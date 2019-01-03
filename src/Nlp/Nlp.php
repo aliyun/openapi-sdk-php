@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Nlp
  *
- * @method    V20180408\Nlp v20180408()
+ * @method V20180408\NlpApiResolver v20180408()
  */
 class Nlp
 {

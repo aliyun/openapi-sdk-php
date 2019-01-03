@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Rtc
  *
- * @method    V20180111\Rtc v20180111()
+ * @method V20180111\RtcApiResolver v20180111()
  */
 class Rtc
 {

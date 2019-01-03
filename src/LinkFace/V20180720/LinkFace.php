@@ -9,21 +9,22 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\LinkFace\V20180720
  *
- * @method CreateGroup createGroup(array $options = [])
- * @method DeleteFace deleteFace(array $options = [])
- * @method DeleteGroup deleteGroup(array $options = [])
- * @method QueryAddUserInfo queryAddUserInfo(array $options = [])
- * @method QueryAllGroups queryAllGroups(array $options = [])
- * @method QueryAuthentication queryAuthentication(array $options = [])
- * @method QueryFace queryFace(array $options = [])
- * @method QueryGroupUsers queryGroupUsers(array $options = [])
- * @method QueryLicenses queryLicenses(array $options = [])
- * @method QuerySyncPicSchedule querySyncPicSchedule(array $options = [])
- * @method RegisterFace registerFace(array $options = [])
- * @method SearchFace searchFace(array $options = [])
- * @method SyncFacePictures syncFacePictures(array $options = [])
- * @method UnlinkFace unlinkFace(array $options = [])
- * @method UpdateFace updateFace(array $options = [])
+ * @method static CreateGroup createGroup(array $options = [])
+ * @method static DeleteFace deleteFace(array $options = [])
+ * @method static DeleteGroup deleteGroup(array $options = [])
+ * @method static LinkFaceApiResolver linkFaceApiResolver(array $options = [])
+ * @method static QueryAddUserInfo queryAddUserInfo(array $options = [])
+ * @method static QueryAllGroups queryAllGroups(array $options = [])
+ * @method static QueryAuthentication queryAuthentication(array $options = [])
+ * @method static QueryFace queryFace(array $options = [])
+ * @method static QueryGroupUsers queryGroupUsers(array $options = [])
+ * @method static QueryLicenses queryLicenses(array $options = [])
+ * @method static QuerySyncPicSchedule querySyncPicSchedule(array $options = [])
+ * @method static RegisterFace registerFace(array $options = [])
+ * @method static SearchFace searchFace(array $options = [])
+ * @method static SyncFacePictures syncFacePictures(array $options = [])
+ * @method static UnlinkFace unlinkFace(array $options = [])
+ * @method static UpdateFace updateFace(array $options = [])
  */
 class LinkFace
 {

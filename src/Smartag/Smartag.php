@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Smartag
  *
- * @method    V20180313\Smartag v20180313()
+ * @method V20180313\SmartagApiResolver v20180313()
  */
 class Smartag
 {

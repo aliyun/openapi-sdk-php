@@ -9,19 +9,20 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Ots\V20160620
  *
- * @method BindInstance2Vpc bindInstance2Vpc(array $options = [])
- * @method DeleteInstance deleteInstance(array $options = [])
- * @method DeleteTags deleteTags(array $options = [])
- * @method GetInstance getInstance(array $options = [])
- * @method InsertInstance insertInstance(array $options = [])
- * @method InsertTags insertTags(array $options = [])
- * @method ListClusterType listClusterType(array $options = [])
- * @method ListInstance listInstance(array $options = [])
- * @method ListTags listTags(array $options = [])
- * @method ListVpcInfoByInstance listVpcInfoByInstance(array $options = [])
- * @method ListVpcInfoByVpc listVpcInfoByVpc(array $options = [])
- * @method UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
- * @method UpdateInstance updateInstance(array $options = [])
+ * @method static BindInstance2Vpc bindInstance2Vpc(array $options = [])
+ * @method static DeleteInstance deleteInstance(array $options = [])
+ * @method static DeleteTags deleteTags(array $options = [])
+ * @method static GetInstance getInstance(array $options = [])
+ * @method static InsertInstance insertInstance(array $options = [])
+ * @method static InsertTags insertTags(array $options = [])
+ * @method static ListClusterType listClusterType(array $options = [])
+ * @method static ListInstance listInstance(array $options = [])
+ * @method static ListTags listTags(array $options = [])
+ * @method static ListVpcInfoByInstance listVpcInfoByInstance(array $options = [])
+ * @method static ListVpcInfoByVpc listVpcInfoByVpc(array $options = [])
+ * @method static OtsApiResolver otsApiResolver(array $options = [])
+ * @method static UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
+ * @method static UpdateInstance updateInstance(array $options = [])
  */
 class Ots
 {

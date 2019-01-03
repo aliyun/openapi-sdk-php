@@ -9,7 +9,8 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\IDST\V20170922
  *
- * @method RoaSearch roaSearch(array $options = [])
+ * @method static IDSTApiResolver iDSTApiResolver(array $options = [])
+ * @method static RoaSearch roaSearch(array $options = [])
  */
 class IDST
 {

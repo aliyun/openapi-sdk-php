@@ -9,14 +9,15 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Hsm\V20180111
  *
- * @method ConfigNetwork configNetwork(array $options = [])
- * @method ConfigWhiteList configWhiteList(array $options = [])
- * @method CreateInstance createInstance(array $options = [])
- * @method DescribeInstances describeInstances(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
- * @method ModifyInstance modifyInstance(array $options = [])
- * @method ReleaseInstance releaseInstance(array $options = [])
- * @method RenewInstance renewInstance(array $options = [])
+ * @method static ConfigNetwork configNetwork(array $options = [])
+ * @method static ConfigWhiteList configWhiteList(array $options = [])
+ * @method static CreateInstance createInstance(array $options = [])
+ * @method static DescribeInstances describeInstances(array $options = [])
+ * @method static DescribeRegions describeRegions(array $options = [])
+ * @method static HsmApiResolver hsmApiResolver(array $options = [])
+ * @method static ModifyInstance modifyInstance(array $options = [])
+ * @method static ReleaseInstance releaseInstance(array $options = [])
+ * @method static RenewInstance renewInstance(array $options = [])
  */
 class Hsm
 {

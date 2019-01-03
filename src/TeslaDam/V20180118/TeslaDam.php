@@ -9,11 +9,12 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\TeslaDam\V20180118
  *
- * @method Action action(array $options = [])
- * @method ActionDiskCheck actionDiskCheck(array $options = [])
- * @method ActionDiskMask actionDiskMask(array $options = [])
- * @method ActionDiskRma actionDiskRma(array $options = [])
- * @method HostGets hostGets(array $options = [])
+ * @method static Action action(array $options = [])
+ * @method static ActionDiskCheck actionDiskCheck(array $options = [])
+ * @method static ActionDiskMask actionDiskMask(array $options = [])
+ * @method static ActionDiskRma actionDiskRma(array $options = [])
+ * @method static HostGets hostGets(array $options = [])
+ * @method static TeslaDamApiResolver teslaDamApiResolver(array $options = [])
  */
 class TeslaDam
 {

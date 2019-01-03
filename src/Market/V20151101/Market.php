@@ -9,20 +9,21 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Market\V20151101
  *
- * @method ActivateLicense activateLicense(array $options = [])
- * @method BindImagePackage bindImagePackage(array $options = [])
- * @method CreateOrder createOrder(array $options = [])
- * @method DescribeInstance describeInstance(array $options = [])
- * @method DescribeLicense describeLicense(array $options = [])
- * @method DescribeOrder describeOrder(array $options = [])
- * @method DescribePrice describePrice(array $options = [])
- * @method DescribeProduct describeProduct(array $options = [])
- * @method DescribeProductRates describeProductRates(array $options = [])
- * @method DescribeProducts describeProducts(array $options = [])
- * @method PushMeteringData pushMeteringData(array $options = [])
- * @method QueryMarketCategories queryMarketCategories(array $options = [])
- * @method QueryMarketImages queryMarketImages(array $options = [])
- * @method SubscribeImage subscribeImage(array $options = [])
+ * @method static ActivateLicense activateLicense(array $options = [])
+ * @method static BindImagePackage bindImagePackage(array $options = [])
+ * @method static CreateOrder createOrder(array $options = [])
+ * @method static DescribeInstance describeInstance(array $options = [])
+ * @method static DescribeLicense describeLicense(array $options = [])
+ * @method static DescribeOrder describeOrder(array $options = [])
+ * @method static DescribePrice describePrice(array $options = [])
+ * @method static DescribeProduct describeProduct(array $options = [])
+ * @method static DescribeProductRates describeProductRates(array $options = [])
+ * @method static DescribeProducts describeProducts(array $options = [])
+ * @method static MarketApiResolver marketApiResolver(array $options = [])
+ * @method static PushMeteringData pushMeteringData(array $options = [])
+ * @method static QueryMarketCategories queryMarketCategories(array $options = [])
+ * @method static QueryMarketImages queryMarketImages(array $options = [])
+ * @method static SubscribeImage subscribeImage(array $options = [])
  */
 class Market
 {

@@ -9,9 +9,10 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Sts\V20150401
  *
- * @method AssumeRole assumeRole(array $options = [])
- * @method GenerateSessionAccessKey generateSessionAccessKey(array $options = [])
- * @method GetCallerIdentity getCallerIdentity(array $options = [])
+ * @method static AssumeRole assumeRole(array $options = [])
+ * @method static GenerateSessionAccessKey generateSessionAccessKey(array $options = [])
+ * @method static GetCallerIdentity getCallerIdentity(array $options = [])
+ * @method static StsApiResolver stsApiResolver(array $options = [])
  */
 class Sts
 {

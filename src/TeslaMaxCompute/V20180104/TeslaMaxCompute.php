@@ -9,15 +9,16 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\TeslaMaxCompute\V20180104
  *
- * @method GetClusterInstance getClusterInstance(array $options = [])
- * @method GetInstancesStatusCount getInstancesStatusCount(array $options = [])
- * @method GetProjectInstance getProjectInstance(array $options = [])
- * @method GetQuotaHistoryInfo getQuotaHistoryInfo(array $options = [])
- * @method GetQuotaInstance getQuotaInstance(array $options = [])
- * @method GetUserInstance getUserInstance(array $options = [])
- * @method QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
- * @method QueryResourceInventory queryResourceInventory(array $options = [])
- * @method QueryTopology queryTopology(array $options = [])
+ * @method static GetClusterInstance getClusterInstance(array $options = [])
+ * @method static GetInstancesStatusCount getInstancesStatusCount(array $options = [])
+ * @method static GetProjectInstance getProjectInstance(array $options = [])
+ * @method static GetQuotaHistoryInfo getQuotaHistoryInfo(array $options = [])
+ * @method static GetQuotaInstance getQuotaInstance(array $options = [])
+ * @method static GetUserInstance getUserInstance(array $options = [])
+ * @method static QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
+ * @method static QueryResourceInventory queryResourceInventory(array $options = [])
+ * @method static QueryTopology queryTopology(array $options = [])
+ * @method static TeslaMaxComputeApiResolver teslaMaxComputeApiResolver(array $options = [])
  */
 class TeslaMaxCompute
 {

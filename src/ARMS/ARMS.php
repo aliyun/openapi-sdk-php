@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\ARMS
  *
- * @method    V20181015\ARMS v20181015()
+ * @method V20181015\ARMSApiResolver v20181015()
  */
 class ARMS
 {

@@ -9,13 +9,14 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Httpdns\V20160201
  *
- * @method AddDomain addDomain(array $options = [])
- * @method DeleteDomain deleteDomain(array $options = [])
- * @method DescribeDomains describeDomains(array $options = [])
- * @method GetAccountInfo getAccountInfo(array $options = [])
- * @method GetResolveCountSummary getResolveCountSummary(array $options = [])
- * @method GetResolveStatistics getResolveStatistics(array $options = [])
- * @method ListDomains listDomains(array $options = [])
+ * @method static AddDomain addDomain(array $options = [])
+ * @method static DeleteDomain deleteDomain(array $options = [])
+ * @method static DescribeDomains describeDomains(array $options = [])
+ * @method static GetAccountInfo getAccountInfo(array $options = [])
+ * @method static GetResolveCountSummary getResolveCountSummary(array $options = [])
+ * @method static GetResolveStatistics getResolveStatistics(array $options = [])
+ * @method static HttpdnsApiResolver httpdnsApiResolver(array $options = [])
+ * @method static ListDomains listDomains(array $options = [])
  */
 class Httpdns
 {

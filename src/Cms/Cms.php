@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Cms
  *
- * @method    V20180308\Cms v20180308()
+ * @method V20180308\CmsApiResolver v20180308()
  */
 class Cms
 {

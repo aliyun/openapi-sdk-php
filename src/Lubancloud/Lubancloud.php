@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Lubancloud
  *
- * @method    V20180509\Lubancloud v20180509()
+ * @method V20180509\LubancloudApiResolver v20180509()
  */
 class Lubancloud
 {

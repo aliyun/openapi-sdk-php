@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ram
  *
- * @method    V20150501\Ram v20150501()
+ * @method V20150501\RamApiResolver v20150501()
  */
 class Ram
 {

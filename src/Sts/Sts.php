@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Sts
  *
- * @method    V20150401\Sts v20150401()
+ * @method V20150401\StsApiResolver v20150401()
  */
 class Sts
 {

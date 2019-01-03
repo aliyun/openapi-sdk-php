@@ -9,15 +9,16 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Nlp\V20180408
  *
- * @method Entity entity(array $options = [])
- * @method IE iE(array $options = [])
- * @method KWE kWE(array $options = [])
- * @method ReviewAnalysis reviewAnalysis(array $options = [])
- * @method Sentiment sentiment(array $options = [])
- * @method TextStructure textStructure(array $options = [])
- * @method Translate translate(array $options = [])
- * @method WordPos wordPos(array $options = [])
- * @method WordSegment wordSegment(array $options = [])
+ * @method static Entity entity(array $options = [])
+ * @method static IE iE(array $options = [])
+ * @method static KWE kWE(array $options = [])
+ * @method static NlpApiResolver nlpApiResolver(array $options = [])
+ * @method static ReviewAnalysis reviewAnalysis(array $options = [])
+ * @method static Sentiment sentiment(array $options = [])
+ * @method static TextStructure textStructure(array $options = [])
+ * @method static Translate translate(array $options = [])
+ * @method static WordPos wordPos(array $options = [])
+ * @method static WordSegment wordSegment(array $options = [])
  */
 class Nlp
 {

@@ -22,8 +22,7 @@ trait ApiResolverTrait
     public function __call($api, $arguments)
     {
         $serviceName = $this->getServiceName(\get_class($this));
-
-        $class = $this->getNamespace(\get_class($this)) . '\\' . \ucfirst($api);
+        $class       = $this->getNamespace(\get_class($this)) . '\\' . \ucfirst($api);
 
         if (\class_exists($class)) {
             if (isset($arguments[0])) {
@@ -36,6 +35,17 @@ trait ApiResolverTrait
             "{$serviceName} contains no $api",
             \ALI_API_NOT_FOUND
         );
+    }
+
+    /**
+     * @param $name
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    public static function __callStatic($name, $arguments)
+    {
+        return (new static())->__call($name, $arguments);
     }
 
     /**

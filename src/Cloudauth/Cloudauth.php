@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Cloudauth
  *
- * @method    V20180916\Cloudauth v20180916()
+ * @method V20180916\CloudauthApiResolver v20180916()
  */
 class Cloudauth
 {

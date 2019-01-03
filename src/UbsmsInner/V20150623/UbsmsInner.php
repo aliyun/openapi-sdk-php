@@ -9,17 +9,18 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\UbsmsInner\V20150623
  *
- * @method DescribeBidRelationByBid describeBidRelationByBid(array $options = [])
- * @method DescribeBidUserBusinessStatus describeBidUserBusinessStatus(array $options = [])
- * @method DescribeBusinessStatus describeBusinessStatus(array $options = [])
- * @method DescribeBusinessStatusOfUser describeBusinessStatusOfUser(array $options = [])
- * @method DescribeUserBusinessStatus describeUserBusinessStatus(array $options = [])
- * @method DescribeUserNetworkType describeUserNetworkType(array $options = [])
- * @method DescribeUserNetworkTypes describeUserNetworkTypes(array $options = [])
- * @method DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
- * @method NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
- * @method SetUserBusinessStatuses setUserBusinessStatuses(array $options = [])
- * @method SetUserSecurityStatus setUserSecurityStatus(array $options = [])
+ * @method static DescribeBidRelationByBid describeBidRelationByBid(array $options = [])
+ * @method static DescribeBidUserBusinessStatus describeBidUserBusinessStatus(array $options = [])
+ * @method static DescribeBusinessStatus describeBusinessStatus(array $options = [])
+ * @method static DescribeBusinessStatusOfUser describeBusinessStatusOfUser(array $options = [])
+ * @method static DescribeUserBusinessStatus describeUserBusinessStatus(array $options = [])
+ * @method static DescribeUserNetworkType describeUserNetworkType(array $options = [])
+ * @method static DescribeUserNetworkTypes describeUserNetworkTypes(array $options = [])
+ * @method static DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
+ * @method static NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
+ * @method static SetUserBusinessStatuses setUserBusinessStatuses(array $options = [])
+ * @method static SetUserSecurityStatus setUserSecurityStatus(array $options = [])
+ * @method static UbsmsInnerApiResolver ubsmsInnerApiResolver(array $options = [])
  */
 class UbsmsInner
 {

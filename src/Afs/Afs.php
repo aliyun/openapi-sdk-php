@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Afs
  *
- * @method    V20180112\Afs v20180112()
+ * @method V20180112\AfsApiResolver v20180112()
  */
 class Afs
 {

@@ -9,15 +9,16 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Jaq\V20161123
  *
- * @method ActivityPrevention activityPrevention(array $options = [])
- * @method AfsAppCheck afsAppCheck(array $options = [])
- * @method AfsCheck afsCheck(array $options = [])
- * @method BbsPrevention bbsPrevention(array $options = [])
- * @method CheckAccountAndPasswordRisk checkAccountAndPasswordRisk(array $options = [])
- * @method LoginPrevention loginPrevention(array $options = [])
- * @method MessagePrevention messagePrevention(array $options = [])
- * @method OtherPrevention otherPrevention(array $options = [])
- * @method SpamRegisterPrevention spamRegisterPrevention(array $options = [])
+ * @method static ActivityPrevention activityPrevention(array $options = [])
+ * @method static AfsAppCheck afsAppCheck(array $options = [])
+ * @method static AfsCheck afsCheck(array $options = [])
+ * @method static BbsPrevention bbsPrevention(array $options = [])
+ * @method static CheckAccountAndPasswordRisk checkAccountAndPasswordRisk(array $options = [])
+ * @method static JaqApiResolver jaqApiResolver(array $options = [])
+ * @method static LoginPrevention loginPrevention(array $options = [])
+ * @method static MessagePrevention messagePrevention(array $options = [])
+ * @method static OtherPrevention otherPrevention(array $options = [])
+ * @method static SpamRegisterPrevention spamRegisterPrevention(array $options = [])
  */
 class Jaq
 {

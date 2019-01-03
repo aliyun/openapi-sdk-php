@@ -9,9 +9,10 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\TeslaStream\V20180115
  *
- * @method BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
- * @method BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
- * @method GetJobTopology getJobTopology(array $options = [])
+ * @method static BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
+ * @method static BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
+ * @method static GetJobTopology getJobTopology(array $options = [])
+ * @method static TeslaStreamApiResolver teslaStreamApiResolver(array $options = [])
  */
 class TeslaStream
 {
