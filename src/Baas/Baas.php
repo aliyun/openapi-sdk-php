@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Baas
  *
- * @method    V20180731\Baas v20180731()
+ * @method V20180731\BaasApiResolver v20180731()
  */
 class Baas
 {

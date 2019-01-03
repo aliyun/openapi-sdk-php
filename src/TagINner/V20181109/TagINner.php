@@ -9,13 +9,14 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\TagINner\V20181109
  *
- * @method InnerListTagResources innerListTagResources(array $options = [])
- * @method InnerTagResources innerTagResources(array $options = [])
- * @method InnerUntagResources innerUntagResources(array $options = [])
- * @method ListTagKeys listTagKeys(array $options = [])
- * @method ListTagValues listTagValues(array $options = [])
- * @method QueryServiceCode queryServiceCode(array $options = [])
- * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
+ * @method static InnerListTagResources innerListTagResources(array $options = [])
+ * @method static InnerTagResources innerTagResources(array $options = [])
+ * @method static InnerUntagResources innerUntagResources(array $options = [])
+ * @method static ListTagKeys listTagKeys(array $options = [])
+ * @method static ListTagValues listTagValues(array $options = [])
+ * @method static QueryServiceCode queryServiceCode(array $options = [])
+ * @method static TagINnerApiResolver tagINnerApiResolver(array $options = [])
+ * @method static TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
  */
 class TagINner
 {

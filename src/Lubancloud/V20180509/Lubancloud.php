@@ -9,12 +9,13 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Lubancloud\V20180509
  *
- * @method BuyOriginPictures buyOriginPictures(array $options = [])
- * @method GetStyles getStyles(array $options = [])
- * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
- * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
- * @method SubmitCutoutTask submitCutoutTask(array $options = [])
- * @method SubmitGenerateTask submitGenerateTask(array $options = [])
+ * @method static BuyOriginPictures buyOriginPictures(array $options = [])
+ * @method static GetStyles getStyles(array $options = [])
+ * @method static LubancloudApiResolver lubancloudApiResolver(array $options = [])
+ * @method static QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
+ * @method static QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
+ * @method static SubmitCutoutTask submitCutoutTask(array $options = [])
+ * @method static SubmitGenerateTask submitGenerateTask(array $options = [])
  */
 class Lubancloud
 {

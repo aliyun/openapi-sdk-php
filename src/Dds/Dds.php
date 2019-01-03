@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Dds
  *
- * @method    V20151201\Dds v20151201()
+ * @method V20151201\DdsApiResolver v20151201()
  */
 class Dds
 {

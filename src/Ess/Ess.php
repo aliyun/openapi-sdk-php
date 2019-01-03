@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ess
  *
- * @method    V20140828\Ess v20140828()
+ * @method V20140828\EssApiResolver v20140828()
  */
 class Ess
 {

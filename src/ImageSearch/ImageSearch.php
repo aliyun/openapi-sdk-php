@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\ImageSearch
  *
- * @method    V20180120\ImageSearch v20180120()
+ * @method V20180120\ImageSearchApiResolver v20180120()
  */
 class ImageSearch
 {

@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Vod
  *
- * @method    V20170321\Vod v20170321()
+ * @method V20170321\VodApiResolver v20170321()
  */
 class Vod
 {

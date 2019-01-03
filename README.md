@@ -10,35 +10,40 @@ Alibaba Cloud SDK for PHP
 [![License](https://poser.pugx.org/alibabacloud/sdk/license)](https://packagist.org/packages/alibabacloud/sdk)
 [![composer.lock](https://poser.pugx.org/alibabacloud/sdk/composerlock)](https://packagist.org/packages/alibabacloud/sdk)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/quality-score.png)](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php)
-[![Build Status](https://travis-ci.org/aliyun/openapi-sdk-php.svg)](https://travis-ci.org/aliyun/openapi-sdk-php)
+[![Build Status](https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master)](https://travis-ci.org/aliyun/openapi-sdk-php)
 [![codecov](https://codecov.io/gh/aliyun/openapi-sdk-php/branch/master/graph/badge.svg)](https://codecov.io/gh/aliyun/openapi-sdk-php)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/code-intelligence.svg)](https://scrutinizer-ci.com/code-intelligence)
 
 
-![](./src/Aliyun.svg)
+![](./src/AlibabaCloud.svg)
 
 
-The **Alibaba Cloud SDK for PHP** provides a quick access method for products based on the inheritance of [Alibaba Cloud Client for PHP][client], making it easier for you to use Alibaba Cloud services.
+**Alibaba Cloud SDK for PHP** is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
 ## Release Notes
+
 We developed a new kernel on the principle of `eliminating known issues` and `compatible with old grammar`, adding the following features:
 - [Support Composer][packagist]
-- [Support for multiple client and client profiles][client]
-- [Return a bigger result][result]
+- [Support for multiple client and client profiles][clients]
+- [Result is a powerful object][result]
 - [More flexible configuration per request][request]
-- More convenient call interface
 
 
 ## Requirements
+
 You must use PHP5.5.0 or later, if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL]. 
 
+
 ## Recommendations
+
 - Use [Composer][composer] and optimize automatic loading `composer dump-autoload --optimize`
 - Install [cURL][cURL] 7.16.2 or later version
 - Use [OPCache][OPCache]
 - In a production environment, do not use [Xdebug][xdebug]
 
+
 ## Installation
+
 1. Download and install Composer（Windows user please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
 ```bash
 curl -sS https://getcomposer.org/installer | php
@@ -55,6 +60,7 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 require __DIR__ . '/vendor/autoload.php'; 
 ```
 
+
 ## Compatible with old grammar
 
 The new kernel still supports the old syntax, but the `@deprecated` has been flagged to highlight the IDE. Developers are strongly encouraged to use the new syntax, and we will completely remove the old syntax in a future release.
@@ -64,26 +70,28 @@ The new kernel still supports the old syntax, but the `@deprecated` has been fla
 <?php
     
     use AlibabaCloud\Client\DefaultAcsClient;
-    use AlibabaCloud\Client\Exception\ClientException;
     use AlibabaCloud\Client\Profile\DefaultProfile;
     use AlibabaCloud\Ecs\V20140526\DescribeRegions;
+    use AlibabaCloud\Client\Exception\ClientException;
     
     $profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
     $client  = new DefaultAcsClient($profile);
     $request = new DescribeRegions();
+    
     try {
-        $response = $client->getAcsResponse($request);
-        print_r($response);
+        $result = $client->getAcsResponse($request);
+        print_r($result->Regions);
+        print_r($result['Regions']);
+        print_r($result->toArray());
     } catch (ClientException $exception) {
-        print_r($exception->getErrorMessage());
+        echo $exception->getMessage(). PHP_EOL;
     }
-
 ```
 
 
 ## Recommend new grammar
 
-Before sending, please [Understanding the usage of the client][client], after sending, please [Understanding the result object][result].
+Before request, please [Understanding the usage of the client][client], after request, please [Understanding the result object][result].
 
 
 ```php
@@ -93,89 +101,62 @@ use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 
+// Set up a global client
 AlibabaCloud::accessKeyClient('foo', 'bar')
             ->regionId('cn-hangzhou')
             ->asGlobalClient();
 
 try {
-    // Send, default to global client
-    $result1 = AlibabaCloud::ecs()
-                           ->v20140526()
-                           ->describeRegions();
+    // Access product APIs
+    $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
 
-    // Specify the client for send
-    $result2 = AlibabaCloud::ecs()
-                           ->v20140526()
-                           ->describeRegions()
-                           ->client('client1')
-                           ->request();
+    // Set options/parameters and execute request
+    $result = $request->withResourceType('type') // API parameter
+                      ->withInstanceChargeType('type') // API parameter
+                      ->client('client1') // Specify the client for send
+                      ->debug(true) // Enable the debug will output detailed information
+                      ->connectTimeout(0.01) // Throw an exception when Connection timeout 
+                      ->timeout(0.01) // Throw an exception when timeout 
+                      ->request(); // Execution request
 
-    // Chain settings
-    $result3 = AlibabaCloud::ecs()
-                           ->v20140526()
-                           ->describeRegions()
-                           ->client('client1') // Specify the client for send
-                           ->connectTimeout(0.001) // Throw an exception when Connection timeout 
-                           ->timeout(0.001) // Throw an exception when timeout 
-                           ->debug(true) // Enable the debug will output detailed information
-                           ->request();
-
-    // Traditional settings
-    $request2 = AlibabaCloud::ecs()
-                            ->v20140526()
-                            ->describeRegions();
-    $request2->client('client1');
-    $request2->timeout(0.001);
-    $result2 = $request2->request();
-
-
-    // Construction settings
-    $request3 = AlibabaCloud::ecs()
-                            ->v20140526()
-                            ->describeRegions([
-                                                  'debug'           => true,
-                                                  'timeout'         => 0.01,
-                                                  'connect_timeout' => 0.01,
-                                                  'query'           => [
-                                                      'pageSize' => 1,
-                                                  ],
-                                              ]);
-    $result3  = $request3->request();
+    // Can also Set by passing in an array
+    $options = [
+                   'debug'           => true,
+                   'connect_timeout' => 0.01,
+                   'timeout'         => 0.01,
+                   'query'           => [
+                       'ResourceType' => 'type',
+                       'InstanceChargeType' => 'type',
+                   ],
+               ];
 
     // Settings priority
-    $result4 = AlibabaCloud::ecs()
+    $result2 = AlibabaCloud::ecs()
                            ->v20140526()
-                           ->describeRegions([
-                                                 'debug'           => true,
-                                                 'timeout'         => 0.01,
-                                                 'connect_timeout' => 0.01,
-                                                 'query'           => [
-                                                     'pageSize' => 1,
-                                                     'Key'      => 'value',
-                                                 ],
-                                             ])
+                           ->describeRegions($options)
                            ->options([
                                          'query' => [
-                                             'pageSize' => 1,
-                                             'Key'      => 'I will overlay this value of the constructor',
-                                             'new'      => 'I am the new added value',
+                                             'Key'      => 'I will overwrite this value in constructor',
+                                             'new'      => 'I am new value',
                                          ],
                                      ])
                            ->options([
                                          'query' => [
-                                             'Key' => 'I will overlay the previous value',
-                                             'new' => 'I will overlay the previous value',
+                                             'Key' => 'I will overwrite the previous value',
+                                             'bar' => 'I am new value',
                                          ],
                                      ])
-                           ->debug(false) // The last call will overwrite the former
+                           ->debug(false) // Overwrite the true of the former
                            ->request();
-} catch (ClientException $exception) {
-    print_r($exception->getErrorMessage());
-} catch (ServerException $exception) {
-    print_r($exception->getErrorMessage());
-}
     
-
+} catch (ClientException $exception) {
+    echo $exception->getMessage(). PHP_EOL;
+} catch (ServerException $exception) {
+    echo $exception->getMessage() . PHP_EOL;
+    echo $exception->getErrorCode(). PHP_EOL;
+    echo $exception->getRequestId(). PHP_EOL;
+    echo $exception->getErrorMessage(). PHP_EOL;
+}
 ```
 
 
@@ -184,21 +165,24 @@ try {
 * [OpenAPI Explorer][open-api]
 * [Packagist][packagist]
 * [Composer][composer]
-* [Guzzle Docs][guzzle-docs]
+* [Guzzle Documentation][guzzle-docs]
 * [Latest Release][latest-release]
 
 
-[open-api]: https://api.aliyun.com/
+[open-api]: https://api.alibabacloud.com
 [latest-release]: https://github.com/aliyun/openapi-sdk-php
-[guzzle-docs]: http://guzzlephp.org
+[guzzle-docs]: http://docs.guzzlephp.org/en/stable/request-options.html
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
-[result]:https://github.com/aliyun/openapi-sdk-php-client#result
+[client]: https://github.com/aliyun/openapi-sdk-php-client#alibaba-cloud-client-for-php
+[clients]: https://github.com/aliyun/openapi-sdk-php-client#client
 [request]: https://github.com/aliyun/openapi-sdk-php-client#request
+[result]: https://github.com/aliyun/openapi-sdk-php-client#result
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
-[client]: https://github.com/aliyun/openapi-sdk-php-client
 [cURL]: http://php.net/manual/en/book.curl.php
 [OPCache]: http://php.net/manual/en/book.opcache.php
 [xdebug]: http://xdebug.org
 [OpenSSL]: http://php.net/manual/en/book.openssl.php
+[aliyun]: https://www.aliyun.com
+[alibabacloud]: https://www.alibabacloud.com

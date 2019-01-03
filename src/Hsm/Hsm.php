@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Hsm
  *
- * @method    V20180111\Hsm v20180111()
+ * @method V20180111\HsmApiResolver v20180111()
  */
 class Hsm
 {

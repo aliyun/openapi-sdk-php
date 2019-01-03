@@ -9,9 +9,10 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\ImageSearch\V20180120
  *
- * @method AddItem addItem(array $options = [])
- * @method DeleteItem deleteItem(array $options = [])
- * @method SearchItem searchItem(array $options = [])
+ * @method static AddItem addItem(array $options = [])
+ * @method static DeleteItem deleteItem(array $options = [])
+ * @method static ImageSearchApiResolver imageSearchApiResolver(array $options = [])
+ * @method static SearchItem searchItem(array $options = [])
  */
 class ImageSearch
 {

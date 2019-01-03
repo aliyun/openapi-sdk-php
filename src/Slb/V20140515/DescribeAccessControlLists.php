@@ -307,15 +307,7 @@ class DescribeAccessControlLists extends RpcRequest
         return $this;
     }
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
+
 
     /**
      * @deprecated deprecated since version 2.0, Use withTag() instead.
@@ -324,7 +316,7 @@ class DescribeAccessControlLists extends RpcRequest
      *
      * @return $this
      */
-    public function setTags(array $tags)
+    public function setTag(array $tags)
     {
         return $this->withTag($tags);
     }

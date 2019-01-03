@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Jarvis
  *
- * @method    V20180206\Jarvis v20180206()
+ * @method V20180206\JarvisApiResolver v20180206()
  */
 class Jarvis
 {

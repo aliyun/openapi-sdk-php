@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\BatchCompute
  *
- * @method    V20130111\BatchCompute v20130111()
+ * @method V20130111\BatchComputeApiResolver v20130111()
  */
 class BatchCompute
 {

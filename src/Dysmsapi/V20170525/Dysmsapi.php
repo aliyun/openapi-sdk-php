@@ -9,9 +9,10 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Dysmsapi\V20170525
  *
- * @method QuerySendDetails querySendDetails(array $options = [])
- * @method SendBatchSms sendBatchSms(array $options = [])
- * @method SendSms sendSms(array $options = [])
+ * @method static DysmsapiApiResolver dysmsapiApiResolver(array $options = [])
+ * @method static QuerySendDetails querySendDetails(array $options = [])
+ * @method static SendBatchSms sendBatchSms(array $options = [])
+ * @method static SendSms sendSms(array $options = [])
  */
 class Dysmsapi
 {

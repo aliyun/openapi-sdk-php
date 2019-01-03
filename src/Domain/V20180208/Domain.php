@@ -9,21 +9,22 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Domain\V20180208
  *
- * @method AcceptDemand acceptDemand(array $options = [])
- * @method BidDomain bidDomain(array $options = [])
- * @method FailDemand failDemand(array $options = [])
- * @method FinishDemand finishDemand(array $options = [])
- * @method GetReserveDomainUrl getReserveDomainUrl(array $options = [])
- * @method QueryAuctionDetail queryAuctionDetail(array $options = [])
- * @method QueryAuctions queryAuctions(array $options = [])
- * @method QueryBidRecords queryBidRecords(array $options = [])
- * @method QueryBookingDomainInfo queryBookingDomainInfo(array $options = [])
- * @method QueryBrokerDemand queryBrokerDemand(array $options = [])
- * @method QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
- * @method RecordDemand recordDemand(array $options = [])
- * @method RefuseDemand refuseDemand(array $options = [])
- * @method RequestPayDemand requestPayDemand(array $options = [])
- * @method ReserveDomain reserveDomain(array $options = [])
+ * @method static AcceptDemand acceptDemand(array $options = [])
+ * @method static BidDomain bidDomain(array $options = [])
+ * @method static DomainApiResolver domainApiResolver(array $options = [])
+ * @method static FailDemand failDemand(array $options = [])
+ * @method static FinishDemand finishDemand(array $options = [])
+ * @method static GetReserveDomainUrl getReserveDomainUrl(array $options = [])
+ * @method static QueryAuctionDetail queryAuctionDetail(array $options = [])
+ * @method static QueryAuctions queryAuctions(array $options = [])
+ * @method static QueryBidRecords queryBidRecords(array $options = [])
+ * @method static QueryBookingDomainInfo queryBookingDomainInfo(array $options = [])
+ * @method static QueryBrokerDemand queryBrokerDemand(array $options = [])
+ * @method static QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
+ * @method static RecordDemand recordDemand(array $options = [])
+ * @method static RefuseDemand refuseDemand(array $options = [])
+ * @method static RequestPayDemand requestPayDemand(array $options = [])
+ * @method static ReserveDomain reserveDomain(array $options = [])
  */
 class Domain
 {

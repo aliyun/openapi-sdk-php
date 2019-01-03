@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Push
  *
- * @method    V20160801\Push v20160801()
+ * @method V20160801\PushApiResolver v20160801()
  */
 class Push
 {

@@ -9,11 +9,12 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\YqBridge\V20170810
  *
- * @method CheckCloudUser checkCloudUser(array $options = [])
- * @method CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])
- * @method GetUserLabel getUserLabel(array $options = [])
- * @method HavanaIdConvert havanaIdConvert(array $options = [])
- * @method ResetAccountPwdInWhiteList resetAccountPwdInWhiteList(array $options = [])
+ * @method static CheckCloudUser checkCloudUser(array $options = [])
+ * @method static CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])
+ * @method static GetUserLabel getUserLabel(array $options = [])
+ * @method static HavanaIdConvert havanaIdConvert(array $options = [])
+ * @method static ResetAccountPwdInWhiteList resetAccountPwdInWhiteList(array $options = [])
+ * @method static YqBridgeApiResolver yqBridgeApiResolver(array $options = [])
  */
 class YqBridge
 {

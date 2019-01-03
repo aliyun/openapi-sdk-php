@@ -2,7 +2,6 @@ Upgrading Guide
 ===============
 
 
-
 Upgrade from Original SDK
 -----------------------
 

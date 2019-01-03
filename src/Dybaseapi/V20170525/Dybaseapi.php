@@ -9,7 +9,8 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Dybaseapi\V20170525
  *
- * @method QueryTokenForMnsQueue queryTokenForMnsQueue(array $options = [])
+ * @method static DybaseapiApiResolver dybaseapiApiResolver(array $options = [])
+ * @method static QueryTokenForMnsQueue queryTokenForMnsQueue(array $options = [])
  */
 class Dybaseapi
 {

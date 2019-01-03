@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Alimt
  *
- * @method    V20181012\Alimt v20181012()
+ * @method V20181012\AlimtApiResolver v20181012()
  */
 class Alimt
 {

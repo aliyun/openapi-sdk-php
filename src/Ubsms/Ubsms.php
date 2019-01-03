@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ubsms
  *
- * @method    V20150623\Ubsms v20150623()
+ * @method V20150623\UbsmsApiResolver v20150623()
  */
 class Ubsms
 {

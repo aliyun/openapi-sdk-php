@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Scdn
  *
- * @method    V20171115\Scdn v20171115()
+ * @method V20171115\ScdnApiResolver v20171115()
  */
 class Scdn
 {

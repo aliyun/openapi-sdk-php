@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\TeslaMaxCompute
  *
- * @method    V20180104\TeslaMaxCompute v20180104()
+ * @method V20180104\TeslaMaxComputeApiResolver v20180104()
  */
 class TeslaMaxCompute
 {

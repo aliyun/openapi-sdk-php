@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\CSB
  *
- * @method    V20171118\CSB v20171118()
+ * @method V20171118\CSBApiResolver v20171118()
  */
 class CSB
 {

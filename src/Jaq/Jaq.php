@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Jaq
  *
- * @method    V20161123\Jaq v20161123()
+ * @method V20161123\JaqApiResolver v20161123()
  */
 class Jaq
 {

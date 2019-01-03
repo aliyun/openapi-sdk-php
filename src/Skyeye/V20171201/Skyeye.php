@@ -9,8 +9,9 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Skyeye\V20171201
  *
- * @method GetCdnSkyeyeStatusData getCdnSkyeyeStatusData(array $options = [])
- * @method SendAlertContent sendAlertContent(array $options = [])
+ * @method static GetCdnSkyeyeStatusData getCdnSkyeyeStatusData(array $options = [])
+ * @method static SendAlertContent sendAlertContent(array $options = [])
+ * @method static SkyeyeApiResolver skyeyeApiResolver(array $options = [])
  */
 class Skyeye
 {

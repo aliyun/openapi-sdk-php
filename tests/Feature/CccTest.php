@@ -28,13 +28,15 @@ class CccTest extends TestCase
     public function testCCC()
     {
         try {
-            $request = AlibabaCloud::cCC()->v20170705()
+            $request = AlibabaCloud::cCC()
+                                   ->v20170705()
                                    ->listPhoneNumbers()
                                    ->client('ccc')
                                    ->withInstanceId(\getenv('CCC_INSTANCE_ID'))
                                    ->withOutboundOnly(true)
                                    ->scheme('https')
                                    ->host('ccc.cn-shanghai.aliyuncs.com');
+
             $result  = $request->request();
             self::assertArrayHasKey('PhoneNumbers', $result);
         } catch (ClientException $e) {

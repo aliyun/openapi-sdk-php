@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Sms
  *
- * @method    V20160927\Sms v20160927()
+ * @method V20160927\SmsApiResolver v20160927()
  */
 class Sms
 {

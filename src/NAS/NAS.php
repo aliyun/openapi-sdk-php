@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\NAS
  *
- * @method    V20170626\NAS v20170626()
+ * @method V20170626\NASApiResolver v20170626()
  */
 class NAS
 {
