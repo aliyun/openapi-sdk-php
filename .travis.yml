@@ -1,0 +1,37 @@
+language: php
+
+php:
+    - 5.5
+    - 5.6
+    - 7.0
+    - 7.1
+    - 7.2
+    - 7.3
+    - hhvm
+    - nightly
+env:
+    - COMPOSER_OPTS=""
+    - COMPOSER_OPTS="--prefer-lowest"
+
+matrix:
+    allow_failures:
+        -   php: 7.2
+        -   php: 7.3
+        -   php: hhvm
+        -   php: nightly
+    fast_finish: true
+
+sudo: false
+
+install:
+    - 'if [ $(phpenv version-name) == "5.5" ]; then rm ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini; fi'
+    - 'if [ $(phpenv version-name) >= "5.6" ] && [ -v COMPOSER_OPTS ]; then composer require --dev phpunit/phpunit "^7.5"; fi'
+    - 'if [ $(phpenv version-name) != "hhvm" ] && [ $(phpenv version-name) != "nightly" ]; then echo "xdebug.overload_var_dump = 0" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi'
+    - composer --version
+    - travis_retry composer update $COMPOSER_OPTS --no-interaction --prefer-source
+
+script:
+    - make test
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

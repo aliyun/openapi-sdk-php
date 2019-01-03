@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./tests/bootstrap.php" colors="true" processIsolation="false" stopOnFailure="false"
+         convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true"
+         testSuiteLoaderFile="phpunit/src/Runner/StandardTestSuiteLoader.php">
+
+    <testsuites>
+        <testsuite name="All">
+            <directory>tests</directory>
+        </testsuite>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+            <group>integration</group>
+        </exclude>
+    </groups>
+
+    <logging>
+        <log type="coverage-html" target="coverage/coverage" lowUpperBound="35" highLowerBound="70"/>
+        <log type="coverage-clover" target="coverage/coverage.clover"/>
+    </logging>
+
+
+    <filter>
+        <whitelist>
+            <file>./src/ApiResolverTrait.php</file>
+            <file>./src/DumpServices.php</file>
+            <file>./src/ServiceResolverTrait.php</file>
+            <file>./src/VersionResolverTrait.php</file>
+            <exclude>
+                <file>./src/Constants.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

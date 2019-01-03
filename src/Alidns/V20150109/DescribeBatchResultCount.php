@@ -1,0 +1,116 @@
+<?php
+
+namespace AlibabaCloud\Alidns\V20150109;
+
+use AlibabaCloud\Client\Request\RpcRequest;
+
+/**
+ * Request of DescribeBatchResultCount
+ *
+ * @method string getUserClientIp()
+ * @method string getLang()
+ * @method string getTaskId()
+ */
+class DescribeBatchResultCount extends RpcRequest
+{
+
+    /**
+     * @var string
+     */
+    public $product = 'Alidns';
+
+    /**
+     * @var string
+     */
+    public $version = '2015-01-09';
+
+    /**
+     * @var string
+     */
+    public $action = 'DescribeBatchResultCount';
+
+    /**
+     * @var string
+     */
+    public $method = 'POST';
+
+    /**
+     * @var string
+     */
+    public $serviceCode = 'alidns';
+
+    /**
+     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
+     *
+     * @param string $userClientIp
+     *
+     * @return $this
+     */
+    public function setUserClientIp($userClientIp)
+    {
+        return $this->withUserClientIp($userClientIp);
+    }
+
+    /**
+     * @param string $userClientIp
+     *
+     * @return $this
+     */
+    public function withUserClientIp($userClientIp)
+    {
+        $this->data['UserClientIp'] = $userClientIp;
+        $this->options['query']['UserClientIp'] = $userClientIp;
+
+        return $this;
+    }
+
+    /**
+     * @deprecated deprecated since version 2.0, Use withLang() instead.
+     *
+     * @param string $lang
+     *
+     * @return $this
+     */
+    public function setLang($lang)
+    {
+        return $this->withLang($lang);
+    }
+
+    /**
+     * @param string $lang
+     *
+     * @return $this
+     */
+    public function withLang($lang)
+    {
+        $this->data['Lang'] = $lang;
+        $this->options['query']['Lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
+     *
+     * @param string $taskId
+     *
+     * @return $this
+     */
+    public function setTaskId($taskId)
+    {
+        return $this->withTaskId($taskId);
+    }
+
+    /**
+     * @param string $taskId
+     *
+     * @return $this
+     */
+    public function withTaskId($taskId)
+    {
+        $this->data['TaskId'] = $taskId;
+        $this->options['query']['TaskId'] = $taskId;
+
+        return $this;
+    }
+}

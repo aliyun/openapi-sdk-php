@@ -1,0 +1,17 @@
+<?php
+
+namespace AlibabaCloud\Lubancloud;
+
+use AlibabaCloud\VersionResolverTrait;
+
+/**
+ * Find the specified version of the Lubancloud based on the method name as the version name.
+ *
+ * @package   AlibabaCloud\Lubancloud
+ *
+ * @method    V20180509\Lubancloud v20180509()
+ */
+class Lubancloud
+{
+    use VersionResolverTrait;
+}
