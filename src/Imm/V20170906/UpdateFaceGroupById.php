@@ -41,18 +41,6 @@ class UpdateFaceGroupById extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -63,18 +51,6 @@ class UpdateFaceGroupById extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -91,18 +67,6 @@ class UpdateFaceGroupById extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewGroupId() instead.
-     *
-     * @param string $newGroupId
-     *
-     * @return $this
-     */
-    public function setNewGroupId($newGroupId)
-    {
-        return $this->withNewGroupId($newGroupId);
-    }
-
-    /**
      * @param string $newGroupId
      *
      * @return $this
@@ -113,18 +77,6 @@ class UpdateFaceGroupById extends RpcRequest
         $this->options['query']['NewGroupId'] = $newGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceIds() instead.
-     *
-     * @param string $faceIds
-     *
-     * @return $this
-     */
-    public function setFaceIds($faceIds)
-    {
-        return $this->withFaceIds($faceIds);
     }
 
     /**

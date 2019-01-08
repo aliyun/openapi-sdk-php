@@ -44,18 +44,6 @@ class DescribeAuditContentItem extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
-
-    /**
      * @param string $totalCount
      *
      * @return $this
@@ -66,18 +54,6 @@ class DescribeAuditContentItem extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class DescribeAuditContentItem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -116,18 +80,6 @@ class DescribeAuditContentItem extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -144,18 +96,6 @@ class DescribeAuditContentItem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeAuditContentItem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -191,18 +119,6 @@ class DescribeAuditContentItem extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

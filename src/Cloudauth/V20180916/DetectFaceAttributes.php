@@ -39,7 +39,6 @@ class DetectFaceAttributes extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -49,18 +48,6 @@ class DetectFaceAttributes extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxNumPhotosPerCategory() instead.
-     *
-     * @param string $maxNumPhotosPerCategory
-     *
-     * @return $this
-     */
-    public function setMaxNumPhotosPerCategory($maxNumPhotosPerCategory)
-    {
-        return $this->withMaxNumPhotosPerCategory($maxNumPhotosPerCategory);
-    }
 
     /**
      * @param string $maxNumPhotosPerCategory
@@ -73,18 +60,6 @@ class DetectFaceAttributes extends RpcRequest
         $this->options['query']['MaxNumPhotosPerCategory'] = $maxNumPhotosPerCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxFaceNum() instead.
-     *
-     * @param string $maxFaceNum
-     *
-     * @return $this
-     */
-    public function setMaxFaceNum($maxFaceNum)
-    {
-        return $this->withMaxFaceNum($maxFaceNum);
     }
 
     /**
@@ -101,18 +76,6 @@ class DetectFaceAttributes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -123,18 +86,6 @@ class DetectFaceAttributes extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -151,18 +102,6 @@ class DetectFaceAttributes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRetAttributes() instead.
-     *
-     * @param string $retAttributes
-     *
-     * @return $this
-     */
-    public function setRetAttributes($retAttributes)
-    {
-        return $this->withRetAttributes($retAttributes);
-    }
-
-    /**
      * @param string $retAttributes
      *
      * @return $this
@@ -173,18 +112,6 @@ class DetectFaceAttributes extends RpcRequest
         $this->options['query']['RetAttributes'] = $retAttributes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaterialValue() instead.
-     *
-     * @param string $materialValue
-     *
-     * @return $this
-     */
-    public function setMaterialValue($materialValue)
-    {
-        return $this->withMaterialValue($materialValue);
     }
 
     /**
@@ -201,18 +128,6 @@ class DetectFaceAttributes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDontSaveDB() instead.
-     *
-     * @param string $dontSaveDB
-     *
-     * @return $this
-     */
-    public function setDontSaveDB($dontSaveDB)
-    {
-        return $this->withDontSaveDB($dontSaveDB);
-    }
-
-    /**
      * @param string $dontSaveDB
      *
      * @return $this
@@ -223,18 +138,6 @@ class DetectFaceAttributes extends RpcRequest
         $this->options['query']['DontSaveDB'] = $dontSaveDB;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientTag() instead.
-     *
-     * @param string $clientTag
-     *
-     * @return $this
-     */
-    public function setClientTag($clientTag)
-    {
-        return $this->withClientTag($clientTag);
     }
 
     /**

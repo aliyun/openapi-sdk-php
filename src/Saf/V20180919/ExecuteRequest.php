@@ -33,7 +33,6 @@ class ExecuteRequest extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -43,18 +42,6 @@ class ExecuteRequest extends RpcRequest
      * @var string
      */
     public $serviceCode = 'saf';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceParameters() instead.
-     *
-     * @param string $serviceParameters
-     *
-     * @return $this
-     */
-    public function setServiceParameters($serviceParameters)
-    {
-        return $this->withServiceParameters($serviceParameters);
-    }
 
     /**
      * @param string $serviceParameters
@@ -67,18 +54,6 @@ class ExecuteRequest extends RpcRequest
         $this->options['query']['ServiceParameters'] = $serviceParameters;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withService() instead.
-     *
-     * @param string $service
-     *
-     * @return $this
-     */
-    public function setService($service)
-    {
-        return $this->withService($service);
     }
 
     /**

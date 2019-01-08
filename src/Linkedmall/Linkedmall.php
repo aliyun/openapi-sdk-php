@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Linkedmall
  *
- * @method V20180116\LinkedmallApiResolver v20180116()
+ * @method LinkedmallV20180116ApiResolver v20180116()
  */
 class Linkedmall
 {

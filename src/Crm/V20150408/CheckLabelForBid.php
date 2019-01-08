@@ -35,18 +35,6 @@ class CheckLabelForBid extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
-
-    /**
      * @param string $labelSeries
      *
      * @return $this
@@ -60,18 +48,6 @@ class CheckLabelForBid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPK() instead.
-     *
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function setPK($pK)
-    {
-        return $this->withPK($pK);
-    }
-
-    /**
      * @param string $pK
      *
      * @return $this
@@ -82,18 +58,6 @@ class CheckLabelForBid extends RpcRequest
         $this->options['query']['PK'] = $pK;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabel() instead.
-     *
-     * @param string $label
-     *
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        return $this->withLabel($label);
     }
 
     /**

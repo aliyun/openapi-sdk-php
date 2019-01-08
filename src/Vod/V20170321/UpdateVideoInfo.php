@@ -46,18 +46,6 @@ class UpdateVideoInfo extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCoverURL() instead.
-     *
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function setCoverURL($coverURL)
-    {
-        return $this->withCoverURL($coverURL);
-    }
-
-    /**
      * @param string $coverURL
      *
      * @return $this
@@ -68,18 +56,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['CoverURL'] = $coverURL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
     }
 
     /**
@@ -146,18 +98,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -168,18 +108,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -196,18 +124,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -243,18 +147,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

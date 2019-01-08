@@ -34,28 +34,6 @@ class DeleteEventTargets extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getIds() instead.
-     *
-     * @return array
-     */
-    public function getIdss()
-    {
-        return $this->getIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param array $idss
-     *
-     * @return $this
-     */
-    public function setIdss(array $idss)
-    {
-        return $this->withIds($idss);
-    }
-
-    /**
      * @param array $ids
      *
      * @return $this
@@ -68,18 +46,6 @@ class DeleteEventTargets extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**

@@ -43,18 +43,6 @@ class CompareImageFaces extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageUriB() instead.
-     *
-     * @param string $imageUriB
-     *
-     * @return $this
-     */
-    public function setImageUriB($imageUriB)
-    {
-        return $this->withImageUriB($imageUriB);
-    }
-
-    /**
      * @param string $imageUriB
      *
      * @return $this
@@ -65,18 +53,6 @@ class CompareImageFaces extends RpcRequest
         $this->options['query']['ImageUriB'] = $imageUriB;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageUriA() instead.
-     *
-     * @param string $imageUriA
-     *
-     * @return $this
-     */
-    public function setImageUriA($imageUriA)
-    {
-        return $this->withImageUriA($imageUriA);
     }
 
     /**
@@ -93,18 +69,6 @@ class CompareImageFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -115,18 +79,6 @@ class CompareImageFaces extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -143,18 +95,6 @@ class CompareImageFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFaceIdA() instead.
-     *
-     * @param string $faceIdA
-     *
-     * @return $this
-     */
-    public function setFaceIdA($faceIdA)
-    {
-        return $this->withFaceIdA($faceIdA);
-    }
-
-    /**
      * @param string $faceIdA
      *
      * @return $this
@@ -165,18 +105,6 @@ class CompareImageFaces extends RpcRequest
         $this->options['query']['FaceIdA'] = $faceIdA;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceIdB() instead.
-     *
-     * @param string $faceIdB
-     *
-     * @return $this
-     */
-    public function setFaceIdB($faceIdB)
-    {
-        return $this->withFaceIdB($faceIdB);
     }
 
     /**

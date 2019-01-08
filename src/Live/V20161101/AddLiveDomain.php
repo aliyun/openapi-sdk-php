@@ -46,18 +46,6 @@ class AddLiveDomain extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopLevelDomain() instead.
-     *
-     * @param string $topLevelDomain
-     *
-     * @return $this
-     */
-    public function setTopLevelDomain($topLevelDomain)
-    {
-        return $this->withTopLevelDomain($topLevelDomain);
-    }
-
-    /**
      * @param string $topLevelDomain
      *
      * @return $this
@@ -68,18 +56,6 @@ class AddLiveDomain extends RpcRequest
         $this->options['query']['TopLevelDomain'] = $topLevelDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -96,18 +72,6 @@ class AddLiveDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class AddLiveDomain extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
     }
 
     /**
@@ -146,18 +98,6 @@ class AddLiveDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -168,18 +108,6 @@ class AddLiveDomain extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +124,6 @@ class AddLiveDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -221,18 +137,6 @@ class AddLiveDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCheckUrl() instead.
-     *
-     * @param string $checkUrl
-     *
-     * @return $this
-     */
-    public function setCheckUrl($checkUrl)
-    {
-        return $this->withCheckUrl($checkUrl);
-    }
-
-    /**
      * @param string $checkUrl
      *
      * @return $this
@@ -243,18 +147,6 @@ class AddLiveDomain extends RpcRequest
         $this->options['query']['CheckUrl'] = $checkUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLiveDomainType() instead.
-     *
-     * @param string $liveDomainType
-     *
-     * @return $this
-     */
-    public function setLiveDomainType($liveDomainType)
-    {
-        return $this->withLiveDomainType($liveDomainType);
     }
 
     /**

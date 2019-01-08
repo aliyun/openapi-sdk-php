@@ -42,18 +42,6 @@ class ModifyRouteEntry extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRouteEntryName() instead.
-     *
-     * @param string $routeEntryName
-     *
-     * @return $this
-     */
-    public function setRouteEntryName($routeEntryName)
-    {
-        return $this->withRouteEntryName($routeEntryName);
-    }
-
-    /**
      * @param string $routeEntryName
      *
      * @return $this
@@ -64,18 +52,6 @@ class ModifyRouteEntry extends RpcRequest
         $this->options['query']['RouteEntryName'] = $routeEntryName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteEntryId() instead.
-     *
-     * @param string $routeEntryId
-     *
-     * @return $this
-     */
-    public function setRouteEntryId($routeEntryId)
-    {
-        return $this->withRouteEntryId($routeEntryId);
     }
 
     /**
@@ -92,18 +68,6 @@ class ModifyRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class ModifyRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -139,18 +91,6 @@ class ModifyRouteEntry extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

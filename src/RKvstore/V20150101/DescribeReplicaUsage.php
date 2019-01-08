@@ -45,18 +45,6 @@ class DescribeReplicaUsage extends RpcRequest
     public $serviceCode = 'redisa';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class DescribeReplicaUsage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceDBInstanceId() instead.
-     *
-     * @param string $sourceDBInstanceId
-     *
-     * @return $this
-     */
-    public function setSourceDBInstanceId($sourceDBInstanceId)
-    {
-        return $this->withSourceDBInstanceId($sourceDBInstanceId);
     }
 
     /**
@@ -95,18 +71,6 @@ class DescribeReplicaUsage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationDBInstanceId() instead.
-     *
-     * @param string $destinationDBInstanceId
-     *
-     * @return $this
-     */
-    public function setDestinationDBInstanceId($destinationDBInstanceId)
-    {
-        return $this->withDestinationDBInstanceId($destinationDBInstanceId);
-    }
-
-    /**
      * @param string $destinationDBInstanceId
      *
      * @return $this
@@ -117,18 +81,6 @@ class DescribeReplicaUsage extends RpcRequest
         $this->options['query']['DestinationDBInstanceId'] = $destinationDBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -145,18 +97,6 @@ class DescribeReplicaUsage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -167,18 +107,6 @@ class DescribeReplicaUsage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -195,18 +123,6 @@ class DescribeReplicaUsage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplicaId() instead.
-     *
-     * @param string $replicaId
-     *
-     * @return $this
-     */
-    public function setReplicaId($replicaId)
-    {
-        return $this->withReplicaId($replicaId);
-    }
-
-    /**
      * @param string $replicaId
      *
      * @return $this
@@ -217,18 +133,6 @@ class DescribeReplicaUsage extends RpcRequest
         $this->options['query']['ReplicaId'] = $replicaId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -35,7 +35,6 @@ class GetVideoCover extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class GetVideoCover extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -69,18 +56,6 @@ class GetVideoCover extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param string $photoId
-     *
-     * @return $this
-     */
-    public function setPhotoId($photoId)
-    {
-        return $this->withPhotoId($photoId);
     }
 
     /**
@@ -97,18 +72,6 @@ class GetVideoCover extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -119,18 +82,6 @@ class GetVideoCover extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoomType() instead.
-     *
-     * @param string $zoomType
-     *
-     * @return $this
-     */
-    public function setZoomType($zoomType)
-    {
-        return $this->withZoomType($zoomType);
     }
 
     /**

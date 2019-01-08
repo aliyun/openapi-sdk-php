@@ -46,18 +46,6 @@ class ModifyMedia extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -68,18 +56,6 @@ class ModifyMedia extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileName() instead.
-     *
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        return $this->withFileName($fileName);
     }
 
     /**
@@ -96,18 +72,6 @@ class ModifyMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -118,18 +82,6 @@ class ModifyMedia extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -146,18 +98,6 @@ class ModifyMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssFilePath() instead.
-     *
-     * @param string $ossFilePath
-     *
-     * @return $this
-     */
-    public function setOssFilePath($ossFilePath)
-    {
-        return $this->withOssFilePath($ossFilePath);
-    }
-
-    /**
      * @param string $ossFilePath
      *
      * @return $this
@@ -168,18 +108,6 @@ class ModifyMedia extends RpcRequest
         $this->options['query']['OssFilePath'] = $ossFilePath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUploadResult() instead.
-     *
-     * @param string $uploadResult
-     *
-     * @return $this
-     */
-    public function setUploadResult($uploadResult)
-    {
-        return $this->withUploadResult($uploadResult);
     }
 
     /**
@@ -196,18 +124,6 @@ class ModifyMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContent() instead.
-     *
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        return $this->withContent($content);
-    }
-
-    /**
      * @param string $content
      *
      * @return $this
@@ -243,18 +147,6 @@ class ModifyMedia extends RpcRequest
         $this->options['query']['Content'] = $content;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssFileName() instead.
-     *
-     * @param string $ossFileName
-     *
-     * @return $this
-     */
-    public function setOssFileName($ossFileName)
-    {
-        return $this->withOssFileName($ossFileName);
     }
 
     /**

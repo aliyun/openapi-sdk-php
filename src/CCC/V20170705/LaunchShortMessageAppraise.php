@@ -42,18 +42,6 @@ class LaunchShortMessageAppraise extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAcid() instead.
-     *
-     * @param string $acid
-     *
-     * @return $this
-     */
-    public function setAcid($acid)
-    {
-        return $this->withAcid($acid);
-    }
-
-    /**
      * @param string $acid
      *
      * @return $this
@@ -64,18 +52,6 @@ class LaunchShortMessageAppraise extends RpcRequest
         $this->options['query']['Acid'] = $acid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -92,18 +68,6 @@ class LaunchShortMessageAppraise extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
-    }
-
-    /**
      * @param string $contactType
      *
      * @return $this
@@ -117,18 +81,6 @@ class LaunchShortMessageAppraise extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumbers() instead.
-     *
-     * @param string $phoneNumbers
-     *
-     * @return $this
-     */
-    public function setPhoneNumbers($phoneNumbers)
-    {
-        return $this->withPhoneNumbers($phoneNumbers);
-    }
-
-    /**
      * @param string $phoneNumbers
      *
      * @return $this
@@ -139,18 +91,6 @@ class LaunchShortMessageAppraise extends RpcRequest
         $this->options['query']['PhoneNumbers'] = $phoneNumbers;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
     }
 
     /**

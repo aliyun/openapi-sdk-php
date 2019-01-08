@@ -45,18 +45,6 @@ class QueryRegistrantProfiles extends RpcRequest
     public $serviceCode = 'domain';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
-    }
-
-    /**
      * @param string $registrantOrganization
      *
      * @return $this
@@ -67,18 +55,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['RegistrantOrganization'] = $registrantOrganization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -95,18 +71,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -117,18 +81,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -145,18 +97,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -167,18 +107,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -195,18 +123,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDefaultRegistrantProfile() instead.
-     *
-     * @param string $defaultRegistrantProfile
-     *
-     * @return $this
-     */
-    public function setDefaultRegistrantProfile($defaultRegistrantProfile)
-    {
-        return $this->withDefaultRegistrantProfile($defaultRegistrantProfile);
-    }
-
-    /**
      * @param string $defaultRegistrantProfile
      *
      * @return $this
@@ -217,18 +133,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['DefaultRegistrantProfile'] = $defaultRegistrantProfile;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**

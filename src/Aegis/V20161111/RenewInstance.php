@@ -43,18 +43,6 @@ class RenewInstance extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -65,18 +53,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -93,18 +69,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -115,18 +79,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVmNumber() instead.
-     *
-     * @param string $vmNumber
-     *
-     * @return $this
-     */
-    public function setVmNumber($vmNumber)
-    {
-        return $this->withVmNumber($vmNumber);
     }
 
     /**
@@ -143,18 +95,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -165,18 +105,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
     }
 
     /**

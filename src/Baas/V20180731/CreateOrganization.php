@@ -37,18 +37,6 @@ class CreateOrganization extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -59,18 +47,6 @@ class CreateOrganization extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpecName() instead.
-     *
-     * @param string $specName
-     *
-     * @return $this
-     */
-    public function setSpecName($specName)
-    {
-        return $this->withSpecName($specName);
     }
 
     /**
@@ -87,18 +63,6 @@ class CreateOrganization extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -112,18 +76,6 @@ class CreateOrganization extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -134,18 +86,6 @@ class CreateOrganization extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**

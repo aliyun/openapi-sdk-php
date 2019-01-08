@@ -49,18 +49,6 @@ class ListCallDetailRecords extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
-    }
-
-    /**
      * @param string $contactType
      *
      * @return $this
@@ -71,18 +59,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['ContactType'] = $contactType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactId() instead.
-     *
-     * @param string $contactId
-     *
-     * @return $this
-     */
-    public function setContactId($contactId)
-    {
-        return $this->withContactId($contactId);
     }
 
     /**
@@ -99,18 +75,6 @@ class ListCallDetailRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCriteria() instead.
-     *
-     * @param string $criteria
-     *
-     * @return $this
-     */
-    public function setCriteria($criteria)
-    {
-        return $this->withCriteria($criteria);
-    }
-
-    /**
      * @param string $criteria
      *
      * @return $this
@@ -121,18 +85,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['Criteria'] = $criteria;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
     }
 
     /**
@@ -149,18 +101,6 @@ class ListCallDetailRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderBy() instead.
-     *
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function setOrderBy($orderBy)
-    {
-        return $this->withOrderBy($orderBy);
-    }
-
-    /**
      * @param string $orderBy
      *
      * @return $this
@@ -171,18 +111,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['OrderBy'] = $orderBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -199,18 +127,6 @@ class ListCallDetailRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStopTime() instead.
-     *
-     * @param string $stopTime
-     *
-     * @return $this
-     */
-    public function setStopTime($stopTime)
-    {
-        return $this->withStopTime($stopTime);
-    }
-
-    /**
      * @param string $stopTime
      *
      * @return $this
@@ -221,18 +137,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['StopTime'] = $stopTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -249,18 +153,6 @@ class ListCallDetailRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -271,18 +163,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactDisposition() instead.
-     *
-     * @param string $contactDisposition
-     *
-     * @return $this
-     */
-    public function setContactDisposition($contactDisposition)
-    {
-        return $this->withContactDisposition($contactDisposition);
     }
 
     /**
@@ -299,18 +179,6 @@ class ListCallDetailRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -321,18 +189,6 @@ class ListCallDetailRecords extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWithRecording() instead.
-     *
-     * @param string $withRecording
-     *
-     * @return $this
-     */
-    public function setWithRecording($withRecording)
-    {
-        return $this->withWithRecording($withRecording);
     }
 
     /**

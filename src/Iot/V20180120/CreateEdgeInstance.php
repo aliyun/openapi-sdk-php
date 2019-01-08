@@ -36,18 +36,6 @@ class CreateEdgeInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -58,18 +46,6 @@ class CreateEdgeInstance extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
     }
 
     /**
@@ -86,18 +62,6 @@ class CreateEdgeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -108,18 +72,6 @@ class CreateEdgeInstance extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

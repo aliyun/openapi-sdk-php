@@ -37,18 +37,6 @@ class UpgradeChaincode extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -59,18 +47,6 @@ class UpgradeChaincode extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChaincodeId() instead.
-     *
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function setChaincodeId($chaincodeId)
-    {
-        return $this->withChaincodeId($chaincodeId);
     }
 
     /**
@@ -87,18 +63,6 @@ class UpgradeChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCollectionConfig() instead.
-     *
-     * @param string $collectionConfig
-     *
-     * @return $this
-     */
-    public function setCollectionConfig($collectionConfig)
-    {
-        return $this->withCollectionConfig($collectionConfig);
-    }
-
-    /**
      * @param string $collectionConfig
      *
      * @return $this
@@ -112,18 +76,6 @@ class UpgradeChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndorsePolicy() instead.
-     *
-     * @param string $endorsePolicy
-     *
-     * @return $this
-     */
-    public function setEndorsePolicy($endorsePolicy)
-    {
-        return $this->withEndorsePolicy($endorsePolicy);
-    }
-
-    /**
      * @param string $endorsePolicy
      *
      * @return $this
@@ -134,18 +86,6 @@ class UpgradeChaincode extends RpcRequest
         $this->options['query']['EndorsePolicy'] = $endorsePolicy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**

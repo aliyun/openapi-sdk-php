@@ -37,18 +37,6 @@ class RunCloudMetricProfiling extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -59,18 +47,6 @@ class RunCloudMetricProfiling extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
     }
 
     /**
@@ -87,18 +63,6 @@ class RunCloudMetricProfiling extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProcessId() instead.
-     *
-     * @param string $processId
-     *
-     * @return $this
-     */
-    public function setProcessId($processId)
-    {
-        return $this->withProcessId($processId);
-    }
-
-    /**
      * @param string $processId
      *
      * @return $this
@@ -112,18 +76,6 @@ class RunCloudMetricProfiling extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFreq() instead.
-     *
-     * @param string $freq
-     *
-     * @return $this
-     */
-    public function setFreq($freq)
-    {
-        return $this->withFreq($freq);
-    }
-
-    /**
      * @param string $freq
      *
      * @return $this
@@ -134,18 +86,6 @@ class RunCloudMetricProfiling extends RpcRequest
         $this->options['query']['Freq'] = $freq;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

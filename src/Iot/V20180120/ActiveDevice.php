@@ -33,28 +33,6 @@ class ActiveDevice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getIotIdList() instead.
-     *
-     * @return array
-     */
-    public function getIotIdLists()
-    {
-        return $this->getIotIdList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIotIdList() instead.
-     *
-     * @param array $iotIdLists
-     *
-     * @return $this
-     */
-    public function setIotIdLists(array $iotIdLists)
-    {
-        return $this->withIotIdList($iotIdLists);
-    }
-
-    /**
      * @param array $iotIdList
      *
      * @return $this

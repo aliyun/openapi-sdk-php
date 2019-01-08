@@ -38,18 +38,6 @@ class ListNotifyPolicy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPolicyType() instead.
-     *
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function setPolicyType($policyType)
-    {
-        return $this->withPolicyType($policyType);
-    }
-
-    /**
      * @param string $policyType
      *
      * @return $this
@@ -60,18 +48,6 @@ class ListNotifyPolicy extends RpcRequest
         $this->options['query']['PolicyType'] = $policyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertName() instead.
-     *
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function setAlertName($alertName)
-    {
-        return $this->withAlertName($alertName);
     }
 
     /**
@@ -88,18 +64,6 @@ class ListNotifyPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -110,18 +74,6 @@ class ListNotifyPolicy extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -138,18 +90,6 @@ class ListNotifyPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -160,18 +100,6 @@ class ListNotifyPolicy extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

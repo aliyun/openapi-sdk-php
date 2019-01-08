@@ -42,18 +42,6 @@ class UnicomSignConfirm extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -64,18 +52,6 @@ class UnicomSignConfirm extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -92,18 +68,6 @@ class UnicomSignConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -114,28 +78,6 @@ class UnicomSignConfirm extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTmsOrder() instead.
-     *
-     * @return array
-     */
-    public function getTmsOrders()
-    {
-        return $this->getTmsOrder();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTmsOrder() instead.
-     *
-     * @param array $tmsOrders
-     *
-     * @return $this
-     */
-    public function setTmsOrders(array $tmsOrders)
-    {
-        return $this->withTmsOrder($tmsOrders);
     }
 
     /**
@@ -154,18 +96,6 @@ class UnicomSignConfirm extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

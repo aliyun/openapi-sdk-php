@@ -39,18 +39,6 @@ class LaunchAppraise extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAcid() instead.
-     *
-     * @param string $acid
-     *
-     * @return $this
-     */
-    public function setAcid($acid)
-    {
-        return $this->withAcid($acid);
-    }
-
-    /**
      * @param string $acid
      *
      * @return $this
@@ -61,18 +49,6 @@ class LaunchAppraise extends RpcRequest
         $this->options['query']['Acid'] = $acid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

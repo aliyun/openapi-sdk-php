@@ -38,28 +38,6 @@ class BuyOriginPictures extends RpcRequest
     public $serviceCode = 'luban';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getPictureId() instead.
-     *
-     * @return array
-     */
-    public function getPictureIds()
-    {
-        return $this->getPictureId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPictureId() instead.
-     *
-     * @param array $pictureIds
-     *
-     * @return $this
-     */
-    public function setPictureIds(array $pictureIds)
-    {
-        return $this->withPictureId($pictureIds);
-    }
-
-    /**
      * @param array $pictureId
      *
      * @return $this

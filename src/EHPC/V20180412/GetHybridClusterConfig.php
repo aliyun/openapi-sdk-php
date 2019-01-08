@@ -34,18 +34,6 @@ class GetHybridClusterConfig extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNode() instead.
-     *
-     * @param string $node
-     *
-     * @return $this
-     */
-    public function setNode($node)
-    {
-        return $this->withNode($node);
-    }
-
-    /**
      * @param string $node
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetHybridClusterConfig extends RpcRequest
         $this->options['query']['Node'] = $node;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\EcsInc
  *
- * @method V20160314\EcsIncApiResolver v20160314()
+ * @method EcsIncV20160314ApiResolver v20160314()
  */
 class EcsInc
 {

@@ -40,18 +40,6 @@ class UpdateProject extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewServiceRole() instead.
-     *
-     * @param string $newServiceRole
-     *
-     * @return $this
-     */
-    public function setNewServiceRole($newServiceRole)
-    {
-        return $this->withNewServiceRole($newServiceRole);
-    }
-
-    /**
      * @param string $newServiceRole
      *
      * @return $this
@@ -65,18 +53,6 @@ class UpdateProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -87,18 +63,6 @@ class UpdateProject extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewCU() instead.
-     *
-     * @param string $newCU
-     *
-     * @return $this
-     */
-    public function setNewCU($newCU)
-    {
-        return $this->withNewCU($newCU);
     }
 
     /**

@@ -41,18 +41,6 @@ class CopyCasterSceneConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromSceneId() instead.
-     *
-     * @param string $fromSceneId
-     *
-     * @return $this
-     */
-    public function setFromSceneId($fromSceneId)
-    {
-        return $this->withFromSceneId($fromSceneId);
-    }
-
-    /**
      * @param string $fromSceneId
      *
      * @return $this
@@ -63,18 +51,6 @@ class CopyCasterSceneConfig extends RpcRequest
         $this->options['query']['FromSceneId'] = $fromSceneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
     }
 
     /**
@@ -91,18 +67,6 @@ class CopyCasterSceneConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -113,18 +77,6 @@ class CopyCasterSceneConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToSceneId() instead.
-     *
-     * @param string $toSceneId
-     *
-     * @return $this
-     */
-    public function setToSceneId($toSceneId)
-    {
-        return $this->withToSceneId($toSceneId);
     }
 
     /**

@@ -39,18 +39,6 @@ class GetJobStatusByCallId extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallId() instead.
-     *
-     * @param string $callId
-     *
-     * @return $this
-     */
-    public function setCallId($callId)
-    {
-        return $this->withCallId($callId);
-    }
-
-    /**
      * @param string $callId
      *
      * @return $this
@@ -61,18 +49,6 @@ class GetJobStatusByCallId extends RpcRequest
         $this->options['query']['CallId'] = $callId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

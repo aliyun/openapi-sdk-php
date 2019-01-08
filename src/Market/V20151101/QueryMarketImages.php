@@ -33,18 +33,6 @@ class QueryMarketImages extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withParam() instead.
-     *
-     * @param string $param
-     *
-     * @return $this
-     */
-    public function setParam($param)
-    {
-        return $this->withParam($param);
-    }
-
-    /**
      * @param string $param
      *
      * @return $this

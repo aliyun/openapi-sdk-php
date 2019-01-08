@@ -43,18 +43,6 @@ class DescribeWebsiteInstance extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
-
-    /**
      * @param string $totalCount
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeWebsiteInstance extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -93,18 +69,6 @@ class DescribeWebsiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -115,18 +79,6 @@ class DescribeWebsiteInstance extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -143,18 +95,6 @@ class DescribeWebsiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -165,18 +105,6 @@ class DescribeWebsiteInstance extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

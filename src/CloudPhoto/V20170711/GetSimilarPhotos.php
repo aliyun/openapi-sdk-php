@@ -34,7 +34,6 @@ class GetSimilarPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,18 +43,6 @@ class GetSimilarPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -71,18 +58,6 @@ class GetSimilarPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param string $photoId
-     *
-     * @return $this
-     */
-    public function setPhotoId($photoId)
-    {
-        return $this->withPhotoId($photoId);
-    }
-
-    /**
      * @param string $photoId
      *
      * @return $this
@@ -93,18 +68,6 @@ class GetSimilarPhotos extends RpcRequest
         $this->options['query']['PhotoId'] = $photoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

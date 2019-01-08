@@ -35,18 +35,6 @@ class QueryDevicePictureFile extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryDevicePictureFile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCaptureId() instead.
-     *
-     * @param string $captureId
-     *
-     * @return $this
-     */
-    public function setCaptureId($captureId)
-    {
-        return $this->withCaptureId($captureId);
-    }
-
-    /**
      * @param string $captureId
      *
      * @return $this
@@ -82,18 +58,6 @@ class QueryDevicePictureFile extends RpcRequest
         $this->options['query']['CaptureId'] = $captureId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPictureType() instead.
-     *
-     * @param string $pictureType
-     *
-     * @return $this
-     */
-    public function setPictureType($pictureType)
-    {
-        return $this->withPictureType($pictureType);
     }
 
     /**

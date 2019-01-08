@@ -49,18 +49,6 @@ class SubmitJob extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStderrRedirectPath() instead.
-     *
-     * @param string $stderrRedirectPath
-     *
-     * @return $this
-     */
-    public function setStderrRedirectPath($stderrRedirectPath)
-    {
-        return $this->withStderrRedirectPath($stderrRedirectPath);
-    }
-
-    /**
      * @param string $stderrRedirectPath
      *
      * @return $this
@@ -71,18 +59,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['StderrRedirectPath'] = $stderrRedirectPath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVariables() instead.
-     *
-     * @param string $variables
-     *
-     * @return $this
-     */
-    public function setVariables($variables)
-    {
-        return $this->withVariables($variables);
     }
 
     /**
@@ -99,18 +75,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRunasUserPassword() instead.
-     *
-     * @param string $runasUserPassword
-     *
-     * @return $this
-     */
-    public function setRunasUserPassword($runasUserPassword)
-    {
-        return $this->withRunasUserPassword($runasUserPassword);
-    }
-
-    /**
      * @param string $runasUserPassword
      *
      * @return $this
@@ -121,18 +85,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['RunasUserPassword'] = $runasUserPassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostCmdLine() instead.
-     *
-     * @param string $postCmdLine
-     *
-     * @return $this
-     */
-    public function setPostCmdLine($postCmdLine)
-    {
-        return $this->withPostCmdLine($postCmdLine);
     }
 
     /**
@@ -149,18 +101,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRunasUser() instead.
-     *
-     * @param string $runasUser
-     *
-     * @return $this
-     */
-    public function setRunasUser($runasUser)
-    {
-        return $this->withRunasUser($runasUser);
-    }
-
-    /**
      * @param string $runasUser
      *
      * @return $this
@@ -171,18 +111,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['RunasUser'] = $runasUser;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**
@@ -199,18 +127,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReRunable() instead.
-     *
-     * @param string $reRunable
-     *
-     * @return $this
-     */
-    public function setReRunable($reRunable)
-    {
-        return $this->withReRunable($reRunable);
-    }
-
-    /**
      * @param string $reRunable
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['ReRunable'] = $reRunable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
     }
 
     /**
@@ -249,18 +153,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommandLine() instead.
-     *
-     * @param string $commandLine
-     *
-     * @return $this
-     */
-    public function setCommandLine($commandLine)
-    {
-        return $this->withCommandLine($commandLine);
-    }
-
-    /**
      * @param string $commandLine
      *
      * @return $this
@@ -271,18 +163,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['CommandLine'] = $commandLine;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobQueue() instead.
-     *
-     * @param string $jobQueue
-     *
-     * @return $this
-     */
-    public function setJobQueue($jobQueue)
-    {
-        return $this->withJobQueue($jobQueue);
     }
 
     /**
@@ -299,18 +179,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArrayRequest() instead.
-     *
-     * @param string $arrayRequest
-     *
-     * @return $this
-     */
-    public function setArrayRequest($arrayRequest)
-    {
-        return $this->withArrayRequest($arrayRequest);
-    }
-
-    /**
      * @param string $arrayRequest
      *
      * @return $this
@@ -321,18 +189,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['ArrayRequest'] = $arrayRequest;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnzipCmd() instead.
-     *
-     * @param string $unzipCmd
-     *
-     * @return $this
-     */
-    public function setUnzipCmd($unzipCmd)
-    {
-        return $this->withUnzipCmd($unzipCmd);
     }
 
     /**
@@ -349,18 +205,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPackagePath() instead.
-     *
-     * @param string $packagePath
-     *
-     * @return $this
-     */
-    public function setPackagePath($packagePath)
-    {
-        return $this->withPackagePath($packagePath);
-    }
-
-    /**
      * @param string $packagePath
      *
      * @return $this
@@ -371,18 +215,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['PackagePath'] = $packagePath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInputFileUrl() instead.
-     *
-     * @param string $inputFileUrl
-     *
-     * @return $this
-     */
-    public function setInputFileUrl($inputFileUrl)
-    {
-        return $this->withInputFileUrl($inputFileUrl);
     }
 
     /**
@@ -399,18 +231,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -424,18 +244,6 @@ class SubmitJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStdoutRedirectPath() instead.
-     *
-     * @param string $stdoutRedirectPath
-     *
-     * @return $this
-     */
-    public function setStdoutRedirectPath($stdoutRedirectPath)
-    {
-        return $this->withStdoutRedirectPath($stdoutRedirectPath);
-    }
-
-    /**
      * @param string $stdoutRedirectPath
      *
      * @return $this
@@ -446,18 +254,6 @@ class SubmitJob extends RpcRequest
         $this->options['query']['StdoutRedirectPath'] = $stdoutRedirectPath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerId() instead.
-     *
-     * @param string $containerId
-     *
-     * @return $this
-     */
-    public function setContainerId($containerId)
-    {
-        return $this->withContainerId($containerId);
     }
 
     /**

@@ -41,18 +41,6 @@ class ModifyBatchIgnoreVul extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReason() instead.
-     *
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        return $this->withReason($reason);
-    }
-
-    /**
      * @param string $reason
      *
      * @return $this
@@ -63,18 +51,6 @@ class ModifyBatchIgnoreVul extends RpcRequest
         $this->options['query']['Reason'] = $reason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -91,18 +67,6 @@ class ModifyBatchIgnoreVul extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -113,18 +77,6 @@ class ModifyBatchIgnoreVul extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInfo() instead.
-     *
-     * @param string $info
-     *
-     * @return $this
-     */
-    public function setInfo($info)
-    {
-        return $this->withInfo($info);
     }
 
     /**

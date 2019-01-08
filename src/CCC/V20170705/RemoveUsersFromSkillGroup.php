@@ -40,18 +40,6 @@ class RemoveUsersFromSkillGroup extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -65,18 +53,6 @@ class RemoveUsersFromSkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
-    }
-
-    /**
      * @param string $skillGroupId
      *
      * @return $this
@@ -87,28 +63,6 @@ class RemoveUsersFromSkillGroup extends RpcRequest
         $this->options['query']['SkillGroupId'] = $skillGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getUserId() instead.
-     *
-     * @return array
-     */
-    public function getUserIds()
-    {
-        return $this->getUserId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param array $userIds
-     *
-     * @return $this
-     */
-    public function setUserIds(array $userIds)
-    {
-        return $this->withUserId($userIds);
     }
 
     /**

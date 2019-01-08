@@ -41,18 +41,6 @@ class MuteAudioAll extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class MuteAudioAll extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParticipantId() instead.
-     *
-     * @param string $participantId
-     *
-     * @return $this
-     */
-    public function setParticipantId($participantId)
-    {
-        return $this->withParticipantId($participantId);
     }
 
     /**
@@ -91,18 +67,6 @@ class MuteAudioAll extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConferenceId() instead.
-     *
-     * @param string $conferenceId
-     *
-     * @return $this
-     */
-    public function setConferenceId($conferenceId)
-    {
-        return $this->withConferenceId($conferenceId);
-    }
-
-    /**
      * @param string $conferenceId
      *
      * @return $this
@@ -113,18 +77,6 @@ class MuteAudioAll extends RpcRequest
         $this->options['query']['ConferenceId'] = $conferenceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

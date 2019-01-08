@@ -35,18 +35,6 @@ class UpdateDeviceShadow extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShadowMessage() instead.
-     *
-     * @param string $shadowMessage
-     *
-     * @return $this
-     */
-    public function setShadowMessage($shadowMessage)
-    {
-        return $this->withShadowMessage($shadowMessage);
-    }
-
-    /**
      * @param string $shadowMessage
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateDeviceShadow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
-    }
-
-    /**
      * @param string $deviceName
      *
      * @return $this
@@ -82,18 +58,6 @@ class UpdateDeviceShadow extends RpcRequest
         $this->options['query']['DeviceName'] = $deviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

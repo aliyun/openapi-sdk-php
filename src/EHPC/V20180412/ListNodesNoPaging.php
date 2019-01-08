@@ -36,18 +36,6 @@ class ListNodesNoPaging extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
-    }
-
-    /**
      * @param string $hostName
      *
      * @return $this
@@ -58,18 +46,6 @@ class ListNodesNoPaging extends RpcRequest
         $this->options['query']['HostName'] = $hostName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRole() instead.
-     *
-     * @param string $role
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        return $this->withRole($role);
     }
 
     /**
@@ -86,18 +62,6 @@ class ListNodesNoPaging extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -108,18 +72,6 @@ class ListNodesNoPaging extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnlyDetached() instead.
-     *
-     * @param string $onlyDetached
-     *
-     * @return $this
-     */
-    public function setOnlyDetached($onlyDetached)
-    {
-        return $this->withOnlyDetached($onlyDetached);
     }
 
     /**

@@ -40,18 +40,6 @@ class SingleSendSms extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecNum() instead.
-     *
-     * @param string $recNum
-     *
-     * @return $this
-     */
-    public function setRecNum($recNum)
-    {
-        return $this->withRecNum($recNum);
-    }
-
-    /**
      * @param string $recNum
      *
      * @return $this
@@ -62,18 +50,6 @@ class SingleSendSms extends RpcRequest
         $this->options['query']['RecNum'] = $recNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -90,18 +66,6 @@ class SingleSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSignName() instead.
-     *
-     * @param string $signName
-     *
-     * @return $this
-     */
-    public function setSignName($signName)
-    {
-        return $this->withSignName($signName);
-    }
-
-    /**
      * @param string $signName
      *
      * @return $this
@@ -112,18 +76,6 @@ class SingleSendSms extends RpcRequest
         $this->options['query']['SignName'] = $signName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParamString() instead.
-     *
-     * @param string $paramString
-     *
-     * @return $this
-     */
-    public function setParamString($paramString)
-    {
-        return $this->withParamString($paramString);
     }
 
     /**
@@ -140,18 +92,6 @@ class SingleSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -162,18 +102,6 @@ class SingleSendSms extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -190,18 +118,6 @@ class SingleSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateCode() instead.
-     *
-     * @param string $templateCode
-     *
-     * @return $this
-     */
-    public function setTemplateCode($templateCode)
-    {
-        return $this->withTemplateCode($templateCode);
-    }
-
-    /**
      * @param string $templateCode
      *
      * @return $this
@@ -212,18 +128,6 @@ class SingleSendSms extends RpcRequest
         $this->options['query']['TemplateCode'] = $templateCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersion() instead.
-     *
-     * @param string $version
-     *
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        return $this->withVersion($version);
     }
 
     /**

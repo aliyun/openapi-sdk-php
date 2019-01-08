@@ -31,7 +31,6 @@ class ListPhotoStores extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

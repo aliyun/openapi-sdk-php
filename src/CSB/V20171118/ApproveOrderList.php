@@ -32,23 +32,10 @@ class ApproveOrderList extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
 
     /**
      * @param string $data

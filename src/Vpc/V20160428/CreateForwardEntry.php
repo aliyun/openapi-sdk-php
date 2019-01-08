@@ -47,18 +47,6 @@ class CreateForwardEntry extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class CreateForwardEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -97,18 +73,6 @@ class CreateForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setIpProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
-    }
-
-    /**
      * @param string $ipProtocol
      *
      * @return $this
@@ -119,18 +83,6 @@ class CreateForwardEntry extends RpcRequest
         $this->options['query']['IpProtocol'] = $ipProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternalPort() instead.
-     *
-     * @param string $internalPort
-     *
-     * @return $this
-     */
-    public function setInternalPort($internalPort)
-    {
-        return $this->withInternalPort($internalPort);
     }
 
     /**
@@ -147,18 +99,6 @@ class CreateForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class CreateForwardEntry extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForwardTableId() instead.
-     *
-     * @param string $forwardTableId
-     *
-     * @return $this
-     */
-    public function setForwardTableId($forwardTableId)
-    {
-        return $this->withForwardTableId($forwardTableId);
     }
 
     /**
@@ -197,18 +125,6 @@ class CreateForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -219,18 +135,6 @@ class CreateForwardEntry extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExternalIp() instead.
-     *
-     * @param string $externalIp
-     *
-     * @return $this
-     */
-    public function setExternalIp($externalIp)
-    {
-        return $this->withExternalIp($externalIp);
     }
 
     /**
@@ -247,18 +151,6 @@ class CreateForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExternalPort() instead.
-     *
-     * @param string $externalPort
-     *
-     * @return $this
-     */
-    public function setExternalPort($externalPort)
-    {
-        return $this->withExternalPort($externalPort);
-    }
-
-    /**
      * @param string $externalPort
      *
      * @return $this
@@ -269,18 +161,6 @@ class CreateForwardEntry extends RpcRequest
         $this->options['query']['ExternalPort'] = $externalPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternalIp() instead.
-     *
-     * @param string $internalIp
-     *
-     * @return $this
-     */
-    public function setInternalIp($internalIp)
-    {
-        return $this->withInternalIp($internalIp);
     }
 
     /**

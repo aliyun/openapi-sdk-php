@@ -42,18 +42,6 @@ class QueryBizItems extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -64,18 +52,6 @@ class QueryBizItems extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubBizId() instead.
-     *
-     * @param string $subBizId
-     *
-     * @return $this
-     */
-    public function setSubBizId($subBizId)
-    {
-        return $this->withSubBizId($subBizId);
     }
 
     /**
@@ -92,18 +68,6 @@ class QueryBizItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -117,18 +81,6 @@ class QueryBizItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -139,18 +91,6 @@ class QueryBizItems extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
     }
 
     /**

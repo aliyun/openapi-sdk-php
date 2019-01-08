@@ -47,28 +47,6 @@ class MoveResourceGroup extends RpcRequest
     public $serviceCode = 'slb';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
-
-    /**
      * @param string $accessKeyId
      *
      * @return $this
@@ -79,18 +57,6 @@ class MoveResourceGroup extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -107,18 +73,6 @@ class MoveResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
-
-    /**
      * @param string $resourceId
      *
      * @return $this
@@ -129,18 +83,6 @@ class MoveResourceGroup extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -157,18 +99,6 @@ class MoveResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -179,18 +109,6 @@ class MoveResourceGroup extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -207,18 +125,6 @@ class MoveResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -229,18 +135,6 @@ class MoveResourceGroup extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -257,18 +151,6 @@ class MoveResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -279,18 +161,6 @@ class MoveResourceGroup extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewResourceGroupId() instead.
-     *
-     * @param string $newResourceGroupId
-     *
-     * @return $this
-     */
-    public function setNewResourceGroupId($newResourceGroupId)
-    {
-        return $this->withNewResourceGroupId($newResourceGroupId);
     }
 
     /**

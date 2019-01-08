@@ -42,18 +42,6 @@ class StartBack2BackCall extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCaller() instead.
-     *
-     * @param string $caller
-     *
-     * @return $this
-     */
-    public function setCaller($caller)
-    {
-        return $this->withCaller($caller);
-    }
-
-    /**
      * @param string $caller
      *
      * @return $this
@@ -64,18 +52,6 @@ class StartBack2BackCall extends RpcRequest
         $this->options['query']['Caller'] = $caller;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -92,18 +68,6 @@ class StartBack2BackCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallCenterNumber() instead.
-     *
-     * @param string $callCenterNumber
-     *
-     * @return $this
-     */
-    public function setCallCenterNumber($callCenterNumber)
-    {
-        return $this->withCallCenterNumber($callCenterNumber);
-    }
-
-    /**
      * @param string $callCenterNumber
      *
      * @return $this
@@ -117,18 +81,6 @@ class StartBack2BackCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallee() instead.
-     *
-     * @param string $callee
-     *
-     * @return $this
-     */
-    public function setCallee($callee)
-    {
-        return $this->withCallee($callee);
-    }
-
-    /**
      * @param string $callee
      *
      * @return $this
@@ -139,18 +91,6 @@ class StartBack2BackCall extends RpcRequest
         $this->options['query']['Callee'] = $callee;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWorkflowId() instead.
-     *
-     * @param string $workflowId
-     *
-     * @return $this
-     */
-    public function setWorkflowId($workflowId)
-    {
-        return $this->withWorkflowId($workflowId);
     }
 
     /**

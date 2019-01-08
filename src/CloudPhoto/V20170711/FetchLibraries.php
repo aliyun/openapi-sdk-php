@@ -34,7 +34,6 @@ class FetchLibraries extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,18 +43,6 @@ class FetchLibraries extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
 
     /**
      * @param string $size
@@ -71,18 +58,6 @@ class FetchLibraries extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -93,18 +68,6 @@ class FetchLibraries extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
     }
 
     /**

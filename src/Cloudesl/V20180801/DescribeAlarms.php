@@ -41,18 +41,6 @@ class DescribeAlarms extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withErrorType() instead.
-     *
-     * @param string $errorType
-     *
-     * @return $this
-     */
-    public function setErrorType($errorType)
-    {
-        return $this->withErrorType($errorType);
-    }
-
-    /**
      * @param string $errorType
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['ErrorType'] = $errorType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToAlarmTime() instead.
-     *
-     * @param string $toAlarmTime
-     *
-     * @return $this
-     */
-    public function setToAlarmTime($toAlarmTime)
-    {
-        return $this->withToAlarmTime($toAlarmTime);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlarmType() instead.
-     *
-     * @param string $alarmType
-     *
-     * @return $this
-     */
-    public function setAlarmType($alarmType)
-    {
-        return $this->withAlarmType($alarmType);
-    }
-
-    /**
      * @param string $alarmType
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['AlarmType'] = $alarmType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFromAlarmTime() instead.
-     *
-     * @param string $fromAlarmTime
-     *
-     * @return $this
-     */
-    public function setFromAlarmTime($fromAlarmTime)
-    {
-        return $this->withFromAlarmTime($fromAlarmTime);
     }
 
     /**
@@ -141,18 +93,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlarmId() instead.
-     *
-     * @param string $alarmId
-     *
-     * @return $this
-     */
-    public function setAlarmId($alarmId)
-    {
-        return $this->withAlarmId($alarmId);
-    }
-
-    /**
      * @param string $alarmId
      *
      * @return $this
@@ -163,18 +103,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['AlarmId'] = $alarmId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -191,18 +119,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
-    }
-
-    /**
      * @param string $storeId
      *
      * @return $this
@@ -216,18 +132,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -238,18 +142,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlarmStatus() instead.
-     *
-     * @param string $alarmStatus
-     *
-     * @return $this
-     */
-    public function setAlarmStatus($alarmStatus)
-    {
-        return $this->withAlarmStatus($alarmStatus);
     }
 
     /**

@@ -100,8 +100,6 @@ Before request, please [Understanding the usage of the client][client], after re
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Ecs\EcsVersion;
-use AlibabaCloud\Ecs\V20140526\Ecs;
 
 // Set up a global client
 AlibabaCloud::accessKeyClient('foo', 'bar')
@@ -109,19 +107,17 @@ AlibabaCloud::accessKeyClient('foo', 'bar')
             ->asGlobalClient();
 
 try {
-    // Multiple ways to access product APIs
-    $request1 = AlibabaCloud::ecs()->v20140526()->describeRegions();
-    $request2 = EcsVersion::v20140526()->describeRegions();
-    $request3 = Ecs::describeRegions();
+    // Access product APIs
+    $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
 
     // Set options/parameters and execute request
-    $result = $request1->withResourceType('type') // API parameter
-                       ->withInstanceChargeType('type') // API parameter
-                       ->client('client1') // Specify the client for send
-                       ->debug(true) // Enable the debug will output detailed information
-                       ->connectTimeout(0.01) // Throw an exception when Connection timeout 
-                       ->timeout(0.01) // Throw an exception when timeout 
-                       ->request(); // Execution request
+    $result = $request->withResourceType('type') // API parameter
+                      ->withInstanceChargeType('type') // API parameter
+                      ->client('client1') // Specify the client for send
+                      ->debug(true) // Enable the debug will output detailed information
+                      ->connectTimeout(0.01) // Throw an exception when Connection timeout 
+                      ->timeout(0.01) // Throw an exception when timeout 
+                      ->request(); // Execution request
 
     // Can also Set by passing in an array
     $options = [
@@ -133,13 +129,11 @@ try {
                        'InstanceChargeType' => 'type',
                    ],
                ];
-    $request4 = AlibabaCloud::ecs()->v20140526()->describeRegions($options)->request();
-    $request5 = EcsVersion::v20140526()->describeRegions($options)->request();
-    $request6 = Ecs::describeRegions($options)->request();
+    $result = AlibabaCloud::ecs()->v20140526()->describeRegions($options)->request();
 
 
     // Settings priority
-    $result4 = AlibabaCloud::ecs()
+    $result2 = AlibabaCloud::ecs()
                            ->v20140526()
                            ->describeRegions($options)
                            ->options([

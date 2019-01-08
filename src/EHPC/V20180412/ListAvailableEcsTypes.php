@@ -35,18 +35,6 @@ class ListAvailableEcsTypes extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpotStrategy() instead.
-     *
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function setSpotStrategy($spotStrategy)
-    {
-        return $this->withSpotStrategy($spotStrategy);
-    }
-
-    /**
      * @param string $spotStrategy
      *
      * @return $this
@@ -60,18 +48,6 @@ class ListAvailableEcsTypes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -82,18 +58,6 @@ class ListAvailableEcsTypes extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
     }
 
     /**

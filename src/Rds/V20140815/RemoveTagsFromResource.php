@@ -55,18 +55,6 @@ class RemoveTagsFromResource extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag4value() instead.
-     *
-     * @param string $tag4value
-     *
-     * @return $this
-     */
-    public function setTag4value($tag4value)
-    {
-        return $this->withTag4value($tag4value);
-    }
-
-    /**
      * @param string $tag4value
      *
      * @return $this
@@ -77,18 +65,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tag.4.value'] = $tag4value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -105,18 +81,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag2key() instead.
-     *
-     * @param string $tag2key
-     *
-     * @return $this
-     */
-    public function setTag2key($tag2key)
-    {
-        return $this->withTag2key($tag2key);
-    }
-
-    /**
      * @param string $tag2key
      *
      * @return $this
@@ -127,18 +91,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tag.2.key'] = $tag2key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag5key() instead.
-     *
-     * @param string $tag5key
-     *
-     * @return $this
-     */
-    public function setTag5key($tag5key)
-    {
-        return $this->withTag5key($tag5key);
     }
 
     /**
@@ -155,18 +107,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -177,18 +117,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -205,18 +133,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -227,18 +143,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag3key() instead.
-     *
-     * @param string $tag3key
-     *
-     * @return $this
-     */
-    public function setTag3key($tag3key)
-    {
-        return $this->withTag3key($tag3key);
     }
 
     /**
@@ -255,18 +159,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -277,18 +169,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag5value() instead.
-     *
-     * @param string $tag5value
-     *
-     * @return $this
-     */
-    public function setTag5value($tag5value)
-    {
-        return $this->withTag5value($tag5value);
     }
 
     /**
@@ -305,18 +185,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -327,18 +195,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag1key() instead.
-     *
-     * @param string $tag1key
-     *
-     * @return $this
-     */
-    public function setTag1key($tag1key)
-    {
-        return $this->withTag1key($tag1key);
     }
 
     /**
@@ -355,18 +211,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag1value() instead.
-     *
-     * @param string $tag1value
-     *
-     * @return $this
-     */
-    public function setTag1value($tag1value)
-    {
-        return $this->withTag1value($tag1value);
-    }
-
-    /**
      * @param string $tag1value
      *
      * @return $this
@@ -377,18 +221,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tag.1.value'] = $tag1value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag2value() instead.
-     *
-     * @param string $tag2value
-     *
-     * @return $this
-     */
-    public function setTag2value($tag2value)
-    {
-        return $this->withTag2value($tag2value);
     }
 
     /**
@@ -405,18 +237,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag4key() instead.
-     *
-     * @param string $tag4key
-     *
-     * @return $this
-     */
-    public function setTag4key($tag4key)
-    {
-        return $this->withTag4key($tag4key);
-    }
-
-    /**
      * @param string $tag4key
      *
      * @return $this
@@ -427,18 +247,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tag.4.key'] = $tag4key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -455,18 +263,6 @@ class RemoveTagsFromResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag3value() instead.
-     *
-     * @param string $tag3value
-     *
-     * @return $this
-     */
-    public function setTag3value($tag3value)
-    {
-        return $this->withTag3value($tag3value);
-    }
-
-    /**
      * @param string $tag3value
      *
      * @return $this
@@ -477,18 +273,6 @@ class RemoveTagsFromResource extends RpcRequest
         $this->options['query']['Tag.3.value'] = $tag3value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

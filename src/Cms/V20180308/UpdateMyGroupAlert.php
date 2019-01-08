@@ -33,18 +33,6 @@ class UpdateMyGroupAlert extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupAlertJson() instead.
-     *
-     * @param string $groupAlertJson
-     *
-     * @return $this
-     */
-    public function setGroupAlertJson($groupAlertJson)
-    {
-        return $this->withGroupAlertJson($groupAlertJson);
-    }
-
-    /**
      * @param string $groupAlertJson
      *
      * @return $this

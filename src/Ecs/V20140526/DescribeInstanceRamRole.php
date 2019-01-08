@@ -39,18 +39,6 @@ class DescribeInstanceRamRole extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeInstanceRamRole extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -89,18 +65,6 @@ class DescribeInstanceRamRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -111,18 +75,6 @@ class DescribeInstanceRamRole extends RpcRequest
         $this->options['query']['InstanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -139,18 +91,6 @@ class DescribeInstanceRamRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRamRoleName() instead.
-     *
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function setRamRoleName($ramRoleName)
-    {
-        return $this->withRamRoleName($ramRoleName);
-    }
-
-    /**
      * @param string $ramRoleName
      *
      * @return $this
@@ -164,18 +104,6 @@ class DescribeInstanceRamRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +114,6 @@ class DescribeInstanceRamRole extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

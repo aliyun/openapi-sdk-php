@@ -35,18 +35,6 @@ class ModifySubscriptionObject extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionObject() instead.
-     *
-     * @param string $subscriptionObject
-     *
-     * @return $this
-     */
-    public function setSubscriptionObject($subscriptionObject)
-    {
-        return $this->withSubscriptionObject($subscriptionObject);
-    }
-
-    /**
      * @param string $subscriptionObject
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifySubscriptionObject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceId() instead.
-     *
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        return $this->withSubscriptionInstanceId($subscriptionInstanceId);
-    }
-
-    /**
      * @param string $subscriptionInstanceId
      *
      * @return $this
@@ -82,18 +58,6 @@ class ModifySubscriptionObject extends RpcRequest
         $this->options['query']['SubscriptionInstanceId'] = $subscriptionInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

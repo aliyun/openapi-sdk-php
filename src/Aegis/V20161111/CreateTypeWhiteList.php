@@ -40,18 +40,6 @@ class CreateTypeWhiteList extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateTypeWhiteList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -87,18 +63,6 @@ class CreateTypeWhiteList extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubTypeNames() instead.
-     *
-     * @param string $subTypeNames
-     *
-     * @return $this
-     */
-    public function setSubTypeNames($subTypeNames)
-    {
-        return $this->withSubTypeNames($subTypeNames);
     }
 
     /**

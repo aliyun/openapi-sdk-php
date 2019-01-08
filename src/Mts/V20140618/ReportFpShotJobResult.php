@@ -44,18 +44,6 @@ class ReportFpShotJobResult extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResult() instead.
-     *
-     * @param string $result
-     *
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        return $this->withResult($result);
-    }
-
-    /**
      * @param string $result
      *
      * @return $this
@@ -66,18 +54,6 @@ class ReportFpShotJobResult extends RpcRequest
         $this->options['query']['Result'] = $result;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
     }
 
     /**
@@ -94,18 +70,6 @@ class ReportFpShotJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -116,18 +80,6 @@ class ReportFpShotJobResult extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class ReportFpShotJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class ReportFpShotJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDetails() instead.
-     *
-     * @param string $details
-     *
-     * @return $this
-     */
-    public function setDetails($details)
-    {
-        return $this->withDetails($details);
-    }
-
-    /**
      * @param string $details
      *
      * @return $this
@@ -191,18 +119,6 @@ class ReportFpShotJobResult extends RpcRequest
         $this->options['query']['Details'] = $details;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -47,18 +47,6 @@ class CreateVideoAnalyseTask extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function setNotifyTopicName($notifyTopicName)
-    {
-        return $this->withNotifyTopicName($notifyTopicName);
-    }
-
-    /**
      * @param string $notifyTopicName
      *
      * @return $this
@@ -69,18 +57,6 @@ class CreateVideoAnalyseTask extends RpcRequest
         $this->options['query']['NotifyTopicName'] = $notifyTopicName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGrabType() instead.
-     *
-     * @param string $grabType
-     *
-     * @return $this
-     */
-    public function setGrabType($grabType)
-    {
-        return $this->withGrabType($grabType);
     }
 
     /**
@@ -97,18 +73,6 @@ class CreateVideoAnalyseTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -119,18 +83,6 @@ class CreateVideoAnalyseTask extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -147,18 +99,6 @@ class CreateVideoAnalyseTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -169,18 +109,6 @@ class CreateVideoAnalyseTask extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoUri() instead.
-     *
-     * @param string $videoUri
-     *
-     * @return $this
-     */
-    public function setVideoUri($videoUri)
-    {
-        return $this->withVideoUri($videoUri);
     }
 
     /**
@@ -197,18 +125,6 @@ class CreateVideoAnalyseTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSaveType() instead.
-     *
-     * @param string $saveType
-     *
-     * @return $this
-     */
-    public function setSaveType($saveType)
-    {
-        return $this->withSaveType($saveType);
-    }
-
-    /**
      * @param string $saveType
      *
      * @return $this
@@ -219,18 +135,6 @@ class CreateVideoAnalyseTask extends RpcRequest
         $this->options['query']['SaveType'] = $saveType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function setNotifyEndpoint($notifyEndpoint)
-    {
-        return $this->withNotifyEndpoint($notifyEndpoint);
     }
 
     /**
@@ -247,18 +151,6 @@ class CreateVideoAnalyseTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -269,18 +161,6 @@ class CreateVideoAnalyseTask extends RpcRequest
         $this->options['query']['Interval'] = $interval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtUri() instead.
-     *
-     * @param string $tgtUri
-     *
-     * @return $this
-     */
-    public function setTgtUri($tgtUri)
-    {
-        return $this->withTgtUri($tgtUri);
     }
 
     /**

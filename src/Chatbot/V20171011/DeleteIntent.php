@@ -38,18 +38,6 @@ class DeleteIntent extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIntentId() instead.
-     *
-     * @param string $intentId
-     *
-     * @return $this
-     */
-    public function setIntentId($intentId)
-    {
-        return $this->withIntentId($intentId);
-    }
-
-    /**
      * @param string $intentId
      *
      * @return $this

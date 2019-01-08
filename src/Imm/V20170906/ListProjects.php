@@ -39,18 +39,6 @@ class ListProjects extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxKeys() instead.
-     *
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function setMaxKeys($maxKeys)
-    {
-        return $this->withMaxKeys($maxKeys);
-    }
-
-    /**
      * @param string $maxKeys
      *
      * @return $this
@@ -61,18 +49,6 @@ class ListProjects extends RpcRequest
         $this->options['query']['MaxKeys'] = $maxKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**

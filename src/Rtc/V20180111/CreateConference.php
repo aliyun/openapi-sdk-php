@@ -44,18 +44,6 @@ class CreateConference extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -66,18 +54,6 @@ class CreateConference extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -94,18 +70,6 @@ class CreateConference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -116,18 +80,6 @@ class CreateConference extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConferenceName() instead.
-     *
-     * @param string $conferenceName
-     *
-     * @return $this
-     */
-    public function setConferenceName($conferenceName)
-    {
-        return $this->withConferenceName($conferenceName);
     }
 
     /**
@@ -144,18 +96,6 @@ class CreateConference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +109,6 @@ class CreateConference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -191,18 +119,6 @@ class CreateConference extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemindNotice() instead.
-     *
-     * @param string $remindNotice
-     *
-     * @return $this
-     */
-    public function setRemindNotice($remindNotice)
-    {
-        return $this->withRemindNotice($remindNotice);
     }
 
     /**

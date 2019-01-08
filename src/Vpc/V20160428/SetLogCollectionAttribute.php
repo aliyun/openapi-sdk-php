@@ -44,18 +44,6 @@ class SetLogCollectionAttribute extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class SetLogCollectionAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogProject() instead.
-     *
-     * @param string $logProject
-     *
-     * @return $this
-     */
-    public function setLogProject($logProject)
-    {
-        return $this->withLogProject($logProject);
     }
 
     /**
@@ -94,18 +70,6 @@ class SetLogCollectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +80,6 @@ class SetLogCollectionAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class SetLogCollectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +109,6 @@ class SetLogCollectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEipInstanceId() instead.
-     *
-     * @param string $eipInstanceId
-     *
-     * @return $this
-     */
-    public function setEipInstanceId($eipInstanceId)
-    {
-        return $this->withEipInstanceId($eipInstanceId);
-    }
-
-    /**
      * @param string $eipInstanceId
      *
      * @return $this
@@ -191,18 +119,6 @@ class SetLogCollectionAttribute extends RpcRequest
         $this->options['query']['EipInstanceId'] = $eipInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogStore() instead.
-     *
-     * @param string $logStore
-     *
-     * @return $this
-     */
-    public function setLogStore($logStore)
-    {
-        return $this->withLogStore($logStore);
     }
 
     /**

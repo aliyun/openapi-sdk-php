@@ -46,18 +46,6 @@ class DescribeCasterProgram extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -68,18 +56,6 @@ class DescribeCasterProgram extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeType() instead.
-     *
-     * @param string $episodeType
-     *
-     * @return $this
-     */
-    public function setEpisodeType($episodeType)
-    {
-        return $this->withEpisodeType($episodeType);
     }
 
     /**
@@ -96,18 +72,6 @@ class DescribeCasterProgram extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -118,18 +82,6 @@ class DescribeCasterProgram extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -146,18 +98,6 @@ class DescribeCasterProgram extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -168,18 +108,6 @@ class DescribeCasterProgram extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +124,6 @@ class DescribeCasterProgram extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeId() instead.
-     *
-     * @param string $episodeId
-     *
-     * @return $this
-     */
-    public function setEpisodeId($episodeId)
-    {
-        return $this->withEpisodeId($episodeId);
-    }
-
-    /**
      * @param string $episodeId
      *
      * @return $this
@@ -221,18 +137,6 @@ class DescribeCasterProgram extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -243,18 +147,6 @@ class DescribeCasterProgram extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

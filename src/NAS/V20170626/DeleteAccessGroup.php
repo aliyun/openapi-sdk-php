@@ -38,18 +38,6 @@ class DeleteAccessGroup extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
-    }
-
-    /**
      * @param string $accessGroupName
      *
      * @return $this

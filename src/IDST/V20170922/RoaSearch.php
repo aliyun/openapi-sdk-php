@@ -44,18 +44,6 @@ class RoaSearch extends RoaRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVid() instead.
-     *
-     * @param string $vid
-     *
-     * @return $this
-     */
-    public function setvid($vid)
-    {
-        return $this->withVid($vid);
-    }
-
-    /**
      * @param string $vid
      *
      * @return $this
@@ -66,18 +54,6 @@ class RoaSearch extends RoaRequest
         $this->options['query']['vid'] = $vid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApp() instead.
-     *
-     * @param string $app
-     *
-     * @return $this
-     */
-    public function setapp($app)
-    {
-        return $this->withApp($app);
     }
 
     /**
@@ -94,18 +70,6 @@ class RoaSearch extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withS() instead.
-     *
-     * @param string $s
-     *
-     * @return $this
-     */
-    public function sets($s)
-    {
-        return $this->withS($s);
-    }
-
-    /**
      * @param string $s
      *
      * @return $this
@@ -116,28 +80,6 @@ class RoaSearch extends RoaRequest
         $this->options['query']['s'] = $s;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getProductId() instead.
-     *
-     * @return string
-     */
-    public function getproduct_id()
-    {
-        return $this->getProductId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductId() instead.
-     *
-     * @param string $product_id
-     *
-     * @return $this
-     */
-    public function setproduct_id($product_id)
-    {
-        return $this->withProductId($product_id);
     }
 
     /**
@@ -154,28 +96,6 @@ class RoaSearch extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getCatId() instead.
-     *
-     * @return string
-     */
-    public function getcat_id()
-    {
-        return $this->getCatId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCatId() instead.
-     *
-     * @param string $cat_id
-     *
-     * @return $this
-     */
-    public function setcat_id($cat_id)
-    {
-        return $this->withCatId($cat_id);
-    }
-
-    /**
      * @param string $catId
      *
      * @return $this
@@ -189,18 +109,6 @@ class RoaSearch extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withN() instead.
-     *
-     * @param string $n
-     *
-     * @return $this
-     */
-    public function setn($n)
-    {
-        return $this->withN($n);
-    }
-
-    /**
      * @param string $n
      *
      * @return $this
@@ -211,28 +119,6 @@ class RoaSearch extends RoaRequest
         $this->options['query']['n'] = $n;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPicName() instead.
-     *
-     * @return string
-     */
-    public function getpic_name()
-    {
-        return $this->getPicName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPicName() instead.
-     *
-     * @param string $pic_name
-     *
-     * @return $this
-     */
-    public function setpic_name($pic_name)
-    {
-        return $this->withPicName($pic_name);
     }
 
     /**

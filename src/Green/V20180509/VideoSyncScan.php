@@ -43,18 +43,6 @@ class VideoSyncScan extends RoaRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientInfo() instead.
-     *
-     * @param string $clientInfo
-     *
-     * @return $this
-     */
-    public function setClientInfo($clientInfo)
-    {
-        return $this->withClientInfo($clientInfo);
-    }
-
-    /**
      * @param string $clientInfo
      *
      * @return $this

@@ -42,18 +42,6 @@ class IndexTag extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
-     * @param string $srcUris
-     *
-     * @return $this
-     */
-    public function setSrcUris($srcUris)
-    {
-        return $this->withSrcUris($srcUris);
-    }
-
-    /**
      * @param string $srcUris
      *
      * @return $this
@@ -64,18 +52,6 @@ class IndexTag extends RpcRequest
         $this->options['query']['SrcUris'] = $srcUris;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
     }
 
     /**
@@ -92,18 +68,6 @@ class IndexTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class IndexTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -139,18 +91,6 @@ class IndexTag extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
     }
 
     /**

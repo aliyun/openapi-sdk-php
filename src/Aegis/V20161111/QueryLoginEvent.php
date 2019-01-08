@@ -42,18 +42,6 @@ class QueryLoginEvent extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -64,18 +52,6 @@ class QueryLoginEvent extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -92,18 +68,6 @@ class QueryLoginEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -117,18 +81,6 @@ class QueryLoginEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
-    }
-
-    /**
      * @param string $uuid
      *
      * @return $this
@@ -139,18 +91,6 @@ class QueryLoginEvent extends RpcRequest
         $this->options['query']['Uuid'] = $uuid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

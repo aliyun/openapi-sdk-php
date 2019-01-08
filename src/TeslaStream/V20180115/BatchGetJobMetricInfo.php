@@ -28,18 +28,6 @@ class BatchGetJobMetricInfo extends RpcRequest
     public $action = 'BatchGetJobMetricInfo';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobInfos() instead.
-     *
-     * @param string $jobInfos
-     *
-     * @return $this
-     */
-    public function setJobInfos($jobInfos)
-    {
-        return $this->withJobInfos($jobInfos);
-    }
-
-    /**
      * @param string $jobInfos
      *
      * @return $this

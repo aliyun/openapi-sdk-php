@@ -40,18 +40,6 @@ class UpdateCustomizeReportStatus extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class UpdateCustomizeReportStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReportId() instead.
-     *
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function setReportId($reportId)
-    {
-        return $this->withReportId($reportId);
-    }
-
-    /**
      * @param string $reportId
      *
      * @return $this
@@ -87,18 +63,6 @@ class UpdateCustomizeReportStatus extends RpcRequest
         $this->options['query']['ReportId'] = $reportId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportStatus() instead.
-     *
-     * @param string $reportStatus
-     *
-     * @return $this
-     */
-    public function setReportStatus($reportStatus)
-    {
-        return $this->withReportStatus($reportStatus);
     }
 
     /**

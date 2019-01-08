@@ -33,18 +33,6 @@ class QueryProductTopic extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this

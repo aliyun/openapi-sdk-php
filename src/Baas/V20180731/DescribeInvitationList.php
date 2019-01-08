@@ -33,18 +33,6 @@ class DescribeInvitationList extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
-    }
-
-    /**
      * @param string $consortiumId
      *
      * @return $this

@@ -40,18 +40,6 @@ class SetReqAuthConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKey1() instead.
-     *
-     * @param string $key1
-     *
-     * @return $this
-     */
-    public function setKey1($key1)
-    {
-        return $this->withKey1($key1);
-    }
-
-    /**
      * @param string $key1
      *
      * @return $this
@@ -62,18 +50,6 @@ class SetReqAuthConfig extends RpcRequest
         $this->options['query']['Key1'] = $key1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKey2() instead.
-     *
-     * @param string $key2
-     *
-     * @return $this
-     */
-    public function setKey2($key2)
-    {
-        return $this->withKey2($key2);
     }
 
     /**
@@ -90,18 +66,6 @@ class SetReqAuthConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthRemoteDesc() instead.
-     *
-     * @param string $authRemoteDesc
-     *
-     * @return $this
-     */
-    public function setAuthRemoteDesc($authRemoteDesc)
-    {
-        return $this->withAuthRemoteDesc($authRemoteDesc);
-    }
-
-    /**
      * @param string $authRemoteDesc
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetReqAuthConfig extends RpcRequest
         $this->options['query']['AuthRemoteDesc'] = $authRemoteDesc;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -140,18 +92,6 @@ class SetReqAuthConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -162,18 +102,6 @@ class SetReqAuthConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -190,18 +118,6 @@ class SetReqAuthConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeOut() instead.
-     *
-     * @param string $timeOut
-     *
-     * @return $this
-     */
-    public function setTimeOut($timeOut)
-    {
-        return $this->withTimeOut($timeOut);
-    }
-
-    /**
      * @param string $timeOut
      *
      * @return $this
@@ -212,18 +128,6 @@ class SetReqAuthConfig extends RpcRequest
         $this->options['query']['TimeOut'] = $timeOut;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthType() instead.
-     *
-     * @param string $authType
-     *
-     * @return $this
-     */
-    public function setAuthType($authType)
-    {
-        return $this->withAuthType($authType);
     }
 
     /**

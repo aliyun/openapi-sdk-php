@@ -56,18 +56,6 @@ class DescribeSnapshots extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -78,18 +66,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Value() instead.
-     *
-     * @param string $filter2Value
-     *
-     * @return $this
-     */
-    public function setFilter2Value($filter2Value)
-    {
-        return $this->withFilter2Value($filter2Value);
     }
 
     /**
@@ -106,18 +82,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotIds() instead.
-     *
-     * @param string $snapshotIds
-     *
-     * @return $this
-     */
-    public function setSnapshotIds($snapshotIds)
-    {
-        return $this->withSnapshotIds($snapshotIds);
-    }
-
-    /**
      * @param string $snapshotIds
      *
      * @return $this
@@ -128,18 +92,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['SnapshotIds'] = $snapshotIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsage() instead.
-     *
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function setUsage($usage)
-    {
-        return $this->withUsage($usage);
     }
 
     /**
@@ -156,18 +108,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotLinkId() instead.
-     *
-     * @param string $snapshotLinkId
-     *
-     * @return $this
-     */
-    public function setSnapshotLinkId($snapshotLinkId)
-    {
-        return $this->withSnapshotLinkId($snapshotLinkId);
-    }
-
-    /**
      * @param string $snapshotLinkId
      *
      * @return $this
@@ -178,18 +118,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['SnapshotLinkId'] = $snapshotLinkId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotName() instead.
-     *
-     * @param string $snapshotName
-     *
-     * @return $this
-     */
-    public function setSnapshotName($snapshotName)
-    {
-        return $this->withSnapshotName($snapshotName);
     }
 
     /**
@@ -206,18 +134,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -228,18 +144,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -256,18 +160,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Key() instead.
-     *
-     * @param string $filter1Key
-     *
-     * @return $this
-     */
-    public function setFilter1Key($filter1Key)
-    {
-        return $this->withFilter1Key($filter1Key);
-    }
-
-    /**
      * @param string $filter1Key
      *
      * @return $this
@@ -278,18 +170,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['Filter.1.Key'] = $filter1Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -306,18 +186,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskId() instead.
-     *
-     * @param string $diskId
-     *
-     * @return $this
-     */
-    public function setDiskId($diskId)
-    {
-        return $this->withDiskId($diskId);
-    }
-
-    /**
      * @param string $diskId
      *
      * @return $this
@@ -328,28 +196,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['DiskId'] = $diskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -369,18 +215,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -391,18 +225,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -419,18 +241,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -441,18 +251,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceDiskType() instead.
-     *
-     * @param string $sourceDiskType
-     *
-     * @return $this
-     */
-    public function setSourceDiskType($sourceDiskType)
-    {
-        return $this->withSourceDiskType($sourceDiskType);
     }
 
     /**
@@ -469,18 +267,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Value() instead.
-     *
-     * @param string $filter1Value
-     *
-     * @return $this
-     */
-    public function setFilter1Value($filter1Value)
-    {
-        return $this->withFilter1Value($filter1Value);
-    }
-
-    /**
      * @param string $filter1Value
      *
      * @return $this
@@ -491,18 +277,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['Filter.1.Value'] = $filter1Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Key() instead.
-     *
-     * @param string $filter2Key
-     *
-     * @return $this
-     */
-    public function setFilter2Key($filter2Key)
-    {
-        return $this->withFilter2Key($filter2Key);
     }
 
     /**
@@ -519,18 +293,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -541,18 +303,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -569,18 +319,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEncrypted() instead.
-     *
-     * @param string $encrypted
-     *
-     * @return $this
-     */
-    public function setEncrypted($encrypted)
-    {
-        return $this->withEncrypted($encrypted);
-    }
-
-    /**
      * @param string $encrypted
      *
      * @return $this
@@ -591,18 +329,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['Encrypted'] = $encrypted;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotType() instead.
-     *
-     * @param string $snapshotType
-     *
-     * @return $this
-     */
-    public function setSnapshotType($snapshotType)
-    {
-        return $this->withSnapshotType($snapshotType);
     }
 
     /**
@@ -619,18 +345,6 @@ class DescribeSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKMSKeyId() instead.
-     *
-     * @param string $kMSKeyId
-     *
-     * @return $this
-     */
-    public function setKMSKeyId($kMSKeyId)
-    {
-        return $this->withKMSKeyId($kMSKeyId);
-    }
-
-    /**
      * @param string $kMSKeyId
      *
      * @return $this
@@ -641,18 +355,6 @@ class DescribeSnapshots extends RpcRequest
         $this->options['query']['KMSKeyId'] = $kMSKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

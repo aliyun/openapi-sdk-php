@@ -38,28 +38,6 @@ class AhQueryDeviceList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getProductKeyList() instead.
-     *
-     * @return array
-     */
-    public function getProductKeyLists()
-    {
-        return $this->getProductKeyList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKeyList() instead.
-     *
-     * @param array $productKeyLists
-     *
-     * @return $this
-     */
-    public function setProductKeyLists(array $productKeyLists)
-    {
-        return $this->withProductKeyList($productKeyLists);
-    }
-
-    /**
      * @param array $productKeyList
      *
      * @return $this
@@ -72,28 +50,6 @@ class AhQueryDeviceList extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCategoryKeyList() instead.
-     *
-     * @return array
-     */
-    public function getCategoryKeyLists()
-    {
-        return $this->getCategoryKeyList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryKeyList() instead.
-     *
-     * @param array $categoryKeyLists
-     *
-     * @return $this
-     */
-    public function setCategoryKeyLists(array $categoryKeyLists)
-    {
-        return $this->withCategoryKeyList($categoryKeyLists);
     }
 
     /**
@@ -112,18 +68,6 @@ class AhQueryDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -134,18 +78,6 @@ class AhQueryDeviceList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -162,18 +94,6 @@ class AhQueryDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -184,28 +104,6 @@ class AhQueryDeviceList extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagList() instead.
-     *
-     * @return array
-     */
-    public function getTagLists()
-    {
-        return $this->getTagList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagList() instead.
-     *
-     * @param array $tagLists
-     *
-     * @return $this
-     */
-    public function setTagLists(array $tagLists)
-    {
-        return $this->withTagList($tagLists);
     }
 
     /**

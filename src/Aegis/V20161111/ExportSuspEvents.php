@@ -48,18 +48,6 @@ class ExportSuspEvents extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeEnd() instead.
-     *
-     * @param string $timeEnd
-     *
-     * @return $this
-     */
-    public function setTimeEnd($timeEnd)
-    {
-        return $this->withTimeEnd($timeEnd);
-    }
-
-    /**
      * @param string $timeEnd
      *
      * @return $this
@@ -70,18 +58,6 @@ class ExportSuspEvents extends RpcRequest
         $this->options['query']['TimeEnd'] = $timeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -98,18 +74,6 @@ class ExportSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -120,18 +84,6 @@ class ExportSuspEvents extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
     }
 
     /**
@@ -148,18 +100,6 @@ class ExportSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -170,18 +110,6 @@ class ExportSuspEvents extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -198,18 +126,6 @@ class ExportSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeStart() instead.
-     *
-     * @param string $timeStart
-     *
-     * @return $this
-     */
-    public function setTimeStart($timeStart)
-    {
-        return $this->withTimeStart($timeStart);
-    }
-
-    /**
      * @param string $timeStart
      *
      * @return $this
@@ -220,18 +136,6 @@ class ExportSuspEvents extends RpcRequest
         $this->options['query']['TimeStart'] = $timeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -248,18 +152,6 @@ class ExportSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevels() instead.
-     *
-     * @param string $levels
-     *
-     * @return $this
-     */
-    public function setLevels($levels)
-    {
-        return $this->withLevels($levels);
-    }
-
-    /**
      * @param string $levels
      *
      * @return $this
@@ -273,18 +165,6 @@ class ExportSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withParentEventTypes() instead.
-     *
-     * @param string $parentEventTypes
-     *
-     * @return $this
-     */
-    public function setParentEventTypes($parentEventTypes)
-    {
-        return $this->withParentEventTypes($parentEventTypes);
-    }
-
-    /**
      * @param string $parentEventTypes
      *
      * @return $this
@@ -295,18 +175,6 @@ class ExportSuspEvents extends RpcRequest
         $this->options['query']['ParentEventTypes'] = $parentEventTypes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

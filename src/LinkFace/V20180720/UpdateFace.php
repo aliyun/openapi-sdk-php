@@ -34,23 +34,10 @@ class UpdateFace extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImage() instead.
-     *
-     * @param string $image
-     *
-     * @return $this
-     */
-    public function setImage($image)
-    {
-        return $this->withImage($image);
-    }
 
     /**
      * @param string $image
@@ -66,18 +53,6 @@ class UpdateFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
-    }
-
-    /**
      * @param string $userId
      *
      * @return $this
@@ -88,18 +63,6 @@ class UpdateFace extends RpcRequest
         $this->options['query']['UserId'] = $userId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserInfo() instead.
-     *
-     * @param string $userInfo
-     *
-     * @return $this
-     */
-    public function setUserInfo($userInfo)
-    {
-        return $this->withUserInfo($userInfo);
     }
 
     /**

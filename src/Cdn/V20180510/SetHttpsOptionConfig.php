@@ -31,18 +31,6 @@ class SetHttpsOptionConfig extends RpcRequest
     public $action = 'SetHttpsOptionConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHttp2() instead.
-     *
-     * @param string $http2
-     *
-     * @return $this
-     */
-    public function setHttp2($http2)
-    {
-        return $this->withHttp2($http2);
-    }
-
-    /**
      * @param string $http2
      *
      * @return $this
@@ -53,18 +41,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['Http2'] = $http2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -81,18 +57,6 @@ class SetHttpsOptionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -103,18 +67,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

@@ -38,18 +38,6 @@ class UpdateKnowledge extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKnowledge() instead.
-     *
-     * @param string $knowledge
-     *
-     * @return $this
-     */
-    public function setKnowledge($knowledge)
-    {
-        return $this->withKnowledge($knowledge);
-    }
-
-    /**
      * @param string $knowledge
      *
      * @return $this

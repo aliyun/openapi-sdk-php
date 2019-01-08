@@ -35,18 +35,6 @@ class SaveDeviceProp extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
-    }
-
-    /**
      * @param string $deviceName
      *
      * @return $this
@@ -60,18 +48,6 @@ class SaveDeviceProp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -82,18 +58,6 @@ class SaveDeviceProp extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProps() instead.
-     *
-     * @param string $props
-     *
-     * @return $this
-     */
-    public function setProps($props)
-    {
-        return $this->withProps($props);
     }
 
     /**

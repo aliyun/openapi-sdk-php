@@ -31,18 +31,6 @@ class SetL2OssKeyConfig extends RpcRequest
     public $action = 'SetL2OssKeyConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -53,18 +41,6 @@ class SetL2OssKeyConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -81,18 +57,6 @@ class SetL2OssKeyConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
-    }
-
-    /**
      * @param string $configId
      *
      * @return $this
@@ -103,18 +67,6 @@ class SetL2OssKeyConfig extends RpcRequest
         $this->options['query']['ConfigId'] = $configId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateOssAuth() instead.
-     *
-     * @param string $privateOssAuth
-     *
-     * @return $this
-     */
-    public function setPrivateOssAuth($privateOssAuth)
-    {
-        return $this->withPrivateOssAuth($privateOssAuth);
     }
 
     /**

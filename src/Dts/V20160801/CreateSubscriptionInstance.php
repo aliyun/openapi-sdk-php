@@ -38,18 +38,6 @@ class CreateSubscriptionInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -60,18 +48,6 @@ class CreateSubscriptionInstance extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -88,18 +64,6 @@ class CreateSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -110,18 +74,6 @@ class CreateSubscriptionInstance extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class CreateSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
-    }
-
-    /**
      * @param string $payType
      *
      * @return $this
@@ -160,18 +100,6 @@ class CreateSubscriptionInstance extends RpcRequest
         $this->options['query']['PayType'] = $payType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsedTime() instead.
-     *
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function setUsedTime($usedTime)
-    {
-        return $this->withUsedTime($usedTime);
     }
 
     /**

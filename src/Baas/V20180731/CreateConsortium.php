@@ -43,18 +43,6 @@ class CreateConsortium extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderersCount() instead.
-     *
-     * @param string $orderersCount
-     *
-     * @return $this
-     */
-    public function setOrderersCount($orderersCount)
-    {
-        return $this->withOrderersCount($orderersCount);
-    }
-
-    /**
      * @param string $orderersCount
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateConsortium extends RpcRequest
         $this->options['query']['OrderersCount'] = $orderersCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
     }
 
     /**
@@ -93,18 +69,6 @@ class CreateConsortium extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpecName() instead.
-     *
-     * @param string $specName
-     *
-     * @return $this
-     */
-    public function setSpecName($specName)
-    {
-        return $this->withSpecName($specName);
-    }
-
-    /**
      * @param string $specName
      *
      * @return $this
@@ -115,28 +79,6 @@ class CreateConsortium extends RpcRequest
         $this->options['query']['SpecName'] = $specName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrganization() instead.
-     *
-     * @return array
-     */
-    public function getOrganizations()
-    {
-        return $this->getOrganization();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param array $organizations
-     *
-     * @return $this
-     */
-    public function setOrganizations(array $organizations)
-    {
-        return $this->withOrganization($organizations);
     }
 
     /**
@@ -155,18 +97,6 @@ class CreateConsortium extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -177,18 +107,6 @@ class CreateConsortium extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrdererType() instead.
-     *
-     * @param string $ordererType
-     *
-     * @return $this
-     */
-    public function setOrdererType($ordererType)
-    {
-        return $this->withOrdererType($ordererType);
     }
 
     /**
@@ -205,18 +123,6 @@ class CreateConsortium extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -227,18 +133,6 @@ class CreateConsortium extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -255,18 +149,6 @@ class CreateConsortium extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -280,18 +162,6 @@ class CreateConsortium extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeersCount() instead.
-     *
-     * @param string $peersCount
-     *
-     * @return $this
-     */
-    public function setPeersCount($peersCount)
-    {
-        return $this->withPeersCount($peersCount);
-    }
-
-    /**
      * @param string $peersCount
      *
      * @return $this
@@ -302,18 +172,6 @@ class CreateConsortium extends RpcRequest
         $this->options['query']['PeersCount'] = $peersCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelPolicy() instead.
-     *
-     * @param string $channelPolicy
-     *
-     * @return $this
-     */
-    public function setChannelPolicy($channelPolicy)
-    {
-        return $this->withChannelPolicy($channelPolicy);
     }
 
     /**

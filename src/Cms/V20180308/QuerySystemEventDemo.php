@@ -34,18 +34,6 @@ class QuerySystemEventDemo extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
-
-    /**
      * @param string $product
      *
      * @return $this
@@ -56,18 +44,6 @@ class QuerySystemEventDemo extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventName() instead.
-     *
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        return $this->withEventName($eventName);
     }
 
     /**

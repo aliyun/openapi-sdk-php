@@ -48,18 +48,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -70,18 +58,6 @@ class InnerCreateEniQosGroup extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTx() instead.
-     *
-     * @param string $tx
-     *
-     * @return $this
-     */
-    public function setTx($tx)
-    {
-        return $this->withTx($tx);
     }
 
     /**
@@ -98,18 +74,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRx() instead.
-     *
-     * @param string $rx
-     *
-     * @return $this
-     */
-    public function setRx($rx)
-    {
-        return $this->withRx($rx);
-    }
-
-    /**
      * @param string $rx
      *
      * @return $this
@@ -120,18 +84,6 @@ class InnerCreateEniQosGroup extends RpcRequest
         $this->options['query']['Rx'] = $rx;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRxPps() instead.
-     *
-     * @param string $rxPps
-     *
-     * @return $this
-     */
-    public function setRxPps($rxPps)
-    {
-        return $this->withRxPps($rxPps);
     }
 
     /**
@@ -148,18 +100,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -170,18 +110,6 @@ class InnerCreateEniQosGroup extends RpcRequest
         $this->options['query']['AliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -198,18 +126,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -220,18 +136,6 @@ class InnerCreateEniQosGroup extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQosGroupName() instead.
-     *
-     * @param string $qosGroupName
-     *
-     * @return $this
-     */
-    public function setQosGroupName($qosGroupName)
-    {
-        return $this->withQosGroupName($qosGroupName);
     }
 
     /**
@@ -248,18 +152,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setRegionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
-    }
-
-    /**
      * @param string $regionNo
      *
      * @return $this
@@ -273,18 +165,6 @@ class InnerCreateEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -295,18 +175,6 @@ class InnerCreateEniQosGroup extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTxPps() instead.
-     *
-     * @param string $txPps
-     *
-     * @return $this
-     */
-    public function setTxPps($txPps)
-    {
-        return $this->withTxPps($txPps);
     }
 
     /**

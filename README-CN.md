@@ -100,8 +100,6 @@ require __DIR__ . '/vendor/autoload.php';
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Ecs\EcsVersion;
-use AlibabaCloud\Ecs\V20140526\Ecs;
 
 // 设置全局客户端
 AlibabaCloud::accessKeyClient('foo', 'bar')
@@ -109,19 +107,17 @@ AlibabaCloud::accessKeyClient('foo', 'bar')
             ->asGlobalClient();
 
 try {
-    // 多种方式访问产品 API
-    $request1 = AlibabaCloud::ecs()->v20140526()->describeRegions();
-    $request2 = EcsVersion::v20140526()->describeRegions();
-    $request3 = Ecs::describeRegions();
+    // 访问产品 API
+    $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
     
     // 设置选项/参数并执行请求
-    $result = $request1->withResourceType('type') // API 的参数
-                       ->withInstanceChargeType('type') // API 的参数
-                       ->client('client1') // 指定发送客户端，否则使用全局客户端
-                       ->debug(true) // 开启调试会输出详细信息
-                       ->connectTimeout(0.01) // 连接超时会抛出异常
-                       ->timeout(0.01) // 超时会抛出异常
-                       ->request(); // 执行请求
+    $result = $request->withResourceType('type') // API 的参数
+                      ->withInstanceChargeType('type') // API 的参数
+                      ->client('client1') // 指定发送客户端，否则使用全局客户端
+                      ->debug(true) // 开启调试会输出详细信息
+                      ->connectTimeout(0.01) // 连接超时会抛出异常
+                      ->timeout(0.01) // 超时会抛出异常
+                      ->request(); // 执行请求
 
     // 也可以传入数组设置
     $options = [
@@ -133,9 +129,7 @@ try {
                        'InstanceChargeType' => 'type',
                    ],
                ];
-    $request4 = AlibabaCloud::ecs()->v20140526()->describeRegions($options)->request();
-    $request5 = EcsVersion::v20140526()->describeRegions($options)->request();
-    $request6 = Ecs::describeRegions($options)->request();
+    $result = AlibabaCloud::ecs()->v20140526()->describeRegions($options)->request();
 
 
     // 设置的优先级

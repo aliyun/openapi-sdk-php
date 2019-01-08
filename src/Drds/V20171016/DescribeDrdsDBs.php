@@ -33,18 +33,6 @@ class DescribeDrdsDBs extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this

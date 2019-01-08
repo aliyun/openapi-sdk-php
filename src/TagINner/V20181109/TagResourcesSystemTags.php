@@ -47,18 +47,6 @@ class TagResourcesSystemTags extends RpcRequest
     public $serviceCode = 'tag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class TagResourcesSystemTags extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerUid() instead.
-     *
-     * @param string $tagOwnerUid
-     *
-     * @return $this
-     */
-    public function setTagOwnerUid($tagOwnerUid)
-    {
-        return $this->withTagOwnerUid($tagOwnerUid);
     }
 
     /**
@@ -97,18 +73,6 @@ class TagResourcesSystemTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
-    }
-
-    /**
      * @param string $scope
      *
      * @return $this
@@ -119,28 +83,6 @@ class TagResourcesSystemTags extends RpcRequest
         $this->options['query']['Scope'] = $scope;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -160,18 +102,6 @@ class TagResourcesSystemTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerBid() instead.
-     *
-     * @param string $tagOwnerBid
-     *
-     * @return $this
-     */
-    public function setTagOwnerBid($tagOwnerBid)
-    {
-        return $this->withTagOwnerBid($tagOwnerBid);
-    }
-
-    /**
      * @param string $tagOwnerBid
      *
      * @return $this
@@ -182,28 +112,6 @@ class TagResourcesSystemTags extends RpcRequest
         $this->options['query']['TagOwnerBid'] = $tagOwnerBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getResourceId() instead.
-     *
-     * @return array
-     */
-    public function getResourceIds()
-    {
-        return $this->getResourceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param array $resourceIds
-     *
-     * @return $this
-     */
-    public function setResourceIds(array $resourceIds)
-    {
-        return $this->withResourceId($resourceIds);
     }
 
     /**
@@ -222,18 +130,6 @@ class TagResourcesSystemTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -244,18 +140,6 @@ class TagResourcesSystemTags extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -272,18 +156,6 @@ class TagResourcesSystemTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -294,18 +166,6 @@ class TagResourcesSystemTags extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

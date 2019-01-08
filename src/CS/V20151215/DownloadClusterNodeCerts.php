@@ -39,18 +39,6 @@ class DownloadClusterNodeCerts extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
-    }
-
-    /**
      * @param string $nodeId
      *
      * @return $this
@@ -61,18 +49,6 @@ class DownloadClusterNodeCerts extends RoaRequest
         $this->pathParameters['NodeId'] = $nodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**

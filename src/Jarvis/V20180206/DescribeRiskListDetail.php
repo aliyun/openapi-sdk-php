@@ -43,18 +43,6 @@ class DescribeRiskListDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRiskType() instead.
-     *
-     * @param string $riskType
-     *
-     * @return $this
-     */
-    public function setriskType($riskType)
-    {
-        return $this->withRiskType($riskType);
-    }
-
-    /**
      * @param string $riskType
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeRiskListDetail extends RpcRequest
         $this->options['query']['riskType'] = $riskType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class DescribeRiskListDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -115,18 +79,6 @@ class DescribeRiskListDetail extends RpcRequest
         $this->options['query']['pageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryProduct() instead.
-     *
-     * @param string $queryProduct
-     *
-     * @return $this
-     */
-    public function setqueryProduct($queryProduct)
-    {
-        return $this->withQueryProduct($queryProduct);
     }
 
     /**
@@ -143,18 +95,6 @@ class DescribeRiskListDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setcurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -165,18 +105,6 @@ class DescribeRiskListDetail extends RpcRequest
         $this->options['query']['currentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskDescribe() instead.
-     *
-     * @param string $riskDescribe
-     *
-     * @return $this
-     */
-    public function setriskDescribe($riskDescribe)
-    {
-        return $this->withRiskDescribe($riskDescribe);
     }
 
     /**
@@ -193,18 +121,6 @@ class DescribeRiskListDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -215,18 +131,6 @@ class DescribeRiskListDetail extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUid() instead.
-     *
-     * @param string $srcUid
-     *
-     * @return $this
-     */
-    public function setsrcUid($srcUid)
-    {
-        return $this->withSrcUid($srcUid);
     }
 
     /**
@@ -243,18 +147,6 @@ class DescribeRiskListDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setsourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
-    }
-
-    /**
      * @param string $sourceCode
      *
      * @return $this
@@ -268,18 +160,6 @@ class DescribeRiskListDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryRegionId() instead.
-     *
-     * @param string $queryRegionId
-     *
-     * @return $this
-     */
-    public function setqueryRegionId($queryRegionId)
-    {
-        return $this->withQueryRegionId($queryRegionId);
-    }
-
-    /**
      * @param string $queryRegionId
      *
      * @return $this
@@ -290,18 +170,6 @@ class DescribeRiskListDetail extends RpcRequest
         $this->options['query']['queryRegionId'] = $queryRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setstatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

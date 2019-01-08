@@ -41,18 +41,6 @@ class SetDNSSLBStatus extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class SetDNSSLBStatus extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubDomain() instead.
-     *
-     * @param string $subDomain
-     *
-     * @return $this
-     */
-    public function setSubDomain($subDomain)
-    {
-        return $this->withSubDomain($subDomain);
     }
 
     /**
@@ -91,18 +67,6 @@ class SetDNSSLBStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -113,18 +77,6 @@ class SetDNSSLBStatus extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOpen() instead.
-     *
-     * @param string $open
-     *
-     * @return $this
-     */
-    public function setOpen($open)
-    {
-        return $this->withOpen($open);
     }
 
     /**

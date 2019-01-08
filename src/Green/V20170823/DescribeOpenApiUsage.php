@@ -41,18 +41,6 @@ class DescribeOpenApiUsage extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeOpenApiUsage extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeOpenApiUsage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeOpenApiUsage extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

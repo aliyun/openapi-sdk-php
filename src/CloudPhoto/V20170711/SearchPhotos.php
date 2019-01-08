@@ -36,7 +36,6 @@ class SearchPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -46,18 +45,6 @@ class SearchPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
 
     /**
      * @param string $size
@@ -70,18 +57,6 @@ class SearchPhotos extends RpcRequest
         $this->options['query']['Size'] = $size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -98,18 +73,6 @@ class SearchPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -123,18 +86,6 @@ class SearchPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -145,18 +96,6 @@ class SearchPhotos extends RpcRequest
         $this->options['query']['Page'] = $page;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
     }
 
     /**

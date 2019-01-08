@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Slb
  *
- * @method V20140515\SlbApiResolver v20140515()
+ * @method SlbV20140515ApiResolver v20140515()
  */
 class Slb
 {

@@ -49,18 +49,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizRegionId() instead.
-     *
-     * @param string $bizRegionId
-     *
-     * @return $this
-     */
-    public function setBizRegionId($bizRegionId)
-    {
-        return $this->withBizRegionId($bizRegionId);
-    }
-
-    /**
      * @param string $bizRegionId
      *
      * @return $this
@@ -71,18 +59,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
         $this->options['query']['BizRegionId'] = $bizRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +75,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -124,18 +88,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -146,28 +98,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagValue() instead.
-     *
-     * @return array
-     */
-    public function getTagValues()
-    {
-        return $this->getTagValue();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagValue() instead.
-     *
-     * @param array $tagValues
-     *
-     * @return $this
-     */
-    public function setTagValues(array $tagValues)
-    {
-        return $this->withTagValue($tagValues);
     }
 
     /**
@@ -186,18 +116,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -208,18 +126,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -236,18 +142,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -261,18 +155,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -283,28 +165,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVSwitchId() instead.
-     *
-     * @return array
-     */
-    public function getVSwitchIds()
-    {
-        return $this->getVSwitchId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param array $vSwitchIds
-     *
-     * @return $this
-     */
-    public function setVSwitchIds(array $vSwitchIds)
-    {
-        return $this->withVSwitchId($vSwitchIds);
     }
 
     /**
@@ -323,18 +183,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
-    }
-
-    /**
      * @param string $metric
      *
      * @return $this
@@ -345,18 +193,6 @@ class InnerQueryEcsCountByCondition extends RpcRequest
         $this->options['query']['Metric'] = $metric;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagKey() instead.
-     *
-     * @param string $tagKey
-     *
-     * @return $this
-     */
-    public function setTagKey($tagKey)
-    {
-        return $this->withTagKey($tagKey);
     }
 
     /**

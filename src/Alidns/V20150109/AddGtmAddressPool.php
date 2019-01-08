@@ -44,18 +44,6 @@ class AddGtmAddressPool extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -66,18 +54,6 @@ class AddGtmAddressPool extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class AddGtmAddressPool extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -116,18 +80,6 @@ class AddGtmAddressPool extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -144,18 +96,6 @@ class AddGtmAddressPool extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -166,28 +106,6 @@ class AddGtmAddressPool extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAddr() instead.
-     *
-     * @return array
-     */
-    public function getAddrs()
-    {
-        return $this->getAddr();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddr() instead.
-     *
-     * @param array $addrs
-     *
-     * @return $this
-     */
-    public function setAddrs(array $addrs)
-    {
-        return $this->withAddr($addrs);
     }
 
     /**
@@ -205,18 +123,6 @@ class AddGtmAddressPool extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinAvailableAddrNum() instead.
-     *
-     * @param string $minAvailableAddrNum
-     *
-     * @return $this
-     */
-    public function setMinAvailableAddrNum($minAvailableAddrNum)
-    {
-        return $this->withMinAvailableAddrNum($minAvailableAddrNum);
     }
 
     /**

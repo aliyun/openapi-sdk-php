@@ -37,18 +37,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeepOssArgs() instead.
-     *
-     * @param string $keepOssArgs
-     *
-     * @return $this
-     */
-    public function setKeepOssArgs($keepOssArgs)
-    {
-        return $this->withKeepOssArgs($keepOssArgs);
-    }
-
-    /**
      * @param string $keepOssArgs
      *
      * @return $this
@@ -59,18 +47,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['KeepOssArgs'] = $keepOssArgs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -87,18 +63,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliRemoveArgs() instead.
-     *
-     * @param string $aliRemoveArgs
-     *
-     * @return $this
-     */
-    public function setAliRemoveArgs($aliRemoveArgs)
-    {
-        return $this->withAliRemoveArgs($aliRemoveArgs);
-    }
-
-    /**
      * @param string $aliRemoveArgs
      *
      * @return $this
@@ -134,18 +86,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['AliRemoveArgs'] = $aliRemoveArgs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

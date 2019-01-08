@@ -47,18 +47,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinutePeriod() instead.
-     *
-     * @param string $minutePeriod
-     *
-     * @return $this
-     */
-    public function setMinutePeriod($minutePeriod)
-    {
-        return $this->withMinutePeriod($minutePeriod);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +83,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpnConnectionId() instead.
-     *
-     * @param string $vpnConnectionId
-     *
-     * @return $this
-     */
-    public function setVpnConnectionId($vpnConnectionId)
-    {
-        return $this->withVpnConnectionId($vpnConnectionId);
     }
 
     /**
@@ -147,18 +99,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -197,18 +125,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
-    }
-
-    /**
      * @param string $from
      *
      * @return $this
@@ -219,18 +135,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
         $this->options['query']['From'] = $from;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTo() instead.
-     *
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function setTo($to)
-    {
-        return $this->withTo($to);
     }
 
     /**
@@ -247,18 +151,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -269,18 +161,6 @@ class DescribeVpnConnectionLogs extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

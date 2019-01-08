@@ -41,18 +41,6 @@ class SetGtmAccessMode extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class SetGtmAccessMode extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
     }
 
     /**
@@ -91,18 +67,6 @@ class SetGtmAccessMode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -113,18 +77,6 @@ class SetGtmAccessMode extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessMode() instead.
-     *
-     * @param string $accessMode
-     *
-     * @return $this
-     */
-    public function setAccessMode($accessMode)
-    {
-        return $this->withAccessMode($accessMode);
     }
 
     /**

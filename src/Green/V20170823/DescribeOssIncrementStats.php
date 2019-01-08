@@ -43,18 +43,6 @@ class DescribeOssIncrementStats extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeOssIncrementStats extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class DescribeOssIncrementStats extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -115,18 +79,6 @@ class DescribeOssIncrementStats extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
     }
 
     /**
@@ -143,18 +95,6 @@ class DescribeOssIncrementStats extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -165,18 +105,6 @@ class DescribeOssIncrementStats extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

@@ -40,18 +40,6 @@ class DescribeCasterScenes extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeCasterScenes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
-    }
-
-    /**
      * @param string $sceneId
      *
      * @return $this
@@ -87,18 +63,6 @@ class DescribeCasterScenes extends RpcRequest
         $this->options['query']['SceneId'] = $sceneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

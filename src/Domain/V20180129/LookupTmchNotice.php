@@ -35,18 +35,6 @@ class LookupTmchNotice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClaimKey() instead.
-     *
-     * @param string $claimKey
-     *
-     * @return $this
-     */
-    public function setClaimKey($claimKey)
-    {
-        return $this->withClaimKey($claimKey);
-    }
-
-    /**
      * @param string $claimKey
      *
      * @return $this
@@ -60,18 +48,6 @@ class LookupTmchNotice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -82,18 +58,6 @@ class LookupTmchNotice extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

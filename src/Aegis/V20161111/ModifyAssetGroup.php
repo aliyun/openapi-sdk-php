@@ -40,18 +40,6 @@ class ModifyAssetGroup extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class ModifyAssetGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -87,18 +63,6 @@ class ModifyAssetGroup extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

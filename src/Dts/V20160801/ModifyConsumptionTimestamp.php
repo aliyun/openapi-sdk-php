@@ -35,18 +35,6 @@ class ModifyConsumptionTimestamp extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceId() instead.
-     *
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        return $this->withSubscriptionInstanceId($subscriptionInstanceId);
-    }
-
-    /**
      * @param string $subscriptionInstanceId
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifyConsumptionTimestamp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsumptionTimestamp() instead.
-     *
-     * @param string $consumptionTimestamp
-     *
-     * @return $this
-     */
-    public function setConsumptionTimestamp($consumptionTimestamp)
-    {
-        return $this->withConsumptionTimestamp($consumptionTimestamp);
-    }
-
-    /**
      * @param string $consumptionTimestamp
      *
      * @return $this
@@ -82,18 +58,6 @@ class ModifyConsumptionTimestamp extends RpcRequest
         $this->options['query']['ConsumptionTimestamp'] = $consumptionTimestamp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

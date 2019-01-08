@@ -46,18 +46,6 @@ class CreateTieringJob extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
-    }
-
-    /**
      * @param string $volume
      *
      * @return $this
@@ -68,18 +56,6 @@ class CreateTieringJob extends RpcRequest
         $this->options['query']['Volume'] = $volume;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPath() instead.
-     *
-     * @param string $path
-     *
-     * @return $this
-     */
-    public function setPath($path)
-    {
-        return $this->withPath($path);
     }
 
     /**
@@ -96,18 +72,6 @@ class CreateTieringJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHour() instead.
-     *
-     * @param string $hour
-     *
-     * @return $this
-     */
-    public function setHour($hour)
-    {
-        return $this->withHour($hour);
-    }
-
-    /**
      * @param string $hour
      *
      * @return $this
@@ -118,18 +82,6 @@ class CreateTieringJob extends RpcRequest
         $this->options['query']['Hour'] = $hour;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -146,18 +98,6 @@ class CreateTieringJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWeekday() instead.
-     *
-     * @param string $weekday
-     *
-     * @return $this
-     */
-    public function setWeekday($weekday)
-    {
-        return $this->withWeekday($weekday);
-    }
-
-    /**
      * @param string $weekday
      *
      * @return $this
@@ -168,18 +108,6 @@ class CreateTieringJob extends RpcRequest
         $this->options['query']['Weekday'] = $weekday;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -196,18 +124,6 @@ class CreateTieringJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecursive() instead.
-     *
-     * @param string $recursive
-     *
-     * @return $this
-     */
-    public function setRecursive($recursive)
-    {
-        return $this->withRecursive($recursive);
-    }
-
-    /**
      * @param string $recursive
      *
      * @return $this
@@ -221,18 +137,6 @@ class CreateTieringJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnabled() instead.
-     *
-     * @param string $enabled
-     *
-     * @return $this
-     */
-    public function setEnabled($enabled)
-    {
-        return $this->withEnabled($enabled);
-    }
-
-    /**
      * @param string $enabled
      *
      * @return $this
@@ -243,18 +147,6 @@ class CreateTieringJob extends RpcRequest
         $this->options['query']['Enabled'] = $enabled;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicy() instead.
-     *
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function setPolicy($policy)
-    {
-        return $this->withPolicy($policy);
     }
 
     /**

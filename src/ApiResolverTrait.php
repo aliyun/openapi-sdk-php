@@ -3,6 +3,7 @@
 namespace AlibabaCloud;
 
 use AlibabaCloud\Client\Exception\ClientException;
+use Stringy\Stringy;
 
 /**
  * Trait ApiResolverTrait
@@ -21,8 +22,7 @@ trait ApiResolverTrait
      */
     public function __call($api, $arguments)
     {
-        $serviceName = $this->getServiceName(\get_class($this));
-        $class       = $this->getNamespace(\get_class($this)) . '\\' . \ucfirst($api);
+        $class = $this->namespace . '\\' . \ucfirst($api);
 
         if (\class_exists($class)) {
             if (isset($arguments[0])) {
@@ -32,9 +32,17 @@ trait ApiResolverTrait
         }
 
         throw new ClientException(
-            "{$serviceName} contains no $api",
-            \ALI_API_NOT_FOUND
+            $this->getServiceName() . " contains no $api",
+            \ALIBABA_CLOUD_API_NOT_FOUND
         );
+    }
+
+    /**
+     * @return string
+     */
+    private function getServiceName()
+    {
+        return (string)Stringy::create($this->namespace)->between('AlibabaCloud\\', '\\V');
     }
 
     /**
@@ -46,44 +54,5 @@ trait ApiResolverTrait
     public static function __callStatic($name, $arguments)
     {
         return (new static())->__call($name, $arguments);
-    }
-
-    /**
-     * @param string $class
-     *
-     * @return mixed
-     * @throws ClientException
-     */
-    protected function getServiceName($class)
-    {
-        $array = \explode('\\', $class);
-        if (isset($array[3])) {
-            return $array[3];
-        }
-        throw new ClientException(
-            'Service name not found.',
-            \ALI_SERVICE_NOT_FOUND
-        );
-    }
-
-    /**
-     * @param string $class
-     *
-     * @return string
-     * @throws ClientException
-     */
-    protected function getNamespace($class)
-    {
-        $array = \explode('\\', $class);
-
-        if (!isset($array[3])) {
-            throw new ClientException(
-                'Get namespace error.',
-                \ALI_PARSE_ERROR
-            );
-        }
-
-        unset($array[3]);
-        return \implode('\\', $array);
     }
 }

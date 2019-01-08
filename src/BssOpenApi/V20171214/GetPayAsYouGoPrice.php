@@ -38,18 +38,6 @@ class GetPayAsYouGoPrice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
-
-    /**
      * @param string $productCode
      *
      * @return $this
@@ -63,18 +51,6 @@ class GetPayAsYouGoPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -85,28 +61,6 @@ class GetPayAsYouGoPrice extends RpcRequest
         $this->options['query']['SubscriptionType'] = $subscriptionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getModuleList() instead.
-     *
-     * @return array
-     */
-    public function getModuleLists()
-    {
-        return $this->getModuleList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModuleList() instead.
-     *
-     * @param array $moduleLists
-     *
-     * @return $this
-     */
-    public function setModuleLists(array $moduleLists)
-    {
-        return $this->withModuleList($moduleLists);
     }
 
     /**
@@ -127,18 +81,6 @@ class GetPayAsYouGoPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -152,18 +94,6 @@ class GetPayAsYouGoPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -174,18 +104,6 @@ class GetPayAsYouGoPrice extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

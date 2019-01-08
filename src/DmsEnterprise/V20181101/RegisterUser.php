@@ -41,18 +41,6 @@ class RegisterUser extends RpcRequest
     public $serviceCode = 'dmsenterprise';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleNames() instead.
-     *
-     * @param string $roleNames
-     *
-     * @return $this
-     */
-    public function setRoleNames($roleNames)
-    {
-        return $this->withRoleNames($roleNames);
-    }
-
-    /**
      * @param string $roleNames
      *
      * @return $this
@@ -63,18 +51,6 @@ class RegisterUser extends RpcRequest
         $this->options['query']['RoleNames'] = $roleNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
     }
 
     /**
@@ -91,18 +67,6 @@ class RegisterUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserNick() instead.
-     *
-     * @param string $userNick
-     *
-     * @return $this
-     */
-    public function setUserNick($userNick)
-    {
-        return $this->withUserNick($userNick);
-    }
-
-    /**
      * @param string $userNick
      *
      * @return $this
@@ -113,18 +77,6 @@ class RegisterUser extends RpcRequest
         $this->options['query']['UserNick'] = $userNick;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTid() instead.
-     *
-     * @param string $tid
-     *
-     * @return $this
-     */
-    public function setTid($tid)
-    {
-        return $this->withTid($tid);
     }
 
     /**

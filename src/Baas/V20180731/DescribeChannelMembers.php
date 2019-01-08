@@ -33,18 +33,6 @@ class DescribeChannelMembers extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
-    }
-
-    /**
      * @param string $channelId
      *
      * @return $this

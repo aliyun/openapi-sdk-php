@@ -42,18 +42,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceSet() instead.
-     *
-     * @param string $forceSet
-     *
-     * @return $this
-     */
-    public function setForceSet($forceSet)
-    {
-        return $this->withForceSet($forceSet);
-    }
-
-    /**
      * @param string $forceSet
      *
      * @return $this
@@ -64,18 +52,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
         $this->options['query']['ForceSet'] = $forceSet;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -92,18 +68,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCertType() instead.
-     *
-     * @param string $certType
-     *
-     * @return $this
-     */
-    public function setCertType($certType)
-    {
-        return $this->withCertType($certType);
-    }
-
-    /**
      * @param string $certType
      *
      * @return $this
@@ -114,18 +78,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
         $this->options['query']['CertType'] = $certType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLPub() instead.
-     *
-     * @param string $sSLPub
-     *
-     * @return $this
-     */
-    public function setSSLPub($sSLPub)
-    {
-        return $this->withSSLPub($sSLPub);
     }
 
     /**
@@ -142,18 +94,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCertName() instead.
-     *
-     * @param string $certName
-     *
-     * @return $this
-     */
-    public function setCertName($certName)
-    {
-        return $this->withCertName($certName);
-    }
-
-    /**
      * @param string $certName
      *
      * @return $this
@@ -164,18 +104,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
         $this->options['query']['CertName'] = $certName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLProtocol() instead.
-     *
-     * @param string $sSLProtocol
-     *
-     * @return $this
-     */
-    public function setSSLProtocol($sSLProtocol)
-    {
-        return $this->withSSLProtocol($sSLProtocol);
     }
 
     /**
@@ -192,18 +120,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -214,18 +130,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -242,18 +146,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -264,18 +156,6 @@ class BatchSetCdnDomainServerCertificate extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLPri() instead.
-     *
-     * @param string $sSLPri
-     *
-     * @return $this
-     */
-    public function setSSLPri($sSLPri)
-    {
-        return $this->withSSLPri($sSLPri);
     }
 
     /**

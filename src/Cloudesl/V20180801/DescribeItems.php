@@ -41,18 +41,6 @@ class DescribeItems extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withItemId() instead.
-     *
-     * @param string $itemId
-     *
-     * @return $this
-     */
-    public function setItemId($itemId)
-    {
-        return $this->withItemId($itemId);
-    }
-
-    /**
      * @param string $itemId
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeItems extends RpcRequest
         $this->options['query']['ItemId'] = $itemId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBePromotion() instead.
-     *
-     * @param string $bePromotion
-     *
-     * @return $this
-     */
-    public function setBePromotion($bePromotion)
-    {
-        return $this->withBePromotion($bePromotion);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShelfCode() instead.
-     *
-     * @param string $shelfCode
-     *
-     * @return $this
-     */
-    public function setShelfCode($shelfCode)
-    {
-        return $this->withShelfCode($shelfCode);
-    }
-
-    /**
      * @param string $shelfCode
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeItems extends RpcRequest
         $this->options['query']['ShelfCode'] = $shelfCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemTitle() instead.
-     *
-     * @param string $itemTitle
-     *
-     * @return $this
-     */
-    public function setItemTitle($itemTitle)
-    {
-        return $this->withItemTitle($itemTitle);
     }
 
     /**
@@ -141,18 +93,6 @@ class DescribeItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -163,18 +103,6 @@ class DescribeItems extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**
@@ -191,18 +119,6 @@ class DescribeItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSkuId() instead.
-     *
-     * @param string $skuId
-     *
-     * @return $this
-     */
-    public function setSkuId($skuId)
-    {
-        return $this->withSkuId($skuId);
-    }
-
-    /**
      * @param string $skuId
      *
      * @return $this
@@ -216,18 +132,6 @@ class DescribeItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -238,18 +142,6 @@ class DescribeItems extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemBarCode() instead.
-     *
-     * @param string $itemBarCode
-     *
-     * @return $this
-     */
-    public function setItemBarCode($itemBarCode)
-    {
-        return $this->withItemBarCode($itemBarCode);
     }
 
     /**

@@ -39,18 +39,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddGroup1() instead.
-     *
-     * @param string $addGroup1
-     *
-     * @return $this
-     */
-    public function setAddGroup1($addGroup1)
-    {
-        return $this->withAddGroup1($addGroup1);
-    }
-
-    /**
      * @param string $addGroup1
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
         $this->options['query']['AddGroup.1'] = $addGroup1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemoveGroup1() instead.
-     *
-     * @param string $removeGroup1
-     *
-     * @return $this
-     */
-    public function setRemoveGroup1($removeGroup1)
-    {
-        return $this->withRemoveGroup1($removeGroup1);
-    }
-
-    /**
      * @param string $removeGroup1
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyImageShareGroupPermission extends RpcRequest
         $this->options['query']['RemoveGroup.1'] = $removeGroup1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -39,18 +39,6 @@ class UpdateDialogFlow extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModuleDefinition() instead.
-     *
-     * @param string $moduleDefinition
-     *
-     * @return $this
-     */
-    public function setModuleDefinition($moduleDefinition)
-    {
-        return $this->withModuleDefinition($moduleDefinition);
-    }
-
-    /**
      * @param string $moduleDefinition
      *
      * @return $this
@@ -61,18 +49,6 @@ class UpdateDialogFlow extends RpcRequest
         $this->options['query']['ModuleDefinition'] = $moduleDefinition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
     }
 
     /**

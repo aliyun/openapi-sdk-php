@@ -33,18 +33,6 @@ class StopTasks extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskIds() instead.
-     *
-     * @param string $taskIds
-     *
-     * @return $this
-     */
-    public function setTaskIds($taskIds)
-    {
-        return $this->withTaskIds($taskIds);
-    }
-
-    /**
      * @param string $taskIds
      *
      * @return $this

@@ -33,18 +33,6 @@ class DeleteRuleAction extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionId() instead.
-     *
-     * @param string $actionId
-     *
-     * @return $this
-     */
-    public function setActionId($actionId)
-    {
-        return $this->withActionId($actionId);
-    }
-
-    /**
      * @param string $actionId
      *
      * @return $this

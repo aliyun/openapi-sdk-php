@@ -39,18 +39,6 @@ class UnassociateEipAddress extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class UnassociateEipAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -89,18 +65,6 @@ class UnassociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -111,18 +75,6 @@ class UnassociateEipAddress extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class UnassociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -164,18 +104,6 @@ class UnassociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllocationId() instead.
-     *
-     * @param string $allocationId
-     *
-     * @return $this
-     */
-    public function setAllocationId($allocationId)
-    {
-        return $this->withAllocationId($allocationId);
-    }
-
-    /**
      * @param string $allocationId
      *
      * @return $this
@@ -186,18 +114,6 @@ class UnassociateEipAddress extends RpcRequest
         $this->options['query']['AllocationId'] = $allocationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

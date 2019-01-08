@@ -39,18 +39,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateName() instead.
-     *
-     * @param string $launchTemplateName
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateName($launchTemplateName)
-    {
-        return $this->withLaunchTemplateName($launchTemplateName);
-    }
-
-    /**
      * @param string $launchTemplateName
      *
      * @return $this
@@ -64,18 +52,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -86,28 +62,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDeleteVersion() instead.
-     *
-     * @return array
-     */
-    public function getDeleteVersions()
-    {
-        return $this->getDeleteVersion();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeleteVersion() instead.
-     *
-     * @param array $deleteVersions
-     *
-     * @return $this
-     */
-    public function setDeleteVersions(array $deleteVersions)
-    {
-        return $this->withDeleteVersion($deleteVersions);
     }
 
     /**
@@ -126,18 +80,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateId() instead.
-     *
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateId($launchTemplateId)
-    {
-        return $this->withLaunchTemplateId($launchTemplateId);
-    }
-
-    /**
      * @param string $launchTemplateId
      *
      * @return $this
@@ -148,18 +90,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
         $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -176,18 +106,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -198,18 +116,6 @@ class DeleteLaunchTemplateVersion extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

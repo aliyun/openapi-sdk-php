@@ -43,28 +43,6 @@ class ListTags extends RpcRequest
     public $serviceCode = 'ots';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
-
-    /**
      * @param string $accessKeyId
      *
      * @return $this
@@ -75,18 +53,6 @@ class ListTags extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -103,18 +69,6 @@ class ListTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
-
-    /**
      * @param string $instanceName
      *
      * @return $this
@@ -125,18 +79,6 @@ class ListTags extends RpcRequest
         $this->options['query']['InstanceName'] = $instanceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -153,18 +95,6 @@ class ListTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -175,28 +105,6 @@ class ListTags extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagInfo() instead.
-     *
-     * @return array
-     */
-    public function getTagInfos()
-    {
-        return $this->getTagInfo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagInfo() instead.
-     *
-     * @param array $tagInfos
-     *
-     * @return $this
-     */
-    public function setTagInfos(array $tagInfos)
-    {
-        return $this->withTagInfo($tagInfos);
     }
 
     /**

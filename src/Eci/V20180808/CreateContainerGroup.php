@@ -11,21 +11,21 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceOwnerId()
  * @method string getMemory()
  * @method string getSecurityGroupId()
+ * @method array getDnsConfigNameServer()
+ * @method array getDnsConfigSearch()
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getEipInstanceId()
- * @method array getDnsConfigNameServer()
  * @method string getResourceOwnerAccount()
  * @method string getRestartPolicy()
  * @method string getOwnerAccount()
- * @method array getDnsConfigOption()
  * @method string getCpu()
- * @method array getDnsConfigSearch()
  * @method string getOwnerId()
  * @method string getVSwitchId()
  * @method array getVolume()
  * @method string getContainerGroupName()
+ * @method array getDnsConfigOption()
  * @method string getZoneId()
  */
 class CreateContainerGroup extends RpcRequest
@@ -55,28 +55,6 @@ class CreateContainerGroup extends RpcRequest
      * @var string
      */
     public $serviceCode = 'eci';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getContainer() instead.
-     *
-     * @return array
-     */
-    public function getContainers()
-    {
-        return $this->getContainer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainer() instead.
-     *
-     * @param array $containers
-     *
-     * @return $this
-     */
-    public function setContainers(array $containers)
-    {
-        return $this->withContainer($containers);
-    }
 
     /**
      * @param array $container
@@ -143,18 +121,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -165,18 +131,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMemory() instead.
-     *
-     * @param string $memory
-     *
-     * @return $this
-     */
-    public function setMemory($memory)
-    {
-        return $this->withMemory($memory);
     }
 
     /**
@@ -193,18 +147,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
-    }
-
-    /**
      * @param string $securityGroupId
      *
      * @return $this
@@ -218,25 +160,33 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInitContainer() instead.
-     *
-     * @return array
-     */
-    public function getInitContainers()
-    {
-        return $this->getInitContainer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInitContainer() instead.
-     *
-     * @param array $initContainers
+     * @param array $dnsConfigNameServer
      *
      * @return $this
      */
-    public function setInitContainers(array $initContainers)
+    public function withDnsConfigNameServer(array $dnsConfigNameServer)
     {
-        return $this->withInitContainer($initContainers);
+        $this->data['DnsConfigNameServer'] = $dnsConfigNameServer;
+        foreach ($dnsConfigNameServer as $i => $iValue) {
+            $this->options['query']['DnsConfigNameServer.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $dnsConfigSearch
+     *
+     * @return $this
+     */
+    public function withDnsConfigSearch(array $dnsConfigSearch)
+    {
+        $this->data['DnsConfigSearch'] = $dnsConfigSearch;
+        foreach ($dnsConfigSearch as $i => $iValue) {
+            $this->options['query']['DnsConfigSearch.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
     }
 
     /**
@@ -280,28 +230,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getImageRegistryCredential() instead.
-     *
-     * @return array
-     */
-    public function getImageRegistryCredentials()
-    {
-        return $this->getImageRegistryCredential();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageRegistryCredential() instead.
-     *
-     * @param array $imageRegistryCredentials
-     *
-     * @return $this
-     */
-    public function setImageRegistryCredentials(array $imageRegistryCredentials)
-    {
-        return $this->withImageRegistryCredential($imageRegistryCredentials);
-    }
-
-    /**
      * @param array $imageRegistryCredential
      *
      * @return $this
@@ -316,28 +244,6 @@ class CreateContainerGroup extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -357,18 +263,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEipInstanceId() instead.
-     *
-     * @param string $eipInstanceId
-     *
-     * @return $this
-     */
-    public function setEipInstanceId($eipInstanceId)
-    {
-        return $this->withEipInstanceId($eipInstanceId);
-    }
-
-    /**
      * @param string $eipInstanceId
      *
      * @return $this
@@ -379,55 +273,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['EipInstanceId'] = $eipInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigNameServer() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigNameServers()
-    {
-        return $this->getDnsConfigNameServer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigNameServer() instead.
-     *
-     * @param array $dnsConfigNameServers
-     *
-     * @return $this
-     */
-    public function setDnsConfigNameServers(array $dnsConfigNameServers)
-    {
-        return $this->withDnsConfigNameServer($dnsConfigNameServers);
-    }
-
-    /**
-     * @param array $dnsConfigNameServer
-     *
-     * @return $this
-     */
-    public function withDnsConfigNameServer(array $dnsConfigNameServer)
-    {
-        $this->data['DnsConfigNameServer'] = $dnsConfigNameServer;
-        foreach ($dnsConfigNameServer as $i => $iValue) {
-            $this->options['query']['DnsConfig.NameServer.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -444,18 +289,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRestartPolicy() instead.
-     *
-     * @param string $restartPolicy
-     *
-     * @return $this
-     */
-    public function setRestartPolicy($restartPolicy)
-    {
-        return $this->withRestartPolicy($restartPolicy);
-    }
-
-    /**
      * @param string $restartPolicy
      *
      * @return $this
@@ -466,18 +299,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['RestartPolicy'] = $restartPolicy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -494,56 +315,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigOption() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigOptions()
-    {
-        return $this->getDnsConfigOption();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigOption() instead.
-     *
-     * @param array $dnsConfigOptions
-     *
-     * @return $this
-     */
-    public function setDnsConfigOptions(array $dnsConfigOptions)
-    {
-        return $this->withDnsConfigOption($dnsConfigOptions);
-    }
-
-    /**
-     * @param array $dnsConfigOption
-     *
-     * @return $this
-     */
-    public function withDnsConfigOption(array $dnsConfigOption)
-    {
-        $this->data['DnsConfigOption'] = $dnsConfigOption;
-        foreach ($dnsConfigOption as $i => $iValue) {
-            $this->options['query']['DnsConfig.Option.' . ($i + 1) . '.Name'] = $dnsConfigOption[$i]['Name'];
-            $this->options['query']['DnsConfig.Option.' . ($i + 1) . '.Value'] = $dnsConfigOption[$i]['Value'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCpu() instead.
-     *
-     * @param string $cpu
-     *
-     * @return $this
-     */
-    public function setCpu($cpu)
-    {
-        return $this->withCpu($cpu);
-    }
-
-    /**
      * @param string $cpu
      *
      * @return $this
@@ -554,55 +325,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['Cpu'] = $cpu;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigSearch() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigSearchs()
-    {
-        return $this->getDnsConfigSearch();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigSearch() instead.
-     *
-     * @param array $dnsConfigSearchs
-     *
-     * @return $this
-     */
-    public function setDnsConfigSearchs(array $dnsConfigSearchs)
-    {
-        return $this->withDnsConfigSearch($dnsConfigSearchs);
-    }
-
-    /**
-     * @param array $dnsConfigSearch
-     *
-     * @return $this
-     */
-    public function withDnsConfigSearch(array $dnsConfigSearch)
-    {
-        $this->data['DnsConfigSearch'] = $dnsConfigSearch;
-        foreach ($dnsConfigSearch as $i => $iValue) {
-            $this->options['query']['DnsConfig.Search.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -619,18 +341,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -641,28 +351,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVolume() instead.
-     *
-     * @return array
-     */
-    public function getVolumes()
-    {
-        return $this->getVolume();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param array $volumes
-     *
-     * @return $this
-     */
-    public function setVolumes(array $volumes)
-    {
-        return $this->withVolume($volumes);
     }
 
     /**
@@ -688,18 +376,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainerGroupName() instead.
-     *
-     * @param string $containerGroupName
-     *
-     * @return $this
-     */
-    public function setContainerGroupName($containerGroupName)
-    {
-        return $this->withContainerGroupName($containerGroupName);
-    }
-
-    /**
      * @param string $containerGroupName
      *
      * @return $this
@@ -713,15 +389,19 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
+     * @param array $dnsConfigOption
      *
      * @return $this
      */
-    public function setZoneId($zoneId)
+    public function withDnsConfigOption(array $dnsConfigOption)
     {
-        return $this->withZoneId($zoneId);
+        $this->data['DnsConfigOption'] = $dnsConfigOption;
+        foreach ($dnsConfigOption as $i => $iValue) {
+            $this->options['query']['DnsConfigOption.' . ($i + 1) . '.Name'] = $dnsConfigOption[$i]['Name'];
+            $this->options['query']['DnsConfigOption.' . ($i + 1) . '.Value'] = $dnsConfigOption[$i]['Value'];
+        }
+
+        return $this;
     }
 
     /**

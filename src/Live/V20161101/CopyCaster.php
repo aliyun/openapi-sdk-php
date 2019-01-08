@@ -41,18 +41,6 @@ class CopyCaster extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcCasterId() instead.
-     *
-     * @param string $srcCasterId
-     *
-     * @return $this
-     */
-    public function setSrcCasterId($srcCasterId)
-    {
-        return $this->withSrcCasterId($srcCasterId);
-    }
-
-    /**
      * @param string $srcCasterId
      *
      * @return $this
@@ -63,18 +51,6 @@ class CopyCaster extends RpcRequest
         $this->options['query']['SrcCasterId'] = $srcCasterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterName() instead.
-     *
-     * @param string $casterName
-     *
-     * @return $this
-     */
-    public function setCasterName($casterName)
-    {
-        return $this->withCasterName($casterName);
     }
 
     /**
@@ -91,18 +67,6 @@ class CopyCaster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -113,18 +77,6 @@ class CopyCaster extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

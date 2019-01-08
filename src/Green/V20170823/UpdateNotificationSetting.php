@@ -43,18 +43,6 @@ class UpdateNotificationSetting extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRealtimeMessageList() instead.
-     *
-     * @param string $realtimeMessageList
-     *
-     * @return $this
-     */
-    public function setRealtimeMessageList($realtimeMessageList)
-    {
-        return $this->withRealtimeMessageList($realtimeMessageList);
-    }
-
-    /**
      * @param string $realtimeMessageList
      *
      * @return $this
@@ -65,18 +53,6 @@ class UpdateNotificationSetting extends RpcRequest
         $this->options['query']['RealtimeMessageList'] = $realtimeMessageList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class UpdateNotificationSetting extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReminderModeList() instead.
-     *
-     * @param string $reminderModeList
-     *
-     * @return $this
-     */
-    public function setReminderModeList($reminderModeList)
-    {
-        return $this->withReminderModeList($reminderModeList);
-    }
-
-    /**
      * @param string $reminderModeList
      *
      * @return $this
@@ -115,18 +79,6 @@ class UpdateNotificationSetting extends RpcRequest
         $this->options['query']['ReminderModeList'] = $reminderModeList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScheduleMessageTime() instead.
-     *
-     * @param string $scheduleMessageTime
-     *
-     * @return $this
-     */
-    public function setScheduleMessageTime($scheduleMessageTime)
-    {
-        return $this->withScheduleMessageTime($scheduleMessageTime);
     }
 
     /**
@@ -143,18 +95,6 @@ class UpdateNotificationSetting extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -165,18 +105,6 @@ class UpdateNotificationSetting extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScheduleMessageTimeZone() instead.
-     *
-     * @param string $scheduleMessageTimeZone
-     *
-     * @return $this
-     */
-    public function setScheduleMessageTimeZone($scheduleMessageTimeZone)
-    {
-        return $this->withScheduleMessageTimeZone($scheduleMessageTimeZone);
     }
 
     /**

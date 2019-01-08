@@ -48,18 +48,6 @@ class SearchMedia extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -70,18 +58,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -98,18 +74,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
-    }
-
-    /**
      * @param string $pageNo
      *
      * @return $this
@@ -120,18 +84,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSearchType() instead.
-     *
-     * @param string $searchType
-     *
-     * @return $this
-     */
-    public function setSearchType($searchType)
-    {
-        return $this->withSearchType($searchType);
     }
 
     /**
@@ -148,18 +100,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMatch() instead.
-     *
-     * @param string $match
-     *
-     * @return $this
-     */
-    public function setMatch($match)
-    {
-        return $this->withMatch($match);
-    }
-
-    /**
      * @param string $match
      *
      * @return $this
@@ -170,18 +110,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['Match'] = $match;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -198,18 +126,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSortBy() instead.
-     *
-     * @param string $sortBy
-     *
-     * @return $this
-     */
-    public function setSortBy($sortBy)
-    {
-        return $this->withSortBy($sortBy);
-    }
-
-    /**
      * @param string $sortBy
      *
      * @return $this
@@ -220,18 +136,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['SortBy'] = $sortBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
     }
 
     /**
@@ -248,18 +152,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -273,18 +165,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFields() instead.
-     *
-     * @param string $fields
-     *
-     * @return $this
-     */
-    public function setFields($fields)
-    {
-        return $this->withFields($fields);
-    }
-
-    /**
      * @param string $fields
      *
      * @return $this
@@ -295,18 +175,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['Fields'] = $fields;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScrollToken() instead.
-     *
-     * @param string $scrollToken
-     *
-     * @return $this
-     */
-    public function setScrollToken($scrollToken)
-    {
-        return $this->withScrollToken($scrollToken);
     }
 
     /**

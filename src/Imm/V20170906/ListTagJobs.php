@@ -41,18 +41,6 @@ class ListTagJobs extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCondition() instead.
-     *
-     * @param string $condition
-     *
-     * @return $this
-     */
-    public function setCondition($condition)
-    {
-        return $this->withCondition($condition);
-    }
-
-    /**
      * @param string $condition
      *
      * @return $this
@@ -63,18 +51,6 @@ class ListTagJobs extends RpcRequest
         $this->options['query']['Condition'] = $condition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxKeys() instead.
-     *
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function setMaxKeys($maxKeys)
-    {
-        return $this->withMaxKeys($maxKeys);
     }
 
     /**
@@ -91,18 +67,6 @@ class ListTagJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
-
-    /**
      * @param string $marker
      *
      * @return $this
@@ -113,18 +77,6 @@ class ListTagJobs extends RpcRequest
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

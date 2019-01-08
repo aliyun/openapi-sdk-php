@@ -38,18 +38,6 @@ class ModifyMailAddress extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifyMailAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -88,18 +64,6 @@ class ModifyMailAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -110,18 +74,6 @@ class ModifyMailAddress extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReplyAddress() instead.
-     *
-     * @param string $replyAddress
-     *
-     * @return $this
-     */
-    public function setReplyAddress($replyAddress)
-    {
-        return $this->withReplyAddress($replyAddress);
     }
 
     /**
@@ -138,18 +90,6 @@ class ModifyMailAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMailAddressId() instead.
-     *
-     * @param string $mailAddressId
-     *
-     * @return $this
-     */
-    public function setMailAddressId($mailAddressId)
-    {
-        return $this->withMailAddressId($mailAddressId);
-    }
-
-    /**
      * @param string $mailAddressId
      *
      * @return $this
@@ -160,18 +100,6 @@ class ModifyMailAddress extends RpcRequest
         $this->options['query']['MailAddressId'] = $mailAddressId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

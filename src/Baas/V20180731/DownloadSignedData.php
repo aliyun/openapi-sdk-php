@@ -34,18 +34,6 @@ class DownloadSignedData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPath() instead.
-     *
-     * @param string $path
-     *
-     * @return $this
-     */
-    public function setPath($path)
-    {
-        return $this->withPath($path);
-    }
-
-    /**
      * @param string $path
      *
      * @return $this
@@ -56,18 +44,6 @@ class DownloadSignedData extends RpcRequest
         $this->options['query']['Path'] = $path;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
     }
 
     /**

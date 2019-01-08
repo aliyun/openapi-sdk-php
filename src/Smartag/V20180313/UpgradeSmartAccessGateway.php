@@ -44,18 +44,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
     }
 
     /**
@@ -94,18 +70,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandWidthSpec() instead.
-     *
-     * @param string $bandWidthSpec
-     *
-     * @return $this
-     */
-    public function setBandWidthSpec($bandWidthSpec)
-    {
-        return $this->withBandWidthSpec($bandWidthSpec);
-    }
-
-    /**
      * @param string $bandWidthSpec
      *
      * @return $this
@@ -116,18 +80,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
         $this->options['query']['BandWidthSpec'] = $bandWidthSpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
      * @param string $smartAGId
      *
      * @return $this
@@ -191,18 +119,6 @@ class UpgradeSmartAccessGateway extends RpcRequest
         $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

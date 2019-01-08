@@ -40,18 +40,6 @@ class QueryDevicePropertiesData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAsc() instead.
-     *
-     * @param string $asc
-     *
-     * @return $this
-     */
-    public function setAsc($asc)
-    {
-        return $this->withAsc($asc);
-    }
-
-    /**
      * @param string $asc
      *
      * @return $this
@@ -62,28 +50,6 @@ class QueryDevicePropertiesData extends RpcRequest
         $this->options['query']['Asc'] = $asc;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getIdentifier() instead.
-     *
-     * @return array
-     */
-    public function getIdentifiers()
-    {
-        return $this->getIdentifier();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentifier() instead.
-     *
-     * @param array $identifiers
-     *
-     * @return $this
-     */
-    public function setIdentifiers(array $identifiers)
-    {
-        return $this->withIdentifier($identifiers);
     }
 
     /**
@@ -102,18 +68,6 @@ class QueryDevicePropertiesData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -124,18 +78,6 @@ class QueryDevicePropertiesData extends RpcRequest
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -152,18 +94,6 @@ class QueryDevicePropertiesData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -174,18 +104,6 @@ class QueryDevicePropertiesData extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
     }
 
     /**
@@ -202,18 +120,6 @@ class QueryDevicePropertiesData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -224,18 +130,6 @@ class QueryDevicePropertiesData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

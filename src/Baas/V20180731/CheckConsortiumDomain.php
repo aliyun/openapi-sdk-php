@@ -33,18 +33,6 @@ class CheckConsortiumDomain extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainCode() instead.
-     *
-     * @param string $domainCode
-     *
-     * @return $this
-     */
-    public function setDomainCode($domainCode)
-    {
-        return $this->withDomainCode($domainCode);
-    }
-
-    /**
      * @param string $domainCode
      *
      * @return $this

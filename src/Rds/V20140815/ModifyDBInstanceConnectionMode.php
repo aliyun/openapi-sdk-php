@@ -43,18 +43,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConnectionMode() instead.
-     *
-     * @param string $connectionMode
-     *
-     * @return $this
-     */
-    public function setConnectionMode($connectionMode)
-    {
-        return $this->withConnectionMode($connectionMode);
-    }
-
-    /**
      * @param string $connectionMode
      *
      * @return $this
@@ -65,18 +53,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
         $this->options['query']['ConnectionMode'] = $connectionMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -93,18 +69,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +79,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +95,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -165,18 +105,6 @@ class ModifyDBInstanceConnectionMode extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

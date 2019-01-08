@@ -40,18 +40,6 @@ class QueryRedialIndicator extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -65,18 +53,6 @@ class QueryRedialIndicator extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactId() instead.
-     *
-     * @param string $contactId
-     *
-     * @return $this
-     */
-    public function setContactId($contactId)
-    {
-        return $this->withContactId($contactId);
-    }
-
-    /**
      * @param string $contactId
      *
      * @return $this
@@ -87,18 +63,6 @@ class QueryRedialIndicator extends RpcRequest
         $this->options['query']['ContactId'] = $contactId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMockResponse() instead.
-     *
-     * @param string $mockResponse
-     *
-     * @return $this
-     */
-    public function setMockResponse($mockResponse)
-    {
-        return $this->withMockResponse($mockResponse);
     }
 
     /**

@@ -33,18 +33,6 @@ class QuerySystemEventDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryJson() instead.
-     *
-     * @param string $queryJson
-     *
-     * @return $this
-     */
-    public function setQueryJson($queryJson)
-    {
-        return $this->withQueryJson($queryJson);
-    }
-
-    /**
      * @param string $queryJson
      *
      * @return $this

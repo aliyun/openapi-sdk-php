@@ -43,18 +43,6 @@ class RevokeClusterToken extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this

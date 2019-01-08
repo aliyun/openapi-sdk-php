@@ -33,18 +33,6 @@ class ListSoftwares extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEhpcVersion() instead.
-     *
-     * @param string $ehpcVersion
-     *
-     * @return $this
-     */
-    public function setEhpcVersion($ehpcVersion)
-    {
-        return $this->withEhpcVersion($ehpcVersion);
-    }
-
-    /**
      * @param string $ehpcVersion
      *
      * @return $this

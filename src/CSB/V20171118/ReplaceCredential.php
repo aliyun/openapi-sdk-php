@@ -32,23 +32,10 @@ class ReplaceCredential extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCredentialId() instead.
-     *
-     * @param string $credentialId
-     *
-     * @return $this
-     */
-    public function setCredentialId($credentialId)
-    {
-        return $this->withCredentialId($credentialId);
-    }
 
     /**
      * @param string $credentialId

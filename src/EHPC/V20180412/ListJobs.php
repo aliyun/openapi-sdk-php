@@ -38,18 +38,6 @@ class ListJobs extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwner() instead.
-     *
-     * @param string $owner
-     *
-     * @return $this
-     */
-    public function setOwner($owner)
-    {
-        return $this->withOwner($owner);
-    }
-
-    /**
      * @param string $owner
      *
      * @return $this
@@ -60,18 +48,6 @@ class ListJobs extends RpcRequest
         $this->options['query']['Owner'] = $owner;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -88,18 +64,6 @@ class ListJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -110,18 +74,6 @@ class ListJobs extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
     }
 
     /**
@@ -138,18 +90,6 @@ class ListJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRerunable() instead.
-     *
-     * @param string $rerunable
-     *
-     * @return $this
-     */
-    public function setRerunable($rerunable)
-    {
-        return $this->withRerunable($rerunable);
-    }
-
-    /**
      * @param string $rerunable
      *
      * @return $this
@@ -160,18 +100,6 @@ class ListJobs extends RpcRequest
         $this->options['query']['Rerunable'] = $rerunable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

@@ -39,18 +39,6 @@ class DescribeResourceFilterAttributes extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
-
-    /**
      * @param string $product
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeResourceFilterAttributes extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

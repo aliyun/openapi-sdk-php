@@ -40,18 +40,6 @@ class CreateFileSystem extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProtocolType() instead.
-     *
-     * @param string $protocolType
-     *
-     * @return $this
-     */
-    public function setProtocolType($protocolType)
-    {
-        return $this->withProtocolType($protocolType);
-    }
-
-    /**
      * @param string $protocolType
      *
      * @return $this
@@ -87,18 +63,6 @@ class CreateFileSystem extends RpcRequest
         $this->options['query']['ProtocolType'] = $protocolType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStorageType() instead.
-     *
-     * @param string $storageType
-     *
-     * @return $this
-     */
-    public function setStorageType($storageType)
-    {
-        return $this->withStorageType($storageType);
     }
 
     /**

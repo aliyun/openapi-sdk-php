@@ -44,18 +44,6 @@ class GetCategories extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class GetCategories extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +70,6 @@ class GetCategories extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
-    }
-
-    /**
      * @param string $cateId
      *
      * @return $this
@@ -116,18 +80,6 @@ class GetCategories extends RpcRequest
         $this->options['query']['CateId'] = $cateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -144,18 +96,6 @@ class GetCategories extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -169,18 +109,6 @@ class GetCategories extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSortBy() instead.
-     *
-     * @param string $sortBy
-     *
-     * @return $this
-     */
-    public function setSortBy($sortBy)
-    {
-        return $this->withSortBy($sortBy);
-    }
-
-    /**
      * @param string $sortBy
      *
      * @return $this
@@ -191,18 +119,6 @@ class GetCategories extends RpcRequest
         $this->options['query']['SortBy'] = $sortBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -43,18 +43,6 @@ class CheckDomainRecord extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRR() instead.
-     *
-     * @param string $rR
-     *
-     * @return $this
-     */
-    public function setRR($rR)
-    {
-        return $this->withRR($rR);
-    }
-
-    /**
      * @param string $rR
      *
      * @return $this
@@ -65,18 +53,6 @@ class CheckDomainRecord extends RpcRequest
         $this->options['query']['RR'] = $rR;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class CheckDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -115,18 +79,6 @@ class CheckDomainRecord extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -143,18 +95,6 @@ class CheckDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -165,18 +105,6 @@ class CheckDomainRecord extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withValue() instead.
-     *
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        return $this->withValue($value);
     }
 
     /**

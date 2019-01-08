@@ -36,18 +36,6 @@ class BindTag extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
-    }
-
-    /**
      * @param string $tagName
      *
      * @return $this
@@ -58,18 +46,6 @@ class BindTag extends RpcRequest
         $this->options['query']['TagName'] = $tagName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientKey() instead.
-     *
-     * @param string $clientKey
-     *
-     * @return $this
-     */
-    public function setClientKey($clientKey)
-    {
-        return $this->withClientKey($clientKey);
     }
 
     /**
@@ -86,18 +62,6 @@ class BindTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -108,18 +72,6 @@ class BindTag extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyType() instead.
-     *
-     * @param string $keyType
-     *
-     * @return $this
-     */
-    public function setKeyType($keyType)
-    {
-        return $this->withKeyType($keyType);
     }
 
     /**

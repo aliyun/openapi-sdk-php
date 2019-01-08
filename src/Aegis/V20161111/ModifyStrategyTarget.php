@@ -41,18 +41,6 @@ class ModifyStrategyTarget extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class ModifyStrategyTarget extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -91,18 +67,6 @@ class ModifyStrategyTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfig() instead.
-     *
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        return $this->withConfig($config);
-    }
-
-    /**
      * @param string $config
      *
      * @return $this
@@ -113,18 +77,6 @@ class ModifyStrategyTarget extends RpcRequest
         $this->options['query']['Config'] = $config;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTarget() instead.
-     *
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function setTarget($target)
-    {
-        return $this->withTarget($target);
     }
 
     /**

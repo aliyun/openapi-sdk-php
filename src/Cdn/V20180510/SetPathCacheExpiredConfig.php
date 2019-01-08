@@ -33,18 +33,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
     public $action = 'SetPathCacheExpiredConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -55,18 +43,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWeight() instead.
-     *
-     * @param string $weight
-     *
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        return $this->withWeight($weight);
     }
 
     /**
@@ -83,18 +59,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCacheContent() instead.
-     *
-     * @param string $cacheContent
-     *
-     * @return $this
-     */
-    public function setCacheContent($cacheContent)
-    {
-        return $this->withCacheContent($cacheContent);
-    }
-
-    /**
      * @param string $cacheContent
      *
      * @return $this
@@ -105,18 +69,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
         $this->options['query']['CacheContent'] = $cacheContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -133,18 +85,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
-    }
-
-    /**
      * @param string $tTL
      *
      * @return $this
@@ -155,18 +95,6 @@ class SetPathCacheExpiredConfig extends RpcRequest
         $this->options['query']['TTL'] = $tTL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

@@ -36,7 +36,6 @@ class MoveFacePhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -46,18 +45,6 @@ class MoveFacePhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -73,18 +60,6 @@ class MoveFacePhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTargetFaceId() instead.
-     *
-     * @param string $targetFaceId
-     *
-     * @return $this
-     */
-    public function setTargetFaceId($targetFaceId)
-    {
-        return $this->withTargetFaceId($targetFaceId);
-    }
-
-    /**
      * @param string $targetFaceId
      *
      * @return $this
@@ -95,28 +70,6 @@ class MoveFacePhotos extends RpcRequest
         $this->options['query']['TargetFaceId'] = $targetFaceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPhotoId() instead.
-     *
-     * @return array
-     */
-    public function getPhotoIds()
-    {
-        return $this->getPhotoId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param array $photoIds
-     *
-     * @return $this
-     */
-    public function setPhotoIds(array $photoIds)
-    {
-        return $this->withPhotoId($photoIds);
     }
 
     /**
@@ -135,18 +88,6 @@ class MoveFacePhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -157,18 +98,6 @@ class MoveFacePhotos extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceFaceId() instead.
-     *
-     * @param string $sourceFaceId
-     *
-     * @return $this
-     */
-    public function setSourceFaceId($sourceFaceId)
-    {
-        return $this->withSourceFaceId($sourceFaceId);
     }
 
     /**

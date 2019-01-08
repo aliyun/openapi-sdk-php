@@ -54,18 +54,6 @@ class SetUserSecurityStatus extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey10() instead.
-     *
-     * @param string $statusKey10
-     *
-     * @return $this
-     */
-    public function setStatusKey10($statusKey10)
-    {
-        return $this->withStatusKey10($statusKey10);
-    }
-
-    /**
      * @param string $statusKey10
      *
      * @return $this
@@ -76,18 +64,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusKey10'] = $statusKey10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
     }
 
     /**
@@ -104,18 +80,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue1() instead.
-     *
-     * @param string $statusValue1
-     *
-     * @return $this
-     */
-    public function setStatusValue1($statusValue1)
-    {
-        return $this->withStatusValue1($statusValue1);
-    }
-
-    /**
      * @param string $statusValue1
      *
      * @return $this
@@ -126,18 +90,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue1'] = $statusValue1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -154,18 +106,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue2() instead.
-     *
-     * @param string $statusValue2
-     *
-     * @return $this
-     */
-    public function setStatusValue2($statusValue2)
-    {
-        return $this->withStatusValue2($statusValue2);
-    }
-
-    /**
      * @param string $statusValue2
      *
      * @return $this
@@ -176,18 +116,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue2'] = $statusValue2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey3() instead.
-     *
-     * @param string $statusKey3
-     *
-     * @return $this
-     */
-    public function setStatusKey3($statusKey3)
-    {
-        return $this->withStatusKey3($statusKey3);
     }
 
     /**
@@ -204,18 +132,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue3() instead.
-     *
-     * @param string $statusValue3
-     *
-     * @return $this
-     */
-    public function setStatusValue3($statusValue3)
-    {
-        return $this->withStatusValue3($statusValue3);
-    }
-
-    /**
      * @param string $statusValue3
      *
      * @return $this
@@ -226,18 +142,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue3'] = $statusValue3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey4() instead.
-     *
-     * @param string $statusKey4
-     *
-     * @return $this
-     */
-    public function setStatusKey4($statusKey4)
-    {
-        return $this->withStatusKey4($statusKey4);
     }
 
     /**
@@ -254,18 +158,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue4() instead.
-     *
-     * @param string $statusValue4
-     *
-     * @return $this
-     */
-    public function setStatusValue4($statusValue4)
-    {
-        return $this->withStatusValue4($statusValue4);
-    }
-
-    /**
      * @param string $statusValue4
      *
      * @return $this
@@ -276,18 +168,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue4'] = $statusValue4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey1() instead.
-     *
-     * @param string $statusKey1
-     *
-     * @return $this
-     */
-    public function setStatusKey1($statusKey1)
-    {
-        return $this->withStatusKey1($statusKey1);
     }
 
     /**
@@ -304,18 +184,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue5() instead.
-     *
-     * @param string $statusValue5
-     *
-     * @return $this
-     */
-    public function setStatusValue5($statusValue5)
-    {
-        return $this->withStatusValue5($statusValue5);
-    }
-
-    /**
      * @param string $statusValue5
      *
      * @return $this
@@ -326,18 +194,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue5'] = $statusValue5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey2() instead.
-     *
-     * @param string $statusKey2
-     *
-     * @return $this
-     */
-    public function setStatusKey2($statusKey2)
-    {
-        return $this->withStatusKey2($statusKey2);
     }
 
     /**
@@ -354,18 +210,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue6() instead.
-     *
-     * @param string $statusValue6
-     *
-     * @return $this
-     */
-    public function setStatusValue6($statusValue6)
-    {
-        return $this->withStatusValue6($statusValue6);
-    }
-
-    /**
      * @param string $statusValue6
      *
      * @return $this
@@ -376,18 +220,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue6'] = $statusValue6;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey7() instead.
-     *
-     * @param string $statusKey7
-     *
-     * @return $this
-     */
-    public function setStatusKey7($statusKey7)
-    {
-        return $this->withStatusKey7($statusKey7);
     }
 
     /**
@@ -404,18 +236,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue7() instead.
-     *
-     * @param string $statusValue7
-     *
-     * @return $this
-     */
-    public function setStatusValue7($statusValue7)
-    {
-        return $this->withStatusValue7($statusValue7);
-    }
-
-    /**
      * @param string $statusValue7
      *
      * @return $this
@@ -426,18 +246,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue7'] = $statusValue7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey8() instead.
-     *
-     * @param string $statusKey8
-     *
-     * @return $this
-     */
-    public function setStatusKey8($statusKey8)
-    {
-        return $this->withStatusKey8($statusKey8);
     }
 
     /**
@@ -454,18 +262,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue8() instead.
-     *
-     * @param string $statusValue8
-     *
-     * @return $this
-     */
-    public function setStatusValue8($statusValue8)
-    {
-        return $this->withStatusValue8($statusValue8);
-    }
-
-    /**
      * @param string $statusValue8
      *
      * @return $this
@@ -476,18 +272,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue8'] = $statusValue8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey5() instead.
-     *
-     * @param string $statusKey5
-     *
-     * @return $this
-     */
-    public function setStatusKey5($statusKey5)
-    {
-        return $this->withStatusKey5($statusKey5);
     }
 
     /**
@@ -504,18 +288,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue9() instead.
-     *
-     * @param string $statusValue9
-     *
-     * @return $this
-     */
-    public function setStatusValue9($statusValue9)
-    {
-        return $this->withStatusValue9($statusValue9);
-    }
-
-    /**
      * @param string $statusValue9
      *
      * @return $this
@@ -526,18 +298,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue9'] = $statusValue9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey6() instead.
-     *
-     * @param string $statusKey6
-     *
-     * @return $this
-     */
-    public function setStatusKey6($statusKey6)
-    {
-        return $this->withStatusKey6($statusKey6);
     }
 
     /**
@@ -554,18 +314,6 @@ class SetUserSecurityStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue10() instead.
-     *
-     * @param string $statusValue10
-     *
-     * @return $this
-     */
-    public function setStatusValue10($statusValue10)
-    {
-        return $this->withStatusValue10($statusValue10);
-    }
-
-    /**
      * @param string $statusValue10
      *
      * @return $this
@@ -576,18 +324,6 @@ class SetUserSecurityStatus extends RpcRequest
         $this->options['query']['StatusValue10'] = $statusValue10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey9() instead.
-     *
-     * @param string $statusKey9
-     *
-     * @return $this
-     */
-    public function setStatusKey9($statusKey9)
-    {
-        return $this->withStatusKey9($statusKey9);
     }
 
     /**

@@ -42,18 +42,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -64,18 +52,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewDomain() instead.
-     *
-     * @param string $newDomain
-     *
-     * @return $this
-     */
-    public function setNewDomain($newDomain)
-    {
-        return $this->withNewDomain($newDomain);
     }
 
     /**
@@ -92,18 +68,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -117,18 +81,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
-    }
-
-    /**
      * @param string $force
      *
      * @return $this
@@ -139,18 +91,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
         $this->options['query']['Force'] = $force;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

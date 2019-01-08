@@ -29,18 +29,6 @@ class Action extends RpcRequest
     public $action = 'Action';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderId() instead.
-     *
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        return $this->withOrderId($orderId);
-    }
-
-    /**
      * @param string $orderId
      *
      * @return $this
@@ -51,18 +39,6 @@ class Action extends RpcRequest
         $this->options['query']['OrderId'] = $orderId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStepCode() instead.
-     *
-     * @param string $stepCode
-     *
-     * @return $this
-     */
-    public function setStepCode($stepCode)
-    {
-        return $this->withStepCode($stepCode);
     }
 
     /**

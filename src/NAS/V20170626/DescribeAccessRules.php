@@ -41,18 +41,6 @@ class DescribeAccessRules extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeAccessRules extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeAccessRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessRuleId() instead.
-     *
-     * @param string $accessRuleId
-     *
-     * @return $this
-     */
-    public function setAccessRuleId($accessRuleId)
-    {
-        return $this->withAccessRuleId($accessRuleId);
-    }
-
-    /**
      * @param string $accessRuleId
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeAccessRules extends RpcRequest
         $this->options['query']['AccessRuleId'] = $accessRuleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

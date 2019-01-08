@@ -34,18 +34,6 @@ class RerunJobs extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobs() instead.
-     *
-     * @param string $jobs
-     *
-     * @return $this
-     */
-    public function setJobs($jobs)
-    {
-        return $this->withJobs($jobs);
-    }
-
-    /**
      * @param string $jobs
      *
      * @return $this
@@ -56,18 +44,6 @@ class RerunJobs extends RpcRequest
         $this->options['query']['Jobs'] = $jobs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

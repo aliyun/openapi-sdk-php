@@ -38,18 +38,6 @@ class ConvertChargeType extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -60,18 +48,6 @@ class ConvertChargeType extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
     }
 
     /**
@@ -88,18 +64,6 @@ class ConvertChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -110,18 +74,6 @@ class ConvertChargeType extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
     }
 
     /**
@@ -138,18 +90,6 @@ class ConvertChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -160,18 +100,6 @@ class ConvertChargeType extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

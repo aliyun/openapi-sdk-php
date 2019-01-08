@@ -39,18 +39,6 @@ class MoveKnowledgeCategory extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKnowledgeId() instead.
-     *
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function setKnowledgeId($knowledgeId)
-    {
-        return $this->withKnowledgeId($knowledgeId);
-    }
-
-    /**
      * @param string $knowledgeId
      *
      * @return $this
@@ -61,18 +49,6 @@ class MoveKnowledgeCategory extends RpcRequest
         $this->options['query']['KnowledgeId'] = $knowledgeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryId() instead.
-     *
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function setCategoryId($categoryId)
-    {
-        return $this->withCategoryId($categoryId);
     }
 
     /**

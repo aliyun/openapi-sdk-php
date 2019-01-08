@@ -42,18 +42,6 @@ class DescribeSasAssetStatistics extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -64,18 +52,6 @@ class DescribeSasAssetStatistics extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatisticsColumn() instead.
-     *
-     * @param string $statisticsColumn
-     *
-     * @return $this
-     */
-    public function setStatisticsColumn($statisticsColumn)
-    {
-        return $this->withStatisticsColumn($statisticsColumn);
     }
 
     /**
@@ -92,18 +68,6 @@ class DescribeSasAssetStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -117,18 +81,6 @@ class DescribeSasAssetStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -139,18 +91,6 @@ class DescribeSasAssetStatistics extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

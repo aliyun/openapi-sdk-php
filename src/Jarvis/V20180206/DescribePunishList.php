@@ -40,18 +40,6 @@ class DescribePunishList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
-    }
-
-    /**
      * @param string $srcIP
      *
      * @return $this
@@ -62,18 +50,6 @@ class DescribePunishList extends RpcRequest
         $this->options['query']['SrcIP'] = $srcIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -90,18 +66,6 @@ class DescribePunishList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribePunishList extends RpcRequest
         $this->options['query']['pageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setcurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -140,18 +92,6 @@ class DescribePunishList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPunishStatus() instead.
-     *
-     * @param string $punishStatus
-     *
-     * @return $this
-     */
-    public function setPunishStatus($punishStatus)
-    {
-        return $this->withPunishStatus($punishStatus);
-    }
-
-    /**
      * @param string $punishStatus
      *
      * @return $this
@@ -162,18 +102,6 @@ class DescribePunishList extends RpcRequest
         $this->options['query']['PunishStatus'] = $punishStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -190,18 +118,6 @@ class DescribePunishList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUid() instead.
-     *
-     * @param string $srcUid
-     *
-     * @return $this
-     */
-    public function setsrcUid($srcUid)
-    {
-        return $this->withSrcUid($srcUid);
-    }
-
-    /**
      * @param string $srcUid
      *
      * @return $this
@@ -212,18 +128,6 @@ class DescribePunishList extends RpcRequest
         $this->options['query']['srcUid'] = $srcUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setsourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

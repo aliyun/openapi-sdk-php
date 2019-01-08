@@ -34,18 +34,6 @@ class QueryStaticsResponseTime extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeRange() instead.
-     *
-     * @param string $timeRange
-     *
-     * @return $this
-     */
-    public function setTimeRange($timeRange)
-    {
-        return $this->withTimeRange($timeRange);
-    }
-
-    /**
      * @param string $timeRange
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryStaticsResponseTime extends RpcRequest
         $this->options['query']['TimeRange'] = $timeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

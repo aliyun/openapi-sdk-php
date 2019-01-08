@@ -35,18 +35,6 @@ class DescribeUserRamPolicy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCompanyId() instead.
-     *
-     * @param string $companyId
-     *
-     * @return $this
-     */
-    public function setCompanyId($companyId)
-    {
-        return $this->withCompanyId($companyId);
-    }
-
-    /**
      * @param string $companyId
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeUserRamPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserType() instead.
-     *
-     * @param string $userType
-     *
-     * @return $this
-     */
-    public function setUserType($userType)
-    {
-        return $this->withUserType($userType);
-    }
-
-    /**
      * @param string $userType
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeUserRamPolicy extends RpcRequest
         $this->options['query']['UserType'] = $userType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**

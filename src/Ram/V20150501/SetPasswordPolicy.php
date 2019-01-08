@@ -40,23 +40,10 @@ class SetPasswordPolicy extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRequireNumbers() instead.
-     *
-     * @param string $requireNumbers
-     *
-     * @return $this
-     */
-    public function setRequireNumbers($requireNumbers)
-    {
-        return $this->withRequireNumbers($requireNumbers);
-    }
 
     /**
      * @param string $requireNumbers
@@ -69,18 +56,6 @@ class SetPasswordPolicy extends RpcRequest
         $this->options['query']['RequireNumbers'] = $requireNumbers;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPasswordReusePrevention() instead.
-     *
-     * @param string $passwordReusePrevention
-     *
-     * @return $this
-     */
-    public function setPasswordReusePrevention($passwordReusePrevention)
-    {
-        return $this->withPasswordReusePrevention($passwordReusePrevention);
     }
 
     /**
@@ -97,18 +72,6 @@ class SetPasswordPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequireUppercaseCharacters() instead.
-     *
-     * @param string $requireUppercaseCharacters
-     *
-     * @return $this
-     */
-    public function setRequireUppercaseCharacters($requireUppercaseCharacters)
-    {
-        return $this->withRequireUppercaseCharacters($requireUppercaseCharacters);
-    }
-
-    /**
      * @param string $requireUppercaseCharacters
      *
      * @return $this
@@ -119,18 +82,6 @@ class SetPasswordPolicy extends RpcRequest
         $this->options['query']['RequireUppercaseCharacters'] = $requireUppercaseCharacters;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxPasswordAge() instead.
-     *
-     * @param string $maxPasswordAge
-     *
-     * @return $this
-     */
-    public function setMaxPasswordAge($maxPasswordAge)
-    {
-        return $this->withMaxPasswordAge($maxPasswordAge);
     }
 
     /**
@@ -147,18 +98,6 @@ class SetPasswordPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxLoginAttemps() instead.
-     *
-     * @param string $maxLoginAttemps
-     *
-     * @return $this
-     */
-    public function setMaxLoginAttemps($maxLoginAttemps)
-    {
-        return $this->withMaxLoginAttemps($maxLoginAttemps);
-    }
-
-    /**
      * @param string $maxLoginAttemps
      *
      * @return $this
@@ -169,18 +108,6 @@ class SetPasswordPolicy extends RpcRequest
         $this->options['query']['MaxLoginAttemps'] = $maxLoginAttemps;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHardExpiry() instead.
-     *
-     * @param string $hardExpiry
-     *
-     * @return $this
-     */
-    public function setHardExpiry($hardExpiry)
-    {
-        return $this->withHardExpiry($hardExpiry);
     }
 
     /**
@@ -197,18 +124,6 @@ class SetPasswordPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMinimumPasswordLength() instead.
-     *
-     * @param string $minimumPasswordLength
-     *
-     * @return $this
-     */
-    public function setMinimumPasswordLength($minimumPasswordLength)
-    {
-        return $this->withMinimumPasswordLength($minimumPasswordLength);
-    }
-
-    /**
      * @param string $minimumPasswordLength
      *
      * @return $this
@@ -222,18 +137,6 @@ class SetPasswordPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequireLowercaseCharacters() instead.
-     *
-     * @param string $requireLowercaseCharacters
-     *
-     * @return $this
-     */
-    public function setRequireLowercaseCharacters($requireLowercaseCharacters)
-    {
-        return $this->withRequireLowercaseCharacters($requireLowercaseCharacters);
-    }
-
-    /**
      * @param string $requireLowercaseCharacters
      *
      * @return $this
@@ -244,18 +147,6 @@ class SetPasswordPolicy extends RpcRequest
         $this->options['query']['RequireLowercaseCharacters'] = $requireLowercaseCharacters;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRequireSymbols() instead.
-     *
-     * @param string $requireSymbols
-     *
-     * @return $this
-     */
-    public function setRequireSymbols($requireSymbols)
-    {
-        return $this->withRequireSymbols($requireSymbols);
     }
 
     /**

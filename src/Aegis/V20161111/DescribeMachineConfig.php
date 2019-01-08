@@ -46,18 +46,6 @@ class DescribeMachineConfig extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTypes() instead.
-     *
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function setTypes($types)
-    {
-        return $this->withTypes($types);
     }
 
     /**
@@ -96,18 +72,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -118,18 +82,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -146,18 +98,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -168,18 +108,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -196,18 +124,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -221,18 +137,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfig() instead.
-     *
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        return $this->withConfig($config);
-    }
-
-    /**
      * @param string $config
      *
      * @return $this
@@ -243,18 +147,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['Config'] = $config;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTarget() instead.
-     *
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function setTarget($target)
-    {
-        return $this->withTarget($target);
     }
 
     /**

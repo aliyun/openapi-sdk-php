@@ -7,15 +7,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
 /**
  * Request of DescribeDomainBpsData
  *
- * @method string getLocationNameEn()
- * @method string getStartTime()
- * @method string getIspNameEn()
  * @method string getDomainType()
+ * @method string getFixTimeGap()
+ * @method string getSecurityToken()
  * @method string getTimeMerge()
  * @method string getDomainName()
  * @method string getEndTime()
- * @method string getOwnerId()
  * @method string getInterval()
+ * @method string getLocationNameEn()
+ * @method string getStartTime()
+ * @method string getIspNameEn()
+ * @method string getOwnerId()
  */
 class DescribeDomainBpsData extends RpcRequest
 {
@@ -41,93 +43,6 @@ class DescribeDomainBpsData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocationNameEn() instead.
-     *
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function setLocationNameEn($locationNameEn)
-    {
-        return $this->withLocationNameEn($locationNameEn);
-    }
-
-    /**
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function withLocationNameEn($locationNameEn)
-    {
-        $this->data['LocationNameEn'] = $locationNameEn;
-        $this->options['query']['LocationNameEn'] = $locationNameEn;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIspNameEn() instead.
-     *
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function setIspNameEn($ispNameEn)
-    {
-        return $this->withIspNameEn($ispNameEn);
-    }
-
-    /**
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function withIspNameEn($ispNameEn)
-    {
-        $this->data['IspNameEn'] = $ispNameEn;
-        $this->options['query']['IspNameEn'] = $ispNameEn;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainType() instead.
-     *
-     * @param string $domainType
-     *
-     * @return $this
-     */
-    public function setDomainType($domainType)
-    {
-        return $this->withDomainType($domainType);
-    }
-
-    /**
      * @param string $domainType
      *
      * @return $this
@@ -141,15 +56,29 @@ class DescribeDomainBpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeMerge() instead.
-     *
-     * @param string $timeMerge
+     * @param string $fixTimeGap
      *
      * @return $this
      */
-    public function setTimeMerge($timeMerge)
+    public function withFixTimeGap($fixTimeGap)
     {
-        return $this->withTimeMerge($timeMerge);
+        $this->data['FixTimeGap'] = $fixTimeGap;
+        $this->options['query']['FixTimeGap'] = $fixTimeGap;
+
+        return $this;
+    }
+
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function withSecurityToken($securityToken)
+    {
+        $this->data['SecurityToken'] = $securityToken;
+        $this->options['query']['SecurityToken'] = $securityToken;
+
+        return $this;
     }
 
     /**
@@ -166,18 +95,6 @@ class DescribeDomainBpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -188,18 +105,6 @@ class DescribeDomainBpsData extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -216,15 +121,55 @@ class DescribeDomainBpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param string $interval
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withInterval($interval)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['Interval'] = $interval;
+        $this->options['query']['Interval'] = $interval;
+
+        return $this;
+    }
+
+    /**
+     * @param string $locationNameEn
+     *
+     * @return $this
+     */
+    public function withLocationNameEn($locationNameEn)
+    {
+        $this->data['LocationNameEn'] = $locationNameEn;
+        $this->options['query']['LocationNameEn'] = $locationNameEn;
+
+        return $this;
+    }
+
+    /**
+     * @param string $startTime
+     *
+     * @return $this
+     */
+    public function withStartTime($startTime)
+    {
+        $this->data['StartTime'] = $startTime;
+        $this->options['query']['StartTime'] = $startTime;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ispNameEn
+     *
+     * @return $this
+     */
+    public function withIspNameEn($ispNameEn)
+    {
+        $this->data['IspNameEn'] = $ispNameEn;
+        $this->options['query']['IspNameEn'] = $ispNameEn;
+
+        return $this;
     }
 
     /**
@@ -236,31 +181,6 @@ class DescribeDomainBpsData extends RpcRequest
     {
         $this->data['OwnerId'] = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function withInterval($interval)
-    {
-        $this->data['Interval'] = $interval;
-        $this->options['query']['Interval'] = $interval;
 
         return $this;
     }

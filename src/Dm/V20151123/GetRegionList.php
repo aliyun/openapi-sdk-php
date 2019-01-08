@@ -41,18 +41,6 @@ class GetRegionList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class GetRegionList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTotal() instead.
-     *
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        return $this->withTotal($total);
     }
 
     /**
@@ -91,18 +67,6 @@ class GetRegionList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOffsetCreateTimeDesc() instead.
-     *
-     * @param string $offsetCreateTimeDesc
-     *
-     * @return $this
-     */
-    public function setOffsetCreateTimeDesc($offsetCreateTimeDesc)
-    {
-        return $this->withOffsetCreateTimeDesc($offsetCreateTimeDesc);
-    }
-
-    /**
      * @param string $offsetCreateTimeDesc
      *
      * @return $this
@@ -113,18 +77,6 @@ class GetRegionList extends RpcRequest
         $this->options['query']['OffsetCreateTimeDesc'] = $offsetCreateTimeDesc;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOffset() instead.
-     *
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        return $this->withOffset($offset);
     }
 
     /**
@@ -141,18 +93,6 @@ class GetRegionList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOffsetCreateTime() instead.
-     *
-     * @param string $offsetCreateTime
-     *
-     * @return $this
-     */
-    public function setOffsetCreateTime($offsetCreateTime)
-    {
-        return $this->withOffsetCreateTime($offsetCreateTime);
-    }
-
-    /**
      * @param string $offsetCreateTime
      *
      * @return $this
@@ -163,18 +103,6 @@ class GetRegionList extends RpcRequest
         $this->options['query']['OffsetCreateTime'] = $offsetCreateTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -191,18 +119,6 @@ class GetRegionList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -216,18 +132,6 @@ class GetRegionList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -238,18 +142,6 @@ class GetRegionList extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

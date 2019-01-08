@@ -41,18 +41,6 @@ class DescribePlayTopVideos extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizDate() instead.
-     *
-     * @param string $bizDate
-     *
-     * @return $this
-     */
-    public function setBizDate($bizDate)
-    {
-        return $this->withBizDate($bizDate);
-    }
-
-    /**
      * @param string $bizDate
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribePlayTopVideos extends RpcRequest
         $this->options['query']['BizDate'] = $bizDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribePlayTopVideos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribePlayTopVideos extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

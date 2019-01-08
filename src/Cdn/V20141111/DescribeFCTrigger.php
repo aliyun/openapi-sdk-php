@@ -29,18 +29,6 @@ class DescribeFCTrigger extends RpcRequest
     public $action = 'DescribeFCTrigger';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTriggerARN() instead.
-     *
-     * @param string $triggerARN
-     *
-     * @return $this
-     */
-    public function setTriggerARN($triggerARN)
-    {
-        return $this->withTriggerARN($triggerARN);
-    }
-
-    /**
      * @param string $triggerARN
      *
      * @return $this
@@ -51,18 +39,6 @@ class DescribeFCTrigger extends RpcRequest
         $this->options['query']['TriggerARN'] = $triggerARN;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -35,18 +35,6 @@ class DeleteMyGroupInstances extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -60,18 +48,6 @@ class DeleteMyGroupInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIdList() instead.
-     *
-     * @param string $instanceIdList
-     *
-     * @return $this
-     */
-    public function setInstanceIdList($instanceIdList)
-    {
-        return $this->withInstanceIdList($instanceIdList);
-    }
-
-    /**
      * @param string $instanceIdList
      *
      * @return $this
@@ -82,18 +58,6 @@ class DeleteMyGroupInstances extends RpcRequest
         $this->options['query']['InstanceIdList'] = $instanceIdList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**

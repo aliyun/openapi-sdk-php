@@ -39,18 +39,6 @@ class GetContactIdentifyByOutBoundTaskId extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -61,18 +49,6 @@ class GetContactIdentifyByOutBoundTaskId extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutboundTaskId() instead.
-     *
-     * @param string $outboundTaskId
-     *
-     * @return $this
-     */
-    public function setOutboundTaskId($outboundTaskId)
-    {
-        return $this->withOutboundTaskId($outboundTaskId);
     }
 
     /**

@@ -40,18 +40,6 @@ class CreateInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
-
-    /**
      * @param string $productCode
      *
      * @return $this
@@ -62,18 +50,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -90,18 +66,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -115,18 +79,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRenewPeriod() instead.
-     *
-     * @param string $renewPeriod
-     *
-     * @return $this
-     */
-    public function setRenewPeriod($renewPeriod)
-    {
-        return $this->withRenewPeriod($renewPeriod);
-    }
-
-    /**
      * @param string $renewPeriod
      *
      * @return $this
@@ -137,28 +89,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['RenewPeriod'] = $renewPeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getParameter() instead.
-     *
-     * @return array
-     */
-    public function getParameters()
-    {
-        return $this->getParameter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParameter() instead.
-     *
-     * @param array $parameters
-     *
-     * @return $this
-     */
-    public function setParameters(array $parameters)
-    {
-        return $this->withParameter($parameters);
     }
 
     /**
@@ -178,18 +108,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRenewalStatus() instead.
-     *
-     * @param string $renewalStatus
-     *
-     * @return $this
-     */
-    public function setRenewalStatus($renewalStatus)
-    {
-        return $this->withRenewalStatus($renewalStatus);
-    }
-
-    /**
      * @param string $renewalStatus
      *
      * @return $this
@@ -203,18 +121,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -225,18 +131,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

@@ -39,18 +39,6 @@ class ListConfig extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -61,28 +49,6 @@ class ListConfig extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getConfigItem() instead.
-     *
-     * @return array
-     */
-    public function getConfigItems()
-    {
-        return $this->getConfigItem();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigItem() instead.
-     *
-     * @param array $configItems
-     *
-     * @return $this
-     */
-    public function setConfigItems(array $configItems)
-    {
-        return $this->withConfigItem($configItems);
     }
 
     /**

@@ -41,18 +41,6 @@ class FindImagesByTagNames extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
-
-    /**
      * @param string $marker
      *
      * @return $this
@@ -63,18 +51,6 @@ class FindImagesByTagNames extends RpcRequest
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -91,18 +67,6 @@ class FindImagesByTagNames extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -113,18 +77,6 @@ class FindImagesByTagNames extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagNames() instead.
-     *
-     * @param string $tagNames
-     *
-     * @return $this
-     */
-    public function setTagNames($tagNames)
-    {
-        return $this->withTagNames($tagNames);
     }
 
     /**

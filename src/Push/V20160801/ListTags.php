@@ -33,18 +33,6 @@ class ListTags extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this

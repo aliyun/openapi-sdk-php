@@ -35,23 +35,10 @@ class RegisterFace extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImage() instead.
-     *
-     * @param string $image
-     *
-     * @return $this
-     */
-    public function setImage($image)
-    {
-        return $this->withImage($image);
-    }
 
     /**
      * @param string $image
@@ -64,18 +51,6 @@ class RegisterFace extends RpcRequest
         $this->options['query']['Image'] = $image;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -92,18 +67,6 @@ class RegisterFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
-    }
-
-    /**
      * @param string $userId
      *
      * @return $this
@@ -114,18 +77,6 @@ class RegisterFace extends RpcRequest
         $this->options['query']['UserId'] = $userId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserInfo() instead.
-     *
-     * @param string $userInfo
-     *
-     * @return $this
-     */
-    public function setUserInfo($userInfo)
-    {
-        return $this->withUserInfo($userInfo);
     }
 
     /**

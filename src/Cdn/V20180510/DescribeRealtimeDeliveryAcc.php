@@ -38,18 +38,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -88,18 +64,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -110,18 +74,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -160,18 +100,6 @@ class DescribeRealtimeDeliveryAcc extends RpcRequest
         $this->options['query']['Interval'] = $interval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogStore() instead.
-     *
-     * @param string $logStore
-     *
-     * @return $this
-     */
-    public function setLogStore($logStore)
-    {
-        return $this->withLogStore($logStore);
     }
 
     /**

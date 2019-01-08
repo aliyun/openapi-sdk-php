@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
+ * @method string getRouteEntryId()
  * @method string getDestinationCidrBlock()
  * @method string getOwnerAccount()
  * @method string getNextHopId()
@@ -45,18 +46,6 @@ class DeleteRouteEntry extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +56,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -95,15 +72,16 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationCidrBlock() instead.
-     *
-     * @param string $destinationCidrBlock
+     * @param string $routeEntryId
      *
      * @return $this
      */
-    public function setDestinationCidrBlock($destinationCidrBlock)
+    public function withRouteEntryId($routeEntryId)
     {
-        return $this->withDestinationCidrBlock($destinationCidrBlock);
+        $this->data['RouteEntryId'] = $routeEntryId;
+        $this->options['query']['RouteEntryId'] = $routeEntryId;
+
+        return $this;
     }
 
     /**
@@ -120,18 +98,6 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -142,18 +108,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextHopId() instead.
-     *
-     * @param string $nextHopId
-     *
-     * @return $this
-     */
-    public function setNextHopId($nextHopId)
-    {
-        return $this->withNextHopId($nextHopId);
     }
 
     /**
@@ -170,18 +124,6 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -192,28 +134,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getNextHopList() instead.
-     *
-     * @return array
-     */
-    public function getNextHopLists()
-    {
-        return $this->getNextHopList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextHopList() instead.
-     *
-     * @param array $nextHopLists
-     *
-     * @return $this
-     */
-    public function setNextHopLists(array $nextHopLists)
-    {
-        return $this->withNextHopList($nextHopLists);
     }
 
     /**
@@ -230,18 +150,6 @@ class DeleteRouteEntry extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableId() instead.
-     *
-     * @param string $routeTableId
-     *
-     * @return $this
-     */
-    public function setRouteTableId($routeTableId)
-    {
-        return $this->withRouteTableId($routeTableId);
     }
 
     /**

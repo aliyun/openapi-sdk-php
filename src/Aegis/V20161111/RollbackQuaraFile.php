@@ -42,18 +42,6 @@ class RollbackQuaraFile extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -64,18 +52,6 @@ class RollbackQuaraFile extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventType() instead.
-     *
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        return $this->withEventType($eventType);
     }
 
     /**
@@ -92,18 +68,6 @@ class RollbackQuaraFile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
-    }
-
-    /**
      * @param string $tag
      *
      * @return $this
@@ -117,18 +81,6 @@ class RollbackQuaraFile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
-    }
-
-    /**
      * @param string $uuid
      *
      * @return $this
@@ -139,18 +91,6 @@ class RollbackQuaraFile extends RpcRequest
         $this->options['query']['Uuid'] = $uuid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventName() instead.
-     *
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        return $this->withEventName($eventName);
     }
 
     /**

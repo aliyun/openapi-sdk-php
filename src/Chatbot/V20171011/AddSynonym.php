@@ -39,18 +39,6 @@ class AddSynonym extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynonym() instead.
-     *
-     * @param string $synonym
-     *
-     * @return $this
-     */
-    public function setSynonym($synonym)
-    {
-        return $this->withSynonym($synonym);
-    }
-
-    /**
      * @param string $synonym
      *
      * @return $this
@@ -61,18 +49,6 @@ class AddSynonym extends RpcRequest
         $this->options['query']['Synonym'] = $synonym;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoreWordName() instead.
-     *
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function setCoreWordName($coreWordName)
-    {
-        return $this->withCoreWordName($coreWordName);
     }
 
     /**

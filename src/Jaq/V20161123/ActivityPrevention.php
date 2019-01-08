@@ -60,18 +60,6 @@ class ActivityPrevention extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProtocolVersion() instead.
-     *
-     * @param string $protocolVersion
-     *
-     * @return $this
-     */
-    public function setProtocolVersion($protocolVersion)
-    {
-        return $this->withProtocolVersion($protocolVersion);
-    }
-
-    /**
      * @param string $protocolVersion
      *
      * @return $this
@@ -82,18 +70,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['ProtocolVersion'] = $protocolVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentUrl() instead.
-     *
-     * @param string $currentUrl
-     *
-     * @return $this
-     */
-    public function setCurrentUrl($currentUrl)
-    {
-        return $this->withCurrentUrl($currentUrl);
     }
 
     /**
@@ -110,18 +86,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReferer() instead.
-     *
-     * @param string $referer
-     *
-     * @return $this
-     */
-    public function setReferer($referer)
-    {
-        return $this->withReferer($referer);
-    }
-
-    /**
      * @param string $referer
      *
      * @return $this
@@ -132,18 +96,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['Referer'] = $referer;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegisterIp() instead.
-     *
-     * @param string $registerIp
-     *
-     * @return $this
-     */
-    public function setRegisterIp($registerIp)
-    {
-        return $this->withRegisterIp($registerIp);
     }
 
     /**
@@ -160,18 +112,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgent() instead.
-     *
-     * @param string $agent
-     *
-     * @return $this
-     */
-    public function setAgent($agent)
-    {
-        return $this->withAgent($agent);
-    }
-
-    /**
      * @param string $agent
      *
      * @return $this
@@ -182,18 +122,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['Agent'] = $agent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIDNumber() instead.
-     *
-     * @param string $iDNumber
-     *
-     * @return $this
-     */
-    public function setIDNumber($iDNumber)
-    {
-        return $this->withIDNumber($iDNumber);
     }
 
     /**
@@ -210,18 +138,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
-    }
-
-    /**
      * @param string $phoneNumber
      *
      * @return $this
@@ -232,18 +148,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['PhoneNumber'] = $phoneNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSource() instead.
-     *
-     * @param string $source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        return $this->withSource($source);
     }
 
     /**
@@ -260,18 +164,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -282,18 +174,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['SessionId'] = $sessionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrize() instead.
-     *
-     * @param string $prize
-     *
-     * @return $this
-     */
-    public function setPrize($prize)
-    {
-        return $this->withPrize($prize);
     }
 
     /**
@@ -310,18 +190,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
-    }
-
-    /**
      * @param string $userId
      *
      * @return $this
@@ -332,18 +200,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['UserId'] = $userId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBankCardNumber() instead.
-     *
-     * @param string $bankCardNumber
-     *
-     * @return $this
-     */
-    public function setBankCardNumber($bankCardNumber)
-    {
-        return $this->withBankCardNumber($bankCardNumber);
     }
 
     /**
@@ -360,18 +216,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExtendData() instead.
-     *
-     * @param string $extendData
-     *
-     * @return $this
-     */
-    public function setExtendData($extendData)
-    {
-        return $this->withExtendData($extendData);
-    }
-
-    /**
      * @param string $extendData
      *
      * @return $this
@@ -382,18 +226,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['ExtendData'] = $extendData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrizeType() instead.
-     *
-     * @param string $prizeType
-     *
-     * @return $this
-     */
-    public function setPrizeType($prizeType)
-    {
-        return $this->withPrizeType($prizeType);
     }
 
     /**
@@ -410,18 +242,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMacAddress() instead.
-     *
-     * @param string $macAddress
-     *
-     * @return $this
-     */
-    public function setMacAddress($macAddress)
-    {
-        return $this->withMacAddress($macAddress);
-    }
-
-    /**
      * @param string $macAddress
      *
      * @return $this
@@ -432,18 +252,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['MacAddress'] = $macAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
     }
 
     /**
@@ -460,18 +268,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
-    }
-
-    /**
      * @param string $email
      *
      * @return $this
@@ -482,18 +278,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['Email'] = $email;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActivityDescription() instead.
-     *
-     * @param string $activityDescription
-     *
-     * @return $this
-     */
-    public function setActivityDescription($activityDescription)
-    {
-        return $this->withActivityDescription($activityDescription);
     }
 
     /**
@@ -510,18 +294,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
-    }
-
-    /**
      * @param string $address
      *
      * @return $this
@@ -532,18 +304,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['Address'] = $address;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCookie() instead.
-     *
-     * @param string $cookie
-     *
-     * @return $this
-     */
-    public function setCookie($cookie)
-    {
-        return $this->withCookie($cookie);
     }
 
     /**
@@ -560,18 +320,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
-    }
-
-    /**
      * @param string $ip
      *
      * @return $this
@@ -582,18 +330,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['Ip'] = $ip;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegisterDate() instead.
-     *
-     * @param string $registerDate
-     *
-     * @return $this
-     */
-    public function setRegisterDate($registerDate)
-    {
-        return $this->withRegisterDate($registerDate);
     }
 
     /**
@@ -610,18 +346,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActivityId() instead.
-     *
-     * @param string $activityId
-     *
-     * @return $this
-     */
-    public function setActivityId($activityId)
-    {
-        return $this->withActivityId($activityId);
-    }
-
-    /**
      * @param string $activityId
      *
      * @return $this
@@ -632,18 +356,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['ActivityId'] = $activityId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdType() instead.
-     *
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function setIdType($idType)
-    {
-        return $this->withIdType($idType);
     }
 
     /**
@@ -660,18 +372,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCompanyName() instead.
-     *
-     * @param string $companyName
-     *
-     * @return $this
-     */
-    public function setCompanyName($companyName)
-    {
-        return $this->withCompanyName($companyName);
-    }
-
-    /**
      * @param string $companyName
      *
      * @return $this
@@ -682,18 +382,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['CompanyName'] = $companyName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJsToken() instead.
-     *
-     * @param string $jsToken
-     *
-     * @return $this
-     */
-    public function setJsToken($jsToken)
-    {
-        return $this->withJsToken($jsToken);
     }
 
     /**
@@ -710,18 +398,6 @@ class ActivityPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSDKToken() instead.
-     *
-     * @param string $sDKToken
-     *
-     * @return $this
-     */
-    public function setSDKToken($sDKToken)
-    {
-        return $this->withSDKToken($sDKToken);
-    }
-
-    /**
      * @param string $sDKToken
      *
      * @return $this
@@ -732,18 +408,6 @@ class ActivityPrevention extends RpcRequest
         $this->options['query']['SDKToken'] = $sDKToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

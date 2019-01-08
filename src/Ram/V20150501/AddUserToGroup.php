@@ -33,23 +33,10 @@ class AddUserToGroup extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
 
     /**
      * @param string $groupName
@@ -62,18 +49,6 @@ class AddUserToGroup extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

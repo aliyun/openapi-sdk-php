@@ -36,28 +36,6 @@ class QueryDeviceList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getProductKeyList() instead.
-     *
-     * @return array
-     */
-    public function getProductKeyLists()
-    {
-        return $this->getProductKeyList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKeyList() instead.
-     *
-     * @param array $productKeyLists
-     *
-     * @return $this
-     */
-    public function setProductKeyLists(array $productKeyLists)
-    {
-        return $this->withProductKeyList($productKeyLists);
-    }
-
-    /**
      * @param array $productKeyList
      *
      * @return $this
@@ -70,18 +48,6 @@ class QueryDeviceList extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
     }
 
     /**
@@ -98,18 +64,6 @@ class QueryDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -120,18 +74,6 @@ class QueryDeviceList extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

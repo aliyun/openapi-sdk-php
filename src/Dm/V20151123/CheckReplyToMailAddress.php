@@ -38,18 +38,6 @@ class CheckReplyToMailAddress extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -60,18 +48,6 @@ class CheckReplyToMailAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -88,18 +64,6 @@ class CheckReplyToMailAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMailAddressId() instead.
-     *
-     * @param string $mailAddressId
-     *
-     * @return $this
-     */
-    public function setMailAddressId($mailAddressId)
-    {
-        return $this->withMailAddressId($mailAddressId);
-    }
-
-    /**
      * @param string $mailAddressId
      *
      * @return $this
@@ -110,18 +74,6 @@ class CheckReplyToMailAddress extends RpcRequest
         $this->options['query']['MailAddressId'] = $mailAddressId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class CheckReplyToMailAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -160,18 +100,6 @@ class CheckReplyToMailAddress extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**

@@ -34,18 +34,6 @@ class DeleteTasks extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDeleteAlarms() instead.
-     *
-     * @param string $isDeleteAlarms
-     *
-     * @return $this
-     */
-    public function setIsDeleteAlarms($isDeleteAlarms)
-    {
-        return $this->withIsDeleteAlarms($isDeleteAlarms);
-    }
-
-    /**
      * @param string $isDeleteAlarms
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteTasks extends RpcRequest
         $this->options['query']['IsDeleteAlarms'] = $isDeleteAlarms;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIds() instead.
-     *
-     * @param string $taskIds
-     *
-     * @return $this
-     */
-    public function setTaskIds($taskIds)
-    {
-        return $this->withTaskIds($taskIds);
     }
 
     /**

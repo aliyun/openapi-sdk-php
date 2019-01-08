@@ -39,18 +39,6 @@ class DescribeCdnSubscription extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeCdnSubscription extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionState() instead.
-     *
-     * @param string $subscriptionState
-     *
-     * @return $this
-     */
-    public function setSubscriptionState($subscriptionState)
-    {
-        return $this->withSubscriptionState($subscriptionState);
     }
 
     /**
@@ -89,18 +65,6 @@ class DescribeCdnSubscription extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -111,18 +75,6 @@ class DescribeCdnSubscription extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -139,18 +91,6 @@ class DescribeCdnSubscription extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -164,18 +104,6 @@ class DescribeCdnSubscription extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVendorName() instead.
-     *
-     * @param string $vendorName
-     *
-     * @return $this
-     */
-    public function setVendorName($vendorName)
-    {
-        return $this->withVendorName($vendorName);
-    }
-
-    /**
      * @param string $vendorName
      *
      * @return $this
@@ -186,18 +114,6 @@ class DescribeCdnSubscription extends RpcRequest
         $this->options['query']['VendorName'] = $vendorName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

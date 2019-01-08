@@ -40,18 +40,6 @@ class ListMyGroups extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSelectContactGroups() instead.
-     *
-     * @param string $selectContactGroups
-     *
-     * @return $this
-     */
-    public function setSelectContactGroups($selectContactGroups)
-    {
-        return $this->withSelectContactGroups($selectContactGroups);
-    }
-
-    /**
      * @param string $selectContactGroups
      *
      * @return $this
@@ -62,18 +50,6 @@ class ListMyGroups extends RpcRequest
         $this->options['query']['SelectContactGroups'] = $selectContactGroups;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -90,18 +66,6 @@ class ListMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -112,18 +76,6 @@ class ListMyGroups extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
     }
 
     /**
@@ -140,18 +92,6 @@ class ListMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -162,18 +102,6 @@ class ListMyGroups extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**
@@ -190,18 +118,6 @@ class ListMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -212,18 +128,6 @@ class ListMyGroups extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBindUrls() instead.
-     *
-     * @param string $bindUrls
-     *
-     * @return $this
-     */
-    public function setBindUrls($bindUrls)
-    {
-        return $this->withBindUrls($bindUrls);
     }
 
     /**

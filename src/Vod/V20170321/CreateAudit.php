@@ -38,18 +38,6 @@ class CreateAudit extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuditContent() instead.
-     *
-     * @param string $auditContent
-     *
-     * @return $this
-     */
-    public function setAuditContent($auditContent)
-    {
-        return $this->withAuditContent($auditContent);
-    }
-
-    /**
      * @param string $auditContent
      *
      * @return $this

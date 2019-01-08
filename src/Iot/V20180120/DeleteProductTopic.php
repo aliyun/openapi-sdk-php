@@ -33,18 +33,6 @@ class DeleteProductTopic extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicId() instead.
-     *
-     * @param string $topicId
-     *
-     * @return $this
-     */
-    public function setTopicId($topicId)
-    {
-        return $this->withTopicId($topicId);
-    }
-
-    /**
      * @param string $topicId
      *
      * @return $this

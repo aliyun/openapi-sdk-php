@@ -51,18 +51,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReason() instead.
-     *
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function setreason($reason)
-    {
-        return $this->withReason($reason);
-    }
-
-    /**
      * @param string $reason
      *
      * @return $this
@@ -73,18 +61,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['reason'] = $reason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -101,18 +77,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetIp() instead.
-     *
-     * @param string $internetIp
-     *
-     * @return $this
-     */
-    public function setinternetIp($internetIp)
-    {
-        return $this->withInternetIp($internetIp);
-    }
-
-    /**
      * @param string $internetIp
      *
      * @return $this
@@ -123,18 +87,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['internetIp'] = $internetIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -151,18 +103,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -173,18 +113,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -201,18 +129,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -223,18 +139,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
     }
 
     /**
@@ -251,18 +155,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -273,18 +165,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -301,18 +181,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLockType() instead.
-     *
-     * @param string $lockType
-     *
-     * @return $this
-     */
-    public function setlockType($lockType)
-    {
-        return $this->withLockType($lockType);
-    }
-
-    /**
      * @param string $lockType
      *
      * @return $this
@@ -323,18 +191,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['lockType'] = $lockType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setid($id)
-    {
-        return $this->withId($id);
     }
 
     /**
@@ -351,18 +207,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProof() instead.
-     *
-     * @param string $proof
-     *
-     * @return $this
-     */
-    public function setproof($proof)
-    {
-        return $this->withProof($proof);
-    }
-
-    /**
      * @param string $proof
      *
      * @return $this
@@ -373,18 +217,6 @@ class InnerMaliceEcsUnlock extends RpcRequest
         $this->options['query']['proof'] = $proof;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

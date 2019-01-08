@@ -37,18 +37,6 @@ class RequestPayDemand extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPrice() instead.
-     *
-     * @param string $price
-     *
-     * @return $this
-     */
-    public function setPrice($price)
-    {
-        return $this->withPrice($price);
-    }
-
-    /**
      * @param string $price
      *
      * @return $this
@@ -59,18 +47,6 @@ class RequestPayDemand extends RpcRequest
         $this->options['query']['Price'] = $price;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
     }
 
     /**
@@ -87,18 +63,6 @@ class RequestPayDemand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +76,6 @@ class RequestPayDemand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduceType() instead.
-     *
-     * @param string $produceType
-     *
-     * @return $this
-     */
-    public function setProduceType($produceType)
-    {
-        return $this->withProduceType($produceType);
-    }
-
-    /**
      * @param string $produceType
      *
      * @return $this
@@ -134,18 +86,6 @@ class RequestPayDemand extends RpcRequest
         $this->options['query']['ProduceType'] = $produceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
     }
 
     /**

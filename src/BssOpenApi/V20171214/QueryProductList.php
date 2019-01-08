@@ -35,18 +35,6 @@ class QueryProductList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryTotalCount() instead.
-     *
-     * @param string $queryTotalCount
-     *
-     * @return $this
-     */
-    public function setQueryTotalCount($queryTotalCount)
-    {
-        return $this->withQueryTotalCount($queryTotalCount);
-    }
-
-    /**
      * @param string $queryTotalCount
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryProductList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -82,18 +58,6 @@ class QueryProductList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

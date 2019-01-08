@@ -34,18 +34,6 @@ class SetDeviceGroupTags extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagString() instead.
-     *
-     * @param string $tagString
-     *
-     * @return $this
-     */
-    public function setTagString($tagString)
-    {
-        return $this->withTagString($tagString);
-    }
-
-    /**
      * @param string $tagString
      *
      * @return $this
@@ -56,18 +44,6 @@ class SetDeviceGroupTags extends RpcRequest
         $this->options['query']['TagString'] = $tagString;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**

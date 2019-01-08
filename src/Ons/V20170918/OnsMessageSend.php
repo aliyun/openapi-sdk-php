@@ -40,18 +40,6 @@ class OnsMessageSend extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -62,18 +50,6 @@ class OnsMessageSend extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -90,18 +66,6 @@ class OnsMessageSend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -112,18 +76,6 @@ class OnsMessageSend extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**
@@ -140,18 +92,6 @@ class OnsMessageSend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProducerId() instead.
-     *
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function setProducerId($producerId)
-    {
-        return $this->withProducerId($producerId);
-    }
-
-    /**
      * @param string $producerId
      *
      * @return $this
@@ -162,18 +102,6 @@ class OnsMessageSend extends RpcRequest
         $this->options['query']['ProducerId'] = $producerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
     }
 
     /**
@@ -190,18 +118,6 @@ class OnsMessageSend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
-    }
-
-    /**
      * @param string $message
      *
      * @return $this
@@ -212,18 +128,6 @@ class OnsMessageSend extends RpcRequest
         $this->options['query']['Message'] = $message;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKey() instead.
-     *
-     * @param string $key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        return $this->withKey($key);
     }
 
     /**

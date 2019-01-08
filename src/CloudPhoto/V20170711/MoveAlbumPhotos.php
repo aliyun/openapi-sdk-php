@@ -36,7 +36,6 @@ class MoveAlbumPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -46,18 +45,6 @@ class MoveAlbumPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceAlbumId() instead.
-     *
-     * @param string $sourceAlbumId
-     *
-     * @return $this
-     */
-    public function setSourceAlbumId($sourceAlbumId)
-    {
-        return $this->withSourceAlbumId($sourceAlbumId);
-    }
 
     /**
      * @param string $sourceAlbumId
@@ -70,18 +57,6 @@ class MoveAlbumPhotos extends RpcRequest
         $this->options['query']['SourceAlbumId'] = $sourceAlbumId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetAlbumId() instead.
-     *
-     * @param string $targetAlbumId
-     *
-     * @return $this
-     */
-    public function setTargetAlbumId($targetAlbumId)
-    {
-        return $this->withTargetAlbumId($targetAlbumId);
     }
 
     /**
@@ -98,18 +73,6 @@ class MoveAlbumPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
-
-    /**
      * @param string $libraryId
      *
      * @return $this
@@ -120,28 +83,6 @@ class MoveAlbumPhotos extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPhotoId() instead.
-     *
-     * @return array
-     */
-    public function getPhotoIds()
-    {
-        return $this->getPhotoId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param array $photoIds
-     *
-     * @return $this
-     */
-    public function setPhotoIds(array $photoIds)
-    {
-        return $this->withPhotoId($photoIds);
     }
 
     /**
@@ -157,18 +98,6 @@ class MoveAlbumPhotos extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

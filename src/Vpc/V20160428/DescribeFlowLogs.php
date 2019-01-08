@@ -52,18 +52,6 @@ class DescribeFlowLogs extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -74,18 +62,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
     }
 
     /**
@@ -102,18 +78,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
-    /**
      * @param string $projectName
      *
      * @return $this
@@ -124,18 +88,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogStoreName() instead.
-     *
-     * @param string $logStoreName
-     *
-     * @return $this
-     */
-    public function setLogStoreName($logStoreName)
-    {
-        return $this->withLogStoreName($logStoreName);
     }
 
     /**
@@ -152,18 +104,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -174,18 +114,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -202,18 +130,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -224,18 +140,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -252,18 +156,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -274,18 +166,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -302,18 +182,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -324,18 +192,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTrafficType() instead.
-     *
-     * @param string $trafficType
-     *
-     * @return $this
-     */
-    public function setTrafficType($trafficType)
-    {
-        return $this->withTrafficType($trafficType);
     }
 
     /**
@@ -352,18 +208,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlowLogId() instead.
-     *
-     * @param string $flowLogId
-     *
-     * @return $this
-     */
-    public function setFlowLogId($flowLogId)
-    {
-        return $this->withFlowLogId($flowLogId);
-    }
-
-    /**
      * @param string $flowLogId
      *
      * @return $this
@@ -377,18 +221,6 @@ class DescribeFlowLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlowLogName() instead.
-     *
-     * @param string $flowLogName
-     *
-     * @return $this
-     */
-    public function setFlowLogName($flowLogName)
-    {
-        return $this->withFlowLogName($flowLogName);
-    }
-
-    /**
      * @param string $flowLogName
      *
      * @return $this
@@ -399,18 +231,6 @@ class DescribeFlowLogs extends RpcRequest
         $this->options['query']['FlowLogName'] = $flowLogName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -47,18 +47,6 @@ class CreateTemplate extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceMode() instead.
-     *
-     * @param string $serviceMode
-     *
-     * @return $this
-     */
-    public function setServiceMode($serviceMode)
-    {
-        return $this->withServiceMode($serviceMode);
-    }
-
-    /**
      * @param string $serviceMode
      *
      * @return $this
@@ -69,28 +57,6 @@ class CreateTemplate extends RpcRequest
         $this->options['query']['ServiceMode'] = $serviceMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getLiveConfig() instead.
-     *
-     * @return array
-     */
-    public function getLiveConfigs()
-    {
-        return $this->getLiveConfig();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLiveConfig() instead.
-     *
-     * @param array $liveConfigs
-     *
-     * @return $this
-     */
-    public function setLiveConfigs(array $liveConfigs)
-    {
-        return $this->withLiveConfig($liveConfigs);
     }
 
     /**
@@ -110,18 +76,6 @@ class CreateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaConfig() instead.
-     *
-     * @param string $mediaConfig
-     *
-     * @return $this
-     */
-    public function setMediaConfig($mediaConfig)
-    {
-        return $this->withMediaConfig($mediaConfig);
-    }
-
-    /**
      * @param string $mediaConfig
      *
      * @return $this
@@ -135,18 +89,6 @@ class CreateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxMixStreamCount() instead.
-     *
-     * @param string $maxMixStreamCount
-     *
-     * @return $this
-     */
-    public function setMaxMixStreamCount($maxMixStreamCount)
-    {
-        return $this->withMaxMixStreamCount($maxMixStreamCount);
-    }
-
-    /**
      * @param string $maxMixStreamCount
      *
      * @return $this
@@ -157,28 +99,6 @@ class CreateTemplate extends RpcRequest
         $this->options['query']['MaxMixStreamCount'] = $maxMixStreamCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getRecordConfig() instead.
-     *
-     * @return array
-     */
-    public function getRecordConfigs()
-    {
-        return $this->getRecordConfig();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordConfig() instead.
-     *
-     * @param array $recordConfigs
-     *
-     * @return $this
-     */
-    public function setRecordConfigs(array $recordConfigs)
-    {
-        return $this->withRecordConfig($recordConfigs);
     }
 
     /**
@@ -201,18 +121,6 @@ class CreateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -223,28 +131,6 @@ class CreateTemplate extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getLayOut() instead.
-     *
-     * @return array
-     */
-    public function getLayOuts()
-    {
-        return $this->getLayOut();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLayOut() instead.
-     *
-     * @param array $layOuts
-     *
-     * @return $this
-     */
-    public function setLayOuts(array $layOuts)
-    {
-        return $this->withLayOut($layOuts);
     }
 
     /**
@@ -265,18 +151,6 @@ class CreateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -290,18 +164,6 @@ class CreateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallBack() instead.
-     *
-     * @param string $callBack
-     *
-     * @return $this
-     */
-    public function setCallBack($callBack)
-    {
-        return $this->withCallBack($callBack);
-    }
-
-    /**
      * @param string $callBack
      *
      * @return $this
@@ -312,18 +174,6 @@ class CreateTemplate extends RpcRequest
         $this->options['query']['CallBack'] = $callBack;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixMode() instead.
-     *
-     * @param string $mixMode
-     *
-     * @return $this
-     */
-    public function setMixMode($mixMode)
-    {
-        return $this->withMixMode($mixMode);
     }
 
     /**

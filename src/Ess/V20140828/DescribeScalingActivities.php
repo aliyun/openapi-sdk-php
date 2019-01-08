@@ -65,18 +65,6 @@ class DescribeScalingActivities extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId9() instead.
-     *
-     * @param string $scalingActivityId9
-     *
-     * @return $this
-     */
-    public function setScalingActivityId9($scalingActivityId9)
-    {
-        return $this->withScalingActivityId9($scalingActivityId9);
-    }
-
-    /**
      * @param string $scalingActivityId9
      *
      * @return $this
@@ -87,18 +75,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.9'] = $scalingActivityId9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -115,18 +91,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId5() instead.
-     *
-     * @param string $scalingActivityId5
-     *
-     * @return $this
-     */
-    public function setScalingActivityId5($scalingActivityId5)
-    {
-        return $this->withScalingActivityId5($scalingActivityId5);
-    }
-
-    /**
      * @param string $scalingActivityId5
      *
      * @return $this
@@ -137,18 +101,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.5'] = $scalingActivityId5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId6() instead.
-     *
-     * @param string $scalingActivityId6
-     *
-     * @return $this
-     */
-    public function setScalingActivityId6($scalingActivityId6)
-    {
-        return $this->withScalingActivityId6($scalingActivityId6);
     }
 
     /**
@@ -165,18 +117,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -187,18 +127,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId7() instead.
-     *
-     * @param string $scalingActivityId7
-     *
-     * @return $this
-     */
-    public function setScalingActivityId7($scalingActivityId7)
-    {
-        return $this->withScalingActivityId7($scalingActivityId7);
     }
 
     /**
@@ -215,18 +143,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId8() instead.
-     *
-     * @param string $scalingActivityId8
-     *
-     * @return $this
-     */
-    public function setScalingActivityId8($scalingActivityId8)
-    {
-        return $this->withScalingActivityId8($scalingActivityId8);
-    }
-
-    /**
      * @param string $scalingActivityId8
      *
      * @return $this
@@ -237,18 +153,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.8'] = $scalingActivityId8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId1() instead.
-     *
-     * @param string $scalingActivityId1
-     *
-     * @return $this
-     */
-    public function setScalingActivityId1($scalingActivityId1)
-    {
-        return $this->withScalingActivityId1($scalingActivityId1);
     }
 
     /**
@@ -265,18 +169,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId2() instead.
-     *
-     * @param string $scalingActivityId2
-     *
-     * @return $this
-     */
-    public function setScalingActivityId2($scalingActivityId2)
-    {
-        return $this->withScalingActivityId2($scalingActivityId2);
-    }
-
-    /**
      * @param string $scalingActivityId2
      *
      * @return $this
@@ -287,18 +179,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.2'] = $scalingActivityId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId3() instead.
-     *
-     * @param string $scalingActivityId3
-     *
-     * @return $this
-     */
-    public function setScalingActivityId3($scalingActivityId3)
-    {
-        return $this->withScalingActivityId3($scalingActivityId3);
     }
 
     /**
@@ -315,18 +195,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId4() instead.
-     *
-     * @param string $scalingActivityId4
-     *
-     * @return $this
-     */
-    public function setScalingActivityId4($scalingActivityId4)
-    {
-        return $this->withScalingActivityId4($scalingActivityId4);
-    }
-
-    /**
      * @param string $scalingActivityId4
      *
      * @return $this
@@ -337,18 +205,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.4'] = $scalingActivityId4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -365,18 +221,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusCode() instead.
-     *
-     * @param string $statusCode
-     *
-     * @return $this
-     */
-    public function setStatusCode($statusCode)
-    {
-        return $this->withStatusCode($statusCode);
-    }
-
-    /**
      * @param string $statusCode
      *
      * @return $this
@@ -387,18 +231,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['StatusCode'] = $statusCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -415,18 +247,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId11() instead.
-     *
-     * @param string $scalingActivityId11
-     *
-     * @return $this
-     */
-    public function setScalingActivityId11($scalingActivityId11)
-    {
-        return $this->withScalingActivityId11($scalingActivityId11);
-    }
-
-    /**
      * @param string $scalingActivityId11
      *
      * @return $this
@@ -437,18 +257,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.11'] = $scalingActivityId11;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId10() instead.
-     *
-     * @param string $scalingActivityId10
-     *
-     * @return $this
-     */
-    public function setScalingActivityId10($scalingActivityId10)
-    {
-        return $this->withScalingActivityId10($scalingActivityId10);
     }
 
     /**
@@ -465,18 +273,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId13() instead.
-     *
-     * @param string $scalingActivityId13
-     *
-     * @return $this
-     */
-    public function setScalingActivityId13($scalingActivityId13)
-    {
-        return $this->withScalingActivityId13($scalingActivityId13);
-    }
-
-    /**
      * @param string $scalingActivityId13
      *
      * @return $this
@@ -487,18 +283,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.13'] = $scalingActivityId13;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId12() instead.
-     *
-     * @param string $scalingActivityId12
-     *
-     * @return $this
-     */
-    public function setScalingActivityId12($scalingActivityId12)
-    {
-        return $this->withScalingActivityId12($scalingActivityId12);
     }
 
     /**
@@ -515,18 +299,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId15() instead.
-     *
-     * @param string $scalingActivityId15
-     *
-     * @return $this
-     */
-    public function setScalingActivityId15($scalingActivityId15)
-    {
-        return $this->withScalingActivityId15($scalingActivityId15);
-    }
-
-    /**
      * @param string $scalingActivityId15
      *
      * @return $this
@@ -537,18 +309,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.15'] = $scalingActivityId15;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId14() instead.
-     *
-     * @param string $scalingActivityId14
-     *
-     * @return $this
-     */
-    public function setScalingActivityId14($scalingActivityId14)
-    {
-        return $this->withScalingActivityId14($scalingActivityId14);
     }
 
     /**
@@ -565,18 +325,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId17() instead.
-     *
-     * @param string $scalingActivityId17
-     *
-     * @return $this
-     */
-    public function setScalingActivityId17($scalingActivityId17)
-    {
-        return $this->withScalingActivityId17($scalingActivityId17);
-    }
-
-    /**
      * @param string $scalingActivityId17
      *
      * @return $this
@@ -587,18 +335,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.17'] = $scalingActivityId17;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId16() instead.
-     *
-     * @param string $scalingActivityId16
-     *
-     * @return $this
-     */
-    public function setScalingActivityId16($scalingActivityId16)
-    {
-        return $this->withScalingActivityId16($scalingActivityId16);
     }
 
     /**
@@ -615,18 +351,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId19() instead.
-     *
-     * @param string $scalingActivityId19
-     *
-     * @return $this
-     */
-    public function setScalingActivityId19($scalingActivityId19)
-    {
-        return $this->withScalingActivityId19($scalingActivityId19);
-    }
-
-    /**
      * @param string $scalingActivityId19
      *
      * @return $this
@@ -637,18 +361,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.19'] = $scalingActivityId19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -665,18 +377,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId18() instead.
-     *
-     * @param string $scalingActivityId18
-     *
-     * @return $this
-     */
-    public function setScalingActivityId18($scalingActivityId18)
-    {
-        return $this->withScalingActivityId18($scalingActivityId18);
-    }
-
-    /**
      * @param string $scalingActivityId18
      *
      * @return $this
@@ -687,18 +387,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['ScalingActivityId.18'] = $scalingActivityId18;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -715,18 +403,6 @@ class DescribeScalingActivities extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -737,18 +413,6 @@ class DescribeScalingActivities extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId20() instead.
-     *
-     * @param string $scalingActivityId20
-     *
-     * @return $this
-     */
-    public function setScalingActivityId20($scalingActivityId20)
-    {
-        return $this->withScalingActivityId20($scalingActivityId20);
     }
 
     /**

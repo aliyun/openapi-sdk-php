@@ -38,18 +38,6 @@ class ExportSnapshot extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -60,18 +48,6 @@ class ExportSnapshot extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
     }
 
     /**
@@ -88,18 +64,6 @@ class ExportSnapshot extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
-
-    /**
      * @param string $ossBucket
      *
      * @return $this
@@ -110,18 +74,6 @@ class ExportSnapshot extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -138,18 +90,6 @@ class ExportSnapshot extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
-    }
-
-    /**
      * @param string $roleName
      *
      * @return $this
@@ -160,18 +100,6 @@ class ExportSnapshot extends RpcRequest
         $this->options['query']['RoleName'] = $roleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

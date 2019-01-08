@@ -40,18 +40,6 @@ class QueryMessages extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -65,18 +53,6 @@ class QueryMessages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -87,18 +63,6 @@ class QueryMessages extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

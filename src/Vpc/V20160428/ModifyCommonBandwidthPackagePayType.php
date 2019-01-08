@@ -50,18 +50,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -72,18 +60,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidthPackageId() instead.
-     *
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function setBandwidthPackageId($bandwidthPackageId)
-    {
-        return $this->withBandwidthPackageId($bandwidthPackageId);
     }
 
     /**
@@ -100,18 +76,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
-    }
-
-    /**
      * @param string $autoPay
      *
      * @return $this
@@ -122,18 +86,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['AutoPay'] = $autoPay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -150,18 +102,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -172,18 +112,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['Bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -200,18 +128,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -222,18 +138,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
     }
 
     /**
@@ -250,18 +154,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKbpsBandwidth() instead.
-     *
-     * @param string $kbpsBandwidth
-     *
-     * @return $this
-     */
-    public function setKbpsBandwidth($kbpsBandwidth)
-    {
-        return $this->withKbpsBandwidth($kbpsBandwidth);
-    }
-
-    /**
      * @param string $kbpsBandwidth
      *
      * @return $this
@@ -272,18 +164,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['KbpsBandwidth'] = $kbpsBandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceUid() instead.
-     *
-     * @param string $resourceUid
-     *
-     * @return $this
-     */
-    public function setResourceUid($resourceUid)
-    {
-        return $this->withResourceUid($resourceUid);
     }
 
     /**
@@ -300,18 +180,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceBid() instead.
-     *
-     * @param string $resourceBid
-     *
-     * @return $this
-     */
-    public function setResourceBid($resourceBid)
-    {
-        return $this->withResourceBid($resourceBid);
-    }
-
-    /**
      * @param string $resourceBid
      *
      * @return $this
@@ -325,18 +193,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
-    }
-
-    /**
      * @param string $payType
      *
      * @return $this
@@ -347,18 +203,6 @@ class ModifyCommonBandwidthPackagePayType extends RpcRequest
         $this->options['query']['PayType'] = $payType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
     }
 
     /**

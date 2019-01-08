@@ -39,18 +39,6 @@ class QueryDomainByParam extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class QueryDomainByParam extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -89,18 +65,6 @@ class QueryDomainByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
-    }
-
-    /**
      * @param string $pageNo
      *
      * @return $this
@@ -111,18 +75,6 @@ class QueryDomainByParam extends RpcRequest
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -139,18 +91,6 @@ class QueryDomainByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -164,18 +104,6 @@ class QueryDomainByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyWord() instead.
-     *
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function setKeyWord($keyWord)
-    {
-        return $this->withKeyWord($keyWord);
-    }
-
-    /**
      * @param string $keyWord
      *
      * @return $this
@@ -186,18 +114,6 @@ class QueryDomainByParam extends RpcRequest
         $this->options['query']['KeyWord'] = $keyWord;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

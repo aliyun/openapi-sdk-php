@@ -33,18 +33,6 @@ class GetContacts extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this

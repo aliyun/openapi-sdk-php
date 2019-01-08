@@ -44,18 +44,6 @@ class DeleteTrigger extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -66,18 +54,6 @@ class DeleteTrigger extends RoaRequest
         $this->pathParameters['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplicationId() instead.
-     *
-     * @param string $applicationId
-     *
-     * @return $this
-     */
-    public function setApplicationId($applicationId)
-    {
-        return $this->withApplicationId($applicationId);
     }
 
     /**

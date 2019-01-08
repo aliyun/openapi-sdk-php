@@ -38,18 +38,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplate() instead.
-     *
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function setTemplate($template)
-    {
-        return $this->withTemplate($template);
-    }
-
-    /**
      * @param string $template
      *
      * @return $this
@@ -60,18 +48,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
         $this->options['query']['Template'] = $template;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApp() instead.
-     *
-     * @param string $app
-     *
-     * @return $this
-     */
-    public function setApp($app)
-    {
-        return $this->withApp($app);
     }
 
     /**
@@ -88,18 +64,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -110,18 +74,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -138,18 +90,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -160,18 +100,6 @@ class DeleteLiveStreamTranscode extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -41,18 +41,6 @@ class CancelPredictiveJobs extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAll() instead.
-     *
-     * @param string $all
-     *
-     * @return $this
-     */
-    public function setAll($all)
-    {
-        return $this->withAll($all);
-    }
-
-    /**
      * @param string $all
      *
      * @return $this
@@ -63,28 +51,6 @@ class CancelPredictiveJobs extends RpcRequest
         $this->options['query']['All'] = $all;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getJobId() instead.
-     *
-     * @return array
-     */
-    public function getJobIds()
-    {
-        return $this->getJobId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param array $jobIds
-     *
-     * @return $this
-     */
-    public function setJobIds(array $jobIds)
-    {
-        return $this->withJobId($jobIds);
     }
 
     /**
@@ -103,18 +69,6 @@ class CancelPredictiveJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -125,18 +79,6 @@ class CancelPredictiveJobs extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobGroupId() instead.
-     *
-     * @param string $jobGroupId
-     *
-     * @return $this
-     */
-    public function setJobGroupId($jobGroupId)
-    {
-        return $this->withJobGroupId($jobGroupId);
     }
 
     /**

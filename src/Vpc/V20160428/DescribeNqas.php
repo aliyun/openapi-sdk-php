@@ -46,18 +46,6 @@ class DescribeNqas extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class DescribeNqas extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -96,18 +72,6 @@ class DescribeNqas extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRouterId() instead.
-     *
-     * @param string $routerId
-     *
-     * @return $this
-     */
-    public function setRouterId($routerId)
-    {
-        return $this->withRouterId($routerId);
-    }
-
-    /**
      * @param string $routerId
      *
      * @return $this
@@ -118,18 +82,6 @@ class DescribeNqas extends RpcRequest
         $this->options['query']['RouterId'] = $routerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class DescribeNqas extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -168,18 +108,6 @@ class DescribeNqas extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNqaId() instead.
-     *
-     * @param string $nqaId
-     *
-     * @return $this
-     */
-    public function setNqaId($nqaId)
-    {
-        return $this->withNqaId($nqaId);
     }
 
     /**
@@ -196,18 +124,6 @@ class DescribeNqas extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDefault() instead.
-     *
-     * @param string $isDefault
-     *
-     * @return $this
-     */
-    public function setIsDefault($isDefault)
-    {
-        return $this->withIsDefault($isDefault);
-    }
-
-    /**
      * @param string $isDefault
      *
      * @return $this
@@ -221,18 +137,6 @@ class DescribeNqas extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -243,18 +147,6 @@ class DescribeNqas extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

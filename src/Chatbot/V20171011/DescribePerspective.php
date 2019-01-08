@@ -38,18 +38,6 @@ class DescribePerspective extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPerspectiveId() instead.
-     *
-     * @param string $perspectiveId
-     *
-     * @return $this
-     */
-    public function setPerspectiveId($perspectiveId)
-    {
-        return $this->withPerspectiveId($perspectiveId);
-    }
-
-    /**
      * @param string $perspectiveId
      *
      * @return $this

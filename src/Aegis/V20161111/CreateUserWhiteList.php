@@ -40,18 +40,6 @@ class CreateUserWhiteList extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRiskIdList() instead.
-     *
-     * @param string $riskIdList
-     *
-     * @return $this
-     */
-    public function setRiskIdList($riskIdList)
-    {
-        return $this->withRiskIdList($riskIdList);
-    }
-
-    /**
      * @param string $riskIdList
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateUserWhiteList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReason() instead.
-     *
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        return $this->withReason($reason);
-    }
-
-    /**
      * @param string $reason
      *
      * @return $this
@@ -87,18 +63,6 @@ class CreateUserWhiteList extends RpcRequest
         $this->options['query']['Reason'] = $reason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**

@@ -46,18 +46,6 @@ class DescribeRuleList extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWarnLevel() instead.
-     *
-     * @param string $warnLevel
-     *
-     * @return $this
-     */
-    public function setWarnLevel($warnLevel)
-    {
-        return $this->withWarnLevel($warnLevel);
-    }
-
-    /**
      * @param string $warnLevel
      *
      * @return $this
@@ -68,18 +56,6 @@ class DescribeRuleList extends RpcRequest
         $this->options['query']['WarnLevel'] = $warnLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -96,18 +72,6 @@ class DescribeRuleList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -118,18 +82,6 @@ class DescribeRuleList extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -146,18 +98,6 @@ class DescribeRuleList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -168,18 +108,6 @@ class DescribeRuleList extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -196,18 +124,6 @@ class DescribeRuleList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -221,18 +137,6 @@ class DescribeRuleList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -243,18 +147,6 @@ class DescribeRuleList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExGroupId() instead.
-     *
-     * @param string $exGroupId
-     *
-     * @return $this
-     */
-    public function setExGroupId($exGroupId)
-    {
-        return $this->withExGroupId($exGroupId);
     }
 
     /**

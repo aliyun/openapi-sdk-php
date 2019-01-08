@@ -37,28 +37,6 @@ class CancelSimulatedSystemEvents extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getEventId() instead.
-     *
-     * @return array
-     */
-    public function getEventIds()
-    {
-        return $this->getEventId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param array $eventIds
-     *
-     * @return $this
-     */
-    public function setEventIds(array $eventIds)
-    {
-        return $this->withEventId($eventIds);
-    }
-
-    /**
      * @param array $eventId
      *
      * @return $this
@@ -71,18 +49,6 @@ class CancelSimulatedSystemEvents extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +65,6 @@ class CancelSimulatedSystemEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -124,18 +78,6 @@ class CancelSimulatedSystemEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -146,18 +88,6 @@ class CancelSimulatedSystemEvents extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

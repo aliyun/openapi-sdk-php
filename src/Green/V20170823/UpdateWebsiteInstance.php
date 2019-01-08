@@ -45,18 +45,6 @@ class UpdateWebsiteInstance extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSiteProtocol() instead.
-     *
-     * @param string $siteProtocol
-     *
-     * @return $this
-     */
-    public function setSiteProtocol($siteProtocol)
-    {
-        return $this->withSiteProtocol($siteProtocol);
-    }
-
-    /**
      * @param string $siteProtocol
      *
      * @return $this
@@ -67,18 +55,6 @@ class UpdateWebsiteInstance extends RpcRequest
         $this->options['query']['SiteProtocol'] = $siteProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +71,6 @@ class UpdateWebsiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -117,18 +81,6 @@ class UpdateWebsiteInstance extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWebsiteScanInterval() instead.
-     *
-     * @param string $websiteScanInterval
-     *
-     * @return $this
-     */
-    public function setWebsiteScanInterval($websiteScanInterval)
-    {
-        return $this->withWebsiteScanInterval($websiteScanInterval);
     }
 
     /**
@@ -145,18 +97,6 @@ class UpdateWebsiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -167,18 +107,6 @@ class UpdateWebsiteInstance extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIndexPage() instead.
-     *
-     * @param string $indexPage
-     *
-     * @return $this
-     */
-    public function setIndexPage($indexPage)
-    {
-        return $this->withIndexPage($indexPage);
     }
 
     /**
@@ -195,18 +123,6 @@ class UpdateWebsiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -217,18 +133,6 @@ class UpdateWebsiteInstance extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIndexPageScanInterval() instead.
-     *
-     * @param string $indexPageScanInterval
-     *
-     * @return $this
-     */
-    public function setIndexPageScanInterval($indexPageScanInterval)
-    {
-        return $this->withIndexPageScanInterval($indexPageScanInterval);
     }
 
     /**

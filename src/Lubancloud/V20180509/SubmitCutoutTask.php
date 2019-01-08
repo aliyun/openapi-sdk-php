@@ -38,28 +38,6 @@ class SubmitCutoutTask extends RpcRequest
     public $serviceCode = 'luban';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getPictureUrl() instead.
-     *
-     * @return array
-     */
-    public function getPictureUrls()
-    {
-        return $this->getPictureUrl();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPictureUrl() instead.
-     *
-     * @param array $pictureUrls
-     *
-     * @return $this
-     */
-    public function setPictureUrls(array $pictureUrls)
-    {
-        return $this->withPictureUrl($pictureUrls);
-    }
-
-    /**
      * @param array $pictureUrl
      *
      * @return $this

@@ -37,18 +37,6 @@ class DescribeDomainBpsDataByTimeStamp extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocationNames() instead.
-     *
-     * @param string $locationNames
-     *
-     * @return $this
-     */
-    public function setLocationNames($locationNames)
-    {
-        return $this->withLocationNames($locationNames);
-    }
-
-    /**
      * @param string $locationNames
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeDomainBpsDataByTimeStamp extends RpcRequest
         $this->options['query']['LocationNames'] = $locationNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIspNames() instead.
-     *
-     * @param string $ispNames
-     *
-     * @return $this
-     */
-    public function setIspNames($ispNames)
-    {
-        return $this->withIspNames($ispNames);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeDomainBpsDataByTimeStamp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeDomainBpsDataByTimeStamp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeDomainBpsDataByTimeStamp extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimePoint() instead.
-     *
-     * @param string $timePoint
-     *
-     * @return $this
-     */
-    public function setTimePoint($timePoint)
-    {
-        return $this->withTimePoint($timePoint);
     }
 
     /**

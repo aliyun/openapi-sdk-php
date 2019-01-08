@@ -55,18 +55,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -77,18 +65,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setimageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -105,18 +81,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVisibility() instead.
-     *
-     * @param string $visibility
-     *
-     * @return $this
-     */
-    public function setvisibility($visibility)
-    {
-        return $this->withVisibility($visibility);
-    }
-
-    /**
      * @param string $visibility
      *
      * @return $this
@@ -127,18 +91,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['visibility'] = $visibility;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -155,18 +107,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -177,18 +117,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOsTypeId() instead.
-     *
-     * @param string $osTypeId
-     *
-     * @return $this
-     */
-    public function setosTypeId($osTypeId)
-    {
-        return $this->withOsTypeId($osTypeId);
     }
 
     /**
@@ -205,18 +133,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -227,18 +143,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -255,18 +159,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -277,18 +169,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageCategory() instead.
-     *
-     * @param string $imageCategory
-     *
-     * @return $this
-     */
-    public function setimageCategory($imageCategory)
-    {
-        return $this->withImageCategory($imageCategory);
     }
 
     /**
@@ -305,18 +185,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -327,18 +195,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRequestId() instead.
-     *
-     * @param string $requestId
-     *
-     * @return $this
-     */
-    public function setrequestId($requestId)
-    {
-        return $this->withRequestId($requestId);
     }
 
     /**
@@ -355,18 +211,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -377,18 +221,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['pageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -405,18 +237,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setpage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -427,18 +247,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['page'] = $page;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -455,18 +263,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -477,18 +273,6 @@ class InnerImageQueryImgsByParam extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setstatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -43,18 +43,6 @@ class CreateRoom extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateIds() instead.
-     *
-     * @param string $templateIds
-     *
-     * @return $this
-     */
-    public function setTemplateIds($templateIds)
-    {
-        return $this->withTemplateIds($templateIds);
-    }
-
-    /**
      * @param string $templateIds
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['TemplateIds'] = $templateIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAnchorId() instead.
-     *
-     * @param string $anchorId
-     *
-     * @return $this
-     */
-    public function setAnchorId($anchorId)
-    {
-        return $this->withAnchorId($anchorId);
     }
 
     /**
@@ -93,18 +69,6 @@ class CreateRoom extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseAppTranscode() instead.
-     *
-     * @param string $useAppTranscode
-     *
-     * @return $this
-     */
-    public function setUseAppTranscode($useAppTranscode)
-    {
-        return $this->withUseAppTranscode($useAppTranscode);
-    }
-
-    /**
      * @param string $useAppTranscode
      *
      * @return $this
@@ -115,18 +79,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['UseAppTranscode'] = $useAppTranscode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +95,6 @@ class CreateRoom extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoomId() instead.
-     *
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function setRoomId($roomId)
-    {
-        return $this->withRoomId($roomId);
-    }
-
-    /**
      * @param string $roomId
      *
      * @return $this
@@ -165,18 +105,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['RoomId'] = $roomId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

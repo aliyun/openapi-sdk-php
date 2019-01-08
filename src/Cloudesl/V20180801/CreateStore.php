@@ -40,18 +40,6 @@ class CreateStore extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCompanyId() instead.
-     *
-     * @param string $companyId
-     *
-     * @return $this
-     */
-    public function setCompanyId($companyId)
-    {
-        return $this->withCompanyId($companyId);
-    }
-
-    /**
      * @param string $companyId
      *
      * @return $this
@@ -62,18 +50,6 @@ class CreateStore extends RpcRequest
         $this->options['query']['CompanyId'] = $companyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComments() instead.
-     *
-     * @param string $comments
-     *
-     * @return $this
-     */
-    public function setComments($comments)
-    {
-        return $this->withComments($comments);
     }
 
     /**
@@ -90,18 +66,6 @@ class CreateStore extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhone() instead.
-     *
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function setPhone($phone)
-    {
-        return $this->withPhone($phone);
-    }
-
-    /**
      * @param string $phone
      *
      * @return $this
@@ -112,18 +76,6 @@ class CreateStore extends RpcRequest
         $this->options['query']['Phone'] = $phone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -140,18 +92,6 @@ class CreateStore extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroups() instead.
-     *
-     * @param string $groups
-     *
-     * @return $this
-     */
-    public function setGroups($groups)
-    {
-        return $this->withGroups($groups);
-    }
-
-    /**
      * @param string $groups
      *
      * @return $this
@@ -162,18 +102,6 @@ class CreateStore extends RpcRequest
         $this->options['query']['Groups'] = $groups;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutId() instead.
-     *
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function setOutId($outId)
-    {
-        return $this->withOutId($outId);
     }
 
     /**
@@ -190,18 +118,6 @@ class CreateStore extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBrand() instead.
-     *
-     * @param string $brand
-     *
-     * @return $this
-     */
-    public function setBrand($brand)
-    {
-        return $this->withBrand($brand);
-    }
-
-    /**
      * @param string $brand
      *
      * @return $this
@@ -212,18 +128,6 @@ class CreateStore extends RpcRequest
         $this->options['query']['Brand'] = $brand;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParentId() instead.
-     *
-     * @param string $parentId
-     *
-     * @return $this
-     */
-    public function setParentId($parentId)
-    {
-        return $this->withParentId($parentId);
     }
 
     /**

@@ -36,18 +36,6 @@ class ModifyFullTableScan extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
-
-    /**
      * @param string $dbName
      *
      * @return $this
@@ -58,18 +46,6 @@ class ModifyFullTableScan extends RpcRequest
         $this->options['query']['DbName'] = $dbName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTableNames() instead.
-     *
-     * @param string $tableNames
-     *
-     * @return $this
-     */
-    public function setTableNames($tableNames)
-    {
-        return $this->withTableNames($tableNames);
     }
 
     /**
@@ -86,18 +62,6 @@ class ModifyFullTableScan extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this
@@ -108,18 +72,6 @@ class ModifyFullTableScan extends RpcRequest
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFullTableScan() instead.
-     *
-     * @param string $fullTableScan
-     *
-     * @return $this
-     */
-    public function setFullTableScan($fullTableScan)
-    {
-        return $this->withFullTableScan($fullTableScan);
     }
 
     /**

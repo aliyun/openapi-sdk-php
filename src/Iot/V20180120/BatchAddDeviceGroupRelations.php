@@ -34,18 +34,6 @@ class BatchAddDeviceGroupRelations extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -56,28 +44,6 @@ class BatchAddDeviceGroupRelations extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDevice() instead.
-     *
-     * @return array
-     */
-    public function getDevices()
-    {
-        return $this->getDevice();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDevice() instead.
-     *
-     * @param array $devices
-     *
-     * @return $this
-     */
-    public function setDevices(array $devices)
-    {
-        return $this->withDevice($devices);
     }
 
     /**

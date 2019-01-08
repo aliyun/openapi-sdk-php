@@ -42,18 +42,6 @@ class DescribeWebshell extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -64,18 +52,6 @@ class DescribeWebshell extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -92,18 +68,6 @@ class DescribeWebshell extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -117,18 +81,6 @@ class DescribeWebshell extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
-    }
-
-    /**
      * @param string $dealed
      *
      * @return $this
@@ -139,18 +91,6 @@ class DescribeWebshell extends RpcRequest
         $this->options['query']['Dealed'] = $dealed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
     }
 
     /**

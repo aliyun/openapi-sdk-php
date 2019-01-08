@@ -46,18 +46,6 @@ class DeleteClusterNode extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReleaseInstance() instead.
-     *
-     * @param string $releaseInstance
-     *
-     * @return $this
-     */
-    public function setreleaseInstance($releaseInstance)
-    {
-        return $this->withReleaseInstance($releaseInstance);
-    }
-
-    /**
      * @param string $releaseInstance
      *
      * @return $this
@@ -68,18 +56,6 @@ class DeleteClusterNode extends RoaRequest
         $this->options['query']['releaseInstance'] = $releaseInstance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
     }
 
     /**
@@ -96,18 +72,6 @@ class DeleteClusterNode extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setforce($force)
-    {
-        return $this->withForce($force);
-    }
-
-    /**
      * @param string $force
      *
      * @return $this
@@ -118,18 +82,6 @@ class DeleteClusterNode extends RoaRequest
         $this->options['query']['force'] = $force;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

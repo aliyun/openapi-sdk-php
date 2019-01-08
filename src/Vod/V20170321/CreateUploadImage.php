@@ -47,18 +47,6 @@ class CreateUploadImage extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageType() instead.
-     *
-     * @param string $imageType
-     *
-     * @return $this
-     */
-    public function setImageType($imageType)
-    {
-        return $this->withImageType($imageType);
     }
 
     /**
@@ -97,18 +73,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOriginalFileName() instead.
-     *
-     * @param string $originalFileName
-     *
-     * @return $this
-     */
-    public function setOriginalFileName($originalFileName)
-    {
-        return $this->withOriginalFileName($originalFileName);
-    }
-
-    /**
      * @param string $originalFileName
      *
      * @return $this
@@ -119,18 +83,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['OriginalFileName'] = $originalFileName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -147,18 +99,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageExt() instead.
-     *
-     * @param string $imageExt
-     *
-     * @return $this
-     */
-    public function setImageExt($imageExt)
-    {
-        return $this->withImageExt($imageExt);
-    }
-
-    /**
      * @param string $imageExt
      *
      * @return $this
@@ -169,18 +109,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['ImageExt'] = $imageExt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
     }
 
     /**
@@ -197,18 +125,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -219,18 +135,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -247,18 +151,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -269,18 +161,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['Tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStorageLocation() instead.
-     *
-     * @param string $storageLocation
-     *
-     * @return $this
-     */
-    public function setStorageLocation($storageLocation)
-    {
-        return $this->withStorageLocation($storageLocation);
     }
 
     /**

@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\TeslaStream
  *
- * @method V20180115\TeslaStreamApiResolver v20180115()
+ * @method TeslaStreamV20180115ApiResolver v20180115()
  */
 class TeslaStream
 {

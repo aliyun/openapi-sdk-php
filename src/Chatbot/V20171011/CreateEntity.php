@@ -42,18 +42,6 @@ class CreateEntity extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegex() instead.
-     *
-     * @param string $regex
-     *
-     * @return $this
-     */
-    public function setRegex($regex)
-    {
-        return $this->withRegex($regex);
-    }
-
-    /**
      * @param string $regex
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateEntity extends RpcRequest
         $this->options['query']['Regex'] = $regex;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEntityType() instead.
-     *
-     * @param string $entityType
-     *
-     * @return $this
-     */
-    public function setEntityType($entityType)
-    {
-        return $this->withEntityType($entityType);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateEntity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMembers() instead.
-     *
-     * @param string $members
-     *
-     * @return $this
-     */
-    public function setMembers($members)
-    {
-        return $this->withMembers($members);
-    }
-
-    /**
      * @param string $members
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateEntity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityName() instead.
-     *
-     * @param string $entityName
-     *
-     * @return $this
-     */
-    public function setEntityName($entityName)
-    {
-        return $this->withEntityName($entityName);
-    }
-
-    /**
      * @param string $entityName
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateEntity extends RpcRequest
         $this->options['query']['EntityName'] = $entityName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
     }
 
     /**

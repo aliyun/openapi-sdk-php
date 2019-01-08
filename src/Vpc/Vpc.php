@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Vpc
  *
- * @method V20160428\VpcApiResolver v20160428()
+ * @method VpcV20160428ApiResolver v20160428()
  */
 class Vpc
 {

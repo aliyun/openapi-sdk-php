@@ -34,18 +34,6 @@ class AfsAppCheck extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSession() instead.
-     *
-     * @param string $session
-     *
-     * @return $this
-     */
-    public function setSession($session)
-    {
-        return $this->withSession($session);
-    }
-
-    /**
      * @param string $session
      *
      * @return $this
@@ -56,18 +44,6 @@ class AfsAppCheck extends RpcRequest
         $this->options['query']['Session'] = $session;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
     }
 
     /**

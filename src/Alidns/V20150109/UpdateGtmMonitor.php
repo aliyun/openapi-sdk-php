@@ -47,18 +47,6 @@ class UpdateGtmMonitor extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMonitorExtendInfo() instead.
-     *
-     * @param string $monitorExtendInfo
-     *
-     * @return $this
-     */
-    public function setMonitorExtendInfo($monitorExtendInfo)
-    {
-        return $this->withMonitorExtendInfo($monitorExtendInfo);
-    }
-
-    /**
      * @param string $monitorExtendInfo
      *
      * @return $this
@@ -69,18 +57,6 @@ class UpdateGtmMonitor extends RpcRequest
         $this->options['query']['MonitorExtendInfo'] = $monitorExtendInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -97,18 +73,6 @@ class UpdateGtmMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -119,18 +83,6 @@ class UpdateGtmMonitor extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMonitorConfigId() instead.
-     *
-     * @param string $monitorConfigId
-     *
-     * @return $this
-     */
-    public function setMonitorConfigId($monitorConfigId)
-    {
-        return $this->withMonitorConfigId($monitorConfigId);
     }
 
     /**
@@ -147,18 +99,6 @@ class UpdateGtmMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEvaluationCount() instead.
-     *
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function setEvaluationCount($evaluationCount)
-    {
-        return $this->withEvaluationCount($evaluationCount);
-    }
-
-    /**
      * @param string $evaluationCount
      *
      * @return $this
@@ -169,18 +109,6 @@ class UpdateGtmMonitor extends RpcRequest
         $this->options['query']['EvaluationCount'] = $evaluationCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProtocolType() instead.
-     *
-     * @param string $protocolType
-     *
-     * @return $this
-     */
-    public function setProtocolType($protocolType)
-    {
-        return $this->withProtocolType($protocolType);
     }
 
     /**
@@ -197,18 +125,6 @@ class UpdateGtmMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -219,18 +135,6 @@ class UpdateGtmMonitor extends RpcRequest
         $this->options['query']['Interval'] = $interval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -247,18 +151,6 @@ class UpdateGtmMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
-    }
-
-    /**
      * @param string $timeout
      *
      * @return $this
@@ -269,28 +161,6 @@ class UpdateGtmMonitor extends RpcRequest
         $this->options['query']['Timeout'] = $timeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getIspCityNode() instead.
-     *
-     * @return array
-     */
-    public function getIspCityNodes()
-    {
-        return $this->getIspCityNode();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIspCityNode() instead.
-     *
-     * @param array $ispCityNodes
-     *
-     * @return $this
-     */
-    public function setIspCityNodes(array $ispCityNodes)
-    {
-        return $this->withIspCityNode($ispCityNodes);
     }
 
     /**

@@ -42,18 +42,6 @@ class CreateTicket extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreatorId() instead.
-     *
-     * @param string $creatorId
-     *
-     * @return $this
-     */
-    public function setCreatorId($creatorId)
-    {
-        return $this->withCreatorId($creatorId);
-    }
-
-    /**
      * @param string $creatorId
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateTicket extends RpcRequest
         $this->options['query']['CreatorId'] = $creatorId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateTicket extends RpcRequest
         $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomFields() instead.
-     *
-     * @param string $customFields
-     *
-     * @return $this
-     */
-    public function setCustomFields($customFields)
-    {
-        return $this->withCustomFields($customFields);
     }
 
     /**

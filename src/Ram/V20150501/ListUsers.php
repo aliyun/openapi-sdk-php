@@ -33,23 +33,10 @@ class ListUsers extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
 
     /**
      * @param string $marker
@@ -62,18 +49,6 @@ class ListUsers extends RpcRequest
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxItems() instead.
-     *
-     * @param string $maxItems
-     *
-     * @return $this
-     */
-    public function setMaxItems($maxItems)
-    {
-        return $this->withMaxItems($maxItems);
     }
 
     /**

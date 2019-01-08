@@ -37,28 +37,6 @@ class InvokeShellCommand extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
-
-    /**
      * @param array $instance
      *
      * @return $this
@@ -71,18 +49,6 @@ class InvokeShellCommand extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWorkingDir() instead.
-     *
-     * @param string $workingDir
-     *
-     * @return $this
-     */
-    public function setWorkingDir($workingDir)
-    {
-        return $this->withWorkingDir($workingDir);
     }
 
     /**
@@ -99,18 +65,6 @@ class InvokeShellCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -124,18 +78,6 @@ class InvokeShellCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommand() instead.
-     *
-     * @param string $command
-     *
-     * @return $this
-     */
-    public function setCommand($command)
-    {
-        return $this->withCommand($command);
-    }
-
-    /**
      * @param string $command
      *
      * @return $this
@@ -146,18 +88,6 @@ class InvokeShellCommand extends RpcRequest
         $this->options['query']['Command'] = $command;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
     }
 
     /**

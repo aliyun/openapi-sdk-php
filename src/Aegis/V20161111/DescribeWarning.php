@@ -48,18 +48,6 @@ class DescribeWarning extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTypeNames() instead.
-     *
-     * @param string $typeNames
-     *
-     * @return $this
-     */
-    public function setTypeNames($typeNames)
-    {
-        return $this->withTypeNames($typeNames);
-    }
-
-    /**
      * @param string $typeNames
      *
      * @return $this
@@ -70,18 +58,6 @@ class DescribeWarning extends RpcRequest
         $this->options['query']['TypeNames'] = $typeNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskName() instead.
-     *
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function setRiskName($riskName)
-    {
-        return $this->withRiskName($riskName);
     }
 
     /**
@@ -98,18 +74,6 @@ class DescribeWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
-
-    /**
      * @param string $statusList
      *
      * @return $this
@@ -120,18 +84,6 @@ class DescribeWarning extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -148,18 +100,6 @@ class DescribeWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRiskLevels() instead.
-     *
-     * @param string $riskLevels
-     *
-     * @return $this
-     */
-    public function setRiskLevels($riskLevels)
-    {
-        return $this->withRiskLevels($riskLevels);
-    }
-
-    /**
      * @param string $riskLevels
      *
      * @return $this
@@ -170,18 +110,6 @@ class DescribeWarning extends RpcRequest
         $this->options['query']['RiskLevels'] = $riskLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -198,18 +126,6 @@ class DescribeWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
-    }
-
-    /**
      * @param string $strategyId
      *
      * @return $this
@@ -220,18 +136,6 @@ class DescribeWarning extends RpcRequest
         $this->options['query']['StrategyId'] = $strategyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -248,18 +152,6 @@ class DescribeWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
-    }
-
-    /**
      * @param string $dealed
      *
      * @return $this
@@ -273,18 +165,6 @@ class DescribeWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubTypeNames() instead.
-     *
-     * @param string $subTypeNames
-     *
-     * @return $this
-     */
-    public function setSubTypeNames($subTypeNames)
-    {
-        return $this->withSubTypeNames($subTypeNames);
-    }
-
-    /**
      * @param string $subTypeNames
      *
      * @return $this
@@ -295,18 +175,6 @@ class DescribeWarning extends RpcRequest
         $this->options['query']['SubTypeNames'] = $subTypeNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

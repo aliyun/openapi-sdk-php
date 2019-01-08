@@ -37,18 +37,6 @@ class ListAlarmHistory extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
-
-    /**
      * @param string $cursor
      *
      * @return $this
@@ -59,18 +47,6 @@ class ListAlarmHistory extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
     }
 
     /**
@@ -87,18 +63,6 @@ class ListAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -112,18 +76,6 @@ class ListAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -134,18 +86,6 @@ class ListAlarmHistory extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**

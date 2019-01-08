@@ -41,18 +41,6 @@ class QueryMovieComments extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -63,18 +51,6 @@ class QueryMovieComments extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMovieId() instead.
-     *
-     * @param string $movieId
-     *
-     * @return $this
-     */
-    public function setMovieId($movieId)
-    {
-        return $this->withMovieId($movieId);
     }
 
     /**
@@ -91,18 +67,6 @@ class QueryMovieComments extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -113,18 +77,6 @@ class QueryMovieComments extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

@@ -35,18 +35,6 @@ class BindPhone extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
-    }
-
-    /**
      * @param string $phoneNumber
      *
      * @return $this
@@ -60,18 +48,6 @@ class BindPhone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -82,18 +58,6 @@ class BindPhone extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceId() instead.
-     *
-     * @param string $deviceId
-     *
-     * @return $this
-     */
-    public function setDeviceId($deviceId)
-    {
-        return $this->withDeviceId($deviceId);
     }
 
     /**

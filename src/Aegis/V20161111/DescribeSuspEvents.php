@@ -48,18 +48,6 @@ class DescribeSuspEvents extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlarmUniqueInfo() instead.
-     *
-     * @param string $alarmUniqueInfo
-     *
-     * @return $this
-     */
-    public function setAlarmUniqueInfo($alarmUniqueInfo)
-    {
-        return $this->withAlarmUniqueInfo($alarmUniqueInfo);
-    }
-
-    /**
      * @param string $alarmUniqueInfo
      *
      * @return $this
@@ -70,18 +58,6 @@ class DescribeSuspEvents extends RpcRequest
         $this->options['query']['AlarmUniqueInfo'] = $alarmUniqueInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -98,18 +74,6 @@ class DescribeSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -120,18 +84,6 @@ class DescribeSuspEvents extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -148,18 +100,6 @@ class DescribeSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
-    }
-
-    /**
      * @param string $dealed
      *
      * @return $this
@@ -170,18 +110,6 @@ class DescribeSuspEvents extends RpcRequest
         $this->options['query']['Dealed'] = $dealed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
     }
 
     /**
@@ -198,18 +126,6 @@ class DescribeSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -220,18 +136,6 @@ class DescribeSuspEvents extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -248,18 +152,6 @@ class DescribeSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -273,18 +165,6 @@ class DescribeSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevels() instead.
-     *
-     * @param string $levels
-     *
-     * @return $this
-     */
-    public function setLevels($levels)
-    {
-        return $this->withLevels($levels);
-    }
-
-    /**
      * @param string $levels
      *
      * @return $this
@@ -295,18 +175,6 @@ class DescribeSuspEvents extends RpcRequest
         $this->options['query']['Levels'] = $levels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParentEventTypes() instead.
-     *
-     * @param string $parentEventTypes
-     *
-     * @return $this
-     */
-    public function setParentEventTypes($parentEventTypes)
-    {
-        return $this->withParentEventTypes($parentEventTypes);
     }
 
     /**

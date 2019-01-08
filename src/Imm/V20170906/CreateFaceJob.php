@@ -39,18 +39,6 @@ class CreateFaceJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -61,18 +49,6 @@ class CreateFaceJob extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**

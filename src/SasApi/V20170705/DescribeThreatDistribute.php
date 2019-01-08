@@ -37,18 +37,6 @@ class DescribeThreatDistribute extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeThreatDistribute extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeThreatDistribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHitDay() instead.
-     *
-     * @param string $hitDay
-     *
-     * @return $this
-     */
-    public function setHitDay($hitDay)
-    {
-        return $this->withHitDay($hitDay);
-    }
-
-    /**
      * @param string $hitDay
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeThreatDistribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeThreatDistribute extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApiType() instead.
-     *
-     * @param string $apiType
-     *
-     * @return $this
-     */
-    public function setApiType($apiType)
-    {
-        return $this->withApiType($apiType);
     }
 
     /**

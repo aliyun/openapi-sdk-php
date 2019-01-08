@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\CCC
  *
- * @method V20170705\CCCApiResolver v20170705()
+ * @method CCCV20170705ApiResolver v20170705()
  */
 class CCC
 {

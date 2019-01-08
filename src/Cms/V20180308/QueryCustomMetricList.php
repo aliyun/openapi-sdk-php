@@ -38,18 +38,6 @@ class QueryCustomMetricList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
-
-    /**
      * @param string $size
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryCustomMetricList extends RpcRequest
         $this->options['query']['Size'] = $size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -88,18 +64,6 @@ class QueryCustomMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -110,18 +74,6 @@ class QueryCustomMetricList extends RpcRequest
         $this->options['query']['Page'] = $page;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**
@@ -138,18 +90,6 @@ class QueryCustomMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDimension() instead.
-     *
-     * @param string $dimension
-     *
-     * @return $this
-     */
-    public function setDimension($dimension)
-    {
-        return $this->withDimension($dimension);
-    }
-
-    /**
      * @param string $dimension
      *
      * @return $this
@@ -160,18 +100,6 @@ class QueryCustomMetricList extends RpcRequest
         $this->options['query']['Dimension'] = $dimension;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMd5() instead.
-     *
-     * @param string $md5
-     *
-     * @return $this
-     */
-    public function setMd5($md5)
-    {
-        return $this->withMd5($md5);
     }
 
     /**

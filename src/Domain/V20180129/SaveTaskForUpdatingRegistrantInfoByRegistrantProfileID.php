@@ -37,18 +37,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -62,18 +50,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -84,28 +60,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDomainName() instead.
-     *
-     * @return array
-     */
-    public function getDomainNames()
-    {
-        return $this->getDomainName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param array $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames(array $domainNames)
-    {
-        return $this->withDomainName($domainNames);
     }
 
     /**
@@ -124,18 +78,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransferOutProhibited() instead.
-     *
-     * @param string $transferOutProhibited
-     *
-     * @return $this
-     */
-    public function setTransferOutProhibited($transferOutProhibited)
-    {
-        return $this->withTransferOutProhibited($transferOutProhibited);
-    }
-
-    /**
      * @param string $transferOutProhibited
      *
      * @return $this
@@ -146,18 +88,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
         $this->options['query']['TransferOutProhibited'] = $transferOutProhibited;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

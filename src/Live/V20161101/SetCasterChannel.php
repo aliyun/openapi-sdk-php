@@ -43,18 +43,6 @@ class SetCasterChannel extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
-
-    /**
      * @param string $resourceId
      *
      * @return $this
@@ -65,18 +53,6 @@ class SetCasterChannel extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlayStatus() instead.
-     *
-     * @param string $playStatus
-     *
-     * @return $this
-     */
-    public function setPlayStatus($playStatus)
-    {
-        return $this->withPlayStatus($playStatus);
     }
 
     /**
@@ -93,18 +69,6 @@ class SetCasterChannel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -115,18 +79,6 @@ class SetCasterChannel extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +95,6 @@ class SetCasterChannel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSeekOffset() instead.
-     *
-     * @param string $seekOffset
-     *
-     * @return $this
-     */
-    public function setSeekOffset($seekOffset)
-    {
-        return $this->withSeekOffset($seekOffset);
-    }
-
-    /**
      * @param string $seekOffset
      *
      * @return $this
@@ -165,18 +105,6 @@ class SetCasterChannel extends RpcRequest
         $this->options['query']['SeekOffset'] = $seekOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

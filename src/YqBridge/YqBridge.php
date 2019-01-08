@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\YqBridge
  *
- * @method V20170810\YqBridgeApiResolver v20170810()
+ * @method YqBridgeV20170810ApiResolver v20170810()
  */
 class YqBridge
 {

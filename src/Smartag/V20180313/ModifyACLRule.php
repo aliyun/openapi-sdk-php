@@ -52,18 +52,6 @@ class ModifyACLRule extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAclId() instead.
-     *
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function setAclId($aclId)
-    {
-        return $this->withAclId($aclId);
-    }
-
-    /**
      * @param string $aclId
      *
      * @return $this
@@ -74,18 +62,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['AclId'] = $aclId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -102,18 +78,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourcePortRange() instead.
-     *
-     * @param string $sourcePortRange
-     *
-     * @return $this
-     */
-    public function setSourcePortRange($sourcePortRange)
-    {
-        return $this->withSourcePortRange($sourcePortRange);
-    }
-
-    /**
      * @param string $sourcePortRange
      *
      * @return $this
@@ -124,18 +88,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['SourcePortRange'] = $sourcePortRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -152,18 +104,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setIpProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
-    }
-
-    /**
      * @param string $ipProtocol
      *
      * @return $this
@@ -174,18 +114,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['IpProtocol'] = $ipProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -202,18 +130,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceCidr() instead.
-     *
-     * @param string $sourceCidr
-     *
-     * @return $this
-     */
-    public function setSourceCidr($sourceCidr)
-    {
-        return $this->withSourceCidr($sourceCidr);
-    }
-
-    /**
      * @param string $sourceCidr
      *
      * @return $this
@@ -224,18 +140,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['SourceCidr'] = $sourceCidr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -252,18 +156,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -274,18 +166,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
     }
 
     /**
@@ -302,18 +182,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAcrId() instead.
-     *
-     * @param string $acrId
-     *
-     * @return $this
-     */
-    public function setAcrId($acrId)
-    {
-        return $this->withAcrId($acrId);
-    }
-
-    /**
      * @param string $acrId
      *
      * @return $this
@@ -324,18 +192,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['AcrId'] = $acrId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestCidr() instead.
-     *
-     * @param string $destCidr
-     *
-     * @return $this
-     */
-    public function setDestCidr($destCidr)
-    {
-        return $this->withDestCidr($destCidr);
     }
 
     /**
@@ -352,18 +208,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestPortRange() instead.
-     *
-     * @param string $destPortRange
-     *
-     * @return $this
-     */
-    public function setDestPortRange($destPortRange)
-    {
-        return $this->withDestPortRange($destPortRange);
-    }
-
-    /**
      * @param string $destPortRange
      *
      * @return $this
@@ -377,18 +221,6 @@ class ModifyACLRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDirection() instead.
-     *
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function setDirection($direction)
-    {
-        return $this->withDirection($direction);
-    }
-
-    /**
      * @param string $direction
      *
      * @return $this
@@ -399,18 +231,6 @@ class ModifyACLRule extends RpcRequest
         $this->options['query']['Direction'] = $direction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicy() instead.
-     *
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function setPolicy($policy)
-    {
-        return $this->withPolicy($policy);
     }
 
     /**

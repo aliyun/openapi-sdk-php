@@ -31,7 +31,6 @@ class GetSecurityPreference extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

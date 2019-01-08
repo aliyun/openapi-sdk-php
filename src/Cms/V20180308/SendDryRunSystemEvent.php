@@ -36,18 +36,6 @@ class SendDryRunSystemEvent extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
-
-    /**
      * @param string $product
      *
      * @return $this
@@ -58,18 +46,6 @@ class SendDryRunSystemEvent extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -86,18 +62,6 @@ class SendDryRunSystemEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventName() instead.
-     *
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        return $this->withEventName($eventName);
-    }
-
-    /**
      * @param string $eventName
      *
      * @return $this
@@ -108,18 +72,6 @@ class SendDryRunSystemEvent extends RpcRequest
         $this->options['query']['EventName'] = $eventName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventContent() instead.
-     *
-     * @param string $eventContent
-     *
-     * @return $this
-     */
-    public function setEventContent($eventContent)
-    {
-        return $this->withEventContent($eventContent);
     }
 
     /**

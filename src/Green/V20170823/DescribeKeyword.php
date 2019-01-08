@@ -44,18 +44,6 @@ class DescribeKeyword extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
-
-    /**
      * @param string $totalCount
      *
      * @return $this
@@ -66,18 +54,6 @@ class DescribeKeyword extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class DescribeKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeywordLibId() instead.
-     *
-     * @param string $keywordLibId
-     *
-     * @return $this
-     */
-    public function setKeywordLibId($keywordLibId)
-    {
-        return $this->withKeywordLibId($keywordLibId);
-    }
-
-    /**
      * @param string $keywordLibId
      *
      * @return $this
@@ -116,18 +80,6 @@ class DescribeKeyword extends RpcRequest
         $this->options['query']['KeywordLibId'] = $keywordLibId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -144,18 +96,6 @@ class DescribeKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -191,18 +119,6 @@ class DescribeKeyword extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
     }
 
     /**

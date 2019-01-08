@@ -39,18 +39,6 @@ class SetInstancesSystemEvent extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class SetInstancesSystemEvent extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotBefore() instead.
-     *
-     * @param string $notBefore
-     *
-     * @return $this
-     */
-    public function setNotBefore($notBefore)
-    {
-        return $this->withNotBefore($notBefore);
     }
 
     /**
@@ -89,18 +65,6 @@ class SetInstancesSystemEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -111,18 +75,6 @@ class SetInstancesSystemEvent extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class SetInstancesSystemEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -161,28 +101,6 @@ class SetInstancesSystemEvent extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIds()
-    {
-        return $this->getInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds(array $instanceIds)
-    {
-        return $this->withInstanceId($instanceIds);
     }
 
     /**
@@ -198,18 +116,6 @@ class SetInstancesSystemEvent extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventType() instead.
-     *
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        return $this->withEventType($eventType);
     }
 
     /**

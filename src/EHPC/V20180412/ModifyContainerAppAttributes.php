@@ -34,18 +34,6 @@ class ModifyContainerAppAttributes extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -56,18 +44,6 @@ class ModifyContainerAppAttributes extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerId() instead.
-     *
-     * @param string $containerId
-     *
-     * @return $this
-     */
-    public function setContainerId($containerId)
-    {
-        return $this->withContainerId($containerId);
     }
 
     /**

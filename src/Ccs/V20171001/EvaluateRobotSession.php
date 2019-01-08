@@ -40,18 +40,6 @@ class EvaluateRobotSession extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -65,18 +53,6 @@ class EvaluateRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSatisfaction() instead.
-     *
-     * @param string $satisfaction
-     *
-     * @return $this
-     */
-    public function setSatisfaction($satisfaction)
-    {
-        return $this->withSatisfaction($satisfaction);
-    }
-
-    /**
      * @param string $satisfaction
      *
      * @return $this
@@ -87,18 +63,6 @@ class EvaluateRobotSession extends RpcRequest
         $this->options['query']['Satisfaction'] = $satisfaction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

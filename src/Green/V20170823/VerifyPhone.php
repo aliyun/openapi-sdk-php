@@ -41,18 +41,6 @@ class VerifyPhone extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVerifyCode() instead.
-     *
-     * @param string $verifyCode
-     *
-     * @return $this
-     */
-    public function setVerifyCode($verifyCode)
-    {
-        return $this->withVerifyCode($verifyCode);
-    }
-
-    /**
      * @param string $verifyCode
      *
      * @return $this
@@ -63,18 +51,6 @@ class VerifyPhone extends RpcRequest
         $this->options['query']['VerifyCode'] = $verifyCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class VerifyPhone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhone() instead.
-     *
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function setPhone($phone)
-    {
-        return $this->withPhone($phone);
-    }
-
-    /**
      * @param string $phone
      *
      * @return $this
@@ -113,18 +77,6 @@ class VerifyPhone extends RpcRequest
         $this->options['query']['Phone'] = $phone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

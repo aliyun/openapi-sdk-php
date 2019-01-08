@@ -34,18 +34,6 @@ class UpgradeClient extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientVersion() instead.
-     *
-     * @param string $clientVersion
-     *
-     * @return $this
-     */
-    public function setClientVersion($clientVersion)
-    {
-        return $this->withClientVersion($clientVersion);
-    }
-
-    /**
      * @param string $clientVersion
      *
      * @return $this
@@ -56,18 +44,6 @@ class UpgradeClient extends RpcRequest
         $this->options['query']['ClientVersion'] = $clientVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

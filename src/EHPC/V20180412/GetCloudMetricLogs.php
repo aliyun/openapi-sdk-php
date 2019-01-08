@@ -41,18 +41,6 @@ class GetCloudMetricLogs extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAggregationType() instead.
-     *
-     * @param string $aggregationType
-     *
-     * @return $this
-     */
-    public function setAggregationType($aggregationType)
-    {
-        return $this->withAggregationType($aggregationType);
-    }
-
-    /**
      * @param string $aggregationType
      *
      * @return $this
@@ -63,18 +51,6 @@ class GetCloudMetricLogs extends RpcRequest
         $this->options['query']['AggregationType'] = $aggregationType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param string $filter
-     *
-     * @return $this
-     */
-    public function setFilter($filter)
-    {
-        return $this->withFilter($filter);
     }
 
     /**
@@ -91,18 +67,6 @@ class GetCloudMetricLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricCategories() instead.
-     *
-     * @param string $metricCategories
-     *
-     * @return $this
-     */
-    public function setMetricCategories($metricCategories)
-    {
-        return $this->withMetricCategories($metricCategories);
-    }
-
-    /**
      * @param string $metricCategories
      *
      * @return $this
@@ -113,18 +77,6 @@ class GetCloudMetricLogs extends RpcRequest
         $this->options['query']['MetricCategories'] = $metricCategories;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricScope() instead.
-     *
-     * @param string $metricScope
-     *
-     * @return $this
-     */
-    public function setMetricScope($metricScope)
-    {
-        return $this->withMetricScope($metricScope);
     }
 
     /**
@@ -141,18 +93,6 @@ class GetCloudMetricLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
-    }
-
-    /**
      * @param string $from
      *
      * @return $this
@@ -163,18 +103,6 @@ class GetCloudMetricLogs extends RpcRequest
         $this->options['query']['From'] = $from;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**
@@ -191,18 +119,6 @@ class GetCloudMetricLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTo() instead.
-     *
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function setTo($to)
-    {
-        return $this->withTo($to);
-    }
-
-    /**
      * @param string $to
      *
      * @return $this
@@ -216,18 +132,6 @@ class GetCloudMetricLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAggregationInterval() instead.
-     *
-     * @param string $aggregationInterval
-     *
-     * @return $this
-     */
-    public function setAggregationInterval($aggregationInterval)
-    {
-        return $this->withAggregationInterval($aggregationInterval);
-    }
-
-    /**
      * @param string $aggregationInterval
      *
      * @return $this
@@ -238,18 +142,6 @@ class GetCloudMetricLogs extends RpcRequest
         $this->options['query']['AggregationInterval'] = $aggregationInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReverse() instead.
-     *
-     * @param string $reverse
-     *
-     * @return $this
-     */
-    public function setReverse($reverse)
-    {
-        return $this->withReverse($reverse);
     }
 
     /**

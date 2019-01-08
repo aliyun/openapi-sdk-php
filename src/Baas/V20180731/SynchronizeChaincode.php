@@ -34,18 +34,6 @@ class SynchronizeChaincode extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -56,18 +44,6 @@ class SynchronizeChaincode extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChaincodeId() instead.
-     *
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function setChaincodeId($chaincodeId)
-    {
-        return $this->withChaincodeId($chaincodeId);
     }
 
     /**

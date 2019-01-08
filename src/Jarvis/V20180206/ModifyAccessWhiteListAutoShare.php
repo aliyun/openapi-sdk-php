@@ -39,18 +39,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
-    }
-
-    /**
      * @param string $srcIP
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
         $this->options['query']['SrcIP'] = $srcIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoConfig() instead.
-     *
-     * @param string $autoConfig
-     *
-     * @return $this
-     */
-    public function setAutoConfig($autoConfig)
-    {
-        return $this->withAutoConfig($autoConfig);
-    }
-
-    /**
      * @param string $autoConfig
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
         $this->options['query']['AutoConfig'] = $autoConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductName() instead.
-     *
-     * @param string $productName
-     *
-     * @return $this
-     */
-    public function setProductName($productName)
-    {
-        return $this->withProductName($productName);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWhiteListType() instead.
-     *
-     * @param string $whiteListType
-     *
-     * @return $this
-     */
-    public function setWhiteListType($whiteListType)
-    {
-        return $this->withWhiteListType($whiteListType);
-    }
-
-    /**
      * @param string $whiteListType
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyAccessWhiteListAutoShare extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

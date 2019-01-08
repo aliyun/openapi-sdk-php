@@ -45,18 +45,6 @@ class ListSnapshots extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class ListSnapshots extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -95,18 +71,6 @@ class ListSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotType() instead.
-     *
-     * @param string $snapshotType
-     *
-     * @return $this
-     */
-    public function setSnapshotType($snapshotType)
-    {
-        return $this->withSnapshotType($snapshotType);
-    }
-
-    /**
      * @param string $snapshotType
      *
      * @return $this
@@ -117,18 +81,6 @@ class ListSnapshots extends RpcRequest
         $this->options['query']['SnapshotType'] = $snapshotType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -145,18 +97,6 @@ class ListSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -167,18 +107,6 @@ class ListSnapshots extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -195,18 +123,6 @@ class ListSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +133,6 @@ class ListSnapshots extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthTimeout() instead.
-     *
-     * @param string $authTimeout
-     *
-     * @return $this
-     */
-    public function setAuthTimeout($authTimeout)
-    {
-        return $this->withAuthTimeout($authTimeout);
     }
 
     /**

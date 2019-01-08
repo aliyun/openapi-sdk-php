@@ -38,18 +38,6 @@ class GetStatisticsByUuid extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
-    }
-
-    /**
      * @param string $uuid
      *
      * @return $this

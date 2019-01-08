@@ -40,18 +40,6 @@ class UpdateDialog extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -65,18 +53,6 @@ class UpdateDialog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
-    }
-
-    /**
      * @param string $dialogId
      *
      * @return $this
@@ -87,18 +63,6 @@ class UpdateDialog extends RpcRequest
         $this->options['query']['DialogId'] = $dialogId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDialogName() instead.
-     *
-     * @param string $dialogName
-     *
-     * @return $this
-     */
-    public function setDialogName($dialogName)
-    {
-        return $this->withDialogName($dialogName);
     }
 
     /**

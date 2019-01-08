@@ -47,18 +47,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerBid() instead.
-     *
-     * @param string $ownerBid
-     *
-     * @return $this
-     */
-    public function setOwnerBid($ownerBid)
-    {
-        return $this->withOwnerBid($ownerBid);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerUid() instead.
-     *
-     * @param string $ownerUid
-     *
-     * @return $this
-     */
-    public function setOwnerUid($ownerUid)
-    {
-        return $this->withOwnerUid($ownerUid);
-    }
-
-    /**
      * @param string $ownerUid
      *
      * @return $this
@@ -119,28 +83,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
         $this->options['query']['OwnerUid'] = $ownerUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getResourceId() instead.
-     *
-     * @return array
-     */
-    public function getResourceIds()
-    {
-        return $this->getResourceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param array $resourceIds
-     *
-     * @return $this
-     */
-    public function setResourceIds(array $resourceIds)
-    {
-        return $this->withResourceId($resourceIds);
     }
 
     /**
@@ -159,18 +101,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -181,18 +111,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -209,18 +127,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -231,18 +137,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -259,18 +153,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRelatedResourceId() instead.
-     *
-     * @param string $relatedResourceId
-     *
-     * @return $this
-     */
-    public function setRelatedResourceId($relatedResourceId)
-    {
-        return $this->withRelatedResourceId($relatedResourceId);
-    }
-
-    /**
      * @param string $relatedResourceId
      *
      * @return $this
@@ -281,18 +163,6 @@ class DescribeResourcesByTagVsw extends RpcRequest
         $this->options['query']['RelatedResourceId'] = $relatedResourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRelatedProduct() instead.
-     *
-     * @param string $relatedProduct
-     *
-     * @return $this
-     */
-    public function setRelatedProduct($relatedProduct)
-    {
-        return $this->withRelatedProduct($relatedProduct);
     }
 
     /**

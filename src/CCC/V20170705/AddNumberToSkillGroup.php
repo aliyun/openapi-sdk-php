@@ -40,18 +40,6 @@ class AddNumberToSkillGroup extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNumber() instead.
-     *
-     * @param string $number
-     *
-     * @return $this
-     */
-    public function setNumber($number)
-    {
-        return $this->withNumber($number);
-    }
-
-    /**
      * @param string $number
      *
      * @return $this
@@ -65,18 +53,6 @@ class AddNumberToSkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -87,18 +63,6 @@ class AddNumberToSkillGroup extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
     }
 
     /**

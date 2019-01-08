@@ -44,18 +44,6 @@ class PushDocument extends RoaRequest
     public $serviceCode = 'airec';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -66,18 +54,6 @@ class PushDocument extends RoaRequest
         $this->pathParameters['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTableName() instead.
-     *
-     * @param string $tableName
-     *
-     * @return $this
-     */
-    public function setTableName($tableName)
-    {
-        return $this->withTableName($tableName);
     }
 
     /**

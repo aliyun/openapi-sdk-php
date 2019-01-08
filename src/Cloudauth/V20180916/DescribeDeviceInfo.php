@@ -47,18 +47,6 @@ class DescribeDeviceInfo extends RpcRequest
     public $serviceCode = 'cloudauth';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizType() instead.
-     *
-     * @param string $bizType
-     *
-     * @return $this
-     */
-    public function setBizType($bizType)
-    {
-        return $this->withBizType($bizType);
-    }
-
-    /**
      * @param string $bizType
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeDeviceInfo extends RpcRequest
         $this->options['query']['BizType'] = $bizType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserDeviceId() instead.
-     *
-     * @param string $userDeviceId
-     *
-     * @return $this
-     */
-    public function setUserDeviceId($userDeviceId)
-    {
-        return $this->withUserDeviceId($userDeviceId);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
-
-    /**
      * @param string $totalCount
      *
      * @return $this
@@ -119,18 +83,6 @@ class DescribeDeviceInfo extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -147,18 +99,6 @@ class DescribeDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeDeviceInfo extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -197,18 +125,6 @@ class DescribeDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -219,18 +135,6 @@ class DescribeDeviceInfo extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiredEndDay() instead.
-     *
-     * @param string $expiredEndDay
-     *
-     * @return $this
-     */
-    public function setExpiredEndDay($expiredEndDay)
-    {
-        return $this->withExpiredEndDay($expiredEndDay);
     }
 
     /**
@@ -247,18 +151,6 @@ class DescribeDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceId() instead.
-     *
-     * @param string $deviceId
-     *
-     * @return $this
-     */
-    public function setDeviceId($deviceId)
-    {
-        return $this->withDeviceId($deviceId);
-    }
-
-    /**
      * @param string $deviceId
      *
      * @return $this
@@ -269,18 +161,6 @@ class DescribeDeviceInfo extends RpcRequest
         $this->options['query']['DeviceId'] = $deviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiredStartDay() instead.
-     *
-     * @param string $expiredStartDay
-     *
-     * @return $this
-     */
-    public function setExpiredStartDay($expiredStartDay)
-    {
-        return $this->withExpiredStartDay($expiredStartDay);
     }
 
     /**

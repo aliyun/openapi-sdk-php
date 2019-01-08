@@ -50,18 +50,6 @@ class PlayInfo extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlayDomain() instead.
-     *
-     * @param string $playDomain
-     *
-     * @return $this
-     */
-    public function setPlayDomain($playDomain)
-    {
-        return $this->withPlayDomain($playDomain);
-    }
-
-    /**
      * @param string $playDomain
      *
      * @return $this
@@ -72,18 +60,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['PlayDomain'] = $playDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +76,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFormats() instead.
-     *
-     * @param string $formats
-     *
-     * @return $this
-     */
-    public function setFormats($formats)
-    {
-        return $this->withFormats($formats);
-    }
-
-    /**
      * @param string $formats
      *
      * @return $this
@@ -122,18 +86,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['Formats'] = $formats;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -150,18 +102,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIncludeSnapshotList() instead.
-     *
-     * @param string $includeSnapshotList
-     *
-     * @return $this
-     */
-    public function setIncludeSnapshotList($includeSnapshotList)
-    {
-        return $this->withIncludeSnapshotList($includeSnapshotList);
-    }
-
-    /**
      * @param string $includeSnapshotList
      *
      * @return $this
@@ -172,18 +112,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['IncludeSnapshotList'] = $includeSnapshotList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -200,18 +128,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHlsUriToken() instead.
-     *
-     * @param string $hlsUriToken
-     *
-     * @return $this
-     */
-    public function setHlsUriToken($hlsUriToken)
-    {
-        return $this->withHlsUriToken($hlsUriToken);
-    }
-
-    /**
      * @param string $hlsUriToken
      *
      * @return $this
@@ -222,18 +138,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['HlsUriToken'] = $hlsUriToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTerminal() instead.
-     *
-     * @param string $terminal
-     *
-     * @return $this
-     */
-    public function setTerminal($terminal)
-    {
-        return $this->withTerminal($terminal);
     }
 
     /**
@@ -250,18 +154,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -272,18 +164,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaId() instead.
-     *
-     * @param string $mediaId
-     *
-     * @return $this
-     */
-    public function setMediaId($mediaId)
-    {
-        return $this->withMediaId($mediaId);
     }
 
     /**
@@ -300,18 +180,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRand() instead.
-     *
-     * @param string $rand
-     *
-     * @return $this
-     */
-    public function setRand($rand)
-    {
-        return $this->withRand($rand);
-    }
-
-    /**
      * @param string $rand
      *
      * @return $this
@@ -325,18 +193,6 @@ class PlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthTimeout() instead.
-     *
-     * @param string $authTimeout
-     *
-     * @return $this
-     */
-    public function setAuthTimeout($authTimeout)
-    {
-        return $this->withAuthTimeout($authTimeout);
-    }
-
-    /**
      * @param string $authTimeout
      *
      * @return $this
@@ -347,18 +203,6 @@ class PlayInfo extends RpcRequest
         $this->options['query']['AuthTimeout'] = $authTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthInfo() instead.
-     *
-     * @param string $authInfo
-     *
-     * @return $this
-     */
-    public function setAuthInfo($authInfo)
-    {
-        return $this->withAuthInfo($authInfo);
     }
 
     /**

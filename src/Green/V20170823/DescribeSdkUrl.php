@@ -41,18 +41,6 @@ class DescribeSdkUrl extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDebug() instead.
-     *
-     * @param string $debug
-     *
-     * @return $this
-     */
-    public function setDebug($debug)
-    {
-        return $this->withDebug($debug);
-    }
-
-    /**
      * @param string $debug
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeSdkUrl extends RpcRequest
         $this->options['query']['Debug'] = $debug;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeSdkUrl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeSdkUrl extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

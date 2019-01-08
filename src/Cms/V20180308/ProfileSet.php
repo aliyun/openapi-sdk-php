@@ -36,18 +36,6 @@ class ProfileSet extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableInstallAgentNewECS() instead.
-     *
-     * @param string $enableInstallAgentNewECS
-     *
-     * @return $this
-     */
-    public function setEnableInstallAgentNewECS($enableInstallAgentNewECS)
-    {
-        return $this->withEnableInstallAgentNewECS($enableInstallAgentNewECS);
-    }
-
-    /**
      * @param string $enableInstallAgentNewECS
      *
      * @return $this
@@ -58,18 +46,6 @@ class ProfileSet extends RpcRequest
         $this->options['query']['EnableInstallAgentNewECS'] = $enableInstallAgentNewECS;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableActiveAlert() instead.
-     *
-     * @param string $enableActiveAlert
-     *
-     * @return $this
-     */
-    public function setEnableActiveAlert($enableActiveAlert)
-    {
-        return $this->withEnableActiveAlert($enableActiveAlert);
     }
 
     /**
@@ -86,18 +62,6 @@ class ProfileSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoInstall() instead.
-     *
-     * @param string $autoInstall
-     *
-     * @return $this
-     */
-    public function setAutoInstall($autoInstall)
-    {
-        return $this->withAutoInstall($autoInstall);
-    }
-
-    /**
      * @param string $autoInstall
      *
      * @return $this
@@ -108,18 +72,6 @@ class ProfileSet extends RpcRequest
         $this->options['query']['AutoInstall'] = $autoInstall;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
     }
 
     /**

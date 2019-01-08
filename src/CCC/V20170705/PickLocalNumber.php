@@ -40,18 +40,6 @@ class PickLocalNumber extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -62,28 +50,6 @@ class PickLocalNumber extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCandidateNumber() instead.
-     *
-     * @return array
-     */
-    public function getCandidateNumbers()
-    {
-        return $this->getCandidateNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCandidateNumber() instead.
-     *
-     * @param array $candidateNumbers
-     *
-     * @return $this
-     */
-    public function setCandidateNumbers(array $candidateNumbers)
-    {
-        return $this->withCandidateNumber($candidateNumbers);
     }
 
     /**
@@ -99,18 +65,6 @@ class PickLocalNumber extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalleeNumber() instead.
-     *
-     * @param string $calleeNumber
-     *
-     * @return $this
-     */
-    public function setCalleeNumber($calleeNumber)
-    {
-        return $this->withCalleeNumber($calleeNumber);
     }
 
     /**

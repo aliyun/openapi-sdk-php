@@ -34,18 +34,6 @@ class BatchRegisterDevice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCount() instead.
-     *
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        return $this->withCount($count);
-    }
-
-    /**
      * @param string $count
      *
      * @return $this
@@ -56,18 +44,6 @@ class BatchRegisterDevice extends RpcRequest
         $this->options['query']['Count'] = $count;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

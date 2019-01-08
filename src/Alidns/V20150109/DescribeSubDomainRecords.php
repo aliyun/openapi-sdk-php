@@ -44,18 +44,6 @@ class DescribeSubDomainRecords extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLine() instead.
-     *
-     * @param string $line
-     *
-     * @return $this
-     */
-    public function setLine($line)
-    {
-        return $this->withLine($line);
-    }
-
-    /**
      * @param string $line
      *
      * @return $this
@@ -66,18 +54,6 @@ class DescribeSubDomainRecords extends RpcRequest
         $this->options['query']['Line'] = $line;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class DescribeSubDomainRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -116,18 +80,6 @@ class DescribeSubDomainRecords extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubDomain() instead.
-     *
-     * @param string $subDomain
-     *
-     * @return $this
-     */
-    public function setSubDomain($subDomain)
-    {
-        return $this->withSubDomain($subDomain);
     }
 
     /**
@@ -144,18 +96,6 @@ class DescribeSubDomainRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeSubDomainRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -191,18 +119,6 @@ class DescribeSubDomainRecords extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

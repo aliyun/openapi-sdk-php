@@ -40,18 +40,6 @@ class UploadImageToLib extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImages() instead.
-     *
-     * @param string $images
-     *
-     * @return $this
-     */
-    public function setImages($images)
-    {
-        return $this->withImages($images);
-    }
-
-    /**
      * @param string $images
      *
      * @return $this
@@ -65,18 +53,6 @@ class UploadImageToLib extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -87,18 +63,6 @@ class UploadImageToLib extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageLibId() instead.
-     *
-     * @param string $imageLibId
-     *
-     * @return $this
-     */
-    public function setImageLibId($imageLibId)
-    {
-        return $this->withImageLibId($imageLibId);
     }
 
     /**

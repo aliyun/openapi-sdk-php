@@ -37,18 +37,6 @@ class OnsPublishDelete extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -59,18 +47,6 @@ class OnsPublishDelete extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -87,18 +63,6 @@ class OnsPublishDelete extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -112,18 +76,6 @@ class OnsPublishDelete extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -134,18 +86,6 @@ class OnsPublishDelete extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProducerId() instead.
-     *
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function setProducerId($producerId)
-    {
-        return $this->withProducerId($producerId);
     }
 
     /**

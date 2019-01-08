@@ -45,18 +45,6 @@ class DescribeRecordLogs extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setendDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -67,18 +55,6 @@ class DescribeRecordLogs extends RpcRequest
         $this->options['query']['endDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -95,18 +71,6 @@ class DescribeRecordLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -117,18 +81,6 @@ class DescribeRecordLogs extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -145,18 +97,6 @@ class DescribeRecordLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -167,18 +107,6 @@ class DescribeRecordLogs extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyWord() instead.
-     *
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function setKeyWord($keyWord)
-    {
-        return $this->withKeyWord($keyWord);
     }
 
     /**
@@ -195,18 +123,6 @@ class DescribeRecordLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -217,18 +133,6 @@ class DescribeRecordLogs extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

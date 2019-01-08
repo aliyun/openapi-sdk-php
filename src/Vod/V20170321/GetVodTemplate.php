@@ -41,18 +41,6 @@ class GetVodTemplate extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class GetVodTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -91,18 +67,6 @@ class GetVodTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVodTemplateId() instead.
-     *
-     * @param string $vodTemplateId
-     *
-     * @return $this
-     */
-    public function setVodTemplateId($vodTemplateId)
-    {
-        return $this->withVodTemplateId($vodTemplateId);
-    }
-
-    /**
      * @param string $vodTemplateId
      *
      * @return $this
@@ -113,18 +77,6 @@ class GetVodTemplate extends RpcRequest
         $this->options['query']['VodTemplateId'] = $vodTemplateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

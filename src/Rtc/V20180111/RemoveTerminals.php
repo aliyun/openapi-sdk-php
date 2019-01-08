@@ -41,28 +41,6 @@ class RemoveTerminals extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTerminalIds() instead.
-     *
-     * @return array
-     */
-    public function getTerminalIdss()
-    {
-        return $this->getTerminalIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTerminalIds() instead.
-     *
-     * @param array $terminalIdss
-     *
-     * @return $this
-     */
-    public function setTerminalIdss(array $terminalIdss)
-    {
-        return $this->withTerminalIds($terminalIdss);
-    }
-
-    /**
      * @param array $terminalIds
      *
      * @return $this
@@ -75,18 +53,6 @@ class RemoveTerminals extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -103,18 +69,6 @@ class RemoveTerminals extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -125,18 +79,6 @@ class RemoveTerminals extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

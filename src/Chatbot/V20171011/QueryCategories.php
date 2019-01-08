@@ -39,18 +39,6 @@ class QueryCategories extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShowChildrens() instead.
-     *
-     * @param string $showChildrens
-     *
-     * @return $this
-     */
-    public function setShowChildrens($showChildrens)
-    {
-        return $this->withShowChildrens($showChildrens);
-    }
-
-    /**
      * @param string $showChildrens
      *
      * @return $this
@@ -61,18 +49,6 @@ class QueryCategories extends RpcRequest
         $this->options['query']['ShowChildrens'] = $showChildrens;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParentCategoryId() instead.
-     *
-     * @param string $parentCategoryId
-     *
-     * @return $this
-     */
-    public function setParentCategoryId($parentCategoryId)
-    {
-        return $this->withParentCategoryId($parentCategoryId);
     }
 
     /**

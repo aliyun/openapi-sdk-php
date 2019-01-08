@@ -49,18 +49,6 @@ class ModifyEipPayType extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -71,18 +59,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +75,6 @@ class ModifyEipPayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -121,18 +85,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
     }
 
     /**
@@ -149,18 +101,6 @@ class ModifyEipPayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -171,18 +111,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -199,18 +127,6 @@ class ModifyEipPayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUsedTime() instead.
-     *
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function setUsedTime($usedTime)
-    {
-        return $this->withUsedTime($usedTime);
-    }
-
-    /**
      * @param string $usedTime
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['UsedTime'] = $usedTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKbpsBandwidth() instead.
-     *
-     * @param string $kbpsBandwidth
-     *
-     * @return $this
-     */
-    public function setKbpsBandwidth($kbpsBandwidth)
-    {
-        return $this->withKbpsBandwidth($kbpsBandwidth);
     }
 
     /**
@@ -249,18 +153,6 @@ class ModifyEipPayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -271,18 +163,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceUid() instead.
-     *
-     * @param string $resourceUid
-     *
-     * @return $this
-     */
-    public function setResourceUid($resourceUid)
-    {
-        return $this->withResourceUid($resourceUid);
     }
 
     /**
@@ -299,18 +179,6 @@ class ModifyEipPayType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceBid() instead.
-     *
-     * @param string $resourceBid
-     *
-     * @return $this
-     */
-    public function setResourceBid($resourceBid)
-    {
-        return $this->withResourceBid($resourceBid);
-    }
-
-    /**
      * @param string $resourceBid
      *
      * @return $this
@@ -321,18 +189,6 @@ class ModifyEipPayType extends RpcRequest
         $this->options['query']['ResourceBid'] = $resourceBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
     }
 
     /**

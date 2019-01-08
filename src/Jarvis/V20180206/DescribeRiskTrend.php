@@ -38,18 +38,6 @@ class DescribeRiskTrend extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeRiskTrend extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryProduct() instead.
-     *
-     * @param string $queryProduct
-     *
-     * @return $this
-     */
-    public function setQueryProduct($queryProduct)
-    {
-        return $this->withQueryProduct($queryProduct);
     }
 
     /**
@@ -88,18 +64,6 @@ class DescribeRiskTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -110,18 +74,6 @@ class DescribeRiskTrend extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeroid() instead.
-     *
-     * @param string $peroid
-     *
-     * @return $this
-     */
-    public function setPeroid($peroid)
-    {
-        return $this->withPeroid($peroid);
     }
 
     /**
@@ -138,18 +90,6 @@ class DescribeRiskTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
-    }
-
-    /**
      * @param string $sourceCode
      *
      * @return $this
@@ -160,18 +100,6 @@ class DescribeRiskTrend extends RpcRequest
         $this->options['query']['SourceCode'] = $sourceCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryRegionId() instead.
-     *
-     * @param string $queryRegionId
-     *
-     * @return $this
-     */
-    public function setQueryRegionId($queryRegionId)
-    {
-        return $this->withQueryRegionId($queryRegionId);
     }
 
     /**

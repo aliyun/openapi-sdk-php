@@ -33,18 +33,6 @@ class DescribeTieringJobs extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
-    }
-
-    /**
      * @param string $volume
      *
      * @return $this

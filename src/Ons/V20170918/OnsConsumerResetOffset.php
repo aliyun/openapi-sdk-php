@@ -39,18 +39,6 @@ class OnsConsumerResetOffset extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -61,18 +49,6 @@ class OnsConsumerResetOffset extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -89,18 +65,6 @@ class OnsConsumerResetOffset extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -111,18 +75,6 @@ class OnsConsumerResetOffset extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsumerId() instead.
-     *
-     * @param string $consumerId
-     *
-     * @return $this
-     */
-    public function setConsumerId($consumerId)
-    {
-        return $this->withConsumerId($consumerId);
     }
 
     /**
@@ -139,18 +91,6 @@ class OnsConsumerResetOffset extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -164,18 +104,6 @@ class OnsConsumerResetOffset extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResetTimestamp() instead.
-     *
-     * @param string $resetTimestamp
-     *
-     * @return $this
-     */
-    public function setResetTimestamp($resetTimestamp)
-    {
-        return $this->withResetTimestamp($resetTimestamp);
-    }
-
-    /**
      * @param string $resetTimestamp
      *
      * @return $this
@@ -186,18 +114,6 @@ class OnsConsumerResetOffset extends RpcRequest
         $this->options['query']['ResetTimestamp'] = $resetTimestamp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

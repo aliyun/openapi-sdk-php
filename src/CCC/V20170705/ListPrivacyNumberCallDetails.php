@@ -45,18 +45,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgentId() instead.
-     *
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function setAgentId($agentId)
-    {
-        return $this->withAgentId($agentId);
-    }
-
-    /**
      * @param string $agentId
      *
      * @return $this
@@ -67,18 +55,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
         $this->options['query']['AgentId'] = $agentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +71,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactId() instead.
-     *
-     * @param string $contactId
-     *
-     * @return $this
-     */
-    public function setContactId($contactId)
-    {
-        return $this->withContactId($contactId);
-    }
-
-    /**
      * @param string $contactId
      *
      * @return $this
@@ -117,18 +81,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
         $this->options['query']['ContactId'] = $contactId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentName() instead.
-     *
-     * @param string $agentName
-     *
-     * @return $this
-     */
-    public function setAgentName($agentName)
-    {
-        return $this->withAgentName($agentName);
     }
 
     /**
@@ -145,18 +97,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -167,18 +107,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -195,18 +123,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -217,18 +133,6 @@ class ListPrivacyNumberCallDetails extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

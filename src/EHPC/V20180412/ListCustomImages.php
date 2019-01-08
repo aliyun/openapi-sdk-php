@@ -34,18 +34,6 @@ class ListCustomImages extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBaseOsTag() instead.
-     *
-     * @param string $baseOsTag
-     *
-     * @return $this
-     */
-    public function setBaseOsTag($baseOsTag)
-    {
-        return $this->withBaseOsTag($baseOsTag);
-    }
-
-    /**
      * @param string $baseOsTag
      *
      * @return $this
@@ -56,18 +44,6 @@ class ListCustomImages extends RpcRequest
         $this->options['query']['BaseOsTag'] = $baseOsTag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
     }
 
     /**

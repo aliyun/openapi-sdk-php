@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\TeslaDam
  *
- * @method V20180118\TeslaDamApiResolver v20180118()
+ * @method TeslaDamV20180118ApiResolver v20180118()
  */
 class TeslaDam
 {

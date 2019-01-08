@@ -34,18 +34,6 @@ class DeleteTieringJob extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
-    }
-
-    /**
      * @param string $volume
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteTieringJob extends RpcRequest
         $this->options['query']['Volume'] = $volume;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

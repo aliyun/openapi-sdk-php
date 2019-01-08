@@ -28,18 +28,6 @@ class BatchGetPluginConfigInfo extends RpcRequest
     public $action = 'BatchGetPluginConfigInfo';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPluginInfos() instead.
-     *
-     * @param string $pluginInfos
-     *
-     * @return $this
-     */
-    public function setPluginInfos($pluginInfos)
-    {
-        return $this->withPluginInfos($pluginInfos);
-    }
-
-    /**
      * @param string $pluginInfos
      *
      * @return $this

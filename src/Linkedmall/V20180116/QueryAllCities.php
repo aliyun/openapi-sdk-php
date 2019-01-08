@@ -39,18 +39,6 @@ class QueryAllCities extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -61,18 +49,6 @@ class QueryAllCities extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

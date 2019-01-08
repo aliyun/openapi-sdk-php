@@ -52,18 +52,6 @@ class DescribeOssResultItems extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
-
-    /**
      * @param string $totalCount
      *
      * @return $this
@@ -74,18 +62,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinScore() instead.
-     *
-     * @param string $minScore
-     *
-     * @return $this
-     */
-    public function setMinScore($minScore)
-    {
-        return $this->withMinScore($minScore);
     }
 
     /**
@@ -102,18 +78,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuggestion() instead.
-     *
-     * @param string $suggestion
-     *
-     * @return $this
-     */
-    public function setSuggestion($suggestion)
-    {
-        return $this->withSuggestion($suggestion);
-    }
-
-    /**
      * @param string $suggestion
      *
      * @return $this
@@ -124,18 +88,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['Suggestion'] = $suggestion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -152,18 +104,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxScore() instead.
-     *
-     * @param string $maxScore
-     *
-     * @return $this
-     */
-    public function setMaxScore($maxScore)
-    {
-        return $this->withMaxScore($maxScore);
-    }
-
-    /**
      * @param string $maxScore
      *
      * @return $this
@@ -174,18 +114,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['MaxScore'] = $maxScore;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
     }
 
     /**
@@ -202,18 +130,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -224,18 +140,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**
@@ -252,18 +156,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryId() instead.
-     *
-     * @param string $queryId
-     *
-     * @return $this
-     */
-    public function setQueryId($queryId)
-    {
-        return $this->withQueryId($queryId);
-    }
-
-    /**
      * @param string $queryId
      *
      * @return $this
@@ -274,18 +166,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['QueryId'] = $queryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBucket() instead.
-     *
-     * @param string $bucket
-     *
-     * @return $this
-     */
-    public function setBucket($bucket)
-    {
-        return $this->withBucket($bucket);
     }
 
     /**
@@ -302,18 +182,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -324,18 +192,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -352,18 +208,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -377,18 +221,6 @@ class DescribeOssResultItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -399,18 +231,6 @@ class DescribeOssResultItems extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStock() instead.
-     *
-     * @param string $stock
-     *
-     * @return $this
-     */
-    public function setStock($stock)
-    {
-        return $this->withStock($stock);
     }
 
     /**

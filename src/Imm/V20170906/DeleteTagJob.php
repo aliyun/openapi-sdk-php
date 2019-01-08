@@ -40,18 +40,6 @@ class DeleteTagJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
-    }
-
-    /**
      * @param string $jobId
      *
      * @return $this
@@ -65,18 +53,6 @@ class DeleteTagJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -87,18 +63,6 @@ class DeleteTagJob extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClearIndexData() instead.
-     *
-     * @param string $clearIndexData
-     *
-     * @return $this
-     */
-    public function setClearIndexData($clearIndexData)
-    {
-        return $this->withClearIndexData($clearIndexData);
     }
 
     /**

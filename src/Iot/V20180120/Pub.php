@@ -36,18 +36,6 @@ class Pub extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicFullName() instead.
-     *
-     * @param string $topicFullName
-     *
-     * @return $this
-     */
-    public function setTopicFullName($topicFullName)
-    {
-        return $this->withTopicFullName($topicFullName);
-    }
-
-    /**
      * @param string $topicFullName
      *
      * @return $this
@@ -58,18 +46,6 @@ class Pub extends RpcRequest
         $this->options['query']['TopicFullName'] = $topicFullName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQos() instead.
-     *
-     * @param string $qos
-     *
-     * @return $this
-     */
-    public function setQos($qos)
-    {
-        return $this->withQos($qos);
     }
 
     /**
@@ -86,18 +62,6 @@ class Pub extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageContent() instead.
-     *
-     * @param string $messageContent
-     *
-     * @return $this
-     */
-    public function setMessageContent($messageContent)
-    {
-        return $this->withMessageContent($messageContent);
-    }
-
-    /**
      * @param string $messageContent
      *
      * @return $this
@@ -108,18 +72,6 @@ class Pub extends RpcRequest
         $this->options['query']['MessageContent'] = $messageContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

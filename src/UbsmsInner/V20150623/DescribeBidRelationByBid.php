@@ -34,18 +34,6 @@ class DescribeBidRelationByBid extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestid() instead.
-     *
-     * @param string $requestid
-     *
-     * @return $this
-     */
-    public function setRequestid($requestid)
-    {
-        return $this->withRequestid($requestid);
-    }
-
-    /**
      * @param string $requestid
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeBidRelationByBid extends RpcRequest
         $this->options['query']['Requestid'] = $requestid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

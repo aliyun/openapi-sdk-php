@@ -41,18 +41,6 @@ class ModifyEmgVulSubmit extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class ModifyEmgVulSubmit extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -91,18 +67,6 @@ class ModifyEmgVulSubmit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserAgreement() instead.
-     *
-     * @param string $userAgreement
-     *
-     * @return $this
-     */
-    public function setUserAgreement($userAgreement)
-    {
-        return $this->withUserAgreement($userAgreement);
-    }
-
-    /**
      * @param string $userAgreement
      *
      * @return $this
@@ -113,18 +77,6 @@ class ModifyEmgVulSubmit extends RpcRequest
         $this->options['query']['UserAgreement'] = $userAgreement;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

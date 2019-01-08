@@ -33,23 +33,10 @@ class ChangePassword extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOldPassword() instead.
-     *
-     * @param string $oldPassword
-     *
-     * @return $this
-     */
-    public function setOldPassword($oldPassword)
-    {
-        return $this->withOldPassword($oldPassword);
-    }
 
     /**
      * @param string $oldPassword
@@ -62,18 +49,6 @@ class ChangePassword extends RpcRequest
         $this->options['query']['OldPassword'] = $oldPassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewPassword() instead.
-     *
-     * @param string $newPassword
-     *
-     * @return $this
-     */
-    public function setNewPassword($newPassword)
-    {
-        return $this->withNewPassword($newPassword);
     }
 
     /**

@@ -40,18 +40,6 @@ class DisableAlarm extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -65,18 +53,6 @@ class DisableAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -87,18 +63,6 @@ class DisableAlarm extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlarmTaskId() instead.
-     *
-     * @param string $alarmTaskId
-     *
-     * @return $this
-     */
-    public function setAlarmTaskId($alarmTaskId)
-    {
-        return $this->withAlarmTaskId($alarmTaskId);
     }
 
     /**

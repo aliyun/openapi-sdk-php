@@ -36,7 +36,6 @@ class TagPhoto extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -46,18 +45,6 @@ class TagPhoto extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -70,28 +57,6 @@ class TagPhoto extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getConfidence() instead.
-     *
-     * @return array
-     */
-    public function getConfidences()
-    {
-        return $this->getConfidence();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfidence() instead.
-     *
-     * @param array $confidences
-     *
-     * @return $this
-     */
-    public function setConfidences(array $confidences)
-    {
-        return $this->withConfidence($confidences);
     }
 
     /**
@@ -110,18 +75,6 @@ class TagPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -135,18 +88,6 @@ class TagPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param string $photoId
-     *
-     * @return $this
-     */
-    public function setPhotoId($photoId)
-    {
-        return $this->withPhotoId($photoId);
-    }
-
-    /**
      * @param string $photoId
      *
      * @return $this
@@ -157,28 +98,6 @@ class TagPhoto extends RpcRequest
         $this->options['query']['PhotoId'] = $photoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagKey() instead.
-     *
-     * @return array
-     */
-    public function getTagKeys()
-    {
-        return $this->getTagKey();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagKey() instead.
-     *
-     * @param array $tagKeys
-     *
-     * @return $this
-     */
-    public function setTagKeys(array $tagKeys)
-    {
-        return $this->withTagKey($tagKeys);
     }
 
     /**

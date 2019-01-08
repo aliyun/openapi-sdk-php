@@ -35,18 +35,6 @@ class DescribeShardDbConnectionInfo extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
-
-    /**
      * @param string $dbName
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeShardDbConnectionInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeShardDbConnectionInfo extends RpcRequest
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubDbName() instead.
-     *
-     * @param string $subDbName
-     *
-     * @return $this
-     */
-    public function setSubDbName($subDbName)
-    {
-        return $this->withSubDbName($subDbName);
     }
 
     /**

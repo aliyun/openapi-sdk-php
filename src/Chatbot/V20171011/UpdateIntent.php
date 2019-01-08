@@ -39,18 +39,6 @@ class UpdateIntent extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIntentDefinition() instead.
-     *
-     * @param string $intentDefinition
-     *
-     * @return $this
-     */
-    public function setIntentDefinition($intentDefinition)
-    {
-        return $this->withIntentDefinition($intentDefinition);
-    }
-
-    /**
      * @param string $intentDefinition
      *
      * @return $this
@@ -61,18 +49,6 @@ class UpdateIntent extends RpcRequest
         $this->options['query']['IntentDefinition'] = $intentDefinition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIntentId() instead.
-     *
-     * @param string $intentId
-     *
-     * @return $this
-     */
-    public function setIntentId($intentId)
-    {
-        return $this->withIntentId($intentId);
     }
 
     /**

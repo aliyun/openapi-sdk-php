@@ -31,7 +31,6 @@ class GetCallerIdentity extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

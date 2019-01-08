@@ -34,18 +34,6 @@ class DeleteSynchronizationJob extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobId() instead.
-     *
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobId($synchronizationJobId)
-    {
-        return $this->withSynchronizationJobId($synchronizationJobId);
-    }
-
-    /**
      * @param string $synchronizationJobId
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteSynchronizationJob extends RpcRequest
         $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

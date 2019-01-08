@@ -39,18 +39,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainNames() instead.
-     *
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames($domainNames)
-    {
-        return $this->withDomainNames($domainNames);
-    }
-
-    /**
      * @param string $domainNames
      *
      * @return $this
@@ -61,18 +49,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
         $this->options['query']['DomainNames'] = $domainNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function setTaskName($taskName)
-    {
-        return $this->withTaskName($taskName);
     }
 
     /**
@@ -89,18 +65,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -111,18 +75,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -139,18 +91,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroup() instead.
-     *
-     * @param string $group
-     *
-     * @return $this
-     */
-    public function setGroup($group)
-    {
-        return $this->withGroup($group);
-    }
-
-    /**
      * @param string $group
      *
      * @return $this
@@ -164,18 +104,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -186,18 +114,6 @@ class CreateUsageDetailDataExportTask extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

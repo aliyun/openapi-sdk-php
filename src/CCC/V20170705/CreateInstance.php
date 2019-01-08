@@ -45,18 +45,6 @@ class CreateInstance extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -67,18 +55,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -95,18 +71,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
-    }
-
-    /**
      * @param string $phoneNumber
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['PhoneNumber'] = $phoneNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -145,18 +97,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStorageMaxDays() instead.
-     *
-     * @param string $storageMaxDays
-     *
-     * @return $this
-     */
-    public function setStorageMaxDays($storageMaxDays)
-    {
-        return $this->withStorageMaxDays($storageMaxDays);
-    }
-
-    /**
      * @param string $storageMaxDays
      *
      * @return $this
@@ -167,18 +107,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['StorageMaxDays'] = $storageMaxDays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStorageMaxSize() instead.
-     *
-     * @param string $storageMaxSize
-     *
-     * @return $this
-     */
-    public function setStorageMaxSize($storageMaxSize)
-    {
-        return $this->withStorageMaxSize($storageMaxSize);
     }
 
     /**
@@ -195,18 +123,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDirectoryId() instead.
-     *
-     * @param string $directoryId
-     *
-     * @return $this
-     */
-    public function setDirectoryId($directoryId)
-    {
-        return $this->withDirectoryId($directoryId);
-    }
-
-    /**
      * @param string $directoryId
      *
      * @return $this
@@ -217,28 +133,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['DirectoryId'] = $directoryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAdminRamId() instead.
-     *
-     * @return array
-     */
-    public function getAdminRamIds()
-    {
-        return $this->getAdminRamId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAdminRamId() instead.
-     *
-     * @param array $adminRamIds
-     *
-     * @return $this
-     */
-    public function setAdminRamIds(array $adminRamIds)
-    {
-        return $this->withAdminRamId($adminRamIds);
     }
 
     /**

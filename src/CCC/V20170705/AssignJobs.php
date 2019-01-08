@@ -43,28 +43,6 @@ class AssignJobs extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
-    }
-
-    /**
      * @param array $callingNumber
      *
      * @return $this
@@ -77,18 +55,6 @@ class AssignJobs extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -105,18 +71,6 @@ class AssignJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -127,18 +81,6 @@ class AssignJobs extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
     }
 
     /**
@@ -155,18 +97,6 @@ class AssignJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -177,28 +107,6 @@ class AssignJobs extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getJobsJson() instead.
-     *
-     * @return array
-     */
-    public function getJobsJsons()
-    {
-        return $this->getJobsJson();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobsJson() instead.
-     *
-     * @param array $jobsJsons
-     *
-     * @return $this
-     */
-    public function setJobsJsons(array $jobsJsons)
-    {
-        return $this->withJobsJson($jobsJsons);
     }
 
     /**

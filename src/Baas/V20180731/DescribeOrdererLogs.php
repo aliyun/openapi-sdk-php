@@ -35,18 +35,6 @@ class DescribeOrdererLogs extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLines() instead.
-     *
-     * @param string $lines
-     *
-     * @return $this
-     */
-    public function setLines($lines)
-    {
-        return $this->withLines($lines);
-    }
-
-    /**
      * @param string $lines
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeOrdererLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
-    }
-
-    /**
      * @param string $consortiumId
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeOrdererLogs extends RpcRequest
         $this->options['query']['ConsortiumId'] = $consortiumId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrdererName() instead.
-     *
-     * @param string $ordererName
-     *
-     * @return $this
-     */
-    public function setOrdererName($ordererName)
-    {
-        return $this->withOrdererName($ordererName);
     }
 
     /**

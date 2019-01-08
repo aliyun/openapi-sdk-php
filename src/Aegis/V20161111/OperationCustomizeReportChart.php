@@ -40,18 +40,6 @@ class OperationCustomizeReportChart extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperations() instead.
-     *
-     * @param string $operations
-     *
-     * @return $this
-     */
-    public function setOperations($operations)
-    {
-        return $this->withOperations($operations);
-    }
-
-    /**
      * @param string $operations
      *
      * @return $this
@@ -65,18 +53,6 @@ class OperationCustomizeReportChart extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -87,18 +63,6 @@ class OperationCustomizeReportChart extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportId() instead.
-     *
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function setReportId($reportId)
-    {
-        return $this->withReportId($reportId);
     }
 
     /**

@@ -34,18 +34,6 @@ class DescribeConsortiumMembers extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeConsortiumMembers extends RpcRequest
         $this->options['query']['Location'] = $location;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
     }
 
     /**

@@ -30,18 +30,6 @@ class ListFCTrigger extends RpcRequest
     public $action = 'ListFCTrigger';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventMetaVersion() instead.
-     *
-     * @param string $eventMetaVersion
-     *
-     * @return $this
-     */
-    public function setEventMetaVersion($eventMetaVersion)
-    {
-        return $this->withEventMetaVersion($eventMetaVersion);
-    }
-
-    /**
      * @param string $eventMetaVersion
      *
      * @return $this
@@ -55,18 +43,6 @@ class ListFCTrigger extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -77,18 +53,6 @@ class ListFCTrigger extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventMetaName() instead.
-     *
-     * @param string $eventMetaName
-     *
-     * @return $this
-     */
-    public function setEventMetaName($eventMetaName)
-    {
-        return $this->withEventMetaName($eventMetaName);
     }
 
     /**

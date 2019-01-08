@@ -33,28 +33,6 @@ class TaskConfigDelete extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getIdList() instead.
-     *
-     * @return array
-     */
-    public function getIdLists()
-    {
-        return $this->getIdList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdList() instead.
-     *
-     * @param array $idLists
-     *
-     * @return $this
-     */
-    public function setIdLists(array $idLists)
-    {
-        return $this->withIdList($idLists);
-    }
-
-    /**
      * @param array $idList
      *
      * @return $this

@@ -43,18 +43,6 @@ class ModifyAlertConfig extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuccessConfig() instead.
-     *
-     * @param string $successConfig
-     *
-     * @return $this
-     */
-    public function setSuccessConfig($successConfig)
-    {
-        return $this->withSuccessConfig($successConfig);
-    }
-
-    /**
      * @param string $successConfig
      *
      * @return $this
@@ -65,18 +53,6 @@ class ModifyAlertConfig extends RpcRequest
         $this->options['query']['SuccessConfig'] = $successConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRejectConfig() instead.
-     *
-     * @param string $rejectConfig
-     *
-     * @return $this
-     */
-    public function setRejectConfig($rejectConfig)
-    {
-        return $this->withRejectConfig($rejectConfig);
     }
 
     /**
@@ -93,18 +69,6 @@ class ModifyAlertConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +79,6 @@ class ModifyAlertConfig extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -143,18 +95,6 @@ class ModifyAlertConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -165,18 +105,6 @@ class ModifyAlertConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFailConfig() instead.
-     *
-     * @param string $failConfig
-     *
-     * @return $this
-     */
-    public function setFailConfig($failConfig)
-    {
-        return $this->withFailConfig($failConfig);
     }
 
     /**

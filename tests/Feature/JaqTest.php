@@ -3,7 +3,8 @@
 namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,12 +21,33 @@ class JaqTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hanghou')->asGlobalClient();
+        )->regionId('cn-hongkong')->asGlobalClient();
     }
 
     public function testJaq()
     {
-        $request = AlibabaCloud::jaq()->v20161123()->afsAppCheck();
-        self::assertInstanceOf(AfsAppCheck::class, $request);
+        try {
+            $result = AlibabaCloud::jaq()
+                                  ->v20161123()
+                                  ->afsAppCheck()
+                                  ->withCallerName('name')
+                                  ->withSession('session')
+                                  ->request();
+            self::assertEquals(
+                'the uid do not apply the service.',
+                $result['ErrorMsg']
+            );
+        } catch (ServerException $e) {
+            self::assertContains(
+                $e->getErrorMessage(),
+                [
+                    'AccessKeyId is mandatory for this action.',
+                    'Specified access key is not found.',
+
+                ]
+            );
+        } catch (ClientException $e) {
+            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
+        }
     }
 }

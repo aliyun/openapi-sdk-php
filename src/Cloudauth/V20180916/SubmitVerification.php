@@ -36,7 +36,6 @@ class SubmitVerification extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -46,18 +45,6 @@ class SubmitVerification extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +57,6 @@ class SubmitVerification extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBiz() instead.
-     *
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function setBiz($biz)
-    {
-        return $this->withBiz($biz);
     }
 
     /**
@@ -98,18 +73,6 @@ class SubmitVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -120,28 +83,6 @@ class SubmitVerification extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMaterial() instead.
-     *
-     * @return array
-     */
-    public function getMaterials()
-    {
-        return $this->getMaterial();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaterial() instead.
-     *
-     * @param array $materials
-     *
-     * @return $this
-     */
-    public function setMaterials(array $materials)
-    {
-        return $this->withMaterial($materials);
     }
 
     /**
@@ -158,18 +99,6 @@ class SubmitVerification extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTicketId() instead.
-     *
-     * @param string $ticketId
-     *
-     * @return $this
-     */
-    public function setTicketId($ticketId)
-    {
-        return $this->withTicketId($ticketId);
     }
 
     /**

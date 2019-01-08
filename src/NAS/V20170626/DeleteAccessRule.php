@@ -39,18 +39,6 @@ class DeleteAccessRule extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
-    }
-
-    /**
      * @param string $accessGroupName
      *
      * @return $this
@@ -61,18 +49,6 @@ class DeleteAccessRule extends RpcRequest
         $this->options['query']['AccessGroupName'] = $accessGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessRuleId() instead.
-     *
-     * @param string $accessRuleId
-     *
-     * @return $this
-     */
-    public function setAccessRuleId($accessRuleId)
-    {
-        return $this->withAccessRuleId($accessRuleId);
     }
 
     /**

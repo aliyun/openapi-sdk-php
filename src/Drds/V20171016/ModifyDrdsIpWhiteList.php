@@ -38,18 +38,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMode() instead.
-     *
-     * @param string $mode
-     *
-     * @return $this
-     */
-    public function setMode($mode)
-    {
-        return $this->withMode($mode);
-    }
-
-    /**
      * @param string $mode
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
         $this->options['query']['Mode'] = $mode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
     }
 
     /**
@@ -88,18 +64,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupAttribute() instead.
-     *
-     * @param string $groupAttribute
-     *
-     * @return $this
-     */
-    public function setGroupAttribute($groupAttribute)
-    {
-        return $this->withGroupAttribute($groupAttribute);
-    }
-
-    /**
      * @param string $groupAttribute
      *
      * @return $this
@@ -110,18 +74,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
         $this->options['query']['GroupAttribute'] = $groupAttribute;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpWhiteList() instead.
-     *
-     * @param string $ipWhiteList
-     *
-     * @return $this
-     */
-    public function setIpWhiteList($ipWhiteList)
-    {
-        return $this->withIpWhiteList($ipWhiteList);
     }
 
     /**
@@ -138,18 +90,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this
@@ -160,18 +100,6 @@ class ModifyDrdsIpWhiteList extends RpcRequest
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

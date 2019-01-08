@@ -34,28 +34,6 @@ class CreateTopicRouteTable extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDstTopic() instead.
-     *
-     * @return array
-     */
-    public function getDstTopics()
-    {
-        return $this->getDstTopic();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDstTopic() instead.
-     *
-     * @param array $dstTopics
-     *
-     * @return $this
-     */
-    public function setDstTopics(array $dstTopics)
-    {
-        return $this->withDstTopic($dstTopics);
-    }
-
-    /**
      * @param array $dstTopic
      *
      * @return $this
@@ -68,18 +46,6 @@ class CreateTopicRouteTable extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcTopic() instead.
-     *
-     * @param string $srcTopic
-     *
-     * @return $this
-     */
-    public function setSrcTopic($srcTopic)
-    {
-        return $this->withSrcTopic($srcTopic);
     }
 
     /**

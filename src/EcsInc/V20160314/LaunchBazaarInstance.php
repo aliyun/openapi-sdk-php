@@ -55,18 +55,6 @@ class LaunchBazaarInstance extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -77,18 +65,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -105,18 +81,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchData() instead.
-     *
-     * @param string $launchData
-     *
-     * @return $this
-     */
-    public function setLaunchData($launchData)
-    {
-        return $this->withLaunchData($launchData);
-    }
-
-    /**
      * @param string $launchData
      *
      * @return $this
@@ -127,18 +91,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['LaunchData'] = $launchData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLinkedSecurityGroupId() instead.
-     *
-     * @param string $linkedSecurityGroupId
-     *
-     * @return $this
-     */
-    public function setLinkedSecurityGroupId($linkedSecurityGroupId)
-    {
-        return $this->withLinkedSecurityGroupId($linkedSecurityGroupId);
     }
 
     /**
@@ -155,18 +107,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAssumeRoleAccessKeySecret() instead.
-     *
-     * @param string $assumeRoleAccessKeySecret
-     *
-     * @return $this
-     */
-    public function setAssumeRoleAccessKeySecret($assumeRoleAccessKeySecret)
-    {
-        return $this->withAssumeRoleAccessKeySecret($assumeRoleAccessKeySecret);
-    }
-
-    /**
      * @param string $assumeRoleAccessKeySecret
      *
      * @return $this
@@ -177,18 +117,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['AssumeRoleAccessKeySecret'] = $assumeRoleAccessKeySecret;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAssumeRoleSecurityToken() instead.
-     *
-     * @param string $assumeRoleSecurityToken
-     *
-     * @return $this
-     */
-    public function setAssumeRoleSecurityToken($assumeRoleSecurityToken)
-    {
-        return $this->withAssumeRoleSecurityToken($assumeRoleSecurityToken);
     }
 
     /**
@@ -205,18 +133,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
-    }
-
-    /**
      * @param string $hostName
      *
      * @return $this
@@ -227,18 +143,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['HostName'] = $hostName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -255,18 +159,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMem() instead.
-     *
-     * @param string $mem
-     *
-     * @return $this
-     */
-    public function setMem($mem)
-    {
-        return $this->withMem($mem);
-    }
-
-    /**
      * @param string $mem
      *
      * @return $this
@@ -277,28 +169,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['Mem'] = $mem;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -318,18 +188,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAssumeRoleAccessKeyId() instead.
-     *
-     * @param string $assumeRoleAccessKeyId
-     *
-     * @return $this
-     */
-    public function setAssumeRoleAccessKeyId($assumeRoleAccessKeyId)
-    {
-        return $this->withAssumeRoleAccessKeyId($assumeRoleAccessKeyId);
-    }
-
-    /**
      * @param string $assumeRoleAccessKeyId
      *
      * @return $this
@@ -340,18 +198,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['AssumeRoleAccessKeyId'] = $assumeRoleAccessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -368,18 +214,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -390,18 +224,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCpu() instead.
-     *
-     * @param string $cpu
-     *
-     * @return $this
-     */
-    public function setCpu($cpu)
-    {
-        return $this->withCpu($cpu);
     }
 
     /**
@@ -418,18 +240,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -440,18 +250,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
     }
 
     /**
@@ -468,18 +266,6 @@ class LaunchBazaarInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -490,18 +276,6 @@ class LaunchBazaarInstance extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLinkedVSwitchId() instead.
-     *
-     * @param string $linkedVSwitchId
-     *
-     * @return $this
-     */
-    public function setLinkedVSwitchId($linkedVSwitchId)
-    {
-        return $this->withLinkedVSwitchId($linkedVSwitchId);
     }
 
     /**

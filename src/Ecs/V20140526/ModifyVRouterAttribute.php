@@ -39,18 +39,6 @@ class ModifyVRouterAttribute extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVRouterName() instead.
-     *
-     * @param string $vRouterName
-     *
-     * @return $this
-     */
-    public function setVRouterName($vRouterName)
-    {
-        return $this->withVRouterName($vRouterName);
-    }
-
-    /**
      * @param string $vRouterName
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyVRouterAttribute extends RpcRequest
         $this->options['query']['VRouterName'] = $vRouterName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyVRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVRouterId() instead.
-     *
-     * @param string $vRouterId
-     *
-     * @return $this
-     */
-    public function setVRouterId($vRouterId)
-    {
-        return $this->withVRouterId($vRouterId);
-    }
-
-    /**
      * @param string $vRouterId
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyVRouterAttribute extends RpcRequest
         $this->options['query']['VRouterId'] = $vRouterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyVRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyVRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyVRouterAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

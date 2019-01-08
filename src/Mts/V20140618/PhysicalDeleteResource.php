@@ -48,18 +48,6 @@ class PhysicalDeleteResource extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
-
-    /**
      * @param string $country
      *
      * @return $this
@@ -70,18 +58,6 @@ class PhysicalDeleteResource extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHid() instead.
-     *
-     * @param string $hid
-     *
-     * @return $this
-     */
-    public function setHid($hid)
-    {
-        return $this->withHid($hid);
     }
 
     /**
@@ -98,18 +74,6 @@ class PhysicalDeleteResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuccess() instead.
-     *
-     * @param string $success
-     *
-     * @return $this
-     */
-    public function setSuccess($success)
-    {
-        return $this->withSuccess($success);
-    }
-
-    /**
      * @param string $success
      *
      * @return $this
@@ -120,18 +84,6 @@ class PhysicalDeleteResource extends RpcRequest
         $this->options['query']['Success'] = $success;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterrupt() instead.
-     *
-     * @param string $interrupt
-     *
-     * @return $this
-     */
-    public function setInterrupt($interrupt)
-    {
-        return $this->withInterrupt($interrupt);
     }
 
     /**
@@ -148,18 +100,6 @@ class PhysicalDeleteResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGmtWakeup() instead.
-     *
-     * @param string $gmtWakeup
-     *
-     * @return $this
-     */
-    public function setGmtWakeup($gmtWakeup)
-    {
-        return $this->withGmtWakeup($gmtWakeup);
-    }
-
-    /**
      * @param string $gmtWakeup
      *
      * @return $this
@@ -170,18 +110,6 @@ class PhysicalDeleteResource extends RpcRequest
         $this->options['query']['GmtWakeup'] = $gmtWakeup;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPk() instead.
-     *
-     * @param string $pk
-     *
-     * @return $this
-     */
-    public function setPk($pk)
-    {
-        return $this->withPk($pk);
     }
 
     /**
@@ -198,18 +126,6 @@ class PhysicalDeleteResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInvoker() instead.
-     *
-     * @param string $invoker
-     *
-     * @return $this
-     */
-    public function setInvoker($invoker)
-    {
-        return $this->withInvoker($invoker);
-    }
-
-    /**
      * @param string $invoker
      *
      * @return $this
@@ -220,18 +136,6 @@ class PhysicalDeleteResource extends RpcRequest
         $this->options['query']['Invoker'] = $invoker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -248,18 +152,6 @@ class PhysicalDeleteResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
-    }
-
-    /**
      * @param string $message
      *
      * @return $this
@@ -273,18 +165,6 @@ class PhysicalDeleteResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskExtraData() instead.
-     *
-     * @param string $taskExtraData
-     *
-     * @return $this
-     */
-    public function setTaskExtraData($taskExtraData)
-    {
-        return $this->withTaskExtraData($taskExtraData);
-    }
-
-    /**
      * @param string $taskExtraData
      *
      * @return $this
@@ -295,18 +175,6 @@ class PhysicalDeleteResource extends RpcRequest
         $this->options['query']['TaskExtraData'] = $taskExtraData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIdentifier() instead.
-     *
-     * @param string $taskIdentifier
-     *
-     * @return $this
-     */
-    public function setTaskIdentifier($taskIdentifier)
-    {
-        return $this->withTaskIdentifier($taskIdentifier);
     }
 
     /**

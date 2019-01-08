@@ -37,18 +37,6 @@ class SetErrorPageConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageType() instead.
-     *
-     * @param string $pageType
-     *
-     * @return $this
-     */
-    public function setPageType($pageType)
-    {
-        return $this->withPageType($pageType);
-    }
-
-    /**
      * @param string $pageType
      *
      * @return $this
@@ -59,18 +47,6 @@ class SetErrorPageConfig extends RpcRequest
         $this->options['query']['PageType'] = $pageType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -87,18 +63,6 @@ class SetErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomPageUrl() instead.
-     *
-     * @param string $customPageUrl
-     *
-     * @return $this
-     */
-    public function setCustomPageUrl($customPageUrl)
-    {
-        return $this->withCustomPageUrl($customPageUrl);
-    }
-
-    /**
      * @param string $customPageUrl
      *
      * @return $this
@@ -134,18 +86,6 @@ class SetErrorPageConfig extends RpcRequest
         $this->options['query']['CustomPageUrl'] = $customPageUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

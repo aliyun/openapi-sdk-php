@@ -41,18 +41,6 @@ class SendWebsiteFeedback extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFeedback() instead.
-     *
-     * @param string $feedback
-     *
-     * @return $this
-     */
-    public function setFeedback($feedback)
-    {
-        return $this->withFeedback($feedback);
-    }
-
-    /**
      * @param string $feedback
      *
      * @return $this
@@ -63,18 +51,6 @@ class SendWebsiteFeedback extends RpcRequest
         $this->options['query']['Feedback'] = $feedback;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUrls() instead.
-     *
-     * @param string $urls
-     *
-     * @return $this
-     */
-    public function setUrls($urls)
-    {
-        return $this->withUrls($urls);
     }
 
     /**
@@ -91,18 +67,6 @@ class SendWebsiteFeedback extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -113,18 +77,6 @@ class SendWebsiteFeedback extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

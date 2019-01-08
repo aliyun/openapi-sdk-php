@@ -33,18 +33,6 @@ class DeleteJobTemplates extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplates() instead.
-     *
-     * @param string $templates
-     *
-     * @return $this
-     */
-    public function setTemplates($templates)
-    {
-        return $this->withTemplates($templates);
-    }
-
-    /**
      * @param string $templates
      *
      * @return $this

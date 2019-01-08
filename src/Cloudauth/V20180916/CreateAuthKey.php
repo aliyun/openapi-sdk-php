@@ -42,18 +42,6 @@ class CreateAuthKey extends RpcRequest
     public $serviceCode = 'cloudauth';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizType() instead.
-     *
-     * @param string $bizType
-     *
-     * @return $this
-     */
-    public function setBizType($bizType)
-    {
-        return $this->withBizType($bizType);
-    }
-
-    /**
      * @param string $bizType
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateAuthKey extends RpcRequest
         $this->options['query']['BizType'] = $bizType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserDeviceId() instead.
-     *
-     * @param string $userDeviceId
-     *
-     * @return $this
-     */
-    public function setUserDeviceId($userDeviceId)
-    {
-        return $this->withUserDeviceId($userDeviceId);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateAuthKey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateAuthKey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTest() instead.
-     *
-     * @param string $test
-     *
-     * @return $this
-     */
-    public function setTest($test)
-    {
-        return $this->withTest($test);
-    }
-
-    /**
      * @param string $test
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateAuthKey extends RpcRequest
         $this->options['query']['Test'] = $test;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

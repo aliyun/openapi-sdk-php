@@ -71,18 +71,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFuzzyDiskName() instead.
-     *
-     * @param string $fuzzyDiskName
-     *
-     * @return $this
-     */
-    public function setfuzzyDiskName($fuzzyDiskName)
-    {
-        return $this->withFuzzyDiskName($fuzzyDiskName);
-    }
-
-    /**
      * @param string $fuzzyDiskName
      *
      * @return $this
@@ -93,18 +81,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['fuzzyDiskName'] = $fuzzyDiskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -121,18 +97,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIzNo() instead.
-     *
-     * @param string $izNo
-     *
-     * @return $this
-     */
-    public function setizNo($izNo)
-    {
-        return $this->withIzNo($izNo);
-    }
-
-    /**
      * @param string $izNo
      *
      * @return $this
@@ -143,18 +107,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['izNo'] = $izNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrePayEcsInstanceIds() instead.
-     *
-     * @param string $prePayEcsInstanceIds
-     *
-     * @return $this
-     */
-    public function setprePayEcsInstanceIds($prePayEcsInstanceIds)
-    {
-        return $this->withPrePayEcsInstanceIds($prePayEcsInstanceIds);
     }
 
     /**
@@ -171,18 +123,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyId() instead.
-     *
-     * @param string $autoSnapshotPolicyId
-     *
-     * @return $this
-     */
-    public function setautoSnapshotPolicyId($autoSnapshotPolicyId)
-    {
-        return $this->withAutoSnapshotPolicyId($autoSnapshotPolicyId);
-    }
-
-    /**
      * @param string $autoSnapshotPolicyId
      *
      * @return $this
@@ -193,18 +133,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['autoSnapshotPolicyId'] = $autoSnapshotPolicyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -221,18 +149,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -243,18 +159,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExcludeStatus() instead.
-     *
-     * @param string $excludeStatus
-     *
-     * @return $this
-     */
-    public function setexcludeStatus($excludeStatus)
-    {
-        return $this->withExcludeStatus($excludeStatus);
     }
 
     /**
@@ -271,18 +175,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskName() instead.
-     *
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function setdiskName($diskName)
-    {
-        return $this->withDiskName($diskName);
-    }
-
-    /**
      * @param string $diskName
      *
      * @return $this
@@ -293,18 +185,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['diskName'] = $diskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeleteAutoSnapshot() instead.
-     *
-     * @param string $deleteAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setdeleteAutoSnapshot($deleteAutoSnapshot)
-    {
-        return $this->withDeleteAutoSnapshot($deleteAutoSnapshot);
     }
 
     /**
@@ -321,18 +201,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskCategory() instead.
-     *
-     * @param string $diskCategory
-     *
-     * @return $this
-     */
-    public function setdiskCategory($diskCategory)
-    {
-        return $this->withDiskCategory($diskCategory);
-    }
-
-    /**
      * @param string $diskCategory
      *
      * @return $this
@@ -343,18 +211,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['diskCategory'] = $diskCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -371,18 +227,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotNo() instead.
-     *
-     * @param string $snapshotNo
-     *
-     * @return $this
-     */
-    public function setsnapshotNo($snapshotNo)
-    {
-        return $this->withSnapshotNo($snapshotNo);
-    }
-
-    /**
      * @param string $snapshotNo
      *
      * @return $this
@@ -393,18 +237,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['snapshotNo'] = $snapshotNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeleteWithInstance() instead.
-     *
-     * @param string $deleteWithInstance
-     *
-     * @return $this
-     */
-    public function setdeleteWithInstance($deleteWithInstance)
-    {
-        return $this->withDeleteWithInstance($deleteWithInstance);
     }
 
     /**
@@ -421,18 +253,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -443,18 +263,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostPayEcsInstanceIds() instead.
-     *
-     * @param string $postPayEcsInstanceIds
-     *
-     * @return $this
-     */
-    public function setpostPayEcsInstanceIds($postPayEcsInstanceIds)
-    {
-        return $this->withPostPayEcsInstanceIds($postPayEcsInstanceIds);
     }
 
     /**
@@ -471,18 +279,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEcsInstanceId() instead.
-     *
-     * @param string $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function setecsInstanceId($ecsInstanceId)
-    {
-        return $this->withEcsInstanceId($ecsInstanceId);
-    }
-
-    /**
      * @param string $ecsInstanceId
      *
      * @return $this
@@ -493,18 +289,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['ecsInstanceId'] = $ecsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableAutoSnapshot() instead.
-     *
-     * @param string $enableAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setenableAutoSnapshot($enableAutoSnapshot)
-    {
-        return $this->withEnableAutoSnapshot($enableAutoSnapshot);
     }
 
     /**
@@ -521,18 +305,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -543,18 +315,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -571,18 +331,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActive() instead.
-     *
-     * @param string $active
-     *
-     * @return $this
-     */
-    public function setactive($active)
-    {
-        return $this->withActive($active);
-    }
-
-    /**
      * @param string $active
      *
      * @return $this
@@ -593,18 +341,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['active'] = $active;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageNo() instead.
-     *
-     * @param string $imageNo
-     *
-     * @return $this
-     */
-    public function setimageNo($imageNo)
-    {
-        return $this->withImageNo($imageNo);
     }
 
     /**
@@ -621,18 +357,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeFrom() instead.
-     *
-     * @param string $createTimeFrom
-     *
-     * @return $this
-     */
-    public function setcreateTimeFrom($createTimeFrom)
-    {
-        return $this->withCreateTimeFrom($createTimeFrom);
-    }
-
-    /**
      * @param string $createTimeFrom
      *
      * @return $this
@@ -643,18 +367,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['createTimeFrom'] = $createTimeFrom;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableAutomatedSnapshotPolicy() instead.
-     *
-     * @param string $enableAutomatedSnapshotPolicy
-     *
-     * @return $this
-     */
-    public function setenableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy)
-    {
-        return $this->withEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy);
     }
 
     /**
@@ -671,18 +383,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPortable() instead.
-     *
-     * @param string $portable
-     *
-     * @return $this
-     */
-    public function setportable($portable)
-    {
-        return $this->withPortable($portable);
-    }
-
-    /**
      * @param string $portable
      *
      * @return $this
@@ -693,18 +393,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['portable'] = $portable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -721,18 +409,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskType() instead.
-     *
-     * @param string $diskType
-     *
-     * @return $this
-     */
-    public function setdiskType($diskType)
-    {
-        return $this->withDiskType($diskType);
-    }
-
-    /**
      * @param string $diskType
      *
      * @return $this
@@ -743,18 +419,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['diskType'] = $diskType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -771,18 +435,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function settags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -793,18 +445,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAsync() instead.
-     *
-     * @param string $async
-     *
-     * @return $this
-     */
-    public function setasync($async)
-    {
-        return $this->withAsync($async);
     }
 
     /**
@@ -821,18 +461,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setinstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -843,18 +471,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['instanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setpageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -871,18 +487,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeTo() instead.
-     *
-     * @param string $createTimeTo
-     *
-     * @return $this
-     */
-    public function setcreateTimeTo($createTimeTo)
-    {
-        return $this->withCreateTimeTo($createTimeTo);
-    }
-
-    /**
      * @param string $createTimeTo
      *
      * @return $this
@@ -893,18 +497,6 @@ class InnerDiskQueryByParamForConsole extends RpcRequest
         $this->options['query']['createTimeTo'] = $createTimeTo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setstatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

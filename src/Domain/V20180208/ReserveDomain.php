@@ -34,28 +34,6 @@ class ReserveDomain extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getChannels() instead.
-     *
-     * @return array
-     */
-    public function getChannelss()
-    {
-        return $this->getChannels();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannels() instead.
-     *
-     * @param array $channelss
-     *
-     * @return $this
-     */
-    public function setChannelss(array $channelss)
-    {
-        return $this->withChannels($channelss);
-    }
-
-    /**
      * @param array $channels
      *
      * @return $this
@@ -68,18 +46,6 @@ class ReserveDomain extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**

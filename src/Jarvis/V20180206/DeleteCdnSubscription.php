@@ -36,18 +36,6 @@ class DeleteCdnSubscription extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -58,18 +46,6 @@ class DeleteCdnSubscription extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -86,18 +62,6 @@ class DeleteCdnSubscription extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCdnUidList() instead.
-     *
-     * @param string $cdnUidList
-     *
-     * @return $this
-     */
-    public function setCdnUidList($cdnUidList)
-    {
-        return $this->withCdnUidList($cdnUidList);
-    }
-
-    /**
      * @param string $cdnUidList
      *
      * @return $this
@@ -108,18 +72,6 @@ class DeleteCdnSubscription extends RpcRequest
         $this->options['query']['CdnUidList'] = $cdnUidList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

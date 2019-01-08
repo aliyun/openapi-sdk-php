@@ -34,18 +34,6 @@ class ActionDiskRma extends RpcRequest
     public $action = 'ActionDiskRma';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskName() instead.
-     *
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function setDiskName($diskName)
-    {
-        return $this->withDiskName($diskName);
-    }
-
-    /**
      * @param string $diskName
      *
      * @return $this
@@ -56,18 +44,6 @@ class ActionDiskRma extends RpcRequest
         $this->options['query']['DiskName'] = $diskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExecutionId() instead.
-     *
-     * @param string $executionId
-     *
-     * @return $this
-     */
-    public function setExecutionId($executionId)
-    {
-        return $this->withExecutionId($executionId);
     }
 
     /**
@@ -84,18 +60,6 @@ class ActionDiskRma extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskSlot() instead.
-     *
-     * @param string $diskSlot
-     *
-     * @return $this
-     */
-    public function setDiskSlot($diskSlot)
-    {
-        return $this->withDiskSlot($diskSlot);
-    }
-
-    /**
      * @param string $diskSlot
      *
      * @return $this
@@ -106,18 +70,6 @@ class ActionDiskRma extends RpcRequest
         $this->options['query']['DiskSlot'] = $diskSlot;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHostname() instead.
-     *
-     * @param string $hostname
-     *
-     * @return $this
-     */
-    public function setHostname($hostname)
-    {
-        return $this->withHostname($hostname);
     }
 
     /**
@@ -134,18 +86,6 @@ class ActionDiskRma extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskMount() instead.
-     *
-     * @param string $diskMount
-     *
-     * @return $this
-     */
-    public function setDiskMount($diskMount)
-    {
-        return $this->withDiskMount($diskMount);
-    }
-
-    /**
      * @param string $diskMount
      *
      * @return $this
@@ -159,18 +99,6 @@ class ActionDiskRma extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskReason() instead.
-     *
-     * @param string $diskReason
-     *
-     * @return $this
-     */
-    public function setDiskReason($diskReason)
-    {
-        return $this->withDiskReason($diskReason);
-    }
-
-    /**
      * @param string $diskReason
      *
      * @return $this
@@ -181,18 +109,6 @@ class ActionDiskRma extends RpcRequest
         $this->options['query']['DiskReason'] = $diskReason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskSn() instead.
-     *
-     * @param string $diskSn
-     *
-     * @return $this
-     */
-    public function setDiskSn($diskSn)
-    {
-        return $this->withDiskSn($diskSn);
     }
 
     /**

@@ -40,18 +40,6 @@ class AllowPushStream extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -65,18 +53,6 @@ class AllowPushStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoomId() instead.
-     *
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function setRoomId($roomId)
-    {
-        return $this->withRoomId($roomId);
-    }
-
-    /**
      * @param string $roomId
      *
      * @return $this
@@ -87,18 +63,6 @@ class AllowPushStream extends RpcRequest
         $this->options['query']['RoomId'] = $roomId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

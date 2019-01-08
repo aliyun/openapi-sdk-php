@@ -34,18 +34,6 @@ class EnableBillGeneration extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
-
-    /**
      * @param string $productCode
      *
      * @return $this
@@ -56,18 +44,6 @@ class EnableBillGeneration extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

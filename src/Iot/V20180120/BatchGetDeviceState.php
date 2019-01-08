@@ -34,28 +34,6 @@ class BatchGetDeviceState extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceName() instead.
-     *
-     * @return array
-     */
-    public function getDeviceNames()
-    {
-        return $this->getDeviceName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param array $deviceNames
-     *
-     * @return $this
-     */
-    public function setDeviceNames(array $deviceNames)
-    {
-        return $this->withDeviceName($deviceNames);
-    }
-
-    /**
      * @param array $deviceName
      *
      * @return $this
@@ -68,18 +46,6 @@ class BatchGetDeviceState extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

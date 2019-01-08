@@ -33,18 +33,6 @@ class QueryCustomerLabel extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
-
-    /**
      * @param string $labelSeries
      *
      * @return $this

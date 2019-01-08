@@ -34,18 +34,6 @@ class QueryPushStat extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageId() instead.
-     *
-     * @param string $messageId
-     *
-     * @return $this
-     */
-    public function setMessageId($messageId)
-    {
-        return $this->withMessageId($messageId);
-    }
-
-    /**
      * @param string $messageId
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryPushStat extends RpcRequest
         $this->options['query']['MessageId'] = $messageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**

@@ -44,18 +44,6 @@ class UpdateSharedServices extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
-    /**
      * @param string $projectName
      *
      * @return $this
@@ -66,18 +54,6 @@ class UpdateSharedServices extends RoaRequest
         $this->pathParameters['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

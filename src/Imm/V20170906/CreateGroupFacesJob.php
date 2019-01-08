@@ -42,18 +42,6 @@ class CreateGroupFacesJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function setNotifyTopicName($notifyTopicName)
-    {
-        return $this->withNotifyTopicName($notifyTopicName);
-    }
-
-    /**
      * @param string $notifyTopicName
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateGroupFacesJob extends RpcRequest
         $this->options['query']['NotifyTopicName'] = $notifyTopicName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function setNotifyEndpoint($notifyEndpoint)
-    {
-        return $this->withNotifyEndpoint($notifyEndpoint);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateGroupFacesJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateGroupFacesJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateGroupFacesJob extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
     }
 
     /**

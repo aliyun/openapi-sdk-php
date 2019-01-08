@@ -36,18 +36,6 @@ class DeleteAutoSnapshotPolicy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -58,18 +46,6 @@ class DeleteAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -86,18 +62,6 @@ class DeleteAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyId() instead.
-     *
-     * @param string $autoSnapshotPolicyId
-     *
-     * @return $this
-     */
-    public function setautoSnapshotPolicyId($autoSnapshotPolicyId)
-    {
-        return $this->withAutoSnapshotPolicyId($autoSnapshotPolicyId);
-    }
-
-    /**
      * @param string $autoSnapshotPolicyId
      *
      * @return $this
@@ -108,18 +72,6 @@ class DeleteAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['autoSnapshotPolicyId'] = $autoSnapshotPolicyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

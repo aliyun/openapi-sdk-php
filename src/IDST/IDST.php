@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\IDST
  *
- * @method V20170922\IDSTApiResolver v20170922()
+ * @method IDSTV20170922ApiResolver v20170922()
  */
 class IDST
 {

@@ -38,18 +38,6 @@ class PushMessageToiOS extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -60,18 +48,6 @@ class PushMessageToiOS extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetValue() instead.
-     *
-     * @param string $targetValue
-     *
-     * @return $this
-     */
-    public function setTargetValue($targetValue)
-    {
-        return $this->withTargetValue($targetValue);
     }
 
     /**
@@ -88,18 +64,6 @@ class PushMessageToiOS extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -110,18 +74,6 @@ class PushMessageToiOS extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBody() instead.
-     *
-     * @param string $body
-     *
-     * @return $this
-     */
-    public function setBody($body)
-    {
-        return $this->withBody($body);
     }
 
     /**
@@ -138,18 +90,6 @@ class PushMessageToiOS extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobKey() instead.
-     *
-     * @param string $jobKey
-     *
-     * @return $this
-     */
-    public function setJobKey($jobKey)
-    {
-        return $this->withJobKey($jobKey);
-    }
-
-    /**
      * @param string $jobKey
      *
      * @return $this
@@ -160,18 +100,6 @@ class PushMessageToiOS extends RpcRequest
         $this->options['query']['JobKey'] = $jobKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTarget() instead.
-     *
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function setTarget($target)
-    {
-        return $this->withTarget($target);
     }
 
     /**

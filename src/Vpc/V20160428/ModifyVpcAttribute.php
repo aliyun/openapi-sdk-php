@@ -46,18 +46,6 @@ class ModifyVpcAttribute extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcName() instead.
-     *
-     * @param string $vpcName
-     *
-     * @return $this
-     */
-    public function setVpcName($vpcName)
-    {
-        return $this->withVpcName($vpcName);
-    }
-
-    /**
      * @param string $vpcName
      *
      * @return $this
@@ -68,18 +56,6 @@ class ModifyVpcAttribute extends RpcRequest
         $this->options['query']['VpcName'] = $vpcName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class ModifyVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class ModifyVpcAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -146,18 +98,6 @@ class ModifyVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class ModifyVpcAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCidrBlock() instead.
-     *
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function setCidrBlock($cidrBlock)
-    {
-        return $this->withCidrBlock($cidrBlock);
     }
 
     /**
@@ -196,18 +124,6 @@ class ModifyVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableIPv6() instead.
-     *
-     * @param string $enableIPv6
-     *
-     * @return $this
-     */
-    public function setEnableIPv6($enableIPv6)
-    {
-        return $this->withEnableIPv6($enableIPv6);
-    }
-
-    /**
      * @param string $enableIPv6
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -243,18 +147,6 @@ class ModifyVpcAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

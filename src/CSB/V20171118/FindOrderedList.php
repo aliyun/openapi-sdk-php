@@ -39,19 +39,6 @@ class FindOrderedList extends RpcRequest
      */
     public $scheme = 'https';
 
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
     /**
      * @param string $projectName
      *
@@ -63,18 +50,6 @@ class FindOrderedList extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShowDelOrder() instead.
-     *
-     * @param string $showDelOrder
-     *
-     * @return $this
-     */
-    public function setShowDelOrder($showDelOrder)
-    {
-        return $this->withShowDelOrder($showDelOrder);
     }
 
     /**
@@ -91,18 +66,6 @@ class FindOrderedList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
-
-    /**
      * @param string $csbId
      *
      * @return $this
@@ -113,18 +76,6 @@ class FindOrderedList extends RpcRequest
         $this->options['query']['CsbId'] = $csbId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlias() instead.
-     *
-     * @param string $alias
-     *
-     * @return $this
-     */
-    public function setAlias($alias)
-    {
-        return $this->withAlias($alias);
     }
 
     /**
@@ -141,18 +92,6 @@ class FindOrderedList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
-    }
-
-    /**
      * @param string $serviceName
      *
      * @return $this
@@ -163,18 +102,6 @@ class FindOrderedList extends RpcRequest
         $this->options['query']['ServiceName'] = $serviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -191,18 +118,6 @@ class FindOrderedList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
-    }
-
-    /**
      * @param string $serviceId
      *
      * @return $this
@@ -213,18 +128,6 @@ class FindOrderedList extends RpcRequest
         $this->options['query']['ServiceId'] = $serviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

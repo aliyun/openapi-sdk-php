@@ -35,18 +35,6 @@ class CreateDeviceGroup extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupDesc() instead.
-     *
-     * @param string $groupDesc
-     *
-     * @return $this
-     */
-    public function setGroupDesc($groupDesc)
-    {
-        return $this->withGroupDesc($groupDesc);
-    }
-
-    /**
      * @param string $groupDesc
      *
      * @return $this
@@ -60,18 +48,6 @@ class CreateDeviceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuperGroupId() instead.
-     *
-     * @param string $superGroupId
-     *
-     * @return $this
-     */
-    public function setSuperGroupId($superGroupId)
-    {
-        return $this->withSuperGroupId($superGroupId);
-    }
-
-    /**
      * @param string $superGroupId
      *
      * @return $this
@@ -82,18 +58,6 @@ class CreateDeviceGroup extends RpcRequest
         $this->options['query']['SuperGroupId'] = $superGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

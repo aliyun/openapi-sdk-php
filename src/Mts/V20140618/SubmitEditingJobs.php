@@ -46,18 +46,6 @@ class SubmitEditingJobs extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputBucket() instead.
-     *
-     * @param string $outputBucket
-     *
-     * @return $this
-     */
-    public function setOutputBucket($outputBucket)
-    {
-        return $this->withOutputBucket($outputBucket);
-    }
-
-    /**
      * @param string $outputBucket
      *
      * @return $this
@@ -68,18 +56,6 @@ class SubmitEditingJobs extends RpcRequest
         $this->options['query']['OutputBucket'] = $outputBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class SubmitEditingJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEditingJobOutputs() instead.
-     *
-     * @param string $editingJobOutputs
-     *
-     * @return $this
-     */
-    public function setEditingJobOutputs($editingJobOutputs)
-    {
-        return $this->withEditingJobOutputs($editingJobOutputs);
-    }
-
-    /**
      * @param string $editingJobOutputs
      *
      * @return $this
@@ -118,18 +82,6 @@ class SubmitEditingJobs extends RpcRequest
         $this->options['query']['EditingJobOutputs'] = $editingJobOutputs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class SubmitEditingJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class SubmitEditingJobs extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutputLocation() instead.
-     *
-     * @param string $outputLocation
-     *
-     * @return $this
-     */
-    public function setOutputLocation($outputLocation)
-    {
-        return $this->withOutputLocation($outputLocation);
     }
 
     /**
@@ -196,18 +124,6 @@ class SubmitEditingJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitEditingJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEditingInputs() instead.
-     *
-     * @param string $editingInputs
-     *
-     * @return $this
-     */
-    public function setEditingInputs($editingInputs)
-    {
-        return $this->withEditingInputs($editingInputs);
-    }
-
-    /**
      * @param string $editingInputs
      *
      * @return $this
@@ -243,18 +147,6 @@ class SubmitEditingJobs extends RpcRequest
         $this->options['query']['EditingInputs'] = $editingInputs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

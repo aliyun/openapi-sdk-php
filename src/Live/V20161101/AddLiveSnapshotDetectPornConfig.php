@@ -46,18 +46,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
-
-    /**
      * @param string $ossBucket
      *
      * @return $this
@@ -68,18 +56,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -96,18 +72,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -118,18 +82,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -146,18 +98,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
-    }
-
-    /**
      * @param string $ossEndpoint
      *
      * @return $this
@@ -168,18 +108,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
         $this->options['query']['OssEndpoint'] = $ossEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**
@@ -196,18 +124,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssObject() instead.
-     *
-     * @param string $ossObject
-     *
-     * @return $this
-     */
-    public function setOssObject($ossObject)
-    {
-        return $this->withOssObject($ossObject);
-    }
-
-    /**
      * @param string $ossObject
      *
      * @return $this
@@ -243,28 +147,6 @@ class AddLiveSnapshotDetectPornConfig extends RpcRequest
         $this->options['query']['OssObject'] = $ossObject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getScene() instead.
-     *
-     * @return array
-     */
-    public function getScenes()
-    {
-        return $this->getScene();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param array $scenes
-     *
-     * @return $this
-     */
-    public function setScenes(array $scenes)
-    {
-        return $this->withScene($scenes);
     }
 
     /**

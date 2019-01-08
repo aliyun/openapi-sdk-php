@@ -34,18 +34,6 @@ class DeleteUsers extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -56,28 +44,6 @@ class DeleteUsers extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getUser() instead.
-     *
-     * @return array
-     */
-    public function getUsers()
-    {
-        return $this->getUser();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param array $users
-     *
-     * @return $this
-     */
-    public function setUsers(array $users)
-    {
-        return $this->withUser($users);
     }
 
     /**

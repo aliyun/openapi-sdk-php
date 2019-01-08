@@ -39,18 +39,6 @@ class GetServiceExtensions extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceType() instead.
-     *
-     * @param string $serviceType
-     *
-     * @return $this
-     */
-    public function setServiceType($serviceType)
-    {
-        return $this->withServiceType($serviceType);
-    }
-
-    /**
      * @param string $serviceType
      *
      * @return $this
@@ -61,18 +49,6 @@ class GetServiceExtensions extends RpcRequest
         $this->options['query']['ServiceType'] = $serviceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

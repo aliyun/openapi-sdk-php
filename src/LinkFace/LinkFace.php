@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\LinkFace
  *
- * @method V20180720\LinkFaceApiResolver v20180720()
+ * @method LinkFaceV20180720ApiResolver v20180720()
  */
 class LinkFace
 {

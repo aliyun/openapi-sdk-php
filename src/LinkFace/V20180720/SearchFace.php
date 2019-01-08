@@ -33,23 +33,10 @@ class SearchFace extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImage() instead.
-     *
-     * @param string $image
-     *
-     * @return $this
-     */
-    public function setImage($image)
-    {
-        return $this->withImage($image);
-    }
 
     /**
      * @param string $image
@@ -62,18 +49,6 @@ class SearchFace extends RpcRequest
         $this->options['query']['Image'] = $image;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**

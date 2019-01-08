@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Iot
  *
- * @method V20180120\IotApiResolver v20180120()
+ * @method IotV20180120ApiResolver v20180120()
  */
 class Iot
 {

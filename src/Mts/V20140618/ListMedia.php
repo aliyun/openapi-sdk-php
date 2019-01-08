@@ -45,18 +45,6 @@ class ListMedia extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class ListMedia extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -95,18 +71,6 @@ class ListMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextPageToken() instead.
-     *
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function setNextPageToken($nextPageToken)
-    {
-        return $this->withNextPageToken($nextPageToken);
-    }
-
-    /**
      * @param string $nextPageToken
      *
      * @return $this
@@ -117,18 +81,6 @@ class ListMedia extends RpcRequest
         $this->options['query']['NextPageToken'] = $nextPageToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -145,18 +97,6 @@ class ListMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaximumPageSize() instead.
-     *
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function setMaximumPageSize($maximumPageSize)
-    {
-        return $this->withMaximumPageSize($maximumPageSize);
-    }
-
-    /**
      * @param string $maximumPageSize
      *
      * @return $this
@@ -167,18 +107,6 @@ class ListMedia extends RpcRequest
         $this->options['query']['MaximumPageSize'] = $maximumPageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -195,18 +123,6 @@ class ListMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTo() instead.
-     *
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function setTo($to)
-    {
-        return $this->withTo($to);
-    }
-
-    /**
      * @param string $to
      *
      * @return $this
@@ -217,18 +133,6 @@ class ListMedia extends RpcRequest
         $this->options['query']['To'] = $to;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

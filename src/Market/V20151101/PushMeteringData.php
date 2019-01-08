@@ -33,18 +33,6 @@ class PushMeteringData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetering() instead.
-     *
-     * @param string $metering
-     *
-     * @return $this
-     */
-    public function setMetering($metering)
-    {
-        return $this->withMetering($metering);
-    }
-
-    /**
      * @param string $metering
      *
      * @return $this

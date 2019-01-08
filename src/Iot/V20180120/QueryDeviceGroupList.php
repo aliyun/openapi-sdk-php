@@ -36,18 +36,6 @@ class QueryDeviceGroupList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuperGroupId() instead.
-     *
-     * @param string $superGroupId
-     *
-     * @return $this
-     */
-    public function setSuperGroupId($superGroupId)
-    {
-        return $this->withSuperGroupId($superGroupId);
-    }
-
-    /**
      * @param string $superGroupId
      *
      * @return $this
@@ -58,18 +46,6 @@ class QueryDeviceGroupList extends RpcRequest
         $this->options['query']['SuperGroupId'] = $superGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -86,18 +62,6 @@ class QueryDeviceGroupList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -108,18 +72,6 @@ class QueryDeviceGroupList extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

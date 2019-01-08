@@ -41,18 +41,6 @@ class CommitContactFlowVersionModification extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCanvas() instead.
-     *
-     * @param string $canvas
-     *
-     * @return $this
-     */
-    public function setCanvas($canvas)
-    {
-        return $this->withCanvas($canvas);
-    }
-
-    /**
      * @param string $canvas
      *
      * @return $this
@@ -63,18 +51,6 @@ class CommitContactFlowVersionModification extends RpcRequest
         $this->options['query']['Canvas'] = $canvas;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -91,18 +67,6 @@ class CommitContactFlowVersionModification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactFlowVersionId() instead.
-     *
-     * @param string $contactFlowVersionId
-     *
-     * @return $this
-     */
-    public function setContactFlowVersionId($contactFlowVersionId)
-    {
-        return $this->withContactFlowVersionId($contactFlowVersionId);
-    }
-
-    /**
      * @param string $contactFlowVersionId
      *
      * @return $this
@@ -113,18 +77,6 @@ class CommitContactFlowVersionModification extends RpcRequest
         $this->options['query']['ContactFlowVersionId'] = $contactFlowVersionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContent() instead.
-     *
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        return $this->withContent($content);
     }
 
     /**

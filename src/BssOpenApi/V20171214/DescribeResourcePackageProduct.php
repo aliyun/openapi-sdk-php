@@ -33,18 +33,6 @@ class DescribeResourcePackageProduct extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
-
-    /**
      * @param string $productCode
      *
      * @return $this

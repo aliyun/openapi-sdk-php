@@ -62,28 +62,6 @@ class CreateLoadBalancer extends RpcRequest
     public $serviceCode = 'slb';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
-
-    /**
      * @param string $accessKeyId
      *
      * @return $this
@@ -94,18 +72,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -122,18 +88,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -144,18 +98,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddressIPVersion() instead.
-     *
-     * @param string $addressIPVersion
-     *
-     * @return $this
-     */
-    public function setAddressIPVersion($addressIPVersion)
-    {
-        return $this->withAddressIPVersion($addressIPVersion);
     }
 
     /**
@@ -172,18 +114,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMasterZoneId() instead.
-     *
-     * @param string $masterZoneId
-     *
-     * @return $this
-     */
-    public function setMasterZoneId($masterZoneId)
-    {
-        return $this->withMasterZoneId($masterZoneId);
-    }
-
-    /**
      * @param string $masterZoneId
      *
      * @return $this
@@ -194,18 +124,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['MasterZoneId'] = $masterZoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
     }
 
     /**
@@ -222,18 +140,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -244,18 +150,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerName() instead.
-     *
-     * @param string $loadBalancerName
-     *
-     * @return $this
-     */
-    public function setLoadBalancerName($loadBalancerName)
-    {
-        return $this->withLoadBalancerName($loadBalancerName);
     }
 
     /**
@@ -272,18 +166,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddressType() instead.
-     *
-     * @param string $addressType
-     *
-     * @return $this
-     */
-    public function setAddressType($addressType)
-    {
-        return $this->withAddressType($addressType);
-    }
-
-    /**
      * @param string $addressType
      *
      * @return $this
@@ -294,18 +176,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['AddressType'] = $addressType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSlaveZoneId() instead.
-     *
-     * @param string $slaveZoneId
-     *
-     * @return $this
-     */
-    public function setSlaveZoneId($slaveZoneId)
-    {
-        return $this->withSlaveZoneId($slaveZoneId);
     }
 
     /**
@@ -322,18 +192,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerSpec() instead.
-     *
-     * @param string $loadBalancerSpec
-     *
-     * @return $this
-     */
-    public function setLoadBalancerSpec($loadBalancerSpec)
-    {
-        return $this->withLoadBalancerSpec($loadBalancerSpec);
-    }
-
-    /**
      * @param string $loadBalancerSpec
      *
      * @return $this
@@ -344,18 +202,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['LoadBalancerSpec'] = $loadBalancerSpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
     }
 
     /**
@@ -372,18 +218,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
-    }
-
-    /**
      * @param string $address
      *
      * @return $this
@@ -394,18 +228,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['Address'] = $address;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -422,18 +244,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -444,18 +254,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['Bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -472,18 +270,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -494,18 +280,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -522,18 +296,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -544,18 +306,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableVpcVipFlow() instead.
-     *
-     * @param string $enableVpcVipFlow
-     *
-     * @return $this
-     */
-    public function setEnableVpcVipFlow($enableVpcVipFlow)
-    {
-        return $this->withEnableVpcVipFlow($enableVpcVipFlow);
     }
 
     /**
@@ -572,18 +322,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -594,18 +332,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -622,18 +348,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
-    }
-
-    /**
      * @param string $payType
      *
      * @return $this
@@ -647,18 +361,6 @@ class CreateLoadBalancer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
-    }
-
-    /**
      * @param string $pricingCycle
      *
      * @return $this
@@ -669,18 +371,6 @@ class CreateLoadBalancer extends RpcRequest
         $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRatio() instead.
-     *
-     * @param string $ratio
-     *
-     * @return $this
-     */
-    public function setRatio($ratio)
-    {
-        return $this->withRatio($ratio);
     }
 
     /**

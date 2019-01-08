@@ -35,18 +35,6 @@ class AnalyzeNvc extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -60,18 +48,6 @@ class AnalyzeNvc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
-
-    /**
      * @param string $data
      *
      * @return $this
@@ -82,18 +58,6 @@ class AnalyzeNvc extends RpcRequest
         $this->options['query']['Data'] = $data;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScoreJsonStr() instead.
-     *
-     * @param string $scoreJsonStr
-     *
-     * @return $this
-     */
-    public function setScoreJsonStr($scoreJsonStr)
-    {
-        return $this->withScoreJsonStr($scoreJsonStr);
     }
 
     /**

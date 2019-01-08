@@ -45,18 +45,6 @@ class DeleteImage extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class DeleteImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageType() instead.
-     *
-     * @param string $imageType
-     *
-     * @return $this
-     */
-    public function setImageType($imageType)
-    {
-        return $this->withImageType($imageType);
     }
 
     /**
@@ -95,18 +71,6 @@ class DeleteImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class DeleteImage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageURLs() instead.
-     *
-     * @param string $imageURLs
-     *
-     * @return $this
-     */
-    public function setImageURLs($imageURLs)
-    {
-        return $this->withImageURLs($imageURLs);
     }
 
     /**
@@ -145,18 +97,6 @@ class DeleteImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
-    }
-
-    /**
      * @param string $videoId
      *
      * @return $this
@@ -167,18 +107,6 @@ class DeleteImage extends RpcRequest
         $this->options['query']['VideoId'] = $videoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +123,6 @@ class DeleteImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeleteImageType() instead.
-     *
-     * @param string $deleteImageType
-     *
-     * @return $this
-     */
-    public function setDeleteImageType($deleteImageType)
-    {
-        return $this->withDeleteImageType($deleteImageType);
-    }
-
-    /**
      * @param string $deleteImageType
      *
      * @return $this
@@ -217,18 +133,6 @@ class DeleteImage extends RpcRequest
         $this->options['query']['DeleteImageType'] = $deleteImageType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageIds() instead.
-     *
-     * @param string $imageIds
-     *
-     * @return $this
-     */
-    public function setImageIds($imageIds)
-    {
-        return $this->withImageIds($imageIds);
     }
 
     /**

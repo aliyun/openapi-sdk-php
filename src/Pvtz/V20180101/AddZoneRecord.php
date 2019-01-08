@@ -45,18 +45,6 @@ class AddZoneRecord extends RpcRequest
     public $serviceCode = 'pvtz';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRr() instead.
-     *
-     * @param string $rr
-     *
-     * @return $this
-     */
-    public function setRr($rr)
-    {
-        return $this->withRr($rr);
-    }
-
-    /**
      * @param string $rr
      *
      * @return $this
@@ -67,18 +55,6 @@ class AddZoneRecord extends RpcRequest
         $this->options['query']['Rr'] = $rr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -95,18 +71,6 @@ class AddZoneRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -117,18 +81,6 @@ class AddZoneRecord extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -145,18 +97,6 @@ class AddZoneRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -167,18 +107,6 @@ class AddZoneRecord extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
     }
 
     /**
@@ -195,18 +123,6 @@ class AddZoneRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTtl() instead.
-     *
-     * @param string $ttl
-     *
-     * @return $this
-     */
-    public function setTtl($ttl)
-    {
-        return $this->withTtl($ttl);
-    }
-
-    /**
      * @param string $ttl
      *
      * @return $this
@@ -217,18 +133,6 @@ class AddZoneRecord extends RpcRequest
         $this->options['query']['Ttl'] = $ttl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withValue() instead.
-     *
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        return $this->withValue($value);
     }
 
     /**

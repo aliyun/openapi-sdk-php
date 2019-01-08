@@ -35,18 +35,6 @@ class QueryMeasureTop extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDay() instead.
-     *
-     * @param string $startDay
-     *
-     * @return $this
-     */
-    public function setStartDay($startDay)
-    {
-        return $this->withStartDay($startDay);
-    }
-
-    /**
      * @param string $startDay
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryMeasureTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSustainDays() instead.
-     *
-     * @param string $sustainDays
-     *
-     * @return $this
-     */
-    public function setSustainDays($sustainDays)
-    {
-        return $this->withSustainDays($sustainDays);
-    }
-
-    /**
      * @param string $sustainDays
      *
      * @return $this
@@ -82,18 +58,6 @@ class QueryMeasureTop extends RpcRequest
         $this->options['query']['SustainDays'] = $sustainDays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopCount() instead.
-     *
-     * @param string $topCount
-     *
-     * @return $this
-     */
-    public function setTopCount($topCount)
-    {
-        return $this->withTopCount($topCount);
     }
 
     /**

@@ -34,18 +34,6 @@ class AddLocalNodes extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodes() instead.
-     *
-     * @param string $nodes
-     *
-     * @return $this
-     */
-    public function setNodes($nodes)
-    {
-        return $this->withNodes($nodes);
-    }
-
-    /**
      * @param string $nodes
      *
      * @return $this
@@ -56,18 +44,6 @@ class AddLocalNodes extends RpcRequest
         $this->options['query']['Nodes'] = $nodes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

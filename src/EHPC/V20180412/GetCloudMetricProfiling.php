@@ -34,18 +34,6 @@ class GetCloudMetricProfiling extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProfilingId() instead.
-     *
-     * @param string $profilingId
-     *
-     * @return $this
-     */
-    public function setProfilingId($profilingId)
-    {
-        return $this->withProfilingId($profilingId);
-    }
-
-    /**
      * @param string $profilingId
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetCloudMetricProfiling extends RpcRequest
         $this->options['query']['ProfilingId'] = $profilingId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

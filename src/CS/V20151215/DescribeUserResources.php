@@ -38,18 +38,6 @@ class DescribeUserResources extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliuid() instead.
-     *
-     * @param string $aliuid
-     *
-     * @return $this
-     */
-    public function setAliuid($aliuid)
-    {
-        return $this->withAliuid($aliuid);
-    }
-
-    /**
      * @param string $aliuid
      *
      * @return $this

@@ -48,18 +48,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
-
-    /**
      * @param string $ossBucket
      *
      * @return $this
@@ -70,18 +58,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -98,18 +74,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
-    }
-
-    /**
      * @param string $ossEndpoint
      *
      * @return $this
@@ -120,18 +84,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OssEndpoint'] = $ossEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -148,18 +100,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -170,18 +110,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -198,18 +126,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
@@ -223,18 +139,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -245,28 +149,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getRecordFormat() instead.
-     *
-     * @return array
-     */
-    public function getRecordFormats()
-    {
-        return $this->getRecordFormat();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordFormat() instead.
-     *
-     * @param array $recordFormats
-     *
-     * @return $this
-     */
-    public function setRecordFormats(array $recordFormats)
-    {
-        return $this->withRecordFormat($recordFormats);
     }
 
     /**
@@ -288,18 +170,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnDemand() instead.
-     *
-     * @param string $onDemand
-     *
-     * @return $this
-     */
-    public function setOnDemand($onDemand)
-    {
-        return $this->withOnDemand($onDemand);
-    }
-
-    /**
      * @param string $onDemand
      *
      * @return $this
@@ -310,18 +180,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OnDemand'] = $onDemand;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

@@ -33,23 +33,10 @@ class DeleteService extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
-    }
 
     /**
      * @param string $serviceName
@@ -62,18 +49,6 @@ class DeleteService extends RpcRequest
         $this->options['query']['ServiceName'] = $serviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
     }
 
     /**

@@ -34,18 +34,6 @@ class GetOrderDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderId() instead.
-     *
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        return $this->withOrderId($orderId);
-    }
-
-    /**
      * @param string $orderId
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetOrderDetail extends RpcRequest
         $this->options['query']['OrderId'] = $orderId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -47,18 +47,6 @@ class DescribeBackupTasks extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBackupJobId() instead.
-     *
-     * @param string $backupJobId
-     *
-     * @return $this
-     */
-    public function setBackupJobId($backupJobId)
-    {
-        return $this->withBackupJobId($backupJobId);
-    }
-
-    /**
      * @param string $backupJobId
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeBackupTasks extends RpcRequest
         $this->options['query']['BackupJobId'] = $backupJobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeBackupTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlag() instead.
-     *
-     * @param string $flag
-     *
-     * @return $this
-     */
-    public function setFlag($flag)
-    {
-        return $this->withFlag($flag);
-    }
-
-    /**
      * @param string $flag
      *
      * @return $this
@@ -119,18 +83,6 @@ class DescribeBackupTasks extends RpcRequest
         $this->options['query']['Flag'] = $flag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -147,18 +99,6 @@ class DescribeBackupTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeBackupTasks extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -197,18 +125,6 @@ class DescribeBackupTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -219,18 +135,6 @@ class DescribeBackupTasks extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupMode() instead.
-     *
-     * @param string $backupMode
-     *
-     * @return $this
-     */
-    public function setBackupMode($backupMode)
-    {
-        return $this->withBackupMode($backupMode);
     }
 
     /**
@@ -247,18 +151,6 @@ class DescribeBackupTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -269,18 +161,6 @@ class DescribeBackupTasks extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupJobStatus() instead.
-     *
-     * @param string $backupJobStatus
-     *
-     * @return $this
-     */
-    public function setBackupJobStatus($backupJobStatus)
-    {
-        return $this->withBackupJobStatus($backupJobStatus);
     }
 
     /**

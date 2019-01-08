@@ -37,18 +37,6 @@ class OnsTopicUpdate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -59,18 +47,6 @@ class OnsTopicUpdate extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -87,18 +63,6 @@ class OnsTopicUpdate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -112,18 +76,6 @@ class OnsTopicUpdate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPerm() instead.
-     *
-     * @param string $perm
-     *
-     * @return $this
-     */
-    public function setPerm($perm)
-    {
-        return $this->withPerm($perm);
-    }
-
-    /**
      * @param string $perm
      *
      * @return $this
@@ -134,18 +86,6 @@ class OnsTopicUpdate extends RpcRequest
         $this->options['query']['Perm'] = $perm;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**

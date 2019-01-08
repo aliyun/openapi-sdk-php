@@ -47,18 +47,6 @@ class UpdateCoverPipeline extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class UpdateCoverPipeline extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRole() instead.
-     *
-     * @param string $role
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        return $this->withRole($role);
     }
 
     /**
@@ -97,18 +73,6 @@ class UpdateCoverPipeline extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +83,6 @@ class UpdateCoverPipeline extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,18 +99,6 @@ class UpdateCoverPipeline extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -169,18 +109,6 @@ class UpdateCoverPipeline extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
     }
 
     /**
@@ -197,18 +125,6 @@ class UpdateCoverPipeline extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyConfig() instead.
-     *
-     * @param string $notifyConfig
-     *
-     * @return $this
-     */
-    public function setNotifyConfig($notifyConfig)
-    {
-        return $this->withNotifyConfig($notifyConfig);
-    }
-
-    /**
      * @param string $notifyConfig
      *
      * @return $this
@@ -219,18 +135,6 @@ class UpdateCoverPipeline extends RpcRequest
         $this->options['query']['NotifyConfig'] = $notifyConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +151,6 @@ class UpdateCoverPipeline extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -269,18 +161,6 @@ class UpdateCoverPipeline extends RpcRequest
         $this->options['query']['Priority'] = $priority;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

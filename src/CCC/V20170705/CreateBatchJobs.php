@@ -45,28 +45,6 @@ class CreateBatchJobs extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
-    }
-
-    /**
      * @param array $callingNumber
      *
      * @return $this
@@ -79,18 +57,6 @@ class CreateBatchJobs extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -107,18 +73,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubmitted() instead.
-     *
-     * @param string $submitted
-     *
-     * @return $this
-     */
-    public function setSubmitted($submitted)
-    {
-        return $this->withSubmitted($submitted);
-    }
-
-    /**
      * @param string $submitted
      *
      * @return $this
@@ -129,18 +83,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['Submitted'] = $submitted;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
     }
 
     /**
@@ -157,18 +99,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -179,18 +109,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -207,18 +125,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -229,18 +135,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobFilePath() instead.
-     *
-     * @param string $jobFilePath
-     *
-     * @return $this
-     */
-    public function setJobFilePath($jobFilePath)
-    {
-        return $this->withJobFilePath($jobFilePath);
     }
 
     /**

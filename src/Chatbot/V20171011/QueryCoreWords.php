@@ -40,18 +40,6 @@ class QueryCoreWords extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -65,18 +53,6 @@ class QueryCoreWords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCoreWordName() instead.
-     *
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function setCoreWordName($coreWordName)
-    {
-        return $this->withCoreWordName($coreWordName);
-    }
-
-    /**
      * @param string $coreWordName
      *
      * @return $this
@@ -87,18 +63,6 @@ class QueryCoreWords extends RpcRequest
         $this->options['query']['CoreWordName'] = $coreWordName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

@@ -28,18 +28,6 @@ class GetJobTopology extends RpcRequest
     public $action = 'GetJobTopology';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobName() instead.
-     *
-     * @param string $jobName
-     *
-     * @return $this
-     */
-    public function setJobName($jobName)
-    {
-        return $this->withJobName($jobName);
-    }
-
-    /**
      * @param string $jobName
      *
      * @return $this

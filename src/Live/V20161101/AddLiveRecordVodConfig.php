@@ -45,18 +45,6 @@ class AddLiveRecordVodConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
@@ -67,18 +55,6 @@ class AddLiveRecordVodConfig extends RpcRequest
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoCompose() instead.
-     *
-     * @param string $autoCompose
-     *
-     * @return $this
-     */
-    public function setAutoCompose($autoCompose)
-    {
-        return $this->withAutoCompose($autoCompose);
     }
 
     /**
@@ -95,18 +71,6 @@ class AddLiveRecordVodConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -117,18 +81,6 @@ class AddLiveRecordVodConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCycleDuration() instead.
-     *
-     * @param string $cycleDuration
-     *
-     * @return $this
-     */
-    public function setCycleDuration($cycleDuration)
-    {
-        return $this->withCycleDuration($cycleDuration);
     }
 
     /**
@@ -145,18 +97,6 @@ class AddLiveRecordVodConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -167,18 +107,6 @@ class AddLiveRecordVodConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComposeVodTranscodeGroupId() instead.
-     *
-     * @param string $composeVodTranscodeGroupId
-     *
-     * @return $this
-     */
-    public function setComposeVodTranscodeGroupId($composeVodTranscodeGroupId)
-    {
-        return $this->withComposeVodTranscodeGroupId($composeVodTranscodeGroupId);
     }
 
     /**
@@ -195,18 +123,6 @@ class AddLiveRecordVodConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
-    }
-
-    /**
      * @param string $streamName
      *
      * @return $this
@@ -217,18 +133,6 @@ class AddLiveRecordVodConfig extends RpcRequest
         $this->options['query']['StreamName'] = $streamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVodTranscodeGroupId() instead.
-     *
-     * @param string $vodTranscodeGroupId
-     *
-     * @return $this
-     */
-    public function setVodTranscodeGroupId($vodTranscodeGroupId)
-    {
-        return $this->withVodTranscodeGroupId($vodTranscodeGroupId);
     }
 
     /**

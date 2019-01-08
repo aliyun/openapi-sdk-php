@@ -134,18 +134,6 @@ class TagResources extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId47() instead.
-     *
-     * @param string $resourceId47
-     *
-     * @return $this
-     */
-    public function setResourceId47($resourceId47)
-    {
-        return $this->withResourceId47($resourceId47);
-    }
-
-    /**
      * @param string $resourceId47
      *
      * @return $this
@@ -156,18 +144,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.47'] = $resourceId47;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId48() instead.
-     *
-     * @param string $resourceId48
-     *
-     * @return $this
-     */
-    public function setResourceId48($resourceId48)
-    {
-        return $this->withResourceId48($resourceId48);
     }
 
     /**
@@ -184,18 +160,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId49() instead.
-     *
-     * @param string $resourceId49
-     *
-     * @return $this
-     */
-    public function setResourceId49($resourceId49)
-    {
-        return $this->withResourceId49($resourceId49);
-    }
-
-    /**
      * @param string $resourceId49
      *
      * @return $this
@@ -206,18 +170,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.49'] = $resourceId49;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag2Key() instead.
-     *
-     * @param string $tag2Key
-     *
-     * @return $this
-     */
-    public function setTag2Key($tag2Key)
-    {
-        return $this->withTag2Key($tag2Key);
     }
 
     /**
@@ -234,18 +186,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag12Value() instead.
-     *
-     * @param string $tag12Value
-     *
-     * @return $this
-     */
-    public function setTag12Value($tag12Value)
-    {
-        return $this->withTag12Value($tag12Value);
-    }
-
-    /**
      * @param string $tag12Value
      *
      * @return $this
@@ -256,18 +196,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.12.Value'] = $tag12Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId40() instead.
-     *
-     * @param string $resourceId40
-     *
-     * @return $this
-     */
-    public function setResourceId40($resourceId40)
-    {
-        return $this->withResourceId40($resourceId40);
     }
 
     /**
@@ -284,18 +212,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId41() instead.
-     *
-     * @param string $resourceId41
-     *
-     * @return $this
-     */
-    public function setResourceId41($resourceId41)
-    {
-        return $this->withResourceId41($resourceId41);
-    }
-
-    /**
      * @param string $resourceId41
      *
      * @return $this
@@ -306,18 +222,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.41'] = $resourceId41;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId42() instead.
-     *
-     * @param string $resourceId42
-     *
-     * @return $this
-     */
-    public function setResourceId42($resourceId42)
-    {
-        return $this->withResourceId42($resourceId42);
     }
 
     /**
@@ -334,18 +238,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId1() instead.
-     *
-     * @param string $resourceId1
-     *
-     * @return $this
-     */
-    public function setResourceId1($resourceId1)
-    {
-        return $this->withResourceId1($resourceId1);
-    }
-
-    /**
      * @param string $resourceId1
      *
      * @return $this
@@ -356,18 +248,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.1'] = $resourceId1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId43() instead.
-     *
-     * @param string $resourceId43
-     *
-     * @return $this
-     */
-    public function setResourceId43($resourceId43)
-    {
-        return $this->withResourceId43($resourceId43);
     }
 
     /**
@@ -384,18 +264,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId2() instead.
-     *
-     * @param string $resourceId2
-     *
-     * @return $this
-     */
-    public function setResourceId2($resourceId2)
-    {
-        return $this->withResourceId2($resourceId2);
-    }
-
-    /**
      * @param string $resourceId2
      *
      * @return $this
@@ -406,18 +274,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.2'] = $resourceId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId44() instead.
-     *
-     * @param string $resourceId44
-     *
-     * @return $this
-     */
-    public function setResourceId44($resourceId44)
-    {
-        return $this->withResourceId44($resourceId44);
     }
 
     /**
@@ -434,18 +290,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId3() instead.
-     *
-     * @param string $resourceId3
-     *
-     * @return $this
-     */
-    public function setResourceId3($resourceId3)
-    {
-        return $this->withResourceId3($resourceId3);
-    }
-
-    /**
      * @param string $resourceId3
      *
      * @return $this
@@ -456,18 +300,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.3'] = $resourceId3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId45() instead.
-     *
-     * @param string $resourceId45
-     *
-     * @return $this
-     */
-    public function setResourceId45($resourceId45)
-    {
-        return $this->withResourceId45($resourceId45);
     }
 
     /**
@@ -484,18 +316,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId4() instead.
-     *
-     * @param string $resourceId4
-     *
-     * @return $this
-     */
-    public function setResourceId4($resourceId4)
-    {
-        return $this->withResourceId4($resourceId4);
-    }
-
-    /**
      * @param string $resourceId4
      *
      * @return $this
@@ -506,18 +326,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.4'] = $resourceId4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId46() instead.
-     *
-     * @param string $resourceId46
-     *
-     * @return $this
-     */
-    public function setResourceId46($resourceId46)
-    {
-        return $this->withResourceId46($resourceId46);
     }
 
     /**
@@ -534,18 +342,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId5() instead.
-     *
-     * @param string $resourceId5
-     *
-     * @return $this
-     */
-    public function setResourceId5($resourceId5)
-    {
-        return $this->withResourceId5($resourceId5);
-    }
-
-    /**
      * @param string $resourceId5
      *
      * @return $this
@@ -556,18 +352,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.5'] = $resourceId5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId6() instead.
-     *
-     * @param string $resourceId6
-     *
-     * @return $this
-     */
-    public function setResourceId6($resourceId6)
-    {
-        return $this->withResourceId6($resourceId6);
     }
 
     /**
@@ -584,18 +368,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId7() instead.
-     *
-     * @param string $resourceId7
-     *
-     * @return $this
-     */
-    public function setResourceId7($resourceId7)
-    {
-        return $this->withResourceId7($resourceId7);
-    }
-
-    /**
      * @param string $resourceId7
      *
      * @return $this
@@ -606,18 +378,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.7'] = $resourceId7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId8() instead.
-     *
-     * @param string $resourceId8
-     *
-     * @return $this
-     */
-    public function setResourceId8($resourceId8)
-    {
-        return $this->withResourceId8($resourceId8);
     }
 
     /**
@@ -634,18 +394,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId9() instead.
-     *
-     * @param string $resourceId9
-     *
-     * @return $this
-     */
-    public function setResourceId9($resourceId9)
-    {
-        return $this->withResourceId9($resourceId9);
-    }
-
-    /**
      * @param string $resourceId9
      *
      * @return $this
@@ -656,18 +404,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.9'] = $resourceId9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag15Value() instead.
-     *
-     * @param string $tag15Value
-     *
-     * @return $this
-     */
-    public function setTag15Value($tag15Value)
-    {
-        return $this->withTag15Value($tag15Value);
     }
 
     /**
@@ -684,18 +420,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag18Key() instead.
-     *
-     * @param string $tag18Key
-     *
-     * @return $this
-     */
-    public function setTag18Key($tag18Key)
-    {
-        return $this->withTag18Key($tag18Key);
-    }
-
-    /**
      * @param string $tag18Key
      *
      * @return $this
@@ -706,18 +430,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.18.Key'] = $tag18Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerBid() instead.
-     *
-     * @param string $tagOwnerBid
-     *
-     * @return $this
-     */
-    public function setTagOwnerBid($tagOwnerBid)
-    {
-        return $this->withTagOwnerBid($tagOwnerBid);
     }
 
     /**
@@ -734,18 +446,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag8Value() instead.
-     *
-     * @param string $tag8Value
-     *
-     * @return $this
-     */
-    public function setTag8Value($tag8Value)
-    {
-        return $this->withTag8Value($tag8Value);
-    }
-
-    /**
      * @param string $tag8Value
      *
      * @return $this
@@ -756,18 +456,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.8.Value'] = $tag8Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag18Value() instead.
-     *
-     * @param string $tag18Value
-     *
-     * @return $this
-     */
-    public function setTag18Value($tag18Value)
-    {
-        return $this->withTag18Value($tag18Value);
     }
 
     /**
@@ -784,18 +472,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId36() instead.
-     *
-     * @param string $resourceId36
-     *
-     * @return $this
-     */
-    public function setResourceId36($resourceId36)
-    {
-        return $this->withResourceId36($resourceId36);
-    }
-
-    /**
      * @param string $resourceId36
      *
      * @return $this
@@ -806,18 +482,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.36'] = $resourceId36;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId37() instead.
-     *
-     * @param string $resourceId37
-     *
-     * @return $this
-     */
-    public function setResourceId37($resourceId37)
-    {
-        return $this->withResourceId37($resourceId37);
     }
 
     /**
@@ -834,18 +498,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId38() instead.
-     *
-     * @param string $resourceId38
-     *
-     * @return $this
-     */
-    public function setResourceId38($resourceId38)
-    {
-        return $this->withResourceId38($resourceId38);
-    }
-
-    /**
      * @param string $resourceId38
      *
      * @return $this
@@ -856,18 +508,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.38'] = $resourceId38;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId39() instead.
-     *
-     * @param string $resourceId39
-     *
-     * @return $this
-     */
-    public function setResourceId39($resourceId39)
-    {
-        return $this->withResourceId39($resourceId39);
     }
 
     /**
@@ -884,18 +524,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId30() instead.
-     *
-     * @param string $resourceId30
-     *
-     * @return $this
-     */
-    public function setResourceId30($resourceId30)
-    {
-        return $this->withResourceId30($resourceId30);
-    }
-
-    /**
      * @param string $resourceId30
      *
      * @return $this
@@ -906,18 +534,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.30'] = $resourceId30;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId31() instead.
-     *
-     * @param string $resourceId31
-     *
-     * @return $this
-     */
-    public function setResourceId31($resourceId31)
-    {
-        return $this->withResourceId31($resourceId31);
     }
 
     /**
@@ -934,18 +550,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -956,18 +560,6 @@ class TagResources extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId32() instead.
-     *
-     * @param string $resourceId32
-     *
-     * @return $this
-     */
-    public function setResourceId32($resourceId32)
-    {
-        return $this->withResourceId32($resourceId32);
     }
 
     /**
@@ -984,18 +576,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId33() instead.
-     *
-     * @param string $resourceId33
-     *
-     * @return $this
-     */
-    public function setResourceId33($resourceId33)
-    {
-        return $this->withResourceId33($resourceId33);
-    }
-
-    /**
      * @param string $resourceId33
      *
      * @return $this
@@ -1006,18 +586,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.33'] = $resourceId33;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId34() instead.
-     *
-     * @param string $resourceId34
-     *
-     * @return $this
-     */
-    public function setResourceId34($resourceId34)
-    {
-        return $this->withResourceId34($resourceId34);
     }
 
     /**
@@ -1034,18 +602,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId35() instead.
-     *
-     * @param string $resourceId35
-     *
-     * @return $this
-     */
-    public function setResourceId35($resourceId35)
-    {
-        return $this->withResourceId35($resourceId35);
-    }
-
-    /**
      * @param string $resourceId35
      *
      * @return $this
@@ -1056,18 +612,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.35'] = $resourceId35;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag16Key() instead.
-     *
-     * @param string $tag16Key
-     *
-     * @return $this
-     */
-    public function setTag16Key($tag16Key)
-    {
-        return $this->withTag16Key($tag16Key);
     }
 
     /**
@@ -1084,18 +628,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag4Key() instead.
-     *
-     * @param string $tag4Key
-     *
-     * @return $this
-     */
-    public function setTag4Key($tag4Key)
-    {
-        return $this->withTag4Key($tag4Key);
-    }
-
-    /**
      * @param string $tag4Key
      *
      * @return $this
@@ -1106,18 +638,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.4.Key'] = $tag4Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId25() instead.
-     *
-     * @param string $resourceId25
-     *
-     * @return $this
-     */
-    public function setResourceId25($resourceId25)
-    {
-        return $this->withResourceId25($resourceId25);
     }
 
     /**
@@ -1134,18 +654,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId26() instead.
-     *
-     * @param string $resourceId26
-     *
-     * @return $this
-     */
-    public function setResourceId26($resourceId26)
-    {
-        return $this->withResourceId26($resourceId26);
-    }
-
-    /**
      * @param string $resourceId26
      *
      * @return $this
@@ -1156,18 +664,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.26'] = $resourceId26;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId27() instead.
-     *
-     * @param string $resourceId27
-     *
-     * @return $this
-     */
-    public function setResourceId27($resourceId27)
-    {
-        return $this->withResourceId27($resourceId27);
     }
 
     /**
@@ -1184,18 +680,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId28() instead.
-     *
-     * @param string $resourceId28
-     *
-     * @return $this
-     */
-    public function setResourceId28($resourceId28)
-    {
-        return $this->withResourceId28($resourceId28);
-    }
-
-    /**
      * @param string $resourceId28
      *
      * @return $this
@@ -1206,18 +690,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.28'] = $resourceId28;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId29() instead.
-     *
-     * @param string $resourceId29
-     *
-     * @return $this
-     */
-    public function setResourceId29($resourceId29)
-    {
-        return $this->withResourceId29($resourceId29);
     }
 
     /**
@@ -1234,18 +706,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag7Key() instead.
-     *
-     * @param string $tag7Key
-     *
-     * @return $this
-     */
-    public function setTag7Key($tag7Key)
-    {
-        return $this->withTag7Key($tag7Key);
-    }
-
-    /**
      * @param string $tag7Key
      *
      * @return $this
@@ -1256,18 +716,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.7.Key'] = $tag7Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag12Key() instead.
-     *
-     * @param string $tag12Key
-     *
-     * @return $this
-     */
-    public function setTag12Key($tag12Key)
-    {
-        return $this->withTag12Key($tag12Key);
     }
 
     /**
@@ -1284,18 +732,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerUid() instead.
-     *
-     * @param string $tagOwnerUid
-     *
-     * @return $this
-     */
-    public function setTagOwnerUid($tagOwnerUid)
-    {
-        return $this->withTagOwnerUid($tagOwnerUid);
-    }
-
-    /**
      * @param string $tagOwnerUid
      *
      * @return $this
@@ -1306,18 +742,6 @@ class TagResources extends RpcRequest
         $this->options['query']['TagOwnerUid'] = $tagOwnerUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag6Value() instead.
-     *
-     * @param string $tag6Value
-     *
-     * @return $this
-     */
-    public function setTag6Value($tag6Value)
-    {
-        return $this->withTag6Value($tag6Value);
     }
 
     /**
@@ -1334,18 +758,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId20() instead.
-     *
-     * @param string $resourceId20
-     *
-     * @return $this
-     */
-    public function setResourceId20($resourceId20)
-    {
-        return $this->withResourceId20($resourceId20);
-    }
-
-    /**
      * @param string $resourceId20
      *
      * @return $this
@@ -1356,18 +768,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.20'] = $resourceId20;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId21() instead.
-     *
-     * @param string $resourceId21
-     *
-     * @return $this
-     */
-    public function setResourceId21($resourceId21)
-    {
-        return $this->withResourceId21($resourceId21);
     }
 
     /**
@@ -1384,18 +784,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId22() instead.
-     *
-     * @param string $resourceId22
-     *
-     * @return $this
-     */
-    public function setResourceId22($resourceId22)
-    {
-        return $this->withResourceId22($resourceId22);
-    }
-
-    /**
      * @param string $resourceId22
      *
      * @return $this
@@ -1406,18 +794,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.22'] = $resourceId22;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId23() instead.
-     *
-     * @param string $resourceId23
-     *
-     * @return $this
-     */
-    public function setResourceId23($resourceId23)
-    {
-        return $this->withResourceId23($resourceId23);
     }
 
     /**
@@ -1434,18 +810,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId24() instead.
-     *
-     * @param string $resourceId24
-     *
-     * @return $this
-     */
-    public function setResourceId24($resourceId24)
-    {
-        return $this->withResourceId24($resourceId24);
-    }
-
-    /**
      * @param string $resourceId24
      *
      * @return $this
@@ -1456,18 +820,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.24'] = $resourceId24;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag14Key() instead.
-     *
-     * @param string $tag14Key
-     *
-     * @return $this
-     */
-    public function setTag14Key($tag14Key)
-    {
-        return $this->withTag14Key($tag14Key);
     }
 
     /**
@@ -1484,18 +836,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag13Value() instead.
-     *
-     * @param string $tag13Value
-     *
-     * @return $this
-     */
-    public function setTag13Value($tag13Value)
-    {
-        return $this->withTag13Value($tag13Value);
-    }
-
-    /**
      * @param string $tag13Value
      *
      * @return $this
@@ -1506,18 +846,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.13.Value'] = $tag13Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId14() instead.
-     *
-     * @param string $resourceId14
-     *
-     * @return $this
-     */
-    public function setResourceId14($resourceId14)
-    {
-        return $this->withResourceId14($resourceId14);
     }
 
     /**
@@ -1534,18 +862,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId15() instead.
-     *
-     * @param string $resourceId15
-     *
-     * @return $this
-     */
-    public function setResourceId15($resourceId15)
-    {
-        return $this->withResourceId15($resourceId15);
-    }
-
-    /**
      * @param string $resourceId15
      *
      * @return $this
@@ -1556,18 +872,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.15'] = $resourceId15;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag10Key() instead.
-     *
-     * @param string $tag10Key
-     *
-     * @return $this
-     */
-    public function setTag10Key($tag10Key)
-    {
-        return $this->withTag10Key($tag10Key);
     }
 
     /**
@@ -1584,18 +888,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId16() instead.
-     *
-     * @param string $resourceId16
-     *
-     * @return $this
-     */
-    public function setResourceId16($resourceId16)
-    {
-        return $this->withResourceId16($resourceId16);
-    }
-
-    /**
      * @param string $resourceId16
      *
      * @return $this
@@ -1606,18 +898,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.16'] = $resourceId16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId17() instead.
-     *
-     * @param string $resourceId17
-     *
-     * @return $this
-     */
-    public function setResourceId17($resourceId17)
-    {
-        return $this->withResourceId17($resourceId17);
     }
 
     /**
@@ -1634,18 +914,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId18() instead.
-     *
-     * @param string $resourceId18
-     *
-     * @return $this
-     */
-    public function setResourceId18($resourceId18)
-    {
-        return $this->withResourceId18($resourceId18);
-    }
-
-    /**
      * @param string $resourceId18
      *
      * @return $this
@@ -1656,18 +924,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.18'] = $resourceId18;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -1684,18 +940,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId19() instead.
-     *
-     * @param string $resourceId19
-     *
-     * @return $this
-     */
-    public function setResourceId19($resourceId19)
-    {
-        return $this->withResourceId19($resourceId19);
-    }
-
-    /**
      * @param string $resourceId19
      *
      * @return $this
@@ -1706,18 +950,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.19'] = $resourceId19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag19Key() instead.
-     *
-     * @param string $tag19Key
-     *
-     * @return $this
-     */
-    public function setTag19Key($tag19Key)
-    {
-        return $this->withTag19Key($tag19Key);
     }
 
     /**
@@ -1734,18 +966,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId10() instead.
-     *
-     * @param string $resourceId10
-     *
-     * @return $this
-     */
-    public function setResourceId10($resourceId10)
-    {
-        return $this->withResourceId10($resourceId10);
-    }
-
-    /**
      * @param string $resourceId10
      *
      * @return $this
@@ -1756,18 +976,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.10'] = $resourceId10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**
@@ -1784,18 +992,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId11() instead.
-     *
-     * @param string $resourceId11
-     *
-     * @return $this
-     */
-    public function setResourceId11($resourceId11)
-    {
-        return $this->withResourceId11($resourceId11);
-    }
-
-    /**
      * @param string $resourceId11
      *
      * @return $this
@@ -1806,18 +1002,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.11'] = $resourceId11;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag5Value() instead.
-     *
-     * @param string $tag5Value
-     *
-     * @return $this
-     */
-    public function setTag5Value($tag5Value)
-    {
-        return $this->withTag5Value($tag5Value);
     }
 
     /**
@@ -1834,18 +1018,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId12() instead.
-     *
-     * @param string $resourceId12
-     *
-     * @return $this
-     */
-    public function setResourceId12($resourceId12)
-    {
-        return $this->withResourceId12($resourceId12);
-    }
-
-    /**
      * @param string $resourceId12
      *
      * @return $this
@@ -1856,18 +1028,6 @@ class TagResources extends RpcRequest
         $this->options['query']['ResourceId.12'] = $resourceId12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId13() instead.
-     *
-     * @param string $resourceId13
-     *
-     * @return $this
-     */
-    public function setResourceId13($resourceId13)
-    {
-        return $this->withResourceId13($resourceId13);
     }
 
     /**
@@ -1884,18 +1044,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag9Key() instead.
-     *
-     * @param string $tag9Key
-     *
-     * @return $this
-     */
-    public function setTag9Key($tag9Key)
-    {
-        return $this->withTag9Key($tag9Key);
-    }
-
-    /**
      * @param string $tag9Key
      *
      * @return $this
@@ -1906,18 +1054,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.9.Key'] = $tag9Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag19Value() instead.
-     *
-     * @param string $tag19Value
-     *
-     * @return $this
-     */
-    public function setTag19Value($tag19Value)
-    {
-        return $this->withTag19Value($tag19Value);
     }
 
     /**
@@ -1934,18 +1070,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag4Value() instead.
-     *
-     * @param string $tag4Value
-     *
-     * @return $this
-     */
-    public function setTag4Value($tag4Value)
-    {
-        return $this->withTag4Value($tag4Value);
-    }
-
-    /**
      * @param string $tag4Value
      *
      * @return $this
@@ -1956,18 +1080,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.4.Value'] = $tag4Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -1984,18 +1096,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag17Key() instead.
-     *
-     * @param string $tag17Key
-     *
-     * @return $this
-     */
-    public function setTag17Key($tag17Key)
-    {
-        return $this->withTag17Key($tag17Key);
-    }
-
-    /**
      * @param string $tag17Key
      *
      * @return $this
@@ -2006,18 +1106,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.17.Key'] = $tag17Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag3Key() instead.
-     *
-     * @param string $tag3Key
-     *
-     * @return $this
-     */
-    public function setTag3Key($tag3Key)
-    {
-        return $this->withTag3Key($tag3Key);
     }
 
     /**
@@ -2034,18 +1122,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag1Value() instead.
-     *
-     * @param string $tag1Value
-     *
-     * @return $this
-     */
-    public function setTag1Value($tag1Value)
-    {
-        return $this->withTag1Value($tag1Value);
-    }
-
-    /**
      * @param string $tag1Value
      *
      * @return $this
@@ -2056,18 +1132,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.1.Value'] = $tag1Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag15Key() instead.
-     *
-     * @param string $tag15Key
-     *
-     * @return $this
-     */
-    public function setTag15Key($tag15Key)
-    {
-        return $this->withTag15Key($tag15Key);
     }
 
     /**
@@ -2084,18 +1148,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag11Value() instead.
-     *
-     * @param string $tag11Value
-     *
-     * @return $this
-     */
-    public function setTag11Value($tag11Value)
-    {
-        return $this->withTag11Value($tag11Value);
-    }
-
-    /**
      * @param string $tag11Value
      *
      * @return $this
@@ -2106,18 +1158,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.11.Value'] = $tag11Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag5Key() instead.
-     *
-     * @param string $tag5Key
-     *
-     * @return $this
-     */
-    public function setTag5Key($tag5Key)
-    {
-        return $this->withTag5Key($tag5Key);
     }
 
     /**
@@ -2134,18 +1174,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag14Value() instead.
-     *
-     * @param string $tag14Value
-     *
-     * @return $this
-     */
-    public function setTag14Value($tag14Value)
-    {
-        return $this->withTag14Value($tag14Value);
-    }
-
-    /**
      * @param string $tag14Value
      *
      * @return $this
@@ -2156,18 +1184,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.14.Value'] = $tag14Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag7Value() instead.
-     *
-     * @param string $tag7Value
-     *
-     * @return $this
-     */
-    public function setTag7Value($tag7Value)
-    {
-        return $this->withTag7Value($tag7Value);
     }
 
     /**
@@ -2184,18 +1200,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag20Key() instead.
-     *
-     * @param string $tag20Key
-     *
-     * @return $this
-     */
-    public function setTag20Key($tag20Key)
-    {
-        return $this->withTag20Key($tag20Key);
-    }
-
-    /**
      * @param string $tag20Key
      *
      * @return $this
@@ -2206,18 +1210,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.20.Key'] = $tag20Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag20Value() instead.
-     *
-     * @param string $tag20Value
-     *
-     * @return $this
-     */
-    public function setTag20Value($tag20Value)
-    {
-        return $this->withTag20Value($tag20Value);
     }
 
     /**
@@ -2234,18 +1226,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag17Value() instead.
-     *
-     * @param string $tag17Value
-     *
-     * @return $this
-     */
-    public function setTag17Value($tag17Value)
-    {
-        return $this->withTag17Value($tag17Value);
-    }
-
-    /**
      * @param string $tag17Value
      *
      * @return $this
@@ -2256,18 +1236,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.17.Value'] = $tag17Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag13Key() instead.
-     *
-     * @param string $tag13Key
-     *
-     * @return $this
-     */
-    public function setTag13Key($tag13Key)
-    {
-        return $this->withTag13Key($tag13Key);
     }
 
     /**
@@ -2284,18 +1252,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag9Value() instead.
-     *
-     * @param string $tag9Value
-     *
-     * @return $this
-     */
-    public function setTag9Value($tag9Value)
-    {
-        return $this->withTag9Value($tag9Value);
-    }
-
-    /**
      * @param string $tag9Value
      *
      * @return $this
@@ -2306,18 +1262,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.9.Value'] = $tag9Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag6Key() instead.
-     *
-     * @param string $tag6Key
-     *
-     * @return $this
-     */
-    public function setTag6Key($tag6Key)
-    {
-        return $this->withTag6Key($tag6Key);
     }
 
     /**
@@ -2334,18 +1278,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
-    }
-
-    /**
      * @param string $scope
      *
      * @return $this
@@ -2356,18 +1288,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Scope'] = $scope;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag10Value() instead.
-     *
-     * @param string $tag10Value
-     *
-     * @return $this
-     */
-    public function setTag10Value($tag10Value)
-    {
-        return $this->withTag10Value($tag10Value);
     }
 
     /**
@@ -2384,18 +1304,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag3Value() instead.
-     *
-     * @param string $tag3Value
-     *
-     * @return $this
-     */
-    public function setTag3Value($tag3Value)
-    {
-        return $this->withTag3Value($tag3Value);
-    }
-
-    /**
      * @param string $tag3Value
      *
      * @return $this
@@ -2406,18 +1314,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.3.Value'] = $tag3Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId50() instead.
-     *
-     * @param string $resourceId50
-     *
-     * @return $this
-     */
-    public function setResourceId50($resourceId50)
-    {
-        return $this->withResourceId50($resourceId50);
     }
 
     /**
@@ -2434,18 +1330,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag16Value() instead.
-     *
-     * @param string $tag16Value
-     *
-     * @return $this
-     */
-    public function setTag16Value($tag16Value)
-    {
-        return $this->withTag16Value($tag16Value);
-    }
-
-    /**
      * @param string $tag16Value
      *
      * @return $this
@@ -2456,18 +1340,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.16.Value'] = $tag16Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag1Key() instead.
-     *
-     * @param string $tag1Key
-     *
-     * @return $this
-     */
-    public function setTag1Key($tag1Key)
-    {
-        return $this->withTag1Key($tag1Key);
     }
 
     /**
@@ -2484,18 +1356,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag8Key() instead.
-     *
-     * @param string $tag8Key
-     *
-     * @return $this
-     */
-    public function setTag8Key($tag8Key)
-    {
-        return $this->withTag8Key($tag8Key);
-    }
-
-    /**
      * @param string $tag8Key
      *
      * @return $this
@@ -2509,18 +1369,6 @@ class TagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag11Key() instead.
-     *
-     * @param string $tag11Key
-     *
-     * @return $this
-     */
-    public function setTag11Key($tag11Key)
-    {
-        return $this->withTag11Key($tag11Key);
-    }
-
-    /**
      * @param string $tag11Key
      *
      * @return $this
@@ -2531,18 +1379,6 @@ class TagResources extends RpcRequest
         $this->options['query']['Tag.11.Key'] = $tag11Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag2Value() instead.
-     *
-     * @param string $tag2Value
-     *
-     * @return $this
-     */
-    public function setTag2Value($tag2Value)
-    {
-        return $this->withTag2Value($tag2Value);
     }
 
     /**

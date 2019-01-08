@@ -39,18 +39,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
-
-    /**
      * @param string $ossBucket
      *
      * @return $this
@@ -61,18 +49,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -89,18 +65,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -111,18 +75,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -139,18 +91,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
-    }
-
-    /**
      * @param string $ossEndpoint
      *
      * @return $this
@@ -164,18 +104,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssObjectPrefix() instead.
-     *
-     * @param string $ossObjectPrefix
-     *
-     * @return $this
-     */
-    public function setOssObjectPrefix($ossObjectPrefix)
-    {
-        return $this->withOssObjectPrefix($ossObjectPrefix);
-    }
-
-    /**
      * @param string $ossObjectPrefix
      *
      * @return $this
@@ -186,18 +114,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OssObjectPrefix'] = $ossObjectPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

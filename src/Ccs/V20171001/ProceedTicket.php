@@ -42,18 +42,6 @@ class ProceedTicket extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMemo() instead.
-     *
-     * @param string $memo
-     *
-     * @return $this
-     */
-    public function setMemo($memo)
-    {
-        return $this->withMemo($memo);
-    }
-
-    /**
      * @param string $memo
      *
      * @return $this
@@ -64,18 +52,6 @@ class ProceedTicket extends RpcRequest
         $this->options['query']['Memo'] = $memo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
     }
 
     /**
@@ -92,18 +68,6 @@ class ProceedTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -117,18 +81,6 @@ class ProceedTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
-    }
-
-    /**
      * @param string $operation
      *
      * @return $this
@@ -139,18 +91,6 @@ class ProceedTicket extends RpcRequest
         $this->options['query']['Operation'] = $operation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperatorId() instead.
-     *
-     * @param string $operatorId
-     *
-     * @return $this
-     */
-    public function setOperatorId($operatorId)
-    {
-        return $this->withOperatorId($operatorId);
     }
 
     /**

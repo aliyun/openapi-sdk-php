@@ -34,18 +34,6 @@ class DescribeISPAreaCity extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
-    }
-
-    /**
      * @param string $city
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeISPAreaCity extends RpcRequest
         $this->options['query']['City'] = $city;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsp() instead.
-     *
-     * @param string $isp
-     *
-     * @return $this
-     */
-    public function setIsp($isp)
-    {
-        return $this->withIsp($isp);
     }
 
     /**

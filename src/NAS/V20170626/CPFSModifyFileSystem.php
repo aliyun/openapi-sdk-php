@@ -39,18 +39,6 @@ class CPFSModifyFileSystem extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFsId() instead.
-     *
-     * @param string $fsId
-     *
-     * @return $this
-     */
-    public function setFsId($fsId)
-    {
-        return $this->withFsId($fsId);
-    }
-
-    /**
      * @param string $fsId
      *
      * @return $this
@@ -61,18 +49,6 @@ class CPFSModifyFileSystem extends RpcRequest
         $this->options['query']['FsId'] = $fsId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFsDesc() instead.
-     *
-     * @param string $fsDesc
-     *
-     * @return $this
-     */
-    public function setFsDesc($fsDesc)
-    {
-        return $this->withFsDesc($fsDesc);
     }
 
     /**

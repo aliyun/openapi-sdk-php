@@ -42,18 +42,6 @@ class EditLiveRecordVideo extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshots() instead.
-     *
-     * @param string $snapshots
-     *
-     * @return $this
-     */
-    public function setSnapshots($snapshots)
-    {
-        return $this->withSnapshots($snapshots);
-    }
-
-    /**
      * @param string $snapshots
      *
      * @return $this
@@ -64,18 +52,6 @@ class EditLiveRecordVideo extends RpcRequest
         $this->options['query']['Snapshots'] = $snapshots;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -92,18 +68,6 @@ class EditLiveRecordVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class EditLiveRecordVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
-    }
-
-    /**
      * @param string $videoId
      *
      * @return $this
@@ -139,18 +91,6 @@ class EditLiveRecordVideo extends RpcRequest
         $this->options['query']['VideoId'] = $videoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

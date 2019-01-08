@@ -44,18 +44,6 @@ class ReserveMovieSeat extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -66,18 +54,6 @@ class ReserveMovieSeat extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScheduleId() instead.
-     *
-     * @param string $scheduleId
-     *
-     * @return $this
-     */
-    public function setScheduleId($scheduleId)
-    {
-        return $this->withScheduleId($scheduleId);
     }
 
     /**
@@ -94,18 +70,6 @@ class ReserveMovieSeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSeatIds() instead.
-     *
-     * @param string $seatIds
-     *
-     * @return $this
-     */
-    public function setSeatIds($seatIds)
-    {
-        return $this->withSeatIds($seatIds);
-    }
-
-    /**
      * @param string $seatIds
      *
      * @return $this
@@ -116,18 +80,6 @@ class ReserveMovieSeat extends RpcRequest
         $this->options['query']['SeatIds'] = $seatIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSeatNames() instead.
-     *
-     * @param string $seatNames
-     *
-     * @return $this
-     */
-    public function setSeatNames($seatNames)
-    {
-        return $this->withSeatNames($seatNames);
     }
 
     /**
@@ -144,18 +96,6 @@ class ReserveMovieSeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizUid() instead.
-     *
-     * @param string $bizUid
-     *
-     * @return $this
-     */
-    public function setBizUid($bizUid)
-    {
-        return $this->withBizUid($bizUid);
-    }
-
-    /**
      * @param string $bizUid
      *
      * @return $this
@@ -169,18 +109,6 @@ class ReserveMovieSeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMobile() instead.
-     *
-     * @param string $mobile
-     *
-     * @return $this
-     */
-    public function setMobile($mobile)
-    {
-        return $this->withMobile($mobile);
-    }
-
-    /**
      * @param string $mobile
      *
      * @return $this
@@ -191,18 +119,6 @@ class ReserveMovieSeat extends RpcRequest
         $this->options['query']['Mobile'] = $mobile;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

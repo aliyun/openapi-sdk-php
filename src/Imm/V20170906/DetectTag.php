@@ -40,18 +40,6 @@ class DetectTag extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
-     * @param string $srcUris
-     *
-     * @return $this
-     */
-    public function setSrcUris($srcUris)
-    {
-        return $this->withSrcUris($srcUris);
-    }
-
-    /**
      * @param string $srcUris
      *
      * @return $this
@@ -65,18 +53,6 @@ class DetectTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
-    }
-
-    /**
      * @param string $modelId
      *
      * @return $this
@@ -87,18 +63,6 @@ class DetectTag extends RpcRequest
         $this->options['query']['ModelId'] = $modelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

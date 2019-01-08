@@ -40,18 +40,6 @@ class QueryHotMovies extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -65,18 +53,6 @@ class QueryHotMovies extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCityCode() instead.
-     *
-     * @param string $cityCode
-     *
-     * @return $this
-     */
-    public function setCityCode($cityCode)
-    {
-        return $this->withCityCode($cityCode);
-    }
-
-    /**
      * @param string $cityCode
      *
      * @return $this
@@ -87,18 +63,6 @@ class QueryHotMovies extends RpcRequest
         $this->options['query']['CityCode'] = $cityCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

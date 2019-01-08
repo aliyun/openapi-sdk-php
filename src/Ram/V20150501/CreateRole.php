@@ -34,23 +34,10 @@ class CreateRole extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
-    }
 
     /**
      * @param string $roleName
@@ -66,18 +53,6 @@ class CreateRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -88,18 +63,6 @@ class CreateRole extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAssumeRolePolicyDocument() instead.
-     *
-     * @param string $assumeRolePolicyDocument
-     *
-     * @return $this
-     */
-    public function setAssumeRolePolicyDocument($assumeRolePolicyDocument)
-    {
-        return $this->withAssumeRolePolicyDocument($assumeRolePolicyDocument);
     }
 
     /**

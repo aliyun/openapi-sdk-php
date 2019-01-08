@@ -49,18 +49,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -71,18 +59,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -99,18 +75,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -121,18 +85,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileSize() instead.
-     *
-     * @param string $fileSize
-     *
-     * @return $this
-     */
-    public function setFileSize($fileSize)
-    {
-        return $this->withFileSize($fileSize);
     }
 
     /**
@@ -149,18 +101,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -171,18 +111,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -199,18 +127,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBusinessType() instead.
-     *
-     * @param string $businessType
-     *
-     * @return $this
-     */
-    public function setBusinessType($businessType)
-    {
-        return $this->withBusinessType($businessType);
-    }
-
-    /**
      * @param string $businessType
      *
      * @return $this
@@ -221,18 +137,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['BusinessType'] = $businessType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -249,18 +153,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStorageLocation() instead.
-     *
-     * @param string $storageLocation
-     *
-     * @return $this
-     */
-    public function setStorageLocation($storageLocation)
-    {
-        return $this->withStorageLocation($storageLocation);
-    }
-
-    /**
      * @param string $storageLocation
      *
      * @return $this
@@ -271,18 +163,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['StorageLocation'] = $storageLocation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaExt() instead.
-     *
-     * @param string $mediaExt
-     *
-     * @return $this
-     */
-    public function setMediaExt($mediaExt)
-    {
-        return $this->withMediaExt($mediaExt);
     }
 
     /**
@@ -299,18 +179,6 @@ class CreateUploadAttachedMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFileName() instead.
-     *
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        return $this->withFileName($fileName);
-    }
-
-    /**
      * @param string $fileName
      *
      * @return $this
@@ -321,18 +189,6 @@ class CreateUploadAttachedMedia extends RpcRequest
         $this->options['query']['FileName'] = $fileName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
     }
 
     /**

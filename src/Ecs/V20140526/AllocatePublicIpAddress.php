@@ -39,18 +39,6 @@ class AllocatePublicIpAddress extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpAddress() instead.
-     *
-     * @param string $ipAddress
-     *
-     * @return $this
-     */
-    public function setIpAddress($ipAddress)
-    {
-        return $this->withIpAddress($ipAddress);
-    }
-
-    /**
      * @param string $ipAddress
      *
      * @return $this
@@ -61,18 +49,6 @@ class AllocatePublicIpAddress extends RpcRequest
         $this->options['query']['IpAddress'] = $ipAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -89,18 +65,6 @@ class AllocatePublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -111,18 +75,6 @@ class AllocatePublicIpAddress extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class AllocatePublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVlanId() instead.
-     *
-     * @param string $vlanId
-     *
-     * @return $this
-     */
-    public function setVlanId($vlanId)
-    {
-        return $this->withVlanId($vlanId);
-    }
-
-    /**
      * @param string $vlanId
      *
      * @return $this
@@ -164,18 +104,6 @@ class AllocatePublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -186,18 +114,6 @@ class AllocatePublicIpAddress extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

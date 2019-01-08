@@ -36,18 +36,6 @@ class DeleteCustomMetric extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -58,18 +46,6 @@ class DeleteCustomMetric extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**
@@ -86,18 +62,6 @@ class DeleteCustomMetric extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUUID() instead.
-     *
-     * @param string $uUID
-     *
-     * @return $this
-     */
-    public function setUUID($uUID)
-    {
-        return $this->withUUID($uUID);
-    }
-
-    /**
      * @param string $uUID
      *
      * @return $this
@@ -108,18 +72,6 @@ class DeleteCustomMetric extends RpcRequest
         $this->options['query']['UUID'] = $uUID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMd5() instead.
-     *
-     * @param string $md5
-     *
-     * @return $this
-     */
-    public function setMd5($md5)
-    {
-        return $this->withMd5($md5);
     }
 
     /**

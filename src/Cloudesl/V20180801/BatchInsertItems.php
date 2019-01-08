@@ -34,28 +34,6 @@ class BatchInsertItems extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getItemInfo() instead.
-     *
-     * @return array
-     */
-    public function getItemInfos()
-    {
-        return $this->getItemInfo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemInfo() instead.
-     *
-     * @param array $itemInfos
-     *
-     * @return $this
-     */
-    public function setItemInfos(array $itemInfos)
-    {
-        return $this->withItemInfo($itemInfos);
-    }
-
-    /**
      * @param array $itemInfo
      *
      * @return $this
@@ -108,18 +86,6 @@ class BatchInsertItems extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**

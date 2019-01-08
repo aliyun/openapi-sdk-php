@@ -42,18 +42,6 @@ class QueryTokenForMnsQueue extends RpcRequest
     public $serviceCode = 'dybaseapi';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueueName() instead.
-     *
-     * @param string $queueName
-     *
-     * @return $this
-     */
-    public function setQueueName($queueName)
-    {
-        return $this->withQueueName($queueName);
-    }
-
-    /**
      * @param string $queueName
      *
      * @return $this
@@ -64,18 +52,6 @@ class QueryTokenForMnsQueue extends RpcRequest
         $this->options['query']['QueueName'] = $queueName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -92,18 +68,6 @@ class QueryTokenForMnsQueue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class QueryTokenForMnsQueue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageType() instead.
-     *
-     * @param string $messageType
-     *
-     * @return $this
-     */
-    public function setMessageType($messageType)
-    {
-        return $this->withMessageType($messageType);
-    }
-
-    /**
      * @param string $messageType
      *
      * @return $this
@@ -139,18 +91,6 @@ class QueryTokenForMnsQueue extends RpcRequest
         $this->options['query']['MessageType'] = $messageType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

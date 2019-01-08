@@ -37,18 +37,6 @@ class SendAlertContent extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertTarget() instead.
-     *
-     * @param string $alertTarget
-     *
-     * @return $this
-     */
-    public function setAlertTarget($alertTarget)
-    {
-        return $this->withAlertTarget($alertTarget);
-    }
-
-    /**
      * @param string $alertTarget
      *
      * @return $this
@@ -59,18 +47,6 @@ class SendAlertContent extends RpcRequest
         $this->options['query']['AlertTarget'] = $alertTarget;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertInfoName() instead.
-     *
-     * @param string $alertInfoName
-     *
-     * @return $this
-     */
-    public function setAlertInfoName($alertInfoName)
-    {
-        return $this->withAlertInfoName($alertInfoName);
     }
 
     /**
@@ -87,18 +63,6 @@ class SendAlertContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertText() instead.
-     *
-     * @param string $alertText
-     *
-     * @return $this
-     */
-    public function setAlertText($alertText)
-    {
-        return $this->withAlertText($alertText);
-    }
-
-    /**
      * @param string $alertText
      *
      * @return $this
@@ -112,18 +76,6 @@ class SendAlertContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -134,18 +86,6 @@ class SendAlertContent extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

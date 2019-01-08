@@ -40,18 +40,6 @@ class QueryTaskMonitorData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
-
-    /**
      * @param string $cursor
      *
      * @return $this
@@ -62,18 +50,6 @@ class QueryTaskMonitorData extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -90,18 +66,6 @@ class QueryTaskMonitorData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLength() instead.
-     *
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        return $this->withLength($length);
-    }
-
-    /**
      * @param string $length
      *
      * @return $this
@@ -112,18 +76,6 @@ class QueryTaskMonitorData extends RpcRequest
         $this->options['query']['Length'] = $length;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -140,18 +92,6 @@ class QueryTaskMonitorData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -162,18 +102,6 @@ class QueryTaskMonitorData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -190,18 +118,6 @@ class QueryTaskMonitorData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setmetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
-    }
-
-    /**
      * @param string $metricName
      *
      * @return $this
@@ -212,18 +128,6 @@ class QueryTaskMonitorData extends RpcRequest
         $this->options['query']['metricName'] = $metricName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

@@ -33,18 +33,6 @@ class DescribeContact extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactName() instead.
-     *
-     * @param string $contactName
-     *
-     * @return $this
-     */
-    public function setContactName($contactName)
-    {
-        return $this->withContactName($contactName);
-    }
-
-    /**
      * @param string $contactName
      *
      * @return $this

@@ -39,18 +39,6 @@ class DownloadUnreachableContacts extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -61,18 +49,6 @@ class DownloadUnreachableContacts extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobGroupId() instead.
-     *
-     * @param string $jobGroupId
-     *
-     * @return $this
-     */
-    public function setJobGroupId($jobGroupId)
-    {
-        return $this->withJobGroupId($jobGroupId);
     }
 
     /**

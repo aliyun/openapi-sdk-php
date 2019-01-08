@@ -41,28 +41,6 @@ class RemoveParticipants extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getParticipantIds() instead.
-     *
-     * @return array
-     */
-    public function getParticipantIdss()
-    {
-        return $this->getParticipantIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParticipantIds() instead.
-     *
-     * @param array $participantIdss
-     *
-     * @return $this
-     */
-    public function setParticipantIdss(array $participantIdss)
-    {
-        return $this->withParticipantIds($participantIdss);
-    }
-
-    /**
      * @param array $participantIds
      *
      * @return $this
@@ -75,18 +53,6 @@ class RemoveParticipants extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -103,18 +69,6 @@ class RemoveParticipants extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConferenceId() instead.
-     *
-     * @param string $conferenceId
-     *
-     * @return $this
-     */
-    public function setConferenceId($conferenceId)
-    {
-        return $this->withConferenceId($conferenceId);
-    }
-
-    /**
      * @param string $conferenceId
      *
      * @return $this
@@ -125,18 +79,6 @@ class RemoveParticipants extends RpcRequest
         $this->options['query']['ConferenceId'] = $conferenceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

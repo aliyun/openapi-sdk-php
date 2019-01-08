@@ -34,18 +34,6 @@ class ActivateLicense extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdentification() instead.
-     *
-     * @param string $identification
-     *
-     * @return $this
-     */
-    public function setIdentification($identification)
-    {
-        return $this->withIdentification($identification);
-    }
-
-    /**
      * @param string $identification
      *
      * @return $this
@@ -56,18 +44,6 @@ class ActivateLicense extends RpcRequest
         $this->options['query']['Identification'] = $identification;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLicenseCode() instead.
-     *
-     * @param string $licenseCode
-     *
-     * @return $this
-     */
-    public function setLicenseCode($licenseCode)
-    {
-        return $this->withLicenseCode($licenseCode);
     }
 
     /**

@@ -39,18 +39,6 @@ class DeleteImageFromLib extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class DeleteImageFromLib extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function setIds($ids)
-    {
-        return $this->withIds($ids);
     }
 
     /**

@@ -41,18 +41,6 @@ class CheckTransferInFeasibility extends RpcRequest
     public $serviceCode = 'domain';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransferAuthorizationCode() instead.
-     *
-     * @param string $transferAuthorizationCode
-     *
-     * @return $this
-     */
-    public function setTransferAuthorizationCode($transferAuthorizationCode)
-    {
-        return $this->withTransferAuthorizationCode($transferAuthorizationCode);
-    }
-
-    /**
      * @param string $transferAuthorizationCode
      *
      * @return $this
@@ -63,18 +51,6 @@ class CheckTransferInFeasibility extends RpcRequest
         $this->options['query']['TransferAuthorizationCode'] = $transferAuthorizationCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class CheckTransferInFeasibility extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -113,18 +77,6 @@ class CheckTransferInFeasibility extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

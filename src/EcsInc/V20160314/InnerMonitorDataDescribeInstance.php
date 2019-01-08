@@ -48,18 +48,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -70,18 +58,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setstartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -98,18 +74,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -120,18 +84,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
         $this->options['query']['aliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setperiod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -148,18 +100,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -170,18 +110,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -198,18 +126,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setendTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -220,18 +136,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
         $this->options['query']['endTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -248,18 +152,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -273,18 +165,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetrics() instead.
-     *
-     * @param string $metrics
-     *
-     * @return $this
-     */
-    public function setmetrics($metrics)
-    {
-        return $this->withMetrics($metrics);
-    }
-
-    /**
      * @param string $metrics
      *
      * @return $this
@@ -295,18 +175,6 @@ class InnerMonitorDataDescribeInstance extends RpcRequest
         $this->options['query']['metrics'] = $metrics;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

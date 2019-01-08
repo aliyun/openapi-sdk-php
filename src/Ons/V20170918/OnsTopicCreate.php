@@ -44,18 +44,6 @@ class OnsTopicCreate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -66,18 +54,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
     }
 
     /**
@@ -94,18 +70,6 @@ class OnsTopicCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueueNum() instead.
-     *
-     * @param string $queueNum
-     *
-     * @return $this
-     */
-    public function setQueueNum($queueNum)
-    {
-        return $this->withQueueNum($queueNum);
-    }
-
-    /**
      * @param string $queueNum
      *
      * @return $this
@@ -116,18 +80,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['QueueNum'] = $queueNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -144,18 +96,6 @@ class OnsTopicCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -166,18 +106,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -194,18 +122,6 @@ class OnsTopicCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQps() instead.
-     *
-     * @param string $qps
-     *
-     * @return $this
-     */
-    public function setQps($qps)
-    {
-        return $this->withQps($qps);
-    }
-
-    /**
      * @param string $qps
      *
      * @return $this
@@ -216,18 +132,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['Qps'] = $qps;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**
@@ -244,18 +148,6 @@ class OnsTopicCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -266,18 +158,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppkey() instead.
-     *
-     * @param string $appkey
-     *
-     * @return $this
-     */
-    public function setAppkey($appkey)
-    {
-        return $this->withAppkey($appkey);
     }
 
     /**
@@ -294,18 +174,6 @@ class OnsTopicCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
-    }
-
-    /**
      * @param string $order
      *
      * @return $this
@@ -316,18 +184,6 @@ class OnsTopicCreate extends RpcRequest
         $this->options['query']['Order'] = $order;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

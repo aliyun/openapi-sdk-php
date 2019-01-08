@@ -28,18 +28,6 @@ class FindAllMembersForAlarmGroup extends RpcRequest
     public $action = 'FindAllMembersForAlarmGroup';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withButlerGroupId() instead.
-     *
-     * @param string $butlerGroupId
-     *
-     * @return $this
-     */
-    public function setButlerGroupId($butlerGroupId)
-    {
-        return $this->withButlerGroupId($butlerGroupId);
-    }
-
-    /**
      * @param string $butlerGroupId
      *
      * @return $this

@@ -43,18 +43,6 @@ class DescribeRequestGraph extends RpcRequest
     public $serviceCode = 'pvtz';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeRequestGraph extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class DescribeRequestGraph extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -115,18 +79,6 @@ class DescribeRequestGraph extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -143,18 +95,6 @@ class DescribeRequestGraph extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTimestamp() instead.
-     *
-     * @param string $startTimestamp
-     *
-     * @return $this
-     */
-    public function setStartTimestamp($startTimestamp)
-    {
-        return $this->withStartTimestamp($startTimestamp);
-    }
-
-    /**
      * @param string $startTimestamp
      *
      * @return $this
@@ -165,18 +105,6 @@ class DescribeRequestGraph extends RpcRequest
         $this->options['query']['StartTimestamp'] = $startTimestamp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTimestamp() instead.
-     *
-     * @param string $endTimestamp
-     *
-     * @return $this
-     */
-    public function setEndTimestamp($endTimestamp)
-    {
-        return $this->withEndTimestamp($endTimestamp);
     }
 
     /**

@@ -33,18 +33,6 @@ class DeleteChaincode extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChaincodeId() instead.
-     *
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function setChaincodeId($chaincodeId)
-    {
-        return $this->withChaincodeId($chaincodeId);
-    }
-
-    /**
      * @param string $chaincodeId
      *
      * @return $this

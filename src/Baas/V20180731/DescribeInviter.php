@@ -33,18 +33,6 @@ class DescribeInviter extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCode() instead.
-     *
-     * @param string $code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        return $this->withCode($code);
-    }
-
-    /**
      * @param string $code
      *
      * @return $this

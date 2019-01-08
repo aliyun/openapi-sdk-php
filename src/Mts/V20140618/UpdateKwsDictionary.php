@@ -45,18 +45,6 @@ class UpdateKwsDictionary extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class UpdateKwsDictionary extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withListDesc() instead.
-     *
-     * @param string $listDesc
-     *
-     * @return $this
-     */
-    public function setListDesc($listDesc)
-    {
-        return $this->withListDesc($listDesc);
     }
 
     /**
@@ -95,18 +71,6 @@ class UpdateKwsDictionary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeywords() instead.
-     *
-     * @param string $keywords
-     *
-     * @return $this
-     */
-    public function setKeywords($keywords)
-    {
-        return $this->withKeywords($keywords);
-    }
-
-    /**
      * @param string $keywords
      *
      * @return $this
@@ -117,18 +81,6 @@ class UpdateKwsDictionary extends RpcRequest
         $this->options['query']['Keywords'] = $keywords;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -145,18 +97,6 @@ class UpdateKwsDictionary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -167,18 +107,6 @@ class UpdateKwsDictionary extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDictionaryId() instead.
-     *
-     * @param string $dictionaryId
-     *
-     * @return $this
-     */
-    public function setDictionaryId($dictionaryId)
-    {
-        return $this->withDictionaryId($dictionaryId);
     }
 
     /**
@@ -195,18 +123,6 @@ class UpdateKwsDictionary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +133,6 @@ class UpdateKwsDictionary extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtendConfig() instead.
-     *
-     * @param string $extendConfig
-     *
-     * @return $this
-     */
-    public function setExtendConfig($extendConfig)
-    {
-        return $this->withExtendConfig($extendConfig);
     }
 
     /**

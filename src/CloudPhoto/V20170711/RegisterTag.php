@@ -35,7 +35,6 @@ class RegisterTag extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class RegisterTag extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
 
     /**
      * @param string $storeName
@@ -69,18 +56,6 @@ class RegisterTag extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withText() instead.
-     *
-     * @param string $text
-     *
-     * @return $this
-     */
-    public function setText($text)
-    {
-        return $this->withText($text);
     }
 
     /**
@@ -97,18 +72,6 @@ class RegisterTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagKey() instead.
-     *
-     * @param string $tagKey
-     *
-     * @return $this
-     */
-    public function setTagKey($tagKey)
-    {
-        return $this->withTagKey($tagKey);
-    }
-
-    /**
      * @param string $tagKey
      *
      * @return $this
@@ -119,18 +82,6 @@ class RegisterTag extends RpcRequest
         $this->options['query']['TagKey'] = $tagKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

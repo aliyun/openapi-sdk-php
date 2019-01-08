@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Saf
  *
- * @method V20180919\SafApiResolver v20180919()
+ * @method SafV20180919ApiResolver v20180919()
  */
 class Saf
 {

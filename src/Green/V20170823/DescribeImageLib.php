@@ -39,18 +39,6 @@ class DescribeImageLib extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeImageLib extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceModule() instead.
-     *
-     * @param string $serviceModule
-     *
-     * @return $this
-     */
-    public function setServiceModule($serviceModule)
-    {
-        return $this->withServiceModule($serviceModule);
     }
 
     /**

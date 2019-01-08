@@ -40,18 +40,6 @@ class AppendEntityMember extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMember() instead.
-     *
-     * @param string $member
-     *
-     * @return $this
-     */
-    public function setMember($member)
-    {
-        return $this->withMember($member);
-    }
-
-    /**
      * @param string $member
      *
      * @return $this
@@ -65,18 +53,6 @@ class AppendEntityMember extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityId() instead.
-     *
-     * @param string $entityId
-     *
-     * @return $this
-     */
-    public function setEntityId($entityId)
-    {
-        return $this->withEntityId($entityId);
-    }
-
-    /**
      * @param string $entityId
      *
      * @return $this
@@ -87,18 +63,6 @@ class AppendEntityMember extends RpcRequest
         $this->options['query']['EntityId'] = $entityId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyType() instead.
-     *
-     * @param string $applyType
-     *
-     * @return $this
-     */
-    public function setApplyType($applyType)
-    {
-        return $this->withApplyType($applyType);
     }
 
     /**

@@ -41,18 +41,6 @@ class ModifyPhoneNumber extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactFlowId() instead.
-     *
-     * @param string $contactFlowId
-     *
-     * @return $this
-     */
-    public function setContactFlowId($contactFlowId)
-    {
-        return $this->withContactFlowId($contactFlowId);
-    }
-
-    /**
      * @param string $contactFlowId
      *
      * @return $this
@@ -63,18 +51,6 @@ class ModifyPhoneNumber extends RpcRequest
         $this->options['query']['ContactFlowId'] = $contactFlowId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -91,18 +67,6 @@ class ModifyPhoneNumber extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumberId() instead.
-     *
-     * @param string $phoneNumberId
-     *
-     * @return $this
-     */
-    public function setPhoneNumberId($phoneNumberId)
-    {
-        return $this->withPhoneNumberId($phoneNumberId);
-    }
-
-    /**
      * @param string $phoneNumberId
      *
      * @return $this
@@ -113,18 +77,6 @@ class ModifyPhoneNumber extends RpcRequest
         $this->options['query']['PhoneNumberId'] = $phoneNumberId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsage() instead.
-     *
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function setUsage($usage)
-    {
-        return $this->withUsage($usage);
     }
 
     /**

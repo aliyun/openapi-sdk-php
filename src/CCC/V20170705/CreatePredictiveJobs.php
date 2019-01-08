@@ -41,18 +41,6 @@ class CreatePredictiveJobs extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -63,18 +51,6 @@ class CreatePredictiveJobs extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
     }
 
     /**
@@ -91,18 +67,6 @@ class CreatePredictiveJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
-    }
-
-    /**
      * @param string $strategyJson
      *
      * @return $this
@@ -113,28 +77,6 @@ class CreatePredictiveJobs extends RpcRequest
         $this->options['query']['StrategyJson'] = $strategyJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getJobsJson() instead.
-     *
-     * @return array
-     */
-    public function getJobsJsons()
-    {
-        return $this->getJobsJson();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobsJson() instead.
-     *
-     * @param array $jobsJsons
-     *
-     * @return $this
-     */
-    public function setJobsJsons(array $jobsJsons)
-    {
-        return $this->withJobsJson($jobsJsons);
     }
 
     /**

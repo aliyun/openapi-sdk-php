@@ -39,18 +39,6 @@ class EnableUser extends RpcRequest
     public $serviceCode = 'dmsenterprise';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
-
-    /**
      * @param string $uid
      *
      * @return $this
@@ -61,18 +49,6 @@ class EnableUser extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTid() instead.
-     *
-     * @param string $tid
-     *
-     * @return $this
-     */
-    public function setTid($tid)
-    {
-        return $this->withTid($tid);
     }
 
     /**

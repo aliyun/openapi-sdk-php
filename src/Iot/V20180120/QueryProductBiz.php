@@ -34,18 +34,6 @@ class QueryProductBiz extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryProductBiz extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizTenantId() instead.
-     *
-     * @param string $bizTenantId
-     *
-     * @return $this
-     */
-    public function setBizTenantId($bizTenantId)
-    {
-        return $this->withBizTenantId($bizTenantId);
     }
 
     /**

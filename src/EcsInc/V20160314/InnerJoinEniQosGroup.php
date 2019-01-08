@@ -44,18 +44,6 @@ class InnerJoinEniQosGroup extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class InnerJoinEniQosGroup extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -94,18 +70,6 @@ class InnerJoinEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEniNo() instead.
-     *
-     * @param string $eniNo
-     *
-     * @return $this
-     */
-    public function setEniNo($eniNo)
-    {
-        return $this->withEniNo($eniNo);
-    }
-
-    /**
      * @param string $eniNo
      *
      * @return $this
@@ -116,18 +80,6 @@ class InnerJoinEniQosGroup extends RpcRequest
         $this->options['query']['EniNo'] = $eniNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class InnerJoinEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +109,6 @@ class InnerJoinEniQosGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQosGroupName() instead.
-     *
-     * @param string $qosGroupName
-     *
-     * @return $this
-     */
-    public function setQosGroupName($qosGroupName)
-    {
-        return $this->withQosGroupName($qosGroupName);
-    }
-
-    /**
      * @param string $qosGroupName
      *
      * @return $this
@@ -191,18 +119,6 @@ class InnerJoinEniQosGroup extends RpcRequest
         $this->options['query']['QosGroupName'] = $qosGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setRegionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
     }
 
     /**

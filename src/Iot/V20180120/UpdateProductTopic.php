@@ -36,18 +36,6 @@ class UpdateProductTopic extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicId() instead.
-     *
-     * @param string $topicId
-     *
-     * @return $this
-     */
-    public function setTopicId($topicId)
-    {
-        return $this->withTopicId($topicId);
-    }
-
-    /**
      * @param string $topicId
      *
      * @return $this
@@ -58,18 +46,6 @@ class UpdateProductTopic extends RpcRequest
         $this->options['query']['TopicId'] = $topicId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
     }
 
     /**
@@ -86,18 +62,6 @@ class UpdateProductTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicShortName() instead.
-     *
-     * @param string $topicShortName
-     *
-     * @return $this
-     */
-    public function setTopicShortName($topicShortName)
-    {
-        return $this->withTopicShortName($topicShortName);
-    }
-
-    /**
      * @param string $topicShortName
      *
      * @return $this
@@ -108,18 +72,6 @@ class UpdateProductTopic extends RpcRequest
         $this->options['query']['TopicShortName'] = $topicShortName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDesc() instead.
-     *
-     * @param string $desc
-     *
-     * @return $this
-     */
-    public function setDesc($desc)
-    {
-        return $this->withDesc($desc);
     }
 
     /**

@@ -39,18 +39,6 @@ class ListMonitoringTemplates extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotal() instead.
-     *
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        return $this->withTotal($total);
-    }
-
-    /**
      * @param string $total
      *
      * @return $this
@@ -61,18 +49,6 @@ class ListMonitoringTemplates extends RpcRequest
         $this->options['query']['Total'] = $total;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -89,18 +65,6 @@ class ListMonitoringTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -111,18 +75,6 @@ class ListMonitoringTemplates extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
     }
 
     /**
@@ -139,18 +91,6 @@ class ListMonitoringTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHistory() instead.
-     *
-     * @param string $history
-     *
-     * @return $this
-     */
-    public function setHistory($history)
-    {
-        return $this->withHistory($history);
-    }
-
-    /**
      * @param string $history
      *
      * @return $this
@@ -164,18 +104,6 @@ class ListMonitoringTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
-    }
-
-    /**
      * @param string $keyword
      *
      * @return $this
@@ -186,18 +114,6 @@ class ListMonitoringTemplates extends RpcRequest
         $this->options['query']['Keyword'] = $keyword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

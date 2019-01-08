@@ -35,18 +35,6 @@ class StartVisualService extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
-
-    /**
      * @param string $port
      *
      * @return $this
@@ -60,18 +48,6 @@ class StartVisualService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -82,18 +58,6 @@ class StartVisualService extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCidrIp() instead.
-     *
-     * @param string $cidrIp
-     *
-     * @return $this
-     */
-    public function setCidrIp($cidrIp)
-    {
-        return $this->withCidrIp($cidrIp);
     }
 
     /**

@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Market
  *
- * @method V20151101\MarketApiResolver v20151101()
+ * @method MarketV20151101ApiResolver v20151101()
  */
 class Market
 {

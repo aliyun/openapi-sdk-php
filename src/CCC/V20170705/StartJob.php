@@ -43,18 +43,6 @@ class StartJob extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobJson() instead.
-     *
-     * @param string $jobJson
-     *
-     * @return $this
-     */
-    public function setJobJson($jobJson)
-    {
-        return $this->withJobJson($jobJson);
-    }
-
-    /**
      * @param string $jobJson
      *
      * @return $this
@@ -65,28 +53,6 @@ class StartJob extends RpcRequest
         $this->options['query']['JobJson'] = $jobJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
     }
 
     /**
@@ -105,18 +71,6 @@ class StartJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -127,18 +81,6 @@ class StartJob extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -155,18 +97,6 @@ class StartJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSelfHostedCallCenter() instead.
-     *
-     * @param string $selfHostedCallCenter
-     *
-     * @return $this
-     */
-    public function setSelfHostedCallCenter($selfHostedCallCenter)
-    {
-        return $this->withSelfHostedCallCenter($selfHostedCallCenter);
-    }
-
-    /**
      * @param string $selfHostedCallCenter
      *
      * @return $this
@@ -177,18 +107,6 @@ class StartJob extends RpcRequest
         $this->options['query']['SelfHostedCallCenter'] = $selfHostedCallCenter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
     }
 
     /**

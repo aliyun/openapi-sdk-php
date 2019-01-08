@@ -34,18 +34,6 @@ class GetQuotaInstance extends RpcRequest
     public $action = 'GetQuotaInstance';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
-
-    /**
      * @param string $cluster
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetQuotaInstance extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -84,18 +60,6 @@ class GetQuotaInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQuotaId() instead.
-     *
-     * @param string $quotaId
-     *
-     * @return $this
-     */
-    public function setQuotaId($quotaId)
-    {
-        return $this->withQuotaId($quotaId);
-    }
-
-    /**
      * @param string $quotaId
      *
      * @return $this
@@ -106,18 +70,6 @@ class GetQuotaInstance extends RpcRequest
         $this->options['query']['QuotaId'] = $quotaId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -134,18 +86,6 @@ class GetQuotaInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -159,18 +99,6 @@ class GetQuotaInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQuotaName() instead.
-     *
-     * @param string $quotaName
-     *
-     * @return $this
-     */
-    public function setQuotaName($quotaName)
-    {
-        return $this->withQuotaName($quotaName);
-    }
-
-    /**
      * @param string $quotaName
      *
      * @return $this
@@ -181,18 +109,6 @@ class GetQuotaInstance extends RpcRequest
         $this->options['query']['QuotaName'] = $quotaName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

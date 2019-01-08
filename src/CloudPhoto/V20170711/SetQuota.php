@@ -34,7 +34,6 @@ class SetQuota extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,18 +43,6 @@ class SetQuota extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTotalQuota() instead.
-     *
-     * @param string $totalQuota
-     *
-     * @return $this
-     */
-    public function setTotalQuota($totalQuota)
-    {
-        return $this->withTotalQuota($totalQuota);
-    }
 
     /**
      * @param string $totalQuota
@@ -71,18 +58,6 @@ class SetQuota extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
-
-    /**
      * @param string $libraryId
      *
      * @return $this
@@ -93,18 +68,6 @@ class SetQuota extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

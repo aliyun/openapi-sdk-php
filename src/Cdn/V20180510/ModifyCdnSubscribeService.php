@@ -39,18 +39,6 @@ class ModifyCdnSubscribeService extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubEmail() instead.
-     *
-     * @param string $subEmail
-     *
-     * @return $this
-     */
-    public function setSubEmail($subEmail)
-    {
-        return $this->withSubEmail($subEmail);
-    }
-
-    /**
      * @param string $subEmail
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyCdnSubscribeService extends RpcRequest
         $this->options['query']['SubEmail'] = $subEmail;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyCdnSubscribeService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubType() instead.
-     *
-     * @param string $subType
-     *
-     * @return $this
-     */
-    public function setSubType($subType)
-    {
-        return $this->withSubType($subType);
-    }
-
-    /**
      * @param string $subType
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyCdnSubscribeService extends RpcRequest
         $this->options['query']['SubType'] = $subType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubMobile() instead.
-     *
-     * @param string $subMobile
-     *
-     * @return $this
-     */
-    public function setSubMobile($subMobile)
-    {
-        return $this->withSubMobile($subMobile);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyCdnSubscribeService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyCdnSubscribeService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyCdnSubscribeService extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubMedia() instead.
-     *
-     * @param string $subMedia
-     *
-     * @return $this
-     */
-    public function setSubMedia($subMedia)
-    {
-        return $this->withSubMedia($subMedia);
     }
 
     /**

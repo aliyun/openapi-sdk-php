@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\SasApi
  *
- * @method V20170705\SasApiApiResolver v20170705()
+ * @method SasApiV20170705ApiResolver v20170705()
  */
 class SasApi
 {

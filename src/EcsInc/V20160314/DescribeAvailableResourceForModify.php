@@ -50,18 +50,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -72,18 +60,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDiskCategory() instead.
-     *
-     * @param string $dataDiskCategory
-     *
-     * @return $this
-     */
-    public function setDataDiskCategory($dataDiskCategory)
-    {
-        return $this->withDataDiskCategory($dataDiskCategory);
     }
 
     /**
@@ -100,18 +76,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
-    }
-
-    /**
      * @param string $systemDiskCategory
      *
      * @return $this
@@ -122,18 +86,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['SystemDiskCategory'] = $systemDiskCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -150,18 +102,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkCategory() instead.
-     *
-     * @param string $networkCategory
-     *
-     * @return $this
-     */
-    public function setNetworkCategory($networkCategory)
-    {
-        return $this->withNetworkCategory($networkCategory);
-    }
-
-    /**
      * @param string $networkCategory
      *
      * @return $this
@@ -172,18 +112,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['NetworkCategory'] = $networkCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -200,18 +128,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -222,18 +138,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -250,18 +154,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperationType() instead.
-     *
-     * @param string $operationType
-     *
-     * @return $this
-     */
-    public function setOperationType($operationType)
-    {
-        return $this->withOperationType($operationType);
-    }
-
-    /**
      * @param string $operationType
      *
      * @return $this
@@ -272,18 +164,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['OperationType'] = $operationType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -300,18 +180,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationResource() instead.
-     *
-     * @param string $destinationResource
-     *
-     * @return $this
-     */
-    public function setDestinationResource($destinationResource)
-    {
-        return $this->withDestinationResource($destinationResource);
-    }
-
-    /**
      * @param string $destinationResource
      *
      * @return $this
@@ -325,18 +193,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -347,18 +203,6 @@ class DescribeAvailableResourceForModify extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMigrate() instead.
-     *
-     * @param string $migrate
-     *
-     * @return $this
-     */
-    public function setMigrate($migrate)
-    {
-        return $this->withMigrate($migrate);
     }
 
     /**

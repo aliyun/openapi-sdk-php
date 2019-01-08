@@ -44,7 +44,6 @@ class RegisterPhoto extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -54,18 +53,6 @@ class RegisterPhoto extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -78,18 +65,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLatitude() instead.
-     *
-     * @param string $latitude
-     *
-     * @return $this
-     */
-    public function setLatitude($latitude)
-    {
-        return $this->withLatitude($latitude);
     }
 
     /**
@@ -106,18 +81,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhotoTitle() instead.
-     *
-     * @param string $photoTitle
-     *
-     * @return $this
-     */
-    public function setPhotoTitle($photoTitle)
-    {
-        return $this->withPhotoTitle($photoTitle);
-    }
-
-    /**
      * @param string $photoTitle
      *
      * @return $this
@@ -128,18 +91,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['PhotoTitle'] = $photoTitle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -156,18 +107,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsVideo() instead.
-     *
-     * @param string $isVideo
-     *
-     * @return $this
-     */
-    public function setIsVideo($isVideo)
-    {
-        return $this->withIsVideo($isVideo);
-    }
-
-    /**
      * @param string $isVideo
      *
      * @return $this
@@ -178,18 +117,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['IsVideo'] = $isVideo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
     }
 
     /**
@@ -206,18 +133,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
-
-    /**
      * @param string $size
      *
      * @return $this
@@ -228,18 +143,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['Size'] = $size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTakenAt() instead.
-     *
-     * @param string $takenAt
-     *
-     * @return $this
-     */
-    public function setTakenAt($takenAt)
-    {
-        return $this->withTakenAt($takenAt);
     }
 
     /**
@@ -256,18 +159,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWidth() instead.
-     *
-     * @param string $width
-     *
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        return $this->withWidth($width);
-    }
-
-    /**
      * @param string $width
      *
      * @return $this
@@ -278,18 +169,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['Width'] = $width;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**
@@ -306,18 +185,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLongitude() instead.
-     *
-     * @param string $longitude
-     *
-     * @return $this
-     */
-    public function setLongitude($longitude)
-    {
-        return $this->withLongitude($longitude);
-    }
-
-    /**
      * @param string $longitude
      *
      * @return $this
@@ -331,18 +198,6 @@ class RegisterPhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHeight() instead.
-     *
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        return $this->withHeight($height);
-    }
-
-    /**
      * @param string $height
      *
      * @return $this
@@ -353,18 +208,6 @@ class RegisterPhoto extends RpcRequest
         $this->options['query']['Height'] = $height;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMd5() instead.
-     *
-     * @param string $md5
-     *
-     * @return $this
-     */
-    public function setMd5($md5)
-    {
-        return $this->withMd5($md5);
     }
 
     /**

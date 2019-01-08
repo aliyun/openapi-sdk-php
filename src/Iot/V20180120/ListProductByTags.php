@@ -35,28 +35,6 @@ class ListProductByTags extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getProductTag() instead.
-     *
-     * @return array
-     */
-    public function getProductTags()
-    {
-        return $this->getProductTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductTag() instead.
-     *
-     * @param array $productTags
-     *
-     * @return $this
-     */
-    public function setProductTags(array $productTags)
-    {
-        return $this->withProductTag($productTags);
-    }
-
-    /**
      * @param array $productTag
      *
      * @return $this
@@ -65,22 +43,11 @@ class ListProductByTags extends RpcRequest
     {
         $this->data['ProductTag'] = $productTag;
         foreach ($productTag as $i => $iValue) {
-            $this->options['query']['ProductTag.' . ($i + 1)] = $iValue;
+            $this->options['query']['ProductTag.' . ($i + 1) . '.TagValue'] = $productTag[$i]['TagValue'];
+            $this->options['query']['ProductTag.' . ($i + 1) . '.TagKey'] = $productTag[$i]['TagKey'];
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -94,18 +61,6 @@ class ListProductByTags extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

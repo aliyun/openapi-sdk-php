@@ -41,18 +41,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeInterval() instead.
-     *
-     * @param string $timeInterval
-     *
-     * @return $this
-     */
-    public function setTimeInterval($timeInterval)
-    {
-        return $this->withTimeInterval($timeInterval);
-    }
-
-    /**
      * @param string $timeInterval
      *
      * @return $this
@@ -63,18 +51,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
         $this->options['query']['TimeInterval'] = $timeInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
     }
 
     /**
@@ -91,18 +67,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
@@ -113,18 +77,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -141,18 +93,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -163,18 +103,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
     }
 
     /**
@@ -191,18 +119,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSequenceOssObject() instead.
-     *
-     * @param string $sequenceOssObject
-     *
-     * @return $this
-     */
-    public function setSequenceOssObject($sequenceOssObject)
-    {
-        return $this->withSequenceOssObject($sequenceOssObject);
-    }
-
-    /**
      * @param string $sequenceOssObject
      *
      * @return $this
@@ -216,18 +132,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOverwriteOssObject() instead.
-     *
-     * @param string $overwriteOssObject
-     *
-     * @return $this
-     */
-    public function setOverwriteOssObject($overwriteOssObject)
-    {
-        return $this->withOverwriteOssObject($overwriteOssObject);
-    }
-
-    /**
      * @param string $overwriteOssObject
      *
      * @return $this
@@ -238,18 +142,6 @@ class UpdateLiveAppSnapshotConfig extends RpcRequest
         $this->options['query']['OverwriteOssObject'] = $overwriteOssObject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

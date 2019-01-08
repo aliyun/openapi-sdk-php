@@ -33,18 +33,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
     public $action = 'SetIgnoreQueryStringConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnable() instead.
-     *
-     * @param string $enable
-     *
-     * @return $this
-     */
-    public function setEnable($enable)
-    {
-        return $this->withEnable($enable);
-    }
-
-    /**
      * @param string $enable
      *
      * @return $this
@@ -55,18 +43,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
         $this->options['query']['Enable'] = $enable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeepOssArgs() instead.
-     *
-     * @param string $keepOssArgs
-     *
-     * @return $this
-     */
-    public function setKeepOssArgs($keepOssArgs)
-    {
-        return $this->withKeepOssArgs($keepOssArgs);
     }
 
     /**
@@ -83,18 +59,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -105,18 +69,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -133,18 +85,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHashKeyArgs() instead.
-     *
-     * @param string $hashKeyArgs
-     *
-     * @return $this
-     */
-    public function setHashKeyArgs($hashKeyArgs)
-    {
-        return $this->withHashKeyArgs($hashKeyArgs);
-    }
-
-    /**
      * @param string $hashKeyArgs
      *
      * @return $this
@@ -155,18 +95,6 @@ class SetIgnoreQueryStringConfig extends RpcRequest
         $this->options['query']['HashKeyArgs'] = $hashKeyArgs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

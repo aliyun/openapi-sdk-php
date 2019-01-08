@@ -56,18 +56,6 @@ class DescribePrice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk3Size() instead.
-     *
-     * @param string $dataDisk3Size
-     *
-     * @return $this
-     */
-    public function setDataDisk3Size($dataDisk3Size)
-    {
-        return $this->withDataDisk3Size($dataDisk3Size);
-    }
-
-    /**
      * @param string $dataDisk3Size
      *
      * @return $this
@@ -78,18 +66,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['DataDisk.3.Size'] = $dataDisk3Size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -106,18 +82,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -128,18 +92,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk3Category() instead.
-     *
-     * @param string $dataDisk3Category
-     *
-     * @return $this
-     */
-    public function setDataDisk3Category($dataDisk3Category)
-    {
-        return $this->withDataDisk3Category($dataDisk3Category);
     }
 
     /**
@@ -156,18 +108,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
-    }
-
-    /**
      * @param string $ioOptimized
      *
      * @return $this
@@ -178,18 +118,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['IoOptimized'] = $ioOptimized;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
     }
 
     /**
@@ -206,18 +134,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
-    }
-
-    /**
      * @param string $systemDiskCategory
      *
      * @return $this
@@ -228,18 +144,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['SystemDisk.Category'] = $systemDiskCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk4Category() instead.
-     *
-     * @param string $dataDisk4Category
-     *
-     * @return $this
-     */
-    public function setDataDisk4Category($dataDisk4Category)
-    {
-        return $this->withDataDisk4Category($dataDisk4Category);
     }
 
     /**
@@ -256,18 +160,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk4Size() instead.
-     *
-     * @param string $dataDisk4Size
-     *
-     * @return $this
-     */
-    public function setDataDisk4Size($dataDisk4Size)
-    {
-        return $this->withDataDisk4Size($dataDisk4Size);
-    }
-
-    /**
      * @param string $dataDisk4Size
      *
      * @return $this
@@ -278,18 +170,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['DataDisk.4.Size'] = $dataDisk4Size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriceUnit() instead.
-     *
-     * @param string $priceUnit
-     *
-     * @return $this
-     */
-    public function setPriceUnit($priceUnit)
-    {
-        return $this->withPriceUnit($priceUnit);
     }
 
     /**
@@ -306,18 +186,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -328,18 +196,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk2Category() instead.
-     *
-     * @param string $dataDisk2Category
-     *
-     * @return $this
-     */
-    public function setDataDisk2Category($dataDisk2Category)
-    {
-        return $this->withDataDisk2Category($dataDisk2Category);
     }
 
     /**
@@ -356,18 +212,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk1Size() instead.
-     *
-     * @param string $dataDisk1Size
-     *
-     * @return $this
-     */
-    public function setDataDisk1Size($dataDisk1Size)
-    {
-        return $this->withDataDisk1Size($dataDisk1Size);
-    }
-
-    /**
      * @param string $dataDisk1Size
      *
      * @return $this
@@ -378,18 +222,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['DataDisk.1.Size'] = $dataDisk1Size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -406,18 +238,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAmount() instead.
-     *
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        return $this->withAmount($amount);
-    }
-
-    /**
      * @param string $amount
      *
      * @return $this
@@ -428,18 +248,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['Amount'] = $amount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -456,18 +264,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -478,18 +274,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk2Size() instead.
-     *
-     * @param string $dataDisk2Size
-     *
-     * @return $this
-     */
-    public function setDataDisk2Size($dataDisk2Size)
-    {
-        return $this->withDataDisk2Size($dataDisk2Size);
     }
 
     /**
@@ -506,18 +290,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -528,18 +300,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**
@@ -556,18 +316,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk1Category() instead.
-     *
-     * @param string $dataDisk1Category
-     *
-     * @return $this
-     */
-    public function setDataDisk1Category($dataDisk1Category)
-    {
-        return $this->withDataDisk1Category($dataDisk1Category);
-    }
-
-    /**
      * @param string $dataDisk1Category
      *
      * @return $this
@@ -578,18 +326,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['DataDisk.1.Category'] = $dataDisk1Category;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
     }
 
     /**
@@ -606,18 +342,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -628,18 +352,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceNetworkType() instead.
-     *
-     * @param string $instanceNetworkType
-     *
-     * @return $this
-     */
-    public function setInstanceNetworkType($instanceNetworkType)
-    {
-        return $this->withInstanceNetworkType($instanceNetworkType);
     }
 
     /**

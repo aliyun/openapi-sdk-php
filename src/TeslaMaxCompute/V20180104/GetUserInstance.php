@@ -32,18 +32,6 @@ class GetUserInstance extends RpcRequest
     public $action = 'GetUserInstance';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -54,18 +42,6 @@ class GetUserInstance extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -82,18 +58,6 @@ class GetUserInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -107,18 +71,6 @@ class GetUserInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
-    }
-
-    /**
      * @param string $user
      *
      * @return $this
@@ -129,18 +81,6 @@ class GetUserInstance extends RpcRequest
         $this->options['query']['User'] = $user;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -34,18 +34,6 @@ class AcceptInvitation extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCode() instead.
-     *
-     * @param string $code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        return $this->withCode($code);
-    }
-
-    /**
      * @param string $code
      *
      * @return $this
@@ -56,18 +44,6 @@ class AcceptInvitation extends RpcRequest
         $this->options['query']['Code'] = $code;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsAccepted() instead.
-     *
-     * @param string $isAccepted
-     *
-     * @return $this
-     */
-    public function setIsAccepted($isAccepted)
-    {
-        return $this->withIsAccepted($isAccepted);
     }
 
     /**

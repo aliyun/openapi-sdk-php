@@ -40,18 +40,6 @@ class LastRobotSession extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
-    }
-
-    /**
      * @param string $sceneId
      *
      * @return $this
@@ -65,18 +53,6 @@ class LastRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -87,18 +63,6 @@ class LastRobotSession extends RpcRequest
         $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVisitorId() instead.
-     *
-     * @param string $visitorId
-     *
-     * @return $this
-     */
-    public function setVisitorId($visitorId)
-    {
-        return $this->withVisitorId($visitorId);
     }
 
     /**

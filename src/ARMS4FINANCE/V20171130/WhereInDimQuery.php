@@ -42,18 +42,6 @@ class WhereInDimQuery extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWhereInKey() instead.
-     *
-     * @param string $whereInKey
-     *
-     * @return $this
-     */
-    public function setWhereInKey($whereInKey)
-    {
-        return $this->withWhereInKey($whereInKey);
-    }
-
-    /**
      * @param string $whereInKey
      *
      * @return $this
@@ -64,28 +52,6 @@ class WhereInDimQuery extends RpcRequest
         $this->options['query']['WhereInKey'] = $whereInKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMeasures() instead.
-     *
-     * @return array
-     */
-    public function getMeasuress()
-    {
-        return $this->getMeasures();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMeasures() instead.
-     *
-     * @param array $measuress
-     *
-     * @return $this
-     */
-    public function setMeasuress(array $measuress)
-    {
-        return $this->withMeasures($measuress);
     }
 
     /**
@@ -104,18 +70,6 @@ class WhereInDimQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIntervalInSec() instead.
-     *
-     * @param string $intervalInSec
-     *
-     * @return $this
-     */
-    public function setIntervalInSec($intervalInSec)
-    {
-        return $this->withIntervalInSec($intervalInSec);
-    }
-
-    /**
      * @param string $intervalInSec
      *
      * @return $this
@@ -126,18 +80,6 @@ class WhereInDimQuery extends RpcRequest
         $this->options['query']['IntervalInSec'] = $intervalInSec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDateStr() instead.
-     *
-     * @param string $dateStr
-     *
-     * @return $this
-     */
-    public function setDateStr($dateStr)
-    {
-        return $this->withDateStr($dateStr);
     }
 
     /**
@@ -154,18 +96,6 @@ class WhereInDimQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDrillDown() instead.
-     *
-     * @param string $isDrillDown
-     *
-     * @return $this
-     */
-    public function setIsDrillDown($isDrillDown)
-    {
-        return $this->withIsDrillDown($isDrillDown);
-    }
-
-    /**
      * @param string $isDrillDown
      *
      * @return $this
@@ -176,18 +106,6 @@ class WhereInDimQuery extends RpcRequest
         $this->options['query']['IsDrillDown'] = $isDrillDown;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinTime() instead.
-     *
-     * @param string $minTime
-     *
-     * @return $this
-     */
-    public function setMinTime($minTime)
-    {
-        return $this->withMinTime($minTime);
     }
 
     /**
@@ -204,18 +122,6 @@ class WhereInDimQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDatasetId() instead.
-     *
-     * @param string $datasetId
-     *
-     * @return $this
-     */
-    public function setDatasetId($datasetId)
-    {
-        return $this->withDatasetId($datasetId);
-    }
-
-    /**
      * @param string $datasetId
      *
      * @return $this
@@ -226,28 +132,6 @@ class WhereInDimQuery extends RpcRequest
         $this->options['query']['DatasetId'] = $datasetId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getWhereInValues() instead.
-     *
-     * @return array
-     */
-    public function getWhereInValuess()
-    {
-        return $this->getWhereInValues();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWhereInValues() instead.
-     *
-     * @param array $whereInValuess
-     *
-     * @return $this
-     */
-    public function setWhereInValuess(array $whereInValuess)
-    {
-        return $this->withWhereInValues($whereInValuess);
     }
 
     /**
@@ -266,18 +150,6 @@ class WhereInDimQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxTime() instead.
-     *
-     * @param string $maxTime
-     *
-     * @return $this
-     */
-    public function setMaxTime($maxTime)
-    {
-        return $this->withMaxTime($maxTime);
-    }
-
-    /**
      * @param string $maxTime
      *
      * @return $this
@@ -288,28 +160,6 @@ class WhereInDimQuery extends RpcRequest
         $this->options['query']['MaxTime'] = $maxTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDimensions() instead.
-     *
-     * @return array
-     */
-    public function getDimensionss()
-    {
-        return $this->getDimensions();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param array $dimensionss
-     *
-     * @return $this
-     */
-    public function setDimensionss(array $dimensionss)
-    {
-        return $this->withDimensions($dimensionss);
     }
 
     /**

@@ -42,18 +42,6 @@ class ListFaceSearchGroupImages extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxKeys() instead.
-     *
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function setMaxKeys($maxKeys)
-    {
-        return $this->withMaxKeys($maxKeys);
-    }
-
-    /**
      * @param string $maxKeys
      *
      * @return $this
@@ -64,18 +52,6 @@ class ListFaceSearchGroupImages extends RpcRequest
         $this->options['query']['MaxKeys'] = $maxKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**
@@ -92,18 +68,6 @@ class ListFaceSearchGroupImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class ListFaceSearchGroupImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this
@@ -139,18 +91,6 @@ class ListFaceSearchGroupImages extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
     }
 
     /**

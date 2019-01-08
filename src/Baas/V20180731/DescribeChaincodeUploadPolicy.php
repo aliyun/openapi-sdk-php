@@ -33,18 +33,6 @@ class DescribeChaincodeUploadPolicy extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this

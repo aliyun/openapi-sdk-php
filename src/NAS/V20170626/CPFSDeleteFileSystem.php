@@ -38,18 +38,6 @@ class CPFSDeleteFileSystem extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFsId() instead.
-     *
-     * @param string $fsId
-     *
-     * @return $this
-     */
-    public function setFsId($fsId)
-    {
-        return $this->withFsId($fsId);
-    }
-
-    /**
      * @param string $fsId
      *
      * @return $this

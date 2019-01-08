@@ -35,18 +35,6 @@ class SetTimeTemplate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -60,18 +48,6 @@ class SetTimeTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllDay() instead.
-     *
-     * @param string $allDay
-     *
-     * @return $this
-     */
-    public function setAllDay($allDay)
-    {
-        return $this->withAllDay($allDay);
-    }
-
-    /**
      * @param string $allDay
      *
      * @return $this
@@ -82,28 +58,6 @@ class SetTimeTemplate extends RpcRequest
         $this->options['query']['AllDay'] = $allDay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTimeSections() instead.
-     *
-     * @return array
-     */
-    public function getTimeSectionss()
-    {
-        return $this->getTimeSections();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeSections() instead.
-     *
-     * @param array $timeSectionss
-     *
-     * @return $this
-     */
-    public function setTimeSectionss(array $timeSectionss)
-    {
-        return $this->withTimeSections($timeSectionss);
     }
 
     /**

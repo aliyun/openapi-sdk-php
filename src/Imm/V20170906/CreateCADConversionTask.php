@@ -51,18 +51,6 @@ class CreateCADConversionTask extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcType() instead.
-     *
-     * @param string $srcType
-     *
-     * @return $this
-     */
-    public function setSrcType($srcType)
-    {
-        return $this->withSrcType($srcType);
-    }
-
-    /**
      * @param string $srcType
      *
      * @return $this
@@ -73,18 +61,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['SrcType'] = $srcType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBaseCol() instead.
-     *
-     * @param string $baseCol
-     *
-     * @return $this
-     */
-    public function setBaseCol($baseCol)
-    {
-        return $this->withBaseCol($baseCol);
     }
 
     /**
@@ -101,18 +77,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function setNotifyTopicName($notifyTopicName)
-    {
-        return $this->withNotifyTopicName($notifyTopicName);
-    }
-
-    /**
      * @param string $notifyTopicName
      *
      * @return $this
@@ -123,18 +87,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['NotifyTopicName'] = $notifyTopicName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnitWidth() instead.
-     *
-     * @param string $unitWidth
-     *
-     * @return $this
-     */
-    public function setUnitWidth($unitWidth)
-    {
-        return $this->withUnitWidth($unitWidth);
     }
 
     /**
@@ -151,18 +103,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoomLevel() instead.
-     *
-     * @param string $zoomLevel
-     *
-     * @return $this
-     */
-    public function setZoomLevel($zoomLevel)
-    {
-        return $this->withZoomLevel($zoomLevel);
-    }
-
-    /**
      * @param string $zoomLevel
      *
      * @return $this
@@ -173,18 +113,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['ZoomLevel'] = $zoomLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBaseRow() instead.
-     *
-     * @param string $baseRow
-     *
-     * @return $this
-     */
-    public function setBaseRow($baseRow)
-    {
-        return $this->withBaseRow($baseRow);
     }
 
     /**
@@ -201,18 +129,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -223,18 +139,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoomFactor() instead.
-     *
-     * @param string $zoomFactor
-     *
-     * @return $this
-     */
-    public function setZoomFactor($zoomFactor)
-    {
-        return $this->withZoomFactor($zoomFactor);
     }
 
     /**
@@ -251,18 +155,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtType() instead.
-     *
-     * @param string $tgtType
-     *
-     * @return $this
-     */
-    public function setTgtType($tgtType)
-    {
-        return $this->withTgtType($tgtType);
-    }
-
-    /**
      * @param string $tgtType
      *
      * @return $this
@@ -273,18 +165,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['TgtType'] = $tgtType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnitHeight() instead.
-     *
-     * @param string $unitHeight
-     *
-     * @return $this
-     */
-    public function setUnitHeight($unitHeight)
-    {
-        return $this->withUnitHeight($unitHeight);
     }
 
     /**
@@ -301,18 +181,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function setNotifyEndpoint($notifyEndpoint)
-    {
-        return $this->withNotifyEndpoint($notifyEndpoint);
-    }
-
-    /**
      * @param string $notifyEndpoint
      *
      * @return $this
@@ -323,18 +191,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['NotifyEndpoint'] = $notifyEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**
@@ -351,18 +207,6 @@ class CreateCADConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withThumbnails() instead.
-     *
-     * @param string $thumbnails
-     *
-     * @return $this
-     */
-    public function setThumbnails($thumbnails)
-    {
-        return $this->withThumbnails($thumbnails);
-    }
-
-    /**
      * @param string $thumbnails
      *
      * @return $this
@@ -373,18 +217,6 @@ class CreateCADConversionTask extends RpcRequest
         $this->options['query']['Thumbnails'] = $thumbnails;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtUri() instead.
-     *
-     * @param string $tgtUri
-     *
-     * @return $this
-     */
-    public function setTgtUri($tgtUri)
-    {
-        return $this->withTgtUri($tgtUri);
     }
 
     /**

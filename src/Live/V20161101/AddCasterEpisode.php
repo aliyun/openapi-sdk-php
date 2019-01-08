@@ -46,18 +46,6 @@ class AddCasterEpisode extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
-
-    /**
      * @param string $resourceId
      *
      * @return $this
@@ -68,28 +56,6 @@ class AddCasterEpisode extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getComponentId() instead.
-     *
-     * @return array
-     */
-    public function getComponentIds()
-    {
-        return $this->getComponentId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentId() instead.
-     *
-     * @param array $componentIds
-     *
-     * @return $this
-     */
-    public function setComponentIds(array $componentIds)
-    {
-        return $this->withComponentId($componentIds);
     }
 
     /**
@@ -108,18 +74,6 @@ class AddCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSwitchType() instead.
-     *
-     * @param string $switchType
-     *
-     * @return $this
-     */
-    public function setSwitchType($switchType)
-    {
-        return $this->withSwitchType($switchType);
-    }
-
-    /**
      * @param string $switchType
      *
      * @return $this
@@ -130,18 +84,6 @@ class AddCasterEpisode extends RpcRequest
         $this->options['query']['SwitchType'] = $switchType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
     }
 
     /**
@@ -158,18 +100,6 @@ class AddCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeType() instead.
-     *
-     * @param string $episodeType
-     *
-     * @return $this
-     */
-    public function setEpisodeType($episodeType)
-    {
-        return $this->withEpisodeType($episodeType);
-    }
-
-    /**
      * @param string $episodeType
      *
      * @return $this
@@ -180,18 +110,6 @@ class AddCasterEpisode extends RpcRequest
         $this->options['query']['EpisodeType'] = $episodeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeName() instead.
-     *
-     * @param string $episodeName
-     *
-     * @return $this
-     */
-    public function setEpisodeName($episodeName)
-    {
-        return $this->withEpisodeName($episodeName);
     }
 
     /**
@@ -208,18 +126,6 @@ class AddCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -233,18 +139,6 @@ class AddCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -255,18 +149,6 @@ class AddCasterEpisode extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -44,18 +44,6 @@ class DeploySharedService extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSharedServiceId() instead.
-     *
-     * @param string $sharedServiceId
-     *
-     * @return $this
-     */
-    public function setSharedServiceId($sharedServiceId)
-    {
-        return $this->withSharedServiceId($sharedServiceId);
-    }
-
-    /**
      * @param string $sharedServiceId
      *
      * @return $this
@@ -66,18 +54,6 @@ class DeploySharedService extends RoaRequest
         $this->pathParameters['SharedServiceId'] = $sharedServiceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

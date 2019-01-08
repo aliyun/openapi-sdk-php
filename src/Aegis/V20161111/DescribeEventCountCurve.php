@@ -43,18 +43,6 @@ class DescribeEventCountCurve extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTypes() instead.
-     *
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function setTypes($types)
-    {
-        return $this->withTypes($types);
-    }
-
-    /**
      * @param string $types
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeEventCountCurve extends RpcRequest
         $this->options['query']['Types'] = $types;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -93,18 +69,6 @@ class DescribeEventCountCurve extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVulEventLevels() instead.
-     *
-     * @param string $vulEventLevels
-     *
-     * @return $this
-     */
-    public function setVulEventLevels($vulEventLevels)
-    {
-        return $this->withVulEventLevels($vulEventLevels);
-    }
-
-    /**
      * @param string $vulEventLevels
      *
      * @return $this
@@ -115,18 +79,6 @@ class DescribeEventCountCurve extends RpcRequest
         $this->options['query']['VulEventLevels'] = $vulEventLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLastDays() instead.
-     *
-     * @param string $lastDays
-     *
-     * @return $this
-     */
-    public function setLastDays($lastDays)
-    {
-        return $this->withLastDays($lastDays);
     }
 
     /**
@@ -143,18 +95,6 @@ class DescribeEventCountCurve extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthEventLevels() instead.
-     *
-     * @param string $healthEventLevels
-     *
-     * @return $this
-     */
-    public function setHealthEventLevels($healthEventLevels)
-    {
-        return $this->withHealthEventLevels($healthEventLevels);
-    }
-
-    /**
      * @param string $healthEventLevels
      *
      * @return $this
@@ -165,18 +105,6 @@ class DescribeEventCountCurve extends RpcRequest
         $this->options['query']['HealthEventLevels'] = $healthEventLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSuspiciousEventLevels() instead.
-     *
-     * @param string $suspiciousEventLevels
-     *
-     * @return $this
-     */
-    public function setSuspiciousEventLevels($suspiciousEventLevels)
-    {
-        return $this->withSuspiciousEventLevels($suspiciousEventLevels);
     }
 
     /**

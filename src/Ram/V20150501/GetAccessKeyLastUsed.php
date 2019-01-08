@@ -33,23 +33,10 @@ class GetAccessKeyLastUsed extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserAccessKeyId() instead.
-     *
-     * @param string $userAccessKeyId
-     *
-     * @return $this
-     */
-    public function setUserAccessKeyId($userAccessKeyId)
-    {
-        return $this->withUserAccessKeyId($userAccessKeyId);
-    }
 
     /**
      * @param string $userAccessKeyId
@@ -62,18 +49,6 @@ class GetAccessKeyLastUsed extends RpcRequest
         $this->options['query']['UserAccessKeyId'] = $userAccessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -37,23 +37,10 @@ class UpdateUser extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewUserName() instead.
-     *
-     * @param string $newUserName
-     *
-     * @return $this
-     */
-    public function setNewUserName($newUserName)
-    {
-        return $this->withNewUserName($newUserName);
-    }
 
     /**
      * @param string $newUserName
@@ -66,18 +53,6 @@ class UpdateUser extends RpcRequest
         $this->options['query']['NewUserName'] = $newUserName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewDisplayName() instead.
-     *
-     * @param string $newDisplayName
-     *
-     * @return $this
-     */
-    public function setNewDisplayName($newDisplayName)
-    {
-        return $this->withNewDisplayName($newDisplayName);
     }
 
     /**
@@ -94,18 +69,6 @@ class UpdateUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewMobilePhone() instead.
-     *
-     * @param string $newMobilePhone
-     *
-     * @return $this
-     */
-    public function setNewMobilePhone($newMobilePhone)
-    {
-        return $this->withNewMobilePhone($newMobilePhone);
-    }
-
-    /**
      * @param string $newMobilePhone
      *
      * @return $this
@@ -116,18 +79,6 @@ class UpdateUser extends RpcRequest
         $this->options['query']['NewMobilePhone'] = $newMobilePhone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewComments() instead.
-     *
-     * @param string $newComments
-     *
-     * @return $this
-     */
-    public function setNewComments($newComments)
-    {
-        return $this->withNewComments($newComments);
     }
 
     /**
@@ -144,18 +95,6 @@ class UpdateUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewEmail() instead.
-     *
-     * @param string $newEmail
-     *
-     * @return $this
-     */
-    public function setNewEmail($newEmail)
-    {
-        return $this->withNewEmail($newEmail);
-    }
-
-    /**
      * @param string $newEmail
      *
      * @return $this
@@ -166,18 +105,6 @@ class UpdateUser extends RpcRequest
         $this->options['query']['NewEmail'] = $newEmail;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

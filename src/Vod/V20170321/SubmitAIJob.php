@@ -46,18 +46,6 @@ class SubmitAIJob extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -68,18 +56,6 @@ class SubmitAIJob extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class SubmitAIJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTypes() instead.
-     *
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function setTypes($types)
-    {
-        return $this->withTypes($types);
-    }
-
-    /**
      * @param string $types
      *
      * @return $this
@@ -118,18 +82,6 @@ class SubmitAIJob extends RpcRequest
         $this->options['query']['Types'] = $types;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class SubmitAIJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class SubmitAIJob extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +124,6 @@ class SubmitAIJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaId() instead.
-     *
-     * @param string $mediaId
-     *
-     * @return $this
-     */
-    public function setMediaId($mediaId)
-    {
-        return $this->withMediaId($mediaId);
-    }
-
-    /**
      * @param string $mediaId
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitAIJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfig() instead.
-     *
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        return $this->withConfig($config);
-    }
-
-    /**
      * @param string $config
      *
      * @return $this
@@ -243,18 +147,6 @@ class SubmitAIJob extends RpcRequest
         $this->options['query']['Config'] = $config;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaType() instead.
-     *
-     * @param string $mediaType
-     *
-     * @return $this
-     */
-    public function setMediaType($mediaType)
-    {
-        return $this->withMediaType($mediaType);
     }
 
     /**

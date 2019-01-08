@@ -40,18 +40,6 @@ class DescribeDomainUsageData extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -62,18 +50,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -90,18 +66,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataProtocol() instead.
-     *
-     * @param string $dataProtocol
-     *
-     * @return $this
-     */
-    public function setDataProtocol($dataProtocol)
-    {
-        return $this->withDataProtocol($dataProtocol);
-    }
-
-    /**
      * @param string $dataProtocol
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['DataProtocol'] = $dataProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArea() instead.
-     *
-     * @param string $area
-     *
-     * @return $this
-     */
-    public function setArea($area)
-    {
-        return $this->withArea($area);
     }
 
     /**
@@ -140,18 +92,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -162,18 +102,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -190,18 +118,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -212,18 +128,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withField() instead.
-     *
-     * @param string $field
-     *
-     * @return $this
-     */
-    public function setField($field)
-    {
-        return $this->withField($field);
     }
 
     /**

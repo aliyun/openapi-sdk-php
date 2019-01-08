@@ -41,18 +41,6 @@ class OperateWarning extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReason() instead.
-     *
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        return $this->withReason($reason);
-    }
-
-    /**
      * @param string $reason
      *
      * @return $this
@@ -63,18 +51,6 @@ class OperateWarning extends RpcRequest
         $this->options['query']['Reason'] = $reason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class OperateWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperateType() instead.
-     *
-     * @param string $operateType
-     *
-     * @return $this
-     */
-    public function setOperateType($operateType)
-    {
-        return $this->withOperateType($operateType);
-    }
-
-    /**
      * @param string $operateType
      *
      * @return $this
@@ -113,18 +77,6 @@ class OperateWarning extends RpcRequest
         $this->options['query']['OperateType'] = $operateType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskWarningIds() instead.
-     *
-     * @param string $riskWarningIds
-     *
-     * @return $this
-     */
-    public function setRiskWarningIds($riskWarningIds)
-    {
-        return $this->withRiskWarningIds($riskWarningIds);
     }
 
     /**

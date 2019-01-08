@@ -37,18 +37,6 @@ class ModifyReadOnlyAccountPassword extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewPasswd() instead.
-     *
-     * @param string $newPasswd
-     *
-     * @return $this
-     */
-    public function setNewPasswd($newPasswd)
-    {
-        return $this->withNewPasswd($newPasswd);
-    }
-
-    /**
      * @param string $newPasswd
      *
      * @return $this
@@ -59,18 +47,6 @@ class ModifyReadOnlyAccountPassword extends RpcRequest
         $this->options['query']['NewPasswd'] = $newPasswd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
     }
 
     /**
@@ -87,18 +63,6 @@ class ModifyReadOnlyAccountPassword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -112,18 +76,6 @@ class ModifyReadOnlyAccountPassword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOriginPassword() instead.
-     *
-     * @param string $originPassword
-     *
-     * @return $this
-     */
-    public function setOriginPassword($originPassword)
-    {
-        return $this->withOriginPassword($originPassword);
-    }
-
-    /**
      * @param string $originPassword
      *
      * @return $this
@@ -134,18 +86,6 @@ class ModifyReadOnlyAccountPassword extends RpcRequest
         $this->options['query']['OriginPassword'] = $originPassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
     }
 
     /**

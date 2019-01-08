@@ -41,18 +41,6 @@ class ReleaseMovieSeat extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -63,18 +51,6 @@ class ReleaseMovieSeat extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLockSeatApplyKey() instead.
-     *
-     * @param string $lockSeatApplyKey
-     *
-     * @return $this
-     */
-    public function setLockSeatApplyKey($lockSeatApplyKey)
-    {
-        return $this->withLockSeatApplyKey($lockSeatApplyKey);
     }
 
     /**
@@ -91,18 +67,6 @@ class ReleaseMovieSeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizUid() instead.
-     *
-     * @param string $bizUid
-     *
-     * @return $this
-     */
-    public function setBizUid($bizUid)
-    {
-        return $this->withBizUid($bizUid);
-    }
-
-    /**
      * @param string $bizUid
      *
      * @return $this
@@ -113,18 +77,6 @@ class ReleaseMovieSeat extends RpcRequest
         $this->options['query']['BizUid'] = $bizUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

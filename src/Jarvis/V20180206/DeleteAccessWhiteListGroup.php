@@ -36,18 +36,6 @@ class DeleteAccessWhiteListGroup extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupIdList() instead.
-     *
-     * @param string $groupIdList
-     *
-     * @return $this
-     */
-    public function setGroupIdList($groupIdList)
-    {
-        return $this->withGroupIdList($groupIdList);
-    }
-
-    /**
      * @param string $groupIdList
      *
      * @return $this
@@ -58,18 +46,6 @@ class DeleteAccessWhiteListGroup extends RpcRequest
         $this->options['query']['GroupIdList'] = $groupIdList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -86,18 +62,6 @@ class DeleteAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -108,18 +72,6 @@ class DeleteAccessWhiteListGroup extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

@@ -40,18 +40,6 @@ class DescribeRegions extends RpcRequest
     public $serviceCode = 'pvtz';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeRegions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAcceptLanguage() instead.
-     *
-     * @param string $acceptLanguage
-     *
-     * @return $this
-     */
-    public function setAcceptLanguage($acceptLanguage)
-    {
-        return $this->withAcceptLanguage($acceptLanguage);
-    }
-
-    /**
      * @param string $acceptLanguage
      *
      * @return $this
@@ -87,18 +63,6 @@ class DescribeRegions extends RpcRequest
         $this->options['query']['AcceptLanguage'] = $acceptLanguage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

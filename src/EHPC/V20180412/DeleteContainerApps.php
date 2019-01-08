@@ -33,28 +33,6 @@ class DeleteContainerApps extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getContainerApp() instead.
-     *
-     * @return array
-     */
-    public function getContainerApps()
-    {
-        return $this->getContainerApp();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerApp() instead.
-     *
-     * @param array $containerApps
-     *
-     * @return $this
-     */
-    public function setContainerApps(array $containerApps)
-    {
-        return $this->withContainerApp($containerApps);
-    }
-
-    /**
      * @param array $containerApp
      *
      * @return $this

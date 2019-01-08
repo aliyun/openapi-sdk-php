@@ -38,18 +38,6 @@ class DescribeEntities extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityId() instead.
-     *
-     * @param string $entityId
-     *
-     * @return $this
-     */
-    public function setEntityId($entityId)
-    {
-        return $this->withEntityId($entityId);
-    }
-
-    /**
      * @param string $entityId
      *
      * @return $this

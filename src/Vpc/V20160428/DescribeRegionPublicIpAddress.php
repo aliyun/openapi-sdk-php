@@ -45,18 +45,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKbpsBandwidth() instead.
-     *
-     * @param string $kbpsBandwidth
-     *
-     * @return $this
-     */
-    public function setKbpsBandwidth($kbpsBandwidth)
-    {
-        return $this->withKbpsBandwidth($kbpsBandwidth);
     }
 
     /**
@@ -95,18 +71,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
     }
 
     /**
@@ -145,18 +97,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -167,18 +107,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceUid() instead.
-     *
-     * @param string $resourceUid
-     *
-     * @return $this
-     */
-    public function setResourceUid($resourceUid)
-    {
-        return $this->withResourceUid($resourceUid);
     }
 
     /**
@@ -195,18 +123,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceBid() instead.
-     *
-     * @param string $resourceBid
-     *
-     * @return $this
-     */
-    public function setResourceBid($resourceBid)
-    {
-        return $this->withResourceBid($resourceBid);
-    }
-
-    /**
      * @param string $resourceBid
      *
      * @return $this
@@ -217,18 +133,6 @@ class DescribeRegionPublicIpAddress extends RpcRequest
         $this->options['query']['ResourceBid'] = $resourceBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

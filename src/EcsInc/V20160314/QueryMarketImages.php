@@ -47,18 +47,6 @@ class QueryMarketImages extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSupportIoOptimized() instead.
-     *
-     * @param string $supportIoOptimized
-     *
-     * @return $this
-     */
-    public function setSupportIoOptimized($supportIoOptimized)
-    {
-        return $this->withSupportIoOptimized($supportIoOptimized);
-    }
-
-    /**
      * @param string $supportIoOptimized
      *
      * @return $this
@@ -69,18 +57,6 @@ class QueryMarketImages extends RpcRequest
         $this->options['query']['SupportIoOptimized'] = $supportIoOptimized;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +73,6 @@ class QueryMarketImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +83,6 @@ class QueryMarketImages extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -147,18 +99,6 @@ class QueryMarketImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExtra() instead.
-     *
-     * @param string $extra
-     *
-     * @return $this
-     */
-    public function setExtra($extra)
-    {
-        return $this->withExtra($extra);
-    }
-
-    /**
      * @param string $extra
      *
      * @return $this
@@ -169,18 +109,6 @@ class QueryMarketImages extends RpcRequest
         $this->options['query']['Extra'] = $extra;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -197,18 +125,6 @@ class QueryMarketImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -219,18 +135,6 @@ class QueryMarketImages extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -247,18 +151,6 @@ class QueryMarketImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMarketImageCategory() instead.
-     *
-     * @param string $marketImageCategory
-     *
-     * @return $this
-     */
-    public function setMarketImageCategory($marketImageCategory)
-    {
-        return $this->withMarketImageCategory($marketImageCategory);
-    }
-
-    /**
      * @param string $marketImageCategory
      *
      * @return $this
@@ -269,18 +161,6 @@ class QueryMarketImages extends RpcRequest
         $this->options['query']['MarketImageCategory'] = $marketImageCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

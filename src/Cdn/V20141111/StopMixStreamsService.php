@@ -40,18 +40,6 @@ class StopMixStreamsService extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -62,18 +50,6 @@ class StopMixStreamsService extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMainDomainName() instead.
-     *
-     * @param string $mainDomainName
-     *
-     * @return $this
-     */
-    public function setMainDomainName($mainDomainName)
-    {
-        return $this->withMainDomainName($mainDomainName);
     }
 
     /**
@@ -90,18 +66,6 @@ class StopMixStreamsService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMixStreamName() instead.
-     *
-     * @param string $mixStreamName
-     *
-     * @return $this
-     */
-    public function setMixStreamName($mixStreamName)
-    {
-        return $this->withMixStreamName($mixStreamName);
-    }
-
-    /**
      * @param string $mixStreamName
      *
      * @return $this
@@ -112,18 +76,6 @@ class StopMixStreamsService extends RpcRequest
         $this->options['query']['MixStreamName'] = $mixStreamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixDomainName() instead.
-     *
-     * @param string $mixDomainName
-     *
-     * @return $this
-     */
-    public function setMixDomainName($mixDomainName)
-    {
-        return $this->withMixDomainName($mixDomainName);
     }
 
     /**
@@ -140,18 +92,6 @@ class StopMixStreamsService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -162,18 +102,6 @@ class StopMixStreamsService extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMainAppName() instead.
-     *
-     * @param string $mainAppName
-     *
-     * @return $this
-     */
-    public function setMainAppName($mainAppName)
-    {
-        return $this->withMainAppName($mainAppName);
     }
 
     /**
@@ -190,18 +118,6 @@ class StopMixStreamsService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMixAppName() instead.
-     *
-     * @param string $mixAppName
-     *
-     * @return $this
-     */
-    public function setMixAppName($mixAppName)
-    {
-        return $this->withMixAppName($mixAppName);
-    }
-
-    /**
      * @param string $mixAppName
      *
      * @return $this
@@ -212,18 +128,6 @@ class StopMixStreamsService extends RpcRequest
         $this->options['query']['MixAppName'] = $mixAppName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMainStreamName() instead.
-     *
-     * @param string $mainStreamName
-     *
-     * @return $this
-     */
-    public function setMainStreamName($mainStreamName)
-    {
-        return $this->withMainStreamName($mainStreamName);
     }
 
     /**

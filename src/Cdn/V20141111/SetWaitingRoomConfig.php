@@ -34,18 +34,6 @@ class SetWaitingRoomConfig extends RpcRequest
     public $action = 'SetWaitingRoomConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWaitUrl() instead.
-     *
-     * @param string $waitUrl
-     *
-     * @return $this
-     */
-    public function setWaitUrl($waitUrl)
-    {
-        return $this->withWaitUrl($waitUrl);
-    }
-
-    /**
      * @param string $waitUrl
      *
      * @return $this
@@ -56,18 +44,6 @@ class SetWaitingRoomConfig extends RpcRequest
         $this->options['query']['WaitUrl'] = $waitUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWaitUri() instead.
-     *
-     * @param string $waitUri
-     *
-     * @return $this
-     */
-    public function setWaitUri($waitUri)
-    {
-        return $this->withWaitUri($waitUri);
     }
 
     /**
@@ -84,18 +60,6 @@ class SetWaitingRoomConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxTimeWait() instead.
-     *
-     * @param string $maxTimeWait
-     *
-     * @return $this
-     */
-    public function setMaxTimeWait($maxTimeWait)
-    {
-        return $this->withMaxTimeWait($maxTimeWait);
-    }
-
-    /**
      * @param string $maxTimeWait
      *
      * @return $this
@@ -106,18 +70,6 @@ class SetWaitingRoomConfig extends RpcRequest
         $this->options['query']['MaxTimeWait'] = $maxTimeWait;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -134,18 +86,6 @@ class SetWaitingRoomConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllowPct() instead.
-     *
-     * @param string $allowPct
-     *
-     * @return $this
-     */
-    public function setAllowPct($allowPct)
-    {
-        return $this->withAllowPct($allowPct);
-    }
-
-    /**
      * @param string $allowPct
      *
      * @return $this
@@ -159,18 +99,6 @@ class SetWaitingRoomConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGapTime() instead.
-     *
-     * @param string $gapTime
-     *
-     * @return $this
-     */
-    public function setGapTime($gapTime)
-    {
-        return $this->withGapTime($gapTime);
-    }
-
-    /**
      * @param string $gapTime
      *
      * @return $this
@@ -181,18 +109,6 @@ class SetWaitingRoomConfig extends RpcRequest
         $this->options['query']['GapTime'] = $gapTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

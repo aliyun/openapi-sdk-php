@@ -38,18 +38,6 @@ class CreateOrder extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderSouce() instead.
-     *
-     * @param string $orderSouce
-     *
-     * @return $this
-     */
-    public function setOrderSouce($orderSouce)
-    {
-        return $this->withOrderSouce($orderSouce);
-    }
-
-    /**
      * @param string $orderSouce
      *
      * @return $this
@@ -60,18 +48,6 @@ class CreateOrder extends RpcRequest
         $this->options['query']['OrderSouce'] = $orderSouce;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommodity() instead.
-     *
-     * @param string $commodity
-     *
-     * @return $this
-     */
-    public function setCommodity($commodity)
-    {
-        return $this->withCommodity($commodity);
     }
 
     /**
@@ -88,18 +64,6 @@ class CreateOrder extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -110,18 +74,6 @@ class CreateOrder extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class CreateOrder extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPaymentType() instead.
-     *
-     * @param string $paymentType
-     *
-     * @return $this
-     */
-    public function setPaymentType($paymentType)
-    {
-        return $this->withPaymentType($paymentType);
-    }
-
-    /**
      * @param string $paymentType
      *
      * @return $this
@@ -160,18 +100,6 @@ class CreateOrder extends RpcRequest
         $this->options['query']['PaymentType'] = $paymentType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

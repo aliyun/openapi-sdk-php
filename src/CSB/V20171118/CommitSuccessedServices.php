@@ -33,23 +33,10 @@ class CommitSuccessedServices extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbName() instead.
-     *
-     * @param string $csbName
-     *
-     * @return $this
-     */
-    public function setCsbName($csbName)
-    {
-        return $this->withCsbName($csbName);
-    }
 
     /**
      * @param string $csbName
@@ -62,18 +49,6 @@ class CommitSuccessedServices extends RpcRequest
         $this->options['query']['CsbName'] = $csbName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServices() instead.
-     *
-     * @param string $services
-     *
-     * @return $this
-     */
-    public function setServices($services)
-    {
-        return $this->withServices($services);
     }
 
     /**

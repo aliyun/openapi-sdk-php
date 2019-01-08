@@ -39,18 +39,6 @@ class DeleteMountTarget extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMountTargetDomain() instead.
-     *
-     * @param string $mountTargetDomain
-     *
-     * @return $this
-     */
-    public function setMountTargetDomain($mountTargetDomain)
-    {
-        return $this->withMountTargetDomain($mountTargetDomain);
-    }
-
-    /**
      * @param string $mountTargetDomain
      *
      * @return $this
@@ -61,18 +49,6 @@ class DeleteMountTarget extends RpcRequest
         $this->options['query']['MountTargetDomain'] = $mountTargetDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
     }
 
     /**

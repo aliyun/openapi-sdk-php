@@ -41,18 +41,6 @@ class CreateLogQuery extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class CreateLogQuery extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryName() instead.
-     *
-     * @param string $queryName
-     *
-     * @return $this
-     */
-    public function setQueryName($queryName)
-    {
-        return $this->withQueryName($queryName);
     }
 
     /**
@@ -91,18 +67,6 @@ class CreateLogQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConditions() instead.
-     *
-     * @param string $conditions
-     *
-     * @return $this
-     */
-    public function setConditions($conditions)
-    {
-        return $this->withConditions($conditions);
-    }
-
-    /**
      * @param string $conditions
      *
      * @return $this
@@ -113,18 +77,6 @@ class CreateLogQuery extends RpcRequest
         $this->options['query']['Conditions'] = $conditions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryDetail() instead.
-     *
-     * @param string $queryDetail
-     *
-     * @return $this
-     */
-    public function setQueryDetail($queryDetail)
-    {
-        return $this->withQueryDetail($queryDetail);
     }
 
     /**

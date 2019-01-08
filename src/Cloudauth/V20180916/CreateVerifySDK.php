@@ -41,18 +41,6 @@ class CreateVerifySDK extends RpcRequest
     public $serviceCode = 'cloudauth';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class CreateVerifySDK extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppUrl() instead.
-     *
-     * @param string $appUrl
-     *
-     * @return $this
-     */
-    public function setAppUrl($appUrl)
-    {
-        return $this->withAppUrl($appUrl);
     }
 
     /**
@@ -91,18 +67,6 @@ class CreateVerifySDK extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -113,18 +77,6 @@ class CreateVerifySDK extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
     }
 
     /**

@@ -38,18 +38,6 @@ class RecoverCluster extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -60,18 +48,6 @@ class RecoverCluster extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOsTag() instead.
-     *
-     * @param string $osTag
-     *
-     * @return $this
-     */
-    public function setOsTag($osTag)
-    {
-        return $this->withOsTag($osTag);
     }
 
     /**
@@ -88,18 +64,6 @@ class RecoverCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountType() instead.
-     *
-     * @param string $accountType
-     *
-     * @return $this
-     */
-    public function setAccountType($accountType)
-    {
-        return $this->withAccountType($accountType);
-    }
-
-    /**
      * @param string $accountType
      *
      * @return $this
@@ -110,18 +74,6 @@ class RecoverCluster extends RpcRequest
         $this->options['query']['AccountType'] = $accountType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSchedulerType() instead.
-     *
-     * @param string $schedulerType
-     *
-     * @return $this
-     */
-    public function setSchedulerType($schedulerType)
-    {
-        return $this->withSchedulerType($schedulerType);
     }
 
     /**
@@ -138,18 +90,6 @@ class RecoverCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -160,18 +100,6 @@ class RecoverCluster extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
     }
 
     /**

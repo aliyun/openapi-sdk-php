@@ -42,28 +42,6 @@ class SetInstancesProtection extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIds()
-    {
-        return $this->getInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds(array $instanceIds)
-    {
-        return $this->withInstanceId($instanceIds);
-    }
-
-    /**
      * @param array $instanceId
      *
      * @return $this
@@ -76,18 +54,6 @@ class SetInstancesProtection extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -104,18 +70,6 @@ class SetInstancesProtection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -129,18 +83,6 @@ class SetInstancesProtection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -151,18 +93,6 @@ class SetInstancesProtection extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProtectedFromScaleIn() instead.
-     *
-     * @param string $protectedFromScaleIn
-     *
-     * @return $this
-     */
-    public function setProtectedFromScaleIn($protectedFromScaleIn)
-    {
-        return $this->withProtectedFromScaleIn($protectedFromScaleIn);
     }
 
     /**

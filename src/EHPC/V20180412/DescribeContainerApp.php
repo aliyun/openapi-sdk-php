@@ -33,18 +33,6 @@ class DescribeContainerApp extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainerId() instead.
-     *
-     * @param string $containerId
-     *
-     * @return $this
-     */
-    public function setContainerId($containerId)
-    {
-        return $this->withContainerId($containerId);
-    }
-
-    /**
      * @param string $containerId
      *
      * @return $this

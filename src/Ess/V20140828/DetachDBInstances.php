@@ -42,18 +42,6 @@ class DetachDBInstances extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -67,18 +55,6 @@ class DetachDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -89,28 +65,6 @@ class DetachDBInstances extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDBInstance() instead.
-     *
-     * @return array
-     */
-    public function getDBInstances()
-    {
-        return $this->getDBInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstance() instead.
-     *
-     * @param array $dBInstances
-     *
-     * @return $this
-     */
-    public function setDBInstances(array $dBInstances)
-    {
-        return $this->withDBInstance($dBInstances);
     }
 
     /**
@@ -129,18 +83,6 @@ class DetachDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceDetach() instead.
-     *
-     * @param string $forceDetach
-     *
-     * @return $this
-     */
-    public function setForceDetach($forceDetach)
-    {
-        return $this->withForceDetach($forceDetach);
-    }
-
-    /**
      * @param string $forceDetach
      *
      * @return $this
@@ -151,18 +93,6 @@ class DetachDBInstances extends RpcRequest
         $this->options['query']['ForceDetach'] = $forceDetach;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

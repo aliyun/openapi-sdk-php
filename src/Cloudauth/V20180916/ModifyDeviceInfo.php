@@ -44,18 +44,6 @@ class ModifyDeviceInfo extends RpcRequest
     public $serviceCode = 'cloudauth';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserDeviceId() instead.
-     *
-     * @param string $userDeviceId
-     *
-     * @return $this
-     */
-    public function setUserDeviceId($userDeviceId)
-    {
-        return $this->withUserDeviceId($userDeviceId);
-    }
-
-    /**
      * @param string $userDeviceId
      *
      * @return $this
@@ -66,18 +54,6 @@ class ModifyDeviceInfo extends RpcRequest
         $this->options['query']['UserDeviceId'] = $userDeviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizType() instead.
-     *
-     * @param string $bizType
-     *
-     * @return $this
-     */
-    public function setBizType($bizType)
-    {
-        return $this->withBizType($bizType);
     }
 
     /**
@@ -94,18 +70,6 @@ class ModifyDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -116,18 +80,6 @@ class ModifyDeviceInfo extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiredDay() instead.
-     *
-     * @param string $expiredDay
-     *
-     * @return $this
-     */
-    public function setExpiredDay($expiredDay)
-    {
-        return $this->withExpiredDay($expiredDay);
     }
 
     /**
@@ -144,18 +96,6 @@ class ModifyDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -169,18 +109,6 @@ class ModifyDeviceInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -191,18 +119,6 @@ class ModifyDeviceInfo extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceId() instead.
-     *
-     * @param string $deviceId
-     *
-     * @return $this
-     */
-    public function setDeviceId($deviceId)
-    {
-        return $this->withDeviceId($deviceId);
     }
 
     /**

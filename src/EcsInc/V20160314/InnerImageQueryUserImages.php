@@ -56,18 +56,6 @@ class InnerImageQueryUserImages extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -78,18 +66,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -106,18 +82,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -128,18 +92,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -156,18 +108,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOsTypeId() instead.
-     *
-     * @param string $osTypeId
-     *
-     * @return $this
-     */
-    public function setosTypeId($osTypeId)
-    {
-        return $this->withOsTypeId($osTypeId);
-    }
-
-    /**
      * @param string $osTypeId
      *
      * @return $this
@@ -178,18 +118,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['osTypeId'] = $osTypeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -206,18 +134,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -228,18 +144,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionIndexId() instead.
-     *
-     * @param string $regionIndexId
-     *
-     * @return $this
-     */
-    public function setregionIndexId($regionIndexId)
-    {
-        return $this->withRegionIndexId($regionIndexId);
     }
 
     /**
@@ -256,18 +160,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -278,18 +170,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -306,18 +186,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setimageName($imageName)
-    {
-        return $this->withImageName($imageName);
-    }
-
-    /**
      * @param string $imageName
      *
      * @return $this
@@ -328,18 +196,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['imageName'] = $imageName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setpageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -356,18 +212,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsPublic() instead.
-     *
-     * @param string $isPublic
-     *
-     * @return $this
-     */
-    public function setisPublic($isPublic)
-    {
-        return $this->withIsPublic($isPublic);
-    }
-
-    /**
      * @param string $isPublic
      *
      * @return $this
@@ -378,18 +222,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['isPublic'] = $isPublic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -406,18 +238,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotNo() instead.
-     *
-     * @param string $snapshotNo
-     *
-     * @return $this
-     */
-    public function setsnapshotNo($snapshotNo)
-    {
-        return $this->withSnapshotNo($snapshotNo);
-    }
-
-    /**
      * @param string $snapshotNo
      *
      * @return $this
@@ -428,18 +248,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['snapshotNo'] = $snapshotNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -456,18 +264,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -481,18 +277,6 @@ class InnerImageQueryUserImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -503,18 +287,6 @@ class InnerImageQueryUserImages extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setstatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -38,18 +38,6 @@ class DeleteCategory extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategoryId() instead.
-     *
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function setCategoryId($categoryId)
-    {
-        return $this->withCategoryId($categoryId);
-    }
-
-    /**
      * @param string $categoryId
      *
      * @return $this

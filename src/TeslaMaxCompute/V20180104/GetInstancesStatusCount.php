@@ -31,18 +31,6 @@ class GetInstancesStatusCount extends RpcRequest
     public $action = 'GetInstancesStatusCount';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
-
-    /**
      * @param string $cluster
      *
      * @return $this
@@ -53,18 +41,6 @@ class GetInstancesStatusCount extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaId() instead.
-     *
-     * @param string $quotaId
-     *
-     * @return $this
-     */
-    public function setQuotaId($quotaId)
-    {
-        return $this->withQuotaId($quotaId);
     }
 
     /**
@@ -81,18 +57,6 @@ class GetInstancesStatusCount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -103,18 +67,6 @@ class GetInstancesStatusCount extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaName() instead.
-     *
-     * @param string $quotaName
-     *
-     * @return $this
-     */
-    public function setQuotaName($quotaName)
-    {
-        return $this->withQuotaName($quotaName);
     }
 
     /**

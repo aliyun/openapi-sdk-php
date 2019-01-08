@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\CloudPhoto
  *
- * @method V20170711\CloudPhotoApiResolver v20170711()
+ * @method CloudPhotoV20170711ApiResolver v20170711()
  */
 class CloudPhoto
 {

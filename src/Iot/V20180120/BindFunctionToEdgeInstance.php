@@ -41,18 +41,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRunMode() instead.
-     *
-     * @param string $runMode
-     *
-     * @return $this
-     */
-    public function setRunMode($runMode)
-    {
-        return $this->withRunMode($runMode);
-    }
-
-    /**
      * @param string $runMode
      *
      * @return $this
@@ -63,18 +51,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
         $this->options['query']['RunMode'] = $runMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMemorySize() instead.
-     *
-     * @param string $memorySize
-     *
-     * @return $this
-     */
-    public function setMemorySize($memorySize)
-    {
-        return $this->withMemorySize($memorySize);
     }
 
     /**
@@ -91,18 +67,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -113,18 +77,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTriggerContent() instead.
-     *
-     * @param string $triggerContent
-     *
-     * @return $this
-     */
-    public function setTriggerContent($triggerContent)
-    {
-        return $this->withTriggerContent($triggerContent);
     }
 
     /**
@@ -141,18 +93,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleArn() instead.
-     *
-     * @param string $roleArn
-     *
-     * @return $this
-     */
-    public function setRoleArn($roleArn)
-    {
-        return $this->withRoleArn($roleArn);
-    }
-
-    /**
      * @param string $roleArn
      *
      * @return $this
@@ -163,18 +103,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
         $this->options['query']['RoleArn'] = $roleArn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFunctionName() instead.
-     *
-     * @param string $functionName
-     *
-     * @return $this
-     */
-    public function setFunctionName($functionName)
-    {
-        return $this->withFunctionName($functionName);
     }
 
     /**
@@ -191,18 +119,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFcRegionId() instead.
-     *
-     * @param string $fcRegionId
-     *
-     * @return $this
-     */
-    public function setFcRegionId($fcRegionId)
-    {
-        return $this->withFcRegionId($fcRegionId);
-    }
-
-    /**
      * @param string $fcRegionId
      *
      * @return $this
@@ -216,18 +132,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
-    }
-
-    /**
      * @param string $serviceName
      *
      * @return $this
@@ -238,18 +142,6 @@ class BindFunctionToEdgeInstance extends RpcRequest
         $this->options['query']['ServiceName'] = $serviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
     }
 
     /**

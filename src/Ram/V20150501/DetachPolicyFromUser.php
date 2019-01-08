@@ -34,23 +34,10 @@ class DetachPolicyFromUser extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicyType() instead.
-     *
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function setPolicyType($policyType)
-    {
-        return $this->withPolicyType($policyType);
-    }
 
     /**
      * @param string $policyType
@@ -66,18 +53,6 @@ class DetachPolicyFromUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPolicyName() instead.
-     *
-     * @param string $policyName
-     *
-     * @return $this
-     */
-    public function setPolicyName($policyName)
-    {
-        return $this->withPolicyName($policyName);
-    }
-
-    /**
      * @param string $policyName
      *
      * @return $this
@@ -88,18 +63,6 @@ class DetachPolicyFromUser extends RpcRequest
         $this->options['query']['PolicyName'] = $policyName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -32,23 +32,10 @@ class ListPoliciesForRole extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
-    }
 
     /**
      * @param string $roleName

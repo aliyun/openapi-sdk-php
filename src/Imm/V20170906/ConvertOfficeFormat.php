@@ -56,18 +56,6 @@ class ConvertOfficeFormat extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcType() instead.
-     *
-     * @param string $srcType
-     *
-     * @return $this
-     */
-    public function setSrcType($srcType)
-    {
-        return $this->withSrcType($srcType);
-    }
-
-    /**
      * @param string $srcType
      *
      * @return $this
@@ -78,18 +66,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['SrcType'] = $srcType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
     }
 
     /**
@@ -106,18 +82,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -128,18 +92,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetRow() instead.
-     *
-     * @param string $maxSheetRow
-     *
-     * @return $this
-     */
-    public function setMaxSheetRow($maxSheetRow)
-    {
-        return $this->withMaxSheetRow($maxSheetRow);
     }
 
     /**
@@ -156,18 +108,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetCount() instead.
-     *
-     * @param string $maxSheetCount
-     *
-     * @return $this
-     */
-    public function setMaxSheetCount($maxSheetCount)
-    {
-        return $this->withMaxSheetCount($maxSheetCount);
-    }
-
-    /**
      * @param string $maxSheetCount
      *
      * @return $this
@@ -178,18 +118,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['MaxSheetCount'] = $maxSheetCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndPage() instead.
-     *
-     * @param string $endPage
-     *
-     * @return $this
-     */
-    public function setEndPage($endPage)
-    {
-        return $this->withEndPage($endPage);
     }
 
     /**
@@ -206,18 +134,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFileSuffix() instead.
-     *
-     * @param string $tgtFileSuffix
-     *
-     * @return $this
-     */
-    public function setTgtFileSuffix($tgtFileSuffix)
-    {
-        return $this->withTgtFileSuffix($tgtFileSuffix);
-    }
-
-    /**
      * @param string $tgtFileSuffix
      *
      * @return $this
@@ -228,18 +144,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['TgtFileSuffix'] = $tgtFileSuffix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPdfVector() instead.
-     *
-     * @param string $pdfVector
-     *
-     * @return $this
-     */
-    public function setPdfVector($pdfVector)
-    {
-        return $this->withPdfVector($pdfVector);
     }
 
     /**
@@ -256,18 +160,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSheetOnePage() instead.
-     *
-     * @param string $sheetOnePage
-     *
-     * @return $this
-     */
-    public function setSheetOnePage($sheetOnePage)
-    {
-        return $this->withSheetOnePage($sheetOnePage);
-    }
-
-    /**
      * @param string $sheetOnePage
      *
      * @return $this
@@ -278,18 +170,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['SheetOnePage'] = $sheetOnePage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -306,18 +186,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartPage() instead.
-     *
-     * @param string $startPage
-     *
-     * @return $this
-     */
-    public function setStartPage($startPage)
-    {
-        return $this->withStartPage($startPage);
-    }
-
-    /**
      * @param string $startPage
      *
      * @return $this
@@ -328,18 +196,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['StartPage'] = $startPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetCol() instead.
-     *
-     * @param string $maxSheetCol
-     *
-     * @return $this
-     */
-    public function setMaxSheetCol($maxSheetCol)
-    {
-        return $this->withMaxSheetCol($maxSheetCol);
     }
 
     /**
@@ -356,18 +212,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtType() instead.
-     *
-     * @param string $tgtType
-     *
-     * @return $this
-     */
-    public function setTgtType($tgtType)
-    {
-        return $this->withTgtType($tgtType);
-    }
-
-    /**
      * @param string $tgtType
      *
      * @return $this
@@ -378,18 +222,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['TgtType'] = $tgtType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFitToPagesWide() instead.
-     *
-     * @param string $fitToPagesWide
-     *
-     * @return $this
-     */
-    public function setFitToPagesWide($fitToPagesWide)
-    {
-        return $this->withFitToPagesWide($fitToPagesWide);
     }
 
     /**
@@ -406,18 +238,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFilePrefix() instead.
-     *
-     * @param string $tgtFilePrefix
-     *
-     * @return $this
-     */
-    public function setTgtFilePrefix($tgtFilePrefix)
-    {
-        return $this->withTgtFilePrefix($tgtFilePrefix);
-    }
-
-    /**
      * @param string $tgtFilePrefix
      *
      * @return $this
@@ -428,18 +248,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['TgtFilePrefix'] = $tgtFilePrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFitToPagesTall() instead.
-     *
-     * @param string $fitToPagesTall
-     *
-     * @return $this
-     */
-    public function setFitToPagesTall($fitToPagesTall)
-    {
-        return $this->withFitToPagesTall($fitToPagesTall);
     }
 
     /**
@@ -456,18 +264,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
-    }
-
-    /**
      * @param string $srcUri
      *
      * @return $this
@@ -481,18 +277,6 @@ class ConvertOfficeFormat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFilePages() instead.
-     *
-     * @param string $tgtFilePages
-     *
-     * @return $this
-     */
-    public function setTgtFilePages($tgtFilePages)
-    {
-        return $this->withTgtFilePages($tgtFilePages);
-    }
-
-    /**
      * @param string $tgtFilePages
      *
      * @return $this
@@ -503,18 +287,6 @@ class ConvertOfficeFormat extends RpcRequest
         $this->options['query']['TgtFilePages'] = $tgtFilePages;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtUri() instead.
-     *
-     * @param string $tgtUri
-     *
-     * @return $this
-     */
-    public function setTgtUri($tgtUri)
-    {
-        return $this->withTgtUri($tgtUri);
     }
 
     /**

@@ -34,18 +34,6 @@ class UnbindFunctionFromEdgeInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFunctionId() instead.
-     *
-     * @param string $functionId
-     *
-     * @return $this
-     */
-    public function setFunctionId($functionId)
-    {
-        return $this->withFunctionId($functionId);
-    }
-
-    /**
      * @param string $functionId
      *
      * @return $this
@@ -56,18 +44,6 @@ class UnbindFunctionFromEdgeInstance extends RpcRequest
         $this->options['query']['FunctionId'] = $functionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

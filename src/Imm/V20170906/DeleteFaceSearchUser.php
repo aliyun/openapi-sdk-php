@@ -40,18 +40,6 @@ class DeleteFaceSearchUser extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -65,18 +53,6 @@ class DeleteFaceSearchUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this
@@ -87,18 +63,6 @@ class DeleteFaceSearchUser extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
     }
 
     /**

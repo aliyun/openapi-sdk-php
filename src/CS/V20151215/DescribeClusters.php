@@ -39,18 +39,6 @@ class DescribeClusters extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterType() instead.
-     *
-     * @param string $clusterType
-     *
-     * @return $this
-     */
-    public function setclusterType($clusterType)
-    {
-        return $this->withClusterType($clusterType);
-    }
-
-    /**
      * @param string $clusterType
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeClusters extends RoaRequest
         $this->options['query']['clusterType'] = $clusterType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

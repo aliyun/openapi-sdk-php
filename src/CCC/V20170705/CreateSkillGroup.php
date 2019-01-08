@@ -43,28 +43,6 @@ class CreateSkillGroup extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getSkillLevel() instead.
-     *
-     * @return array
-     */
-    public function getSkillLevels()
-    {
-        return $this->getSkillLevel();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillLevel() instead.
-     *
-     * @param array $skillLevels
-     *
-     * @return $this
-     */
-    public function setSkillLevels(array $skillLevels)
-    {
-        return $this->withSkillLevel($skillLevels);
-    }
-
-    /**
      * @param array $skillLevel
      *
      * @return $this
@@ -80,18 +58,6 @@ class CreateSkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -102,28 +68,6 @@ class CreateSkillGroup extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOutboundPhoneNumberId() instead.
-     *
-     * @return array
-     */
-    public function getOutboundPhoneNumberIds()
-    {
-        return $this->getOutboundPhoneNumberId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutboundPhoneNumberId() instead.
-     *
-     * @param array $outboundPhoneNumberIds
-     *
-     * @return $this
-     */
-    public function setOutboundPhoneNumberIds(array $outboundPhoneNumberIds)
-    {
-        return $this->withOutboundPhoneNumberId($outboundPhoneNumberIds);
     }
 
     /**
@@ -142,18 +86,6 @@ class CreateSkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -167,18 +99,6 @@ class CreateSkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -189,28 +109,6 @@ class CreateSkillGroup extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getUserId() instead.
-     *
-     * @return array
-     */
-    public function getUserIds()
-    {
-        return $this->getUserId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param array $userIds
-     *
-     * @return $this
-     */
-    public function setUserIds(array $userIds)
-    {
-        return $this->withUserId($userIds);
     }
 
     /**

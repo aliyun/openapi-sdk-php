@@ -43,18 +43,6 @@ class QueryMetricTop extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -65,18 +53,6 @@ class QueryMetricTop extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -93,18 +69,6 @@ class QueryMetricTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
-    }
-
-    /**
      * @param string $metric
      *
      * @return $this
@@ -115,18 +79,6 @@ class QueryMetricTop extends RpcRequest
         $this->options['query']['Metric'] = $metric;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLength() instead.
-     *
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        return $this->withLength($length);
     }
 
     /**
@@ -143,18 +95,6 @@ class QueryMetricTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -165,18 +105,6 @@ class QueryMetricTop extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -193,18 +121,6 @@ class QueryMetricTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderby() instead.
-     *
-     * @param string $orderby
-     *
-     * @return $this
-     */
-    public function setOrderby($orderby)
-    {
-        return $this->withOrderby($orderby);
-    }
-
-    /**
      * @param string $orderby
      *
      * @return $this
@@ -215,18 +131,6 @@ class QueryMetricTop extends RpcRequest
         $this->options['query']['Orderby'] = $orderby;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpress() instead.
-     *
-     * @param string $express
-     *
-     * @return $this
-     */
-    public function setExpress($express)
-    {
-        return $this->withExpress($express);
     }
 
     /**
@@ -243,18 +147,6 @@ class QueryMetricTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -268,18 +160,6 @@ class QueryMetricTop extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
-    }
-
-    /**
      * @param string $dimensions
      *
      * @return $this
@@ -290,18 +170,6 @@ class QueryMetricTop extends RpcRequest
         $this->options['query']['Dimensions'] = $dimensions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderDesc() instead.
-     *
-     * @param string $orderDesc
-     *
-     * @return $this
-     */
-    public function setOrderDesc($orderDesc)
-    {
-        return $this->withOrderDesc($orderDesc);
     }
 
     /**

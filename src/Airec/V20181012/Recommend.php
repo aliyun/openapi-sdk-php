@@ -43,18 +43,6 @@ class Recommend extends RoaRequest
     public $serviceCode = 'airec';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReturnCount() instead.
-     *
-     * @param string $returnCount
-     *
-     * @return $this
-     */
-    public function setReturnCount($returnCount)
-    {
-        return $this->withReturnCount($returnCount);
-    }
-
-    /**
      * @param string $returnCount
      *
      * @return $this
@@ -65,18 +53,6 @@ class Recommend extends RoaRequest
         $this->options['query']['ReturnCount'] = $returnCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -93,18 +69,6 @@ class Recommend extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
-    }
-
-    /**
      * @param string $ip
      *
      * @return $this
@@ -115,18 +79,6 @@ class Recommend extends RoaRequest
         $this->options['query']['Ip'] = $ip;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
     }
 
     /**
@@ -143,18 +95,6 @@ class Recommend extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImei() instead.
-     *
-     * @param string $imei
-     *
-     * @return $this
-     */
-    public function setImei($imei)
-    {
-        return $this->withImei($imei);
-    }
-
-    /**
      * @param string $imei
      *
      * @return $this
@@ -165,18 +105,6 @@ class Recommend extends RoaRequest
         $this->options['query']['Imei'] = $imei;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
     }
 
     /**

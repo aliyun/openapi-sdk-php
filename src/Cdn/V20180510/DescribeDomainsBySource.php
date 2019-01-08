@@ -35,18 +35,6 @@ class DescribeDomainsBySource extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSources() instead.
-     *
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function setSources($sources)
-    {
-        return $this->withSources($sources);
-    }
-
-    /**
      * @param string $sources
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeDomainsBySource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeDomainsBySource extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -40,18 +40,6 @@ class AddCasterProgram extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -62,28 +50,6 @@ class AddCasterProgram extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getEpisode() instead.
-     *
-     * @return array
-     */
-    public function getEpisodes()
-    {
-        return $this->getEpisode();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEpisode() instead.
-     *
-     * @param array $episodes
-     *
-     * @return $this
-     */
-    public function setEpisodes(array $episodes)
-    {
-        return $this->withEpisode($episodes);
     }
 
     /**
@@ -107,18 +73,6 @@ class AddCasterProgram extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

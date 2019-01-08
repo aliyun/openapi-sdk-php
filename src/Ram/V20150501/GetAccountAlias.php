@@ -31,7 +31,6 @@ class GetAccountAlias extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

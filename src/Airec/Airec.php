@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Airec
  *
- * @method V20181012\AirecApiResolver v20181012()
+ * @method AirecV20181012ApiResolver v20181012()
  */
 class Airec
 {

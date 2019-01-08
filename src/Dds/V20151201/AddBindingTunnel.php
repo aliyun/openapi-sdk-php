@@ -48,18 +48,6 @@ class AddBindingTunnel extends RpcRequest
     public $serviceCode = 'dds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -70,18 +58,6 @@ class AddBindingTunnel extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRestoreCheckPointTS() instead.
-     *
-     * @param string $restoreCheckPointTS
-     *
-     * @return $this
-     */
-    public function setRestoreCheckPointTS($restoreCheckPointTS)
-    {
-        return $this->withRestoreCheckPointTS($restoreCheckPointTS);
     }
 
     /**
@@ -98,18 +74,6 @@ class AddBindingTunnel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceDataFilter() instead.
-     *
-     * @param string $sourceDataFilter
-     *
-     * @return $this
-     */
-    public function setSourceDataFilter($sourceDataFilter)
-    {
-        return $this->withSourceDataFilter($sourceDataFilter);
-    }
-
-    /**
      * @param string $sourceDataFilter
      *
      * @return $this
@@ -120,18 +84,6 @@ class AddBindingTunnel extends RpcRequest
         $this->options['query']['SourceDataFilter'] = $sourceDataFilter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -148,18 +100,6 @@ class AddBindingTunnel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -170,18 +110,6 @@ class AddBindingTunnel extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -198,18 +126,6 @@ class AddBindingTunnel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -220,18 +136,6 @@ class AddBindingTunnel extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReplicationGroupId() instead.
-     *
-     * @param string $replicationGroupId
-     *
-     * @return $this
-     */
-    public function setReplicationGroupId($replicationGroupId)
-    {
-        return $this->withReplicationGroupId($replicationGroupId);
     }
 
     /**
@@ -248,18 +152,6 @@ class AddBindingTunnel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationInstanceId() instead.
-     *
-     * @param string $destinationInstanceId
-     *
-     * @return $this
-     */
-    public function setDestinationInstanceId($destinationInstanceId)
-    {
-        return $this->withDestinationInstanceId($destinationInstanceId);
-    }
-
-    /**
      * @param string $destinationInstanceId
      *
      * @return $this
@@ -273,18 +165,6 @@ class AddBindingTunnel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceInstanceId() instead.
-     *
-     * @param string $sourceInstanceId
-     *
-     * @return $this
-     */
-    public function setSourceInstanceId($sourceInstanceId)
-    {
-        return $this->withSourceInstanceId($sourceInstanceId);
-    }
-
-    /**
      * @param string $sourceInstanceId
      *
      * @return $this
@@ -295,18 +175,6 @@ class AddBindingTunnel extends RpcRequest
         $this->options['query']['SourceInstanceId'] = $sourceInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationDataFilter() instead.
-     *
-     * @param string $destinationDataFilter
-     *
-     * @return $this
-     */
-    public function setDestinationDataFilter($destinationDataFilter)
-    {
-        return $this->withDestinationDataFilter($destinationDataFilter);
     }
 
     /**

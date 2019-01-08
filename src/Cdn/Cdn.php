@@ -9,8 +9,8 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Cdn
  *
- * @method V20141111\CdnApiResolver v20141111()
- * @method V20180510\CdnApiResolver v20180510()
+ * @method CdnV20141111ApiResolver v20141111()
+ * @method CdnV20180510ApiResolver v20180510()
  */
 class Cdn
 {

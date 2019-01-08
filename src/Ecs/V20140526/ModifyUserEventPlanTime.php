@@ -39,18 +39,6 @@ class ModifyUserEventPlanTime extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param string $eventId
-     *
-     * @return $this
-     */
-    public function setEventId($eventId)
-    {
-        return $this->withEventId($eventId);
-    }
-
-    /**
      * @param string $eventId
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyUserEventPlanTime extends RpcRequest
         $this->options['query']['EventId'] = $eventId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyUserEventPlanTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
-
-    /**
      * @param string $resourceId
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyUserEventPlanTime extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyUserEventPlanTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewPlanTime() instead.
-     *
-     * @param string $newPlanTime
-     *
-     * @return $this
-     */
-    public function setNewPlanTime($newPlanTime)
-    {
-        return $this->withNewPlanTime($newPlanTime);
-    }
-
-    /**
      * @param string $newPlanTime
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyUserEventPlanTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyUserEventPlanTime extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewExpireTime() instead.
-     *
-     * @param string $newExpireTime
-     *
-     * @return $this
-     */
-    public function setNewExpireTime($newExpireTime)
-    {
-        return $this->withNewExpireTime($newExpireTime);
     }
 
     /**

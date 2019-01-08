@@ -2,31 +2,65 @@
 
 namespace AlibabaCloud\LinkFace\V20180720;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Find the specified Api of the LinkFace based on the method name as the Api name.
+ * Request of LinkFace
  *
- * @package   AlibabaCloud\LinkFace\V20180720
- *
- * @method static CreateGroup createGroup(array $options = [])
- * @method static DeleteFace deleteFace(array $options = [])
- * @method static DeleteGroup deleteGroup(array $options = [])
- * @method static LinkFaceApiResolver linkFaceApiResolver(array $options = [])
- * @method static QueryAddUserInfo queryAddUserInfo(array $options = [])
- * @method static QueryAllGroups queryAllGroups(array $options = [])
- * @method static QueryAuthentication queryAuthentication(array $options = [])
- * @method static QueryFace queryFace(array $options = [])
- * @method static QueryGroupUsers queryGroupUsers(array $options = [])
- * @method static QueryLicenses queryLicenses(array $options = [])
- * @method static QuerySyncPicSchedule querySyncPicSchedule(array $options = [])
- * @method static RegisterFace registerFace(array $options = [])
- * @method static SearchFace searchFace(array $options = [])
- * @method static SyncFacePictures syncFacePictures(array $options = [])
- * @method static UnlinkFace unlinkFace(array $options = [])
- * @method static UpdateFace updateFace(array $options = [])
+ * @method string getGroupId()
+ * @method string getUserId()
  */
-class LinkFace
+class LinkFace extends RpcRequest
 {
-    use ApiResolverTrait;
+
+    /**
+     * @var string
+     */
+    public $product = 'LinkFace';
+
+    /**
+     * @var string
+     */
+    public $version = '2018-07-20';
+
+    /**
+     * @var string
+     */
+    public $action = 'LinkFace';
+
+    /**
+     * @var string
+     */
+    public $scheme = 'https';
+
+    /**
+     * @var string
+     */
+    public $method = 'POST';
+
+    /**
+     * @param string $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId($groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        $this->options['query']['GroupId'] = $groupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $userId
+     *
+     * @return $this
+     */
+    public function withUserId($userId)
+    {
+        $this->data['UserId'] = $userId;
+        $this->options['query']['UserId'] = $userId;
+
+        return $this;
+    }
 }

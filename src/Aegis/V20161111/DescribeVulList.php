@@ -47,18 +47,6 @@ class DescribeVulList extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
-
-    /**
      * @param string $statusList
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -119,18 +83,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['Level'] = $level;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -147,18 +99,6 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
     }
 
     /**
@@ -197,18 +125,6 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -219,18 +135,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -247,18 +151,6 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNecessity() instead.
-     *
-     * @param string $necessity
-     *
-     * @return $this
-     */
-    public function setNecessity($necessity)
-    {
-        return $this->withNecessity($necessity);
-    }
-
-    /**
      * @param string $necessity
      *
      * @return $this
@@ -269,18 +161,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['Necessity'] = $necessity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

@@ -41,18 +41,6 @@ class DeactivateScalingConfiguration extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId() instead.
-     *
-     * @param string $scalingConfigurationId
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId($scalingConfigurationId)
-    {
-        return $this->withScalingConfigurationId($scalingConfigurationId);
-    }
-
-    /**
      * @param string $scalingConfigurationId
      *
      * @return $this
@@ -63,18 +51,6 @@ class DeactivateScalingConfiguration extends RpcRequest
         $this->options['query']['ScalingConfigurationId'] = $scalingConfigurationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -91,18 +67,6 @@ class DeactivateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -113,18 +77,6 @@ class DeactivateScalingConfiguration extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

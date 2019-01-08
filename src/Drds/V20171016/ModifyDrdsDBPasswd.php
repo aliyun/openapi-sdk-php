@@ -35,18 +35,6 @@ class ModifyDrdsDBPasswd extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewPasswd() instead.
-     *
-     * @param string $newPasswd
-     *
-     * @return $this
-     */
-    public function setNewPasswd($newPasswd)
-    {
-        return $this->withNewPasswd($newPasswd);
-    }
-
-    /**
      * @param string $newPasswd
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifyDrdsDBPasswd extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
-
-    /**
      * @param string $dbName
      *
      * @return $this
@@ -82,18 +58,6 @@ class ModifyDrdsDBPasswd extends RpcRequest
         $this->options['query']['DbName'] = $dbName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
     }
 
     /**

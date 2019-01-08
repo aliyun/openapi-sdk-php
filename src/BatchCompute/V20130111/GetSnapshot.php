@@ -34,18 +34,6 @@ class GetSnapshot extends RoaRequest
     public $pathPattern = '/snapshots/[ResourceName]';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetSnapshot extends RoaRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceName() instead.
-     *
-     * @param string $resourceName
-     *
-     * @return $this
-     */
-    public function setResourceName($resourceName)
-    {
-        return $this->withResourceName($resourceName);
     }
 
     /**

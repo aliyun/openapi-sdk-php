@@ -35,18 +35,6 @@ class QueryRecordPlanDevices extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlanId() instead.
-     *
-     * @param string $planId
-     *
-     * @return $this
-     */
-    public function setPlanId($planId)
-    {
-        return $this->withPlanId($planId);
-    }
-
-    /**
      * @param string $planId
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryRecordPlanDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -82,18 +58,6 @@ class QueryRecordPlanDevices extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

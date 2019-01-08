@@ -36,18 +36,6 @@ class QueryMovieTickets extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -58,18 +46,6 @@ class QueryMovieTickets extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizUid() instead.
-     *
-     * @param string $bizUid
-     *
-     * @return $this
-     */
-    public function setBizUid($bizUid)
-    {
-        return $this->withBizUid($bizUid);
     }
 
     /**
@@ -86,18 +62,6 @@ class QueryMovieTickets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderId() instead.
-     *
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        return $this->withOrderId($orderId);
-    }
-
-    /**
      * @param string $orderId
      *
      * @return $this
@@ -108,18 +72,6 @@ class QueryMovieTickets extends RpcRequest
         $this->options['query']['OrderId'] = $orderId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

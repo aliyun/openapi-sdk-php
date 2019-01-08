@@ -47,18 +47,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConnectionStringPrefix() instead.
-     *
-     * @param string $connectionStringPrefix
-     *
-     * @return $this
-     */
-    public function setConnectionStringPrefix($connectionStringPrefix)
-    {
-        return $this->withConnectionStringPrefix($connectionStringPrefix);
     }
 
     /**
@@ -97,18 +73,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +83,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
     }
 
     /**
@@ -147,18 +99,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDistributionType() instead.
-     *
-     * @param string $distributionType
-     *
-     * @return $this
-     */
-    public function setDistributionType($distributionType)
-    {
-        return $this->withDistributionType($distributionType);
-    }
-
-    /**
      * @param string $distributionType
      *
      * @return $this
@@ -169,18 +109,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
         $this->options['query']['DistributionType'] = $distributionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -197,18 +125,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWeight() instead.
-     *
-     * @param string $weight
-     *
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        return $this->withWeight($weight);
-    }
-
-    /**
      * @param string $weight
      *
      * @return $this
@@ -219,18 +135,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
         $this->options['query']['Weight'] = $weight;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -247,18 +151,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -269,18 +161,6 @@ class ModifyReadWriteSplittingConnection extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxDelayTime() instead.
-     *
-     * @param string $maxDelayTime
-     *
-     * @return $this
-     */
-    public function setMaxDelayTime($maxDelayTime)
-    {
-        return $this->withMaxDelayTime($maxDelayTime);
     }
 
     /**

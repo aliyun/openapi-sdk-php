@@ -46,18 +46,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArgRegex() instead.
-     *
-     * @param string $argRegex
-     *
-     * @return $this
-     */
-    public function setArgRegex($argRegex)
-    {
-        return $this->withArgRegex($argRegex);
-    }
-
-    /**
      * @param string $argRegex
      *
      * @return $this
@@ -68,18 +56,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['ArgRegex'] = $argRegex;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNullAllowed() instead.
-     *
-     * @param string $nullAllowed
-     *
-     * @return $this
-     */
-    public function setNullAllowed($nullAllowed)
-    {
-        return $this->withNullAllowed($nullAllowed);
     }
 
     /**
@@ -96,18 +72,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigs() instead.
-     *
-     * @param string $configs
-     *
-     * @return $this
-     */
-    public function setConfigs($configs)
-    {
-        return $this->withConfigs($configs);
-    }
-
-    /**
      * @param string $configs
      *
      * @return $this
@@ -118,18 +82,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['Configs'] = $configs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArgName() instead.
-     *
-     * @param string $argName
-     *
-     * @return $this
-     */
-    public function setArgName($argName)
-    {
-        return $this->withArgName($argName);
     }
 
     /**
@@ -146,18 +98,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -168,18 +108,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +124,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConflictFunction() instead.
-     *
-     * @param string $conflictFunction
-     *
-     * @return $this
-     */
-    public function setConflictFunction($conflictFunction)
-    {
-        return $this->withConflictFunction($conflictFunction);
-    }
-
-    /**
      * @param string $conflictFunction
      *
      * @return $this
@@ -218,18 +134,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['ConflictFunction'] = $conflictFunction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFunctionId() instead.
-     *
-     * @param string $functionId
-     *
-     * @return $this
-     */
-    public function setFunctionId($functionId)
-    {
-        return $this->withFunctionId($functionId);
     }
 
     /**
@@ -246,18 +150,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArgValue() instead.
-     *
-     * @param string $argValue
-     *
-     * @return $this
-     */
-    public function setArgValue($argValue)
-    {
-        return $this->withArgValue($argValue);
-    }
-
-    /**
      * @param string $argValue
      *
      * @return $this
@@ -268,18 +160,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['ArgValue'] = $argValue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -296,18 +176,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFunctionName() instead.
-     *
-     * @param string $functionName
-     *
-     * @return $this
-     */
-    public function setFunctionName($functionName)
-    {
-        return $this->withFunctionName($functionName);
-    }
-
-    /**
      * @param string $functionName
      *
      * @return $this
@@ -318,18 +186,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['FunctionName'] = $functionName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckUrl() instead.
-     *
-     * @param string $checkUrl
-     *
-     * @return $this
-     */
-    public function setCheckUrl($checkUrl)
-    {
-        return $this->withCheckUrl($checkUrl);
     }
 
     /**
@@ -346,18 +202,6 @@ class SetBusinessFunctionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArgId() instead.
-     *
-     * @param string $argId
-     *
-     * @return $this
-     */
-    public function setArgId($argId)
-    {
-        return $this->withArgId($argId);
-    }
-
-    /**
      * @param string $argId
      *
      * @return $this
@@ -368,18 +212,6 @@ class SetBusinessFunctionConfig extends RpcRequest
         $this->options['query']['ArgId'] = $argId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSeqId() instead.
-     *
-     * @param string $seqId
-     *
-     * @return $this
-     */
-    public function setSeqId($seqId)
-    {
-        return $this->withSeqId($seqId);
     }
 
     /**

@@ -34,18 +34,6 @@ class GetResolveCountSummary extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGranularity() instead.
-     *
-     * @param string $granularity
-     *
-     * @return $this
-     */
-    public function setGranularity($granularity)
-    {
-        return $this->withGranularity($granularity);
-    }
-
-    /**
      * @param string $granularity
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetResolveCountSummary extends RpcRequest
         $this->options['query']['Granularity'] = $granularity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeSpan() instead.
-     *
-     * @param string $timeSpan
-     *
-     * @return $this
-     */
-    public function setTimeSpan($timeSpan)
-    {
-        return $this->withTimeSpan($timeSpan);
     }
 
     /**

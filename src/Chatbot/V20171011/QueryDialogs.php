@@ -41,18 +41,6 @@ class QueryDialogs extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -63,18 +51,6 @@ class QueryDialogs extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -91,18 +67,6 @@ class QueryDialogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDialogName() instead.
-     *
-     * @param string $dialogName
-     *
-     * @return $this
-     */
-    public function setDialogName($dialogName)
-    {
-        return $this->withDialogName($dialogName);
-    }
-
-    /**
      * @param string $dialogName
      *
      * @return $this
@@ -113,18 +77,6 @@ class QueryDialogs extends RpcRequest
         $this->options['query']['DialogName'] = $dialogName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

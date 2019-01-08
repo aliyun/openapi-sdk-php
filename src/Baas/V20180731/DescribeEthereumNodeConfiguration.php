@@ -33,18 +33,6 @@ class DescribeEthereumNodeConfiguration extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
-    }
-
-    /**
      * @param string $nodeId
      *
      * @return $this

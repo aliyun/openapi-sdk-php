@@ -36,18 +36,6 @@ class ListContainerImages extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainerType() instead.
-     *
-     * @param string $containerType
-     *
-     * @return $this
-     */
-    public function setContainerType($containerType)
-    {
-        return $this->withContainerType($containerType);
-    }
-
-    /**
      * @param string $containerType
      *
      * @return $this
@@ -58,18 +46,6 @@ class ListContainerImages extends RpcRequest
         $this->options['query']['ContainerType'] = $containerType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -86,18 +62,6 @@ class ListContainerImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -108,18 +72,6 @@ class ListContainerImages extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

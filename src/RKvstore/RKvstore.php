@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\RKvstore
  *
- * @method V20150101\RKvstoreApiResolver v20150101()
+ * @method RKvstoreV20150101ApiResolver v20150101()
  */
 class RKvstore
 {

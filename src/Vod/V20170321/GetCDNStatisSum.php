@@ -44,18 +44,6 @@ class GetCDNStatisSum extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class GetCDNStatisSum extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartStatisTime() instead.
-     *
-     * @param string $startStatisTime
-     *
-     * @return $this
-     */
-    public function setStartStatisTime($startStatisTime)
-    {
-        return $this->withStartStatisTime($startStatisTime);
     }
 
     /**
@@ -94,18 +70,6 @@ class GetCDNStatisSum extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +80,6 @@ class GetCDNStatisSum extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
     }
 
     /**
@@ -144,18 +96,6 @@ class GetCDNStatisSum extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class GetCDNStatisSum extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -191,18 +119,6 @@ class GetCDNStatisSum extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndStatisTime() instead.
-     *
-     * @param string $endStatisTime
-     *
-     * @return $this
-     */
-    public function setEndStatisTime($endStatisTime)
-    {
-        return $this->withEndStatisTime($endStatisTime);
     }
 
     /**

@@ -33,28 +33,6 @@ class QueryDeviceRecordLifeCycle extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceList() instead.
-     *
-     * @return array
-     */
-    public function getDeviceLists()
-    {
-        return $this->getDeviceList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceList() instead.
-     *
-     * @param array $deviceLists
-     *
-     * @return $this
-     */
-    public function setDeviceLists(array $deviceLists)
-    {
-        return $this->withDeviceList($deviceLists);
-    }
-
-    /**
      * @param array $deviceList
      *
      * @return $this

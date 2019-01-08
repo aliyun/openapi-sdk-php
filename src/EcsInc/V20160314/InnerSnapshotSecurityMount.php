@@ -52,18 +52,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -74,18 +62,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEcsOwnerAliUid() instead.
-     *
-     * @param string $ecsOwnerAliUid
-     *
-     * @return $this
-     */
-    public function setecsOwnerAliUid($ecsOwnerAliUid)
-    {
-        return $this->withEcsOwnerAliUid($ecsOwnerAliUid);
     }
 
     /**
@@ -102,18 +78,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -124,18 +88,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -152,18 +104,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -174,18 +114,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -202,18 +130,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -224,18 +140,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -252,18 +156,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAsync() instead.
-     *
-     * @param string $async
-     *
-     * @return $this
-     */
-    public function setasync($async)
-    {
-        return $this->withAsync($async);
-    }
-
-    /**
      * @param string $async
      *
      * @return $this
@@ -274,18 +166,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['async'] = $async;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -302,18 +182,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -324,18 +192,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['aliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -352,18 +208,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotOwnerAliUid() instead.
-     *
-     * @param string $snapshotOwnerAliUid
-     *
-     * @return $this
-     */
-    public function setsnapshotOwnerAliUid($snapshotOwnerAliUid)
-    {
-        return $this->withSnapshotOwnerAliUid($snapshotOwnerAliUid);
-    }
-
-    /**
      * @param string $snapshotOwnerAliUid
      *
      * @return $this
@@ -377,18 +221,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -399,18 +231,6 @@ class InnerSnapshotSecurityMount extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotIndexId() instead.
-     *
-     * @param string $snapshotIndexId
-     *
-     * @return $this
-     */
-    public function setsnapshotIndexId($snapshotIndexId)
-    {
-        return $this->withSnapshotIndexId($snapshotIndexId);
     }
 
     /**

@@ -41,18 +41,6 @@ class PushAllTask extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class PushAllTask extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class PushAllTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTasks() instead.
-     *
-     * @param string $tasks
-     *
-     * @return $this
-     */
-    public function setTasks($tasks)
-    {
-        return $this->withTasks($tasks);
-    }
-
-    /**
      * @param string $tasks
      *
      * @return $this
@@ -113,18 +77,6 @@ class PushAllTask extends RpcRequest
         $this->options['query']['Tasks'] = $tasks;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

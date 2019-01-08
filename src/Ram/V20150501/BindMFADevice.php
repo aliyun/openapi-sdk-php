@@ -35,23 +35,10 @@ class BindMFADevice extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSerialNumber() instead.
-     *
-     * @param string $serialNumber
-     *
-     * @return $this
-     */
-    public function setSerialNumber($serialNumber)
-    {
-        return $this->withSerialNumber($serialNumber);
-    }
 
     /**
      * @param string $serialNumber
@@ -64,18 +51,6 @@ class BindMFADevice extends RpcRequest
         $this->options['query']['SerialNumber'] = $serialNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthenticationCode2() instead.
-     *
-     * @param string $authenticationCode2
-     *
-     * @return $this
-     */
-    public function setAuthenticationCode2($authenticationCode2)
-    {
-        return $this->withAuthenticationCode2($authenticationCode2);
     }
 
     /**
@@ -92,18 +67,6 @@ class BindMFADevice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthenticationCode1() instead.
-     *
-     * @param string $authenticationCode1
-     *
-     * @return $this
-     */
-    public function setAuthenticationCode1($authenticationCode1)
-    {
-        return $this->withAuthenticationCode1($authenticationCode1);
-    }
-
-    /**
      * @param string $authenticationCode1
      *
      * @return $this
@@ -114,18 +77,6 @@ class BindMFADevice extends RpcRequest
         $this->options['query']['AuthenticationCode1'] = $authenticationCode1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

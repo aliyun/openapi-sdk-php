@@ -33,19 +33,6 @@ class GetService extends RpcRequest
      */
     public $scheme = 'https';
 
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
-
     /**
      * @param string $csbId
      *
@@ -57,18 +44,6 @@ class GetService extends RpcRequest
         $this->options['query']['CsbId'] = $csbId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
     }
 
     /**

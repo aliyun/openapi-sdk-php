@@ -46,18 +46,6 @@ class SubmitTranscodeJobs extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class SubmitTranscodeJobs extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateGroupId() instead.
-     *
-     * @param string $templateGroupId
-     *
-     * @return $this
-     */
-    public function setTemplateGroupId($templateGroupId)
-    {
-        return $this->withTemplateGroupId($templateGroupId);
     }
 
     /**
@@ -96,18 +72,6 @@ class SubmitTranscodeJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class SubmitTranscodeJobs extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -146,18 +98,6 @@ class SubmitTranscodeJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOverrideParams() instead.
-     *
-     * @param string $overrideParams
-     *
-     * @return $this
-     */
-    public function setOverrideParams($overrideParams)
-    {
-        return $this->withOverrideParams($overrideParams);
-    }
-
-    /**
      * @param string $overrideParams
      *
      * @return $this
@@ -168,18 +108,6 @@ class SubmitTranscodeJobs extends RpcRequest
         $this->options['query']['OverrideParams'] = $overrideParams;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +124,6 @@ class SubmitTranscodeJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitTranscodeJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEncryptConfig() instead.
-     *
-     * @param string $encryptConfig
-     *
-     * @return $this
-     */
-    public function setEncryptConfig($encryptConfig)
-    {
-        return $this->withEncryptConfig($encryptConfig);
-    }
-
-    /**
      * @param string $encryptConfig
      *
      * @return $this
@@ -243,18 +147,6 @@ class SubmitTranscodeJobs extends RpcRequest
         $this->options['query']['EncryptConfig'] = $encryptConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

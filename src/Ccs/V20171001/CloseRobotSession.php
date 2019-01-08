@@ -39,18 +39,6 @@ class CloseRobotSession extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -61,18 +49,6 @@ class CloseRobotSession extends RpcRequest
         $this->options['query']['SessionId'] = $sessionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

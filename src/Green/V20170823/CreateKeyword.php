@@ -41,18 +41,6 @@ class CreateKeyword extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class CreateKeyword extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeywords() instead.
-     *
-     * @param string $keywords
-     *
-     * @return $this
-     */
-    public function setKeywords($keywords)
-    {
-        return $this->withKeywords($keywords);
     }
 
     /**
@@ -91,18 +67,6 @@ class CreateKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeywordLibId() instead.
-     *
-     * @param string $keywordLibId
-     *
-     * @return $this
-     */
-    public function setKeywordLibId($keywordLibId)
-    {
-        return $this->withKeywordLibId($keywordLibId);
-    }
-
-    /**
      * @param string $keywordLibId
      *
      * @return $this
@@ -113,18 +77,6 @@ class CreateKeyword extends RpcRequest
         $this->options['query']['KeywordLibId'] = $keywordLibId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

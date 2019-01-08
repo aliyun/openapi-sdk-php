@@ -40,18 +40,6 @@ class DetectImageCelebrity extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageUri() instead.
-     *
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function setImageUri($imageUri)
-    {
-        return $this->withImageUri($imageUri);
-    }
-
-    /**
      * @param string $imageUri
      *
      * @return $this
@@ -65,18 +53,6 @@ class DetectImageCelebrity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLibrary() instead.
-     *
-     * @param string $library
-     *
-     * @return $this
-     */
-    public function setLibrary($library)
-    {
-        return $this->withLibrary($library);
-    }
-
-    /**
      * @param string $library
      *
      * @return $this
@@ -87,18 +63,6 @@ class DetectImageCelebrity extends RpcRequest
         $this->options['query']['Library'] = $library;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

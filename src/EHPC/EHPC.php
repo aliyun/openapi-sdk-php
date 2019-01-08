@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\EHPC
  *
- * @method V20180412\EHPCApiResolver v20180412()
+ * @method EHPCV20180412ApiResolver v20180412()
  */
 class EHPC
 {

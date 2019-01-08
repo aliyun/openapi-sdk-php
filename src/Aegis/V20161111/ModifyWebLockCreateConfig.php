@@ -44,18 +44,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocalBackupDir() instead.
-     *
-     * @param string $localBackupDir
-     *
-     * @return $this
-     */
-    public function setLocalBackupDir($localBackupDir)
-    {
-        return $this->withLocalBackupDir($localBackupDir);
-    }
-
-    /**
      * @param string $localBackupDir
      *
      * @return $this
@@ -66,18 +54,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
         $this->options['query']['LocalBackupDir'] = $localBackupDir;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExclusiveFileType() instead.
-     *
-     * @param string $exclusiveFileType
-     *
-     * @return $this
-     */
-    public function setExclusiveFileType($exclusiveFileType)
-    {
-        return $this->withExclusiveFileType($exclusiveFileType);
-    }
-
-    /**
      * @param string $exclusiveFileType
      *
      * @return $this
@@ -116,18 +80,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
         $this->options['query']['ExclusiveFileType'] = $exclusiveFileType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -144,18 +96,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDir() instead.
-     *
-     * @param string $dir
-     *
-     * @return $this
-     */
-    public function setDir($dir)
-    {
-        return $this->withDir($dir);
-    }
-
-    /**
      * @param string $dir
      *
      * @return $this
@@ -169,18 +109,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
-    }
-
-    /**
      * @param string $uuid
      *
      * @return $this
@@ -191,18 +119,6 @@ class ModifyWebLockCreateConfig extends RpcRequest
         $this->options['query']['Uuid'] = $uuid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExclusiveDir() instead.
-     *
-     * @param string $exclusiveDir
-     *
-     * @return $this
-     */
-    public function setExclusiveDir($exclusiveDir)
-    {
-        return $this->withExclusiveDir($exclusiveDir);
     }
 
     /**

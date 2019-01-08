@@ -40,18 +40,6 @@ class UpdateRule extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSelect() instead.
-     *
-     * @param string $select
-     *
-     * @return $this
-     */
-    public function setSelect($select)
-    {
-        return $this->withSelect($select);
-    }
-
-    /**
      * @param string $select
      *
      * @return $this
@@ -62,18 +50,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['Select'] = $select;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleDesc() instead.
-     *
-     * @param string $ruleDesc
-     *
-     * @return $this
-     */
-    public function setRuleDesc($ruleDesc)
-    {
-        return $this->withRuleDesc($ruleDesc);
     }
 
     /**
@@ -90,18 +66,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -112,18 +76,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWhere() instead.
-     *
-     * @param string $where
-     *
-     * @return $this
-     */
-    public function setWhere($where)
-    {
-        return $this->withWhere($where);
     }
 
     /**
@@ -140,18 +92,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
-     *
-     * @return $this
-     */
-    public function setRuleId($ruleId)
-    {
-        return $this->withRuleId($ruleId);
-    }
-
-    /**
      * @param string $ruleId
      *
      * @return $this
@@ -162,18 +102,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['RuleId'] = $ruleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**
@@ -190,18 +118,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicType() instead.
-     *
-     * @param string $topicType
-     *
-     * @return $this
-     */
-    public function setTopicType($topicType)
-    {
-        return $this->withTopicType($topicType);
-    }
-
-    /**
      * @param string $topicType
      *
      * @return $this
@@ -212,18 +128,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['TopicType'] = $topicType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShortTopic() instead.
-     *
-     * @param string $shortTopic
-     *
-     * @return $this
-     */
-    public function setShortTopic($shortTopic)
-    {
-        return $this->withShortTopic($shortTopic);
     }
 
     /**

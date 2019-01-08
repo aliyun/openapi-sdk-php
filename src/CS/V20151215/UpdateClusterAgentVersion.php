@@ -44,18 +44,6 @@ class UpdateClusterAgentVersion extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -66,18 +54,6 @@ class UpdateClusterAgentVersion extends RoaRequest
         $this->pathParameters['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersion() instead.
-     *
-     * @param string $version
-     *
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        return $this->withVersion($version);
     }
 
     /**

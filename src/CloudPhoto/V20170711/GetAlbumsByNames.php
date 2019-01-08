@@ -34,7 +34,6 @@ class GetAlbumsByNames extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,18 +43,6 @@ class GetAlbumsByNames extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -71,28 +58,6 @@ class GetAlbumsByNames extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getName() instead.
-     *
-     * @return array
-     */
-    public function getNames()
-    {
-        return $this->getName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param array $names
-     *
-     * @return $this
-     */
-    public function setNames(array $names)
-    {
-        return $this->withName($names);
-    }
-
-    /**
      * @param array $name
      *
      * @return $this
@@ -105,18 +70,6 @@ class GetAlbumsByNames extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

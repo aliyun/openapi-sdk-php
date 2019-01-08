@@ -38,18 +38,6 @@ class DeleteDialog extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
-    }
-
-    /**
      * @param string $dialogId
      *
      * @return $this

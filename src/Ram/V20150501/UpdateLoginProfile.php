@@ -35,23 +35,10 @@ class UpdateLoginProfile extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
 
     /**
      * @param string $password
@@ -64,18 +51,6 @@ class UpdateLoginProfile extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPasswordResetRequired() instead.
-     *
-     * @param string $passwordResetRequired
-     *
-     * @return $this
-     */
-    public function setPasswordResetRequired($passwordResetRequired)
-    {
-        return $this->withPasswordResetRequired($passwordResetRequired);
     }
 
     /**
@@ -92,18 +67,6 @@ class UpdateLoginProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMFABindRequired() instead.
-     *
-     * @param string $mFABindRequired
-     *
-     * @return $this
-     */
-    public function setMFABindRequired($mFABindRequired)
-    {
-        return $this->withMFABindRequired($mFABindRequired);
-    }
-
-    /**
      * @param string $mFABindRequired
      *
      * @return $this
@@ -114,18 +77,6 @@ class UpdateLoginProfile extends RpcRequest
         $this->options['query']['MFABindRequired'] = $mFABindRequired;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

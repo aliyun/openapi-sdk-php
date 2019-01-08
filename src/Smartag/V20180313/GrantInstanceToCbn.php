@@ -44,18 +44,6 @@ class GrantInstanceToCbn extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class GrantInstanceToCbn extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +70,6 @@ class GrantInstanceToCbn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCenUid() instead.
-     *
-     * @param string $cenUid
-     *
-     * @return $this
-     */
-    public function setCenUid($cenUid)
-    {
-        return $this->withCenUid($cenUid);
-    }
-
-    /**
      * @param string $cenUid
      *
      * @return $this
@@ -116,18 +80,6 @@ class GrantInstanceToCbn extends RpcRequest
         $this->options['query']['CenUid'] = $cenUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCenInstanceId() instead.
-     *
-     * @param string $cenInstanceId
-     *
-     * @return $this
-     */
-    public function setCenInstanceId($cenInstanceId)
-    {
-        return $this->withCenInstanceId($cenInstanceId);
     }
 
     /**
@@ -144,18 +96,6 @@ class GrantInstanceToCbn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class GrantInstanceToCbn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcnInstanceId() instead.
-     *
-     * @param string $ccnInstanceId
-     *
-     * @return $this
-     */
-    public function setCcnInstanceId($ccnInstanceId)
-    {
-        return $this->withCcnInstanceId($ccnInstanceId);
-    }
-
-    /**
      * @param string $ccnInstanceId
      *
      * @return $this
@@ -191,18 +119,6 @@ class GrantInstanceToCbn extends RpcRequest
         $this->options['query']['CcnInstanceId'] = $ccnInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

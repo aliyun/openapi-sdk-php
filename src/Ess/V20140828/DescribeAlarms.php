@@ -46,18 +46,6 @@ class DescribeAlarms extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsEnable() instead.
-     *
-     * @param string $isEnable
-     *
-     * @return $this
-     */
-    public function setIsEnable($isEnable)
-    {
-        return $this->withIsEnable($isEnable);
-    }
-
-    /**
      * @param string $isEnable
      *
      * @return $this
@@ -68,18 +56,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['IsEnable'] = $isEnable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricType() instead.
-     *
-     * @param string $metricType
-     *
-     * @return $this
-     */
-    public function setMetricType($metricType)
-    {
-        return $this->withMetricType($metricType);
     }
 
     /**
@@ -96,18 +72,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -146,18 +98,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -168,18 +108,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
     }
 
     /**
@@ -196,18 +124,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlarmTaskId() instead.
-     *
-     * @param string $alarmTaskId
-     *
-     * @return $this
-     */
-    public function setAlarmTaskId($alarmTaskId)
-    {
-        return $this->withAlarmTaskId($alarmTaskId);
-    }
-
-    /**
      * @param string $alarmTaskId
      *
      * @return $this
@@ -243,18 +147,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['AlarmTaskId'] = $alarmTaskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

@@ -45,28 +45,6 @@ class ModifySkillGroup extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getSkillLevel() instead.
-     *
-     * @return array
-     */
-    public function getSkillLevels()
-    {
-        return $this->getSkillLevel();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillLevel() instead.
-     *
-     * @param array $skillLevels
-     *
-     * @return $this
-     */
-    public function setSkillLevels(array $skillLevels)
-    {
-        return $this->withSkillLevel($skillLevels);
-    }
-
-    /**
      * @param array $skillLevel
      *
      * @return $this
@@ -79,18 +57,6 @@ class ModifySkillGroup extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -107,18 +73,6 @@ class ModifySkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllowPrivateOutboundNumber() instead.
-     *
-     * @param string $allowPrivateOutboundNumber
-     *
-     * @return $this
-     */
-    public function setAllowPrivateOutboundNumber($allowPrivateOutboundNumber)
-    {
-        return $this->withAllowPrivateOutboundNumber($allowPrivateOutboundNumber);
-    }
-
-    /**
      * @param string $allowPrivateOutboundNumber
      *
      * @return $this
@@ -129,28 +83,6 @@ class ModifySkillGroup extends RpcRequest
         $this->options['query']['AllowPrivateOutboundNumber'] = $allowPrivateOutboundNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOutboundPhoneNumberId() instead.
-     *
-     * @return array
-     */
-    public function getOutboundPhoneNumberIds()
-    {
-        return $this->getOutboundPhoneNumberId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutboundPhoneNumberId() instead.
-     *
-     * @param array $outboundPhoneNumberIds
-     *
-     * @return $this
-     */
-    public function setOutboundPhoneNumberIds(array $outboundPhoneNumberIds)
-    {
-        return $this->withOutboundPhoneNumberId($outboundPhoneNumberIds);
     }
 
     /**
@@ -169,18 +101,6 @@ class ModifySkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
-    }
-
-    /**
      * @param string $skillGroupId
      *
      * @return $this
@@ -191,18 +111,6 @@ class ModifySkillGroup extends RpcRequest
         $this->options['query']['SkillGroupId'] = $skillGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -219,18 +127,6 @@ class ModifySkillGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -241,28 +137,6 @@ class ModifySkillGroup extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getUserId() instead.
-     *
-     * @return array
-     */
-    public function getUserIds()
-    {
-        return $this->getUserId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param array $userIds
-     *
-     * @return $this
-     */
-    public function setUserIds(array $userIds)
-    {
-        return $this->withUserId($userIds);
     }
 
     /**

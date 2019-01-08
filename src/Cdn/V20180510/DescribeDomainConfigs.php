@@ -36,18 +36,6 @@ class DescribeDomainConfigs extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -58,18 +46,6 @@ class DescribeDomainConfigs extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -86,18 +62,6 @@ class DescribeDomainConfigs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigList() instead.
-     *
-     * @param string $configList
-     *
-     * @return $this
-     */
-    public function setConfigList($configList)
-    {
-        return $this->withConfigList($configList);
-    }
-
-    /**
      * @param string $configList
      *
      * @return $this
@@ -108,18 +72,6 @@ class DescribeDomainConfigs extends RpcRequest
         $this->options['query']['ConfigList'] = $configList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

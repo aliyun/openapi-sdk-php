@@ -62,18 +62,6 @@ class ConfigureMigrationJob extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceID() instead.
-     *
-     * @param string $sourceEndpointInstanceID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceID($sourceEndpointInstanceID)
-    {
-        return $this->withSourceEndpointInstanceID($sourceEndpointInstanceID);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceID
      *
      * @return $this
@@ -84,18 +72,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceID'] = $sourceEndpointInstanceID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckpoint() instead.
-     *
-     * @param string $checkpoint
-     *
-     * @return $this
-     */
-    public function setCheckpoint($checkpoint)
-    {
-        return $this->withCheckpoint($checkpoint);
     }
 
     /**
@@ -112,18 +88,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointEngineName() instead.
-     *
-     * @param string $sourceEndpointEngineName
-     *
-     * @return $this
-     */
-    public function setSourceEndpointEngineName($sourceEndpointEngineName)
-    {
-        return $this->withSourceEndpointEngineName($sourceEndpointEngineName);
-    }
-
-    /**
      * @param string $sourceEndpointEngineName
      *
      * @return $this
@@ -134,18 +98,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.EngineName'] = $sourceEndpointEngineName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointOracleSID() instead.
-     *
-     * @param string $sourceEndpointOracleSID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointOracleSID($sourceEndpointOracleSID)
-    {
-        return $this->withSourceEndpointOracleSID($sourceEndpointOracleSID);
     }
 
     /**
@@ -162,18 +114,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointInstanceID() instead.
-     *
-     * @param string $destinationEndpointInstanceID
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointInstanceID($destinationEndpointInstanceID)
-    {
-        return $this->withDestinationEndpointInstanceID($destinationEndpointInstanceID);
-    }
-
-    /**
      * @param string $destinationEndpointInstanceID
      *
      * @return $this
@@ -184,18 +124,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['DestinationEndpoint.InstanceID'] = $destinationEndpointInstanceID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointIP() instead.
-     *
-     * @param string $sourceEndpointIP
-     *
-     * @return $this
-     */
-    public function setSourceEndpointIP($sourceEndpointIP)
-    {
-        return $this->withSourceEndpointIP($sourceEndpointIP);
     }
 
     /**
@@ -212,18 +140,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointPassword() instead.
-     *
-     * @param string $destinationEndpointPassword
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointPassword($destinationEndpointPassword)
-    {
-        return $this->withDestinationEndpointPassword($destinationEndpointPassword);
-    }
-
-    /**
      * @param string $destinationEndpointPassword
      *
      * @return $this
@@ -234,18 +150,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['DestinationEndpoint.Password'] = $destinationEndpointPassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMigrationObject() instead.
-     *
-     * @param string $migrationObject
-     *
-     * @return $this
-     */
-    public function setMigrationObject($migrationObject)
-    {
-        return $this->withMigrationObject($migrationObject);
     }
 
     /**
@@ -262,18 +166,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrationModeDataIntialization() instead.
-     *
-     * @param string $migrationModeDataIntialization
-     *
-     * @return $this
-     */
-    public function setMigrationModeDataIntialization($migrationModeDataIntialization)
-    {
-        return $this->withMigrationModeDataIntialization($migrationModeDataIntialization);
-    }
-
-    /**
      * @param string $migrationModeDataIntialization
      *
      * @return $this
@@ -284,18 +176,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['MigrationMode.DataIntialization'] = $migrationModeDataIntialization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMigrationJobId() instead.
-     *
-     * @param string $migrationJobId
-     *
-     * @return $this
-     */
-    public function setMigrationJobId($migrationJobId)
-    {
-        return $this->withMigrationJobId($migrationJobId);
     }
 
     /**
@@ -312,18 +192,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceType() instead.
-     *
-     * @param string $sourceEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceType($sourceEndpointInstanceType)
-    {
-        return $this->withSourceEndpointInstanceType($sourceEndpointInstanceType);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceType
      *
      * @return $this
@@ -334,18 +202,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceType'] = $sourceEndpointInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointEngineName() instead.
-     *
-     * @param string $destinationEndpointEngineName
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointEngineName($destinationEndpointEngineName)
-    {
-        return $this->withDestinationEndpointEngineName($destinationEndpointEngineName);
     }
 
     /**
@@ -362,18 +218,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrationModeStructureIntialization() instead.
-     *
-     * @param string $migrationModeStructureIntialization
-     *
-     * @return $this
-     */
-    public function setMigrationModeStructureIntialization($migrationModeStructureIntialization)
-    {
-        return $this->withMigrationModeStructureIntialization($migrationModeStructureIntialization);
-    }
-
-    /**
      * @param string $migrationModeStructureIntialization
      *
      * @return $this
@@ -384,18 +228,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['MigrationMode.StructureIntialization'] = $migrationModeStructureIntialization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMigrationModeDataSynchronization() instead.
-     *
-     * @param string $migrationModeDataSynchronization
-     *
-     * @return $this
-     */
-    public function setMigrationModeDataSynchronization($migrationModeDataSynchronization)
-    {
-        return $this->withMigrationModeDataSynchronization($migrationModeDataSynchronization);
     }
 
     /**
@@ -412,18 +244,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointRegion() instead.
-     *
-     * @param string $destinationEndpointRegion
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointRegion($destinationEndpointRegion)
-    {
-        return $this->withDestinationEndpointRegion($destinationEndpointRegion);
-    }
-
-    /**
      * @param string $destinationEndpointRegion
      *
      * @return $this
@@ -434,18 +254,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['DestinationEndpoint.Region'] = $destinationEndpointRegion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointUserName() instead.
-     *
-     * @param string $sourceEndpointUserName
-     *
-     * @return $this
-     */
-    public function setSourceEndpointUserName($sourceEndpointUserName)
-    {
-        return $this->withSourceEndpointUserName($sourceEndpointUserName);
     }
 
     /**
@@ -462,18 +270,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointDatabaseName() instead.
-     *
-     * @param string $sourceEndpointDatabaseName
-     *
-     * @return $this
-     */
-    public function setSourceEndpointDatabaseName($sourceEndpointDatabaseName)
-    {
-        return $this->withSourceEndpointDatabaseName($sourceEndpointDatabaseName);
-    }
-
-    /**
      * @param string $sourceEndpointDatabaseName
      *
      * @return $this
@@ -484,18 +280,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.DatabaseName'] = $sourceEndpointDatabaseName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointPort() instead.
-     *
-     * @param string $sourceEndpointPort
-     *
-     * @return $this
-     */
-    public function setSourceEndpointPort($sourceEndpointPort)
-    {
-        return $this->withSourceEndpointPort($sourceEndpointPort);
     }
 
     /**
@@ -512,18 +296,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointOwnerID() instead.
-     *
-     * @param string $sourceEndpointOwnerID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointOwnerID($sourceEndpointOwnerID)
-    {
-        return $this->withSourceEndpointOwnerID($sourceEndpointOwnerID);
-    }
-
-    /**
      * @param string $sourceEndpointOwnerID
      *
      * @return $this
@@ -534,18 +306,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.OwnerID'] = $sourceEndpointOwnerID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointUserName() instead.
-     *
-     * @param string $destinationEndpointUserName
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointUserName($destinationEndpointUserName)
-    {
-        return $this->withDestinationEndpointUserName($destinationEndpointUserName);
     }
 
     /**
@@ -562,18 +322,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointPort() instead.
-     *
-     * @param string $destinationEndpointPort
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointPort($destinationEndpointPort)
-    {
-        return $this->withDestinationEndpointPort($destinationEndpointPort);
-    }
-
-    /**
      * @param string $destinationEndpointPort
      *
      * @return $this
@@ -584,18 +332,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['DestinationEndpoint.Port'] = $destinationEndpointPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointRegion() instead.
-     *
-     * @param string $sourceEndpointRegion
-     *
-     * @return $this
-     */
-    public function setSourceEndpointRegion($sourceEndpointRegion)
-    {
-        return $this->withSourceEndpointRegion($sourceEndpointRegion);
     }
 
     /**
@@ -612,18 +348,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointRole() instead.
-     *
-     * @param string $sourceEndpointRole
-     *
-     * @return $this
-     */
-    public function setSourceEndpointRole($sourceEndpointRole)
-    {
-        return $this->withSourceEndpointRole($sourceEndpointRole);
-    }
-
-    /**
      * @param string $sourceEndpointRole
      *
      * @return $this
@@ -634,18 +358,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.Role'] = $sourceEndpointRole;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -662,18 +374,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointDataBaseName() instead.
-     *
-     * @param string $destinationEndpointDataBaseName
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointDataBaseName($destinationEndpointDataBaseName)
-    {
-        return $this->withDestinationEndpointDataBaseName($destinationEndpointDataBaseName);
-    }
-
-    /**
      * @param string $destinationEndpointDataBaseName
      *
      * @return $this
@@ -684,18 +384,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['DestinationEndpoint.DataBaseName'] = $destinationEndpointDataBaseName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointPassword() instead.
-     *
-     * @param string $sourceEndpointPassword
-     *
-     * @return $this
-     */
-    public function setSourceEndpointPassword($sourceEndpointPassword)
-    {
-        return $this->withSourceEndpointPassword($sourceEndpointPassword);
     }
 
     /**
@@ -712,18 +400,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrationReserved() instead.
-     *
-     * @param string $migrationReserved
-     *
-     * @return $this
-     */
-    public function setMigrationReserved($migrationReserved)
-    {
-        return $this->withMigrationReserved($migrationReserved);
-    }
-
-    /**
      * @param string $migrationReserved
      *
      * @return $this
@@ -734,18 +410,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['MigrationReserved'] = $migrationReserved;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointIP() instead.
-     *
-     * @param string $destinationEndpointIP
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointIP($destinationEndpointIP)
-    {
-        return $this->withDestinationEndpointIP($destinationEndpointIP);
     }
 
     /**
@@ -762,18 +426,6 @@ class ConfigureMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrationJobName() instead.
-     *
-     * @param string $migrationJobName
-     *
-     * @return $this
-     */
-    public function setMigrationJobName($migrationJobName)
-    {
-        return $this->withMigrationJobName($migrationJobName);
-    }
-
-    /**
      * @param string $migrationJobName
      *
      * @return $this
@@ -784,18 +436,6 @@ class ConfigureMigrationJob extends RpcRequest
         $this->options['query']['MigrationJobName'] = $migrationJobName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointInstanceType() instead.
-     *
-     * @param string $destinationEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointInstanceType($destinationEndpointInstanceType)
-    {
-        return $this->withDestinationEndpointInstanceType($destinationEndpointInstanceType);
     }
 
     /**

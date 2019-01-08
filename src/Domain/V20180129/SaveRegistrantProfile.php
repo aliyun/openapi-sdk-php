@@ -53,18 +53,6 @@ class SaveRegistrantProfile extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
-
-    /**
      * @param string $country
      *
      * @return $this
@@ -75,18 +63,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
     }
 
     /**
@@ -103,18 +79,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelArea() instead.
-     *
-     * @param string $telArea
-     *
-     * @return $this
-     */
-    public function setTelArea($telArea)
-    {
-        return $this->withTelArea($telArea);
-    }
-
-    /**
      * @param string $telArea
      *
      * @return $this
@@ -125,18 +89,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['TelArea'] = $telArea;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
     }
 
     /**
@@ -153,18 +105,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -175,18 +115,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhAddress() instead.
-     *
-     * @param string $zhAddress
-     *
-     * @return $this
-     */
-    public function setZhAddress($zhAddress)
-    {
-        return $this->withZhAddress($zhAddress);
     }
 
     /**
@@ -203,18 +131,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantType() instead.
-     *
-     * @param string $registrantType
-     *
-     * @return $this
-     */
-    public function setRegistrantType($registrantType)
-    {
-        return $this->withRegistrantType($registrantType);
-    }
-
-    /**
      * @param string $registrantType
      *
      * @return $this
@@ -225,18 +141,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['RegistrantType'] = $registrantType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTelephone() instead.
-     *
-     * @param string $telephone
-     *
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        return $this->withTelephone($telephone);
     }
 
     /**
@@ -253,18 +157,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDefaultRegistrantProfile() instead.
-     *
-     * @param string $defaultRegistrantProfile
-     *
-     * @return $this
-     */
-    public function setDefaultRegistrantProfile($defaultRegistrantProfile)
-    {
-        return $this->withDefaultRegistrantProfile($defaultRegistrantProfile);
-    }
-
-    /**
      * @param string $defaultRegistrantProfile
      *
      * @return $this
@@ -275,18 +167,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['DefaultRegistrantProfile'] = $defaultRegistrantProfile;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhCity() instead.
-     *
-     * @param string $zhCity
-     *
-     * @return $this
-     */
-    public function setZhCity($zhCity)
-    {
-        return $this->withZhCity($zhCity);
     }
 
     /**
@@ -303,18 +183,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhProvince() instead.
-     *
-     * @param string $zhProvince
-     *
-     * @return $this
-     */
-    public function setZhProvince($zhProvince)
-    {
-        return $this->withZhProvince($zhProvince);
-    }
-
-    /**
      * @param string $zhProvince
      *
      * @return $this
@@ -325,18 +193,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['ZhProvince'] = $zhProvince;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
     }
 
     /**
@@ -353,18 +209,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelExt() instead.
-     *
-     * @param string $telExt
-     *
-     * @return $this
-     */
-    public function setTelExt($telExt)
-    {
-        return $this->withTelExt($telExt);
-    }
-
-    /**
      * @param string $telExt
      *
      * @return $this
@@ -375,18 +219,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['TelExt'] = $telExt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProvince() instead.
-     *
-     * @param string $province
-     *
-     * @return $this
-     */
-    public function setProvince($province)
-    {
-        return $this->withProvince($province);
     }
 
     /**
@@ -403,18 +235,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantName() instead.
-     *
-     * @param string $zhRegistrantName
-     *
-     * @return $this
-     */
-    public function setZhRegistrantName($zhRegistrantName)
-    {
-        return $this->withZhRegistrantName($zhRegistrantName);
-    }
-
-    /**
      * @param string $zhRegistrantName
      *
      * @return $this
@@ -425,18 +245,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['ZhRegistrantName'] = $zhRegistrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostalCode() instead.
-     *
-     * @param string $postalCode
-     *
-     * @return $this
-     */
-    public function setPostalCode($postalCode)
-    {
-        return $this->withPostalCode($postalCode);
     }
 
     /**
@@ -453,18 +261,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -475,18 +271,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -503,18 +287,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
-    }
-
-    /**
      * @param string $email
      *
      * @return $this
@@ -528,18 +300,6 @@ class SaveRegistrantProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantName() instead.
-     *
-     * @param string $registrantName
-     *
-     * @return $this
-     */
-    public function setRegistrantName($registrantName)
-    {
-        return $this->withRegistrantName($registrantName);
-    }
-
-    /**
      * @param string $registrantName
      *
      * @return $this
@@ -550,18 +310,6 @@ class SaveRegistrantProfile extends RpcRequest
         $this->options['query']['RegistrantName'] = $registrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantOrganization() instead.
-     *
-     * @param string $zhRegistrantOrganization
-     *
-     * @return $this
-     */
-    public function setZhRegistrantOrganization($zhRegistrantOrganization)
-    {
-        return $this->withZhRegistrantOrganization($zhRegistrantOrganization);
     }
 
     /**

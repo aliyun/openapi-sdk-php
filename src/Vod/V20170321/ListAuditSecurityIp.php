@@ -38,18 +38,6 @@ class ListAuditSecurityIp extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupName() instead.
-     *
-     * @param string $securityGroupName
-     *
-     * @return $this
-     */
-    public function setSecurityGroupName($securityGroupName)
-    {
-        return $this->withSecurityGroupName($securityGroupName);
-    }
-
-    /**
      * @param string $securityGroupName
      *
      * @return $this

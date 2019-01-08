@@ -33,18 +33,6 @@ class DescribeBlockchainInfo extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
-
-    /**
      * @param string $bizid
      *
      * @return $this

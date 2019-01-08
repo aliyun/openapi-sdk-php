@@ -51,18 +51,6 @@ class DescribeEvents extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param string $eventId
-     *
-     * @return $this
-     */
-    public function setEventId($eventId)
-    {
-        return $this->withEventId($eventId);
-    }
-
-    /**
      * @param string $eventId
      *
      * @return $this
@@ -73,18 +61,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['EventId'] = $eventId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -101,18 +77,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEffectTime() instead.
-     *
-     * @param string $effectTime
-     *
-     * @return $this
-     */
-    public function setEffectTime($effectTime)
-    {
-        return $this->withEffectTime($effectTime);
-    }
-
-    /**
      * @param string $effectTime
      *
      * @return $this
@@ -123,18 +87,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['EffectTime'] = $effectTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -151,18 +103,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimitTime() instead.
-     *
-     * @param string $limitTime
-     *
-     * @return $this
-     */
-    public function setLimitTime($limitTime)
-    {
-        return $this->withLimitTime($limitTime);
-    }
-
-    /**
      * @param string $limitTime
      *
      * @return $this
@@ -173,18 +113,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['LimitTime'] = $limitTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -201,18 +129,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlanTime() instead.
-     *
-     * @param string $planTime
-     *
-     * @return $this
-     */
-    public function setPlanTime($planTime)
-    {
-        return $this->withPlanTime($planTime);
-    }
-
-    /**
      * @param string $planTime
      *
      * @return $this
@@ -223,18 +139,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['PlanTime'] = $planTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -251,18 +155,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpireTime() instead.
-     *
-     * @param string $expireTime
-     *
-     * @return $this
-     */
-    public function setExpireTime($expireTime)
-    {
-        return $this->withExpireTime($expireTime);
-    }
-
-    /**
      * @param string $expireTime
      *
      * @return $this
@@ -273,18 +165,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['ExpireTime'] = $expireTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
     }
 
     /**
@@ -301,18 +181,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -323,18 +191,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -351,18 +207,6 @@ class DescribeEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventType() instead.
-     *
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        return $this->withEventType($eventType);
-    }
-
-    /**
      * @param string $eventType
      *
      * @return $this
@@ -373,18 +217,6 @@ class DescribeEvents extends RpcRequest
         $this->options['query']['EventType'] = $eventType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

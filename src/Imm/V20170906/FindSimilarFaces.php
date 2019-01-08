@@ -42,18 +42,6 @@ class FindSimilarFaces extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageUri() instead.
-     *
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function setImageUri($imageUri)
-    {
-        return $this->withImageUri($imageUri);
-    }
-
-    /**
      * @param string $imageUri
      *
      * @return $this
@@ -64,18 +52,6 @@ class FindSimilarFaces extends RpcRequest
         $this->options['query']['ImageUri'] = $imageUri;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
     }
 
     /**
@@ -92,18 +68,6 @@ class FindSimilarFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class FindSimilarFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -139,18 +91,6 @@ class FindSimilarFaces extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceId() instead.
-     *
-     * @param string $faceId
-     *
-     * @return $this
-     */
-    public function setFaceId($faceId)
-    {
-        return $this->withFaceId($faceId);
     }
 
     /**

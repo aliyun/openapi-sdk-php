@@ -35,18 +35,6 @@ class UpdateMyGroupMembers extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReaders() instead.
-     *
-     * @param string $readers
-     *
-     * @return $this
-     */
-    public function setReaders($readers)
-    {
-        return $this->withReaders($readers);
-    }
-
-    /**
      * @param string $readers
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateMyGroupMembers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -82,18 +58,6 @@ class UpdateMyGroupMembers extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMasters() instead.
-     *
-     * @param string $masters
-     *
-     * @return $this
-     */
-    public function setMasters($masters)
-    {
-        return $this->withMasters($masters);
     }
 
     /**

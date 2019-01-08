@@ -34,18 +34,6 @@ class DeleteCluster extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReleaseInstance() instead.
-     *
-     * @param string $releaseInstance
-     *
-     * @return $this
-     */
-    public function setReleaseInstance($releaseInstance)
-    {
-        return $this->withReleaseInstance($releaseInstance);
-    }
-
-    /**
      * @param string $releaseInstance
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteCluster extends RpcRequest
         $this->options['query']['ReleaseInstance'] = $releaseInstance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

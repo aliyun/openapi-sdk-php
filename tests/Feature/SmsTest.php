@@ -7,6 +7,7 @@ use AlibabaCloud\Client\DefaultAcsClient;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Profile\DefaultProfile;
+use AlibabaCloud\Dysmsapi\DysmsapiV20170525;
 use AlibabaCloud\Dysmsapi\V20170525\SendSms;
 use PHPUnit\Framework\TestCase;
 
@@ -47,6 +48,32 @@ class SmsTest extends TestCase
                                                        ));
 
             $result = $request->request();
+
+            self::assertEquals('OK', $result['Message']);
+        } catch (ServerException $e) {
+            self::assertNotEmpty($e->getMessage());
+        } catch (ClientException $e) {
+            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
+        }
+    }
+
+    public function testSmsWithVersionStatic()
+    {
+        try {
+            $request = DysmsapiV20170525::sendSms()
+                                        ->method('POST')
+                                        ->withPhoneNumbers(\getenv('SMS_PHONE'))
+                                        ->withSignName(\getenv('SMS_SIGN_NAME'))
+                                        ->withTemplateCode(\getenv('SMS_CODE'))
+                                        ->withTemplateParam(json_encode(
+                                                                [
+                                                                    'score' => '100',
+                                                                    'bonus' => '100',
+                                                                ],
+                                                                JSON_UNESCAPED_UNICODE
+                                                            ));
+
+            $result = $request->request();
             self::assertEquals('OK', $result['Message']);
         } catch (ServerException $e) {
             self::assertNotEmpty($e->getMessage());
@@ -66,16 +93,16 @@ class SmsTest extends TestCase
         $client = new DefaultAcsClient($iClientProfile);
 
         $request = new SendSms();
-        $request->setPhoneNumbers(\getenv('SMS_PHONE'));
-        $request->setSignName(\getenv('SMS_SIGN_NAME'));
-        $request->setTemplateCode(\getenv('SMS_CODE'));
-        $request->setTemplateParam(json_encode(
-                                       [
-                                           'score' => '100',
-                                           'bonus' => '100',
-                                       ],
-                                       JSON_UNESCAPED_UNICODE
-                                   ));
+        $request->withPhoneNumbers(\getenv('SMS_PHONE'));
+        $request->withSignName(\getenv('SMS_SIGN_NAME'));
+        $request->withTemplateCode(\getenv('SMS_CODE'));
+        $request->withTemplateParam(json_encode(
+                                        [
+                                            'score' => '100',
+                                            'bonus' => '100',
+                                        ],
+                                        JSON_UNESCAPED_UNICODE
+                                    ));
         try {
             $result = $client->getAcsResponse($request);
             self::assertEquals('OK', $result['Message']);

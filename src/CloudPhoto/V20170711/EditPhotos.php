@@ -38,7 +38,6 @@ class EditPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -48,18 +47,6 @@ class EditPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTakenAt() instead.
-     *
-     * @param string $takenAt
-     *
-     * @return $this
-     */
-    public function setTakenAt($takenAt)
-    {
-        return $this->withTakenAt($takenAt);
-    }
 
     /**
      * @param string $takenAt
@@ -72,18 +59,6 @@ class EditPhotos extends RpcRequest
         $this->options['query']['TakenAt'] = $takenAt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -100,18 +75,6 @@ class EditPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShareExpireTime() instead.
-     *
-     * @param string $shareExpireTime
-     *
-     * @return $this
-     */
-    public function setShareExpireTime($shareExpireTime)
-    {
-        return $this->withShareExpireTime($shareExpireTime);
-    }
-
-    /**
      * @param string $shareExpireTime
      *
      * @return $this
@@ -122,28 +85,6 @@ class EditPhotos extends RpcRequest
         $this->options['query']['ShareExpireTime'] = $shareExpireTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPhotoId() instead.
-     *
-     * @return array
-     */
-    public function getPhotoIds()
-    {
-        return $this->getPhotoId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param array $photoIds
-     *
-     * @return $this
-     */
-    public function setPhotoIds(array $photoIds)
-    {
-        return $this->withPhotoId($photoIds);
     }
 
     /**
@@ -162,18 +103,6 @@ class EditPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -187,18 +116,6 @@ class EditPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -209,18 +126,6 @@ class EditPhotos extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**

@@ -46,18 +46,6 @@ class UpdateEditingProject extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCoverURL() instead.
-     *
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function setCoverURL($coverURL)
-    {
-        return $this->withCoverURL($coverURL);
-    }
-
-    /**
      * @param string $coverURL
      *
      * @return $this
@@ -68,18 +56,6 @@ class UpdateEditingProject extends RpcRequest
         $this->options['query']['CoverURL'] = $coverURL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class UpdateEditingProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +82,6 @@ class UpdateEditingProject extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class UpdateEditingProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeline() instead.
-     *
-     * @param string $timeline
-     *
-     * @return $this
-     */
-    public function setTimeline($timeline)
-    {
-        return $this->withTimeline($timeline);
-    }
-
-    /**
      * @param string $timeline
      *
      * @return $this
@@ -168,18 +108,6 @@ class UpdateEditingProject extends RpcRequest
         $this->options['query']['Timeline'] = $timeline;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -196,18 +124,6 @@ class UpdateEditingProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class UpdateEditingProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -243,18 +147,6 @@ class UpdateEditingProject extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectId() instead.
-     *
-     * @param string $projectId
-     *
-     * @return $this
-     */
-    public function setProjectId($projectId)
-    {
-        return $this->withProjectId($projectId);
     }
 
     /**

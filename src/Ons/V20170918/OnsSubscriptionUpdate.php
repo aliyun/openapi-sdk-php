@@ -37,18 +37,6 @@ class OnsSubscriptionUpdate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -59,18 +47,6 @@ class OnsSubscriptionUpdate extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -87,18 +63,6 @@ class OnsSubscriptionUpdate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReadEnable() instead.
-     *
-     * @param string $readEnable
-     *
-     * @return $this
-     */
-    public function setReadEnable($readEnable)
-    {
-        return $this->withReadEnable($readEnable);
-    }
-
-    /**
      * @param string $readEnable
      *
      * @return $this
@@ -112,18 +76,6 @@ class OnsSubscriptionUpdate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -134,18 +86,6 @@ class OnsSubscriptionUpdate extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsumerId() instead.
-     *
-     * @param string $consumerId
-     *
-     * @return $this
-     */
-    public function setConsumerId($consumerId)
-    {
-        return $this->withConsumerId($consumerId);
     }
 
     /**

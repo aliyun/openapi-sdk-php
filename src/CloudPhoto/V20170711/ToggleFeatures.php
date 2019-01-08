@@ -34,7 +34,6 @@ class ToggleFeatures extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,28 +43,6 @@ class ToggleFeatures extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDisabledFeatures() instead.
-     *
-     * @return array
-     */
-    public function getDisabledFeaturess()
-    {
-        return $this->getDisabledFeatures();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDisabledFeatures() instead.
-     *
-     * @param array $disabledFeaturess
-     *
-     * @return $this
-     */
-    public function setDisabledFeaturess(array $disabledFeaturess)
-    {
-        return $this->withDisabledFeatures($disabledFeaturess);
-    }
 
     /**
      * @param array $disabledFeatures
@@ -83,18 +60,6 @@ class ToggleFeatures extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -105,28 +70,6 @@ class ToggleFeatures extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getEnabledFeatures() instead.
-     *
-     * @return array
-     */
-    public function getEnabledFeaturess()
-    {
-        return $this->getEnabledFeatures();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnabledFeatures() instead.
-     *
-     * @param array $enabledFeaturess
-     *
-     * @return $this
-     */
-    public function setEnabledFeaturess(array $enabledFeaturess)
-    {
-        return $this->withEnabledFeatures($enabledFeaturess);
     }
 
     /**

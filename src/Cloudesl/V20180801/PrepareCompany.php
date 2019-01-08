@@ -33,18 +33,6 @@ class PrepareCompany extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
-    }
-
-    /**
      * @param string $platform
      *
      * @return $this

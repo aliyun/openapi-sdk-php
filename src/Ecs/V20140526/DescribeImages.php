@@ -55,18 +55,6 @@ class DescribeImages extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionType() instead.
-     *
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function setActionType($actionType)
-    {
-        return $this->withActionType($actionType);
-    }
-
-    /**
      * @param string $actionType
      *
      * @return $this
@@ -77,18 +65,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['ActionType'] = $actionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -105,18 +81,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -127,18 +91,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
     }
 
     /**
@@ -155,18 +107,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUsage() instead.
-     *
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function setUsage($usage)
-    {
-        return $this->withUsage($usage);
-    }
-
-    /**
      * @param string $usage
      *
      * @return $this
@@ -177,18 +117,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['Usage'] = $usage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -205,18 +133,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
-    }
-
-    /**
      * @param string $imageOwnerAlias
      *
      * @return $this
@@ -227,18 +143,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['ImageOwnerAlias'] = $imageOwnerAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -255,18 +159,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsSupportIoOptimized() instead.
-     *
-     * @param string $isSupportIoOptimized
-     *
-     * @return $this
-     */
-    public function setIsSupportIoOptimized($isSupportIoOptimized)
-    {
-        return $this->withIsSupportIoOptimized($isSupportIoOptimized);
-    }
-
-    /**
      * @param string $isSupportIoOptimized
      *
      * @return $this
@@ -277,18 +169,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['IsSupportIoOptimized'] = $isSupportIoOptimized;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setImageName($imageName)
-    {
-        return $this->withImageName($imageName);
     }
 
     /**
@@ -305,18 +185,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsSupportCloudinit() instead.
-     *
-     * @param string $isSupportCloudinit
-     *
-     * @return $this
-     */
-    public function setIsSupportCloudinit($isSupportCloudinit)
-    {
-        return $this->withIsSupportCloudinit($isSupportCloudinit);
-    }
-
-    /**
      * @param string $isSupportCloudinit
      *
      * @return $this
@@ -327,18 +195,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['IsSupportCloudinit'] = $isSupportCloudinit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -355,18 +211,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -377,28 +221,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -418,18 +240,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArchitecture() instead.
-     *
-     * @param string $architecture
-     *
-     * @return $this
-     */
-    public function setArchitecture($architecture)
-    {
-        return $this->withArchitecture($architecture);
-    }
-
-    /**
      * @param string $architecture
      *
      * @return $this
@@ -440,18 +250,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['Architecture'] = $architecture;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
     }
 
     /**
@@ -468,18 +266,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -490,18 +276,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -518,18 +292,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShowExpired() instead.
-     *
-     * @param string $showExpired
-     *
-     * @return $this
-     */
-    public function setShowExpired($showExpired)
-    {
-        return $this->withShowExpired($showExpired);
-    }
-
-    /**
      * @param string $showExpired
      *
      * @return $this
@@ -540,18 +302,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['ShowExpired'] = $showExpired;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOSType() instead.
-     *
-     * @param string $oSType
-     *
-     * @return $this
-     */
-    public function setOSType($oSType)
-    {
-        return $this->withOSType($oSType);
     }
 
     /**
@@ -568,18 +318,6 @@ class DescribeImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -590,28 +328,6 @@ class DescribeImages extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
     }
 
     /**
@@ -628,18 +344,6 @@ class DescribeImages extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -44,18 +44,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAIVideoCategoryConfig() instead.
-     *
-     * @param string $aIVideoCategoryConfig
-     *
-     * @return $this
-     */
-    public function setAIVideoCategoryConfig($aIVideoCategoryConfig)
-    {
-        return $this->withAIVideoCategoryConfig($aIVideoCategoryConfig);
-    }
-
-    /**
      * @param string $aIVideoCategoryConfig
      *
      * @return $this
@@ -66,18 +54,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
         $this->options['query']['AIVideoCategoryConfig'] = $aIVideoCategoryConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
     }
 
     /**
@@ -94,18 +70,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -116,18 +80,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -191,18 +119,6 @@ class SubmitAIVideoCategoryJob extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaId() instead.
-     *
-     * @param string $mediaId
-     *
-     * @return $this
-     */
-    public function setMediaId($mediaId)
-    {
-        return $this->withMediaId($mediaId);
     }
 
     /**

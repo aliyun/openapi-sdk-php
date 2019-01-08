@@ -44,18 +44,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
-    }
-
-    /**
      * @param string $jobId
      *
      * @return $this
@@ -66,18 +54,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
         $this->options['query']['JobId'] = $jobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +70,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +80,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextPageToken() instead.
-     *
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function setNextPageToken($nextPageToken)
-    {
-        return $this->withNextPageToken($nextPageToken);
     }
 
     /**
@@ -144,18 +96,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaximumPageSize() instead.
-     *
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function setMaximumPageSize($maximumPageSize)
-    {
-        return $this->withMaximumPageSize($maximumPageSize);
-    }
-
-    /**
      * @param string $maximumPageSize
      *
      * @return $this
@@ -191,18 +119,6 @@ class QueryMediaCensorJobDetail extends RpcRequest
         $this->options['query']['MaximumPageSize'] = $maximumPageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -33,19 +33,6 @@ class GetProject extends RpcRequest
      */
     public $scheme = 'https';
 
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
     /**
      * @param string $projectName
      *
@@ -57,18 +44,6 @@ class GetProject extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**

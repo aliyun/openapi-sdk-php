@@ -40,18 +40,6 @@ class OperateSuspiciousEvent extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class OperateSuspiciousEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
-
-    /**
      * @param string $data
      *
      * @return $this
@@ -87,18 +63,6 @@ class OperateSuspiciousEvent extends RpcRequest
         $this->options['query']['Data'] = $data;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperateType() instead.
-     *
-     * @param string $operateType
-     *
-     * @return $this
-     */
-    public function setOperateType($operateType)
-    {
-        return $this->withOperateType($operateType);
     }
 
     /**

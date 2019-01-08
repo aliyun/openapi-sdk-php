@@ -33,18 +33,6 @@ class CheckCloudUser extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
-
-    /**
      * @param string $uid
      *
      * @return $this

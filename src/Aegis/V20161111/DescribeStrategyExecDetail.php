@@ -39,18 +39,6 @@ class DescribeStrategyExecDetail extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeStrategyExecDetail extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
     }
 
     /**

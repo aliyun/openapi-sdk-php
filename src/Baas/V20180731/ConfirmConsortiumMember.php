@@ -34,28 +34,6 @@ class ConfirmConsortiumMember extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getOrganization() instead.
-     *
-     * @return array
-     */
-    public function getOrganizations()
-    {
-        return $this->getOrganization();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param array $organizations
-     *
-     * @return $this
-     */
-    public function setOrganizations(array $organizations)
-    {
-        return $this->withOrganization($organizations);
-    }
-
-    /**
      * @param array $organization
      *
      * @return $this
@@ -68,18 +46,6 @@ class ConfirmConsortiumMember extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
     }
 
     /**

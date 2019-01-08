@@ -36,18 +36,6 @@ class GetPhoneProfile extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhone() instead.
-     *
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function setPhone($phone)
-    {
-        return $this->withPhone($phone);
-    }
-
-    /**
      * @param string $phone
      *
      * @return $this
@@ -58,18 +46,6 @@ class GetPhoneProfile extends RpcRequest
         $this->options['query']['Phone'] = $phone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSensType() instead.
-     *
-     * @param string $sensType
-     *
-     * @return $this
-     */
-    public function setSensType($sensType)
-    {
-        return $this->withSensType($sensType);
     }
 
     /**
@@ -86,18 +62,6 @@ class GetPhoneProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataVersion() instead.
-     *
-     * @param string $dataVersion
-     *
-     * @return $this
-     */
-    public function setDataVersion($dataVersion)
-    {
-        return $this->withDataVersion($dataVersion);
-    }
-
-    /**
      * @param string $dataVersion
      *
      * @return $this
@@ -108,18 +72,6 @@ class GetPhoneProfile extends RpcRequest
         $this->options['query']['DataVersion'] = $dataVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessType() instead.
-     *
-     * @param string $businessType
-     *
-     * @return $this
-     */
-    public function setBusinessType($businessType)
-    {
-        return $this->withBusinessType($businessType);
     }
 
     /**

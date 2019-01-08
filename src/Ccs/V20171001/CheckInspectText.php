@@ -39,28 +39,6 @@ class CheckInspectText extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getSentence() instead.
-     *
-     * @return array
-     */
-    public function getSentences()
-    {
-        return $this->getSentence();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSentence() instead.
-     *
-     * @param array $sentences
-     *
-     * @return $this
-     */
-    public function setSentences(array $sentences)
-    {
-        return $this->withSentence($sentences);
-    }
-
-    /**
      * @param array $sentence
      *
      * @return $this
@@ -76,18 +54,6 @@ class CheckInspectText extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

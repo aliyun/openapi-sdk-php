@@ -45,18 +45,6 @@ class IndexImage extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageUri() instead.
-     *
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function setImageUri($imageUri)
-    {
-        return $this->withImageUri($imageUri);
-    }
-
-    /**
      * @param string $imageUri
      *
      * @return $this
@@ -67,18 +55,6 @@ class IndexImage extends RpcRequest
         $this->options['query']['ImageUri'] = $imageUri;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceUri() instead.
-     *
-     * @param string $sourceUri
-     *
-     * @return $this
-     */
-    public function setSourceUri($sourceUri)
-    {
-        return $this->withSourceUri($sourceUri);
     }
 
     /**
@@ -95,18 +71,6 @@ class IndexImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourcePosition() instead.
-     *
-     * @param string $sourcePosition
-     *
-     * @return $this
-     */
-    public function setSourcePosition($sourcePosition)
-    {
-        return $this->withSourcePosition($sourcePosition);
-    }
-
-    /**
      * @param string $sourcePosition
      *
      * @return $this
@@ -117,18 +81,6 @@ class IndexImage extends RpcRequest
         $this->options['query']['SourcePosition'] = $sourcePosition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksB() instead.
-     *
-     * @param string $remarksB
-     *
-     * @return $this
-     */
-    public function setRemarksB($remarksB)
-    {
-        return $this->withRemarksB($remarksB);
     }
 
     /**
@@ -145,18 +97,6 @@ class IndexImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -167,18 +107,6 @@ class IndexImage extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -195,18 +123,6 @@ class IndexImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemarksA() instead.
-     *
-     * @param string $remarksA
-     *
-     * @return $this
-     */
-    public function setRemarksA($remarksA)
-    {
-        return $this->withRemarksA($remarksA);
-    }
-
-    /**
      * @param string $remarksA
      *
      * @return $this
@@ -217,18 +133,6 @@ class IndexImage extends RpcRequest
         $this->options['query']['RemarksA'] = $remarksA;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceType() instead.
-     *
-     * @param string $sourceType
-     *
-     * @return $this
-     */
-    public function setSourceType($sourceType)
-    {
-        return $this->withSourceType($sourceType);
     }
 
     /**

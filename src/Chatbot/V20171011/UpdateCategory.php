@@ -39,18 +39,6 @@ class UpdateCategory extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -61,18 +49,6 @@ class UpdateCategory extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryId() instead.
-     *
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function setCategoryId($categoryId)
-    {
-        return $this->withCategoryId($categoryId);
     }
 
     /**

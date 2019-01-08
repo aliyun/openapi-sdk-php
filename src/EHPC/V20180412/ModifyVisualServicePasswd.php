@@ -7,8 +7,8 @@ use AlibabaCloud\Client\Request\RpcRequest;
 /**
  * Request of ModifyVisualServicePasswd
  *
+ * @method string getPasswd()
  * @method string getClusterId()
- * @method string getCidrIp()
  */
 class ModifyVisualServicePasswd extends RpcRequest
 {
@@ -34,15 +34,16 @@ class ModifyVisualServicePasswd extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
+     * @param string $passwd
      *
      * @return $this
      */
-    public function setClusterId($clusterId)
+    public function withPasswd($passwd)
     {
-        return $this->withClusterId($clusterId);
+        $this->data['Passwd'] = $passwd;
+        $this->options['query']['Passwd'] = $passwd;
+
+        return $this;
     }
 
     /**
@@ -54,31 +55,6 @@ class ModifyVisualServicePasswd extends RpcRequest
     {
         $this->data['ClusterId'] = $clusterId;
         $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCidrIp() instead.
-     *
-     * @param string $cidrIp
-     *
-     * @return $this
-     */
-    public function setCidrIp($cidrIp)
-    {
-        return $this->withCidrIp($cidrIp);
-    }
-
-    /**
-     * @param string $cidrIp
-     *
-     * @return $this
-     */
-    public function withCidrIp($cidrIp)
-    {
-        $this->data['CidrIp'] = $cidrIp;
-        $this->options['query']['CidrIp'] = $cidrIp;
 
         return $this;
     }

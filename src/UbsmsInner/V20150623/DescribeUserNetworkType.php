@@ -35,18 +35,6 @@ class DescribeUserNetworkType extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
-
-    /**
      * @param string $uid
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeUserNetworkType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
-    }
-
-    /**
      * @param string $serviceCode
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeUserNetworkType extends RpcRequest
         $this->options['query']['ServiceCode'] = $serviceCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

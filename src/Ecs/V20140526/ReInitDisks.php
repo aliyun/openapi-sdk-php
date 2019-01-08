@@ -41,18 +41,6 @@ class ReInitDisks extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class ReInitDisks extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -91,18 +67,6 @@ class ReInitDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -113,18 +77,6 @@ class ReInitDisks extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -141,18 +93,6 @@ class ReInitDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartInstance() instead.
-     *
-     * @param string $startInstance
-     *
-     * @return $this
-     */
-    public function setStartInstance($startInstance)
-    {
-        return $this->withStartInstance($startInstance);
-    }
-
-    /**
      * @param string $startInstance
      *
      * @return $this
@@ -163,18 +103,6 @@ class ReInitDisks extends RpcRequest
         $this->options['query']['StartInstance'] = $startInstance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskIds() instead.
-     *
-     * @param string $diskIds
-     *
-     * @return $this
-     */
-    public function setDiskIds($diskIds)
-    {
-        return $this->withDiskIds($diskIds);
     }
 
     /**
@@ -191,18 +119,6 @@ class ReInitDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityEnhancementStrategy() instead.
-     *
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        return $this->withSecurityEnhancementStrategy($securityEnhancementStrategy);
-    }
-
-    /**
      * @param string $securityEnhancementStrategy
      *
      * @return $this
@@ -216,18 +132,6 @@ class ReInitDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
-    }
-
-    /**
      * @param string $keyPairName
      *
      * @return $this
@@ -238,18 +142,6 @@ class ReInitDisks extends RpcRequest
         $this->options['query']['KeyPairName'] = $keyPairName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

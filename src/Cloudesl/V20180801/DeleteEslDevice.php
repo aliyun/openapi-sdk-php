@@ -34,18 +34,6 @@ class DeleteEslDevice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEslBarCode() instead.
-     *
-     * @param string $eslBarCode
-     *
-     * @return $this
-     */
-    public function setEslBarCode($eslBarCode)
-    {
-        return $this->withEslBarCode($eslBarCode);
-    }
-
-    /**
      * @param string $eslBarCode
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteEslDevice extends RpcRequest
         $this->options['query']['EslBarCode'] = $eslBarCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**

@@ -45,18 +45,6 @@ class AddMediaSequences extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class AddMediaSequences extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaURL() instead.
-     *
-     * @param string $mediaURL
-     *
-     * @return $this
-     */
-    public function setMediaURL($mediaURL)
-    {
-        return $this->withMediaURL($mediaURL);
     }
 
     /**
@@ -95,18 +71,6 @@ class AddMediaSequences extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class AddMediaSequences extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -145,18 +97,6 @@ class AddMediaSequences extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaSequences() instead.
-     *
-     * @param string $mediaSequences
-     *
-     * @return $this
-     */
-    public function setMediaSequences($mediaSequences)
-    {
-        return $this->withMediaSequences($mediaSequences);
-    }
-
-    /**
      * @param string $mediaSequences
      *
      * @return $this
@@ -167,18 +107,6 @@ class AddMediaSequences extends RpcRequest
         $this->options['query']['MediaSequences'] = $mediaSequences;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +123,6 @@ class AddMediaSequences extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaId() instead.
-     *
-     * @param string $mediaId
-     *
-     * @return $this
-     */
-    public function setMediaId($mediaId)
-    {
-        return $this->withMediaId($mediaId);
-    }
-
-    /**
      * @param string $mediaId
      *
      * @return $this
@@ -217,18 +133,6 @@ class AddMediaSequences extends RpcRequest
         $this->options['query']['MediaId'] = $mediaId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaType() instead.
-     *
-     * @param string $mediaType
-     *
-     * @return $this
-     */
-    public function setMediaType($mediaType)
-    {
-        return $this->withMediaType($mediaType);
     }
 
     /**

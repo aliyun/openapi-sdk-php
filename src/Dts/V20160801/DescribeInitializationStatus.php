@@ -36,18 +36,6 @@ class DescribeInitializationStatus extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobId() instead.
-     *
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobId($synchronizationJobId)
-    {
-        return $this->withSynchronizationJobId($synchronizationJobId);
-    }
-
-    /**
      * @param string $synchronizationJobId
      *
      * @return $this
@@ -58,18 +46,6 @@ class DescribeInitializationStatus extends RpcRequest
         $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -86,18 +62,6 @@ class DescribeInitializationStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -108,18 +72,6 @@ class DescribeInitializationStatus extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -45,18 +45,6 @@ class CreateInstance extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -67,18 +55,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsAutoRenew() instead.
-     *
-     * @param string $isAutoRenew
-     *
-     * @return $this
-     */
-    public function setIsAutoRenew($isAutoRenew)
-    {
-        return $this->withIsAutoRenew($isAutoRenew);
     }
 
     /**
@@ -95,18 +71,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVmNumber() instead.
-     *
-     * @param string $vmNumber
-     *
-     * @return $this
-     */
-    public function setVmNumber($vmNumber)
-    {
-        return $this->withVmNumber($vmNumber);
     }
 
     /**
@@ -145,18 +97,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -167,18 +107,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersionCode() instead.
-     *
-     * @param string $versionCode
-     *
-     * @return $this
-     */
-    public function setVersionCode($versionCode)
-    {
-        return $this->withVersionCode($versionCode);
     }
 
     /**
@@ -195,18 +123,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
-    }
-
-    /**
      * @param string $pricingCycle
      *
      * @return $this
@@ -217,18 +133,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenewDuration() instead.
-     *
-     * @param string $autoRenewDuration
-     *
-     * @return $this
-     */
-    public function setAutoRenewDuration($autoRenewDuration)
-    {
-        return $this->withAutoRenewDuration($autoRenewDuration);
     }
 
     /**

@@ -32,18 +32,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     public $action = 'SetRemoveQueryStringConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliRemoveArgs() instead.
-     *
-     * @param string $aliRemoveArgs
-     *
-     * @return $this
-     */
-    public function setAliRemoveArgs($aliRemoveArgs)
-    {
-        return $this->withAliRemoveArgs($aliRemoveArgs);
-    }
-
-    /**
      * @param string $aliRemoveArgs
      *
      * @return $this
@@ -54,18 +42,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['AliRemoveArgs'] = $aliRemoveArgs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeepOssArgs() instead.
-     *
-     * @param string $keepOssArgs
-     *
-     * @return $this
-     */
-    public function setKeepOssArgs($keepOssArgs)
-    {
-        return $this->withKeepOssArgs($keepOssArgs);
     }
 
     /**
@@ -82,18 +58,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -107,18 +71,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -129,18 +81,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

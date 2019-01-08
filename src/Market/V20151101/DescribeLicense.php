@@ -33,18 +33,6 @@ class DescribeLicense extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLicenseCode() instead.
-     *
-     * @param string $licenseCode
-     *
-     * @return $this
-     */
-    public function setLicenseCode($licenseCode)
-    {
-        return $this->withLicenseCode($licenseCode);
-    }
-
-    /**
      * @param string $licenseCode
      *
      * @return $this

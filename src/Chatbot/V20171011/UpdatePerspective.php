@@ -39,18 +39,6 @@ class UpdatePerspective extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPerspectiveId() instead.
-     *
-     * @param string $perspectiveId
-     *
-     * @return $this
-     */
-    public function setPerspectiveId($perspectiveId)
-    {
-        return $this->withPerspectiveId($perspectiveId);
-    }
-
-    /**
      * @param string $perspectiveId
      *
      * @return $this
@@ -61,18 +49,6 @@ class UpdatePerspective extends RpcRequest
         $this->options['query']['PerspectiveId'] = $perspectiveId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

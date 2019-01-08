@@ -38,7 +38,6 @@ class ListTagPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -48,18 +47,6 @@ class ListTagPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
 
     /**
      * @param string $cursor
@@ -72,18 +59,6 @@ class ListTagPhotos extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
     }
 
     /**
@@ -100,18 +75,6 @@ class ListTagPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagId() instead.
-     *
-     * @param string $tagId
-     *
-     * @return $this
-     */
-    public function setTagId($tagId)
-    {
-        return $this->withTagId($tagId);
-    }
-
-    /**
      * @param string $tagId
      *
      * @return $this
@@ -122,18 +85,6 @@ class ListTagPhotos extends RpcRequest
         $this->options['query']['TagId'] = $tagId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -150,18 +101,6 @@ class ListTagPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -175,18 +114,6 @@ class ListTagPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
-    }
-
-    /**
      * @param string $state
      *
      * @return $this
@@ -197,18 +124,6 @@ class ListTagPhotos extends RpcRequest
         $this->options['query']['State'] = $state;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDirection() instead.
-     *
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function setDirection($direction)
-    {
-        return $this->withDirection($direction);
     }
 
     /**

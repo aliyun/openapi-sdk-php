@@ -41,18 +41,6 @@ class SendPredefinedShortMessage extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -63,18 +51,6 @@ class SendPredefinedShortMessage extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumbers() instead.
-     *
-     * @param string $phoneNumbers
-     *
-     * @return $this
-     */
-    public function setPhoneNumbers($phoneNumbers)
-    {
-        return $this->withPhoneNumbers($phoneNumbers);
     }
 
     /**
@@ -91,18 +67,6 @@ class SendPredefinedShortMessage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
-    }
-
-    /**
      * @param string $configId
      *
      * @return $this
@@ -113,18 +77,6 @@ class SendPredefinedShortMessage extends RpcRequest
         $this->options['query']['ConfigId'] = $configId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateParam() instead.
-     *
-     * @param string $templateParam
-     *
-     * @return $this
-     */
-    public function setTemplateParam($templateParam)
-    {
-        return $this->withTemplateParam($templateParam);
     }
 
     /**

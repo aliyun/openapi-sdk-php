@@ -39,18 +39,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigID() instead.
-     *
-     * @param string $configID
-     *
-     * @return $this
-     */
-    public function setConfigID($configID)
-    {
-        return $this->withConfigID($configID);
     }
 
     /**
@@ -89,18 +65,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -111,18 +75,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWeight() instead.
-     *
-     * @param string $weight
-     *
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        return $this->withWeight($weight);
     }
 
     /**
@@ -139,18 +91,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCacheContent() instead.
-     *
-     * @param string $cacheContent
-     *
-     * @return $this
-     */
-    public function setCacheContent($cacheContent)
-    {
-        return $this->withCacheContent($cacheContent);
-    }
-
-    /**
      * @param string $cacheContent
      *
      * @return $this
@@ -164,18 +104,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +114,6 @@ class ModifyFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
     }
 
     /**

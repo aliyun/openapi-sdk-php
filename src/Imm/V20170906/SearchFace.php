@@ -43,18 +43,6 @@ class SearchFace extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResultNum() instead.
-     *
-     * @param string $resultNum
-     *
-     * @return $this
-     */
-    public function setResultNum($resultNum)
-    {
-        return $this->withResultNum($resultNum);
-    }
-
-    /**
      * @param string $resultNum
      *
      * @return $this
@@ -65,18 +53,6 @@ class SearchFace extends RpcRequest
         $this->options['query']['ResultNum'] = $resultNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -93,18 +69,6 @@ class SearchFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSearchThresholdLevel() instead.
-     *
-     * @param string $searchThresholdLevel
-     *
-     * @return $this
-     */
-    public function setSearchThresholdLevel($searchThresholdLevel)
-    {
-        return $this->withSearchThresholdLevel($searchThresholdLevel);
-    }
-
-    /**
      * @param string $searchThresholdLevel
      *
      * @return $this
@@ -115,18 +79,6 @@ class SearchFace extends RpcRequest
         $this->options['query']['SearchThresholdLevel'] = $searchThresholdLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**
@@ -143,18 +95,6 @@ class SearchFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsThreshold() instead.
-     *
-     * @param string $isThreshold
-     *
-     * @return $this
-     */
-    public function setIsThreshold($isThreshold)
-    {
-        return $this->withIsThreshold($isThreshold);
-    }
-
-    /**
      * @param string $isThreshold
      *
      * @return $this
@@ -165,18 +105,6 @@ class SearchFace extends RpcRequest
         $this->options['query']['IsThreshold'] = $isThreshold;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

@@ -40,28 +40,6 @@ class TaskConfigCreate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstanceList() instead.
-     *
-     * @return array
-     */
-    public function getInstanceLists()
-    {
-        return $this->getInstanceList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceList() instead.
-     *
-     * @param array $instanceLists
-     *
-     * @return $this
-     */
-    public function setInstanceLists(array $instanceLists)
-    {
-        return $this->withInstanceList($instanceLists);
-    }
-
-    /**
      * @param array $instanceList
      *
      * @return $this
@@ -74,18 +52,6 @@ class TaskConfigCreate extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJsonData() instead.
-     *
-     * @param string $jsonData
-     *
-     * @return $this
-     */
-    public function setJsonData($jsonData)
-    {
-        return $this->withJsonData($jsonData);
     }
 
     /**
@@ -102,18 +68,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskType() instead.
-     *
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function setTaskType($taskType)
-    {
-        return $this->withTaskType($taskType);
-    }
-
-    /**
      * @param string $taskType
      *
      * @return $this
@@ -124,18 +78,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['TaskType'] = $taskType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskScope() instead.
-     *
-     * @param string $taskScope
-     *
-     * @return $this
-     */
-    public function setTaskScope($taskScope)
-    {
-        return $this->withTaskScope($taskScope);
     }
 
     /**
@@ -152,18 +94,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertConfig() instead.
-     *
-     * @param string $alertConfig
-     *
-     * @return $this
-     */
-    public function setAlertConfig($alertConfig)
-    {
-        return $this->withAlertConfig($alertConfig);
-    }
-
-    /**
      * @param string $alertConfig
      *
      * @return $this
@@ -174,18 +104,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['AlertConfig'] = $alertConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -202,18 +120,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function setTaskName($taskName)
-    {
-        return $this->withTaskName($taskName);
-    }
-
-    /**
      * @param string $taskName
      *
      * @return $this
@@ -224,18 +130,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['TaskName'] = $taskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

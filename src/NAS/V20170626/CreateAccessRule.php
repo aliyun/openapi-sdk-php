@@ -42,18 +42,6 @@ class CreateAccessRule extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRWAccessType() instead.
-     *
-     * @param string $rWAccessType
-     *
-     * @return $this
-     */
-    public function setRWAccessType($rWAccessType)
-    {
-        return $this->withRWAccessType($rWAccessType);
-    }
-
-    /**
      * @param string $rWAccessType
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateAccessRule extends RpcRequest
         $this->options['query']['RWAccessType'] = $rWAccessType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCidrIp() instead.
-     *
-     * @param string $sourceCidrIp
-     *
-     * @return $this
-     */
-    public function setSourceCidrIp($sourceCidrIp)
-    {
-        return $this->withSourceCidrIp($sourceCidrIp);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateAccessRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserAccessType() instead.
-     *
-     * @param string $userAccessType
-     *
-     * @return $this
-     */
-    public function setUserAccessType($userAccessType)
-    {
-        return $this->withUserAccessType($userAccessType);
-    }
-
-    /**
      * @param string $userAccessType
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateAccessRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateAccessRule extends RpcRequest
         $this->options['query']['Priority'] = $priority;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
     }
 
     /**

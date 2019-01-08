@@ -33,18 +33,6 @@ class DescribeEventRule extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
-    }
-
-    /**
      * @param string $ruleName
      *
      * @return $this

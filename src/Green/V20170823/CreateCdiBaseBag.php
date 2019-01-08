@@ -43,18 +43,6 @@ class CreateCdiBaseBag extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateCdiBaseBag extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -93,18 +69,6 @@ class CreateCdiBaseBag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommodityCode() instead.
-     *
-     * @param string $commodityCode
-     *
-     * @return $this
-     */
-    public function setCommodityCode($commodityCode)
-    {
-        return $this->withCommodityCode($commodityCode);
-    }
-
-    /**
      * @param string $commodityCode
      *
      * @return $this
@@ -115,18 +79,6 @@ class CreateCdiBaseBag extends RpcRequest
         $this->options['query']['CommodityCode'] = $commodityCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +95,6 @@ class CreateCdiBaseBag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlowOutSpec() instead.
-     *
-     * @param string $flowOutSpec
-     *
-     * @return $this
-     */
-    public function setFlowOutSpec($flowOutSpec)
-    {
-        return $this->withFlowOutSpec($flowOutSpec);
-    }
-
-    /**
      * @param string $flowOutSpec
      *
      * @return $this
@@ -165,18 +105,6 @@ class CreateCdiBaseBag extends RpcRequest
         $this->options['query']['FlowOutSpec'] = $flowOutSpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

@@ -34,23 +34,10 @@ class UpdateGroup extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewGroupName() instead.
-     *
-     * @param string $newGroupName
-     *
-     * @return $this
-     */
-    public function setNewGroupName($newGroupName)
-    {
-        return $this->withNewGroupName($newGroupName);
-    }
 
     /**
      * @param string $newGroupName
@@ -66,18 +53,6 @@ class UpdateGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewComments() instead.
-     *
-     * @param string $newComments
-     *
-     * @return $this
-     */
-    public function setNewComments($newComments)
-    {
-        return $this->withNewComments($newComments);
-    }
-
-    /**
      * @param string $newComments
      *
      * @return $this
@@ -88,18 +63,6 @@ class UpdateGroup extends RpcRequest
         $this->options['query']['NewComments'] = $newComments;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

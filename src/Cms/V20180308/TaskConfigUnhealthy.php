@@ -33,28 +33,6 @@ class TaskConfigUnhealthy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTaskIdList() instead.
-     *
-     * @return array
-     */
-    public function getTaskIdLists()
-    {
-        return $this->getTaskIdList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIdList() instead.
-     *
-     * @param array $taskIdLists
-     *
-     * @return $this
-     */
-    public function setTaskIdLists(array $taskIdLists)
-    {
-        return $this->withTaskIdList($taskIdLists);
-    }
-
-    /**
      * @param array $taskIdList
      *
      * @return $this

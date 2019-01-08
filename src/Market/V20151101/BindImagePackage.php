@@ -34,18 +34,6 @@ class BindImagePackage extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEcsInstanceId() instead.
-     *
-     * @param string $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function setEcsInstanceId($ecsInstanceId)
-    {
-        return $this->withEcsInstanceId($ecsInstanceId);
-    }
-
-    /**
      * @param string $ecsInstanceId
      *
      * @return $this
@@ -56,18 +44,6 @@ class BindImagePackage extends RpcRequest
         $this->options['query']['EcsInstanceId'] = $ecsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImagePackageInstanceId() instead.
-     *
-     * @param string $imagePackageInstanceId
-     *
-     * @return $this
-     */
-    public function setImagePackageInstanceId($imagePackageInstanceId)
-    {
-        return $this->withImagePackageInstanceId($imagePackageInstanceId);
     }
 
     /**

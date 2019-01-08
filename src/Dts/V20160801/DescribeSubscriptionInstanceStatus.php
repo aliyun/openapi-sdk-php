@@ -34,18 +34,6 @@ class DescribeSubscriptionInstanceStatus extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceId() instead.
-     *
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        return $this->withSubscriptionInstanceId($subscriptionInstanceId);
-    }
-
-    /**
      * @param string $subscriptionInstanceId
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeSubscriptionInstanceStatus extends RpcRequest
         $this->options['query']['SubscriptionInstanceId'] = $subscriptionInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

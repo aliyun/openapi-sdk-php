@@ -40,18 +40,6 @@ class CreateUserSetting extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class CreateUserSetting extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertLevels() instead.
-     *
-     * @param string $alertLevels
-     *
-     * @return $this
-     */
-    public function setAlertLevels($alertLevels)
-    {
-        return $this->withAlertLevels($alertLevels);
-    }
-
-    /**
      * @param string $alertLevels
      *
      * @return $this
@@ -87,18 +63,6 @@ class CreateUserSetting extends RpcRequest
         $this->options['query']['AlertLevels'] = $alertLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInvalidWarningKeepDays() instead.
-     *
-     * @param string $invalidWarningKeepDays
-     *
-     * @return $this
-     */
-    public function setInvalidWarningKeepDays($invalidWarningKeepDays)
-    {
-        return $this->withInvalidWarningKeepDays($invalidWarningKeepDays);
     }
 
     /**

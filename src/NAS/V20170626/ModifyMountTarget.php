@@ -41,18 +41,6 @@ class ModifyMountTarget extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMountTargetDomain() instead.
-     *
-     * @param string $mountTargetDomain
-     *
-     * @return $this
-     */
-    public function setMountTargetDomain($mountTargetDomain)
-    {
-        return $this->withMountTargetDomain($mountTargetDomain);
-    }
-
-    /**
      * @param string $mountTargetDomain
      *
      * @return $this
@@ -63,18 +51,6 @@ class ModifyMountTarget extends RpcRequest
         $this->options['query']['MountTargetDomain'] = $mountTargetDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
     }
 
     /**
@@ -91,18 +67,6 @@ class ModifyMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
-    }
-
-    /**
      * @param string $fileSystemId
      *
      * @return $this
@@ -113,18 +77,6 @@ class ModifyMountTarget extends RpcRequest
         $this->options['query']['FileSystemId'] = $fileSystemId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

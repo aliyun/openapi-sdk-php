@@ -37,18 +37,6 @@ class DescribeDrdsInstanceDbMonitor extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
-
-    /**
      * @param string $dbName
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeDrdsInstanceDbMonitor extends RpcRequest
         $this->options['query']['DbName'] = $dbName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeDrdsInstanceDbMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeDrdsInstanceDbMonitor extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeDrdsInstanceDbMonitor extends RpcRequest
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKey() instead.
-     *
-     * @param string $key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        return $this->withKey($key);
     }
 
     /**

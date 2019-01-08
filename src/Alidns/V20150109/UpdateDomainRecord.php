@@ -46,18 +46,6 @@ class UpdateDomainRecord extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecordId() instead.
-     *
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function setRecordId($recordId)
-    {
-        return $this->withRecordId($recordId);
-    }
-
-    /**
      * @param string $recordId
      *
      * @return $this
@@ -68,18 +56,6 @@ class UpdateDomainRecord extends RpcRequest
         $this->options['query']['RecordId'] = $recordId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRR() instead.
-     *
-     * @param string $rR
-     *
-     * @return $this
-     */
-    public function setRR($rR)
-    {
-        return $this->withRR($rR);
     }
 
     /**
@@ -96,18 +72,6 @@ class UpdateDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLine() instead.
-     *
-     * @param string $line
-     *
-     * @return $this
-     */
-    public function setLine($line)
-    {
-        return $this->withLine($line);
-    }
-
-    /**
      * @param string $line
      *
      * @return $this
@@ -118,18 +82,6 @@ class UpdateDomainRecord extends RpcRequest
         $this->options['query']['Line'] = $line;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -146,18 +98,6 @@ class UpdateDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -168,18 +108,6 @@ class UpdateDomainRecord extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -196,18 +124,6 @@ class UpdateDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -221,18 +137,6 @@ class UpdateDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withValue() instead.
-     *
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        return $this->withValue($value);
-    }
-
-    /**
      * @param string $value
      *
      * @return $this
@@ -243,18 +147,6 @@ class UpdateDomainRecord extends RpcRequest
         $this->options['query']['Value'] = $value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
     }
 
     /**

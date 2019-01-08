@@ -35,18 +35,6 @@ class DescribeProduct extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCode() instead.
-     *
-     * @param string $code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        return $this->withCode($code);
-    }
-
-    /**
      * @param string $code
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryDraft() instead.
-     *
-     * @param string $queryDraft
-     *
-     * @return $this
-     */
-    public function setQueryDraft($queryDraft)
-    {
-        return $this->withQueryDraft($queryDraft);
-    }
-
-    /**
      * @param string $queryDraft
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeProduct extends RpcRequest
         $this->options['query']['QueryDraft'] = $queryDraft;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**

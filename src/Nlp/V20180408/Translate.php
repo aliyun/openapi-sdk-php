@@ -43,18 +43,6 @@ class Translate extends RoaRequest
     public $serviceCode = 'nlp';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this

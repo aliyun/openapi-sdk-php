@@ -38,7 +38,6 @@ class FetchMomentPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -48,18 +47,6 @@ class FetchMomentPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
 
     /**
      * @param string $size
@@ -72,18 +59,6 @@ class FetchMomentPhotos extends RpcRequest
         $this->options['query']['Size'] = $size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -100,18 +75,6 @@ class FetchMomentPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderBy() instead.
-     *
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function setOrderBy($orderBy)
-    {
-        return $this->withOrderBy($orderBy);
-    }
-
-    /**
      * @param string $orderBy
      *
      * @return $this
@@ -122,18 +85,6 @@ class FetchMomentPhotos extends RpcRequest
         $this->options['query']['OrderBy'] = $orderBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -150,18 +101,6 @@ class FetchMomentPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -175,18 +114,6 @@ class FetchMomentPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMomentId() instead.
-     *
-     * @param string $momentId
-     *
-     * @return $this
-     */
-    public function setMomentId($momentId)
-    {
-        return $this->withMomentId($momentId);
-    }
-
-    /**
      * @param string $momentId
      *
      * @return $this
@@ -197,18 +124,6 @@ class FetchMomentPhotos extends RpcRequest
         $this->options['query']['MomentId'] = $momentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
     }
 
     /**

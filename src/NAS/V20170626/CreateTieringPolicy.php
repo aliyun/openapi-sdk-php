@@ -46,18 +46,6 @@ class CreateTieringPolicy extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAtime() instead.
-     *
-     * @param string $atime
-     *
-     * @return $this
-     */
-    public function setAtime($atime)
-    {
-        return $this->withAtime($atime);
-    }
-
-    /**
      * @param string $atime
      *
      * @return $this
@@ -68,18 +56,6 @@ class CreateTieringPolicy extends RpcRequest
         $this->options['query']['Atime'] = $atime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileName() instead.
-     *
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        return $this->withFileName($fileName);
     }
 
     /**
@@ -96,18 +72,6 @@ class CreateTieringPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
-    }
-
-    /**
      * @param string $size
      *
      * @return $this
@@ -118,18 +82,6 @@ class CreateTieringPolicy extends RpcRequest
         $this->options['query']['Size'] = $size;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecallTime() instead.
-     *
-     * @param string $recallTime
-     *
-     * @return $this
-     */
-    public function setRecallTime($recallTime)
-    {
-        return $this->withRecallTime($recallTime);
     }
 
     /**
@@ -146,18 +98,6 @@ class CreateTieringPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -168,18 +108,6 @@ class CreateTieringPolicy extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -196,18 +124,6 @@ class CreateTieringPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCtime() instead.
-     *
-     * @param string $ctime
-     *
-     * @return $this
-     */
-    public function setCtime($ctime)
-    {
-        return $this->withCtime($ctime);
-    }
-
-    /**
      * @param string $ctime
      *
      * @return $this
@@ -221,18 +137,6 @@ class CreateTieringPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMtime() instead.
-     *
-     * @param string $mtime
-     *
-     * @return $this
-     */
-    public function setMtime($mtime)
-    {
-        return $this->withMtime($mtime);
-    }
-
-    /**
      * @param string $mtime
      *
      * @return $this
@@ -243,18 +147,6 @@ class CreateTieringPolicy extends RpcRequest
         $this->options['query']['Mtime'] = $mtime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckLimit() instead.
-     *
-     * @param string $checkLimit
-     *
-     * @return $this
-     */
-    public function setCheckLimit($checkLimit)
-    {
-        return $this->withCheckLimit($checkLimit);
     }
 
     /**

@@ -33,23 +33,10 @@ class UploadPublicKey extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPublicKeySpec() instead.
-     *
-     * @param string $publicKeySpec
-     *
-     * @return $this
-     */
-    public function setPublicKeySpec($publicKeySpec)
-    {
-        return $this->withPublicKeySpec($publicKeySpec);
-    }
 
     /**
      * @param string $publicKeySpec
@@ -62,18 +49,6 @@ class UploadPublicKey extends RpcRequest
         $this->options['query']['PublicKeySpec'] = $publicKeySpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

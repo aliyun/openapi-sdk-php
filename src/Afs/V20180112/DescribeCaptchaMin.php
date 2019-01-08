@@ -37,18 +37,6 @@ class DescribeCaptchaMin extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeCaptchaMin extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigName() instead.
-     *
-     * @param string $configName
-     *
-     * @return $this
-     */
-    public function setConfigName($configName)
-    {
-        return $this->withConfigName($configName);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeCaptchaMin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRefExtId() instead.
-     *
-     * @param string $refExtId
-     *
-     * @return $this
-     */
-    public function setRefExtId($refExtId)
-    {
-        return $this->withRefExtId($refExtId);
-    }
-
-    /**
      * @param string $refExtId
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeCaptchaMin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTime() instead.
-     *
-     * @param string $time
-     *
-     * @return $this
-     */
-    public function setTime($time)
-    {
-        return $this->withTime($time);
-    }
-
-    /**
      * @param string $time
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeCaptchaMin extends RpcRequest
         $this->options['query']['Time'] = $time;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

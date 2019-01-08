@@ -45,18 +45,6 @@ class QueryTransferInList extends RpcRequest
     public $serviceCode = 'domain';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubmissionStartDate() instead.
-     *
-     * @param string $submissionStartDate
-     *
-     * @return $this
-     */
-    public function setSubmissionStartDate($submissionStartDate)
-    {
-        return $this->withSubmissionStartDate($submissionStartDate);
-    }
-
-    /**
      * @param string $submissionStartDate
      *
      * @return $this
@@ -67,18 +55,6 @@ class QueryTransferInList extends RpcRequest
         $this->options['query']['SubmissionStartDate'] = $submissionStartDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -95,18 +71,6 @@ class QueryTransferInList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubmissionEndDate() instead.
-     *
-     * @param string $submissionEndDate
-     *
-     * @return $this
-     */
-    public function setSubmissionEndDate($submissionEndDate)
-    {
-        return $this->withSubmissionEndDate($submissionEndDate);
-    }
-
-    /**
      * @param string $submissionEndDate
      *
      * @return $this
@@ -117,18 +81,6 @@ class QueryTransferInList extends RpcRequest
         $this->options['query']['SubmissionEndDate'] = $submissionEndDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -145,18 +97,6 @@ class QueryTransferInList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSimpleTransferInStatus() instead.
-     *
-     * @param string $simpleTransferInStatus
-     *
-     * @return $this
-     */
-    public function setSimpleTransferInStatus($simpleTransferInStatus)
-    {
-        return $this->withSimpleTransferInStatus($simpleTransferInStatus);
-    }
-
-    /**
      * @param string $simpleTransferInStatus
      *
      * @return $this
@@ -167,18 +107,6 @@ class QueryTransferInList extends RpcRequest
         $this->options['query']['SimpleTransferInStatus'] = $simpleTransferInStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -195,18 +123,6 @@ class QueryTransferInList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -217,18 +133,6 @@ class QueryTransferInList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

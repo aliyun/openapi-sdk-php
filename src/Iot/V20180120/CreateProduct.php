@@ -41,18 +41,6 @@ class CreateProduct extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataFormat() instead.
-     *
-     * @param string $dataFormat
-     *
-     * @return $this
-     */
-    public function setDataFormat($dataFormat)
-    {
-        return $this->withDataFormat($dataFormat);
-    }
-
-    /**
      * @param string $dataFormat
      *
      * @return $this
@@ -63,18 +51,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['DataFormat'] = $dataFormat;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeType() instead.
-     *
-     * @param string $nodeType
-     *
-     * @return $this
-     */
-    public function setNodeType($nodeType)
-    {
-        return $this->withNodeType($nodeType);
     }
 
     /**
@@ -91,18 +67,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId2() instead.
-     *
-     * @param string $id2
-     *
-     * @return $this
-     */
-    public function setId2($id2)
-    {
-        return $this->withId2($id2);
-    }
-
-    /**
      * @param string $id2
      *
      * @return $this
@@ -113,18 +77,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['Id2'] = $id2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetType() instead.
-     *
-     * @param string $netType
-     *
-     * @return $this
-     */
-    public function setNetType($netType)
-    {
-        return $this->withNetType($netType);
     }
 
     /**
@@ -141,18 +93,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductName() instead.
-     *
-     * @param string $productName
-     *
-     * @return $this
-     */
-    public function setProductName($productName)
-    {
-        return $this->withProductName($productName);
-    }
-
-    /**
      * @param string $productName
      *
      * @return $this
@@ -163,18 +103,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['ProductName'] = $productName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -191,18 +119,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProtocolType() instead.
-     *
-     * @param string $protocolType
-     *
-     * @return $this
-     */
-    public function setProtocolType($protocolType)
-    {
-        return $this->withProtocolType($protocolType);
-    }
-
-    /**
      * @param string $protocolType
      *
      * @return $this
@@ -216,18 +132,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliyunCommodityCode() instead.
-     *
-     * @param string $aliyunCommodityCode
-     *
-     * @return $this
-     */
-    public function setAliyunCommodityCode($aliyunCommodityCode)
-    {
-        return $this->withAliyunCommodityCode($aliyunCommodityCode);
-    }
-
-    /**
      * @param string $aliyunCommodityCode
      *
      * @return $this
@@ -238,18 +142,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['AliyunCommodityCode'] = $aliyunCommodityCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryId() instead.
-     *
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function setCategoryId($categoryId)
-    {
-        return $this->withCategoryId($categoryId);
     }
 
     /**

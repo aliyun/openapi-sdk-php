@@ -43,18 +43,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -65,18 +53,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +69,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToAddress() instead.
-     *
-     * @param string $toAddress
-     *
-     * @return $this
-     */
-    public function setToAddress($toAddress)
-    {
-        return $this->withToAddress($toAddress);
-    }
-
-    /**
      * @param string $toAddress
      *
      * @return $this
@@ -115,18 +79,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
         $this->options['query']['ToAddress'] = $toAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLength() instead.
-     *
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        return $this->withLength($length);
     }
 
     /**
@@ -143,18 +95,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextStart() instead.
-     *
-     * @param string $nextStart
-     *
-     * @return $this
-     */
-    public function setNextStart($nextStart)
-    {
-        return $this->withNextStart($nextStart);
-    }
-
-    /**
      * @param string $nextStart
      *
      * @return $this
@@ -165,18 +105,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
         $this->options['query']['NextStart'] = $nextStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -193,18 +121,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -215,18 +131,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -243,18 +147,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
-    }
-
-    /**
      * @param string $tagName
      *
      * @return $this
@@ -268,18 +160,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -290,18 +170,6 @@ class SenderStatisticsDetailByParam extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

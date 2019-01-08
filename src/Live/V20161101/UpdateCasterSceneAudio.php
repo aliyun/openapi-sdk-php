@@ -43,28 +43,6 @@ class UpdateCasterSceneAudio extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAudioLayer() instead.
-     *
-     * @return array
-     */
-    public function getAudioLayers()
-    {
-        return $this->getAudioLayer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAudioLayer() instead.
-     *
-     * @param array $audioLayers
-     *
-     * @return $this
-     */
-    public function setAudioLayers(array $audioLayers)
-    {
-        return $this->withAudioLayer($audioLayers);
-    }
-
-    /**
      * @param array $audioLayer
      *
      * @return $this
@@ -82,18 +60,6 @@ class UpdateCasterSceneAudio extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -107,18 +73,6 @@ class UpdateCasterSceneAudio extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
-    }
-
-    /**
      * @param string $sceneId
      *
      * @return $this
@@ -129,28 +83,6 @@ class UpdateCasterSceneAudio extends RpcRequest
         $this->options['query']['SceneId'] = $sceneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMixList() instead.
-     *
-     * @return array
-     */
-    public function getMixLists()
-    {
-        return $this->getMixList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixList() instead.
-     *
-     * @param array $mixLists
-     *
-     * @return $this
-     */
-    public function setMixLists(array $mixLists)
-    {
-        return $this->withMixList($mixLists);
     }
 
     /**
@@ -169,18 +101,6 @@ class UpdateCasterSceneAudio extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -191,18 +111,6 @@ class UpdateCasterSceneAudio extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFollowEnable() instead.
-     *
-     * @param string $followEnable
-     *
-     * @return $this
-     */
-    public function setFollowEnable($followEnable)
-    {
-        return $this->withFollowEnable($followEnable);
     }
 
     /**

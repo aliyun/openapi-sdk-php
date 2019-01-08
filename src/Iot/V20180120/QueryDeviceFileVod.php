@@ -36,18 +36,6 @@ class QueryDeviceFileVod extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -58,18 +46,6 @@ class QueryDeviceFileVod extends RpcRequest
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileName() instead.
-     *
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        return $this->withFileName($fileName);
     }
 
     /**
@@ -86,18 +62,6 @@ class QueryDeviceFileVod extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShouldEncrypt() instead.
-     *
-     * @param string $shouldEncrypt
-     *
-     * @return $this
-     */
-    public function setShouldEncrypt($shouldEncrypt)
-    {
-        return $this->withShouldEncrypt($shouldEncrypt);
-    }
-
-    /**
      * @param string $shouldEncrypt
      *
      * @return $this
@@ -108,18 +72,6 @@ class QueryDeviceFileVod extends RpcRequest
         $this->options['query']['ShouldEncrypt'] = $shouldEncrypt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEncryptType() instead.
-     *
-     * @param string $encryptType
-     *
-     * @return $this
-     */
-    public function setEncryptType($encryptType)
-    {
-        return $this->withEncryptType($encryptType);
     }
 
     /**

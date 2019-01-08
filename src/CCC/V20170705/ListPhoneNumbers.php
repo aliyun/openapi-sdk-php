@@ -39,18 +39,6 @@ class ListPhoneNumbers extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutboundOnly() instead.
-     *
-     * @param string $outboundOnly
-     *
-     * @return $this
-     */
-    public function setOutboundOnly($outboundOnly)
-    {
-        return $this->withOutboundOnly($outboundOnly);
-    }
-
-    /**
      * @param string $outboundOnly
      *
      * @return $this
@@ -61,18 +49,6 @@ class ListPhoneNumbers extends RpcRequest
         $this->options['query']['OutboundOnly'] = $outboundOnly;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

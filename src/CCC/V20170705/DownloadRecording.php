@@ -40,18 +40,6 @@ class DownloadRecording extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -65,18 +53,6 @@ class DownloadRecording extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFileName() instead.
-     *
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function setFileName($fileName)
-    {
-        return $this->withFileName($fileName);
-    }
-
-    /**
      * @param string $fileName
      *
      * @return $this
@@ -87,18 +63,6 @@ class DownloadRecording extends RpcRequest
         $this->options['query']['FileName'] = $fileName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setChannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**

@@ -40,18 +40,6 @@ class CompareFace extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUriB() instead.
-     *
-     * @param string $srcUriB
-     *
-     * @return $this
-     */
-    public function setSrcUriB($srcUriB)
-    {
-        return $this->withSrcUriB($srcUriB);
-    }
-
-    /**
      * @param string $srcUriB
      *
      * @return $this
@@ -65,18 +53,6 @@ class CompareFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUriA() instead.
-     *
-     * @param string $srcUriA
-     *
-     * @return $this
-     */
-    public function setSrcUriA($srcUriA)
-    {
-        return $this->withSrcUriA($srcUriA);
-    }
-
-    /**
      * @param string $srcUriA
      *
      * @return $this
@@ -87,18 +63,6 @@ class CompareFace extends RpcRequest
         $this->options['query']['SrcUriA'] = $srcUriA;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

@@ -33,18 +33,6 @@ class PutEvent extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventInfo() instead.
-     *
-     * @param string $eventInfo
-     *
-     * @return $this
-     */
-    public function setEventInfo($eventInfo)
-    {
-        return $this->withEventInfo($eventInfo);
-    }
-
-    /**
      * @param string $eventInfo
      *
      * @return $this

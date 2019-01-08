@@ -38,18 +38,6 @@ class UpdateMyGroups extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactGroups() instead.
-     *
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function setContactGroups($contactGroups)
-    {
-        return $this->withContactGroups($contactGroups);
-    }
-
-    /**
      * @param string $contactGroups
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['ContactGroups'] = $contactGroups;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -88,18 +64,6 @@ class UpdateMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
-    }
-
-    /**
      * @param string $serviceId
      *
      * @return $this
@@ -110,18 +74,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['ServiceId'] = $serviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -138,18 +90,6 @@ class UpdateMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this
@@ -160,18 +100,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBindUrls() instead.
-     *
-     * @param string $bindUrls
-     *
-     * @return $this
-     */
-    public function setBindUrls($bindUrls)
-    {
-        return $this->withBindUrls($bindUrls);
     }
 
     /**

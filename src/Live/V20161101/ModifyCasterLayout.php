@@ -44,28 +44,6 @@ class ModifyCasterLayout extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getBlendList() instead.
-     *
-     * @return array
-     */
-    public function getBlendLists()
-    {
-        return $this->getBlendList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBlendList() instead.
-     *
-     * @param array $blendLists
-     *
-     * @return $this
-     */
-    public function setBlendLists(array $blendLists)
-    {
-        return $this->withBlendList($blendLists);
-    }
-
-    /**
      * @param array $blendList
      *
      * @return $this
@@ -78,28 +56,6 @@ class ModifyCasterLayout extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAudioLayer() instead.
-     *
-     * @return array
-     */
-    public function getAudioLayers()
-    {
-        return $this->getAudioLayer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAudioLayer() instead.
-     *
-     * @param array $audioLayers
-     *
-     * @return $this
-     */
-    public function setAudioLayers(array $audioLayers)
-    {
-        return $this->withAudioLayer($audioLayers);
     }
 
     /**
@@ -117,28 +73,6 @@ class ModifyCasterLayout extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVideoLayer() instead.
-     *
-     * @return array
-     */
-    public function getVideoLayers()
-    {
-        return $this->getVideoLayer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoLayer() instead.
-     *
-     * @param array $videoLayers
-     *
-     * @return $this
-     */
-    public function setVideoLayers(array $videoLayers)
-    {
-        return $this->withVideoLayer($videoLayers);
     }
 
     /**
@@ -164,18 +98,6 @@ class ModifyCasterLayout extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -186,28 +108,6 @@ class ModifyCasterLayout extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMixList() instead.
-     *
-     * @return array
-     */
-    public function getMixLists()
-    {
-        return $this->getMixList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixList() instead.
-     *
-     * @param array $mixLists
-     *
-     * @return $this
-     */
-    public function setMixLists(array $mixLists)
-    {
-        return $this->withMixList($mixLists);
     }
 
     /**
@@ -226,18 +126,6 @@ class ModifyCasterLayout extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -248,18 +136,6 @@ class ModifyCasterLayout extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLayoutId() instead.
-     *
-     * @param string $layoutId
-     *
-     * @return $this
-     */
-    public function setLayoutId($layoutId)
-    {
-        return $this->withLayoutId($layoutId);
     }
 
     /**

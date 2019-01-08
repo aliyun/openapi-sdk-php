@@ -47,18 +47,6 @@ class AddCasterComponent extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withComponentType() instead.
-     *
-     * @param string $componentType
-     *
-     * @return $this
-     */
-    public function setComponentType($componentType)
-    {
-        return $this->withComponentType($componentType);
-    }
-
-    /**
      * @param string $componentType
      *
      * @return $this
@@ -69,18 +57,6 @@ class AddCasterComponent extends RpcRequest
         $this->options['query']['ComponentType'] = $componentType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationId() instead.
-     *
-     * @param string $locationId
-     *
-     * @return $this
-     */
-    public function setLocationId($locationId)
-    {
-        return $this->withLocationId($locationId);
     }
 
     /**
@@ -97,18 +73,6 @@ class AddCasterComponent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageLayerContent() instead.
-     *
-     * @param string $imageLayerContent
-     *
-     * @return $this
-     */
-    public function setImageLayerContent($imageLayerContent)
-    {
-        return $this->withImageLayerContent($imageLayerContent);
-    }
-
-    /**
      * @param string $imageLayerContent
      *
      * @return $this
@@ -119,18 +83,6 @@ class AddCasterComponent extends RpcRequest
         $this->options['query']['ImageLayerContent'] = $imageLayerContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
     }
 
     /**
@@ -147,18 +99,6 @@ class AddCasterComponent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEffect() instead.
-     *
-     * @param string $effect
-     *
-     * @return $this
-     */
-    public function setEffect($effect)
-    {
-        return $this->withEffect($effect);
-    }
-
-    /**
      * @param string $effect
      *
      * @return $this
@@ -169,18 +109,6 @@ class AddCasterComponent extends RpcRequest
         $this->options['query']['Effect'] = $effect;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentLayer() instead.
-     *
-     * @param string $componentLayer
-     *
-     * @return $this
-     */
-    public function setComponentLayer($componentLayer)
-    {
-        return $this->withComponentLayer($componentLayer);
     }
 
     /**
@@ -197,18 +125,6 @@ class AddCasterComponent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCaptionLayerContent() instead.
-     *
-     * @param string $captionLayerContent
-     *
-     * @return $this
-     */
-    public function setCaptionLayerContent($captionLayerContent)
-    {
-        return $this->withCaptionLayerContent($captionLayerContent);
-    }
-
-    /**
      * @param string $captionLayerContent
      *
      * @return $this
@@ -219,18 +135,6 @@ class AddCasterComponent extends RpcRequest
         $this->options['query']['CaptionLayerContent'] = $captionLayerContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentName() instead.
-     *
-     * @param string $componentName
-     *
-     * @return $this
-     */
-    public function setComponentName($componentName)
-    {
-        return $this->withComponentName($componentName);
     }
 
     /**
@@ -247,18 +151,6 @@ class AddCasterComponent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -269,18 +161,6 @@ class AddCasterComponent extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTextLayerContent() instead.
-     *
-     * @param string $textLayerContent
-     *
-     * @return $this
-     */
-    public function setTextLayerContent($textLayerContent)
-    {
-        return $this->withTextLayerContent($textLayerContent);
     }
 
     /**

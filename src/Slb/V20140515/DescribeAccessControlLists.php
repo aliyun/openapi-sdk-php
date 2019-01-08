@@ -48,28 +48,6 @@ class DescribeAccessControlLists extends RpcRequest
     public $serviceCode = 'slb';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
-
-    /**
      * @param string $accessKeyId
      *
      * @return $this
@@ -80,18 +58,6 @@ class DescribeAccessControlLists extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -108,18 +74,6 @@ class DescribeAccessControlLists extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAclName() instead.
-     *
-     * @param string $aclName
-     *
-     * @return $this
-     */
-    public function setAclName($aclName)
-    {
-        return $this->withAclName($aclName);
-    }
-
-    /**
      * @param string $aclName
      *
      * @return $this
@@ -130,18 +84,6 @@ class DescribeAccessControlLists extends RpcRequest
         $this->options['query']['AclName'] = $aclName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -158,18 +100,6 @@ class DescribeAccessControlLists extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -180,18 +110,6 @@ class DescribeAccessControlLists extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -208,18 +126,6 @@ class DescribeAccessControlLists extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddressIPVersion() instead.
-     *
-     * @param string $addressIPVersion
-     *
-     * @return $this
-     */
-    public function setAddressIPVersion($addressIPVersion)
-    {
-        return $this->withAddressIPVersion($addressIPVersion);
-    }
-
-    /**
      * @param string $addressIPVersion
      *
      * @return $this
@@ -230,18 +136,6 @@ class DescribeAccessControlLists extends RpcRequest
         $this->options['query']['AddressIPVersion'] = $addressIPVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -258,18 +152,6 @@ class DescribeAccessControlLists extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -283,18 +165,6 @@ class DescribeAccessControlLists extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -305,20 +175,6 @@ class DescribeAccessControlLists extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTag(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**

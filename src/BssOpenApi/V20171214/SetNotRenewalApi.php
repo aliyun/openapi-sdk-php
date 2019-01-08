@@ -37,18 +37,6 @@ class SetNotRenewalApi extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
-
-    /**
      * @param string $productCode
      *
      * @return $this
@@ -59,18 +47,6 @@ class SetNotRenewalApi extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIDs() instead.
-     *
-     * @param string $instanceIDs
-     *
-     * @return $this
-     */
-    public function setInstanceIDs($instanceIDs)
-    {
-        return $this->withInstanceIDs($instanceIDs);
     }
 
     /**
@@ -87,18 +63,6 @@ class SetNotRenewalApi extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetNotRenewalApi extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -134,18 +86,6 @@ class SetNotRenewalApi extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

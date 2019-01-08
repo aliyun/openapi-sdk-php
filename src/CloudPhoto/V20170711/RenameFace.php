@@ -35,7 +35,6 @@ class RenameFace extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class RenameFace extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -69,18 +56,6 @@ class RenameFace extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -97,18 +72,6 @@ class RenameFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFaceId() instead.
-     *
-     * @param string $faceId
-     *
-     * @return $this
-     */
-    public function setFaceId($faceId)
-    {
-        return $this->withFaceId($faceId);
-    }
-
-    /**
      * @param string $faceId
      *
      * @return $this
@@ -119,18 +82,6 @@ class RenameFace extends RpcRequest
         $this->options['query']['FaceId'] = $faceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceName() instead.
-     *
-     * @param string $faceName
-     *
-     * @return $this
-     */
-    public function setFaceName($faceName)
-    {
-        return $this->withFaceName($faceName);
     }
 
     /**

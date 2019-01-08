@@ -45,18 +45,6 @@ class ModifyInstanceAttribute extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -67,18 +55,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -95,18 +71,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecyclable() instead.
-     *
-     * @param string $recyclable
-     *
-     * @return $this
-     */
-    public function setRecyclable($recyclable)
-    {
-        return $this->withRecyclable($recyclable);
-    }
-
-    /**
      * @param string $recyclable
      *
      * @return $this
@@ -117,18 +81,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['Recyclable'] = $recyclable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -145,18 +97,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -167,18 +107,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreditSpecification() instead.
-     *
-     * @param string $creditSpecification
-     *
-     * @return $this
-     */
-    public function setCreditSpecification($creditSpecification)
-    {
-        return $this->withCreditSpecification($creditSpecification);
     }
 
     /**
@@ -195,18 +123,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +133,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeletionProtection() instead.
-     *
-     * @param string $deletionProtection
-     *
-     * @return $this
-     */
-    public function setDeletionProtection($deletionProtection)
-    {
-        return $this->withDeletionProtection($deletionProtection);
     }
 
     /**
@@ -245,18 +149,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -267,18 +159,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -295,18 +175,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
-    }
-
-    /**
      * @param string $hostName
      *
      * @return $this
@@ -320,18 +188,6 @@ class ModifyInstanceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -342,18 +198,6 @@ class ModifyInstanceAttribute extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
     }
 
     /**

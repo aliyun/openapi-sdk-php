@@ -36,18 +36,6 @@ class NotifyAddThingTopo extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGwProductKey() instead.
-     *
-     * @param string $gwProductKey
-     *
-     * @return $this
-     */
-    public function setGwProductKey($gwProductKey)
-    {
-        return $this->withGwProductKey($gwProductKey);
-    }
-
-    /**
      * @param string $gwProductKey
      *
      * @return $this
@@ -58,18 +46,6 @@ class NotifyAddThingTopo extends RpcRequest
         $this->options['query']['GwProductKey'] = $gwProductKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGwDeviceName() instead.
-     *
-     * @param string $gwDeviceName
-     *
-     * @return $this
-     */
-    public function setGwDeviceName($gwDeviceName)
-    {
-        return $this->withGwDeviceName($gwDeviceName);
     }
 
     /**
@@ -86,18 +62,6 @@ class NotifyAddThingTopo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGwIotId() instead.
-     *
-     * @param string $gwIotId
-     *
-     * @return $this
-     */
-    public function setGwIotId($gwIotId)
-    {
-        return $this->withGwIotId($gwIotId);
-    }
-
-    /**
      * @param string $gwIotId
      *
      * @return $this
@@ -108,18 +72,6 @@ class NotifyAddThingTopo extends RpcRequest
         $this->options['query']['GwIotId'] = $gwIotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceListStr() instead.
-     *
-     * @param string $deviceListStr
-     *
-     * @return $this
-     */
-    public function setDeviceListStr($deviceListStr)
-    {
-        return $this->withDeviceListStr($deviceListStr);
     }
 
     /**

@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ccs
  *
- * @method V20171001\CcsApiResolver v20171001()
+ * @method CcsV20171001ApiResolver v20171001()
  */
 class Ccs
 {

@@ -39,18 +39,6 @@ class DescribeSuspiciousExportInfo extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeSuspiciousExportInfo extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExportId() instead.
-     *
-     * @param string $exportId
-     *
-     * @return $this
-     */
-    public function setExportId($exportId)
-    {
-        return $this->withExportId($exportId);
     }
 
     /**

@@ -44,18 +44,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDiskPolicyEnabled() instead.
-     *
-     * @param string $dataDiskPolicyEnabled
-     *
-     * @return $this
-     */
-    public function setDataDiskPolicyEnabled($dataDiskPolicyEnabled)
-    {
-        return $this->withDataDiskPolicyEnabled($dataDiskPolicyEnabled);
-    }
-
-    /**
      * @param string $dataDiskPolicyEnabled
      *
      * @return $this
@@ -66,18 +54,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['DataDiskPolicyEnabled'] = $dataDiskPolicyEnabled;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +70,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDiskPolicyRetentionDays() instead.
-     *
-     * @param string $dataDiskPolicyRetentionDays
-     *
-     * @return $this
-     */
-    public function setDataDiskPolicyRetentionDays($dataDiskPolicyRetentionDays)
-    {
-        return $this->withDataDiskPolicyRetentionDays($dataDiskPolicyRetentionDays);
-    }
-
-    /**
      * @param string $dataDiskPolicyRetentionDays
      *
      * @return $this
@@ -116,18 +80,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['DataDiskPolicyRetentionDays'] = $dataDiskPolicyRetentionDays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskPolicyRetentionLastWeek() instead.
-     *
-     * @param string $systemDiskPolicyRetentionLastWeek
-     *
-     * @return $this
-     */
-    public function setSystemDiskPolicyRetentionLastWeek($systemDiskPolicyRetentionLastWeek)
-    {
-        return $this->withSystemDiskPolicyRetentionLastWeek($systemDiskPolicyRetentionLastWeek);
-    }
-
-    /**
      * @param string $systemDiskPolicyRetentionLastWeek
      *
      * @return $this
@@ -166,18 +106,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['SystemDiskPolicyRetentionLastWeek'] = $systemDiskPolicyRetentionLastWeek;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -194,18 +122,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskPolicyTimePeriod() instead.
-     *
-     * @param string $systemDiskPolicyTimePeriod
-     *
-     * @return $this
-     */
-    public function setSystemDiskPolicyTimePeriod($systemDiskPolicyTimePeriod)
-    {
-        return $this->withSystemDiskPolicyTimePeriod($systemDiskPolicyTimePeriod);
-    }
-
-    /**
      * @param string $systemDiskPolicyTimePeriod
      *
      * @return $this
@@ -216,18 +132,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['SystemDiskPolicyTimePeriod'] = $systemDiskPolicyTimePeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -244,18 +148,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDiskPolicyRetentionLastWeek() instead.
-     *
-     * @param string $dataDiskPolicyRetentionLastWeek
-     *
-     * @return $this
-     */
-    public function setDataDiskPolicyRetentionLastWeek($dataDiskPolicyRetentionLastWeek)
-    {
-        return $this->withDataDiskPolicyRetentionLastWeek($dataDiskPolicyRetentionLastWeek);
-    }
-
-    /**
      * @param string $dataDiskPolicyRetentionLastWeek
      *
      * @return $this
@@ -266,18 +158,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['DataDiskPolicyRetentionLastWeek'] = $dataDiskPolicyRetentionLastWeek;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskPolicyRetentionDays() instead.
-     *
-     * @param string $systemDiskPolicyRetentionDays
-     *
-     * @return $this
-     */
-    public function setSystemDiskPolicyRetentionDays($systemDiskPolicyRetentionDays)
-    {
-        return $this->withSystemDiskPolicyRetentionDays($systemDiskPolicyRetentionDays);
     }
 
     /**
@@ -294,18 +174,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataDiskPolicyTimePeriod() instead.
-     *
-     * @param string $dataDiskPolicyTimePeriod
-     *
-     * @return $this
-     */
-    public function setDataDiskPolicyTimePeriod($dataDiskPolicyTimePeriod)
-    {
-        return $this->withDataDiskPolicyTimePeriod($dataDiskPolicyTimePeriod);
-    }
-
-    /**
      * @param string $dataDiskPolicyTimePeriod
      *
      * @return $this
@@ -316,18 +184,6 @@ class ModifyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['DataDiskPolicyTimePeriod'] = $dataDiskPolicyTimePeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskPolicyEnabled() instead.
-     *
-     * @param string $systemDiskPolicyEnabled
-     *
-     * @return $this
-     */
-    public function setSystemDiskPolicyEnabled($systemDiskPolicyEnabled)
-    {
-        return $this->withSystemDiskPolicyEnabled($systemDiskPolicyEnabled);
     }
 
     /**

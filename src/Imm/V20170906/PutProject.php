@@ -42,18 +42,6 @@ class PutProject extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCU() instead.
-     *
-     * @param string $cU
-     *
-     * @return $this
-     */
-    public function setCU($cU)
-    {
-        return $this->withCU($cU);
-    }
-
-    /**
      * @param string $cU
      *
      * @return $this
@@ -64,18 +52,6 @@ class PutProject extends RpcRequest
         $this->options['query']['CU'] = $cU;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceRole() instead.
-     *
-     * @param string $serviceRole
-     *
-     * @return $this
-     */
-    public function setServiceRole($serviceRole)
-    {
-        return $this->withServiceRole($serviceRole);
     }
 
     /**
@@ -92,18 +68,6 @@ class PutProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class PutProject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBillingType() instead.
-     *
-     * @param string $billingType
-     *
-     * @return $this
-     */
-    public function setBillingType($billingType)
-    {
-        return $this->withBillingType($billingType);
-    }
-
-    /**
      * @param string $billingType
      *
      * @return $this
@@ -139,18 +91,6 @@ class PutProject extends RpcRequest
         $this->options['query']['BillingType'] = $billingType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

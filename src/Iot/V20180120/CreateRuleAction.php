@@ -36,18 +36,6 @@ class CreateRuleAction extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfiguration() instead.
-     *
-     * @param string $configuration
-     *
-     * @return $this
-     */
-    public function setConfiguration($configuration)
-    {
-        return $this->withConfiguration($configuration);
-    }
-
-    /**
      * @param string $configuration
      *
      * @return $this
@@ -58,18 +46,6 @@ class CreateRuleAction extends RpcRequest
         $this->options['query']['Configuration'] = $configuration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
-     *
-     * @return $this
-     */
-    public function setRuleId($ruleId)
-    {
-        return $this->withRuleId($ruleId);
     }
 
     /**
@@ -86,18 +62,6 @@ class CreateRuleAction extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -108,18 +72,6 @@ class CreateRuleAction extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withErrorActionFlag() instead.
-     *
-     * @param string $errorActionFlag
-     *
-     * @return $this
-     */
-    public function setErrorActionFlag($errorActionFlag)
-    {
-        return $this->withErrorActionFlag($errorActionFlag);
     }
 
     /**

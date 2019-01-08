@@ -4,6 +4,7 @@ namespace AlibabaCloud;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use ReflectionException;
+use Stringy\Stringy as S;
 
 /**
  * CLass DumpServices
@@ -28,7 +29,6 @@ class DumpServices
         foreach (glob(__DIR__ . DIRECTORY_SEPARATOR . '*') as $productDirectory) {
             if (is_dir($productDirectory)) {
                 self::$products[] = \basename($productDirectory);
-                self::generateStaticVersionResolverFile($productDirectory);
                 self::generateVersionResolverFile($productDirectory);
             }
         }
@@ -121,7 +121,7 @@ EOT;
         $method = '';
         foreach ($versions as $version) {
             $lcVersion = \lcfirst($version);
-            $method    .= \PHP_EOL . " * @method {$version}\\{$productName}ApiResolver {$lcVersion}()";
+            $method    .= \PHP_EOL . " * @method {$productName}{$version}ApiResolver {$lcVersion}()";
         }
 
         $php = <<<EOT
@@ -145,51 +145,6 @@ class {$productName}
 EOT;
 
         $fileName = $productDirectory . DIRECTORY_SEPARATOR . $productName . '.php';
-        \file_put_contents($fileName, $php);
-        return true;
-    }
-
-    /**
-     * @param string $productDirectory
-     *
-     * @return bool
-     */
-    private static function generateStaticVersionResolverFile($productDirectory)
-    {
-        $productName = basename($productDirectory);
-
-        $versions = self::getVersions($productDirectory);
-        if ($versions === []) {
-            return false;
-        }
-
-        $method = '';
-        foreach ($versions as $version) {
-            $lcVersion = \lcfirst($version);
-            $method    .= \PHP_EOL . " * @method static {$version}\\{$productName}ApiResolver {$lcVersion}()";
-        }
-
-        $php = <<<EOT
-<?php
-
-namespace AlibabaCloud\\{$productName};
-
-use AlibabaCloud\VersionResolverTrait;
-
-/**
- * Find the specified version of the $productName based on the method name as the version name.
- *
- * @package   AlibabaCloud\\{$productName}
- *{$method}
- */
-class {$productName}Version
-{
-    use VersionResolverTrait;
-}
-
-EOT;
-
-        $fileName = $productDirectory . DIRECTORY_SEPARATOR . $productName . 'Version.php';
         \file_put_contents($fileName, $php);
         return true;
     }
@@ -250,33 +205,44 @@ EOT;
         foreach ($apis as $api) {
             $api   = \str_replace('.php', '', $api);
             $lcApi = \lcfirst($api);
-            // Avoid adding the itself to the code
-            if ($api !== $product) {
-                $method .= \PHP_EOL . " * @method static $api {$lcApi}(array \$options = [])";
+            // Avoid adding the ApiResolver to the code
+            if (S::create($api)->contains('ApiResolver')) {
+                continue;
             }
+            // Avoid adding the itself to the code
+            if ($api === $product) {
+                continue;
+            }
+            $method .= \PHP_EOL . " * @method static {$version}\\{$api} {$lcApi}(array \$options = [])";
         }
 
-        $php = <<<EOT
+        $className  = $product . $version;
+        $php        = <<<EOT
 <?php
 
-namespace AlibabaCloud\\{$product}\\{$version};
+namespace AlibabaCloud\\{$product};
 
 use AlibabaCloud\ApiResolverTrait;
 
 /**
  * Find the specified Api of the $product based on the method name as the Api name.
  *
- * @package   AlibabaCloud\\{$product}\\{$version}
+ * @package   AlibabaCloud\\{$product}
  *{$method}
  */
-class {$product}
+class {$className}
 {
     use ApiResolverTrait;
+
+    /**
+     * @var string
+     */
+    protected \$namespace = 'AlibabaCloud\\\\$product\\\\$version';
 }
 
 EOT;
-
-        $fileName = $versionDirectory . DIRECTORY_SEPARATOR . $product . '.php';
+        $productDir = \dirname($versionDirectory);
+        $fileName   = $productDir . DIRECTORY_SEPARATOR . $className . '.php';
         \file_put_contents($fileName, $php);
     }
 
@@ -295,33 +261,45 @@ EOT;
         foreach ($apis as $api) {
             $api   = \str_replace('.php', '', $api);
             $lcApi = \lcfirst($api);
-            // Avoid adding the itself to the code
-            if ($api !== $product) {
-                $method .= \PHP_EOL . " * @method $api {$lcApi}(array \$options = [])";
+            // Avoid adding the ApiResolver to the code
+            if (S::create($api)->contains('ApiResolver')) {
+                continue;
             }
+            // Avoid adding the itself to the code
+            if ($api === $product) {
+                continue;
+            }
+            $method .= \PHP_EOL . " * @method {$version}\\$api {$lcApi}(array \$options = [])";
         }
 
-        $php = <<<EOT
+        $className = "{$product}{$version}ApiResolver";
+        $php       = <<<EOT
 <?php
 
-namespace AlibabaCloud\\{$product}\\{$version};
+namespace AlibabaCloud\\{$product};
 
 use AlibabaCloud\ApiResolverTrait;
 
 /**
  * Find the specified Api of the $product based on the method name as the Api name.
  *
- * @package   AlibabaCloud\\{$product}\\{$version}
+ * @package   AlibabaCloud\\{$product}
  *{$method}
  */
-class {$product}ApiResolver
+class $className
 {
     use ApiResolverTrait;
+
+    /**
+     * @var string
+     */
+    protected \$namespace = 'AlibabaCloud\\\\$product\\\\$version';
 }
 
 EOT;
 
-        $fileName = $versionDirectory . DIRECTORY_SEPARATOR . $product . 'ApiResolver.php';
+        $productDir = \dirname($versionDirectory);
+        $fileName   = $productDir . DIRECTORY_SEPARATOR . $className . '.php';
         \file_put_contents($fileName, $php);
     }
 

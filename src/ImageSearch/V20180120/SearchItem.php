@@ -38,18 +38,6 @@ class SearchItem extends RoaRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setinstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
-
-    /**
      * @param string $instanceName
      *
      * @return $this

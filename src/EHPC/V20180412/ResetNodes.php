@@ -34,28 +34,6 @@ class ResetNodes extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
-
-    /**
      * @param array $instance
      *
      * @return $this
@@ -68,18 +46,6 @@ class ResetNodes extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

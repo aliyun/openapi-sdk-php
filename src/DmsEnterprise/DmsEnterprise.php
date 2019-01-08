@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\DmsEnterprise
  *
- * @method V20181101\DmsEnterpriseApiResolver v20181101()
+ * @method DmsEnterpriseV20181101ApiResolver v20181101()
  */
 class DmsEnterprise
 {

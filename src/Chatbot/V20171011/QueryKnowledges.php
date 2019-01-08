@@ -41,18 +41,6 @@ class QueryKnowledges extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -63,18 +51,6 @@ class QueryKnowledges extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoreWordName() instead.
-     *
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function setCoreWordName($coreWordName)
-    {
-        return $this->withCoreWordName($coreWordName);
     }
 
     /**
@@ -91,18 +67,6 @@ class QueryKnowledges extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKnowledgeTitle() instead.
-     *
-     * @param string $knowledgeTitle
-     *
-     * @return $this
-     */
-    public function setKnowledgeTitle($knowledgeTitle)
-    {
-        return $this->withKnowledgeTitle($knowledgeTitle);
-    }
-
-    /**
      * @param string $knowledgeTitle
      *
      * @return $this
@@ -113,18 +77,6 @@ class QueryKnowledges extends RpcRequest
         $this->options['query']['KnowledgeTitle'] = $knowledgeTitle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

@@ -41,18 +41,6 @@ class DescribeCustomizeReportChartData extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeCustomizeReportChartData extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportId() instead.
-     *
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function setReportId($reportId)
-    {
-        return $this->withReportId($reportId);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeCustomizeReportChartData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChartIds() instead.
-     *
-     * @param string $chartIds
-     *
-     * @return $this
-     */
-    public function setChartIds($chartIds)
-    {
-        return $this->withChartIds($chartIds);
-    }
-
-    /**
      * @param string $chartIds
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeCustomizeReportChartData extends RpcRequest
         $this->options['query']['ChartIds'] = $chartIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

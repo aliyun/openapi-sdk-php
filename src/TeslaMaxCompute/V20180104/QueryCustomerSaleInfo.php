@@ -28,18 +28,6 @@ class QueryCustomerSaleInfo extends RpcRequest
     public $action = 'QueryCustomerSaleInfo';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegionName() instead.
-     *
-     * @param string $regionName
-     *
-     * @return $this
-     */
-    public function setRegionName($regionName)
-    {
-        return $this->withRegionName($regionName);
-    }
-
-    /**
      * @param string $regionName
      *
      * @return $this

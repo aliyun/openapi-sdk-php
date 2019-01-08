@@ -31,18 +31,6 @@ class FindInstanceList extends RpcRequest
     public $action = 'FindInstanceList';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSearchTxt() instead.
-     *
-     * @param string $searchTxt
-     *
-     * @return $this
-     */
-    public function setSearchTxt($searchTxt)
-    {
-        return $this->withSearchTxt($searchTxt);
-    }
-
-    /**
      * @param string $searchTxt
      *
      * @return $this
@@ -53,18 +41,6 @@ class FindInstanceList extends RpcRequest
         $this->options['query']['SearchTxt'] = $searchTxt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**
@@ -81,18 +57,6 @@ class FindInstanceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -103,18 +67,6 @@ class FindInstanceList extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

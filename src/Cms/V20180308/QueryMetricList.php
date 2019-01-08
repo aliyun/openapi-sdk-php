@@ -42,18 +42,6 @@ class QueryMetricList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
-
-    /**
      * @param string $cursor
      *
      * @return $this
@@ -64,18 +52,6 @@ class QueryMetricList extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -92,18 +68,6 @@ class QueryMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -114,18 +78,6 @@ class QueryMetricList extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
     }
 
     /**
@@ -142,18 +94,6 @@ class QueryMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLength() instead.
-     *
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        return $this->withLength($length);
-    }
-
-    /**
      * @param string $length
      *
      * @return $this
@@ -164,18 +104,6 @@ class QueryMetricList extends RpcRequest
         $this->options['query']['Length'] = $length;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -192,18 +120,6 @@ class QueryMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -214,18 +130,6 @@ class QueryMetricList extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpress() instead.
-     *
-     * @param string $express
-     *
-     * @return $this
-     */
-    public function setExpress($express)
-    {
-        return $this->withExpress($express);
     }
 
     /**
@@ -242,18 +146,6 @@ class QueryMetricList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -264,18 +156,6 @@ class QueryMetricList extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

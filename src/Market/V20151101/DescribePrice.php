@@ -34,18 +34,6 @@ class DescribePrice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommodity() instead.
-     *
-     * @param string $commodity
-     *
-     * @return $this
-     */
-    public function setCommodity($commodity)
-    {
-        return $this->withCommodity($commodity);
-    }
-
-    /**
      * @param string $commodity
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['Commodity'] = $commodity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

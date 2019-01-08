@@ -36,18 +36,6 @@ class SaveDomainGroup extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -58,18 +46,6 @@ class SaveDomainGroup extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainGroupName() instead.
-     *
-     * @param string $domainGroupName
-     *
-     * @return $this
-     */
-    public function setDomainGroupName($domainGroupName)
-    {
-        return $this->withDomainGroupName($domainGroupName);
     }
 
     /**
@@ -86,18 +62,6 @@ class SaveDomainGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -108,18 +72,6 @@ class SaveDomainGroup extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainGroupId() instead.
-     *
-     * @param string $domainGroupId
-     *
-     * @return $this
-     */
-    public function setDomainGroupId($domainGroupId)
-    {
-        return $this->withDomainGroupId($domainGroupId);
     }
 
     /**

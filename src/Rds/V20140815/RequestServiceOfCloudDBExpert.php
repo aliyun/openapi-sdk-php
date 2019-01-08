@@ -40,18 +40,6 @@ class RequestServiceOfCloudDBExpert extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceRequestParam() instead.
-     *
-     * @param string $serviceRequestParam
-     *
-     * @return $this
-     */
-    public function setServiceRequestParam($serviceRequestParam)
-    {
-        return $this->withServiceRequestParam($serviceRequestParam);
-    }
-
-    /**
      * @param string $serviceRequestParam
      *
      * @return $this
@@ -65,18 +53,6 @@ class RequestServiceOfCloudDBExpert extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -87,18 +63,6 @@ class RequestServiceOfCloudDBExpert extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceRequestType() instead.
-     *
-     * @param string $serviceRequestType
-     *
-     * @return $this
-     */
-    public function setServiceRequestType($serviceRequestType)
-    {
-        return $this->withServiceRequestType($serviceRequestType);
     }
 
     /**

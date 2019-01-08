@@ -45,18 +45,6 @@ class ListRecordings extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgentId() instead.
-     *
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function setAgentId($agentId)
-    {
-        return $this->withAgentId($agentId);
-    }
-
-    /**
      * @param string $agentId
      *
      * @return $this
@@ -67,18 +55,6 @@ class ListRecordings extends RpcRequest
         $this->options['query']['AgentId'] = $agentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +71,6 @@ class ListRecordings extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCriteria() instead.
-     *
-     * @param string $criteria
-     *
-     * @return $this
-     */
-    public function setCriteria($criteria)
-    {
-        return $this->withCriteria($criteria);
-    }
-
-    /**
      * @param string $criteria
      *
      * @return $this
@@ -117,18 +81,6 @@ class ListRecordings extends RpcRequest
         $this->options['query']['Criteria'] = $criteria;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
     }
 
     /**
@@ -145,18 +97,6 @@ class ListRecordings extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -167,18 +107,6 @@ class ListRecordings extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStopTime() instead.
-     *
-     * @param string $stopTime
-     *
-     * @return $this
-     */
-    public function setStopTime($stopTime)
-    {
-        return $this->withStopTime($stopTime);
     }
 
     /**
@@ -195,18 +123,6 @@ class ListRecordings extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -217,18 +133,6 @@ class ListRecordings extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

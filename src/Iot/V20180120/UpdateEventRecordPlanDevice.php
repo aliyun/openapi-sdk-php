@@ -35,18 +35,6 @@ class UpdateEventRecordPlanDevice extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateEventRecordPlanDevice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlanId() instead.
-     *
-     * @param string $planId
-     *
-     * @return $this
-     */
-    public function setPlanId($planId)
-    {
-        return $this->withPlanId($planId);
-    }
-
-    /**
      * @param string $planId
      *
      * @return $this
@@ -82,18 +58,6 @@ class UpdateEventRecordPlanDevice extends RpcRequest
         $this->options['query']['PlanId'] = $planId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamType() instead.
-     *
-     * @param string $streamType
-     *
-     * @return $this
-     */
-    public function setStreamType($streamType)
-    {
-        return $this->withStreamType($streamType);
     }
 
     /**

@@ -35,18 +35,6 @@ class SubscribeExportToOSS extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBucketOwnerId() instead.
-     *
-     * @param string $bucketOwnerId
-     *
-     * @return $this
-     */
-    public function setBucketOwnerId($bucketOwnerId)
-    {
-        return $this->withBucketOwnerId($bucketOwnerId);
-    }
-
-    /**
      * @param string $bucketOwnerId
      *
      * @return $this
@@ -57,28 +45,6 @@ class SubscribeExportToOSS extends RpcRequest
         $this->options['query']['BucketOwnerId'] = $bucketOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSubscribeType() instead.
-     *
-     * @return array
-     */
-    public function getSubscribeTypes()
-    {
-        return $this->getSubscribeType();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscribeType() instead.
-     *
-     * @param array $subscribeTypes
-     *
-     * @return $this
-     */
-    public function setSubscribeTypes(array $subscribeTypes)
-    {
-        return $this->withSubscribeType($subscribeTypes);
     }
 
     /**
@@ -94,18 +60,6 @@ class SubscribeExportToOSS extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscribeBucket() instead.
-     *
-     * @param string $subscribeBucket
-     *
-     * @return $this
-     */
-    public function setSubscribeBucket($subscribeBucket)
-    {
-        return $this->withSubscribeBucket($subscribeBucket);
     }
 
     /**

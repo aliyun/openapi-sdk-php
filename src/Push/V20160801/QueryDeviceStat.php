@@ -37,18 +37,6 @@ class QueryDeviceStat extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -59,18 +47,6 @@ class QueryDeviceStat extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**
@@ -87,18 +63,6 @@ class QueryDeviceStat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -112,18 +76,6 @@ class QueryDeviceStat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceType() instead.
-     *
-     * @param string $deviceType
-     *
-     * @return $this
-     */
-    public function setDeviceType($deviceType)
-    {
-        return $this->withDeviceType($deviceType);
-    }
-
-    /**
      * @param string $deviceType
      *
      * @return $this
@@ -134,18 +86,6 @@ class QueryDeviceStat extends RpcRequest
         $this->options['query']['DeviceType'] = $deviceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryType() instead.
-     *
-     * @param string $queryType
-     *
-     * @return $this
-     */
-    public function setQueryType($queryType)
-    {
-        return $this->withQueryType($queryType);
     }
 
     /**

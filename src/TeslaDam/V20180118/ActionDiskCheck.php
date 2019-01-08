@@ -29,18 +29,6 @@ class ActionDiskCheck extends RpcRequest
     public $action = 'ActionDiskCheck';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskMount() instead.
-     *
-     * @param string $diskMount
-     *
-     * @return $this
-     */
-    public function setDiskMount($diskMount)
-    {
-        return $this->withDiskMount($diskMount);
-    }
-
-    /**
      * @param string $diskMount
      *
      * @return $this
@@ -51,18 +39,6 @@ class ActionDiskCheck extends RpcRequest
         $this->options['query']['DiskMount'] = $diskMount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
     }
 
     /**

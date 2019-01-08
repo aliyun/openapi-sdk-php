@@ -33,28 +33,6 @@ class BatchGetAliyunIdByAliyunPk extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getPkList() instead.
-     *
-     * @return array
-     */
-    public function getPkLists()
-    {
-        return $this->getPkList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPkList() instead.
-     *
-     * @param array $pkLists
-     *
-     * @return $this
-     */
-    public function setPkLists(array $pkLists)
-    {
-        return $this->withPkList($pkLists);
-    }
-
-    /**
      * @param array $pkList
      *
      * @return $this

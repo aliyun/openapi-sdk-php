@@ -37,18 +37,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
-
-    /**
      * @param string $uid
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
-    }
-
-    /**
      * @param string $serviceCode
      *
      * @return $this
@@ -109,28 +73,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         $this->options['query']['ServiceCode'] = $serviceCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getStatusKey() instead.
-     *
-     * @return array
-     */
-    public function getStatusKeys()
-    {
-        return $this->getStatusKey();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey() instead.
-     *
-     * @param array $statusKeys
-     *
-     * @return $this
-     */
-    public function setStatusKeys(array $statusKeys)
-    {
-        return $this->withStatusKey($statusKeys);
     }
 
     /**
@@ -146,18 +88,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerBid() instead.
-     *
-     * @param string $callerBid
-     *
-     * @return $this
-     */
-    public function setcallerBid($callerBid)
-    {
-        return $this->withCallerBid($callerBid);
     }
 
     /**

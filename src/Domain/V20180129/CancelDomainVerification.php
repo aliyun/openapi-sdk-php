@@ -36,18 +36,6 @@ class CancelDomainVerification extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionType() instead.
-     *
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function setActionType($actionType)
-    {
-        return $this->withActionType($actionType);
-    }
-
-    /**
      * @param string $actionType
      *
      * @return $this
@@ -58,18 +46,6 @@ class CancelDomainVerification extends RpcRequest
         $this->options['query']['ActionType'] = $actionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -86,18 +62,6 @@ class CancelDomainVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -108,18 +72,6 @@ class CancelDomainVerification extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

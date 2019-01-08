@@ -55,18 +55,6 @@ class RegisterInstance extends RpcRequest
     public $serviceCode = 'dmsenterprise';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEcsInstanceId() instead.
-     *
-     * @param string $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function setEcsInstanceId($ecsInstanceId)
-    {
-        return $this->withEcsInstanceId($ecsInstanceId);
-    }
-
-    /**
      * @param string $ecsInstanceId
      *
      * @return $this
@@ -77,18 +65,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['EcsInstanceId'] = $ecsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEcsRegion() instead.
-     *
-     * @param string $ecsRegion
-     *
-     * @return $this
-     */
-    public function setEcsRegion($ecsRegion)
-    {
-        return $this->withEcsRegion($ecsRegion);
     }
 
     /**
@@ -105,18 +81,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExportTimeout() instead.
-     *
-     * @param string $exportTimeout
-     *
-     * @return $this
-     */
-    public function setExportTimeout($exportTimeout)
-    {
-        return $this->withExportTimeout($exportTimeout);
-    }
-
-    /**
      * @param string $exportTimeout
      *
      * @return $this
@@ -127,18 +91,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['ExportTimeout'] = $exportTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDatabasePassword() instead.
-     *
-     * @param string $databasePassword
-     *
-     * @return $this
-     */
-    public function setDatabasePassword($databasePassword)
-    {
-        return $this->withDatabasePassword($databasePassword);
     }
 
     /**
@@ -155,18 +107,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceAlias() instead.
-     *
-     * @param string $instanceAlias
-     *
-     * @return $this
-     */
-    public function setInstanceAlias($instanceAlias)
-    {
-        return $this->withInstanceAlias($instanceAlias);
-    }
-
-    /**
      * @param string $instanceAlias
      *
      * @return $this
@@ -177,18 +117,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['InstanceAlias'] = $instanceAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -205,18 +133,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTid() instead.
-     *
-     * @param string $tid
-     *
-     * @return $this
-     */
-    public function setTid($tid)
-    {
-        return $this->withTid($tid);
-    }
-
-    /**
      * @param string $tid
      *
      * @return $this
@@ -227,18 +143,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['Tid'] = $tid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSid() instead.
-     *
-     * @param string $sid
-     *
-     * @return $this
-     */
-    public function setSid($sid)
-    {
-        return $this->withSid($sid);
     }
 
     /**
@@ -255,18 +159,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDatabaseUser() instead.
-     *
-     * @param string $databaseUser
-     *
-     * @return $this
-     */
-    public function setDatabaseUser($databaseUser)
-    {
-        return $this->withDatabaseUser($databaseUser);
-    }
-
-    /**
      * @param string $databaseUser
      *
      * @return $this
@@ -277,18 +169,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['DatabaseUser'] = $databaseUser;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
     }
 
     /**
@@ -305,18 +185,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -327,18 +195,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceSource() instead.
-     *
-     * @param string $instanceSource
-     *
-     * @return $this
-     */
-    public function setInstanceSource($instanceSource)
-    {
-        return $this->withInstanceSource($instanceSource);
     }
 
     /**
@@ -355,18 +211,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnvType() instead.
-     *
-     * @param string $envType
-     *
-     * @return $this
-     */
-    public function setEnvType($envType)
-    {
-        return $this->withEnvType($envType);
-    }
-
-    /**
      * @param string $envType
      *
      * @return $this
@@ -377,18 +221,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['EnvType'] = $envType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHost() instead.
-     *
-     * @param string $host
-     *
-     * @return $this
-     */
-    public function setHost($host)
-    {
-        return $this->withHost($host);
     }
 
     /**
@@ -405,18 +237,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -427,18 +247,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryTimeout() instead.
-     *
-     * @param string $queryTimeout
-     *
-     * @return $this
-     */
-    public function setQueryTimeout($queryTimeout)
-    {
-        return $this->withQueryTimeout($queryTimeout);
     }
 
     /**
@@ -455,18 +263,6 @@ class RegisterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbaUid() instead.
-     *
-     * @param string $dbaUid
-     *
-     * @return $this
-     */
-    public function setDbaUid($dbaUid)
-    {
-        return $this->withDbaUid($dbaUid);
-    }
-
-    /**
      * @param string $dbaUid
      *
      * @return $this
@@ -477,18 +273,6 @@ class RegisterInstance extends RpcRequest
         $this->options['query']['DbaUid'] = $dbaUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSafeRule() instead.
-     *
-     * @param string $safeRule
-     *
-     * @return $this
-     */
-    public function setSafeRule($safeRule)
-    {
-        return $this->withSafeRule($safeRule);
     }
 
     /**

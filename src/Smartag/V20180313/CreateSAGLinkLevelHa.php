@@ -47,18 +47,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupLinkId() instead.
-     *
-     * @param string $backupLinkId
-     *
-     * @return $this
-     */
-    public function setBackupLinkId($backupLinkId)
-    {
-        return $this->withBackupLinkId($backupLinkId);
     }
 
     /**
@@ -97,18 +73,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +83,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHaType() instead.
-     *
-     * @param string $haType
-     *
-     * @return $this
-     */
-    public function setHaType($haType)
-    {
-        return $this->withHaType($haType);
     }
 
     /**
@@ -147,18 +99,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMainLinkRegionId() instead.
-     *
-     * @param string $mainLinkRegionId
-     *
-     * @return $this
-     */
-    public function setMainLinkRegionId($mainLinkRegionId)
-    {
-        return $this->withMainLinkRegionId($mainLinkRegionId);
     }
 
     /**
@@ -197,18 +125,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
      * @param string $smartAGId
      *
      * @return $this
@@ -219,18 +135,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
         $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +151,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMainLinkId() instead.
-     *
-     * @param string $mainLinkId
-     *
-     * @return $this
-     */
-    public function setMainLinkId($mainLinkId)
-    {
-        return $this->withMainLinkId($mainLinkId);
-    }
-
-    /**
      * @param string $mainLinkId
      *
      * @return $this
@@ -269,18 +161,6 @@ class CreateSAGLinkLevelHa extends RpcRequest
         $this->options['query']['MainLinkId'] = $mainLinkId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupLinkRegionId() instead.
-     *
-     * @param string $backupLinkRegionId
-     *
-     * @return $this
-     */
-    public function setBackupLinkRegionId($backupLinkRegionId)
-    {
-        return $this->withBackupLinkRegionId($backupLinkRegionId);
     }
 
     /**

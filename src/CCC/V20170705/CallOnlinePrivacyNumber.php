@@ -40,18 +40,6 @@ class CallOnlinePrivacyNumber extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelA() instead.
-     *
-     * @param string $telA
-     *
-     * @return $this
-     */
-    public function setTelA($telA)
-    {
-        return $this->withTelA($telA);
-    }
-
-    /**
      * @param string $telA
      *
      * @return $this
@@ -65,18 +53,6 @@ class CallOnlinePrivacyNumber extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelB() instead.
-     *
-     * @param string $telB
-     *
-     * @return $this
-     */
-    public function setTelB($telB)
-    {
-        return $this->withTelB($telB);
-    }
-
-    /**
      * @param string $telB
      *
      * @return $this
@@ -87,18 +63,6 @@ class CallOnlinePrivacyNumber extends RpcRequest
         $this->options['query']['TelB'] = $telB;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

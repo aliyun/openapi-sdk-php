@@ -34,18 +34,6 @@ class GetBlockchainCreateTask extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrent() instead.
-     *
-     * @param string $current
-     *
-     * @return $this
-     */
-    public function setCurrent($current)
-    {
-        return $this->withCurrent($current);
-    }
-
-    /**
      * @param string $current
      *
      * @return $this
@@ -56,18 +44,6 @@ class GetBlockchainCreateTask extends RpcRequest
         $this->options['query']['Current'] = $current;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

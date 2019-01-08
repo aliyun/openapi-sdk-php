@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\TagINner
  *
- * @method V20181109\TagINnerApiResolver v20181109()
+ * @method TagINnerV20181109ApiResolver v20181109()
  */
 class TagINner
 {

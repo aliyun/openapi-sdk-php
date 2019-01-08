@@ -41,18 +41,6 @@ class ExportImage extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class ExportImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -91,18 +67,6 @@ class ExportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOSSBucket() instead.
-     *
-     * @param string $oSSBucket
-     *
-     * @return $this
-     */
-    public function setOSSBucket($oSSBucket)
-    {
-        return $this->withOSSBucket($oSSBucket);
-    }
-
-    /**
      * @param string $oSSBucket
      *
      * @return $this
@@ -113,18 +77,6 @@ class ExportImage extends RpcRequest
         $this->options['query']['OSSBucket'] = $oSSBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -141,18 +93,6 @@ class ExportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOSSPrefix() instead.
-     *
-     * @param string $oSSPrefix
-     *
-     * @return $this
-     */
-    public function setOSSPrefix($oSSPrefix)
-    {
-        return $this->withOSSPrefix($oSSPrefix);
-    }
-
-    /**
      * @param string $oSSPrefix
      *
      * @return $this
@@ -163,18 +103,6 @@ class ExportImage extends RpcRequest
         $this->options['query']['OSSPrefix'] = $oSSPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
     }
 
     /**
@@ -191,18 +119,6 @@ class ExportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableCompress() instead.
-     *
-     * @param string $enableCompress
-     *
-     * @return $this
-     */
-    public function setenableCompress($enableCompress)
-    {
-        return $this->withEnableCompress($enableCompress);
-    }
-
-    /**
      * @param string $enableCompress
      *
      * @return $this
@@ -216,18 +132,6 @@ class ExportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -238,18 +142,6 @@ class ExportImage extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageFormat() instead.
-     *
-     * @param string $imageFormat
-     *
-     * @return $this
-     */
-    public function setImageFormat($imageFormat)
-    {
-        return $this->withImageFormat($imageFormat);
     }
 
     /**

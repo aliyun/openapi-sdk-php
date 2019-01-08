@@ -36,19 +36,6 @@ class FindOrderableList extends RpcRequest
      */
     public $scheme = 'https';
 
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
     /**
      * @param string $projectName
      *
@@ -60,18 +47,6 @@ class FindOrderableList extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**
@@ -88,18 +63,6 @@ class FindOrderableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlias() instead.
-     *
-     * @param string $alias
-     *
-     * @return $this
-     */
-    public function setAlias($alias)
-    {
-        return $this->withAlias($alias);
-    }
-
-    /**
      * @param string $alias
      *
      * @return $this
@@ -113,18 +76,6 @@ class FindOrderableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
-    }
-
-    /**
      * @param string $serviceName
      *
      * @return $this
@@ -135,18 +86,6 @@ class FindOrderableList extends RpcRequest
         $this->options['query']['ServiceName'] = $serviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

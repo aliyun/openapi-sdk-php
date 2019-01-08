@@ -34,18 +34,6 @@ class QueryDevicesByAlias extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlias() instead.
-     *
-     * @param string $alias
-     *
-     * @return $this
-     */
-    public function setAlias($alias)
-    {
-        return $this->withAlias($alias);
-    }
-
-    /**
      * @param string $alias
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryDevicesByAlias extends RpcRequest
         $this->options['query']['Alias'] = $alias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**

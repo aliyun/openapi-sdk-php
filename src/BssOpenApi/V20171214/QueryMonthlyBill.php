@@ -33,18 +33,6 @@ class QueryMonthlyBill extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBillingCycle() instead.
-     *
-     * @param string $billingCycle
-     *
-     * @return $this
-     */
-    public function setBillingCycle($billingCycle)
-    {
-        return $this->withBillingCycle($billingCycle);
-    }
-
-    /**
      * @param string $billingCycle
      *
      * @return $this

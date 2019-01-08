@@ -40,18 +40,6 @@ class DeleteGtmAccessStrategy extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class DeleteGtmAccessStrategy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
-    }
-
-    /**
      * @param string $strategyId
      *
      * @return $this
@@ -87,18 +63,6 @@ class DeleteGtmAccessStrategy extends RpcRequest
         $this->options['query']['StrategyId'] = $strategyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

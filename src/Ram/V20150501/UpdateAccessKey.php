@@ -34,23 +34,10 @@ class UpdateAccessKey extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserAccessKeyId() instead.
-     *
-     * @param string $userAccessKeyId
-     *
-     * @return $this
-     */
-    public function setUserAccessKeyId($userAccessKeyId)
-    {
-        return $this->withUserAccessKeyId($userAccessKeyId);
-    }
 
     /**
      * @param string $userAccessKeyId
@@ -66,18 +53,6 @@ class UpdateAccessKey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
-    }
-
-    /**
      * @param string $userName
      *
      * @return $this
@@ -88,18 +63,6 @@ class UpdateAccessKey extends RpcRequest
         $this->options['query']['UserName'] = $userName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

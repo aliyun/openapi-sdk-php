@@ -38,18 +38,6 @@ class QuerySystemEntities extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityName() instead.
-     *
-     * @param string $entityName
-     *
-     * @return $this
-     */
-    public function setEntityName($entityName)
-    {
-        return $this->withEntityName($entityName);
-    }
-
-    /**
      * @param string $entityName
      *
      * @return $this

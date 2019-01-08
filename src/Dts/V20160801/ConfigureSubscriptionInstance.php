@@ -42,18 +42,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceID() instead.
-     *
-     * @param string $sourceEndpointInstanceID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceID($sourceEndpointInstanceID)
-    {
-        return $this->withSourceEndpointInstanceID($sourceEndpointInstanceID);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceID
      *
      * @return $this
@@ -64,18 +52,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceID'] = $sourceEndpointInstanceID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointOwnerID() instead.
-     *
-     * @param string $sourceEndpointOwnerID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointOwnerID($sourceEndpointOwnerID)
-    {
-        return $this->withSourceEndpointOwnerID($sourceEndpointOwnerID);
     }
 
     /**
@@ -92,18 +68,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionDataTypeDML() instead.
-     *
-     * @param string $subscriptionDataTypeDML
-     *
-     * @return $this
-     */
-    public function setSubscriptionDataTypeDML($subscriptionDataTypeDML)
-    {
-        return $this->withSubscriptionDataTypeDML($subscriptionDataTypeDML);
-    }
-
-    /**
      * @param string $subscriptionDataTypeDML
      *
      * @return $this
@@ -114,18 +78,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
         $this->options['query']['SubscriptionDataType.DML'] = $subscriptionDataTypeDML;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionObject() instead.
-     *
-     * @param string $subscriptionObject
-     *
-     * @return $this
-     */
-    public function setSubscriptionObject($subscriptionObject)
-    {
-        return $this->withSubscriptionObject($subscriptionObject);
     }
 
     /**
@@ -142,18 +94,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceName() instead.
-     *
-     * @param string $subscriptionInstanceName
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceName($subscriptionInstanceName)
-    {
-        return $this->withSubscriptionInstanceName($subscriptionInstanceName);
-    }
-
-    /**
      * @param string $subscriptionInstanceName
      *
      * @return $this
@@ -164,18 +104,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
         $this->options['query']['SubscriptionInstanceName'] = $subscriptionInstanceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceId() instead.
-     *
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        return $this->withSubscriptionInstanceId($subscriptionInstanceId);
     }
 
     /**
@@ -192,18 +120,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointRole() instead.
-     *
-     * @param string $sourceEndpointRole
-     *
-     * @return $this
-     */
-    public function setSourceEndpointRole($sourceEndpointRole)
-    {
-        return $this->withSourceEndpointRole($sourceEndpointRole);
-    }
-
-    /**
      * @param string $sourceEndpointRole
      *
      * @return $this
@@ -214,18 +130,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
         $this->options['query']['SourceEndpoint.Role'] = $sourceEndpointRole;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -242,18 +146,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceType() instead.
-     *
-     * @param string $sourceEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceType($sourceEndpointInstanceType)
-    {
-        return $this->withSourceEndpointInstanceType($sourceEndpointInstanceType);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceType
      *
      * @return $this
@@ -264,18 +156,6 @@ class ConfigureSubscriptionInstance extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceType'] = $sourceEndpointInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionDataTypeDDL() instead.
-     *
-     * @param string $subscriptionDataTypeDDL
-     *
-     * @return $this
-     */
-    public function setSubscriptionDataTypeDDL($subscriptionDataTypeDDL)
-    {
-        return $this->withSubscriptionDataTypeDDL($subscriptionDataTypeDDL);
     }
 
     /**

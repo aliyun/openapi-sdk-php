@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Eci
  *
- * @method V20180808\EciApiResolver v20180808()
+ * @method EciV20180808ApiResolver v20180808()
  */
 class Eci
 {

@@ -32,18 +32,6 @@ class GetQuotaHistoryInfo extends RpcRequest
     public $action = 'GetQuotaHistoryInfo';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
-
-    /**
      * @param string $cluster
      *
      * @return $this
@@ -54,18 +42,6 @@ class GetQuotaHistoryInfo extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -82,18 +58,6 @@ class GetQuotaHistoryInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -107,18 +71,6 @@ class GetQuotaHistoryInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -129,18 +81,6 @@ class GetQuotaHistoryInfo extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaName() instead.
-     *
-     * @param string $quotaName
-     *
-     * @return $this
-     */
-    public function setQuotaName($quotaName)
-    {
-        return $this->withQuotaName($quotaName);
     }
 
     /**

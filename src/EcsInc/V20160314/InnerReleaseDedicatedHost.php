@@ -42,18 +42,6 @@ class InnerReleaseDedicatedHost extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -64,18 +52,6 @@ class InnerReleaseDedicatedHost extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -92,18 +68,6 @@ class InnerReleaseDedicatedHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class InnerReleaseDedicatedHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostId() instead.
-     *
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function setDedicatedHostId($dedicatedHostId)
-    {
-        return $this->withDedicatedHostId($dedicatedHostId);
-    }
-
-    /**
      * @param string $dedicatedHostId
      *
      * @return $this
@@ -139,18 +91,6 @@ class InnerReleaseDedicatedHost extends RpcRequest
         $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

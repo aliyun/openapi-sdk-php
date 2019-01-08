@@ -39,18 +39,6 @@ class CreateChaincode extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -61,18 +49,6 @@ class CreateChaincode extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
     }
 
     /**
@@ -89,18 +65,6 @@ class CreateChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssUrl() instead.
-     *
-     * @param string $ossUrl
-     *
-     * @return $this
-     */
-    public function setOssUrl($ossUrl)
-    {
-        return $this->withOssUrl($ossUrl);
-    }
-
-    /**
      * @param string $ossUrl
      *
      * @return $this
@@ -111,18 +75,6 @@ class CreateChaincode extends RpcRequest
         $this->options['query']['OssUrl'] = $ossUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndorsePolicy() instead.
-     *
-     * @param string $endorsePolicy
-     *
-     * @return $this
-     */
-    public function setEndorsePolicy($endorsePolicy)
-    {
-        return $this->withEndorsePolicy($endorsePolicy);
     }
 
     /**
@@ -139,18 +91,6 @@ class CreateChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -164,18 +104,6 @@ class CreateChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
-    }
-
-    /**
      * @param string $channelId
      *
      * @return $this
@@ -186,18 +114,6 @@ class CreateChaincode extends RpcRequest
         $this->options['query']['ChannelId'] = $channelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
     }
 
     /**

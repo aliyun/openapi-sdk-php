@@ -35,18 +35,6 @@ class QueryInstanceInfoByConn extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
-
-    /**
      * @param string $port
      *
      * @return $this
@@ -60,18 +48,6 @@ class QueryInstanceInfoByConn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHost() instead.
-     *
-     * @param string $host
-     *
-     * @return $this
-     */
-    public function setHost($host)
-    {
-        return $this->withHost($host);
-    }
-
-    /**
      * @param string $host
      *
      * @return $this
@@ -82,18 +58,6 @@ class QueryInstanceInfoByConn extends RpcRequest
         $this->options['query']['Host'] = $host;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -48,18 +48,6 @@ class StartLiveIndex extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
-
-    /**
      * @param string $ossBucket
      *
      * @return $this
@@ -70,18 +58,6 @@ class StartLiveIndex extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTokenId() instead.
-     *
-     * @param string $tokenId
-     *
-     * @return $this
-     */
-    public function setTokenId($tokenId)
-    {
-        return $this->withTokenId($tokenId);
     }
 
     /**
@@ -98,18 +74,6 @@ class StartLiveIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -120,18 +84,6 @@ class StartLiveIndex extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
     }
 
     /**
@@ -148,18 +100,6 @@ class StartLiveIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInputUrl() instead.
-     *
-     * @param string $inputUrl
-     *
-     * @return $this
-     */
-    public function setInputUrl($inputUrl)
-    {
-        return $this->withInputUrl($inputUrl);
-    }
-
-    /**
      * @param string $inputUrl
      *
      * @return $this
@@ -170,18 +110,6 @@ class StartLiveIndex extends RpcRequest
         $this->options['query']['InputUrl'] = $inputUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -198,18 +126,6 @@ class StartLiveIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
@@ -220,18 +136,6 @@ class StartLiveIndex extends RpcRequest
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**
@@ -248,18 +152,6 @@ class StartLiveIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssRamRole() instead.
-     *
-     * @param string $ossRamRole
-     *
-     * @return $this
-     */
-    public function setOssRamRole($ossRamRole)
-    {
-        return $this->withOssRamRole($ossRamRole);
-    }
-
-    /**
      * @param string $ossRamRole
      *
      * @return $this
@@ -273,18 +165,6 @@ class StartLiveIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
-    }
-
-    /**
      * @param string $streamName
      *
      * @return $this
@@ -295,18 +175,6 @@ class StartLiveIndex extends RpcRequest
         $this->options['query']['StreamName'] = $streamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssUserId() instead.
-     *
-     * @param string $ossUserId
-     *
-     * @return $this
-     */
-    public function setOssUserId($ossUserId)
-    {
-        return $this->withOssUserId($ossUserId);
     }
 
     /**

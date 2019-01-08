@@ -48,18 +48,6 @@ class IndexVideo extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGrabType() instead.
-     *
-     * @param string $grabType
-     *
-     * @return $this
-     */
-    public function setGrabType($grabType)
-    {
-        return $this->withGrabType($grabType);
-    }
-
-    /**
      * @param string $grabType
      *
      * @return $this
@@ -70,18 +58,6 @@ class IndexVideo extends RpcRequest
         $this->options['query']['GrabType'] = $grabType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksB() instead.
-     *
-     * @param string $remarksB
-     *
-     * @return $this
-     */
-    public function setRemarksB($remarksB)
-    {
-        return $this->withRemarksB($remarksB);
     }
 
     /**
@@ -98,18 +74,6 @@ class IndexVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -120,18 +84,6 @@ class IndexVideo extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksA() instead.
-     *
-     * @param string $remarksA
-     *
-     * @return $this
-     */
-    public function setRemarksA($remarksA)
-    {
-        return $this->withRemarksA($remarksA);
     }
 
     /**
@@ -148,18 +100,6 @@ class IndexVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -170,18 +110,6 @@ class IndexVideo extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -198,18 +126,6 @@ class IndexVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoUri() instead.
-     *
-     * @param string $videoUri
-     *
-     * @return $this
-     */
-    public function setVideoUri($videoUri)
-    {
-        return $this->withVideoUri($videoUri);
-    }
-
-    /**
      * @param string $videoUri
      *
      * @return $this
@@ -220,18 +136,6 @@ class IndexVideo extends RpcRequest
         $this->options['query']['VideoUri'] = $videoUri;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSaveType() instead.
-     *
-     * @param string $saveType
-     *
-     * @return $this
-     */
-    public function setSaveType($saveType)
-    {
-        return $this->withSaveType($saveType);
     }
 
     /**
@@ -248,18 +152,6 @@ class IndexVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -273,18 +165,6 @@ class IndexVideo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -295,18 +175,6 @@ class IndexVideo extends RpcRequest
         $this->options['query']['Interval'] = $interval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtUri() instead.
-     *
-     * @param string $tgtUri
-     *
-     * @return $this
-     */
-    public function setTgtUri($tgtUri)
-    {
-        return $this->withTgtUri($tgtUri);
     }
 
     /**

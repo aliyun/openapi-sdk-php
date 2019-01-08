@@ -39,18 +39,6 @@ class ModifySasAssetStatisticsColumn extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -61,18 +49,6 @@ class ModifySasAssetStatisticsColumn extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatisticsColumn() instead.
-     *
-     * @param string $statisticsColumn
-     *
-     * @return $this
-     */
-    public function setStatisticsColumn($statisticsColumn)
-    {
-        return $this->withStatisticsColumn($statisticsColumn);
     }
 
     /**

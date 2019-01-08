@@ -36,18 +36,6 @@ class DeleteLiveDomainMapping extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPullDomain() instead.
-     *
-     * @param string $pullDomain
-     *
-     * @return $this
-     */
-    public function setPullDomain($pullDomain)
-    {
-        return $this->withPullDomain($pullDomain);
-    }
-
-    /**
      * @param string $pullDomain
      *
      * @return $this
@@ -58,18 +46,6 @@ class DeleteLiveDomainMapping extends RpcRequest
         $this->options['query']['PullDomain'] = $pullDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -86,18 +62,6 @@ class DeleteLiveDomainMapping extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPushDomain() instead.
-     *
-     * @param string $pushDomain
-     *
-     * @return $this
-     */
-    public function setPushDomain($pushDomain)
-    {
-        return $this->withPushDomain($pushDomain);
-    }
-
-    /**
      * @param string $pushDomain
      *
      * @return $this
@@ -108,18 +72,6 @@ class DeleteLiveDomainMapping extends RpcRequest
         $this->options['query']['PushDomain'] = $pushDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

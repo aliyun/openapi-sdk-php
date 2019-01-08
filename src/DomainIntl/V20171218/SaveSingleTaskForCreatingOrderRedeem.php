@@ -45,18 +45,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
     public $serviceCode = 'domain';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
-    }
-
-    /**
      * @param string $promotionNo
      *
      * @return $this
@@ -67,18 +55,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
         $this->options['query']['PromotionNo'] = $promotionNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentExpirationDate() instead.
-     *
-     * @param string $currentExpirationDate
-     *
-     * @return $this
-     */
-    public function setCurrentExpirationDate($currentExpirationDate)
-    {
-        return $this->withCurrentExpirationDate($currentExpirationDate);
     }
 
     /**
@@ -95,18 +71,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -117,18 +81,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -145,18 +97,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
-    }
-
-    /**
      * @param string $couponNo
      *
      * @return $this
@@ -167,18 +107,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
         $this->options['query']['CouponNo'] = $couponNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
     }
 
     /**
@@ -195,18 +123,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -217,18 +133,6 @@ class SaveSingleTaskForCreatingOrderRedeem extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

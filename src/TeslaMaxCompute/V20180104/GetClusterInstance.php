@@ -32,18 +32,6 @@ class GetClusterInstance extends RpcRequest
     public $action = 'GetClusterInstance';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
-
-    /**
      * @param string $cluster
      *
      * @return $this
@@ -54,18 +42,6 @@ class GetClusterInstance extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -82,18 +58,6 @@ class GetClusterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -107,18 +71,6 @@ class GetClusterInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -129,18 +81,6 @@ class GetClusterInstance extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

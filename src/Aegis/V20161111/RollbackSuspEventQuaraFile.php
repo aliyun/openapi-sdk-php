@@ -40,18 +40,6 @@ class RollbackSuspEventQuaraFile extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class RollbackSuspEventQuaraFile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
-    }
-
-    /**
      * @param string $from
      *
      * @return $this
@@ -87,18 +63,6 @@ class RollbackSuspEventQuaraFile extends RpcRequest
         $this->options['query']['From'] = $from;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuaraFileId() instead.
-     *
-     * @param string $quaraFileId
-     *
-     * @return $this
-     */
-    public function setQuaraFileId($quaraFileId)
-    {
-        return $this->withQuaraFileId($quaraFileId);
     }
 
     /**

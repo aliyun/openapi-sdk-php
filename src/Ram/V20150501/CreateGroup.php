@@ -33,23 +33,10 @@ class CreateGroup extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComments() instead.
-     *
-     * @param string $comments
-     *
-     * @return $this
-     */
-    public function setComments($comments)
-    {
-        return $this->withComments($comments);
-    }
 
     /**
      * @param string $comments
@@ -62,18 +49,6 @@ class CreateGroup extends RpcRequest
         $this->options['query']['Comments'] = $comments;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

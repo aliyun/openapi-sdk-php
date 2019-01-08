@@ -28,18 +28,6 @@ class GetInstance extends RpcRequest
     public $action = 'GetInstance';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
-
-    /**
      * @param string $csbId
      *
      * @return $this

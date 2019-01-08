@@ -33,18 +33,6 @@ class PutCustomMetric extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricList() instead.
-     *
-     * @param string $metricList
-     *
-     * @return $this
-     */
-    public function setMetricList($metricList)
-    {
-        return $this->withMetricList($metricList);
-    }
-
-    /**
      * @param string $metricList
      *
      * @return $this

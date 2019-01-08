@@ -35,7 +35,6 @@ class RenameAlbum extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class RenameAlbum extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlbumName() instead.
-     *
-     * @param string $albumName
-     *
-     * @return $this
-     */
-    public function setAlbumName($albumName)
-    {
-        return $this->withAlbumName($albumName);
-    }
 
     /**
      * @param string $albumName
@@ -69,18 +56,6 @@ class RenameAlbum extends RpcRequest
         $this->options['query']['AlbumName'] = $albumName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -97,18 +72,6 @@ class RenameAlbum extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlbumId() instead.
-     *
-     * @param string $albumId
-     *
-     * @return $this
-     */
-    public function setAlbumId($albumId)
-    {
-        return $this->withAlbumId($albumId);
-    }
-
-    /**
      * @param string $albumId
      *
      * @return $this
@@ -119,18 +82,6 @@ class RenameAlbum extends RpcRequest
         $this->options['query']['AlbumId'] = $albumId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

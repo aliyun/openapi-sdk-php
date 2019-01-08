@@ -40,18 +40,6 @@ class PublishSurvey extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSurveyId() instead.
-     *
-     * @param string $surveyId
-     *
-     * @return $this
-     */
-    public function setSurveyId($surveyId)
-    {
-        return $this->withSurveyId($surveyId);
-    }
-
-    /**
      * @param string $surveyId
      *
      * @return $this
@@ -65,18 +53,6 @@ class PublishSurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -87,18 +63,6 @@ class PublishSurvey extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
     }
 
     /**

@@ -36,18 +36,6 @@ class CreateMigrationJob extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -58,18 +46,6 @@ class CreateMigrationJob extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**
@@ -86,18 +62,6 @@ class CreateMigrationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrationJobClass() instead.
-     *
-     * @param string $migrationJobClass
-     *
-     * @return $this
-     */
-    public function setMigrationJobClass($migrationJobClass)
-    {
-        return $this->withMigrationJobClass($migrationJobClass);
-    }
-
-    /**
      * @param string $migrationJobClass
      *
      * @return $this
@@ -108,18 +72,6 @@ class CreateMigrationJob extends RpcRequest
         $this->options['query']['MigrationJobClass'] = $migrationJobClass;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

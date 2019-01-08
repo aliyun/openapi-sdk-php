@@ -33,23 +33,10 @@ class UpdateServiceQPS extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQps() instead.
-     *
-     * @param string $qps
-     *
-     * @return $this
-     */
-    public function setQps($qps)
-    {
-        return $this->withQps($qps);
-    }
 
     /**
      * @param string $qps
@@ -62,18 +49,6 @@ class UpdateServiceQPS extends RpcRequest
         $this->options['query']['Qps'] = $qps;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
     }
 
     /**

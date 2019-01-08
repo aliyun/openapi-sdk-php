@@ -54,18 +54,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
-
-    /**
      * @param string $country
      *
      * @return $this
@@ -76,18 +64,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
     }
 
     /**
@@ -104,18 +80,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelArea() instead.
-     *
-     * @param string $telArea
-     *
-     * @return $this
-     */
-    public function setTelArea($telArea)
-    {
-        return $this->withTelArea($telArea);
-    }
-
-    /**
      * @param string $telArea
      *
      * @return $this
@@ -126,18 +90,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['TelArea'] = $telArea;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
     }
 
     /**
@@ -154,18 +106,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
-    }
-
-    /**
      * @param string $city
      *
      * @return $this
@@ -176,18 +116,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['City'] = $city;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhAddress() instead.
-     *
-     * @param string $zhAddress
-     *
-     * @return $this
-     */
-    public function setZhAddress($zhAddress)
-    {
-        return $this->withZhAddress($zhAddress);
     }
 
     /**
@@ -204,18 +132,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantType() instead.
-     *
-     * @param string $registrantType
-     *
-     * @return $this
-     */
-    public function setRegistrantType($registrantType)
-    {
-        return $this->withRegistrantType($registrantType);
-    }
-
-    /**
      * @param string $registrantType
      *
      * @return $this
@@ -226,28 +142,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['RegistrantType'] = $registrantType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDomainName() instead.
-     *
-     * @return array
-     */
-    public function getDomainNames()
-    {
-        return $this->getDomainName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param array $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames(array $domainNames)
-    {
-        return $this->withDomainName($domainNames);
     }
 
     /**
@@ -266,18 +160,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelephone() instead.
-     *
-     * @param string $telephone
-     *
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        return $this->withTelephone($telephone);
-    }
-
-    /**
      * @param string $telephone
      *
      * @return $this
@@ -288,18 +170,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['Telephone'] = $telephone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTransferOutProhibited() instead.
-     *
-     * @param string $transferOutProhibited
-     *
-     * @return $this
-     */
-    public function setTransferOutProhibited($transferOutProhibited)
-    {
-        return $this->withTransferOutProhibited($transferOutProhibited);
     }
 
     /**
@@ -316,18 +186,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhCity() instead.
-     *
-     * @param string $zhCity
-     *
-     * @return $this
-     */
-    public function setZhCity($zhCity)
-    {
-        return $this->withZhCity($zhCity);
-    }
-
-    /**
      * @param string $zhCity
      *
      * @return $this
@@ -338,18 +196,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['ZhCity'] = $zhCity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhProvince() instead.
-     *
-     * @param string $zhProvince
-     *
-     * @return $this
-     */
-    public function setZhProvince($zhProvince)
-    {
-        return $this->withZhProvince($zhProvince);
     }
 
     /**
@@ -366,18 +212,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
-    }
-
-    /**
      * @param string $registrantOrganization
      *
      * @return $this
@@ -388,18 +222,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['RegistrantOrganization'] = $registrantOrganization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTelExt() instead.
-     *
-     * @param string $telExt
-     *
-     * @return $this
-     */
-    public function setTelExt($telExt)
-    {
-        return $this->withTelExt($telExt);
     }
 
     /**
@@ -416,18 +238,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProvince() instead.
-     *
-     * @param string $province
-     *
-     * @return $this
-     */
-    public function setProvince($province)
-    {
-        return $this->withProvince($province);
-    }
-
-    /**
      * @param string $province
      *
      * @return $this
@@ -438,18 +248,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['Province'] = $province;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantName() instead.
-     *
-     * @param string $zhRegistrantName
-     *
-     * @return $this
-     */
-    public function setZhRegistrantName($zhRegistrantName)
-    {
-        return $this->withZhRegistrantName($zhRegistrantName);
     }
 
     /**
@@ -466,18 +264,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPostalCode() instead.
-     *
-     * @param string $postalCode
-     *
-     * @return $this
-     */
-    public function setPostalCode($postalCode)
-    {
-        return $this->withPostalCode($postalCode);
-    }
-
-    /**
      * @param string $postalCode
      *
      * @return $this
@@ -488,18 +274,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['PostalCode'] = $postalCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -516,18 +290,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -538,18 +300,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**
@@ -566,18 +316,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantName() instead.
-     *
-     * @param string $registrantName
-     *
-     * @return $this
-     */
-    public function setRegistrantName($registrantName)
-    {
-        return $this->withRegistrantName($registrantName);
-    }
-
-    /**
      * @param string $registrantName
      *
      * @return $this
@@ -588,18 +326,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends RpcRequest
         $this->options['query']['RegistrantName'] = $registrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantOrganization() instead.
-     *
-     * @param string $zhRegistrantOrganization
-     *
-     * @return $this
-     */
-    public function setZhRegistrantOrganization($zhRegistrantOrganization)
-    {
-        return $this->withZhRegistrantOrganization($zhRegistrantOrganization);
     }
 
     /**

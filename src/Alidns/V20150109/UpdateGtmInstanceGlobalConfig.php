@@ -45,18 +45,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertGroup() instead.
-     *
-     * @param string $alertGroup
-     *
-     * @return $this
-     */
-    public function setAlertGroup($alertGroup)
-    {
-        return $this->withAlertGroup($alertGroup);
-    }
-
-    /**
      * @param string $alertGroup
      *
      * @return $this
@@ -67,18 +55,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
         $this->options['query']['AlertGroup'] = $alertGroup;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +71,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
-
-    /**
      * @param string $instanceName
      *
      * @return $this
@@ -117,18 +81,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
         $this->options['query']['InstanceName'] = $instanceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserDomainName() instead.
-     *
-     * @param string $userDomainName
-     *
-     * @return $this
-     */
-    public function setUserDomainName($userDomainName)
-    {
-        return $this->withUserDomainName($userDomainName);
     }
 
     /**
@@ -145,18 +97,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -167,18 +107,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLbaStrategy() instead.
-     *
-     * @param string $lbaStrategy
-     *
-     * @return $this
-     */
-    public function setLbaStrategy($lbaStrategy)
-    {
-        return $this->withLbaStrategy($lbaStrategy);
     }
 
     /**
@@ -195,18 +123,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -217,18 +133,6 @@ class UpdateGtmInstanceGlobalConfig extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTtl() instead.
-     *
-     * @param string $ttl
-     *
-     * @return $this
-     */
-    public function setTtl($ttl)
-    {
-        return $this->withTtl($ttl);
     }
 
     /**

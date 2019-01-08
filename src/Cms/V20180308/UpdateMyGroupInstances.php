@@ -34,18 +34,6 @@ class UpdateMyGroupInstances extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstances() instead.
-     *
-     * @param string $instances
-     *
-     * @return $this
-     */
-    public function setInstances($instances)
-    {
-        return $this->withInstances($instances);
-    }
-
-    /**
      * @param string $instances
      *
      * @return $this
@@ -56,18 +44,6 @@ class UpdateMyGroupInstances extends RpcRequest
         $this->options['query']['Instances'] = $instances;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**

@@ -34,18 +34,6 @@ class ApplyBlockchain extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBlockchain() instead.
-     *
-     * @param string $blockchain
-     *
-     * @return $this
-     */
-    public function setBlockchain($blockchain)
-    {
-        return $this->withBlockchain($blockchain);
-    }
-
-    /**
      * @param string $blockchain
      *
      * @return $this
@@ -56,18 +44,6 @@ class ApplyBlockchain extends RpcRequest
         $this->options['query']['Blockchain'] = $blockchain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUploadReq() instead.
-     *
-     * @param string $uploadReq
-     *
-     * @return $this
-     */
-    public function setUploadReq($uploadReq)
-    {
-        return $this->withUploadReq($uploadReq);
     }
 
     /**

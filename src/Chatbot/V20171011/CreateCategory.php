@@ -39,18 +39,6 @@ class CreateCategory extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withParentCategoryId() instead.
-     *
-     * @param string $parentCategoryId
-     *
-     * @return $this
-     */
-    public function setParentCategoryId($parentCategoryId)
-    {
-        return $this->withParentCategoryId($parentCategoryId);
-    }
-
-    /**
      * @param string $parentCategoryId
      *
      * @return $this
@@ -61,18 +49,6 @@ class CreateCategory extends RpcRequest
         $this->options['query']['ParentCategoryId'] = $parentCategoryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

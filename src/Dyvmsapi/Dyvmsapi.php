@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Dyvmsapi
  *
- * @method V20170525\DyvmsapiApiResolver v20170525()
+ * @method DyvmsapiV20170525ApiResolver v20170525()
  */
 class Dyvmsapi
 {

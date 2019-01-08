@@ -37,18 +37,6 @@ class DescribeDedicatedHostAutoRenew extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostIds() instead.
-     *
-     * @param string $dedicatedHostIds
-     *
-     * @return $this
-     */
-    public function setDedicatedHostIds($dedicatedHostIds)
-    {
-        return $this->withDedicatedHostIds($dedicatedHostIds);
-    }
-
-    /**
      * @param string $dedicatedHostIds
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeDedicatedHostAutoRenew extends RpcRequest
         $this->options['query']['DedicatedHostIds'] = $dedicatedHostIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeDedicatedHostAutoRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeDedicatedHostAutoRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeDedicatedHostAutoRenew extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

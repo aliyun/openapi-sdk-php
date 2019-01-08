@@ -45,18 +45,6 @@ class SendBatchSms extends RpcRequest
     public $serviceCode = 'dysmsapi';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateParamJson() instead.
-     *
-     * @param string $templateParamJson
-     *
-     * @return $this
-     */
-    public function setTemplateParamJson($templateParamJson)
-    {
-        return $this->withTemplateParamJson($templateParamJson);
-    }
-
-    /**
      * @param string $templateParamJson
      *
      * @return $this
@@ -67,18 +55,6 @@ class SendBatchSms extends RpcRequest
         $this->options['query']['TemplateParamJson'] = $templateParamJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -95,18 +71,6 @@ class SendBatchSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +81,6 @@ class SendBatchSms extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSmsUpExtendCodeJson() instead.
-     *
-     * @param string $smsUpExtendCodeJson
-     *
-     * @return $this
-     */
-    public function setSmsUpExtendCodeJson($smsUpExtendCodeJson)
-    {
-        return $this->withSmsUpExtendCodeJson($smsUpExtendCodeJson);
     }
 
     /**
@@ -145,18 +97,6 @@ class SendBatchSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -167,18 +107,6 @@ class SendBatchSms extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSignNameJson() instead.
-     *
-     * @param string $signNameJson
-     *
-     * @return $this
-     */
-    public function setSignNameJson($signNameJson)
-    {
-        return $this->withSignNameJson($signNameJson);
     }
 
     /**
@@ -195,18 +123,6 @@ class SendBatchSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateCode() instead.
-     *
-     * @param string $templateCode
-     *
-     * @return $this
-     */
-    public function setTemplateCode($templateCode)
-    {
-        return $this->withTemplateCode($templateCode);
-    }
-
-    /**
      * @param string $templateCode
      *
      * @return $this
@@ -217,18 +133,6 @@ class SendBatchSms extends RpcRequest
         $this->options['query']['TemplateCode'] = $templateCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumberJson() instead.
-     *
-     * @param string $phoneNumberJson
-     *
-     * @return $this
-     */
-    public function setPhoneNumberJson($phoneNumberJson)
-    {
-        return $this->withPhoneNumberJson($phoneNumberJson);
     }
 
     /**

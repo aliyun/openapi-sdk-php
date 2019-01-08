@@ -41,18 +41,6 @@ class DeleteNotificationConfiguration extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -63,18 +51,6 @@ class DeleteNotificationConfiguration extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -91,18 +67,6 @@ class DeleteNotificationConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotificationArn() instead.
-     *
-     * @param string $notificationArn
-     *
-     * @return $this
-     */
-    public function setNotificationArn($notificationArn)
-    {
-        return $this->withNotificationArn($notificationArn);
-    }
-
-    /**
      * @param string $notificationArn
      *
      * @return $this
@@ -113,18 +77,6 @@ class DeleteNotificationConfiguration extends RpcRequest
         $this->options['query']['NotificationArn'] = $notificationArn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

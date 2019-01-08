@@ -41,18 +41,6 @@ class DescribeSuspEventDetail extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuspiciousEventId() instead.
-     *
-     * @param string $suspiciousEventId
-     *
-     * @return $this
-     */
-    public function setSuspiciousEventId($suspiciousEventId)
-    {
-        return $this->withSuspiciousEventId($suspiciousEventId);
-    }
-
-    /**
      * @param string $suspiciousEventId
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeSuspEventDetail extends RpcRequest
         $this->options['query']['SuspiciousEventId'] = $suspiciousEventId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeSuspEventDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
-    }
-
-    /**
      * @param string $from
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeSuspEventDetail extends RpcRequest
         $this->options['query']['From'] = $from;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

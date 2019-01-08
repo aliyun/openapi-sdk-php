@@ -39,18 +39,6 @@ class DescribeTriggerHookStatus extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTriggerURL() instead.
-     *
-     * @param string $triggerURL
-     *
-     * @return $this
-     */
-    public function setTriggerURL($triggerURL)
-    {
-        return $this->withTriggerURL($triggerURL);
-    }
-
-    /**
      * @param string $triggerURL
      *
      * @return $this
@@ -61,18 +49,6 @@ class DescribeTriggerHookStatus extends RoaRequest
         $this->pathParameters['TriggerURL'] = $triggerURL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecret() instead.
-     *
-     * @param string $secret
-     *
-     * @return $this
-     */
-    public function setSecret($secret)
-    {
-        return $this->withSecret($secret);
     }
 
     /**

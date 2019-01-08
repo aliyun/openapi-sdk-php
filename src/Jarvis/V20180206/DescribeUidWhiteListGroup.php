@@ -41,18 +41,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWhiteListType() instead.
-     *
-     * @param string $whiteListType
-     *
-     * @return $this
-     */
-    public function setWhiteListType($whiteListType)
-    {
-        return $this->withWhiteListType($whiteListType);
     }
 
     /**
@@ -141,18 +93,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDstIP() instead.
-     *
-     * @param string $dstIP
-     *
-     * @return $this
-     */
-    public function setDstIP($dstIP)
-    {
-        return $this->withDstIP($dstIP);
-    }
-
-    /**
      * @param string $dstIP
      *
      * @return $this
@@ -163,18 +103,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
         $this->options['query']['DstIP'] = $dstIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -191,18 +119,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUid() instead.
-     *
-     * @param string $srcUid
-     *
-     * @return $this
-     */
-    public function setSrcUid($srcUid)
-    {
-        return $this->withSrcUid($srcUid);
-    }
-
-    /**
      * @param string $srcUid
      *
      * @return $this
@@ -216,18 +132,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
-    }
-
-    /**
      * @param string $status
      *
      * @return $this
@@ -238,18 +142,6 @@ class DescribeUidWhiteListGroup extends RpcRequest
         $this->options['query']['Status'] = $status;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

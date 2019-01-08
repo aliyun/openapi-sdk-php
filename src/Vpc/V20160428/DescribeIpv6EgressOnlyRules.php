@@ -48,18 +48,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -70,18 +58,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -98,18 +74,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6EgressOnlyRuleId() instead.
-     *
-     * @param string $ipv6EgressOnlyRuleId
-     *
-     * @return $this
-     */
-    public function setIpv6EgressOnlyRuleId($ipv6EgressOnlyRuleId)
-    {
-        return $this->withIpv6EgressOnlyRuleId($ipv6EgressOnlyRuleId);
-    }
-
-    /**
      * @param string $ipv6EgressOnlyRuleId
      *
      * @return $this
@@ -120,18 +84,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
         $this->options['query']['Ipv6EgressOnlyRuleId'] = $ipv6EgressOnlyRuleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -148,18 +100,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -170,18 +110,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -198,18 +126,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -220,18 +136,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -248,18 +152,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -273,18 +165,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6GatewayId() instead.
-     *
-     * @param string $ipv6GatewayId
-     *
-     * @return $this
-     */
-    public function setIpv6GatewayId($ipv6GatewayId)
-    {
-        return $this->withIpv6GatewayId($ipv6GatewayId);
-    }
-
-    /**
      * @param string $ipv6GatewayId
      *
      * @return $this
@@ -295,18 +175,6 @@ class DescribeIpv6EgressOnlyRules extends RpcRequest
         $this->options['query']['Ipv6GatewayId'] = $ipv6GatewayId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

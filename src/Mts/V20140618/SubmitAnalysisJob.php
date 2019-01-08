@@ -46,18 +46,6 @@ class SubmitAnalysisJob extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInput() instead.
-     *
-     * @param string $input
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        return $this->withInput($input);
-    }
-
-    /**
      * @param string $input
      *
      * @return $this
@@ -68,18 +56,6 @@ class SubmitAnalysisJob extends RpcRequest
         $this->options['query']['Input'] = $input;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
     }
 
     /**
@@ -96,18 +72,6 @@ class SubmitAnalysisJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -118,18 +82,6 @@ class SubmitAnalysisJob extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAnalysisConfig() instead.
-     *
-     * @param string $analysisConfig
-     *
-     * @return $this
-     */
-    public function setAnalysisConfig($analysisConfig)
-    {
-        return $this->withAnalysisConfig($analysisConfig);
     }
 
     /**
@@ -146,18 +98,6 @@ class SubmitAnalysisJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class SubmitAnalysisJob extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +124,6 @@ class SubmitAnalysisJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitAnalysisJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -243,18 +147,6 @@ class SubmitAnalysisJob extends RpcRequest
         $this->options['query']['Priority'] = $priority;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

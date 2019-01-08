@@ -33,18 +33,6 @@ class DescribeEthereumDeletable extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEthereumId() instead.
-     *
-     * @param string $ethereumId
-     *
-     * @return $this
-     */
-    public function setEthereumId($ethereumId)
-    {
-        return $this->withEthereumId($ethereumId);
-    }
-
-    /**
      * @param string $ethereumId
      *
      * @return $this

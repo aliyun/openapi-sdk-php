@@ -46,18 +46,6 @@ class AssociateEipAddress extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddress() instead.
-     *
-     * @param string $privateIpAddress
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddress($privateIpAddress)
-    {
-        return $this->withPrivateIpAddress($privateIpAddress);
-    }
-
-    /**
      * @param string $privateIpAddress
      *
      * @return $this
@@ -68,18 +56,6 @@ class AssociateEipAddress extends RpcRequest
         $this->options['query']['PrivateIpAddress'] = $privateIpAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -96,18 +72,6 @@ class AssociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -118,18 +82,6 @@ class AssociateEipAddress extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class AssociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceRegionId() instead.
-     *
-     * @param string $instanceRegionId
-     *
-     * @return $this
-     */
-    public function setInstanceRegionId($instanceRegionId)
-    {
-        return $this->withInstanceRegionId($instanceRegionId);
-    }
-
-    /**
      * @param string $instanceRegionId
      *
      * @return $this
@@ -168,18 +108,6 @@ class AssociateEipAddress extends RpcRequest
         $this->options['query']['InstanceRegionId'] = $instanceRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +124,6 @@ class AssociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -221,18 +137,6 @@ class AssociateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllocationId() instead.
-     *
-     * @param string $allocationId
-     *
-     * @return $this
-     */
-    public function setAllocationId($allocationId)
-    {
-        return $this->withAllocationId($allocationId);
-    }
-
-    /**
      * @param string $allocationId
      *
      * @return $this
@@ -243,18 +147,6 @@ class AssociateEipAddress extends RpcRequest
         $this->options['query']['AllocationId'] = $allocationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

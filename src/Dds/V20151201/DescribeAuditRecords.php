@@ -52,18 +52,6 @@ class DescribeAuditRecords extends RpcRequest
     public $serviceCode = 'dds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -74,18 +62,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -102,18 +78,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -124,18 +88,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -152,18 +104,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -174,18 +114,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -202,18 +130,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryKeywords() instead.
-     *
-     * @param string $queryKeywords
-     *
-     * @return $this
-     */
-    public function setQueryKeywords($queryKeywords)
-    {
-        return $this->withQueryKeywords($queryKeywords);
-    }
-
-    /**
      * @param string $queryKeywords
      *
      * @return $this
@@ -224,18 +140,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['QueryKeywords'] = $queryKeywords;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -252,18 +156,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDatabase() instead.
-     *
-     * @param string $database
-     *
-     * @return $this
-     */
-    public function setDatabase($database)
-    {
-        return $this->withDatabase($database);
-    }
-
-    /**
      * @param string $database
      *
      * @return $this
@@ -274,18 +166,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['Database'] = $database;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForm() instead.
-     *
-     * @param string $form
-     *
-     * @return $this
-     */
-    public function setForm($form)
-    {
-        return $this->withForm($form);
     }
 
     /**
@@ -302,18 +182,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -324,18 +192,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -352,18 +208,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -377,18 +221,6 @@ class DescribeAuditRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
-    }
-
-    /**
      * @param string $nodeId
      *
      * @return $this
@@ -399,18 +231,6 @@ class DescribeAuditRecords extends RpcRequest
         $this->options['query']['NodeId'] = $nodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
     }
 
     /**

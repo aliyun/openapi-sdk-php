@@ -35,28 +35,6 @@ class SetDevicesProperty extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceName() instead.
-     *
-     * @return array
-     */
-    public function getDeviceNames()
-    {
-        return $this->getDeviceName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param array $deviceNames
-     *
-     * @return $this
-     */
-    public function setDeviceNames(array $deviceNames)
-    {
-        return $this->withDeviceName($deviceNames);
-    }
-
-    /**
      * @param array $deviceName
      *
      * @return $this
@@ -72,18 +50,6 @@ class SetDevicesProperty extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -94,18 +60,6 @@ class SetDevicesProperty extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItems() instead.
-     *
-     * @param string $items
-     *
-     * @return $this
-     */
-    public function setItems($items)
-    {
-        return $this->withItems($items);
     }
 
     /**

@@ -46,18 +46,6 @@ class CPFSCreateFileSystem extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFsSpec() instead.
-     *
-     * @param string $fsSpec
-     *
-     * @return $this
-     */
-    public function setFsSpec($fsSpec)
-    {
-        return $this->withFsSpec($fsSpec);
-    }
-
-    /**
      * @param string $fsSpec
      *
      * @return $this
@@ -68,18 +56,6 @@ class CPFSCreateFileSystem extends RpcRequest
         $this->options['query']['FsSpec'] = $fsSpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -96,18 +72,6 @@ class CPFSCreateFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -118,18 +82,6 @@ class CPFSCreateFileSystem extends RpcRequest
         $this->options['query']['Bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -146,18 +98,6 @@ class CPFSCreateFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -168,18 +108,6 @@ class CPFSCreateFileSystem extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -196,18 +124,6 @@ class CPFSCreateFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFsDesc() instead.
-     *
-     * @param string $fsDesc
-     *
-     * @return $this
-     */
-    public function setFsDesc($fsDesc)
-    {
-        return $this->withFsDesc($fsDesc);
-    }
-
-    /**
      * @param string $fsDesc
      *
      * @return $this
@@ -221,18 +137,6 @@ class CPFSCreateFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSquashType() instead.
-     *
-     * @param string $squashType
-     *
-     * @return $this
-     */
-    public function setSquashType($squashType)
-    {
-        return $this->withSquashType($squashType);
-    }
-
-    /**
      * @param string $squashType
      *
      * @return $this
@@ -243,18 +147,6 @@ class CPFSCreateFileSystem extends RpcRequest
         $this->options['query']['SquashType'] = $squashType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCapacity() instead.
-     *
-     * @param string $capacity
-     *
-     * @return $this
-     */
-    public function setCapacity($capacity)
-    {
-        return $this->withCapacity($capacity);
     }
 
     /**

@@ -36,18 +36,6 @@ class DescribePrice extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriceUnit() instead.
-     *
-     * @param string $priceUnit
-     *
-     * @return $this
-     */
-    public function setPriceUnit($priceUnit)
-    {
-        return $this->withPriceUnit($priceUnit);
-    }
-
-    /**
      * @param string $priceUnit
      *
      * @return $this
@@ -58,28 +46,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['PriceUnit'] = $priceUnit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCommodities() instead.
-     *
-     * @return array
-     */
-    public function getCommoditiess()
-    {
-        return $this->getCommodities();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommodities() instead.
-     *
-     * @param array $commoditiess
-     *
-     * @return $this
-     */
-    public function setCommoditiess(array $commoditiess)
-    {
-        return $this->withCommodities($commoditiess);
     }
 
     /**
@@ -104,18 +70,6 @@ class DescribePrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
-    }
-
-    /**
      * @param string $chargeType
      *
      * @return $this
@@ -126,18 +80,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['ChargeType'] = $chargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

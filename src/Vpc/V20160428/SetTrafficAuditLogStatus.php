@@ -46,18 +46,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -96,18 +72,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogProject() instead.
-     *
-     * @param string $logProject
-     *
-     * @return $this
-     */
-    public function setLogProject($logProject)
-    {
-        return $this->withLogProject($logProject);
-    }
-
-    /**
      * @param string $logProject
      *
      * @return $this
@@ -118,18 +82,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['LogProject'] = $logProject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -196,18 +124,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogStore() instead.
-     *
-     * @param string $logStore
-     *
-     * @return $this
-     */
-    public function setLogStore($logStore)
-    {
-        return $this->withLogStore($logStore);
-    }
-
-    /**
      * @param string $logStore
      *
      * @return $this
@@ -243,18 +147,6 @@ class SetTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['LogStore'] = $logStore;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -30,18 +30,6 @@ class ModifyUserCustomLogConfig extends RpcRequest
     public $action = 'ModifyUserCustomLogConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -55,18 +43,6 @@ class ModifyUserCustomLogConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
-    }
-
-    /**
      * @param string $configId
      *
      * @return $this
@@ -77,18 +53,6 @@ class ModifyUserCustomLogConfig extends RpcRequest
         $this->options['query']['ConfigId'] = $configId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
     }
 
     /**

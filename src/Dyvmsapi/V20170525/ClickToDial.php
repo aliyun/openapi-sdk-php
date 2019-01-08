@@ -44,18 +44,6 @@ class ClickToDial extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +70,6 @@ class ClickToDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecordFlag() instead.
-     *
-     * @param string $recordFlag
-     *
-     * @return $this
-     */
-    public function setRecordFlag($recordFlag)
-    {
-        return $this->withRecordFlag($recordFlag);
-    }
-
-    /**
      * @param string $recordFlag
      *
      * @return $this
@@ -116,18 +80,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['RecordFlag'] = $recordFlag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -144,18 +96,6 @@ class ClickToDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallerShowNumber() instead.
-     *
-     * @param string $callerShowNumber
-     *
-     * @return $this
-     */
-    public function setCallerShowNumber($callerShowNumber)
-    {
-        return $this->withCallerShowNumber($callerShowNumber);
-    }
-
-    /**
      * @param string $callerShowNumber
      *
      * @return $this
@@ -166,18 +106,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['CallerShowNumber'] = $callerShowNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionTimeout() instead.
-     *
-     * @param string $sessionTimeout
-     *
-     * @return $this
-     */
-    public function setSessionTimeout($sessionTimeout)
-    {
-        return $this->withSessionTimeout($sessionTimeout);
     }
 
     /**
@@ -194,18 +122,6 @@ class ClickToDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
-    }
-
-    /**
      * @param string $calledNumber
      *
      * @return $this
@@ -216,18 +132,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['CalledNumber'] = $calledNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalledShowNumber() instead.
-     *
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function setCalledShowNumber($calledShowNumber)
-    {
-        return $this->withCalledShowNumber($calledShowNumber);
     }
 
     /**
@@ -244,18 +148,6 @@ class ClickToDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutId() instead.
-     *
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function setOutId($outId)
-    {
-        return $this->withOutId($outId);
-    }
-
-    /**
      * @param string $outId
      *
      * @return $this
@@ -266,18 +158,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['OutId'] = $outId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAsrFlag() instead.
-     *
-     * @param string $asrFlag
-     *
-     * @return $this
-     */
-    public function setAsrFlag($asrFlag)
-    {
-        return $this->withAsrFlag($asrFlag);
     }
 
     /**
@@ -294,18 +174,6 @@ class ClickToDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAsrModelId() instead.
-     *
-     * @param string $asrModelId
-     *
-     * @return $this
-     */
-    public function setAsrModelId($asrModelId)
-    {
-        return $this->withAsrModelId($asrModelId);
-    }
-
-    /**
      * @param string $asrModelId
      *
      * @return $this
@@ -316,18 +184,6 @@ class ClickToDial extends RpcRequest
         $this->options['query']['AsrModelId'] = $asrModelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerNumber() instead.
-     *
-     * @param string $callerNumber
-     *
-     * @return $this
-     */
-    public function setCallerNumber($callerNumber)
-    {
-        return $this->withCallerNumber($callerNumber);
     }
 
     /**

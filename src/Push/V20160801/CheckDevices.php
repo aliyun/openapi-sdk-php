@@ -34,18 +34,6 @@ class CheckDevices extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceIds() instead.
-     *
-     * @param string $deviceIds
-     *
-     * @return $this
-     */
-    public function setDeviceIds($deviceIds)
-    {
-        return $this->withDeviceIds($deviceIds);
-    }
-
-    /**
      * @param string $deviceIds
      *
      * @return $this
@@ -56,18 +44,6 @@ class CheckDevices extends RpcRequest
         $this->options['query']['DeviceIds'] = $deviceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**

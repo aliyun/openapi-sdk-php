@@ -7,16 +7,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
 /**
  * Request of ModifySmartAccessGateway
  *
+ * @method array getSnatEntries()
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getCity()
  * @method string getOwnerAccount()
- * @method string getName()
- * @method string getCidrBlock()
- * @method string getSmartAGId()
  * @method string getDescription()
  * @method string getOwnerId()
  * @method string getSecurityLockThreshold()
+ * @method string getName()
+ * @method string getCidrBlock()
+ * @method string getSmartAGId()
  */
 class ModifySmartAccessGateway extends RpcRequest
 {
@@ -47,15 +48,19 @@ class ModifySmartAccessGateway extends RpcRequest
     public $serviceCode = 'smartag';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
+     * @param array $snatEntries
      *
      * @return $this
      */
-    public function setResourceOwnerId($resourceOwnerId)
+    public function withSnatEntries(array $snatEntries)
     {
-        return $this->withResourceOwnerId($resourceOwnerId);
+        $this->data['SnatEntries'] = $snatEntries;
+        foreach ($snatEntries as $i => $iValue) {
+            $this->options['query']['SnatEntries.' . ($i + 1) . '.CidrBlock'] = $snatEntries[$i]['CidrBlock'];
+            $this->options['query']['SnatEntries.' . ($i + 1) . '.SnatIp'] = $snatEntries[$i]['SnatIp'];
+        }
+
+        return $this;
     }
 
     /**
@@ -72,18 +77,6 @@ class ModifySmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -94,18 +87,6 @@ class ModifySmartAccessGateway extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
     }
 
     /**
@@ -122,18 +103,6 @@ class ModifySmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -144,93 +113,6 @@ class ModifySmartAccessGateway extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCidrBlock() instead.
-     *
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function setCidrBlock($cidrBlock)
-    {
-        return $this->withCidrBlock($cidrBlock);
-    }
-
-    /**
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function withCidrBlock($cidrBlock)
-    {
-        $this->data['CidrBlock'] = $cidrBlock;
-        $this->options['query']['CidrBlock'] = $cidrBlock;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function withSmartAGId($smartAGId)
-    {
-        $this->data['SmartAGId'] = $smartAGId;
-        $this->options['query']['SmartAGId'] = $smartAGId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -247,18 +129,6 @@ class ModifySmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -272,18 +142,6 @@ class ModifySmartAccessGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityLockThreshold() instead.
-     *
-     * @param string $securityLockThreshold
-     *
-     * @return $this
-     */
-    public function setSecurityLockThreshold($securityLockThreshold)
-    {
-        return $this->withSecurityLockThreshold($securityLockThreshold);
-    }
-
-    /**
      * @param string $securityLockThreshold
      *
      * @return $this
@@ -292,6 +150,45 @@ class ModifySmartAccessGateway extends RpcRequest
     {
         $this->data['SecurityLockThreshold'] = $securityLockThreshold;
         $this->options['query']['SecurityLockThreshold'] = $securityLockThreshold;
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function withName($name)
+    {
+        $this->data['Name'] = $name;
+        $this->options['query']['Name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $cidrBlock
+     *
+     * @return $this
+     */
+    public function withCidrBlock($cidrBlock)
+    {
+        $this->data['CidrBlock'] = $cidrBlock;
+        $this->options['query']['CidrBlock'] = $cidrBlock;
+
+        return $this;
+    }
+
+    /**
+     * @param string $smartAGId
+     *
+     * @return $this
+     */
+    public function withSmartAGId($smartAGId)
+    {
+        $this->data['SmartAGId'] = $smartAGId;
+        $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
     }

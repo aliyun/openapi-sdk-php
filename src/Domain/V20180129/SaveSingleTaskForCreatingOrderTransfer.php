@@ -42,18 +42,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPermitPremiumTransfer() instead.
-     *
-     * @param string $permitPremiumTransfer
-     *
-     * @return $this
-     */
-    public function setPermitPremiumTransfer($permitPremiumTransfer)
-    {
-        return $this->withPermitPremiumTransfer($permitPremiumTransfer);
-    }
-
-    /**
      * @param string $permitPremiumTransfer
      *
      * @return $this
@@ -64,18 +52,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['PermitPremiumTransfer'] = $permitPremiumTransfer;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
     }
 
     /**
@@ -92,18 +68,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthorizationCode() instead.
-     *
-     * @param string $authorizationCode
-     *
-     * @return $this
-     */
-    public function setAuthorizationCode($authorizationCode)
-    {
-        return $this->withAuthorizationCode($authorizationCode);
-    }
-
-    /**
      * @param string $authorizationCode
      *
      * @return $this
@@ -114,18 +78,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['AuthorizationCode'] = $authorizationCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -142,18 +94,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -164,18 +104,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
     }
 
     /**
@@ -192,18 +120,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
-    }
-
-    /**
      * @param string $couponNo
      *
      * @return $this
@@ -214,18 +130,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['CouponNo'] = $couponNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
     }
 
     /**
@@ -242,18 +146,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -264,18 +156,6 @@ class SaveSingleTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

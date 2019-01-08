@@ -31,7 +31,6 @@ class ClearAccountAlias extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

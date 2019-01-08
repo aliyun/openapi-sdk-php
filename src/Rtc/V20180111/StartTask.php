@@ -43,28 +43,6 @@ class StartTask extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getMixPanes() instead.
-     *
-     * @return array
-     */
-    public function getMixPaness()
-    {
-        return $this->getMixPanes();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixPanes() instead.
-     *
-     * @param array $mixPaness
-     *
-     * @return $this
-     */
-    public function setMixPaness(array $mixPaness)
-    {
-        return $this->withMixPanes($mixPaness);
-    }
-
-    /**
      * @param array $mixPanes
      *
      * @return $this
@@ -82,18 +60,6 @@ class StartTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdempotentId() instead.
-     *
-     * @param string $idempotentId
-     *
-     * @return $this
-     */
-    public function setIdempotentId($idempotentId)
-    {
-        return $this->withIdempotentId($idempotentId);
-    }
-
-    /**
      * @param string $idempotentId
      *
      * @return $this
@@ -104,18 +70,6 @@ class StartTask extends RpcRequest
         $this->options['query']['IdempotentId'] = $idempotentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -132,18 +86,6 @@ class StartTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
@@ -157,18 +99,6 @@ class StartTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -179,18 +109,6 @@ class StartTask extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

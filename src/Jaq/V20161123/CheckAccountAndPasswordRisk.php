@@ -35,18 +35,6 @@ class CheckAccountAndPasswordRisk extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -60,18 +48,6 @@ class CheckAccountAndPasswordRisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPasswordHash() instead.
-     *
-     * @param string $passwordHash
-     *
-     * @return $this
-     */
-    public function setPasswordHash($passwordHash)
-    {
-        return $this->withPasswordHash($passwordHash);
-    }
-
-    /**
      * @param string $passwordHash
      *
      * @return $this
@@ -82,18 +58,6 @@ class CheckAccountAndPasswordRisk extends RpcRequest
         $this->options['query']['PasswordHash'] = $passwordHash;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
     }
 
     /**

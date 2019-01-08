@@ -35,18 +35,6 @@ class BindEslDeviceShelf extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withShelfCode() instead.
-     *
-     * @param string $shelfCode
-     *
-     * @return $this
-     */
-    public function setShelfCode($shelfCode)
-    {
-        return $this->withShelfCode($shelfCode);
-    }
-
-    /**
      * @param string $shelfCode
      *
      * @return $this
@@ -60,18 +48,6 @@ class BindEslDeviceShelf extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEslBarCode() instead.
-     *
-     * @param string $eslBarCode
-     *
-     * @return $this
-     */
-    public function setEslBarCode($eslBarCode)
-    {
-        return $this->withEslBarCode($eslBarCode);
-    }
-
-    /**
      * @param string $eslBarCode
      *
      * @return $this
@@ -82,18 +58,6 @@ class BindEslDeviceShelf extends RpcRequest
         $this->options['query']['EslBarCode'] = $eslBarCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**

@@ -44,18 +44,6 @@ class RealTimeSnapshotCommand extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMode() instead.
-     *
-     * @param string $mode
-     *
-     * @return $this
-     */
-    public function setMode($mode)
-    {
-        return $this->withMode($mode);
-    }
-
-    /**
      * @param string $mode
      *
      * @return $this
@@ -66,18 +54,6 @@ class RealTimeSnapshotCommand extends RpcRequest
         $this->options['query']['Mode'] = $mode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -94,18 +70,6 @@ class RealTimeSnapshotCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -116,18 +80,6 @@ class RealTimeSnapshotCommand extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**
@@ -144,18 +96,6 @@ class RealTimeSnapshotCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +109,6 @@ class RealTimeSnapshotCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommand() instead.
-     *
-     * @param string $command
-     *
-     * @return $this
-     */
-    public function setCommand($command)
-    {
-        return $this->withCommand($command);
-    }
-
-    /**
      * @param string $command
      *
      * @return $this
@@ -191,18 +119,6 @@ class RealTimeSnapshotCommand extends RpcRequest
         $this->options['query']['Command'] = $command;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

@@ -40,18 +40,6 @@ class DescribeUploadInfo extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBiz() instead.
-     *
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function setBiz($biz)
-    {
-        return $this->withBiz($biz);
-    }
-
-    /**
      * @param string $biz
      *
      * @return $this
@@ -65,18 +53,6 @@ class DescribeUploadInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -87,18 +63,6 @@ class DescribeUploadInfo extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

@@ -37,18 +37,6 @@ class SetEventRecordPlan extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -59,18 +47,6 @@ class SetEventRecordPlan extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventTypes() instead.
-     *
-     * @param string $eventTypes
-     *
-     * @return $this
-     */
-    public function setEventTypes($eventTypes)
-    {
-        return $this->withEventTypes($eventTypes);
     }
 
     /**
@@ -87,18 +63,6 @@ class SetEventRecordPlan extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreRecordDuration() instead.
-     *
-     * @param string $preRecordDuration
-     *
-     * @return $this
-     */
-    public function setPreRecordDuration($preRecordDuration)
-    {
-        return $this->withPreRecordDuration($preRecordDuration);
-    }
-
-    /**
      * @param string $preRecordDuration
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetEventRecordPlan extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecordDuration() instead.
-     *
-     * @param string $recordDuration
-     *
-     * @return $this
-     */
-    public function setRecordDuration($recordDuration)
-    {
-        return $this->withRecordDuration($recordDuration);
-    }
-
-    /**
      * @param string $recordDuration
      *
      * @return $this
@@ -134,18 +86,6 @@ class SetEventRecordPlan extends RpcRequest
         $this->options['query']['RecordDuration'] = $recordDuration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**

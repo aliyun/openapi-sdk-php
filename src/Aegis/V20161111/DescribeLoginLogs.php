@@ -44,18 +44,6 @@ class DescribeLoginLogs extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTypes() instead.
-     *
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function setTypes($types)
-    {
-        return $this->withTypes($types);
-    }
-
-    /**
      * @param string $types
      *
      * @return $this
@@ -66,18 +54,6 @@ class DescribeLoginLogs extends RpcRequest
         $this->options['query']['Types'] = $types;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -94,18 +70,6 @@ class DescribeLoginLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -116,18 +80,6 @@ class DescribeLoginLogs extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatuses() instead.
-     *
-     * @param string $statuses
-     *
-     * @return $this
-     */
-    public function setStatuses($statuses)
-    {
-        return $this->withStatuses($statuses);
     }
 
     /**
@@ -144,18 +96,6 @@ class DescribeLoginLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeLoginLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -191,18 +119,6 @@ class DescribeLoginLogs extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
     }
 
     /**

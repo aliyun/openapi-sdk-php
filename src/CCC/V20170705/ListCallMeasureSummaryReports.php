@@ -38,18 +38,6 @@ class ListCallMeasureSummaryReports extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIntervalType() instead.
-     *
-     * @param string $intervalType
-     *
-     * @return $this
-     */
-    public function setIntervalType($intervalType)
-    {
-        return $this->withIntervalType($intervalType);
-    }
-
-    /**
      * @param string $intervalType
      *
      * @return $this

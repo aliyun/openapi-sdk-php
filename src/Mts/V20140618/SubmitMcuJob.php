@@ -46,18 +46,6 @@ class SubmitMcuJob extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplate() instead.
-     *
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function setTemplate($template)
-    {
-        return $this->withTemplate($template);
-    }
-
-    /**
      * @param string $template
      *
      * @return $this
@@ -68,18 +56,6 @@ class SubmitMcuJob extends RpcRequest
         $this->options['query']['Template'] = $template;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInput() instead.
-     *
-     * @param string $input
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        return $this->withInput($input);
     }
 
     /**
@@ -96,18 +72,6 @@ class SubmitMcuJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -118,18 +82,6 @@ class SubmitMcuJob extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -146,18 +98,6 @@ class SubmitMcuJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class SubmitMcuJob extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +124,6 @@ class SubmitMcuJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitMcuJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
@@ -243,18 +147,6 @@ class SubmitMcuJob extends RpcRequest
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

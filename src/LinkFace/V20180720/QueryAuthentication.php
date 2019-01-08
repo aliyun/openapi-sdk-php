@@ -37,23 +37,10 @@ class QueryAuthentication extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLicenseType() instead.
-     *
-     * @param string $licenseType
-     *
-     * @return $this
-     */
-    public function setLicenseType($licenseType)
-    {
-        return $this->withLicenseType($licenseType);
-    }
 
     /**
      * @param string $licenseType
@@ -66,18 +53,6 @@ class QueryAuthentication extends RpcRequest
         $this->options['query']['LicenseType'] = $licenseType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
     }
 
     /**
@@ -94,18 +69,6 @@ class QueryAuthentication extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -116,18 +79,6 @@ class QueryAuthentication extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -144,18 +95,6 @@ class QueryAuthentication extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
-    }
-
-    /**
      * @param string $deviceName
      *
      * @return $this
@@ -166,18 +105,6 @@ class QueryAuthentication extends RpcRequest
         $this->options['query']['DeviceName'] = $deviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

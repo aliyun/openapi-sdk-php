@@ -29,18 +29,6 @@ class FindAlarmHistory extends RpcRequest
     public $action = 'FindAlarmHistory';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
-
-    /**
      * @param string $csbId
      *
      * @return $this
@@ -51,18 +39,6 @@ class FindAlarmHistory extends RpcRequest
         $this->options['query']['CsbId'] = $csbId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeWindow() instead.
-     *
-     * @param string $timeWindow
-     *
-     * @return $this
-     */
-    public function setTimeWindow($timeWindow)
-    {
-        return $this->withTimeWindow($timeWindow);
     }
 
     /**

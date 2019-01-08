@@ -48,28 +48,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getEventId() instead.
-     *
-     * @return array
-     */
-    public function getEventIds()
-    {
-        return $this->getEventId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param array $eventIds
-     *
-     * @return $this
-     */
-    public function setEventIds(array $eventIds)
-    {
-        return $this->withEventId($eventIds);
-    }
-
-    /**
      * @param array $eventId
      *
      * @return $this
@@ -82,18 +60,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -110,18 +76,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventCycleStatus() instead.
-     *
-     * @param string $eventCycleStatus
-     *
-     * @return $this
-     */
-    public function setEventCycleStatus($eventCycleStatus)
-    {
-        return $this->withEventCycleStatus($eventCycleStatus);
-    }
-
-    /**
      * @param string $eventCycleStatus
      *
      * @return $this
@@ -132,18 +86,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['EventCycleStatus'] = $eventCycleStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -160,18 +102,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -182,28 +112,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceEventCycleStatus() instead.
-     *
-     * @return array
-     */
-    public function getInstanceEventCycleStatuss()
-    {
-        return $this->getInstanceEventCycleStatus();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceEventCycleStatus() instead.
-     *
-     * @param array $instanceEventCycleStatuss
-     *
-     * @return $this
-     */
-    public function setInstanceEventCycleStatuss(array $instanceEventCycleStatuss)
-    {
-        return $this->withInstanceEventCycleStatus($instanceEventCycleStatuss);
     }
 
     /**
@@ -222,18 +130,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventPublishTimeEnd() instead.
-     *
-     * @param string $eventPublishTimeEnd
-     *
-     * @return $this
-     */
-    public function setEventPublishTimeEnd($eventPublishTimeEnd)
-    {
-        return $this->withEventPublishTimeEnd($eventPublishTimeEnd);
-    }
-
-    /**
      * @param string $eventPublishTimeEnd
      *
      * @return $this
@@ -244,28 +140,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['EventPublishTime.End'] = $eventPublishTimeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceEventType() instead.
-     *
-     * @return array
-     */
-    public function getInstanceEventTypes()
-    {
-        return $this->getInstanceEventType();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceEventType() instead.
-     *
-     * @param array $instanceEventTypes
-     *
-     * @return $this
-     */
-    public function setInstanceEventTypes(array $instanceEventTypes)
-    {
-        return $this->withInstanceEventType($instanceEventTypes);
     }
 
     /**
@@ -284,18 +158,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -306,18 +168,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -334,18 +184,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotBeforeStart() instead.
-     *
-     * @param string $notBeforeStart
-     *
-     * @return $this
-     */
-    public function setNotBeforeStart($notBeforeStart)
-    {
-        return $this->withNotBeforeStart($notBeforeStart);
-    }
-
-    /**
      * @param string $notBeforeStart
      *
      * @return $this
@@ -356,18 +194,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['NotBefore.Start'] = $notBeforeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -384,18 +210,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventPublishTimeStart() instead.
-     *
-     * @param string $eventPublishTimeStart
-     *
-     * @return $this
-     */
-    public function setEventPublishTimeStart($eventPublishTimeStart)
-    {
-        return $this->withEventPublishTimeStart($eventPublishTimeStart);
-    }
-
-    /**
      * @param string $eventPublishTimeStart
      *
      * @return $this
@@ -406,18 +220,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['EventPublishTime.Start'] = $eventPublishTimeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -434,18 +236,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotBeforeEnd() instead.
-     *
-     * @param string $notBeforeEnd
-     *
-     * @return $this
-     */
-    public function setNotBeforeEnd($notBeforeEnd)
-    {
-        return $this->withNotBeforeEnd($notBeforeEnd);
-    }
-
-    /**
      * @param string $notBeforeEnd
      *
      * @return $this
@@ -456,18 +246,6 @@ class DescribeInstanceHistoryEvents extends RpcRequest
         $this->options['query']['NotBefore.End'] = $notBeforeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventType() instead.
-     *
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        return $this->withEventType($eventType);
     }
 
     /**

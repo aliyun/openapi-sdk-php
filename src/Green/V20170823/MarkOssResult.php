@@ -44,18 +44,6 @@ class MarkOssResult extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -66,18 +54,6 @@ class MarkOssResult extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function setIds($ids)
-    {
-        return $this->withIds($ids);
     }
 
     /**
@@ -94,18 +70,6 @@ class MarkOssResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -116,18 +80,6 @@ class MarkOssResult extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStock() instead.
-     *
-     * @param string $stock
-     *
-     * @return $this
-     */
-    public function setStock($stock)
-    {
-        return $this->withStock($stock);
     }
 
     /**
@@ -144,18 +96,6 @@ class MarkOssResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
-    }
-
-    /**
      * @param string $operation
      *
      * @return $this
@@ -169,18 +109,6 @@ class MarkOssResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -191,18 +119,6 @@ class MarkOssResult extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

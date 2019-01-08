@@ -37,18 +37,6 @@ class QueryMetricMeta extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
-    }
-
-    /**
      * @param string $metric
      *
      * @return $this
@@ -59,18 +47,6 @@ class QueryMetricMeta extends RpcRequest
         $this->options['query']['Metric'] = $metric;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -87,18 +63,6 @@ class QueryMetricMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -112,18 +76,6 @@ class QueryMetricMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -134,18 +86,6 @@ class QueryMetricMeta extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabels() instead.
-     *
-     * @param string $labels
-     *
-     * @return $this
-     */
-    public function setLabels($labels)
-    {
-        return $this->withLabels($labels);
     }
 
     /**

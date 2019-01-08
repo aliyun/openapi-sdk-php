@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ons
  *
- * @method V20170918\OnsApiResolver v20170918()
+ * @method OnsV20170918ApiResolver v20170918()
  */
 class Ons
 {

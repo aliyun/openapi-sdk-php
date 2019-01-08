@@ -34,18 +34,6 @@ class DeleteEdgeInstanceMessageRoute extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteEdgeInstanceMessageRoute extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteId() instead.
-     *
-     * @param string $routeId
-     *
-     * @return $this
-     */
-    public function setRouteId($routeId)
-    {
-        return $this->withRouteId($routeId);
     }
 
     /**

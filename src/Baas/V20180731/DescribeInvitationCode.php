@@ -33,18 +33,6 @@ class DescribeInvitationCode extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
-    }
-
-    /**
      * @param string $consortiumId
      *
      * @return $this

@@ -5,7 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Nlp\V20180408\Nlp;
+use AlibabaCloud\Nlp\NlpV20180408;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -62,7 +62,7 @@ class NlpTest extends TestCase
                     ->regionId('cn-shanghai');
 
         try {
-            $result = Nlp::wordSegment()
+            $result = NlpV20180408::wordSegment()
                          ->withDomain('general')
                          ->jsonBody([
                                         'lang' => 'ZH',
@@ -98,7 +98,7 @@ class NlpTest extends TestCase
                     ->regionId('cn-shanghai');
 
         try {
-            $result = Nlp::wordSegment([
+            $result = NlpV20180408::wordSegment([
                                            'body' => \json_encode([
                                                                       'lang' => 'ZH',
                                                                       'text' => 'Iphone专用数据线',
@@ -107,7 +107,6 @@ class NlpTest extends TestCase
                          ->withDomain('general')
                          ->client('content')
                          ->request();
-
             self::assertEquals('Iphone', $result['data'][0]['word']);
         } catch (ServerException $e) {
             $this->assertContains(

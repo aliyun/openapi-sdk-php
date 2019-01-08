@@ -37,18 +37,6 @@ class DeleteLabel extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
-
-    /**
      * @param string $labelSeries
      *
      * @return $this
@@ -59,18 +47,6 @@ class DeleteLabel extends RpcRequest
         $this->options['query']['LabelSeries'] = $labelSeries;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param string $organization
-     *
-     * @return $this
-     */
-    public function setOrganization($organization)
-    {
-        return $this->withOrganization($organization);
     }
 
     /**
@@ -87,18 +63,6 @@ class DeleteLabel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPK() instead.
-     *
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function setPK($pK)
-    {
-        return $this->withPK($pK);
-    }
-
-    /**
      * @param string $pK
      *
      * @return $this
@@ -112,18 +76,6 @@ class DeleteLabel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabelName() instead.
-     *
-     * @param string $labelName
-     *
-     * @return $this
-     */
-    public function setLabelName($labelName)
-    {
-        return $this->withLabelName($labelName);
-    }
-
-    /**
      * @param string $labelName
      *
      * @return $this
@@ -134,18 +86,6 @@ class DeleteLabel extends RpcRequest
         $this->options['query']['LabelName'] = $labelName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

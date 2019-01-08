@@ -48,18 +48,6 @@ class CreateLifecycleHook extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDefaultResult() instead.
-     *
-     * @param string $defaultResult
-     *
-     * @return $this
-     */
-    public function setDefaultResult($defaultResult)
-    {
-        return $this->withDefaultResult($defaultResult);
-    }
-
-    /**
      * @param string $defaultResult
      *
      * @return $this
@@ -70,18 +58,6 @@ class CreateLifecycleHook extends RpcRequest
         $this->options['query']['DefaultResult'] = $defaultResult;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -98,18 +74,6 @@ class CreateLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHeartbeatTimeout() instead.
-     *
-     * @param string $heartbeatTimeout
-     *
-     * @return $this
-     */
-    public function setHeartbeatTimeout($heartbeatTimeout)
-    {
-        return $this->withHeartbeatTimeout($heartbeatTimeout);
-    }
-
-    /**
      * @param string $heartbeatTimeout
      *
      * @return $this
@@ -120,18 +84,6 @@ class CreateLifecycleHook extends RpcRequest
         $this->options['query']['HeartbeatTimeout'] = $heartbeatTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -148,18 +100,6 @@ class CreateLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -170,18 +110,6 @@ class CreateLifecycleHook extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotificationMetadata() instead.
-     *
-     * @param string $notificationMetadata
-     *
-     * @return $this
-     */
-    public function setNotificationMetadata($notificationMetadata)
-    {
-        return $this->withNotificationMetadata($notificationMetadata);
     }
 
     /**
@@ -198,18 +126,6 @@ class CreateLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -220,18 +136,6 @@ class CreateLifecycleHook extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleTransition() instead.
-     *
-     * @param string $lifecycleTransition
-     *
-     * @return $this
-     */
-    public function setLifecycleTransition($lifecycleTransition)
-    {
-        return $this->withLifecycleTransition($lifecycleTransition);
     }
 
     /**
@@ -248,18 +152,6 @@ class CreateLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHookName() instead.
-     *
-     * @param string $lifecycleHookName
-     *
-     * @return $this
-     */
-    public function setLifecycleHookName($lifecycleHookName)
-    {
-        return $this->withLifecycleHookName($lifecycleHookName);
-    }
-
-    /**
      * @param string $lifecycleHookName
      *
      * @return $this
@@ -273,18 +165,6 @@ class CreateLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotificationArn() instead.
-     *
-     * @param string $notificationArn
-     *
-     * @return $this
-     */
-    public function setNotificationArn($notificationArn)
-    {
-        return $this->withNotificationArn($notificationArn);
-    }
-
-    /**
      * @param string $notificationArn
      *
      * @return $this
@@ -295,28 +175,6 @@ class CreateLifecycleHook extends RpcRequest
         $this->options['query']['NotificationArn'] = $notificationArn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getLifecycleHook() instead.
-     *
-     * @return array
-     */
-    public function getLifecycleHooks()
-    {
-        return $this->getLifecycleHook();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHook() instead.
-     *
-     * @param array $lifecycleHooks
-     *
-     * @return $this
-     */
-    public function setLifecycleHooks(array $lifecycleHooks)
-    {
-        return $this->withLifecycleHook($lifecycleHooks);
     }
 
     /**

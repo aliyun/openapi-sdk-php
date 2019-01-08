@@ -35,18 +35,6 @@ class DescribeProductRates extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCode() instead.
-     *
-     * @param string $code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        return $this->withCode($code);
-    }
-
-    /**
      * @param string $code
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeProductRates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeProductRates extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageIndex() instead.
-     *
-     * @param string $pageIndex
-     *
-     * @return $this
-     */
-    public function setPageIndex($pageIndex)
-    {
-        return $this->withPageIndex($pageIndex);
     }
 
     /**

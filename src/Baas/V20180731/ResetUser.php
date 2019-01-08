@@ -36,18 +36,6 @@ class ResetUser extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
-
-    /**
      * @param string $bizid
      *
      * @return $this
@@ -58,18 +46,6 @@ class ResetUser extends RpcRequest
         $this->options['query']['Bizid'] = $bizid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -86,18 +62,6 @@ class ResetUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
-    }
-
-    /**
      * @param string $operation
      *
      * @return $this
@@ -108,18 +72,6 @@ class ResetUser extends RpcRequest
         $this->options['query']['Operation'] = $operation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

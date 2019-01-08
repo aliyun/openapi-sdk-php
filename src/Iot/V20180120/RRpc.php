@@ -37,18 +37,6 @@ class RRpc extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestBase64Byte() instead.
-     *
-     * @param string $requestBase64Byte
-     *
-     * @return $this
-     */
-    public function setRequestBase64Byte($requestBase64Byte)
-    {
-        return $this->withRequestBase64Byte($requestBase64Byte);
-    }
-
-    /**
      * @param string $requestBase64Byte
      *
      * @return $this
@@ -59,18 +47,6 @@ class RRpc extends RpcRequest
         $this->options['query']['RequestBase64Byte'] = $requestBase64Byte;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**
@@ -87,18 +63,6 @@ class RRpc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
-    }
-
-    /**
      * @param string $deviceName
      *
      * @return $this
@@ -112,18 +76,6 @@ class RRpc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -134,18 +86,6 @@ class RRpc extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
     }
 
     /**

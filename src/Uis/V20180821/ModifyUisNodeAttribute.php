@@ -46,18 +46,6 @@ class ModifyUisNodeAttribute extends RpcRequest
     public $serviceCode = 'uis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class ModifyUisNodeAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUisNodeBandwidth() instead.
-     *
-     * @param string $uisNodeBandwidth
-     *
-     * @return $this
-     */
-    public function setUisNodeBandwidth($uisNodeBandwidth)
-    {
-        return $this->withUisNodeBandwidth($uisNodeBandwidth);
     }
 
     /**
@@ -96,18 +72,6 @@ class ModifyUisNodeAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUisNodeId() instead.
-     *
-     * @param string $uisNodeId
-     *
-     * @return $this
-     */
-    public function setUisNodeId($uisNodeId)
-    {
-        return $this->withUisNodeId($uisNodeId);
-    }
-
-    /**
      * @param string $uisNodeId
      *
      * @return $this
@@ -118,18 +82,6 @@ class ModifyUisNodeAttribute extends RpcRequest
         $this->options['query']['UisNodeId'] = $uisNodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +98,6 @@ class ModifyUisNodeAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class ModifyUisNodeAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUisId() instead.
-     *
-     * @param string $uisId
-     *
-     * @return $this
-     */
-    public function setUisId($uisId)
-    {
-        return $this->withUisId($uisId);
     }
 
     /**
@@ -196,18 +124,6 @@ class ModifyUisNodeAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyUisNodeAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -243,18 +147,6 @@ class ModifyUisNodeAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

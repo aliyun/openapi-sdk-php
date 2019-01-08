@@ -41,18 +41,6 @@ class GetSenderAddressList extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -63,18 +51,6 @@ class GetSenderAddressList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTotal() instead.
-     *
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        return $this->withTotal($total);
     }
 
     /**
@@ -91,18 +67,6 @@ class GetSenderAddressList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOffset() instead.
-     *
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        return $this->withOffset($offset);
-    }
-
-    /**
      * @param string $offset
      *
      * @return $this
@@ -113,18 +77,6 @@ class GetSenderAddressList extends RpcRequest
         $this->options['query']['Offset'] = $offset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -141,18 +93,6 @@ class GetSenderAddressList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
-    }
-
-    /**
      * @param string $pageNo
      *
      * @return $this
@@ -163,18 +103,6 @@ class GetSenderAddressList extends RpcRequest
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -191,18 +119,6 @@ class GetSenderAddressList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyUrl() instead.
-     *
-     * @param string $notifyUrl
-     *
-     * @return $this
-     */
-    public function setNotifyUrl($notifyUrl)
-    {
-        return $this->withNotifyUrl($notifyUrl);
-    }
-
-    /**
      * @param string $notifyUrl
      *
      * @return $this
@@ -216,18 +132,6 @@ class GetSenderAddressList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -238,18 +142,6 @@ class GetSenderAddressList extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
     }
 
     /**

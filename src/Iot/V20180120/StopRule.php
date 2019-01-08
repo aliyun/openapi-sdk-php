@@ -33,18 +33,6 @@ class StopRule extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
-     *
-     * @return $this
-     */
-    public function setRuleId($ruleId)
-    {
-        return $this->withRuleId($ruleId);
-    }
-
-    /**
      * @param string $ruleId
      *
      * @return $this

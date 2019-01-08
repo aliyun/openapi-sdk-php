@@ -43,18 +43,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -65,18 +53,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -93,18 +69,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6EgressOnlyRuleId() instead.
-     *
-     * @param string $ipv6EgressOnlyRuleId
-     *
-     * @return $this
-     */
-    public function setIpv6EgressOnlyRuleId($ipv6EgressOnlyRuleId)
-    {
-        return $this->withIpv6EgressOnlyRuleId($ipv6EgressOnlyRuleId);
-    }
-
-    /**
      * @param string $ipv6EgressOnlyRuleId
      *
      * @return $this
@@ -115,18 +79,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
         $this->options['query']['Ipv6EgressOnlyRuleId'] = $ipv6EgressOnlyRuleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -143,18 +95,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -165,18 +105,6 @@ class DeleteIpv6EgressOnlyRule extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

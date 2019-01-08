@@ -34,18 +34,6 @@ class DescribeReadOnlyAccount extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
-
-    /**
      * @param string $dbName
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeReadOnlyAccount extends RpcRequest
         $this->options['query']['DbName'] = $dbName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
     }
 
     /**

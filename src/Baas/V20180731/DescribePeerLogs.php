@@ -35,18 +35,6 @@ class DescribePeerLogs extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribePeerLogs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeerName() instead.
-     *
-     * @param string $peerName
-     *
-     * @return $this
-     */
-    public function setPeerName($peerName)
-    {
-        return $this->withPeerName($peerName);
-    }
-
-    /**
      * @param string $peerName
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribePeerLogs extends RpcRequest
         $this->options['query']['PeerName'] = $peerName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLines() instead.
-     *
-     * @param string $lines
-     *
-     * @return $this
-     */
-    public function setLines($lines)
-    {
-        return $this->withLines($lines);
     }
 
     /**

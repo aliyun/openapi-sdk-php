@@ -34,18 +34,6 @@ class QueryTransaction extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
-
-    /**
      * @param string $bizid
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryTransaction extends RpcRequest
         $this->options['query']['Bizid'] = $bizid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHash() instead.
-     *
-     * @param string $hash
-     *
-     * @return $this
-     */
-    public function setHash($hash)
-    {
-        return $this->withHash($hash);
     }
 
     /**

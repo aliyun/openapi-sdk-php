@@ -39,18 +39,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyTag() instead.
-     *
-     * @param string $keyTag
-     *
-     * @return $this
-     */
-    public function setKeyTag($keyTag)
-    {
-        return $this->withKeyTag($keyTag);
-    }
-
-    /**
      * @param string $keyTag
      *
      * @return $this
@@ -61,18 +49,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
         $this->options['query']['KeyTag'] = $keyTag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -89,18 +65,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -111,18 +75,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDigestType() instead.
-     *
-     * @param string $digestType
-     *
-     * @return $this
-     */
-    public function setDigestType($digestType)
-    {
-        return $this->withDigestType($digestType);
     }
 
     /**
@@ -139,18 +91,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDigest() instead.
-     *
-     * @param string $digest
-     *
-     * @return $this
-     */
-    public function setDigest($digest)
-    {
-        return $this->withDigest($digest);
-    }
-
-    /**
      * @param string $digest
      *
      * @return $this
@@ -164,18 +104,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -186,18 +114,6 @@ class SaveSingleTaskForAddingDSRecord extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlgorithm() instead.
-     *
-     * @param string $algorithm
-     *
-     * @return $this
-     */
-    public function setAlgorithm($algorithm)
-    {
-        return $this->withAlgorithm($algorithm);
     }
 
     /**

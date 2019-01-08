@@ -64,18 +64,6 @@ class DescribeScalingConfigurations extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId6() instead.
-     *
-     * @param string $scalingConfigurationId6
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId6($scalingConfigurationId6)
-    {
-        return $this->withScalingConfigurationId6($scalingConfigurationId6);
-    }
-
-    /**
      * @param string $scalingConfigurationId6
      *
      * @return $this
@@ -86,18 +74,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.6'] = $scalingConfigurationId6;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId7() instead.
-     *
-     * @param string $scalingConfigurationId7
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId7($scalingConfigurationId7)
-    {
-        return $this->withScalingConfigurationId7($scalingConfigurationId7);
     }
 
     /**
@@ -114,18 +90,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -136,18 +100,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId4() instead.
-     *
-     * @param string $scalingConfigurationId4
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId4($scalingConfigurationId4)
-    {
-        return $this->withScalingConfigurationId4($scalingConfigurationId4);
     }
 
     /**
@@ -164,18 +116,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId5() instead.
-     *
-     * @param string $scalingConfigurationId5
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId5($scalingConfigurationId5)
-    {
-        return $this->withScalingConfigurationId5($scalingConfigurationId5);
-    }
-
-    /**
      * @param string $scalingConfigurationId5
      *
      * @return $this
@@ -186,18 +126,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.5'] = $scalingConfigurationId5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -214,18 +142,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId8() instead.
-     *
-     * @param string $scalingConfigurationId8
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId8($scalingConfigurationId8)
-    {
-        return $this->withScalingConfigurationId8($scalingConfigurationId8);
-    }
-
-    /**
      * @param string $scalingConfigurationId8
      *
      * @return $this
@@ -236,18 +152,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.8'] = $scalingConfigurationId8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId9() instead.
-     *
-     * @param string $scalingConfigurationId9
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId9($scalingConfigurationId9)
-    {
-        return $this->withScalingConfigurationId9($scalingConfigurationId9);
     }
 
     /**
@@ -264,18 +168,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId10() instead.
-     *
-     * @param string $scalingConfigurationId10
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId10($scalingConfigurationId10)
-    {
-        return $this->withScalingConfigurationId10($scalingConfigurationId10);
-    }
-
-    /**
      * @param string $scalingConfigurationId10
      *
      * @return $this
@@ -286,18 +178,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.10'] = $scalingConfigurationId10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -314,18 +194,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName2() instead.
-     *
-     * @param string $scalingConfigurationName2
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName2($scalingConfigurationName2)
-    {
-        return $this->withScalingConfigurationName2($scalingConfigurationName2);
-    }
-
-    /**
      * @param string $scalingConfigurationName2
      *
      * @return $this
@@ -336,18 +204,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationName.2'] = $scalingConfigurationName2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName3() instead.
-     *
-     * @param string $scalingConfigurationName3
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName3($scalingConfigurationName3)
-    {
-        return $this->withScalingConfigurationName3($scalingConfigurationName3);
     }
 
     /**
@@ -364,18 +220,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName1() instead.
-     *
-     * @param string $scalingConfigurationName1
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName1($scalingConfigurationName1)
-    {
-        return $this->withScalingConfigurationName1($scalingConfigurationName1);
-    }
-
-    /**
      * @param string $scalingConfigurationName1
      *
      * @return $this
@@ -386,18 +230,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationName.1'] = $scalingConfigurationName1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -414,18 +246,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId2() instead.
-     *
-     * @param string $scalingConfigurationId2
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId2($scalingConfigurationId2)
-    {
-        return $this->withScalingConfigurationId2($scalingConfigurationId2);
-    }
-
-    /**
      * @param string $scalingConfigurationId2
      *
      * @return $this
@@ -436,18 +256,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.2'] = $scalingConfigurationId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId3() instead.
-     *
-     * @param string $scalingConfigurationId3
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId3($scalingConfigurationId3)
-    {
-        return $this->withScalingConfigurationId3($scalingConfigurationId3);
     }
 
     /**
@@ -464,18 +272,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId1() instead.
-     *
-     * @param string $scalingConfigurationId1
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId1($scalingConfigurationId1)
-    {
-        return $this->withScalingConfigurationId1($scalingConfigurationId1);
-    }
-
-    /**
      * @param string $scalingConfigurationId1
      *
      * @return $this
@@ -486,18 +282,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationId.1'] = $scalingConfigurationId1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -514,18 +298,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -536,18 +308,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName6() instead.
-     *
-     * @param string $scalingConfigurationName6
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName6($scalingConfigurationName6)
-    {
-        return $this->withScalingConfigurationName6($scalingConfigurationName6);
     }
 
     /**
@@ -564,18 +324,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName7() instead.
-     *
-     * @param string $scalingConfigurationName7
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName7($scalingConfigurationName7)
-    {
-        return $this->withScalingConfigurationName7($scalingConfigurationName7);
-    }
-
-    /**
      * @param string $scalingConfigurationName7
      *
      * @return $this
@@ -586,18 +334,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationName.7'] = $scalingConfigurationName7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName4() instead.
-     *
-     * @param string $scalingConfigurationName4
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName4($scalingConfigurationName4)
-    {
-        return $this->withScalingConfigurationName4($scalingConfigurationName4);
     }
 
     /**
@@ -614,18 +350,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName5() instead.
-     *
-     * @param string $scalingConfigurationName5
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName5($scalingConfigurationName5)
-    {
-        return $this->withScalingConfigurationName5($scalingConfigurationName5);
-    }
-
-    /**
      * @param string $scalingConfigurationName5
      *
      * @return $this
@@ -636,18 +360,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationName.5'] = $scalingConfigurationName5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -664,18 +376,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName8() instead.
-     *
-     * @param string $scalingConfigurationName8
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName8($scalingConfigurationName8)
-    {
-        return $this->withScalingConfigurationName8($scalingConfigurationName8);
-    }
-
-    /**
      * @param string $scalingConfigurationName8
      *
      * @return $this
@@ -689,18 +389,6 @@ class DescribeScalingConfigurations extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName9() instead.
-     *
-     * @param string $scalingConfigurationName9
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName9($scalingConfigurationName9)
-    {
-        return $this->withScalingConfigurationName9($scalingConfigurationName9);
-    }
-
-    /**
      * @param string $scalingConfigurationName9
      *
      * @return $this
@@ -711,18 +399,6 @@ class DescribeScalingConfigurations extends RpcRequest
         $this->options['query']['ScalingConfigurationName.9'] = $scalingConfigurationName9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName10() instead.
-     *
-     * @param string $scalingConfigurationName10
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName10($scalingConfigurationName10)
-    {
-        return $this->withScalingConfigurationName10($scalingConfigurationName10);
     }
 
     /**

@@ -40,18 +40,6 @@ class RemoveMessages extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
-
-    /**
      * @param string $bizId
      *
      * @return $this
@@ -65,18 +53,6 @@ class RemoveMessages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageIds() instead.
-     *
-     * @param string $messageIds
-     *
-     * @return $this
-     */
-    public function setMessageIds($messageIds)
-    {
-        return $this->withMessageIds($messageIds);
-    }
-
-    /**
      * @param string $messageIds
      *
      * @return $this
@@ -87,18 +63,6 @@ class RemoveMessages extends RpcRequest
         $this->options['query']['MessageIds'] = $messageIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
     }
 
     /**

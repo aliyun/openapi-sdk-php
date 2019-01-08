@@ -36,18 +36,6 @@ class DescribeApplies extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrent() instead.
-     *
-     * @param string $current
-     *
-     * @return $this
-     */
-    public function setCurrent($current)
-    {
-        return $this->withCurrent($current);
-    }
-
-    /**
      * @param string $current
      *
      * @return $this
@@ -58,18 +46,6 @@ class DescribeApplies extends RpcRequest
         $this->options['query']['Current'] = $current;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
     }
 
     /**
@@ -86,18 +62,6 @@ class DescribeApplies extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -108,18 +72,6 @@ class DescribeApplies extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

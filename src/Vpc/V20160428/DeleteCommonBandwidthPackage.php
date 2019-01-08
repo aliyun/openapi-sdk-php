@@ -44,18 +44,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidthPackageId() instead.
-     *
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function setBandwidthPackageId($bandwidthPackageId)
-    {
-        return $this->withBandwidthPackageId($bandwidthPackageId);
     }
 
     /**
@@ -94,18 +70,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +80,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
-    }
-
-    /**
      * @param string $force
      *
      * @return $this
@@ -169,18 +109,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpVersion() instead.
-     *
-     * @param string $ipVersion
-     *
-     * @return $this
-     */
-    public function setIpVersion($ipVersion)
-    {
-        return $this->withIpVersion($ipVersion);
-    }
-
-    /**
      * @param string $ipVersion
      *
      * @return $this
@@ -191,18 +119,6 @@ class DeleteCommonBandwidthPackage extends RpcRequest
         $this->options['query']['IpVersion'] = $ipVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

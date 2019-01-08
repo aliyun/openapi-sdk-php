@@ -50,18 +50,6 @@ class CreateScalingRule extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -72,18 +60,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAdjustmentValue() instead.
-     *
-     * @param string $adjustmentValue
-     *
-     * @return $this
-     */
-    public function setAdjustmentValue($adjustmentValue)
-    {
-        return $this->withAdjustmentValue($adjustmentValue);
     }
 
     /**
@@ -100,18 +76,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -122,18 +86,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEstimatedInstanceWarmup() instead.
-     *
-     * @param string $estimatedInstanceWarmup
-     *
-     * @return $this
-     */
-    public function setEstimatedInstanceWarmup($estimatedInstanceWarmup)
-    {
-        return $this->withEstimatedInstanceWarmup($estimatedInstanceWarmup);
     }
 
     /**
@@ -150,18 +102,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -172,18 +112,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAdjustmentType() instead.
-     *
-     * @param string $adjustmentType
-     *
-     * @return $this
-     */
-    public function setAdjustmentType($adjustmentType)
-    {
-        return $this->withAdjustmentType($adjustmentType);
     }
 
     /**
@@ -200,18 +128,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDisableScaleIn() instead.
-     *
-     * @param string $disableScaleIn
-     *
-     * @return $this
-     */
-    public function setDisableScaleIn($disableScaleIn)
-    {
-        return $this->withDisableScaleIn($disableScaleIn);
-    }
-
-    /**
      * @param string $disableScaleIn
      *
      * @return $this
@@ -222,18 +138,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['DisableScaleIn'] = $disableScaleIn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -250,18 +154,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingRuleName() instead.
-     *
-     * @param string $scalingRuleName
-     *
-     * @return $this
-     */
-    public function setScalingRuleName($scalingRuleName)
-    {
-        return $this->withScalingRuleName($scalingRuleName);
-    }
-
-    /**
      * @param string $scalingRuleName
      *
      * @return $this
@@ -272,18 +164,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['ScalingRuleName'] = $scalingRuleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCooldown() instead.
-     *
-     * @param string $cooldown
-     *
-     * @return $this
-     */
-    public function setCooldown($cooldown)
-    {
-        return $this->withCooldown($cooldown);
     }
 
     /**
@@ -300,18 +180,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTargetValue() instead.
-     *
-     * @param string $targetValue
-     *
-     * @return $this
-     */
-    public function setTargetValue($targetValue)
-    {
-        return $this->withTargetValue($targetValue);
-    }
-
-    /**
      * @param string $targetValue
      *
      * @return $this
@@ -325,18 +193,6 @@ class CreateScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingRuleType() instead.
-     *
-     * @param string $scalingRuleType
-     *
-     * @return $this
-     */
-    public function setScalingRuleType($scalingRuleType)
-    {
-        return $this->withScalingRuleType($scalingRuleType);
-    }
-
-    /**
      * @param string $scalingRuleType
      *
      * @return $this
@@ -347,18 +203,6 @@ class CreateScalingRule extends RpcRequest
         $this->options['query']['ScalingRuleType'] = $scalingRuleType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**

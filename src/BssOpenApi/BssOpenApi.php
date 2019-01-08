@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\BssOpenApi
  *
- * @method V20171214\BssOpenApiApiResolver v20171214()
+ * @method BssOpenApiV20171214ApiResolver v20171214()
  */
 class BssOpenApi
 {

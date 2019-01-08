@@ -42,28 +42,6 @@ class DetachLoadBalancers extends RpcRequest
     public $serviceCode = 'ess';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getLoadBalancer() instead.
-     *
-     * @return array
-     */
-    public function getLoadBalancers()
-    {
-        return $this->getLoadBalancer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancer() instead.
-     *
-     * @param array $loadBalancers
-     *
-     * @return $this
-     */
-    public function setLoadBalancers(array $loadBalancers)
-    {
-        return $this->withLoadBalancer($loadBalancers);
-    }
-
-    /**
      * @param array $loadBalancer
      *
      * @return $this
@@ -76,18 +54,6 @@ class DetachLoadBalancers extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -104,18 +70,6 @@ class DetachLoadBalancers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -129,18 +83,6 @@ class DetachLoadBalancers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceDetach() instead.
-     *
-     * @param string $forceDetach
-     *
-     * @return $this
-     */
-    public function setForceDetach($forceDetach)
-    {
-        return $this->withForceDetach($forceDetach);
-    }
-
-    /**
      * @param string $forceDetach
      *
      * @return $this
@@ -151,18 +93,6 @@ class DetachLoadBalancers extends RpcRequest
         $this->options['query']['ForceDetach'] = $forceDetach;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

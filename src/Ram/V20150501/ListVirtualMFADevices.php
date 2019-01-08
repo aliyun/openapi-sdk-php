@@ -31,7 +31,6 @@ class ListVirtualMFADevices extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

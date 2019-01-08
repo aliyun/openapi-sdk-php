@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Uis
  *
- * @method V20180821\UisApiResolver v20180821()
+ * @method UisV20180821ApiResolver v20180821()
  */
 class Uis
 {

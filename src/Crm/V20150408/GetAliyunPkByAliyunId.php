@@ -33,18 +33,6 @@ class GetAliyunPkByAliyunId extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliyunId() instead.
-     *
-     * @param string $aliyunId
-     *
-     * @return $this
-     */
-    public function setAliyunId($aliyunId)
-    {
-        return $this->withAliyunId($aliyunId);
-    }
-
-    /**
      * @param string $aliyunId
      *
      * @return $this

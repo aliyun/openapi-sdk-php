@@ -38,18 +38,6 @@ class CreateCoreWord extends RpcRequest
     public $serviceCode = 'beebot';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCoreWordName() instead.
-     *
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function setCoreWordName($coreWordName)
-    {
-        return $this->withCoreWordName($coreWordName);
-    }
-
-    /**
      * @param string $coreWordName
      *
      * @return $this

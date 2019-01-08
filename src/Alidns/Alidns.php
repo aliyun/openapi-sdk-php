@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Alidns
  *
- * @method V20150109\AlidnsApiResolver v20150109()
+ * @method AlidnsV20150109ApiResolver v20150109()
  */
 class Alidns
 {

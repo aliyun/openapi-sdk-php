@@ -41,18 +41,6 @@ class InnerDeleteNcExpression extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGrayBid() instead.
-     *
-     * @param string $grayBid
-     *
-     * @return $this
-     */
-    public function setGrayBid($grayBid)
-    {
-        return $this->withGrayBid($grayBid);
-    }
-
-    /**
      * @param string $grayBid
      *
      * @return $this
@@ -63,18 +51,6 @@ class InnerDeleteNcExpression extends RpcRequest
         $this->options['query']['GrayBid'] = $grayBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGrayAliUid() instead.
-     *
-     * @param string $grayAliUid
-     *
-     * @return $this
-     */
-    public function setGrayAliUid($grayAliUid)
-    {
-        return $this->withGrayAliUid($grayAliUid);
     }
 
     /**
@@ -91,28 +67,6 @@ class InnerDeleteNcExpression extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getEcsInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getEcsInstanceIds()
-    {
-        return $this->getEcsInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEcsInstanceId() instead.
-     *
-     * @param array $ecsInstanceIds
-     *
-     * @return $this
-     */
-    public function setEcsInstanceIds(array $ecsInstanceIds)
-    {
-        return $this->withEcsInstanceId($ecsInstanceIds);
-    }
-
-    /**
      * @param array $ecsInstanceId
      *
      * @return $this
@@ -125,28 +79,6 @@ class InnerDeleteNcExpression extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVSwitchId() instead.
-     *
-     * @return array
-     */
-    public function getVSwitchIds()
-    {
-        return $this->getVSwitchId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param array $vSwitchIds
-     *
-     * @return $this
-     */
-    public function setVSwitchIds(array $vSwitchIds)
-    {
-        return $this->withVSwitchId($vSwitchIds);
     }
 
     /**

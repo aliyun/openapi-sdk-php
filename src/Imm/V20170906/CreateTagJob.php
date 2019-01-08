@@ -42,18 +42,6 @@ class CreateTagJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function setNotifyTopicName($notifyTopicName)
-    {
-        return $this->withNotifyTopicName($notifyTopicName);
-    }
-
-    /**
      * @param string $notifyTopicName
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateTagJob extends RpcRequest
         $this->options['query']['NotifyTopicName'] = $notifyTopicName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function setNotifyEndpoint($notifyEndpoint)
-    {
-        return $this->withNotifyEndpoint($notifyEndpoint);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateTagJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateTagJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExternalID() instead.
-     *
-     * @param string $externalID
-     *
-     * @return $this
-     */
-    public function setExternalID($externalID)
-    {
-        return $this->withExternalID($externalID);
-    }
-
-    /**
      * @param string $externalID
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateTagJob extends RpcRequest
         $this->options['query']['ExternalID'] = $externalID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**

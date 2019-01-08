@@ -49,18 +49,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIkeConfig() instead.
-     *
-     * @param string $ikeConfig
-     *
-     * @return $this
-     */
-    public function setIkeConfig($ikeConfig)
-    {
-        return $this->withIkeConfig($ikeConfig);
-    }
-
-    /**
      * @param string $ikeConfig
      *
      * @return $this
@@ -71,18 +59,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['IkeConfig'] = $ikeConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +75,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemoteSubnet() instead.
-     *
-     * @param string $remoteSubnet
-     *
-     * @return $this
-     */
-    public function setRemoteSubnet($remoteSubnet)
-    {
-        return $this->withRemoteSubnet($remoteSubnet);
-    }
-
-    /**
      * @param string $remoteSubnet
      *
      * @return $this
@@ -121,18 +85,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['RemoteSubnet'] = $remoteSubnet;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEffectImmediately() instead.
-     *
-     * @param string $effectImmediately
-     *
-     * @return $this
-     */
-    public function setEffectImmediately($effectImmediately)
-    {
-        return $this->withEffectImmediately($effectImmediately);
     }
 
     /**
@@ -149,18 +101,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -171,18 +111,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -199,18 +127,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpsecConfig() instead.
-     *
-     * @param string $ipsecConfig
-     *
-     * @return $this
-     */
-    public function setIpsecConfig($ipsecConfig)
-    {
-        return $this->withIpsecConfig($ipsecConfig);
     }
 
     /**
@@ -249,18 +153,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -271,18 +163,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocalSubnet() instead.
-     *
-     * @param string $localSubnet
-     *
-     * @return $this
-     */
-    public function setLocalSubnet($localSubnet)
-    {
-        return $this->withLocalSubnet($localSubnet);
     }
 
     /**
@@ -299,18 +179,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpnConnectionId() instead.
-     *
-     * @param string $vpnConnectionId
-     *
-     * @return $this
-     */
-    public function setVpnConnectionId($vpnConnectionId)
-    {
-        return $this->withVpnConnectionId($vpnConnectionId);
-    }
-
-    /**
      * @param string $vpnConnectionId
      *
      * @return $this
@@ -321,18 +189,6 @@ class ModifyVpnConnectionAttribute extends RpcRequest
         $this->options['query']['VpnConnectionId'] = $vpnConnectionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

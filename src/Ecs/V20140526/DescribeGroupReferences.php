@@ -33,28 +33,6 @@ class DescribeGroupReferences extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getGroupNo() instead.
-     *
-     * @return array
-     */
-    public function getGroupNos()
-    {
-        return $this->getGroupNo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupNo() instead.
-     *
-     * @param array $groupNos
-     *
-     * @return $this
-     */
-    public function setGroupNos(array $groupNos)
-    {
-        return $this->withGroupNo($groupNos);
-    }
-
-    /**
      * @param array $groupNo
      *
      * @return $this

@@ -35,7 +35,6 @@ class SubmitMaterials extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class SubmitMaterials extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +56,6 @@ class SubmitMaterials extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -97,28 +72,6 @@ class SubmitMaterials extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getMaterial() instead.
-     *
-     * @return array
-     */
-    public function getMaterials()
-    {
-        return $this->getMaterial();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaterial() instead.
-     *
-     * @param array $materials
-     *
-     * @return $this
-     */
-    public function setMaterials(array $materials)
-    {
-        return $this->withMaterial($materials);
-    }
-
-    /**
      * @param array $material
      *
      * @return $this
@@ -132,18 +85,6 @@ class SubmitMaterials extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVerifyToken() instead.
-     *
-     * @param string $verifyToken
-     *
-     * @return $this
-     */
-    public function setVerifyToken($verifyToken)
-    {
-        return $this->withVerifyToken($verifyToken);
     }
 
     /**

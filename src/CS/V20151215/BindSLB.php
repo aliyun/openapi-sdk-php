@@ -44,18 +44,6 @@ class BindSLB extends RoaRequest
     public $serviceCode = 'cs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSlbID() instead.
-     *
-     * @param string $slbID
-     *
-     * @return $this
-     */
-    public function setSlbID($slbID)
-    {
-        return $this->withSlbID($slbID);
-    }
-
-    /**
      * @param string $slbID
      *
      * @return $this
@@ -66,18 +54,6 @@ class BindSLB extends RoaRequest
         $this->pathParameters['SlbID'] = $slbID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

@@ -44,18 +44,6 @@ class InnerAddEntityConstraints extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityKey() instead.
-     *
-     * @param string $entityKey
-     *
-     * @return $this
-     */
-    public function setEntityKey($entityKey)
-    {
-        return $this->withEntityKey($entityKey);
-    }
-
-    /**
      * @param string $entityKey
      *
      * @return $this
@@ -66,18 +54,6 @@ class InnerAddEntityConstraints extends RpcRequest
         $this->options['query']['EntityKey'] = $entityKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +70,6 @@ class InnerAddEntityConstraints extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityProperties() instead.
-     *
-     * @param string $entityProperties
-     *
-     * @return $this
-     */
-    public function setEntityProperties($entityProperties)
-    {
-        return $this->withEntityProperties($entityProperties);
-    }
-
-    /**
      * @param string $entityProperties
      *
      * @return $this
@@ -116,18 +80,6 @@ class InnerAddEntityConstraints extends RpcRequest
         $this->options['query']['EntityProperties'] = $entityProperties;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class InnerAddEntityConstraints extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class InnerAddEntityConstraints extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -191,18 +119,6 @@ class InnerAddEntityConstraints extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEntityType() instead.
-     *
-     * @param string $entityType
-     *
-     * @return $this
-     */
-    public function setEntityType($entityType)
-    {
-        return $this->withEntityType($entityType);
     }
 
     /**

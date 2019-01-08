@@ -35,7 +35,6 @@ class GetPhotosByMd5s extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -45,18 +44,6 @@ class GetPhotosByMd5s extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -69,18 +56,6 @@ class GetPhotosByMd5s extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -97,18 +72,6 @@ class GetPhotosByMd5s extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
-    }
-
-    /**
      * @param string $state
      *
      * @return $this
@@ -119,28 +82,6 @@ class GetPhotosByMd5s extends RpcRequest
         $this->options['query']['State'] = $state;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMd5() instead.
-     *
-     * @return array
-     */
-    public function getMd5s()
-    {
-        return $this->getMd5();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMd5() instead.
-     *
-     * @param array $md5s
-     *
-     * @return $this
-     */
-    public function setMd5s(array $md5s)
-    {
-        return $this->withMd5($md5s);
     }
 
     /**

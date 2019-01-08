@@ -49,18 +49,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -71,18 +59,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateNatGatewayId() instead.
-     *
-     * @param string $privateNatGatewayId
-     *
-     * @return $this
-     */
-    public function setPrivateNatGatewayId($privateNatGatewayId)
-    {
-        return $this->withPrivateNatGatewayId($privateNatGatewayId);
     }
 
     /**
@@ -99,18 +75,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDNatIp() instead.
-     *
-     * @param string $dNatIp
-     *
-     * @return $this
-     */
-    public function setDNatIp($dNatIp)
-    {
-        return $this->withDNatIp($dNatIp);
-    }
-
-    /**
      * @param string $dNatIp
      *
      * @return $this
@@ -121,18 +85,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['DNatIp'] = $dNatIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -149,18 +101,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setIpProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
-    }
-
-    /**
      * @param string $ipProtocol
      *
      * @return $this
@@ -171,18 +111,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['IpProtocol'] = $ipProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -199,18 +127,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -221,18 +137,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateDNatEntryId() instead.
-     *
-     * @param string $privateDNatEntryId
-     *
-     * @return $this
-     */
-    public function setPrivateDNatEntryId($privateDNatEntryId)
-    {
-        return $this->withPrivateDNatEntryId($privateDNatEntryId);
     }
 
     /**
@@ -249,18 +153,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -271,18 +163,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationIp() instead.
-     *
-     * @param string $destinationIp
-     *
-     * @return $this
-     */
-    public function setDestinationIp($destinationIp)
-    {
-        return $this->withDestinationIp($destinationIp);
     }
 
     /**
@@ -299,18 +179,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationPort() instead.
-     *
-     * @param string $destinationPort
-     *
-     * @return $this
-     */
-    public function setDestinationPort($destinationPort)
-    {
-        return $this->withDestinationPort($destinationPort);
-    }
-
-    /**
      * @param string $destinationPort
      *
      * @return $this
@@ -321,18 +189,6 @@ class ModifyPrivateDNatEntry extends RpcRequest
         $this->options['query']['DestinationPort'] = $destinationPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDNatPort() instead.
-     *
-     * @param string $dNatPort
-     *
-     * @return $this
-     */
-    public function setDNatPort($dNatPort)
-    {
-        return $this->withDNatPort($dNatPort);
     }
 
     /**

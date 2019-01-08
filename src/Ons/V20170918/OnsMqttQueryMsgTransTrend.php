@@ -43,18 +43,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
-
-    /**
      * @param string $preventCache
      *
      * @return $this
@@ -65,18 +53,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -93,18 +69,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -115,18 +79,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQos() instead.
-     *
-     * @param string $qos
-     *
-     * @return $this
-     */
-    public function setQos($qos)
-    {
-        return $this->withQos($qos);
     }
 
     /**
@@ -143,18 +95,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransType() instead.
-     *
-     * @param string $transType
-     *
-     * @return $this
-     */
-    public function setTransType($transType)
-    {
-        return $this->withTransType($transType);
-    }
-
-    /**
      * @param string $transType
      *
      * @return $this
@@ -165,18 +105,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
         $this->options['query']['TransType'] = $transType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -193,18 +121,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeginTime() instead.
-     *
-     * @param string $beginTime
-     *
-     * @return $this
-     */
-    public function setBeginTime($beginTime)
-    {
-        return $this->withBeginTime($beginTime);
-    }
-
-    /**
      * @param string $beginTime
      *
      * @return $this
@@ -215,18 +131,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
         $this->options['query']['BeginTime'] = $beginTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTpsType() instead.
-     *
-     * @param string $tpsType
-     *
-     * @return $this
-     */
-    public function setTpsType($tpsType)
-    {
-        return $this->withTpsType($tpsType);
     }
 
     /**
@@ -243,18 +147,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withParentTopic() instead.
-     *
-     * @param string $parentTopic
-     *
-     * @return $this
-     */
-    public function setParentTopic($parentTopic)
-    {
-        return $this->withParentTopic($parentTopic);
-    }
-
-    /**
      * @param string $parentTopic
      *
      * @return $this
@@ -268,18 +160,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMsgType() instead.
-     *
-     * @param string $msgType
-     *
-     * @return $this
-     */
-    public function setMsgType($msgType)
-    {
-        return $this->withMsgType($msgType);
-    }
-
-    /**
      * @param string $msgType
      *
      * @return $this
@@ -290,18 +170,6 @@ class OnsMqttQueryMsgTransTrend extends RpcRequest
         $this->options['query']['MsgType'] = $msgType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubTopic() instead.
-     *
-     * @param string $subTopic
-     *
-     * @return $this
-     */
-    public function setSubTopic($subTopic)
-    {
-        return $this->withSubTopic($subTopic);
     }
 
     /**

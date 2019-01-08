@@ -38,18 +38,6 @@ class AfsCheck extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSig() instead.
-     *
-     * @param string $sig
-     *
-     * @return $this
-     */
-    public function setSig($sig)
-    {
-        return $this->withSig($sig);
-    }
-
-    /**
      * @param string $sig
      *
      * @return $this
@@ -60,18 +48,6 @@ class AfsCheck extends RpcRequest
         $this->options['query']['Sig'] = $sig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSession() instead.
-     *
-     * @param string $session
-     *
-     * @return $this
-     */
-    public function setSession($session)
-    {
-        return $this->withSession($session);
     }
 
     /**
@@ -88,18 +64,6 @@ class AfsCheck extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
-    }
-
-    /**
      * @param string $callerName
      *
      * @return $this
@@ -110,18 +74,6 @@ class AfsCheck extends RpcRequest
         $this->options['query']['CallerName'] = $callerName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
     }
 
     /**
@@ -138,18 +90,6 @@ class AfsCheck extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -160,18 +100,6 @@ class AfsCheck extends RpcRequest
         $this->options['query']['Token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

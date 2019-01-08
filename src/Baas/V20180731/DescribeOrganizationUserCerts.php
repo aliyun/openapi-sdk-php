@@ -34,18 +34,6 @@ class DescribeOrganizationUserCerts extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -56,18 +44,6 @@ class DescribeOrganizationUserCerts extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsername() instead.
-     *
-     * @param string $username
-     *
-     * @return $this
-     */
-    public function setUsername($username)
-    {
-        return $this->withUsername($username);
     }
 
     /**

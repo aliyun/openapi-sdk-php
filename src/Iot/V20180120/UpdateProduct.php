@@ -35,18 +35,6 @@ class UpdateProduct extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductName() instead.
-     *
-     * @param string $productName
-     *
-     * @return $this
-     */
-    public function setProductName($productName)
-    {
-        return $this->withProductName($productName);
-    }
-
-    /**
      * @param string $productName
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -82,18 +58,6 @@ class UpdateProduct extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

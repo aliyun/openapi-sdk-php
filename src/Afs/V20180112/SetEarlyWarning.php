@@ -40,18 +40,6 @@ class SetEarlyWarning extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeEnd() instead.
-     *
-     * @param string $timeEnd
-     *
-     * @return $this
-     */
-    public function setTimeEnd($timeEnd)
-    {
-        return $this->withTimeEnd($timeEnd);
-    }
-
-    /**
      * @param string $timeEnd
      *
      * @return $this
@@ -62,18 +50,6 @@ class SetEarlyWarning extends RpcRequest
         $this->options['query']['TimeEnd'] = $timeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWarnOpen() instead.
-     *
-     * @param string $warnOpen
-     *
-     * @return $this
-     */
-    public function setWarnOpen($warnOpen)
-    {
-        return $this->withWarnOpen($warnOpen);
     }
 
     /**
@@ -90,18 +66,6 @@ class SetEarlyWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -112,18 +76,6 @@ class SetEarlyWarning extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setChannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -140,18 +92,6 @@ class SetEarlyWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -162,18 +102,6 @@ class SetEarlyWarning extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeOpen() instead.
-     *
-     * @param string $timeOpen
-     *
-     * @return $this
-     */
-    public function setTimeOpen($timeOpen)
-    {
-        return $this->withTimeOpen($timeOpen);
     }
 
     /**
@@ -190,18 +118,6 @@ class SetEarlyWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeBegin() instead.
-     *
-     * @param string $timeBegin
-     *
-     * @return $this
-     */
-    public function setTimeBegin($timeBegin)
-    {
-        return $this->withTimeBegin($timeBegin);
-    }
-
-    /**
      * @param string $timeBegin
      *
      * @return $this
@@ -212,18 +128,6 @@ class SetEarlyWarning extends RpcRequest
         $this->options['query']['TimeBegin'] = $timeBegin;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrequency() instead.
-     *
-     * @param string $frequency
-     *
-     * @return $this
-     */
-    public function setFrequency($frequency)
-    {
-        return $this->withFrequency($frequency);
     }
 
     /**

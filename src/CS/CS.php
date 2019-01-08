@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\CS
  *
- * @method V20151215\CSApiResolver v20151215()
+ * @method CSV20151215ApiResolver v20151215()
  */
 class CS
 {

@@ -37,18 +37,6 @@ class AddContainerApp extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainerType() instead.
-     *
-     * @param string $containerType
-     *
-     * @return $this
-     */
-    public function setContainerType($containerType)
-    {
-        return $this->withContainerType($containerType);
-    }
-
-    /**
      * @param string $containerType
      *
      * @return $this
@@ -59,18 +47,6 @@ class AddContainerApp extends RpcRequest
         $this->options['query']['ContainerType'] = $containerType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -87,18 +63,6 @@ class AddContainerApp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -112,18 +76,6 @@ class AddContainerApp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRepository() instead.
-     *
-     * @param string $repository
-     *
-     * @return $this
-     */
-    public function setRepository($repository)
-    {
-        return $this->withRepository($repository);
-    }
-
-    /**
      * @param string $repository
      *
      * @return $this
@@ -134,18 +86,6 @@ class AddContainerApp extends RpcRequest
         $this->options['query']['Repository'] = $repository;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageTag() instead.
-     *
-     * @param string $imageTag
-     *
-     * @return $this
-     */
-    public function setImageTag($imageTag)
-    {
-        return $this->withImageTag($imageTag);
     }
 
     /**

@@ -50,18 +50,6 @@ class ModifySecurityIps extends RpcRequest
     public $serviceCode = 'rds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceIPArrayName() instead.
-     *
-     * @param string $dBInstanceIPArrayName
-     *
-     * @return $this
-     */
-    public function setDBInstanceIPArrayName($dBInstanceIPArrayName)
-    {
-        return $this->withDBInstanceIPArrayName($dBInstanceIPArrayName);
-    }
-
-    /**
      * @param string $dBInstanceIPArrayName
      *
      * @return $this
@@ -72,18 +60,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['DBInstanceIPArrayName'] = $dBInstanceIPArrayName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +76,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModifyMode() instead.
-     *
-     * @param string $modifyMode
-     *
-     * @return $this
-     */
-    public function setModifyMode($modifyMode)
-    {
-        return $this->withModifyMode($modifyMode);
-    }
-
-    /**
      * @param string $modifyMode
      *
      * @return $this
@@ -122,18 +86,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['ModifyMode'] = $modifyMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -150,18 +102,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -172,18 +112,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -200,18 +128,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIps() instead.
-     *
-     * @param string $securityIps
-     *
-     * @return $this
-     */
-    public function setSecurityIps($securityIps)
-    {
-        return $this->withSecurityIps($securityIps);
-    }
-
-    /**
      * @param string $securityIps
      *
      * @return $this
@@ -222,18 +138,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['SecurityIps'] = $securityIps;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -250,18 +154,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -272,18 +164,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWhitelistNetworkType() instead.
-     *
-     * @param string $whitelistNetworkType
-     *
-     * @return $this
-     */
-    public function setWhitelistNetworkType($whitelistNetworkType)
-    {
-        return $this->withWhitelistNetworkType($whitelistNetworkType);
     }
 
     /**
@@ -300,18 +180,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceIPArrayAttribute() instead.
-     *
-     * @param string $dBInstanceIPArrayAttribute
-     *
-     * @return $this
-     */
-    public function setDBInstanceIPArrayAttribute($dBInstanceIPArrayAttribute)
-    {
-        return $this->withDBInstanceIPArrayAttribute($dBInstanceIPArrayAttribute);
-    }
-
-    /**
      * @param string $dBInstanceIPArrayAttribute
      *
      * @return $this
@@ -325,18 +193,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIPType() instead.
-     *
-     * @param string $securityIPType
-     *
-     * @return $this
-     */
-    public function setSecurityIPType($securityIPType)
-    {
-        return $this->withSecurityIPType($securityIPType);
-    }
-
-    /**
      * @param string $securityIPType
      *
      * @return $this
@@ -347,18 +203,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['SecurityIPType'] = $securityIPType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**

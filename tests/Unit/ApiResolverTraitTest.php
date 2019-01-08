@@ -3,6 +3,8 @@
 namespace AlibabaCloud\Tests\Unit;
 
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Ecs\EcsV20140526;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
@@ -42,13 +44,10 @@ class ApiResolverTraitTest extends TestCase
         $method = $ref->getMethod('getServiceName');
         $method->setAccessible(true);
         self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
      * @throws \ReflectionException
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     * @expectedExceptionMessage Service name not found.
      */
     public function testGetServiceNameNotFound()
     {
@@ -56,33 +55,12 @@ class ApiResolverTraitTest extends TestCase
         $ref    = new \ReflectionObject($slb);
         $method = $ref->getMethod('getServiceName');
         $method->setAccessible(true);
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));
+        self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class(new stdClass())]));
     }
 
-    /**
-     * @throws \ReflectionException
-     */
-    public function testGetNamespace()
+    public function testGetServiceName2()
     {
-        $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
-        $method = $ref->getMethod('getNamespace');
-        $method->setAccessible(true);
-        self::assertEquals('AlibabaCloud\Slb\V20140515', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('AlibabaCloud\Tests\Unit', $method->invokeArgs($slb, [\get_class($this)]));
-    }
-
-    /**
-     * @throws \ReflectionException
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     * @expectedExceptionMessage Get namespace error.
-     */
-    public function testGetNamespaceNotFound()
-    {
-        $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
-        $method = $ref->getMethod('getNamespace');
-        $method->setAccessible(true);
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));
+        $ecs = EcsV20140526::describeRegions();
+        self::assertInstanceOf(DescribeRegions::class, $ecs);
     }
 }

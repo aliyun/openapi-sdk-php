@@ -38,18 +38,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -60,18 +48,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -88,18 +64,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -110,18 +74,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoReleaseTime() instead.
-     *
-     * @param string $autoReleaseTime
-     *
-     * @return $this
-     */
-    public function setAutoReleaseTime($autoReleaseTime)
-    {
-        return $this->withAutoReleaseTime($autoReleaseTime);
     }
 
     /**
@@ -138,18 +90,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostId() instead.
-     *
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function setDedicatedHostId($dedicatedHostId)
-    {
-        return $this->withDedicatedHostId($dedicatedHostId);
-    }
-
-    /**
      * @param string $dedicatedHostId
      *
      * @return $this
@@ -160,18 +100,6 @@ class ModifyDedicatedHostAutoReleaseTime extends RpcRequest
         $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

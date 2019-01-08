@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Imm
  *
- * @method V20170906\ImmApiResolver v20170906()
+ * @method ImmV20170906ApiResolver v20170906()
  */
 class Imm
 {

@@ -46,18 +46,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -68,18 +56,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVcpuTotal() instead.
-     *
-     * @param string $vcpuTotal
-     *
-     * @return $this
-     */
-    public function setVcpuTotal($vcpuTotal)
-    {
-        return $this->withVcpuTotal($vcpuTotal);
     }
 
     /**
@@ -96,18 +72,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -118,18 +82,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -146,18 +98,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -168,18 +108,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +124,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +137,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsSuccess() instead.
-     *
-     * @param string $isSuccess
-     *
-     * @return $this
-     */
-    public function setIsSuccess($isSuccess)
-    {
-        return $this->withIsSuccess($isSuccess);
-    }
-
-    /**
      * @param string $isSuccess
      *
      * @return $this
@@ -243,28 +147,6 @@ class InnerRefundVcpuCallBack extends RpcRequest
         $this->options['query']['IsSuccess'] = $isSuccess;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceIds() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIdss()
-    {
-        return $this->getInstanceIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param array $instanceIdss
-     *
-     * @return $this
-     */
-    public function setInstanceIdss(array $instanceIdss)
-    {
-        return $this->withInstanceIds($instanceIdss);
     }
 
     /**

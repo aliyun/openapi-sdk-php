@@ -33,18 +33,6 @@ class QueryAuctionDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuctionId() instead.
-     *
-     * @param string $auctionId
-     *
-     * @return $this
-     */
-    public function setAuctionId($auctionId)
-    {
-        return $this->withAuctionId($auctionId);
-    }
-
-    /**
      * @param string $auctionId
      *
      * @return $this

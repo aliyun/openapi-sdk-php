@@ -33,19 +33,6 @@ class FindProjectsNameList extends RpcRequest
      */
     public $scheme = 'https';
 
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperationFlag() instead.
-     *
-     * @param string $operationFlag
-     *
-     * @return $this
-     */
-    public function setOperationFlag($operationFlag)
-    {
-        return $this->withOperationFlag($operationFlag);
-    }
-
     /**
      * @param string $operationFlag
      *
@@ -57,18 +44,6 @@ class FindProjectsNameList extends RpcRequest
         $this->options['query']['OperationFlag'] = $operationFlag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**

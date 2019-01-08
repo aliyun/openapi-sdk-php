@@ -35,18 +35,6 @@ class DownloadOrganizationSDK extends RpcRequest
     public $method = 'PUT';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
-
-    /**
      * @param string $organizationId
      *
      * @return $this
@@ -60,18 +48,6 @@ class DownloadOrganizationSDK extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -82,18 +58,6 @@ class DownloadOrganizationSDK extends RpcRequest
         $this->options['query']['Location'] = $location;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsername() instead.
-     *
-     * @param string $username
-     *
-     * @return $this
-     */
-    public function setUsername($username)
-    {
-        return $this->withUsername($username);
     }
 
     /**

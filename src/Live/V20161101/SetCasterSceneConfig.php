@@ -42,28 +42,6 @@ class SetCasterSceneConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getComponentId() instead.
-     *
-     * @return array
-     */
-    public function getComponentIds()
-    {
-        return $this->getComponentId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentId() instead.
-     *
-     * @param array $componentIds
-     *
-     * @return $this
-     */
-    public function setComponentIds(array $componentIds)
-    {
-        return $this->withComponentId($componentIds);
-    }
-
-    /**
      * @param array $componentId
      *
      * @return $this
@@ -76,18 +54,6 @@ class SetCasterSceneConfig extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
     }
 
     /**
@@ -104,18 +70,6 @@ class SetCasterSceneConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
-    }
-
-    /**
      * @param string $sceneId
      *
      * @return $this
@@ -129,18 +83,6 @@ class SetCasterSceneConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -151,18 +93,6 @@ class SetCasterSceneConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLayoutId() instead.
-     *
-     * @param string $layoutId
-     *
-     * @return $this
-     */
-    public function setLayoutId($layoutId)
-    {
-        return $this->withLayoutId($layoutId);
     }
 
     /**

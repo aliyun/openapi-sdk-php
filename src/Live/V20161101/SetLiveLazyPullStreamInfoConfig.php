@@ -45,18 +45,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
@@ -67,18 +55,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPullAuthKey() instead.
-     *
-     * @param string $pullAuthKey
-     *
-     * @return $this
-     */
-    public function setPullAuthKey($pullAuthKey)
-    {
-        return $this->withPullAuthKey($pullAuthKey);
     }
 
     /**
@@ -95,18 +71,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPullAuthType() instead.
-     *
-     * @param string $pullAuthType
-     *
-     * @return $this
-     */
-    public function setPullAuthType($pullAuthType)
-    {
-        return $this->withPullAuthType($pullAuthType);
-    }
-
-    /**
      * @param string $pullAuthType
      *
      * @return $this
@@ -117,18 +81,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
         $this->options['query']['PullAuthType'] = $pullAuthType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -145,18 +97,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPullDomainName() instead.
-     *
-     * @param string $pullDomainName
-     *
-     * @return $this
-     */
-    public function setPullDomainName($pullDomainName)
-    {
-        return $this->withPullDomainName($pullDomainName);
-    }
-
-    /**
      * @param string $pullDomainName
      *
      * @return $this
@@ -167,18 +107,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
         $this->options['query']['PullDomainName'] = $pullDomainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +123,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPullAppName() instead.
-     *
-     * @param string $pullAppName
-     *
-     * @return $this
-     */
-    public function setPullAppName($pullAppName)
-    {
-        return $this->withPullAppName($pullAppName);
-    }
-
-    /**
      * @param string $pullAppName
      *
      * @return $this
@@ -217,18 +133,6 @@ class SetLiveLazyPullStreamInfoConfig extends RpcRequest
         $this->options['query']['PullAppName'] = $pullAppName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPullProtocol() instead.
-     *
-     * @param string $pullProtocol
-     *
-     * @return $this
-     */
-    public function setPullProtocol($pullProtocol)
-    {
-        return $this->withPullProtocol($pullProtocol);
     }
 
     /**

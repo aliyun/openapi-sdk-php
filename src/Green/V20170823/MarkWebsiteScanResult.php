@@ -40,18 +40,6 @@ class MarkWebsiteScanResult extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class MarkWebsiteScanResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function setIds($ids)
-    {
-        return $this->withIds($ids);
-    }
-
-    /**
      * @param string $ids
      *
      * @return $this
@@ -87,18 +63,6 @@ class MarkWebsiteScanResult extends RpcRequest
         $this->options['query']['Ids'] = $ids;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

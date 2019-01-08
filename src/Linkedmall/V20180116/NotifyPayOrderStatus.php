@@ -42,18 +42,6 @@ class NotifyPayOrderStatus extends RpcRequest
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAmount() instead.
-     *
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        return $this->withAmount($amount);
-    }
-
-    /**
      * @param string $amount
      *
      * @return $this
@@ -64,18 +52,6 @@ class NotifyPayOrderStatus extends RpcRequest
         $this->options['query']['Amount'] = $amount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPayTypes() instead.
-     *
-     * @param string $payTypes
-     *
-     * @return $this
-     */
-    public function setPayTypes($payTypes)
-    {
-        return $this->withPayTypes($payTypes);
     }
 
     /**
@@ -92,18 +68,6 @@ class NotifyPayOrderStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestId() instead.
-     *
-     * @param string $requestId
-     *
-     * @return $this
-     */
-    public function setRequestId($requestId)
-    {
-        return $this->withRequestId($requestId);
-    }
-
-    /**
      * @param string $requestId
      *
      * @return $this
@@ -117,18 +81,6 @@ class NotifyPayOrderStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperationDate() instead.
-     *
-     * @param string $operationDate
-     *
-     * @return $this
-     */
-    public function setOperationDate($operationDate)
-    {
-        return $this->withOperationDate($operationDate);
-    }
-
-    /**
      * @param string $operationDate
      *
      * @return $this
@@ -139,18 +91,6 @@ class NotifyPayOrderStatus extends RpcRequest
         $this->options['query']['OperationDate'] = $operationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

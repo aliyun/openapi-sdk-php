@@ -44,18 +44,6 @@ class InnerQueryExplanation extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionType() instead.
-     *
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function setActionType($actionType)
-    {
-        return $this->withActionType($actionType);
-    }
-
-    /**
      * @param string $actionType
      *
      * @return $this
@@ -66,18 +54,6 @@ class InnerQueryExplanation extends RpcRequest
         $this->options['query']['ActionType'] = $actionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +70,6 @@ class InnerQueryExplanation extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +80,6 @@ class InnerQueryExplanation extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -144,18 +96,6 @@ class InnerQueryExplanation extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -166,28 +106,6 @@ class InnerQueryExplanation extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
     }
 
     /**
@@ -204,18 +122,6 @@ class InnerQueryExplanation extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEntityType() instead.
-     *
-     * @param string $entityType
-     *
-     * @return $this
-     */
-    public function setEntityType($entityType)
-    {
-        return $this->withEntityType($entityType);
     }
 
     /**

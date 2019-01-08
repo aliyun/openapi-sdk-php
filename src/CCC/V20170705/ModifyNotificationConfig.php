@@ -42,28 +42,6 @@ class ModifyNotificationConfig extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getSubscriptions() instead.
-     *
-     * @return array
-     */
-    public function getSubscriptionss()
-    {
-        return $this->getSubscriptions();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptions() instead.
-     *
-     * @param array $subscriptionss
-     *
-     * @return $this
-     */
-    public function setSubscriptionss(array $subscriptionss)
-    {
-        return $this->withSubscriptions($subscriptionss);
-    }
-
-    /**
      * @param array $subscriptions
      *
      * @return $this
@@ -81,18 +59,6 @@ class ModifyNotificationConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -103,18 +69,6 @@ class ModifyNotificationConfig extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessPoint() instead.
-     *
-     * @param string $accessPoint
-     *
-     * @return $this
-     */
-    public function setAccessPoint($accessPoint)
-    {
-        return $this->withAccessPoint($accessPoint);
     }
 
     /**
@@ -131,18 +85,6 @@ class ModifyNotificationConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -153,18 +95,6 @@ class ModifyNotificationConfig extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProducerId() instead.
-     *
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function setProducerId($producerId)
-    {
-        return $this->withProducerId($producerId);
     }
 
     /**

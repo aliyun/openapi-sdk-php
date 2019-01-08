@@ -39,18 +39,6 @@ class QueryPictureFiles extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -61,18 +49,6 @@ class QueryPictureFiles extends RpcRequest
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBeginTime() instead.
-     *
-     * @param string $beginTime
-     *
-     * @return $this
-     */
-    public function setBeginTime($beginTime)
-    {
-        return $this->withBeginTime($beginTime);
     }
 
     /**
@@ -89,18 +65,6 @@ class QueryPictureFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -111,18 +75,6 @@ class QueryPictureFiles extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -139,18 +91,6 @@ class QueryPictureFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -164,18 +104,6 @@ class QueryPictureFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPictureType() instead.
-     *
-     * @param string $pictureType
-     *
-     * @return $this
-     */
-    public function setPictureType($pictureType)
-    {
-        return $this->withPictureType($pictureType);
-    }
-
-    /**
      * @param string $pictureType
      *
      * @return $this
@@ -186,18 +114,6 @@ class QueryPictureFiles extends RpcRequest
         $this->options['query']['PictureType'] = $pictureType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPictureSource() instead.
-     *
-     * @param string $pictureSource
-     *
-     * @return $this
-     */
-    public function setPictureSource($pictureSource)
-    {
-        return $this->withPictureSource($pictureSource);
     }
 
     /**

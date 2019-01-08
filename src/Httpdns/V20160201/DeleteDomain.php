@@ -34,18 +34,6 @@ class DeleteDomain extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountId() instead.
-     *
-     * @param string $accountId
-     *
-     * @return $this
-     */
-    public function setAccountId($accountId)
-    {
-        return $this->withAccountId($accountId);
-    }
-
-    /**
      * @param string $accountId
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteDomain extends RpcRequest
         $this->options['query']['AccountId'] = $accountId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**

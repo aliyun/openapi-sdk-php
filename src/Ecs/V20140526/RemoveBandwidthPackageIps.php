@@ -39,28 +39,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getRemovedIpAddresses() instead.
-     *
-     * @return array
-     */
-    public function getRemovedIpAddressess()
-    {
-        return $this->getRemovedIpAddresses();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemovedIpAddresses() instead.
-     *
-     * @param array $removedIpAddressess
-     *
-     * @return $this
-     */
-    public function setRemovedIpAddressess(array $removedIpAddressess)
-    {
-        return $this->withRemovedIpAddresses($removedIpAddressess);
-    }
-
-    /**
      * @param array $removedIpAddresses
      *
      * @return $this
@@ -73,18 +51,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -101,18 +67,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidthPackageId() instead.
-     *
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function setBandwidthPackageId($bandwidthPackageId)
-    {
-        return $this->withBandwidthPackageId($bandwidthPackageId);
-    }
-
-    /**
      * @param string $bandwidthPackageId
      *
      * @return $this
@@ -123,18 +77,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
         $this->options['query']['BandwidthPackageId'] = $bandwidthPackageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -151,18 +93,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -176,18 +106,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -198,18 +116,6 @@ class RemoveBandwidthPackageIps extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

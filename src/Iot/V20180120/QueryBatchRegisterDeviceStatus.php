@@ -34,18 +34,6 @@ class QueryBatchRegisterDeviceStatus extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withApplyId() instead.
-     *
-     * @param string $applyId
-     *
-     * @return $this
-     */
-    public function setApplyId($applyId)
-    {
-        return $this->withApplyId($applyId);
-    }
-
-    /**
      * @param string $applyId
      *
      * @return $this
@@ -56,18 +44,6 @@ class QueryBatchRegisterDeviceStatus extends RpcRequest
         $this->options['query']['ApplyId'] = $applyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

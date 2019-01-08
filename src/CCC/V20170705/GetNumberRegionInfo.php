@@ -39,18 +39,6 @@ class GetNumberRegionInfo extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNumber() instead.
-     *
-     * @param string $number
-     *
-     * @return $this
-     */
-    public function setNumber($number)
-    {
-        return $this->withNumber($number);
-    }
-
-    /**
      * @param string $number
      *
      * @return $this
@@ -61,18 +49,6 @@ class GetNumberRegionInfo extends RpcRequest
         $this->options['query']['Number'] = $number;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

@@ -37,7 +37,6 @@ class ListAlbumTagPhotos extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -47,18 +46,6 @@ class ListAlbumTagPhotos extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagId() instead.
-     *
-     * @param string $tagId
-     *
-     * @return $this
-     */
-    public function setTagId($tagId)
-    {
-        return $this->withTagId($tagId);
-    }
 
     /**
      * @param string $tagId
@@ -71,18 +58,6 @@ class ListAlbumTagPhotos extends RpcRequest
         $this->options['query']['TagId'] = $tagId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -99,18 +74,6 @@ class ListAlbumTagPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCount() instead.
-     *
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        return $this->withCount($count);
-    }
-
-    /**
      * @param string $count
      *
      * @return $this
@@ -121,18 +84,6 @@ class ListAlbumTagPhotos extends RpcRequest
         $this->options['query']['Count'] = $count;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlbumId() instead.
-     *
-     * @param string $albumId
-     *
-     * @return $this
-     */
-    public function setAlbumId($albumId)
-    {
-        return $this->withAlbumId($albumId);
     }
 
     /**
@@ -149,18 +100,6 @@ class ListAlbumTagPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -171,18 +110,6 @@ class ListAlbumTagPhotos extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
     }
 
     /**

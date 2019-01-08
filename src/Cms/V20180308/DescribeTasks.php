@@ -37,18 +37,6 @@ class DescribeTasks extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskType() instead.
-     *
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function setTaskType($taskType)
-    {
-        return $this->withTaskType($taskType);
-    }
-
-    /**
      * @param string $taskType
      *
      * @return $this
@@ -59,18 +47,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['TaskType'] = $taskType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -87,18 +63,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
-    }
-
-    /**
      * @param string $keyword
      *
      * @return $this
@@ -134,18 +86,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['Keyword'] = $keyword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

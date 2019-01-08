@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\DomainIntl
  *
- * @method V20171218\DomainIntlApiResolver v20171218()
+ * @method DomainIntlV20171218ApiResolver v20171218()
  */
 class DomainIntl
 {

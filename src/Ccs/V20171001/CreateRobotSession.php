@@ -42,18 +42,6 @@ class CreateRobotSession extends RpcRequest
     public $serviceCode = 'ccs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVisitorIp() instead.
-     *
-     * @param string $visitorIp
-     *
-     * @return $this
-     */
-    public function setVisitorIp($visitorIp)
-    {
-        return $this->withVisitorIp($visitorIp);
-    }
-
-    /**
      * @param string $visitorIp
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateRobotSession extends RpcRequest
         $this->options['query']['VisitorIp'] = $visitorIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRobotId() instead.
-     *
-     * @param string $robotId
-     *
-     * @return $this
-     */
-    public function setRobotId($robotId)
-    {
-        return $this->withRobotId($robotId);
-    }
-
-    /**
      * @param string $robotId
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateRobotSession extends RpcRequest
         $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVisitorId() instead.
-     *
-     * @param string $visitorId
-     *
-     * @return $this
-     */
-    public function setVisitorId($visitorId)
-    {
-        return $this->withVisitorId($visitorId);
     }
 
     /**

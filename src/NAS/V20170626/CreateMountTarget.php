@@ -42,18 +42,6 @@ class CreateMountTarget extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -64,18 +52,6 @@ class CreateMountTarget extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -92,18 +68,6 @@ class CreateMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
-    }
-
-    /**
      * @param string $accessGroupName
      *
      * @return $this
@@ -139,18 +91,6 @@ class CreateMountTarget extends RpcRequest
         $this->options['query']['AccessGroupName'] = $accessGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
     }
 
     /**

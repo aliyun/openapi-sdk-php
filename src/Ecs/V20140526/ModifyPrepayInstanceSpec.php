@@ -43,18 +43,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -65,18 +53,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
     }
 
     /**
@@ -93,18 +69,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +79,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -143,18 +95,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -165,18 +105,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +121,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperatorType() instead.
-     *
-     * @param string $operatorType
-     *
-     * @return $this
-     */
-    public function setOperatorType($operatorType)
-    {
-        return $this->withOperatorType($operatorType);
-    }
-
-    /**
      * @param string $operatorType
      *
      * @return $this
@@ -215,18 +131,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
         $this->options['query']['OperatorType'] = $operatorType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
     }
 
     /**
@@ -243,18 +147,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -268,18 +160,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrateAcrossZone() instead.
-     *
-     * @param string $migrateAcrossZone
-     *
-     * @return $this
-     */
-    public function setMigrateAcrossZone($migrateAcrossZone)
-    {
-        return $this->withMigrateAcrossZone($migrateAcrossZone);
-    }
-
-    /**
      * @param string $migrateAcrossZone
      *
      * @return $this
@@ -290,18 +170,6 @@ class ModifyPrepayInstanceSpec extends RpcRequest
         $this->options['query']['MigrateAcrossZone'] = $migrateAcrossZone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**

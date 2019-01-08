@@ -34,18 +34,6 @@ class SchemaDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSchemaId() instead.
-     *
-     * @param string $schemaId
-     *
-     * @return $this
-     */
-    public function setSchemaId($schemaId)
-    {
-        return $this->withSchemaId($schemaId);
-    }
-
-    /**
      * @param string $schemaId
      *
      * @return $this
@@ -56,18 +44,6 @@ class SchemaDetail extends RpcRequest
         $this->options['query']['SchemaId'] = $schemaId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
     }
 
     /**

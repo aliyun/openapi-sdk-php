@@ -42,28 +42,6 @@ class AssignUsers extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getUserRamId() instead.
-     *
-     * @return array
-     */
-    public function getUserRamIds()
-    {
-        return $this->getUserRamId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserRamId() instead.
-     *
-     * @param array $userRamIds
-     *
-     * @return $this
-     */
-    public function setUserRamIds(array $userRamIds)
-    {
-        return $this->withUserRamId($userRamIds);
-    }
-
-    /**
      * @param array $userRamId
      *
      * @return $this
@@ -76,28 +54,6 @@ class AssignUsers extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSkillLevel() instead.
-     *
-     * @return array
-     */
-    public function getSkillLevels()
-    {
-        return $this->getSkillLevel();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillLevel() instead.
-     *
-     * @param array $skillLevels
-     *
-     * @return $this
-     */
-    public function setSkillLevels(array $skillLevels)
-    {
-        return $this->withSkillLevel($skillLevels);
     }
 
     /**
@@ -116,18 +72,6 @@ class AssignUsers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -138,28 +82,6 @@ class AssignUsers extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getRoleId() instead.
-     *
-     * @return array
-     */
-    public function getRoleIds()
-    {
-        return $this->getRoleId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleId() instead.
-     *
-     * @param array $roleIds
-     *
-     * @return $this
-     */
-    public function setRoleIds(array $roleIds)
-    {
-        return $this->withRoleId($roleIds);
     }
 
     /**
@@ -175,28 +97,6 @@ class AssignUsers extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSkillGroupId() instead.
-     *
-     * @return array
-     */
-    public function getSkillGroupIds()
-    {
-        return $this->getSkillGroupId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param array $skillGroupIds
-     *
-     * @return $this
-     */
-    public function setSkillGroupIds(array $skillGroupIds)
-    {
-        return $this->withSkillGroupId($skillGroupIds);
     }
 
     /**

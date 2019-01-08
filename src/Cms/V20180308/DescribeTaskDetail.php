@@ -33,18 +33,6 @@ class DescribeTaskDetail extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
-    }
-
-    /**
      * @param string $taskId
      *
      * @return $this

@@ -48,18 +48,6 @@ class UpdateTemplate extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainer() instead.
-     *
-     * @param string $container
-     *
-     * @return $this
-     */
-    public function setContainer($container)
-    {
-        return $this->withContainer($container);
-    }
-
-    /**
      * @param string $container
      *
      * @return $this
@@ -70,18 +58,6 @@ class UpdateTemplate extends RpcRequest
         $this->options['query']['Container'] = $container;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -98,18 +74,6 @@ class UpdateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -120,18 +84,6 @@ class UpdateTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -148,18 +100,6 @@ class UpdateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMuxConfig() instead.
-     *
-     * @param string $muxConfig
-     *
-     * @return $this
-     */
-    public function setMuxConfig($muxConfig)
-    {
-        return $this->withMuxConfig($muxConfig);
-    }
-
-    /**
      * @param string $muxConfig
      *
      * @return $this
@@ -170,18 +110,6 @@ class UpdateTemplate extends RpcRequest
         $this->options['query']['MuxConfig'] = $muxConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideo() instead.
-     *
-     * @param string $video
-     *
-     * @return $this
-     */
-    public function setVideo($video)
-    {
-        return $this->withVideo($video);
     }
 
     /**
@@ -198,18 +126,6 @@ class UpdateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -220,18 +136,6 @@ class UpdateTemplate extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**
@@ -248,18 +152,6 @@ class UpdateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -273,18 +165,6 @@ class UpdateTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransConfig() instead.
-     *
-     * @param string $transConfig
-     *
-     * @return $this
-     */
-    public function setTransConfig($transConfig)
-    {
-        return $this->withTransConfig($transConfig);
-    }
-
-    /**
      * @param string $transConfig
      *
      * @return $this
@@ -295,18 +175,6 @@ class UpdateTemplate extends RpcRequest
         $this->options['query']['TransConfig'] = $transConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAudio() instead.
-     *
-     * @param string $audio
-     *
-     * @return $this
-     */
-    public function setAudio($audio)
-    {
-        return $this->withAudio($audio);
     }
 
     /**

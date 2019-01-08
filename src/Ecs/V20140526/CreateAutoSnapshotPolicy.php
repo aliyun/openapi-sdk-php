@@ -39,18 +39,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -61,18 +49,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -89,18 +65,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimePoints() instead.
-     *
-     * @param string $timePoints
-     *
-     * @return $this
-     */
-    public function settimePoints($timePoints)
-    {
-        return $this->withTimePoints($timePoints);
-    }
-
-    /**
      * @param string $timePoints
      *
      * @return $this
@@ -111,18 +75,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['timePoints'] = $timePoints;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRetentionDays() instead.
-     *
-     * @param string $retentionDays
-     *
-     * @return $this
-     */
-    public function setretentionDays($retentionDays)
-    {
-        return $this->withRetentionDays($retentionDays);
     }
 
     /**
@@ -139,18 +91,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -164,18 +104,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRepeatWeekdays() instead.
-     *
-     * @param string $repeatWeekdays
-     *
-     * @return $this
-     */
-    public function setrepeatWeekdays($repeatWeekdays)
-    {
-        return $this->withRepeatWeekdays($repeatWeekdays);
-    }
-
-    /**
      * @param string $repeatWeekdays
      *
      * @return $this
@@ -186,18 +114,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['repeatWeekdays'] = $repeatWeekdays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyName() instead.
-     *
-     * @param string $autoSnapshotPolicyName
-     *
-     * @return $this
-     */
-    public function setautoSnapshotPolicyName($autoSnapshotPolicyName)
-    {
-        return $this->withAutoSnapshotPolicyName($autoSnapshotPolicyName);
     }
 
     /**

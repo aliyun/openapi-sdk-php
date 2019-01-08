@@ -41,18 +41,6 @@ class DescribeRisks extends RpcRequest
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRiskName() instead.
-     *
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function setRiskName($riskName)
-    {
-        return $this->withRiskName($riskName);
-    }
-
-    /**
      * @param string $riskName
      *
      * @return $this
@@ -63,18 +51,6 @@ class DescribeRisks extends RpcRequest
         $this->options['query']['RiskName'] = $riskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +67,6 @@ class DescribeRisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
-    }
-
-    /**
      * @param string $limit
      *
      * @return $this
@@ -113,18 +77,6 @@ class DescribeRisks extends RpcRequest
         $this->options['query']['Limit'] = $limit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskId() instead.
-     *
-     * @param string $riskId
-     *
-     * @return $this
-     */
-    public function setRiskId($riskId)
-    {
-        return $this->withRiskId($riskId);
     }
 
     /**

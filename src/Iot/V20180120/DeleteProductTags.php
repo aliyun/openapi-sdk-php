@@ -34,28 +34,6 @@ class DeleteProductTags extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getProductTag() instead.
-     *
-     * @return array
-     */
-    public function getProductTags()
-    {
-        return $this->getProductTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductTag() instead.
-     *
-     * @param array $productTags
-     *
-     * @return $this
-     */
-    public function setProductTags(array $productTags)
-    {
-        return $this->withProductTag($productTags);
-    }
-
-    /**
      * @param array $productTag
      *
      * @return $this
@@ -68,18 +46,6 @@ class DeleteProductTags extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

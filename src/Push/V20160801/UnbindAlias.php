@@ -36,18 +36,6 @@ class UnbindAlias extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliasName() instead.
-     *
-     * @param string $aliasName
-     *
-     * @return $this
-     */
-    public function setAliasName($aliasName)
-    {
-        return $this->withAliasName($aliasName);
-    }
-
-    /**
      * @param string $aliasName
      *
      * @return $this
@@ -58,18 +46,6 @@ class UnbindAlias extends RpcRequest
         $this->options['query']['AliasName'] = $aliasName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**
@@ -86,18 +62,6 @@ class UnbindAlias extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceId() instead.
-     *
-     * @param string $deviceId
-     *
-     * @return $this
-     */
-    public function setDeviceId($deviceId)
-    {
-        return $this->withDeviceId($deviceId);
-    }
-
-    /**
      * @param string $deviceId
      *
      * @return $this
@@ -108,18 +72,6 @@ class UnbindAlias extends RpcRequest
         $this->options['query']['DeviceId'] = $deviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnbindAll() instead.
-     *
-     * @param string $unbindAll
-     *
-     * @return $this
-     */
-    public function setUnbindAll($unbindAll)
-    {
-        return $this->withUnbindAll($unbindAll);
     }
 
     /**

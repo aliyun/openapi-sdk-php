@@ -51,18 +51,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -73,18 +61,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCircuitCode() instead.
-     *
-     * @param string $circuitCode
-     *
-     * @return $this
-     */
-    public function setCircuitCode($circuitCode)
-    {
-        return $this->withCircuitCode($circuitCode);
     }
 
     /**
@@ -101,18 +77,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAssociatedPhysicalConnections() instead.
-     *
-     * @param string $associatedPhysicalConnections
-     *
-     * @return $this
-     */
-    public function setAssociatedPhysicalConnections($associatedPhysicalConnections)
-    {
-        return $this->withAssociatedPhysicalConnections($associatedPhysicalConnections);
-    }
-
-    /**
      * @param string $associatedPhysicalConnections
      *
      * @return $this
@@ -123,18 +87,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['AssociatedPhysicalConnections'] = $associatedPhysicalConnections;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVlanId() instead.
-     *
-     * @param string $vlanId
-     *
-     * @return $this
-     */
-    public function setVlanId($vlanId)
-    {
-        return $this->withVlanId($vlanId);
     }
 
     /**
@@ -151,18 +103,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -173,18 +113,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -201,18 +129,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -223,18 +139,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -251,18 +155,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVbrId() instead.
-     *
-     * @param string $vbrId
-     *
-     * @return $this
-     */
-    public function setVbrId($vbrId)
-    {
-        return $this->withVbrId($vbrId);
-    }
-
-    /**
      * @param string $vbrId
      *
      * @return $this
@@ -273,18 +165,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['VbrId'] = $vbrId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -301,18 +181,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeerGatewayIp() instead.
-     *
-     * @param string $peerGatewayIp
-     *
-     * @return $this
-     */
-    public function setPeerGatewayIp($peerGatewayIp)
-    {
-        return $this->withPeerGatewayIp($peerGatewayIp);
-    }
-
-    /**
      * @param string $peerGatewayIp
      *
      * @return $this
@@ -323,18 +191,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['PeerGatewayIp'] = $peerGatewayIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeeringSubnetMask() instead.
-     *
-     * @param string $peeringSubnetMask
-     *
-     * @return $this
-     */
-    public function setPeeringSubnetMask($peeringSubnetMask)
-    {
-        return $this->withPeeringSubnetMask($peeringSubnetMask);
     }
 
     /**
@@ -351,18 +207,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -373,18 +217,6 @@ class ModifyVirtualBorderRouterAttribute extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocalGatewayIp() instead.
-     *
-     * @param string $localGatewayIp
-     *
-     * @return $this
-     */
-    public function setLocalGatewayIp($localGatewayIp)
-    {
-        return $this->withLocalGatewayIp($localGatewayIp);
     }
 
     /**

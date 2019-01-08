@@ -34,28 +34,6 @@ class TaskConfigEnable extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getIdList() instead.
-     *
-     * @return array
-     */
-    public function getIdLists()
-    {
-        return $this->getIdList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdList() instead.
-     *
-     * @param array $idLists
-     *
-     * @return $this
-     */
-    public function setIdLists(array $idLists)
-    {
-        return $this->withIdList($idLists);
-    }
-
-    /**
      * @param array $idList
      *
      * @return $this
@@ -68,18 +46,6 @@ class TaskConfigEnable extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnabled() instead.
-     *
-     * @param string $enabled
-     *
-     * @return $this
-     */
-    public function setEnabled($enabled)
-    {
-        return $this->withEnabled($enabled);
     }
 
     /**

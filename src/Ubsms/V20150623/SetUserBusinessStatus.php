@@ -36,18 +36,6 @@ class SetUserBusinessStatus extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
-
-    /**
      * @param string $uid
      *
      * @return $this
@@ -58,18 +46,6 @@ class SetUserBusinessStatus extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue() instead.
-     *
-     * @param string $statusValue
-     *
-     * @return $this
-     */
-    public function setStatusValue($statusValue)
-    {
-        return $this->withStatusValue($statusValue);
     }
 
     /**
@@ -86,18 +62,6 @@ class SetUserBusinessStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withService() instead.
-     *
-     * @param string $service
-     *
-     * @return $this
-     */
-    public function setService($service)
-    {
-        return $this->withService($service);
-    }
-
-    /**
      * @param string $service
      *
      * @return $this
@@ -108,18 +72,6 @@ class SetUserBusinessStatus extends RpcRequest
         $this->options['query']['Service'] = $service;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey() instead.
-     *
-     * @param string $statusKey
-     *
-     * @return $this
-     */
-    public function setStatusKey($statusKey)
-    {
-        return $this->withStatusKey($statusKey);
     }
 
     /**

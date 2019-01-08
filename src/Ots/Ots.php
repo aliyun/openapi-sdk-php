@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ots
  *
- * @method V20160620\OtsApiResolver v20160620()
+ * @method OtsV20160620ApiResolver v20160620()
  */
 class Ots
 {

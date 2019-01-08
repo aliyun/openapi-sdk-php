@@ -39,18 +39,6 @@ class QueryRecord extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
@@ -61,18 +49,6 @@ class QueryRecord extends RpcRequest
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamType() instead.
-     *
-     * @param string $streamType
-     *
-     * @return $this
-     */
-    public function setStreamType($streamType)
-    {
-        return $this->withStreamType($streamType);
     }
 
     /**
@@ -89,18 +65,6 @@ class QueryRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeginTime() instead.
-     *
-     * @param string $beginTime
-     *
-     * @return $this
-     */
-    public function setBeginTime($beginTime)
-    {
-        return $this->withBeginTime($beginTime);
-    }
-
-    /**
      * @param string $beginTime
      *
      * @return $this
@@ -111,18 +75,6 @@ class QueryRecord extends RpcRequest
         $this->options['query']['BeginTime'] = $beginTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -139,18 +91,6 @@ class QueryRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRecordType() instead.
-     *
-     * @param string $recordType
-     *
-     * @return $this
-     */
-    public function setRecordType($recordType)
-    {
-        return $this->withRecordType($recordType);
-    }
-
-    /**
      * @param string $recordType
      *
      * @return $this
@@ -164,18 +104,6 @@ class QueryRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -186,18 +114,6 @@ class QueryRecord extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

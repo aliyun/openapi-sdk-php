@@ -44,18 +44,6 @@ class GetVideoPlayAuth extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -66,18 +54,6 @@ class GetVideoPlayAuth extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +70,6 @@ class GetVideoPlayAuth extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReAuthInfo() instead.
-     *
-     * @param string $reAuthInfo
-     *
-     * @return $this
-     */
-    public function setReAuthInfo($reAuthInfo)
-    {
-        return $this->withReAuthInfo($reAuthInfo);
-    }
-
-    /**
      * @param string $reAuthInfo
      *
      * @return $this
@@ -116,18 +80,6 @@ class GetVideoPlayAuth extends RpcRequest
         $this->options['query']['ReAuthInfo'] = $reAuthInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlayConfig() instead.
-     *
-     * @param string $playConfig
-     *
-     * @return $this
-     */
-    public function setPlayConfig($playConfig)
-    {
-        return $this->withPlayConfig($playConfig);
     }
 
     /**
@@ -144,18 +96,6 @@ class GetVideoPlayAuth extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthInfoTimeout() instead.
-     *
-     * @param string $authInfoTimeout
-     *
-     * @return $this
-     */
-    public function setAuthInfoTimeout($authInfoTimeout)
-    {
-        return $this->withAuthInfoTimeout($authInfoTimeout);
-    }
-
-    /**
      * @param string $authInfoTimeout
      *
      * @return $this
@@ -169,18 +109,6 @@ class GetVideoPlayAuth extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
-    }
-
-    /**
      * @param string $videoId
      *
      * @return $this
@@ -191,18 +119,6 @@ class GetVideoPlayAuth extends RpcRequest
         $this->options['query']['VideoId'] = $videoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

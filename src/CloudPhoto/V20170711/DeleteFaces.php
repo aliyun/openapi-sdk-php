@@ -34,7 +34,6 @@ class DeleteFaces extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
@@ -44,18 +43,6 @@ class DeleteFaces extends RpcRequest
      * @var string
      */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -71,18 +58,6 @@ class DeleteFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -93,28 +68,6 @@ class DeleteFaces extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFaceId() instead.
-     *
-     * @return array
-     */
-    public function getFaceIds()
-    {
-        return $this->getFaceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceId() instead.
-     *
-     * @param array $faceIds
-     *
-     * @return $this
-     */
-    public function setFaceIds(array $faceIds)
-    {
-        return $this->withFaceId($faceIds);
     }
 
     /**

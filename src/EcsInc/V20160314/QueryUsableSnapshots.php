@@ -47,18 +47,6 @@ class QueryUsableSnapshots extends RpcRequest
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -69,18 +57,6 @@ class QueryUsableSnapshots extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotNickName() instead.
-     *
-     * @param string $snapshotNickName
-     *
-     * @return $this
-     */
-    public function setSnapshotNickName($snapshotNickName)
-    {
-        return $this->withSnapshotNickName($snapshotNickName);
     }
 
     /**
@@ -97,18 +73,6 @@ class QueryUsableSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
-    }
-
-    /**
      * @param string $snapshotId
      *
      * @return $this
@@ -119,18 +83,6 @@ class QueryUsableSnapshots extends RpcRequest
         $this->options['query']['SnapshotId'] = $snapshotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOffset() instead.
-     *
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        return $this->withOffset($offset);
     }
 
     /**
@@ -147,18 +99,6 @@ class QueryUsableSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -169,18 +109,6 @@ class QueryUsableSnapshots extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreationStartTime() instead.
-     *
-     * @param string $creationStartTime
-     *
-     * @return $this
-     */
-    public function setCreationStartTime($creationStartTime)
-    {
-        return $this->withCreationStartTime($creationStartTime);
     }
 
     /**
@@ -197,18 +125,6 @@ class QueryUsableSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreationEndTime() instead.
-     *
-     * @param string $creationEndTime
-     *
-     * @return $this
-     */
-    public function setCreationEndTime($creationEndTime)
-    {
-        return $this->withCreationEndTime($creationEndTime);
-    }
-
-    /**
      * @param string $creationEndTime
      *
      * @return $this
@@ -219,18 +135,6 @@ class QueryUsableSnapshots extends RpcRequest
         $this->options['query']['CreationEndTime'] = $creationEndTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -247,18 +151,6 @@ class QueryUsableSnapshots extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -269,18 +161,6 @@ class QueryUsableSnapshots extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

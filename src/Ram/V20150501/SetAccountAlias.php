@@ -32,23 +32,10 @@ class SetAccountAlias extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountAlias() instead.
-     *
-     * @param string $accountAlias
-     *
-     * @return $this
-     */
-    public function setAccountAlias($accountAlias)
-    {
-        return $this->withAccountAlias($accountAlias);
-    }
 
     /**
      * @param string $accountAlias

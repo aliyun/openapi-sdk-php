@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Drds
  *
- * @method V20171016\DrdsApiResolver v20171016()
+ * @method DrdsV20171016ApiResolver v20171016()
  */
 class Drds
 {

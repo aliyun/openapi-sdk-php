@@ -39,18 +39,6 @@ class GetPornBatchDetectJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
-    }
-
-    /**
      * @param string $jobId
      *
      * @return $this
@@ -61,18 +49,6 @@ class GetPornBatchDetectJob extends RpcRequest
         $this->options['query']['JobId'] = $jobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

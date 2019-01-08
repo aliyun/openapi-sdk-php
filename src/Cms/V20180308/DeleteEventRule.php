@@ -34,28 +34,6 @@ class DeleteEventRule extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getRuleNames() instead.
-     *
-     * @return array
-     */
-    public function getRuleNamess()
-    {
-        return $this->getRuleNames();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleNames() instead.
-     *
-     * @param array $ruleNamess
-     *
-     * @return $this
-     */
-    public function setRuleNamess(array $ruleNamess)
-    {
-        return $this->withRuleNames($ruleNamess);
-    }
-
-    /**
      * @param array $ruleNames
      *
      * @return $this
@@ -68,18 +46,6 @@ class DeleteEventRule extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**

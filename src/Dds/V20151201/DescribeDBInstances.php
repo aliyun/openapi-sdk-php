@@ -59,18 +59,6 @@ class DescribeDBInstances extends RpcRequest
     public $serviceCode = 'dds';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -81,18 +69,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEngineVersion() instead.
-     *
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function setEngineVersion($engineVersion)
-    {
-        return $this->withEngineVersion($engineVersion);
     }
 
     /**
@@ -109,18 +85,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -131,18 +95,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -159,18 +111,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplicationFactor() instead.
-     *
-     * @param string $replicationFactor
-     *
-     * @return $this
-     */
-    public function setReplicationFactor($replicationFactor)
-    {
-        return $this->withReplicationFactor($replicationFactor);
-    }
-
-    /**
      * @param string $replicationFactor
      *
      * @return $this
@@ -181,18 +121,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['ReplicationFactor'] = $replicationFactor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpired() instead.
-     *
-     * @param string $expired
-     *
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        return $this->withExpired($expired);
     }
 
     /**
@@ -209,18 +137,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -231,18 +147,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEngine() instead.
-     *
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function setEngine($engine)
-    {
-        return $this->withEngine($engine);
     }
 
     /**
@@ -259,18 +163,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -281,18 +173,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -309,18 +189,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceDescription() instead.
-     *
-     * @param string $dBInstanceDescription
-     *
-     * @return $this
-     */
-    public function setDBInstanceDescription($dBInstanceDescription)
-    {
-        return $this->withDBInstanceDescription($dBInstanceDescription);
-    }
-
-    /**
      * @param string $dBInstanceDescription
      *
      * @return $this
@@ -331,18 +199,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['DBInstanceDescription'] = $dBInstanceDescription;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceStatus() instead.
-     *
-     * @param string $dBInstanceStatus
-     *
-     * @return $this
-     */
-    public function setDBInstanceStatus($dBInstanceStatus)
-    {
-        return $this->withDBInstanceStatus($dBInstanceStatus);
     }
 
     /**
@@ -359,18 +215,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpireTime() instead.
-     *
-     * @param string $expireTime
-     *
-     * @return $this
-     */
-    public function setExpireTime($expireTime)
-    {
-        return $this->withExpireTime($expireTime);
-    }
-
-    /**
      * @param string $expireTime
      *
      * @return $this
@@ -381,18 +225,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['ExpireTime'] = $expireTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -409,18 +241,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -431,18 +251,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -459,18 +267,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceType() instead.
-     *
-     * @param string $dBInstanceType
-     *
-     * @return $this
-     */
-    public function setDBInstanceType($dBInstanceType)
-    {
-        return $this->withDBInstanceType($dBInstanceType);
-    }
-
-    /**
      * @param string $dBInstanceType
      *
      * @return $this
@@ -481,18 +277,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['DBInstanceType'] = $dBInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceClass() instead.
-     *
-     * @param string $dBInstanceClass
-     *
-     * @return $this
-     */
-    public function setDBInstanceClass($dBInstanceClass)
-    {
-        return $this->withDBInstanceClass($dBInstanceClass);
     }
 
     /**
@@ -509,18 +293,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -531,18 +303,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -559,18 +319,6 @@ class DescribeDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -581,18 +329,6 @@ class DescribeDBInstances extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
     }
 
     /**

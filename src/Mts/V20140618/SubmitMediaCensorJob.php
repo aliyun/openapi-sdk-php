@@ -49,18 +49,6 @@ class SubmitMediaCensorJob extends RpcRequest
     public $serviceCode = 'mts';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -71,18 +59,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoverImages() instead.
-     *
-     * @param string $coverImages
-     *
-     * @return $this
-     */
-    public function setCoverImages($coverImages)
-    {
-        return $this->withCoverImages($coverImages);
     }
 
     /**
@@ -99,18 +75,6 @@ class SubmitMediaCensorJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -121,18 +85,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -149,18 +101,6 @@ class SubmitMediaCensorJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -171,18 +111,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -199,18 +127,6 @@ class SubmitMediaCensorJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -221,18 +137,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**
@@ -249,18 +153,6 @@ class SubmitMediaCensorJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoCensorConfig() instead.
-     *
-     * @param string $videoCensorConfig
-     *
-     * @return $this
-     */
-    public function setVideoCensorConfig($videoCensorConfig)
-    {
-        return $this->withVideoCensorConfig($videoCensorConfig);
-    }
-
-    /**
      * @param string $videoCensorConfig
      *
      * @return $this
@@ -271,18 +163,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['VideoCensorConfig'] = $videoCensorConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInput() instead.
-     *
-     * @param string $input
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        return $this->withInput($input);
     }
 
     /**
@@ -299,18 +179,6 @@ class SubmitMediaCensorJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -321,18 +189,6 @@ class SubmitMediaCensorJob extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBarrages() instead.
-     *
-     * @param string $barrages
-     *
-     * @return $this
-     */
-    public function setBarrages($barrages)
-    {
-        return $this->withBarrages($barrages);
     }
 
     /**

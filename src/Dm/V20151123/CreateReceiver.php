@@ -38,18 +38,6 @@ class CreateReceiver extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -60,18 +48,6 @@ class CreateReceiver extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReceiversName() instead.
-     *
-     * @param string $receiversName
-     *
-     * @return $this
-     */
-    public function setReceiversName($receiversName)
-    {
-        return $this->withReceiversName($receiversName);
     }
 
     /**
@@ -88,18 +64,6 @@ class CreateReceiver extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -110,18 +74,6 @@ class CreateReceiver extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class CreateReceiver extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReceiversAlias() instead.
-     *
-     * @param string $receiversAlias
-     *
-     * @return $this
-     */
-    public function setReceiversAlias($receiversAlias)
-    {
-        return $this->withReceiversAlias($receiversAlias);
-    }
-
-    /**
      * @param string $receiversAlias
      *
      * @return $this
@@ -160,18 +100,6 @@ class CreateReceiver extends RpcRequest
         $this->options['query']['ReceiversAlias'] = $receiversAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDesc() instead.
-     *
-     * @param string $desc
-     *
-     * @return $this
-     */
-    public function setDesc($desc)
-    {
-        return $this->withDesc($desc);
     }
 
     /**

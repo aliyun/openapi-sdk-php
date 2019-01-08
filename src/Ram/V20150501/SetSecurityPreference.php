@@ -38,23 +38,10 @@ class SetSecurityPreference extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAllowUserToManageAccessKeys() instead.
-     *
-     * @param string $allowUserToManageAccessKeys
-     *
-     * @return $this
-     */
-    public function setAllowUserToManageAccessKeys($allowUserToManageAccessKeys)
-    {
-        return $this->withAllowUserToManageAccessKeys($allowUserToManageAccessKeys);
-    }
 
     /**
      * @param string $allowUserToManageAccessKeys
@@ -67,18 +54,6 @@ class SetSecurityPreference extends RpcRequest
         $this->options['query']['AllowUserToManageAccessKeys'] = $allowUserToManageAccessKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAllowUserToManageMFADevices() instead.
-     *
-     * @param string $allowUserToManageMFADevices
-     *
-     * @return $this
-     */
-    public function setAllowUserToManageMFADevices($allowUserToManageMFADevices)
-    {
-        return $this->withAllowUserToManageMFADevices($allowUserToManageMFADevices);
     }
 
     /**
@@ -95,18 +70,6 @@ class SetSecurityPreference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllowUserToManagePublicKeys() instead.
-     *
-     * @param string $allowUserToManagePublicKeys
-     *
-     * @return $this
-     */
-    public function setAllowUserToManagePublicKeys($allowUserToManagePublicKeys)
-    {
-        return $this->withAllowUserToManagePublicKeys($allowUserToManagePublicKeys);
-    }
-
-    /**
      * @param string $allowUserToManagePublicKeys
      *
      * @return $this
@@ -117,18 +80,6 @@ class SetSecurityPreference extends RpcRequest
         $this->options['query']['AllowUserToManagePublicKeys'] = $allowUserToManagePublicKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableSaveMFATicket() instead.
-     *
-     * @param string $enableSaveMFATicket
-     *
-     * @return $this
-     */
-    public function setEnableSaveMFATicket($enableSaveMFATicket)
-    {
-        return $this->withEnableSaveMFATicket($enableSaveMFATicket);
     }
 
     /**
@@ -145,18 +96,6 @@ class SetSecurityPreference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoginNetworkMasks() instead.
-     *
-     * @param string $loginNetworkMasks
-     *
-     * @return $this
-     */
-    public function setLoginNetworkMasks($loginNetworkMasks)
-    {
-        return $this->withLoginNetworkMasks($loginNetworkMasks);
-    }
-
-    /**
      * @param string $loginNetworkMasks
      *
      * @return $this
@@ -170,18 +109,6 @@ class SetSecurityPreference extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllowUserToChangePassword() instead.
-     *
-     * @param string $allowUserToChangePassword
-     *
-     * @return $this
-     */
-    public function setAllowUserToChangePassword($allowUserToChangePassword)
-    {
-        return $this->withAllowUserToChangePassword($allowUserToChangePassword);
-    }
-
-    /**
      * @param string $allowUserToChangePassword
      *
      * @return $this
@@ -192,18 +119,6 @@ class SetSecurityPreference extends RpcRequest
         $this->options['query']['AllowUserToChangePassword'] = $allowUserToChangePassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoginSessionDuration() instead.
-     *
-     * @param string $loginSessionDuration
-     *
-     * @return $this
-     */
-    public function setLoginSessionDuration($loginSessionDuration)
-    {
-        return $this->withLoginSessionDuration($loginSessionDuration);
     }
 
     /**

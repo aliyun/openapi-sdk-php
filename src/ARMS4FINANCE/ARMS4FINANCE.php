@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\ARMS4FINANCE
  *
- * @method V20171130\ARMS4FINANCEApiResolver v20171130()
+ * @method ARMS4FINANCEV20171130ApiResolver v20171130()
  */
 class ARMS4FINANCE
 {

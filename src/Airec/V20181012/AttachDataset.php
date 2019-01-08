@@ -44,18 +44,6 @@ class AttachDataset extends RoaRequest
     public $serviceCode = 'airec';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVersionId() instead.
-     *
-     * @param string $versionId
-     *
-     * @return $this
-     */
-    public function setVersionId($versionId)
-    {
-        return $this->withVersionId($versionId);
-    }
-
-    /**
      * @param string $versionId
      *
      * @return $this
@@ -66,18 +54,6 @@ class AttachDataset extends RoaRequest
         $this->pathParameters['VersionId'] = $versionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

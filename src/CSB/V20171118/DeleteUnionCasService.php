@@ -35,23 +35,10 @@ class DeleteUnionCasService extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLeafOnly() instead.
-     *
-     * @param string $leafOnly
-     *
-     * @return $this
-     */
-    public function setLeafOnly($leafOnly)
-    {
-        return $this->withLeafOnly($leafOnly);
-    }
 
     /**
      * @param string $leafOnly
@@ -64,18 +51,6 @@ class DeleteUnionCasService extends RpcRequest
         $this->options['query']['LeafOnly'] = $leafOnly;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasCsbName() instead.
-     *
-     * @param string $casCsbName
-     *
-     * @return $this
-     */
-    public function setCasCsbName($casCsbName)
-    {
-        return $this->withCasCsbName($casCsbName);
     }
 
     /**
@@ -92,18 +67,6 @@ class DeleteUnionCasService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUserId() instead.
-     *
-     * @param string $srcUserId
-     *
-     * @return $this
-     */
-    public function setSrcUserId($srcUserId)
-    {
-        return $this->withSrcUserId($srcUserId);
-    }
-
-    /**
      * @param string $srcUserId
      *
      * @return $this
@@ -114,18 +77,6 @@ class DeleteUnionCasService extends RpcRequest
         $this->options['query']['SrcUserId'] = $srcUserId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasServiceId() instead.
-     *
-     * @param string $casServiceId
-     *
-     * @return $this
-     */
-    public function setCasServiceId($casServiceId)
-    {
-        return $this->withCasServiceId($casServiceId);
     }
 
     /**

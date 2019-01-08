@@ -38,28 +38,6 @@ class ListInvocationResults extends RpcRequest
     public $serviceCode = 'ehs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
-
-    /**
      * @param array $instance
      *
      * @return $this
@@ -72,18 +50,6 @@ class ListInvocationResults extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInvokeRecordStatus() instead.
-     *
-     * @param string $invokeRecordStatus
-     *
-     * @return $this
-     */
-    public function setInvokeRecordStatus($invokeRecordStatus)
-    {
-        return $this->withInvokeRecordStatus($invokeRecordStatus);
     }
 
     /**
@@ -100,18 +66,6 @@ class ListInvocationResults extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -122,18 +76,6 @@ class ListInvocationResults extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**
@@ -150,18 +92,6 @@ class ListInvocationResults extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommandId() instead.
-     *
-     * @param string $commandId
-     *
-     * @return $this
-     */
-    public function setCommandId($commandId)
-    {
-        return $this->withCommandId($commandId);
-    }
-
-    /**
      * @param string $commandId
      *
      * @return $this
@@ -172,18 +102,6 @@ class ListInvocationResults extends RpcRequest
         $this->options['query']['CommandId'] = $commandId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

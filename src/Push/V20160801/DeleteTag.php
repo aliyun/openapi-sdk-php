@@ -34,18 +34,6 @@ class DeleteTag extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
-    }
-
-    /**
      * @param string $tagName
      *
      * @return $this
@@ -56,18 +44,6 @@ class DeleteTag extends RpcRequest
         $this->options['query']['TagName'] = $tagName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**

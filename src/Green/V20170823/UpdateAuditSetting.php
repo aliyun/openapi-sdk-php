@@ -40,18 +40,6 @@ class UpdateAuditSetting extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -65,18 +53,6 @@ class UpdateAuditSetting extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSeed() instead.
-     *
-     * @param string $seed
-     *
-     * @return $this
-     */
-    public function setSeed($seed)
-    {
-        return $this->withSeed($seed);
-    }
-
-    /**
      * @param string $seed
      *
      * @return $this
@@ -87,18 +63,6 @@ class UpdateAuditSetting extends RpcRequest
         $this->options['query']['Seed'] = $seed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallback() instead.
-     *
-     * @param string $callback
-     *
-     * @return $this
-     */
-    public function setCallback($callback)
-    {
-        return $this->withCallback($callback);
     }
 
     /**

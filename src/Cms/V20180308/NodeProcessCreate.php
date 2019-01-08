@@ -37,18 +37,6 @@ class NodeProcessCreate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -59,18 +47,6 @@ class NodeProcessCreate extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProcessName() instead.
-     *
-     * @param string $processName
-     *
-     * @return $this
-     */
-    public function setProcessName($processName)
-    {
-        return $this->withProcessName($processName);
     }
 
     /**
@@ -87,18 +63,6 @@ class NodeProcessCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -112,18 +76,6 @@ class NodeProcessCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProcessUser() instead.
-     *
-     * @param string $processUser
-     *
-     * @return $this
-     */
-    public function setProcessUser($processUser)
-    {
-        return $this->withProcessUser($processUser);
-    }
-
-    /**
      * @param string $processUser
      *
      * @return $this
@@ -134,18 +86,6 @@ class NodeProcessCreate extends RpcRequest
         $this->options['query']['ProcessUser'] = $processUser;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommand() instead.
-     *
-     * @param string $command
-     *
-     * @return $this
-     */
-    public function setCommand($command)
-    {
-        return $this->withCommand($command);
     }
 
     /**

@@ -47,18 +47,6 @@ class DescribeRoomList extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -69,18 +57,6 @@ class DescribeRoomList extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAnchorId() instead.
-     *
-     * @param string $anchorId
-     *
-     * @return $this
-     */
-    public function setAnchorId($anchorId)
-    {
-        return $this->withAnchorId($anchorId);
     }
 
     /**
@@ -97,18 +73,6 @@ class DescribeRoomList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -119,18 +83,6 @@ class DescribeRoomList extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoomStatus() instead.
-     *
-     * @param string $roomStatus
-     *
-     * @return $this
-     */
-    public function setRoomStatus($roomStatus)
-    {
-        return $this->withRoomStatus($roomStatus);
     }
 
     /**
@@ -147,18 +99,6 @@ class DescribeRoomList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -169,18 +109,6 @@ class DescribeRoomList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
     }
 
     /**
@@ -197,18 +125,6 @@ class DescribeRoomList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -219,18 +135,6 @@ class DescribeRoomList extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +151,6 @@ class DescribeRoomList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoomId() instead.
-     *
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function setRoomId($roomId)
-    {
-        return $this->withRoomId($roomId);
-    }
-
-    /**
      * @param string $roomId
      *
      * @return $this
@@ -269,18 +161,6 @@ class DescribeRoomList extends RpcRequest
         $this->options['query']['RoomId'] = $roomId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

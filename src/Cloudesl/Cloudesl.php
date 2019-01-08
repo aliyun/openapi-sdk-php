@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Cloudesl
  *
- * @method V20180801\CloudeslApiResolver v20180801()
+ * @method CloudeslV20180801ApiResolver v20180801()
  */
 class Cloudesl
 {

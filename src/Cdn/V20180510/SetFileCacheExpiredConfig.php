@@ -32,18 +32,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
     public $action = 'SetFileCacheExpiredConfig';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -54,18 +42,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCacheContent() instead.
-     *
-     * @param string $cacheContent
-     *
-     * @return $this
-     */
-    public function setCacheContent($cacheContent)
-    {
-        return $this->withCacheContent($cacheContent);
     }
 
     /**
@@ -82,18 +58,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -107,18 +71,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
-    }
-
-    /**
      * @param string $tTL
      *
      * @return $this
@@ -129,18 +81,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['TTL'] = $tTL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

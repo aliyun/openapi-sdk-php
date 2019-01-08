@@ -45,18 +45,6 @@ class CreateKeywordLib extends RpcRequest
     public $serviceCode = 'green';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -67,18 +55,6 @@ class CreateKeywordLib extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibType() instead.
-     *
-     * @param string $libType
-     *
-     * @return $this
-     */
-    public function setLibType($libType)
-    {
-        return $this->withLibType($libType);
     }
 
     /**
@@ -95,18 +71,6 @@ class CreateKeywordLib extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateKeywordLib extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizTypes() instead.
-     *
-     * @param string $bizTypes
-     *
-     * @return $this
-     */
-    public function setBizTypes($bizTypes)
-    {
-        return $this->withBizTypes($bizTypes);
     }
 
     /**
@@ -145,18 +97,6 @@ class CreateKeywordLib extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceModule() instead.
-     *
-     * @param string $serviceModule
-     *
-     * @return $this
-     */
-    public function setServiceModule($serviceModule)
-    {
-        return $this->withServiceModule($serviceModule);
-    }
-
-    /**
      * @param string $serviceModule
      *
      * @return $this
@@ -167,18 +107,6 @@ class CreateKeywordLib extends RpcRequest
         $this->options['query']['ServiceModule'] = $serviceModule;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -195,18 +123,6 @@ class CreateKeywordLib extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -217,18 +133,6 @@ class CreateKeywordLib extends RpcRequest
         $this->options['query']['Category'] = $category;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

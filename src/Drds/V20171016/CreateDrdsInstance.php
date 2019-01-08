@@ -45,18 +45,6 @@ class CreateDrdsInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsAutoRenew() instead.
-     *
-     * @param string $isAutoRenew
-     *
-     * @return $this
-     */
-    public function setIsAutoRenew($isAutoRenew)
-    {
-        return $this->withIsAutoRenew($isAutoRenew);
-    }
-
-    /**
      * @param string $isAutoRenew
      *
      * @return $this
@@ -67,18 +55,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['IsAutoRenew'] = $isAutoRenew;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuantity() instead.
-     *
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function setQuantity($quantity)
-    {
-        return $this->withQuantity($quantity);
     }
 
     /**
@@ -95,18 +71,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -117,18 +81,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpecification() instead.
-     *
-     * @param string $specification
-     *
-     * @return $this
-     */
-    public function setSpecification($specification)
-    {
-        return $this->withSpecification($specification);
     }
 
     /**
@@ -145,18 +97,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -167,18 +107,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVswitchId() instead.
-     *
-     * @param string $vswitchId
-     *
-     * @return $this
-     */
-    public function setVswitchId($vswitchId)
-    {
-        return $this->withVswitchId($vswitchId);
     }
 
     /**
@@ -195,18 +123,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
-
-    /**
      * @param string $duration
      *
      * @return $this
@@ -217,18 +133,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsHa() instead.
-     *
-     * @param string $isHa
-     *
-     * @return $this
-     */
-    public function setisHa($isHa)
-    {
-        return $this->withIsHa($isHa);
     }
 
     /**
@@ -245,18 +149,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceSeries() instead.
-     *
-     * @param string $instanceSeries
-     *
-     * @return $this
-     */
-    public function setinstanceSeries($instanceSeries)
-    {
-        return $this->withInstanceSeries($instanceSeries);
-    }
-
-    /**
      * @param string $instanceSeries
      *
      * @return $this
@@ -267,18 +159,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['instanceSeries'] = $instanceSeries;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -295,18 +175,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -320,18 +188,6 @@ class CreateDrdsInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
-    }
-
-    /**
      * @param string $payType
      *
      * @return $this
@@ -342,18 +198,6 @@ class CreateDrdsInstance extends RpcRequest
         $this->options['query']['PayType'] = $payType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
     }
 
     /**

@@ -40,18 +40,6 @@ class DescribeAlarmsForResources extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableState() instead.
-     *
-     * @param string $enableState
-     *
-     * @return $this
-     */
-    public function setEnableState($enableState)
-    {
-        return $this->withEnableState($enableState);
-    }
-
-    /**
      * @param string $enableState
      *
      * @return $this
@@ -62,18 +50,6 @@ class DescribeAlarmsForResources extends RpcRequest
         $this->options['query']['EnableState'] = $enableState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -90,18 +66,6 @@ class DescribeAlarmsForResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
-    }
-
-    /**
      * @param string $namespace
      *
      * @return $this
@@ -112,18 +76,6 @@ class DescribeAlarmsForResources extends RpcRequest
         $this->options['query']['Namespace'] = $namespace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -140,18 +92,6 @@ class DescribeAlarmsForResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertState() instead.
-     *
-     * @param string $alertState
-     *
-     * @return $this
-     */
-    public function setAlertState($alertState)
-    {
-        return $this->withAlertState($alertState);
-    }
-
-    /**
      * @param string $alertState
      *
      * @return $this
@@ -162,18 +102,6 @@ class DescribeAlarmsForResources extends RpcRequest
         $this->options['query']['AlertState'] = $alertState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
     }
 
     /**
@@ -190,18 +118,6 @@ class DescribeAlarmsForResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
-    }
-
-    /**
      * @param string $metricName
      *
      * @return $this
@@ -212,18 +128,6 @@ class DescribeAlarmsForResources extends RpcRequest
         $this->options['query']['MetricName'] = $metricName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

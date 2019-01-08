@@ -35,18 +35,6 @@ class UpdateRuleAction extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfiguration() instead.
-     *
-     * @param string $configuration
-     *
-     * @return $this
-     */
-    public function setConfiguration($configuration)
-    {
-        return $this->withConfiguration($configuration);
-    }
-
-    /**
      * @param string $configuration
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateRuleAction extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionId() instead.
-     *
-     * @param string $actionId
-     *
-     * @return $this
-     */
-    public function setActionId($actionId)
-    {
-        return $this->withActionId($actionId);
-    }
-
-    /**
      * @param string $actionId
      *
      * @return $this
@@ -82,18 +58,6 @@ class UpdateRuleAction extends RpcRequest
         $this->options['query']['ActionId'] = $actionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

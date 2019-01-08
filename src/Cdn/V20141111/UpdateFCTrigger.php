@@ -38,18 +38,6 @@ class UpdateFCTrigger extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotes() instead.
-     *
-     * @param string $notes
-     *
-     * @return $this
-     */
-    public function setNotes($notes)
-    {
-        return $this->withNotes($notes);
-    }
-
-    /**
      * @param string $notes
      *
      * @return $this
@@ -60,18 +48,6 @@ class UpdateFCTrigger extends RpcRequest
         $this->options['query']['Notes'] = $notes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTriggerARN() instead.
-     *
-     * @param string $triggerARN
-     *
-     * @return $this
-     */
-    public function setTriggerARN($triggerARN)
-    {
-        return $this->withTriggerARN($triggerARN);
     }
 
     /**
@@ -88,18 +64,6 @@ class UpdateFCTrigger extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceARN() instead.
-     *
-     * @param string $sourceARN
-     *
-     * @return $this
-     */
-    public function setSourceARN($sourceARN)
-    {
-        return $this->withSourceARN($sourceARN);
-    }
-
-    /**
      * @param string $sourceARN
      *
      * @return $this
@@ -110,18 +74,6 @@ class UpdateFCTrigger extends RpcRequest
         $this->options['query']['SourceARN'] = $sourceARN;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +90,6 @@ class UpdateFCTrigger extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleARN() instead.
-     *
-     * @param string $roleARN
-     *
-     * @return $this
-     */
-    public function setRoleARN($roleARN)
-    {
-        return $this->withRoleARN($roleARN);
-    }
-
-    /**
      * @param string $roleARN
      *
      * @return $this
@@ -160,18 +100,6 @@ class UpdateFCTrigger extends RpcRequest
         $this->options['query']['RoleARN'] = $roleARN;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFunctionARN() instead.
-     *
-     * @param string $functionARN
-     *
-     * @return $this
-     */
-    public function setFunctionARN($functionARN)
-    {
-        return $this->withFunctionARN($functionARN);
     }
 
     /**

@@ -38,18 +38,6 @@ class DeleteFileSystem extends RpcRequest
     public $serviceCode = 'nas';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
-    }
-
-    /**
      * @param string $fileSystemId
      *
      * @return $this

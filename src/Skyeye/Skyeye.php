@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Skyeye
  *
- * @method V20171201\SkyeyeApiResolver v20171201()
+ * @method SkyeyeV20171201ApiResolver v20171201()
  */
 class Skyeye
 {

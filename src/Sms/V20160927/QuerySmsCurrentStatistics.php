@@ -42,18 +42,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -64,18 +52,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagCode() instead.
-     *
-     * @param string $tagCode
-     *
-     * @return $this
-     */
-    public function setTagCode($tagCode)
-    {
-        return $this->withTagCode($tagCode);
     }
 
     /**
@@ -92,18 +68,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -114,18 +78,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -142,18 +94,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDateStr() instead.
-     *
-     * @param string $endDateStr
-     *
-     * @return $this
-     */
-    public function setEndDateStr($endDateStr)
-    {
-        return $this->withEndDateStr($endDateStr);
-    }
-
-    /**
      * @param string $endDateStr
      *
      * @return $this
@@ -164,18 +104,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
         $this->options['query']['EndDateStr'] = $endDateStr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateType() instead.
-     *
-     * @param string $templateType
-     *
-     * @return $this
-     */
-    public function setTemplateType($templateType)
-    {
-        return $this->withTemplateType($templateType);
     }
 
     /**
@@ -192,18 +120,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -214,18 +130,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartDateStr() instead.
-     *
-     * @param string $startDateStr
-     *
-     * @return $this
-     */
-    public function setStartDateStr($startDateStr)
-    {
-        return $this->withStartDateStr($startDateStr);
     }
 
     /**
@@ -242,18 +146,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -264,18 +156,6 @@ class QuerySmsCurrentStatistics extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateCode() instead.
-     *
-     * @param string $templateCode
-     *
-     * @return $this
-     */
-    public function setTemplateCode($templateCode)
-    {
-        return $this->withTemplateCode($templateCode);
     }
 
     /**

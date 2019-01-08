@@ -9,7 +9,7 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Crm
  *
- * @method V20150408\CrmApiResolver v20150408()
+ * @method CrmV20150408ApiResolver v20150408()
  */
 class Crm
 {

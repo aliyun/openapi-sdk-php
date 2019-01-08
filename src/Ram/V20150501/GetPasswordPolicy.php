@@ -31,7 +31,6 @@ class GetPasswordPolicy extends RpcRequest
      */
     public $scheme = 'https';
 
-
     /**
      * @var string
      */

@@ -35,18 +35,6 @@ class DescribeHlsLiveStreamRealTimeBpsData extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -60,18 +48,6 @@ class DescribeHlsLiveStreamRealTimeBpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTime() instead.
-     *
-     * @param string $time
-     *
-     * @return $this
-     */
-    public function setTime($time)
-    {
-        return $this->withTime($time);
-    }
-
-    /**
      * @param string $time
      *
      * @return $this
@@ -82,18 +58,6 @@ class DescribeHlsLiveStreamRealTimeBpsData extends RpcRequest
         $this->options['query']['Time'] = $time;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

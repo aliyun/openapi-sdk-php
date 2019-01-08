@@ -47,18 +47,6 @@ class UpdateDocIndexMeta extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey1() instead.
-     *
-     * @param string $customKey1
-     *
-     * @return $this
-     */
-    public function setCustomKey1($customKey1)
-    {
-        return $this->withCustomKey1($customKey1);
-    }
-
-    /**
      * @param string $customKey1
      *
      * @return $this
@@ -69,18 +57,6 @@ class UpdateDocIndexMeta extends RpcRequest
         $this->options['query']['CustomKey1'] = $customKey1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSet() instead.
-     *
-     * @param string $set
-     *
-     * @return $this
-     */
-    public function setSet($set)
-    {
-        return $this->withSet($set);
     }
 
     /**
@@ -97,18 +73,6 @@ class UpdateDocIndexMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey5() instead.
-     *
-     * @param string $customKey5
-     *
-     * @return $this
-     */
-    public function setCustomKey5($customKey5)
-    {
-        return $this->withCustomKey5($customKey5);
-    }
-
-    /**
      * @param string $customKey5
      *
      * @return $this
@@ -119,18 +83,6 @@ class UpdateDocIndexMeta extends RpcRequest
         $this->options['query']['CustomKey5'] = $customKey5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey4() instead.
-     *
-     * @param string $customKey4
-     *
-     * @return $this
-     */
-    public function setCustomKey4($customKey4)
-    {
-        return $this->withCustomKey4($customKey4);
     }
 
     /**
@@ -147,18 +99,6 @@ class UpdateDocIndexMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey3() instead.
-     *
-     * @param string $customKey3
-     *
-     * @return $this
-     */
-    public function setCustomKey3($customKey3)
-    {
-        return $this->withCustomKey3($customKey3);
-    }
-
-    /**
      * @param string $customKey3
      *
      * @return $this
@@ -169,18 +109,6 @@ class UpdateDocIndexMeta extends RpcRequest
         $this->options['query']['CustomKey3'] = $customKey3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey2() instead.
-     *
-     * @param string $customKey2
-     *
-     * @return $this
-     */
-    public function setCustomKey2($customKey2)
-    {
-        return $this->withCustomKey2($customKey2);
     }
 
     /**
@@ -197,18 +125,6 @@ class UpdateDocIndexMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -219,18 +135,6 @@ class UpdateDocIndexMeta extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey6() instead.
-     *
-     * @param string $customKey6
-     *
-     * @return $this
-     */
-    public function setCustomKey6($customKey6)
-    {
-        return $this->withCustomKey6($customKey6);
     }
 
     /**
@@ -247,18 +151,6 @@ class UpdateDocIndexMeta extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -269,18 +161,6 @@ class UpdateDocIndexMeta extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUniqueId() instead.
-     *
-     * @param string $uniqueId
-     *
-     * @return $this
-     */
-    public function setUniqueId($uniqueId)
-    {
-        return $this->withUniqueId($uniqueId);
     }
 
     /**
