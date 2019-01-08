@@ -57,6 +57,7 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 3. 在代码中引入 Composer 自动加载工具
 ```php
 <?php
+
 require __DIR__ . '/vendor/autoload.php'; 
 ```
 
@@ -69,23 +70,23 @@ require __DIR__ . '/vendor/autoload.php';
 ```php
 <?php
     
-    use AlibabaCloud\Client\DefaultAcsClient;
-    use AlibabaCloud\Client\Profile\DefaultProfile;
-    use AlibabaCloud\Ecs\V20140526\DescribeRegions;
-    use AlibabaCloud\Client\Exception\ClientException;
-    
-    $profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
-    $client  = new DefaultAcsClient($profile);
-    $request = new DescribeRegions();
-    
-    try {
-        $result = $client->getAcsResponse($request);
-        print_r($result->Regions);
-        print_r($result['Regions']);
-        print_r($result->toArray());
-    } catch (ClientException $exception) {
-       echo $exception->getMessage(). PHP_EOL;
-    }
+use AlibabaCloud\Client\DefaultAcsClient;
+use AlibabaCloud\Client\Profile\DefaultProfile;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
+use AlibabaCloud\Client\Exception\ClientException;
+
+$profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
+$client  = new DefaultAcsClient($profile);
+$request = new DescribeRegions();
+
+try {
+    $result = $client->getAcsResponse($request);
+    print_r($result->Regions);
+    print_r($result['Regions']);
+    print_r($result->toArray());
+} catch (ClientException $exception) {
+   echo $exception->getMessage(). PHP_EOL;
+}
 ```
 
 
@@ -119,7 +120,7 @@ try {
                       ->connectTimeout(0.01) // 连接超时会抛出异常
                       ->timeout(0.01) // 超时会抛出异常
                       ->request(); // 执行请求
-
+    
     // 也可以传入数组设置
     $options = [
                    'debug'           => true,

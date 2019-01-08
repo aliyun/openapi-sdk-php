@@ -57,6 +57,7 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 3. Require the Composer auto-loading tool
 ```php
 <?php
+
 require __DIR__ . '/vendor/autoload.php'; 
 ```
 
@@ -68,24 +69,24 @@ The new kernel still supports the old syntax, but the `@deprecated` has been fla
 
 ```php
 <?php
-    
-    use AlibabaCloud\Client\DefaultAcsClient;
-    use AlibabaCloud\Client\Profile\DefaultProfile;
-    use AlibabaCloud\Ecs\V20140526\DescribeRegions;
-    use AlibabaCloud\Client\Exception\ClientException;
-    
-    $profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
-    $client  = new DefaultAcsClient($profile);
-    $request = new DescribeRegions();
-    
-    try {
-        $result = $client->getAcsResponse($request);
-        print_r($result->Regions);
-        print_r($result['Regions']);
-        print_r($result->toArray());
-    } catch (ClientException $exception) {
-        echo $exception->getMessage(). PHP_EOL;
-    }
+
+use AlibabaCloud\Client\DefaultAcsClient;
+use AlibabaCloud\Client\Profile\DefaultProfile;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
+use AlibabaCloud\Client\Exception\ClientException;
+
+$profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
+$client  = new DefaultAcsClient($profile);
+$request = new DescribeRegions();
+
+try {
+    $result = $client->getAcsResponse($request);
+    print_r($result->Regions);
+    print_r($result['Regions']);
+    print_r($result->toArray());
+} catch (ClientException $exception) {
+    echo $exception->getMessage(). PHP_EOL;
+}
 ```
 
 
@@ -110,7 +111,7 @@ AlibabaCloud::accessKeyClient('foo', 'bar')
 try {
     // Access product APIs
     $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
-
+    
     // Set options/parameters and execute request
     $result = $request->withResourceType('type') // API parameter
                       ->withInstanceChargeType('type') // API parameter
@@ -130,7 +131,7 @@ try {
                        'InstanceChargeType' => 'type',
                    ],
                ];
-
+    
     // Settings priority
     $result2 = AlibabaCloud::ecs()
                            ->v20140526()
