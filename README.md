@@ -93,6 +93,7 @@ The new kernel still supports the old syntax, but the `@deprecated` has been fla
 
 Before request, please [Understanding the usage of the client][client], after request, please [Understanding the result object][result].
 
+> Currently only some Alibaba Cloud products are supported, you can use [Alibaba Cloud Client for PHP][request] to initiate any custom requests.
 
 ```php
 <?php
@@ -186,3 +187,4 @@ try {
 [OpenSSL]: http://php.net/manual/en/book.openssl.php
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README.md#request

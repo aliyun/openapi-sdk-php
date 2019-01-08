@@ -93,6 +93,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 请求之前，请 [了解客户端的用法][client]，请求之后，请 [了解结果对象][result]。
 
+> 目前仅支持部分阿里云产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起任何自定义请求。
 
 ```php
 <?php
@@ -186,3 +187,4 @@ try {
 [OpenSSL]: http://php.net/manual/en/book.openssl.php
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E8%AF%B7%E6%B1%82
