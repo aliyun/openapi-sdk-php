@@ -67,6 +67,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Mts\Mts mts()
  * @method static NAS\NAS nAS()
  * @method static Nlp\Nlp nlp()
+ * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static Ons\Ons ons()
  * @method static Ots\Ots ots()
  * @method static Push\Push push()
