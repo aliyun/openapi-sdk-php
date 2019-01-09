@@ -54,7 +54,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method OpenScdnService openScdnService(array $options = [])
  * @method PreloadScdnObjectCaches preloadScdnObjectCaches(array $options = [])
  * @method RefreshScdnObjectCaches refreshScdnObjectCaches(array $options = [])
- * @method ScdnApiResolver scdnApiResolver(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
  * @method SetScdnDomainCertificate setScdnDomainCertificate(array $options = [])
  * @method StartScdnDomain startScdnDomain(array $options = [])

@@ -225,7 +225,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method UnassociateHaVip unassociateHaVip(array $options = [])
  * @method UnassociatePhysicalConnectionFromVirtualBorderRouter unassociatePhysicalConnectionFromVirtualBorderRouter(array $options = [])
  * @method UnassociateRouteTable unassociateRouteTable(array $options = [])
- * @method VpcApiResolver vpcApiResolver(array $options = [])
  */
 class VpcApiResolver
 {

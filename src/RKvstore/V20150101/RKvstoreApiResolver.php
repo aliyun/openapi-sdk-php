@@ -119,7 +119,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifyReplicationGroup modifyReplicationGroup(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method QueryTask queryTask(array $options = [])
- * @method RKvstoreApiResolver rKvstoreApiResolver(array $options = [])
  * @method RebuildInstance rebuildInstance(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
  * @method ReleaseReplica releaseReplica(array $options = [])

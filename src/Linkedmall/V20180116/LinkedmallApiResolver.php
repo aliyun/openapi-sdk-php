@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method CreateMovieTicketOrder createMovieTicketOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
- * @method LinkedmallApiResolver linkedmallApiResolver(array $options = [])
  * @method NotifyPayOrderStatus notifyPayOrderStatus(array $options = [])
  * @method QueryAllCinemas queryAllCinemas(array $options = [])
  * @method QueryAllCities queryAllCities(array $options = [])

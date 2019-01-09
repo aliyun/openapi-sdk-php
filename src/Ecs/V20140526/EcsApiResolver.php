@@ -187,7 +187,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DetachInstanceRamRole detachInstanceRamRole(array $options = [])
  * @method DetachKeyPair detachKeyPair(array $options = [])
  * @method DetachNetworkInterface detachNetworkInterface(array $options = [])
- * @method EcsApiResolver ecsApiResolver(array $options = [])
  * @method EipFillParams eipFillParams(array $options = [])
  * @method EipFillProduct eipFillProduct(array $options = [])
  * @method EipNotifyPaid eipNotifyPaid(array $options = [])

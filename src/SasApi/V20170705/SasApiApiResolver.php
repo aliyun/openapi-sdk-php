@@ -23,7 +23,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetIpProfile getIpProfile(array $options = [])
  * @method GetIpProfileRequest getIpProfileRequest(array $options = [])
  * @method GetPhoneProfile getPhoneProfile(array $options = [])
- * @method SasApiApiResolver sasApiApiResolver(array $options = [])
  */
 class SasApiApiResolver
 {

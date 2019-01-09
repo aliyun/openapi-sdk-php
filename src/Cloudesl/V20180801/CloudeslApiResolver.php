@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchInsertItems batchInsertItems(array $options = [])
  * @method BindEslDevice bindEslDevice(array $options = [])
  * @method BindEslDeviceShelf bindEslDeviceShelf(array $options = [])
- * @method CloudeslApiResolver cloudeslApiResolver(array $options = [])
  * @method CreateStore createStore(array $options = [])
  * @method DeleteEslDevice deleteEslDevice(array $options = [])
  * @method DeleteItem deleteItem(array $options = [])

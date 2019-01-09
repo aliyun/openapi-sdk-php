@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Cloudauth\V20180916
  *
- * @method CloudauthApiResolver cloudauthApiResolver(array $options = [])
  * @method CompareFaces compareFaces(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])
  * @method CreateVerifySDK createVerifySDK(array $options = [])

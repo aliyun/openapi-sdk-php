@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AttachInstances attachInstances(array $options = [])
  * @method BatchUpdateSharedService batchUpdateSharedService(array $options = [])
  * @method BindSLB bindSLB(array $options = [])
- * @method CSApiResolver cSApiResolver(array $options = [])
  * @method CheckAliyunCSServiceRole checkAliyunCSServiceRole(array $options = [])
  * @method CheckSecurityGroup checkSecurityGroup(array $options = [])
  * @method CleanUpControllerEvent cleanUpControllerEvent(array $options = [])

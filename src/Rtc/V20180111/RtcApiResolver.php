@@ -33,7 +33,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method MuteAudioAll muteAudioAll(array $options = [])
  * @method RemoveParticipants removeParticipants(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
- * @method RtcApiResolver rtcApiResolver(array $options = [])
  * @method StartApp startApp(array $options = [])
  * @method StartTask startTask(array $options = [])
  * @method StopApp stopApp(array $options = [])

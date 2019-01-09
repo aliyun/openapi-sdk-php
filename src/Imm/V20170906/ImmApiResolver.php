@@ -80,7 +80,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetVideo getVideo(array $options = [])
  * @method GetVideoTask getVideoTask(array $options = [])
  * @method GroupFaces groupFaces(array $options = [])
- * @method ImmApiResolver immApiResolver(array $options = [])
  * @method IndexFace indexFace(array $options = [])
  * @method IndexImage indexImage(array $options = [])
  * @method IndexTag indexTag(array $options = [])

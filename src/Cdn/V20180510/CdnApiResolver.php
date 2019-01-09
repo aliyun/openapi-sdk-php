@@ -16,7 +16,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchSetCdnDomainConfig batchSetCdnDomainConfig(array $options = [])
  * @method BatchSetCdnDomainServerCertificate batchSetCdnDomainServerCertificate(array $options = [])
  * @method BatchUpdateCdnDomain batchUpdateCdnDomain(array $options = [])
- * @method CdnApiResolver cdnApiResolver(array $options = [])
  * @method CreateUsageDetailDataExportTask createUsageDetailDataExportTask(array $options = [])
  * @method CreateUserUsageDataExportTask createUserUsageDataExportTask(array $options = [])
  * @method DeleteCdnDomain deleteCdnDomain(array $options = [])

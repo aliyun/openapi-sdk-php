@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\ARMS4FINANCE\V20171130
  *
- * @method ARMS4FINANCEApiResolver aRMS4FINANCEApiResolver(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  * @method WhereInDimQuery whereInDimQuery(array $options = [])
  */

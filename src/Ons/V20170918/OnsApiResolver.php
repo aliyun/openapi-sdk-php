@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Ons\V20170918
  *
- * @method OnsApiResolver onsApiResolver(array $options = [])
  * @method OnsConsumerAccumulate onsConsumerAccumulate(array $options = [])
  * @method OnsConsumerGetConnection onsConsumerGetConnection(array $options = [])
  * @method OnsConsumerResetOffset onsConsumerResetOffset(array $options = [])

@@ -63,7 +63,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ImportTslFromOss importTslFromOss(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
- * @method IotApiResolver iotApiResolver(array $options = [])
  * @method ListProductByTags listProductByTags(array $options = [])
  * @method ListProductTags listProductTags(array $options = [])
  * @method ListRule listRule(array $options = [])

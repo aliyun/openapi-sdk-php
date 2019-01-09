@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method AcceptDemand acceptDemand(array $options = [])
  * @method BidDomain bidDomain(array $options = [])
- * @method DomainApiResolver domainApiResolver(array $options = [])
  * @method FailDemand failDemand(array $options = [])
  * @method FinishDemand finishDemand(array $options = [])
  * @method GetReserveDomainUrl getReserveDomainUrl(array $options = [])

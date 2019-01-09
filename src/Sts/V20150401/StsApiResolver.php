@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AssumeRole assumeRole(array $options = [])
  * @method GenerateSessionAccessKey generateSessionAccessKey(array $options = [])
  * @method GetCallerIdentity getCallerIdentity(array $options = [])
- * @method StsApiResolver stsApiResolver(array $options = [])
  */
 class StsApiResolver
 {

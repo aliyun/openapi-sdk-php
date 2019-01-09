@@ -122,7 +122,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method UpdateWatermark updateWatermark(array $options = [])
  * @method UpdateWorkFlow updateWorkFlow(array $options = [])
  * @method UploadMediaByURL uploadMediaByURL(array $options = [])
- * @method VodApiResolver vodApiResolver(array $options = [])
  */
 class VodApiResolver
 {

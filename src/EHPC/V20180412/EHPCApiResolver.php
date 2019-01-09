@@ -31,7 +31,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeImageGatewayConfig describeImageGatewayConfig(array $options = [])
  * @method DescribeImagePrice describeImagePrice(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
- * @method EHPCApiResolver eHPCApiResolver(array $options = [])
  * @method EditJobTemplate editJobTemplate(array $options = [])
  * @method GetAutoScaleConfig getAutoScaleConfig(array $options = [])
  * @method GetCloudMetricLogs getCloudMetricLogs(array $options = [])

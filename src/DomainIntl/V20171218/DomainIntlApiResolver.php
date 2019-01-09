@@ -17,7 +17,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ConfirmTransferInEmail confirmTransferInEmail(array $options = [])
  * @method DeleteEmailVerification deleteEmailVerification(array $options = [])
  * @method DeleteRegistrantProfile deleteRegistrantProfile(array $options = [])
- * @method DomainIntlApiResolver domainIntlApiResolver(array $options = [])
  * @method EmailVerified emailVerified(array $options = [])
  * @method FuzzyMatchDomainSensitiveWord fuzzyMatchDomainSensitiveWord(array $options = [])
  * @method ListEmailVerification listEmailVerification(array $options = [])

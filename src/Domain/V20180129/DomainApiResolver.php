@@ -22,7 +22,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
  * @method DeleteEmailVerification deleteEmailVerification(array $options = [])
  * @method DeleteRegistrantProfile deleteRegistrantProfile(array $options = [])
- * @method DomainApiResolver domainApiResolver(array $options = [])
  * @method EmailVerified emailVerified(array $options = [])
  * @method FuzzyMatchDomainSensitiveWord fuzzyMatchDomainSensitiveWord(array $options = [])
  * @method GetQualificationUploadPolicy getQualificationUploadPolicy(array $options = [])

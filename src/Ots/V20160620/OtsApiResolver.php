@@ -20,7 +20,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListTags listTags(array $options = [])
  * @method ListVpcInfoByInstance listVpcInfoByInstance(array $options = [])
  * @method ListVpcInfoByVpc listVpcInfoByVpc(array $options = [])
- * @method OtsApiResolver otsApiResolver(array $options = [])
  * @method UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
  */

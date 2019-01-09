@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method ActivatePhotos activatePhotos(array $options = [])
  * @method AddAlbumPhotos addAlbumPhotos(array $options = [])
- * @method CloudPhotoApiResolver cloudPhotoApiResolver(array $options = [])
  * @method CreateAlbum createAlbum(array $options = [])
  * @method CreateEvent createEvent(array $options = [])
  * @method CreatePhoto createPhoto(array $options = [])

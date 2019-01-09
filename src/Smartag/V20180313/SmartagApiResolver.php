@@ -42,7 +42,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifySmartAccessGateway modifySmartAccessGateway(array $options = [])
  * @method RebootSmartAccessGateway rebootSmartAccessGateway(array $options = [])
  * @method RevokeInstanceFromCbn revokeInstanceFromCbn(array $options = [])
- * @method SmartagApiResolver smartagApiResolver(array $options = [])
  * @method SwitchCloudBoxHaState switchCloudBoxHaState(array $options = [])
  * @method SwitchSAGHaState switchSAGHaState(array $options = [])
  * @method UnbindSmartAccessGateway unbindSmartAccessGateway(array $options = [])

@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\ARMS\V20181015
  *
- * @method ARMSApiResolver aRMSApiResolver(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  * @method MetricQuery metricQuery(array $options = [])
  */

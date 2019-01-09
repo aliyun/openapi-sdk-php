@@ -10,7 +10,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @package   AlibabaCloud\NlsCloudMeta\V20180518
  *
  * @method CreateToken createToken(array $options = [])
- * @method NlsCloudMetaApiResolver nlsCloudMetaApiResolver(array $options = [])
  */
 class NlsCloudMetaApiResolver
 {

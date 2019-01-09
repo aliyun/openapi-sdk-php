@@ -18,7 +18,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
  * @method QueryResourceInventory queryResourceInventory(array $options = [])
  * @method QueryTopology queryTopology(array $options = [])
- * @method TeslaMaxComputeApiResolver teslaMaxComputeApiResolver(array $options = [])
  */
 class TeslaMaxComputeApiResolver
 {

@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
- * @method DmsEnterpriseApiResolver dmsEnterpriseApiResolver(array $options = [])
  * @method EnableUser enableUser(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])

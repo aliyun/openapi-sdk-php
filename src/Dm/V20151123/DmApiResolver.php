@@ -38,7 +38,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescAccountSummary2 descAccountSummary2(array $options = [])
  * @method DescDomain descDomain(array $options = [])
  * @method DescTemplate descTemplate(array $options = [])
- * @method DmApiResolver dmApiResolver(array $options = [])
  * @method EnableAccount enableAccount(array $options = [])
  * @method GetAccountList getAccountList(array $options = [])
  * @method GetIpProtection getIpProtection(array $options = [])
