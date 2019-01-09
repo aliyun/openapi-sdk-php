@@ -145,7 +145,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ForbidLiveStream forbidLiveStream(array $options = [])
  * @method ForbidPushStream forbidPushStream(array $options = [])
  * @method JoinBoard joinBoard(array $options = [])
- * @method LiveApiResolver liveApiResolver(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
  * @method ModifyCasterEpisode modifyCasterEpisode(array $options = [])
  * @method ModifyCasterLayout modifyCasterLayout(array $options = [])

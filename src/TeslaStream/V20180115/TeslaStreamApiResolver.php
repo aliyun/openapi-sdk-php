@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
  * @method BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
  * @method GetJobTopology getJobTopology(array $options = [])
- * @method TeslaStreamApiResolver teslaStreamApiResolver(array $options = [])
  */
 class TeslaStreamApiResolver
 {

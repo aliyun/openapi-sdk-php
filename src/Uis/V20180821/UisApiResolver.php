@@ -28,7 +28,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifyUisAttribute modifyUisAttribute(array $options = [])
  * @method ModifyUisConnectionAttribute modifyUisConnectionAttribute(array $options = [])
  * @method ModifyUisNodeAttribute modifyUisNodeAttribute(array $options = [])
- * @method UisApiResolver uisApiResolver(array $options = [])
  */
 class UisApiResolver
 {

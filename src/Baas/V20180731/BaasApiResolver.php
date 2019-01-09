@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method AcceptInvitation acceptInvitation(array $options = [])
  * @method ApplyBlockchain applyBlockchain(array $options = [])
- * @method BaasApiResolver baasApiResolver(array $options = [])
  * @method CheckConsortiumDomain checkConsortiumDomain(array $options = [])
  * @method CheckOrganizationDomain checkOrganizationDomain(array $options = [])
  * @method ConfirmConsortiumMember confirmConsortiumMember(array $options = [])

@@ -55,7 +55,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeResourcesByTagVsw describeResourcesByTagVsw(array $options = [])
  * @method DescribeResourcesModification describeResourcesModification(array $options = [])
  * @method DetailCenterResourceAtOrigin detailCenterResourceAtOrigin(array $options = [])
- * @method EcsIncApiResolver ecsIncApiResolver(array $options = [])
  * @method FiveDaysRefund fiveDaysRefund(array $options = [])
  * @method GdprCheckResource gdprCheckResource(array $options = [])
  * @method GdprLogicalDeleteResource gdprLogicalDeleteResource(array $options = [])

@@ -26,7 +26,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QuerySmsTemplateInfoList querySmsTemplateInfoList(array $options = [])
  * @method QueryTemplateByParam queryTemplateByParam(array $options = [])
  * @method SingleSendSms singleSendSms(array $options = [])
- * @method SmsApiResolver smsApiResolver(array $options = [])
  */
 class SmsApiResolver
 {

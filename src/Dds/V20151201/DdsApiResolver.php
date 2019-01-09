@@ -22,7 +22,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateReplicationGroup createReplicationGroup(array $options = [])
  * @method CreateShardingDBInstance createShardingDBInstance(array $options = [])
  * @method CreateStaticVerification createStaticVerification(array $options = [])
- * @method DdsApiResolver ddsApiResolver(array $options = [])
  * @method DeleteDBInstance deleteDBInstance(array $options = [])
  * @method DeleteMonitorInstance deleteMonitorInstance(array $options = [])
  * @method DeleteMonitorNode deleteMonitorNode(array $options = [])

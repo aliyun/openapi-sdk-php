@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\BatchCompute\V20130111
  *
- * @method BatchComputeApiResolver batchComputeApiResolver(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])

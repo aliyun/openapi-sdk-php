@@ -51,7 +51,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeWebsiteStat describeWebsiteStat(array $options = [])
  * @method DescribeWebsiteVerifyInfo describeWebsiteVerifyInfo(array $options = [])
  * @method ExportOssResult exportOssResult(array $options = [])
- * @method GreenApiResolver greenApiResolver(array $options = [])
  * @method MarkAuditContent markAuditContent(array $options = [])
  * @method MarkAuditContentItem markAuditContentItem(array $options = [])
  * @method MarkOssResult markOssResult(array $options = [])

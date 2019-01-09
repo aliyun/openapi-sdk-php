@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Dysmsapi\V20170525
  *
- * @method DysmsapiApiResolver dysmsapiApiResolver(array $options = [])
  * @method QuerySendDetails querySendDetails(array $options = [])
  * @method SendBatchSms sendBatchSms(array $options = [])
  * @method SendSms sendSms(array $options = [])

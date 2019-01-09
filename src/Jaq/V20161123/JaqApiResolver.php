@@ -14,7 +14,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AfsCheck afsCheck(array $options = [])
  * @method BbsPrevention bbsPrevention(array $options = [])
  * @method CheckAccountAndPasswordRisk checkAccountAndPasswordRisk(array $options = [])
- * @method JaqApiResolver jaqApiResolver(array $options = [])
  * @method LoginPrevention loginPrevention(array $options = [])
  * @method MessagePrevention messagePrevention(array $options = [])
  * @method OtherPrevention otherPrevention(array $options = [])

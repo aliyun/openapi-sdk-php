@@ -14,7 +14,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchRobotSmartCall batchRobotSmartCall(array $options = [])
  * @method CancelCall cancelCall(array $options = [])
  * @method ClickToDial clickToDial(array $options = [])
- * @method DyvmsapiApiResolver dyvmsapiApiResolver(array $options = [])
  * @method GetRtcToken getRtcToken(array $options = [])
  * @method GetVoipToken getVoipToken(array $options = [])
  * @method IvrCall ivrCall(array $options = [])

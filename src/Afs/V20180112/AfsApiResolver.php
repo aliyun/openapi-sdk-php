@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Afs\V20180112
  *
- * @method AfsApiResolver afsApiResolver(array $options = [])
  * @method AnalyzeNvc analyzeNvc(array $options = [])
  * @method AuthenticateSig authenticateSig(array $options = [])
  * @method ConfigurationStyle configurationStyle(array $options = [])

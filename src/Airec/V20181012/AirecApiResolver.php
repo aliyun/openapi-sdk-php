@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Airec\V20181012
  *
- * @method AirecApiResolver airecApiResolver(array $options = [])
  * @method AttachDataset attachDataset(array $options = [])
  * @method CreateDiversify createDiversify(array $options = [])
  * @method CreateInstance createInstance(array $options = [])

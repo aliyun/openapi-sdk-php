@@ -13,7 +13,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddMyGroupInstances addMyGroupInstances(array $options = [])
  * @method ApplyMonitoringTemplate applyMonitoringTemplate(array $options = [])
  * @method ApplyTemplate applyTemplate(array $options = [])
- * @method CmsApiResolver cmsApiResolver(array $options = [])
  * @method CreateAlarm createAlarm(array $options = [])
  * @method CreateMonitoringTemplate createMonitoringTemplate(array $options = [])
  * @method CreateMyGroupAlertBatch createMyGroupAlertBatch(array $options = [])

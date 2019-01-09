@@ -10,7 +10,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @package   AlibabaCloud\Saf\V20180919
  *
  * @method ExecuteRequest executeRequest(array $options = [])
- * @method SafApiResolver safApiResolver(array $options = [])
  */
 class SafApiResolver
 {

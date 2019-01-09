@@ -13,7 +13,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
  * @method AssignUsers assignUsers(array $options = [])
- * @method CCCApiResolver cCCApiResolver(array $options = [])
  * @method CallOnlinePrivacyNumber callOnlinePrivacyNumber(array $options = [])
  * @method CancelJobs cancelJobs(array $options = [])
  * @method CancelPredictiveJobs cancelPredictiveJobs(array $options = [])

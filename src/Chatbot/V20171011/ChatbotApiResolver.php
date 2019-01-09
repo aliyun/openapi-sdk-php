@@ -13,7 +13,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddSynonym addSynonym(array $options = [])
  * @method AppendEntityMember appendEntityMember(array $options = [])
  * @method Chat chat(array $options = [])
- * @method ChatbotApiResolver chatbotApiResolver(array $options = [])
  * @method CreateCategory createCategory(array $options = [])
  * @method CreateCoreWord createCoreWord(array $options = [])
  * @method CreateDialog createDialog(array $options = [])

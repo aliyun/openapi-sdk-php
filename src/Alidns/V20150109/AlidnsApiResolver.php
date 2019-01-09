@@ -15,7 +15,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddGtmAccessStrategy addGtmAccessStrategy(array $options = [])
  * @method AddGtmAddressPool addGtmAddressPool(array $options = [])
  * @method AddGtmMonitor addGtmMonitor(array $options = [])
- * @method AlidnsApiResolver alidnsApiResolver(array $options = [])
  * @method ChangeDomainGroup changeDomainGroup(array $options = [])
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
  * @method CheckDomainRecord checkDomainRecord(array $options = [])

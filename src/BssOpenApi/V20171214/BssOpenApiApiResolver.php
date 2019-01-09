@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\BssOpenApi\V20171214
  *
- * @method BssOpenApiApiResolver bssOpenApiApiResolver(array $options = [])
  * @method ConvertChargeType convertChargeType(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateResourcePackage createResourcePackage(array $options = [])

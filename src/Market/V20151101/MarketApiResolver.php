@@ -19,7 +19,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeProduct describeProduct(array $options = [])
  * @method DescribeProductRates describeProductRates(array $options = [])
  * @method DescribeProducts describeProducts(array $options = [])
- * @method MarketApiResolver marketApiResolver(array $options = [])
  * @method PushMeteringData pushMeteringData(array $options = [])
  * @method QueryMarketCategories queryMarketCategories(array $options = [])
  * @method QueryMarketImages queryMarketImages(array $options = [])

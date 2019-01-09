@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeBusinessStatus describeBusinessStatus(array $options = [])
  * @method NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
  * @method SetUserBusinessStatus setUserBusinessStatus(array $options = [])
- * @method UbsmsApiResolver ubsmsApiResolver(array $options = [])
  */
 class UbsmsApiResolver
 {

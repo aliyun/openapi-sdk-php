@@ -10,7 +10,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @package   AlibabaCloud\Ccs\V20171001
  *
  * @method AssumeOss assumeOss(array $options = [])
- * @method CcsApiResolver ccsApiResolver(array $options = [])
  * @method ChatRobotSession chatRobotSession(array $options = [])
  * @method CheckInspectAudio checkInspectAudio(array $options = [])
  * @method CheckInspectText checkInspectText(array $options = [])

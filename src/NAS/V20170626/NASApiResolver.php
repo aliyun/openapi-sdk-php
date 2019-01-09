@@ -39,7 +39,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifyMountTarget modifyMountTarget(array $options = [])
  * @method ModifyTieringJob modifyTieringJob(array $options = [])
  * @method ModifyTieringPolicy modifyTieringPolicy(array $options = [])
- * @method NASApiResolver nASApiResolver(array $options = [])
  */
 class NASApiResolver
 {

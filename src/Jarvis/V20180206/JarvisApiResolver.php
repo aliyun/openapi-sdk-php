@@ -32,7 +32,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeRiskTrend describeRiskTrend(array $options = [])
  * @method DescribeUidGcLevel describeUidGcLevel(array $options = [])
  * @method DescribeUidWhiteListGroup describeUidWhiteListGroup(array $options = [])
- * @method JarvisApiResolver jarvisApiResolver(array $options = [])
  * @method ModifyAccessWhiteListAutoShare modifyAccessWhiteListAutoShare(array $options = [])
  * @method ModifyUidWhiteListAutoShare modifyUidWhiteListAutoShare(array $options = [])
  */

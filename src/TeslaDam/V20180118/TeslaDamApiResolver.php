@@ -14,7 +14,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ActionDiskMask actionDiskMask(array $options = [])
  * @method ActionDiskRma actionDiskRma(array $options = [])
  * @method HostGets hostGets(array $options = [])
- * @method TeslaDamApiResolver teslaDamApiResolver(array $options = [])
  */
 class TeslaDamApiResolver
 {
