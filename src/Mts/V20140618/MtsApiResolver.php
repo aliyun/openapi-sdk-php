@@ -63,7 +63,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListTerrorismPipeline listTerrorismPipeline(array $options = [])
  * @method ListVideoSummaryPipeline listVideoSummaryPipeline(array $options = [])
  * @method LogicalDeleteResource logicalDeleteResource(array $options = [])
- * @method MtsApiResolver mtsApiResolver(array $options = [])
  * @method PhysicalDeleteResource physicalDeleteResource(array $options = [])
  * @method PlayInfo playInfo(array $options = [])
  * @method PlayerAuth playerAuth(array $options = [])

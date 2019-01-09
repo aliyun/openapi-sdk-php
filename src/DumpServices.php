@@ -4,6 +4,7 @@ namespace AlibabaCloud;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use ReflectionException;
+use Stringy\Stringy;
 
 /**
  * CLass DumpServices
@@ -295,8 +296,8 @@ EOT;
         foreach ($apis as $api) {
             $api   = \str_replace('.php', '', $api);
             $lcApi = \lcfirst($api);
-            // Avoid adding the itself to the code
-            if ($api !== $product) {
+            // Avoid adding the itself and ApiResolver  to the code
+            if ($api !== $product && !Stringy::create($api)->endsWith('ApiResolver')) {
                 $method .= \PHP_EOL . " * @method $api {$lcApi}(array \$options = [])";
             }
         }

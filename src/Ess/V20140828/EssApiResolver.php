@@ -57,7 +57,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method EnableAlarm enableAlarm(array $options = [])
  * @method EnableScalingGroup enableScalingGroup(array $options = [])
  * @method EnterStandby enterStandby(array $options = [])
- * @method EssApiResolver essApiResolver(array $options = [])
  * @method ExecuteScalingRule executeScalingRule(array $options = [])
  * @method ExitStandby exitStandby(array $options = [])
  * @method ModifyAlarm modifyAlarm(array $options = [])

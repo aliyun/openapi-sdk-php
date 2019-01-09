@@ -28,7 +28,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetGroups getGroups(array $options = [])
  * @method GetPerson getPerson(array $options = [])
  * @method GetPersons getPersons(array $options = [])
- * @method GreenApiResolver greenApiResolver(array $options = [])
  * @method ImageAsyncScan imageAsyncScan(array $options = [])
  * @method ImageAsyncScanResults imageAsyncScanResults(array $options = [])
  * @method ImageScanFeedback imageScanFeedback(array $options = [])

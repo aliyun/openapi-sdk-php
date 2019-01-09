@@ -13,7 +13,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchDeleteDcdnDomainConfig batchDeleteDcdnDomainConfig(array $options = [])
  * @method BatchDeleteDcdnDomainConfigs batchDeleteDcdnDomainConfigs(array $options = [])
  * @method BatchSetDcdnDomainConfigs batchSetDcdnDomainConfigs(array $options = [])
- * @method DcdnApiResolver dcdnApiResolver(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
  * @method DescribeDcdnCertificateDetail describeDcdnCertificateDetail(array $options = [])

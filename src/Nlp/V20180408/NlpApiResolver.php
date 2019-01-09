@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method Entity entity(array $options = [])
  * @method IE iE(array $options = [])
  * @method KWE kWE(array $options = [])
- * @method NlpApiResolver nlpApiResolver(array $options = [])
  * @method ReviewAnalysis reviewAnalysis(array $options = [])
  * @method Sentiment sentiment(array $options = [])
  * @method TextStructure textStructure(array $options = [])

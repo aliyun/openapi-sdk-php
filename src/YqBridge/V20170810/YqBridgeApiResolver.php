@@ -14,7 +14,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetUserLabel getUserLabel(array $options = [])
  * @method HavanaIdConvert havanaIdConvert(array $options = [])
  * @method ResetAccountPwdInWhiteList resetAccountPwdInWhiteList(array $options = [])
- * @method YqBridgeApiResolver yqBridgeApiResolver(array $options = [])
  */
 class YqBridgeApiResolver
 {

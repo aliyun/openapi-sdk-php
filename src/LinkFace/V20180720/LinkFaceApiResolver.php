@@ -12,7 +12,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateGroup createGroup(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
- * @method LinkFaceApiResolver linkFaceApiResolver(array $options = [])
  * @method QueryAddUserInfo queryAddUserInfo(array $options = [])
  * @method QueryAllGroups queryAllGroups(array $options = [])
  * @method QueryAuthentication queryAuthentication(array $options = [])

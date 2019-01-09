@@ -20,7 +20,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListPushRecords listPushRecords(array $options = [])
  * @method ListSummaryApps listSummaryApps(array $options = [])
  * @method ListTags listTags(array $options = [])
- * @method PushApiResolver pushApiResolver(array $options = [])
  * @method PushMessageToAndroid pushMessageToAndroid(array $options = [])
  * @method PushMessageToiOS pushMessageToiOS(array $options = [])
  * @method PushNoticeToAndroid pushNoticeToAndroid(array $options = [])

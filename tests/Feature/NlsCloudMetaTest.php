@@ -8,11 +8,11 @@ use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class NlsTest
+ * Class NlsCloudMetaTest
  *
  * @package   AlibabaCloud\Tests\Feature
  */
-class NlsTest extends TestCase
+class NlsCloudMetaTest extends TestCase
 {
     public function setUp()
     {
@@ -24,14 +24,14 @@ class NlsTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
-    public function testNls()
+    public function testNlsCloudMeta()
     {
-        $request = AlibabaCloud::nlsCloudMeta()
-                               ->v20180518()
-                               ->createToken()
-                               ->host('nls-meta.cn-shanghai.aliyuncs.com');
         try {
-            $result = $request->request();
+            $result = AlibabaCloud::nlsCloudMeta()
+                                  ->v20180518()
+                                  ->createToken()
+                                  ->host('nls-meta.cn-shanghai.aliyuncs.com')
+                                  ->request();
             self::assertArrayHasKey('NlsRequestId', $result);
         } catch (ServerException $e) {
             self::assertContains(
@@ -46,17 +46,17 @@ class NlsTest extends TestCase
         }
     }
 
-    public function testNlsWithOldMethod()
+    public function testWithClientMethod()
     {
-        $request = AlibabaCloud::roaRequest()
-                               ->pathPattern('/pop/2018-05-18/tokens')
-                               ->product('nls-cloud-meta')
-                               ->version('2018-05-18')
-                               ->method('POST')
-                               ->action('CreateToken')
-                               ->host('nls-meta.cn-shanghai.aliyuncs.com');
         try {
-            $result = $request->request();
+            $result = AlibabaCloud::roaRequest()
+                                  ->pathPattern('/pop/2018-05-18/tokens')
+                                  ->product('nls-cloud-meta')
+                                  ->version('2018-05-18')
+                                  ->method('POST')
+                                  ->action('CreateToken')
+                                  ->host('nls-meta.cn-shanghai.aliyuncs.com')
+                                  ->request();
             self::assertArrayHasKey('NlsRequestId', $result);
         } catch (ServerException $e) {
             self::assertContains(

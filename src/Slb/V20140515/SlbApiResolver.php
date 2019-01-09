@@ -116,7 +116,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method SetVServerGroup setVServerGroup(array $options = [])
  * @method SetVServerGroupAttribute setVServerGroupAttribute(array $options = [])
  * @method SetVServerGroupAttributeAsyn setVServerGroupAttributeAsyn(array $options = [])
- * @method SlbApiResolver slbApiResolver(array $options = [])
  * @method StartLoadBalancerListener startLoadBalancerListener(array $options = [])
  * @method StopLoadBalancerListener stopLoadBalancerListener(array $options = [])
  * @method TagResources tagResources(array $options = [])

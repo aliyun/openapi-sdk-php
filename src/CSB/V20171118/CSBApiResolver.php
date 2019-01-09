@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method AddMember2AlarmGroup addMember2AlarmGroup(array $options = [])
  * @method ApproveOrderList approveOrderList(array $options = [])
- * @method CSBApiResolver cSBApiResolver(array $options = [])
  * @method CheckServiceExist checkServiceExist(array $options = [])
  * @method CommitSuccessedServices commitSuccessedServices(array $options = [])
  * @method CreateCredentials createCredentials(array $options = [])

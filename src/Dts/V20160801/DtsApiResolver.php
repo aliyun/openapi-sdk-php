@@ -30,7 +30,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeSynchronizationJobStatus describeSynchronizationJobStatus(array $options = [])
  * @method DescribeSynchronizationJobs describeSynchronizationJobs(array $options = [])
  * @method DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options = [])
- * @method DtsApiResolver dtsApiResolver(array $options = [])
  * @method ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
  * @method ModifyMigrationObject modifyMigrationObject(array $options = [])
  * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])

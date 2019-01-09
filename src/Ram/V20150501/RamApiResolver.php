@@ -62,7 +62,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListUsers listUsers(array $options = [])
  * @method ListUsersForGroup listUsersForGroup(array $options = [])
  * @method ListVirtualMFADevices listVirtualMFADevices(array $options = [])
- * @method RamApiResolver ramApiResolver(array $options = [])
  * @method RemoveUserFromGroup removeUserFromGroup(array $options = [])
  * @method SetAccountAlias setAccountAlias(array $options = [])
  * @method SetDefaultPolicyVersion setDefaultPolicyVersion(array $options = [])

@@ -14,7 +14,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateInstance createInstance(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
- * @method HsmApiResolver hsmApiResolver(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])

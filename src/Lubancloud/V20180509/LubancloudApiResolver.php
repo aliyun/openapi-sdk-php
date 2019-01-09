@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method BuyOriginPictures buyOriginPictures(array $options = [])
  * @method GetStyles getStyles(array $options = [])
- * @method LubancloudApiResolver lubancloudApiResolver(array $options = [])
  * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
  * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
  * @method SubmitCutoutTask submitCutoutTask(array $options = [])

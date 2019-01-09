@@ -15,7 +15,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
  * @method QueryServiceCode queryServiceCode(array $options = [])
- * @method TagINnerApiResolver tagINnerApiResolver(array $options = [])
  * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
  */
 class TagINnerApiResolver

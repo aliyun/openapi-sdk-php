@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Alimt\V20181012
  *
- * @method AlimtApiResolver alimtApiResolver(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])
  */

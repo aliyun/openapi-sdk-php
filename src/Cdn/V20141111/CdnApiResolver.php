@@ -18,7 +18,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchDeleteCdnDomainConfig batchDeleteCdnDomainConfig(array $options = [])
  * @method BatchDescribeDomainCname batchDescribeDomainCname(array $options = [])
  * @method BatchSetCdnDomainConfig batchSetCdnDomainConfig(array $options = [])
- * @method CdnApiResolver cdnApiResolver(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
  * @method DeleteCacheExpiredConfig deleteCacheExpiredConfig(array $options = [])
  * @method DeleteCdnDomain deleteCdnDomain(array $options = [])

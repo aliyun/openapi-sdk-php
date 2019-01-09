@@ -131,7 +131,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifySecurityGroupConfiguration modifySecurityGroupConfiguration(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method PurgeDBInstanceLog purgeDBInstanceLog(array $options = [])
- * @method RdsApiResolver rdsApiResolver(array $options = [])
  * @method RecoveryDBInstance recoveryDBInstance(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
  * @method ReleaseReadWriteSplittingConnection releaseReadWriteSplittingConnection(array $options = [])

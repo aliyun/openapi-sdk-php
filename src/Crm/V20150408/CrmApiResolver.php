@@ -15,7 +15,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BatchGetAliyunIdByAliyunPk batchGetAliyunIdByAliyunPk(array $options = [])
  * @method CheckLabel checkLabel(array $options = [])
  * @method CheckLabelForBid checkLabelForBid(array $options = [])
- * @method CrmApiResolver crmApiResolver(array $options = [])
  * @method DeleteLabel deleteLabel(array $options = [])
  * @method DeleteLabelForBid deleteLabelForBid(array $options = [])
  * @method GetAliyunPkByAliyunId getAliyunPkByAliyunId(array $options = [])

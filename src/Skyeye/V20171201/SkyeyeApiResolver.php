@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method GetCdnSkyeyeStatusData getCdnSkyeyeStatusData(array $options = [])
  * @method SendAlertContent sendAlertContent(array $options = [])
- * @method SkyeyeApiResolver skyeyeApiResolver(array $options = [])
  */
 class SkyeyeApiResolver
 {

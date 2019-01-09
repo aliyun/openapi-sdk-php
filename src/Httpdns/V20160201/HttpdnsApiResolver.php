@@ -15,7 +15,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetAccountInfo getAccountInfo(array $options = [])
  * @method GetResolveCountSummary getResolveCountSummary(array $options = [])
  * @method GetResolveStatistics getResolveStatistics(array $options = [])
- * @method HttpdnsApiResolver httpdnsApiResolver(array $options = [])
  * @method ListDomains listDomains(array $options = [])
  */
 class HttpdnsApiResolver

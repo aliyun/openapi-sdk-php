@@ -9,7 +9,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Aegis\V20161111
  *
- * @method AegisApiResolver aegisApiResolver(array $options = [])
  * @method AutoUpgradeSas autoUpgradeSas(array $options = [])
  * @method BatchDeleteWhiteList batchDeleteWhiteList(array $options = [])
  * @method CreateCondition createCondition(array $options = [])
