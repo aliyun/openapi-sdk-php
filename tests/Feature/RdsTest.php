@@ -35,13 +35,9 @@ class RdsTest extends TestCase
         try {
             $request->request();
         } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'DBInstanceIdentifier does not refer to an existing DB instance.',
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                ]
-
+            self::assertEquals(
+                'DBInstanceIdentifier does not refer to an existing DB instance.',
+                $e->getErrorMessage()
             );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());

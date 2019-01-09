@@ -53,6 +53,9 @@ class NlpTest extends TestCase
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testWordSegmentWithApiResolver()
     {
         AlibabaCloud::accessKeyClient(
@@ -72,15 +75,6 @@ class NlpTest extends TestCase
                          ->request();
 
             self::assertEquals('Iphone', $result['data'][0]['word']);
-        } catch (ServerException $e) {
-            $this->assertContains(
-                $e->getErrorCode(),
-                [
-                    'InvalidApi.NotPurchase',
-                    'MissingAccessKeyId',
-                    'InvalidAccessKeyId.NotFound',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith(
                 'cURL error',
@@ -89,6 +83,9 @@ class NlpTest extends TestCase
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testWordSegmentParametersInConstruct()
     {
         AlibabaCloud::accessKeyClient(
@@ -109,15 +106,6 @@ class NlpTest extends TestCase
                          ->request();
 
             self::assertEquals('Iphone', $result['data'][0]['word']);
-        } catch (ServerException $e) {
-            $this->assertContains(
-                $e->getErrorCode(),
-                [
-                    'InvalidApi.NotPurchase',
-                    'MissingAccessKeyId',
-                    'InvalidAccessKeyId.NotFound',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith(
                 'cURL error',

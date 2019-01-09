@@ -14,4 +14,4 @@ define('ALIBABA_CLOUD_PARSE_ERROR', 'SDK.ParseError');
 /**
  * SDK Version
  */
-defined('ALIBABA_CLOUD_SDK_VERSION') || define('ALIBABA_CLOUD_SDK_VERSION', '1.0.0');
+defined('ALIBABA_CLOUD_SDK_VERSION') || define('ALIBABA_CLOUD_SDK_VERSION', '1.0.1');

@@ -24,6 +24,9 @@ class CdnTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testCdn()
     {
         $request = AlibabaCloud::cdn()->v20180510()
@@ -33,8 +36,6 @@ class CdnTest extends TestCase
         try {
             $result = $request->request();
             self::assertEquals('False', $result['CdnIp']);
-        } catch (ServerException $e) {
-            self::assertEquals('AccessKeyId is mandatory for this action.', $e->getErrorMessage());
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

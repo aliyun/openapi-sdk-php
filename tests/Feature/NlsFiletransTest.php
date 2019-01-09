@@ -24,6 +24,9 @@ class NlsFiletransTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testSubmitTask()
     {
         try {
@@ -38,20 +41,14 @@ class NlsFiletransTest extends TestCase
                                   ->withDebug('true')
                                   ->request();
             self::assertArrayHasKey('TaskId', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                    'AccessKeyId is mandatory for this action.',
-                    'Specified access key is not found.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testGetTaskResult()
     {
         try {
@@ -63,20 +60,14 @@ class NlsFiletransTest extends TestCase
                                   ->withDebug('true')
                                   ->request();
             self::assertArrayHasKey('TaskId', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                    'AccessKeyId is mandatory for this action.',
-                    'Specified access key is not found.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testSubmitTaskWithClientMethod()
     {
         try {
@@ -98,14 +89,6 @@ class NlsFiletransTest extends TestCase
                                   ->request();
 
             self::assertArrayHasKey('TaskId', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                    'AccessKeyId is mandatory for this action.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

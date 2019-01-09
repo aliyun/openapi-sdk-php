@@ -24,6 +24,9 @@ class CsTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testCs()
     {
         try {
@@ -32,11 +35,6 @@ class CsTest extends TestCase
                                   ->describeApiVersion()
                                   ->request();
             self::assertEquals('2015-12-21', $result['build']);
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'AccessKeyId is mandatory for this action.',
-                $e->getErrorMessage()
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
