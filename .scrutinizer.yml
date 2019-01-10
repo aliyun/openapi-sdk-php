@@ -7,9 +7,9 @@ build:
         coverage:
             tests:
                 override:
-                    -   command: make test
+                    -   command: composer test
                         coverage:
-                            file: coverage/coverage.clover
+                            file: cache/coverage.clover
                             format: clover
 
 filter:

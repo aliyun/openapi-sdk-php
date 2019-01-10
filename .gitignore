@@ -3,5 +3,5 @@
 /.env
 .idea/*
 *.pem
-/coverage/
+/cache
 /.php_cs.cache

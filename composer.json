@@ -64,5 +64,39 @@
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts-descriptions": {
+        "cs": "Tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard.",
+        "cbf": "Automatically correct coding standard violations.",
+        "fixer": "Fixes code to follow standards.",
+        "test": "Run all tests.",
+        "unit": "Run Unit tests.",
+        "feature": "Run Feature tests.",
+        "clearCache": "Clear cache like coverage.",
+        "coverage": "Show Coverage html.",
+        "prompts": "Generate IDE prompts."
+    },
+    "scripts": {
+        "cs": "phpcs --standard=PSR2 -n src",
+        "cbf": "phpcbf --standard=PSR2 -n src",
+        "fixer": "php-cs-fixer fix src",
+        "test": [
+            "@clearCache",
+            "phpunit --colors=always"
+        ],
+        "unit": [
+            "@clearCache",
+            "phpunit --testsuite=Unit --colors=always"
+        ],
+        "feature": [
+            "@clearCache",
+            "phpunit --testsuite=Feature --colors=always"
+        ],
+        "clearCache": "rm -rf cache/*",
+        "coverage": "open cache/coverage/index.html",
+        "prompts": [
+            "AlibabaCloud\\DumpServices::dump",
+            "@fixer"
+        ]
+    }
 }

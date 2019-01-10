@@ -1,23 +1,24 @@
 English | [简体中文](./README-CN.md)
 
-Alibaba Cloud SDK for PHP
-======
+
+<p align="center"><img src="./src/AlibabaCloud.svg"></p>
+<p align="center">
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/downloads" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/license" alt="License"></a>
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/composerlock" alt="composer.lock"></a>
+</p>
+<p align="center">
+<a href="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php"><img src="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/quality-score.png" alt="Scrutinizer Code Quality"></a>
+<a href="https://travis-ci.org/aliyun/openapi-sdk-php"><img src="https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master" alt="Travis Build Status"></a>
+<a href="https://ci.appveyor.com/project/songshenzong/openapi-sdk-php/branch/master"><img src="https://ci.appveyor.com/api/projects/status/ttsf2ugc88dqyn1o/branch/master?svg=true" alt="Appveyor Build Status"></a>
+<a href="https://codecov.io/gh/aliyun/openapi-sdk-php"><img src="https://codecov.io/gh/aliyun/openapi-sdk-php/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="https://scrutinizer-ci.com/code-intelligence"><img src="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/code-intelligence.svg" alt="Code Intelligence Status"></a>
+</p> 
 
 
-[![Latest Stable Version](https://poser.pugx.org/alibabacloud/sdk/v/stable)](https://packagist.org/packages/alibabacloud/sdk)
-[![Total Downloads](https://poser.pugx.org/alibabacloud/sdk/downloads)](https://packagist.org/packages/alibabacloud/sdk)
-[![Latest Unstable Version](https://poser.pugx.org/alibabacloud/sdk/v/unstable)](https://packagist.org/packages/alibabacloud/sdk)
-[![License](https://poser.pugx.org/alibabacloud/sdk/license)](https://packagist.org/packages/alibabacloud/sdk)
-[![composer.lock](https://poser.pugx.org/alibabacloud/sdk/composerlock)](https://packagist.org/packages/alibabacloud/sdk)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/quality-score.png)](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php)
-[![Build Status](https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master)](https://travis-ci.org/aliyun/openapi-sdk-php)
-[![codecov](https://codecov.io/gh/aliyun/openapi-sdk-php/branch/master/graph/badge.svg)](https://codecov.io/gh/aliyun/openapi-sdk-php)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/code-intelligence.svg)](https://scrutinizer-ci.com/code-intelligence)
-
-
-![](./src/AlibabaCloud.svg)
-
-
+## About
 **Alibaba Cloud SDK for PHP** is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
 ## Release Notes

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.2 - 2019-01-11
+
+* Support test on the Windows.
+
 ## 1.0.1 - 2019-01-09
 
 * Support NLS Filetrans.

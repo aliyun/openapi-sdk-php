@@ -1,0 +1,56 @@
+version: 1.0.{build}
+build: off
+shallow_clone: false
+platform: 'x86'
+branches:
+    only:
+        - master
+
+## Cache composer bits
+cache:
+    - '%LOCALAPPDATA%\Composer\files -> composer.lock'
+
+# Install PHP/Composer and set PATH
+install:
+    - cinst -y curl
+    - SET PATH=C:\Program Files\curl;%PATH%
+    # Which is only needed by the test suite.
+    - cinst -y which
+    - SET PATH=C:\Program Files\which;%PATH%
+    # Install PHP per
+    - IF EXIST c:\tools\php (SET PHP=0) # Checks for the PHP install being cached
+    -   ps: appveyor-retry cinst --params '""/InstallDir:C:\tools\php""' --ignore-checksums -y php --version ((choco search php --exact --all-versions -r | select-string -pattern $env:php_ver_target | sort { [version]($_ -split '\|' | select -last 1) } -Descending | Select-Object -first 1) -replace '[php|]','')
+    - cd c:\tools\php
+    - copy php.ini-production php.ini
+    - echo date.timezone="UTC" >> php.ini
+    - echo mbstring.http_input=pass >> php.ini
+    - echo mbstring.http_output=pass >> php.ini
+    - echo sendmail_path=nul >> php.ini
+    - echo extension_dir=ext >> php.ini
+    - echo extension=php_openssl.dll >> php.ini
+    - echo extension=php_mbstring.dll >> php.ini
+    - echo extension=php_sockets.dll >> php.ini
+    - echo extension=php_curl.dll >> php.ini
+    - echo extension=php_gd2.dll >> php.ini
+    # Set PATH for PHP
+    - SET PATH=C:\tools\php;%PATH%
+    # Back to working directory
+    - cd %APPVEYOR_BUILD_FOLDER%
+    # Download Composer https://getcomposer.org/composer.phar
+    - php -r "readfile('http://getcomposer.org/installer');" | php
+    # Install dependencies via Composer
+    - IF %dependencies%==lowest appveyor-retry php composer.phar update --no-interaction  --prefer-source --profile --prefer-lowest
+    - IF %dependencies%==highest appveyor-retry php composer.phar update --no-interaction  --prefer-source --profile
+    # Set PATH for Composer'S bin
+    - SET PATH=%APPVEYOR_BUILD_FOLDER%;%APPVEYOR_BUILD_FOLDER%/vendor/bin;%PATH%
+
+test_script:
+    - phpunit --colors=always
+
+# environment variables
+environment:
+    matrix:
+        -   dependencies: highest
+            php_ver_target: 5.5
+        -   dependencies: highest
+            php_ver_target: 7.0

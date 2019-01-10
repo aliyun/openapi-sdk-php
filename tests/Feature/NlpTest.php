@@ -83,9 +83,6 @@ class NlpTest extends TestCase
         }
     }
 
-    /**
-     * @throws ServerException
-     */
     public function testWordSegmentParametersInConstruct()
     {
         AlibabaCloud::accessKeyClient(
@@ -111,6 +108,9 @@ class NlpTest extends TestCase
                 'cURL error',
                 $e->getErrorMessage()
             );
+        } catch (ServerException $e) {
+            \dump($e->getResult()->getRequest()->stringToBeSigned());
+            \dump($e->getMessage());
         }
     }
 }
