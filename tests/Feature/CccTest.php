@@ -37,17 +37,14 @@ class CccTest extends TestCase
                                    ->scheme('https')
                                    ->host('ccc.cn-shanghai.aliyuncs.com');
 
-            $result  = $request->request();
+            $result = $request->request();
             self::assertArrayHasKey('PhoneNumbers', $result);
         } catch (ClientException $e) {
             $this->assertEquals(\ALIBABA_CLOUD_SERVER_UNREACHABLE, $e->getErrorCode());
         } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'InvalidBearerTokenException: Bearertoken has expired',
-                    'Specified bearer token is not found.',
-                ]
+            self::assertEquals(
+                'InvalidBearerTokenException: Bearertoken has expired',
+                $e->getErrorMessage()
             );
         }
     }

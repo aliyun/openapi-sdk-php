@@ -4,7 +4,6 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,6 +23,9 @@ class DdsTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws \AlibabaCloud\Client\Exception\ServerException
+     */
     public function testDds()
     {
         $request = AlibabaCloud::dds()
@@ -32,8 +34,6 @@ class DdsTest extends TestCase
         try {
             $result = $request->request();
             self::assertArrayHasKey('DdsRegion', $result['Regions']);
-        } catch (ServerException $e) {
-            self::assertEquals('AccessKeyId is mandatory for this action.', $e->getErrorMessage());
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

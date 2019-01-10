@@ -4,7 +4,6 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,6 +23,9 @@ class AlimtTest extends TestCase
         )->regionId('cn-hangzhou')->asGlobalClient();
     }
 
+    /**
+     * @throws \AlibabaCloud\Client\Exception\ServerException
+     */
     public function testAlimt()
     {
         $request = AlibabaCloud::alimt()
@@ -38,14 +40,6 @@ class AlimtTest extends TestCase
         try {
             $result = $request->request();
             self::assertArrayHasKey('Data', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'AccessKeyId is mandatory for this action.',
-                    'Specified access key is not found.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

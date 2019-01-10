@@ -24,6 +24,9 @@ class RamTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testRam()
     {
         $request = AlibabaCloud::ram()
@@ -34,11 +37,6 @@ class RamTest extends TestCase
             self::assertEquals(
                 \getenv('ACCESS_KEY_ID'),
                 $result['AccessKeys']['AccessKey'][0]['AccessKeyId']
-            );
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'AccessKeyId is mandatory for this action.',
-                $e->getErrorMessage()
             );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());

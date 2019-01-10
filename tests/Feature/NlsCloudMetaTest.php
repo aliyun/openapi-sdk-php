@@ -24,6 +24,9 @@ class NlsCloudMetaTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testNlsCloudMeta()
     {
         try {
@@ -33,19 +36,14 @@ class NlsCloudMetaTest extends TestCase
                                   ->host('nls-meta.cn-shanghai.aliyuncs.com')
                                   ->request();
             self::assertArrayHasKey('NlsRequestId', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                    'AccessKeyId is mandatory for this action.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testWithClientMethod()
     {
         try {
@@ -58,14 +56,6 @@ class NlsCloudMetaTest extends TestCase
                                   ->host('nls-meta.cn-shanghai.aliyuncs.com')
                                   ->request();
             self::assertArrayHasKey('NlsRequestId', $result);
-        } catch (ServerException $e) {
-            self::assertContains(
-                $e->getErrorMessage(),
-                [
-                    'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                    'AccessKeyId is mandatory for this action.',
-                ]
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

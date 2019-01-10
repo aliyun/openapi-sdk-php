@@ -27,6 +27,9 @@ class EcsTest extends TestCase
                     ->asGlobalClient();
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testEcs()
     {
         $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
@@ -34,43 +37,34 @@ class EcsTest extends TestCase
         try {
             $result = $request->request();
             self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                $e->getErrorMessage()
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testEcsInVersionStaticMethod()
     {
         try {
             $request = EcsVersion::v20140526()->describeRegions();
             $result  = $request->request();
             self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                $e->getErrorMessage()
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 
+    /**
+     * @throws ServerException
+     */
     public function testEcsInApiStaticMethod()
     {
         try {
             $request = Ecs::describeRegions();
             $result  = $request->request();
             self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                $e->getErrorMessage()
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }

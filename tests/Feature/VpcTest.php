@@ -4,7 +4,6 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,6 +23,9 @@ class VpcTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws \AlibabaCloud\Client\Exception\ServerException
+     */
     public function testVpc()
     {
         $request = AlibabaCloud::vpc()
@@ -32,11 +34,6 @@ class VpcTest extends TestCase
         try {
             $result = $request->request();
             self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ServerException $e) {
-            self::assertEquals(
-                'The input parameter "AccessKeyId" that is mandatory for processing this request is not supplied.',
-                $e->getErrorMessage()
-            );
         } catch (ClientException $e) {
             self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
