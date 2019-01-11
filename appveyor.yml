@@ -6,10 +6,6 @@ branches:
     only:
         - master
 
-## Cache composer bits
-cache:
-    - '%LOCALAPPDATA%\Composer\files -> composer.lock'
-
 # Install PHP/Composer and set PATH
 install:
     - cinst -y curl
@@ -23,15 +19,11 @@ install:
     - cd c:\tools\php
     - copy php.ini-production php.ini
     - echo date.timezone="UTC" >> php.ini
-    - echo mbstring.http_input=pass >> php.ini
-    - echo mbstring.http_output=pass >> php.ini
-    - echo sendmail_path=nul >> php.ini
     - echo extension_dir=ext >> php.ini
     - echo extension=php_openssl.dll >> php.ini
     - echo extension=php_mbstring.dll >> php.ini
     - echo extension=php_sockets.dll >> php.ini
     - echo extension=php_curl.dll >> php.ini
-    - echo extension=php_gd2.dll >> php.ini
     # Set PATH for PHP
     - SET PATH=C:\tools\php;%PATH%
     # Back to working directory
@@ -39,8 +31,7 @@ install:
     # Download Composer https://getcomposer.org/composer.phar
     - php -r "readfile('http://getcomposer.org/installer');" | php
     # Install dependencies via Composer
-    - IF %dependencies%==lowest appveyor-retry php composer.phar update --no-interaction  --prefer-source --profile --prefer-lowest
-    - IF %dependencies%==highest appveyor-retry php composer.phar update --no-interaction  --prefer-source --profile
+    - IF %dependencies%==highest appveyor-retry php composer.phar update --no-interaction --prefer-source --profile
     # Set PATH for Composer'S bin
     - SET PATH=%APPVEYOR_BUILD_FOLDER%;%APPVEYOR_BUILD_FOLDER%/vendor/bin;%PATH%
 

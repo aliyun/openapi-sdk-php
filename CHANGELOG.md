@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.3 - 2019-01-11
+
+* Support CloudAPI.
+
 ## 1.0.2 - 2019-01-11
 
 * Support test on the Windows.

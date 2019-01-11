@@ -5,3 +5,4 @@
 *.pem
 /cache
 /.php_cs.cache
+/composer.lock
