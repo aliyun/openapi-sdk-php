@@ -29,6 +29,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Ccs\Ccs ccs()
  * @method static Cdn\Cdn cdn()
  * @method static Chatbot\Chatbot chatbot()
+ * @method static CloudAPI\CloudAPI cloudAPI()
  * @method static CloudPhoto\CloudPhoto cloudPhoto()
  * @method static Cloudauth\Cloudauth cloudauth()
  * @method static Cloudesl\Cloudesl cloudesl()
