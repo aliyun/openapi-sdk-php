@@ -1,10 +1,7 @@
-version: 1.0.{build}
 build: off
 shallow_clone: false
-platform: 'x86'
-branches:
-    only:
-        - master
+platform:
+    - x64
 
 # Install PHP/Composer and set PATH
 install:
@@ -31,7 +28,7 @@ install:
     # Download Composer https://getcomposer.org/composer.phar
     - php -r "readfile('http://getcomposer.org/installer');" | php
     # Install dependencies via Composer
-    - IF %dependencies%==highest appveyor-retry php composer.phar update --no-interaction --prefer-source --profile
+    - appveyor-retry php composer.phar update --no-interaction --prefer-source --profile
     # Set PATH for Composer'S bin
     - SET PATH=%APPVEYOR_BUILD_FOLDER%;%APPVEYOR_BUILD_FOLDER%/vendor/bin;%PATH%
 
@@ -41,7 +38,5 @@ test_script:
 # environment variables
 environment:
     matrix:
-        -   dependencies: highest
-            php_ver_target: 5.5
-        -   dependencies: highest
-            php_ver_target: 7.0
+        -   php_ver_target: 5.5
+        -   php_ver_target: 7.0

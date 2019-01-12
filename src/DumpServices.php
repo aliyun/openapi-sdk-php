@@ -29,7 +29,6 @@ class DumpServices
         foreach (glob(__DIR__ . DIRECTORY_SEPARATOR . '*') as $productDirectory) {
             if (is_dir($productDirectory)) {
                 self::$products[] = \basename($productDirectory);
-                self::generateStaticVersionResolverFile($productDirectory);
                 self::generateVersionResolverFile($productDirectory);
             }
         }
@@ -153,51 +152,6 @@ EOT;
     /**
      * @param string $productDirectory
      *
-     * @return bool
-     */
-    private static function generateStaticVersionResolverFile($productDirectory)
-    {
-        $productName = basename($productDirectory);
-
-        $versions = self::getVersions($productDirectory);
-        if ($versions === []) {
-            return false;
-        }
-
-        $method = '';
-        foreach ($versions as $version) {
-            $lcVersion = \lcfirst($version);
-            $method    .= \PHP_EOL . " * @method static {$version}\\{$productName}ApiResolver {$lcVersion}()";
-        }
-
-        $php = <<<EOT
-<?php
-
-namespace AlibabaCloud\\{$productName};
-
-use AlibabaCloud\VersionResolverTrait;
-
-/**
- * Find the specified version of the $productName based on the method name as the version name.
- *
- * @package   AlibabaCloud\\{$productName}
- *{$method}
- */
-class {$productName}Version
-{
-    use VersionResolverTrait;
-}
-
-EOT;
-
-        $fileName = $productDirectory . DIRECTORY_SEPARATOR . $productName . 'Version.php';
-        \file_put_contents($fileName, $php);
-        return true;
-    }
-
-    /**
-     * @param string $productDirectory
-     *
      * @return array
      */
     private static function getVersions($productDirectory)
@@ -206,7 +160,6 @@ EOT;
         foreach (glob($productDirectory . DIRECTORY_SEPARATOR . '*') as $versionDirectory) {
             // Product have versions.
             if (is_dir($versionDirectory) && \mb_strlen(\basename($versionDirectory)) === 9) {
-                self::generateStaticApiResolverFile($versionDirectory);
                 self::generateApiResolverFile($versionDirectory);
                 $versions[] = \basename($versionDirectory);
             }
@@ -234,51 +187,6 @@ EOT;
             }
         }
         return $apis;
-    }
-
-    /**
-     * @param string $versionDirectory
-     *
-     * @return void
-     */
-    private static function generateStaticApiResolverFile($versionDirectory)
-    {
-        $version = basename($versionDirectory);
-        $product = \basename(\dirname($versionDirectory));
-
-        $apis   = self::getApis($versionDirectory);
-        $method = '';
-        foreach ($apis as $api) {
-            $api   = \str_replace('.php', '', $api);
-            $lcApi = \lcfirst($api);
-            // Avoid adding the itself to the code
-            if ($api !== $product) {
-                $method .= \PHP_EOL . " * @method static $api {$lcApi}(array \$options = [])";
-            }
-        }
-
-        $php = <<<EOT
-<?php
-
-namespace AlibabaCloud\\{$product}\\{$version};
-
-use AlibabaCloud\ApiResolverTrait;
-
-/**
- * Find the specified Api of the $product based on the method name as the Api name.
- *
- * @package   AlibabaCloud\\{$product}\\{$version}
- *{$method}
- */
-class {$product}
-{
-    use ApiResolverTrait;
-}
-
-EOT;
-
-        $fileName = $versionDirectory . DIRECTORY_SEPARATOR . $product . '.php';
-        \file_put_contents($fileName, $php);
     }
 
     /**
