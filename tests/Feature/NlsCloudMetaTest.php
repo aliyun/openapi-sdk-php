@@ -26,38 +26,36 @@ class NlsCloudMetaTest extends TestCase
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testNlsCloudMeta()
     {
-        try {
-            $result = AlibabaCloud::nlsCloudMeta()
-                                  ->v20180518()
-                                  ->createToken()
-                                  ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                                  ->request();
-            self::assertArrayHasKey('NlsRequestId', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::nlsCloudMeta()
+                              ->v20180518()
+                              ->createToken()
+                              ->host('nls-meta.cn-shanghai.aliyuncs.com')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('NlsRequestId', $result);
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testWithClientMethod()
     {
-        try {
-            $result = AlibabaCloud::roaRequest()
-                                  ->pathPattern('/pop/2018-05-18/tokens')
-                                  ->product('nls-cloud-meta')
-                                  ->version('2018-05-18')
-                                  ->method('POST')
-                                  ->action('CreateToken')
-                                  ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                                  ->request();
-            self::assertArrayHasKey('NlsRequestId', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::roaRequest()
+                              ->pathPattern('/pop/2018-05-18/tokens')
+                              ->product('nls-cloud-meta')
+                              ->version('2018-05-18')
+                              ->method('POST')
+                              ->action('CreateToken')
+                              ->host('nls-meta.cn-shanghai.aliyuncs.com')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('NlsRequestId', $result);
     }
 }

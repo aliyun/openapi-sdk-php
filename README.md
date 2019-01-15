@@ -93,7 +93,7 @@ try {
 
 Before request, please [Understanding the usage of the client][client], after request, please [Understanding the result object][result].
 
-> Currently only some Alibaba Cloud products are supported, you can use [Alibaba Cloud Client for PHP][request] to initiate any custom requests.
+> Currently only some Alibaba Cloud products are supported, you can use [Alibaba Cloud Client for PHP][request] to initiate any custom requests. [API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate Alibaba Cloud Client for PHP Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API. It is highly recommended.
 
 ```php
 <?php

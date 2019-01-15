@@ -15,102 +15,82 @@ use PHPUnit\Framework\TestCase;
  */
 class NlpTest extends TestCase
 {
+
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     */
     public function testWordSegment()
     {
         AlibabaCloud::accessKeyClient(
-            \getenv('NLP_ACCESS_KEY_ID'),
-            \getenv('NLP_ACCESS_KEY_SECRET')
-        )->name('content')
-                    ->regionId('cn-shanghai');
+            \getenv('ACCESS_KEY_ID'),
+            \getenv('ACCESS_KEY_SECRET')
+        )->name('content')->regionId('cn-shanghai');
 
-        $request = AlibabaCloud::nlp()
-                               ->v20180408()
-                               ->wordSegment();
-
-        $request->withDomain('general');
-        $request->jsonBody([
-                               'lang' => 'ZH',
-                               'text' => 'Iphone专用数据线',
-                           ]);
-
-        try {
-            $result = $request->client('content')->request();
-            self::assertEquals('Iphone', $result['data'][0]['word']);
-        } catch (ServerException $e) {
-            $this->assertContains(
-                $e->getErrorCode(),
-                [
-                    'InvalidApi.NotPurchase',
-                    'MissingAccessKeyId',
-                    'InvalidAccessKeyId.NotFound',
-                ]
-            );
-        } catch (ClientException $e) {
-            self::assertStringStartsWith(
-                'cURL error',
-                $e->getErrorMessage()
-            );
-        }
+        $result = AlibabaCloud::nlp()
+                              ->v20180408()
+                              ->wordSegment()
+                              ->withDomain('general')
+                              ->jsonBody([
+                                             'lang' => 'ZH',
+                                             'text' => 'Iphone专用数据线',
+                                         ])
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->client('content')
+                              ->request();
+        self::assertEquals('Iphone', $result['data'][0]['word']);
     }
 
     /**
+     * @throws ClientException
      * @throws ServerException
      */
     public function testWordSegmentWithApiResolver()
     {
         AlibabaCloud::accessKeyClient(
-            \getenv('NLP_ACCESS_KEY_ID'),
-            \getenv('NLP_ACCESS_KEY_SECRET')
-        )->name('content')
-                    ->regionId('cn-shanghai');
+            \getenv('ACCESS_KEY_ID'),
+            \getenv('ACCESS_KEY_SECRET')
+        )->name('content')->regionId('cn-shanghai');
 
-        try {
-            $result = Nlp::wordSegment()
-                         ->withDomain('general')
-                         ->jsonBody([
-                                        'lang' => 'ZH',
-                                        'text' => 'Iphone专用数据线',
-                                    ])
-                         ->client('content')
-                         ->request();
+        $result = Nlp::wordSegment()
+                     ->withDomain('general')
+                     ->jsonBody([
+                                    'lang' => 'ZH',
+                                    'text' => 'Iphone专用数据线',
+                                ])
+                     ->client('content')
+                     ->connectTimeout(15)
+                     ->timeout(20)
+                     ->request();
 
-            self::assertEquals('Iphone', $result['data'][0]['word']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith(
-                'cURL error',
-                $e->getErrorMessage()
-            );
-        }
+        self::assertEquals('Iphone', $result['data'][0]['word']);
     }
 
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     */
     public function testWordSegmentParametersInConstruct()
     {
         AlibabaCloud::accessKeyClient(
-            \getenv('NLP_ACCESS_KEY_ID'),
-            \getenv('NLP_ACCESS_KEY_SECRET')
+            \getenv('ACCESS_KEY_ID'),
+            \getenv('ACCESS_KEY_SECRET')
         )->name('content')
                     ->regionId('cn-shanghai');
 
-        try {
-            $result = Nlp::wordSegment([
-                                           'body' => \json_encode([
-                                                                      'lang' => 'ZH',
-                                                                      'text' => 'Iphone专用数据线',
-                                                                  ]),
-                                       ])
-                         ->withDomain('general')
-                         ->client('content')
-                         ->request();
+        $result = Nlp::wordSegment([
+                                       'body' => \json_encode([
+                                                                  'lang' => 'ZH',
+                                                                  'text' => 'Iphone专用数据线',
+                                                              ]),
+                                   ])
+                     ->withDomain('general')
+                     ->client('content')
+                     ->connectTimeout(15)
+                     ->timeout(20)
+                     ->request();
 
-            self::assertEquals('Iphone', $result['data'][0]['word']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith(
-                'cURL error',
-                $e->getErrorMessage()
-            );
-        } catch (ServerException $e) {
-            \dump($e->getResult()->getRequest()->stringToBeSigned());
-            \dump($e->getMessage());
-        }
+        self::assertEquals('Iphone', $result['data'][0]['word']);
     }
 }

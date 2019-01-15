@@ -25,21 +25,23 @@ class RamTest extends TestCase
     }
 
     /**
+     * @throws ClientException
      * @throws ServerException
      */
     public function testRam()
     {
-        $request = AlibabaCloud::ram()
-                               ->v20150501()
-                               ->listAccessKeys();
-        try {
-            $result = $request->request();
-            self::assertEquals(
-                \getenv('ACCESS_KEY_ID'),
-                $result['AccessKeys']['AccessKey'][0]['AccessKeyId']
-            );
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::ram()
+                              ->v20150501()
+                              ->listAccessKeys()
+                              ->options([
+                                            'verify' => false,
+                                        ])
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertEquals(
+            \getenv('ACCESS_KEY_ID'),
+            $result['AccessKeys']['AccessKey'][0]['AccessKeyId']
+        );
     }
 }

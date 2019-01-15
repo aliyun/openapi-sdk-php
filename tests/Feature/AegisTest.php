@@ -8,11 +8,11 @@ use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class CsTest
+ * Class AegisTest
  *
  * @package   AlibabaCloud\Tests\Feature
  */
-class CsTest extends TestCase
+class AegisTest extends TestCase
 {
     public function setUp()
     {
@@ -21,21 +21,23 @@ class CsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-hangzhou')->asGlobalClient();
     }
 
     /**
-     * @throws ServerException
      * @throws ClientException
+     * @throws ServerException
      */
-    public function testCs()
+    public function testAegis()
     {
-        $result = AlibabaCloud::cS()
-                              ->v20151215()
-                              ->describeApiVersion()
+        $result = AlibabaCloud::aegis()
+                              ->v20161111()
+                              ->describeAlarmEventDetail()
+                              ->withAlarmUniqueInfo('info')
+                              ->withFrom('from')
                               ->connectTimeout(15)
                               ->timeout(20)
                               ->request();
-        self::assertArrayHasKey('docker_region_versions', $result);
+        self::assertArrayHasKey('RequestId', $result);
     }
 }

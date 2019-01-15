@@ -23,50 +23,49 @@ class EcsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')
-                    ->asGlobalClient();
+        )->regionId('cn-shanghai')->asGlobalClient();
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testEcs()
     {
-        $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
-
-        try {
-            $result = $request->request();
-            self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::ecs()
+                              ->v20140526()
+                              ->describeRegions()
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('Region', $result['Regions']);
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testEcsInVersionStaticMethod()
     {
-        try {
-            $request = EcsVersion::v20140526()->describeRegions();
-            $result  = $request->request();
-            self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = EcsVersion::v20140526()
+                            ->describeRegions()
+                            ->connectTimeout(15)
+                            ->timeout(20)
+                            ->request();
+
+        self::assertArrayHasKey('Region', $result['Regions']);
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testEcsInApiStaticMethod()
     {
-        try {
-            $request = Ecs::describeRegions();
-            $result  = $request->request();
-            self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = Ecs::describeRegions()
+                     ->connectTimeout(15)
+                     ->timeout(20)
+                     ->request();
+        self::assertArrayHasKey('Region', $result['Regions']);
     }
 }
