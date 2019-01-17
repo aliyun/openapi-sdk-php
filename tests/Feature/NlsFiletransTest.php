@@ -26,71 +26,68 @@ class NlsFiletransTest extends TestCase
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testSubmitTask()
     {
-        try {
-            $result = AlibabaCloud::nlsFiletrans()
-                                  ->v20180817()
-                                  ->submitTask()
-                                  ->host('filetrans.cn-shanghai.aliyuncs.com')
-                                  ->withTask(json_encode([
-                                                             'app_key'   => 'app_key',
-                                                             'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
-                                                         ]))
-                                  ->withDebug('true')
-                                  ->request();
-            self::assertArrayHasKey('TaskId', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::nlsFiletrans()
+                              ->v20180817()
+                              ->submitTask()
+                              ->host('filetrans.cn-shanghai.aliyuncs.com')
+                              ->withTask(json_encode([
+                                                         'app_key'   => 'app_key',
+                                                         'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
+                                                     ]))
+                              ->withDebug('true')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('TaskId', $result);
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testGetTaskResult()
     {
-        try {
-            $result = AlibabaCloud::nlsFiletrans()
-                                  ->v20180817()
-                                  ->getTaskResult()
-                                  ->host('filetrans.cn-shanghai.aliyuncs.com')
-                                  ->withTaskId('id')
-                                  ->withDebug('true')
-                                  ->request();
-            self::assertArrayHasKey('TaskId', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::nlsFiletrans()
+                              ->v20180817()
+                              ->getTaskResult()
+                              ->host('filetrans.cn-shanghai.aliyuncs.com')
+                              ->withTaskId('id')
+                              ->withDebug('true')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('TaskId', $result);
     }
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testSubmitTaskWithClientMethod()
     {
-        try {
-            $result = AlibabaCloud::rpcRequest()
-                                  ->product('nls-cloud-meta')
-                                  ->version('2018-08-17')
-                                  ->method('POST')
-                                  ->action('SubmitTask')
-                                  ->host('filetrans.cn-shanghai.aliyuncs.com')
-                                  ->options([
-                                                'query' => [
-                                                    'Task'  => json_encode([
-                                                                               'app_key'   => 'app_key',
-                                                                               'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
-                                                                           ]),
-                                                    'Debug' => 'true',
-                                                ],
-                                            ])
-                                  ->request();
+        $result = AlibabaCloud::rpcRequest()
+                              ->product('nls-cloud-meta')
+                              ->version('2018-08-17')
+                              ->method('POST')
+                              ->action('SubmitTask')
+                              ->host('filetrans.cn-shanghai.aliyuncs.com')
+                              ->options([
+                                            'query' => [
+                                                'Task'  => json_encode([
+                                                                           'app_key'   => 'app_key',
+                                                                           'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
+                                                                       ]),
+                                                'Debug' => 'true',
+                                            ],
+                                        ])
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
 
-            self::assertArrayHasKey('TaskId', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        self::assertArrayHasKey('TaskId', $result);
     }
 }

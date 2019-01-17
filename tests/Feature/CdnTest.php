@@ -26,18 +26,18 @@ class CdnTest extends TestCase
 
     /**
      * @throws ServerException
+     * @throws ClientException
      */
     public function testCdn()
     {
         $request = AlibabaCloud::cdn()->v20180510()
                                ->describeIpInfo()
                                ->withIP('192.168.0.1')
+                               ->connectTimeout(15)
+                               ->timeout(20)
                                ->withSecurityToken('token');
-        try {
-            $result = $request->request();
-            self::assertEquals('False', $result['CdnIp']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+
+        $result = $request->request();
+        self::assertEquals('False', $result['CdnIp']);
     }
 }

@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -18,30 +19,29 @@ class AlimtTest extends TestCase
         parent::setUp();
 
         AlibabaCloud::accessKeyClient(
-            \getenv('ALIMT_ACCESS_KEY_ID'),
-            \getenv('ALIMT_ACCESS_KEY_SECRET')
+            \getenv('ACCESS_KEY_ID'),
+            \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-hangzhou')->asGlobalClient();
     }
 
     /**
-     * @throws \AlibabaCloud\Client\Exception\ServerException
+     * @throws ClientException
+     * @throws ServerException
      */
     public function testAlimt()
     {
-        $request = AlibabaCloud::alimt()
-                               ->v20181012()
-                               ->translateECommerce()
-                               ->method('POST')
-                               ->withSourceLanguage('en')
-                               ->withScene('title')
-                               ->withSourceText('book')
-                               ->withFormatType('text')
-                               ->withTargetLanguage('zh');
-        try {
-            $result = $request->request();
-            self::assertArrayHasKey('Data', $result);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::alimt()
+                              ->v20181012()
+                              ->translateECommerce()
+                              ->method('POST')
+                              ->withSourceLanguage('en')
+                              ->withScene('title')
+                              ->withSourceText('book')
+                              ->withFormatType('text')
+                              ->withTargetLanguage('zh')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('Data', $result);
     }
 }

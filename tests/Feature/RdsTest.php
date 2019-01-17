@@ -24,23 +24,25 @@ class RdsTest extends TestCase
         )->regionId('cn-shanghai')->asGlobalClient();
     }
 
+    /**
+     * @throws ClientException
+     */
     public function testRds()
     {
-        $request = AlibabaCloud::rds()
-                               ->v20140815()
-                               ->deleteDatabase()
-                               ->withDBInstanceId(\time())
-                               ->withDBName('name');
-
         try {
-            $request->request();
+            AlibabaCloud::rds()
+                        ->v20140815()
+                        ->deleteDatabase()
+                        ->withDBInstanceId(\time())
+                        ->withDBName('name')
+                        ->connectTimeout(15)
+                        ->timeout(20)
+                        ->request();
         } catch (ServerException $e) {
             self::assertEquals(
                 'DBInstanceIdentifier does not refer to an existing DB instance.',
                 $e->getErrorMessage()
             );
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
         }
     }
 }

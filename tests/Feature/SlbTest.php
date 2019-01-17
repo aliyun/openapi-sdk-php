@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,18 +25,17 @@ class SlbTest extends TestCase
     }
 
     /**
-     * @throws \AlibabaCloud\Client\Exception\ServerException
+     * @throws ClientException
+     * @throws ServerException
      */
     public function testSlb()
     {
-        $request = AlibabaCloud::slb()
-                               ->v20140515()
-                               ->describeRegions();
-        try {
-            $result = $request->request();
-            self::assertArrayHasKey('Region', $result['Regions']);
-        } catch (ClientException $e) {
-            self::assertStringStartsWith('cURL error', $e->getErrorMessage());
-        }
+        $result = AlibabaCloud::slb()
+                              ->v20140515()
+                              ->describeRegions()
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('Region', $result['Regions']);
     }
 }

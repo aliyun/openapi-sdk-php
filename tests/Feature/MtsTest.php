@@ -8,11 +8,11 @@ use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class CloudApiTest
+ * Class MtsTest
  *
  * @package   AlibabaCloud\Tests\Feature
  */
-class CloudApiTest extends TestCase
+class MtsTest extends TestCase
 {
     public function setUp()
     {
@@ -28,15 +28,15 @@ class CloudApiTest extends TestCase
      * @throws ServerException
      * @throws ClientException
      */
-    public function testCloudApi()
+    public function testMts()
     {
-        $request = AlibabaCloud::cloudAPI()
-                               ->v20160714()
-                               ->describeRegions()
-                               ->connectTimeout(15)
-                               ->timeout(20);
-
-        $result = $request->request();
-        self::assertArrayHasKey('Region', $result['Regions']);
+        $result = AlibabaCloud::mts()
+                              ->v20140618()
+                              ->queryFpImportResult()
+                              ->format('JSON')
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->request();
+        self::assertArrayHasKey('PageInfo', $result);
     }
 }
