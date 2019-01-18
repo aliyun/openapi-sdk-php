@@ -23,7 +23,7 @@ class EcsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId(\getenv('REGION_ID'))->asGlobalClient();
     }
 
     /**
