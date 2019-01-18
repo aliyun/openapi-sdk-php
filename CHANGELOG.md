@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.4 - 2019-01-15
+
+* Improve Test.
+* Improve Resolver.
+
 ## 1.0.3 - 2019-01-11
 
 * Support CloudAPI.
