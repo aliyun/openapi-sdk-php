@@ -163,6 +163,7 @@ try {
 
 ## 相关
 
+* [阿里云服务 Regions & Endpoints][endpoints]
 * [OpenAPI Explorer][open-api]
 * [Packagist][packagist]
 * [Composer][composer]
@@ -188,3 +189,4 @@ try {
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
 [request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E8%AF%B7%E6%B1%82
+[endpoints]: https://developer.aliyun.com/endpoints
