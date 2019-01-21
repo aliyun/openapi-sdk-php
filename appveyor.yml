@@ -2,6 +2,9 @@ build: off
 shallow_clone: false
 platform:
     - x64
+branches:
+    only:
+        - master
 
 # Install PHP/Composer and set PATH
 install:
