@@ -40,6 +40,5 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 $env = __DIR__ . '/../.env';
 if (is_readable($env)) {
-    $dotenv = new Dotenv();
-    $dotenv->load($env);
+    (new Dotenv())->load($env);
 }
