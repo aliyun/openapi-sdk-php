@@ -87,9 +87,9 @@ try {
 
 
 ## 推荐新语法
-请求之前，请 [了解客户端的用法][client]，请求之后，请 [了解结果对象][result]。
+请求之前，请[了解客户端的用法][client]，请求之后，请[了解结果对象][result]。
 
-> 目前仅支持部分阿里云产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起任何自定义请求。[API Explorer](https://api.aliyun.com) 提供在线调用阿里云产品，并动态生成 Alibaba Cloud Client for PHP 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+> 目前仅支持部分阿里云产品，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
 
 ```php
 <?php
