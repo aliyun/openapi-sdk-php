@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.5 - 2019-01-23
+
+* `AlibabaCloud\Dybaseapi\MNS` - Support MNS with Feature test.
+* Update readme.
+* Update bootstrap for test.
+
 ## 1.0.4 - 2019-01-15
 
 * Improve Test.
@@ -7,7 +13,7 @@
 
 ## 1.0.3 - 2019-01-11
 
-* Support CloudAPI.
+* `AlibabaCloud\CloudAPI` - Support CloudAPI.
 
 ## 1.0.2 - 2019-01-11
 
@@ -15,8 +21,8 @@
 
 ## 1.0.1 - 2019-01-09
 
-* Support NLS Filetrans.
-* Support NLS Cloud Meta.
+* `AlibabaCloud\NlsFiletrans` - Support NLS Filetrans.
+* `AlibabaCloud\NlsCloudMeta` - Support NLS Cloud Meta.
 
 ## 1.0.0 - 2019-01-07
 
