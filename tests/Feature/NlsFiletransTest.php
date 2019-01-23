@@ -25,8 +25,9 @@ class NlsFiletransTest extends TestCase
     }
 
     /**
-     * @throws ServerException
+     * @return string
      * @throws ClientException
+     * @throws ServerException
      */
     public function testSubmitTask()
     {
@@ -42,25 +43,31 @@ class NlsFiletransTest extends TestCase
                               ->connectTimeout(15)
                               ->timeout(20)
                               ->request();
+
         self::assertArrayHasKey('TaskId', $result);
+        return $result['TaskId'];
     }
 
     /**
-     * @throws ServerException
+     * @depends testSubmitTask
+     *
+     * @param $taskId
+     *
      * @throws ClientException
+     * @throws ServerException
      */
-    public function testGetTaskResult()
+    public function testGetTaskResult($taskId)
     {
         $result = AlibabaCloud::nlsFiletrans()
                               ->v20180817()
                               ->getTaskResult()
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
-                              ->withTaskId('id')
+                              ->withTaskId($taskId)
                               ->withDebug('true')
                               ->connectTimeout(15)
                               ->timeout(20)
                               ->request();
-        self::assertArrayHasKey('TaskId', $result);
+        self::assertEquals($taskId, $result['TaskId']);
     }
 
     /**
