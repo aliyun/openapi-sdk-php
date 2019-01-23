@@ -19,8 +19,8 @@
 ## 关于
 **Alibaba Cloud SDK for PHP** 是支持产品快捷访问的开发包，由 [Alibaba Cloud Client for PHP][client] 提供底层支持。
 
-## 发行说明
 
+## 发行说明
 我们在 `消除已知问题` 和 `兼容旧语法` 的原则上开发了新内核，增加了如下特性：
 - [支持 Composer][packagist]
 - [支持多客户端和客户端配置文件][clients]
@@ -29,12 +29,11 @@
 
 
 ## 要求
-
-您必须使用 PHP 5.5.0 或更高版本，如果您使用了 `RsaKeyPair` 客户端（仅支持日本站），还需要 [OpenSSL PHP 扩展][OpenSSL]。
+- 您必须使用 PHP 5.5.0 或更高版本。
+- 如果您使用了 `RsaKeyPair` 客户端（仅支持日本站），还需要 [OpenSSL PHP 扩展][OpenSSL]。
 
 
 ## 建议
-
 - 使用 [Composer][composer] 并优化自动加载 `composer dump-autoload --optimize`
 - 安装 [cURL][cURL] 7.16.2 或更高版本
 - 使用 [OPCache][OPCache]
@@ -42,8 +41,7 @@
 
 
 ## 安装
-
-1. 下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) ）
+1. 下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)）
 ```bash
 curl -sS https://getcomposer.org/installer | php
 ```
@@ -62,7 +60,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 ## 兼容旧语法
-
 新内核仍支持旧语法，但已标记 `@deprecated` 让 IDE 高亮提示，强烈建议开发者使用新语法，我们将在未来某个版本中完全移除旧语法。
 
 
@@ -90,7 +87,6 @@ try {
 
 
 ## 推荐新语法
-
 请求之前，请 [了解客户端的用法][client]，请求之后，请 [了解结果对象][result]。
 
 > 目前仅支持部分阿里云产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起任何自定义请求。[API Explorer](https://api.aliyun.com) 提供在线调用阿里云产品，并动态生成 Alibaba Cloud Client for PHP 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
@@ -162,7 +158,6 @@ try {
 
 
 ## 相关
-
 * [阿里云服务 Regions & Endpoints][endpoints]
 * [OpenAPI Explorer][open-api]
 * [Packagist][packagist]

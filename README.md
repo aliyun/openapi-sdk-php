@@ -19,8 +19,8 @@ English | [简体中文](./README-CN.md)
 ## About
 **Alibaba Cloud SDK for PHP** is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
-## Release Notes
 
+## Release Notes
 We developed a new kernel on the principle of `eliminating known issues` and `compatible with old grammar`, adding the following features:
 - [Support Composer][packagist]
 - [Support for multiple client and client profiles][clients]
@@ -29,12 +29,11 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 
 
 ## Requirements
-
-You must use PHP5.5.0 or later, if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL]. 
+- You must use PHP 5.5.0 or later.
+- if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL]. 
 
 
 ## Recommendations
-
 - Use [Composer][composer] and optimize automatic loading `composer dump-autoload --optimize`
 - Install [cURL][cURL] 7.16.2 or later version
 - Use [OPCache][OPCache]
@@ -42,7 +41,6 @@ You must use PHP5.5.0 or later, if you use the `RsaKeyPair` (Only Japan station 
 
 
 ## Installation
-
 1. Download and install Composer（Windows user please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
 ```bash
 curl -sS https://getcomposer.org/installer | php
@@ -62,7 +60,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 ## Compatible with old grammar
-
 The new kernel still supports the old syntax, but the `@deprecated` has been flagged to highlight the IDE. Developers are strongly encouraged to use the new syntax, and we will completely remove the old syntax in a future release.
 
 
@@ -90,7 +87,6 @@ try {
 
 
 ## Recommend new grammar
-
 Before request, please [Understanding the usage of the client][client], after request, please [Understanding the result object][result].
 
 > Currently only some Alibaba Cloud products are supported, you can use [Alibaba Cloud Client for PHP][request] to initiate any custom requests. [API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate Alibaba Cloud Client for PHP Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API. It is highly recommended.
@@ -162,7 +158,6 @@ try {
 
 
 ## References
-
 * [Alibaba Cloud Regions & Endpoints][endpoints]
 * [OpenAPI Explorer][open-api]
 * [Packagist][packagist]
