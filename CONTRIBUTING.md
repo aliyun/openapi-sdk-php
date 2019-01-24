@@ -1,54 +1,31 @@
-Contributing to Composer
-========================
+# Contributing to the Alibaba Cloud SDK for PHP
 
-Please note that this project is released with a
-[Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/).
-By participating in this project you agree to abide by its terms.
+We work hard to provide a high-quality and useful SDK for Alibaba Cloud, and
+we greatly value feedback and contributions from our community. Please submit
+your [issues][issues] or [pull requests][pull-requests] through GitHub.
 
-Reporting Issues
-----------------
+## Tips
 
-When reporting issues, please try to be as descriptive as possible, and include
-as much relevant information as you can. A step by step guide on how to
-reproduce the issue will greatly increase the chances of your issue being
-resolved in a timely manner.
+- The SDK is released under the [Apache license][license]. Any code you submit
+   will be released under that license. For substantial contributions, we may
+   ask you to sign a [Alibaba Documentation Corporate Contributor License 
+   Agreement (CLA)][cla].
+- We follow all of the relevant PSR recommendations from the [PHP Framework
+   Interop Group][php-fig]. Please submit code that follows these standards.
+   The [PHP CS Fixer][cs-fixer] tool can be helpful for formatting your code.
+   Your can use `composer fixer` to fix code.
+- We maintain a high percentage of code coverage in our unit tests. If you make
+   changes to the code, please add, update, and/or remove tests as appropriate.
+- If your code does not conform to the PSR standards, does not include adequate
+   tests, or does not contain a changelog document, we may ask you to update
+   your pull requests before we accept them. We also reserve the right to deny
+   any pull requests that do not align with our standards or goals.
 
-For example, if you are experiencing a problem while running one of the
-commands, please provide full output of said command in very very verbose mode
-(`-vvv`, e.g. `composer install -vvv`).
 
-If your issue involves installing, updating or resolving dependencies, the
-chance of us being able to reproduce your issue will be much higher if you
-share your `composer.json` with us.
-
-Security Reports
-----------------
-
-Please send any sensitive issue to [sdk-team@alibabacloud.com](mailto:sdk-team@alibabacloud.com). Thanks!
-
-Installation from Source
-------------------------
-
-Prior to contributing to Composer, you must be able to run the test suite.
-To achieve this, you need to acquire the Composer source code:
-
-1. Run `git clone https://github.com/composer/composer.git`
-2. Download the [`composer.phar`](https://getcomposer.org/composer.phar) executable
-3. Run Composer to get the dependencies: `cd composer && php ../composer.phar install`
-
-You can run the test suite by executing `vendor/bin/phpunit` when inside the
-composer directory, and run Composer by executing the `bin/composer`. To test
-your modified Composer code against another project, run `php
-/path/to/composer/bin/composer` inside that project's directory.
-
-Contributing policy
--------------------
-
-Fork the project, create a feature branch, and send us a pull request.
-
-To ensure a consistent code base, you should make sure the code follows
-the [PSR-2 Coding Standards](http://www.php-fig.org/psr/psr-2/). You can also
-run [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) with the
-configuration file that can be found in the project root directory.
-
-If you would like to help, take a look at the [list of open issues](https://github.com/composer/composer/issues).
+[issues]: https://github.com/aliyun/openapi-sdk-php/issues
+[pull-requests]: https://github.com/aliyun/openapi-sdk-php/pulls
+[license]: http://www.apache.org/licenses/LICENSE-2.0
+[cla]: https://alibaba-cla-2018.oss-cn-beijing.aliyuncs.com/Alibaba_Documentation_Open_Source_Corporate_CLA.pdf
+[php-fig]: http://php-fig.org
+[cs-fixer]: http://cs.sensiolabs.org/
+[docs-readme]: https://github.com/aliyun/openapi-sdk-php/blob/master/README.md
