@@ -11,7 +11,6 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @method static AddItem addItem(array $options = [])
  * @method static DeleteItem deleteItem(array $options = [])
- * @method static ImageSearchApiResolver imageSearchApiResolver(array $options = [])
  * @method static SearchItem searchItem(array $options = [])
  */
 class ImageSearch

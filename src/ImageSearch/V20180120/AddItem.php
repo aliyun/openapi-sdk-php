@@ -3,6 +3,7 @@
 namespace AlibabaCloud\ImageSearch\V20180120;
 
 use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\ImageSearch\V20180120\Traits\AddItemTrait;
 
 /**
  * Request of AddItem
@@ -11,6 +12,7 @@ use AlibabaCloud\Client\Request\RoaRequest;
  */
 class AddItem extends RoaRequest
 {
+    use AddItemTrait;
 
     /**
      * @var string
@@ -56,7 +58,7 @@ class AddItem extends RoaRequest
      */
     public function withInstanceName($instanceName)
     {
-        $this->data['InstanceName'] = $instanceName;
+        $this->data['InstanceName']             = $instanceName;
         $this->options['query']['instanceName'] = $instanceName;
 
         return $this;

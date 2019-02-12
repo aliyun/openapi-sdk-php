@@ -21,7 +21,7 @@ class ImageSearchTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hangzhou')->asGlobalClient();
+        )->regionId('cn-shanghai')->asGlobalClient();
     }
 
     /**
@@ -33,17 +33,52 @@ class ImageSearchTest extends TestCase
         $result = AlibabaCloud::imageSearch()
                               ->v20180120()
                               ->addItem()
-                              ->withInstanceName('name')
-                              ->options([
-                                            'form_params' => [
-                                                'item_id'      => 'item_id',
-                                                'cat_id'       => 'cat_id',
-                                                'crop'         => 'crop',
-                                                'region'       => 'region',
-                                                'cust_content' => 'cust_content',
-                                            ],
-                                        ])
+                              ->withInstanceName('sdktest')
+                              ->withCateId('0')
+                              ->withCustContent('{"key":"value"}')
+                              ->withItemId('1234')
+                              ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
                               ->request();
-        self::assertArrayHasKey('RequestId', $result);
+
+        self::assertArrayHasKey('Message', $result);
+        self::assertEquals('success', $result['Message']);
+    }
+
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     */
+    public function testSearchItem()
+    {
+        $result = AlibabaCloud::imageSearch()
+                              ->v20180120()
+                              ->searchItem()
+                              ->withInstanceName('sdktest')
+                              ->withNum(10)
+                              ->withStart(0)
+                              ->withCateId('0')
+                              ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                              ->request();
+
+        self::assertArrayHasKey('Message', $result);
+        self::assertEquals('success', $result['Message']);
+    }
+
+    /**
+     * @throws ClientException
+     * @throws ServerException
+     */
+    public function testDeleteItem()
+    {
+        $result = AlibabaCloud::imageSearch()
+                              ->v20180120()
+                              ->deleteItem()
+                              ->withInstanceName('sdktest')
+                              ->withItemId('1234')
+                              ->addPicture('picture')
+                              ->request();
+
+        self::assertArrayHasKey('Message', $result);
+        self::assertEquals('success', $result['Message']);
     }
 }
