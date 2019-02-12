@@ -19,11 +19,11 @@ try {
                           ->withSignName(\getenv('SMS_SIGN_NAME'))
                           ->withTemplateCode(\getenv('SMS_CODE'))
                           ->withTemplateParam(json_encode(
-                                                  [
+                              [
                                                       'score' => '100',
                                                       'bonus' => '100',
                                                   ],
-                                                  JSON_UNESCAPED_UNICODE
+                              JSON_UNESCAPED_UNICODE
                                               ))
                           ->request();
 
