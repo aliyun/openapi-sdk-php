@@ -37,7 +37,6 @@
         "symfony/dotenv": "^3.4",
         "friendsofphp/php-cs-fixer": "^2.2",
         "phpunit/phpunit": "^4.8",
-        "symfony/dotenv": "^3.4",
         "squizlabs/php_codesniffer": "^3.4",
         "symfony/var-dumper": "^3.4"
     },
@@ -102,6 +101,9 @@
         "prompts": [
             "AlibabaCloud\\DumpServices::dump",
             "@fixer"
+        ],
+        "release": [
+            "AlibabaCloud\\Release::release"
         ]
     }
 }
