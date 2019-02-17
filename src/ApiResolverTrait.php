@@ -28,12 +28,13 @@ trait ApiResolverTrait
             if (isset($arguments[0])) {
                 return new $class($arguments[0]);
             }
+
             return new $class();
         }
 
         throw new ClientException(
             "{$serviceName} contains no $api",
-            \ALIBABA_CLOUD_API_NOT_FOUND
+            'SDK.ApiNotFound'
         );
     }
 
@@ -79,11 +80,12 @@ trait ApiResolverTrait
         if (!isset($array[3])) {
             throw new ClientException(
                 'Get namespace error.',
-                \ALIBABA_CLOUD_PARSE_ERROR
+                'SDK.ParseError'
             );
         }
 
         unset($array[3]);
+
         return \implode('\\', $array);
     }
 }
