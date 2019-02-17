@@ -38,6 +38,9 @@ class ImageSearchTest extends TestCase
                               ->withCustContent('{"key":"value"}')
                               ->withItemId('1234')
                               ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                              ->connectTimeout(30)
+                              ->timeout(35)
                               ->request();
 
         self::assertArrayHasKey('Message', $result);
@@ -58,6 +61,11 @@ class ImageSearchTest extends TestCase
                               ->withStart(0)
                               ->withCateId('0')
                               ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                              ->connectTimeout(15)
+                              ->timeout(20)
+                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                              ->connectTimeout(30)
+                              ->timeout(35)
                               ->request();
 
         self::assertArrayHasKey('Message', $result);
@@ -76,6 +84,9 @@ class ImageSearchTest extends TestCase
                               ->withInstanceName('sdktest')
                               ->withItemId('1234')
                               ->addPicture('picture')
+                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                              ->connectTimeout(30)
+                              ->timeout(35)
                               ->request();
 
         self::assertArrayHasKey('Message', $result);

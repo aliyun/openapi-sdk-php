@@ -7,10 +7,17 @@ use Composer\Script\Event;
 /**
  * Class Release
  *
+ * @codeCoverageIgnore
  * @package AlibabaCloud\Client
  */
 class Release
 {
+
+    /**
+     * Version of the Client
+     */
+    const VERSION = '1.0.6';
+
     /**
      * @param Event $event
      */
@@ -29,7 +36,7 @@ class Release
      */
     private static function getCodeFile()
     {
-        return __DIR__ . '/Constants.php';
+        return __DIR__ . '/Release.php';
     }
 
     /**
@@ -61,12 +68,12 @@ class Release
      */
     private static function changeVersionInCode($version)
     {
+        $symbol  = "'";
         $content = preg_replace(
-            "/ALIBABA_CLOUD_SDK_VERSION\', \'(.*)\');/",
-            "const VERSION = '" . $version . "';",
+            "/const VERSION = \'(.*)\';/",
+            "const VERSION = $symbol$version$symbol;",
             self::getCodeContent()
         );
-
         file_put_contents(self::getCodeFile(), $content);
     }
 
@@ -79,8 +86,8 @@ class Release
         $content = preg_replace(
             '/# CHANGELOG/',
             '# CHANGELOG'
-            . PHP_EOL
-            . PHP_EOL
+            . "\n"
+            . "\n"
             . "## $version - " . date('Y-m-d')
             . self::log($changeLog),
             self::getChangeLogContent()
@@ -97,10 +104,10 @@ class Release
     private static function log($changeLog)
     {
         $logs   = explode('|', $changeLog);
-        $string = PHP_EOL;
+        $string = "\n";
         foreach ($logs as $log) {
             if ($log) {
-                $string .= "- $log." . PHP_EOL;
+                $string .= "- $log." . "\n";
             }
         }
 

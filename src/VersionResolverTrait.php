@@ -53,7 +53,7 @@ trait VersionResolverTrait
 
         throw new ClientException(
             "$serviceName Versions contains no {$version}",
-            \ALIBABA_CLOUD_VERSION_NOT_FOUND
+            'SDK.VersionNotFound'
         );
     }
 
