@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.7 - 2019-02-21
+- Add APIs for `VOD`.
+
+
 ## 1.0.6 - 2019-02-12
 - Support Image Search.
 
