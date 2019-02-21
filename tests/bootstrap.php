@@ -27,8 +27,9 @@ if (!ini_get('date.timezone')) {
 |
 */
 
-require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
-if (is_readable(__DIR__ . '/../.env')) {
-    (new Dotenv())->load(__DIR__ . '/../.env');
+$env = dirname(__DIR__) . DIRECTORY_SEPARATOR . '.env';
+if (is_readable($env)) {
+    (new Dotenv())->load($env);
 }
