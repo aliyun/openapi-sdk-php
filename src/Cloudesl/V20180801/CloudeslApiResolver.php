@@ -15,6 +15,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateStore createStore(array $options = [])
  * @method DeleteEslDevice deleteEslDevice(array $options = [])
  * @method DeleteItem deleteItem(array $options = [])
+ * @method DeleteItemBySkuId deleteItemBySkuId(array $options = [])
  * @method DeleteStore deleteStore(array $options = [])
  * @method DescribeAlarms describeAlarms(array $options = [])
  * @method DescribeCompany describeCompany(array $options = [])

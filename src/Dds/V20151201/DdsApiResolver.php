@@ -102,6 +102,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifyDynamicMode modifyDynamicMode(array $options = [])
  * @method ModifyGuardDomainMode modifyGuardDomainMode(array $options = [])
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
+ * @method ModifyInstanceVpcAuthMode modifyInstanceVpcAuthMode(array $options = [])
  * @method ModifyNodeSpec modifyNodeSpec(array $options = [])
  * @method ModifyParameter modifyParameter(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])

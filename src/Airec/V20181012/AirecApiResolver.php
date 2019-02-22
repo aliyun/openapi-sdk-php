@@ -29,6 +29,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListDataSource listDataSource(array $options = [])
  * @method ListDiversify listDiversify(array $options = [])
  * @method ListInstance listInstance(array $options = [])
+ * @method ListInstanceTask listInstanceTask(array $options = [])
  * @method ListMix listMix(array $options = [])
  * @method ModifyDataSource modifyDataSource(array $options = [])
  * @method ModifyDiversify modifyDiversify(array $options = [])

@@ -9,6 +9,7 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\TagINner\V20181109
  *
+ * @method InnerFixRegion innerFixRegion(array $options = [])
  * @method InnerListTagResources innerListTagResources(array $options = [])
  * @method InnerTagResources innerTagResources(array $options = [])
  * @method InnerUntagResources innerUntagResources(array $options = [])

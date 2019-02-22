@@ -20,6 +20,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateAndPublishSpecialContactFlow createAndPublishSpecialContactFlow(array $options = [])
  * @method CreateBatchJobs createBatchJobs(array $options = [])
  * @method CreateCCCPostOrder createCCCPostOrder(array $options = [])
+ * @method CreateCabInstance createCabInstance(array $options = [])
  * @method CreateContactFlow createContactFlow(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
