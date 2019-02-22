@@ -9,6 +9,7 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\Green\V20170823
  *
+ * @method CreatCustomOcrTemplate creatCustomOcrTemplate(array $options = [])
  * @method CreateCdiBag createCdiBag(array $options = [])
  * @method CreateCdiBaseBag createCdiBaseBag(array $options = [])
  * @method CreateImageLib createImageLib(array $options = [])
@@ -16,6 +17,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateKeywordLib createKeywordLib(array $options = [])
  * @method CreateWebSiteInstance createWebSiteInstance(array $options = [])
  * @method CreateWebsiteIndexPageBaseline createWebsiteIndexPageBaseline(array $options = [])
+ * @method DeleteCustomOcrTemplate deleteCustomOcrTemplate(array $options = [])
  * @method DeleteImageFromLib deleteImageFromLib(array $options = [])
  * @method DeleteImageLib deleteImageLib(array $options = [])
  * @method DeleteKeyword deleteKeyword(array $options = [])
@@ -26,6 +28,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeAuditContent describeAuditContent(array $options = [])
  * @method DescribeAuditContentItem describeAuditContentItem(array $options = [])
  * @method DescribeAuditSetting describeAuditSetting(array $options = [])
+ * @method DescribeCustomOcrTemplate describeCustomOcrTemplate(array $options = [])
  * @method DescribeImageFromLib describeImageFromLib(array $options = [])
  * @method DescribeImageLib describeImageLib(array $options = [])
  * @method DescribeImageUploadInfo describeImageUploadInfo(array $options = [])
@@ -64,6 +67,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method SendWebsiteFeedback sendWebsiteFeedback(array $options = [])
  * @method UpdateAppPackage updateAppPackage(array $options = [])
  * @method UpdateAuditSetting updateAuditSetting(array $options = [])
+ * @method UpdateCustomOcrTemplate updateCustomOcrTemplate(array $options = [])
  * @method UpdateImageLib updateImageLib(array $options = [])
  * @method UpdateKeywordLib updateKeywordLib(array $options = [])
  * @method UpdateNotificationSetting updateNotificationSetting(array $options = [])
@@ -74,6 +78,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method UpdateWebsiteInstanceStatus updateWebsiteInstanceStatus(array $options = [])
  * @method UpgradeCdiBaseBag upgradeCdiBaseBag(array $options = [])
  * @method UploadImageToLib uploadImageToLib(array $options = [])
+ * @method VerifyCustomOcrTemplate verifyCustomOcrTemplate(array $options = [])
  * @method VerifyEmail verifyEmail(array $options = [])
  * @method VerifyPhone verifyPhone(array $options = [])
  * @method VerifyWebsiteInstance verifyWebsiteInstance(array $options = [])

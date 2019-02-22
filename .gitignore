@@ -6,3 +6,4 @@
 /cache
 /.php_cs.cache
 /composer.lock
+/build/Xml/

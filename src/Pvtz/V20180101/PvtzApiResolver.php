@@ -24,6 +24,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeZoneRecords describeZoneRecords(array $options = [])
  * @method DescribeZoneVpcTree describeZoneVpcTree(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method SetProxyPattern setProxyPattern(array $options = [])
  * @method SetZoneRecordStatus setZoneRecordStatus(array $options = [])
  * @method UpdateZoneRecord updateZoneRecord(array $options = [])
  * @method UpdateZoneRemark updateZoneRemark(array $options = [])

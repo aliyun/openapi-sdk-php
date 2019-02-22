@@ -10,6 +10,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @package   AlibabaCloud\LinkFace\V20180720
  *
  * @method CreateGroup createGroup(array $options = [])
+ * @method DeleteDeviceAllGroup deleteDeviceAllGroup(array $options = [])
+ * @method DeleteDeviceGroup deleteDeviceGroup(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
  * @method QueryAddUserInfo queryAddUserInfo(array $options = [])
