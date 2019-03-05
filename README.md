@@ -40,6 +40,10 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 - In a production environment, do not use [Xdebug][xdebug]
 
 
+## Online Demo
+[API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API. **It is highly recommended**.
+
+
 ## Installation
 1. Download and install Composer（Windows user please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
 ```bash
