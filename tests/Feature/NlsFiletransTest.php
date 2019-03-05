@@ -36,7 +36,6 @@ class NlsFiletransTest extends TestCase
                               ->submitTask()
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
                               ->withTask(json_encode([
-                                                         'app_key'   => 'app_key',
                                                          'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
                                                      ]))
                               ->withDebug('true')
@@ -44,30 +43,26 @@ class NlsFiletransTest extends TestCase
                               ->timeout(20)
                               ->request();
 
-        self::assertArrayHasKey('TaskId', $result);
-        return $result['TaskId'];
+        self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
     }
 
     /**
-     * @depends testSubmitTask
-     *
-     * @param $taskId
-     *
      * @throws ClientException
      * @throws ServerException
      */
-    public function testGetTaskResult($taskId)
+    public function testGetTaskResult()
     {
         $result = AlibabaCloud::nlsFiletrans()
                               ->v20180817()
                               ->getTaskResult()
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
-                              ->withTaskId($taskId)
+                              ->withTaskId('FILE_TRANS_TASK_EXPIRED')
                               ->withDebug('true')
                               ->connectTimeout(15)
                               ->timeout(20)
                               ->request();
-        self::assertEquals($taskId, $result['TaskId']);
+
+        self::assertEquals('REQUEST_INVALID_TASK_ID', $result['StatusText']);
     }
 
     /**
@@ -85,8 +80,8 @@ class NlsFiletransTest extends TestCase
                               ->options([
                                             'query' => [
                                                 'Task'  => json_encode([
-                                                                           'app_key'   => 'app_key',
-                                                                           'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
+                                                                           'app_key_no' => 'app_key',
+                                                                           'file_link'  => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
                                                                        ]),
                                                 'Debug' => 'true',
                                             ],
@@ -95,6 +90,6 @@ class NlsFiletransTest extends TestCase
                               ->timeout(20)
                               ->request();
 
-        self::assertArrayHasKey('TaskId', $result);
+        self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
     }
 }

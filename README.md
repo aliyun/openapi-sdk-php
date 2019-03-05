@@ -176,9 +176,9 @@ try {
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
 [client]: https://github.com/aliyun/openapi-sdk-php-client#alibaba-cloud-client-for-php
-[clients]: https://github.com/aliyun/openapi-sdk-php-client#client
-[request]: https://github.com/aliyun/openapi-sdk-php-client#request
-[result]: https://github.com/aliyun/openapi-sdk-php-client#result
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Client-CN.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Request-CN.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Result-CN.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php
@@ -187,5 +187,4 @@ try {
 [OpenSSL]: http://php.net/manual/en/book.openssl.php
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README.md#request
 [endpoints]: https://developer.aliyun.com/endpoints

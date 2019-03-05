@@ -68,28 +68,4 @@ class EcsTest extends TestCase
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
-
-
-    /**
-     * @throws ServerException
-     * @throws ClientException
-     */
-    public function testDeleteKeyPairs()
-    {
-        //AlibabaCloud::ecs()->v20140526()->deleteKeyPairs()->withKeyPairNames()
-        $result = AlibabaCloud::rpcRequest()
-                              ->product('Ecs')
-            // ->scheme('https') // https | http
-                              ->version('2014-05-26')
-                              ->action('DeleteKeyPairs')
-                              ->method('POST')
-                              ->options([
-                                            'query' => [
-                                                'RegionId' => 'cn-shenzhen',
-                                                'KeyPairNames' => 'aliyunhongkong',
-                                                'SourceRegionId' => 'cn-shenzhen',
-                                            ],
-                                        ])
-                              ->request();
-    }
 }
