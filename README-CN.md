@@ -40,6 +40,10 @@
 - 生产环境中不要使用 [Xdebug][xdebug]
 
 
+## 在线示例
+[API Explorer](https://api.aliyun.com) 提供在线调用阿里云产品，并动态生成 SDK 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+
+
 ## 安装
 1. 下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)）
 ```bash
