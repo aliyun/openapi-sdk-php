@@ -35,8 +35,8 @@ class EcsTest extends TestCase
         $result = AlibabaCloud::ecs()
                               ->v20140526()
                               ->describeRegions()
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
@@ -49,8 +49,8 @@ class EcsTest extends TestCase
     {
         $result = EcsVersion::v20140526()
                             ->describeRegions()
-                            ->connectTimeout(15)
-                            ->timeout(20)
+                            ->connectTimeout(20)
+                            ->timeout(25)
                             ->request();
 
         self::assertArrayHasKey('Region', $result['Regions']);
@@ -63,8 +63,8 @@ class EcsTest extends TestCase
     public function testEcsInApiStaticMethod()
     {
         $result = Ecs::describeRegions()
-                     ->connectTimeout(15)
-                     ->timeout(20)
+                     ->connectTimeout(20)
+                     ->timeout(25)
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }

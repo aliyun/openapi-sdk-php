@@ -34,8 +34,8 @@ class NlsCloudMetaTest extends TestCase
                               ->v20180518()
                               ->createToken()
                               ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('NlsRequestId', $result);
     }
@@ -53,8 +53,8 @@ class NlsCloudMetaTest extends TestCase
                               ->method('POST')
                               ->action('CreateToken')
                               ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('NlsRequestId', $result);
     }
