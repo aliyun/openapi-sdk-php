@@ -176,9 +176,9 @@ try {
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
 [client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#alibaba-cloud-client-for-php
-[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E5%AE%A2%E6%88%B7%E7%AB%AF
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E8%AF%B7%E6%B1%82
-[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E7%BB%93%E6%9E%9C
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Client-EN.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Request-EN.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Result-EN.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php
@@ -187,5 +187,4 @@ try {
 [OpenSSL]: http://php.net/manual/en/book.openssl.php
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#%E8%AF%B7%E6%B1%82
 [endpoints]: https://developer.aliyun.com/endpoints
