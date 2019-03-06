@@ -35,8 +35,8 @@ class AegisTest extends TestCase
                               ->describeAlarmEventDetail()
                               ->withAlarmUniqueInfo('info')
                               ->withFrom('from')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('RequestId', $result);
     }

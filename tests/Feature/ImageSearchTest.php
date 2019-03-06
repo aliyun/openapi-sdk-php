@@ -61,8 +61,6 @@ class ImageSearchTest extends TestCase
                               ->withStart(0)
                               ->withCateId('0')
                               ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                              ->connectTimeout(15)
-                              ->timeout(20)
                               ->host('imagesearch.cn-shanghai.aliyuncs.com')
                               ->connectTimeout(30)
                               ->timeout(35)

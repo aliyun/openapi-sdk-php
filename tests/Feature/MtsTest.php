@@ -34,8 +34,8 @@ class MtsTest extends TestCase
                               ->v20140618()
                               ->queryFpImportResult()
                               ->format('JSON')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('PageInfo', $result);
     }

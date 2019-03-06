@@ -36,8 +36,8 @@ class RamTest extends TestCase
                               ->options([
                                             'verify' => false,
                                         ])
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertEquals(
             \getenv('ACCESS_KEY_ID'),
