@@ -35,8 +35,8 @@ class RdsTest extends TestCase
                         ->deleteDatabase()
                         ->withDBInstanceId(\time())
                         ->withDBName('name')
-                        ->connectTimeout(15)
-                        ->timeout(20)
+                        ->connectTimeout(20)
+                        ->timeout(25)
                         ->request();
         } catch (ServerException $e) {
             self::assertEquals(

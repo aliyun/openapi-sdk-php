@@ -35,8 +35,8 @@ class EcsTest extends TestCase
         $result = AlibabaCloud::ecs()
                               ->v20140526()
                               ->describeRegions()
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
@@ -49,8 +49,8 @@ class EcsTest extends TestCase
     {
         $result = EcsVersion::v20140526()
                             ->describeRegions()
-                            ->connectTimeout(15)
-                            ->timeout(20)
+                            ->connectTimeout(20)
+                            ->timeout(25)
                             ->request();
 
         self::assertArrayHasKey('Region', $result['Regions']);
@@ -63,33 +63,9 @@ class EcsTest extends TestCase
     public function testEcsInApiStaticMethod()
     {
         $result = Ecs::describeRegions()
-                     ->connectTimeout(15)
-                     ->timeout(20)
+                     ->connectTimeout(20)
+                     ->timeout(25)
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
-    }
-
-
-    /**
-     * @throws ServerException
-     * @throws ClientException
-     */
-    public function testDeleteKeyPairs()
-    {
-        //AlibabaCloud::ecs()->v20140526()->deleteKeyPairs()->withKeyPairNames()
-        $result = AlibabaCloud::rpcRequest()
-                              ->product('Ecs')
-            // ->scheme('https') // https | http
-                              ->version('2014-05-26')
-                              ->action('DeleteKeyPairs')
-                              ->method('POST')
-                              ->options([
-                                            'query' => [
-                                                'RegionId' => 'cn-shenzhen',
-                                                'KeyPairNames' => 'aliyunhongkong',
-                                                'SourceRegionId' => 'cn-shenzhen',
-                                            ],
-                                        ])
-                              ->request();
     }
 }

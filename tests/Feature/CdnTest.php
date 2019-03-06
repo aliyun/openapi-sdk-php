@@ -33,8 +33,8 @@ class CdnTest extends TestCase
         $request = AlibabaCloud::cdn()->v20180510()
                                ->describeIpInfo()
                                ->withIP('192.168.0.1')
-                               ->connectTimeout(15)
-                               ->timeout(20)
+                               ->connectTimeout(20)
+                               ->timeout(25)
                                ->withSecurityToken('token');
 
         $result = $request->request();

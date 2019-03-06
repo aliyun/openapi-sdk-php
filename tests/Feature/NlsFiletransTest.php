@@ -39,8 +39,8 @@ class NlsFiletransTest extends TestCase
                                                          'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
                                                      ]))
                               ->withDebug('true')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
 
         self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
@@ -58,8 +58,8 @@ class NlsFiletransTest extends TestCase
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
                               ->withTaskId('FILE_TRANS_TASK_EXPIRED')
                               ->withDebug('true')
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
 
         self::assertEquals('REQUEST_INVALID_TASK_ID', $result['StatusText']);
@@ -86,8 +86,8 @@ class NlsFiletransTest extends TestCase
                                                 'Debug' => 'true',
                                             ],
                                         ])
-                              ->connectTimeout(15)
-                              ->timeout(20)
+                              ->connectTimeout(20)
+                              ->timeout(25)
                               ->request();
 
         self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
