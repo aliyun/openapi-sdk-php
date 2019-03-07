@@ -16,6 +16,9 @@ use PHPUnit\Framework\TestCase;
  */
 class EcsTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();

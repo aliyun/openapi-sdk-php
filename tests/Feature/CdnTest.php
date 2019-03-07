@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class CdnTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();

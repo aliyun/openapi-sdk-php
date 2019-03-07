@@ -6,13 +6,13 @@ use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 
-// Create a global client
-AlibabaCloud::accessKeyClient(
-    \getenv('ACCESS_KEY_ID'),
-    \getenv('ACCESS_KEY_SECRET')
-)->regionId('cn-shanghai')->asGlobalClient();
-
 try {
+    // Create a global client
+    AlibabaCloud::accessKeyClient(
+        \getenv('ACCESS_KEY_ID'),
+        \getenv('ACCESS_KEY_SECRET')
+    )->regionId('cn-shanghai')->asDefaultClient();
+
     // Submit task
     $result = AlibabaCloud::nlsFiletrans()
                           ->v20180817()

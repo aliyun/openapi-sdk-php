@@ -5,13 +5,13 @@ use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 
-// Create a global client
-AlibabaCloud::accessKeyClient(
-    \getenv('SMS_ACCESS_KEY_ID'),
-    \getenv('SMS_ACCESS_KEY_SECRET')
-)->regionId('cn-shanghai')->asGlobalClient();
-
 try {
+    // Create a global client
+    AlibabaCloud::accessKeyClient(
+        \getenv('SMS_ACCESS_KEY_ID'),
+        \getenv('SMS_ACCESS_KEY_SECRET')
+    )->regionId('cn-shanghai')->asDefaultClient();
+
     $result = AlibabaCloud::dysmsapi()
                           ->v20170525()
                           ->sendSms()

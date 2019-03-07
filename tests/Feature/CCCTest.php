@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class CCCTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
