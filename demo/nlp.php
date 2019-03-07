@@ -5,14 +5,14 @@ use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 
-// Create a global client
-AlibabaCloud::accessKeyClient(
-    \getenv('ACCESS_KEY_ID'),
-    \getenv('ACCESS_KEY_SECRET')
-)->regionId('cn-shanghai')->asGlobalClient();
-
 try {
-    $result = AlibabaCloud::roaRequest()
+    // Create a global client
+    AlibabaCloud::accessKeyClient(
+        \getenv('ACCESS_KEY_ID'),
+        \getenv('ACCESS_KEY_SECRET')
+    )->regionId('cn-shanghai')->asDefaultClient();
+
+    $result = AlibabaCloud::roa()
                           ->product('Nlp')
                           ->version('2018-04-08')
                           ->pathPattern('/nlp/api/wordpos/[Domain]')
