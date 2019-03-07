@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.0.9 - 2019-03-07
+- Optimize api analysis.
+
+
+## 1.0.8 - 2019-02-22
+- 238 interfaces added to support 29 products.
+
+
 ## 1.0.7 - 2019-02-21
 - Add APIs for `VOD`.
 
