@@ -13,6 +13,9 @@ use PHPUnit\Framework\TestCase;
  */
 class JaqTest extends TestCase
 {
+    /**
+     * @throws \AlibabaCloud\Client\Exception\ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -20,7 +23,7 @@ class JaqTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hanghou')->asGlobalClient();
+        )->regionId('cn-hanghou')->asDefaultClient();
     }
 
     public function testJaq()

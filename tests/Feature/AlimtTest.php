@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class AlimtTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -21,7 +24,7 @@ class AlimtTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hangzhou')->asGlobalClient();
+        )->regionId('cn-hangzhou')->asDefaultClient();
     }
 
     /**

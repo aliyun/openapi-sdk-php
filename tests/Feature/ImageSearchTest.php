@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class ImageSearchTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -21,7 +24,7 @@ class ImageSearchTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     /**

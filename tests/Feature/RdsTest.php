@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class RdsTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -21,7 +24,7 @@ class RdsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId(\getenv('REGION_ID'))->asGlobalClient();
+        )->regionId(\getenv('REGION_ID'))->asDefaultClient();
     }
 
     /**

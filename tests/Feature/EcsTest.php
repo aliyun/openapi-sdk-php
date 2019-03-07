@@ -16,6 +16,9 @@ use PHPUnit\Framework\TestCase;
  */
 class EcsTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -23,7 +26,7 @@ class EcsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId(\getenv('REGION_ID'))->asGlobalClient();
+        )->regionId(\getenv('REGION_ID'))->asDefaultClient();
     }
 
     /**

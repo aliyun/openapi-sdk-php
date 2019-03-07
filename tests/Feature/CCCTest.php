@@ -14,13 +14,16 @@ use PHPUnit\Framework\TestCase;
  */
 class CCCTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
 
         AlibabaCloud::bearerTokenClient(
             \getenv('BEARER_TOKEN')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     /**

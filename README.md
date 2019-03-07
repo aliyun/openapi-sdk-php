@@ -105,7 +105,7 @@ use AlibabaCloud\Client\Exception\ServerException;
 // Set up a global client
 AlibabaCloud::accessKeyClient('foo', 'bar')
             ->regionId('cn-hangzhou')
-            ->asGlobalClient();
+            ->asDefaultClient();
 
 try {
     // Access product APIs

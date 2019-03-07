@@ -14,6 +14,9 @@ use PHPUnit\Framework\TestCase;
  */
 class NlsCloudMetaTest extends TestCase
 {
+    /**
+     * @throws ClientException
+     */
     public function setUp()
     {
         parent::setUp();
@@ -21,7 +24,7 @@ class NlsCloudMetaTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     /**
@@ -46,7 +49,7 @@ class NlsCloudMetaTest extends TestCase
      */
     public function testWithClientMethod()
     {
-        $result = AlibabaCloud::roaRequest()
+        $result = AlibabaCloud::roa()
                               ->pathPattern('/pop/2018-05-18/tokens')
                               ->product('nls-cloud-meta')
                               ->version('2018-05-18')
