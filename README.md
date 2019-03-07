@@ -91,7 +91,7 @@ try {
 
 
 ## Recommend new grammar
-Before request, please [Understanding the usage of the client][client], after request, please [Understanding the result object][result].
+Before request, please [Understanding the Clients][clients], after request, please [Understanding the Result][result].
 
 > Currently only some Alibaba Cloud products are supported. For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [API Explorer](https://api.aliyun.com) to generate Alibaba Cloud Client for PHP code online.
 
