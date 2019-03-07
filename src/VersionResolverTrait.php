@@ -82,7 +82,7 @@ trait VersionResolverTrait
         }
         throw new ClientException(
             'Service name not found.',
-            \ALIBABA_CLOUD_SERVICE_NOT_FOUND
+            'SDK.ServiceNotFound'
         );
     }
 }
