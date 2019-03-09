@@ -45,6 +45,10 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 
 
 ## Installation
+> To install Alibaba SDK Client for PHP, you must know how to use [Composer][composer].
+
+<br/>
+
 1. Download and install Composer（Windows user please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
 ```bash
 curl -sS https://getcomposer.org/installer | php
