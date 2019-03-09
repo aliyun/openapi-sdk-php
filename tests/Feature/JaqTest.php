@@ -13,6 +13,9 @@ use PHPUnit\Framework\TestCase;
  */
 class JaqTest extends TestCase
 {
+    /**
+     * @throws \AlibabaCloud\Client\Exception\ClientException
+     */
     public function setUp()
     {
         parent::setUp();
