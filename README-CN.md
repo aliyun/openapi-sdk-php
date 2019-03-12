@@ -45,6 +45,8 @@
 
 
 ## 安装
+> 安装 Alibaba Cloud SDK for PHP，您必须掌握如何使用 [Composer][composer]。
+
 1. 下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)）
 ```bash
 curl -sS https://getcomposer.org/installer | php
@@ -94,6 +96,8 @@ try {
 请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
 
 > 目前仅支持部分阿里云产品，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
+
+<br/>
 
 ```php
 <?php
