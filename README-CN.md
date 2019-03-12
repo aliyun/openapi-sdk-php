@@ -3,17 +3,18 @@
 
 <p align="center"><img src="./src/Aliyun.svg"></p>
 <p align="center">
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://badge.fury.io/ph/alibabacloud%2Fsdk.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/stable" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/downloads" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/downloads" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/license" alt="License"></a>
 <br/>
+<a href="https://codecov.io/gh/aliyun/openapi-sdk-php"><img src="https://codecov.io/gh/aliyun/openapi-sdk-php/branch/master/graph/badge.svg" alt="codecov"></a>
 <a href="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php"><img src="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/quality-score.png" alt="Scrutinizer Code Quality"></a>
 <a href="https://travis-ci.org/aliyun/openapi-sdk-php"><img src="https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master" alt="Travis Build Status"></a>
 <a href="https://ci.appveyor.com/project/songshenzong/openapi-sdk-php/branch/master"><img src="https://ci.appveyor.com/api/projects/status/ttsf2ugc88dqyn1o/branch/master?svg=true" alt="Appveyor Build Status"></a>
-<a href="https://codecov.io/gh/aliyun/openapi-sdk-php"><img src="https://codecov.io/gh/aliyun/openapi-sdk-php/branch/master/graph/badge.svg" alt="codecov"></a>
 <a href="https://scrutinizer-ci.com/code-intelligence"><img src="https://scrutinizer-ci.com/g/aliyun/openapi-sdk-php/badges/code-intelligence.svg" alt="Code Intelligence Status"></a>
-</p> 
+</p>
 
 
 ## 关于
@@ -180,9 +181,9 @@ try {
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
 [client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-CN.md#alibaba-cloud-client-for-php
-[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Client-CN.md
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Request-CN.md
-[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/Result-CN.md
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/2-Client-CN.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/3-Request-CN.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/4-Result-CN.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php
