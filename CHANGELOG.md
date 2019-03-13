@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.10 - 2019-03-13
+- Update Docs.
+
+
 ## 1.0.9 - 2019-03-07
 - Optimize api analysis.
 
