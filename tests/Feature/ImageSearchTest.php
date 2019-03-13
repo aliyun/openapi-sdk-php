@@ -30,6 +30,8 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
+     * @expectedException \AlibabaCloud\Client\Exception\ServerException
+     * @expectedExceptionMessageRegExp /Your instance is unavailable./
      */
     public function testAddItem()
     {
@@ -53,6 +55,8 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
+     * @expectedException \AlibabaCloud\Client\Exception\ServerException
+     * @expectedExceptionMessageRegExp /Your instance is unavailable./
      */
     public function testSearchItem()
     {
@@ -76,6 +80,8 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
+     * @expectedException \AlibabaCloud\Client\Exception\ServerException
+     * @expectedExceptionMessageRegExp /Your instance is unavailable./
      */
     public function testDeleteItem()
     {
