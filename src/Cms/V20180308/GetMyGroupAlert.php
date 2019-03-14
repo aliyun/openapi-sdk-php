@@ -2,48 +2,23 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetMyGroupAlert
+ * Api GetMyGroupAlert
  *
  * @method string getGroupId()
  * @method string getAlertName()
  */
-class GetMyGroupAlert extends RpcRequest
+class GetMyGroupAlert extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetMyGroupAlert';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $groupId
@@ -56,18 +31,6 @@ class GetMyGroupAlert extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertName() instead.
-     *
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function setAlertName($alertName)
-    {
-        return $this->withAlertName($alertName);
     }
 
     /**

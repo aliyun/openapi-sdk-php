@@ -49,4 +49,24 @@ class CCCTest extends TestCase
             );
         }
     }
+
+    public function testSetMethod()
+    {
+        $with = AlibabaCloud::cCC()
+                            ->v20170705()
+                            ->listPhoneNumbers()
+                            ->host('ccc.cn-shanghai.aliyuncs.com')
+                            ->withInstanceId('id')
+                            ->connectTimeout(20)
+                            ->timeout(25);
+
+        $set = AlibabaCloud::cCC()
+                           ->v20170705()
+                           ->listPhoneNumbers()
+                           ->host('ccc.cn-shanghai.aliyuncs.com')
+                           ->setInstanceId('id')
+                           ->connectTimeout(20)
+                           ->timeout(25);
+        self::assertTrue(json_encode($set) === json_encode($with));
+    }
 }

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateConfiguration
+ * Api CreateConfiguration
  *
  * @method string getSourceIp()
  * @method string getConfigurationName()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getApplyType()
  * @method string getScene()
  */
-class CreateConfiguration extends RpcRequest
+class CreateConfiguration extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'afs';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateConfiguration';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -60,18 +33,6 @@ class CreateConfiguration extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigurationName() instead.
-     *
-     * @param string $configurationName
-     *
-     * @return $this
-     */
-    public function setConfigurationName($configurationName)
-    {
-        return $this->withConfigurationName($configurationName);
     }
 
     /**
@@ -88,18 +49,6 @@ class CreateConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxPV() instead.
-     *
-     * @param string $maxPV
-     *
-     * @return $this
-     */
-    public function setMaxPV($maxPV)
-    {
-        return $this->withMaxPV($maxPV);
-    }
-
-    /**
      * @param string $maxPV
      *
      * @return $this
@@ -110,18 +59,6 @@ class CreateConfiguration extends RpcRequest
         $this->options['query']['MaxPV'] = $maxPV;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigurationMethod() instead.
-     *
-     * @param string $configurationMethod
-     *
-     * @return $this
-     */
-    public function setConfigurationMethod($configurationMethod)
-    {
-        return $this->withConfigurationMethod($configurationMethod);
     }
 
     /**
@@ -138,18 +75,6 @@ class CreateConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withApplyType() instead.
-     *
-     * @param string $applyType
-     *
-     * @return $this
-     */
-    public function setApplyType($applyType)
-    {
-        return $this->withApplyType($applyType);
-    }
-
-    /**
      * @param string $applyType
      *
      * @return $this
@@ -160,18 +85,6 @@ class CreateConfiguration extends RpcRequest
         $this->options['query']['ApplyType'] = $applyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

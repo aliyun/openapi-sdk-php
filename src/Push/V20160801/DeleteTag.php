@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteTag
+ * Api DeleteTag
  *
  * @method string getTagName()
  * @method string getAppKey()
  */
-class DeleteTag extends RpcRequest
+class DeleteTag extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Push';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteTag';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
-    }
 
     /**
      * @param string $tagName
@@ -56,18 +29,6 @@ class DeleteTag extends RpcRequest
         $this->options['query']['TagName'] = $tagName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**

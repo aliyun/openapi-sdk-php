@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListPushRecords
+ * Api ListPushRecords
  *
  * @method string getPageSize()
  * @method string getEndTime()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPage()
  * @method string getPushType()
  */
-class ListPushRecords extends RpcRequest
+class ListPushRecords extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Push';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListPushRecords';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
 
     /**
      * @param string $pageSize
@@ -60,18 +33,6 @@ class ListPushRecords extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -88,18 +49,6 @@ class ListPushRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -110,18 +59,6 @@ class ListPushRecords extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -138,18 +75,6 @@ class ListPushRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -160,18 +85,6 @@ class ListPushRecords extends RpcRequest
         $this->options['query']['Page'] = $page;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPushType() instead.
-     *
-     * @param string $pushType
-     *
-     * @return $this
-     */
-    public function setPushType($pushType)
-    {
-        return $this->withPushType($pushType);
     }
 
     /**

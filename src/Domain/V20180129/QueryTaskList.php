@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTaskList
+ * Api QueryTaskList
  *
  * @method string getBeginCreateTime()
  * @method string getEndCreateTime()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getPageNum()
  */
-class QueryTaskList extends RpcRequest
+class QueryTaskList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTaskList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBeginCreateTime() instead.
-     *
-     * @param string $beginCreateTime
-     *
-     * @return $this
-     */
-    public function setBeginCreateTime($beginCreateTime)
-    {
-        return $this->withBeginCreateTime($beginCreateTime);
-    }
 
     /**
      * @param string $beginCreateTime
@@ -60,18 +33,6 @@ class QueryTaskList extends RpcRequest
         $this->options['query']['BeginCreateTime'] = $beginCreateTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndCreateTime() instead.
-     *
-     * @param string $endCreateTime
-     *
-     * @return $this
-     */
-    public function setEndCreateTime($endCreateTime)
-    {
-        return $this->withEndCreateTime($endCreateTime);
     }
 
     /**
@@ -88,18 +49,6 @@ class QueryTaskList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -110,18 +59,6 @@ class QueryTaskList extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -138,18 +75,6 @@ class QueryTaskList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -160,18 +85,6 @@ class QueryTaskList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

@@ -2,12 +2,13 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeNetworkInterfaces
+ * Api DescribeNetworkInterfaces
  *
  * @method string getResourceOwnerId()
+ * @method string getServiceManaged()
  * @method string getSecurityGroupId()
  * @method string getType()
  * @method string getPageNumber()
@@ -24,40 +25,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPrimaryIpAddress()
  * @method array getNetworkInterfaceId()
  */
-class DescribeNetworkInterfaces extends RpcRequest
+class DescribeNetworkInterfaces extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeNetworkInterfaces';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -73,15 +49,16 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
+     * @param string $serviceManaged
      *
      * @return $this
      */
-    public function setSecurityGroupId($securityGroupId)
+    public function withServiceManaged($serviceManaged)
     {
-        return $this->withSecurityGroupId($securityGroupId);
+        $this->data['ServiceManaged'] = $serviceManaged;
+        $this->options['query']['ServiceManaged'] = $serviceManaged;
+
+        return $this;
     }
 
     /**
@@ -98,18 +75,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -120,18 +85,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -148,18 +101,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -173,18 +114,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -195,28 +124,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -236,18 +143,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkInterfaceName() instead.
-     *
-     * @param string $networkInterfaceName
-     *
-     * @return $this
-     */
-    public function setNetworkInterfaceName($networkInterfaceName)
-    {
-        return $this->withNetworkInterfaceName($networkInterfaceName);
-    }
-
-    /**
      * @param string $networkInterfaceName
      *
      * @return $this
@@ -258,18 +153,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['NetworkInterfaceName'] = $networkInterfaceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -286,18 +169,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -308,18 +179,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -336,18 +195,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -358,18 +205,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -386,18 +221,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -411,18 +234,6 @@ class DescribeNetworkInterfaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPrimaryIpAddress() instead.
-     *
-     * @param string $primaryIpAddress
-     *
-     * @return $this
-     */
-    public function setPrimaryIpAddress($primaryIpAddress)
-    {
-        return $this->withPrimaryIpAddress($primaryIpAddress);
-    }
-
-    /**
      * @param string $primaryIpAddress
      *
      * @return $this
@@ -433,28 +244,6 @@ class DescribeNetworkInterfaces extends RpcRequest
         $this->options['query']['PrimaryIpAddress'] = $primaryIpAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getNetworkInterfaceId() instead.
-     *
-     * @return array
-     */
-    public function getNetworkInterfaceIds()
-    {
-        return $this->getNetworkInterfaceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkInterfaceId() instead.
-     *
-     * @param array $networkInterfaceIds
-     *
-     * @return $this
-     */
-    public function setNetworkInterfaceIds(array $networkInterfaceIds)
-    {
-        return $this->withNetworkInterfaceId($networkInterfaceIds);
     }
 
     /**

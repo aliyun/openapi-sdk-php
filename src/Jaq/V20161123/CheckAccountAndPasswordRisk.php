@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Jaq\V20161123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckAccountAndPasswordRisk
+ * Api CheckAccountAndPasswordRisk
  *
  * @method string getAccountName()
  * @method string getPasswordHash()
  * @method string getCallerName()
  */
-class CheckAccountAndPasswordRisk extends RpcRequest
+class CheckAccountAndPasswordRisk extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jaq';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckAccountAndPasswordRisk';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
 
     /**
      * @param string $accountName
@@ -60,18 +33,6 @@ class CheckAccountAndPasswordRisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPasswordHash() instead.
-     *
-     * @param string $passwordHash
-     *
-     * @return $this
-     */
-    public function setPasswordHash($passwordHash)
-    {
-        return $this->withPasswordHash($passwordHash);
-    }
-
-    /**
      * @param string $passwordHash
      *
      * @return $this
@@ -82,18 +43,6 @@ class CheckAccountAndPasswordRisk extends RpcRequest
         $this->options['query']['PasswordHash'] = $passwordHash;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
     }
 
     /**

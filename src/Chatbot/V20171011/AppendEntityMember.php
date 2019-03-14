@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AppendEntityMember
+ * Api AppendEntityMember
  *
  * @method string getMember()
  * @method string getEntityId()
  * @method string getApplyType()
  */
-class AppendEntityMember extends RpcRequest
+class AppendEntityMember extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'AppendEntityMember';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMember() instead.
-     *
-     * @param string $member
-     *
-     * @return $this
-     */
-    public function setMember($member)
-    {
-        return $this->withMember($member);
-    }
 
     /**
      * @param string $member
@@ -65,18 +35,6 @@ class AppendEntityMember extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntityId() instead.
-     *
-     * @param string $entityId
-     *
-     * @return $this
-     */
-    public function setEntityId($entityId)
-    {
-        return $this->withEntityId($entityId);
-    }
-
-    /**
      * @param string $entityId
      *
      * @return $this
@@ -87,18 +45,6 @@ class AppendEntityMember extends RpcRequest
         $this->options['query']['EntityId'] = $entityId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyType() instead.
-     *
-     * @param string $applyType
-     *
-     * @return $this
-     */
-    public function setApplyType($applyType)
-    {
-        return $this->withApplyType($applyType);
     }
 
     /**

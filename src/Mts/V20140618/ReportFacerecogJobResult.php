@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReportFacerecogJobResult
+ * Api ReportFacerecogJobResult
  *
  * @method string getJobId()
  * @method string getResourceOwnerId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDetails()
  * @method string getOwnerId()
  */
-class ReportFacerecogJobResult extends RpcRequest
+class ReportFacerecogJobResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReportFacerecogJobResult';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
-    }
 
     /**
      * @param string $jobId
@@ -66,18 +36,6 @@ class ReportFacerecogJobResult extends RpcRequest
         $this->options['query']['JobId'] = $jobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +52,6 @@ class ReportFacerecogJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +62,6 @@ class ReportFacerecogJobResult extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFacerecog() instead.
-     *
-     * @param string $facerecog
-     *
-     * @return $this
-     */
-    public function setFacerecog($facerecog)
-    {
-        return $this->withFacerecog($facerecog);
     }
 
     /**
@@ -144,18 +78,6 @@ class ReportFacerecogJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class ReportFacerecogJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDetails() instead.
-     *
-     * @param string $details
-     *
-     * @return $this
-     */
-    public function setDetails($details)
-    {
-        return $this->withDetails($details);
-    }
-
-    /**
      * @param string $details
      *
      * @return $this
@@ -191,18 +101,6 @@ class ReportFacerecogJobResult extends RpcRequest
         $this->options['query']['Details'] = $details;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,56 +2,26 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBizItems
+ * Api QueryBizItems
  *
  * @method string getBizId()
- * @method string getSubBizId()
  * @method string getPageSize()
- * @method string getPageNumber()
  * @method string getUserId()
+ * @method string getPageNumber()
+ * @method string getSubBizId()
  */
-class QueryBizItems extends RpcRequest
+class QueryBizItems extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBizItems';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
 
     /**
      * @param string $bizId
@@ -64,43 +34,6 @@ class QueryBizItems extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubBizId() instead.
-     *
-     * @param string $subBizId
-     *
-     * @return $this
-     */
-    public function setSubBizId($subBizId)
-    {
-        return $this->withSubBizId($subBizId);
-    }
-
-    /**
-     * @param string $subBizId
-     *
-     * @return $this
-     */
-    public function withSubBizId($subBizId)
-    {
-        $this->data['SubBizId'] = $subBizId;
-        $this->options['query']['SubBizId'] = $subBizId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -117,15 +50,16 @@ class QueryBizItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
+     * @param string $userId
      *
      * @return $this
      */
-    public function setPageNumber($pageNumber)
+    public function withUserId($userId)
     {
-        return $this->withPageNumber($pageNumber);
+        $this->data['UserId'] = $userId;
+        $this->options['query']['UserId'] = $userId;
+
+        return $this;
     }
 
     /**
@@ -142,26 +76,14 @@ class QueryBizItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
+     * @param string $subBizId
      *
      * @return $this
      */
-    public function setUserId($userId)
+    public function withSubBizId($subBizId)
     {
-        return $this->withUserId($userId);
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
+        $this->data['SubBizId'] = $subBizId;
+        $this->options['query']['SubBizId'] = $subBizId;
 
         return $this;
     }

@@ -2,14 +2,15 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyScheduledTask
+ * Api ModifyScheduledTask
  *
  * @method string getLaunchTime()
  * @method string getResourceOwnerId()
  * @method string getScheduledAction()
+ * @method string getMaxValue()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
  * @method string getDescription()
@@ -17,50 +18,21 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRecurrenceValue()
  * @method string getLaunchExpirationTime()
  * @method string getRecurrenceEndTime()
+ * @method string getMinValue()
  * @method string getScheduledTaskName()
  * @method string getTaskEnabled()
  * @method string getScheduledTaskId()
  * @method string getRecurrenceType()
  */
-class ModifyScheduledTask extends RpcRequest
+class ModifyScheduledTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyScheduledTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTime() instead.
-     *
-     * @param string $launchTime
-     *
-     * @return $this
-     */
-    public function setLaunchTime($launchTime)
-    {
-        return $this->withLaunchTime($launchTime);
-    }
 
     /**
      * @param string $launchTime
@@ -73,18 +45,6 @@ class ModifyScheduledTask extends RpcRequest
         $this->options['query']['LaunchTime'] = $launchTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -101,18 +61,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduledAction() instead.
-     *
-     * @param string $scheduledAction
-     *
-     * @return $this
-     */
-    public function setScheduledAction($scheduledAction)
-    {
-        return $this->withScheduledAction($scheduledAction);
-    }
-
-    /**
      * @param string $scheduledAction
      *
      * @return $this
@@ -126,15 +74,16 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $maxValue
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withMaxValue($maxValue)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['MaxValue'] = $maxValue;
+        $this->options['query']['MaxValue'] = $maxValue;
+
+        return $this;
     }
 
     /**
@@ -151,18 +100,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -173,18 +110,6 @@ class ModifyScheduledTask extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -201,18 +126,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -223,18 +136,6 @@ class ModifyScheduledTask extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecurrenceValue() instead.
-     *
-     * @param string $recurrenceValue
-     *
-     * @return $this
-     */
-    public function setRecurrenceValue($recurrenceValue)
-    {
-        return $this->withRecurrenceValue($recurrenceValue);
     }
 
     /**
@@ -251,18 +152,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchExpirationTime() instead.
-     *
-     * @param string $launchExpirationTime
-     *
-     * @return $this
-     */
-    public function setLaunchExpirationTime($launchExpirationTime)
-    {
-        return $this->withLaunchExpirationTime($launchExpirationTime);
-    }
-
-    /**
      * @param string $launchExpirationTime
      *
      * @return $this
@@ -273,18 +162,6 @@ class ModifyScheduledTask extends RpcRequest
         $this->options['query']['LaunchExpirationTime'] = $launchExpirationTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecurrenceEndTime() instead.
-     *
-     * @param string $recurrenceEndTime
-     *
-     * @return $this
-     */
-    public function setRecurrenceEndTime($recurrenceEndTime)
-    {
-        return $this->withRecurrenceEndTime($recurrenceEndTime);
     }
 
     /**
@@ -301,15 +178,16 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduledTaskName() instead.
-     *
-     * @param string $scheduledTaskName
+     * @param string $minValue
      *
      * @return $this
      */
-    public function setScheduledTaskName($scheduledTaskName)
+    public function withMinValue($minValue)
     {
-        return $this->withScheduledTaskName($scheduledTaskName);
+        $this->data['MinValue'] = $minValue;
+        $this->options['query']['MinValue'] = $minValue;
+
+        return $this;
     }
 
     /**
@@ -326,18 +204,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskEnabled() instead.
-     *
-     * @param string $taskEnabled
-     *
-     * @return $this
-     */
-    public function setTaskEnabled($taskEnabled)
-    {
-        return $this->withTaskEnabled($taskEnabled);
-    }
-
-    /**
      * @param string $taskEnabled
      *
      * @return $this
@@ -351,18 +217,6 @@ class ModifyScheduledTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduledTaskId() instead.
-     *
-     * @param string $scheduledTaskId
-     *
-     * @return $this
-     */
-    public function setScheduledTaskId($scheduledTaskId)
-    {
-        return $this->withScheduledTaskId($scheduledTaskId);
-    }
-
-    /**
      * @param string $scheduledTaskId
      *
      * @return $this
@@ -373,18 +227,6 @@ class ModifyScheduledTask extends RpcRequest
         $this->options['query']['ScheduledTaskId'] = $scheduledTaskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecurrenceType() instead.
-     *
-     * @param string $recurrenceType
-     *
-     * @return $this
-     */
-    public function setRecurrenceType($recurrenceType)
-    {
-        return $this->withRecurrenceType($recurrenceType);
     }
 
     /**

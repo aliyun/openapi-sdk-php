@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveBatchTaskForUpdatingContactInfo
+ * Api SaveBatchTaskForUpdatingContactInfo
  *
  * @method string getContactType()
  * @method string getUserClientIp()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAddTransferLock()
  * @method string getLang()
  */
-class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
+class SaveBatchTaskForUpdatingContactInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveBatchTaskForUpdatingContactInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
-    }
 
     /**
      * @param string $contactType
@@ -65,18 +35,6 @@ class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['ContactType'] = $contactType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -93,18 +51,6 @@ class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -115,28 +61,6 @@ class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDomainName() instead.
-     *
-     * @return array
-     */
-    public function getDomainNames()
-    {
-        return $this->getDomainName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param array $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames(array $domainNames)
-    {
-        return $this->withDomainName($domainNames);
     }
 
     /**
@@ -155,18 +79,6 @@ class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddTransferLock() instead.
-     *
-     * @param string $addTransferLock
-     *
-     * @return $this
-     */
-    public function setAddTransferLock($addTransferLock)
-    {
-        return $this->withAddTransferLock($addTransferLock);
-    }
-
-    /**
      * @param string $addTransferLock
      *
      * @return $this
@@ -177,18 +89,6 @@ class SaveBatchTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['AddTransferLock'] = $addTransferLock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

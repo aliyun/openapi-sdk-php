@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ProceedTicket
+ * Api ProceedTicket
  *
  * @method string getMemo()
  * @method string getId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOperation()
  * @method string getOperatorId()
  */
-class ProceedTicket extends RpcRequest
+class ProceedTicket extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ProceedTicket';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMemo() instead.
-     *
-     * @param string $memo
-     *
-     * @return $this
-     */
-    public function setMemo($memo)
-    {
-        return $this->withMemo($memo);
-    }
 
     /**
      * @param string $memo
@@ -64,18 +34,6 @@ class ProceedTicket extends RpcRequest
         $this->options['query']['Memo'] = $memo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
     }
 
     /**
@@ -92,18 +50,6 @@ class ProceedTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -117,18 +63,6 @@ class ProceedTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
-    }
-
-    /**
      * @param string $operation
      *
      * @return $this
@@ -139,18 +73,6 @@ class ProceedTicket extends RpcRequest
         $this->options['query']['Operation'] = $operation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperatorId() instead.
-     *
-     * @param string $operatorId
-     *
-     * @return $this
-     */
-    public function setOperatorId($operatorId)
-    {
-        return $this->withOperatorId($operatorId);
     }
 
     /**

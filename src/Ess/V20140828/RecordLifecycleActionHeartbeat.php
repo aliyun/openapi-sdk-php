@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RecordLifecycleActionHeartbeat
+ * Api RecordLifecycleActionHeartbeat
  *
  * @method string getLifecycleActionToken()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class RecordLifecycleActionHeartbeat extends RpcRequest
+class RecordLifecycleActionHeartbeat extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'RecordLifecycleActionHeartbeat';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleActionToken() instead.
-     *
-     * @param string $lifecycleActionToken
-     *
-     * @return $this
-     */
-    public function setlifecycleActionToken($lifecycleActionToken)
-    {
-        return $this->withLifecycleActionToken($lifecycleActionToken);
-    }
 
     /**
      * @param string $lifecycleActionToken
@@ -65,18 +35,6 @@ class RecordLifecycleActionHeartbeat extends RpcRequest
         $this->options['query']['lifecycleActionToken'] = $lifecycleActionToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class RecordLifecycleActionHeartbeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHeartbeatTimeout() instead.
-     *
-     * @param string $heartbeatTimeout
-     *
-     * @return $this
-     */
-    public function setheartbeatTimeout($heartbeatTimeout)
-    {
-        return $this->withHeartbeatTimeout($heartbeatTimeout);
-    }
-
-    /**
      * @param string $heartbeatTimeout
      *
      * @return $this
@@ -115,18 +61,6 @@ class RecordLifecycleActionHeartbeat extends RpcRequest
         $this->options['query']['heartbeatTimeout'] = $heartbeatTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHookId() instead.
-     *
-     * @param string $lifecycleHookId
-     *
-     * @return $this
-     */
-    public function setlifecycleHookId($lifecycleHookId)
-    {
-        return $this->withLifecycleHookId($lifecycleHookId);
     }
 
     /**
@@ -143,18 +77,6 @@ class RecordLifecycleActionHeartbeat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -165,18 +87,6 @@ class RecordLifecycleActionHeartbeat extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

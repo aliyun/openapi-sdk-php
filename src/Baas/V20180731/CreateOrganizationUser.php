@@ -2,36 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateOrganizationUser
+ * Api CreateOrganizationUser
  *
  * @method string getOrganizationId()
  * @method string getPassword()
  * @method string getUsername()
  */
-class CreateOrganizationUser extends RpcRequest
+class CreateOrganizationUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateOrganizationUser';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

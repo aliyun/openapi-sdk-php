@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateAccessWhiteListGroup
+ * Api CreateAccessWhiteListGroup
  *
  * @method string getNote()
  * @method string getResourceOwnerId()
@@ -20,40 +20,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getSourceCode()
  */
-class CreateAccessWhiteListGroup extends RpcRequest
+class CreateAccessWhiteListGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateAccessWhiteListGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNote() instead.
-     *
-     * @param string $note
-     *
-     * @return $this
-     */
-    public function setNote($note)
-    {
-        return $this->withNote($note);
-    }
 
     /**
      * @param string $note
@@ -66,18 +39,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['Note'] = $note;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +55,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
-    }
-
-    /**
      * @param string $srcIP
      *
      * @return $this
@@ -116,18 +65,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['SrcIP'] = $srcIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -144,18 +81,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDstPort() instead.
-     *
-     * @param string $dstPort
-     *
-     * @return $this
-     */
-    public function setDstPort($dstPort)
-    {
-        return $this->withDstPort($dstPort);
-    }
-
-    /**
      * @param string $dstPort
      *
      * @return $this
@@ -166,18 +91,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['DstPort'] = $dstPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIdList() instead.
-     *
-     * @param string $instanceIdList
-     *
-     * @return $this
-     */
-    public function setInstanceIdList($instanceIdList)
-    {
-        return $this->withInstanceIdList($instanceIdList);
     }
 
     /**
@@ -194,18 +107,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLiveTime() instead.
-     *
-     * @param string $liveTime
-     *
-     * @return $this
-     */
-    public function setLiveTime($liveTime)
-    {
-        return $this->withLiveTime($liveTime);
-    }
-
-    /**
      * @param string $liveTime
      *
      * @return $this
@@ -216,18 +117,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['LiveTime'] = $liveTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductName() instead.
-     *
-     * @param string $productName
-     *
-     * @return $this
-     */
-    public function setProductName($productName)
-    {
-        return $this->withProductName($productName);
     }
 
     /**
@@ -244,18 +133,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWhiteListType() instead.
-     *
-     * @param string $whiteListType
-     *
-     * @return $this
-     */
-    public function setWhiteListType($whiteListType)
-    {
-        return $this->withWhiteListType($whiteListType);
-    }
-
-    /**
      * @param string $whiteListType
      *
      * @return $this
@@ -266,18 +143,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['WhiteListType'] = $whiteListType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceInfoList() instead.
-     *
-     * @param string $instanceInfoList
-     *
-     * @return $this
-     */
-    public function setInstanceInfoList($instanceInfoList)
-    {
-        return $this->withInstanceInfoList($instanceInfoList);
     }
 
     /**
@@ -294,18 +159,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -316,18 +169,6 @@ class CreateAccessWhiteListGroup extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

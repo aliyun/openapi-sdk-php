@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerAntInstanceConvertToPrepaid
+ * Api InnerAntInstanceConvertToPrepaid
  *
  * @method string getResourceOwnerId()
  * @method string getAutoPay()
@@ -26,45 +26,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPricingCycle()
  * @method string getProxyId()
  */
-class InnerAntInstanceConvertToPrepaid extends RpcRequest
+class InnerAntInstanceConvertToPrepaid extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerAntInstanceConvertToPrepaid';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -77,18 +47,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setautoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
     }
 
     /**
@@ -105,18 +63,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setdryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -127,18 +73,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['dryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -155,18 +89,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -177,18 +99,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -205,18 +115,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -227,18 +125,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBuyerId() instead.
-     *
-     * @param string $buyerId
-     *
-     * @return $this
-     */
-    public function setbuyerId($buyerId)
-    {
-        return $this->withBuyerId($buyerId);
     }
 
     /**
@@ -255,18 +141,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -277,18 +151,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -305,18 +167,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setregionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
-    }
-
-    /**
      * @param string $regionNo
      *
      * @return $this
@@ -327,18 +177,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['regionNo'] = $regionNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setduration($duration)
-    {
-        return $this->withDuration($duration);
     }
 
     /**
@@ -355,18 +193,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConvertDataDisk() instead.
-     *
-     * @param string $convertDataDisk
-     *
-     * @return $this
-     */
-    public function setconvertDataDisk($convertDataDisk)
-    {
-        return $this->withConvertDataDisk($convertDataDisk);
-    }
-
-    /**
      * @param string $convertDataDisk
      *
      * @return $this
@@ -377,18 +203,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['convertDataDisk'] = $convertDataDisk;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setinstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
     }
 
     /**
@@ -405,18 +219,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -427,18 +229,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['aliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -455,18 +245,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setpricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
-    }
-
-    /**
      * @param string $pricingCycle
      *
      * @return $this
@@ -477,18 +255,6 @@ class InnerAntInstanceConvertToPrepaid extends RpcRequest
         $this->options['query']['pricingCycle'] = $pricingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

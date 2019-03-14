@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeInstances
+ * Api DescribeInstances
  *
  * @method string getInnerIpAddresses()
  * @method string getResourceOwnerId()
@@ -49,40 +49,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceNetworkType()
  * @method string getStatus()
  */
-class DescribeInstances extends RpcRequest
+class DescribeInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withInnerIpAddresses() instead.
-     *
-     * @param string $innerIpAddresses
-     *
-     * @return $this
-     */
-    public function setInnerIpAddresses($innerIpAddresses)
-    {
-        return $this->withInnerIpAddresses($innerIpAddresses);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $innerIpAddresses
@@ -95,18 +70,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InnerIpAddresses'] = $innerIpAddresses;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -123,18 +86,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -145,18 +96,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddresses() instead.
-     *
-     * @param string $privateIpAddresses
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddresses($privateIpAddresses)
-    {
-        return $this->withPrivateIpAddresses($privateIpAddresses);
     }
 
     /**
@@ -173,18 +112,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHpcClusterId() instead.
-     *
-     * @param string $hpcClusterId
-     *
-     * @return $this
-     */
-    public function setHpcClusterId($hpcClusterId)
-    {
-        return $this->withHpcClusterId($hpcClusterId);
-    }
-
-    /**
      * @param string $hpcClusterId
      *
      * @return $this
@@ -195,18 +122,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['HpcClusterId'] = $hpcClusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Value() instead.
-     *
-     * @param string $filter2Value
-     *
-     * @return $this
-     */
-    public function setFilter2Value($filter2Value)
-    {
-        return $this->withFilter2Value($filter2Value);
     }
 
     /**
@@ -223,18 +138,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter4Value() instead.
-     *
-     * @param string $filter4Value
-     *
-     * @return $this
-     */
-    public function setFilter4Value($filter4Value)
-    {
-        return $this->withFilter4Value($filter4Value);
-    }
-
-    /**
      * @param string $filter4Value
      *
      * @return $this
@@ -245,18 +148,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['Filter.4.Value'] = $filter4Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
     }
 
     /**
@@ -273,18 +164,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
-    }
-
-    /**
      * @param string $securityGroupId
      *
      * @return $this
@@ -295,18 +174,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['SecurityGroupId'] = $securityGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
     }
 
     /**
@@ -323,18 +190,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter4Key() instead.
-     *
-     * @param string $filter4Key
-     *
-     * @return $this
-     */
-    public function setFilter4Key($filter4Key)
-    {
-        return $this->withFilter4Key($filter4Key);
-    }
-
-    /**
      * @param string $filter4Key
      *
      * @return $this
@@ -345,18 +200,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['Filter.4.Key'] = $filter4Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -373,18 +216,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -395,18 +226,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLockReason() instead.
-     *
-     * @param string $lockReason
-     *
-     * @return $this
-     */
-    public function setLockReason($lockReason)
-    {
-        return $this->withLockReason($lockReason);
     }
 
     /**
@@ -423,18 +242,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Key() instead.
-     *
-     * @param string $filter1Key
-     *
-     * @return $this
-     */
-    public function setFilter1Key($filter1Key)
-    {
-        return $this->withFilter1Key($filter1Key);
-    }
-
-    /**
      * @param string $filter1Key
      *
      * @return $this
@@ -445,18 +252,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['Filter.1.Key'] = $filter1Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRdmaIpAddresses() instead.
-     *
-     * @param string $rdmaIpAddresses
-     *
-     * @return $this
-     */
-    public function setRdmaIpAddresses($rdmaIpAddresses)
-    {
-        return $this->withRdmaIpAddresses($rdmaIpAddresses);
     }
 
     /**
@@ -473,18 +268,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceAvailable() instead.
-     *
-     * @param string $deviceAvailable
-     *
-     * @return $this
-     */
-    public function setDeviceAvailable($deviceAvailable)
-    {
-        return $this->withDeviceAvailable($deviceAvailable);
-    }
-
-    /**
      * @param string $deviceAvailable
      *
      * @return $this
@@ -495,18 +278,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['DeviceAvailable'] = $deviceAvailable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -523,18 +294,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPublicIpAddresses() instead.
-     *
-     * @param string $publicIpAddresses
-     *
-     * @return $this
-     */
-    public function setPublicIpAddresses($publicIpAddresses)
-    {
-        return $this->withPublicIpAddresses($publicIpAddresses);
-    }
-
-    /**
      * @param string $publicIpAddresses
      *
      * @return $this
@@ -548,18 +307,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -570,28 +317,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -611,18 +336,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
-    }
-
-    /**
      * @param string $instanceChargeType
      *
      * @return $this
@@ -633,18 +346,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InstanceChargeType'] = $instanceChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter3Value() instead.
-     *
-     * @param string $filter3Value
-     *
-     * @return $this
-     */
-    public function setFilter3Value($filter3Value)
-    {
-        return $this->withFilter3Value($filter3Value);
     }
 
     /**
@@ -661,18 +362,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -683,18 +372,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -711,18 +388,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -733,18 +398,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceTypeFamily() instead.
-     *
-     * @param string $instanceTypeFamily
-     *
-     * @return $this
-     */
-    public function setInstanceTypeFamily($instanceTypeFamily)
-    {
-        return $this->withInstanceTypeFamily($instanceTypeFamily);
     }
 
     /**
@@ -761,18 +414,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Value() instead.
-     *
-     * @param string $filter1Value
-     *
-     * @return $this
-     */
-    public function setFilter1Value($filter1Value)
-    {
-        return $this->withFilter1Value($filter1Value);
-    }
-
-    /**
      * @param string $filter1Value
      *
      * @return $this
@@ -783,18 +424,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['Filter.1.Value'] = $filter1Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNeedSaleCycle() instead.
-     *
-     * @param string $needSaleCycle
-     *
-     * @return $this
-     */
-    public function setNeedSaleCycle($needSaleCycle)
-    {
-        return $this->withNeedSaleCycle($needSaleCycle);
     }
 
     /**
@@ -811,18 +440,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Key() instead.
-     *
-     * @param string $filter2Key
-     *
-     * @return $this
-     */
-    public function setFilter2Key($filter2Key)
-    {
-        return $this->withFilter2Key($filter2Key);
-    }
-
-    /**
      * @param string $filter2Key
      *
      * @return $this
@@ -833,18 +450,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['Filter.2.Key'] = $filter2Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -861,18 +466,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -883,18 +476,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEipAddresses() instead.
-     *
-     * @param string $eipAddresses
-     *
-     * @return $this
-     */
-    public function setEipAddresses($eipAddresses)
-    {
-        return $this->withEipAddresses($eipAddresses);
     }
 
     /**
@@ -911,18 +492,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
-
-    /**
      * @param string $instanceName
      *
      * @return $this
@@ -933,18 +502,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InstanceName'] = $instanceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
     }
 
     /**
@@ -961,18 +518,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -983,18 +528,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -1011,18 +544,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -1033,18 +554,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter3Key() instead.
-     *
-     * @param string $filter3Key
-     *
-     * @return $this
-     */
-    public function setFilter3Key($filter3Key)
-    {
-        return $this->withFilter3Key($filter3Key);
     }
 
     /**
@@ -1061,18 +570,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceNetworkType() instead.
-     *
-     * @param string $instanceNetworkType
-     *
-     * @return $this
-     */
-    public function setInstanceNetworkType($instanceNetworkType)
-    {
-        return $this->withInstanceNetworkType($instanceNetworkType);
-    }
-
-    /**
      * @param string $instanceNetworkType
      *
      * @return $this
@@ -1083,18 +580,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InstanceNetworkType'] = $instanceNetworkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -2,48 +2,23 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryStaticsErrorRate
+ * Api QueryStaticsErrorRate
  *
  * @method string getTimeRange()
  * @method string getTaskId()
  */
-class QueryStaticsErrorRate extends RpcRequest
+class QueryStaticsErrorRate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryStaticsErrorRate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeRange() instead.
-     *
-     * @param string $timeRange
-     *
-     * @return $this
-     */
-    public function setTimeRange($timeRange)
-    {
-        return $this->withTimeRange($timeRange);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $timeRange
@@ -56,18 +31,6 @@ class QueryStaticsErrorRate extends RpcRequest
         $this->options['query']['TimeRange'] = $timeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeInstances
+ * Api DescribeInstances
  *
  * @method string getResourceOwnerId()
  * @method string getInstanceStatus()
@@ -17,7 +17,6 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getInstanceClass()
  * @method string getPageNumber()
- * @method string getTags()
  * @method string getVSwitchId()
  * @method string getExpired()
  * @method string getSecurityToken()
@@ -28,46 +27,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceType()
  * @method string getZoneId()
  * @method string getChargeType()
+ * @method array getTag()
  */
-class DescribeInstances extends RpcRequest
+class DescribeInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'R-kvstore';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'redisa';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -80,18 +50,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceStatus() instead.
-     *
-     * @param string $instanceStatus
-     *
-     * @return $this
-     */
-    public function setInstanceStatus($instanceStatus)
-    {
-        return $this->withInstanceStatus($instanceStatus);
     }
 
     /**
@@ -108,18 +66,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -130,18 +76,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -158,18 +92,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSearchKey() instead.
-     *
-     * @param string $searchKey
-     *
-     * @return $this
-     */
-    public function setSearchKey($searchKey)
-    {
-        return $this->withSearchKey($searchKey);
-    }
-
-    /**
      * @param string $searchKey
      *
      * @return $this
@@ -180,18 +102,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['SearchKey'] = $searchKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -208,18 +118,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEngineVersion() instead.
-     *
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function setEngineVersion($engineVersion)
-    {
-        return $this->withEngineVersion($engineVersion);
-    }
-
-    /**
      * @param string $engineVersion
      *
      * @return $this
@@ -230,18 +128,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['EngineVersion'] = $engineVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -258,18 +144,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceClass() instead.
-     *
-     * @param string $instanceClass
-     *
-     * @return $this
-     */
-    public function setInstanceClass($instanceClass)
-    {
-        return $this->withInstanceClass($instanceClass);
-    }
-
-    /**
      * @param string $instanceClass
      *
      * @return $this
@@ -280,18 +154,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['InstanceClass'] = $instanceClass;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -308,43 +170,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -355,18 +180,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpired() instead.
-     *
-     * @param string $expired
-     *
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        return $this->withExpired($expired);
     }
 
     /**
@@ -383,18 +196,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -405,18 +206,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
     }
 
     /**
@@ -433,18 +222,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArchitectureType() instead.
-     *
-     * @param string $architectureType
-     *
-     * @return $this
-     */
-    public function setArchitectureType($architectureType)
-    {
-        return $this->withArchitectureType($architectureType);
-    }
-
-    /**
      * @param string $architectureType
      *
      * @return $this
@@ -455,18 +232,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ArchitectureType'] = $architectureType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -483,18 +248,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -505,18 +258,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -533,18 +274,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -558,18 +287,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
-    }
-
-    /**
      * @param string $chargeType
      *
      * @return $this
@@ -578,6 +295,22 @@ class DescribeInstances extends RpcRequest
     {
         $this->data['ChargeType'] = $chargeType;
         $this->options['query']['ChargeType'] = $chargeType;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $i => $iValue) {
+            $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
+            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
+        }
 
         return $this;
     }

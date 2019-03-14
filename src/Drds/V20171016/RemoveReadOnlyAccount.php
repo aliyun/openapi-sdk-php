@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemoveReadOnlyAccount
+ * Api RemoveReadOnlyAccount
  *
  * @method string getDbName()
  * @method string getAccountName()
  * @method string getDrdsInstanceId()
  */
-class RemoveReadOnlyAccount extends RpcRequest
+class RemoveReadOnlyAccount extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Drds';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemoveReadOnlyAccount';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
-    }
 
     /**
      * @param string $dbName
@@ -60,18 +33,6 @@ class RemoveReadOnlyAccount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -82,18 +43,6 @@ class RemoveReadOnlyAccount extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
     }
 
     /**

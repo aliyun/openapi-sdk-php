@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\DmsEnterprise\V20181101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DisableUser
+ * Api DisableUser
  *
  * @method string getUid()
  * @method string getTid()
  */
-class DisableUser extends RpcRequest
+class DisableUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dms-enterprise';
 
-    /**
-     * @var string
-     */
     public $version = '2018-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DisableUser';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dmsenterprise';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -61,18 +31,6 @@ class DisableUser extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTid() instead.
-     *
-     * @param string $tid
-     *
-     * @return $this
-     */
-    public function setTid($tid)
-    {
-        return $this->withTid($tid);
     }
 
     /**

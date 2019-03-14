@@ -2,50 +2,24 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateRuleAction
+ * Api CreateRuleAction
  *
  * @method string getConfiguration()
+ * @method string getIotInstanceId()
  * @method string getRuleId()
  * @method string getType()
  * @method string getErrorActionFlag()
  */
-class CreateRuleAction extends RpcRequest
+class CreateRuleAction extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateRuleAction';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfiguration() instead.
-     *
-     * @param string $configuration
-     *
-     * @return $this
-     */
-    public function setConfiguration($configuration)
-    {
-        return $this->withConfiguration($configuration);
-    }
 
     /**
      * @param string $configuration
@@ -61,15 +35,16 @@ class CreateRuleAction extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setRuleId($ruleId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withRuleId($ruleId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -86,18 +61,6 @@ class CreateRuleAction extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -108,18 +71,6 @@ class CreateRuleAction extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withErrorActionFlag() instead.
-     *
-     * @param string $errorActionFlag
-     *
-     * @return $this
-     */
-    public function setErrorActionFlag($errorActionFlag)
-    {
-        return $this->withErrorActionFlag($errorActionFlag);
     }
 
     /**

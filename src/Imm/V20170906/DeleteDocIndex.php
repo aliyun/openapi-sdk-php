@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteDocIndex
+ * Api DeleteDocIndex
  *
  * @method string getSet()
  * @method string getProject()
  * @method string getUniqueId()
  */
-class DeleteDocIndex extends RpcRequest
+class DeleteDocIndex extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteDocIndex';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSet() instead.
-     *
-     * @param string $set
-     *
-     * @return $this
-     */
-    public function setSet($set)
-    {
-        return $this->withSet($set);
-    }
 
     /**
      * @param string $set
@@ -65,18 +35,6 @@ class DeleteDocIndex extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -87,18 +45,6 @@ class DeleteDocIndex extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUniqueId() instead.
-     *
-     * @param string $uniqueId
-     *
-     * @return $this
-     */
-    public function setUniqueId($uniqueId)
-    {
-        return $this->withUniqueId($uniqueId);
     }
 
     /**

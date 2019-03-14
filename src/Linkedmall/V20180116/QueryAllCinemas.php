@@ -2,54 +2,50 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryAllCinemas
+ * Api QueryAllCinemas
  *
- * @method string getBizId()
  * @method string getCityCode()
- * @method string getPageNumber()
  * @method string getExtJson()
+ * @method string getBizId()
+ * @method string getPageNumber()
  */
-class QueryAllCinemas extends RpcRequest
+class QueryAllCinemas extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryAllCinemas';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $cityCode
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withCityCode($cityCode)
     {
-        return $this->withBizId($bizId);
+        $this->data['CityCode'] = $cityCode;
+        $this->options['query']['CityCode'] = $cityCode;
+
+        return $this;
+    }
+
+    /**
+     * @param string $extJson
+     *
+     * @return $this
+     */
+    public function withExtJson($extJson)
+    {
+        $this->data['ExtJson'] = $extJson;
+        $this->options['query']['ExtJson'] = $extJson;
+
+        return $this;
     }
 
     /**
@@ -66,43 +62,6 @@ class QueryAllCinemas extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCityCode() instead.
-     *
-     * @param string $cityCode
-     *
-     * @return $this
-     */
-    public function setCityCode($cityCode)
-    {
-        return $this->withCityCode($cityCode);
-    }
-
-    /**
-     * @param string $cityCode
-     *
-     * @return $this
-     */
-    public function withCityCode($cityCode)
-    {
-        $this->data['CityCode'] = $cityCode;
-        $this->options['query']['CityCode'] = $cityCode;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -111,31 +70,6 @@ class QueryAllCinemas extends RpcRequest
     {
         $this->data['PageNumber'] = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
 
         return $this;
     }

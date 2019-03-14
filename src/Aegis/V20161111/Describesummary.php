@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of Describesummary
+ * Api Describesummary
  *
  * @method string getTypeNames()
  * @method string getRiskName()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSubTypeNames()
  * @method string getUuids()
  */
-class Describesummary extends RpcRequest
+class Describesummary extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'Describesummary';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTypeNames() instead.
-     *
-     * @param string $typeNames
-     *
-     * @return $this
-     */
-    public function setTypeNames($typeNames)
-    {
-        return $this->withTypeNames($typeNames);
-    }
 
     /**
      * @param string $typeNames
@@ -70,18 +40,6 @@ class Describesummary extends RpcRequest
         $this->options['query']['TypeNames'] = $typeNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskName() instead.
-     *
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function setRiskName($riskName)
-    {
-        return $this->withRiskName($riskName);
     }
 
     /**
@@ -98,18 +56,6 @@ class Describesummary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
-
-    /**
      * @param string $statusList
      *
      * @return $this
@@ -120,18 +66,6 @@ class Describesummary extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -148,18 +82,6 @@ class Describesummary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRiskLevels() instead.
-     *
-     * @param string $riskLevels
-     *
-     * @return $this
-     */
-    public function setRiskLevels($riskLevels)
-    {
-        return $this->withRiskLevels($riskLevels);
-    }
-
-    /**
      * @param string $riskLevels
      *
      * @return $this
@@ -170,18 +92,6 @@ class Describesummary extends RpcRequest
         $this->options['query']['RiskLevels'] = $riskLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -198,18 +108,6 @@ class Describesummary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
-    }
-
-    /**
      * @param string $dealed
      *
      * @return $this
@@ -220,18 +118,6 @@ class Describesummary extends RpcRequest
         $this->options['query']['Dealed'] = $dealed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
     }
 
     /**
@@ -248,18 +134,6 @@ class Describesummary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -273,18 +147,6 @@ class Describesummary extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubTypeNames() instead.
-     *
-     * @param string $subTypeNames
-     *
-     * @return $this
-     */
-    public function setSubTypeNames($subTypeNames)
-    {
-        return $this->withSubTypeNames($subTypeNames);
-    }
-
-    /**
      * @param string $subTypeNames
      *
      * @return $this
@@ -295,18 +157,6 @@ class Describesummary extends RpcRequest
         $this->options['query']['SubTypeNames'] = $subTypeNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

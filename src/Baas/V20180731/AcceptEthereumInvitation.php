@@ -2,35 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AcceptEthereumInvitation
+ * Api AcceptEthereumInvitation
  *
  * @method string getCode()
  * @method string getToken()
  */
-class AcceptEthereumInvitation extends RpcRequest
+class AcceptEthereumInvitation extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'AcceptEthereumInvitation';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

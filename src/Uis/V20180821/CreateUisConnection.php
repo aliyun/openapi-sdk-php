@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateUisConnection
+ * Api CreateUisConnection
  *
  * @method string getResourceOwnerId()
  * @method string getUisNodeId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getGreConfig()
  */
-class CreateUisConnection extends RpcRequest
+class CreateUisConnection extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Uis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateUisConnection';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'uis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class CreateUisConnection extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUisNodeId() instead.
-     *
-     * @param string $uisNodeId
-     *
-     * @return $this
-     */
-    public function setUisNodeId($uisNodeId)
-    {
-        return $this->withUisNodeId($uisNodeId);
     }
 
     /**
@@ -97,18 +55,6 @@ class CreateUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class CreateUisConnection extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class CreateUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -169,18 +91,6 @@ class CreateUisConnection extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -197,18 +107,6 @@ class CreateUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUisProtocol() instead.
-     *
-     * @param string $uisProtocol
-     *
-     * @return $this
-     */
-    public function setUisProtocol($uisProtocol)
-    {
-        return $this->withUisProtocol($uisProtocol);
-    }
-
-    /**
      * @param string $uisProtocol
      *
      * @return $this
@@ -219,18 +117,6 @@ class CreateUisConnection extends RpcRequest
         $this->options['query']['UisProtocol'] = $uisProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSslConfig() instead.
-     *
-     * @param string $sslConfig
-     *
-     * @return $this
-     */
-    public function setSslConfig($sslConfig)
-    {
-        return $this->withSslConfig($sslConfig);
     }
 
     /**
@@ -247,18 +133,6 @@ class CreateUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -269,18 +143,6 @@ class CreateUisConnection extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGreConfig() instead.
-     *
-     * @param string $greConfig
-     *
-     * @return $this
-     */
-    public function setGreConfig($greConfig)
-    {
-        return $this->withGreConfig($greConfig);
     }
 
     /**

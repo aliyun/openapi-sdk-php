@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveSingleTaskForCreatingOrderActivate
+ * Api SaveSingleTaskForCreatingOrderActivate
  *
  * @method string getCountry()
  * @method string getSubscriptionDuration()
@@ -40,40 +40,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegistrantName()
  * @method string getUsePromotion()
  */
-class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
+class SaveSingleTaskForCreatingOrderActivate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveSingleTaskForCreatingOrderActivate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
 
     /**
      * @param string $country
@@ -86,18 +59,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionDuration() instead.
-     *
-     * @param string $subscriptionDuration
-     *
-     * @return $this
-     */
-    public function setSubscriptionDuration($subscriptionDuration)
-    {
-        return $this->withSubscriptionDuration($subscriptionDuration);
     }
 
     /**
@@ -114,18 +75,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPermitPremiumActivation() instead.
-     *
-     * @param string $permitPremiumActivation
-     *
-     * @return $this
-     */
-    public function setPermitPremiumActivation($permitPremiumActivation)
-    {
-        return $this->withPermitPremiumActivation($permitPremiumActivation);
-    }
-
-    /**
      * @param string $permitPremiumActivation
      *
      * @return $this
@@ -136,18 +85,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['PermitPremiumActivation'] = $permitPremiumActivation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
     }
 
     /**
@@ -164,18 +101,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDns2() instead.
-     *
-     * @param string $dns2
-     *
-     * @return $this
-     */
-    public function setDns2($dns2)
-    {
-        return $this->withDns2($dns2);
-    }
-
-    /**
      * @param string $dns2
      *
      * @return $this
@@ -186,18 +111,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['Dns2'] = $dns2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDns1() instead.
-     *
-     * @param string $dns1
-     *
-     * @return $this
-     */
-    public function setDns1($dns1)
-    {
-        return $this->withDns1($dns1);
     }
 
     /**
@@ -214,18 +127,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -236,18 +137,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
     }
 
     /**
@@ -264,18 +153,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliyunDns() instead.
-     *
-     * @param string $aliyunDns
-     *
-     * @return $this
-     */
-    public function setAliyunDns($aliyunDns)
-    {
-        return $this->withAliyunDns($aliyunDns);
-    }
-
-    /**
      * @param string $aliyunDns
      *
      * @return $this
@@ -286,18 +163,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['AliyunDns'] = $aliyunDns;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhCity() instead.
-     *
-     * @param string $zhCity
-     *
-     * @return $this
-     */
-    public function setZhCity($zhCity)
-    {
-        return $this->withZhCity($zhCity);
     }
 
     /**
@@ -314,18 +179,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelExt() instead.
-     *
-     * @param string $telExt
-     *
-     * @return $this
-     */
-    public function setTelExt($telExt)
-    {
-        return $this->withTelExt($telExt);
-    }
-
-    /**
      * @param string $telExt
      *
      * @return $this
@@ -336,18 +189,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['TelExt'] = $telExt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantName() instead.
-     *
-     * @param string $zhRegistrantName
-     *
-     * @return $this
-     */
-    public function setZhRegistrantName($zhRegistrantName)
-    {
-        return $this->withZhRegistrantName($zhRegistrantName);
     }
 
     /**
@@ -364,18 +205,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProvince() instead.
-     *
-     * @param string $province
-     *
-     * @return $this
-     */
-    public function setProvince($province)
-    {
-        return $this->withProvince($province);
-    }
-
-    /**
      * @param string $province
      *
      * @return $this
@@ -386,18 +215,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['Province'] = $province;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostalCode() instead.
-     *
-     * @param string $postalCode
-     *
-     * @return $this
-     */
-    public function setPostalCode($postalCode)
-    {
-        return $this->withPostalCode($postalCode);
     }
 
     /**
@@ -414,18 +231,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -436,18 +241,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**
@@ -464,18 +257,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantOrganization() instead.
-     *
-     * @param string $zhRegistrantOrganization
-     *
-     * @return $this
-     */
-    public function setZhRegistrantOrganization($zhRegistrantOrganization)
-    {
-        return $this->withZhRegistrantOrganization($zhRegistrantOrganization);
-    }
-
-    /**
      * @param string $zhRegistrantOrganization
      *
      * @return $this
@@ -486,18 +267,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['ZhRegistrantOrganization'] = $zhRegistrantOrganization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
     }
 
     /**
@@ -514,18 +283,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelArea() instead.
-     *
-     * @param string $telArea
-     *
-     * @return $this
-     */
-    public function setTelArea($telArea)
-    {
-        return $this->withTelArea($telArea);
-    }
-
-    /**
      * @param string $telArea
      *
      * @return $this
@@ -536,18 +293,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['TelArea'] = $telArea;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -564,18 +309,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhAddress() instead.
-     *
-     * @param string $zhAddress
-     *
-     * @return $this
-     */
-    public function setZhAddress($zhAddress)
-    {
-        return $this->withZhAddress($zhAddress);
-    }
-
-    /**
      * @param string $zhAddress
      *
      * @return $this
@@ -586,18 +319,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['ZhAddress'] = $zhAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantType() instead.
-     *
-     * @param string $registrantType
-     *
-     * @return $this
-     */
-    public function setRegistrantType($registrantType)
-    {
-        return $this->withRegistrantType($registrantType);
     }
 
     /**
@@ -614,18 +335,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelephone() instead.
-     *
-     * @param string $telephone
-     *
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        return $this->withTelephone($telephone);
-    }
-
-    /**
      * @param string $telephone
      *
      * @return $this
@@ -636,18 +345,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['Telephone'] = $telephone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTrademarkDomainActivation() instead.
-     *
-     * @param string $trademarkDomainActivation
-     *
-     * @return $this
-     */
-    public function setTrademarkDomainActivation($trademarkDomainActivation)
-    {
-        return $this->withTrademarkDomainActivation($trademarkDomainActivation);
     }
 
     /**
@@ -664,18 +361,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
-    }
-
-    /**
      * @param string $useCoupon
      *
      * @return $this
@@ -686,18 +371,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['UseCoupon'] = $useCoupon;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhProvince() instead.
-     *
-     * @param string $zhProvince
-     *
-     * @return $this
-     */
-    public function setZhProvince($zhProvince)
-    {
-        return $this->withZhProvince($zhProvince);
     }
 
     /**
@@ -714,18 +387,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
-    }
-
-    /**
      * @param string $registrantOrganization
      *
      * @return $this
@@ -736,18 +397,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['RegistrantOrganization'] = $registrantOrganization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
     }
 
     /**
@@ -764,18 +413,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableDomainProxy() instead.
-     *
-     * @param string $enableDomainProxy
-     *
-     * @return $this
-     */
-    public function setEnableDomainProxy($enableDomainProxy)
-    {
-        return $this->withEnableDomainProxy($enableDomainProxy);
-    }
-
-    /**
      * @param string $enableDomainProxy
      *
      * @return $this
@@ -786,18 +423,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['EnableDomainProxy'] = $enableDomainProxy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -814,18 +439,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantName() instead.
-     *
-     * @param string $registrantName
-     *
-     * @return $this
-     */
-    public function setRegistrantName($registrantName)
-    {
-        return $this->withRegistrantName($registrantName);
-    }
-
-    /**
      * @param string $registrantName
      *
      * @return $this
@@ -836,18 +449,6 @@ class SaveSingleTaskForCreatingOrderActivate extends RpcRequest
         $this->options['query']['RegistrantName'] = $registrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

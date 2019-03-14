@@ -2,56 +2,27 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteSAGLinkLevelHa
+ * Api DeleteSAGLinkLevelHa
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
+ * @method string getHaType()
  * @method string getOwnerAccount()
  * @method string getSmartAGId()
  * @method string getOwnerId()
  */
-class DeleteSAGLinkLevelHa extends RpcRequest
+class DeleteSAGLinkLevelHa extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteSAGLinkLevelHa';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +35,6 @@ class DeleteSAGLinkLevelHa extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -92,15 +51,16 @@ class DeleteSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
+     * @param string $haType
      *
      * @return $this
      */
-    public function setOwnerAccount($ownerAccount)
+    public function withHaType($haType)
     {
-        return $this->withOwnerAccount($ownerAccount);
+        $this->data['HaType'] = $haType;
+        $this->options['query']['HaType'] = $haType;
+
+        return $this;
     }
 
     /**
@@ -117,18 +77,6 @@ class DeleteSAGLinkLevelHa extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
      * @param string $smartAGId
      *
      * @return $this
@@ -139,18 +87,6 @@ class DeleteSAGLinkLevelHa extends RpcRequest
         $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

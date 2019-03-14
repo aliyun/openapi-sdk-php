@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCacheAnalysisReportList
+ * Api DescribeCacheAnalysisReportList
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDays()
  * @method string getNodeId()
  */
-class DescribeCacheAnalysisReportList extends RpcRequest
+class DescribeCacheAnalysisReportList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'R-kvstore';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCacheAnalysisReportList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'redisa';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumbers() instead.
-     *
-     * @param string $pageNumbers
-     *
-     * @return $this
-     */
-    public function setPageNumbers($pageNumbers)
-    {
-        return $this->withPageNumbers($pageNumbers);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDays() instead.
-     *
-     * @param string $days
-     *
-     * @return $this
-     */
-    public function setDays($days)
-    {
-        return $this->withDays($days);
-    }
-
-    /**
      * @param string $days
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeCacheAnalysisReportList extends RpcRequest
         $this->options['query']['Days'] = $days;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
     }
 
     /**

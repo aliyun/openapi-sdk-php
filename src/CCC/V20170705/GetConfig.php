@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetConfig
+ * Api GetConfig
  *
  * @method string getInstanceId()
  * @method string getName()
  * @method string getObjectType()
  * @method string getObjectId()
  */
-class GetConfig extends RpcRequest
+class GetConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -63,18 +33,6 @@ class GetConfig extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -91,18 +49,6 @@ class GetConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withObjectType() instead.
-     *
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function setObjectType($objectType)
-    {
-        return $this->withObjectType($objectType);
-    }
-
-    /**
      * @param string $objectType
      *
      * @return $this
@@ -113,18 +59,6 @@ class GetConfig extends RpcRequest
         $this->options['query']['ObjectType'] = $objectType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withObjectId() instead.
-     *
-     * @param string $objectId
-     *
-     * @return $this
-     */
-    public function setObjectId($objectId)
-    {
-        return $this->withObjectId($objectId);
     }
 
     /**

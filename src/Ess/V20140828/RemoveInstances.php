@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemoveInstances
+ * Api RemoveInstances
  *
  * @method string getInstanceId10()
  * @method string getResourceOwnerId()
@@ -34,45 +34,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class RemoveInstances extends RpcRequest
+class RemoveInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemoveInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId10() instead.
-     *
-     * @param string $instanceId10
-     *
-     * @return $this
-     */
-    public function setInstanceId10($instanceId10)
-    {
-        return $this->withInstanceId10($instanceId10);
-    }
 
     /**
      * @param string $instanceId10
@@ -85,18 +55,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.10'] = $instanceId10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -113,18 +71,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId12() instead.
-     *
-     * @param string $instanceId12
-     *
-     * @return $this
-     */
-    public function setInstanceId12($instanceId12)
-    {
-        return $this->withInstanceId12($instanceId12);
-    }
-
-    /**
      * @param string $instanceId12
      *
      * @return $this
@@ -135,18 +81,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.12'] = $instanceId12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId11() instead.
-     *
-     * @param string $instanceId11
-     *
-     * @return $this
-     */
-    public function setInstanceId11($instanceId11)
-    {
-        return $this->withInstanceId11($instanceId11);
     }
 
     /**
@@ -163,18 +97,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -185,18 +107,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId20() instead.
-     *
-     * @param string $instanceId20
-     *
-     * @return $this
-     */
-    public function setInstanceId20($instanceId20)
-    {
-        return $this->withInstanceId20($instanceId20);
     }
 
     /**
@@ -213,18 +123,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId1() instead.
-     *
-     * @param string $instanceId1
-     *
-     * @return $this
-     */
-    public function setInstanceId1($instanceId1)
-    {
-        return $this->withInstanceId1($instanceId1);
-    }
-
-    /**
      * @param string $instanceId1
      *
      * @return $this
@@ -235,18 +133,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.1'] = $instanceId1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemovePolicy() instead.
-     *
-     * @param string $removePolicy
-     *
-     * @return $this
-     */
-    public function setRemovePolicy($removePolicy)
-    {
-        return $this->withRemovePolicy($removePolicy);
     }
 
     /**
@@ -263,18 +149,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId3() instead.
-     *
-     * @param string $instanceId3
-     *
-     * @return $this
-     */
-    public function setInstanceId3($instanceId3)
-    {
-        return $this->withInstanceId3($instanceId3);
-    }
-
-    /**
      * @param string $instanceId3
      *
      * @return $this
@@ -285,18 +159,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.3'] = $instanceId3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -313,18 +175,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId2() instead.
-     *
-     * @param string $instanceId2
-     *
-     * @return $this
-     */
-    public function setInstanceId2($instanceId2)
-    {
-        return $this->withInstanceId2($instanceId2);
-    }
-
-    /**
      * @param string $instanceId2
      *
      * @return $this
@@ -335,18 +185,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.2'] = $instanceId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId5() instead.
-     *
-     * @param string $instanceId5
-     *
-     * @return $this
-     */
-    public function setInstanceId5($instanceId5)
-    {
-        return $this->withInstanceId5($instanceId5);
     }
 
     /**
@@ -363,18 +201,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId4() instead.
-     *
-     * @param string $instanceId4
-     *
-     * @return $this
-     */
-    public function setInstanceId4($instanceId4)
-    {
-        return $this->withInstanceId4($instanceId4);
-    }
-
-    /**
      * @param string $instanceId4
      *
      * @return $this
@@ -385,18 +211,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.4'] = $instanceId4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -413,18 +227,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId7() instead.
-     *
-     * @param string $instanceId7
-     *
-     * @return $this
-     */
-    public function setInstanceId7($instanceId7)
-    {
-        return $this->withInstanceId7($instanceId7);
-    }
-
-    /**
      * @param string $instanceId7
      *
      * @return $this
@@ -435,18 +237,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.7'] = $instanceId7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId6() instead.
-     *
-     * @param string $instanceId6
-     *
-     * @return $this
-     */
-    public function setInstanceId6($instanceId6)
-    {
-        return $this->withInstanceId6($instanceId6);
     }
 
     /**
@@ -463,18 +253,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId9() instead.
-     *
-     * @param string $instanceId9
-     *
-     * @return $this
-     */
-    public function setInstanceId9($instanceId9)
-    {
-        return $this->withInstanceId9($instanceId9);
-    }
-
-    /**
      * @param string $instanceId9
      *
      * @return $this
@@ -485,18 +263,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.9'] = $instanceId9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId8() instead.
-     *
-     * @param string $instanceId8
-     *
-     * @return $this
-     */
-    public function setInstanceId8($instanceId8)
-    {
-        return $this->withInstanceId8($instanceId8);
     }
 
     /**
@@ -513,18 +279,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -535,18 +289,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId18() instead.
-     *
-     * @param string $instanceId18
-     *
-     * @return $this
-     */
-    public function setInstanceId18($instanceId18)
-    {
-        return $this->withInstanceId18($instanceId18);
     }
 
     /**
@@ -563,18 +305,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId17() instead.
-     *
-     * @param string $instanceId17
-     *
-     * @return $this
-     */
-    public function setInstanceId17($instanceId17)
-    {
-        return $this->withInstanceId17($instanceId17);
-    }
-
-    /**
      * @param string $instanceId17
      *
      * @return $this
@@ -585,18 +315,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.17'] = $instanceId17;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId19() instead.
-     *
-     * @param string $instanceId19
-     *
-     * @return $this
-     */
-    public function setInstanceId19($instanceId19)
-    {
-        return $this->withInstanceId19($instanceId19);
     }
 
     /**
@@ -613,18 +331,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId14() instead.
-     *
-     * @param string $instanceId14
-     *
-     * @return $this
-     */
-    public function setInstanceId14($instanceId14)
-    {
-        return $this->withInstanceId14($instanceId14);
-    }
-
-    /**
      * @param string $instanceId14
      *
      * @return $this
@@ -635,18 +341,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.14'] = $instanceId14;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId13() instead.
-     *
-     * @param string $instanceId13
-     *
-     * @return $this
-     */
-    public function setInstanceId13($instanceId13)
-    {
-        return $this->withInstanceId13($instanceId13);
     }
 
     /**
@@ -663,18 +357,6 @@ class RemoveInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId16() instead.
-     *
-     * @param string $instanceId16
-     *
-     * @return $this
-     */
-    public function setInstanceId16($instanceId16)
-    {
-        return $this->withInstanceId16($instanceId16);
-    }
-
-    /**
      * @param string $instanceId16
      *
      * @return $this
@@ -685,18 +367,6 @@ class RemoveInstances extends RpcRequest
         $this->options['query']['InstanceId.16'] = $instanceId16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId15() instead.
-     *
-     * @param string $instanceId15
-     *
-     * @return $this
-     */
-    public function setInstanceId15($instanceId15)
-    {
-        return $this->withInstanceId15($instanceId15);
     }
 
     /**

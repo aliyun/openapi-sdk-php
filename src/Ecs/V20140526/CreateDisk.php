@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDisk
+ * Api CreateDisk
  *
  * @method string getResourceOwnerId()
  * @method string getSnapshotId()
@@ -21,41 +21,18 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDiskCategory()
  * @method string getZoneId()
  * @method array getTag()
+ * @method array getArn()
+ * @method string getKMSKeyId()
  */
-class CreateDisk extends RpcRequest
+class CreateDisk extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDisk';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +45,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
     }
 
     /**
@@ -96,18 +61,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +71,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -146,18 +87,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +97,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -196,18 +113,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -218,18 +123,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskName() instead.
-     *
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function setDiskName($diskName)
-    {
-        return $this->withDiskName($diskName);
     }
 
     /**
@@ -246,18 +139,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -268,18 +149,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
     }
 
     /**
@@ -296,18 +165,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEncrypted() instead.
-     *
-     * @param string $encrypted
-     *
-     * @return $this
-     */
-    public function setEncrypted($encrypted)
-    {
-        return $this->withEncrypted($encrypted);
-    }
-
-    /**
      * @param string $encrypted
      *
      * @return $this
@@ -318,18 +175,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['Encrypted'] = $encrypted;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskCategory() instead.
-     *
-     * @param string $diskCategory
-     *
-     * @return $this
-     */
-    public function setDiskCategory($diskCategory)
-    {
-        return $this->withDiskCategory($diskCategory);
     }
 
     /**
@@ -346,18 +191,6 @@ class CreateDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -368,28 +201,6 @@ class CreateDisk extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -404,6 +215,36 @@ class CreateDisk extends RpcRequest
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param array $arn
+     *
+     * @return $this
+     */
+    public function withArn(array $arn)
+    {
+        $this->data['Arn'] = $arn;
+        foreach ($arn as $i => $iValue) {
+            $this->options['query']['Arn.' . ($i + 1) . '.Rolearn'] = $arn[$i]['Rolearn'];
+            $this->options['query']['Arn.' . ($i + 1) . '.RoleType'] = $arn[$i]['RoleType'];
+            $this->options['query']['Arn.' . ($i + 1) . '.AssumeRoleFor'] = $arn[$i]['AssumeRoleFor'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $kMSKeyId
+     *
+     * @return $this
+     */
+    public function withKMSKeyId($kMSKeyId)
+    {
+        $this->data['KMSKeyId'] = $kMSKeyId;
+        $this->options['query']['KMSKeyId'] = $kMSKeyId;
 
         return $this;
     }

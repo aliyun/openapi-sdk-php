@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddTrancodeSEI
+ * Api AddTrancodeSEI
  *
  * @method string getDelay()
  * @method string getAppName()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getStreamName()
  */
-class AddTrancodeSEI extends RpcRequest
+class AddTrancodeSEI extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddTrancodeSEI';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDelay() instead.
-     *
-     * @param string $delay
-     *
-     * @return $this
-     */
-    public function setDelay($delay)
-    {
-        return $this->withDelay($delay);
-    }
 
     /**
      * @param string $delay
@@ -67,18 +37,6 @@ class AddTrancodeSEI extends RpcRequest
         $this->options['query']['Delay'] = $delay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -95,18 +53,6 @@ class AddTrancodeSEI extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRepeat() instead.
-     *
-     * @param string $repeat
-     *
-     * @return $this
-     */
-    public function setRepeat($repeat)
-    {
-        return $this->withRepeat($repeat);
-    }
-
-    /**
      * @param string $repeat
      *
      * @return $this
@@ -117,18 +63,6 @@ class AddTrancodeSEI extends RpcRequest
         $this->options['query']['Repeat'] = $repeat;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -145,18 +79,6 @@ class AddTrancodeSEI extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPattern() instead.
-     *
-     * @param string $pattern
-     *
-     * @return $this
-     */
-    public function setPattern($pattern)
-    {
-        return $this->withPattern($pattern);
-    }
-
-    /**
      * @param string $pattern
      *
      * @return $this
@@ -167,18 +89,6 @@ class AddTrancodeSEI extends RpcRequest
         $this->options['query']['Pattern'] = $pattern;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withText() instead.
-     *
-     * @param string $text
-     *
-     * @return $this
-     */
-    public function setText($text)
-    {
-        return $this->withText($text);
     }
 
     /**
@@ -195,18 +105,6 @@ class AddTrancodeSEI extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +115,6 @@ class AddTrancodeSEI extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

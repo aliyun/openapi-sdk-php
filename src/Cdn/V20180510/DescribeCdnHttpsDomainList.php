@@ -2,34 +2,19 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCdnHttpsDomainList
+ * Api DescribeCdnHttpsDomainList
  *
  * @method string getOwnerId()
  */
-class DescribeCdnHttpsDomainList extends RpcRequest
+class DescribeCdnHttpsDomainList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCdnHttpsDomainList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

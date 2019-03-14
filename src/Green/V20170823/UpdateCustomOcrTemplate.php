@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateCustomOcrTemplate
+ * Api UpdateCustomOcrTemplate
  *
  * @method string getSourceIp()
  * @method string getReferArea()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getName()
  * @method string getId()
  */
-class UpdateCustomOcrTemplate extends RpcRequest
+class UpdateCustomOcrTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateCustomOcrTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
 
     /**

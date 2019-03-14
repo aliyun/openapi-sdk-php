@@ -2,48 +2,22 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDeviceGroupTags
+ * Api SetDeviceGroupTags
  *
  * @method string getTagString()
+ * @method string getIotInstanceId()
  * @method string getGroupId()
  */
-class SetDeviceGroupTags extends RpcRequest
+class SetDeviceGroupTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDeviceGroupTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagString() instead.
-     *
-     * @param string $tagString
-     *
-     * @return $this
-     */
-    public function setTagString($tagString)
-    {
-        return $this->withTagString($tagString);
-    }
 
     /**
      * @param string $tagString
@@ -59,15 +33,16 @@ class SetDeviceGroupTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withGroupId($groupId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

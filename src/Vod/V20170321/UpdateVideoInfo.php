@@ -2,85 +2,33 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateVideoInfo
+ * Api UpdateVideoInfo
  *
- * @method string getCoverURL()
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
- * @method string getCateId()
  * @method string getDescription()
  * @method string getVideoId()
  * @method string getOwnerId()
  * @method string getTitle()
  * @method string getTags()
+ * @method string getCoverURL()
+ * @method string getDownloadSwitch()
+ * @method string getCateId()
+ * @method string getCustomMediaInfo()
+ * @method string getStatus()
  */
-class UpdateVideoInfo extends RpcRequest
+class UpdateVideoInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateVideoInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoverURL() instead.
-     *
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function setCoverURL($coverURL)
-    {
-        return $this->withCoverURL($coverURL);
-    }
-
-    /**
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function withCoverURL($coverURL)
-    {
-        $this->data['CoverURL'] = $coverURL;
-        $this->options['query']['CoverURL'] = $coverURL;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -93,18 +41,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -121,43 +57,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
-    }
-
-    /**
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function withCateId($cateId)
-    {
-        $this->data['CateId'] = $cateId;
-        $this->options['query']['CateId'] = $cateId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -168,18 +67,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -196,18 +83,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -218,18 +93,6 @@ class UpdateVideoInfo extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -246,18 +109,6 @@ class UpdateVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -266,6 +117,71 @@ class UpdateVideoInfo extends RpcRequest
     {
         $this->data['Tags'] = $tags;
         $this->options['query']['Tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * @param string $coverURL
+     *
+     * @return $this
+     */
+    public function withCoverURL($coverURL)
+    {
+        $this->data['CoverURL'] = $coverURL;
+        $this->options['query']['CoverURL'] = $coverURL;
+
+        return $this;
+    }
+
+    /**
+     * @param string $downloadSwitch
+     *
+     * @return $this
+     */
+    public function withDownloadSwitch($downloadSwitch)
+    {
+        $this->data['DownloadSwitch'] = $downloadSwitch;
+        $this->options['query']['DownloadSwitch'] = $downloadSwitch;
+
+        return $this;
+    }
+
+    /**
+     * @param string $cateId
+     *
+     * @return $this
+     */
+    public function withCateId($cateId)
+    {
+        $this->data['CateId'] = $cateId;
+        $this->options['query']['CateId'] = $cateId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $customMediaInfo
+     *
+     * @return $this
+     */
+    public function withCustomMediaInfo($customMediaInfo)
+    {
+        $this->data['CustomMediaInfo'] = $customMediaInfo;
+        $this->options['query']['CustomMediaInfo'] = $customMediaInfo;
+
+        return $this;
+    }
+
+    /**
+     * @param string $status
+     *
+     * @return $this
+     */
+    public function withStatus($status)
+    {
+        $this->data['Status'] = $status;
+        $this->options['query']['Status'] = $status;
 
         return $this;
     }

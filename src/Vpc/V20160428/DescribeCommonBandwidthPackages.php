@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCommonBandwidthPackages
+ * Api DescribeCommonBandwidthPackages
  *
  * @method string getResourceGroupId()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getIncludeReservationData()
  * @method string getPageNumber()
  */
-class DescribeCommonBandwidthPackages extends RpcRequest
+class DescribeCommonBandwidthPackages extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCommonBandwidthPackages';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
 
     /**
      * @param string $resourceGroupId
@@ -69,18 +39,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidthPackageId() instead.
-     *
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function setBandwidthPackageId($bandwidthPackageId)
-    {
-        return $this->withBandwidthPackageId($bandwidthPackageId);
-    }
-
-    /**
      * @param string $bandwidthPackageId
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
         $this->options['query']['BandwidthPackageId'] = $bandwidthPackageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIncludeReservationData() instead.
-     *
-     * @param string $includeReservationData
-     *
-     * @return $this
-     */
-    public function setIncludeReservationData($includeReservationData)
-    {
-        return $this->withIncludeReservationData($includeReservationData);
-    }
-
-    /**
      * @param string $includeReservationData
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeCommonBandwidthPackages extends RpcRequest
         $this->options['query']['IncludeReservationData'] = $includeReservationData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

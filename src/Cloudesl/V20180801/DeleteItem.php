@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Cloudesl\V20180801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteItem
+ * Api DeleteItem
  *
  * @method string getStoreId()
  * @method string getItemBarCode()
  */
-class DeleteItem extends RpcRequest
+class DeleteItem extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'cloudesl';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteItem';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
-    }
 
     /**
      * @param string $storeId
@@ -56,18 +29,6 @@ class DeleteItem extends RpcRequest
         $this->options['query']['StoreId'] = $storeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemBarCode() instead.
-     *
-     * @param string $itemBarCode
-     *
-     * @return $this
-     */
-    public function setItemBarCode($itemBarCode)
-    {
-        return $this->withItemBarCode($itemBarCode);
     }
 
     /**

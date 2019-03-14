@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRegions
+ * Api DescribeRegions
  *
  */
-class DescribeRegions extends RpcRequest
+class DescribeRegions extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRegions';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
 }

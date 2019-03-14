@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteSpecificConfig
+ * Api DeleteSpecificConfig
  *
  * @method string getSecurityToken()
  * @method string getConfigId()
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class DeleteSpecificConfig extends RpcRequest
+class DeleteSpecificConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteSpecificConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

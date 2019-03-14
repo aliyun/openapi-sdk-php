@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddLabel
+ * Api AddLabel
  *
  * @method string getLabelSeries()
  * @method string getOrganization()
@@ -14,40 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLabelName()
  * @method string getUserName()
  */
-class AddLabel extends RpcRequest
+class AddLabel extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Crm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-04-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddLabel';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
+    public $serviceCode = 'crm';
 
     /**
      * @param string $labelSeries
@@ -60,18 +35,6 @@ class AddLabel extends RpcRequest
         $this->options['query']['LabelSeries'] = $labelSeries;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param string $organization
-     *
-     * @return $this
-     */
-    public function setOrganization($organization)
-    {
-        return $this->withOrganization($organization);
     }
 
     /**
@@ -88,18 +51,6 @@ class AddLabel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -110,18 +61,6 @@ class AddLabel extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPK() instead.
-     *
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function setPK($pK)
-    {
-        return $this->withPK($pK);
     }
 
     /**
@@ -138,18 +77,6 @@ class AddLabel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabelName() instead.
-     *
-     * @param string $labelName
-     *
-     * @return $this
-     */
-    public function setLabelName($labelName)
-    {
-        return $this->withLabelName($labelName);
-    }
-
-    /**
      * @param string $labelName
      *
      * @return $this
@@ -160,18 +87,6 @@ class AddLabel extends RpcRequest
         $this->options['query']['LabelName'] = $labelName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UploadServerCertificate
+ * Api UploadServerCertificate
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -20,55 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceGroupId()
  * @method string getServerCertificateName()
  */
-class UploadServerCertificate extends RpcRequest
+class UploadServerCertificate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'UploadServerCertificate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -81,18 +41,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -109,18 +57,6 @@ class UploadServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServerCertificate() instead.
-     *
-     * @param string $serverCertificate
-     *
-     * @return $this
-     */
-    public function setServerCertificate($serverCertificate)
-    {
-        return $this->withServerCertificate($serverCertificate);
-    }
-
-    /**
      * @param string $serverCertificate
      *
      * @return $this
@@ -131,18 +67,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['ServerCertificate'] = $serverCertificate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -159,18 +83,6 @@ class UploadServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -181,18 +93,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliCloudCertificateName() instead.
-     *
-     * @param string $aliCloudCertificateName
-     *
-     * @return $this
-     */
-    public function setAliCloudCertificateName($aliCloudCertificateName)
-    {
-        return $this->withAliCloudCertificateName($aliCloudCertificateName);
     }
 
     /**
@@ -209,18 +109,6 @@ class UploadServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliCloudCertificateId() instead.
-     *
-     * @param string $aliCloudCertificateId
-     *
-     * @return $this
-     */
-    public function setAliCloudCertificateId($aliCloudCertificateId)
-    {
-        return $this->withAliCloudCertificateId($aliCloudCertificateId);
-    }
-
-    /**
      * @param string $aliCloudCertificateId
      *
      * @return $this
@@ -231,18 +119,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['AliCloudCertificateId'] = $aliCloudCertificateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -259,18 +135,6 @@ class UploadServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -281,18 +145,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['Tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateKey() instead.
-     *
-     * @param string $privateKey
-     *
-     * @return $this
-     */
-    public function setPrivateKey($privateKey)
-    {
-        return $this->withPrivateKey($privateKey);
     }
 
     /**
@@ -309,18 +161,6 @@ class UploadServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -331,18 +171,6 @@ class UploadServerCertificate extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServerCertificateName() instead.
-     *
-     * @param string $serverCertificateName
-     *
-     * @return $this
-     */
-    public function setServerCertificateName($serverCertificateName)
-    {
-        return $this->withServerCertificateName($serverCertificateName);
     }
 
     /**

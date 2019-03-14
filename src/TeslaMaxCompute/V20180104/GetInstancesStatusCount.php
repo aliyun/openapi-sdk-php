@@ -2,45 +2,21 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetInstancesStatusCount
+ * Api GetInstancesStatusCount
  *
  * @method string getCluster()
  * @method string getQuotaId()
  * @method string getRegion()
  * @method string getQuotaName()
  */
-class GetInstancesStatusCount extends RpcRequest
+class GetInstancesStatusCount extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaMaxCompute';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-04';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetInstancesStatusCount';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
 
     /**
      * @param string $cluster
@@ -53,18 +29,6 @@ class GetInstancesStatusCount extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaId() instead.
-     *
-     * @param string $quotaId
-     *
-     * @return $this
-     */
-    public function setQuotaId($quotaId)
-    {
-        return $this->withQuotaId($quotaId);
     }
 
     /**
@@ -81,18 +45,6 @@ class GetInstancesStatusCount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -103,18 +55,6 @@ class GetInstancesStatusCount extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaName() instead.
-     *
-     * @param string $quotaName
-     *
-     * @return $this
-     */
-    public function setQuotaName($quotaName)
-    {
-        return $this->withQuotaName($quotaName);
     }
 
     /**

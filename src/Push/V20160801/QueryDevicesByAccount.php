@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryDevicesByAccount
+ * Api QueryDevicesByAccount
  *
  * @method string getAppKey()
  * @method string getAccount()
  */
-class QueryDevicesByAccount extends RpcRequest
+class QueryDevicesByAccount extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Push';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryDevicesByAccount';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
 
     /**
      * @param string $appKey
@@ -56,18 +29,6 @@ class QueryDevicesByAccount extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccount() instead.
-     *
-     * @param string $account
-     *
-     * @return $this
-     */
-    public function setAccount($account)
-    {
-        return $this->withAccount($account);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryHotlineRecord
+ * Api QueryHotlineRecord
  *
  * @method string getAgentId()
  * @method string getMaxTalkDuration()
@@ -24,45 +24,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVisitorId()
  * @method string getStatus()
  */
-class QueryHotlineRecord extends RpcRequest
+class QueryHotlineRecord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryHotlineRecord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentId() instead.
-     *
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function setAgentId($agentId)
-    {
-        return $this->withAgentId($agentId);
-    }
 
     /**
      * @param string $agentId
@@ -75,18 +45,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['AgentId'] = $agentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxTalkDuration() instead.
-     *
-     * @param string $maxTalkDuration
-     *
-     * @return $this
-     */
-    public function setMaxTalkDuration($maxTalkDuration)
-    {
-        return $this->withMaxTalkDuration($maxTalkDuration);
     }
 
     /**
@@ -103,18 +61,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -125,18 +71,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -153,18 +87,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -175,18 +97,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -203,18 +113,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSatisfaction() instead.
-     *
-     * @param string $satisfaction
-     *
-     * @return $this
-     */
-    public function setSatisfaction($satisfaction)
-    {
-        return $this->withSatisfaction($satisfaction);
-    }
-
-    /**
      * @param string $satisfaction
      *
      * @return $this
@@ -225,18 +123,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['Satisfaction'] = $satisfaction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinTalkDuratoin() instead.
-     *
-     * @param string $minTalkDuratoin
-     *
-     * @return $this
-     */
-    public function setMinTalkDuratoin($minTalkDuratoin)
-    {
-        return $this->withMinTalkDuratoin($minTalkDuratoin);
     }
 
     /**
@@ -253,18 +139,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategoryIds() instead.
-     *
-     * @param string $categoryIds
-     *
-     * @return $this
-     */
-    public function setCategoryIds($categoryIds)
-    {
-        return $this->withCategoryIds($categoryIds);
-    }
-
-    /**
      * @param string $categoryIds
      *
      * @return $this
@@ -275,18 +149,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['CategoryIds'] = $categoryIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVisitorProvince() instead.
-     *
-     * @param string $visitorProvince
-     *
-     * @return $this
-     */
-    public function setVisitorProvince($visitorProvince)
-    {
-        return $this->withVisitorProvince($visitorProvince);
     }
 
     /**
@@ -303,18 +165,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -325,18 +175,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallType() instead.
-     *
-     * @param string $callType
-     *
-     * @return $this
-     */
-    public function setCallType($callType)
-    {
-        return $this->withCallType($callType);
     }
 
     /**
@@ -353,18 +191,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -375,18 +201,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVisitorPhone() instead.
-     *
-     * @param string $visitorPhone
-     *
-     * @return $this
-     */
-    public function setVisitorPhone($visitorPhone)
-    {
-        return $this->withVisitorPhone($visitorPhone);
     }
 
     /**
@@ -403,18 +217,6 @@ class QueryHotlineRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVisitorId() instead.
-     *
-     * @param string $visitorId
-     *
-     * @return $this
-     */
-    public function setVisitorId($visitorId)
-    {
-        return $this->withVisitorId($visitorId);
-    }
-
-    /**
      * @param string $visitorId
      *
      * @return $this
@@ -425,18 +227,6 @@ class QueryHotlineRecord extends RpcRequest
         $this->options['query']['VisitorId'] = $visitorId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

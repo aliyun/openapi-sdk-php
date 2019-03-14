@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeResources
+ * Api DescribeResources
  *
  * @method array getFilter()
  * @method string getProduct()
@@ -14,55 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMaxItems()
  * @method string getResourceType()
  */
-class DescribeResources extends RpcRequest
+class DescribeResources extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeResources';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
-    }
 
     /**
      * @param array $filter
@@ -82,18 +42,6 @@ class DescribeResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
-
-    /**
      * @param string $product
      *
      * @return $this
@@ -104,18 +52,6 @@ class DescribeResources extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**
@@ -132,18 +68,6 @@ class DescribeResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
-    }
-
-    /**
      * @param string $keyword
      *
      * @return $this
@@ -157,18 +81,6 @@ class DescribeResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxItems() instead.
-     *
-     * @param string $maxItems
-     *
-     * @return $this
-     */
-    public function setMaxItems($maxItems)
-    {
-        return $this->withMaxItems($maxItems);
-    }
-
-    /**
      * @param string $maxItems
      *
      * @return $this
@@ -179,18 +91,6 @@ class DescribeResources extends RpcRequest
         $this->options['query']['MaxItems'] = $maxItems;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

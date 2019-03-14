@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerRenewInstance
+ * Api InnerRenewInstance
  *
  * @method string getCommodity()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBusinessInfo()
  * @method string getOrderType()
  */
-class InnerRenewInstance extends RpcRequest
+class InnerRenewInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerRenewInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommodity() instead.
-     *
-     * @param string $commodity
-     *
-     * @return $this
-     */
-    public function setCommodity($commodity)
-    {
-        return $this->withCommodity($commodity);
-    }
 
     /**
      * @param string $commodity
@@ -69,18 +39,6 @@ class InnerRenewInstance extends RpcRequest
         $this->options['query']['Commodity'] = $commodity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +55,6 @@ class InnerRenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromApp() instead.
-     *
-     * @param string $fromApp
-     *
-     * @return $this
-     */
-    public function setFromApp($fromApp)
-    {
-        return $this->withFromApp($fromApp);
-    }
-
-    /**
      * @param string $fromApp
      *
      * @return $this
@@ -119,18 +65,6 @@ class InnerRenewInstance extends RpcRequest
         $this->options['query']['FromApp'] = $fromApp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class InnerRenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -169,18 +91,6 @@ class InnerRenewInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -197,18 +107,6 @@ class InnerRenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
-    }
-
-    /**
      * @param string $chargeType
      *
      * @return $this
@@ -219,18 +117,6 @@ class InnerRenewInstance extends RpcRequest
         $this->options['query']['ChargeType'] = $chargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class InnerRenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBusinessInfo() instead.
-     *
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function setBusinessInfo($businessInfo)
-    {
-        return $this->withBusinessInfo($businessInfo);
-    }
-
-    /**
      * @param string $businessInfo
      *
      * @return $this
@@ -269,18 +143,6 @@ class InnerRenewInstance extends RpcRequest
         $this->options['query']['BusinessInfo'] = $businessInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

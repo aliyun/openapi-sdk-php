@@ -2,45 +2,21 @@
 
 namespace AlibabaCloud\TeslaDam\V20180118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of HostGets
+ * Api HostGets
  *
  * @method string getQuery()
  * @method string getEndTime()
  * @method string getStartTime()
  * @method string getQueryType()
  */
-class HostGets extends RpcRequest
+class HostGets extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaDam';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'HostGets';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuery() instead.
-     *
-     * @param string $query
-     *
-     * @return $this
-     */
-    public function setQuery($query)
-    {
-        return $this->withQuery($query);
-    }
 
     /**
      * @param string $query
@@ -53,18 +29,6 @@ class HostGets extends RpcRequest
         $this->options['query']['Query'] = $query;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -81,18 +45,6 @@ class HostGets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -103,18 +55,6 @@ class HostGets extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryType() instead.
-     *
-     * @param string $queryType
-     *
-     * @return $this
-     */
-    public function setQueryType($queryType)
-    {
-        return $this->withQueryType($queryType);
     }
 
     /**

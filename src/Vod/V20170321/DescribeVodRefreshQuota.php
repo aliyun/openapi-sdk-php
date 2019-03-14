@@ -2,40 +2,22 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVodRefreshQuota
+ * Api DescribeVodRefreshQuota
  *
  * @method string getSecurityToken()
  * @method string getOwnerId()
  */
-class DescribeVodRefreshQuota extends RpcRequest
+class DescribeVodRefreshQuota extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVodRefreshQuota';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetHttpsOptionConfig
+ * Api SetHttpsOptionConfig
  *
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getHttp2()
  * @method string getOwnerId()
  */
-class SetHttpsOptionConfig extends RpcRequest
+class SetHttpsOptionConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetHttpsOptionConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -58,18 +31,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -86,18 +47,6 @@ class SetHttpsOptionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHttp2() instead.
-     *
-     * @param string $http2
-     *
-     * @return $this
-     */
-    public function setHttp2($http2)
-    {
-        return $this->withHttp2($http2);
-    }
-
-    /**
      * @param string $http2
      *
      * @return $this
@@ -108,18 +57,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['Http2'] = $http2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

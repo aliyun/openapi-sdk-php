@@ -2,134 +2,32 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of IndexImage
+ * Api IndexImage
  *
+ * @method string getRemarksB()
+ * @method string getProject()
+ * @method string getRemarksA()
+ * @method string getExternalId()
  * @method string getImageUri()
  * @method string getSourceUri()
  * @method string getSourcePosition()
- * @method string getRemarksB()
- * @method string getProject()
+ * @method string getRemarksD()
+ * @method string getRemarksC()
  * @method string getSetId()
- * @method string getRemarksA()
  * @method string getSourceType()
  */
-class IndexImage extends RpcRequest
+class IndexImage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'IndexImage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageUri() instead.
-     *
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function setImageUri($imageUri)
-    {
-        return $this->withImageUri($imageUri);
-    }
-
-    /**
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function withImageUri($imageUri)
-    {
-        $this->data['ImageUri'] = $imageUri;
-        $this->options['query']['ImageUri'] = $imageUri;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceUri() instead.
-     *
-     * @param string $sourceUri
-     *
-     * @return $this
-     */
-    public function setSourceUri($sourceUri)
-    {
-        return $this->withSourceUri($sourceUri);
-    }
-
-    /**
-     * @param string $sourceUri
-     *
-     * @return $this
-     */
-    public function withSourceUri($sourceUri)
-    {
-        $this->data['SourceUri'] = $sourceUri;
-        $this->options['query']['SourceUri'] = $sourceUri;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourcePosition() instead.
-     *
-     * @param string $sourcePosition
-     *
-     * @return $this
-     */
-    public function setSourcePosition($sourcePosition)
-    {
-        return $this->withSourcePosition($sourcePosition);
-    }
-
-    /**
-     * @param string $sourcePosition
-     *
-     * @return $this
-     */
-    public function withSourcePosition($sourcePosition)
-    {
-        $this->data['SourcePosition'] = $sourcePosition;
-        $this->options['query']['SourcePosition'] = $sourcePosition;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksB() instead.
-     *
-     * @param string $remarksB
-     *
-     * @return $this
-     */
-    public function setRemarksB($remarksB)
-    {
-        return $this->withRemarksB($remarksB);
-    }
 
     /**
      * @param string $remarksB
@@ -142,18 +40,6 @@ class IndexImage extends RpcRequest
         $this->options['query']['RemarksB'] = $remarksB;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -170,43 +56,6 @@ class IndexImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksA() instead.
-     *
-     * @param string $remarksA
-     *
-     * @return $this
-     */
-    public function setRemarksA($remarksA)
-    {
-        return $this->withRemarksA($remarksA);
-    }
-
-    /**
      * @param string $remarksA
      *
      * @return $this
@@ -220,15 +69,94 @@ class IndexImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceType() instead.
-     *
-     * @param string $sourceType
+     * @param string $externalId
      *
      * @return $this
      */
-    public function setSourceType($sourceType)
+    public function withExternalId($externalId)
     {
-        return $this->withSourceType($sourceType);
+        $this->data['ExternalId'] = $externalId;
+        $this->options['query']['ExternalId'] = $externalId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $imageUri
+     *
+     * @return $this
+     */
+    public function withImageUri($imageUri)
+    {
+        $this->data['ImageUri'] = $imageUri;
+        $this->options['query']['ImageUri'] = $imageUri;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sourceUri
+     *
+     * @return $this
+     */
+    public function withSourceUri($sourceUri)
+    {
+        $this->data['SourceUri'] = $sourceUri;
+        $this->options['query']['SourceUri'] = $sourceUri;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sourcePosition
+     *
+     * @return $this
+     */
+    public function withSourcePosition($sourcePosition)
+    {
+        $this->data['SourcePosition'] = $sourcePosition;
+        $this->options['query']['SourcePosition'] = $sourcePosition;
+
+        return $this;
+    }
+
+    /**
+     * @param string $remarksD
+     *
+     * @return $this
+     */
+    public function withRemarksD($remarksD)
+    {
+        $this->data['RemarksD'] = $remarksD;
+        $this->options['query']['RemarksD'] = $remarksD;
+
+        return $this;
+    }
+
+    /**
+     * @param string $remarksC
+     *
+     * @return $this
+     */
+    public function withRemarksC($remarksC)
+    {
+        $this->data['RemarksC'] = $remarksC;
+        $this->options['query']['RemarksC'] = $remarksC;
+
+        return $this;
+    }
+
+    /**
+     * @param string $setId
+     *
+     * @return $this
+     */
+    public function withSetId($setId)
+    {
+        $this->data['SetId'] = $setId;
+        $this->options['query']['SetId'] = $setId;
+
+        return $this;
     }
 
     /**

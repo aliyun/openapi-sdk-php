@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeHosts
+ * Api DescribeHosts
  *
  * @method string getEventLevels()
  * @method string getSourceIp()
  * @method string getLastDays()
  * @method string getEventTypes()
  */
-class DescribeHosts extends RpcRequest
+class DescribeHosts extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeHosts';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventLevels() instead.
-     *
-     * @param string $eventLevels
-     *
-     * @return $this
-     */
-    public function setEventLevels($eventLevels)
-    {
-        return $this->withEventLevels($eventLevels);
-    }
 
     /**
      * @param string $eventLevels
@@ -63,18 +33,6 @@ class DescribeHosts extends RpcRequest
         $this->options['query']['EventLevels'] = $eventLevels;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +49,6 @@ class DescribeHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLastDays() instead.
-     *
-     * @param string $lastDays
-     *
-     * @return $this
-     */
-    public function setLastDays($lastDays)
-    {
-        return $this->withLastDays($lastDays);
-    }
-
-    /**
      * @param string $lastDays
      *
      * @return $this
@@ -113,18 +59,6 @@ class DescribeHosts extends RpcRequest
         $this->options['query']['LastDays'] = $lastDays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventTypes() instead.
-     *
-     * @param string $eventTypes
-     *
-     * @return $this
-     */
-    public function setEventTypes($eventTypes)
-    {
-        return $this->withEventTypes($eventTypes);
     }
 
     /**

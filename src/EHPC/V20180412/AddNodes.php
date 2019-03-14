@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddNodes
+ * Api AddNodes
  *
  * @method string getAutoRenewPeriod()
  * @method string getPeriod()
@@ -23,40 +23,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceType()
  * @method string getComputeSpotPriceLimit()
  */
-class AddNodes extends RpcRequest
+class AddNodes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddNodes';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenewPeriod() instead.
-     *
-     * @param string $autoRenewPeriod
-     *
-     * @return $this
-     */
-    public function setAutoRenewPeriod($autoRenewPeriod)
-    {
-        return $this->withAutoRenewPeriod($autoRenewPeriod);
-    }
 
     /**
      * @param string $autoRenewPeriod
@@ -69,18 +42,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['AutoRenewPeriod'] = $autoRenewPeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -97,18 +58,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -119,18 +68,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCount() instead.
-     *
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        return $this->withCount($count);
     }
 
     /**
@@ -147,18 +84,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -169,18 +94,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComputeSpotStrategy() instead.
-     *
-     * @param string $computeSpotStrategy
-     *
-     * @return $this
-     */
-    public function setComputeSpotStrategy($computeSpotStrategy)
-    {
-        return $this->withComputeSpotStrategy($computeSpotStrategy);
     }
 
     /**
@@ -197,18 +110,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobQueue() instead.
-     *
-     * @param string $jobQueue
-     *
-     * @return $this
-     */
-    public function setJobQueue($jobQueue)
-    {
-        return $this->withJobQueue($jobQueue);
-    }
-
-    /**
      * @param string $jobQueue
      *
      * @return $this
@@ -219,18 +120,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['JobQueue'] = $jobQueue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
     }
 
     /**
@@ -247,18 +136,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
-    }
-
-    /**
      * @param string $periodUnit
      *
      * @return $this
@@ -269,18 +146,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['PeriodUnit'] = $periodUnit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
     }
 
     /**
@@ -297,18 +162,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEcsChargeType() instead.
-     *
-     * @param string $ecsChargeType
-     *
-     * @return $this
-     */
-    public function setEcsChargeType($ecsChargeType)
-    {
-        return $this->withEcsChargeType($ecsChargeType);
-    }
-
-    /**
      * @param string $ecsChargeType
      *
      * @return $this
@@ -319,18 +172,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['EcsChargeType'] = $ecsChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreateMode() instead.
-     *
-     * @param string $createMode
-     *
-     * @return $this
-     */
-    public function setCreateMode($createMode)
-    {
-        return $this->withCreateMode($createMode);
     }
 
     /**
@@ -347,18 +188,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
-    }
-
-    /**
      * @param string $systemDiskSize
      *
      * @return $this
@@ -372,18 +201,6 @@ class AddNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -394,18 +211,6 @@ class AddNodes extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComputeSpotPriceLimit() instead.
-     *
-     * @param string $computeSpotPriceLimit
-     *
-     * @return $this
-     */
-    public function setComputeSpotPriceLimit($computeSpotPriceLimit)
-    {
-        return $this->withComputeSpotPriceLimit($computeSpotPriceLimit);
     }
 
     /**

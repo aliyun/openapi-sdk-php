@@ -2,75 +2,49 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainTopUrlVisit
+ * Api DescribeDomainTopUrlVisit
  *
- * @method string getSecurityToken()
- * @method string getDomainName()
- * @method string getSortBy()
  * @method string getStartTime()
+ * @method string getPercent()
+ * @method string getDomainName()
  * @method string getOwnerId()
+ * @method string getSortBy()
  */
-class DescribeDomainTopUrlVisit extends RpcRequest
+class DescribeDomainTopUrlVisit extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainTopUrlVisit';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
+     * @param string $startTime
      *
      * @return $this
      */
-    public function setSecurityToken($securityToken)
+    public function withStartTime($startTime)
     {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
+        $this->data['StartTime'] = $startTime;
+        $this->options['query']['StartTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
+     * @param string $percent
      *
      * @return $this
      */
-    public function setDomainName($domainName)
+    public function withPercent($percent)
     {
-        return $this->withDomainName($domainName);
+        $this->data['Percent'] = $percent;
+        $this->options['query']['Percent'] = $percent;
+
+        return $this;
     }
 
     /**
@@ -87,15 +61,16 @@ class DescribeDomainTopUrlVisit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSortBy() instead.
-     *
-     * @param string $sortBy
+     * @param string $ownerId
      *
      * @return $this
      */
-    public function setSortBy($sortBy)
+    public function withOwnerId($ownerId)
     {
-        return $this->withSortBy($sortBy);
+        $this->data['OwnerId'] = $ownerId;
+        $this->options['query']['OwnerId'] = $ownerId;
+
+        return $this;
     }
 
     /**
@@ -107,56 +82,6 @@ class DescribeDomainTopUrlVisit extends RpcRequest
     {
         $this->data['SortBy'] = $sortBy;
         $this->options['query']['SortBy'] = $sortBy;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

@@ -2,54 +2,31 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StopInstance
+ * Api StopInstance
  *
  * @method string getResourceOwnerId()
  * @method string getInstanceId()
+ * @method string getDryRun()
  * @method string getResourceOwnerAccount()
  * @method string getConfirmStop()
  * @method string getOwnerAccount()
  * @method string getStoppedMode()
  * @method string getOwnerId()
+ * @method string getHibernate()
  * @method string getForceStop()
  */
-class StopInstance extends RpcRequest
+class StopInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'StopInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +39,6 @@ class StopInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -90,15 +55,16 @@ class StopInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $dryRun
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withDryRun($dryRun)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['DryRun'] = $dryRun;
+        $this->options['query']['DryRun'] = $dryRun;
+
+        return $this;
     }
 
     /**
@@ -115,18 +81,6 @@ class StopInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfirmStop() instead.
-     *
-     * @param string $confirmStop
-     *
-     * @return $this
-     */
-    public function setConfirmStop($confirmStop)
-    {
-        return $this->withConfirmStop($confirmStop);
-    }
-
-    /**
      * @param string $confirmStop
      *
      * @return $this
@@ -137,18 +91,6 @@ class StopInstance extends RpcRequest
         $this->options['query']['ConfirmStop'] = $confirmStop;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -165,18 +107,6 @@ class StopInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoppedMode() instead.
-     *
-     * @param string $stoppedMode
-     *
-     * @return $this
-     */
-    public function setStoppedMode($stoppedMode)
-    {
-        return $this->withStoppedMode($stoppedMode);
-    }
-
-    /**
      * @param string $stoppedMode
      *
      * @return $this
@@ -187,18 +117,6 @@ class StopInstance extends RpcRequest
         $this->options['query']['StoppedMode'] = $stoppedMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -215,15 +133,16 @@ class StopInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceStop() instead.
-     *
-     * @param string $forceStop
+     * @param string $hibernate
      *
      * @return $this
      */
-    public function setForceStop($forceStop)
+    public function withHibernate($hibernate)
     {
-        return $this->withForceStop($forceStop);
+        $this->data['Hibernate'] = $hibernate;
+        $this->options['query']['Hibernate'] = $hibernate;
+
+        return $this;
     }
 
     /**

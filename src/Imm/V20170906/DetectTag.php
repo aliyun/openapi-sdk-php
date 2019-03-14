@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DetectTag
+ * Api DetectTag
  *
  * @method string getSrcUris()
  * @method string getModelId()
  * @method string getProject()
  */
-class DetectTag extends RpcRequest
+class DetectTag extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DetectTag';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
-     * @param string $srcUris
-     *
-     * @return $this
-     */
-    public function setSrcUris($srcUris)
-    {
-        return $this->withSrcUris($srcUris);
-    }
 
     /**
      * @param string $srcUris
@@ -65,18 +35,6 @@ class DetectTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
-    }
-
-    /**
      * @param string $modelId
      *
      * @return $this
@@ -87,18 +45,6 @@ class DetectTag extends RpcRequest
         $this->options['query']['ModelId'] = $modelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

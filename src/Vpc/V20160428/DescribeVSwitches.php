@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVSwitches
+ * Api DescribeVSwitches
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -18,48 +18,19 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVSwitchName()
  * @method string getPageSize()
  * @method string getZoneId()
+ * @method array getTag()
  * @method string getIsDefault()
  * @method string getRouteTableId()
  */
-class DescribeVSwitches extends RpcRequest
+class DescribeVSwitches extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVSwitches';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,18 +43,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -100,18 +59,6 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -122,18 +69,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -150,18 +85,6 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -172,18 +95,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -200,18 +111,6 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -222,18 +121,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -250,18 +137,6 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchName() instead.
-     *
-     * @param string $vSwitchName
-     *
-     * @return $this
-     */
-    public function setVSwitchName($vSwitchName)
-    {
-        return $this->withVSwitchName($vSwitchName);
-    }
-
-    /**
      * @param string $vSwitchName
      *
      * @return $this
@@ -272,18 +147,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['VSwitchName'] = $vSwitchName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -300,18 +163,6 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -325,15 +176,19 @@ class DescribeVSwitches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDefault() instead.
-     *
-     * @param string $isDefault
+     * @param array $tag
      *
      * @return $this
      */
-    public function setIsDefault($isDefault)
+    public function withTag(array $tag)
     {
-        return $this->withIsDefault($isDefault);
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $i => $iValue) {
+            $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
+            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
+        }
+
+        return $this;
     }
 
     /**
@@ -347,18 +202,6 @@ class DescribeVSwitches extends RpcRequest
         $this->options['query']['IsDefault'] = $isDefault;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableId() instead.
-     *
-     * @param string $routeTableId
-     *
-     * @return $this
-     */
-    public function setRouteTableId($routeTableId)
-    {
-        return $this->withRouteTableId($routeTableId);
     }
 
     /**

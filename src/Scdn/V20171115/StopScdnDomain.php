@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StopScdnDomain
+ * Api StopScdnDomain
  *
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class StopScdnDomain extends RpcRequest
+class StopScdnDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'scdn';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'StopScdnDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'scdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -65,18 +35,6 @@ class StopScdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -87,18 +45,6 @@ class StopScdnDomain extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

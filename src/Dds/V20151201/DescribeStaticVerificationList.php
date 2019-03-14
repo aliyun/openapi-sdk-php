@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeStaticVerificationList
+ * Api DescribeStaticVerificationList
  *
  * @method string getResourceOwnerId()
  * @method string getSecurityToken()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSourceInstanceId()
  * @method string getOwnerId()
  */
-class DescribeStaticVerificationList extends RpcRequest
+class DescribeStaticVerificationList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeStaticVerificationList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class DescribeStaticVerificationList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -95,18 +53,6 @@ class DescribeStaticVerificationList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeStaticVerificationList extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -145,18 +79,6 @@ class DescribeStaticVerificationList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplicaId() instead.
-     *
-     * @param string $replicaId
-     *
-     * @return $this
-     */
-    public function setReplicaId($replicaId)
-    {
-        return $this->withReplicaId($replicaId);
-    }
-
-    /**
      * @param string $replicaId
      *
      * @return $this
@@ -167,18 +89,6 @@ class DescribeStaticVerificationList extends RpcRequest
         $this->options['query']['ReplicaId'] = $replicaId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationInstanceId() instead.
-     *
-     * @param string $destinationInstanceId
-     *
-     * @return $this
-     */
-    public function setDestinationInstanceId($destinationInstanceId)
-    {
-        return $this->withDestinationInstanceId($destinationInstanceId);
     }
 
     /**
@@ -195,18 +105,6 @@ class DescribeStaticVerificationList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceInstanceId() instead.
-     *
-     * @param string $sourceInstanceId
-     *
-     * @return $this
-     */
-    public function setSourceInstanceId($sourceInstanceId)
-    {
-        return $this->withSourceInstanceId($sourceInstanceId);
-    }
-
-    /**
      * @param string $sourceInstanceId
      *
      * @return $this
@@ -217,18 +115,6 @@ class DescribeStaticVerificationList extends RpcRequest
         $this->options['query']['SourceInstanceId'] = $sourceInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

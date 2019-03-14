@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsPublishGet
+ * Api OnsPublishGet
  *
  * @method string getPreventCache()
  * @method string getOnsRegionId()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTopic()
  * @method string getProducerId()
  */
-class OnsPublishGet extends RpcRequest
+class OnsPublishGet extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsPublishGet';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -59,18 +32,6 @@ class OnsPublishGet extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -87,18 +48,6 @@ class OnsPublishGet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -112,18 +61,6 @@ class OnsPublishGet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -134,18 +71,6 @@ class OnsPublishGet extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProducerId() instead.
-     *
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function setProducerId($producerId)
-    {
-        return $this->withProducerId($producerId);
     }
 
     /**

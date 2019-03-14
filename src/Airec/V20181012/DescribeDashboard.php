@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeDashboard
+ * Api DescribeDashboard
  *
  * @method string getInstanceId()
  * @method string getEndDate()
  * @method string getStartDate()
  */
-class DescribeDashboard extends RoaRequest
+class DescribeDashboard extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Airec';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDashboard';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'airec';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -65,18 +35,6 @@ class DescribeDashboard extends RoaRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -87,18 +45,6 @@ class DescribeDashboard extends RoaRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
     }
 
     /**

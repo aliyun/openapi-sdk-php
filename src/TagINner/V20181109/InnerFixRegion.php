@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\TagINner\V20181109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerFixRegion
+ * Api InnerFixRegion
  *
  * @method string getResourceOwnerId()
  * @method string getFixRegionId()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTagValueId()
  * @method string getTagKeyId()
  */
-class InnerFixRegion extends RpcRequest
+class InnerFixRegion extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Tag-Inner';
 
-    /**
-     * @var string
-     */
     public $version = '2018-11-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerFixRegion';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'tag';
 
     /**

@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of JoinBoard
+ * Api JoinBoard
  *
  * @method string getBoardId()
  * @method string getAppUid()
  * @method string getOwnerId()
  * @method string getAppId()
  */
-class JoinBoard extends RpcRequest
+class JoinBoard extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'JoinBoard';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBoardId() instead.
-     *
-     * @param string $boardId
-     *
-     * @return $this
-     */
-    public function setBoardId($boardId)
-    {
-        return $this->withBoardId($boardId);
-    }
 
     /**
      * @param string $boardId
@@ -63,18 +33,6 @@ class JoinBoard extends RpcRequest
         $this->options['query']['BoardId'] = $boardId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppUid() instead.
-     *
-     * @param string $appUid
-     *
-     * @return $this
-     */
-    public function setAppUid($appUid)
-    {
-        return $this->withAppUid($appUid);
     }
 
     /**
@@ -91,18 +49,6 @@ class JoinBoard extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -113,18 +59,6 @@ class JoinBoard extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

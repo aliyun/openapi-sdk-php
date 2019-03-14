@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateBatchJobs
+ * Api CreateBatchJobs
  *
  * @method array getCallingNumber()
  * @method string getInstanceId()
@@ -16,55 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getScenarioId()
  * @method string getJobFilePath()
  */
-class CreateBatchJobs extends RpcRequest
+class CreateBatchJobs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateBatchJobs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
-    }
 
     /**
      * @param array $callingNumber
@@ -82,18 +42,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -104,18 +52,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubmitted() instead.
-     *
-     * @param string $submitted
-     *
-     * @return $this
-     */
-    public function setSubmitted($submitted)
-    {
-        return $this->withSubmitted($submitted);
     }
 
     /**
@@ -132,18 +68,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
-    }
-
-    /**
      * @param string $strategyJson
      *
      * @return $this
@@ -154,18 +78,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['StrategyJson'] = $strategyJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -182,18 +94,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -207,18 +107,6 @@ class CreateBatchJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -229,18 +117,6 @@ class CreateBatchJobs extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobFilePath() instead.
-     *
-     * @param string $jobFilePath
-     *
-     * @return $this
-     */
-    public function setJobFilePath($jobFilePath)
-    {
-        return $this->withJobFilePath($jobFilePath);
     }
 
     /**

@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteTrafficSpecialControl
+ * Api DeleteTrafficSpecialControl
  *
  * @method string getTrafficControlId()
  * @method string getSpecialKey()
  * @method string getSecurityToken()
  * @method string getSpecialType()
  */
-class DeleteTrafficSpecialControl extends RpcRequest
+class DeleteTrafficSpecialControl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteTrafficSpecialControl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

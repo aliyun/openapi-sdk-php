@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cloudesl\V20180801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeEslDevices
+ * Api DescribeEslDevices
  *
  * @method string getEslStatus()
  * @method string getToBatteryLevel()
@@ -21,40 +21,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBeBind()
  * @method string getItemBarCode()
  */
-class DescribeEslDevices extends RpcRequest
+class DescribeEslDevices extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'cloudesl';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeEslDevices';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEslStatus() instead.
-     *
-     * @param string $eslStatus
-     *
-     * @return $this
-     */
-    public function setEslStatus($eslStatus)
-    {
-        return $this->withEslStatus($eslStatus);
-    }
 
     /**
      * @param string $eslStatus
@@ -67,18 +40,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['EslStatus'] = $eslStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToBatteryLevel() instead.
-     *
-     * @param string $toBatteryLevel
-     *
-     * @return $this
-     */
-    public function setToBatteryLevel($toBatteryLevel)
-    {
-        return $this->withToBatteryLevel($toBatteryLevel);
     }
 
     /**
@@ -95,18 +56,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
-    }
-
-    /**
      * @param string $storeId
      *
      * @return $this
@@ -117,18 +66,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['StoreId'] = $storeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -145,18 +82,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMac() instead.
-     *
-     * @param string $mac
-     *
-     * @return $this
-     */
-    public function setMac($mac)
-    {
-        return $this->withMac($mac);
-    }
-
-    /**
      * @param string $mac
      *
      * @return $this
@@ -167,18 +92,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['Mac'] = $mac;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -195,18 +108,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromBatteryLevel() instead.
-     *
-     * @param string $fromBatteryLevel
-     *
-     * @return $this
-     */
-    public function setFromBatteryLevel($fromBatteryLevel)
-    {
-        return $this->withFromBatteryLevel($fromBatteryLevel);
-    }
-
-    /**
      * @param string $fromBatteryLevel
      *
      * @return $this
@@ -217,18 +118,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['FromBatteryLevel'] = $fromBatteryLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShelfCode() instead.
-     *
-     * @param string $shelfCode
-     *
-     * @return $this
-     */
-    public function setShelfCode($shelfCode)
-    {
-        return $this->withShelfCode($shelfCode);
     }
 
     /**
@@ -245,18 +134,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEslBarCode() instead.
-     *
-     * @param string $eslBarCode
-     *
-     * @return $this
-     */
-    public function setEslBarCode($eslBarCode)
-    {
-        return $this->withEslBarCode($eslBarCode);
-    }
-
-    /**
      * @param string $eslBarCode
      *
      * @return $this
@@ -267,18 +144,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['EslBarCode'] = $eslBarCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVendor() instead.
-     *
-     * @param string $vendor
-     *
-     * @return $this
-     */
-    public function setVendor($vendor)
-    {
-        return $this->withVendor($vendor);
     }
 
     /**
@@ -295,18 +160,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -320,18 +173,6 @@ class DescribeEslDevices extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeBind() instead.
-     *
-     * @param string $beBind
-     *
-     * @return $this
-     */
-    public function setBeBind($beBind)
-    {
-        return $this->withBeBind($beBind);
-    }
-
-    /**
      * @param string $beBind
      *
      * @return $this
@@ -342,18 +183,6 @@ class DescribeEslDevices extends RpcRequest
         $this->options['query']['BeBind'] = $beBind;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemBarCode() instead.
-     *
-     * @param string $itemBarCode
-     *
-     * @return $this
-     */
-    public function setItemBarCode($itemBarCode)
-    {
-        return $this->withItemBarCode($itemBarCode);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDocIndexTask
+ * Api CreateDocIndexTask
  *
  * @method string getCustomKey1()
  * @method string getSet()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSrcUri()
  * @method string getUniqueId()
  */
-class CreateDocIndexTask extends RpcRequest
+class CreateDocIndexTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDocIndexTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey1() instead.
-     *
-     * @param string $customKey1
-     *
-     * @return $this
-     */
-    public function setCustomKey1($customKey1)
-    {
-        return $this->withCustomKey1($customKey1);
-    }
 
     /**
      * @param string $customKey1
@@ -71,18 +41,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['CustomKey1'] = $customKey1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSet() instead.
-     *
-     * @param string $set
-     *
-     * @return $this
-     */
-    public function setSet($set)
-    {
-        return $this->withSet($set);
     }
 
     /**
@@ -99,18 +57,6 @@ class CreateDocIndexTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey5() instead.
-     *
-     * @param string $customKey5
-     *
-     * @return $this
-     */
-    public function setCustomKey5($customKey5)
-    {
-        return $this->withCustomKey5($customKey5);
-    }
-
-    /**
      * @param string $customKey5
      *
      * @return $this
@@ -121,18 +67,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['CustomKey5'] = $customKey5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey4() instead.
-     *
-     * @param string $customKey4
-     *
-     * @return $this
-     */
-    public function setCustomKey4($customKey4)
-    {
-        return $this->withCustomKey4($customKey4);
     }
 
     /**
@@ -149,18 +83,6 @@ class CreateDocIndexTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey3() instead.
-     *
-     * @param string $customKey3
-     *
-     * @return $this
-     */
-    public function setCustomKey3($customKey3)
-    {
-        return $this->withCustomKey3($customKey3);
-    }
-
-    /**
      * @param string $customKey3
      *
      * @return $this
@@ -171,18 +93,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['CustomKey3'] = $customKey3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey2() instead.
-     *
-     * @param string $customKey2
-     *
-     * @return $this
-     */
-    public function setCustomKey2($customKey2)
-    {
-        return $this->withCustomKey2($customKey2);
     }
 
     /**
@@ -199,18 +109,6 @@ class CreateDocIndexTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -221,18 +119,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCustomKey6() instead.
-     *
-     * @param string $customKey6
-     *
-     * @return $this
-     */
-    public function setCustomKey6($customKey6)
-    {
-        return $this->withCustomKey6($customKey6);
     }
 
     /**
@@ -249,18 +135,6 @@ class CreateDocIndexTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContentType() instead.
-     *
-     * @param string $contentType
-     *
-     * @return $this
-     */
-    public function setContentType($contentType)
-    {
-        return $this->withContentType($contentType);
-    }
-
-    /**
      * @param string $contentType
      *
      * @return $this
@@ -271,18 +145,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['ContentType'] = $contentType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -299,18 +161,6 @@ class CreateDocIndexTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
-    }
-
-    /**
      * @param string $srcUri
      *
      * @return $this
@@ -321,18 +171,6 @@ class CreateDocIndexTask extends RpcRequest
         $this->options['query']['SrcUri'] = $srcUri;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUniqueId() instead.
-     *
-     * @param string $uniqueId
-     *
-     * @return $this
-     */
-    public function setUniqueId($uniqueId)
-    {
-        return $this->withUniqueId($uniqueId);
     }
 
     /**

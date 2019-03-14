@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OperationSuspEvents
+ * Api OperationSuspEvents
  *
  * @method string getSourceIp()
  * @method string getWarnType()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSubOperation()
  * @method string getOperation()
  */
-class OperationSuspEvents extends RpcRequest
+class OperationSuspEvents extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'OperationSuspEvents';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -65,18 +35,6 @@ class OperationSuspEvents extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWarnType() instead.
-     *
-     * @param string $warnType
-     *
-     * @return $this
-     */
-    public function setWarnType($warnType)
-    {
-        return $this->withWarnType($warnType);
     }
 
     /**
@@ -93,18 +51,6 @@ class OperationSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuspiciousEventIds() instead.
-     *
-     * @param string $suspiciousEventIds
-     *
-     * @return $this
-     */
-    public function setSuspiciousEventIds($suspiciousEventIds)
-    {
-        return $this->withSuspiciousEventIds($suspiciousEventIds);
-    }
-
-    /**
      * @param string $suspiciousEventIds
      *
      * @return $this
@@ -115,18 +61,6 @@ class OperationSuspEvents extends RpcRequest
         $this->options['query']['SuspiciousEventIds'] = $suspiciousEventIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -143,18 +77,6 @@ class OperationSuspEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubOperation() instead.
-     *
-     * @param string $subOperation
-     *
-     * @return $this
-     */
-    public function setSubOperation($subOperation)
-    {
-        return $this->withSubOperation($subOperation);
-    }
-
-    /**
      * @param string $subOperation
      *
      * @return $this
@@ -165,18 +87,6 @@ class OperationSuspEvents extends RpcRequest
         $this->options['query']['SubOperation'] = $subOperation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
     }
 
     /**

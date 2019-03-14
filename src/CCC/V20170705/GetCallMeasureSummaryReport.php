@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetCallMeasureSummaryReport
+ * Api GetCallMeasureSummaryReport
  *
  * @method string getIntervalType()
  * @method string getMonth()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDay()
  * @method string getPageNumber()
  */
-class GetCallMeasureSummaryReport extends RpcRequest
+class GetCallMeasureSummaryReport extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetCallMeasureSummaryReport';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIntervalType() instead.
-     *
-     * @param string $intervalType
-     *
-     * @return $this
-     */
-    public function setIntervalType($intervalType)
-    {
-        return $this->withIntervalType($intervalType);
-    }
 
     /**
      * @param string $intervalType
@@ -65,18 +35,6 @@ class GetCallMeasureSummaryReport extends RpcRequest
         $this->options['query']['IntervalType'] = $intervalType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMonth() instead.
-     *
-     * @param string $month
-     *
-     * @return $this
-     */
-    public function setMonth($month)
-    {
-        return $this->withMonth($month);
     }
 
     /**
@@ -93,18 +51,6 @@ class GetCallMeasureSummaryReport extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withYear() instead.
-     *
-     * @param string $year
-     *
-     * @return $this
-     */
-    public function setYear($year)
-    {
-        return $this->withYear($year);
-    }
-
-    /**
      * @param string $year
      *
      * @return $this
@@ -115,18 +61,6 @@ class GetCallMeasureSummaryReport extends RpcRequest
         $this->options['query']['Year'] = $year;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -143,18 +77,6 @@ class GetCallMeasureSummaryReport extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDay() instead.
-     *
-     * @param string $day
-     *
-     * @return $this
-     */
-    public function setDay($day)
-    {
-        return $this->withDay($day);
-    }
-
-    /**
      * @param string $day
      *
      * @return $this
@@ -165,18 +87,6 @@ class GetCallMeasureSummaryReport extends RpcRequest
         $this->options['query']['Day'] = $day;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

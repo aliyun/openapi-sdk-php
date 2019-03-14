@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\ARMS\V20181015;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ARMSQueryDataSet
+ * Api ARMSQueryDataSet
  *
  * @method string getDateStr()
  * @method string getMinTime()
@@ -23,40 +23,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDatasetId()
  * @method array getDimensions()
  */
-class ARMSQueryDataSet extends RpcRequest
+class ARMSQueryDataSet extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'ARMS';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'ARMSQueryDataSet';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDateStr() instead.
-     *
-     * @param string $dateStr
-     *
-     * @return $this
-     */
-    public function setDateStr($dateStr)
-    {
-        return $this->withDateStr($dateStr);
-    }
 
     /**
      * @param string $dateStr
@@ -69,18 +42,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['DateStr'] = $dateStr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinTime() instead.
-     *
-     * @param string $minTime
-     *
-     * @return $this
-     */
-    public function setMinTime($minTime)
-    {
-        return $this->withMinTime($minTime);
     }
 
     /**
@@ -97,18 +58,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReduceTail() instead.
-     *
-     * @param string $reduceTail
-     *
-     * @return $this
-     */
-    public function setReduceTail($reduceTail)
-    {
-        return $this->withReduceTail($reduceTail);
-    }
-
-    /**
      * @param string $reduceTail
      *
      * @return $this
@@ -122,18 +71,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxTime() instead.
-     *
-     * @param string $maxTime
-     *
-     * @return $this
-     */
-    public function setMaxTime($maxTime)
-    {
-        return $this->withMaxTime($maxTime);
-    }
-
-    /**
      * @param string $maxTime
      *
      * @return $this
@@ -144,28 +81,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['MaxTime'] = $maxTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOptionalDims() instead.
-     *
-     * @return array
-     */
-    public function getOptionalDimss()
-    {
-        return $this->getOptionalDims();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOptionalDims() instead.
-     *
-     * @param array $optionalDimss
-     *
-     * @return $this
-     */
-    public function setOptionalDimss(array $optionalDimss)
-    {
-        return $this->withOptionalDims($optionalDimss);
     }
 
     /**
@@ -186,28 +101,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getMeasures() instead.
-     *
-     * @return array
-     */
-    public function getMeasuress()
-    {
-        return $this->getMeasures();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMeasures() instead.
-     *
-     * @param array $measuress
-     *
-     * @return $this
-     */
-    public function setMeasuress(array $measuress)
-    {
-        return $this->withMeasures($measuress);
-    }
-
-    /**
      * @param array $measures
      *
      * @return $this
@@ -220,18 +113,6 @@ class ARMSQueryDataSet extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIntervalInSec() instead.
-     *
-     * @param string $intervalInSec
-     *
-     * @return $this
-     */
-    public function setIntervalInSec($intervalInSec)
-    {
-        return $this->withIntervalInSec($intervalInSec);
     }
 
     /**
@@ -248,18 +129,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDrillDown() instead.
-     *
-     * @param string $isDrillDown
-     *
-     * @return $this
-     */
-    public function setIsDrillDown($isDrillDown)
-    {
-        return $this->withIsDrillDown($isDrillDown);
-    }
-
-    /**
      * @param string $isDrillDown
      *
      * @return $this
@@ -270,18 +139,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['IsDrillDown'] = $isDrillDown;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHungryMode() instead.
-     *
-     * @param string $hungryMode
-     *
-     * @return $this
-     */
-    public function setHungryMode($hungryMode)
-    {
-        return $this->withHungryMode($hungryMode);
     }
 
     /**
@@ -298,18 +155,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -320,18 +165,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderByKey() instead.
-     *
-     * @param string $orderByKey
-     *
-     * @return $this
-     */
-    public function setOrderByKey($orderByKey)
-    {
-        return $this->withOrderByKey($orderByKey);
     }
 
     /**
@@ -348,18 +181,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
-    }
-
-    /**
      * @param string $limit
      *
      * @return $this
@@ -370,28 +191,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['Limit'] = $limit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getRequiredDims() instead.
-     *
-     * @return array
-     */
-    public function getRequiredDimss()
-    {
-        return $this->getRequiredDims();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRequiredDims() instead.
-     *
-     * @param array $requiredDimss
-     *
-     * @return $this
-     */
-    public function setRequiredDimss(array $requiredDimss)
-    {
-        return $this->withRequiredDims($requiredDimss);
     }
 
     /**
@@ -412,18 +211,6 @@ class ARMSQueryDataSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDatasetId() instead.
-     *
-     * @param string $datasetId
-     *
-     * @return $this
-     */
-    public function setDatasetId($datasetId)
-    {
-        return $this->withDatasetId($datasetId);
-    }
-
-    /**
      * @param string $datasetId
      *
      * @return $this
@@ -434,28 +221,6 @@ class ARMSQueryDataSet extends RpcRequest
         $this->options['query']['DatasetId'] = $datasetId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDimensions() instead.
-     *
-     * @return array
-     */
-    public function getDimensionss()
-    {
-        return $this->getDimensions();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param array $dimensionss
-     *
-     * @return $this
-     */
-    public function setDimensionss(array $dimensionss)
-    {
-        return $this->withDimensions($dimensionss);
     }
 
     /**

@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PreloadVodObjectCaches
+ * Api PreloadVodObjectCaches
  *
  * @method string getSecurityToken()
  * @method string getObjectPath()
  * @method string getOwnerId()
  */
-class PreloadVodObjectCaches extends RpcRequest
+class PreloadVodObjectCaches extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'PreloadVodObjectCaches';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

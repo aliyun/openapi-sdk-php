@@ -2,34 +2,19 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeNetstatURL
+ * Api DescribeNetstatURL
  *
  * @method string getId()
  */
-class DescribeNetstatURL extends RpcRequest
+class DescribeNetstatURL extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeNetstatURL';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

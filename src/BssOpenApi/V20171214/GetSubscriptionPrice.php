@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetSubscriptionPrice
+ * Api GetSubscriptionPrice
  *
  * @method string getServicePeriodQuantity()
  * @method string getProductCode()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOrderType()
  * @method string getProductType()
  */
-class GetSubscriptionPrice extends RpcRequest
+class GetSubscriptionPrice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetSubscriptionPrice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServicePeriodQuantity() instead.
-     *
-     * @param string $servicePeriodQuantity
-     *
-     * @return $this
-     */
-    public function setServicePeriodQuantity($servicePeriodQuantity)
-    {
-        return $this->withServicePeriodQuantity($servicePeriodQuantity);
-    }
 
     /**
      * @param string $servicePeriodQuantity
@@ -65,18 +38,6 @@ class GetSubscriptionPrice extends RpcRequest
         $this->options['query']['ServicePeriodQuantity'] = $servicePeriodQuantity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
     }
 
     /**
@@ -93,18 +54,6 @@ class GetSubscriptionPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -115,18 +64,6 @@ class GetSubscriptionPrice extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuantity() instead.
-     *
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function setQuantity($quantity)
-    {
-        return $this->withQuantity($quantity);
     }
 
     /**
@@ -143,18 +80,6 @@ class GetSubscriptionPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServicePeriodUnit() instead.
-     *
-     * @param string $servicePeriodUnit
-     *
-     * @return $this
-     */
-    public function setServicePeriodUnit($servicePeriodUnit)
-    {
-        return $this->withServicePeriodUnit($servicePeriodUnit);
-    }
-
-    /**
      * @param string $servicePeriodUnit
      *
      * @return $this
@@ -168,18 +93,6 @@ class GetSubscriptionPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -190,28 +103,6 @@ class GetSubscriptionPrice extends RpcRequest
         $this->options['query']['SubscriptionType'] = $subscriptionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getModuleList() instead.
-     *
-     * @return array
-     */
-    public function getModuleLists()
-    {
-        return $this->getModuleList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModuleList() instead.
-     *
-     * @param array $moduleLists
-     *
-     * @return $this
-     */
-    public function setModuleLists(array $moduleLists)
-    {
-        return $this->withModuleList($moduleLists);
     }
 
     /**
@@ -233,18 +124,6 @@ class GetSubscriptionPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -255,18 +134,6 @@ class GetSubscriptionPrice extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**
@@ -283,18 +150,6 @@ class GetSubscriptionPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
-    }
-
-    /**
      * @param string $orderType
      *
      * @return $this
@@ -305,18 +160,6 @@ class GetSubscriptionPrice extends RpcRequest
         $this->options['query']['OrderType'] = $orderType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

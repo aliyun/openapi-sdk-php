@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of MoveAlbumPhotos
+ * Api MoveAlbumPhotos
  *
  * @method string getSourceAlbumId()
  * @method string getTargetAlbumId()
@@ -13,51 +13,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getPhotoId()
  * @method string getStoreName()
  */
-class MoveAlbumPhotos extends RpcRequest
+class MoveAlbumPhotos extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'MoveAlbumPhotos';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceAlbumId() instead.
-     *
-     * @param string $sourceAlbumId
-     *
-     * @return $this
-     */
-    public function setSourceAlbumId($sourceAlbumId)
-    {
-        return $this->withSourceAlbumId($sourceAlbumId);
-    }
 
     /**
      * @param string $sourceAlbumId
@@ -70,18 +36,6 @@ class MoveAlbumPhotos extends RpcRequest
         $this->options['query']['SourceAlbumId'] = $sourceAlbumId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetAlbumId() instead.
-     *
-     * @param string $targetAlbumId
-     *
-     * @return $this
-     */
-    public function setTargetAlbumId($targetAlbumId)
-    {
-        return $this->withTargetAlbumId($targetAlbumId);
     }
 
     /**
@@ -98,18 +52,6 @@ class MoveAlbumPhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
-
-    /**
      * @param string $libraryId
      *
      * @return $this
@@ -120,28 +62,6 @@ class MoveAlbumPhotos extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPhotoId() instead.
-     *
-     * @return array
-     */
-    public function getPhotoIds()
-    {
-        return $this->getPhotoId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param array $photoIds
-     *
-     * @return $this
-     */
-    public function setPhotoIds(array $photoIds)
-    {
-        return $this->withPhotoId($photoIds);
     }
 
     /**
@@ -157,18 +77,6 @@ class MoveAlbumPhotos extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

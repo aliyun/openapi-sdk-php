@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySynchronizationObject
+ * Api ModifySynchronizationObject
  *
  * @method string getSynchronizationJobId()
  * @method string getSynchronizationObjects()
  * @method string getOwnerId()
  */
-class ModifySynchronizationObject extends RpcRequest
+class ModifySynchronizationObject extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dts';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySynchronizationObject';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobId() instead.
-     *
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobId($synchronizationJobId)
-    {
-        return $this->withSynchronizationJobId($synchronizationJobId);
-    }
 
     /**
      * @param string $synchronizationJobId
@@ -60,18 +33,6 @@ class ModifySynchronizationObject extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationObjects() instead.
-     *
-     * @param string $synchronizationObjects
-     *
-     * @return $this
-     */
-    public function setSynchronizationObjects($synchronizationObjects)
-    {
-        return $this->withSynchronizationObjects($synchronizationObjects);
-    }
-
-    /**
      * @param string $synchronizationObjects
      *
      * @return $this
@@ -82,18 +43,6 @@ class ModifySynchronizationObject extends RpcRequest
         $this->options['query']['SynchronizationObjects'] = $synchronizationObjects;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

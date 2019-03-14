@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RollbackSuspEventQuaraFile
+ * Api RollbackSuspEventQuaraFile
  *
  * @method string getSourceIp()
  * @method string getFrom()
  * @method string getQuaraFileId()
  */
-class RollbackSuspEventQuaraFile extends RpcRequest
+class RollbackSuspEventQuaraFile extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'RollbackSuspEventQuaraFile';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -65,18 +35,6 @@ class RollbackSuspEventQuaraFile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
-    }
-
-    /**
      * @param string $from
      *
      * @return $this
@@ -87,18 +45,6 @@ class RollbackSuspEventQuaraFile extends RpcRequest
         $this->options['query']['From'] = $from;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuaraFileId() instead.
-     *
-     * @param string $quaraFileId
-     *
-     * @return $this
-     */
-    public function setQuaraFileId($quaraFileId)
-    {
-        return $this->withQuaraFileId($quaraFileId);
     }
 
     /**

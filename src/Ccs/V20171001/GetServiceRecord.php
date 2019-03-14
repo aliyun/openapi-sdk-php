@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetServiceRecord
+ * Api GetServiceRecord
  *
  * @method string getId()
  * @method string getCcsInstanceId()
  */
-class GetServiceRecord extends RpcRequest
+class GetServiceRecord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetServiceRecord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
 
     /**
      * @param string $id
@@ -61,18 +31,6 @@ class GetServiceRecord extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

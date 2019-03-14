@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScalingGroups
+ * Api DescribeScalingGroups
  *
  * @method string getResourceOwnerId()
  * @method string getScalingGroupId10()
@@ -54,45 +54,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getScalingGroupName6()
  * @method string getScalingGroupName12()
  */
-class DescribeScalingGroups extends RpcRequest
+class DescribeScalingGroups extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScalingGroups';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -105,18 +75,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId10() instead.
-     *
-     * @param string $scalingGroupId10
-     *
-     * @return $this
-     */
-    public function setScalingGroupId10($scalingGroupId10)
-    {
-        return $this->withScalingGroupId10($scalingGroupId10);
     }
 
     /**
@@ -133,18 +91,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId12() instead.
-     *
-     * @param string $scalingGroupId12
-     *
-     * @return $this
-     */
-    public function setScalingGroupId12($scalingGroupId12)
-    {
-        return $this->withScalingGroupId12($scalingGroupId12);
-    }
-
-    /**
      * @param string $scalingGroupId12
      *
      * @return $this
@@ -155,18 +101,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.12'] = $scalingGroupId12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId13() instead.
-     *
-     * @param string $scalingGroupId13
-     *
-     * @return $this
-     */
-    public function setScalingGroupId13($scalingGroupId13)
-    {
-        return $this->withScalingGroupId13($scalingGroupId13);
     }
 
     /**
@@ -183,18 +117,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId14() instead.
-     *
-     * @param string $scalingGroupId14
-     *
-     * @return $this
-     */
-    public function setScalingGroupId14($scalingGroupId14)
-    {
-        return $this->withScalingGroupId14($scalingGroupId14);
-    }
-
-    /**
      * @param string $scalingGroupId14
      *
      * @return $this
@@ -205,18 +127,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.14'] = $scalingGroupId14;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId15() instead.
-     *
-     * @param string $scalingGroupId15
-     *
-     * @return $this
-     */
-    public function setScalingGroupId15($scalingGroupId15)
-    {
-        return $this->withScalingGroupId15($scalingGroupId15);
     }
 
     /**
@@ -233,18 +143,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -255,18 +153,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -283,18 +169,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -305,18 +179,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName20() instead.
-     *
-     * @param string $scalingGroupName20
-     *
-     * @return $this
-     */
-    public function setScalingGroupName20($scalingGroupName20)
-    {
-        return $this->withScalingGroupName20($scalingGroupName20);
     }
 
     /**
@@ -333,18 +195,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName19() instead.
-     *
-     * @param string $scalingGroupName19
-     *
-     * @return $this
-     */
-    public function setScalingGroupName19($scalingGroupName19)
-    {
-        return $this->withScalingGroupName19($scalingGroupName19);
-    }
-
-    /**
      * @param string $scalingGroupName19
      *
      * @return $this
@@ -355,18 +205,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.19'] = $scalingGroupName19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId20() instead.
-     *
-     * @param string $scalingGroupId20
-     *
-     * @return $this
-     */
-    public function setScalingGroupId20($scalingGroupId20)
-    {
-        return $this->withScalingGroupId20($scalingGroupId20);
     }
 
     /**
@@ -383,18 +221,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName18() instead.
-     *
-     * @param string $scalingGroupName18
-     *
-     * @return $this
-     */
-    public function setScalingGroupName18($scalingGroupName18)
-    {
-        return $this->withScalingGroupName18($scalingGroupName18);
-    }
-
-    /**
      * @param string $scalingGroupName18
      *
      * @return $this
@@ -405,18 +231,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.18'] = $scalingGroupName18;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName17() instead.
-     *
-     * @param string $scalingGroupName17
-     *
-     * @return $this
-     */
-    public function setScalingGroupName17($scalingGroupName17)
-    {
-        return $this->withScalingGroupName17($scalingGroupName17);
     }
 
     /**
@@ -433,18 +247,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName16() instead.
-     *
-     * @param string $scalingGroupName16
-     *
-     * @return $this
-     */
-    public function setScalingGroupName16($scalingGroupName16)
-    {
-        return $this->withScalingGroupName16($scalingGroupName16);
-    }
-
-    /**
      * @param string $scalingGroupName16
      *
      * @return $this
@@ -455,18 +257,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.16'] = $scalingGroupName16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -483,18 +273,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName() instead.
-     *
-     * @param string $scalingGroupName
-     *
-     * @return $this
-     */
-    public function setScalingGroupName($scalingGroupName)
-    {
-        return $this->withScalingGroupName($scalingGroupName);
-    }
-
-    /**
      * @param string $scalingGroupName
      *
      * @return $this
@@ -505,18 +283,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName'] = $scalingGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -533,18 +299,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName1() instead.
-     *
-     * @param string $scalingGroupName1
-     *
-     * @return $this
-     */
-    public function setScalingGroupName1($scalingGroupName1)
-    {
-        return $this->withScalingGroupName1($scalingGroupName1);
-    }
-
-    /**
      * @param string $scalingGroupName1
      *
      * @return $this
@@ -555,18 +309,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.1'] = $scalingGroupName1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName2() instead.
-     *
-     * @param string $scalingGroupName2
-     *
-     * @return $this
-     */
-    public function setScalingGroupName2($scalingGroupName2)
-    {
-        return $this->withScalingGroupName2($scalingGroupName2);
     }
 
     /**
@@ -583,18 +325,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId2() instead.
-     *
-     * @param string $scalingGroupId2
-     *
-     * @return $this
-     */
-    public function setScalingGroupId2($scalingGroupId2)
-    {
-        return $this->withScalingGroupId2($scalingGroupId2);
-    }
-
-    /**
      * @param string $scalingGroupId2
      *
      * @return $this
@@ -605,18 +335,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.2'] = $scalingGroupId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId1() instead.
-     *
-     * @param string $scalingGroupId1
-     *
-     * @return $this
-     */
-    public function setScalingGroupId1($scalingGroupId1)
-    {
-        return $this->withScalingGroupId1($scalingGroupId1);
     }
 
     /**
@@ -633,18 +351,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId6() instead.
-     *
-     * @param string $scalingGroupId6
-     *
-     * @return $this
-     */
-    public function setScalingGroupId6($scalingGroupId6)
-    {
-        return $this->withScalingGroupId6($scalingGroupId6);
-    }
-
-    /**
      * @param string $scalingGroupId6
      *
      * @return $this
@@ -655,18 +361,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.6'] = $scalingGroupId6;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId16() instead.
-     *
-     * @param string $scalingGroupId16
-     *
-     * @return $this
-     */
-    public function setScalingGroupId16($scalingGroupId16)
-    {
-        return $this->withScalingGroupId16($scalingGroupId16);
     }
 
     /**
@@ -683,18 +377,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName7() instead.
-     *
-     * @param string $scalingGroupName7
-     *
-     * @return $this
-     */
-    public function setScalingGroupName7($scalingGroupName7)
-    {
-        return $this->withScalingGroupName7($scalingGroupName7);
-    }
-
-    /**
      * @param string $scalingGroupName7
      *
      * @return $this
@@ -705,18 +387,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.7'] = $scalingGroupName7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName11() instead.
-     *
-     * @param string $scalingGroupName11
-     *
-     * @return $this
-     */
-    public function setScalingGroupName11($scalingGroupName11)
-    {
-        return $this->withScalingGroupName11($scalingGroupName11);
     }
 
     /**
@@ -733,18 +403,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId5() instead.
-     *
-     * @param string $scalingGroupId5
-     *
-     * @return $this
-     */
-    public function setScalingGroupId5($scalingGroupId5)
-    {
-        return $this->withScalingGroupId5($scalingGroupId5);
-    }
-
-    /**
      * @param string $scalingGroupId5
      *
      * @return $this
@@ -755,18 +413,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.5'] = $scalingGroupId5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId17() instead.
-     *
-     * @param string $scalingGroupId17
-     *
-     * @return $this
-     */
-    public function setScalingGroupId17($scalingGroupId17)
-    {
-        return $this->withScalingGroupId17($scalingGroupId17);
     }
 
     /**
@@ -783,18 +429,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName8() instead.
-     *
-     * @param string $scalingGroupName8
-     *
-     * @return $this
-     */
-    public function setScalingGroupName8($scalingGroupName8)
-    {
-        return $this->withScalingGroupName8($scalingGroupName8);
-    }
-
-    /**
      * @param string $scalingGroupName8
      *
      * @return $this
@@ -805,18 +439,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.8'] = $scalingGroupName8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName10() instead.
-     *
-     * @param string $scalingGroupName10
-     *
-     * @return $this
-     */
-    public function setScalingGroupName10($scalingGroupName10)
-    {
-        return $this->withScalingGroupName10($scalingGroupName10);
     }
 
     /**
@@ -833,18 +455,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId4() instead.
-     *
-     * @param string $scalingGroupId4
-     *
-     * @return $this
-     */
-    public function setScalingGroupId4($scalingGroupId4)
-    {
-        return $this->withScalingGroupId4($scalingGroupId4);
-    }
-
-    /**
      * @param string $scalingGroupId4
      *
      * @return $this
@@ -855,18 +465,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.4'] = $scalingGroupId4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId18() instead.
-     *
-     * @param string $scalingGroupId18
-     *
-     * @return $this
-     */
-    public function setScalingGroupId18($scalingGroupId18)
-    {
-        return $this->withScalingGroupId18($scalingGroupId18);
     }
 
     /**
@@ -883,18 +481,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName9() instead.
-     *
-     * @param string $scalingGroupName9
-     *
-     * @return $this
-     */
-    public function setScalingGroupName9($scalingGroupName9)
-    {
-        return $this->withScalingGroupName9($scalingGroupName9);
-    }
-
-    /**
      * @param string $scalingGroupName9
      *
      * @return $this
@@ -905,18 +491,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.9'] = $scalingGroupName9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId3() instead.
-     *
-     * @param string $scalingGroupId3
-     *
-     * @return $this
-     */
-    public function setScalingGroupId3($scalingGroupId3)
-    {
-        return $this->withScalingGroupId3($scalingGroupId3);
     }
 
     /**
@@ -933,18 +507,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId19() instead.
-     *
-     * @param string $scalingGroupId19
-     *
-     * @return $this
-     */
-    public function setScalingGroupId19($scalingGroupId19)
-    {
-        return $this->withScalingGroupId19($scalingGroupId19);
-    }
-
-    /**
      * @param string $scalingGroupId19
      *
      * @return $this
@@ -955,18 +517,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.19'] = $scalingGroupId19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName3() instead.
-     *
-     * @param string $scalingGroupName3
-     *
-     * @return $this
-     */
-    public function setScalingGroupName3($scalingGroupName3)
-    {
-        return $this->withScalingGroupName3($scalingGroupName3);
     }
 
     /**
@@ -983,18 +533,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName15() instead.
-     *
-     * @param string $scalingGroupName15
-     *
-     * @return $this
-     */
-    public function setScalingGroupName15($scalingGroupName15)
-    {
-        return $this->withScalingGroupName15($scalingGroupName15);
-    }
-
-    /**
      * @param string $scalingGroupName15
      *
      * @return $this
@@ -1005,18 +543,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.15'] = $scalingGroupName15;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId9() instead.
-     *
-     * @param string $scalingGroupId9
-     *
-     * @return $this
-     */
-    public function setScalingGroupId9($scalingGroupId9)
-    {
-        return $this->withScalingGroupId9($scalingGroupId9);
     }
 
     /**
@@ -1033,18 +559,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName4() instead.
-     *
-     * @param string $scalingGroupName4
-     *
-     * @return $this
-     */
-    public function setScalingGroupName4($scalingGroupName4)
-    {
-        return $this->withScalingGroupName4($scalingGroupName4);
-    }
-
-    /**
      * @param string $scalingGroupName4
      *
      * @return $this
@@ -1055,18 +569,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.4'] = $scalingGroupName4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName14() instead.
-     *
-     * @param string $scalingGroupName14
-     *
-     * @return $this
-     */
-    public function setScalingGroupName14($scalingGroupName14)
-    {
-        return $this->withScalingGroupName14($scalingGroupName14);
     }
 
     /**
@@ -1083,18 +585,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId8() instead.
-     *
-     * @param string $scalingGroupId8
-     *
-     * @return $this
-     */
-    public function setScalingGroupId8($scalingGroupId8)
-    {
-        return $this->withScalingGroupId8($scalingGroupId8);
-    }
-
-    /**
      * @param string $scalingGroupId8
      *
      * @return $this
@@ -1105,18 +595,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupId.8'] = $scalingGroupId8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName5() instead.
-     *
-     * @param string $scalingGroupName5
-     *
-     * @return $this
-     */
-    public function setScalingGroupName5($scalingGroupName5)
-    {
-        return $this->withScalingGroupName5($scalingGroupName5);
     }
 
     /**
@@ -1133,18 +611,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName13() instead.
-     *
-     * @param string $scalingGroupName13
-     *
-     * @return $this
-     */
-    public function setScalingGroupName13($scalingGroupName13)
-    {
-        return $this->withScalingGroupName13($scalingGroupName13);
-    }
-
-    /**
      * @param string $scalingGroupName13
      *
      * @return $this
@@ -1155,18 +621,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.13'] = $scalingGroupName13;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId7() instead.
-     *
-     * @param string $scalingGroupId7
-     *
-     * @return $this
-     */
-    public function setScalingGroupId7($scalingGroupId7)
-    {
-        return $this->withScalingGroupId7($scalingGroupId7);
     }
 
     /**
@@ -1183,18 +637,6 @@ class DescribeScalingGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName6() instead.
-     *
-     * @param string $scalingGroupName6
-     *
-     * @return $this
-     */
-    public function setScalingGroupName6($scalingGroupName6)
-    {
-        return $this->withScalingGroupName6($scalingGroupName6);
-    }
-
-    /**
      * @param string $scalingGroupName6
      *
      * @return $this
@@ -1205,18 +647,6 @@ class DescribeScalingGroups extends RpcRequest
         $this->options['query']['ScalingGroupName.6'] = $scalingGroupName6;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName12() instead.
-     *
-     * @param string $scalingGroupName12
-     *
-     * @return $this
-     */
-    public function setScalingGroupName12($scalingGroupName12)
-    {
-        return $this->withScalingGroupName12($scalingGroupName12);
     }
 
     /**

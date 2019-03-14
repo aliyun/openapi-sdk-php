@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyDedicatedHostAttribute
+ * Api ModifyDedicatedHostAttribute
  *
  * @method string getResourceOwnerId()
  * @method string getDescription()
@@ -18,40 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNetworkAttributesSlbUdpTimeout()
  * @method string getNetworkAttributesUdpTimeout()
  */
-class ModifyDedicatedHostAttribute extends RpcRequest
+class ModifyDedicatedHostAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyDedicatedHostAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +39,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -92,18 +55,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionOnMaintenance() instead.
-     *
-     * @param string $actionOnMaintenance
-     *
-     * @return $this
-     */
-    public function setActionOnMaintenance($actionOnMaintenance)
-    {
-        return $this->withActionOnMaintenance($actionOnMaintenance);
-    }
-
-    /**
      * @param string $actionOnMaintenance
      *
      * @return $this
@@ -114,18 +65,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
         $this->options['query']['ActionOnMaintenance'] = $actionOnMaintenance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostName() instead.
-     *
-     * @param string $dedicatedHostName
-     *
-     * @return $this
-     */
-    public function setDedicatedHostName($dedicatedHostName)
-    {
-        return $this->withDedicatedHostName($dedicatedHostName);
     }
 
     /**
@@ -142,18 +81,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -164,18 +91,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -192,18 +107,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostId() instead.
-     *
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function setDedicatedHostId($dedicatedHostId)
-    {
-        return $this->withDedicatedHostId($dedicatedHostId);
-    }
-
-    /**
      * @param string $dedicatedHostId
      *
      * @return $this
@@ -214,18 +117,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
         $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -242,18 +133,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkAttributesSlbUdpTimeout() instead.
-     *
-     * @param string $networkAttributesSlbUdpTimeout
-     *
-     * @return $this
-     */
-    public function setNetworkAttributesSlbUdpTimeout($networkAttributesSlbUdpTimeout)
-    {
-        return $this->withNetworkAttributesSlbUdpTimeout($networkAttributesSlbUdpTimeout);
-    }
-
-    /**
      * @param string $networkAttributesSlbUdpTimeout
      *
      * @return $this
@@ -264,18 +143,6 @@ class ModifyDedicatedHostAttribute extends RpcRequest
         $this->options['query']['NetworkAttributes.SlbUdpTimeout'] = $networkAttributesSlbUdpTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkAttributesUdpTimeout() instead.
-     *
-     * @param string $networkAttributesUdpTimeout
-     *
-     * @return $this
-     */
-    public function setNetworkAttributesUdpTimeout($networkAttributesUdpTimeout)
-    {
-        return $this->withNetworkAttributesUdpTimeout($networkAttributesUdpTimeout);
     }
 
     /**

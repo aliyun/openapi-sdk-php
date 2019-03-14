@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryFailingReasonListForQualification
+ * Api QueryFailingReasonListForQualification
  *
  * @method string getInstanceId()
  * @method string getUserClientIp()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getQualificationType()
  */
-class QueryFailingReasonListForQualification extends RpcRequest
+class QueryFailingReasonListForQualification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryFailingReasonListForQualification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -59,18 +32,6 @@ class QueryFailingReasonListForQualification extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -87,18 +48,6 @@ class QueryFailingReasonListForQualification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
-    }
-
-    /**
      * @param string $limit
      *
      * @return $this
@@ -112,18 +61,6 @@ class QueryFailingReasonListForQualification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -134,18 +71,6 @@ class QueryFailingReasonListForQualification extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQualificationType() instead.
-     *
-     * @param string $qualificationType
-     *
-     * @return $this
-     */
-    public function setQualificationType($qualificationType)
-    {
-        return $this->withQualificationType($qualificationType);
     }
 
     /**

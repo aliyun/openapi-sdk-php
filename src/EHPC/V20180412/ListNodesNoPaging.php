@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListNodesNoPaging
+ * Api ListNodesNoPaging
  *
  * @method string getHostName()
  * @method string getRole()
  * @method string getClusterId()
  * @method string getOnlyDetached()
  */
-class ListNodesNoPaging extends RpcRequest
+class ListNodesNoPaging extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListNodesNoPaging';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
-    }
 
     /**
      * @param string $hostName
@@ -58,18 +31,6 @@ class ListNodesNoPaging extends RpcRequest
         $this->options['query']['HostName'] = $hostName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRole() instead.
-     *
-     * @param string $role
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        return $this->withRole($role);
     }
 
     /**
@@ -86,18 +47,6 @@ class ListNodesNoPaging extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -108,18 +57,6 @@ class ListNodesNoPaging extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnlyDetached() instead.
-     *
-     * @param string $onlyDetached
-     *
-     * @return $this
-     */
-    public function setOnlyDetached($onlyDetached)
-    {
-        return $this->withOnlyDetached($onlyDetached);
     }
 
     /**

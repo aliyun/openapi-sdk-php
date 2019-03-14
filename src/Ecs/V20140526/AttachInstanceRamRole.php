@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AttachInstanceRamRole
+ * Api AttachInstanceRamRole
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRamRoleName()
  * @method string getOwnerId()
  */
-class AttachInstanceRamRole extends RpcRequest
+class AttachInstanceRamRole extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'AttachInstanceRamRole';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -59,18 +34,6 @@ class AttachInstanceRamRole extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -87,18 +50,6 @@ class AttachInstanceRamRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -112,18 +63,6 @@ class AttachInstanceRamRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRamRoleName() instead.
-     *
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function setRamRoleName($ramRoleName)
-    {
-        return $this->withRamRoleName($ramRoleName);
-    }
-
-    /**
      * @param string $ramRoleName
      *
      * @return $this
@@ -134,18 +73,6 @@ class AttachInstanceRamRole extends RpcRequest
         $this->options['query']['RamRoleName'] = $ramRoleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

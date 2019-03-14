@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateOrUpdateGroup
+ * Api CreateOrUpdateGroup
  *
  * @method string getRuleIds()
  * @method string getSourceIp()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getGroupName()
  */
-class CreateOrUpdateGroup extends RpcRequest
+class CreateOrUpdateGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateOrUpdateGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleIds() instead.
-     *
-     * @param string $ruleIds
-     *
-     * @return $this
-     */
-    public function setRuleIds($ruleIds)
-    {
-        return $this->withRuleIds($ruleIds);
-    }
 
     /**
      * @param string $ruleIds
@@ -66,18 +36,6 @@ class CreateOrUpdateGroup extends RpcRequest
         $this->options['query']['RuleIds'] = $ruleIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -94,18 +52,6 @@ class CreateOrUpdateGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMachineGroupIds() instead.
-     *
-     * @param string $machineGroupIds
-     *
-     * @return $this
-     */
-    public function setMachineGroupIds($machineGroupIds)
-    {
-        return $this->withMachineGroupIds($machineGroupIds);
-    }
-
-    /**
      * @param string $machineGroupIds
      *
      * @return $this
@@ -116,18 +62,6 @@ class CreateOrUpdateGroup extends RpcRequest
         $this->options['query']['MachineGroupIds'] = $machineGroupIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -144,18 +78,6 @@ class CreateOrUpdateGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -169,18 +91,6 @@ class CreateOrUpdateGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -191,18 +101,6 @@ class CreateOrUpdateGroup extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetFileCacheExpiredConfig
+ * Api SetFileCacheExpiredConfig
  *
  * @method string getDomainName()
  * @method string getCacheContent()
@@ -13,35 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTTL()
  * @method string getConfigId()
  */
-class SetFileCacheExpiredConfig extends RpcRequest
+class SetFileCacheExpiredConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetFileCacheExpiredConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $domainName
@@ -54,18 +32,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCacheContent() instead.
-     *
-     * @param string $cacheContent
-     *
-     * @return $this
-     */
-    public function setCacheContent($cacheContent)
-    {
-        return $this->withCacheContent($cacheContent);
     }
 
     /**
@@ -82,18 +48,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -107,18 +61,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
-    }
-
-    /**
      * @param string $tTL
      *
      * @return $this
@@ -129,18 +71,6 @@ class SetFileCacheExpiredConfig extends RpcRequest
         $this->options['query']['TTL'] = $tTL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

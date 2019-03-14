@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyInstanceAutoRenewAttribute
+ * Api ModifyInstanceAutoRenewAttribute
  *
  * @method string getDuration()
  * @method string getResourceOwnerId()
@@ -17,40 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRenewalStatus()
  * @method string getOwnerId()
  */
-class ModifyInstanceAutoRenewAttribute extends RpcRequest
+class ModifyInstanceAutoRenewAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyInstanceAutoRenewAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $duration
@@ -63,18 +38,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -91,18 +54,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
-    }
-
-    /**
      * @param string $periodUnit
      *
      * @return $this
@@ -113,18 +64,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
         $this->options['query']['PeriodUnit'] = $periodUnit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -141,18 +80,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
-    }
-
-    /**
      * @param string $autoRenew
      *
      * @return $this
@@ -163,18 +90,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
         $this->options['query']['AutoRenew'] = $autoRenew;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -191,18 +106,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -216,18 +119,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRenewalStatus() instead.
-     *
-     * @param string $renewalStatus
-     *
-     * @return $this
-     */
-    public function setRenewalStatus($renewalStatus)
-    {
-        return $this->withRenewalStatus($renewalStatus);
-    }
-
-    /**
      * @param string $renewalStatus
      *
      * @return $this
@@ -238,18 +129,6 @@ class ModifyInstanceAutoRenewAttribute extends RpcRequest
         $this->options['query']['RenewalStatus'] = $renewalStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

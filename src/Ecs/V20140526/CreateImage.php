@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateImage
+ * Api CreateImage
  *
  * @method array getDiskDeviceMapping()
  * @method string getResourceOwnerId()
@@ -23,50 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getTag()
  * @method string getArchitecture()
  */
-class CreateImage extends RpcRequest
+class CreateImage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateImage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getDiskDeviceMapping() instead.
-     *
-     * @return array
-     */
-    public function getDiskDeviceMappings()
-    {
-        return $this->getDiskDeviceMapping();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskDeviceMapping() instead.
-     *
-     * @param array $diskDeviceMappings
-     *
-     * @return $this
-     */
-    public function setDiskDeviceMappings(array $diskDeviceMappings)
-    {
-        return $this->withDiskDeviceMapping($diskDeviceMappings);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param array $diskDeviceMapping
@@ -87,18 +52,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -109,18 +62,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
     }
 
     /**
@@ -137,18 +78,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -159,18 +88,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -187,18 +104,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -209,18 +114,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -237,18 +130,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -259,18 +140,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
     }
 
     /**
@@ -287,18 +156,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -309,18 +166,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -337,18 +182,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setImageName($imageName)
-    {
-        return $this->withImageName($imageName);
-    }
-
-    /**
      * @param string $imageName
      *
      * @return $this
@@ -359,18 +192,6 @@ class CreateImage extends RpcRequest
         $this->options['query']['ImageName'] = $imageName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageVersion() instead.
-     *
-     * @param string $imageVersion
-     *
-     * @return $this
-     */
-    public function setImageVersion($imageVersion)
-    {
-        return $this->withImageVersion($imageVersion);
     }
 
     /**
@@ -387,28 +208,6 @@ class CreateImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
-    }
-
-    /**
      * @param array $tag
      *
      * @return $this
@@ -422,18 +221,6 @@ class CreateImage extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArchitecture() instead.
-     *
-     * @param string $architecture
-     *
-     * @return $this
-     */
-    public function setArchitecture($architecture)
-    {
-        return $this->withArchitecture($architecture);
     }
 
     /**

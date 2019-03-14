@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CancelCall
+ * Api CancelCall
  *
  * @method string getCallId()
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  */
-class CancelCall extends RpcRequest
+class CancelCall extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'CancelCall';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallId() instead.
-     *
-     * @param string $callId
-     *
-     * @return $this
-     */
-    public function setCallId($callId)
-    {
-        return $this->withCallId($callId);
-    }
 
     /**
      * @param string $callId
@@ -58,18 +31,6 @@ class CancelCall extends RpcRequest
         $this->options['query']['CallId'] = $callId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -86,18 +47,6 @@ class CancelCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -108,18 +57,6 @@ class CancelCall extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

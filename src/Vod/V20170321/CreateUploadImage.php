@@ -2,61 +2,34 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateUploadImage
+ * Api CreateUploadImage
  *
  * @method string getResourceOwnerId()
  * @method string getImageType()
- * @method string getOriginalFileName()
  * @method string getResourceOwnerAccount()
  * @method string getImageExt()
- * @method string getCateId()
+ * @method string getDescription()
  * @method string getOwnerId()
  * @method string getTitle()
  * @method string getTags()
  * @method string getStorageLocation()
+ * @method string getUserData()
+ * @method string getOriginalFileName()
+ * @method string getCateId()
+ * @method string getAppId()
  */
-class CreateUploadImage extends RpcRequest
+class CreateUploadImage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateUploadImage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +42,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageType() instead.
-     *
-     * @param string $imageType
-     *
-     * @return $this
-     */
-    public function setImageType($imageType)
-    {
-        return $this->withImageType($imageType);
     }
 
     /**
@@ -97,43 +58,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOriginalFileName() instead.
-     *
-     * @param string $originalFileName
-     *
-     * @return $this
-     */
-    public function setOriginalFileName($originalFileName)
-    {
-        return $this->withOriginalFileName($originalFileName);
-    }
-
-    /**
-     * @param string $originalFileName
-     *
-     * @return $this
-     */
-    public function withOriginalFileName($originalFileName)
-    {
-        $this->data['OriginalFileName'] = $originalFileName;
-        $this->options['query']['OriginalFileName'] = $originalFileName;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -144,18 +68,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageExt() instead.
-     *
-     * @param string $imageExt
-     *
-     * @return $this
-     */
-    public function setImageExt($imageExt)
-    {
-        return $this->withImageExt($imageExt);
     }
 
     /**
@@ -172,40 +84,16 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
+     * @param string $description
      *
      * @return $this
      */
-    public function setCateId($cateId)
+    public function withDescription($description)
     {
-        return $this->withCateId($cateId);
-    }
-
-    /**
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function withCateId($cateId)
-    {
-        $this->data['CateId'] = $cateId;
-        $this->options['query']['CateId'] = $cateId;
+        $this->data['Description'] = $description;
+        $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -222,18 +110,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -244,18 +120,6 @@ class CreateUploadImage extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -272,18 +136,6 @@ class CreateUploadImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStorageLocation() instead.
-     *
-     * @param string $storageLocation
-     *
-     * @return $this
-     */
-    public function setStorageLocation($storageLocation)
-    {
-        return $this->withStorageLocation($storageLocation);
-    }
-
-    /**
      * @param string $storageLocation
      *
      * @return $this
@@ -292,6 +144,58 @@ class CreateUploadImage extends RpcRequest
     {
         $this->data['StorageLocation'] = $storageLocation;
         $this->options['query']['StorageLocation'] = $storageLocation;
+
+        return $this;
+    }
+
+    /**
+     * @param string $userData
+     *
+     * @return $this
+     */
+    public function withUserData($userData)
+    {
+        $this->data['UserData'] = $userData;
+        $this->options['query']['UserData'] = $userData;
+
+        return $this;
+    }
+
+    /**
+     * @param string $originalFileName
+     *
+     * @return $this
+     */
+    public function withOriginalFileName($originalFileName)
+    {
+        $this->data['OriginalFileName'] = $originalFileName;
+        $this->options['query']['OriginalFileName'] = $originalFileName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $cateId
+     *
+     * @return $this
+     */
+    public function withCateId($cateId)
+    {
+        $this->data['CateId'] = $cateId;
+        $this->options['query']['CateId'] = $cateId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $appId
+     *
+     * @return $this
+     */
+    public function withAppId($appId)
+    {
+        $this->data['AppId'] = $appId;
+        $this->options['query']['AppId'] = $appId;
 
         return $this;
     }

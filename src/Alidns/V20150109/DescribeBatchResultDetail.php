@@ -2,55 +2,39 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeBatchResultDetail
+ * Api DescribeBatchResultDetail
  *
+ * @method string getBatchType()
  * @method string getUserClientIp()
  * @method string getPageSize()
  * @method string getLang()
  * @method string getPageNumber()
  * @method string getTaskId()
  */
-class DescribeBatchResultDetail extends RpcRequest
+class DescribeBatchResultDetail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeBatchResultDetail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
+     * @param string $batchType
      *
      * @return $this
      */
-    public function setUserClientIp($userClientIp)
+    public function withBatchType($batchType)
     {
-        return $this->withUserClientIp($userClientIp);
+        $this->data['BatchType'] = $batchType;
+        $this->options['query']['BatchType'] = $batchType;
+
+        return $this;
     }
 
     /**
@@ -67,18 +51,6 @@ class DescribeBatchResultDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -89,18 +61,6 @@ class DescribeBatchResultDetail extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -117,18 +77,6 @@ class DescribeBatchResultDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -139,18 +87,6 @@ class DescribeBatchResultDetail extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

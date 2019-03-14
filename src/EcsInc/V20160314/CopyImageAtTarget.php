@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CopyImageAtTarget
+ * Api CopyImageAtTarget
  *
+ * @method string getToEncrypted()
  * @method string getResourceOwnerId()
  * @method string getFromSnapshotListBase64()
  * @method string getImageId()
@@ -16,51 +17,36 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceMetaMappingsBase64()
  * @method string getOwnerAccount()
  * @method string getDestinationRegionId()
+ * @method string getArnsBase64()
  * @method string getOwnerId()
  * @method string getFromRegionId()
  * @method string getFromRegionName()
  * @method string getFromImageBase64()
  * @method string getDestinationRegionPriId()
+ * @method string getKmsKeyId()
  * @method string getDestinationDescription()
  */
-class CopyImageAtTarget extends RpcRequest
+class CopyImageAtTarget extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CopyImageAtTarget';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
+     * @param string $toEncrypted
      *
      * @return $this
      */
-    public function setResourceOwnerId($resourceOwnerId)
+    public function withToEncrypted($toEncrypted)
     {
-        return $this->withResourceOwnerId($resourceOwnerId);
+        $this->data['ToEncrypted'] = $toEncrypted;
+        $this->options['query']['ToEncrypted'] = $toEncrypted;
+
+        return $this;
     }
 
     /**
@@ -77,18 +63,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromSnapshotListBase64() instead.
-     *
-     * @param string $fromSnapshotListBase64
-     *
-     * @return $this
-     */
-    public function setFromSnapshotListBase64($fromSnapshotListBase64)
-    {
-        return $this->withFromSnapshotListBase64($fromSnapshotListBase64);
-    }
-
-    /**
      * @param string $fromSnapshotListBase64
      *
      * @return $this
@@ -99,18 +73,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['FromSnapshotListBase64'] = $fromSnapshotListBase64;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -127,18 +89,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -149,18 +99,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageSnapshotMappingsBase64() instead.
-     *
-     * @param string $imageSnapshotMappingsBase64
-     *
-     * @return $this
-     */
-    public function setImageSnapshotMappingsBase64($imageSnapshotMappingsBase64)
-    {
-        return $this->withImageSnapshotMappingsBase64($imageSnapshotMappingsBase64);
     }
 
     /**
@@ -177,18 +115,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationImageName() instead.
-     *
-     * @param string $destinationImageName
-     *
-     * @return $this
-     */
-    public function setDestinationImageName($destinationImageName)
-    {
-        return $this->withDestinationImageName($destinationImageName);
-    }
-
-    /**
      * @param string $destinationImageName
      *
      * @return $this
@@ -199,18 +125,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['DestinationImageName'] = $destinationImageName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceMetaMappingsBase64() instead.
-     *
-     * @param string $resourceMetaMappingsBase64
-     *
-     * @return $this
-     */
-    public function setResourceMetaMappingsBase64($resourceMetaMappingsBase64)
-    {
-        return $this->withResourceMetaMappingsBase64($resourceMetaMappingsBase64);
     }
 
     /**
@@ -227,18 +141,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -249,18 +151,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationRegionId() instead.
-     *
-     * @param string $destinationRegionId
-     *
-     * @return $this
-     */
-    public function setDestinationRegionId($destinationRegionId)
-    {
-        return $this->withDestinationRegionId($destinationRegionId);
     }
 
     /**
@@ -277,15 +167,16 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param string $arnsBase64
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withArnsBase64($arnsBase64)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['ArnsBase64'] = $arnsBase64;
+        $this->options['query']['ArnsBase64'] = $arnsBase64;
+
+        return $this;
     }
 
     /**
@@ -302,18 +193,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromRegionId() instead.
-     *
-     * @param string $fromRegionId
-     *
-     * @return $this
-     */
-    public function setFromRegionId($fromRegionId)
-    {
-        return $this->withFromRegionId($fromRegionId);
-    }
-
-    /**
      * @param string $fromRegionId
      *
      * @return $this
@@ -324,18 +203,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['FromRegionId'] = $fromRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFromRegionName() instead.
-     *
-     * @param string $fromRegionName
-     *
-     * @return $this
-     */
-    public function setFromRegionName($fromRegionName)
-    {
-        return $this->withFromRegionName($fromRegionName);
     }
 
     /**
@@ -352,18 +219,6 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromImageBase64() instead.
-     *
-     * @param string $fromImageBase64
-     *
-     * @return $this
-     */
-    public function setFromImageBase64($fromImageBase64)
-    {
-        return $this->withFromImageBase64($fromImageBase64);
-    }
-
-    /**
      * @param string $fromImageBase64
      *
      * @return $this
@@ -374,18 +229,6 @@ class CopyImageAtTarget extends RpcRequest
         $this->options['query']['FromImageBase64'] = $fromImageBase64;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationRegionPriId() instead.
-     *
-     * @param string $destinationRegionPriId
-     *
-     * @return $this
-     */
-    public function setDestinationRegionPriId($destinationRegionPriId)
-    {
-        return $this->withDestinationRegionPriId($destinationRegionPriId);
     }
 
     /**
@@ -402,15 +245,16 @@ class CopyImageAtTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationDescription() instead.
-     *
-     * @param string $destinationDescription
+     * @param string $kmsKeyId
      *
      * @return $this
      */
-    public function setDestinationDescription($destinationDescription)
+    public function withKmsKeyId($kmsKeyId)
     {
-        return $this->withDestinationDescription($destinationDescription);
+        $this->data['KmsKeyId'] = $kmsKeyId;
+        $this->options['query']['KmsKeyId'] = $kmsKeyId;
+
+        return $this;
     }
 
     /**

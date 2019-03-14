@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTaskInfoHistory
+ * Api QueryTaskInfoHistory
  *
  * @method string getBeginCreateTime()
  * @method string getEndCreateTime()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getCreateTimeCursor()
  */
-class QueryTaskInfoHistory extends RpcRequest
+class QueryTaskInfoHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTaskInfoHistory';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBeginCreateTime() instead.
-     *
-     * @param string $beginCreateTime
-     *
-     * @return $this
-     */
-    public function setBeginCreateTime($beginCreateTime)
-    {
-        return $this->withBeginCreateTime($beginCreateTime);
-    }
 
     /**
      * @param string $beginCreateTime
@@ -61,18 +34,6 @@ class QueryTaskInfoHistory extends RpcRequest
         $this->options['query']['BeginCreateTime'] = $beginCreateTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndCreateTime() instead.
-     *
-     * @param string $endCreateTime
-     *
-     * @return $this
-     */
-    public function setEndCreateTime($endCreateTime)
-    {
-        return $this->withEndCreateTime($endCreateTime);
     }
 
     /**
@@ -89,18 +50,6 @@ class QueryTaskInfoHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskNoCursor() instead.
-     *
-     * @param string $taskNoCursor
-     *
-     * @return $this
-     */
-    public function setTaskNoCursor($taskNoCursor)
-    {
-        return $this->withTaskNoCursor($taskNoCursor);
-    }
-
-    /**
      * @param string $taskNoCursor
      *
      * @return $this
@@ -111,18 +60,6 @@ class QueryTaskInfoHistory extends RpcRequest
         $this->options['query']['TaskNoCursor'] = $taskNoCursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -139,18 +76,6 @@ class QueryTaskInfoHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -164,18 +89,6 @@ class QueryTaskInfoHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -186,18 +99,6 @@ class QueryTaskInfoHistory extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeCursor() instead.
-     *
-     * @param string $createTimeCursor
-     *
-     * @return $this
-     */
-    public function setCreateTimeCursor($createTimeCursor)
-    {
-        return $this->withCreateTimeCursor($createTimeCursor);
     }
 
     /**

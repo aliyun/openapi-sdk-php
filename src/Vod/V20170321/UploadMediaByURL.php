@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UploadMediaByURL
+ * Api UploadMediaByURL
  *
  * @method string getUserData()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPriority()
  * @method string getStorageLocation()
  */
-class UploadMediaByURL extends RpcRequest
+class UploadMediaByURL extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'UploadMediaByURL';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
 
     /**
      * @param string $userData
@@ -69,18 +39,6 @@ class UploadMediaByURL extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +55,6 @@ class UploadMediaByURL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateGroupId() instead.
-     *
-     * @param string $templateGroupId
-     *
-     * @return $this
-     */
-    public function setTemplateGroupId($templateGroupId)
-    {
-        return $this->withTemplateGroupId($templateGroupId);
-    }
-
-    /**
      * @param string $templateGroupId
      *
      * @return $this
@@ -119,18 +65,6 @@ class UploadMediaByURL extends RpcRequest
         $this->options['query']['TemplateGroupId'] = $templateGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUploadMetadatas() instead.
-     *
-     * @param string $uploadMetadatas
-     *
-     * @return $this
-     */
-    public function setUploadMetadatas($uploadMetadatas)
-    {
-        return $this->withUploadMetadatas($uploadMetadatas);
     }
 
     /**
@@ -147,18 +81,6 @@ class UploadMediaByURL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class UploadMediaByURL extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUploadURLs() instead.
-     *
-     * @param string $uploadURLs
-     *
-     * @return $this
-     */
-    public function setUploadURLs($uploadURLs)
-    {
-        return $this->withUploadURLs($uploadURLs);
     }
 
     /**
@@ -197,18 +107,6 @@ class UploadMediaByURL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageCallback() instead.
-     *
-     * @param string $messageCallback
-     *
-     * @return $this
-     */
-    public function setMessageCallback($messageCallback)
-    {
-        return $this->withMessageCallback($messageCallback);
-    }
-
-    /**
      * @param string $messageCallback
      *
      * @return $this
@@ -219,18 +117,6 @@ class UploadMediaByURL extends RpcRequest
         $this->options['query']['MessageCallback'] = $messageCallback;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class UploadMediaByURL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -269,18 +143,6 @@ class UploadMediaByURL extends RpcRequest
         $this->options['query']['Priority'] = $priority;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStorageLocation() instead.
-     *
-     * @param string $storageLocation
-     *
-     * @return $this
-     */
-    public function setStorageLocation($storageLocation)
-    {
-        return $this->withStorageLocation($storageLocation);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScalingInstances
+ * Api DescribeScalingInstances
  *
  * @method string getInstanceId10()
  * @method string getResourceOwnerId()
@@ -39,45 +39,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class DescribeScalingInstances extends RpcRequest
+class DescribeScalingInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScalingInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId10() instead.
-     *
-     * @param string $instanceId10
-     *
-     * @return $this
-     */
-    public function setInstanceId10($instanceId10)
-    {
-        return $this->withInstanceId10($instanceId10);
-    }
 
     /**
      * @param string $instanceId10
@@ -90,18 +60,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.10'] = $instanceId10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -118,18 +76,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId12() instead.
-     *
-     * @param string $instanceId12
-     *
-     * @return $this
-     */
-    public function setInstanceId12($instanceId12)
-    {
-        return $this->withInstanceId12($instanceId12);
-    }
-
-    /**
      * @param string $instanceId12
      *
      * @return $this
@@ -140,18 +86,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.12'] = $instanceId12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId11() instead.
-     *
-     * @param string $instanceId11
-     *
-     * @return $this
-     */
-    public function setInstanceId11($instanceId11)
-    {
-        return $this->withInstanceId11($instanceId11);
     }
 
     /**
@@ -168,18 +102,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -190,18 +112,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleState() instead.
-     *
-     * @param string $lifecycleState
-     *
-     * @return $this
-     */
-    public function setLifecycleState($lifecycleState)
-    {
-        return $this->withLifecycleState($lifecycleState);
     }
 
     /**
@@ -218,18 +128,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreationType() instead.
-     *
-     * @param string $creationType
-     *
-     * @return $this
-     */
-    public function setCreationType($creationType)
-    {
-        return $this->withCreationType($creationType);
-    }
-
-    /**
      * @param string $creationType
      *
      * @return $this
@@ -240,18 +138,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['CreationType'] = $creationType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -268,18 +154,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -290,18 +164,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId20() instead.
-     *
-     * @param string $instanceId20
-     *
-     * @return $this
-     */
-    public function setInstanceId20($instanceId20)
-    {
-        return $this->withInstanceId20($instanceId20);
     }
 
     /**
@@ -318,18 +180,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId1() instead.
-     *
-     * @param string $instanceId1
-     *
-     * @return $this
-     */
-    public function setInstanceId1($instanceId1)
-    {
-        return $this->withInstanceId1($instanceId1);
-    }
-
-    /**
      * @param string $instanceId1
      *
      * @return $this
@@ -340,18 +190,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.1'] = $instanceId1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId3() instead.
-     *
-     * @param string $instanceId3
-     *
-     * @return $this
-     */
-    public function setInstanceId3($instanceId3)
-    {
-        return $this->withInstanceId3($instanceId3);
     }
 
     /**
@@ -368,18 +206,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -390,18 +216,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId2() instead.
-     *
-     * @param string $instanceId2
-     *
-     * @return $this
-     */
-    public function setInstanceId2($instanceId2)
-    {
-        return $this->withInstanceId2($instanceId2);
     }
 
     /**
@@ -418,18 +232,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId5() instead.
-     *
-     * @param string $instanceId5
-     *
-     * @return $this
-     */
-    public function setInstanceId5($instanceId5)
-    {
-        return $this->withInstanceId5($instanceId5);
-    }
-
-    /**
      * @param string $instanceId5
      *
      * @return $this
@@ -440,18 +242,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.5'] = $instanceId5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId4() instead.
-     *
-     * @param string $instanceId4
-     *
-     * @return $this
-     */
-    public function setInstanceId4($instanceId4)
-    {
-        return $this->withInstanceId4($instanceId4);
     }
 
     /**
@@ -468,18 +258,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -490,18 +268,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId7() instead.
-     *
-     * @param string $instanceId7
-     *
-     * @return $this
-     */
-    public function setInstanceId7($instanceId7)
-    {
-        return $this->withInstanceId7($instanceId7);
     }
 
     /**
@@ -518,18 +284,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId6() instead.
-     *
-     * @param string $instanceId6
-     *
-     * @return $this
-     */
-    public function setInstanceId6($instanceId6)
-    {
-        return $this->withInstanceId6($instanceId6);
-    }
-
-    /**
      * @param string $instanceId6
      *
      * @return $this
@@ -540,18 +294,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.6'] = $instanceId6;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId9() instead.
-     *
-     * @param string $instanceId9
-     *
-     * @return $this
-     */
-    public function setInstanceId9($instanceId9)
-    {
-        return $this->withInstanceId9($instanceId9);
     }
 
     /**
@@ -568,18 +310,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId8() instead.
-     *
-     * @param string $instanceId8
-     *
-     * @return $this
-     */
-    public function setInstanceId8($instanceId8)
-    {
-        return $this->withInstanceId8($instanceId8);
-    }
-
-    /**
      * @param string $instanceId8
      *
      * @return $this
@@ -590,18 +320,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.8'] = $instanceId8;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -618,18 +336,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationId() instead.
-     *
-     * @param string $scalingConfigurationId
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationId($scalingConfigurationId)
-    {
-        return $this->withScalingConfigurationId($scalingConfigurationId);
-    }
-
-    /**
      * @param string $scalingConfigurationId
      *
      * @return $this
@@ -640,18 +346,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['ScalingConfigurationId'] = $scalingConfigurationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthStatus() instead.
-     *
-     * @param string $healthStatus
-     *
-     * @return $this
-     */
-    public function setHealthStatus($healthStatus)
-    {
-        return $this->withHealthStatus($healthStatus);
     }
 
     /**
@@ -668,18 +362,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId18() instead.
-     *
-     * @param string $instanceId18
-     *
-     * @return $this
-     */
-    public function setInstanceId18($instanceId18)
-    {
-        return $this->withInstanceId18($instanceId18);
-    }
-
-    /**
      * @param string $instanceId18
      *
      * @return $this
@@ -690,18 +372,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.18'] = $instanceId18;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId17() instead.
-     *
-     * @param string $instanceId17
-     *
-     * @return $this
-     */
-    public function setInstanceId17($instanceId17)
-    {
-        return $this->withInstanceId17($instanceId17);
     }
 
     /**
@@ -718,18 +388,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId19() instead.
-     *
-     * @param string $instanceId19
-     *
-     * @return $this
-     */
-    public function setInstanceId19($instanceId19)
-    {
-        return $this->withInstanceId19($instanceId19);
-    }
-
-    /**
      * @param string $instanceId19
      *
      * @return $this
@@ -740,18 +398,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.19'] = $instanceId19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId14() instead.
-     *
-     * @param string $instanceId14
-     *
-     * @return $this
-     */
-    public function setInstanceId14($instanceId14)
-    {
-        return $this->withInstanceId14($instanceId14);
     }
 
     /**
@@ -768,18 +414,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId13() instead.
-     *
-     * @param string $instanceId13
-     *
-     * @return $this
-     */
-    public function setInstanceId13($instanceId13)
-    {
-        return $this->withInstanceId13($instanceId13);
-    }
-
-    /**
      * @param string $instanceId13
      *
      * @return $this
@@ -793,18 +427,6 @@ class DescribeScalingInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId16() instead.
-     *
-     * @param string $instanceId16
-     *
-     * @return $this
-     */
-    public function setInstanceId16($instanceId16)
-    {
-        return $this->withInstanceId16($instanceId16);
-    }
-
-    /**
      * @param string $instanceId16
      *
      * @return $this
@@ -815,18 +437,6 @@ class DescribeScalingInstances extends RpcRequest
         $this->options['query']['InstanceId.16'] = $instanceId16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId15() instead.
-     *
-     * @param string $instanceId15
-     *
-     * @return $this
-     */
-    public function setInstanceId15($instanceId15)
-    {
-        return $this->withInstanceId15($instanceId15);
     }
 
     /**

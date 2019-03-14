@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetQuotaHistoryInfo
+ * Api GetQuotaHistoryInfo
  *
  * @method string getCluster()
  * @method string getEndTime()
@@ -13,35 +13,11 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegion()
  * @method string getQuotaName()
  */
-class GetQuotaHistoryInfo extends RpcRequest
+class GetQuotaHistoryInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaMaxCompute';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-04';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetQuotaHistoryInfo';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCluster() instead.
-     *
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function setCluster($cluster)
-    {
-        return $this->withCluster($cluster);
-    }
 
     /**
      * @param string $cluster
@@ -54,18 +30,6 @@ class GetQuotaHistoryInfo extends RpcRequest
         $this->options['query']['Cluster'] = $cluster;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -82,18 +46,6 @@ class GetQuotaHistoryInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -107,18 +59,6 @@ class GetQuotaHistoryInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -129,18 +69,6 @@ class GetQuotaHistoryInfo extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuotaName() instead.
-     *
-     * @param string $quotaName
-     *
-     * @return $this
-     */
-    public function setQuotaName($quotaName)
-    {
-        return $this->withQuotaName($quotaName);
     }
 
     /**

@@ -2,35 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescrebeEventRuleTarget
+ * Api DescrebeEventRuleTarget
  *
  * @method string getRuleName()
  */
-class DescrebeEventRuleTarget extends RpcRequest
+class DescrebeEventRuleTarget extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescrebeEventRuleTarget';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
+
+    public $serviceCode = 'cms';
 
     /**
      * @param string $ruleName

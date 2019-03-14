@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of Chat
+ * Api Chat
  *
  * @method string getKnowledgeId()
  * @method string getSenderId()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTag()
  * @method string getUtterance()
  */
-class Chat extends RpcRequest
+class Chat extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'Chat';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKnowledgeId() instead.
-     *
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function setKnowledgeId($knowledgeId)
-    {
-        return $this->withKnowledgeId($knowledgeId);
-    }
 
     /**
      * @param string $knowledgeId
@@ -67,18 +37,6 @@ class Chat extends RpcRequest
         $this->options['query']['KnowledgeId'] = $knowledgeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSenderId() instead.
-     *
-     * @param string $senderId
-     *
-     * @return $this
-     */
-    public function setSenderId($senderId)
-    {
-        return $this->withSenderId($senderId);
     }
 
     /**
@@ -95,18 +53,6 @@ class Chat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -120,18 +66,6 @@ class Chat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSenderNick() instead.
-     *
-     * @param string $senderNick
-     *
-     * @return $this
-     */
-    public function setSenderNick($senderNick)
-    {
-        return $this->withSenderNick($senderNick);
-    }
-
-    /**
      * @param string $senderNick
      *
      * @return $this
@@ -142,28 +76,6 @@ class Chat extends RpcRequest
         $this->options['query']['SenderNick'] = $senderNick;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPerspective() instead.
-     *
-     * @return array
-     */
-    public function getPerspectives()
-    {
-        return $this->getPerspective();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPerspective() instead.
-     *
-     * @param array $perspectives
-     *
-     * @return $this
-     */
-    public function setPerspectives(array $perspectives)
-    {
-        return $this->withPerspective($perspectives);
     }
 
     /**
@@ -182,18 +94,6 @@ class Chat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -207,18 +107,6 @@ class Chat extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
-    }
-
-    /**
      * @param string $tag
      *
      * @return $this
@@ -229,18 +117,6 @@ class Chat extends RpcRequest
         $this->options['query']['Tag'] = $tag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUtterance() instead.
-     *
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function setUtterance($utterance)
-    {
-        return $this->withUtterance($utterance);
     }
 
     /**

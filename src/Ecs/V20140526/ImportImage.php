@@ -2,66 +2,31 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ImportImage
+ * Api ImportImage
  *
  * @method array getDiskDeviceMapping()
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
- * @method string getImageName()
  * @method string getRoleName()
  * @method string getDescription()
  * @method string getOSType()
  * @method string getOwnerId()
  * @method string getPlatform()
+ * @method string getImageName()
  * @method string getArchitecture()
  */
-class ImportImage extends RpcRequest
+class ImportImage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ImportImage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getDiskDeviceMapping() instead.
-     *
-     * @return array
-     */
-    public function getDiskDeviceMappings()
-    {
-        return $this->getDiskDeviceMapping();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskDeviceMapping() instead.
-     *
-     * @param array $diskDeviceMappings
-     *
-     * @return $this
-     */
-    public function setDiskDeviceMappings(array $diskDeviceMappings)
-    {
-        return $this->withDiskDeviceMapping($diskDeviceMappings);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param array $diskDeviceMapping
@@ -84,18 +49,6 @@ class ImportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -106,18 +59,6 @@ class ImportImage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -134,43 +75,6 @@ class ImportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setImageName($imageName)
-    {
-        return $this->withImageName($imageName);
-    }
-
-    /**
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function withImageName($imageName)
-    {
-        $this->data['ImageName'] = $imageName;
-        $this->options['query']['ImageName'] = $imageName;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
-    }
-
-    /**
      * @param string $roleName
      *
      * @return $this
@@ -181,18 +85,6 @@ class ImportImage extends RpcRequest
         $this->options['query']['RoleName'] = $roleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -209,18 +101,6 @@ class ImportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOSType() instead.
-     *
-     * @param string $oSType
-     *
-     * @return $this
-     */
-    public function setOSType($oSType)
-    {
-        return $this->withOSType($oSType);
-    }
-
-    /**
      * @param string $oSType
      *
      * @return $this
@@ -231,18 +111,6 @@ class ImportImage extends RpcRequest
         $this->options['query']['OSType'] = $oSType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -259,18 +127,6 @@ class ImportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
-    }
-
-    /**
      * @param string $platform
      *
      * @return $this
@@ -284,15 +140,16 @@ class ImportImage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArchitecture() instead.
-     *
-     * @param string $architecture
+     * @param string $imageName
      *
      * @return $this
      */
-    public function setArchitecture($architecture)
+    public function withImageName($imageName)
     {
-        return $this->withArchitecture($architecture);
+        $this->data['ImageName'] = $imageName;
+        $this->options['query']['ImageName'] = $imageName;
+
+        return $this;
     }
 
     /**

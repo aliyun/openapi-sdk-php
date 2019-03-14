@@ -2,53 +2,38 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVulDetails
+ * Api DescribeVulDetails
  *
+ * @method string getAliasName()
  * @method string getSourceIp()
  * @method string getName()
+ * @method string getLang()
  * @method string getType()
  */
-class DescribeVulDetails extends RpcRequest
+class DescribeVulDetails extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVulDetails';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
+     * @param string $aliasName
      *
      * @return $this
      */
-    public function setSourceIp($sourceIp)
+    public function withAliasName($aliasName)
     {
-        return $this->withSourceIp($sourceIp);
+        $this->data['AliasName'] = $aliasName;
+        $this->options['query']['AliasName'] = $aliasName;
+
+        return $this;
     }
 
     /**
@@ -65,18 +50,6 @@ class DescribeVulDetails extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -90,15 +63,16 @@ class DescribeVulDetails extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
+     * @param string $lang
      *
      * @return $this
      */
-    public function setType($type)
+    public function withLang($lang)
     {
-        return $this->withType($type);
+        $this->data['Lang'] = $lang;
+        $this->options['query']['Lang'] = $lang;
+
+        return $this;
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckResource
+ * Api CheckResource
  *
  * @method string getCountry()
  * @method string getHid()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTaskExtraData()
  * @method string getTaskIdentifier()
  */
-class CheckResource extends RpcRequest
+class CheckResource extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckResource';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
 
     /**
      * @param string $country
@@ -73,18 +43,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHid() instead.
-     *
-     * @param string $hid
-     *
-     * @return $this
-     */
-    public function setHid($hid)
-    {
-        return $this->withHid($hid);
     }
 
     /**
@@ -101,18 +59,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -123,18 +69,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['Level'] = $level;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInvoker() instead.
-     *
-     * @param string $invoker
-     *
-     * @return $this
-     */
-    public function setInvoker($invoker)
-    {
-        return $this->withInvoker($invoker);
     }
 
     /**
@@ -151,18 +85,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
-    }
-
-    /**
      * @param string $message
      *
      * @return $this
@@ -173,18 +95,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['Message'] = $message;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUrl() instead.
-     *
-     * @param string $url
-     *
-     * @return $this
-     */
-    public function setUrl($url)
-    {
-        return $this->withUrl($url);
     }
 
     /**
@@ -201,18 +111,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuccess() instead.
-     *
-     * @param string $success
-     *
-     * @return $this
-     */
-    public function setSuccess($success)
-    {
-        return $this->withSuccess($success);
-    }
-
-    /**
      * @param string $success
      *
      * @return $this
@@ -223,18 +121,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['Success'] = $success;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterrupt() instead.
-     *
-     * @param string $interrupt
-     *
-     * @return $this
-     */
-    public function setInterrupt($interrupt)
-    {
-        return $this->withInterrupt($interrupt);
     }
 
     /**
@@ -251,18 +137,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGmtWakeup() instead.
-     *
-     * @param string $gmtWakeup
-     *
-     * @return $this
-     */
-    public function setGmtWakeup($gmtWakeup)
-    {
-        return $this->withGmtWakeup($gmtWakeup);
-    }
-
-    /**
      * @param string $gmtWakeup
      *
      * @return $this
@@ -273,18 +147,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['GmtWakeup'] = $gmtWakeup;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPk() instead.
-     *
-     * @param string $pk
-     *
-     * @return $this
-     */
-    public function setPk($pk)
-    {
-        return $this->withPk($pk);
     }
 
     /**
@@ -301,18 +163,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -323,18 +173,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['Bid'] = $bid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrompt() instead.
-     *
-     * @param string $prompt
-     *
-     * @return $this
-     */
-    public function setPrompt($prompt)
-    {
-        return $this->withPrompt($prompt);
     }
 
     /**
@@ -351,18 +189,6 @@ class CheckResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskExtraData() instead.
-     *
-     * @param string $taskExtraData
-     *
-     * @return $this
-     */
-    public function setTaskExtraData($taskExtraData)
-    {
-        return $this->withTaskExtraData($taskExtraData);
-    }
-
-    /**
      * @param string $taskExtraData
      *
      * @return $this
@@ -373,18 +199,6 @@ class CheckResource extends RpcRequest
         $this->options['query']['TaskExtraData'] = $taskExtraData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIdentifier() instead.
-     *
-     * @param string $taskIdentifier
-     *
-     * @return $this
-     */
-    public function setTaskIdentifier($taskIdentifier)
-    {
-        return $this->withTaskIdentifier($taskIdentifier);
     }
 
     /**

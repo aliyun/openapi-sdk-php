@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribePropertyUserDetail
+ * Api DescribePropertyUserDetail
  *
  * @method string getExtend()
  * @method string getSourceIp()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUser()
  * @method string getUuid()
  */
-class DescribePropertyUserDetail extends RpcRequest
+class DescribePropertyUserDetail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribePropertyUserDetail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtend() instead.
-     *
-     * @param string $extend
-     *
-     * @return $this
-     */
-    public function setExtend($extend)
-    {
-        return $this->withExtend($extend);
-    }
 
     /**
      * @param string $extend
@@ -70,18 +40,6 @@ class DescribePropertyUserDetail extends RpcRequest
         $this->options['query']['Extend'] = $extend;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -98,18 +56,6 @@ class DescribePropertyUserDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
-    }
-
-    /**
      * @param string $ip
      *
      * @return $this
@@ -120,18 +66,6 @@ class DescribePropertyUserDetail extends RpcRequest
         $this->options['query']['Ip'] = $ip;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -148,18 +82,6 @@ class DescribePropertyUserDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagIdListString() instead.
-     *
-     * @param string $tagIdListString
-     *
-     * @return $this
-     */
-    public function setTagIdListString($tagIdListString)
-    {
-        return $this->withTagIdListString($tagIdListString);
-    }
-
-    /**
      * @param string $tagIdListString
      *
      * @return $this
@@ -170,18 +92,6 @@ class DescribePropertyUserDetail extends RpcRequest
         $this->options['query']['TagIdListString'] = $tagIdListString;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -198,18 +108,6 @@ class DescribePropertyUserDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -220,18 +118,6 @@ class DescribePropertyUserDetail extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsRoot() instead.
-     *
-     * @param string $isRoot
-     *
-     * @return $this
-     */
-    public function setIsRoot($isRoot)
-    {
-        return $this->withIsRoot($isRoot);
     }
 
     /**
@@ -248,18 +134,6 @@ class DescribePropertyUserDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -273,18 +147,6 @@ class DescribePropertyUserDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
-    }
-
-    /**
      * @param string $user
      *
      * @return $this
@@ -295,18 +157,6 @@ class DescribePropertyUserDetail extends RpcRequest
         $this->options['query']['User'] = $user;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
     }
 
     /**

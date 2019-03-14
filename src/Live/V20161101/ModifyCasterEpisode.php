@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyCasterEpisode
+ * Api ModifyCasterEpisode
  *
  * @method string getResourceId()
  * @method array getComponentId()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getEpisodeId()
  */
-class ModifyCasterEpisode extends RpcRequest
+class ModifyCasterEpisode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyCasterEpisode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
 
     /**
      * @param string $resourceId
@@ -68,28 +38,6 @@ class ModifyCasterEpisode extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getComponentId() instead.
-     *
-     * @return array
-     */
-    public function getComponentIds()
-    {
-        return $this->getComponentId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentId() instead.
-     *
-     * @param array $componentIds
-     *
-     * @return $this
-     */
-    public function setComponentIds(array $componentIds)
-    {
-        return $this->withComponentId($componentIds);
     }
 
     /**
@@ -108,18 +56,6 @@ class ModifyCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSwitchType() instead.
-     *
-     * @param string $switchType
-     *
-     * @return $this
-     */
-    public function setSwitchType($switchType)
-    {
-        return $this->withSwitchType($switchType);
-    }
-
-    /**
      * @param string $switchType
      *
      * @return $this
@@ -130,18 +66,6 @@ class ModifyCasterEpisode extends RpcRequest
         $this->options['query']['SwitchType'] = $switchType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
     }
 
     /**
@@ -158,18 +82,6 @@ class ModifyCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeName() instead.
-     *
-     * @param string $episodeName
-     *
-     * @return $this
-     */
-    public function setEpisodeName($episodeName)
-    {
-        return $this->withEpisodeName($episodeName);
-    }
-
-    /**
      * @param string $episodeName
      *
      * @return $this
@@ -180,18 +92,6 @@ class ModifyCasterEpisode extends RpcRequest
         $this->options['query']['EpisodeName'] = $episodeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -208,18 +108,6 @@ class ModifyCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -233,18 +121,6 @@ class ModifyCasterEpisode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -255,18 +131,6 @@ class ModifyCasterEpisode extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEpisodeId() instead.
-     *
-     * @param string $episodeId
-     *
-     * @return $this
-     */
-    public function setEpisodeId($episodeId)
-    {
-        return $this->withEpisodeId($episodeId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetHttpErrorPageConfig
+ * Api SetHttpErrorPageConfig
  *
  * @method string getPageUrl()
  * @method string getErrorCode()
@@ -13,35 +13,11 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getConfigId()
  */
-class SetHttpErrorPageConfig extends RpcRequest
+class SetHttpErrorPageConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
-
-    /**
-     * @var string
-     */
-    public $action = 'SetHttpErrorPageConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageUrl() instead.
-     *
-     * @param string $pageUrl
-     *
-     * @return $this
-     */
-    public function setPageUrl($pageUrl)
-    {
-        return $this->withPageUrl($pageUrl);
-    }
 
     /**
      * @param string $pageUrl
@@ -54,18 +30,6 @@ class SetHttpErrorPageConfig extends RpcRequest
         $this->options['query']['PageUrl'] = $pageUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withErrorCode() instead.
-     *
-     * @param string $errorCode
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        return $this->withErrorCode($errorCode);
     }
 
     /**
@@ -82,18 +46,6 @@ class SetHttpErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -107,18 +59,6 @@ class SetHttpErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -129,18 +69,6 @@ class SetHttpErrorPageConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

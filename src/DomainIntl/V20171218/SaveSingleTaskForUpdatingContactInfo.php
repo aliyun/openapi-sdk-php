@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveSingleTaskForUpdatingContactInfo
+ * Api SaveSingleTaskForUpdatingContactInfo
  *
  * @method string getInstanceId()
  * @method string getContactType()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAddTransferLock()
  * @method string getLang()
  */
-class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
+class SaveSingleTaskForUpdatingContactInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveSingleTaskForUpdatingContactInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -66,18 +36,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
     }
 
     /**
@@ -94,18 +52,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -116,18 +62,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -144,18 +78,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -169,18 +91,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddTransferLock() instead.
-     *
-     * @param string $addTransferLock
-     *
-     * @return $this
-     */
-    public function setAddTransferLock($addTransferLock)
-    {
-        return $this->withAddTransferLock($addTransferLock);
-    }
-
-    /**
      * @param string $addTransferLock
      *
      * @return $this
@@ -191,18 +101,6 @@ class SaveSingleTaskForUpdatingContactInfo extends RpcRequest
         $this->options['query']['AddTransferLock'] = $addTransferLock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

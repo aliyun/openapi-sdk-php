@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DownloadSignedData
+ * Api DownloadSignedData
  *
  * @method string getPath()
  * @method string getBizid()
  */
-class DownloadSignedData extends RpcRequest
+class DownloadSignedData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DownloadSignedData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPath() instead.
-     *
-     * @param string $path
-     *
-     * @return $this
-     */
-    public function setPath($path)
-    {
-        return $this->withPath($path);
-    }
 
     /**
      * @param string $path
@@ -56,18 +29,6 @@ class DownloadSignedData extends RpcRequest
         $this->options['query']['Path'] = $path;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
     }
 
     /**

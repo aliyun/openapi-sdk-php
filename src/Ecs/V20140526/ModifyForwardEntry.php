@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyForwardEntry
+ * Api ModifyForwardEntry
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,40 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getExternalIp()
  * @method string getExternalPort()
  */
-class ModifyForwardEntry extends RpcRequest
+class ModifyForwardEntry extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyForwardEntry';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +40,6 @@ class ModifyForwardEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +56,6 @@ class ModifyForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setIpProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
-    }
-
-    /**
      * @param string $ipProtocol
      *
      * @return $this
@@ -115,18 +66,6 @@ class ModifyForwardEntry extends RpcRequest
         $this->options['query']['IpProtocol'] = $ipProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +82,6 @@ class ModifyForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForwardTableId() instead.
-     *
-     * @param string $forwardTableId
-     *
-     * @return $this
-     */
-    public function setForwardTableId($forwardTableId)
-    {
-        return $this->withForwardTableId($forwardTableId);
-    }
-
-    /**
      * @param string $forwardTableId
      *
      * @return $this
@@ -165,18 +92,6 @@ class ModifyForwardEntry extends RpcRequest
         $this->options['query']['ForwardTableId'] = $forwardTableId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +108,6 @@ class ModifyForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternalIp() instead.
-     *
-     * @param string $internalIp
-     *
-     * @return $this
-     */
-    public function setInternalIp($internalIp)
-    {
-        return $this->withInternalIp($internalIp);
-    }
-
-    /**
      * @param string $internalIp
      *
      * @return $this
@@ -215,18 +118,6 @@ class ModifyForwardEntry extends RpcRequest
         $this->options['query']['InternalIp'] = $internalIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForwardEntryId() instead.
-     *
-     * @param string $forwardEntryId
-     *
-     * @return $this
-     */
-    public function setForwardEntryId($forwardEntryId)
-    {
-        return $this->withForwardEntryId($forwardEntryId);
     }
 
     /**
@@ -243,18 +134,6 @@ class ModifyForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternalPort() instead.
-     *
-     * @param string $internalPort
-     *
-     * @return $this
-     */
-    public function setInternalPort($internalPort)
-    {
-        return $this->withInternalPort($internalPort);
-    }
-
-    /**
      * @param string $internalPort
      *
      * @return $this
@@ -268,18 +147,6 @@ class ModifyForwardEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExternalIp() instead.
-     *
-     * @param string $externalIp
-     *
-     * @return $this
-     */
-    public function setExternalIp($externalIp)
-    {
-        return $this->withExternalIp($externalIp);
-    }
-
-    /**
      * @param string $externalIp
      *
      * @return $this
@@ -290,18 +157,6 @@ class ModifyForwardEntry extends RpcRequest
         $this->options['query']['ExternalIp'] = $externalIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExternalPort() instead.
-     *
-     * @param string $externalPort
-     *
-     * @return $this
-     */
-    public function setExternalPort($externalPort)
-    {
-        return $this->withExternalPort($externalPort);
     }
 
     /**

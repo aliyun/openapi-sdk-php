@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeTotalAndRateLine
+ * Api DescribeTotalAndRateLine
  *
  * @method string getSourceIp()
  * @method string getApiType()
  */
-class DescribeTotalAndRateLine extends RpcRequest
+class DescribeTotalAndRateLine extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sas-api';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTotalAndRateLine';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -56,18 +29,6 @@ class DescribeTotalAndRateLine extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApiType() instead.
-     *
-     * @param string $apiType
-     *
-     * @return $this
-     */
-    public function setApiType($apiType)
-    {
-        return $this->withApiType($apiType);
     }
 
     /**

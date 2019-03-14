@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAuditContent
+ * Api DescribeAuditContent
  *
  * @method string getTotalCount()
  * @method string getSuggestion()
@@ -23,45 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getTaskId()
  */
-class DescribeAuditContent extends RpcRequest
+class DescribeAuditContent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAuditContent';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTotalCount() instead.
-     *
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function setTotalCount($totalCount)
-    {
-        return $this->withTotalCount($totalCount);
-    }
 
     /**
      * @param string $totalCount
@@ -74,18 +44,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['TotalCount'] = $totalCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSuggestion() instead.
-     *
-     * @param string $suggestion
-     *
-     * @return $this
-     */
-    public function setSuggestion($suggestion)
-    {
-        return $this->withSuggestion($suggestion);
     }
 
     /**
@@ -102,18 +60,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -124,18 +70,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabel() instead.
-     *
-     * @param string $label
-     *
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        return $this->withLabel($label);
     }
 
     /**
@@ -152,18 +86,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -174,18 +96,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**
@@ -202,18 +112,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
-    }
-
-    /**
      * @param string $scene
      *
      * @return $this
@@ -224,18 +122,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['Scene'] = $scene;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizType() instead.
-     *
-     * @param string $bizType
-     *
-     * @return $this
-     */
-    public function setBizType($bizType)
-    {
-        return $this->withBizType($bizType);
     }
 
     /**
@@ -252,18 +138,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
-
-    /**
      * @param string $endDate
      *
      * @return $this
@@ -274,18 +148,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -302,18 +164,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataId() instead.
-     *
-     * @param string $dataId
-     *
-     * @return $this
-     */
-    public function setDataId($dataId)
-    {
-        return $this->withDataId($dataId);
-    }
-
-    /**
      * @param string $dataId
      *
      * @return $this
@@ -324,18 +174,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['DataId'] = $dataId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuditResult() instead.
-     *
-     * @param string $auditResult
-     *
-     * @return $this
-     */
-    public function setAuditResult($auditResult)
-    {
-        return $this->withAuditResult($auditResult);
     }
 
     /**
@@ -352,18 +190,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -377,18 +203,6 @@ class DescribeAuditContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -399,18 +213,6 @@ class DescribeAuditContent extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

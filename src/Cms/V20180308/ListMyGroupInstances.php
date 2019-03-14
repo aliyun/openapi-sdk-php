@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListMyGroupInstances
+ * Api ListMyGroupInstances
  *
  * @method string getTotal()
  * @method string getInstanceIds()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getKeyword()
  * @method string getPageNumber()
  */
-class ListMyGroupInstances extends RpcRequest
+class ListMyGroupInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListMyGroupInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withTotal() instead.
-     *
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        return $this->withTotal($total);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $total
@@ -61,18 +36,6 @@ class ListMyGroupInstances extends RpcRequest
         $this->options['query']['Total'] = $total;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
     }
 
     /**
@@ -89,18 +52,6 @@ class ListMyGroupInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -111,18 +62,6 @@ class ListMyGroupInstances extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -139,18 +78,6 @@ class ListMyGroupInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -164,18 +91,6 @@ class ListMyGroupInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
-    }
-
-    /**
      * @param string $keyword
      *
      * @return $this
@@ -186,18 +101,6 @@ class ListMyGroupInstances extends RpcRequest
         $this->options['query']['Keyword'] = $keyword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

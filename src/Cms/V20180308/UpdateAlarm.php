@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateAlarm
+ * Api UpdateAlarm
  *
  * @method string getPeriod()
  * @method string getWebhook()
@@ -22,40 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getComparisonOperator()
  * @method string getStatistics()
  */
-class UpdateAlarm extends RpcRequest
+class UpdateAlarm extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateAlarm';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $period
@@ -68,18 +43,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWebhook() instead.
-     *
-     * @param string $webhook
-     *
-     * @return $this
-     */
-    public function setWebhook($webhook)
-    {
-        return $this->withWebhook($webhook);
     }
 
     /**
@@ -96,18 +59,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -118,18 +69,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactGroups() instead.
-     *
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function setContactGroups($contactGroups)
-    {
-        return $this->withContactGroups($contactGroups);
     }
 
     /**
@@ -146,18 +85,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -168,18 +95,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withThreshold() instead.
-     *
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function setThreshold($threshold)
-    {
-        return $this->withThreshold($threshold);
     }
 
     /**
@@ -196,18 +111,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -218,18 +121,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -246,18 +137,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEvaluationCount() instead.
-     *
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function setEvaluationCount($evaluationCount)
-    {
-        return $this->withEvaluationCount($evaluationCount);
-    }
-
-    /**
      * @param string $evaluationCount
      *
      * @return $this
@@ -268,18 +147,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['EvaluationCount'] = $evaluationCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSilenceTime() instead.
-     *
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function setSilenceTime($silenceTime)
-    {
-        return $this->withSilenceTime($silenceTime);
     }
 
     /**
@@ -296,18 +163,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -318,18 +173,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyType() instead.
-     *
-     * @param string $notifyType
-     *
-     * @return $this
-     */
-    public function setNotifyType($notifyType)
-    {
-        return $this->withNotifyType($notifyType);
     }
 
     /**
@@ -346,18 +189,6 @@ class UpdateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withComparisonOperator() instead.
-     *
-     * @param string $comparisonOperator
-     *
-     * @return $this
-     */
-    public function setComparisonOperator($comparisonOperator)
-    {
-        return $this->withComparisonOperator($comparisonOperator);
-    }
-
-    /**
      * @param string $comparisonOperator
      *
      * @return $this
@@ -368,18 +199,6 @@ class UpdateAlarm extends RpcRequest
         $this->options['query']['ComparisonOperator'] = $comparisonOperator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatistics() instead.
-     *
-     * @param string $statistics
-     *
-     * @return $this
-     */
-    public function setStatistics($statistics)
-    {
-        return $this->withStatistics($statistics);
     }
 
     /**

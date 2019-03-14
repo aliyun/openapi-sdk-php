@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListCurrentClientVersion
+ * Api ListCurrentClientVersion
  *
  */
-class ListCurrentClientVersion extends RpcRequest
+class ListCurrentClientVersion extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListCurrentClientVersion';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
 }

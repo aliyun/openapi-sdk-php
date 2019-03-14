@@ -110,6 +110,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeDedicatedHostAutoRenew describeDedicatedHostAutoRenew(array $options = [])
  * @method DescribeDedicatedHostTypes describeDedicatedHostTypes(array $options = [])
  * @method DescribeDedicatedHosts describeDedicatedHosts(array $options = [])
+ * @method DescribeDemands describeDemands(array $options = [])
  * @method DescribeDeploymentSets describeDeploymentSets(array $options = [])
  * @method DescribeDiskMonitorData describeDiskMonitorData(array $options = [])
  * @method DescribeDisks describeDisks(array $options = [])
@@ -204,6 +205,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method JoinResourceGroup joinResourceGroup(array $options = [])
  * @method JoinSecurityGroup joinSecurityGroup(array $options = [])
  * @method LeaveSecurityGroup leaveSecurityGroup(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyAutoSnapshotPolicy modifyAutoSnapshotPolicy(array $options = [])
  * @method ModifyAutoSnapshotPolicyEx modifyAutoSnapshotPolicyEx(array $options = [])
  * @method ModifyAxtCommand modifyAxtCommand(array $options = [])
@@ -276,12 +278,14 @@ use AlibabaCloud\ApiResolverTrait;
  * @method StopAxtTask stopAxtTask(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInvocation stopInvocation(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method TerminatePhysicalConnection terminatePhysicalConnection(array $options = [])
  * @method TerminateVirtualBorderRouter terminateVirtualBorderRouter(array $options = [])
  * @method UnassignIpv6Addresses unassignIpv6Addresses(array $options = [])
  * @method UnassignPrivateIpAddresses unassignPrivateIpAddresses(array $options = [])
  * @method UnassociateEipAddress unassociateEipAddress(array $options = [])
  * @method UnassociateHaVip unassociateHaVip(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  */
 class EcsApiResolver
 {

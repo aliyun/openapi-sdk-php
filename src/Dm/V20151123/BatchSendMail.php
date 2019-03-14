@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchSendMail
+ * Api BatchSendMail
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAddressType()
  * @method string getTemplateName()
  */
-class BatchSendMail extends RpcRequest
+class BatchSendMail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchSendMail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +38,6 @@ class BatchSendMail extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +54,6 @@ class BatchSendMail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClickTrace() instead.
-     *
-     * @param string $clickTrace
-     *
-     * @return $this
-     */
-    public function setClickTrace($clickTrace)
-    {
-        return $this->withClickTrace($clickTrace);
-    }
-
-    /**
      * @param string $clickTrace
      *
      * @return $this
@@ -115,18 +64,6 @@ class BatchSendMail extends RpcRequest
         $this->options['query']['ClickTrace'] = $clickTrace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +80,6 @@ class BatchSendMail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplyAddressAlias() instead.
-     *
-     * @param string $replyAddressAlias
-     *
-     * @return $this
-     */
-    public function setReplyAddressAlias($replyAddressAlias)
-    {
-        return $this->withReplyAddressAlias($replyAddressAlias);
-    }
-
-    /**
      * @param string $replyAddressAlias
      *
      * @return $this
@@ -165,18 +90,6 @@ class BatchSendMail extends RpcRequest
         $this->options['query']['ReplyAddressAlias'] = $replyAddressAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
     }
 
     /**
@@ -193,18 +106,6 @@ class BatchSendMail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -215,18 +116,6 @@ class BatchSendMail extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReceiversName() instead.
-     *
-     * @param string $receiversName
-     *
-     * @return $this
-     */
-    public function setReceiversName($receiversName)
-    {
-        return $this->withReceiversName($receiversName);
     }
 
     /**
@@ -243,18 +132,6 @@ class BatchSendMail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplyAddress() instead.
-     *
-     * @param string $replyAddress
-     *
-     * @return $this
-     */
-    public function setReplyAddress($replyAddress)
-    {
-        return $this->withReplyAddress($replyAddress);
-    }
-
-    /**
      * @param string $replyAddress
      *
      * @return $this
@@ -268,18 +145,6 @@ class BatchSendMail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddressType() instead.
-     *
-     * @param string $addressType
-     *
-     * @return $this
-     */
-    public function setAddressType($addressType)
-    {
-        return $this->withAddressType($addressType);
-    }
-
-    /**
      * @param string $addressType
      *
      * @return $this
@@ -290,18 +155,6 @@ class BatchSendMail extends RpcRequest
         $this->options['query']['AddressType'] = $addressType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateName() instead.
-     *
-     * @param string $templateName
-     *
-     * @return $this
-     */
-    public function setTemplateName($templateName)
-    {
-        return $this->withTemplateName($templateName);
     }
 
     /**

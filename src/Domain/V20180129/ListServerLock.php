@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListServerLock
+ * Api ListServerLock
  *
  * @method string getLockProductId()
  * @method string getEndStartDate()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getBeginStartDate()
  */
-class ListServerLock extends RpcRequest
+class ListServerLock extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListServerLock';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLockProductId() instead.
-     *
-     * @param string $lockProductId
-     *
-     * @return $this
-     */
-    public function setLockProductId($lockProductId)
-    {
-        return $this->withLockProductId($lockProductId);
-    }
 
     /**
      * @param string $lockProductId
@@ -65,18 +38,6 @@ class ListServerLock extends RpcRequest
         $this->options['query']['LockProductId'] = $lockProductId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndStartDate() instead.
-     *
-     * @param string $endStartDate
-     *
-     * @return $this
-     */
-    public function setEndStartDate($endStartDate)
-    {
-        return $this->withEndStartDate($endStartDate);
     }
 
     /**
@@ -93,18 +54,6 @@ class ListServerLock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServerLockStatus() instead.
-     *
-     * @param string $serverLockStatus
-     *
-     * @return $this
-     */
-    public function setServerLockStatus($serverLockStatus)
-    {
-        return $this->withServerLockStatus($serverLockStatus);
-    }
-
-    /**
      * @param string $serverLockStatus
      *
      * @return $this
@@ -115,18 +64,6 @@ class ListServerLock extends RpcRequest
         $this->options['query']['ServerLockStatus'] = $serverLockStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartExpireDate() instead.
-     *
-     * @param string $startExpireDate
-     *
-     * @return $this
-     */
-    public function setStartExpireDate($startExpireDate)
-    {
-        return $this->withStartExpireDate($startExpireDate);
     }
 
     /**
@@ -143,18 +80,6 @@ class ListServerLock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -165,18 +90,6 @@ class ListServerLock extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -193,18 +106,6 @@ class ListServerLock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -215,18 +116,6 @@ class ListServerLock extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndExpireDate() instead.
-     *
-     * @param string $endExpireDate
-     *
-     * @return $this
-     */
-    public function setEndExpireDate($endExpireDate)
-    {
-        return $this->withEndExpireDate($endExpireDate);
     }
 
     /**
@@ -243,18 +132,6 @@ class ListServerLock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -268,18 +145,6 @@ class ListServerLock extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -290,18 +155,6 @@ class ListServerLock extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBeginStartDate() instead.
-     *
-     * @param string $beginStartDate
-     *
-     * @return $this
-     */
-    public function setBeginStartDate($beginStartDate)
-    {
-        return $this->withBeginStartDate($beginStartDate);
     }
 
     /**

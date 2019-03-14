@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpgradeCdiBaseBag
+ * Api UpgradeCdiBaseBag
  *
  * @method string getInstanceId()
  * @method string getClientToken()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getFlowOutSpec()
  * @method string getOrderType()
  */
-class UpgradeCdiBaseBag extends RpcRequest
+class UpgradeCdiBaseBag extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpgradeCdiBaseBag';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -65,18 +35,6 @@ class UpgradeCdiBaseBag extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -93,18 +51,6 @@ class UpgradeCdiBaseBag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommodityCode() instead.
-     *
-     * @param string $commodityCode
-     *
-     * @return $this
-     */
-    public function setCommodityCode($commodityCode)
-    {
-        return $this->withCommodityCode($commodityCode);
-    }
-
-    /**
      * @param string $commodityCode
      *
      * @return $this
@@ -115,18 +61,6 @@ class UpgradeCdiBaseBag extends RpcRequest
         $this->options['query']['CommodityCode'] = $commodityCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +77,6 @@ class UpgradeCdiBaseBag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlowOutSpec() instead.
-     *
-     * @param string $flowOutSpec
-     *
-     * @return $this
-     */
-    public function setFlowOutSpec($flowOutSpec)
-    {
-        return $this->withFlowOutSpec($flowOutSpec);
-    }
-
-    /**
      * @param string $flowOutSpec
      *
      * @return $this
@@ -165,18 +87,6 @@ class UpgradeCdiBaseBag extends RpcRequest
         $this->options['query']['FlowOutSpec'] = $flowOutSpec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

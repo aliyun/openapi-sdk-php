@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SuspendSynchronizationJob
+ * Api SuspendSynchronizationJob
  *
  * @method string getSynchronizationJobId()
  * @method string getOwnerId()
  */
-class SuspendSynchronizationJob extends RpcRequest
+class SuspendSynchronizationJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dts';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'SuspendSynchronizationJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobId() instead.
-     *
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobId($synchronizationJobId)
-    {
-        return $this->withSynchronizationJobId($synchronizationJobId);
-    }
 
     /**
      * @param string $synchronizationJobId
@@ -56,18 +29,6 @@ class SuspendSynchronizationJob extends RpcRequest
         $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RefreshVodObjectCaches
+ * Api RefreshVodObjectCaches
  *
  * @method string getSecurityToken()
  * @method string getObjectPath()
  * @method string getOwnerId()
  * @method string getObjectType()
  */
-class RefreshVodObjectCaches extends RpcRequest
+class RefreshVodObjectCaches extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'RefreshVodObjectCaches';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

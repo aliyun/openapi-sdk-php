@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDomainWebSocketStatus
+ * Api SetDomainWebSocketStatus
  *
  * @method string getSecurityToken()
  * @method string getGroupId()
  * @method string getDomainName()
  * @method string getActionValue()
  */
-class SetDomainWebSocketStatus extends RpcRequest
+class SetDomainWebSocketStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDomainWebSocketStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

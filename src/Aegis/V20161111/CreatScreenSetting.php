@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatScreenSetting
+ * Api CreatScreenSetting
  *
  * @method string getSourceIp()
  * @method string getScreenTitle()
  * @method string getScreenIdSetting()
  */
-class CreatScreenSetting extends RpcRequest
+class CreatScreenSetting extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatScreenSetting';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatePhysicalConnectionNew
+ * Api CreatePhysicalConnectionNew
  *
  * @method string getAccessPointId()
  * @method string getRedundantPhysicalConnectionId()
@@ -25,45 +25,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getName()
  * @method string getDeviceName()
  */
-class CreatePhysicalConnectionNew extends RpcRequest
+class CreatePhysicalConnectionNew extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatePhysicalConnectionNew';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessPointId() instead.
-     *
-     * @param string $accessPointId
-     *
-     * @return $this
-     */
-    public function setAccessPointId($accessPointId)
-    {
-        return $this->withAccessPointId($accessPointId);
-    }
 
     /**
      * @param string $accessPointId
@@ -76,18 +46,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['AccessPointId'] = $accessPointId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRedundantPhysicalConnectionId() instead.
-     *
-     * @param string $redundantPhysicalConnectionId
-     *
-     * @return $this
-     */
-    public function setRedundantPhysicalConnectionId($redundantPhysicalConnectionId)
-    {
-        return $this->withRedundantPhysicalConnectionId($redundantPhysicalConnectionId);
     }
 
     /**
@@ -104,18 +62,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeerLocation() instead.
-     *
-     * @param string $peerLocation
-     *
-     * @return $this
-     */
-    public function setPeerLocation($peerLocation)
-    {
-        return $this->withPeerLocation($peerLocation);
-    }
-
-    /**
      * @param string $peerLocation
      *
      * @return $this
@@ -126,18 +72,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['PeerLocation'] = $peerLocation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -154,18 +88,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPortType() instead.
-     *
-     * @param string $portType
-     *
-     * @return $this
-     */
-    public function setPortType($portType)
-    {
-        return $this->withPortType($portType);
-    }
-
-    /**
      * @param string $portType
      *
      * @return $this
@@ -176,18 +98,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['PortType'] = $portType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCircuitCode() instead.
-     *
-     * @param string $circuitCode
-     *
-     * @return $this
-     */
-    public function setCircuitCode($circuitCode)
-    {
-        return $this->withCircuitCode($circuitCode);
     }
 
     /**
@@ -204,18 +114,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setbandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -226,18 +124,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -254,18 +140,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -276,18 +150,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -304,18 +166,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -326,18 +176,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterfaceName() instead.
-     *
-     * @param string $interfaceName
-     *
-     * @return $this
-     */
-    public function setInterfaceName($interfaceName)
-    {
-        return $this->withInterfaceName($interfaceName);
     }
 
     /**
@@ -354,18 +192,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -376,18 +202,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -404,18 +218,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLineOperator() instead.
-     *
-     * @param string $lineOperator
-     *
-     * @return $this
-     */
-    public function setLineOperator($lineOperator)
-    {
-        return $this->withLineOperator($lineOperator);
-    }
-
-    /**
      * @param string $lineOperator
      *
      * @return $this
@@ -429,18 +231,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -451,18 +241,6 @@ class CreatePhysicalConnectionNew extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
     }
 
     /**

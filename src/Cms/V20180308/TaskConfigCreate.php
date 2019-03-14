@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of TaskConfigCreate
+ * Api TaskConfigCreate
  *
  * @method array getInstanceList()
  * @method string getJsonData()
@@ -16,50 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTaskName()
  * @method string getGroupName()
  */
-class TaskConfigCreate extends RpcRequest
+class TaskConfigCreate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'TaskConfigCreate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceList() instead.
-     *
-     * @return array
-     */
-    public function getInstanceLists()
-    {
-        return $this->getInstanceList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceList() instead.
-     *
-     * @param array $instanceLists
-     *
-     * @return $this
-     */
-    public function setInstanceLists(array $instanceLists)
-    {
-        return $this->withInstanceList($instanceLists);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param array $instanceList
@@ -77,18 +42,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJsonData() instead.
-     *
-     * @param string $jsonData
-     *
-     * @return $this
-     */
-    public function setJsonData($jsonData)
-    {
-        return $this->withJsonData($jsonData);
-    }
-
-    /**
      * @param string $jsonData
      *
      * @return $this
@@ -99,18 +52,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['JsonData'] = $jsonData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskType() instead.
-     *
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function setTaskType($taskType)
-    {
-        return $this->withTaskType($taskType);
     }
 
     /**
@@ -127,18 +68,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskScope() instead.
-     *
-     * @param string $taskScope
-     *
-     * @return $this
-     */
-    public function setTaskScope($taskScope)
-    {
-        return $this->withTaskScope($taskScope);
-    }
-
-    /**
      * @param string $taskScope
      *
      * @return $this
@@ -149,18 +78,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['TaskScope'] = $taskScope;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertConfig() instead.
-     *
-     * @param string $alertConfig
-     *
-     * @return $this
-     */
-    public function setAlertConfig($alertConfig)
-    {
-        return $this->withAlertConfig($alertConfig);
     }
 
     /**
@@ -177,18 +94,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -202,18 +107,6 @@ class TaskConfigCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function setTaskName($taskName)
-    {
-        return $this->withTaskName($taskName);
-    }
-
-    /**
      * @param string $taskName
      *
      * @return $this
@@ -224,18 +117,6 @@ class TaskConfigCreate extends RpcRequest
         $this->options['query']['TaskName'] = $taskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

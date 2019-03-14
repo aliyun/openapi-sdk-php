@@ -2,55 +2,30 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateProduct
+ * Api CreateProduct
  *
  * @method string getDataFormat()
  * @method string getNodeType()
  * @method string getId2()
+ * @method string getIotInstanceId()
  * @method string getNetType()
  * @method string getProductName()
  * @method string getDescription()
  * @method string getProtocolType()
  * @method string getAliyunCommodityCode()
+ * @method string getJoinPermissionId()
  * @method string getCategoryId()
  */
-class CreateProduct extends RpcRequest
+class CreateProduct extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateProduct';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataFormat() instead.
-     *
-     * @param string $dataFormat
-     *
-     * @return $this
-     */
-    public function setDataFormat($dataFormat)
-    {
-        return $this->withDataFormat($dataFormat);
-    }
 
     /**
      * @param string $dataFormat
@@ -63,18 +38,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['DataFormat'] = $dataFormat;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeType() instead.
-     *
-     * @param string $nodeType
-     *
-     * @return $this
-     */
-    public function setNodeType($nodeType)
-    {
-        return $this->withNodeType($nodeType);
     }
 
     /**
@@ -91,18 +54,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId2() instead.
-     *
-     * @param string $id2
-     *
-     * @return $this
-     */
-    public function setId2($id2)
-    {
-        return $this->withId2($id2);
-    }
-
-    /**
      * @param string $id2
      *
      * @return $this
@@ -116,15 +67,16 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetType() instead.
-     *
-     * @param string $netType
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setNetType($netType)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withNetType($netType);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -141,18 +93,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductName() instead.
-     *
-     * @param string $productName
-     *
-     * @return $this
-     */
-    public function setProductName($productName)
-    {
-        return $this->withProductName($productName);
-    }
-
-    /**
      * @param string $productName
      *
      * @return $this
@@ -163,18 +103,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['ProductName'] = $productName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -191,18 +119,6 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProtocolType() instead.
-     *
-     * @param string $protocolType
-     *
-     * @return $this
-     */
-    public function setProtocolType($protocolType)
-    {
-        return $this->withProtocolType($protocolType);
-    }
-
-    /**
      * @param string $protocolType
      *
      * @return $this
@@ -213,18 +129,6 @@ class CreateProduct extends RpcRequest
         $this->options['query']['ProtocolType'] = $protocolType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliyunCommodityCode() instead.
-     *
-     * @param string $aliyunCommodityCode
-     *
-     * @return $this
-     */
-    public function setAliyunCommodityCode($aliyunCommodityCode)
-    {
-        return $this->withAliyunCommodityCode($aliyunCommodityCode);
     }
 
     /**
@@ -241,15 +145,16 @@ class CreateProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategoryId() instead.
-     *
-     * @param string $categoryId
+     * @param string $joinPermissionId
      *
      * @return $this
      */
-    public function setCategoryId($categoryId)
+    public function withJoinPermissionId($joinPermissionId)
     {
-        return $this->withCategoryId($categoryId);
+        $this->data['JoinPermissionId'] = $joinPermissionId;
+        $this->options['query']['JoinPermissionId'] = $joinPermissionId;
+
+        return $this;
     }
 
     /**

@@ -2,48 +2,24 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApplyBlockchain
+ * Api ApplyBlockchain
  *
  * @method string getBlockchain()
+ * @method string getAccountPubKey()
  * @method string getUploadReq()
+ * @method string getAccountRecoverPubKey()
+ * @method string getAccount()
  */
-class ApplyBlockchain extends RpcRequest
+class ApplyBlockchain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApplyBlockchain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBlockchain() instead.
-     *
-     * @param string $blockchain
-     *
-     * @return $this
-     */
-    public function setBlockchain($blockchain)
-    {
-        return $this->withBlockchain($blockchain);
-    }
 
     /**
      * @param string $blockchain
@@ -59,15 +35,16 @@ class ApplyBlockchain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUploadReq() instead.
-     *
-     * @param string $uploadReq
+     * @param string $accountPubKey
      *
      * @return $this
      */
-    public function setUploadReq($uploadReq)
+    public function withAccountPubKey($accountPubKey)
     {
-        return $this->withUploadReq($uploadReq);
+        $this->data['AccountPubKey'] = $accountPubKey;
+        $this->options['query']['AccountPubKey'] = $accountPubKey;
+
+        return $this;
     }
 
     /**
@@ -79,6 +56,32 @@ class ApplyBlockchain extends RpcRequest
     {
         $this->data['UploadReq'] = $uploadReq;
         $this->options['query']['UploadReq'] = $uploadReq;
+
+        return $this;
+    }
+
+    /**
+     * @param string $accountRecoverPubKey
+     *
+     * @return $this
+     */
+    public function withAccountRecoverPubKey($accountRecoverPubKey)
+    {
+        $this->data['AccountRecoverPubKey'] = $accountRecoverPubKey;
+        $this->options['query']['AccountRecoverPubKey'] = $accountRecoverPubKey;
+
+        return $this;
+    }
+
+    /**
+     * @param string $account
+     *
+     * @return $this
+     */
+    public function withAccount($account)
+    {
+        $this->data['Account'] = $account;
+        $this->options['query']['Account'] = $account;
 
         return $this;
     }

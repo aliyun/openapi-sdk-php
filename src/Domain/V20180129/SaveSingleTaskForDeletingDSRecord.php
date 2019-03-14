@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveSingleTaskForDeletingDSRecord
+ * Api SaveSingleTaskForDeletingDSRecord
  *
  * @method string getKeyTag()
  * @method string getDomainName()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class SaveSingleTaskForDeletingDSRecord extends RpcRequest
+class SaveSingleTaskForDeletingDSRecord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveSingleTaskForDeletingDSRecord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyTag() instead.
-     *
-     * @param string $keyTag
-     *
-     * @return $this
-     */
-    public function setKeyTag($keyTag)
-    {
-        return $this->withKeyTag($keyTag);
-    }
 
     /**
      * @param string $keyTag
@@ -58,18 +31,6 @@ class SaveSingleTaskForDeletingDSRecord extends RpcRequest
         $this->options['query']['KeyTag'] = $keyTag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -86,18 +47,6 @@ class SaveSingleTaskForDeletingDSRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -108,18 +57,6 @@ class SaveSingleTaskForDeletingDSRecord extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

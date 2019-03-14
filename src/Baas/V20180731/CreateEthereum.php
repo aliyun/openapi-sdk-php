@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateEthereum
+ * Api CreateEthereum
  *
  * @method string getConsensus()
  * @method string getDifficulty()
@@ -16,27 +16,12 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNetworkId()
  * @method string getRegion()
  */
-class CreateEthereum extends RpcRequest
+class CreateEthereum extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateEthereum';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

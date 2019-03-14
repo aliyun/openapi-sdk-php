@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Hsm\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateInstance
+ * Api CreateInstance
  *
  * @method string getPeriod()
  * @method string getPeriodUnit()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getZoneId()
  * @method string getHsmOem()
  */
-class CreateInstance extends RpcRequest
+class CreateInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'hsm';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'hsm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
 
     /**
      * @param string $period
@@ -67,18 +37,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
     }
 
     /**
@@ -95,18 +53,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -117,18 +63,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuantity() instead.
-     *
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function setQuantity($quantity)
-    {
-        return $this->withQuantity($quantity);
     }
 
     /**
@@ -145,18 +79,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHsmDeviceType() instead.
-     *
-     * @param string $hsmDeviceType
-     *
-     * @return $this
-     */
-    public function setHsmDeviceType($hsmDeviceType)
-    {
-        return $this->withHsmDeviceType($hsmDeviceType);
-    }
-
-    /**
      * @param string $hsmDeviceType
      *
      * @return $this
@@ -167,18 +89,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['HsmDeviceType'] = $hsmDeviceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -195,18 +105,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -217,18 +115,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHsmOem() instead.
-     *
-     * @param string $hsmOem
-     *
-     * @return $this
-     */
-    public function setHsmOem($hsmOem)
-    {
-        return $this->withHsmOem($hsmOem);
     }
 
     /**

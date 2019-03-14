@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddFaceRegistration
+ * Api AddFaceRegistration
  *
  * @method string getResourceOwnerId()
  * @method string getPersonLibrary()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getImageIds()
  * @method string getPersonName()
  */
-class AddFaceRegistration extends RpcRequest
+class AddFaceRegistration extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddFaceRegistration';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class AddFaceRegistration extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPersonLibrary() instead.
-     *
-     * @param string $personLibrary
-     *
-     * @return $this
-     */
-    public function setPersonLibrary($personLibrary)
-    {
-        return $this->withPersonLibrary($personLibrary);
     }
 
     /**
@@ -96,18 +54,6 @@ class AddFaceRegistration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +64,6 @@ class AddFaceRegistration extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -146,18 +80,6 @@ class AddFaceRegistration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPersonId() instead.
-     *
-     * @param string $personId
-     *
-     * @return $this
-     */
-    public function setPersonId($personId)
-    {
-        return $this->withPersonId($personId);
-    }
-
-    /**
      * @param string $personId
      *
      * @return $this
@@ -168,18 +90,6 @@ class AddFaceRegistration extends RpcRequest
         $this->options['query']['PersonId'] = $personId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +106,6 @@ class AddFaceRegistration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -221,18 +119,6 @@ class AddFaceRegistration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageIds() instead.
-     *
-     * @param string $imageIds
-     *
-     * @return $this
-     */
-    public function setImageIds($imageIds)
-    {
-        return $this->withImageIds($imageIds);
-    }
-
-    /**
      * @param string $imageIds
      *
      * @return $this
@@ -243,18 +129,6 @@ class AddFaceRegistration extends RpcRequest
         $this->options['query']['ImageIds'] = $imageIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPersonName() instead.
-     *
-     * @param string $personName
-     *
-     * @return $this
-     */
-    public function setPersonName($personName)
-    {
-        return $this->withPersonName($personName);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RestoreTable
+ * Api RestoreTable
  *
  * @method string getResourceOwnerId()
  * @method string getRestoreTime()
@@ -17,32 +17,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getOwnerId()
  */
-class RestoreTable extends RpcRequest
+class RestoreTable extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'RestoreTable';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
 
     /**

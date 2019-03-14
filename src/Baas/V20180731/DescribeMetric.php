@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeMetric
+ * Api DescribeMetric
  *
  * @method string getPeriod()
  * @method string getMetric()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTimeArea()
  * @method string getInnerIp()
  */
-class DescribeMetric extends RpcRequest
+class DescribeMetric extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeMetric';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
 
     /**
      * @param string $period
@@ -60,18 +33,6 @@ class DescribeMetric extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
     }
 
     /**
@@ -88,18 +49,6 @@ class DescribeMetric extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
-
-    /**
      * @param string $port
      *
      * @return $this
@@ -110,18 +59,6 @@ class DescribeMetric extends RpcRequest
         $this->options['query']['Port'] = $port;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
     }
 
     /**
@@ -138,18 +75,6 @@ class DescribeMetric extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeArea() instead.
-     *
-     * @param string $timeArea
-     *
-     * @return $this
-     */
-    public function setTimeArea($timeArea)
-    {
-        return $this->withTimeArea($timeArea);
-    }
-
-    /**
      * @param string $timeArea
      *
      * @return $this
@@ -160,18 +85,6 @@ class DescribeMetric extends RpcRequest
         $this->options['query']['TimeArea'] = $timeArea;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInnerIp() instead.
-     *
-     * @param string $innerIp
-     *
-     * @return $this
-     */
-    public function setInnerIp($innerIp)
-    {
-        return $this->withInnerIp($innerIp);
     }
 
     /**

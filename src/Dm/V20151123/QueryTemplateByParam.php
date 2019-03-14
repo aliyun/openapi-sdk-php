@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTemplateByParam
+ * Api QueryTemplateByParam
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getKeyWord()
  * @method string getStatus()
  */
-class QueryTemplateByParam extends RpcRequest
+class QueryTemplateByParam extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTemplateByParam';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +35,6 @@ class QueryTemplateByParam extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -90,18 +51,6 @@ class QueryTemplateByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
-    }
-
-    /**
      * @param string $pageNo
      *
      * @return $this
@@ -112,18 +61,6 @@ class QueryTemplateByParam extends RpcRequest
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -140,18 +77,6 @@ class QueryTemplateByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromType() instead.
-     *
-     * @param string $fromType
-     *
-     * @return $this
-     */
-    public function setFromType($fromType)
-    {
-        return $this->withFromType($fromType);
-    }
-
-    /**
      * @param string $fromType
      *
      * @return $this
@@ -162,18 +87,6 @@ class QueryTemplateByParam extends RpcRequest
         $this->options['query']['FromType'] = $fromType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -190,18 +103,6 @@ class QueryTemplateByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyWord() instead.
-     *
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function setKeyWord($keyWord)
-    {
-        return $this->withKeyWord($keyWord);
-    }
-
-    /**
      * @param string $keyWord
      *
      * @return $this
@@ -212,18 +113,6 @@ class QueryTemplateByParam extends RpcRequest
         $this->options['query']['KeyWord'] = $keyWord;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

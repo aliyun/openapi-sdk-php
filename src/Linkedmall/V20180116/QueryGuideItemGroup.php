@@ -2,54 +2,37 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryGuideItemGroup
+ * Api QueryGuideItemGroup
  *
- * @method string getBizId()
  * @method string getGroupId()
- * @method string getPageNumber()
+ * @method string getBizId()
  * @method string getPageSize()
+ * @method string getPageNumber()
  */
-class QueryGuideItemGroup extends RpcRequest
+class QueryGuideItemGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryGuideItemGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $groupId
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withGroupId($groupId)
     {
-        return $this->withBizId($bizId);
+        $this->data['GroupId'] = $groupId;
+        $this->options['query']['GroupId'] = $groupId;
+
+        return $this;
     }
 
     /**
@@ -66,40 +49,16 @@ class QueryGuideItemGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
+     * @param string $pageSize
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function withPageSize($pageSize)
     {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -111,31 +70,6 @@ class QueryGuideItemGroup extends RpcRequest
     {
         $this->data['PageNumber'] = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }

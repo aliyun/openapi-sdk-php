@@ -47,4 +47,32 @@ class AlimtTest extends TestCase
                               ->request();
         self::assertArrayHasKey('Data', $result);
     }
+
+    public function testSetMethod()
+    {
+        $with = AlibabaCloud::alimt()
+                            ->v20181012()
+                            ->translateECommerce()
+                            ->method('POST')
+                            ->withSourceLanguage('en')
+                            ->withScene('title')
+                            ->withSourceText('book')
+                            ->withFormatType('text')
+                            ->withTargetLanguage('zh')
+                            ->connectTimeout(20)
+                            ->timeout(25);
+
+        $set = AlibabaCloud::alimt()
+                           ->v20181012()
+                           ->translateECommerce()
+                           ->method('POST')
+                           ->setSourceLanguage('en')
+                           ->setScene('title')
+                           ->setSourceText('book')
+                           ->setFormatType('text')
+                           ->setTargetLanguage('zh')
+                           ->connectTimeout(20)
+                           ->timeout(25);
+        self::assertTrue(json_encode($set) === json_encode($with));
+    }
 }

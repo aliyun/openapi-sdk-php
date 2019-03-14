@@ -2,37 +2,19 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeUserResourceDomain
+ * Api DescribeUserResourceDomain
  *
  */
-class DescribeUserResourceDomain extends RoaRequest
+class DescribeUserResourceDomain extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserResourceDomain';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/resource_domain';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
 }

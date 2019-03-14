@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLogItems
+ * Api DescribeLogItems
  *
  * @method string getLoginOffset()
  * @method string getProcessSnapshotOffset()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCrackOffset()
  * @method string getPageSize()
  */
-class DescribeLogItems extends RpcRequest
+class DescribeLogItems extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLogItems';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoginOffset() instead.
-     *
-     * @param string $loginOffset
-     *
-     * @return $this
-     */
-    public function setLoginOffset($loginOffset)
-    {
-        return $this->withLoginOffset($loginOffset);
-    }
 
     /**
      * @param string $loginOffset
@@ -72,18 +42,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['LoginOffset'] = $loginOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProcessSnapshotOffset() instead.
-     *
-     * @param string $processSnapshotOffset
-     *
-     * @return $this
-     */
-    public function setProcessSnapshotOffset($processSnapshotOffset)
-    {
-        return $this->withProcessSnapshotOffset($processSnapshotOffset);
     }
 
     /**
@@ -100,18 +58,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPortSnapshotOffset() instead.
-     *
-     * @param string $portSnapshotOffset
-     *
-     * @return $this
-     */
-    public function setPortSnapshotOffset($portSnapshotOffset)
-    {
-        return $this->withPortSnapshotOffset($portSnapshotOffset);
-    }
-
-    /**
      * @param string $portSnapshotOffset
      *
      * @return $this
@@ -122,18 +68,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['PortSnapshotOffset'] = $portSnapshotOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuery() instead.
-     *
-     * @param string $query
-     *
-     * @return $this
-     */
-    public function setQuery($query)
-    {
-        return $this->withQuery($query);
     }
 
     /**
@@ -150,18 +84,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -172,18 +94,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -200,18 +110,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkOffset() instead.
-     *
-     * @param string $networkOffset
-     *
-     * @return $this
-     */
-    public function setNetworkOffset($networkOffset)
-    {
-        return $this->withNetworkOffset($networkOffset);
-    }
-
-    /**
      * @param string $networkOffset
      *
      * @return $this
@@ -222,18 +120,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['NetworkOffset'] = $networkOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -250,18 +136,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountSnapshotOffset() instead.
-     *
-     * @param string $accountSnapshotOffset
-     *
-     * @return $this
-     */
-    public function setAccountSnapshotOffset($accountSnapshotOffset)
-    {
-        return $this->withAccountSnapshotOffset($accountSnapshotOffset);
-    }
-
-    /**
      * @param string $accountSnapshotOffset
      *
      * @return $this
@@ -272,18 +146,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['AccountSnapshotOffset'] = $accountSnapshotOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProcessOffset() instead.
-     *
-     * @param string $processOffset
-     *
-     * @return $this
-     */
-    public function setProcessOffset($processOffset)
-    {
-        return $this->withProcessOffset($processOffset);
     }
 
     /**
@@ -300,18 +162,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -325,18 +175,6 @@ class DescribeLogItems extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCrackOffset() instead.
-     *
-     * @param string $crackOffset
-     *
-     * @return $this
-     */
-    public function setCrackOffset($crackOffset)
-    {
-        return $this->withCrackOffset($crackOffset);
-    }
-
-    /**
      * @param string $crackOffset
      *
      * @return $this
@@ -347,18 +185,6 @@ class DescribeLogItems extends RpcRequest
         $this->options['query']['CrackOffset'] = $crackOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RenewInstance
+ * Api RenewInstance
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getForceUpgrade()
  * @method string getBusinessInfo()
  */
-class RenewInstance extends RpcRequest
+class RenewInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'R-kvstore';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'RenewInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'redisa';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,18 +43,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -101,18 +59,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
-    }
-
-    /**
      * @param string $autoPay
      *
      * @return $this
@@ -123,18 +69,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['AutoPay'] = $autoPay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFromApp() instead.
-     *
-     * @param string $fromApp
-     *
-     * @return $this
-     */
-    public function setFromApp($fromApp)
-    {
-        return $this->withFromApp($fromApp);
     }
 
     /**
@@ -151,18 +85,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -173,18 +95,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -201,18 +111,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
-    }
-
-    /**
      * @param string $couponNo
      *
      * @return $this
@@ -223,18 +121,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['CouponNo'] = $couponNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -251,18 +137,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceClass() instead.
-     *
-     * @param string $instanceClass
-     *
-     * @return $this
-     */
-    public function setInstanceClass($instanceClass)
-    {
-        return $this->withInstanceClass($instanceClass);
-    }
-
-    /**
      * @param string $instanceClass
      *
      * @return $this
@@ -273,18 +147,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['InstanceClass'] = $instanceClass;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCapacity() instead.
-     *
-     * @param string $capacity
-     *
-     * @return $this
-     */
-    public function setCapacity($capacity)
-    {
-        return $this->withCapacity($capacity);
     }
 
     /**
@@ -301,18 +163,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -323,18 +173,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -351,18 +189,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceUpgrade() instead.
-     *
-     * @param string $forceUpgrade
-     *
-     * @return $this
-     */
-    public function setForceUpgrade($forceUpgrade)
-    {
-        return $this->withForceUpgrade($forceUpgrade);
-    }
-
-    /**
      * @param string $forceUpgrade
      *
      * @return $this
@@ -373,18 +199,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ForceUpgrade'] = $forceUpgrade;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessInfo() instead.
-     *
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function setBusinessInfo($businessInfo)
-    {
-        return $this->withBusinessInfo($businessInfo);
     }
 
     /**

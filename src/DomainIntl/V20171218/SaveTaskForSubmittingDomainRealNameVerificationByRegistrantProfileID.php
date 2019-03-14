@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID
+ * Api SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID
  *
  * @method string getInstanceId()
  * @method string getUserClientIp()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegistrantProfileId()
  * @method string getLang()
  */
-class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends RpcRequest
+class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

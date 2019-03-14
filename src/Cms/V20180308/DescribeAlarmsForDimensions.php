@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAlarmsForDimensions
+ * Api DescribeAlarmsForDimensions
  *
  * @method string getEnableState()
  * @method string getGroupId()
@@ -16,40 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMetricName()
  * @method string getDimensions()
  */
-class DescribeAlarmsForDimensions extends RpcRequest
+class DescribeAlarmsForDimensions extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAlarmsForDimensions';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableState() instead.
-     *
-     * @param string $enableState
-     *
-     * @return $this
-     */
-    public function setEnableState($enableState)
-    {
-        return $this->withEnableState($enableState);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $enableState
@@ -62,18 +37,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
         $this->options['query']['EnableState'] = $enableState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -90,18 +53,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
-    }
-
-    /**
      * @param string $namespace
      *
      * @return $this
@@ -112,18 +63,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
         $this->options['query']['Namespace'] = $namespace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -140,18 +79,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertState() instead.
-     *
-     * @param string $alertState
-     *
-     * @return $this
-     */
-    public function setAlertState($alertState)
-    {
-        return $this->withAlertState($alertState);
-    }
-
-    /**
      * @param string $alertState
      *
      * @return $this
@@ -162,18 +89,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
         $this->options['query']['AlertState'] = $alertState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
     }
 
     /**
@@ -190,18 +105,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
-    }
-
-    /**
      * @param string $metricName
      *
      * @return $this
@@ -212,18 +115,6 @@ class DescribeAlarmsForDimensions extends RpcRequest
         $this->options['query']['MetricName'] = $metricName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

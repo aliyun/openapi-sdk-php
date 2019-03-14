@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetRemoveQueryStringConfig
+ * Api SetRemoveQueryStringConfig
  *
  * @method string getAliRemoveArgs()
  * @method string getKeepOssArgs()
@@ -13,35 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getConfigId()
  */
-class SetRemoveQueryStringConfig extends RpcRequest
+class SetRemoveQueryStringConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetRemoveQueryStringConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliRemoveArgs() instead.
-     *
-     * @param string $aliRemoveArgs
-     *
-     * @return $this
-     */
-    public function setAliRemoveArgs($aliRemoveArgs)
-    {
-        return $this->withAliRemoveArgs($aliRemoveArgs);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $aliRemoveArgs
@@ -54,18 +32,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['AliRemoveArgs'] = $aliRemoveArgs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeepOssArgs() instead.
-     *
-     * @param string $keepOssArgs
-     *
-     * @return $this
-     */
-    public function setKeepOssArgs($keepOssArgs)
-    {
-        return $this->withKeepOssArgs($keepOssArgs);
     }
 
     /**
@@ -82,18 +48,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -107,18 +61,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -129,18 +71,6 @@ class SetRemoveQueryStringConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsTrendTopicInputTps
+ * Api OnsTrendTopicInputTps
  *
  * @method string getPreventCache()
  * @method string getPeriod()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBeginTime()
  * @method string getType()
  */
-class OnsTrendTopicInputTps extends RpcRequest
+class OnsTrendTopicInputTps extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsTrendTopicInputTps';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -62,18 +35,6 @@ class OnsTrendTopicInputTps extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -90,18 +51,6 @@ class OnsTrendTopicInputTps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
-    }
-
-    /**
      * @param string $onsRegionId
      *
      * @return $this
@@ -112,18 +61,6 @@ class OnsTrendTopicInputTps extends RpcRequest
         $this->options['query']['OnsRegionId'] = $onsRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
     }
 
     /**
@@ -140,18 +77,6 @@ class OnsTrendTopicInputTps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -162,18 +87,6 @@ class OnsTrendTopicInputTps extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -190,18 +103,6 @@ class OnsTrendTopicInputTps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeginTime() instead.
-     *
-     * @param string $beginTime
-     *
-     * @return $this
-     */
-    public function setBeginTime($beginTime)
-    {
-        return $this->withBeginTime($beginTime);
-    }
-
-    /**
      * @param string $beginTime
      *
      * @return $this
@@ -212,18 +113,6 @@ class OnsTrendTopicInputTps extends RpcRequest
         $this->options['query']['BeginTime'] = $beginTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

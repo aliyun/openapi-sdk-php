@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDnatEntries
+ * Api DescribeDnatEntries
  *
  * @method string getResourceOwnerId()
  * @method string getUisNodeId()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getPageNumber()
  */
-class DescribeDnatEntries extends RpcRequest
+class DescribeDnatEntries extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Uis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDnatEntries';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'uis';
 
     /**

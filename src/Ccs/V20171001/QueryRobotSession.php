@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryRobotSession
+ * Api QueryRobotSession
  *
  * @method string getAnswerSource()
  * @method string getSceneId()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCcsInstanceId()
  * @method string getUtterance()
  */
-class QueryRobotSession extends RpcRequest
+class QueryRobotSession extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryRobotSession';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAnswerSource() instead.
-     *
-     * @param string $answerSource
-     *
-     * @return $this
-     */
-    public function setAnswerSource($answerSource)
-    {
-        return $this->withAnswerSource($answerSource);
-    }
 
     /**
      * @param string $answerSource
@@ -68,18 +38,6 @@ class QueryRobotSession extends RpcRequest
         $this->options['query']['AnswerSource'] = $answerSource;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
     }
 
     /**
@@ -96,18 +54,6 @@ class QueryRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -118,18 +64,6 @@ class QueryRobotSession extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -146,18 +80,6 @@ class QueryRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -168,18 +90,6 @@ class QueryRobotSession extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -196,18 +106,6 @@ class QueryRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSatisfaction() instead.
-     *
-     * @param string $satisfaction
-     *
-     * @return $this
-     */
-    public function setSatisfaction($satisfaction)
-    {
-        return $this->withSatisfaction($satisfaction);
-    }
-
-    /**
      * @param string $satisfaction
      *
      * @return $this
@@ -221,18 +119,6 @@ class QueryRobotSession extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
-    }
-
-    /**
      * @param string $ccsInstanceId
      *
      * @return $this
@@ -243,18 +129,6 @@ class QueryRobotSession extends RpcRequest
         $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUtterance() instead.
-     *
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function setUtterance($utterance)
-    {
-        return $this->withUtterance($utterance);
     }
 
     /**

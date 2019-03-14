@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyCasterVideoResource
+ * Api ModifyCasterVideoResource
  *
  * @method string getResourceId()
  * @method string getVodUrl()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceName()
  * @method string getRepeatNum()
  */
-class ModifyCasterVideoResource extends RpcRequest
+class ModifyCasterVideoResource extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyCasterVideoResource';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
-    }
 
     /**
      * @param string $resourceId
@@ -70,18 +40,6 @@ class ModifyCasterVideoResource extends RpcRequest
         $this->options['query']['ResourceId'] = $resourceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVodUrl() instead.
-     *
-     * @param string $vodUrl
-     *
-     * @return $this
-     */
-    public function setVodUrl($vodUrl)
-    {
-        return $this->withVodUrl($vodUrl);
     }
 
     /**
@@ -98,18 +56,6 @@ class ModifyCasterVideoResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -120,18 +66,6 @@ class ModifyCasterVideoResource extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndOffset() instead.
-     *
-     * @param string $endOffset
-     *
-     * @return $this
-     */
-    public function setEndOffset($endOffset)
-    {
-        return $this->withEndOffset($endOffset);
     }
 
     /**
@@ -148,18 +82,6 @@ class ModifyCasterVideoResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -170,18 +92,6 @@ class ModifyCasterVideoResource extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaterialId() instead.
-     *
-     * @param string $materialId
-     *
-     * @return $this
-     */
-    public function setMaterialId($materialId)
-    {
-        return $this->withMaterialId($materialId);
     }
 
     /**
@@ -198,18 +108,6 @@ class ModifyCasterVideoResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeginOffset() instead.
-     *
-     * @param string $beginOffset
-     *
-     * @return $this
-     */
-    public function setBeginOffset($beginOffset)
-    {
-        return $this->withBeginOffset($beginOffset);
-    }
-
-    /**
      * @param string $beginOffset
      *
      * @return $this
@@ -220,18 +118,6 @@ class ModifyCasterVideoResource extends RpcRequest
         $this->options['query']['BeginOffset'] = $beginOffset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLiveStreamUrl() instead.
-     *
-     * @param string $liveStreamUrl
-     *
-     * @return $this
-     */
-    public function setLiveStreamUrl($liveStreamUrl)
-    {
-        return $this->withLiveStreamUrl($liveStreamUrl);
     }
 
     /**
@@ -248,18 +134,6 @@ class ModifyCasterVideoResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPtsCallbackInterval() instead.
-     *
-     * @param string $ptsCallbackInterval
-     *
-     * @return $this
-     */
-    public function setPtsCallbackInterval($ptsCallbackInterval)
-    {
-        return $this->withPtsCallbackInterval($ptsCallbackInterval);
-    }
-
-    /**
      * @param string $ptsCallbackInterval
      *
      * @return $this
@@ -273,18 +147,6 @@ class ModifyCasterVideoResource extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceName() instead.
-     *
-     * @param string $resourceName
-     *
-     * @return $this
-     */
-    public function setResourceName($resourceName)
-    {
-        return $this->withResourceName($resourceName);
-    }
-
-    /**
      * @param string $resourceName
      *
      * @return $this
@@ -295,18 +157,6 @@ class ModifyCasterVideoResource extends RpcRequest
         $this->options['query']['ResourceName'] = $resourceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRepeatNum() instead.
-     *
-     * @param string $repeatNum
-     *
-     * @return $this
-     */
-    public function setRepeatNum($repeatNum)
-    {
-        return $this->withRepeatNum($repeatNum);
     }
 
     /**

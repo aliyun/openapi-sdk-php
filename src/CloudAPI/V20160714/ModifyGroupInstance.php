@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyGroupInstance
+ * Api ModifyGroupInstance
  *
  * @method string getTargetInstanceId()
  * @method string getSecurityToken()
  * @method string getGroupId()
  * @method string getRemark()
  */
-class ModifyGroupInstance extends RpcRequest
+class ModifyGroupInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyGroupInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

@@ -2,55 +2,26 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListImages
+ * Api ListImages
  *
  * @method string getMarker()
+ * @method string getLimit()
  * @method string getProject()
  * @method string getSetId()
  * @method string getCreateTimeStart()
  */
-class ListImages extends RpcRequest
+class ListImages extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListImages';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
 
     /**
      * @param string $marker
@@ -66,15 +37,16 @@ class ListImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
+     * @param string $limit
      *
      * @return $this
      */
-    public function setProject($project)
+    public function withLimit($limit)
     {
-        return $this->withProject($project);
+        $this->data['Limit'] = $limit;
+        $this->options['query']['Limit'] = $limit;
+
+        return $this;
     }
 
     /**
@@ -91,18 +63,6 @@ class ListImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -113,18 +73,6 @@ class ListImages extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeStart() instead.
-     *
-     * @param string $createTimeStart
-     *
-     * @return $this
-     */
-    public function setCreateTimeStart($createTimeStart)
-    {
-        return $this->withCreateTimeStart($createTimeStart);
     }
 
     /**

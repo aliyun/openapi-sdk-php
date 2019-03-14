@@ -2,45 +2,30 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateEthereumInvitation
+ * Api CreateEthereumInvitation
  *
- * @method string getId()
+ * @method string getEthereumId()
  */
-class CreateEthereumInvitation extends RpcRequest
+class CreateEthereumInvitation extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateEthereumInvitation';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @param string $id
+     * @param string $ethereumId
      *
      * @return $this
      */
-    public function withId($id)
+    public function withEthereumId($ethereumId)
     {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
+        $this->data['EthereumId'] = $ethereumId;
+        $this->options['query']['EthereumId'] = $ethereumId;
 
         return $this;
     }

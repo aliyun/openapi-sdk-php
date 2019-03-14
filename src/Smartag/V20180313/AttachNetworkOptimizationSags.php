@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AttachNetworkOptimizationSags
+ * Api AttachNetworkOptimizationSags
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getSmartAGIds()
  * @method string getOwnerId()
  */
-class AttachNetworkOptimizationSags extends RpcRequest
+class AttachNetworkOptimizationSags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'AttachNetworkOptimizationSags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
 
     /**

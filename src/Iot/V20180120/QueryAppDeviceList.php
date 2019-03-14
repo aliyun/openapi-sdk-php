@@ -2,62 +2,26 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryAppDeviceList
+ * Api QueryAppDeviceList
  *
  * @method array getProductKeyList()
  * @method array getCategoryKeyList()
+ * @method string getIotInstanceId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  * @method string getAppKey()
  * @method array getTagList()
  */
-class QueryAppDeviceList extends RpcRequest
+class QueryAppDeviceList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryAppDeviceList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getProductKeyList() instead.
-     *
-     * @return array
-     */
-    public function getProductKeyLists()
-    {
-        return $this->getProductKeyList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKeyList() instead.
-     *
-     * @param array $productKeyLists
-     *
-     * @return $this
-     */
-    public function setProductKeyLists(array $productKeyLists)
-    {
-        return $this->withProductKeyList($productKeyLists);
-    }
 
     /**
      * @param array $productKeyList
@@ -72,28 +36,6 @@ class QueryAppDeviceList extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCategoryKeyList() instead.
-     *
-     * @return array
-     */
-    public function getCategoryKeyLists()
-    {
-        return $this->getCategoryKeyList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryKeyList() instead.
-     *
-     * @param array $categoryKeyLists
-     *
-     * @return $this
-     */
-    public function setCategoryKeyLists(array $categoryKeyLists)
-    {
-        return $this->withCategoryKeyList($categoryKeyLists);
     }
 
     /**
@@ -112,15 +54,16 @@ class QueryAppDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withPageSize($pageSize);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -137,18 +80,6 @@ class QueryAppDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -162,18 +93,6 @@ class QueryAppDeviceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -184,28 +103,6 @@ class QueryAppDeviceList extends RpcRequest
         $this->options['query']['AppKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagList() instead.
-     *
-     * @return array
-     */
-    public function getTagLists()
-    {
-        return $this->getTagList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagList() instead.
-     *
-     * @param array $tagLists
-     *
-     * @return $this
-     */
-    public function setTagLists(array $tagLists)
-    {
-        return $this->withTagList($tagLists);
     }
 
     /**

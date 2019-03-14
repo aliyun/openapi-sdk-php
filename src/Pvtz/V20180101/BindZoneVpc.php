@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BindZoneVpc
+ * Api BindZoneVpc
  *
  * @method string getUserClientIp()
  * @method string getZoneId()
  * @method string getLang()
  * @method array getVpcs()
  */
-class BindZoneVpc extends RpcRequest
+class BindZoneVpc extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'pvtz';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'BindZoneVpc';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'pvtz';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
 
     /**
      * @param string $userClientIp
@@ -63,18 +33,6 @@ class BindZoneVpc extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**
@@ -91,18 +49,6 @@ class BindZoneVpc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -113,28 +59,6 @@ class BindZoneVpc extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVpcs() instead.
-     *
-     * @return array
-     */
-    public function getVpcss()
-    {
-        return $this->getVpcs();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcs() instead.
-     *
-     * @param array $vpcss
-     *
-     * @return $this
-     */
-    public function setVpcss(array $vpcss)
-    {
-        return $this->withVpcs($vpcss);
     }
 
     /**

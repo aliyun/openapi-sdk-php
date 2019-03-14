@@ -2,48 +2,35 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryProductList
+ * Api QueryProductList
  *
+ * @method string getIotInstanceId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  * @method string getAliyunCommodityCode()
  */
-class QueryProductList extends RpcRequest
+class QueryProductList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryProductList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withPageSize($pageSize);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -60,18 +47,6 @@ class QueryProductList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -82,18 +57,6 @@ class QueryProductList extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliyunCommodityCode() instead.
-     *
-     * @param string $aliyunCommodityCode
-     *
-     * @return $this
-     */
-    public function setAliyunCommodityCode($aliyunCommodityCode)
-    {
-        return $this->withAliyunCommodityCode($aliyunCommodityCode);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyInstance
+ * Api ModifyInstance
  *
  * @method string getProductCode()
  * @method string getInstanceId()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getProductType()
  */
-class ModifyInstance extends RpcRequest
+class ModifyInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
 
     /**
      * @param string $productCode
@@ -61,18 +34,6 @@ class ModifyInstance extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -89,18 +50,6 @@ class ModifyInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -114,18 +63,6 @@ class ModifyInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModifyType() instead.
-     *
-     * @param string $modifyType
-     *
-     * @return $this
-     */
-    public function setModifyType($modifyType)
-    {
-        return $this->withModifyType($modifyType);
-    }
-
-    /**
      * @param string $modifyType
      *
      * @return $this
@@ -136,28 +73,6 @@ class ModifyInstance extends RpcRequest
         $this->options['query']['ModifyType'] = $modifyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getParameter() instead.
-     *
-     * @return array
-     */
-    public function getParameters()
-    {
-        return $this->getParameter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withParameter() instead.
-     *
-     * @param array $parameters
-     *
-     * @return $this
-     */
-    public function setParameters(array $parameters)
-    {
-        return $this->withParameter($parameters);
     }
 
     /**
@@ -177,18 +92,6 @@ class ModifyInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -199,18 +102,6 @@ class ModifyInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

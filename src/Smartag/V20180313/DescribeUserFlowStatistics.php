@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserFlowStatistics
+ * Api DescribeUserFlowStatistics
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getUserNames()
  * @method string getOwnerId()
  */
-class DescribeUserFlowStatistics extends RpcRequest
+class DescribeUserFlowStatistics extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserFlowStatistics';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
 
     /**

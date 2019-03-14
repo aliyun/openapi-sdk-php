@@ -2,59 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListProductByTags
+ * Api ListProductByTags
  *
  * @method array getProductTag()
+ * @method string getIotInstanceId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class ListProductByTags extends RpcRequest
+class ListProductByTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListProductByTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getProductTag() instead.
-     *
-     * @return array
-     */
-    public function getProductTags()
-    {
-        return $this->getProductTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductTag() instead.
-     *
-     * @param array $productTags
-     *
-     * @return $this
-     */
-    public function setProductTags(array $productTags)
-    {
-        return $this->withProductTag($productTags);
-    }
 
     /**
      * @param array $productTag
@@ -65,22 +29,24 @@ class ListProductByTags extends RpcRequest
     {
         $this->data['ProductTag'] = $productTag;
         foreach ($productTag as $i => $iValue) {
-            $this->options['query']['ProductTag.' . ($i + 1)] = $iValue;
+            $this->options['query']['ProductTag.' . ($i + 1) . '.TagValue'] = $productTag[$i]['TagValue'];
+            $this->options['query']['ProductTag.' . ($i + 1) . '.TagKey'] = $productTag[$i]['TagKey'];
         }
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withPageSize($pageSize);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -94,18 +60,6 @@ class ListProductByTags extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatePhoto
+ * Api CreatePhoto
  *
  * @method string getTakenAt()
  * @method string getPhotoTitle()
@@ -18,51 +18,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStaging()
  * @method string getFileId()
  */
-class CreatePhoto extends RpcRequest
+class CreatePhoto extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatePhoto';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTakenAt() instead.
-     *
-     * @param string $takenAt
-     *
-     * @return $this
-     */
-    public function setTakenAt($takenAt)
-    {
-        return $this->withTakenAt($takenAt);
-    }
 
     /**
      * @param string $takenAt
@@ -75,18 +41,6 @@ class CreatePhoto extends RpcRequest
         $this->options['query']['TakenAt'] = $takenAt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoTitle() instead.
-     *
-     * @param string $photoTitle
-     *
-     * @return $this
-     */
-    public function setPhotoTitle($photoTitle)
-    {
-        return $this->withPhotoTitle($photoTitle);
     }
 
     /**
@@ -103,18 +57,6 @@ class CreatePhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
-
-    /**
      * @param string $libraryId
      *
      * @return $this
@@ -125,18 +67,6 @@ class CreatePhoto extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShareExpireTime() instead.
-     *
-     * @param string $shareExpireTime
-     *
-     * @return $this
-     */
-    public function setShareExpireTime($shareExpireTime)
-    {
-        return $this->withShareExpireTime($shareExpireTime);
     }
 
     /**
@@ -153,18 +83,6 @@ class CreatePhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -175,18 +93,6 @@ class CreatePhoto extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUploadType() instead.
-     *
-     * @param string $uploadType
-     *
-     * @return $this
-     */
-    public function setUploadType($uploadType)
-    {
-        return $this->withUploadType($uploadType);
     }
 
     /**
@@ -203,18 +109,6 @@ class CreatePhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -225,18 +119,6 @@ class CreatePhoto extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
     }
 
     /**
@@ -253,18 +135,6 @@ class CreatePhoto extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStaging() instead.
-     *
-     * @param string $staging
-     *
-     * @return $this
-     */
-    public function setStaging($staging)
-    {
-        return $this->withStaging($staging);
-    }
-
-    /**
      * @param string $staging
      *
      * @return $this
@@ -275,18 +145,6 @@ class CreatePhoto extends RpcRequest
         $this->options['query']['Staging'] = $staging;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileId() instead.
-     *
-     * @param string $fileId
-     *
-     * @return $this
-     */
-    public function setFileId($fileId)
-    {
-        return $this->withFileId($fileId);
     }
 
     /**

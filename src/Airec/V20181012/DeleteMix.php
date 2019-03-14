@@ -2,58 +2,25 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DeleteMix
+ * Api DeleteMix
  *
  * @method string getInstanceId()
  * @method string getName()
  */
-class DeleteMix extends RoaRequest
+class DeleteMix extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Airec';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteMix';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
 
-    /**
-     * @var string
-     */
     public $method = 'DELETE';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'airec';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -66,18 +33,6 @@ class DeleteMix extends RoaRequest
         $this->pathParameters['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

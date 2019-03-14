@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeTasks
+ * Api DescribeTasks
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,40 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageSize()
  * @method string getTaskAction()
  */
-class DescribeTasks extends RpcRequest
+class DescribeTasks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTasks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +40,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +56,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -115,18 +66,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -143,18 +82,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -165,18 +92,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +108,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskIds() instead.
-     *
-     * @param string $taskIds
-     *
-     * @return $this
-     */
-    public function setTaskIds($taskIds)
-    {
-        return $this->withTaskIds($taskIds);
-    }
-
-    /**
      * @param string $taskIds
      *
      * @return $this
@@ -215,18 +118,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['TaskIds'] = $taskIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -243,18 +134,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskStatus() instead.
-     *
-     * @param string $taskStatus
-     *
-     * @return $this
-     */
-    public function setTaskStatus($taskStatus)
-    {
-        return $this->withTaskStatus($taskStatus);
-    }
-
-    /**
      * @param string $taskStatus
      *
      * @return $this
@@ -268,18 +147,6 @@ class DescribeTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -290,18 +157,6 @@ class DescribeTasks extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskAction() instead.
-     *
-     * @param string $taskAction
-     *
-     * @return $this
-     */
-    public function setTaskAction($taskAction)
-    {
-        return $this->withTaskAction($taskAction);
     }
 
     /**

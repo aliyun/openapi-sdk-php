@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AllocateDedicatedHosts
+ * Api AllocateDedicatedHosts
  *
  * @method string getResourceOwnerId()
  * @method string getClientToken()
@@ -29,40 +29,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getChargeType()
  * @method string getNetworkAttributesUdpTimeout()
  */
-class AllocateDedicatedHosts extends RpcRequest
+class AllocateDedicatedHosts extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'AllocateDedicatedHosts';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -75,18 +50,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -103,18 +66,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -125,18 +76,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -153,18 +92,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionOnMaintenance() instead.
-     *
-     * @param string $actionOnMaintenance
-     *
-     * @return $this
-     */
-    public function setActionOnMaintenance($actionOnMaintenance)
-    {
-        return $this->withActionOnMaintenance($actionOnMaintenance);
-    }
-
-    /**
      * @param string $actionOnMaintenance
      *
      * @return $this
@@ -175,28 +102,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['ActionOnMaintenance'] = $actionOnMaintenance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -216,18 +121,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostType() instead.
-     *
-     * @param string $dedicatedHostType
-     *
-     * @return $this
-     */
-    public function setDedicatedHostType($dedicatedHostType)
-    {
-        return $this->withDedicatedHostType($dedicatedHostType);
-    }
-
-    /**
      * @param string $dedicatedHostType
      *
      * @return $this
@@ -238,18 +131,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['DedicatedHostType'] = $dedicatedHostType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenewPeriod() instead.
-     *
-     * @param string $autoRenewPeriod
-     *
-     * @return $this
-     */
-    public function setAutoRenewPeriod($autoRenewPeriod)
-    {
-        return $this->withAutoRenewPeriod($autoRenewPeriod);
     }
 
     /**
@@ -266,18 +147,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -288,18 +157,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQuantity() instead.
-     *
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function setQuantity($quantity)
-    {
-        return $this->withQuantity($quantity);
     }
 
     /**
@@ -316,18 +173,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostName() instead.
-     *
-     * @param string $dedicatedHostName
-     *
-     * @return $this
-     */
-    public function setDedicatedHostName($dedicatedHostName)
-    {
-        return $this->withDedicatedHostName($dedicatedHostName);
-    }
-
-    /**
      * @param string $dedicatedHostName
      *
      * @return $this
@@ -338,18 +183,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['DedicatedHostName'] = $dedicatedHostName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -366,18 +199,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -388,18 +209,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoReleaseTime() instead.
-     *
-     * @param string $autoReleaseTime
-     *
-     * @return $this
-     */
-    public function setAutoReleaseTime($autoReleaseTime)
-    {
-        return $this->withAutoReleaseTime($autoReleaseTime);
     }
 
     /**
@@ -416,18 +225,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -438,18 +235,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
     }
 
     /**
@@ -466,18 +251,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
-    }
-
-    /**
      * @param string $autoRenew
      *
      * @return $this
@@ -488,18 +261,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['AutoRenew'] = $autoRenew;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkAttributesSlbUdpTimeout() instead.
-     *
-     * @param string $networkAttributesSlbUdpTimeout
-     *
-     * @return $this
-     */
-    public function setNetworkAttributesSlbUdpTimeout($networkAttributesSlbUdpTimeout)
-    {
-        return $this->withNetworkAttributesSlbUdpTimeout($networkAttributesSlbUdpTimeout);
     }
 
     /**
@@ -516,18 +277,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -541,18 +290,6 @@ class AllocateDedicatedHosts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
-    }
-
-    /**
      * @param string $chargeType
      *
      * @return $this
@@ -563,18 +300,6 @@ class AllocateDedicatedHosts extends RpcRequest
         $this->options['query']['ChargeType'] = $chargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkAttributesUdpTimeout() instead.
-     *
-     * @param string $networkAttributesUdpTimeout
-     *
-     * @return $this
-     */
-    public function setNetworkAttributesUdpTimeout($networkAttributesUdpTimeout)
-    {
-        return $this->withNetworkAttributesUdpTimeout($networkAttributesUdpTimeout);
     }
 
     /**

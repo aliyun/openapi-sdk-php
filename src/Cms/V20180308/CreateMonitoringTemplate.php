@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateMonitoringTemplate
+ * Api CreateMonitoringTemplate
  *
  * @method string getEventRuleTemplatesJson()
  * @method string getName()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getAlertTemplatesJson()
  */
-class CreateMonitoringTemplate extends RpcRequest
+class CreateMonitoringTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateMonitoringTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventRuleTemplatesJson() instead.
-     *
-     * @param string $eventRuleTemplatesJson
-     *
-     * @return $this
-     */
-    public function setEventRuleTemplatesJson($eventRuleTemplatesJson)
-    {
-        return $this->withEventRuleTemplatesJson($eventRuleTemplatesJson);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $eventRuleTemplatesJson
@@ -59,18 +34,6 @@ class CreateMonitoringTemplate extends RpcRequest
         $this->options['query']['EventRuleTemplatesJson'] = $eventRuleTemplatesJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -87,18 +50,6 @@ class CreateMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
-    }
-
-    /**
      * @param string $namespace
      *
      * @return $this
@@ -112,18 +63,6 @@ class CreateMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -134,18 +73,6 @@ class CreateMonitoringTemplate extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertTemplatesJson() instead.
-     *
-     * @param string $alertTemplatesJson
-     *
-     * @return $this
-     */
-    public function setAlertTemplatesJson($alertTemplatesJson)
-    {
-        return $this->withAlertTemplatesJson($alertTemplatesJson);
     }
 
     /**

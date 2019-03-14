@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddMedia
+ * Api AddMedia
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMediaWorkflowId()
  * @method string getMediaWorkflowUserData()
  */
-class AddMedia extends RpcRequest
+class AddMedia extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddMedia';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,18 +43,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -101,18 +59,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -123,18 +69,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -151,18 +85,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOverrideParams() instead.
-     *
-     * @param string $overrideParams
-     *
-     * @return $this
-     */
-    public function setOverrideParams($overrideParams)
-    {
-        return $this->withOverrideParams($overrideParams);
-    }
-
-    /**
      * @param string $overrideParams
      *
      * @return $this
@@ -173,18 +95,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['OverrideParams'] = $overrideParams;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -201,18 +111,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -223,18 +121,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInputUnbind() instead.
-     *
-     * @param string $inputUnbind
-     *
-     * @return $this
-     */
-    public function setInputUnbind($inputUnbind)
-    {
-        return $this->withInputUnbind($inputUnbind);
     }
 
     /**
@@ -251,18 +137,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -273,18 +147,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['Tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoverURL() instead.
-     *
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function setCoverURL($coverURL)
-    {
-        return $this->withCoverURL($coverURL);
     }
 
     /**
@@ -301,18 +163,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
-    }
-
-    /**
      * @param string $cateId
      *
      * @return $this
@@ -323,18 +173,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['CateId'] = $cateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileURL() instead.
-     *
-     * @param string $fileURL
-     *
-     * @return $this
-     */
-    public function setFileURL($fileURL)
-    {
-        return $this->withFileURL($fileURL);
     }
 
     /**
@@ -351,18 +189,6 @@ class AddMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaWorkflowId() instead.
-     *
-     * @param string $mediaWorkflowId
-     *
-     * @return $this
-     */
-    public function setMediaWorkflowId($mediaWorkflowId)
-    {
-        return $this->withMediaWorkflowId($mediaWorkflowId);
-    }
-
-    /**
      * @param string $mediaWorkflowId
      *
      * @return $this
@@ -373,18 +199,6 @@ class AddMedia extends RpcRequest
         $this->options['query']['MediaWorkflowId'] = $mediaWorkflowId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMediaWorkflowUserData() instead.
-     *
-     * @param string $mediaWorkflowUserData
-     *
-     * @return $this
-     */
-    public function setMediaWorkflowUserData($mediaWorkflowUserData)
-    {
-        return $this->withMediaWorkflowUserData($mediaWorkflowUserData);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateUser
+ * Api CreateUser
  *
  * @method string getComments()
  * @method string getDisplayName()
@@ -13,46 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEmail()
  * @method string getUserName()
  */
-class CreateUser extends RpcRequest
+class CreateUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ram';
 
-    /**
-     * @var string
-     */
     public $version = '2015-05-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateUser';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComments() instead.
-     *
-     * @param string $comments
-     *
-     * @return $this
-     */
-    public function setComments($comments)
-    {
-        return $this->withComments($comments);
-    }
 
     /**
      * @param string $comments
@@ -65,18 +34,6 @@ class CreateUser extends RpcRequest
         $this->options['query']['Comments'] = $comments;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDisplayName() instead.
-     *
-     * @param string $displayName
-     *
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        return $this->withDisplayName($displayName);
     }
 
     /**
@@ -93,18 +50,6 @@ class CreateUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMobilePhone() instead.
-     *
-     * @param string $mobilePhone
-     *
-     * @return $this
-     */
-    public function setMobilePhone($mobilePhone)
-    {
-        return $this->withMobilePhone($mobilePhone);
-    }
-
-    /**
      * @param string $mobilePhone
      *
      * @return $this
@@ -118,18 +63,6 @@ class CreateUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
-    }
-
-    /**
      * @param string $email
      *
      * @return $this
@@ -140,18 +73,6 @@ class CreateUser extends RpcRequest
         $this->options['query']['Email'] = $email;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SendMailUseTemplate
+ * Api SendMailUseTemplate
  *
  * @method string getHtmlBody()
  * @method string getFromAlias()
@@ -25,40 +25,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAddressType()
  * @method string getTextBody()
  */
-class SendMailUseTemplate extends RpcRequest
+class SendMailUseTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'SendMailUseTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHtmlBody() instead.
-     *
-     * @param string $htmlBody
-     *
-     * @return $this
-     */
-    public function setHtmlBody($htmlBody)
-    {
-        return $this->withHtmlBody($htmlBody);
-    }
 
     /**
      * @param string $htmlBody
@@ -71,18 +44,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['HtmlBody'] = $htmlBody;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFromAlias() instead.
-     *
-     * @param string $fromAlias
-     *
-     * @return $this
-     */
-    public function setFromAlias($fromAlias)
-    {
-        return $this->withFromAlias($fromAlias);
     }
 
     /**
@@ -99,18 +60,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -121,18 +70,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -149,18 +86,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToAddress() instead.
-     *
-     * @param string $toAddress
-     *
-     * @return $this
-     */
-    public function setToAddress($toAddress)
-    {
-        return $this->withToAddress($toAddress);
-    }
-
-    /**
      * @param string $toAddress
      *
      * @return $this
@@ -171,18 +96,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['ToAddress'] = $toAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClickTrace() instead.
-     *
-     * @param string $clickTrace
-     *
-     * @return $this
-     */
-    public function setClickTrace($clickTrace)
-    {
-        return $this->withClickTrace($clickTrace);
     }
 
     /**
@@ -199,18 +112,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubject() instead.
-     *
-     * @param string $subject
-     *
-     * @return $this
-     */
-    public function setSubject($subject)
-    {
-        return $this->withSubject($subject);
-    }
-
-    /**
      * @param string $subject
      *
      * @return $this
@@ -221,18 +122,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['Subject'] = $subject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -249,18 +138,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplyAddressAlias() instead.
-     *
-     * @param string $replyAddressAlias
-     *
-     * @return $this
-     */
-    public function setReplyAddressAlias($replyAddressAlias)
-    {
-        return $this->withReplyAddressAlias($replyAddressAlias);
-    }
-
-    /**
      * @param string $replyAddressAlias
      *
      * @return $this
@@ -271,18 +148,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['ReplyAddressAlias'] = $replyAddressAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateContent() instead.
-     *
-     * @param string $templateContent
-     *
-     * @return $this
-     */
-    public function setTemplateContent($templateContent)
-    {
-        return $this->withTemplateContent($templateContent);
     }
 
     /**
@@ -299,18 +164,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
-    }
-
-    /**
      * @param string $tagName
      *
      * @return $this
@@ -321,18 +174,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['TagName'] = $tagName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToAlias() instead.
-     *
-     * @param string $toAlias
-     *
-     * @return $this
-     */
-    public function setToAlias($toAlias)
-    {
-        return $this->withToAlias($toAlias);
     }
 
     /**
@@ -349,18 +190,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -371,18 +200,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReplyToAddress() instead.
-     *
-     * @param string $replyToAddress
-     *
-     * @return $this
-     */
-    public function setReplyToAddress($replyToAddress)
-    {
-        return $this->withReplyToAddress($replyToAddress);
     }
 
     /**
@@ -399,18 +216,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplyAddress() instead.
-     *
-     * @param string $replyAddress
-     *
-     * @return $this
-     */
-    public function setReplyAddress($replyAddress)
-    {
-        return $this->withReplyAddress($replyAddress);
-    }
-
-    /**
      * @param string $replyAddress
      *
      * @return $this
@@ -424,18 +229,6 @@ class SendMailUseTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddressType() instead.
-     *
-     * @param string $addressType
-     *
-     * @return $this
-     */
-    public function setAddressType($addressType)
-    {
-        return $this->withAddressType($addressType);
-    }
-
-    /**
      * @param string $addressType
      *
      * @return $this
@@ -446,18 +239,6 @@ class SendMailUseTemplate extends RpcRequest
         $this->options['query']['AddressType'] = $addressType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTextBody() instead.
-     *
-     * @param string $textBody
-     *
-     * @return $this
-     */
-    public function setTextBody($textBody)
-    {
-        return $this->withTextBody($textBody);
     }
 
     /**

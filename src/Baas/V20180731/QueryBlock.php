@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBlock
+ * Api QueryBlock
  *
  * @method string getBizid()
  * @method string getHeight()
  */
-class QueryBlock extends RpcRequest
+class QueryBlock extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBlock';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
 
     /**
      * @param string $bizid
@@ -56,18 +29,6 @@ class QueryBlock extends RpcRequest
         $this->options['query']['Bizid'] = $bizid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHeight() instead.
-     *
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        return $this->withHeight($height);
     }
 
     /**

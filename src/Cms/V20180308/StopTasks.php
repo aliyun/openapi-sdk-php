@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StopTasks
+ * Api StopTasks
  *
  * @method string getTaskIds()
  */
-class StopTasks extends RpcRequest
+class StopTasks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'StopTasks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIds() instead.
-     *
-     * @param string $taskIds
-     *
-     * @return $this
-     */
-    public function setTaskIds($taskIds)
-    {
-        return $this->withTaskIds($taskIds);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $taskIds

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDeploymentSet
+ * Api CreateDeploymentSet
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,40 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDomain()
  * @method string getStrategy()
  */
-class CreateDeploymentSet extends RpcRequest
+class CreateDeploymentSet extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDeploymentSet';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +40,6 @@ class CreateDeploymentSet extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +56,6 @@ class CreateDeploymentSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -115,18 +66,6 @@ class CreateDeploymentSet extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +82,6 @@ class CreateDeploymentSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -165,18 +92,6 @@ class CreateDeploymentSet extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetName() instead.
-     *
-     * @param string $deploymentSetName
-     *
-     * @return $this
-     */
-    public function setDeploymentSetName($deploymentSetName)
-    {
-        return $this->withDeploymentSetName($deploymentSetName);
     }
 
     /**
@@ -193,18 +108,6 @@ class CreateDeploymentSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -215,18 +118,6 @@ class CreateDeploymentSet extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnUnableToRedeployFailedInstance() instead.
-     *
-     * @param string $onUnableToRedeployFailedInstance
-     *
-     * @return $this
-     */
-    public function setOnUnableToRedeployFailedInstance($onUnableToRedeployFailedInstance)
-    {
-        return $this->withOnUnableToRedeployFailedInstance($onUnableToRedeployFailedInstance);
     }
 
     /**
@@ -243,18 +134,6 @@ class CreateDeploymentSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGranularity() instead.
-     *
-     * @param string $granularity
-     *
-     * @return $this
-     */
-    public function setGranularity($granularity)
-    {
-        return $this->withGranularity($granularity);
-    }
-
-    /**
      * @param string $granularity
      *
      * @return $this
@@ -268,18 +147,6 @@ class CreateDeploymentSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -290,18 +157,6 @@ class CreateDeploymentSet extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategy() instead.
-     *
-     * @param string $strategy
-     *
-     * @return $this
-     */
-    public function setStrategy($strategy)
-    {
-        return $this->withStrategy($strategy);
     }
 
     /**

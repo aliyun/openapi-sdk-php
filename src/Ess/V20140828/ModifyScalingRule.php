@@ -2,64 +2,40 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyScalingRule
+ * Api ModifyScalingRule
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getAdjustmentValue()
  * @method string getEstimatedInstanceWarmup()
  * @method string getOwnerAccount()
+ * @method string getPredictiveTaskBufferTime()
  * @method string getAdjustmentType()
  * @method string getDisableScaleIn()
  * @method string getOwnerId()
  * @method string getScalingRuleId()
+ * @method string getInitialMaxSize()
+ * @method string getPredictiveValueBuffer()
  * @method string getScalingRuleName()
  * @method string getCooldown()
+ * @method string getMinAdjustmentMagnitude()
+ * @method string getPredictiveValueBehavior()
  * @method string getTargetValue()
  * @method string getMetricName()
+ * @method string getPredictiveScalingMode()
  */
-class ModifyScalingRule extends RpcRequest
+class ModifyScalingRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyScalingRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,18 +48,6 @@ class ModifyScalingRule extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -100,18 +64,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAdjustmentValue() instead.
-     *
-     * @param string $adjustmentValue
-     *
-     * @return $this
-     */
-    public function setAdjustmentValue($adjustmentValue)
-    {
-        return $this->withAdjustmentValue($adjustmentValue);
-    }
-
-    /**
      * @param string $adjustmentValue
      *
      * @return $this
@@ -122,18 +74,6 @@ class ModifyScalingRule extends RpcRequest
         $this->options['query']['AdjustmentValue'] = $adjustmentValue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEstimatedInstanceWarmup() instead.
-     *
-     * @param string $estimatedInstanceWarmup
-     *
-     * @return $this
-     */
-    public function setEstimatedInstanceWarmup($estimatedInstanceWarmup)
-    {
-        return $this->withEstimatedInstanceWarmup($estimatedInstanceWarmup);
     }
 
     /**
@@ -150,18 +90,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -175,15 +103,16 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAdjustmentType() instead.
-     *
-     * @param string $adjustmentType
+     * @param string $predictiveTaskBufferTime
      *
      * @return $this
      */
-    public function setAdjustmentType($adjustmentType)
+    public function withPredictiveTaskBufferTime($predictiveTaskBufferTime)
     {
-        return $this->withAdjustmentType($adjustmentType);
+        $this->data['PredictiveTaskBufferTime'] = $predictiveTaskBufferTime;
+        $this->options['query']['PredictiveTaskBufferTime'] = $predictiveTaskBufferTime;
+
+        return $this;
     }
 
     /**
@@ -200,18 +129,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDisableScaleIn() instead.
-     *
-     * @param string $disableScaleIn
-     *
-     * @return $this
-     */
-    public function setDisableScaleIn($disableScaleIn)
-    {
-        return $this->withDisableScaleIn($disableScaleIn);
-    }
-
-    /**
      * @param string $disableScaleIn
      *
      * @return $this
@@ -222,18 +139,6 @@ class ModifyScalingRule extends RpcRequest
         $this->options['query']['DisableScaleIn'] = $disableScaleIn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -250,18 +155,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingRuleId() instead.
-     *
-     * @param string $scalingRuleId
-     *
-     * @return $this
-     */
-    public function setScalingRuleId($scalingRuleId)
-    {
-        return $this->withScalingRuleId($scalingRuleId);
-    }
-
-    /**
      * @param string $scalingRuleId
      *
      * @return $this
@@ -275,15 +168,29 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingRuleName() instead.
-     *
-     * @param string $scalingRuleName
+     * @param string $initialMaxSize
      *
      * @return $this
      */
-    public function setScalingRuleName($scalingRuleName)
+    public function withInitialMaxSize($initialMaxSize)
     {
-        return $this->withScalingRuleName($scalingRuleName);
+        $this->data['InitialMaxSize'] = $initialMaxSize;
+        $this->options['query']['InitialMaxSize'] = $initialMaxSize;
+
+        return $this;
+    }
+
+    /**
+     * @param string $predictiveValueBuffer
+     *
+     * @return $this
+     */
+    public function withPredictiveValueBuffer($predictiveValueBuffer)
+    {
+        $this->data['PredictiveValueBuffer'] = $predictiveValueBuffer;
+        $this->options['query']['PredictiveValueBuffer'] = $predictiveValueBuffer;
+
+        return $this;
     }
 
     /**
@@ -300,18 +207,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCooldown() instead.
-     *
-     * @param string $cooldown
-     *
-     * @return $this
-     */
-    public function setCooldown($cooldown)
-    {
-        return $this->withCooldown($cooldown);
-    }
-
-    /**
      * @param string $cooldown
      *
      * @return $this
@@ -325,15 +220,29 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTargetValue() instead.
-     *
-     * @param string $targetValue
+     * @param string $minAdjustmentMagnitude
      *
      * @return $this
      */
-    public function setTargetValue($targetValue)
+    public function withMinAdjustmentMagnitude($minAdjustmentMagnitude)
     {
-        return $this->withTargetValue($targetValue);
+        $this->data['MinAdjustmentMagnitude'] = $minAdjustmentMagnitude;
+        $this->options['query']['MinAdjustmentMagnitude'] = $minAdjustmentMagnitude;
+
+        return $this;
+    }
+
+    /**
+     * @param string $predictiveValueBehavior
+     *
+     * @return $this
+     */
+    public function withPredictiveValueBehavior($predictiveValueBehavior)
+    {
+        $this->data['PredictiveValueBehavior'] = $predictiveValueBehavior;
+        $this->options['query']['PredictiveValueBehavior'] = $predictiveValueBehavior;
+
+        return $this;
     }
 
     /**
@@ -350,18 +259,6 @@ class ModifyScalingRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
-    }
-
-    /**
      * @param string $metricName
      *
      * @return $this
@@ -370,6 +267,19 @@ class ModifyScalingRule extends RpcRequest
     {
         $this->data['MetricName'] = $metricName;
         $this->options['query']['MetricName'] = $metricName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $predictiveScalingMode
+     *
+     * @return $this
+     */
+    public function withPredictiveScalingMode($predictiveScalingMode)
+    {
+        $this->data['PredictiveScalingMode'] = $predictiveScalingMode;
+        $this->options['query']['PredictiveScalingMode'] = $predictiveScalingMode;
 
         return $this;
     }

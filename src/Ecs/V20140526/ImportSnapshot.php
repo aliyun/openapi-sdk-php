@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ImportSnapshot
+ * Api ImportSnapshot
  *
  * @method string getResourceOwnerId()
  * @method string getSnapshotName()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRoleName()
  * @method string getOwnerId()
  */
-class ImportSnapshot extends RpcRequest
+class ImportSnapshot extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ImportSnapshot';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -61,18 +36,6 @@ class ImportSnapshot extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotName() instead.
-     *
-     * @param string $snapshotName
-     *
-     * @return $this
-     */
-    public function setSnapshotName($snapshotName)
-    {
-        return $this->withSnapshotName($snapshotName);
     }
 
     /**
@@ -89,18 +52,6 @@ class ImportSnapshot extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssObject() instead.
-     *
-     * @param string $ossObject
-     *
-     * @return $this
-     */
-    public function setOssObject($ossObject)
-    {
-        return $this->withOssObject($ossObject);
-    }
-
-    /**
      * @param string $ossObject
      *
      * @return $this
@@ -111,18 +62,6 @@ class ImportSnapshot extends RpcRequest
         $this->options['query']['OssObject'] = $ossObject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
     }
 
     /**
@@ -139,18 +78,6 @@ class ImportSnapshot extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -164,18 +91,6 @@ class ImportSnapshot extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleName() instead.
-     *
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function setRoleName($roleName)
-    {
-        return $this->withRoleName($roleName);
-    }
-
-    /**
      * @param string $roleName
      *
      * @return $this
@@ -186,18 +101,6 @@ class ImportSnapshot extends RpcRequest
         $this->options['query']['RoleName'] = $roleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

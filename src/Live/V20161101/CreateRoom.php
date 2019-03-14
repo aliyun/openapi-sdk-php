@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateRoom
+ * Api CreateRoom
  *
  * @method string getTemplateIds()
  * @method string getAnchorId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRoomId()
  * @method string getAppId()
  */
-class CreateRoom extends RpcRequest
+class CreateRoom extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateRoom';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateIds() instead.
-     *
-     * @param string $templateIds
-     *
-     * @return $this
-     */
-    public function setTemplateIds($templateIds)
-    {
-        return $this->withTemplateIds($templateIds);
-    }
 
     /**
      * @param string $templateIds
@@ -65,18 +35,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['TemplateIds'] = $templateIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAnchorId() instead.
-     *
-     * @param string $anchorId
-     *
-     * @return $this
-     */
-    public function setAnchorId($anchorId)
-    {
-        return $this->withAnchorId($anchorId);
     }
 
     /**
@@ -93,18 +51,6 @@ class CreateRoom extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseAppTranscode() instead.
-     *
-     * @param string $useAppTranscode
-     *
-     * @return $this
-     */
-    public function setUseAppTranscode($useAppTranscode)
-    {
-        return $this->withUseAppTranscode($useAppTranscode);
-    }
-
-    /**
      * @param string $useAppTranscode
      *
      * @return $this
@@ -115,18 +61,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['UseAppTranscode'] = $useAppTranscode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -143,18 +77,6 @@ class CreateRoom extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoomId() instead.
-     *
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function setRoomId($roomId)
-    {
-        return $this->withRoomId($roomId);
-    }
-
-    /**
      * @param string $roomId
      *
      * @return $this
@@ -165,18 +87,6 @@ class CreateRoom extends RpcRequest
         $this->options['query']['RoomId'] = $roomId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

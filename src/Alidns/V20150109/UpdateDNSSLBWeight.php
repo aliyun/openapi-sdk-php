@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateDNSSLBWeight
+ * Api UpdateDNSSLBWeight
  *
  * @method string getRecordId()
  * @method string getUserClientIp()
  * @method string getWeight()
  * @method string getLang()
  */
-class UpdateDNSSLBWeight extends RpcRequest
+class UpdateDNSSLBWeight extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateDNSSLBWeight';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordId() instead.
-     *
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function setRecordId($recordId)
-    {
-        return $this->withRecordId($recordId);
-    }
 
     /**
      * @param string $recordId
@@ -63,18 +33,6 @@ class UpdateDNSSLBWeight extends RpcRequest
         $this->options['query']['RecordId'] = $recordId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -91,18 +49,6 @@ class UpdateDNSSLBWeight extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWeight() instead.
-     *
-     * @param string $weight
-     *
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        return $this->withWeight($weight);
-    }
-
-    /**
      * @param string $weight
      *
      * @return $this
@@ -113,18 +59,6 @@ class UpdateDNSSLBWeight extends RpcRequest
         $this->options['query']['Weight'] = $weight;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

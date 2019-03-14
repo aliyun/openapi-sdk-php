@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListJobStatus
+ * Api ListJobStatus
  *
  * @method string getContactName()
  * @method string getInstanceId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getScenarioId()
  * @method string getPageNumber()
  */
-class ListJobStatus extends RpcRequest
+class ListJobStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListJobStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactName() instead.
-     *
-     * @param string $contactName
-     *
-     * @return $this
-     */
-    public function setContactName($contactName)
-    {
-        return $this->withContactName($contactName);
-    }
 
     /**
      * @param string $contactName
@@ -69,18 +39,6 @@ class ListJobStatus extends RpcRequest
         $this->options['query']['ContactName'] = $contactName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -97,18 +55,6 @@ class ListJobStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeAlignment() instead.
-     *
-     * @param string $timeAlignment
-     *
-     * @return $this
-     */
-    public function setTimeAlignment($timeAlignment)
-    {
-        return $this->withTimeAlignment($timeAlignment);
-    }
-
-    /**
      * @param string $timeAlignment
      *
      * @return $this
@@ -119,18 +65,6 @@ class ListJobStatus extends RpcRequest
         $this->options['query']['TimeAlignment'] = $timeAlignment;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -147,18 +81,6 @@ class ListJobStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
-    }
-
-    /**
      * @param string $phoneNumber
      *
      * @return $this
@@ -169,18 +91,6 @@ class ListJobStatus extends RpcRequest
         $this->options['query']['PhoneNumber'] = $phoneNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -197,18 +107,6 @@ class ListJobStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -219,18 +117,6 @@ class ListJobStatus extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -247,18 +133,6 @@ class ListJobStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -269,18 +143,6 @@ class ListJobStatus extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

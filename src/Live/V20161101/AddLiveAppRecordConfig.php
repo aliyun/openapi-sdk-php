@@ -2,62 +2,32 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddLiveAppRecordConfig
+ * Api AddLiveAppRecordConfig
  *
  * @method string getOssBucket()
+ * @method string getAppName()
+ * @method string getSecurityToken()
+ * @method array getRecordFormat()
  * @method string getDomainName()
  * @method string getOssEndpoint()
  * @method string getEndTime()
  * @method string getStartTime()
  * @method string getOwnerId()
- * @method string getAppName()
- * @method string getSecurityToken()
- * @method array getRecordFormat()
  * @method string getOnDemand()
  * @method string getStreamName()
  */
-class AddLiveAppRecordConfig extends RpcRequest
+class AddLiveAppRecordConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddLiveAppRecordConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
 
     /**
      * @param string $ossBucket
@@ -70,143 +40,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
-    }
-
-    /**
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function withOssEndpoint($ossEndpoint)
-    {
-        $this->data['OssEndpoint'] = $ossEndpoint;
-        $this->options['query']['OssEndpoint'] = $ossEndpoint;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -223,18 +56,6 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -245,28 +66,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getRecordFormat() instead.
-     *
-     * @return array
-     */
-    public function getRecordFormats()
-    {
-        return $this->getRecordFormat();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordFormat() instead.
-     *
-     * @param array $recordFormats
-     *
-     * @return $this
-     */
-    public function setRecordFormats(array $recordFormats)
-    {
-        return $this->withRecordFormat($recordFormats);
     }
 
     /**
@@ -288,15 +87,68 @@ class AddLiveAppRecordConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnDemand() instead.
-     *
-     * @param string $onDemand
+     * @param string $domainName
      *
      * @return $this
      */
-    public function setOnDemand($onDemand)
+    public function withDomainName($domainName)
     {
-        return $this->withOnDemand($onDemand);
+        $this->data['DomainName'] = $domainName;
+        $this->options['query']['DomainName'] = $domainName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ossEndpoint
+     *
+     * @return $this
+     */
+    public function withOssEndpoint($ossEndpoint)
+    {
+        $this->data['OssEndpoint'] = $ossEndpoint;
+        $this->options['query']['OssEndpoint'] = $ossEndpoint;
+
+        return $this;
+    }
+
+    /**
+     * @param string $endTime
+     *
+     * @return $this
+     */
+    public function withEndTime($endTime)
+    {
+        $this->data['EndTime'] = $endTime;
+        $this->options['query']['EndTime'] = $endTime;
+
+        return $this;
+    }
+
+    /**
+     * @param string $startTime
+     *
+     * @return $this
+     */
+    public function withStartTime($startTime)
+    {
+        $this->data['StartTime'] = $startTime;
+        $this->options['query']['StartTime'] = $startTime;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function withOwnerId($ownerId)
+    {
+        $this->data['OwnerId'] = $ownerId;
+        $this->options['query']['OwnerId'] = $ownerId;
+
+        return $this;
     }
 
     /**
@@ -310,18 +162,6 @@ class AddLiveAppRecordConfig extends RpcRequest
         $this->options['query']['OnDemand'] = $onDemand;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

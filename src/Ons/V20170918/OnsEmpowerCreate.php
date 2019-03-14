@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsEmpowerCreate
+ * Api OnsEmpowerCreate
  *
  * @method string getPreventCache()
  * @method string getOnsRegionId()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTopic()
  * @method string getRelation()
  */
-class OnsEmpowerCreate extends RpcRequest
+class OnsEmpowerCreate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsEmpowerCreate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -60,18 +33,6 @@ class OnsEmpowerCreate extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -88,18 +49,6 @@ class OnsEmpowerCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -110,18 +59,6 @@ class OnsEmpowerCreate extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmpowerUser() instead.
-     *
-     * @param string $empowerUser
-     *
-     * @return $this
-     */
-    public function setEmpowerUser($empowerUser)
-    {
-        return $this->withEmpowerUser($empowerUser);
     }
 
     /**
@@ -138,18 +75,6 @@ class OnsEmpowerCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -160,18 +85,6 @@ class OnsEmpowerCreate extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRelation() instead.
-     *
-     * @param string $relation
-     *
-     * @return $this
-     */
-    public function setRelation($relation)
-    {
-        return $this->withRelation($relation);
     }
 
     /**

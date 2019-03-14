@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySecurityIps
+ * Api ModifySecurityIps
  *
  * @method string getResourceOwnerId()
  * @method string getModifyMode()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getSecurityIpGroupAttribute()
  */
-class ModifySecurityIps extends RpcRequest
+class ModifySecurityIps extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySecurityIps';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModifyMode() instead.
-     *
-     * @param string $modifyMode
-     *
-     * @return $this
-     */
-    public function setModifyMode($modifyMode)
-    {
-        return $this->withModifyMode($modifyMode);
     }
 
     /**
@@ -97,18 +55,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIps() instead.
-     *
-     * @param string $securityIps
-     *
-     * @return $this
-     */
-    public function setSecurityIps($securityIps)
-    {
-        return $this->withSecurityIps($securityIps);
-    }
-
-    /**
      * @param string $securityIps
      *
      * @return $this
@@ -169,18 +91,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['SecurityIps'] = $securityIps;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -197,18 +107,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIpGroupName() instead.
-     *
-     * @param string $securityIpGroupName
-     *
-     * @return $this
-     */
-    public function setSecurityIpGroupName($securityIpGroupName)
-    {
-        return $this->withSecurityIpGroupName($securityIpGroupName);
-    }
-
-    /**
      * @param string $securityIpGroupName
      *
      * @return $this
@@ -219,18 +117,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['SecurityIpGroupName'] = $securityIpGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -247,18 +133,6 @@ class ModifySecurityIps extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -269,18 +143,6 @@ class ModifySecurityIps extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIpGroupAttribute() instead.
-     *
-     * @param string $securityIpGroupAttribute
-     *
-     * @return $this
-     */
-    public function setSecurityIpGroupAttribute($securityIpGroupAttribute)
-    {
-        return $this->withSecurityIpGroupAttribute($securityIpGroupAttribute);
     }
 
     /**

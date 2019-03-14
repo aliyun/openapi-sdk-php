@@ -9,6 +9,7 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\CCC\V20170705
  *
+ * @method AddBulkPhoneNumbers addBulkPhoneNumbers(array $options = [])
  * @method AddNumberToSkillGroup addNumberToSkillGroup(array $options = [])
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
@@ -25,6 +26,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
  * @method CreateMedia createMedia(array $options = [])
+ * @method CreatePredictiveJobGroup createPredictiveJobGroup(array $options = [])
  * @method CreatePredictiveJobs createPredictiveJobs(array $options = [])
  * @method CreateScenario createScenario(array $options = [])
  * @method CreateScenarioFromTemplate createScenarioFromTemplate(array $options = [])
@@ -56,6 +58,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetInstanceSummaryReportSinceMidnight getInstanceSummaryReportSinceMidnight(array $options = [])
  * @method GetJob getJob(array $options = [])
  * @method GetJobDataUploadParams getJobDataUploadParams(array $options = [])
+ * @method GetJobFileUploadUrl getJobFileUploadUrl(array $options = [])
  * @method GetJobGroup getJobGroup(array $options = [])
  * @method GetJobList getJobList(array $options = [])
  * @method GetJobStatusByCallId getJobStatusByCallId(array $options = [])
@@ -70,6 +73,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetUser getUser(array $options = [])
  * @method LaunchAppraise launchAppraise(array $options = [])
  * @method LaunchShortMessageAppraise launchShortMessageAppraise(array $options = [])
+ * @method ListAgentEvents listAgentEvents(array $options = [])
  * @method ListAgentStates listAgentStates(array $options = [])
  * @method ListAgentSummaryReports listAgentSummaryReports(array $options = [])
  * @method ListAgentSummaryReportsByInterval listAgentSummaryReportsByInterval(array $options = [])
@@ -117,7 +121,9 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ModifySurvey modifySurvey(array $options = [])
  * @method ModifyUser modifyUser(array $options = [])
  * @method PickLocalNumber pickLocalNumber(array $options = [])
+ * @method PickNumbersByTags pickNumbersByTags(array $options = [])
  * @method PickOutboundNumbers pickOutboundNumbers(array $options = [])
+ * @method PickOutboundNumbersByTags pickOutboundNumbersByTags(array $options = [])
  * @method PreCreateMedia preCreateMedia(array $options = [])
  * @method PreModifyMedia preModifyMedia(array $options = [])
  * @method PublishContactFlowVersion publishContactFlowVersion(array $options = [])

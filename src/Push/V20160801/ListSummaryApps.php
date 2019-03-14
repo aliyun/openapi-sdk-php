@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListSummaryApps
+ * Api ListSummaryApps
  *
  */
-class ListSummaryApps extends RpcRequest
+class ListSummaryApps extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Push';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListSummaryApps';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

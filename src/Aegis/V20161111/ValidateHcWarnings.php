@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ValidateHcWarnings
+ * Api ValidateHcWarnings
  *
  * @method string getRiskIds()
  * @method string getSourceIp()
  * @method string getUuids()
  */
-class ValidateHcWarnings extends RpcRequest
+class ValidateHcWarnings extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ValidateHcWarnings';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

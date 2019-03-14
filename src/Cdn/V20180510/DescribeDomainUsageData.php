@@ -2,54 +2,27 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainUsageData
+ * Api DescribeDomainUsageData
  *
  * @method string getStartTime()
- * @method string getType()
  * @method string getDataProtocol()
  * @method string getArea()
  * @method string getDomainName()
  * @method string getEndTime()
  * @method string getOwnerId()
  * @method string getField()
+ * @method string getInterval()
  */
-class DescribeDomainUsageData extends RpcRequest
+class DescribeDomainUsageData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainUsageData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
 
     /**
      * @param string $startTime
@@ -62,43 +35,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataProtocol() instead.
-     *
-     * @param string $dataProtocol
-     *
-     * @return $this
-     */
-    public function setDataProtocol($dataProtocol)
-    {
-        return $this->withDataProtocol($dataProtocol);
     }
 
     /**
@@ -115,18 +51,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withArea() instead.
-     *
-     * @param string $area
-     *
-     * @return $this
-     */
-    public function setArea($area)
-    {
-        return $this->withArea($area);
-    }
-
-    /**
      * @param string $area
      *
      * @return $this
@@ -137,18 +61,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['Area'] = $area;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -165,18 +77,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -187,18 +87,6 @@ class DescribeDomainUsageData extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -215,18 +103,6 @@ class DescribeDomainUsageData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withField() instead.
-     *
-     * @param string $field
-     *
-     * @return $this
-     */
-    public function setField($field)
-    {
-        return $this->withField($field);
-    }
-
-    /**
      * @param string $field
      *
      * @return $this
@@ -235,6 +111,19 @@ class DescribeDomainUsageData extends RpcRequest
     {
         $this->data['Field'] = $field;
         $this->options['query']['Field'] = $field;
+
+        return $this;
+    }
+
+    /**
+     * @param string $interval
+     *
+     * @return $this
+     */
+    public function withInterval($interval)
+    {
+        $this->data['Interval'] = $interval;
+        $this->options['query']['Interval'] = $interval;
 
         return $this;
     }

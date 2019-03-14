@@ -2,31 +2,19 @@
 
 namespace AlibabaCloud\NlsFiletrans\V20180817;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetTaskResult
+ * Api GetTaskResult
  *
  * @method string getDebug()
  * @method string getTaskId()
  */
-class GetTaskResult extends RpcRequest
+class GetTaskResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'nls-filetrans';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-17';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetTaskResult';
 
     /**
      * @param string $debug

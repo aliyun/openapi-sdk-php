@@ -2,57 +2,24 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of CreateAutoScale
+ * Api CreateAutoScale
  *
  * @method string getClusterId()
  */
-class CreateAutoScale extends RoaRequest
+class CreateAutoScale extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateAutoScale';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/cluster/[ClusterId]/autoscale/';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
 
     /**
      * @param string $clusterId

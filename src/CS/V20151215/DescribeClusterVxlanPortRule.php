@@ -2,52 +2,22 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeClusterVxlanPortRule
+ * Api DescribeClusterVxlanPortRule
  *
  * @method string getClusterId()
  */
-class DescribeClusterVxlanPortRule extends RoaRequest
+class DescribeClusterVxlanPortRule extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeClusterVxlanPortRule';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/clusters/[ClusterId]/vxlan_ports';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
 
     /**
      * @param string $clusterId

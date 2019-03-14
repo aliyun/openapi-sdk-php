@@ -2,54 +2,23 @@
 
 namespace AlibabaCloud\LinkFace\V20180720;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteFace
+ * Api DeleteFace
  *
  * @method string getGroupId()
  * @method string getUserId()
  */
-class DeleteFace extends RpcRequest
+class DeleteFace extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'LinkFace';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteFace';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
 
     /**
      * @param string $groupId
@@ -62,18 +31,6 @@ class DeleteFace extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
     }
 
     /**

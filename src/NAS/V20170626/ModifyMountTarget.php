@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyMountTarget
+ * Api ModifyMountTarget
  *
  * @method string getMountTargetDomain()
  * @method string getAccessGroupName()
  * @method string getFileSystemId()
  * @method string getStatus()
  */
-class ModifyMountTarget extends RpcRequest
+class ModifyMountTarget extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyMountTarget';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMountTargetDomain() instead.
-     *
-     * @param string $mountTargetDomain
-     *
-     * @return $this
-     */
-    public function setMountTargetDomain($mountTargetDomain)
-    {
-        return $this->withMountTargetDomain($mountTargetDomain);
-    }
 
     /**
      * @param string $mountTargetDomain
@@ -63,18 +33,6 @@ class ModifyMountTarget extends RpcRequest
         $this->options['query']['MountTargetDomain'] = $mountTargetDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
     }
 
     /**
@@ -91,18 +49,6 @@ class ModifyMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
-    }
-
-    /**
      * @param string $fileSystemId
      *
      * @return $this
@@ -113,18 +59,6 @@ class ModifyMountTarget extends RpcRequest
         $this->options['query']['FileSystemId'] = $fileSystemId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

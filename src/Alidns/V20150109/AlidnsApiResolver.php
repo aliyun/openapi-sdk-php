@@ -45,6 +45,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeGtmInstanceAddressPool describeGtmInstanceAddressPool(array $options = [])
  * @method DescribeGtmInstanceAddressPools describeGtmInstanceAddressPools(array $options = [])
  * @method DescribeGtmInstanceStatus describeGtmInstanceStatus(array $options = [])
+ * @method DescribeGtmInstanceSystemCname describeGtmInstanceSystemCname(array $options = [])
  * @method DescribeGtmInstances describeGtmInstances(array $options = [])
  * @method DescribeGtmLogs describeGtmLogs(array $options = [])
  * @method DescribeGtmMonitorAvailableConfig describeGtmMonitorAvailableConfig(array $options = [])

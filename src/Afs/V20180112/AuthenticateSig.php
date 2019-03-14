@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AuthenticateSig
+ * Api AuthenticateSig
  *
  * @method string getSig()
  * @method string getRemoteIp()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getToken()
  * @method string getScene()
  */
-class AuthenticateSig extends RpcRequest
+class AuthenticateSig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'afs';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'AuthenticateSig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSig() instead.
-     *
-     * @param string $sig
-     *
-     * @return $this
-     */
-    public function setSig($sig)
-    {
-        return $this->withSig($sig);
-    }
 
     /**
      * @param string $sig
@@ -61,18 +34,6 @@ class AuthenticateSig extends RpcRequest
         $this->options['query']['Sig'] = $sig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemoteIp() instead.
-     *
-     * @param string $remoteIp
-     *
-     * @return $this
-     */
-    public function setRemoteIp($remoteIp)
-    {
-        return $this->withRemoteIp($remoteIp);
     }
 
     /**
@@ -89,18 +50,6 @@ class AuthenticateSig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -111,18 +60,6 @@ class AuthenticateSig extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**
@@ -139,18 +76,6 @@ class AuthenticateSig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -164,18 +89,6 @@ class AuthenticateSig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -186,18 +99,6 @@ class AuthenticateSig extends RpcRequest
         $this->options['query']['Token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

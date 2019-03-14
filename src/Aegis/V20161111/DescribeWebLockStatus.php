@@ -2,53 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeWebLockStatus
+ * Api DescribeWebLockStatus
  *
  * @method string getSourceIp()
+ * @method string getFrom()
  * @method string getLang()
  */
-class DescribeWebLockStatus extends RpcRequest
+class DescribeWebLockStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeWebLockStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -64,15 +35,16 @@ class DescribeWebLockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
+     * @param string $from
      *
      * @return $this
      */
-    public function setLang($lang)
+    public function withFrom($from)
     {
-        return $this->withLang($lang);
+        $this->data['From'] = $from;
+        $this->options['query']['From'] = $from;
+
+        return $this;
     }
 
     /**

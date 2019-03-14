@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyRdsReadWeight
+ * Api ModifyRdsReadWeight
  *
  * @method string getInstanceNames()
  * @method string getDbName()
  * @method string getWeights()
  * @method string getDrdsInstanceId()
  */
-class ModifyRdsReadWeight extends RpcRequest
+class ModifyRdsReadWeight extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Drds';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyRdsReadWeight';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceNames() instead.
-     *
-     * @param string $instanceNames
-     *
-     * @return $this
-     */
-    public function setInstanceNames($instanceNames)
-    {
-        return $this->withInstanceNames($instanceNames);
-    }
 
     /**
      * @param string $instanceNames
@@ -58,18 +31,6 @@ class ModifyRdsReadWeight extends RpcRequest
         $this->options['query']['InstanceNames'] = $instanceNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
     }
 
     /**
@@ -86,18 +47,6 @@ class ModifyRdsReadWeight extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWeights() instead.
-     *
-     * @param string $weights
-     *
-     * @return $this
-     */
-    public function setWeights($weights)
-    {
-        return $this->withWeights($weights);
-    }
-
-    /**
      * @param string $weights
      *
      * @return $this
@@ -108,18 +57,6 @@ class ModifyRdsReadWeight extends RpcRequest
         $this->options['query']['Weights'] = $weights;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
     }
 
     /**

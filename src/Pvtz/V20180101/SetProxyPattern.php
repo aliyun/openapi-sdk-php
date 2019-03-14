@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetProxyPattern
+ * Api SetProxyPattern
  *
  * @method string getProxyPattern()
  * @method string getUserClientIp()
  * @method string getZoneId()
  * @method string getLang()
  */
-class SetProxyPattern extends RpcRequest
+class SetProxyPattern extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'pvtz';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetProxyPattern';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'pvtz';
 
     /**

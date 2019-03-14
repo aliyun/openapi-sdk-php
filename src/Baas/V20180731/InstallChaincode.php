@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InstallChaincode
+ * Api InstallChaincode
  *
  * @method string getOrganizationId()
  * @method string getChaincodeId()
  * @method string getLocation()
  */
-class InstallChaincode extends RpcRequest
+class InstallChaincode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'InstallChaincode';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
 
     /**
      * @param string $organizationId
@@ -60,18 +33,6 @@ class InstallChaincode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChaincodeId() instead.
-     *
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function setChaincodeId($chaincodeId)
-    {
-        return $this->withChaincodeId($chaincodeId);
-    }
-
-    /**
      * @param string $chaincodeId
      *
      * @return $this
@@ -82,18 +43,6 @@ class InstallChaincode extends RpcRequest
         $this->options['query']['ChaincodeId'] = $chaincodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**

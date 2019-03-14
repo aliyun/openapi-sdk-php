@@ -2,15 +2,17 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchRobotSmartCall
+ * Api BatchRobotSmartCall
  *
  * @method string getResourceOwnerId()
  * @method string getEarlyMediaAsr()
  * @method string getResourceOwnerAccount()
+ * @method string getTtsParamHead()
  * @method string getTaskName()
+ * @method string getTtsParam()
  * @method string getOwnerId()
  * @method string getDialogId()
  * @method string getCalledNumber()
@@ -18,41 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCalledShowNumber()
  * @method string getCorpName()
  * @method string getScheduleCall()
+ * @method string getIsSelfLine()
  */
-class BatchRobotSmartCall extends RpcRequest
+class BatchRobotSmartCall extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchRobotSmartCall';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +41,6 @@ class BatchRobotSmartCall extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEarlyMediaAsr() instead.
-     *
-     * @param string $earlyMediaAsr
-     *
-     * @return $this
-     */
-    public function setEarlyMediaAsr($earlyMediaAsr)
-    {
-        return $this->withEarlyMediaAsr($earlyMediaAsr);
     }
 
     /**
@@ -93,18 +57,6 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,15 +70,16 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
+     * @param string $ttsParamHead
      *
      * @return $this
      */
-    public function setTaskName($taskName)
+    public function withTtsParamHead($ttsParamHead)
     {
-        return $this->withTaskName($taskName);
+        $this->data['TtsParamHead'] = $ttsParamHead;
+        $this->options['query']['TtsParamHead'] = $ttsParamHead;
+
+        return $this;
     }
 
     /**
@@ -143,15 +96,16 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param string $ttsParam
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withTtsParam($ttsParam)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['TtsParam'] = $ttsParam;
+        $this->options['query']['TtsParam'] = $ttsParam;
+
+        return $this;
     }
 
     /**
@@ -168,18 +122,6 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
-    }
-
-    /**
      * @param string $dialogId
      *
      * @return $this
@@ -190,18 +132,6 @@ class BatchRobotSmartCall extends RpcRequest
         $this->options['query']['DialogId'] = $dialogId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
     }
 
     /**
@@ -218,18 +148,6 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduleTime() instead.
-     *
-     * @param string $scheduleTime
-     *
-     * @return $this
-     */
-    public function setScheduleTime($scheduleTime)
-    {
-        return $this->withScheduleTime($scheduleTime);
-    }
-
-    /**
      * @param string $scheduleTime
      *
      * @return $this
@@ -240,18 +158,6 @@ class BatchRobotSmartCall extends RpcRequest
         $this->options['query']['ScheduleTime'] = $scheduleTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalledShowNumber() instead.
-     *
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function setCalledShowNumber($calledShowNumber)
-    {
-        return $this->withCalledShowNumber($calledShowNumber);
     }
 
     /**
@@ -268,18 +174,6 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCorpName() instead.
-     *
-     * @param string $corpName
-     *
-     * @return $this
-     */
-    public function setCorpName($corpName)
-    {
-        return $this->withCorpName($corpName);
-    }
-
-    /**
      * @param string $corpName
      *
      * @return $this
@@ -293,18 +187,6 @@ class BatchRobotSmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduleCall() instead.
-     *
-     * @param string $scheduleCall
-     *
-     * @return $this
-     */
-    public function setScheduleCall($scheduleCall)
-    {
-        return $this->withScheduleCall($scheduleCall);
-    }
-
-    /**
      * @param string $scheduleCall
      *
      * @return $this
@@ -313,6 +195,19 @@ class BatchRobotSmartCall extends RpcRequest
     {
         $this->data['ScheduleCall'] = $scheduleCall;
         $this->options['query']['ScheduleCall'] = $scheduleCall;
+
+        return $this;
+    }
+
+    /**
+     * @param string $isSelfLine
+     *
+     * @return $this
+     */
+    public function withIsSelfLine($isSelfLine)
+    {
+        $this->data['IsSelfLine'] = $isSelfLine;
+        $this->options['query']['IsSelfLine'] = $isSelfLine;
 
         return $this;
     }

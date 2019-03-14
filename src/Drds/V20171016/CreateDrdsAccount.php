@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDrdsAccount
+ * Api CreateDrdsAccount
  *
  * @method string getPassword()
  * @method string getDbName()
  * @method string getDrdsInstanceId()
  * @method string getUserName()
  */
-class CreateDrdsAccount extends RpcRequest
+class CreateDrdsAccount extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Drds';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDrdsAccount';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
 
     /**
      * @param string $password
@@ -58,18 +31,6 @@ class CreateDrdsAccount extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDbName() instead.
-     *
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function setDbName($dbName)
-    {
-        return $this->withDbName($dbName);
     }
 
     /**
@@ -86,18 +47,6 @@ class CreateDrdsAccount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function setDrdsInstanceId($drdsInstanceId)
-    {
-        return $this->withDrdsInstanceId($drdsInstanceId);
-    }
-
-    /**
      * @param string $drdsInstanceId
      *
      * @return $this
@@ -108,18 +57,6 @@ class CreateDrdsAccount extends RpcRequest
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

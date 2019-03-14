@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDeploymentSets
+ * Api DescribeDeploymentSets
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -20,40 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageSize()
  * @method string getStrategy()
  */
-class DescribeDeploymentSets extends RpcRequest
+class DescribeDeploymentSets extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDeploymentSets';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +41,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +57,6 @@ class DescribeDeploymentSets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -116,18 +67,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -144,18 +83,6 @@ class DescribeDeploymentSets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetName() instead.
-     *
-     * @param string $deploymentSetName
-     *
-     * @return $this
-     */
-    public function setDeploymentSetName($deploymentSetName)
-    {
-        return $this->withDeploymentSetName($deploymentSetName);
-    }
-
-    /**
      * @param string $deploymentSetName
      *
      * @return $this
@@ -166,18 +93,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['DeploymentSetName'] = $deploymentSetName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -194,18 +109,6 @@ class DescribeDeploymentSets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -216,18 +119,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetIds() instead.
-     *
-     * @param string $deploymentSetIds
-     *
-     * @return $this
-     */
-    public function setDeploymentSetIds($deploymentSetIds)
-    {
-        return $this->withDeploymentSetIds($deploymentSetIds);
     }
 
     /**
@@ -244,18 +135,6 @@ class DescribeDeploymentSets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGranularity() instead.
-     *
-     * @param string $granularity
-     *
-     * @return $this
-     */
-    public function setGranularity($granularity)
-    {
-        return $this->withGranularity($granularity);
-    }
-
-    /**
      * @param string $granularity
      *
      * @return $this
@@ -266,18 +145,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['Granularity'] = $granularity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
     }
 
     /**
@@ -294,18 +161,6 @@ class DescribeDeploymentSets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -316,18 +171,6 @@ class DescribeDeploymentSets extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategy() instead.
-     *
-     * @param string $strategy
-     *
-     * @return $this
-     */
-    public function setStrategy($strategy)
-    {
-        return $this->withStrategy($strategy);
     }
 
     /**

@@ -2,57 +2,32 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateEcosphere
+ * Api CreateEcosphere
  *
  * @method string getOrderersCount()
  * @method string getConsortiumName()
  * @method string getSpecName()
+ * @method string getDescription()
+ * @method string getChannelPolicy()
+ * @method string getDuration()
  * @method array getOrganization()
  * @method string getZoneId()
  * @method string getOrdererType()
- * @method string getDescription()
  * @method string getOrdererDomain()
  * @method string getLocation()
  * @method string getPeersCount()
- * @method string getChannelPolicy()
+ * @method string getPricingCycle()
  */
-class CreateEcosphere extends RpcRequest
+class CreateEcosphere extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateEcosphere';
-
-    /**
-     * @var string
-     */
-    public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderersCount() instead.
-     *
-     * @param string $orderersCount
-     *
-     * @return $this
-     */
-    public function setOrderersCount($orderersCount)
-    {
-        return $this->withOrderersCount($orderersCount);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $orderersCount
@@ -65,18 +40,6 @@ class CreateEcosphere extends RpcRequest
         $this->options['query']['OrderersCount'] = $orderersCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumName() instead.
-     *
-     * @param string $consortiumName
-     *
-     * @return $this
-     */
-    public function setConsortiumName($consortiumName)
-    {
-        return $this->withConsortiumName($consortiumName);
     }
 
     /**
@@ -93,18 +56,6 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpecName() instead.
-     *
-     * @param string $specName
-     *
-     * @return $this
-     */
-    public function setSpecName($specName)
-    {
-        return $this->withSpecName($specName);
-    }
-
-    /**
      * @param string $specName
      *
      * @return $this
@@ -118,25 +69,42 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getOrganization() instead.
-     *
-     * @return array
-     */
-    public function getOrganizations()
-    {
-        return $this->getOrganization();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param array $organizations
+     * @param string $description
      *
      * @return $this
      */
-    public function setOrganizations(array $organizations)
+    public function withDescription($description)
     {
-        return $this->withOrganization($organizations);
+        $this->data['Description'] = $description;
+        $this->options['query']['Description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * @param string $channelPolicy
+     *
+     * @return $this
+     */
+    public function withChannelPolicy($channelPolicy)
+    {
+        $this->data['ChannelPolicy'] = $channelPolicy;
+        $this->options['query']['ChannelPolicy'] = $channelPolicy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $duration
+     *
+     * @return $this
+     */
+    public function withDuration($duration)
+    {
+        $this->data['Duration'] = $duration;
+        $this->options['query']['Duration'] = $duration;
+
+        return $this;
     }
 
     /**
@@ -157,18 +125,6 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -179,18 +135,6 @@ class CreateEcosphere extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrdererType() instead.
-     *
-     * @param string $ordererType
-     *
-     * @return $this
-     */
-    public function setOrdererType($ordererType)
-    {
-        return $this->withOrdererType($ordererType);
     }
 
     /**
@@ -207,43 +151,6 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrdererDomain() instead.
-     *
-     * @param string $ordererDomain
-     *
-     * @return $this
-     */
-    public function setOrdererDomain($ordererDomain)
-    {
-        return $this->withOrdererDomain($ordererDomain);
-    }
-
-    /**
      * @param string $ordererDomain
      *
      * @return $this
@@ -254,18 +161,6 @@ class CreateEcosphere extends RpcRequest
         $this->options['query']['OrdererDomain'] = $ordererDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**
@@ -282,18 +177,6 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeersCount() instead.
-     *
-     * @param string $peersCount
-     *
-     * @return $this
-     */
-    public function setPeersCount($peersCount)
-    {
-        return $this->withPeersCount($peersCount);
-    }
-
-    /**
      * @param string $peersCount
      *
      * @return $this
@@ -307,26 +190,14 @@ class CreateEcosphere extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannelPolicy() instead.
-     *
-     * @param string $channelPolicy
+     * @param string $pricingCycle
      *
      * @return $this
      */
-    public function setChannelPolicy($channelPolicy)
+    public function withPricingCycle($pricingCycle)
     {
-        return $this->withChannelPolicy($channelPolicy);
-    }
-
-    /**
-     * @param string $channelPolicy
-     *
-     * @return $this
-     */
-    public function withChannelPolicy($channelPolicy)
-    {
-        $this->data['ChannelPolicy'] = $channelPolicy;
-        $this->options['query']['ChannelPolicy'] = $channelPolicy;
+        $this->data['PricingCycle'] = $pricingCycle;
+        $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
     }

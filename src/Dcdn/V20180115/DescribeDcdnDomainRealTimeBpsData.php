@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnDomainRealTimeBpsData
+ * Api DescribeDcdnDomainRealTimeBpsData
  *
  * @method string getLocationNameEn()
  * @method string getIspNameEn()
@@ -14,27 +14,12 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeDcdnDomainRealTimeBpsData extends RpcRequest
+class DescribeDcdnDomainRealTimeBpsData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnDomainRealTimeBpsData';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
 
     /**

@@ -2,64 +2,24 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AcknowledgeTaskResult
+ * Api AcknowledgeTaskResult
  *
  * @method array getTaskDetailNo()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class AcknowledgeTaskResult extends RpcRequest
+class AcknowledgeTaskResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'AcknowledgeTaskResult';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTaskDetailNo() instead.
-     *
-     * @return array
-     */
-    public function getTaskDetailNos()
-    {
-        return $this->getTaskDetailNo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskDetailNo() instead.
-     *
-     * @param array $taskDetailNos
-     *
-     * @return $this
-     */
-    public function setTaskDetailNos(array $taskDetailNos)
-    {
-        return $this->withTaskDetailNo($taskDetailNos);
-    }
 
     /**
      * @param array $taskDetailNo
@@ -77,18 +37,6 @@ class AcknowledgeTaskResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -99,18 +47,6 @@ class AcknowledgeTaskResult extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

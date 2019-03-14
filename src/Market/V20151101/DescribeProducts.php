@@ -2,60 +2,23 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeProducts
+ * Api DescribeProducts
  *
  * @method array getFilter()
  * @method string getSearchTerm()
  * @method string getPageSize()
  * @method string getPageNumber()
  */
-class DescribeProducts extends RpcRequest
+class DescribeProducts extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Market';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeProducts';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
-    }
 
     /**
      * @param array $filter
@@ -74,18 +37,6 @@ class DescribeProducts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSearchTerm() instead.
-     *
-     * @param string $searchTerm
-     *
-     * @return $this
-     */
-    public function setSearchTerm($searchTerm)
-    {
-        return $this->withSearchTerm($searchTerm);
-    }
-
-    /**
      * @param string $searchTerm
      *
      * @return $this
@@ -99,18 +50,6 @@ class DescribeProducts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -121,18 +60,6 @@ class DescribeProducts extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

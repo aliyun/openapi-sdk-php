@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DestroyConsortium
+ * Api DestroyConsortium
  *
  * @method string getConsortiumId()
  */
-class DestroyConsortium extends RpcRequest
+class DestroyConsortium extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DestroyConsortium';
-
-    /**
-     * @var string
-     */
-    public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $consortiumId

@@ -2,46 +2,33 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTopicReverseRouteTable
+ * Api QueryTopicReverseRouteTable
  *
+ * @method string getIotInstanceId()
  * @method string getTopic()
  */
-class QueryTopicReverseRouteTable extends RpcRequest
+class QueryTopicReverseRouteTable extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTopicReverseRouteTable';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setTopic($topic)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withTopic($topic);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

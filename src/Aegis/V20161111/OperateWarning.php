@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OperateWarning
+ * Api OperateWarning
  *
  * @method string getReason()
  * @method string getSourceIp()
  * @method string getOperateType()
  * @method string getRiskWarningIds()
  */
-class OperateWarning extends RpcRequest
+class OperateWarning extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'OperateWarning';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReason() instead.
-     *
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        return $this->withReason($reason);
-    }
 
     /**
      * @param string $reason
@@ -63,18 +33,6 @@ class OperateWarning extends RpcRequest
         $this->options['query']['Reason'] = $reason;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +49,6 @@ class OperateWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperateType() instead.
-     *
-     * @param string $operateType
-     *
-     * @return $this
-     */
-    public function setOperateType($operateType)
-    {
-        return $this->withOperateType($operateType);
-    }
-
-    /**
      * @param string $operateType
      *
      * @return $this
@@ -113,18 +59,6 @@ class OperateWarning extends RpcRequest
         $this->options['query']['OperateType'] = $operateType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskWarningIds() instead.
-     *
-     * @param string $riskWarningIds
-     *
-     * @return $this
-     */
-    public function setRiskWarningIds($riskWarningIds)
-    {
-        return $this->withRiskWarningIds($riskWarningIds);
     }
 
     /**

@@ -2,57 +2,24 @@
 
 namespace AlibabaCloud\Green\V20180509;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of SetPerson
+ * Api SetPerson
  *
  * @method string getClientInfo()
  */
-class SetPerson extends RoaRequest
+class SetPerson extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetPerson';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/green/sface/person/update';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientInfo() instead.
-     *
-     * @param string $clientInfo
-     *
-     * @return $this
-     */
-    public function setClientInfo($clientInfo)
-    {
-        return $this->withClientInfo($clientInfo);
-    }
 
     /**
      * @param string $clientInfo

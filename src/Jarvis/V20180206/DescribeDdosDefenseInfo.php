@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDdosDefenseInfo
+ * Api DescribeDdosDefenseInfo
  *
  * @method string getSourceIp()
  * @method string getLang()
  * @method string getSrcUid()
  * @method string getSourceCode()
  */
-class DescribeDdosDefenseInfo extends RpcRequest
+class DescribeDdosDefenseInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDdosDefenseInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -58,18 +31,6 @@ class DescribeDdosDefenseInfo extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -86,18 +47,6 @@ class DescribeDdosDefenseInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUid() instead.
-     *
-     * @param string $srcUid
-     *
-     * @return $this
-     */
-    public function setsrcUid($srcUid)
-    {
-        return $this->withSrcUid($srcUid);
-    }
-
-    /**
      * @param string $srcUid
      *
      * @return $this
@@ -108,18 +57,6 @@ class DescribeDdosDefenseInfo extends RpcRequest
         $this->options['query']['srcUid'] = $srcUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setsourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

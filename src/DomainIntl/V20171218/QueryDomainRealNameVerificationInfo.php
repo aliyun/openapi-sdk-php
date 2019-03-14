@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryDomainRealNameVerificationInfo
+ * Api QueryDomainRealNameVerificationInfo
  *
  * @method string getFetchImage()
  * @method string getUserClientIp()
  * @method string getDomainName()
  * @method string getLang()
  */
-class QueryDomainRealNameVerificationInfo extends RpcRequest
+class QueryDomainRealNameVerificationInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryDomainRealNameVerificationInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

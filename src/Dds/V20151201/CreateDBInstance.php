@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDBInstance
+ * Api CreateDBInstance
  *
  * @method string getResourceOwnerId()
  * @method string getDBInstanceStorage()
@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getReplicationFactor()
  * @method string getStorageEngine()
  * @method string getResourceGroupId()
+ * @method string getDatabaseNames()
  * @method string getSecurityToken()
  * @method string getEngine()
  * @method string getDBInstanceDescription()
@@ -36,45 +37,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getZoneId()
  * @method string getChargeType()
  */
-class CreateDBInstance extends RpcRequest
+class CreateDBInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDBInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -87,18 +58,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceStorage() instead.
-     *
-     * @param string $dBInstanceStorage
-     *
-     * @return $this
-     */
-    public function setDBInstanceStorage($dBInstanceStorage)
-    {
-        return $this->withDBInstanceStorage($dBInstanceStorage);
     }
 
     /**
@@ -115,18 +74,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -137,18 +84,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
     }
 
     /**
@@ -165,18 +100,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEngineVersion() instead.
-     *
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function setEngineVersion($engineVersion)
-    {
-        return $this->withEngineVersion($engineVersion);
-    }
-
-    /**
      * @param string $engineVersion
      *
      * @return $this
@@ -187,18 +110,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['EngineVersion'] = $engineVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -215,18 +126,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplicationFactor() instead.
-     *
-     * @param string $replicationFactor
-     *
-     * @return $this
-     */
-    public function setReplicationFactor($replicationFactor)
-    {
-        return $this->withReplicationFactor($replicationFactor);
-    }
-
-    /**
      * @param string $replicationFactor
      *
      * @return $this
@@ -237,18 +136,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['ReplicationFactor'] = $replicationFactor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStorageEngine() instead.
-     *
-     * @param string $storageEngine
-     *
-     * @return $this
-     */
-    public function setStorageEngine($storageEngine)
-    {
-        return $this->withStorageEngine($storageEngine);
     }
 
     /**
@@ -265,18 +152,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -290,15 +165,16 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
+     * @param string $databaseNames
      *
      * @return $this
      */
-    public function setSecurityToken($securityToken)
+    public function withDatabaseNames($databaseNames)
     {
-        return $this->withSecurityToken($securityToken);
+        $this->data['DatabaseNames'] = $databaseNames;
+        $this->options['query']['DatabaseNames'] = $databaseNames;
+
+        return $this;
     }
 
     /**
@@ -315,18 +191,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEngine() instead.
-     *
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function setEngine($engine)
-    {
-        return $this->withEngine($engine);
-    }
-
-    /**
      * @param string $engine
      *
      * @return $this
@@ -337,18 +201,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['Engine'] = $engine;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceDescription() instead.
-     *
-     * @param string $dBInstanceDescription
-     *
-     * @return $this
-     */
-    public function setDBInstanceDescription($dBInstanceDescription)
-    {
-        return $this->withDBInstanceDescription($dBInstanceDescription);
     }
 
     /**
@@ -365,18 +217,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBusinessInfo() instead.
-     *
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function setBusinessInfo($businessInfo)
-    {
-        return $this->withBusinessInfo($businessInfo);
-    }
-
-    /**
      * @param string $businessInfo
      *
      * @return $this
@@ -387,18 +227,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['BusinessInfo'] = $businessInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -415,18 +243,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRestoreTime() instead.
-     *
-     * @param string $restoreTime
-     *
-     * @return $this
-     */
-    public function setRestoreTime($restoreTime)
-    {
-        return $this->withRestoreTime($restoreTime);
-    }
-
-    /**
      * @param string $restoreTime
      *
      * @return $this
@@ -437,18 +253,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['RestoreTime'] = $restoreTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -465,18 +269,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcDBInstanceId() instead.
-     *
-     * @param string $srcDBInstanceId
-     *
-     * @return $this
-     */
-    public function setSrcDBInstanceId($srcDBInstanceId)
-    {
-        return $this->withSrcDBInstanceId($srcDBInstanceId);
-    }
-
-    /**
      * @param string $srcDBInstanceId
      *
      * @return $this
@@ -487,18 +279,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['SrcDBInstanceId'] = $srcDBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -515,18 +295,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBackupId() instead.
-     *
-     * @param string $backupId
-     *
-     * @return $this
-     */
-    public function setBackupId($backupId)
-    {
-        return $this->withBackupId($backupId);
-    }
-
-    /**
      * @param string $backupId
      *
      * @return $this
@@ -537,18 +305,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['BackupId'] = $backupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -565,18 +321,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceClass() instead.
-     *
-     * @param string $dBInstanceClass
-     *
-     * @return $this
-     */
-    public function setDBInstanceClass($dBInstanceClass)
-    {
-        return $this->withDBInstanceClass($dBInstanceClass);
-    }
-
-    /**
      * @param string $dBInstanceClass
      *
      * @return $this
@@ -587,18 +331,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['DBInstanceClass'] = $dBInstanceClass;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIPList() instead.
-     *
-     * @param string $securityIPList
-     *
-     * @return $this
-     */
-    public function setSecurityIPList($securityIPList)
-    {
-        return $this->withSecurityIPList($securityIPList);
     }
 
     /**
@@ -615,18 +347,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -637,18 +357,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountPassword() instead.
-     *
-     * @param string $accountPassword
-     *
-     * @return $this
-     */
-    public function setAccountPassword($accountPassword)
-    {
-        return $this->withAccountPassword($accountPassword);
     }
 
     /**
@@ -665,18 +373,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
-    }
-
-    /**
      * @param string $autoRenew
      *
      * @return $this
@@ -687,18 +383,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['AutoRenew'] = $autoRenew;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -715,18 +399,6 @@ class CreateDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -737,18 +409,6 @@ class CreateDBInstance extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
     }
 
     /**

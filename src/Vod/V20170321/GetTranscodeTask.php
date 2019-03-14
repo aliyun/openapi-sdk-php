@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetTranscodeTask
+ * Api GetTranscodeTask
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getTranscodeTaskId()
  * @method string getOwnerId()
  */
-class GetTranscodeTask extends RpcRequest
+class GetTranscodeTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetTranscodeTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

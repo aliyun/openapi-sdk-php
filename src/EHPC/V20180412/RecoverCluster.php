@@ -2,52 +2,26 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RecoverCluster
+ * Api RecoverCluster
  *
  * @method string getImageId()
  * @method string getOsTag()
+ * @method string getClientVersion()
  * @method string getAccountType()
  * @method string getSchedulerType()
  * @method string getClusterId()
  * @method string getImageOwnerAlias()
  */
-class RecoverCluster extends RpcRequest
+class RecoverCluster extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'RecoverCluster';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
 
     /**
      * @param string $imageId
@@ -60,18 +34,6 @@ class RecoverCluster extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOsTag() instead.
-     *
-     * @param string $osTag
-     *
-     * @return $this
-     */
-    public function setOsTag($osTag)
-    {
-        return $this->withOsTag($osTag);
     }
 
     /**
@@ -88,15 +50,16 @@ class RecoverCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountType() instead.
-     *
-     * @param string $accountType
+     * @param string $clientVersion
      *
      * @return $this
      */
-    public function setAccountType($accountType)
+    public function withClientVersion($clientVersion)
     {
-        return $this->withAccountType($accountType);
+        $this->data['ClientVersion'] = $clientVersion;
+        $this->options['query']['ClientVersion'] = $clientVersion;
+
+        return $this;
     }
 
     /**
@@ -113,18 +76,6 @@ class RecoverCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSchedulerType() instead.
-     *
-     * @param string $schedulerType
-     *
-     * @return $this
-     */
-    public function setSchedulerType($schedulerType)
-    {
-        return $this->withSchedulerType($schedulerType);
-    }
-
-    /**
      * @param string $schedulerType
      *
      * @return $this
@@ -138,18 +89,6 @@ class RecoverCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -160,18 +99,6 @@ class RecoverCluster extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
     }
 
     /**

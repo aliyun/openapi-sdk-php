@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeDiversify
+ * Api DescribeDiversify
  *
  * @method string getInstanceId()
  * @method string getName()
  */
-class DescribeDiversify extends RoaRequest
+class DescribeDiversify extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Airec';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDiversify';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies/[Name]';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'airec';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -61,18 +31,6 @@ class DescribeDiversify extends RoaRequest
         $this->pathParameters['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

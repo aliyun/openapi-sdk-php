@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeResourceModificationCapacity
+ * Api DescribeResourceModificationCapacity
  *
  * @method string getResourceOwnerId()
  * @method string getTargetInstanceType()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getInstanceId()
  * @method string getBid()
  */
-class DescribeResourceModificationCapacity extends RpcRequest
+class DescribeResourceModificationCapacity extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeResourceModificationCapacity';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetInstanceType() instead.
-     *
-     * @param string $targetInstanceType
-     *
-     * @return $this
-     */
-    public function setTargetInstanceType($targetInstanceType)
-    {
-        return $this->withTargetInstanceType($targetInstanceType);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMigrateAcrossZone() instead.
-     *
-     * @param string $migrateAcrossZone
-     *
-     * @return $this
-     */
-    public function setMigrateAcrossZone($migrateAcrossZone)
-    {
-        return $this->withMigrateAcrossZone($migrateAcrossZone);
-    }
-
-    /**
      * @param string $migrateAcrossZone
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
         $this->options['query']['MigrateAcrossZone'] = $migrateAcrossZone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetSystemDiskCategory() instead.
-     *
-     * @param string $targetSystemDiskCategory
-     *
-     * @return $this
-     */
-    public function setTargetSystemDiskCategory($targetSystemDiskCategory)
-    {
-        return $this->withTargetSystemDiskCategory($targetSystemDiskCategory);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
         $this->options['query']['AliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,28 +133,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIds()
-    {
-        return $this->getInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds(array $instanceIds)
-    {
-        return $this->withInstanceId($instanceIds);
-    }
-
-    /**
      * @param array $instanceId
      *
      * @return $this
@@ -281,18 +145,6 @@ class DescribeResourceModificationCapacity extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

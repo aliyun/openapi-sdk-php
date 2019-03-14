@@ -2,44 +2,20 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyUserCustomLogConfig
+ * Api ModifyUserCustomLogConfig
  *
  * @method string getOwnerId()
  * @method string getConfigId()
  * @method string getTag()
  */
-class ModifyUserCustomLogConfig extends RpcRequest
+class ModifyUserCustomLogConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
-
-    /**
-     * @var string
-     */
-    public $action = 'ModifyUserCustomLogConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
 
     /**
      * @param string $ownerId
@@ -55,18 +31,6 @@ class ModifyUserCustomLogConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
-    }
-
-    /**
      * @param string $configId
      *
      * @return $this
@@ -77,18 +41,6 @@ class ModifyUserCustomLogConfig extends RpcRequest
         $this->options['query']['ConfigId'] = $configId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
     }
 
     /**

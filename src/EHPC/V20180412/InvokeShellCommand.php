@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InvokeShellCommand
+ * Api InvokeShellCommand
  *
  * @method array getInstance()
  * @method string getWorkingDir()
@@ -13,50 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCommand()
  * @method string getTimeout()
  */
-class InvokeShellCommand extends RpcRequest
+class InvokeShellCommand extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'InvokeShellCommand';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
 
     /**
      * @param array $instance
@@ -74,18 +37,6 @@ class InvokeShellCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWorkingDir() instead.
-     *
-     * @param string $workingDir
-     *
-     * @return $this
-     */
-    public function setWorkingDir($workingDir)
-    {
-        return $this->withWorkingDir($workingDir);
-    }
-
-    /**
      * @param string $workingDir
      *
      * @return $this
@@ -96,18 +47,6 @@ class InvokeShellCommand extends RpcRequest
         $this->options['query']['WorkingDir'] = $workingDir;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**
@@ -124,18 +63,6 @@ class InvokeShellCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommand() instead.
-     *
-     * @param string $command
-     *
-     * @return $this
-     */
-    public function setCommand($command)
-    {
-        return $this->withCommand($command);
-    }
-
-    /**
      * @param string $command
      *
      * @return $this
@@ -146,18 +73,6 @@ class InvokeShellCommand extends RpcRequest
         $this->options['query']['Command'] = $command;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
     }
 
     /**

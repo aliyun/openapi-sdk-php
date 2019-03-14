@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of IvrCall
+ * Api IvrCall
  *
  * @method string getByeCode()
  * @method array getMenuKeyMap()
@@ -21,40 +21,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOutId()
  * @method string getByeTtsParams()
  */
-class IvrCall extends RpcRequest
+class IvrCall extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'IvrCall';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withByeCode() instead.
-     *
-     * @param string $byeCode
-     *
-     * @return $this
-     */
-    public function setByeCode($byeCode)
-    {
-        return $this->withByeCode($byeCode);
-    }
 
     /**
      * @param string $byeCode
@@ -67,28 +40,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['ByeCode'] = $byeCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMenuKeyMap() instead.
-     *
-     * @return array
-     */
-    public function getMenuKeyMaps()
-    {
-        return $this->getMenuKeyMap();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMenuKeyMap() instead.
-     *
-     * @param array $menuKeyMaps
-     *
-     * @return $this
-     */
-    public function setMenuKeyMaps(array $menuKeyMaps)
-    {
-        return $this->withMenuKeyMap($menuKeyMaps);
     }
 
     /**
@@ -109,18 +60,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -131,18 +70,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -159,18 +86,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTtsParams() instead.
-     *
-     * @param string $startTtsParams
-     *
-     * @return $this
-     */
-    public function setStartTtsParams($startTtsParams)
-    {
-        return $this->withStartTtsParams($startTtsParams);
-    }
-
-    /**
      * @param string $startTtsParams
      *
      * @return $this
@@ -181,18 +96,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['StartTtsParams'] = $startTtsParams;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlayTimes() instead.
-     *
-     * @param string $playTimes
-     *
-     * @return $this
-     */
-    public function setPlayTimes($playTimes)
-    {
-        return $this->withPlayTimes($playTimes);
     }
 
     /**
@@ -209,18 +112,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -231,18 +122,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeout() instead.
-     *
-     * @param string $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout($timeout)
-    {
-        return $this->withTimeout($timeout);
     }
 
     /**
@@ -259,18 +138,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartCode() instead.
-     *
-     * @param string $startCode
-     *
-     * @return $this
-     */
-    public function setStartCode($startCode)
-    {
-        return $this->withStartCode($startCode);
-    }
-
-    /**
      * @param string $startCode
      *
      * @return $this
@@ -281,18 +148,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['StartCode'] = $startCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
     }
 
     /**
@@ -309,18 +164,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledShowNumber() instead.
-     *
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function setCalledShowNumber($calledShowNumber)
-    {
-        return $this->withCalledShowNumber($calledShowNumber);
-    }
-
-    /**
      * @param string $calledShowNumber
      *
      * @return $this
@@ -334,18 +177,6 @@ class IvrCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutId() instead.
-     *
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function setOutId($outId)
-    {
-        return $this->withOutId($outId);
-    }
-
-    /**
      * @param string $outId
      *
      * @return $this
@@ -356,18 +187,6 @@ class IvrCall extends RpcRequest
         $this->options['query']['OutId'] = $outId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withByeTtsParams() instead.
-     *
-     * @param string $byeTtsParams
-     *
-     * @return $this
-     */
-    public function setByeTtsParams($byeTtsParams)
-    {
-        return $this->withByeTtsParams($byeTtsParams);
     }
 
     /**

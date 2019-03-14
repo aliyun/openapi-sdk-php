@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerEcsDescribeDangerAcl
+ * Api InnerEcsDescribeDangerAcl
  *
  * @method string getResourceOwnerId()
  * @method string getBigRegion()
@@ -23,45 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getToken()
  * @method string getAlarmLevel()
  */
-class InnerEcsDescribeDangerAcl extends RpcRequest
+class InnerEcsDescribeDangerAcl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerEcsDescribeDangerAcl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -74,18 +44,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBigRegion() instead.
-     *
-     * @param string $bigRegion
-     *
-     * @return $this
-     */
-    public function setBigRegion($bigRegion)
-    {
-        return $this->withBigRegion($bigRegion);
     }
 
     /**
@@ -102,18 +60,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDstGroupId() instead.
-     *
-     * @param string $dstGroupId
-     *
-     * @return $this
-     */
-    public function setDstGroupId($dstGroupId)
-    {
-        return $this->withDstGroupId($dstGroupId);
-    }
-
-    /**
      * @param string $dstGroupId
      *
      * @return $this
@@ -124,18 +70,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['DstGroupId'] = $dstGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -152,18 +86,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -174,18 +96,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -202,18 +112,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDs() instead.
-     *
-     * @param string $ds
-     *
-     * @return $this
-     */
-    public function setDs($ds)
-    {
-        return $this->withDs($ds);
-    }
-
-    /**
      * @param string $ds
      *
      * @return $this
@@ -224,18 +122,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['Ds'] = $ds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -252,18 +138,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
-    }
-
-    /**
      * @param string $aliUid
      *
      * @return $this
@@ -274,18 +148,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['AliUid'] = $aliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**
@@ -302,18 +164,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -324,18 +174,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -352,18 +190,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -377,18 +203,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -399,18 +213,6 @@ class InnerEcsDescribeDangerAcl extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlarmLevel() instead.
-     *
-     * @param string $alarmLevel
-     *
-     * @return $this
-     */
-    public function setAlarmLevel($alarmLevel)
-    {
-        return $this->withAlarmLevel($alarmLevel);
     }
 
     /**

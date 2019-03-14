@@ -2,43 +2,19 @@
 
 namespace AlibabaCloud\TeslaDam\V20180118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ActionDiskCheck
+ * Api ActionDiskCheck
  *
  * @method string getDiskMount()
  * @method string getIp()
  */
-class ActionDiskCheck extends RpcRequest
+class ActionDiskCheck extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaDam';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'ActionDiskCheck';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskMount() instead.
-     *
-     * @param string $diskMount
-     *
-     * @return $this
-     */
-    public function setDiskMount($diskMount)
-    {
-        return $this->withDiskMount($diskMount);
-    }
 
     /**
      * @param string $diskMount
@@ -51,18 +27,6 @@ class ActionDiskCheck extends RpcRequest
         $this->options['query']['DiskMount'] = $diskMount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
     }
 
     /**

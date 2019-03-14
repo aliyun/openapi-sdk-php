@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSignaturesByApi
+ * Api DescribeSignaturesByApi
  *
  * @method string getStageName()
  * @method string getSecurityToken()
  * @method string getGroupId()
  * @method string getApiId()
  */
-class DescribeSignaturesByApi extends RpcRequest
+class DescribeSignaturesByApi extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSignaturesByApi';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

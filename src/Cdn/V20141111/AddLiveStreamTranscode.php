@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddLiveStreamTranscode
+ * Api AddLiveStreamTranscode
  *
  * @method string getTemplate()
  * @method string getApp()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getSnapshot()
  */
-class AddLiveStreamTranscode extends RpcRequest
+class AddLiveStreamTranscode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddLiveStreamTranscode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplate() instead.
-     *
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function setTemplate($template)
-    {
-        return $this->withTemplate($template);
-    }
 
     /**
      * @param string $template
@@ -62,18 +35,6 @@ class AddLiveStreamTranscode extends RpcRequest
         $this->options['query']['Template'] = $template;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApp() instead.
-     *
-     * @param string $app
-     *
-     * @return $this
-     */
-    public function setApp($app)
-    {
-        return $this->withApp($app);
     }
 
     /**
@@ -90,18 +51,6 @@ class AddLiveStreamTranscode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -112,18 +61,6 @@ class AddLiveStreamTranscode extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -140,18 +77,6 @@ class AddLiveStreamTranscode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -162,18 +87,6 @@ class AddLiveStreamTranscode extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecord() instead.
-     *
-     * @param string $record
-     *
-     * @return $this
-     */
-    public function setRecord($record)
-    {
-        return $this->withRecord($record);
     }
 
     /**
@@ -190,18 +103,6 @@ class AddLiveStreamTranscode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -212,18 +113,6 @@ class AddLiveStreamTranscode extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshot() instead.
-     *
-     * @param string $snapshot
-     *
-     * @return $this
-     */
-    public function setSnapshot($snapshot)
-    {
-        return $this->withSnapshot($snapshot);
     }
 
     /**

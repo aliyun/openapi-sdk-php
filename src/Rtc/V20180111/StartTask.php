@@ -2,120 +2,100 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StartTask
+ * Api StartTask
  *
- * @method array getMixPanes()
- * @method string getIdempotentId()
+ * @method array getUserPanes()
+ * @method string getBackgroundColor()
+ * @method array getLayoutIds()
+ * @method string getTaskId()
+ * @method string getStreamURL()
  * @method string getOwnerId()
- * @method string getTemplateId()
  * @method string getAppId()
+ * @method string getMediaEncode()
  * @method string getChannelId()
  */
-class StartTask extends RpcRequest
+class StartTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'rtc';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'StartTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getMixPanes() instead.
-     *
-     * @return array
-     */
-    public function getMixPaness()
-    {
-        return $this->getMixPanes();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixPanes() instead.
-     *
-     * @param array $mixPaness
+     * @param array $userPanes
      *
      * @return $this
      */
-    public function setMixPaness(array $mixPaness)
+    public function withUserPanes(array $userPanes)
     {
-        return $this->withMixPanes($mixPaness);
-    }
-
-    /**
-     * @param array $mixPanes
-     *
-     * @return $this
-     */
-    public function withMixPanes(array $mixPanes)
-    {
-        $this->data['MixPanes'] = $mixPanes;
-        foreach ($mixPanes as $i => $iValue) {
-            $this->options['query']['MixPanes.' . ($i + 1) . '.PaneId'] = $mixPanes[$i]['PaneId'];
-            $this->options['query']['MixPanes.' . ($i + 1) . '.UserId'] = $mixPanes[$i]['UserId'];
-            $this->options['query']['MixPanes.' . ($i + 1) . '.SourceType'] = $mixPanes[$i]['SourceType'];
+        $this->data['UserPanes'] = $userPanes;
+        foreach ($userPanes as $i => $iValue) {
+            $this->options['query']['UserPanes.' . ($i + 1) . '.PaneId'] = $userPanes[$i]['PaneId'];
+            $this->options['query']['UserPanes.' . ($i + 1) . '.UserId'] = $userPanes[$i]['UserId'];
+            $this->options['query']['UserPanes.' . ($i + 1) . '.SourceType'] = $userPanes[$i]['SourceType'];
         }
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdempotentId() instead.
-     *
-     * @param string $idempotentId
+     * @param string $backgroundColor
      *
      * @return $this
      */
-    public function setIdempotentId($idempotentId)
+    public function withBackgroundColor($backgroundColor)
     {
-        return $this->withIdempotentId($idempotentId);
-    }
-
-    /**
-     * @param string $idempotentId
-     *
-     * @return $this
-     */
-    public function withIdempotentId($idempotentId)
-    {
-        $this->data['IdempotentId'] = $idempotentId;
-        $this->options['query']['IdempotentId'] = $idempotentId;
+        $this->data['BackgroundColor'] = $backgroundColor;
+        $this->options['query']['BackgroundColor'] = $backgroundColor;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param array $layoutIds
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withLayoutIds(array $layoutIds)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['LayoutIds'] = $layoutIds;
+        foreach ($layoutIds as $i => $iValue) {
+            $this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $taskId
+     *
+     * @return $this
+     */
+    public function withTaskId($taskId)
+    {
+        $this->data['TaskId'] = $taskId;
+        $this->options['query']['TaskId'] = $taskId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $streamURL
+     *
+     * @return $this
+     */
+    public function withStreamURL($streamURL)
+    {
+        $this->data['StreamURL'] = $streamURL;
+        $this->options['query']['StreamURL'] = $streamURL;
+
+        return $this;
     }
 
     /**
@@ -132,43 +112,6 @@ class StartTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function withTemplateId($templateId)
-    {
-        $this->data['TemplateId'] = $templateId;
-        $this->options['query']['TemplateId'] = $templateId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -182,15 +125,16 @@ class StartTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
+     * @param string $mediaEncode
      *
      * @return $this
      */
-    public function setChannelId($channelId)
+    public function withMediaEncode($mediaEncode)
     {
-        return $this->withChannelId($channelId);
+        $this->data['MediaEncode'] = $mediaEncode;
+        $this->options['query']['MediaEncode'] = $mediaEncode;
+
+        return $this;
     }
 
     /**

@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateAllEcsWhiteList
+ * Api CreateAllEcsWhiteList
  *
  * @method string getResourceOwnerId()
  * @method string getSrcIP()
  * @method string getSourceIp()
  * @method string getSourceCode()
  */
-class CreateAllEcsWhiteList extends RpcRequest
+class CreateAllEcsWhiteList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateAllEcsWhiteList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

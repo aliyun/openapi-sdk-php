@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateDomainTrackName
+ * Api UpdateDomainTrackName
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCnameTrackRecord()
  * @method string getDomainId()
  */
-class UpdateDomainTrackName extends RpcRequest
+class UpdateDomainTrackName extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateDomainTrackName';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -59,18 +32,6 @@ class UpdateDomainTrackName extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -87,18 +48,6 @@ class UpdateDomainTrackName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -112,18 +61,6 @@ class UpdateDomainTrackName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCnameTrackRecord() instead.
-     *
-     * @param string $cnameTrackRecord
-     *
-     * @return $this
-     */
-    public function setCnameTrackRecord($cnameTrackRecord)
-    {
-        return $this->withCnameTrackRecord($cnameTrackRecord);
-    }
-
-    /**
      * @param string $cnameTrackRecord
      *
      * @return $this
@@ -134,18 +71,6 @@ class UpdateDomainTrackName extends RpcRequest
         $this->options['query']['CnameTrackRecord'] = $cnameTrackRecord;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainId() instead.
-     *
-     * @param string $domainId
-     *
-     * @return $this
-     */
-    public function setDomainId($domainId)
-    {
-        return $this->withDomainId($domainId);
     }
 
     /**

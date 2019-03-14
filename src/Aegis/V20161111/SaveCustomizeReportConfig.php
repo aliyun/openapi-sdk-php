@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveCustomizeReportConfig
+ * Api SaveCustomizeReportConfig
  *
  * @method string getReportType()
  * @method string getSourceIp()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSendTime()
  * @method string getReportStatus()
  */
-class SaveCustomizeReportConfig extends RpcRequest
+class SaveCustomizeReportConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveCustomizeReportConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportType() instead.
-     *
-     * @param string $reportType
-     *
-     * @return $this
-     */
-    public function setReportType($reportType)
-    {
-        return $this->withReportType($reportType);
-    }
 
     /**
      * @param string $reportType
@@ -68,18 +38,6 @@ class SaveCustomizeReportConfig extends RpcRequest
         $this->options['query']['ReportType'] = $reportType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -96,18 +54,6 @@ class SaveCustomizeReportConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReportId() instead.
-     *
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function setReportId($reportId)
-    {
-        return $this->withReportId($reportId);
-    }
-
-    /**
      * @param string $reportId
      *
      * @return $this
@@ -118,18 +64,6 @@ class SaveCustomizeReportConfig extends RpcRequest
         $this->options['query']['ReportId'] = $reportId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportEndDate() instead.
-     *
-     * @param string $reportEndDate
-     *
-     * @return $this
-     */
-    public function setReportEndDate($reportEndDate)
-    {
-        return $this->withReportEndDate($reportEndDate);
     }
 
     /**
@@ -146,18 +80,6 @@ class SaveCustomizeReportConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReportStartDate() instead.
-     *
-     * @param string $reportStartDate
-     *
-     * @return $this
-     */
-    public function setReportStartDate($reportStartDate)
-    {
-        return $this->withReportStartDate($reportStartDate);
-    }
-
-    /**
      * @param string $reportStartDate
      *
      * @return $this
@@ -168,18 +90,6 @@ class SaveCustomizeReportConfig extends RpcRequest
         $this->options['query']['ReportStartDate'] = $reportStartDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecipients() instead.
-     *
-     * @param string $recipients
-     *
-     * @return $this
-     */
-    public function setRecipients($recipients)
-    {
-        return $this->withRecipients($recipients);
     }
 
     /**
@@ -196,18 +106,6 @@ class SaveCustomizeReportConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -221,18 +119,6 @@ class SaveCustomizeReportConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSendTime() instead.
-     *
-     * @param string $sendTime
-     *
-     * @return $this
-     */
-    public function setSendTime($sendTime)
-    {
-        return $this->withSendTime($sendTime);
-    }
-
-    /**
      * @param string $sendTime
      *
      * @return $this
@@ -243,18 +129,6 @@ class SaveCustomizeReportConfig extends RpcRequest
         $this->options['query']['SendTime'] = $sendTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportStatus() instead.
-     *
-     * @param string $reportStatus
-     *
-     * @return $this
-     */
-    public function setReportStatus($reportStatus)
-    {
-        return $this->withReportStatus($reportStatus);
     }
 
     /**

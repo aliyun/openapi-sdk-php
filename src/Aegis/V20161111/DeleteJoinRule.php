@@ -2,41 +2,22 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteJoinRule
+ * Api DeleteJoinRule
  *
  * @method string getSourceIp()
- * @method string getName()
- * @method string getId()
+ * @method string getIds()
  */
-class DeleteJoinRule extends RpcRequest
+class DeleteJoinRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteJoinRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**
@@ -53,27 +34,14 @@ class DeleteJoinRule extends RpcRequest
     }
 
     /**
-     * @param string $name
+     * @param string $ids
      *
      * @return $this
      */
-    public function withName($name)
+    public function withIds($ids)
     {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['id'] = $id;
+        $this->data['Ids'] = $ids;
+        $this->options['query']['Ids'] = $ids;
 
         return $this;
     }

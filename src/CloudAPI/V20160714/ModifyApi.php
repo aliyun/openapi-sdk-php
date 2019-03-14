@@ -2,14 +2,15 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyApi
+ * Api ModifyApi
  *
  * @method string getWebSocketApiType()
  * @method string getErrorCodeSamples()
  * @method string getDescription()
+ * @method string getDisableInternet()
  * @method string getConstantParameters()
  * @method string getAuthType()
  * @method string getAllowSignatureMethod()
@@ -27,36 +28,19 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResultType()
  * @method string getApiName()
  * @method string getResultSample()
+ * @method string getForceNonceCheck()
  * @method string getRequestConfig()
  * @method string getResultBodyModel()
  * @method string getApiId()
  */
-class ModifyApi extends RpcRequest
+class ModifyApi extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyApi';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**
@@ -94,6 +78,19 @@ class ModifyApi extends RpcRequest
     {
         $this->data['Description'] = $description;
         $this->options['query']['Description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * @param string $disableInternet
+     *
+     * @return $this
+     */
+    public function withDisableInternet($disableInternet)
+    {
+        $this->data['DisableInternet'] = $disableInternet;
+        $this->options['query']['DisableInternet'] = $disableInternet;
 
         return $this;
     }
@@ -315,6 +312,19 @@ class ModifyApi extends RpcRequest
     {
         $this->data['ResultSample'] = $resultSample;
         $this->options['query']['ResultSample'] = $resultSample;
+
+        return $this;
+    }
+
+    /**
+     * @param string $forceNonceCheck
+     *
+     * @return $this
+     */
+    public function withForceNonceCheck($forceNonceCheck)
+    {
+        $this->data['ForceNonceCheck'] = $forceNonceCheck;
+        $this->options['query']['ForceNonceCheck'] = $forceNonceCheck;
 
         return $this;
     }

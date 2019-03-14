@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StartTasks
+ * Api StartTasks
  *
  * @method string getTaskIds()
  */
-class StartTasks extends RpcRequest
+class StartTasks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'StartTasks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIds() instead.
-     *
-     * @param string $taskIds
-     *
-     * @return $this
-     */
-    public function setTaskIds($taskIds)
-    {
-        return $this->withTaskIds($taskIds);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $taskIds

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTicket
+ * Api QueryTicket
  *
  * @method string getStage()
  * @method string getPageSize()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getType()
  * @method string getCcsInstanceId()
  */
-class QueryTicket extends RpcRequest
+class QueryTicket extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTicket';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStage() instead.
-     *
-     * @param string $stage
-     *
-     * @return $this
-     */
-    public function setStage($stage)
-    {
-        return $this->withStage($stage);
-    }
 
     /**
      * @param string $stage
@@ -67,18 +37,6 @@ class QueryTicket extends RpcRequest
         $this->options['query']['Stage'] = $stage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -95,18 +53,6 @@ class QueryTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreatorId() instead.
-     *
-     * @param string $creatorId
-     *
-     * @return $this
-     */
-    public function setCreatorId($creatorId)
-    {
-        return $this->withCreatorId($creatorId);
-    }
-
-    /**
      * @param string $creatorId
      *
      * @return $this
@@ -117,18 +63,6 @@ class QueryTicket extends RpcRequest
         $this->options['query']['CreatorId'] = $creatorId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -145,18 +79,6 @@ class QueryTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -167,18 +89,6 @@ class QueryTicket extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -195,18 +105,6 @@ class QueryTicket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -217,18 +115,6 @@ class QueryTicket extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

@@ -2,61 +2,27 @@
 
 namespace AlibabaCloud\Cloudauth\V20180916;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetMaterials
+ * Api GetMaterials
  *
  * @method string getResourceOwnerId()
  * @method string getBiz()
  * @method string getSourceIp()
  * @method string getTicketId()
  */
-class GetMaterials extends RpcRequest
+class GetMaterials extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cloudauth';
 
-    /**
-     * @var string
-     */
     public $version = '2018-09-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetMaterials';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +35,6 @@ class GetMaterials extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBiz() instead.
-     *
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function setBiz($biz)
-    {
-        return $this->withBiz($biz);
     }
 
     /**
@@ -97,18 +51,6 @@ class GetMaterials extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -119,18 +61,6 @@ class GetMaterials extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTicketId() instead.
-     *
-     * @param string $ticketId
-     *
-     * @return $this
-     */
-    public function setTicketId($ticketId)
-    {
-        return $this->withTicketId($ticketId);
     }
 
     /**

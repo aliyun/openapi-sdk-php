@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteAttachedMedia
+ * Api DeleteAttachedMedia
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getMediaIds()
  * @method string getOwnerId()
  */
-class DeleteAttachedMedia extends RpcRequest
+class DeleteAttachedMedia extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteAttachedMedia';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PutMetricAlarm
+ * Api PutMetricAlarm
  *
  * @method string getPeriod()
  * @method string getWebhook()
@@ -32,40 +32,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDimensions()
  * @method string getStatistics()
  */
-class PutMetricAlarm extends RpcRequest
+class PutMetricAlarm extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'PutMetricAlarm';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $period
@@ -78,18 +53,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWebhook() instead.
-     *
-     * @param string $webhook
-     *
-     * @return $this
-     */
-    public function setWebhook($webhook)
-    {
-        return $this->withWebhook($webhook);
     }
 
     /**
@@ -106,18 +69,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactGroups() instead.
-     *
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function setContactGroups($contactGroups)
-    {
-        return $this->withContactGroups($contactGroups);
-    }
-
-    /**
      * @param string $contactGroups
      *
      * @return $this
@@ -128,18 +79,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['ContactGroups'] = $contactGroups;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
     }
 
     /**
@@ -156,18 +95,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubject() instead.
-     *
-     * @param string $subject
-     *
-     * @return $this
-     */
-    public function setSubject($subject)
-    {
-        return $this->withSubject($subject);
-    }
-
-    /**
      * @param string $subject
      *
      * @return $this
@@ -178,18 +105,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Subject'] = $subject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertName() instead.
-     *
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function setAlertName($alertName)
-    {
-        return $this->withAlertName($alertName);
     }
 
     /**
@@ -206,18 +121,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -228,18 +131,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -256,18 +147,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResources() instead.
-     *
-     * @param string $resources
-     *
-     * @return $this
-     */
-    public function setResources($resources)
-    {
-        return $this->withResources($resources);
-    }
-
-    /**
      * @param string $resources
      *
      * @return $this
@@ -278,18 +157,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Resources'] = $resources;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withThreshold() instead.
-     *
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function setThreshold($threshold)
-    {
-        return $this->withThreshold($threshold);
     }
 
     /**
@@ -306,18 +173,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEffectiveInterval() instead.
-     *
-     * @param string $effectiveInterval
-     *
-     * @return $this
-     */
-    public function setEffectiveInterval($effectiveInterval)
-    {
-        return $this->withEffectiveInterval($effectiveInterval);
-    }
-
-    /**
      * @param string $effectiveInterval
      *
      * @return $this
@@ -328,18 +183,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['EffectiveInterval'] = $effectiveInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**
@@ -356,18 +199,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param string $filter
-     *
-     * @return $this
-     */
-    public function setFilter($filter)
-    {
-        return $this->withFilter($filter);
-    }
-
-    /**
      * @param string $filter
      *
      * @return $this
@@ -378,18 +209,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Filter'] = $filter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNoEffectiveInterval() instead.
-     *
-     * @param string $noEffectiveInterval
-     *
-     * @return $this
-     */
-    public function setNoEffectiveInterval($noEffectiveInterval)
-    {
-        return $this->withNoEffectiveInterval($noEffectiveInterval);
     }
 
     /**
@@ -406,18 +225,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDisplayName() instead.
-     *
-     * @param string $displayName
-     *
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        return $this->withDisplayName($displayName);
-    }
-
-    /**
      * @param string $displayName
      *
      * @return $this
@@ -428,18 +235,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['DisplayName'] = $displayName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
     }
 
     /**
@@ -456,18 +251,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEvaluationCount() instead.
-     *
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function setEvaluationCount($evaluationCount)
-    {
-        return $this->withEvaluationCount($evaluationCount);
-    }
-
-    /**
      * @param string $evaluationCount
      *
      * @return $this
@@ -478,18 +261,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['EvaluationCount'] = $evaluationCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSilenceTime() instead.
-     *
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function setSilenceTime($silenceTime)
-    {
-        return $this->withSilenceTime($silenceTime);
     }
 
     /**
@@ -506,18 +277,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -528,18 +287,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Interval'] = $interval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**
@@ -556,18 +303,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeepDive() instead.
-     *
-     * @param string $deepDive
-     *
-     * @return $this
-     */
-    public function setDeepDive($deepDive)
-    {
-        return $this->withDeepDive($deepDive);
-    }
-
-    /**
      * @param string $deepDive
      *
      * @return $this
@@ -578,18 +313,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['DeepDive'] = $deepDive;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComparisonOperator() instead.
-     *
-     * @param string $comparisonOperator
-     *
-     * @return $this
-     */
-    public function setComparisonOperator($comparisonOperator)
-    {
-        return $this->withComparisonOperator($comparisonOperator);
     }
 
     /**
@@ -606,18 +329,6 @@ class PutMetricAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
-    }
-
-    /**
      * @param string $dimensions
      *
      * @return $this
@@ -628,18 +339,6 @@ class PutMetricAlarm extends RpcRequest
         $this->options['query']['Dimensions'] = $dimensions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatistics() instead.
-     *
-     * @param string $statistics
-     *
-     * @return $this
-     */
-    public function setStatistics($statistics)
-    {
-        return $this->withStatistics($statistics);
     }
 
     /**

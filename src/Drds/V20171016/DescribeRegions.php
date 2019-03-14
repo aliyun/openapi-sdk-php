@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRegions
+ * Api DescribeRegions
  *
  */
-class DescribeRegions extends RpcRequest
+class DescribeRegions extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Drds';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRegions';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

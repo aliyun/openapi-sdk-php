@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateLiveRecordNotifyConfig
+ * Api UpdateLiveRecordNotifyConfig
  *
  * @method string getOnDemandUrl()
  * @method string getSecurityToken()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getNeedStatusNotify()
  */
-class UpdateLiveRecordNotifyConfig extends RpcRequest
+class UpdateLiveRecordNotifyConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateLiveRecordNotifyConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnDemandUrl() instead.
-     *
-     * @param string $onDemandUrl
-     *
-     * @return $this
-     */
-    public function setOnDemandUrl($onDemandUrl)
-    {
-        return $this->withOnDemandUrl($onDemandUrl);
-    }
 
     /**
      * @param string $onDemandUrl
@@ -65,18 +35,6 @@ class UpdateLiveRecordNotifyConfig extends RpcRequest
         $this->options['query']['OnDemandUrl'] = $onDemandUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -93,18 +51,6 @@ class UpdateLiveRecordNotifyConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -115,18 +61,6 @@ class UpdateLiveRecordNotifyConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyUrl() instead.
-     *
-     * @param string $notifyUrl
-     *
-     * @return $this
-     */
-    public function setNotifyUrl($notifyUrl)
-    {
-        return $this->withNotifyUrl($notifyUrl);
     }
 
     /**
@@ -143,18 +77,6 @@ class UpdateLiveRecordNotifyConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -165,18 +87,6 @@ class UpdateLiveRecordNotifyConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNeedStatusNotify() instead.
-     *
-     * @param string $needStatusNotify
-     *
-     * @return $this
-     */
-    public function setNeedStatusNotify($needStatusNotify)
-    {
-        return $this->withNeedStatusNotify($needStatusNotify);
     }
 
     /**

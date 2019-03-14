@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyHttpHeaderConfig
+ * Api ModifyHttpHeaderConfig
  *
  * @method string getHeaderValue()
  * @method string getSecurityToken()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getHeaderKey()
  * @method string getOwnerId()
  */
-class ModifyHttpHeaderConfig extends RpcRequest
+class ModifyHttpHeaderConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyHttpHeaderConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHeaderValue() instead.
-     *
-     * @param string $headerValue
-     *
-     * @return $this
-     */
-    public function setHeaderValue($headerValue)
-    {
-        return $this->withHeaderValue($headerValue);
-    }
 
     /**
      * @param string $headerValue
@@ -60,18 +33,6 @@ class ModifyHttpHeaderConfig extends RpcRequest
         $this->options['query']['HeaderValue'] = $headerValue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -88,18 +49,6 @@ class ModifyHttpHeaderConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfigID() instead.
-     *
-     * @param string $configID
-     *
-     * @return $this
-     */
-    public function setConfigID($configID)
-    {
-        return $this->withConfigID($configID);
-    }
-
-    /**
      * @param string $configID
      *
      * @return $this
@@ -110,18 +59,6 @@ class ModifyHttpHeaderConfig extends RpcRequest
         $this->options['query']['ConfigID'] = $configID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -138,18 +75,6 @@ class ModifyHttpHeaderConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHeaderKey() instead.
-     *
-     * @param string $headerKey
-     *
-     * @return $this
-     */
-    public function setHeaderKey($headerKey)
-    {
-        return $this->withHeaderKey($headerKey);
-    }
-
-    /**
      * @param string $headerKey
      *
      * @return $this
@@ -160,18 +85,6 @@ class ModifyHttpHeaderConfig extends RpcRequest
         $this->options['query']['HeaderKey'] = $headerKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

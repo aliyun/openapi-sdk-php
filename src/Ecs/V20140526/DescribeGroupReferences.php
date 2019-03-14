@@ -2,57 +2,22 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeGroupReferences
+ * Api DescribeGroupReferences
  *
  * @method array getGroupNo()
  */
-class DescribeGroupReferences extends RpcRequest
+class DescribeGroupReferences extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeGroupReferences';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getGroupNo() instead.
-     *
-     * @return array
-     */
-    public function getGroupNos()
-    {
-        return $this->getGroupNo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupNo() instead.
-     *
-     * @param array $groupNos
-     *
-     * @return $this
-     */
-    public function setGroupNos(array $groupNos)
-    {
-        return $this->withGroupNo($groupNos);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param array $groupNo

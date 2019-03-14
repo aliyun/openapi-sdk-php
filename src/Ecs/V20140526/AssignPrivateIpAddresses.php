@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AssignPrivateIpAddresses
+ * Api AssignPrivateIpAddresses
  *
  * @method string getResourceOwnerId()
  * @method string getSecondaryPrivateIpAddressCount()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getPrivateIpAddress()
  * @method string getNetworkInterfaceId()
  */
-class AssignPrivateIpAddresses extends RpcRequest
+class AssignPrivateIpAddresses extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'AssignPrivateIpAddresses';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -61,18 +36,6 @@ class AssignPrivateIpAddresses extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecondaryPrivateIpAddressCount() instead.
-     *
-     * @param string $secondaryPrivateIpAddressCount
-     *
-     * @return $this
-     */
-    public function setSecondaryPrivateIpAddressCount($secondaryPrivateIpAddressCount)
-    {
-        return $this->withSecondaryPrivateIpAddressCount($secondaryPrivateIpAddressCount);
     }
 
     /**
@@ -89,18 +52,6 @@ class AssignPrivateIpAddresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -111,18 +62,6 @@ class AssignPrivateIpAddresses extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -139,18 +78,6 @@ class AssignPrivateIpAddresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -161,28 +88,6 @@ class AssignPrivateIpAddresses extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPrivateIpAddress() instead.
-     *
-     * @return array
-     */
-    public function getPrivateIpAddresss()
-    {
-        return $this->getPrivateIpAddress();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddress() instead.
-     *
-     * @param array $privateIpAddresss
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddresss(array $privateIpAddresss)
-    {
-        return $this->withPrivateIpAddress($privateIpAddresss);
     }
 
     /**
@@ -198,18 +103,6 @@ class AssignPrivateIpAddresses extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkInterfaceId() instead.
-     *
-     * @param string $networkInterfaceId
-     *
-     * @return $this
-     */
-    public function setNetworkInterfaceId($networkInterfaceId)
-    {
-        return $this->withNetworkInterfaceId($networkInterfaceId);
     }
 
     /**

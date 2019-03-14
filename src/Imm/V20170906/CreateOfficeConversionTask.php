@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateOfficeConversionTask
+ * Api CreateOfficeConversionTask
  *
  * @method string getSrcType()
  * @method string getProject()
@@ -25,50 +25,21 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSheetOnePage()
  * @method string getMaxSheetCol()
  * @method string getTgtType()
+ * @method string getHidecomments()
  * @method string getFitToPagesTall()
  * @method string getSrcUri()
  * @method string getTgtFilePages()
  * @method string getTgtUri()
  */
-class CreateOfficeConversionTask extends RpcRequest
+class CreateOfficeConversionTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateOfficeConversionTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcType() instead.
-     *
-     * @param string $srcType
-     *
-     * @return $this
-     */
-    public function setSrcType($srcType)
-    {
-        return $this->withSrcType($srcType);
-    }
 
     /**
      * @param string $srcType
@@ -81,18 +52,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['SrcType'] = $srcType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -109,18 +68,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdempotentToken() instead.
-     *
-     * @param string $idempotentToken
-     *
-     * @return $this
-     */
-    public function setIdempotentToken($idempotentToken)
-    {
-        return $this->withIdempotentToken($idempotentToken);
-    }
-
-    /**
      * @param string $idempotentToken
      *
      * @return $this
@@ -131,18 +78,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['IdempotentToken'] = $idempotentToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPdfVector() instead.
-     *
-     * @param string $pdfVector
-     *
-     * @return $this
-     */
-    public function setPdfVector($pdfVector)
-    {
-        return $this->withPdfVector($pdfVector);
     }
 
     /**
@@ -159,18 +94,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
-
-    /**
      * @param string $password
      *
      * @return $this
@@ -181,18 +104,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartPage() instead.
-     *
-     * @param string $startPage
-     *
-     * @return $this
-     */
-    public function setStartPage($startPage)
-    {
-        return $this->withStartPage($startPage);
     }
 
     /**
@@ -209,18 +120,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function setNotifyEndpoint($notifyEndpoint)
-    {
-        return $this->withNotifyEndpoint($notifyEndpoint);
-    }
-
-    /**
      * @param string $notifyEndpoint
      *
      * @return $this
@@ -231,18 +130,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['NotifyEndpoint'] = $notifyEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFitToPagesWide() instead.
-     *
-     * @param string $fitToPagesWide
-     *
-     * @return $this
-     */
-    public function setFitToPagesWide($fitToPagesWide)
-    {
-        return $this->withFitToPagesWide($fitToPagesWide);
     }
 
     /**
@@ -259,18 +146,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFilePrefix() instead.
-     *
-     * @param string $tgtFilePrefix
-     *
-     * @return $this
-     */
-    public function setTgtFilePrefix($tgtFilePrefix)
-    {
-        return $this->withTgtFilePrefix($tgtFilePrefix);
-    }
-
-    /**
      * @param string $tgtFilePrefix
      *
      * @return $this
@@ -281,18 +156,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['TgtFilePrefix'] = $tgtFilePrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function setNotifyTopicName($notifyTopicName)
-    {
-        return $this->withNotifyTopicName($notifyTopicName);
     }
 
     /**
@@ -309,18 +172,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
-    }
-
-    /**
      * @param string $modelId
      *
      * @return $this
@@ -331,18 +182,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['ModelId'] = $modelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetRow() instead.
-     *
-     * @param string $maxSheetRow
-     *
-     * @return $this
-     */
-    public function setMaxSheetRow($maxSheetRow)
-    {
-        return $this->withMaxSheetRow($maxSheetRow);
     }
 
     /**
@@ -359,18 +198,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetCount() instead.
-     *
-     * @param string $maxSheetCount
-     *
-     * @return $this
-     */
-    public function setMaxSheetCount($maxSheetCount)
-    {
-        return $this->withMaxSheetCount($maxSheetCount);
-    }
-
-    /**
      * @param string $maxSheetCount
      *
      * @return $this
@@ -381,18 +208,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['MaxSheetCount'] = $maxSheetCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndPage() instead.
-     *
-     * @param string $endPage
-     *
-     * @return $this
-     */
-    public function setEndPage($endPage)
-    {
-        return $this->withEndPage($endPage);
     }
 
     /**
@@ -409,18 +224,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFileSuffix() instead.
-     *
-     * @param string $tgtFileSuffix
-     *
-     * @return $this
-     */
-    public function setTgtFileSuffix($tgtFileSuffix)
-    {
-        return $this->withTgtFileSuffix($tgtFileSuffix);
-    }
-
-    /**
      * @param string $tgtFileSuffix
      *
      * @return $this
@@ -431,18 +234,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['TgtFileSuffix'] = $tgtFileSuffix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSheetOnePage() instead.
-     *
-     * @param string $sheetOnePage
-     *
-     * @return $this
-     */
-    public function setSheetOnePage($sheetOnePage)
-    {
-        return $this->withSheetOnePage($sheetOnePage);
     }
 
     /**
@@ -459,18 +250,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxSheetCol() instead.
-     *
-     * @param string $maxSheetCol
-     *
-     * @return $this
-     */
-    public function setMaxSheetCol($maxSheetCol)
-    {
-        return $this->withMaxSheetCol($maxSheetCol);
-    }
-
-    /**
      * @param string $maxSheetCol
      *
      * @return $this
@@ -481,18 +260,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['MaxSheetCol'] = $maxSheetCol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtType() instead.
-     *
-     * @param string $tgtType
-     *
-     * @return $this
-     */
-    public function setTgtType($tgtType)
-    {
-        return $this->withTgtType($tgtType);
     }
 
     /**
@@ -509,15 +276,16 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFitToPagesTall() instead.
-     *
-     * @param string $fitToPagesTall
+     * @param string $hidecomments
      *
      * @return $this
      */
-    public function setFitToPagesTall($fitToPagesTall)
+    public function withHidecomments($hidecomments)
     {
-        return $this->withFitToPagesTall($fitToPagesTall);
+        $this->data['Hidecomments'] = $hidecomments;
+        $this->options['query']['Hidecomments'] = $hidecomments;
+
+        return $this;
     }
 
     /**
@@ -534,18 +302,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
-    }
-
-    /**
      * @param string $srcUri
      *
      * @return $this
@@ -559,18 +315,6 @@ class CreateOfficeConversionTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTgtFilePages() instead.
-     *
-     * @param string $tgtFilePages
-     *
-     * @return $this
-     */
-    public function setTgtFilePages($tgtFilePages)
-    {
-        return $this->withTgtFilePages($tgtFilePages);
-    }
-
-    /**
      * @param string $tgtFilePages
      *
      * @return $this
@@ -581,18 +325,6 @@ class CreateOfficeConversionTask extends RpcRequest
         $this->options['query']['TgtFilePages'] = $tgtFilePages;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTgtUri() instead.
-     *
-     * @param string $tgtUri
-     *
-     * @return $this
-     */
-    public function setTgtUri($tgtUri)
-    {
-        return $this->withTgtUri($tgtUri);
     }
 
     /**

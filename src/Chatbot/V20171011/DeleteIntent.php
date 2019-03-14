@@ -2,52 +2,22 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteIntent
+ * Api DeleteIntent
  *
  * @method string getIntentId()
  */
-class DeleteIntent extends RpcRequest
+class DeleteIntent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteIntent';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIntentId() instead.
-     *
-     * @param string $intentId
-     *
-     * @return $this
-     */
-    public function setIntentId($intentId)
-    {
-        return $this->withIntentId($intentId);
-    }
 
     /**
      * @param string $intentId

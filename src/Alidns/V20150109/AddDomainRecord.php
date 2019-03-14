@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddDomainRecord
+ * Api AddDomainRecord
  *
  * @method string getRR()
  * @method string getLine()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getValue()
  * @method string getTTL()
  */
-class AddDomainRecord extends RpcRequest
+class AddDomainRecord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddDomainRecord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRR() instead.
-     *
-     * @param string $rR
-     *
-     * @return $this
-     */
-    public function setRR($rR)
-    {
-        return $this->withRR($rR);
-    }
 
     /**
      * @param string $rR
@@ -68,18 +38,6 @@ class AddDomainRecord extends RpcRequest
         $this->options['query']['RR'] = $rR;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLine() instead.
-     *
-     * @param string $line
-     *
-     * @return $this
-     */
-    public function setLine($line)
-    {
-        return $this->withLine($line);
     }
 
     /**
@@ -96,18 +54,6 @@ class AddDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -118,18 +64,6 @@ class AddDomainRecord extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -146,18 +80,6 @@ class AddDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -168,18 +90,6 @@ class AddDomainRecord extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -196,18 +106,6 @@ class AddDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
-    }
-
-    /**
      * @param string $priority
      *
      * @return $this
@@ -221,18 +119,6 @@ class AddDomainRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withValue() instead.
-     *
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        return $this->withValue($value);
-    }
-
-    /**
      * @param string $value
      *
      * @return $this
@@ -243,18 +129,6 @@ class AddDomainRecord extends RpcRequest
         $this->options['query']['Value'] = $value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
     }
 
     /**

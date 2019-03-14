@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateAutoSnapshotPolicy
+ * Api CreateAutoSnapshotPolicy
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRepeatWeekdays()
  * @method string getAutoSnapshotPolicyName()
  */
-class CreateAutoSnapshotPolicy extends RpcRequest
+class CreateAutoSnapshotPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateAutoSnapshotPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -61,18 +36,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -89,18 +52,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimePoints() instead.
-     *
-     * @param string $timePoints
-     *
-     * @return $this
-     */
-    public function settimePoints($timePoints)
-    {
-        return $this->withTimePoints($timePoints);
-    }
-
-    /**
      * @param string $timePoints
      *
      * @return $this
@@ -111,18 +62,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['timePoints'] = $timePoints;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRetentionDays() instead.
-     *
-     * @param string $retentionDays
-     *
-     * @return $this
-     */
-    public function setretentionDays($retentionDays)
-    {
-        return $this->withRetentionDays($retentionDays);
     }
 
     /**
@@ -139,18 +78,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -164,18 +91,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRepeatWeekdays() instead.
-     *
-     * @param string $repeatWeekdays
-     *
-     * @return $this
-     */
-    public function setrepeatWeekdays($repeatWeekdays)
-    {
-        return $this->withRepeatWeekdays($repeatWeekdays);
-    }
-
-    /**
      * @param string $repeatWeekdays
      *
      * @return $this
@@ -186,18 +101,6 @@ class CreateAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['repeatWeekdays'] = $repeatWeekdays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyName() instead.
-     *
-     * @param string $autoSnapshotPolicyName
-     *
-     * @return $this
-     */
-    public function setautoSnapshotPolicyName($autoSnapshotPolicyName)
-    {
-        return $this->withAutoSnapshotPolicyName($autoSnapshotPolicyName);
     }
 
     /**

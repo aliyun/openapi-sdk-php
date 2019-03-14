@@ -2,36 +2,23 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSiteMonitorISPAreaCity
+ * Api DescribeSiteMonitorISPAreaCity
  *
  * @method string getCity()
  * @method string getIsp()
  */
-class DescribeSiteMonitorISPAreaCity extends RpcRequest
+class DescribeSiteMonitorISPAreaCity extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSiteMonitorISPAreaCity';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
+
+    public $serviceCode = 'cms';
 
     /**
      * @param string $city

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeTemplatesList
+ * Api DescribeTemplatesList
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -26,45 +26,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getMaxAvgScanRows()
  */
-class DescribeTemplatesList extends RpcRequest
+class DescribeTemplatesList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTemplatesList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -77,18 +47,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -105,18 +63,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMinAvgConsume() instead.
-     *
-     * @param string $minAvgConsume
-     *
-     * @return $this
-     */
-    public function setMinAvgConsume($minAvgConsume)
-    {
-        return $this->withMinAvgConsume($minAvgConsume);
-    }
-
-    /**
      * @param string $minAvgConsume
      *
      * @return $this
@@ -127,18 +73,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['MinAvgConsume'] = $minAvgConsume;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -155,18 +89,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxRecordsPerPage() instead.
-     *
-     * @param string $maxRecordsPerPage
-     *
-     * @return $this
-     */
-    public function setMaxRecordsPerPage($maxRecordsPerPage)
-    {
-        return $this->withMaxRecordsPerPage($maxRecordsPerPage);
-    }
-
-    /**
      * @param string $maxRecordsPerPage
      *
      * @return $this
@@ -177,18 +99,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['MaxRecordsPerPage'] = $maxRecordsPerPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -205,18 +115,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -227,18 +125,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -255,18 +141,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxAvgConsume() instead.
-     *
-     * @param string $maxAvgConsume
-     *
-     * @return $this
-     */
-    public function setMaxAvgConsume($maxAvgConsume)
-    {
-        return $this->withMaxAvgConsume($maxAvgConsume);
-    }
-
-    /**
      * @param string $maxAvgConsume
      *
      * @return $this
@@ -277,18 +151,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['MaxAvgConsume'] = $maxAvgConsume;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSortKey() instead.
-     *
-     * @param string $sortKey
-     *
-     * @return $this
-     */
-    public function setSortKey($sortKey)
-    {
-        return $this->withSortKey($sortKey);
     }
 
     /**
@@ -305,18 +167,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMinAvgScanRows() instead.
-     *
-     * @param string $minAvgScanRows
-     *
-     * @return $this
-     */
-    public function setMinAvgScanRows($minAvgScanRows)
-    {
-        return $this->withMinAvgScanRows($minAvgScanRows);
-    }
-
-    /**
      * @param string $minAvgScanRows
      *
      * @return $this
@@ -327,18 +177,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['MinAvgScanRows'] = $minAvgScanRows;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSqType() instead.
-     *
-     * @param string $sqType
-     *
-     * @return $this
-     */
-    public function setSqType($sqType)
-    {
-        return $this->withSqType($sqType);
     }
 
     /**
@@ -355,18 +193,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -377,18 +203,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSortMethod() instead.
-     *
-     * @param string $sortMethod
-     *
-     * @return $this
-     */
-    public function setSortMethod($sortMethod)
-    {
-        return $this->withSortMethod($sortMethod);
     }
 
     /**
@@ -405,18 +219,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumbers() instead.
-     *
-     * @param string $pageNumbers
-     *
-     * @return $this
-     */
-    public function setPageNumbers($pageNumbers)
-    {
-        return $this->withPageNumbers($pageNumbers);
-    }
-
-    /**
      * @param string $pageNumbers
      *
      * @return $this
@@ -427,18 +229,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['PageNumbers'] = $pageNumbers;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPagingId() instead.
-     *
-     * @param string $pagingId
-     *
-     * @return $this
-     */
-    public function setPagingId($pagingId)
-    {
-        return $this->withPagingId($pagingId);
     }
 
     /**
@@ -455,18 +245,6 @@ class DescribeTemplatesList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -477,18 +255,6 @@ class DescribeTemplatesList extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxAvgScanRows() instead.
-     *
-     * @param string $maxAvgScanRows
-     *
-     * @return $this
-     */
-    public function setMaxAvgScanRows($maxAvgScanRows)
-    {
-        return $this->withMaxAvgScanRows($maxAvgScanRows);
     }
 
     /**

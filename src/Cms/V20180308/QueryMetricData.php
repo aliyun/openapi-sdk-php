@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryMetricData
+ * Api QueryMetricData
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -17,40 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getDimensions()
  */
-class QueryMetricData extends RpcRequest
+class QueryMetricData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryMetricData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $resourceOwnerId
@@ -63,18 +38,6 @@ class QueryMetricData extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -91,18 +54,6 @@ class QueryMetricData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
-    }
-
-    /**
      * @param string $metric
      *
      * @return $this
@@ -113,18 +64,6 @@ class QueryMetricData extends RpcRequest
         $this->options['query']['Metric'] = $metric;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLength() instead.
-     *
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        return $this->withLength($length);
     }
 
     /**
@@ -141,18 +80,6 @@ class QueryMetricData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -163,18 +90,6 @@ class QueryMetricData extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -191,18 +106,6 @@ class QueryMetricData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpress() instead.
-     *
-     * @param string $express
-     *
-     * @return $this
-     */
-    public function setExpress($express)
-    {
-        return $this->withExpress($express);
-    }
-
-    /**
      * @param string $express
      *
      * @return $this
@@ -216,18 +119,6 @@ class QueryMetricData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -238,18 +129,6 @@ class QueryMetricData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

@@ -2,58 +2,21 @@
 
 namespace AlibabaCloud\Cloudesl\V20180801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchInsertItems
+ * Api BatchInsertItems
  *
  * @method array getItemInfo()
  * @method string getStoreId()
  */
-class BatchInsertItems extends RpcRequest
+class BatchInsertItems extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'cloudesl';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchInsertItems';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getItemInfo() instead.
-     *
-     * @return array
-     */
-    public function getItemInfos()
-    {
-        return $this->getItemInfo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemInfo() instead.
-     *
-     * @param array $itemInfos
-     *
-     * @return $this
-     */
-    public function setItemInfos(array $itemInfos)
-    {
-        return $this->withItemInfo($itemInfos);
-    }
 
     /**
      * @param array $itemInfo
@@ -108,18 +71,6 @@ class BatchInsertItems extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreId() instead.
-     *
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function setStoreId($storeId)
-    {
-        return $this->withStoreId($storeId);
     }
 
     /**

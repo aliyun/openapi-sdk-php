@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyAccountInfo
+ * Api ModifyAccountInfo
  *
  * @method string getResourceOwnerId()
  * @method string getPassword()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMonitorInstanceId()
  * @method string getOwnerId()
  */
-class ModifyAccountInfo extends RpcRequest
+class ModifyAccountInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyAccountInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class ModifyAccountInfo extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -96,18 +54,6 @@ class ModifyAccountInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -118,18 +64,6 @@ class ModifyAccountInfo extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -146,18 +80,6 @@ class ModifyAccountInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -168,18 +90,6 @@ class ModifyAccountInfo extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +106,6 @@ class ModifyAccountInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMonitorNodeId() instead.
-     *
-     * @param string $monitorNodeId
-     *
-     * @return $this
-     */
-    public function setMonitorNodeId($monitorNodeId)
-    {
-        return $this->withMonitorNodeId($monitorNodeId);
-    }
-
-    /**
      * @param string $monitorNodeId
      *
      * @return $this
@@ -221,18 +119,6 @@ class ModifyAccountInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMonitorInstanceId() instead.
-     *
-     * @param string $monitorInstanceId
-     *
-     * @return $this
-     */
-    public function setMonitorInstanceId($monitorInstanceId)
-    {
-        return $this->withMonitorInstanceId($monitorInstanceId);
-    }
-
-    /**
      * @param string $monitorInstanceId
      *
      * @return $this
@@ -243,18 +129,6 @@ class ModifyAccountInfo extends RpcRequest
         $this->options['query']['MonitorInstanceId'] = $monitorInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

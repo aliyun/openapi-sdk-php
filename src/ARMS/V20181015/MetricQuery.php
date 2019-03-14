@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\ARMS\V20181015;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of MetricQuery
+ * Api MetricQuery
  *
  * @method string getEndTime()
  * @method string getOrderBy()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getDimensions()
  * @method string getOrder()
  */
-class MetricQuery extends RpcRequest
+class MetricQuery extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'ARMS';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'MetricQuery';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
 
     /**
      * @param string $endTime
@@ -68,18 +41,6 @@ class MetricQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderBy() instead.
-     *
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function setOrderBy($orderBy)
-    {
-        return $this->withOrderBy($orderBy);
-    }
-
-    /**
      * @param string $orderBy
      *
      * @return $this
@@ -90,28 +51,6 @@ class MetricQuery extends RpcRequest
         $this->options['query']['OrderBy'] = $orderBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilters() instead.
-     *
-     * @return array
-     */
-    public function getFilterss()
-    {
-        return $this->getFilters();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilters() instead.
-     *
-     * @param array $filterss
-     *
-     * @return $this
-     */
-    public function setFilterss(array $filterss)
-    {
-        return $this->withFilters($filterss);
     }
 
     /**
@@ -131,18 +70,6 @@ class MetricQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -156,18 +83,6 @@ class MetricQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIintervalInSec() instead.
-     *
-     * @param string $iintervalInSec
-     *
-     * @return $this
-     */
-    public function setIintervalInSec($iintervalInSec)
-    {
-        return $this->withIintervalInSec($iintervalInSec);
-    }
-
-    /**
      * @param string $iintervalInSec
      *
      * @return $this
@@ -178,28 +93,6 @@ class MetricQuery extends RpcRequest
         $this->options['query']['IintervalInSec'] = $iintervalInSec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMeasures() instead.
-     *
-     * @return array
-     */
-    public function getMeasuress()
-    {
-        return $this->getMeasures();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMeasures() instead.
-     *
-     * @param array $measuress
-     *
-     * @return $this
-     */
-    public function setMeasuress(array $measuress)
-    {
-        return $this->withMeasures($measuress);
     }
 
     /**
@@ -218,18 +111,6 @@ class MetricQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetric() instead.
-     *
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function setMetric($metric)
-    {
-        return $this->withMetric($metric);
-    }
-
-    /**
      * @param string $metric
      *
      * @return $this
@@ -240,18 +121,6 @@ class MetricQuery extends RpcRequest
         $this->options['query']['Metric'] = $metric;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -268,18 +137,6 @@ class MetricQuery extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
-    }
-
-    /**
      * @param string $limit
      *
      * @return $this
@@ -290,28 +147,6 @@ class MetricQuery extends RpcRequest
         $this->options['query']['Limit'] = $limit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDimensions() instead.
-     *
-     * @return array
-     */
-    public function getDimensionss()
-    {
-        return $this->getDimensions();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param array $dimensionss
-     *
-     * @return $this
-     */
-    public function setDimensionss(array $dimensionss)
-    {
-        return $this->withDimensions($dimensionss);
     }
 
     /**
@@ -327,18 +162,6 @@ class MetricQuery extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
     }
 
     /**

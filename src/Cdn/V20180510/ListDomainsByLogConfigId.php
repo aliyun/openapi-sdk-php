@@ -2,43 +2,19 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListDomainsByLogConfigId
+ * Api ListDomainsByLogConfigId
  *
  * @method string getOwnerId()
  * @method string getConfigId()
  */
-class ListDomainsByLogConfigId extends RpcRequest
+class ListDomainsByLogConfigId extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
-
-    /**
-     * @var string
-     */
-    public $action = 'ListDomainsByLogConfigId';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
 
     /**
      * @param string $ownerId
@@ -51,18 +27,6 @@ class ListDomainsByLogConfigId extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

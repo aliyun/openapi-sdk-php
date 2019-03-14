@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateAttachedMediaInfos
+ * Api UpdateAttachedMediaInfos
  *
  * @method string getResourceOwnerId()
  * @method string getUpdateContent()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceRealOwnerId()
  * @method string getOwnerId()
  */
-class UpdateAttachedMediaInfos extends RpcRequest
+class UpdateAttachedMediaInfos extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateAttachedMediaInfos';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

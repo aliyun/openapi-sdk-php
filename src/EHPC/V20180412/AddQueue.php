@@ -2,35 +2,20 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddQueue
+ * Api AddQueue
  *
  * @method string getQueueName()
  * @method string getClusterId()
  */
-class AddQueue extends RpcRequest
+class AddQueue extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddQueue';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
 
     /**

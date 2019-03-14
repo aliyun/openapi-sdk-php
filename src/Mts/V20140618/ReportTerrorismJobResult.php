@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReportTerrorismJobResult
+ * Api ReportTerrorismJobResult
  *
  * @method string getJobId()
  * @method string getResourceOwnerId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDetail()
  * @method string getOwnerId()
  */
-class ReportTerrorismJobResult extends RpcRequest
+class ReportTerrorismJobResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReportTerrorismJobResult';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
-    }
 
     /**
      * @param string $jobId
@@ -66,18 +36,6 @@ class ReportTerrorismJobResult extends RpcRequest
         $this->options['query']['JobId'] = $jobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +52,6 @@ class ReportTerrorismJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +62,6 @@ class ReportTerrorismJobResult extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class ReportTerrorismJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLabel() instead.
-     *
-     * @param string $label
-     *
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        return $this->withLabel($label);
-    }
-
-    /**
      * @param string $label
      *
      * @return $this
@@ -169,18 +91,6 @@ class ReportTerrorismJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDetail() instead.
-     *
-     * @param string $detail
-     *
-     * @return $this
-     */
-    public function setDetail($detail)
-    {
-        return $this->withDetail($detail);
-    }
-
-    /**
      * @param string $detail
      *
      * @return $this
@@ -191,18 +101,6 @@ class ReportTerrorismJobResult extends RpcRequest
         $this->options['query']['Detail'] = $detail;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

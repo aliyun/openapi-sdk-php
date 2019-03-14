@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateFlowLog
+ * Api CreateFlowLog
  *
  * @method string getResourceOwnerId()
  * @method string getResourceId()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTrafficType()
  * @method string getFlowLogName()
  */
-class CreateFlowLog extends RpcRequest
+class CreateFlowLog extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateFlowLog';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +40,6 @@ class CreateFlowLog extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function setResourceId($resourceId)
-    {
-        return $this->withResourceId($resourceId);
     }
 
     /**
@@ -98,18 +56,6 @@ class CreateFlowLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
-
-    /**
      * @param string $projectName
      *
      * @return $this
@@ -120,18 +66,6 @@ class CreateFlowLog extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogStoreName() instead.
-     *
-     * @param string $logStoreName
-     *
-     * @return $this
-     */
-    public function setLogStoreName($logStoreName)
-    {
-        return $this->withLogStoreName($logStoreName);
     }
 
     /**
@@ -148,18 +82,6 @@ class CreateFlowLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -170,18 +92,6 @@ class CreateFlowLog extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -198,18 +108,6 @@ class CreateFlowLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -220,18 +118,6 @@ class CreateFlowLog extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -248,18 +134,6 @@ class CreateFlowLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -273,18 +147,6 @@ class CreateFlowLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTrafficType() instead.
-     *
-     * @param string $trafficType
-     *
-     * @return $this
-     */
-    public function setTrafficType($trafficType)
-    {
-        return $this->withTrafficType($trafficType);
-    }
-
-    /**
      * @param string $trafficType
      *
      * @return $this
@@ -295,18 +157,6 @@ class CreateFlowLog extends RpcRequest
         $this->options['query']['TrafficType'] = $trafficType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFlowLogName() instead.
-     *
-     * @param string $flowLogName
-     *
-     * @return $this
-     */
-    public function setFlowLogName($flowLogName)
-    {
-        return $this->withFlowLogName($flowLogName);
     }
 
     /**

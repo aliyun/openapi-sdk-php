@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID
+ * Api SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID
  *
  * @method string getUserClientIp()
  * @method string getRegistrantProfileId()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTransferOutProhibited()
  * @method string getLang()
  */
-class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends RpcRequest
+class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

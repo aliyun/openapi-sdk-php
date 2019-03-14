@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AllocateInstanceVpcNetworkType
+ * Api AllocateInstanceVpcNetworkType
  *
  * @method string getTargetVpcId()
  * @method string getResourceOwnerId()
@@ -17,32 +17,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTargetVSwitchId()
  * @method string getOwnerId()
  */
-class AllocateInstanceVpcNetworkType extends RpcRequest
+class AllocateInstanceVpcNetworkType extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'AllocateInstanceVpcNetworkType';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
 
     /**

@@ -2,61 +2,38 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVulList
+ * Api DescribeVulList
  *
  * @method string getStatusList()
- * @method string getSourceIp()
  * @method string getLevel()
- * @method string getName()
- * @method string getPageSize()
+ * @method string getResource()
+ * @method string getRemark()
  * @method string getDealed()
  * @method string getCurrentPage()
  * @method string getType()
+ * @method string getCreateTsStart()
+ * @method string getBatchName()
+ * @method string getAliasName()
+ * @method string getSourceIp()
+ * @method string getName()
+ * @method string getPageSize()
+ * @method string getLang()
+ * @method string getCreateTsEnd()
  * @method string getNecessity()
  * @method string getUuids()
  */
-class DescribeVulList extends RpcRequest
+class DescribeVulList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVulList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
 
     /**
      * @param string $statusList
@@ -69,43 +46,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
     }
 
     /**
@@ -122,65 +62,29 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
+     * @param string $resource
      *
      * @return $this
      */
-    public function setName($name)
+    public function withResource($resource)
     {
-        return $this->withName($name);
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
+        $this->data['Resource'] = $resource;
+        $this->options['query']['Resource'] = $resource;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $remark
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withRemark($remark)
     {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
+        $this->data['Remark'] = $remark;
+        $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
     }
 
     /**
@@ -197,18 +101,6 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -219,18 +111,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -247,15 +127,107 @@ class DescribeVulList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNecessity() instead.
-     *
-     * @param string $necessity
+     * @param string $createTsStart
      *
      * @return $this
      */
-    public function setNecessity($necessity)
+    public function withCreateTsStart($createTsStart)
     {
-        return $this->withNecessity($necessity);
+        $this->data['CreateTsStart'] = $createTsStart;
+        $this->options['query']['CreateTsStart'] = $createTsStart;
+
+        return $this;
+    }
+
+    /**
+     * @param string $batchName
+     *
+     * @return $this
+     */
+    public function withBatchName($batchName)
+    {
+        $this->data['BatchName'] = $batchName;
+        $this->options['query']['BatchName'] = $batchName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $aliasName
+     *
+     * @return $this
+     */
+    public function withAliasName($aliasName)
+    {
+        $this->data['AliasName'] = $aliasName;
+        $this->options['query']['AliasName'] = $aliasName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sourceIp
+     *
+     * @return $this
+     */
+    public function withSourceIp($sourceIp)
+    {
+        $this->data['SourceIp'] = $sourceIp;
+        $this->options['query']['SourceIp'] = $sourceIp;
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function withName($name)
+    {
+        $this->data['Name'] = $name;
+        $this->options['query']['Name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function withPageSize($pageSize)
+    {
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
+
+        return $this;
+    }
+
+    /**
+     * @param string $lang
+     *
+     * @return $this
+     */
+    public function withLang($lang)
+    {
+        $this->data['Lang'] = $lang;
+        $this->options['query']['Lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * @param string $createTsEnd
+     *
+     * @return $this
+     */
+    public function withCreateTsEnd($createTsEnd)
+    {
+        $this->data['CreateTsEnd'] = $createTsEnd;
+        $this->options['query']['CreateTsEnd'] = $createTsEnd;
+
+        return $this;
     }
 
     /**
@@ -269,18 +241,6 @@ class DescribeVulList extends RpcRequest
         $this->options['query']['Necessity'] = $necessity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

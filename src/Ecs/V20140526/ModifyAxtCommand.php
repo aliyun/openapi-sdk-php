@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyAxtCommand
+ * Api ModifyAxtCommand
  *
  * @method string getResourceOwnerId()
  * @method string getWorkingDir()
@@ -18,40 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getName()
  */
-class ModifyAxtCommand extends RpcRequest
+class ModifyAxtCommand extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyAxtCommand';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +39,6 @@ class ModifyAxtCommand extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWorkingDir() instead.
-     *
-     * @param string $workingDir
-     *
-     * @return $this
-     */
-    public function setWorkingDir($workingDir)
-    {
-        return $this->withWorkingDir($workingDir);
     }
 
     /**
@@ -92,18 +55,6 @@ class ModifyAxtCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -114,18 +65,6 @@ class ModifyAxtCommand extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommandId() instead.
-     *
-     * @param string $commandId
-     *
-     * @return $this
-     */
-    public function setCommandId($commandId)
-    {
-        return $this->withCommandId($commandId);
     }
 
     /**
@@ -142,18 +81,6 @@ class ModifyAxtCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommandContent() instead.
-     *
-     * @param string $commandContent
-     *
-     * @return $this
-     */
-    public function setCommandContent($commandContent)
-    {
-        return $this->withCommandContent($commandContent);
-    }
-
-    /**
      * @param string $commandContent
      *
      * @return $this
@@ -164,18 +91,6 @@ class ModifyAxtCommand extends RpcRequest
         $this->options['query']['CommandContent'] = $commandContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeOut() instead.
-     *
-     * @param string $timeOut
-     *
-     * @return $this
-     */
-    public function setTimeOut($timeOut)
-    {
-        return $this->withTimeOut($timeOut);
     }
 
     /**
@@ -192,18 +107,6 @@ class ModifyAxtCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -214,18 +117,6 @@ class ModifyAxtCommand extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -242,18 +133,6 @@ class ModifyAxtCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -264,18 +143,6 @@ class ModifyAxtCommand extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

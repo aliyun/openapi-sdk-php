@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateContainerInstances
+ * Api CreateContainerInstances
  *
  * @method string getResourceOwnerId()
  * @method string getImageId()
@@ -21,40 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPodData()
  * @method string getInternetMaxBandwidthIn()
  */
-class CreateContainerInstances extends RpcRequest
+class CreateContainerInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateContainerInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +42,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -95,18 +58,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
-    }
-
-    /**
      * @param string $internetMaxBandwidthOut
      *
      * @return $this
@@ -117,18 +68,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -145,18 +84,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -167,18 +94,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -195,18 +110,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAmount() instead.
-     *
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        return $this->withAmount($amount);
-    }
-
-    /**
      * @param string $amount
      *
      * @return $this
@@ -217,18 +120,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['Amount'] = $amount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -245,18 +136,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -267,18 +146,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -295,18 +162,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -320,18 +175,6 @@ class CreateContainerInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPodData() instead.
-     *
-     * @param string $podData
-     *
-     * @return $this
-     */
-    public function setPodData($podData)
-    {
-        return $this->withPodData($podData);
-    }
-
-    /**
      * @param string $podData
      *
      * @return $this
@@ -342,18 +185,6 @@ class CreateContainerInstances extends RpcRequest
         $this->options['query']['PodData'] = $podData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthIn() instead.
-     *
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        return $this->withInternetMaxBandwidthIn($internetMaxBandwidthIn);
     }
 
     /**

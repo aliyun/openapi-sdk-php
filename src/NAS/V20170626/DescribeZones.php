@@ -2,37 +2,19 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeZones
+ * Api DescribeZones
  *
  */
-class DescribeZones extends RpcRequest
+class DescribeZones extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeZones';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
 }

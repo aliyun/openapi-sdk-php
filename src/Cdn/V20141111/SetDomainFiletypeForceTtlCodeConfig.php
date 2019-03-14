@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDomainFiletypeForceTtlCodeConfig
+ * Api SetDomainFiletypeForceTtlCodeConfig
  *
  * @method string getFileType()
  * @method string getDomainName()
@@ -14,35 +14,11 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCodeString()
  * @method string getSecurityToken()
  */
-class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
+class SetDomainFiletypeForceTtlCodeConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
-
-    /**
-     * @var string
-     */
-    public $action = 'SetDomainFiletypeForceTtlCodeConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileType() instead.
-     *
-     * @param string $fileType
-     *
-     * @return $this
-     */
-    public function setFileType($fileType)
-    {
-        return $this->withFileType($fileType);
-    }
 
     /**
      * @param string $fileType
@@ -55,18 +31,6 @@ class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
         $this->options['query']['FileType'] = $fileType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -83,18 +47,6 @@ class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -105,18 +57,6 @@ class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersion() instead.
-     *
-     * @param string $version
-     *
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        return $this->withVersion($version);
     }
 
     /**
@@ -133,18 +73,6 @@ class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCodeString() instead.
-     *
-     * @param string $codeString
-     *
-     * @return $this
-     */
-    public function setCodeString($codeString)
-    {
-        return $this->withCodeString($codeString);
-    }
-
-    /**
      * @param string $codeString
      *
      * @return $this
@@ -155,18 +83,6 @@ class SetDomainFiletypeForceTtlCodeConfig extends RpcRequest
         $this->options['query']['CodeString'] = $codeString;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**

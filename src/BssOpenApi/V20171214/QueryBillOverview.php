@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBillOverview
+ * Api QueryBillOverview
  *
  * @method string getProductCode()
  * @method string getSubscriptionType()
  * @method string getBillingCycle()
  * @method string getProductType()
  */
-class QueryBillOverview extends RpcRequest
+class QueryBillOverview extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBillOverview';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
 
     /**
      * @param string $productCode
@@ -58,18 +31,6 @@ class QueryBillOverview extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
     }
 
     /**
@@ -86,18 +47,6 @@ class QueryBillOverview extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBillingCycle() instead.
-     *
-     * @param string $billingCycle
-     *
-     * @return $this
-     */
-    public function setBillingCycle($billingCycle)
-    {
-        return $this->withBillingCycle($billingCycle);
-    }
-
-    /**
      * @param string $billingCycle
      *
      * @return $this
@@ -108,18 +57,6 @@ class QueryBillOverview extends RpcRequest
         $this->options['query']['BillingCycle'] = $billingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

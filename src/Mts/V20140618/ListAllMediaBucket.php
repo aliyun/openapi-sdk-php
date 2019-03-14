@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListAllMediaBucket
+ * Api ListAllMediaBucket
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMaximumPageSize()
  * @method string getOwnerId()
  */
-class ListAllMediaBucket extends RpcRequest
+class ListAllMediaBucket extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListAllMediaBucket';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class ListAllMediaBucket extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class ListAllMediaBucket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextPageToken() instead.
-     *
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function setNextPageToken($nextPageToken)
-    {
-        return $this->withNextPageToken($nextPageToken);
-    }
-
-    /**
      * @param string $nextPageToken
      *
      * @return $this
@@ -115,18 +61,6 @@ class ListAllMediaBucket extends RpcRequest
         $this->options['query']['NextPageToken'] = $nextPageToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class ListAllMediaBucket extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaximumPageSize() instead.
-     *
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function setMaximumPageSize($maximumPageSize)
-    {
-        return $this->withMaximumPageSize($maximumPageSize);
-    }
-
-    /**
      * @param string $maximumPageSize
      *
      * @return $this
@@ -165,18 +87,6 @@ class ListAllMediaBucket extends RpcRequest
         $this->options['query']['MaximumPageSize'] = $maximumPageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

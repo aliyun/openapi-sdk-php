@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyDeploymentSetAttribute
+ * Api ModifyDeploymentSetAttribute
  *
  * @method string getDeploymentSetId()
  * @method string getResourceOwnerId()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDeploymentSetName()
  * @method string getOwnerId()
  */
-class ModifyDeploymentSetAttribute extends RpcRequest
+class ModifyDeploymentSetAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyDeploymentSetAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetId() instead.
-     *
-     * @param string $deploymentSetId
-     *
-     * @return $this
-     */
-    public function setDeploymentSetId($deploymentSetId)
-    {
-        return $this->withDeploymentSetId($deploymentSetId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $deploymentSetId
@@ -61,18 +36,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
         $this->options['query']['DeploymentSetId'] = $deploymentSetId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -89,18 +52,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -111,18 +62,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -139,18 +78,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -164,18 +91,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetName() instead.
-     *
-     * @param string $deploymentSetName
-     *
-     * @return $this
-     */
-    public function setDeploymentSetName($deploymentSetName)
-    {
-        return $this->withDeploymentSetName($deploymentSetName);
-    }
-
-    /**
      * @param string $deploymentSetName
      *
      * @return $this
@@ -186,18 +101,6 @@ class ModifyDeploymentSetAttribute extends RpcRequest
         $this->options['query']['DeploymentSetName'] = $deploymentSetName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

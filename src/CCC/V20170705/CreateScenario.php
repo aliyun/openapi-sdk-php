@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateScenario
+ * Api CreateScenario
  *
  * @method string getInstanceId()
  * @method array getSurveysJson()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getType()
  */
-class CreateScenario extends RpcRequest
+class CreateScenario extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateScenario';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -65,28 +35,6 @@ class CreateScenario extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSurveysJson() instead.
-     *
-     * @return array
-     */
-    public function getSurveysJsons()
-    {
-        return $this->getSurveysJson();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSurveysJson() instead.
-     *
-     * @param array $surveysJsons
-     *
-     * @return $this
-     */
-    public function setSurveysJsons(array $surveysJsons)
-    {
-        return $this->withSurveysJson($surveysJsons);
     }
 
     /**
@@ -105,18 +53,6 @@ class CreateScenario extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
-    }
-
-    /**
      * @param string $strategyJson
      *
      * @return $this
@@ -127,18 +63,6 @@ class CreateScenario extends RpcRequest
         $this->options['query']['StrategyJson'] = $strategyJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -155,18 +79,6 @@ class CreateScenario extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -177,18 +89,6 @@ class CreateScenario extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

@@ -2,61 +2,27 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PutEventTargets
+ * Api PutEventTargets
  *
  * @method array getWebhookParameters()
  * @method array getContactParameters()
+ * @method array getSlsParameters()
  * @method array getFcParameters()
  * @method string getRuleName()
  * @method array getMnsParameters()
  */
-class PutEventTargets extends RpcRequest
+class PutEventTargets extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'PutEventTargets';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getWebhookParameters() instead.
-     *
-     * @return array
-     */
-    public function getWebhookParameterss()
-    {
-        return $this->getWebhookParameters();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWebhookParameters() instead.
-     *
-     * @param array $webhookParameterss
-     *
-     * @return $this
-     */
-    public function setWebhookParameterss(array $webhookParameterss)
-    {
-        return $this->withWebhookParameters($webhookParameterss);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param array $webhookParameters
@@ -77,28 +43,6 @@ class PutEventTargets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getContactParameters() instead.
-     *
-     * @return array
-     */
-    public function getContactParameterss()
-    {
-        return $this->getContactParameters();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactParameters() instead.
-     *
-     * @param array $contactParameterss
-     *
-     * @return $this
-     */
-    public function setContactParameterss(array $contactParameterss)
-    {
-        return $this->withContactParameters($contactParameterss);
-    }
-
-    /**
      * @param array $contactParameters
      *
      * @return $this
@@ -116,25 +60,21 @@ class PutEventTargets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getFcParameters() instead.
-     *
-     * @return array
-     */
-    public function getFcParameterss()
-    {
-        return $this->getFcParameters();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFcParameters() instead.
-     *
-     * @param array $fcParameterss
+     * @param array $slsParameters
      *
      * @return $this
      */
-    public function setFcParameterss(array $fcParameterss)
+    public function withSlsParameters(array $slsParameters)
     {
-        return $this->withFcParameters($fcParameterss);
+        $this->data['SlsParameters'] = $slsParameters;
+        foreach ($slsParameters as $i => $iValue) {
+            $this->options['query']['SlsParameters.' . ($i + 1) . '.Project'] = $slsParameters[$i]['Project'];
+            $this->options['query']['SlsParameters.' . ($i + 1) . '.Id'] = $slsParameters[$i]['Id'];
+            $this->options['query']['SlsParameters.' . ($i + 1) . '.Region'] = $slsParameters[$i]['Region'];
+            $this->options['query']['SlsParameters.' . ($i + 1) . '.LogStore'] = $slsParameters[$i]['LogStore'];
+        }
+
+        return $this;
     }
 
     /**
@@ -156,18 +96,6 @@ class PutEventTargets extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
-    }
-
-    /**
      * @param string $ruleName
      *
      * @return $this
@@ -178,28 +106,6 @@ class PutEventTargets extends RpcRequest
         $this->options['query']['RuleName'] = $ruleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMnsParameters() instead.
-     *
-     * @return array
-     */
-    public function getMnsParameterss()
-    {
-        return $this->getMnsParameters();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMnsParameters() instead.
-     *
-     * @param array $mnsParameterss
-     *
-     * @return $this
-     */
-    public function setMnsParameterss(array $mnsParameterss)
-    {
-        return $this->withMnsParameters($mnsParameterss);
     }
 
     /**

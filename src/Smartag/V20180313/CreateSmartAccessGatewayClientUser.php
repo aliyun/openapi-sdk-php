@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateSmartAccessGatewayClientUser
+ * Api CreateSmartAccessGatewayClientUser
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,32 +19,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSmartAGId()
  * @method string getUserName()
  */
-class CreateSmartAccessGatewayClientUser extends RpcRequest
+class CreateSmartAccessGatewayClientUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateSmartAccessGatewayClientUser';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
 
     /**

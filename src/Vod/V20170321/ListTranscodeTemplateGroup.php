@@ -2,41 +2,25 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListTranscodeTemplateGroup
+ * Api ListTranscodeTemplateGroup
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
+ * @method string getPageNo()
+ * @method string getPageSize()
  * @method string getOwnerId()
  */
-class ListTranscodeTemplateGroup extends RpcRequest
+class ListTranscodeTemplateGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListTranscodeTemplateGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**
@@ -61,6 +45,32 @@ class ListTranscodeTemplateGroup extends RpcRequest
     {
         $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageNo
+     *
+     * @return $this
+     */
+    public function withPageNo($pageNo)
+    {
+        $this->data['PageNo'] = $pageNo;
+        $this->options['query']['PageNo'] = $pageNo;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function withPageSize($pageSize)
+    {
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }

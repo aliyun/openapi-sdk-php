@@ -2,49 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateDeviceGroup
+ * Api CreateDeviceGroup
  *
  * @method string getGroupDesc()
+ * @method string getIotInstanceId()
  * @method string getSuperGroupId()
  * @method string getGroupName()
  */
-class CreateDeviceGroup extends RpcRequest
+class CreateDeviceGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateDeviceGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupDesc() instead.
-     *
-     * @param string $groupDesc
-     *
-     * @return $this
-     */
-    public function setGroupDesc($groupDesc)
-    {
-        return $this->withGroupDesc($groupDesc);
-    }
 
     /**
      * @param string $groupDesc
@@ -60,15 +34,16 @@ class CreateDeviceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuperGroupId() instead.
-     *
-     * @param string $superGroupId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setSuperGroupId($superGroupId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withSuperGroupId($superGroupId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -82,18 +57,6 @@ class CreateDeviceGroup extends RpcRequest
         $this->options['query']['SuperGroupId'] = $superGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

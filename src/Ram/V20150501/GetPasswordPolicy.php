@@ -2,38 +2,19 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetPasswordPolicy
+ * Api GetPasswordPolicy
  *
  */
-class GetPasswordPolicy extends RpcRequest
+class GetPasswordPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ram';
 
-    /**
-     * @var string
-     */
     public $version = '2015-05-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetPasswordPolicy';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

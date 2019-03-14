@@ -2,50 +2,24 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NotifyAddThingTopo
+ * Api NotifyAddThingTopo
  *
  * @method string getGwProductKey()
  * @method string getGwDeviceName()
+ * @method string getIotInstanceId()
  * @method string getGwIotId()
  * @method string getDeviceListStr()
  */
-class NotifyAddThingTopo extends RpcRequest
+class NotifyAddThingTopo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'NotifyAddThingTopo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGwProductKey() instead.
-     *
-     * @param string $gwProductKey
-     *
-     * @return $this
-     */
-    public function setGwProductKey($gwProductKey)
-    {
-        return $this->withGwProductKey($gwProductKey);
-    }
 
     /**
      * @param string $gwProductKey
@@ -58,18 +32,6 @@ class NotifyAddThingTopo extends RpcRequest
         $this->options['query']['GwProductKey'] = $gwProductKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGwDeviceName() instead.
-     *
-     * @param string $gwDeviceName
-     *
-     * @return $this
-     */
-    public function setGwDeviceName($gwDeviceName)
-    {
-        return $this->withGwDeviceName($gwDeviceName);
     }
 
     /**
@@ -86,15 +48,16 @@ class NotifyAddThingTopo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGwIotId() instead.
-     *
-     * @param string $gwIotId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setGwIotId($gwIotId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withGwIotId($gwIotId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -108,18 +71,6 @@ class NotifyAddThingTopo extends RpcRequest
         $this->options['query']['GwIotId'] = $gwIotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceListStr() instead.
-     *
-     * @param string $deviceListStr
-     *
-     * @return $this
-     */
-    public function setDeviceListStr($deviceListStr)
-    {
-        return $this->withDeviceListStr($deviceListStr);
     }
 
     /**

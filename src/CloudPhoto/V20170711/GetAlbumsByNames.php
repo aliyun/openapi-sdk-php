@@ -2,60 +2,26 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetAlbumsByNames
+ * Api GetAlbumsByNames
  *
  * @method string getLibraryId()
  * @method array getName()
  * @method string getStoreName()
  */
-class GetAlbumsByNames extends RpcRequest
+class GetAlbumsByNames extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetAlbumsByNames';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -71,28 +37,6 @@ class GetAlbumsByNames extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getName() instead.
-     *
-     * @return array
-     */
-    public function getNames()
-    {
-        return $this->getName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param array $names
-     *
-     * @return $this
-     */
-    public function setNames(array $names)
-    {
-        return $this->withName($names);
-    }
-
-    /**
      * @param array $name
      *
      * @return $this
@@ -105,18 +49,6 @@ class GetAlbumsByNames extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**

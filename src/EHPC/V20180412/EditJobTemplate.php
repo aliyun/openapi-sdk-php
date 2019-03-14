@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of EditJobTemplate
+ * Api EditJobTemplate
  *
  * @method string getStderrRedirectPath()
  * @method string getVariables()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getName()
  * @method string getStdoutRedirectPath()
  */
-class EditJobTemplate extends RpcRequest
+class EditJobTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'EditJobTemplate';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStderrRedirectPath() instead.
-     *
-     * @param string $stderrRedirectPath
-     *
-     * @return $this
-     */
-    public function setStderrRedirectPath($stderrRedirectPath)
-    {
-        return $this->withStderrRedirectPath($stderrRedirectPath);
-    }
 
     /**
      * @param string $stderrRedirectPath
@@ -65,18 +38,6 @@ class EditJobTemplate extends RpcRequest
         $this->options['query']['StderrRedirectPath'] = $stderrRedirectPath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVariables() instead.
-     *
-     * @param string $variables
-     *
-     * @return $this
-     */
-    public function setVariables($variables)
-    {
-        return $this->withVariables($variables);
     }
 
     /**
@@ -93,18 +54,6 @@ class EditJobTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRunasUser() instead.
-     *
-     * @param string $runasUser
-     *
-     * @return $this
-     */
-    public function setRunasUser($runasUser)
-    {
-        return $this->withRunasUser($runasUser);
-    }
-
-    /**
      * @param string $runasUser
      *
      * @return $this
@@ -115,18 +64,6 @@ class EditJobTemplate extends RpcRequest
         $this->options['query']['RunasUser'] = $runasUser;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReRunable() instead.
-     *
-     * @param string $reRunable
-     *
-     * @return $this
-     */
-    public function setReRunable($reRunable)
-    {
-        return $this->withReRunable($reRunable);
     }
 
     /**
@@ -143,18 +80,6 @@ class EditJobTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
@@ -165,18 +90,6 @@ class EditJobTemplate extends RpcRequest
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
     }
 
     /**
@@ -193,18 +106,6 @@ class EditJobTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommandLine() instead.
-     *
-     * @param string $commandLine
-     *
-     * @return $this
-     */
-    public function setCommandLine($commandLine)
-    {
-        return $this->withCommandLine($commandLine);
-    }
-
-    /**
      * @param string $commandLine
      *
      * @return $this
@@ -215,18 +116,6 @@ class EditJobTemplate extends RpcRequest
         $this->options['query']['CommandLine'] = $commandLine;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArrayRequest() instead.
-     *
-     * @param string $arrayRequest
-     *
-     * @return $this
-     */
-    public function setArrayRequest($arrayRequest)
-    {
-        return $this->withArrayRequest($arrayRequest);
     }
 
     /**
@@ -243,18 +132,6 @@ class EditJobTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPackagePath() instead.
-     *
-     * @param string $packagePath
-     *
-     * @return $this
-     */
-    public function setPackagePath($packagePath)
-    {
-        return $this->withPackagePath($packagePath);
-    }
-
-    /**
      * @param string $packagePath
      *
      * @return $this
@@ -268,18 +145,6 @@ class EditJobTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -290,18 +155,6 @@ class EditJobTemplate extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStdoutRedirectPath() instead.
-     *
-     * @param string $stdoutRedirectPath
-     *
-     * @return $this
-     */
-    public function setStdoutRedirectPath($stdoutRedirectPath)
-    {
-        return $this->withStdoutRedirectPath($stdoutRedirectPath);
     }
 
     /**

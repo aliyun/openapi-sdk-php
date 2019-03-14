@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryPrepaidCards
+ * Api QueryPrepaidCards
  *
  * @method string getExpiryTimeEnd()
  * @method string getExpiryTimeStart()
  * @method string getEffectiveOrNot()
  */
-class QueryPrepaidCards extends RpcRequest
+class QueryPrepaidCards extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryPrepaidCards';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeEnd() instead.
-     *
-     * @param string $expiryTimeEnd
-     *
-     * @return $this
-     */
-    public function setExpiryTimeEnd($expiryTimeEnd)
-    {
-        return $this->withExpiryTimeEnd($expiryTimeEnd);
-    }
 
     /**
      * @param string $expiryTimeEnd
@@ -60,18 +33,6 @@ class QueryPrepaidCards extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeStart() instead.
-     *
-     * @param string $expiryTimeStart
-     *
-     * @return $this
-     */
-    public function setExpiryTimeStart($expiryTimeStart)
-    {
-        return $this->withExpiryTimeStart($expiryTimeStart);
-    }
-
-    /**
      * @param string $expiryTimeStart
      *
      * @return $this
@@ -82,18 +43,6 @@ class QueryPrepaidCards extends RpcRequest
         $this->options['query']['ExpiryTimeStart'] = $expiryTimeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEffectiveOrNot() instead.
-     *
-     * @param string $effectiveOrNot
-     *
-     * @return $this
-     */
-    public function setEffectiveOrNot($effectiveOrNot)
-    {
-        return $this->withEffectiveOrNot($effectiveOrNot);
     }
 
     /**

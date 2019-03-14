@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\BatchCompute\V20130111;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DeleteSnapshot
+ * Api DeleteSnapshot
  *
  * @method string getResourceOwnerId()
  * @method string getResourceName()
  */
-class DeleteSnapshot extends RoaRequest
+class DeleteSnapshot extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BatchCompute';
 
-    /**
-     * @var string
-     */
     public $version = '2013-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteSnapshot';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/snapshots/[ResourceName]';
 
-    /**
-     * @var string
-     */
     public $method = 'DELETE';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -61,18 +31,6 @@ class DeleteSnapshot extends RoaRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceName() instead.
-     *
-     * @param string $resourceName
-     *
-     * @return $this
-     */
-    public function setResourceName($resourceName)
-    {
-        return $this->withResourceName($resourceName);
     }
 
     /**

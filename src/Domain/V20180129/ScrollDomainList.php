@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ScrollDomainList
+ * Api ScrollDomainList
  *
  * @method string getEndExpirationDate()
  * @method string getProductDomainType()
@@ -30,40 +30,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartRegistrationDate()
  * @method string getEndLength()
  */
-class ScrollDomainList extends RpcRequest
+class ScrollDomainList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'ScrollDomainList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndExpirationDate() instead.
-     *
-     * @param string $endExpirationDate
-     *
-     * @return $this
-     */
-    public function setEndExpirationDate($endExpirationDate)
-    {
-        return $this->withEndExpirationDate($endExpirationDate);
-    }
 
     /**
      * @param string $endExpirationDate
@@ -76,18 +49,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['EndExpirationDate'] = $endExpirationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductDomainType() instead.
-     *
-     * @param string $productDomainType
-     *
-     * @return $this
-     */
-    public function setProductDomainType($productDomainType)
-    {
-        return $this->withProductDomainType($productDomainType);
     }
 
     /**
@@ -104,18 +65,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSuffixs() instead.
-     *
-     * @param string $suffixs
-     *
-     * @return $this
-     */
-    public function setSuffixs($suffixs)
-    {
-        return $this->withSuffixs($suffixs);
-    }
-
-    /**
      * @param string $suffixs
      *
      * @return $this
@@ -126,18 +75,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['Suffixs'] = $suffixs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartExpirationDate() instead.
-     *
-     * @param string $startExpirationDate
-     *
-     * @return $this
-     */
-    public function setStartExpirationDate($startExpirationDate)
-    {
-        return $this->withStartExpirationDate($startExpirationDate);
     }
 
     /**
@@ -154,18 +91,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
-     *
-     * @param string $domainStatus
-     *
-     * @return $this
-     */
-    public function setDomainStatus($domainStatus)
-    {
-        return $this->withDomainStatus($domainStatus);
-    }
-
-    /**
      * @param string $domainStatus
      *
      * @return $this
@@ -176,18 +101,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['DomainStatus'] = $domainStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainGroupId() instead.
-     *
-     * @param string $domainGroupId
-     *
-     * @return $this
-     */
-    public function setDomainGroupId($domainGroupId)
-    {
-        return $this->withDomainGroupId($domainGroupId);
     }
 
     /**
@@ -204,18 +117,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyWordSuffix() instead.
-     *
-     * @param string $keyWordSuffix
-     *
-     * @return $this
-     */
-    public function setKeyWordSuffix($keyWordSuffix)
-    {
-        return $this->withKeyWordSuffix($keyWordSuffix);
-    }
-
-    /**
      * @param string $keyWordSuffix
      *
      * @return $this
@@ -226,18 +127,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['KeyWordSuffix'] = $keyWordSuffix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScrollId() instead.
-     *
-     * @param string $scrollId
-     *
-     * @return $this
-     */
-    public function setScrollId($scrollId)
-    {
-        return $this->withScrollId($scrollId);
     }
 
     /**
@@ -254,18 +143,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExcluded() instead.
-     *
-     * @param string $excluded
-     *
-     * @return $this
-     */
-    public function setExcluded($excluded)
-    {
-        return $this->withExcluded($excluded);
-    }
-
-    /**
      * @param string $excluded
      *
      * @return $this
@@ -276,18 +153,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['Excluded'] = $excluded;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyWordPrefix() instead.
-     *
-     * @param string $keyWordPrefix
-     *
-     * @return $this
-     */
-    public function setKeyWordPrefix($keyWordPrefix)
-    {
-        return $this->withKeyWordPrefix($keyWordPrefix);
     }
 
     /**
@@ -304,18 +169,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartLength() instead.
-     *
-     * @param string $startLength
-     *
-     * @return $this
-     */
-    public function setStartLength($startLength)
-    {
-        return $this->withStartLength($startLength);
-    }
-
-    /**
      * @param string $startLength
      *
      * @return $this
@@ -326,18 +179,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['StartLength'] = $startLength;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTradeType() instead.
-     *
-     * @param string $tradeType
-     *
-     * @return $this
-     */
-    public function setTradeType($tradeType)
-    {
-        return $this->withTradeType($tradeType);
     }
 
     /**
@@ -354,18 +195,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExcludedSuffix() instead.
-     *
-     * @param string $excludedSuffix
-     *
-     * @return $this
-     */
-    public function setExcludedSuffix($excludedSuffix)
-    {
-        return $this->withExcludedSuffix($excludedSuffix);
-    }
-
-    /**
      * @param string $excludedSuffix
      *
      * @return $this
@@ -376,18 +205,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['ExcludedSuffix'] = $excludedSuffix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndRegistrationDate() instead.
-     *
-     * @param string $endRegistrationDate
-     *
-     * @return $this
-     */
-    public function setEndRegistrationDate($endRegistrationDate)
-    {
-        return $this->withEndRegistrationDate($endRegistrationDate);
     }
 
     /**
@@ -404,18 +221,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForm() instead.
-     *
-     * @param string $form
-     *
-     * @return $this
-     */
-    public function setForm($form)
-    {
-        return $this->withForm($form);
-    }
-
-    /**
      * @param string $form
      *
      * @return $this
@@ -426,18 +231,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['Form'] = $form;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -454,18 +247,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -476,18 +257,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -504,18 +273,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExcludedPrefix() instead.
-     *
-     * @param string $excludedPrefix
-     *
-     * @return $this
-     */
-    public function setExcludedPrefix($excludedPrefix)
-    {
-        return $this->withExcludedPrefix($excludedPrefix);
-    }
-
-    /**
      * @param string $excludedPrefix
      *
      * @return $this
@@ -526,18 +283,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['ExcludedPrefix'] = $excludedPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyWord() instead.
-     *
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function setKeyWord($keyWord)
-    {
-        return $this->withKeyWord($keyWord);
     }
 
     /**
@@ -554,18 +299,6 @@ class ScrollDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartRegistrationDate() instead.
-     *
-     * @param string $startRegistrationDate
-     *
-     * @return $this
-     */
-    public function setStartRegistrationDate($startRegistrationDate)
-    {
-        return $this->withStartRegistrationDate($startRegistrationDate);
-    }
-
-    /**
      * @param string $startRegistrationDate
      *
      * @return $this
@@ -576,18 +309,6 @@ class ScrollDomainList extends RpcRequest
         $this->options['query']['StartRegistrationDate'] = $startRegistrationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndLength() instead.
-     *
-     * @param string $endLength
-     *
-     * @return $this
-     */
-    public function setEndLength($endLength)
-    {
-        return $this->withEndLength($endLength);
     }
 
     /**

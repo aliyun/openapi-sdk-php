@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserDomains
+ * Api DescribeUserDomains
  *
  * @method string getFuncFilter()
  * @method string getSources()
@@ -21,40 +21,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCdnType()
  * @method string getPageSize()
  */
-class DescribeUserDomains extends RpcRequest
+class DescribeUserDomains extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserDomains';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFuncFilter() instead.
-     *
-     * @param string $funcFilter
-     *
-     * @return $this
-     */
-    public function setFuncFilter($funcFilter)
-    {
-        return $this->withFuncFilter($funcFilter);
-    }
 
     /**
      * @param string $funcFilter
@@ -67,18 +40,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['FuncFilter'] = $funcFilter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSources() instead.
-     *
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function setSources($sources)
-    {
-        return $this->withSources($sources);
     }
 
     /**
@@ -95,18 +56,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -117,18 +66,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -145,18 +82,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFuncId() instead.
-     *
-     * @param string $funcId
-     *
-     * @return $this
-     */
-    public function setFuncId($funcId)
-    {
-        return $this->withFuncId($funcId);
-    }
-
-    /**
      * @param string $funcId
      *
      * @return $this
@@ -167,18 +92,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['FuncId'] = $funcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -195,18 +108,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
-     *
-     * @param string $domainStatus
-     *
-     * @return $this
-     */
-    public function setDomainStatus($domainStatus)
-    {
-        return $this->withDomainStatus($domainStatus);
-    }
-
-    /**
      * @param string $domainStatus
      *
      * @return $this
@@ -217,18 +118,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['DomainStatus'] = $domainStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainSearchType() instead.
-     *
-     * @param string $domainSearchType
-     *
-     * @return $this
-     */
-    public function setDomainSearchType($domainSearchType)
-    {
-        return $this->withDomainSearchType($domainSearchType);
     }
 
     /**
@@ -245,18 +134,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCheckDomainShow() instead.
-     *
-     * @param string $checkDomainShow
-     *
-     * @return $this
-     */
-    public function setCheckDomainShow($checkDomainShow)
-    {
-        return $this->withCheckDomainShow($checkDomainShow);
-    }
-
-    /**
      * @param string $checkDomainShow
      *
      * @return $this
@@ -267,18 +144,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['CheckDomainShow'] = $checkDomainShow;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -295,18 +160,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -320,18 +173,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCdnType() instead.
-     *
-     * @param string $cdnType
-     *
-     * @return $this
-     */
-    public function setCdnType($cdnType)
-    {
-        return $this->withCdnType($cdnType);
-    }
-
-    /**
      * @param string $cdnType
      *
      * @return $this
@@ -342,18 +183,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['CdnType'] = $cdnType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

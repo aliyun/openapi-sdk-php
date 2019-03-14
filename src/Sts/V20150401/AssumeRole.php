@@ -2,56 +2,25 @@
 
 namespace AlibabaCloud\Sts\V20150401;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AssumeRole
+ * Api AssumeRole
  *
  * @method string getRoleArn()
  * @method string getRoleSessionName()
  * @method string getDurationSeconds()
  * @method string getPolicy()
  */
-class AssumeRole extends RpcRequest
+class AssumeRole extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sts';
 
-    /**
-     * @var string
-     */
     public $version = '2015-04-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AssumeRole';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleArn() instead.
-     *
-     * @param string $roleArn
-     *
-     * @return $this
-     */
-    public function setRoleArn($roleArn)
-    {
-        return $this->withRoleArn($roleArn);
-    }
 
     /**
      * @param string $roleArn
@@ -64,18 +33,6 @@ class AssumeRole extends RpcRequest
         $this->options['query']['RoleArn'] = $roleArn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRoleSessionName() instead.
-     *
-     * @param string $roleSessionName
-     *
-     * @return $this
-     */
-    public function setRoleSessionName($roleSessionName)
-    {
-        return $this->withRoleSessionName($roleSessionName);
     }
 
     /**
@@ -92,18 +49,6 @@ class AssumeRole extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDurationSeconds() instead.
-     *
-     * @param string $durationSeconds
-     *
-     * @return $this
-     */
-    public function setDurationSeconds($durationSeconds)
-    {
-        return $this->withDurationSeconds($durationSeconds);
-    }
-
-    /**
      * @param string $durationSeconds
      *
      * @return $this
@@ -114,18 +59,6 @@ class AssumeRole extends RpcRequest
         $this->options['query']['DurationSeconds'] = $durationSeconds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicy() instead.
-     *
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function setPolicy($policy)
-    {
-        return $this->withPolicy($policy);
     }
 
     /**

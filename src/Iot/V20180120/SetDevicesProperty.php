@@ -2,58 +2,35 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDevicesProperty
+ * Api SetDevicesProperty
  *
+ * @method string getIotInstanceId()
  * @method array getDeviceName()
  * @method string getProductKey()
  * @method string getItems()
  */
-class SetDevicesProperty extends RpcRequest
+class SetDevicesProperty extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDevicesProperty';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceName() instead.
-     *
-     * @return array
-     */
-    public function getDeviceNames()
-    {
-        return $this->getDeviceName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param array $deviceNames
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setDeviceNames(array $deviceNames)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withDeviceName($deviceNames);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -72,18 +49,6 @@ class SetDevicesProperty extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -94,18 +59,6 @@ class SetDevicesProperty extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItems() instead.
-     *
-     * @param string $items
-     *
-     * @return $this
-     */
-    public function setItems($items)
-    {
-        return $this->withItems($items);
     }
 
     /**

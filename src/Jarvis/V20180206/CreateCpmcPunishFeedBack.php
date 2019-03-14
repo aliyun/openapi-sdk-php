@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateCpmcPunishFeedBack
+ * Api CreateCpmcPunishFeedBack
  *
  * @method string getFeedBack()
  * @method string getSrcIP()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getSourceCode()
  */
-class CreateCpmcPunishFeedBack extends RpcRequest
+class CreateCpmcPunishFeedBack extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateCpmcPunishFeedBack';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFeedBack() instead.
-     *
-     * @param string $feedBack
-     *
-     * @return $this
-     */
-    public function setFeedBack($feedBack)
-    {
-        return $this->withFeedBack($feedBack);
-    }
 
     /**
      * @param string $feedBack
@@ -65,18 +38,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
         $this->options['query']['FeedBack'] = $feedBack;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
     }
 
     /**
@@ -93,18 +54,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -115,18 +64,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDstPort() instead.
-     *
-     * @param string $dstPort
-     *
-     * @return $this
-     */
-    public function setDstPort($dstPort)
-    {
-        return $this->withDstPort($dstPort);
     }
 
     /**
@@ -143,18 +80,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProtocolName() instead.
-     *
-     * @param string $protocolName
-     *
-     * @return $this
-     */
-    public function setProtocolName($protocolName)
-    {
-        return $this->withProtocolName($protocolName);
-    }
-
-    /**
      * @param string $protocolName
      *
      * @return $this
@@ -165,18 +90,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
         $this->options['query']['ProtocolName'] = $protocolName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcPort() instead.
-     *
-     * @param string $srcPort
-     *
-     * @return $this
-     */
-    public function setSrcPort($srcPort)
-    {
-        return $this->withSrcPort($srcPort);
     }
 
     /**
@@ -193,18 +106,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPunishType() instead.
-     *
-     * @param string $punishType
-     *
-     * @return $this
-     */
-    public function setPunishType($punishType)
-    {
-        return $this->withPunishType($punishType);
-    }
-
-    /**
      * @param string $punishType
      *
      * @return $this
@@ -215,18 +116,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
         $this->options['query']['PunishType'] = $punishType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGmtCreate() instead.
-     *
-     * @param string $gmtCreate
-     *
-     * @return $this
-     */
-    public function setGmtCreate($gmtCreate)
-    {
-        return $this->withGmtCreate($gmtCreate);
     }
 
     /**
@@ -243,18 +132,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDstIP() instead.
-     *
-     * @param string $dstIP
-     *
-     * @return $this
-     */
-    public function setDstIP($dstIP)
-    {
-        return $this->withDstIP($dstIP);
-    }
-
-    /**
      * @param string $dstIP
      *
      * @return $this
@@ -268,18 +145,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -290,18 +155,6 @@ class CreateCpmcPunishFeedBack extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

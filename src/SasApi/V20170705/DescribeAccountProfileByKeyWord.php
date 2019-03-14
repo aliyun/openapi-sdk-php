@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAccountProfileByKeyWord
+ * Api DescribeAccountProfileByKeyWord
  *
  * @method string getSourceIp()
  * @method string getKeyword()
  */
-class DescribeAccountProfileByKeyWord extends RpcRequest
+class DescribeAccountProfileByKeyWord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sas-api';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAccountProfileByKeyWord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -56,18 +29,6 @@ class DescribeAccountProfileByKeyWord extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyword() instead.
-     *
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function setKeyword($keyword)
-    {
-        return $this->withKeyword($keyword);
     }
 
     /**

@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryDomainRealNameVerificationInfo
+ * Api QueryDomainRealNameVerificationInfo
  *
  * @method string getFetchImage()
  * @method string getUserClientIp()
  * @method string getDomainName()
  * @method string getLang()
  */
-class QueryDomainRealNameVerificationInfo extends RpcRequest
+class QueryDomainRealNameVerificationInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryDomainRealNameVerificationInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFetchImage() instead.
-     *
-     * @param string $fetchImage
-     *
-     * @return $this
-     */
-    public function setFetchImage($fetchImage)
-    {
-        return $this->withFetchImage($fetchImage);
-    }
 
     /**
      * @param string $fetchImage
@@ -58,18 +31,6 @@ class QueryDomainRealNameVerificationInfo extends RpcRequest
         $this->options['query']['FetchImage'] = $fetchImage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -86,18 +47,6 @@ class QueryDomainRealNameVerificationInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -108,18 +57,6 @@ class QueryDomainRealNameVerificationInfo extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateScalingConfiguration
+ * Api CreateScalingConfiguration
  *
  * @method string getImageId()
  * @method string getMemory()
@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getSpotPriceLimit()
  * @method string getSystemDiskCategory()
  * @method string getUserData()
+ * @method string getResourceGroupId()
  * @method string getHostName()
  * @method string getPassword()
  * @method string getPasswordInherit()
@@ -40,45 +41,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInternetChargeType()
  * @method string getInternetMaxBandwidthIn()
  */
-class CreateScalingConfiguration extends RpcRequest
+class CreateScalingConfiguration extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateScalingConfiguration';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
 
     /**
      * @param string $imageId
@@ -91,18 +62,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMemory() instead.
-     *
-     * @param string $memory
-     *
-     * @return $this
-     */
-    public function setMemory($memory)
-    {
-        return $this->withMemory($memory);
     }
 
     /**
@@ -119,18 +78,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -141,28 +88,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceTypes() instead.
-     *
-     * @return array
-     */
-    public function getInstanceTypess()
-    {
-        return $this->getInstanceTypes();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceTypes() instead.
-     *
-     * @param array $instanceTypess
-     *
-     * @return $this
-     */
-    public function setInstanceTypess(array $instanceTypess)
-    {
-        return $this->withInstanceTypes($instanceTypess);
     }
 
     /**
@@ -181,18 +106,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
-    }
-
-    /**
      * @param string $ioOptimized
      *
      * @return $this
@@ -203,18 +116,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['IoOptimized'] = $ioOptimized;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -231,18 +132,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
-    }
-
-    /**
      * @param string $internetMaxBandwidthOut
      *
      * @return $this
@@ -253,18 +142,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityEnhancementStrategy() instead.
-     *
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        return $this->withSecurityEnhancementStrategy($securityEnhancementStrategy);
     }
 
     /**
@@ -281,18 +158,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
-    }
-
-    /**
      * @param string $keyPairName
      *
      * @return $this
@@ -303,28 +168,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['KeyPairName'] = $keyPairName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSpotPriceLimit() instead.
-     *
-     * @return array
-     */
-    public function getSpotPriceLimits()
-    {
-        return $this->getSpotPriceLimit();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpotPriceLimit() instead.
-     *
-     * @param array $spotPriceLimits
-     *
-     * @return $this
-     */
-    public function setSpotPriceLimits(array $spotPriceLimits)
-    {
-        return $this->withSpotPriceLimit($spotPriceLimits);
     }
 
     /**
@@ -344,18 +187,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
-    }
-
-    /**
      * @param string $systemDiskCategory
      *
      * @return $this
@@ -366,18 +197,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['SystemDisk.Category'] = $systemDiskCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
     }
 
     /**
@@ -394,15 +213,16 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
+     * @param string $resourceGroupId
      *
      * @return $this
      */
-    public function setHostName($hostName)
+    public function withResourceGroupId($resourceGroupId)
     {
-        return $this->withHostName($hostName);
+        $this->data['ResourceGroupId'] = $resourceGroupId;
+        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
+
+        return $this;
     }
 
     /**
@@ -419,18 +239,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
-
-    /**
      * @param string $password
      *
      * @return $this
@@ -441,18 +249,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPasswordInherit() instead.
-     *
-     * @param string $passwordInherit
-     *
-     * @return $this
-     */
-    public function setPasswordInherit($passwordInherit)
-    {
-        return $this->withPasswordInherit($passwordInherit);
     }
 
     /**
@@ -469,18 +265,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setImageName($imageName)
-    {
-        return $this->withImageName($imageName);
-    }
-
-    /**
      * @param string $imageName
      *
      * @return $this
@@ -491,18 +275,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['ImageName'] = $imageName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -519,18 +291,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetId() instead.
-     *
-     * @param string $deploymentSetId
-     *
-     * @return $this
-     */
-    public function setDeploymentSetId($deploymentSetId)
-    {
-        return $this->withDeploymentSetId($deploymentSetId);
-    }
-
-    /**
      * @param string $deploymentSetId
      *
      * @return $this
@@ -541,18 +301,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['DeploymentSetId'] = $deploymentSetId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -569,18 +317,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -591,18 +327,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCpu() instead.
-     *
-     * @param string $cpu
-     *
-     * @return $this
-     */
-    public function setCpu($cpu)
-    {
-        return $this->withCpu($cpu);
     }
 
     /**
@@ -619,18 +343,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRamRoleName() instead.
-     *
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function setRamRoleName($ramRoleName)
-    {
-        return $this->withRamRoleName($ramRoleName);
-    }
-
-    /**
      * @param string $ramRoleName
      *
      * @return $this
@@ -644,18 +356,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -666,28 +366,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDataDisk() instead.
-     *
-     * @return array
-     */
-    public function getDataDisks()
-    {
-        return $this->getDataDisk();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk() instead.
-     *
-     * @param array $dataDisks
-     *
-     * @return $this
-     */
-    public function setDataDisks(array $dataDisks)
-    {
-        return $this->withDataDisk($dataDisks);
     }
 
     /**
@@ -710,18 +388,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingConfigurationName() instead.
-     *
-     * @param string $scalingConfigurationName
-     *
-     * @return $this
-     */
-    public function setScalingConfigurationName($scalingConfigurationName)
-    {
-        return $this->withScalingConfigurationName($scalingConfigurationName);
-    }
-
-    /**
      * @param string $scalingConfigurationName
      *
      * @return $this
@@ -732,18 +398,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['ScalingConfigurationName'] = $scalingConfigurationName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -760,18 +414,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpotStrategy() instead.
-     *
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function setSpotStrategy($spotStrategy)
-    {
-        return $this->withSpotStrategy($spotStrategy);
-    }
-
-    /**
      * @param string $spotStrategy
      *
      * @return $this
@@ -782,18 +424,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['SpotStrategy'] = $spotStrategy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight() instead.
-     *
-     * @param string $loadBalancerWeight
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight($loadBalancerWeight)
-    {
-        return $this->withLoadBalancerWeight($loadBalancerWeight);
     }
 
     /**
@@ -810,18 +440,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
-
-    /**
      * @param string $instanceName
      *
      * @return $this
@@ -832,18 +450,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['InstanceName'] = $instanceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
     }
 
     /**
@@ -860,18 +466,6 @@ class CreateScalingConfiguration extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -882,18 +476,6 @@ class CreateScalingConfiguration extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthIn() instead.
-     *
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        return $this->withInternetMaxBandwidthIn($internetMaxBandwidthIn);
     }
 
     /**

@@ -53,6 +53,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeHealthCheckDiagnoseResult describeHealthCheckDiagnoseResult(array $options = [])
  * @method DescribeHealthStatus describeHealthStatus(array $options = [])
  * @method DescribeIdleInstances describeIdleInstances(array $options = [])
+ * @method DescribeIdleInstancesForGlobal describeIdleInstancesForGlobal(array $options = [])
  * @method DescribeListenerAccessControlAttribute describeListenerAccessControlAttribute(array $options = [])
  * @method DescribeLoadBalancerAttribute describeLoadBalancerAttribute(array $options = [])
  * @method DescribeLoadBalancerAutoReleaseTime describeLoadBalancerAutoReleaseTime(array $options = [])

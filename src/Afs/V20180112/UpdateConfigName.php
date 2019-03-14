@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateConfigName
+ * Api UpdateConfigName
  *
  * @method string getSourceIp()
  * @method string getConfigName()
  * @method string getRefExtId()
  * @method string getLang()
  */
-class UpdateConfigName extends RpcRequest
+class UpdateConfigName extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'afs';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateConfigName';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -58,18 +31,6 @@ class UpdateConfigName extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigName() instead.
-     *
-     * @param string $configName
-     *
-     * @return $this
-     */
-    public function setConfigName($configName)
-    {
-        return $this->withConfigName($configName);
     }
 
     /**
@@ -86,18 +47,6 @@ class UpdateConfigName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRefExtId() instead.
-     *
-     * @param string $refExtId
-     *
-     * @return $this
-     */
-    public function setRefExtId($refExtId)
-    {
-        return $this->withRefExtId($refExtId);
-    }
-
-    /**
      * @param string $refExtId
      *
      * @return $this
@@ -108,18 +57,6 @@ class UpdateConfigName extends RpcRequest
         $this->options['query']['RefExtId'] = $refExtId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

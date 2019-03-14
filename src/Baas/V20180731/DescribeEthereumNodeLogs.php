@@ -2,36 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeEthereumNodeLogs
+ * Api DescribeEthereumNodeLogs
  *
  * @method string getLines()
  * @method string getNodeId()
  * @method string getTarget()
  */
-class DescribeEthereumNodeLogs extends RpcRequest
+class DescribeEthereumNodeLogs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeEthereumNodeLogs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

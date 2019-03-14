@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserBusinessStatus
+ * Api DescribeUserBusinessStatus
  *
  * @method string getUid()
  * @method string getPassword()
  * @method string getServiceCode()
  * @method string getCallerBid()
  */
-class DescribeUserBusinessStatus extends RpcRequest
+class DescribeUserBusinessStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms-inner';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserBusinessStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -58,18 +31,6 @@ class DescribeUserBusinessStatus extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -86,18 +47,6 @@ class DescribeUserBusinessStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
-    }
-
-    /**
      * @param string $serviceCode
      *
      * @return $this
@@ -108,18 +57,6 @@ class DescribeUserBusinessStatus extends RpcRequest
         $this->options['query']['ServiceCode'] = $serviceCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerBid() instead.
-     *
-     * @param string $callerBid
-     *
-     * @return $this
-     */
-    public function setcallerBid($callerBid)
-    {
-        return $this->withCallerBid($callerBid);
     }
 
     /**

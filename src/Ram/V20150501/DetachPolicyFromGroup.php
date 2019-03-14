@@ -2,55 +2,24 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DetachPolicyFromGroup
+ * Api DetachPolicyFromGroup
  *
  * @method string getPolicyType()
  * @method string getPolicyName()
  * @method string getGroupName()
  */
-class DetachPolicyFromGroup extends RpcRequest
+class DetachPolicyFromGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ram';
 
-    /**
-     * @var string
-     */
     public $version = '2015-05-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DetachPolicyFromGroup';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicyType() instead.
-     *
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function setPolicyType($policyType)
-    {
-        return $this->withPolicyType($policyType);
-    }
 
     /**
      * @param string $policyType
@@ -66,18 +35,6 @@ class DetachPolicyFromGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPolicyName() instead.
-     *
-     * @param string $policyName
-     *
-     * @return $this
-     */
-    public function setPolicyName($policyName)
-    {
-        return $this->withPolicyName($policyName);
-    }
-
-    /**
      * @param string $policyName
      *
      * @return $this
@@ -88,18 +45,6 @@ class DetachPolicyFromGroup extends RpcRequest
         $this->options['query']['PolicyName'] = $policyName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
     }
 
     /**

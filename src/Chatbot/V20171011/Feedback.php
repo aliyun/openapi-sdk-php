@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of Feedback
+ * Api Feedback
  *
  * @method string getFeedback()
  * @method string getInstanceId()
  * @method string getMessageId()
  * @method string getSessionId()
  */
-class Feedback extends RpcRequest
+class Feedback extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'Feedback';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFeedback() instead.
-     *
-     * @param string $feedback
-     *
-     * @return $this
-     */
-    public function setFeedback($feedback)
-    {
-        return $this->withFeedback($feedback);
-    }
 
     /**
      * @param string $feedback
@@ -63,18 +33,6 @@ class Feedback extends RpcRequest
         $this->options['query']['Feedback'] = $feedback;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -91,18 +49,6 @@ class Feedback extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageId() instead.
-     *
-     * @param string $messageId
-     *
-     * @return $this
-     */
-    public function setMessageId($messageId)
-    {
-        return $this->withMessageId($messageId);
-    }
-
-    /**
      * @param string $messageId
      *
      * @return $this
@@ -113,18 +59,6 @@ class Feedback extends RpcRequest
         $this->options['query']['MessageId'] = $messageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
     }
 
     /**

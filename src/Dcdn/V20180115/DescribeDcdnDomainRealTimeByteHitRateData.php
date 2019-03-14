@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnDomainRealTimeByteHitRateData
+ * Api DescribeDcdnDomainRealTimeByteHitRateData
  *
  * @method string getStartTime()
  * @method string getDomainName()
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeDcdnDomainRealTimeByteHitRateData extends RpcRequest
+class DescribeDcdnDomainRealTimeByteHitRateData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnDomainRealTimeByteHitRateData';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
 
     /**

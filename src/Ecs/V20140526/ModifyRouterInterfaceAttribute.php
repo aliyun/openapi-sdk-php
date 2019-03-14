@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyRouterInterfaceAttribute
+ * Api ModifyRouterInterfaceAttribute
  *
  * @method string getOppositeRouterId()
  * @method string getResourceOwnerId()
@@ -20,40 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOppositeRouterType()
  * @method string getOppositeInterfaceId()
  */
-class ModifyRouterInterfaceAttribute extends RpcRequest
+class ModifyRouterInterfaceAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyRouterInterfaceAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withOppositeRouterId() instead.
-     *
-     * @param string $oppositeRouterId
-     *
-     * @return $this
-     */
-    public function setOppositeRouterId($oppositeRouterId)
-    {
-        return $this->withOppositeRouterId($oppositeRouterId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $oppositeRouterId
@@ -66,18 +41,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['OppositeRouterId'] = $oppositeRouterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +57,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +67,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -144,18 +83,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckTargetIp() instead.
-     *
-     * @param string $healthCheckTargetIp
-     *
-     * @return $this
-     */
-    public function setHealthCheckTargetIp($healthCheckTargetIp)
-    {
-        return $this->withHealthCheckTargetIp($healthCheckTargetIp);
-    }
-
-    /**
      * @param string $healthCheckTargetIp
      *
      * @return $this
@@ -166,18 +93,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['HealthCheckTargetIp'] = $healthCheckTargetIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -194,18 +109,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRouterInterfaceId() instead.
-     *
-     * @param string $routerInterfaceId
-     *
-     * @return $this
-     */
-    public function setRouterInterfaceId($routerInterfaceId)
-    {
-        return $this->withRouterInterfaceId($routerInterfaceId);
-    }
-
-    /**
      * @param string $routerInterfaceId
      *
      * @return $this
@@ -216,18 +119,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['RouterInterfaceId'] = $routerInterfaceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOppositeInterfaceOwnerId() instead.
-     *
-     * @param string $oppositeInterfaceOwnerId
-     *
-     * @return $this
-     */
-    public function setOppositeInterfaceOwnerId($oppositeInterfaceOwnerId)
-    {
-        return $this->withOppositeInterfaceOwnerId($oppositeInterfaceOwnerId);
     }
 
     /**
@@ -244,18 +135,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckSourceIp() instead.
-     *
-     * @param string $healthCheckSourceIp
-     *
-     * @return $this
-     */
-    public function setHealthCheckSourceIp($healthCheckSourceIp)
-    {
-        return $this->withHealthCheckSourceIp($healthCheckSourceIp);
-    }
-
-    /**
      * @param string $healthCheckSourceIp
      *
      * @return $this
@@ -266,18 +145,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['HealthCheckSourceIp'] = $healthCheckSourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -294,18 +161,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOppositeRouterType() instead.
-     *
-     * @param string $oppositeRouterType
-     *
-     * @return $this
-     */
-    public function setOppositeRouterType($oppositeRouterType)
-    {
-        return $this->withOppositeRouterType($oppositeRouterType);
-    }
-
-    /**
      * @param string $oppositeRouterType
      *
      * @return $this
@@ -316,18 +171,6 @@ class ModifyRouterInterfaceAttribute extends RpcRequest
         $this->options['query']['OppositeRouterType'] = $oppositeRouterType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOppositeInterfaceId() instead.
-     *
-     * @param string $oppositeInterfaceId
-     *
-     * @return $this
-     */
-    public function setOppositeInterfaceId($oppositeInterfaceId)
-    {
-        return $this->withOppositeInterfaceId($oppositeInterfaceId);
     }
 
     /**

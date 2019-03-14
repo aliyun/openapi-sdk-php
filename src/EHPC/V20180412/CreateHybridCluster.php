@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateHybridCluster
+ * Api CreateHybridCluster
  *
  * @method string getEhpcVersion()
  * @method string getSecurityGroupId()
@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOnPremiseVolumeRemotePath()
  * @method string getJobQueue()
  * @method string getVolumeType()
+ * @method string getResourceGroupId()
  * @method string getPassword()
  * @method string getOnPremiseVolumeMountPoint()
  * @method string getOnPremiseVolumeProtocol()
@@ -36,40 +37,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getZoneId()
  * @method string getLocation()
  */
-class CreateHybridCluster extends RpcRequest
+class CreateHybridCluster extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateHybridCluster';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEhpcVersion() instead.
-     *
-     * @param string $ehpcVersion
-     *
-     * @return $this
-     */
-    public function setEhpcVersion($ehpcVersion)
-    {
-        return $this->withEhpcVersion($ehpcVersion);
-    }
 
     /**
      * @param string $ehpcVersion
@@ -82,18 +56,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['EhpcVersion'] = $ehpcVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -110,18 +72,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -132,18 +82,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
     }
 
     /**
@@ -160,18 +98,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupName() instead.
-     *
-     * @param string $securityGroupName
-     *
-     * @return $this
-     */
-    public function setSecurityGroupName($securityGroupName)
-    {
-        return $this->withSecurityGroupName($securityGroupName);
-    }
-
-    /**
      * @param string $securityGroupName
      *
      * @return $this
@@ -182,18 +108,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['SecurityGroupName'] = $securityGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEcsOrderComputeInstanceType() instead.
-     *
-     * @param string $ecsOrderComputeInstanceType
-     *
-     * @return $this
-     */
-    public function setEcsOrderComputeInstanceType($ecsOrderComputeInstanceType)
-    {
-        return $this->withEcsOrderComputeInstanceType($ecsOrderComputeInstanceType);
     }
 
     /**
@@ -210,18 +124,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnPremiseVolumeRemotePath() instead.
-     *
-     * @param string $onPremiseVolumeRemotePath
-     *
-     * @return $this
-     */
-    public function setOnPremiseVolumeRemotePath($onPremiseVolumeRemotePath)
-    {
-        return $this->withOnPremiseVolumeRemotePath($onPremiseVolumeRemotePath);
-    }
-
-    /**
      * @param string $onPremiseVolumeRemotePath
      *
      * @return $this
@@ -232,18 +134,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['OnPremiseVolumeRemotePath'] = $onPremiseVolumeRemotePath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobQueue() instead.
-     *
-     * @param string $jobQueue
-     *
-     * @return $this
-     */
-    public function setJobQueue($jobQueue)
-    {
-        return $this->withJobQueue($jobQueue);
     }
 
     /**
@@ -260,18 +150,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolumeType() instead.
-     *
-     * @param string $volumeType
-     *
-     * @return $this
-     */
-    public function setVolumeType($volumeType)
-    {
-        return $this->withVolumeType($volumeType);
-    }
-
-    /**
      * @param string $volumeType
      *
      * @return $this
@@ -285,15 +163,16 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
+     * @param string $resourceGroupId
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function withResourceGroupId($resourceGroupId)
     {
-        return $this->withPassword($password);
+        $this->data['ResourceGroupId'] = $resourceGroupId;
+        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
+
+        return $this;
     }
 
     /**
@@ -310,18 +189,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnPremiseVolumeMountPoint() instead.
-     *
-     * @param string $onPremiseVolumeMountPoint
-     *
-     * @return $this
-     */
-    public function setOnPremiseVolumeMountPoint($onPremiseVolumeMountPoint)
-    {
-        return $this->withOnPremiseVolumeMountPoint($onPremiseVolumeMountPoint);
-    }
-
-    /**
      * @param string $onPremiseVolumeMountPoint
      *
      * @return $this
@@ -332,18 +199,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['OnPremiseVolumeMountPoint'] = $onPremiseVolumeMountPoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnPremiseVolumeProtocol() instead.
-     *
-     * @param string $onPremiseVolumeProtocol
-     *
-     * @return $this
-     */
-    public function setOnPremiseVolumeProtocol($onPremiseVolumeProtocol)
-    {
-        return $this->withOnPremiseVolumeProtocol($onPremiseVolumeProtocol);
     }
 
     /**
@@ -360,18 +215,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolumeProtocol() instead.
-     *
-     * @param string $volumeProtocol
-     *
-     * @return $this
-     */
-    public function setVolumeProtocol($volumeProtocol)
-    {
-        return $this->withVolumeProtocol($volumeProtocol);
-    }
-
-    /**
      * @param string $volumeProtocol
      *
      * @return $this
@@ -382,18 +225,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['VolumeProtocol'] = $volumeProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnPremiseVolumeLocalPath() instead.
-     *
-     * @param string $onPremiseVolumeLocalPath
-     *
-     * @return $this
-     */
-    public function setOnPremiseVolumeLocalPath($onPremiseVolumeLocalPath)
-    {
-        return $this->withOnPremiseVolumeLocalPath($onPremiseVolumeLocalPath);
     }
 
     /**
@@ -410,18 +241,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientVersion() instead.
-     *
-     * @param string $clientVersion
-     *
-     * @return $this
-     */
-    public function setClientVersion($clientVersion)
-    {
-        return $this->withClientVersion($clientVersion);
-    }
-
-    /**
      * @param string $clientVersion
      *
      * @return $this
@@ -432,18 +251,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['ClientVersion'] = $clientVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOsTag() instead.
-     *
-     * @param string $osTag
-     *
-     * @return $this
-     */
-    public function setOsTag($osTag)
-    {
-        return $this->withOsTag($osTag);
     }
 
     /**
@@ -460,18 +267,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemoteDirectory() instead.
-     *
-     * @param string $remoteDirectory
-     *
-     * @return $this
-     */
-    public function setRemoteDirectory($remoteDirectory)
-    {
-        return $this->withRemoteDirectory($remoteDirectory);
-    }
-
-    /**
      * @param string $remoteDirectory
      *
      * @return $this
@@ -482,28 +277,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['RemoteDirectory'] = $remoteDirectory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPostInstallScript() instead.
-     *
-     * @return array
-     */
-    public function getPostInstallScripts()
-    {
-        return $this->getPostInstallScript();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostInstallScript() instead.
-     *
-     * @param array $postInstallScripts
-     *
-     * @return $this
-     */
-    public function setPostInstallScripts(array $postInstallScripts)
-    {
-        return $this->withPostInstallScript($postInstallScripts);
     }
 
     /**
@@ -523,18 +296,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -548,18 +309,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodes() instead.
-     *
-     * @param string $nodes
-     *
-     * @return $this
-     */
-    public function setNodes($nodes)
-    {
-        return $this->withNodes($nodes);
-    }
-
-    /**
      * @param string $nodes
      *
      * @return $this
@@ -570,28 +319,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['Nodes'] = $nodes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getApplication() instead.
-     *
-     * @return array
-     */
-    public function getApplications()
-    {
-        return $this->getApplication();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplication() instead.
-     *
-     * @param array $applications
-     *
-     * @return $this
-     */
-    public function setApplications(array $applications)
-    {
-        return $this->withApplication($applications);
     }
 
     /**
@@ -610,18 +337,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
-
-    /**
      * @param string $domain
      *
      * @return $this
@@ -632,18 +347,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['Domain'] = $domain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -660,18 +363,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -682,18 +373,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVolumeId() instead.
-     *
-     * @param string $volumeId
-     *
-     * @return $this
-     */
-    public function setVolumeId($volumeId)
-    {
-        return $this->withVolumeId($volumeId);
     }
 
     /**
@@ -710,18 +389,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolumeMountpoint() instead.
-     *
-     * @param string $volumeMountpoint
-     *
-     * @return $this
-     */
-    public function setVolumeMountpoint($volumeMountpoint)
-    {
-        return $this->withVolumeMountpoint($volumeMountpoint);
-    }
-
-    /**
      * @param string $volumeMountpoint
      *
      * @return $this
@@ -735,18 +402,6 @@ class CreateHybridCluster extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -757,18 +412,6 @@ class CreateHybridCluster extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**

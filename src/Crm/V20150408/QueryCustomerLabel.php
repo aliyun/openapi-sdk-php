@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryCustomerLabel
+ * Api QueryCustomerLabel
  *
  * @method string getLabelSeries()
  */
-class QueryCustomerLabel extends RpcRequest
+class QueryCustomerLabel extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Crm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-04-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryCustomerLabel';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
+    public $serviceCode = 'crm';
 
     /**
      * @param string $labelSeries

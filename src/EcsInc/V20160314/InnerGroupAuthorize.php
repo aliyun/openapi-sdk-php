@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerGroupAuthorize
+ * Api InnerGroupAuthorize
  *
  * @method string getResourceOwnerId()
  * @method string getChannel()
@@ -31,45 +31,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBid()
  * @method string getGroupNo()
  */
-class InnerGroupAuthorize extends RpcRequest
+class InnerGroupAuthorize extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerGroupAuthorize';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -82,18 +52,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -110,18 +68,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNic() instead.
-     *
-     * @param string $nic
-     *
-     * @return $this
-     */
-    public function setnic($nic)
-    {
-        return $this->withNic($nic);
-    }
-
-    /**
      * @param string $nic
      *
      * @return $this
@@ -132,18 +78,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['nic'] = $nic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcInstanceId() instead.
-     *
-     * @param string $vpcInstanceId
-     *
-     * @return $this
-     */
-    public function setvpcInstanceId($vpcInstanceId)
-    {
-        return $this->withVpcInstanceId($vpcInstanceId);
     }
 
     /**
@@ -160,18 +94,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -182,18 +104,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -210,18 +120,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -232,18 +130,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicy() instead.
-     *
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function setpolicy($policy)
-    {
-        return $this->withPolicy($policy);
     }
 
     /**
@@ -260,18 +146,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupNo() instead.
-     *
-     * @param string $sourceGroupNo
-     *
-     * @return $this
-     */
-    public function setsourceGroupNo($sourceGroupNo)
-    {
-        return $this->withSourceGroupNo($sourceGroupNo);
-    }
-
-    /**
      * @param string $sourceGroupNo
      *
      * @return $this
@@ -282,18 +156,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['sourceGroupNo'] = $sourceGroupNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPortRange() instead.
-     *
-     * @param string $portRange
-     *
-     * @return $this
-     */
-    public function setportRange($portRange)
-    {
-        return $this->withPortRange($portRange);
     }
 
     /**
@@ -310,18 +172,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -332,18 +182,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setlevel($level)
-    {
-        return $this->withLevel($level);
     }
 
     /**
@@ -360,18 +198,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setipProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
-    }
-
-    /**
      * @param string $ipProtocol
      *
      * @return $this
@@ -382,18 +208,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['ipProtocol'] = $ipProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -410,18 +224,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceCidrIp() instead.
-     *
-     * @param string $sourceCidrIp
-     *
-     * @return $this
-     */
-    public function setsourceCidrIp($sourceCidrIp)
-    {
-        return $this->withSourceCidrIp($sourceCidrIp);
-    }
-
-    /**
      * @param string $sourceCidrIp
      *
      * @return $this
@@ -432,18 +234,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['sourceCidrIp'] = $sourceCidrIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -460,18 +250,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestCidrIp() instead.
-     *
-     * @param string $destCidrIp
-     *
-     * @return $this
-     */
-    public function setdestCidrIp($destCidrIp)
-    {
-        return $this->withDestCidrIp($destCidrIp);
-    }
-
-    /**
      * @param string $destCidrIp
      *
      * @return $this
@@ -482,18 +260,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['destCidrIp'] = $destCidrIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -510,18 +276,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupOwnerAliUid() instead.
-     *
-     * @param string $sourceGroupOwnerAliUid
-     *
-     * @return $this
-     */
-    public function setsourceGroupOwnerAliUid($sourceGroupOwnerAliUid)
-    {
-        return $this->withSourceGroupOwnerAliUid($sourceGroupOwnerAliUid);
-    }
-
-    /**
      * @param string $sourceGroupOwnerAliUid
      *
      * @return $this
@@ -532,18 +286,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['sourceGroupOwnerAliUid'] = $sourceGroupOwnerAliUid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAsync() instead.
-     *
-     * @param string $async
-     *
-     * @return $this
-     */
-    public function setasync($async)
-    {
-        return $this->withAsync($async);
     }
 
     /**
@@ -560,18 +302,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupId() instead.
-     *
-     * @param string $sourceGroupId
-     *
-     * @return $this
-     */
-    public function setsourceGroupId($sourceGroupId)
-    {
-        return $this->withSourceGroupId($sourceGroupId);
-    }
-
-    /**
      * @param string $sourceGroupId
      *
      * @return $this
@@ -585,18 +315,6 @@ class InnerGroupAuthorize extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -607,18 +325,6 @@ class InnerGroupAuthorize extends RpcRequest
         $this->options['query']['bid'] = $bid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupNo() instead.
-     *
-     * @param string $groupNo
-     *
-     * @return $this
-     */
-    public function setgroupNo($groupNo)
-    {
-        return $this->withGroupNo($groupNo);
     }
 
     /**

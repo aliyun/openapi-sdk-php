@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateMonitoringTemplate
+ * Api UpdateMonitoringTemplate
  *
  * @method string getEventRuleTemplatesJson()
  * @method string getName()
@@ -14,40 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getId()
  * @method string getAlertTemplatesJson()
  */
-class UpdateMonitoringTemplate extends RpcRequest
+class UpdateMonitoringTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateMonitoringTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventRuleTemplatesJson() instead.
-     *
-     * @param string $eventRuleTemplatesJson
-     *
-     * @return $this
-     */
-    public function setEventRuleTemplatesJson($eventRuleTemplatesJson)
-    {
-        return $this->withEventRuleTemplatesJson($eventRuleTemplatesJson);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $eventRuleTemplatesJson
@@ -60,18 +35,6 @@ class UpdateMonitoringTemplate extends RpcRequest
         $this->options['query']['EventRuleTemplatesJson'] = $eventRuleTemplatesJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -88,18 +51,6 @@ class UpdateMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRestVersion() instead.
-     *
-     * @param string $restVersion
-     *
-     * @return $this
-     */
-    public function setRestVersion($restVersion)
-    {
-        return $this->withRestVersion($restVersion);
-    }
-
-    /**
      * @param string $restVersion
      *
      * @return $this
@@ -110,18 +61,6 @@ class UpdateMonitoringTemplate extends RpcRequest
         $this->options['query']['RestVersion'] = $restVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -138,18 +77,6 @@ class UpdateMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -160,18 +87,6 @@ class UpdateMonitoringTemplate extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertTemplatesJson() instead.
-     *
-     * @param string $alertTemplatesJson
-     *
-     * @return $this
-     */
-    public function setAlertTemplatesJson($alertTemplatesJson)
-    {
-        return $this->withAlertTemplatesJson($alertTemplatesJson);
     }
 
     /**

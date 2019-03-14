@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteTieringJob
+ * Api DeleteTieringJob
  *
  * @method string getVolume()
  * @method string getName()
  */
-class DeleteTieringJob extends RpcRequest
+class DeleteTieringJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteTieringJob';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
-    }
 
     /**
      * @param string $volume
@@ -56,18 +29,6 @@ class DeleteTieringJob extends RpcRequest
         $this->options['query']['Volume'] = $volume;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

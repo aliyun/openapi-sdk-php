@@ -2,13 +2,14 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateRule
+ * Api UpdateRule
  *
  * @method string getSelect()
  * @method string getRuleDesc()
+ * @method string getIotInstanceId()
  * @method string getName()
  * @method string getWhere()
  * @method string getRuleId()
@@ -16,40 +17,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTopicType()
  * @method string getShortTopic()
  */
-class UpdateRule extends RpcRequest
+class UpdateRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSelect() instead.
-     *
-     * @param string $select
-     *
-     * @return $this
-     */
-    public function setSelect($select)
-    {
-        return $this->withSelect($select);
-    }
 
     /**
      * @param string $select
@@ -62,18 +36,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['Select'] = $select;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleDesc() instead.
-     *
-     * @param string $ruleDesc
-     *
-     * @return $this
-     */
-    public function setRuleDesc($ruleDesc)
-    {
-        return $this->withRuleDesc($ruleDesc);
     }
 
     /**
@@ -90,15 +52,16 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setName($name)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withName($name);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -115,18 +78,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWhere() instead.
-     *
-     * @param string $where
-     *
-     * @return $this
-     */
-    public function setWhere($where)
-    {
-        return $this->withWhere($where);
-    }
-
-    /**
      * @param string $where
      *
      * @return $this
@@ -137,18 +88,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['Where'] = $where;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
-     *
-     * @return $this
-     */
-    public function setRuleId($ruleId)
-    {
-        return $this->withRuleId($ruleId);
     }
 
     /**
@@ -165,18 +104,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -190,18 +117,6 @@ class UpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicType() instead.
-     *
-     * @param string $topicType
-     *
-     * @return $this
-     */
-    public function setTopicType($topicType)
-    {
-        return $this->withTopicType($topicType);
-    }
-
-    /**
      * @param string $topicType
      *
      * @return $this
@@ -212,18 +127,6 @@ class UpdateRule extends RpcRequest
         $this->options['query']['TopicType'] = $topicType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShortTopic() instead.
-     *
-     * @param string $shortTopic
-     *
-     * @return $this
-     */
-    public function setShortTopic($shortTopic)
-    {
-        return $this->withShortTopic($shortTopic);
     }
 
     /**

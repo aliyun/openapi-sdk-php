@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchDeleteDcdnDomainConfig
+ * Api BatchDeleteDcdnDomainConfig
  *
  * @method string getFunctionNames()
  * @method string getSecurityToken()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class BatchDeleteDcdnDomainConfig extends RpcRequest
+class BatchDeleteDcdnDomainConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchDeleteDcdnDomainConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFunctionNames() instead.
-     *
-     * @param string $functionNames
-     *
-     * @return $this
-     */
-    public function setFunctionNames($functionNames)
-    {
-        return $this->withFunctionNames($functionNames);
-    }
 
     /**
      * @param string $functionNames
@@ -64,18 +34,6 @@ class BatchDeleteDcdnDomainConfig extends RpcRequest
         $this->options['query']['FunctionNames'] = $functionNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -92,18 +50,6 @@ class BatchDeleteDcdnDomainConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainNames() instead.
-     *
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames($domainNames)
-    {
-        return $this->withDomainNames($domainNames);
-    }
-
-    /**
      * @param string $domainNames
      *
      * @return $this
@@ -117,18 +63,6 @@ class BatchDeleteDcdnDomainConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -139,18 +73,6 @@ class BatchDeleteDcdnDomainConfig extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddLiveDomainMapping
+ * Api AddLiveDomainMapping
  *
  * @method string getPullDomain()
  * @method string getSecurityToken()
  * @method string getPushDomain()
  * @method string getOwnerId()
  */
-class AddLiveDomainMapping extends RpcRequest
+class AddLiveDomainMapping extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddLiveDomainMapping';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPullDomain() instead.
-     *
-     * @param string $pullDomain
-     *
-     * @return $this
-     */
-    public function setPullDomain($pullDomain)
-    {
-        return $this->withPullDomain($pullDomain);
-    }
 
     /**
      * @param string $pullDomain
@@ -63,18 +33,6 @@ class AddLiveDomainMapping extends RpcRequest
         $this->options['query']['PullDomain'] = $pullDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -91,18 +49,6 @@ class AddLiveDomainMapping extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPushDomain() instead.
-     *
-     * @param string $pushDomain
-     *
-     * @return $this
-     */
-    public function setPushDomain($pushDomain)
-    {
-        return $this->withPushDomain($pushDomain);
-    }
-
-    /**
      * @param string $pushDomain
      *
      * @return $this
@@ -113,18 +59,6 @@ class AddLiveDomainMapping extends RpcRequest
         $this->options['query']['PushDomain'] = $pushDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

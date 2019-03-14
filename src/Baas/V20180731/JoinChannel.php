@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of JoinChannel
+ * Api JoinChannel
  *
  * @method string getLocation()
  * @method string getDo()
  * @method string getChannelId()
  */
-class JoinChannel extends RpcRequest
+class JoinChannel extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'JoinChannel';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
 
     /**
      * @param string $location
@@ -60,18 +33,6 @@ class JoinChannel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDo() instead.
-     *
-     * @param string $do
-     *
-     * @return $this
-     */
-    public function setDo($do)
-    {
-        return $this->withDo($do);
-    }
-
-    /**
      * @param string $do
      *
      * @return $this
@@ -82,18 +43,6 @@ class JoinChannel extends RpcRequest
         $this->options['query']['Do'] = $do;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

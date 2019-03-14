@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitComplexJob
+ * Api SubmitComplexJob
  *
  * @method string getResourceOwnerId()
  * @method string getTranscodeOutput()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUserData()
  * @method string getComplexConfigs()
  */
-class SubmitComplexJob extends RpcRequest
+class SubmitComplexJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitComplexJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +40,6 @@ class SubmitComplexJob extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTranscodeOutput() instead.
-     *
-     * @param string $transcodeOutput
-     *
-     * @return $this
-     */
-    public function setTranscodeOutput($transcodeOutput)
-    {
-        return $this->withTranscodeOutput($transcodeOutput);
     }
 
     /**
@@ -98,18 +56,6 @@ class SubmitComplexJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -120,18 +66,6 @@ class SubmitComplexJob extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInputs() instead.
-     *
-     * @param string $inputs
-     *
-     * @return $this
-     */
-    public function setInputs($inputs)
-    {
-        return $this->withInputs($inputs);
     }
 
     /**
@@ -148,18 +82,6 @@ class SubmitComplexJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -170,18 +92,6 @@ class SubmitComplexJob extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutputLocation() instead.
-     *
-     * @param string $outputLocation
-     *
-     * @return $this
-     */
-    public function setOutputLocation($outputLocation)
-    {
-        return $this->withOutputLocation($outputLocation);
     }
 
     /**
@@ -198,18 +108,6 @@ class SubmitComplexJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -220,18 +118,6 @@ class SubmitComplexJob extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**
@@ -248,18 +134,6 @@ class SubmitComplexJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputBucket() instead.
-     *
-     * @param string $outputBucket
-     *
-     * @return $this
-     */
-    public function setOutputBucket($outputBucket)
-    {
-        return $this->withOutputBucket($outputBucket);
-    }
-
-    /**
      * @param string $outputBucket
      *
      * @return $this
@@ -273,18 +147,6 @@ class SubmitComplexJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -295,18 +157,6 @@ class SubmitComplexJob extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComplexConfigs() instead.
-     *
-     * @param string $complexConfigs
-     *
-     * @return $this
-     */
-    public function setComplexConfigs($complexConfigs)
-    {
-        return $this->withComplexConfigs($complexConfigs);
     }
 
     /**

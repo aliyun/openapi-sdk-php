@@ -2,42 +2,18 @@
 
 namespace AlibabaCloud\TeslaStream\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetJobTopology
+ * Api GetJobTopology
  *
  * @method string getJobName()
  */
-class GetJobTopology extends RpcRequest
+class GetJobTopology extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaStream';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetJobTopology';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobName() instead.
-     *
-     * @param string $jobName
-     *
-     * @return $this
-     */
-    public function setJobName($jobName)
-    {
-        return $this->withJobName($jobName);
-    }
 
     /**
      * @param string $jobName

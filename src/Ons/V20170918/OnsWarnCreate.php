@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsWarnCreate
+ * Api OnsWarnCreate
  *
  * @method string getPreventCache()
  * @method string getOnsRegionId()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAlertTime()
  * @method string getContacts()
  */
-class OnsWarnCreate extends RpcRequest
+class OnsWarnCreate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsWarnCreate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -65,18 +38,6 @@ class OnsWarnCreate extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -93,18 +54,6 @@ class OnsWarnCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -115,18 +64,6 @@ class OnsWarnCreate extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBlockTime() instead.
-     *
-     * @param string $blockTime
-     *
-     * @return $this
-     */
-    public function setBlockTime($blockTime)
-    {
-        return $this->withBlockTime($blockTime);
     }
 
     /**
@@ -143,18 +80,6 @@ class OnsWarnCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -165,18 +90,6 @@ class OnsWarnCreate extends RpcRequest
         $this->options['query']['Level'] = $level;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsumerId() instead.
-     *
-     * @param string $consumerId
-     *
-     * @return $this
-     */
-    public function setConsumerId($consumerId)
-    {
-        return $this->withConsumerId($consumerId);
     }
 
     /**
@@ -193,18 +106,6 @@ class OnsWarnCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDelayTime() instead.
-     *
-     * @param string $delayTime
-     *
-     * @return $this
-     */
-    public function setDelayTime($delayTime)
-    {
-        return $this->withDelayTime($delayTime);
-    }
-
-    /**
      * @param string $delayTime
      *
      * @return $this
@@ -215,18 +116,6 @@ class OnsWarnCreate extends RpcRequest
         $this->options['query']['DelayTime'] = $delayTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**
@@ -243,18 +132,6 @@ class OnsWarnCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withThreshold() instead.
-     *
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function setThreshold($threshold)
-    {
-        return $this->withThreshold($threshold);
-    }
-
-    /**
      * @param string $threshold
      *
      * @return $this
@@ -268,18 +145,6 @@ class OnsWarnCreate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertTime() instead.
-     *
-     * @param string $alertTime
-     *
-     * @return $this
-     */
-    public function setAlertTime($alertTime)
-    {
-        return $this->withAlertTime($alertTime);
-    }
-
-    /**
      * @param string $alertTime
      *
      * @return $this
@@ -290,18 +155,6 @@ class OnsWarnCreate extends RpcRequest
         $this->options['query']['AlertTime'] = $alertTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContacts() instead.
-     *
-     * @param string $contacts
-     *
-     * @return $this
-     */
-    public function setContacts($contacts)
-    {
-        return $this->withContacts($contacts);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SingleCallByTts
+ * Api SingleCallByTts
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCalledShowNumber()
  * @method string getOutId()
  */
-class SingleCallByTts extends RpcRequest
+class SingleCallByTts extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'SingleCallByTts';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +38,6 @@ class SingleCallByTts extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +54,6 @@ class SingleCallByTts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTtsCode() instead.
-     *
-     * @param string $ttsCode
-     *
-     * @return $this
-     */
-    public function setTtsCode($ttsCode)
-    {
-        return $this->withTtsCode($ttsCode);
-    }
-
-    /**
      * @param string $ttsCode
      *
      * @return $this
@@ -115,18 +64,6 @@ class SingleCallByTts extends RpcRequest
         $this->options['query']['TtsCode'] = $ttsCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlayTimes() instead.
-     *
-     * @param string $playTimes
-     *
-     * @return $this
-     */
-    public function setPlayTimes($playTimes)
-    {
-        return $this->withPlayTimes($playTimes);
     }
 
     /**
@@ -143,18 +80,6 @@ class SingleCallByTts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTtsParam() instead.
-     *
-     * @param string $ttsParam
-     *
-     * @return $this
-     */
-    public function setTtsParam($ttsParam)
-    {
-        return $this->withTtsParam($ttsParam);
-    }
-
-    /**
      * @param string $ttsParam
      *
      * @return $this
@@ -165,18 +90,6 @@ class SingleCallByTts extends RpcRequest
         $this->options['query']['TtsParam'] = $ttsParam;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +106,6 @@ class SingleCallByTts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpeed() instead.
-     *
-     * @param string $speed
-     *
-     * @return $this
-     */
-    public function setSpeed($speed)
-    {
-        return $this->withSpeed($speed);
-    }
-
-    /**
      * @param string $speed
      *
      * @return $this
@@ -215,18 +116,6 @@ class SingleCallByTts extends RpcRequest
         $this->options['query']['Speed'] = $speed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
     }
 
     /**
@@ -243,18 +132,6 @@ class SingleCallByTts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
-    }
-
-    /**
      * @param string $calledNumber
      *
      * @return $this
@@ -268,18 +145,6 @@ class SingleCallByTts extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledShowNumber() instead.
-     *
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function setCalledShowNumber($calledShowNumber)
-    {
-        return $this->withCalledShowNumber($calledShowNumber);
-    }
-
-    /**
      * @param string $calledShowNumber
      *
      * @return $this
@@ -290,18 +155,6 @@ class SingleCallByTts extends RpcRequest
         $this->options['query']['CalledShowNumber'] = $calledShowNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutId() instead.
-     *
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function setOutId($outId)
-    {
-        return $this->withOutId($outId);
     }
 
     /**

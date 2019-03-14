@@ -2,43 +2,26 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RestartContainerGroup
+ * Api RestartContainerGroup
  *
  * @method string getResourceOwnerId()
+ * @method string getClientToken()
  * @method string getContainerGroupId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class RestartContainerGroup extends RpcRequest
+class RestartContainerGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Eci';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'RestartContainerGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'eci';
 
     /**
@@ -50,6 +33,19 @@ class RestartContainerGroup extends RpcRequest
     {
         $this->data['ResourceOwnerId'] = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function withClientToken($clientToken)
+    {
+        $this->data['ClientToken'] = $clientToken;
+        $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
     }

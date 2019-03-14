@@ -2,12 +2,14 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyNodeSpec
+ * Api ModifyNodeSpec
  *
  * @method string getResourceOwnerId()
+ * @method string getAutoPay()
+ * @method string getFromApp()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getNodeStorage()
@@ -19,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getNodeId()
  */
-class ModifyNodeSpec extends RpcRequest
+class ModifyNodeSpec extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyNodeSpec';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,15 +45,29 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $autoPay
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withAutoPay($autoPay)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['AutoPay'] = $autoPay;
+        $this->options['query']['AutoPay'] = $autoPay;
+
+        return $this;
+    }
+
+    /**
+     * @param string $fromApp
+     *
+     * @return $this
+     */
+    public function withFromApp($fromApp)
+    {
+        $this->data['FromApp'] = $fromApp;
+        $this->options['query']['FromApp'] = $fromApp;
+
+        return $this;
     }
 
     /**
@@ -98,18 +84,6 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -120,18 +94,6 @@ class ModifyNodeSpec extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeStorage() instead.
-     *
-     * @param string $nodeStorage
-     *
-     * @return $this
-     */
-    public function setNodeStorage($nodeStorage)
-    {
-        return $this->withNodeStorage($nodeStorage);
     }
 
     /**
@@ -148,18 +110,6 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -170,18 +120,6 @@ class ModifyNodeSpec extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -198,18 +136,6 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeClass() instead.
-     *
-     * @param string $nodeClass
-     *
-     * @return $this
-     */
-    public function setNodeClass($nodeClass)
-    {
-        return $this->withNodeClass($nodeClass);
-    }
-
-    /**
      * @param string $nodeClass
      *
      * @return $this
@@ -220,18 +146,6 @@ class ModifyNodeSpec extends RpcRequest
         $this->options['query']['NodeClass'] = $nodeClass;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -248,18 +162,6 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEffectiveTime() instead.
-     *
-     * @param string $effectiveTime
-     *
-     * @return $this
-     */
-    public function setEffectiveTime($effectiveTime)
-    {
-        return $this->withEffectiveTime($effectiveTime);
-    }
-
-    /**
      * @param string $effectiveTime
      *
      * @return $this
@@ -273,18 +175,6 @@ class ModifyNodeSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -295,18 +185,6 @@ class ModifyNodeSpec extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
     }
 
     /**

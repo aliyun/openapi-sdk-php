@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReplaceSystemDisk
+ * Api ReplaceSystemDisk
  *
  * @method string getResourceOwnerId()
  * @method string getImageId()
@@ -24,40 +24,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUseAdditionalService()
  * @method string getArchitecture()
  */
-class ReplaceSystemDisk extends RpcRequest
+class ReplaceSystemDisk extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReplaceSystemDisk';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +45,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -98,18 +61,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -120,18 +71,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -148,18 +87,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -170,18 +97,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityEnhancementStrategy() instead.
-     *
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        return $this->withSecurityEnhancementStrategy($securityEnhancementStrategy);
     }
 
     /**
@@ -198,18 +113,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
-    }
-
-    /**
      * @param string $keyPairName
      *
      * @return $this
@@ -220,18 +123,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['KeyPairName'] = $keyPairName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -248,18 +139,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlatform() instead.
-     *
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function setPlatform($platform)
-    {
-        return $this->withPlatform($platform);
-    }
-
-    /**
      * @param string $platform
      *
      * @return $this
@@ -270,18 +149,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['Platform'] = $platform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -298,18 +165,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -320,18 +175,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPasswordInherit() instead.
-     *
-     * @param string $passwordInherit
-     *
-     * @return $this
-     */
-    public function setPasswordInherit($passwordInherit)
-    {
-        return $this->withPasswordInherit($passwordInherit);
     }
 
     /**
@@ -348,18 +191,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
-    }
-
-    /**
      * @param string $systemDiskSize
      *
      * @return $this
@@ -370,18 +201,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['SystemDisk.Size'] = $systemDiskSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskId() instead.
-     *
-     * @param string $diskId
-     *
-     * @return $this
-     */
-    public function setDiskId($diskId)
-    {
-        return $this->withDiskId($diskId);
     }
 
     /**
@@ -398,18 +217,6 @@ class ReplaceSystemDisk extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseAdditionalService() instead.
-     *
-     * @param string $useAdditionalService
-     *
-     * @return $this
-     */
-    public function setUseAdditionalService($useAdditionalService)
-    {
-        return $this->withUseAdditionalService($useAdditionalService);
-    }
-
-    /**
      * @param string $useAdditionalService
      *
      * @return $this
@@ -420,18 +227,6 @@ class ReplaceSystemDisk extends RpcRequest
         $this->options['query']['UseAdditionalService'] = $useAdditionalService;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArchitecture() instead.
-     *
-     * @param string $architecture
-     *
-     * @return $this
-     */
-    public function setArchitecture($architecture)
-    {
-        return $this->withArchitecture($architecture);
     }
 
     /**

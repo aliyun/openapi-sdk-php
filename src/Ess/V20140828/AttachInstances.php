@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AttachInstances
+ * Api AttachInstances
  *
  * @method string getInstanceId10()
  * @method string getLoadBalancerWeight6()
@@ -53,45 +53,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class AttachInstances extends RpcRequest
+class AttachInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'AttachInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId10() instead.
-     *
-     * @param string $instanceId10
-     *
-     * @return $this
-     */
-    public function setInstanceId10($instanceId10)
-    {
-        return $this->withInstanceId10($instanceId10);
-    }
 
     /**
      * @param string $instanceId10
@@ -104,18 +74,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.10'] = $instanceId10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight6() instead.
-     *
-     * @param string $loadBalancerWeight6
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight6($loadBalancerWeight6)
-    {
-        return $this->withLoadBalancerWeight6($loadBalancerWeight6);
     }
 
     /**
@@ -132,18 +90,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight11() instead.
-     *
-     * @param string $loadBalancerWeight11
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight11($loadBalancerWeight11)
-    {
-        return $this->withLoadBalancerWeight11($loadBalancerWeight11);
-    }
-
-    /**
      * @param string $loadBalancerWeight11
      *
      * @return $this
@@ -154,18 +100,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.11'] = $loadBalancerWeight11;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight7() instead.
-     *
-     * @param string $loadBalancerWeight7
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight7($loadBalancerWeight7)
-    {
-        return $this->withLoadBalancerWeight7($loadBalancerWeight7);
     }
 
     /**
@@ -182,18 +116,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight12() instead.
-     *
-     * @param string $loadBalancerWeight12
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight12($loadBalancerWeight12)
-    {
-        return $this->withLoadBalancerWeight12($loadBalancerWeight12);
-    }
-
-    /**
      * @param string $loadBalancerWeight12
      *
      * @return $this
@@ -204,18 +126,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.12'] = $loadBalancerWeight12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -232,18 +142,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId12() instead.
-     *
-     * @param string $instanceId12
-     *
-     * @return $this
-     */
-    public function setInstanceId12($instanceId12)
-    {
-        return $this->withInstanceId12($instanceId12);
-    }
-
-    /**
      * @param string $instanceId12
      *
      * @return $this
@@ -254,18 +152,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.12'] = $instanceId12;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight8() instead.
-     *
-     * @param string $loadBalancerWeight8
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight8($loadBalancerWeight8)
-    {
-        return $this->withLoadBalancerWeight8($loadBalancerWeight8);
     }
 
     /**
@@ -282,18 +168,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId11() instead.
-     *
-     * @param string $instanceId11
-     *
-     * @return $this
-     */
-    public function setInstanceId11($instanceId11)
-    {
-        return $this->withInstanceId11($instanceId11);
-    }
-
-    /**
      * @param string $instanceId11
      *
      * @return $this
@@ -304,18 +178,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.11'] = $instanceId11;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight9() instead.
-     *
-     * @param string $loadBalancerWeight9
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight9($loadBalancerWeight9)
-    {
-        return $this->withLoadBalancerWeight9($loadBalancerWeight9);
     }
 
     /**
@@ -332,18 +194,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight10() instead.
-     *
-     * @param string $loadBalancerWeight10
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight10($loadBalancerWeight10)
-    {
-        return $this->withLoadBalancerWeight10($loadBalancerWeight10);
-    }
-
-    /**
      * @param string $loadBalancerWeight10
      *
      * @return $this
@@ -354,18 +204,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.10'] = $loadBalancerWeight10;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight2() instead.
-     *
-     * @param string $loadBalancerWeight2
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight2($loadBalancerWeight2)
-    {
-        return $this->withLoadBalancerWeight2($loadBalancerWeight2);
     }
 
     /**
@@ -382,18 +220,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight15() instead.
-     *
-     * @param string $loadBalancerWeight15
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight15($loadBalancerWeight15)
-    {
-        return $this->withLoadBalancerWeight15($loadBalancerWeight15);
-    }
-
-    /**
      * @param string $loadBalancerWeight15
      *
      * @return $this
@@ -404,18 +230,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.15'] = $loadBalancerWeight15;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight3() instead.
-     *
-     * @param string $loadBalancerWeight3
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight3($loadBalancerWeight3)
-    {
-        return $this->withLoadBalancerWeight3($loadBalancerWeight3);
     }
 
     /**
@@ -432,18 +246,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight16() instead.
-     *
-     * @param string $loadBalancerWeight16
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight16($loadBalancerWeight16)
-    {
-        return $this->withLoadBalancerWeight16($loadBalancerWeight16);
-    }
-
-    /**
      * @param string $loadBalancerWeight16
      *
      * @return $this
@@ -454,18 +256,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.16'] = $loadBalancerWeight16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -482,18 +272,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight4() instead.
-     *
-     * @param string $loadBalancerWeight4
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight4($loadBalancerWeight4)
-    {
-        return $this->withLoadBalancerWeight4($loadBalancerWeight4);
-    }
-
-    /**
      * @param string $loadBalancerWeight4
      *
      * @return $this
@@ -504,18 +282,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.4'] = $loadBalancerWeight4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight13() instead.
-     *
-     * @param string $loadBalancerWeight13
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight13($loadBalancerWeight13)
-    {
-        return $this->withLoadBalancerWeight13($loadBalancerWeight13);
     }
 
     /**
@@ -532,18 +298,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight5() instead.
-     *
-     * @param string $loadBalancerWeight5
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight5($loadBalancerWeight5)
-    {
-        return $this->withLoadBalancerWeight5($loadBalancerWeight5);
-    }
-
-    /**
      * @param string $loadBalancerWeight5
      *
      * @return $this
@@ -554,18 +308,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.5'] = $loadBalancerWeight5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight14() instead.
-     *
-     * @param string $loadBalancerWeight14
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight14($loadBalancerWeight14)
-    {
-        return $this->withLoadBalancerWeight14($loadBalancerWeight14);
     }
 
     /**
@@ -582,18 +324,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight1() instead.
-     *
-     * @param string $loadBalancerWeight1
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight1($loadBalancerWeight1)
-    {
-        return $this->withLoadBalancerWeight1($loadBalancerWeight1);
-    }
-
-    /**
      * @param string $loadBalancerWeight1
      *
      * @return $this
@@ -604,18 +334,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.1'] = $loadBalancerWeight1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId20() instead.
-     *
-     * @param string $instanceId20
-     *
-     * @return $this
-     */
-    public function setInstanceId20($instanceId20)
-    {
-        return $this->withInstanceId20($instanceId20);
     }
 
     /**
@@ -632,18 +350,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId1() instead.
-     *
-     * @param string $instanceId1
-     *
-     * @return $this
-     */
-    public function setInstanceId1($instanceId1)
-    {
-        return $this->withInstanceId1($instanceId1);
-    }
-
-    /**
      * @param string $instanceId1
      *
      * @return $this
@@ -654,18 +360,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.1'] = $instanceId1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight20() instead.
-     *
-     * @param string $loadBalancerWeight20
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight20($loadBalancerWeight20)
-    {
-        return $this->withLoadBalancerWeight20($loadBalancerWeight20);
     }
 
     /**
@@ -682,18 +376,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId3() instead.
-     *
-     * @param string $instanceId3
-     *
-     * @return $this
-     */
-    public function setInstanceId3($instanceId3)
-    {
-        return $this->withInstanceId3($instanceId3);
-    }
-
-    /**
      * @param string $instanceId3
      *
      * @return $this
@@ -704,18 +386,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.3'] = $instanceId3;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -732,18 +402,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId2() instead.
-     *
-     * @param string $instanceId2
-     *
-     * @return $this
-     */
-    public function setInstanceId2($instanceId2)
-    {
-        return $this->withInstanceId2($instanceId2);
-    }
-
-    /**
      * @param string $instanceId2
      *
      * @return $this
@@ -754,18 +412,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.2'] = $instanceId2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId5() instead.
-     *
-     * @param string $instanceId5
-     *
-     * @return $this
-     */
-    public function setInstanceId5($instanceId5)
-    {
-        return $this->withInstanceId5($instanceId5);
     }
 
     /**
@@ -782,18 +428,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId4() instead.
-     *
-     * @param string $instanceId4
-     *
-     * @return $this
-     */
-    public function setInstanceId4($instanceId4)
-    {
-        return $this->withInstanceId4($instanceId4);
-    }
-
-    /**
      * @param string $instanceId4
      *
      * @return $this
@@ -804,18 +438,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.4'] = $instanceId4;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -832,18 +454,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId7() instead.
-     *
-     * @param string $instanceId7
-     *
-     * @return $this
-     */
-    public function setInstanceId7($instanceId7)
-    {
-        return $this->withInstanceId7($instanceId7);
-    }
-
-    /**
      * @param string $instanceId7
      *
      * @return $this
@@ -854,18 +464,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.7'] = $instanceId7;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId6() instead.
-     *
-     * @param string $instanceId6
-     *
-     * @return $this
-     */
-    public function setInstanceId6($instanceId6)
-    {
-        return $this->withInstanceId6($instanceId6);
     }
 
     /**
@@ -882,18 +480,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId9() instead.
-     *
-     * @param string $instanceId9
-     *
-     * @return $this
-     */
-    public function setInstanceId9($instanceId9)
-    {
-        return $this->withInstanceId9($instanceId9);
-    }
-
-    /**
      * @param string $instanceId9
      *
      * @return $this
@@ -904,18 +490,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.9'] = $instanceId9;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId8() instead.
-     *
-     * @param string $instanceId8
-     *
-     * @return $this
-     */
-    public function setInstanceId8($instanceId8)
-    {
-        return $this->withInstanceId8($instanceId8);
     }
 
     /**
@@ -932,18 +506,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -954,18 +516,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId18() instead.
-     *
-     * @param string $instanceId18
-     *
-     * @return $this
-     */
-    public function setInstanceId18($instanceId18)
-    {
-        return $this->withInstanceId18($instanceId18);
     }
 
     /**
@@ -982,18 +532,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight19() instead.
-     *
-     * @param string $loadBalancerWeight19
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight19($loadBalancerWeight19)
-    {
-        return $this->withLoadBalancerWeight19($loadBalancerWeight19);
-    }
-
-    /**
      * @param string $loadBalancerWeight19
      *
      * @return $this
@@ -1004,18 +542,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.19'] = $loadBalancerWeight19;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId17() instead.
-     *
-     * @param string $instanceId17
-     *
-     * @return $this
-     */
-    public function setInstanceId17($instanceId17)
-    {
-        return $this->withInstanceId17($instanceId17);
     }
 
     /**
@@ -1032,18 +558,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight17() instead.
-     *
-     * @param string $loadBalancerWeight17
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight17($loadBalancerWeight17)
-    {
-        return $this->withLoadBalancerWeight17($loadBalancerWeight17);
-    }
-
-    /**
      * @param string $loadBalancerWeight17
      *
      * @return $this
@@ -1054,18 +568,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.17'] = $loadBalancerWeight17;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId19() instead.
-     *
-     * @param string $instanceId19
-     *
-     * @return $this
-     */
-    public function setInstanceId19($instanceId19)
-    {
-        return $this->withInstanceId19($instanceId19);
     }
 
     /**
@@ -1082,18 +584,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerWeight18() instead.
-     *
-     * @param string $loadBalancerWeight18
-     *
-     * @return $this
-     */
-    public function setLoadBalancerWeight18($loadBalancerWeight18)
-    {
-        return $this->withLoadBalancerWeight18($loadBalancerWeight18);
-    }
-
-    /**
      * @param string $loadBalancerWeight18
      *
      * @return $this
@@ -1104,18 +594,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['LoadBalancerWeight.18'] = $loadBalancerWeight18;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId14() instead.
-     *
-     * @param string $instanceId14
-     *
-     * @return $this
-     */
-    public function setInstanceId14($instanceId14)
-    {
-        return $this->withInstanceId14($instanceId14);
     }
 
     /**
@@ -1132,18 +610,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId13() instead.
-     *
-     * @param string $instanceId13
-     *
-     * @return $this
-     */
-    public function setInstanceId13($instanceId13)
-    {
-        return $this->withInstanceId13($instanceId13);
-    }
-
-    /**
      * @param string $instanceId13
      *
      * @return $this
@@ -1157,18 +623,6 @@ class AttachInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId16() instead.
-     *
-     * @param string $instanceId16
-     *
-     * @return $this
-     */
-    public function setInstanceId16($instanceId16)
-    {
-        return $this->withInstanceId16($instanceId16);
-    }
-
-    /**
      * @param string $instanceId16
      *
      * @return $this
@@ -1179,18 +633,6 @@ class AttachInstances extends RpcRequest
         $this->options['query']['InstanceId.16'] = $instanceId16;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId15() instead.
-     *
-     * @param string $instanceId15
-     *
-     * @return $this
-     */
-    public function setInstanceId15($instanceId15)
-    {
-        return $this->withInstanceId15($instanceId15);
     }
 
     /**

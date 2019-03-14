@@ -2,54 +2,25 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRiskType
+ * Api DescribeRiskType
  *
  * @method string getSourceIp()
  * @method string getStrategyId()
+ * @method string getLang()
  * @method string getUuids()
  */
-class DescribeRiskType extends RpcRequest
+class DescribeRiskType extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRiskType';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -62,18 +33,6 @@ class DescribeRiskType extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function setStrategyId($strategyId)
-    {
-        return $this->withStrategyId($strategyId);
     }
 
     /**
@@ -90,15 +49,16 @@ class DescribeRiskType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
+     * @param string $lang
      *
      * @return $this
      */
-    public function setUuids($uuids)
+    public function withLang($lang)
     {
-        return $this->withUuids($uuids);
+        $this->data['Lang'] = $lang;
+        $this->options['query']['Lang'] = $lang;
+
+        return $this;
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Skyeye\V20171201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SendAlertContent
+ * Api SendAlertContent
  *
  * @method string getAlertTarget()
  * @method string getAlertInfoName()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTitle()
  * @method string getTags()
  */
-class SendAlertContent extends RpcRequest
+class SendAlertContent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Skyeye';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'SendAlertContent';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertTarget() instead.
-     *
-     * @param string $alertTarget
-     *
-     * @return $this
-     */
-    public function setAlertTarget($alertTarget)
-    {
-        return $this->withAlertTarget($alertTarget);
-    }
 
     /**
      * @param string $alertTarget
@@ -59,18 +32,6 @@ class SendAlertContent extends RpcRequest
         $this->options['query']['AlertTarget'] = $alertTarget;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertInfoName() instead.
-     *
-     * @param string $alertInfoName
-     *
-     * @return $this
-     */
-    public function setAlertInfoName($alertInfoName)
-    {
-        return $this->withAlertInfoName($alertInfoName);
     }
 
     /**
@@ -87,18 +48,6 @@ class SendAlertContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertText() instead.
-     *
-     * @param string $alertText
-     *
-     * @return $this
-     */
-    public function setAlertText($alertText)
-    {
-        return $this->withAlertText($alertText);
-    }
-
-    /**
      * @param string $alertText
      *
      * @return $this
@@ -112,18 +61,6 @@ class SendAlertContent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
-    }
-
-    /**
      * @param string $title
      *
      * @return $this
@@ -134,18 +71,6 @@ class SendAlertContent extends RpcRequest
         $this->options['query']['Title'] = $title;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

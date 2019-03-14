@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubscribeExportToOSS
+ * Api SubscribeExportToOSS
  *
  * @method string getBucketOwnerId()
  * @method array getSubscribeType()
  * @method string getSubscribeBucket()
  */
-class SubscribeExportToOSS extends RpcRequest
+class SubscribeExportToOSS extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubscribeExportToOSS';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBucketOwnerId() instead.
-     *
-     * @param string $bucketOwnerId
-     *
-     * @return $this
-     */
-    public function setBucketOwnerId($bucketOwnerId)
-    {
-        return $this->withBucketOwnerId($bucketOwnerId);
-    }
 
     /**
      * @param string $bucketOwnerId
@@ -60,28 +33,6 @@ class SubscribeExportToOSS extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getSubscribeType() instead.
-     *
-     * @return array
-     */
-    public function getSubscribeTypes()
-    {
-        return $this->getSubscribeType();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscribeType() instead.
-     *
-     * @param array $subscribeTypes
-     *
-     * @return $this
-     */
-    public function setSubscribeTypes(array $subscribeTypes)
-    {
-        return $this->withSubscribeType($subscribeTypes);
-    }
-
-    /**
      * @param array $subscribeType
      *
      * @return $this
@@ -94,18 +45,6 @@ class SubscribeExportToOSS extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscribeBucket() instead.
-     *
-     * @param string $subscribeBucket
-     *
-     * @return $this
-     */
-    public function setSubscribeBucket($subscribeBucket)
-    {
-        return $this->withSubscribeBucket($subscribeBucket);
     }
 
     /**

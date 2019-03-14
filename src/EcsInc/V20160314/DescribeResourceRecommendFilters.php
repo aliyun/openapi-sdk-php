@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeResourceRecommendFilters
+ * Api DescribeResourceRecommendFilters
  *
  * @method string getProduct()
  * @method string getAttributeValue()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMaxItems()
  * @method string getResourceType()
  */
-class DescribeResourceRecommendFilters extends RpcRequest
+class DescribeResourceRecommendFilters extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeResourceRecommendFilters';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
 
     /**
      * @param string $product
@@ -64,18 +34,6 @@ class DescribeResourceRecommendFilters extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAttributeValue() instead.
-     *
-     * @param string $attributeValue
-     *
-     * @return $this
-     */
-    public function setAttributeValue($attributeValue)
-    {
-        return $this->withAttributeValue($attributeValue);
     }
 
     /**
@@ -92,18 +50,6 @@ class DescribeResourceRecommendFilters extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAttributeName() instead.
-     *
-     * @param string $attributeName
-     *
-     * @return $this
-     */
-    public function setAttributeName($attributeName)
-    {
-        return $this->withAttributeName($attributeName);
-    }
-
-    /**
      * @param string $attributeName
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeResourceRecommendFilters extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxItems() instead.
-     *
-     * @param string $maxItems
-     *
-     * @return $this
-     */
-    public function setMaxItems($maxItems)
-    {
-        return $this->withMaxItems($maxItems);
-    }
-
-    /**
      * @param string $maxItems
      *
      * @return $this
@@ -139,18 +73,6 @@ class DescribeResourceRecommendFilters extends RpcRequest
         $this->options['query']['MaxItems'] = $maxItems;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

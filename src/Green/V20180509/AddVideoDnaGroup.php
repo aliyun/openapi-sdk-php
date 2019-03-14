@@ -2,57 +2,24 @@
 
 namespace AlibabaCloud\Green\V20180509;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of AddVideoDnaGroup
+ * Api AddVideoDnaGroup
  *
  * @method string getClientInfo()
  */
-class AddVideoDnaGroup extends RoaRequest
+class AddVideoDnaGroup extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddVideoDnaGroup';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/green/video/dna/group/add';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientInfo() instead.
-     *
-     * @param string $clientInfo
-     *
-     * @return $this
-     */
-    public function setClientInfo($clientInfo)
-    {
-        return $this->withClientInfo($clientInfo);
-    }
 
     /**
      * @param string $clientInfo

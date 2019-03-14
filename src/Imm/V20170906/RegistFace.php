@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RegistFace
+ * Api RegistFace
  *
  * @method string getChooseBiggestFace()
  * @method string getIsQualityLimit()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getGroupName()
  * @method string getUser()
  */
-class RegistFace extends RpcRequest
+class RegistFace extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'RegistFace';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChooseBiggestFace() instead.
-     *
-     * @param string $chooseBiggestFace
-     *
-     * @return $this
-     */
-    public function setChooseBiggestFace($chooseBiggestFace)
-    {
-        return $this->withChooseBiggestFace($chooseBiggestFace);
-    }
 
     /**
      * @param string $chooseBiggestFace
@@ -66,18 +36,6 @@ class RegistFace extends RpcRequest
         $this->options['query']['ChooseBiggestFace'] = $chooseBiggestFace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsQualityLimit() instead.
-     *
-     * @param string $isQualityLimit
-     *
-     * @return $this
-     */
-    public function setIsQualityLimit($isQualityLimit)
-    {
-        return $this->withIsQualityLimit($isQualityLimit);
     }
 
     /**
@@ -94,18 +52,6 @@ class RegistFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -116,18 +62,6 @@ class RegistFace extends RpcRequest
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**
@@ -144,18 +78,6 @@ class RegistFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegisterCheckLevel() instead.
-     *
-     * @param string $registerCheckLevel
-     *
-     * @return $this
-     */
-    public function setRegisterCheckLevel($registerCheckLevel)
-    {
-        return $this->withRegisterCheckLevel($registerCheckLevel);
-    }
-
-    /**
      * @param string $registerCheckLevel
      *
      * @return $this
@@ -169,18 +91,6 @@ class RegistFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this
@@ -191,18 +101,6 @@ class RegistFace extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
     }
 
     /**

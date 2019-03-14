@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Alimt\V20181012;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of TranslateGeneral
+ * Api TranslateGeneral
  *
  * @method string getSourceLanguage()
  * @method string getSourceText()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTargetLanguage()
  * @method string getScene()
  */
-class TranslateGeneral extends RpcRequest
+class TranslateGeneral extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'alimt';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'TranslateGeneral';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alimt';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceLanguage() instead.
-     *
-     * @param string $sourceLanguage
-     *
-     * @return $this
-     */
-    public function setSourceLanguage($sourceLanguage)
-    {
-        return $this->withSourceLanguage($sourceLanguage);
-    }
 
     /**
      * @param string $sourceLanguage
@@ -64,18 +34,6 @@ class TranslateGeneral extends RpcRequest
         $this->options['query']['SourceLanguage'] = $sourceLanguage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceText() instead.
-     *
-     * @param string $sourceText
-     *
-     * @return $this
-     */
-    public function setSourceText($sourceText)
-    {
-        return $this->withSourceText($sourceText);
     }
 
     /**
@@ -92,18 +50,6 @@ class TranslateGeneral extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFormatType() instead.
-     *
-     * @param string $formatType
-     *
-     * @return $this
-     */
-    public function setFormatType($formatType)
-    {
-        return $this->withFormatType($formatType);
-    }
-
-    /**
      * @param string $formatType
      *
      * @return $this
@@ -117,18 +63,6 @@ class TranslateGeneral extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTargetLanguage() instead.
-     *
-     * @param string $targetLanguage
-     *
-     * @return $this
-     */
-    public function setTargetLanguage($targetLanguage)
-    {
-        return $this->withTargetLanguage($targetLanguage);
-    }
-
-    /**
      * @param string $targetLanguage
      *
      * @return $this
@@ -139,18 +73,6 @@ class TranslateGeneral extends RpcRequest
         $this->options['query']['TargetLanguage'] = $targetLanguage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

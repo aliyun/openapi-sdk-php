@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListFpShotJob
+ * Api ListFpShotJob
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndOfJobCreatedTimeRange()
  * @method string getPipelineId()
  */
-class ListFpShotJob extends RpcRequest
+class ListFpShotJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListFpShotJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class ListFpShotJob extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -97,18 +55,6 @@ class ListFpShotJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextPageToken() instead.
-     *
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function setNextPageToken($nextPageToken)
-    {
-        return $this->withNextPageToken($nextPageToken);
-    }
-
-    /**
      * @param string $nextPageToken
      *
      * @return $this
@@ -119,18 +65,6 @@ class ListFpShotJob extends RpcRequest
         $this->options['query']['NextPageToken'] = $nextPageToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartOfJobCreatedTimeRange() instead.
-     *
-     * @param string $startOfJobCreatedTimeRange
-     *
-     * @return $this
-     */
-    public function setStartOfJobCreatedTimeRange($startOfJobCreatedTimeRange)
-    {
-        return $this->withStartOfJobCreatedTimeRange($startOfJobCreatedTimeRange);
     }
 
     /**
@@ -147,18 +81,6 @@ class ListFpShotJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class ListFpShotJob extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaximumPageSize() instead.
-     *
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function setMaximumPageSize($maximumPageSize)
-    {
-        return $this->withMaximumPageSize($maximumPageSize);
     }
 
     /**
@@ -197,18 +107,6 @@ class ListFpShotJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
-    }
-
-    /**
      * @param string $state
      *
      * @return $this
@@ -219,18 +117,6 @@ class ListFpShotJob extends RpcRequest
         $this->options['query']['State'] = $state;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class ListFpShotJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndOfJobCreatedTimeRange() instead.
-     *
-     * @param string $endOfJobCreatedTimeRange
-     *
-     * @return $this
-     */
-    public function setEndOfJobCreatedTimeRange($endOfJobCreatedTimeRange)
-    {
-        return $this->withEndOfJobCreatedTimeRange($endOfJobCreatedTimeRange);
-    }
-
-    /**
      * @param string $endOfJobCreatedTimeRange
      *
      * @return $this
@@ -269,18 +143,6 @@ class ListFpShotJob extends RpcRequest
         $this->options['query']['EndOfJobCreatedTimeRange'] = $endOfJobCreatedTimeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

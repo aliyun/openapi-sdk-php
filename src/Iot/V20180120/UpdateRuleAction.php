@@ -2,49 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateRuleAction
+ * Api UpdateRuleAction
  *
  * @method string getConfiguration()
+ * @method string getIotInstanceId()
  * @method string getActionId()
  * @method string getType()
  */
-class UpdateRuleAction extends RpcRequest
+class UpdateRuleAction extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateRuleAction';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfiguration() instead.
-     *
-     * @param string $configuration
-     *
-     * @return $this
-     */
-    public function setConfiguration($configuration)
-    {
-        return $this->withConfiguration($configuration);
-    }
 
     /**
      * @param string $configuration
@@ -60,15 +34,16 @@ class UpdateRuleAction extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionId() instead.
-     *
-     * @param string $actionId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setActionId($actionId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withActionId($actionId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -82,18 +57,6 @@ class UpdateRuleAction extends RpcRequest
         $this->options['query']['ActionId'] = $actionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

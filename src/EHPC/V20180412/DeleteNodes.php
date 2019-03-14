@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteNodes
+ * Api DeleteNodes
  *
  * @method string getReleaseInstance()
  * @method array getInstance()
  * @method string getClusterId()
  */
-class DeleteNodes extends RpcRequest
+class DeleteNodes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteNodes';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReleaseInstance() instead.
-     *
-     * @param string $releaseInstance
-     *
-     * @return $this
-     */
-    public function setReleaseInstance($releaseInstance)
-    {
-        return $this->withReleaseInstance($releaseInstance);
-    }
 
     /**
      * @param string $releaseInstance
@@ -60,28 +33,6 @@ class DeleteNodes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
-
-    /**
      * @param array $instance
      *
      * @return $this
@@ -94,18 +45,6 @@ class DeleteNodes extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

@@ -12,6 +12,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateContainerGroup createContainerGroup(array $options = [])
  * @method DeleteContainerGroup deleteContainerGroup(array $options = [])
  * @method DescribeContainerExecUri describeContainerExecUri(array $options = [])
+ * @method DescribeContainerGroupMetric describeContainerGroupMetric(array $options = [])
  * @method DescribeContainerGroupPrice describeContainerGroupPrice(array $options = [])
  * @method DescribeContainerGroups describeContainerGroups(array $options = [])
  * @method DescribeContainerLog describeContainerLog(array $options = [])

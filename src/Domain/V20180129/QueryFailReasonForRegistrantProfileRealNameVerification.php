@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryFailReasonForRegistrantProfileRealNameVerification
+ * Api QueryFailReasonForRegistrantProfileRealNameVerification
  *
  * @method string getUserClientIp()
  * @method string getRegistrantProfileID()
  * @method string getLang()
  */
-class QueryFailReasonForRegistrantProfileRealNameVerification extends RpcRequest
+class QueryFailReasonForRegistrantProfileRealNameVerification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryFailReasonForRegistrantProfileRealNameVerification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
 
     /**
      * @param string $userClientIp
@@ -60,18 +33,6 @@ class QueryFailReasonForRegistrantProfileRealNameVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileID() instead.
-     *
-     * @param string $registrantProfileID
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileID($registrantProfileID)
-    {
-        return $this->withRegistrantProfileID($registrantProfileID);
-    }
-
-    /**
      * @param string $registrantProfileID
      *
      * @return $this
@@ -82,18 +43,6 @@ class QueryFailReasonForRegistrantProfileRealNameVerification extends RpcRequest
         $this->options['query']['RegistrantProfileID'] = $registrantProfileID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

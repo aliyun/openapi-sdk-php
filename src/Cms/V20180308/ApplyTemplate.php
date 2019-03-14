@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApplyTemplate
+ * Api ApplyTemplate
  *
  * @method string getEnableStartTime()
  * @method string getApplyMode()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNotifyLevel()
  * @method string getSilenceTime()
  */
-class ApplyTemplate extends RpcRequest
+class ApplyTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApplyTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableStartTime() instead.
-     *
-     * @param string $enableStartTime
-     *
-     * @return $this
-     */
-    public function setEnableStartTime($enableStartTime)
-    {
-        return $this->withEnableStartTime($enableStartTime);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $enableStartTime
@@ -61,18 +36,6 @@ class ApplyTemplate extends RpcRequest
         $this->options['query']['EnableStartTime'] = $enableStartTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyMode() instead.
-     *
-     * @param string $applyMode
-     *
-     * @return $this
-     */
-    public function setApplyMode($applyMode)
-    {
-        return $this->withApplyMode($applyMode);
     }
 
     /**
@@ -89,18 +52,6 @@ class ApplyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateIds() instead.
-     *
-     * @param string $templateIds
-     *
-     * @return $this
-     */
-    public function setTemplateIds($templateIds)
-    {
-        return $this->withTemplateIds($templateIds);
-    }
-
-    /**
      * @param string $templateIds
      *
      * @return $this
@@ -111,18 +62,6 @@ class ApplyTemplate extends RpcRequest
         $this->options['query']['TemplateIds'] = $templateIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableEndTime() instead.
-     *
-     * @param string $enableEndTime
-     *
-     * @return $this
-     */
-    public function setEnableEndTime($enableEndTime)
-    {
-        return $this->withEnableEndTime($enableEndTime);
     }
 
     /**
@@ -139,18 +78,6 @@ class ApplyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -164,18 +91,6 @@ class ApplyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyLevel() instead.
-     *
-     * @param string $notifyLevel
-     *
-     * @return $this
-     */
-    public function setNotifyLevel($notifyLevel)
-    {
-        return $this->withNotifyLevel($notifyLevel);
-    }
-
-    /**
      * @param string $notifyLevel
      *
      * @return $this
@@ -186,18 +101,6 @@ class ApplyTemplate extends RpcRequest
         $this->options['query']['NotifyLevel'] = $notifyLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSilenceTime() instead.
-     *
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function setSilenceTime($silenceTime)
-    {
-        return $this->withSilenceTime($silenceTime);
     }
 
     /**
