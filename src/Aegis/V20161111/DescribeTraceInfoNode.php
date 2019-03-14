@@ -12,6 +12,8 @@ use AlibabaCloud\Rpc;
  * @method string getFrom()
  * @method string getLang()
  * @method string getType()
+ * @method string getUuid()
+ * @method string getEventName()
  */
 class DescribeTraceInfoNode extends Rpc
 {
@@ -84,6 +86,32 @@ class DescribeTraceInfoNode extends Rpc
     {
         $this->data['Type'] = $type;
         $this->options['query']['Type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * @param string $uuid
+     *
+     * @return $this
+     */
+    public function withUuid($uuid)
+    {
+        $this->data['Uuid'] = $uuid;
+        $this->options['query']['Uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * @param string $eventName
+     *
+     * @return $this
+     */
+    public function withEventName($eventName)
+    {
+        $this->data['EventName'] = $eventName;
+        $this->options['query']['EventName'] = $eventName;
 
         return $this;
     }

@@ -13,9 +13,11 @@ use AlibabaCloud\Rpc;
  * @method string getCustomerId()
  * @method array getSelectedIds()
  * @method string getProcessWay()
+ * @method string getCallerBid()
  * @method string getOwnerId()
  * @method string getInvoiceAmount()
  * @method string getAddressId()
+ * @method string getCallerUid()
  */
 class ApplyInvoice extends Rpc
 {
@@ -106,6 +108,19 @@ class ApplyInvoice extends Rpc
     }
 
     /**
+     * @param string $callerBid
+     *
+     * @return $this
+     */
+    public function withCallerBid($callerBid)
+    {
+        $this->data['CallerBid'] = $callerBid;
+        $this->options['query']['callerBid'] = $callerBid;
+
+        return $this;
+    }
+
+    /**
      * @param string $ownerId
      *
      * @return $this
@@ -140,6 +155,19 @@ class ApplyInvoice extends Rpc
     {
         $this->data['AddressId'] = $addressId;
         $this->options['query']['AddressId'] = $addressId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $callerUid
+     *
+     * @return $this
+     */
+    public function withCallerUid($callerUid)
+    {
+        $this->data['CallerUid'] = $callerUid;
+        $this->options['query']['callerUid'] = $callerUid;
 
         return $this;
     }

@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.1.1 - 2019-03-14
+- Add `DescribeWhiteListStrategyList` for `Aegis`.
+- Add `DescribeAvailableCrossRegion` for `Rds`.
+- Add `DescribeAvailableRecoveryTime` for `Rds`.
+- Add `DescribeCrossRegionBackupDBInstance` for `Rds`.
+- Update Apis for `Aegis`.
+- Update Apis for `BssOpenApi`.
+- Update Apis for `Green`.
+
+
 ## 1.1.0 - 2019-03-14
 - IDE auto-prompt for unlabeling discarded methods.
 - Reduce size.

@@ -22,6 +22,7 @@ use AlibabaCloud\Rpc;
  * @method string getPageSize()
  * @method string getLang()
  * @method string getStock()
+ * @method string getObject()
  */
 class DescribeOssResultItems extends Rpc
 {
@@ -224,6 +225,19 @@ class DescribeOssResultItems extends Rpc
     {
         $this->data['Stock'] = $stock;
         $this->options['query']['Stock'] = $stock;
+
+        return $this;
+    }
+
+    /**
+     * @param string $object
+     *
+     * @return $this
+     */
+    public function withObject($object)
+    {
+        $this->data['Object'] = $object;
+        $this->options['query']['Object'] = $object;
 
         return $this;
     }

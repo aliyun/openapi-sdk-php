@@ -5,13 +5,13 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLogstoreStorage
+ * Api DescribeWhiteListStrategyList
  *
  * @method string getSourceIp()
- * @method string getFrom()
+ * @method string getStrategyIds()
  * @method string getLang()
  */
-class DescribeLogstoreStorage extends Rpc
+class DescribeWhiteListStrategyList extends Rpc
 {
     public $product = 'aegis';
 
@@ -35,14 +35,14 @@ class DescribeLogstoreStorage extends Rpc
     }
 
     /**
-     * @param string $from
+     * @param string $strategyIds
      *
      * @return $this
      */
-    public function withFrom($from)
+    public function withStrategyIds($strategyIds)
     {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
+        $this->data['StrategyIds'] = $strategyIds;
+        $this->options['query']['StrategyIds'] = $strategyIds;
 
         return $this;
     }

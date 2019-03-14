@@ -9,6 +9,7 @@ use AlibabaCloud\Rpc;
  *
  * @method string getImageAutoFreeze()
  * @method string getVideoSceneList()
+ * @method string getAutoFreezeType()
  * @method string getImageSceneList()
  * @method string getBucketConfigList()
  * @method string getSourceIp()
@@ -51,6 +52,19 @@ class UpdateOssIncrementCheckSetting extends Rpc
     {
         $this->data['VideoSceneList'] = $videoSceneList;
         $this->options['query']['VideoSceneList'] = $videoSceneList;
+
+        return $this;
+    }
+
+    /**
+     * @param string $autoFreezeType
+     *
+     * @return $this
+     */
+    public function withAutoFreezeType($autoFreezeType)
+    {
+        $this->data['AutoFreezeType'] = $autoFreezeType;
+        $this->options['query']['AutoFreezeType'] = $autoFreezeType;
 
         return $this;
     }

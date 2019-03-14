@@ -12,6 +12,7 @@ use AlibabaCloud\Rpc;
  * @method string getVideoFrameInterval()
  * @method string getVideoMaxSize()
  * @method string getStartDate()
+ * @method string getAutoFreezeType()
  * @method string getEndDate()
  * @method string getBucketConfigList()
  * @method string getSourceIp()
@@ -92,6 +93,19 @@ class UpdateOssStockStatus extends Rpc
     {
         $this->data['StartDate'] = $startDate;
         $this->options['query']['StartDate'] = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * @param string $autoFreezeType
+     *
+     * @return $this
+     */
+    public function withAutoFreezeType($autoFreezeType)
+    {
+        $this->data['AutoFreezeType'] = $autoFreezeType;
+        $this->options['query']['AutoFreezeType'] = $autoFreezeType;
 
         return $this;
     }
