@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
  * Api ModifyClearLogstoreStorage
  *
  * @method string getSourceIp()
+ * @method string getFrom()
  * @method string getLang()
  */
 class ModifyClearLogstoreStorage extends Rpc
@@ -29,6 +30,19 @@ class ModifyClearLogstoreStorage extends Rpc
     {
         $this->data['SourceIp'] = $sourceIp;
         $this->options['query']['SourceIp'] = $sourceIp;
+
+        return $this;
+    }
+
+    /**
+     * @param string $from
+     *
+     * @return $this
+     */
+    public function withFrom($from)
+    {
+        $this->data['From'] = $from;
+        $this->options['query']['From'] = $from;
 
         return $this;
     }

@@ -28,7 +28,7 @@ class SearchItem extends Roa
      */
     public function withInstanceName($instanceName)
     {
-        $this->data['InstanceName']             = $instanceName;
+        $this->data['InstanceName'] = $instanceName;
         $this->options['query']['instanceName'] = $instanceName;
 
         return $this;

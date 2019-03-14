@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
  * Api QueryLogistics
  *
  * @method string getLmOrderId()
+ * @method string getBizUid()
  * @method string getBizId()
  */
 class QueryLogistics extends Rpc
@@ -29,6 +30,19 @@ class QueryLogistics extends Rpc
     {
         $this->data['LmOrderId'] = $lmOrderId;
         $this->options['query']['LmOrderId'] = $lmOrderId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $bizUid
+     *
+     * @return $this
+     */
+    public function withBizUid($bizUid)
+    {
+        $this->data['BizUid'] = $bizUid;
+        $this->options['query']['BizUid'] = $bizUid;
 
         return $this;
     }

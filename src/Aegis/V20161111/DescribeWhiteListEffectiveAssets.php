@@ -10,6 +10,7 @@ use AlibabaCloud\Rpc;
  * @method string getSourceIp()
  * @method string getPageSize()
  * @method string getRemark()
+ * @method string getStrategyId()
  * @method string getCurrentPage()
  * @method string getLang()
  * @method string getNeedStatistics()
@@ -59,6 +60,19 @@ class DescribeWhiteListEffectiveAssets extends Rpc
     {
         $this->data['Remark'] = $remark;
         $this->options['query']['Remark'] = $remark;
+
+        return $this;
+    }
+
+    /**
+     * @param string $strategyId
+     *
+     * @return $this
+     */
+    public function withStrategyId($strategyId)
+    {
+        $this->data['StrategyId'] = $strategyId;
+        $this->options['query']['StrategyId'] = $strategyId;
 
         return $this;
     }
