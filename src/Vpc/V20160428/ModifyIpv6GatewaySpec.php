@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyIpv6GatewaySpec
+ * Api ModifyIpv6GatewaySpec
  *
  * @method string getResourceOwnerId()
  * @method string getClientToken()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getIpv6GatewayId()
  */
-class ModifyIpv6GatewaySpec extends RpcRequest
+class ModifyIpv6GatewaySpec extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyIpv6GatewaySpec';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +36,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -94,18 +52,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpec() instead.
-     *
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function setSpec($spec)
-    {
-        return $this->withSpec($spec);
-    }
-
-    /**
      * @param string $spec
      *
      * @return $this
@@ -116,18 +62,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
         $this->options['query']['Spec'] = $spec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -191,18 +101,6 @@ class ModifyIpv6GatewaySpec extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpv6GatewayId() instead.
-     *
-     * @param string $ipv6GatewayId
-     *
-     * @return $this
-     */
-    public function setIpv6GatewayId($ipv6GatewayId)
-    {
-        return $this->withIpv6GatewayId($ipv6GatewayId);
     }
 
     /**

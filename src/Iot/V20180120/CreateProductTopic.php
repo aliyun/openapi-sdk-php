@@ -2,49 +2,36 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateProductTopic
+ * Api CreateProductTopic
  *
+ * @method string getIotInstanceId()
  * @method string getProductKey()
  * @method string getTopicShortName()
  * @method string getOperation()
  * @method string getDesc()
  */
-class CreateProductTopic extends RpcRequest
+class CreateProductTopic extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateProductTopic';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setProductKey($productKey)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withProductKey($productKey);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -61,18 +48,6 @@ class CreateProductTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopicShortName() instead.
-     *
-     * @param string $topicShortName
-     *
-     * @return $this
-     */
-    public function setTopicShortName($topicShortName)
-    {
-        return $this->withTopicShortName($topicShortName);
-    }
-
-    /**
      * @param string $topicShortName
      *
      * @return $this
@@ -86,18 +61,6 @@ class CreateProductTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
-    }
-
-    /**
      * @param string $operation
      *
      * @return $this
@@ -108,18 +71,6 @@ class CreateProductTopic extends RpcRequest
         $this->options['query']['Operation'] = $operation;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDesc() instead.
-     *
-     * @param string $desc
-     *
-     * @return $this
-     */
-    public function setDesc($desc)
-    {
-        return $this->withDesc($desc);
     }
 
     /**

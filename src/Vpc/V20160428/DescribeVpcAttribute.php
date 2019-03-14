@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVpcAttribute
+ * Api DescribeVpcAttribute
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getIsDefault()
  * @method string getOwnerId()
  */
-class DescribeVpcAttribute extends RpcRequest
+class DescribeVpcAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVpcAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class DescribeVpcAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class DescribeVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -115,18 +61,6 @@ class DescribeVpcAttribute extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class DescribeVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsDefault() instead.
-     *
-     * @param string $isDefault
-     *
-     * @return $this
-     */
-    public function setIsDefault($isDefault)
-    {
-        return $this->withIsDefault($isDefault);
-    }
-
-    /**
      * @param string $isDefault
      *
      * @return $this
@@ -165,18 +87,6 @@ class DescribeVpcAttribute extends RpcRequest
         $this->options['query']['IsDefault'] = $isDefault;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

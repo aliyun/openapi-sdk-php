@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetMainDomainName
+ * Api GetMainDomainName
  *
  * @method string getInputString()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class GetMainDomainName extends RpcRequest
+class GetMainDomainName extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetMainDomainName';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInputString() instead.
-     *
-     * @param string $inputString
-     *
-     * @return $this
-     */
-    public function setInputString($inputString)
-    {
-        return $this->withInputString($inputString);
-    }
 
     /**
      * @param string $inputString
@@ -65,18 +35,6 @@ class GetMainDomainName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -87,18 +45,6 @@ class GetMainDomainName extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

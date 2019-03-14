@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeActiveOperationTask
+ * Api DescribeActiveOperationTask
  *
  * @method string getResourceOwnerId()
  * @method string getTaskType()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageSize()
  * @method string getRegion()
  */
-class DescribeActiveOperationTask extends RpcRequest
+class DescribeActiveOperationTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeActiveOperationTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class DescribeActiveOperationTask extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskType() instead.
-     *
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function setTaskType($taskType)
-    {
-        return $this->withTaskType($taskType);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeActiveOperationTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeActiveOperationTask extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeActiveOperationTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeActiveOperationTask extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeActiveOperationTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsHistory() instead.
-     *
-     * @param string $isHistory
-     *
-     * @return $this
-     */
-    public function setIsHistory($isHistory)
-    {
-        return $this->withIsHistory($isHistory);
-    }
-
-    /**
      * @param string $isHistory
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeActiveOperationTask extends RpcRequest
         $this->options['query']['IsHistory'] = $isHistory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeActiveOperationTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeActiveOperationTask extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**

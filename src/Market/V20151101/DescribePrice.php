@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribePrice
+ * Api DescribePrice
  *
  * @method string getCommodity()
  * @method string getOrderType()
  */
-class DescribePrice extends RpcRequest
+class DescribePrice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Market';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribePrice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCommodity() instead.
-     *
-     * @param string $commodity
-     *
-     * @return $this
-     */
-    public function setCommodity($commodity)
-    {
-        return $this->withCommodity($commodity);
-    }
 
     /**
      * @param string $commodity
@@ -56,18 +29,6 @@ class DescribePrice extends RpcRequest
         $this->options['query']['Commodity'] = $commodity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

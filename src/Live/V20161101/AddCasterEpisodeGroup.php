@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddCasterEpisodeGroup
+ * Api AddCasterEpisodeGroup
  *
  * @method string getSideOutputUrl()
  * @method array getItem()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCallbackUrl()
  * @method string getOwnerId()
  */
-class AddCasterEpisodeGroup extends RpcRequest
+class AddCasterEpisodeGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddCasterEpisodeGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSideOutputUrl() instead.
-     *
-     * @param string $sideOutputUrl
-     *
-     * @return $this
-     */
-    public function setSideOutputUrl($sideOutputUrl)
-    {
-        return $this->withSideOutputUrl($sideOutputUrl);
-    }
 
     /**
      * @param string $sideOutputUrl
@@ -67,28 +37,6 @@ class AddCasterEpisodeGroup extends RpcRequest
         $this->options['query']['SideOutputUrl'] = $sideOutputUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getItem() instead.
-     *
-     * @return array
-     */
-    public function getItems()
-    {
-        return $this->getItem();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItem() instead.
-     *
-     * @param array $items
-     *
-     * @return $this
-     */
-    public function setItems(array $items)
-    {
-        return $this->withItem($items);
     }
 
     /**
@@ -108,18 +56,6 @@ class AddCasterEpisodeGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -130,18 +66,6 @@ class AddCasterEpisodeGroup extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -158,18 +82,6 @@ class AddCasterEpisodeGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -180,18 +92,6 @@ class AddCasterEpisodeGroup extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRepeatNum() instead.
-     *
-     * @param string $repeatNum
-     *
-     * @return $this
-     */
-    public function setRepeatNum($repeatNum)
-    {
-        return $this->withRepeatNum($repeatNum);
     }
 
     /**
@@ -208,18 +108,6 @@ class AddCasterEpisodeGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallbackUrl() instead.
-     *
-     * @param string $callbackUrl
-     *
-     * @return $this
-     */
-    public function setCallbackUrl($callbackUrl)
-    {
-        return $this->withCallbackUrl($callbackUrl);
-    }
-
-    /**
      * @param string $callbackUrl
      *
      * @return $this
@@ -230,18 +118,6 @@ class AddCasterEpisodeGroup extends RpcRequest
         $this->options['query']['CallbackUrl'] = $callbackUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

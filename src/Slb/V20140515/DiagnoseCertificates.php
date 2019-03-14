@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DiagnoseCertificates
+ * Api DiagnoseCertificates
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DiagnoseCertificates extends RpcRequest
+class DiagnoseCertificates extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DiagnoseCertificates';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
 
     /**

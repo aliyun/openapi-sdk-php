@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerEcsResourceGroupQueryByResources
+ * Api InnerEcsResourceGroupQueryByResources
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getProxyId()
  * @method string getResourceIds()
  */
-class InnerEcsResourceGroupQueryByResources extends RpcRequest
+class InnerEcsResourceGroupQueryByResources extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerEcsResourceGroupQueryByResources';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,18 +42,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -100,18 +58,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -122,18 +68,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -150,18 +84,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -172,18 +94,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**
@@ -200,18 +110,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -222,18 +120,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
     }
 
     /**
@@ -250,18 +136,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setRegionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
-    }
-
-    /**
      * @param string $regionNo
      *
      * @return $this
@@ -272,18 +146,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['RegionNo'] = $regionNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -300,18 +162,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -325,18 +175,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -347,18 +185,6 @@ class InnerEcsResourceGroupQueryByResources extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceIds() instead.
-     *
-     * @param string $resourceIds
-     *
-     * @return $this
-     */
-    public function setResourceIds($resourceIds)
-    {
-        return $this->withResourceIds($resourceIds);
     }
 
     /**

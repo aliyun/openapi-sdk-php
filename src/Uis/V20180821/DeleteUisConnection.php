@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteUisConnection
+ * Api DeleteUisConnection
  *
  * @method string getResourceOwnerId()
  * @method string getUisConnectionId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DeleteUisConnection extends RpcRequest
+class DeleteUisConnection extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Uis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteUisConnection';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'uis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +36,6 @@ class DeleteUisConnection extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUisConnectionId() instead.
-     *
-     * @param string $uisConnectionId
-     *
-     * @return $this
-     */
-    public function setUisConnectionId($uisConnectionId)
-    {
-        return $this->withUisConnectionId($uisConnectionId);
     }
 
     /**
@@ -94,18 +52,6 @@ class DeleteUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUisNodeId() instead.
-     *
-     * @param string $uisNodeId
-     *
-     * @return $this
-     */
-    public function setUisNodeId($uisNodeId)
-    {
-        return $this->withUisNodeId($uisNodeId);
-    }
-
-    /**
      * @param string $uisNodeId
      *
      * @return $this
@@ -116,18 +62,6 @@ class DeleteUisConnection extends RpcRequest
         $this->options['query']['UisNodeId'] = $uisNodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class DeleteUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -169,18 +91,6 @@ class DeleteUisConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -191,18 +101,6 @@ class DeleteUisConnection extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

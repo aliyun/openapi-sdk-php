@@ -2,27 +2,15 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryResourceInventory
+ * Api QueryResourceInventory
  *
  */
-class QueryResourceInventory extends RpcRequest
+class QueryResourceInventory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaMaxCompute';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-04';
-
-    /**
-     * @var string
-     */
-    public $action = 'QueryResourceInventory';
 }

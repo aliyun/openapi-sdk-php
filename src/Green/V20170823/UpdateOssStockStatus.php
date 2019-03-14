@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateOssStockStatus
+ * Api UpdateOssStockStatus
  *
  * @method string getImageAutoFreeze()
  * @method string getResourceTypeList()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVideoMaxFrames()
  * @method string getOperation()
  */
-class UpdateOssStockStatus extends RpcRequest
+class UpdateOssStockStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateOssStockStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageAutoFreeze() instead.
-     *
-     * @param string $imageAutoFreeze
-     *
-     * @return $this
-     */
-    public function setImageAutoFreeze($imageAutoFreeze)
-    {
-        return $this->withImageAutoFreeze($imageAutoFreeze);
-    }
 
     /**
      * @param string $imageAutoFreeze
@@ -72,18 +42,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['ImageAutoFreeze'] = $imageAutoFreeze;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceTypeList() instead.
-     *
-     * @param string $resourceTypeList
-     *
-     * @return $this
-     */
-    public function setResourceTypeList($resourceTypeList)
-    {
-        return $this->withResourceTypeList($resourceTypeList);
     }
 
     /**
@@ -100,18 +58,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoFrameInterval() instead.
-     *
-     * @param string $videoFrameInterval
-     *
-     * @return $this
-     */
-    public function setVideoFrameInterval($videoFrameInterval)
-    {
-        return $this->withVideoFrameInterval($videoFrameInterval);
-    }
-
-    /**
      * @param string $videoFrameInterval
      *
      * @return $this
@@ -122,18 +68,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['VideoFrameInterval'] = $videoFrameInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoMaxSize() instead.
-     *
-     * @param string $videoMaxSize
-     *
-     * @return $this
-     */
-    public function setVideoMaxSize($videoMaxSize)
-    {
-        return $this->withVideoMaxSize($videoMaxSize);
     }
 
     /**
@@ -150,18 +84,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -172,18 +94,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
     }
 
     /**
@@ -200,18 +110,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBucketConfigList() instead.
-     *
-     * @param string $bucketConfigList
-     *
-     * @return $this
-     */
-    public function setBucketConfigList($bucketConfigList)
-    {
-        return $this->withBucketConfigList($bucketConfigList);
-    }
-
-    /**
      * @param string $bucketConfigList
      *
      * @return $this
@@ -222,18 +120,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['BucketConfigList'] = $bucketConfigList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -250,18 +136,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneList() instead.
-     *
-     * @param string $sceneList
-     *
-     * @return $this
-     */
-    public function setSceneList($sceneList)
-    {
-        return $this->withSceneList($sceneList);
-    }
-
-    /**
      * @param string $sceneList
      *
      * @return $this
@@ -272,18 +146,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['SceneList'] = $sceneList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoAutoFreezeSceneList() instead.
-     *
-     * @param string $videoAutoFreezeSceneList
-     *
-     * @return $this
-     */
-    public function setVideoAutoFreezeSceneList($videoAutoFreezeSceneList)
-    {
-        return $this->withVideoAutoFreezeSceneList($videoAutoFreezeSceneList);
     }
 
     /**
@@ -300,18 +162,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -325,18 +175,6 @@ class UpdateOssStockStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoMaxFrames() instead.
-     *
-     * @param string $videoMaxFrames
-     *
-     * @return $this
-     */
-    public function setVideoMaxFrames($videoMaxFrames)
-    {
-        return $this->withVideoMaxFrames($videoMaxFrames);
-    }
-
-    /**
      * @param string $videoMaxFrames
      *
      * @return $this
@@ -347,18 +185,6 @@ class UpdateOssStockStatus extends RpcRequest
         $this->options['query']['VideoMaxFrames'] = $videoMaxFrames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperation() instead.
-     *
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function setOperation($operation)
-    {
-        return $this->withOperation($operation);
     }
 
     /**

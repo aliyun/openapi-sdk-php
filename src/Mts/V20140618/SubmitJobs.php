@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitJobs
+ * Api SubmitJobs
  *
  * @method string getOutputs()
  * @method string getInput()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getPipelineId()
  */
-class SubmitJobs extends RpcRequest
+class SubmitJobs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitJobs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutputs() instead.
-     *
-     * @param string $outputs
-     *
-     * @return $this
-     */
-    public function setOutputs($outputs)
-    {
-        return $this->withOutputs($outputs);
-    }
 
     /**
      * @param string $outputs
@@ -68,18 +38,6 @@ class SubmitJobs extends RpcRequest
         $this->options['query']['Outputs'] = $outputs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInput() instead.
-     *
-     * @param string $input
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        return $this->withInput($input);
     }
 
     /**
@@ -96,18 +54,6 @@ class SubmitJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputBucket() instead.
-     *
-     * @param string $outputBucket
-     *
-     * @return $this
-     */
-    public function setOutputBucket($outputBucket)
-    {
-        return $this->withOutputBucket($outputBucket);
-    }
-
-    /**
      * @param string $outputBucket
      *
      * @return $this
@@ -118,18 +64,6 @@ class SubmitJobs extends RpcRequest
         $this->options['query']['OutputBucket'] = $outputBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -146,18 +80,6 @@ class SubmitJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -168,18 +90,6 @@ class SubmitJobs extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +106,6 @@ class SubmitJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputLocation() instead.
-     *
-     * @param string $outputLocation
-     *
-     * @return $this
-     */
-    public function setOutputLocation($outputLocation)
-    {
-        return $this->withOutputLocation($outputLocation);
-    }
-
-    /**
      * @param string $outputLocation
      *
      * @return $this
@@ -221,18 +119,6 @@ class SubmitJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -243,18 +129,6 @@ class SubmitJobs extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

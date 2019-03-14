@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVodDomainLog
+ * Api DescribeVodDomainLog
  *
  * @method string getStartTime()
  * @method string getPageNumber()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeVodDomainLog extends RpcRequest
+class DescribeVodDomainLog extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVodDomainLog';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

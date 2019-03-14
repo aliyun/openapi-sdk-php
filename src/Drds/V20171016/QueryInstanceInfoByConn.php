@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryInstanceInfoByConn
+ * Api QueryInstanceInfoByConn
  *
  * @method string getPort()
  * @method string getHost()
  * @method string getUserName()
  */
-class QueryInstanceInfoByConn extends RpcRequest
+class QueryInstanceInfoByConn extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Drds';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryInstanceInfoByConn';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
 
     /**
      * @param string $port
@@ -60,18 +33,6 @@ class QueryInstanceInfoByConn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHost() instead.
-     *
-     * @param string $host
-     *
-     * @return $this
-     */
-    public function setHost($host)
-    {
-        return $this->withHost($host);
-    }
-
-    /**
      * @param string $host
      *
      * @return $this
@@ -82,18 +43,6 @@ class QueryInstanceInfoByConn extends RpcRequest
         $this->options['query']['Host'] = $host;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

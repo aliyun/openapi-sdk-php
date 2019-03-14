@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCustomerGateways
+ * Api DescribeCustomerGateways
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCustomerGatewayId()
  * @method string getPageNumber()
  */
-class DescribeCustomerGateways extends RpcRequest
+class DescribeCustomerGateways extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCustomerGateways';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +36,6 @@ class DescribeCustomerGateways extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +52,6 @@ class DescribeCustomerGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -116,18 +62,6 @@ class DescribeCustomerGateways extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -144,18 +78,6 @@ class DescribeCustomerGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeCustomerGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomerGatewayId() instead.
-     *
-     * @param string $customerGatewayId
-     *
-     * @return $this
-     */
-    public function setCustomerGatewayId($customerGatewayId)
-    {
-        return $this->withCustomerGatewayId($customerGatewayId);
-    }
-
-    /**
      * @param string $customerGatewayId
      *
      * @return $this
@@ -191,18 +101,6 @@ class DescribeCustomerGateways extends RpcRequest
         $this->options['query']['CustomerGatewayId'] = $customerGatewayId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

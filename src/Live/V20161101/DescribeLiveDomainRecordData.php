@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLiveDomainRecordData
+ * Api DescribeLiveDomainRecordData
  *
  * @method string getRecordType()
  * @method string getDomainName()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getOwnerId()
  */
-class DescribeLiveDomainRecordData extends RpcRequest
+class DescribeLiveDomainRecordData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLiveDomainRecordData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordType() instead.
-     *
-     * @param string $recordType
-     *
-     * @return $this
-     */
-    public function setRecordType($recordType)
-    {
-        return $this->withRecordType($recordType);
-    }
 
     /**
      * @param string $recordType
@@ -64,18 +34,6 @@ class DescribeLiveDomainRecordData extends RpcRequest
         $this->options['query']['RecordType'] = $recordType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -92,18 +50,6 @@ class DescribeLiveDomainRecordData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeLiveDomainRecordData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -139,18 +73,6 @@ class DescribeLiveDomainRecordData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

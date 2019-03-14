@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnIpaDomainConfigs
+ * Api DescribeDcdnIpaDomainConfigs
  *
  * @method string getFunctionNames()
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class DescribeDcdnIpaDomainConfigs extends RpcRequest
+class DescribeDcdnIpaDomainConfigs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnIpaDomainConfigs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
 
     /**

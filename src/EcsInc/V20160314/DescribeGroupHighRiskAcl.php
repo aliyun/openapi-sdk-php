@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeGroupHighRiskAcl
+ * Api DescribeGroupHighRiskAcl
  *
  * @method string getBizRegionId()
  * @method string getResourceOwnerId()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getToken()
  * @method string getAlarmLevel()
  */
-class DescribeGroupHighRiskAcl extends RpcRequest
+class DescribeGroupHighRiskAcl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeGroupHighRiskAcl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizRegionId() instead.
-     *
-     * @param string $bizRegionId
-     *
-     * @return $this
-     */
-    public function setBizRegionId($bizRegionId)
-    {
-        return $this->withBizRegionId($bizRegionId);
-    }
 
     /**
      * @param string $bizRegionId
@@ -72,18 +42,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['BizRegionId'] = $bizRegionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +58,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -122,18 +68,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -150,18 +84,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -172,18 +94,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -200,18 +110,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -222,18 +120,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**
@@ -250,18 +136,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -272,18 +146,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -300,18 +162,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -325,18 +175,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -347,18 +185,6 @@ class DescribeGroupHighRiskAcl extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlarmLevel() instead.
-     *
-     * @param string $alarmLevel
-     *
-     * @return $this
-     */
-    public function setAlarmLevel($alarmLevel)
-    {
-        return $this->withAlarmLevel($alarmLevel);
     }
 
     /**

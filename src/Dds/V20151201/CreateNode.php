@@ -2,13 +2,15 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateNode
+ * Api CreateNode
  *
  * @method string getResourceOwnerId()
  * @method string getNodeType()
+ * @method string getAutoPay()
+ * @method string getFromApp()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getNodeStorage()
@@ -18,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSecurityToken()
  * @method string getDBInstanceId()
  */
-class CreateNode extends RpcRequest
+class CreateNode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateNode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +41,6 @@ class CreateNode extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeType() instead.
-     *
-     * @param string $nodeType
-     *
-     * @return $this
-     */
-    public function setNodeType($nodeType)
-    {
-        return $this->withNodeType($nodeType);
     }
 
     /**
@@ -97,15 +57,29 @@ class CreateNode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $autoPay
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withAutoPay($autoPay)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['AutoPay'] = $autoPay;
+        $this->options['query']['AutoPay'] = $autoPay;
+
+        return $this;
+    }
+
+    /**
+     * @param string $fromApp
+     *
+     * @return $this
+     */
+    public function withFromApp($fromApp)
+    {
+        $this->data['FromApp'] = $fromApp;
+        $this->options['query']['FromApp'] = $fromApp;
+
+        return $this;
     }
 
     /**
@@ -122,18 +96,6 @@ class CreateNode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -144,18 +106,6 @@ class CreateNode extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeStorage() instead.
-     *
-     * @param string $nodeStorage
-     *
-     * @return $this
-     */
-    public function setNodeStorage($nodeStorage)
-    {
-        return $this->withNodeStorage($nodeStorage);
     }
 
     /**
@@ -172,18 +122,6 @@ class CreateNode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -194,18 +132,6 @@ class CreateNode extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -222,18 +148,6 @@ class CreateNode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeClass() instead.
-     *
-     * @param string $nodeClass
-     *
-     * @return $this
-     */
-    public function setNodeClass($nodeClass)
-    {
-        return $this->withNodeClass($nodeClass);
-    }
-
-    /**
      * @param string $nodeClass
      *
      * @return $this
@@ -247,18 +161,6 @@ class CreateNode extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -269,18 +171,6 @@ class CreateNode extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RegistrantProfileRealNameVerification
+ * Api RegistrantProfileRealNameVerification
  *
  * @method string getIdentityCredentialType()
  * @method string getUserClientIp()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getIdentityCredentialNo()
  */
-class RegistrantProfileRealNameVerification extends RpcRequest
+class RegistrantProfileRealNameVerification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'RegistrantProfileRealNameVerification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialType() instead.
-     *
-     * @param string $identityCredentialType
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialType($identityCredentialType)
-    {
-        return $this->withIdentityCredentialType($identityCredentialType);
-    }
 
     /**
      * @param string $identityCredentialType
@@ -60,18 +33,6 @@ class RegistrantProfileRealNameVerification extends RpcRequest
         $this->options['query']['IdentityCredentialType'] = $identityCredentialType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -88,18 +49,6 @@ class RegistrantProfileRealNameVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileID() instead.
-     *
-     * @param string $registrantProfileID
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileID($registrantProfileID)
-    {
-        return $this->withRegistrantProfileID($registrantProfileID);
-    }
-
-    /**
      * @param string $registrantProfileID
      *
      * @return $this
@@ -110,18 +59,6 @@ class RegistrantProfileRealNameVerification extends RpcRequest
         $this->options['query']['RegistrantProfileID'] = $registrantProfileID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredential() instead.
-     *
-     * @param string $identityCredential
-     *
-     * @return $this
-     */
-    public function setIdentityCredential($identityCredential)
-    {
-        return $this->withIdentityCredential($identityCredential);
     }
 
     /**
@@ -138,18 +75,6 @@ class RegistrantProfileRealNameVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -160,18 +85,6 @@ class RegistrantProfileRealNameVerification extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialNo() instead.
-     *
-     * @param string $identityCredentialNo
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialNo($identityCredentialNo)
-    {
-        return $this->withIdentityCredentialNo($identityCredentialNo);
     }
 
     /**

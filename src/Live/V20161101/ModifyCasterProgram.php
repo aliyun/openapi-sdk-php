@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyCasterProgram
+ * Api ModifyCasterProgram
  *
  * @method string getCasterId()
  * @method array getEpisode()
  * @method string getOwnerId()
  */
-class ModifyCasterProgram extends RpcRequest
+class ModifyCasterProgram extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyCasterProgram';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
 
     /**
      * @param string $casterId
@@ -62,28 +32,6 @@ class ModifyCasterProgram extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getEpisode() instead.
-     *
-     * @return array
-     */
-    public function getEpisodes()
-    {
-        return $this->getEpisode();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEpisode() instead.
-     *
-     * @param array $episodes
-     *
-     * @return $this
-     */
-    public function setEpisodes(array $episodes)
-    {
-        return $this->withEpisode($episodes);
     }
 
     /**
@@ -108,18 +56,6 @@ class ModifyCasterProgram extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

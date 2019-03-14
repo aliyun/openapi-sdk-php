@@ -2,54 +2,37 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryMovieComments
+ * Api QueryMovieComments
  *
+ * @method string getExtJson()
  * @method string getBizId()
  * @method string getMovieId()
  * @method string getPageNumber()
- * @method string getExtJson()
  */
-class QueryMovieComments extends RpcRequest
+class QueryMovieComments extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryMovieComments';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $extJson
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withExtJson($extJson)
     {
-        return $this->withBizId($bizId);
+        $this->data['ExtJson'] = $extJson;
+        $this->options['query']['ExtJson'] = $extJson;
+
+        return $this;
     }
 
     /**
@@ -66,18 +49,6 @@ class QueryMovieComments extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMovieId() instead.
-     *
-     * @param string $movieId
-     *
-     * @return $this
-     */
-    public function setMovieId($movieId)
-    {
-        return $this->withMovieId($movieId);
-    }
-
-    /**
      * @param string $movieId
      *
      * @return $this
@@ -91,18 +62,6 @@ class QueryMovieComments extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -111,31 +70,6 @@ class QueryMovieComments extends RpcRequest
     {
         $this->data['PageNumber'] = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
 
         return $this;
     }

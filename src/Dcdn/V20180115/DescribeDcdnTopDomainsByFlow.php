@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnTopDomainsByFlow
+ * Api DescribeDcdnTopDomainsByFlow
  *
  * @method string getStartTime()
  * @method string getLimit()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeDcdnTopDomainsByFlow extends RpcRequest
+class DescribeDcdnTopDomainsByFlow extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnTopDomainsByFlow';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
 
     /**
      * @param string $startTime
@@ -64,18 +34,6 @@ class DescribeDcdnTopDomainsByFlow extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        return $this->withLimit($limit);
     }
 
     /**
@@ -92,18 +50,6 @@ class DescribeDcdnTopDomainsByFlow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
-
-    /**
      * @param string $product
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeDcdnTopDomainsByFlow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -139,18 +73,6 @@ class DescribeDcdnTopDomainsByFlow extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

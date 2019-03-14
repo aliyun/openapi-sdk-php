@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainCCAttackInfo
+ * Api DescribeDomainCCAttackInfo
  *
  * @method string getSecurityToken()
  * @method string getDomainName()
@@ -13,27 +13,12 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getOwnerId()
  */
-class DescribeDomainCCAttackInfo extends RpcRequest
+class DescribeDomainCCAttackInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainCCAttackInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

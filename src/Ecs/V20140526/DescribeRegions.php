@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRegions
+ * Api DescribeRegions
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceChargeType()
  * @method string getResourceType()
  */
-class DescribeRegions extends RpcRequest
+class DescribeRegions extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRegions';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -61,18 +36,6 @@ class DescribeRegions extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -89,18 +52,6 @@ class DescribeRegions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -111,18 +62,6 @@ class DescribeRegions extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAcceptLanguage() instead.
-     *
-     * @param string $acceptLanguage
-     *
-     * @return $this
-     */
-    public function setAcceptLanguage($acceptLanguage)
-    {
-        return $this->withAcceptLanguage($acceptLanguage);
     }
 
     /**
@@ -139,18 +78,6 @@ class DescribeRegions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -164,18 +91,6 @@ class DescribeRegions extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
-    }
-
-    /**
      * @param string $instanceChargeType
      *
      * @return $this
@@ -186,18 +101,6 @@ class DescribeRegions extends RpcRequest
         $this->options['query']['InstanceChargeType'] = $instanceChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

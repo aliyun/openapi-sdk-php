@@ -2,60 +2,32 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateOrUpdateRule
+ * Api CreateOrUpdateRule
  *
  * @method string getWarnLevel()
  * @method string getSourceIp()
+ * @method string getStatisticsRules()
  * @method string getDataSourceId()
  * @method string getDescription()
  * @method string getRuleName()
  * @method string getId()
  * @method string getLang()
  * @method string getExpressions()
+ * @method string getActions()
  * @method string getRuleGroupIds()
  */
-class CreateOrUpdateRule extends RpcRequest
+class CreateOrUpdateRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateOrUpdateRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWarnLevel() instead.
-     *
-     * @param string $warnLevel
-     *
-     * @return $this
-     */
-    public function setWarnLevel($warnLevel)
-    {
-        return $this->withWarnLevel($warnLevel);
-    }
 
     /**
      * @param string $warnLevel
@@ -68,18 +40,6 @@ class CreateOrUpdateRule extends RpcRequest
         $this->options['query']['WarnLevel'] = $warnLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -96,15 +56,16 @@ class CreateOrUpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataSourceId() instead.
-     *
-     * @param string $dataSourceId
+     * @param string $statisticsRules
      *
      * @return $this
      */
-    public function setDataSourceId($dataSourceId)
+    public function withStatisticsRules($statisticsRules)
     {
-        return $this->withDataSourceId($dataSourceId);
+        $this->data['StatisticsRules'] = $statisticsRules;
+        $this->options['query']['StatisticsRules'] = $statisticsRules;
+
+        return $this;
     }
 
     /**
@@ -121,18 +82,6 @@ class CreateOrUpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -143,18 +92,6 @@ class CreateOrUpdateRule extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**
@@ -171,18 +108,6 @@ class CreateOrUpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -193,18 +118,6 @@ class CreateOrUpdateRule extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -221,18 +134,6 @@ class CreateOrUpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpressions() instead.
-     *
-     * @param string $expressions
-     *
-     * @return $this
-     */
-    public function setExpressions($expressions)
-    {
-        return $this->withExpressions($expressions);
-    }
-
-    /**
      * @param string $expressions
      *
      * @return $this
@@ -246,15 +147,16 @@ class CreateOrUpdateRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleGroupIds() instead.
-     *
-     * @param string $ruleGroupIds
+     * @param string $actions
      *
      * @return $this
      */
-    public function setRuleGroupIds($ruleGroupIds)
+    public function withActions($actions)
     {
-        return $this->withRuleGroupIds($ruleGroupIds);
+        $this->data['Actions'] = $actions;
+        $this->options['query']['Actions'] = $actions;
+
+        return $this;
     }
 
     /**

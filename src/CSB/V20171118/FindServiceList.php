@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindServiceList
+ * Api FindServiceList
  *
  * @method string getProjectName()
  * @method string getShowDelService()
@@ -15,41 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getServiceName()
  * @method string getPageNum()
  */
-class FindServiceList extends RpcRequest
+class FindServiceList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'FindServiceList';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
-
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
 
     /**
      * @param string $projectName
@@ -62,18 +34,6 @@ class FindServiceList extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShowDelService() instead.
-     *
-     * @param string $showDelService
-     *
-     * @return $this
-     */
-    public function setShowDelService($showDelService)
-    {
-        return $this->withShowDelService($showDelService);
     }
 
     /**
@@ -90,18 +50,6 @@ class FindServiceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasShowType() instead.
-     *
-     * @param string $casShowType
-     *
-     * @return $this
-     */
-    public function setCasShowType($casShowType)
-    {
-        return $this->withCasShowType($casShowType);
-    }
-
-    /**
      * @param string $casShowType
      *
      * @return $this
@@ -112,18 +60,6 @@ class FindServiceList extends RpcRequest
         $this->options['query']['CasShowType'] = $casShowType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**
@@ -140,18 +76,6 @@ class FindServiceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlias() instead.
-     *
-     * @param string $alias
-     *
-     * @return $this
-     */
-    public function setAlias($alias)
-    {
-        return $this->withAlias($alias);
-    }
-
-    /**
      * @param string $alias
      *
      * @return $this
@@ -165,18 +89,6 @@ class FindServiceList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
-    }
-
-    /**
      * @param string $serviceName
      *
      * @return $this
@@ -187,18 +99,6 @@ class FindServiceList extends RpcRequest
         $this->options['query']['ServiceName'] = $serviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

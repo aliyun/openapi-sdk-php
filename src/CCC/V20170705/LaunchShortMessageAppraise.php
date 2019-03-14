@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of LaunchShortMessageAppraise
+ * Api LaunchShortMessageAppraise
  *
  * @method string getAcid()
  * @method string getInstanceId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPhoneNumbers()
  * @method string getSkillGroupId()
  */
-class LaunchShortMessageAppraise extends RpcRequest
+class LaunchShortMessageAppraise extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'LaunchShortMessageAppraise';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAcid() instead.
-     *
-     * @param string $acid
-     *
-     * @return $this
-     */
-    public function setAcid($acid)
-    {
-        return $this->withAcid($acid);
-    }
 
     /**
      * @param string $acid
@@ -64,18 +34,6 @@ class LaunchShortMessageAppraise extends RpcRequest
         $this->options['query']['Acid'] = $acid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -92,18 +50,6 @@ class LaunchShortMessageAppraise extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContactType() instead.
-     *
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function setContactType($contactType)
-    {
-        return $this->withContactType($contactType);
-    }
-
-    /**
      * @param string $contactType
      *
      * @return $this
@@ -117,18 +63,6 @@ class LaunchShortMessageAppraise extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumbers() instead.
-     *
-     * @param string $phoneNumbers
-     *
-     * @return $this
-     */
-    public function setPhoneNumbers($phoneNumbers)
-    {
-        return $this->withPhoneNumbers($phoneNumbers);
-    }
-
-    /**
      * @param string $phoneNumbers
      *
      * @return $this
@@ -139,18 +73,6 @@ class LaunchShortMessageAppraise extends RpcRequest
         $this->options['query']['PhoneNumbers'] = $phoneNumbers;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
     }
 
     /**

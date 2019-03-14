@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerInstallCloudAssistant
+ * Api InnerInstallCloudAssistant
  *
  * @method string getResourceOwnerId()
  * @method string getInstanceOwnerId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method array getInstanceId()
  */
-class InnerInstallCloudAssistant extends RpcRequest
+class InnerInstallCloudAssistant extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerInstallCloudAssistant';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class InnerInstallCloudAssistant extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceOwnerId() instead.
-     *
-     * @param string $instanceOwnerId
-     *
-     * @return $this
-     */
-    public function setInstanceOwnerId($instanceOwnerId)
-    {
-        return $this->withInstanceOwnerId($instanceOwnerId);
     }
 
     /**
@@ -93,18 +51,6 @@ class InnerInstallCloudAssistant extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +61,6 @@ class InnerInstallCloudAssistant extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class InnerInstallCloudAssistant extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -165,28 +87,6 @@ class InnerInstallCloudAssistant extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIds()
-    {
-        return $this->getInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds(array $instanceIds)
-    {
-        return $this->withInstanceId($instanceIds);
     }
 
     /**

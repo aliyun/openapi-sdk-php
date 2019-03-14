@@ -2,35 +2,20 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserCdnStatus
+ * Api DescribeUserCdnStatus
  *
  * @method string getSecurityToken()
  * @method string getOwnerId()
  */
-class DescribeUserCdnStatus extends RpcRequest
+class DescribeUserCdnStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserCdnStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

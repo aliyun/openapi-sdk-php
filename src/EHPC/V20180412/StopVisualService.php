@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StopVisualService
+ * Api StopVisualService
  *
  * @method string getPort()
  * @method string getClusterId()
  * @method string getCidrIp()
  */
-class StopVisualService extends RpcRequest
+class StopVisualService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'StopVisualService';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
 
     /**
      * @param string $port
@@ -60,18 +33,6 @@ class StopVisualService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
-
-    /**
      * @param string $clusterId
      *
      * @return $this
@@ -82,18 +43,6 @@ class StopVisualService extends RpcRequest
         $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCidrIp() instead.
-     *
-     * @param string $cidrIp
-     *
-     * @return $this
-     */
-    public function setCidrIp($cidrIp)
-    {
-        return $this->withCidrIp($cidrIp);
     }
 
     /**

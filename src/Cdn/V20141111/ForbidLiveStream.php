@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ForbidLiveStream
+ * Api ForbidLiveStream
  *
  * @method string getResumeTime()
  * @method string getAppName()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getStreamName()
  */
-class ForbidLiveStream extends RpcRequest
+class ForbidLiveStream extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ForbidLiveStream';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResumeTime() instead.
-     *
-     * @param string $resumeTime
-     *
-     * @return $this
-     */
-    public function setResumeTime($resumeTime)
-    {
-        return $this->withResumeTime($resumeTime);
-    }
 
     /**
      * @param string $resumeTime
@@ -61,18 +34,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['ResumeTime'] = $resumeTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -89,18 +50,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -111,18 +60,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLiveStreamType() instead.
-     *
-     * @param string $liveStreamType
-     *
-     * @return $this
-     */
-    public function setLiveStreamType($liveStreamType)
-    {
-        return $this->withLiveStreamType($liveStreamType);
     }
 
     /**
@@ -139,18 +76,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -164,18 +89,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +99,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

@@ -2,47 +2,49 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RegisterDevice
+ * Api RegisterDevice
  *
+ * @method string getPinCode()
+ * @method string getIotInstanceId()
  * @method string getDeviceName()
  * @method string getProductKey()
+ * @method string getDevEui()
  */
-class RegisterDevice extends RpcRequest
+class RegisterDevice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'RegisterDevice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
+     * @param string $pinCode
      *
      * @return $this
      */
-    public function setDeviceName($deviceName)
+    public function withPinCode($pinCode)
     {
-        return $this->withDeviceName($deviceName);
+        $this->data['PinCode'] = $pinCode;
+        $this->options['query']['PinCode'] = $pinCode;
+
+        return $this;
+    }
+
+    /**
+     * @param string $iotInstanceId
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($iotInstanceId)
+    {
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -59,18 +61,6 @@ class RegisterDevice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -79,6 +69,19 @@ class RegisterDevice extends RpcRequest
     {
         $this->data['ProductKey'] = $productKey;
         $this->options['query']['ProductKey'] = $productKey;
+
+        return $this;
+    }
+
+    /**
+     * @param string $devEui
+     *
+     * @return $this
+     */
+    public function withDevEui($devEui)
+    {
+        $this->data['DevEui'] = $devEui;
+        $this->options['query']['DevEui'] = $devEui;
 
         return $this;
     }

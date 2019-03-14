@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainQpsData
+ * Api DescribeDomainQpsData
  *
  * @method string getFixTimeGap()
  * @method string getTimeMerge()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSecurityToken()
  * @method string getInterval()
  */
-class DescribeDomainQpsData extends RpcRequest
+class DescribeDomainQpsData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainQpsData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFixTimeGap() instead.
-     *
-     * @param string $fixTimeGap
-     *
-     * @return $this
-     */
-    public function setFixTimeGap($fixTimeGap)
-    {
-        return $this->withFixTimeGap($fixTimeGap);
-    }
 
     /**
      * @param string $fixTimeGap
@@ -65,18 +38,6 @@ class DescribeDomainQpsData extends RpcRequest
         $this->options['query']['FixTimeGap'] = $fixTimeGap;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeMerge() instead.
-     *
-     * @param string $timeMerge
-     *
-     * @return $this
-     */
-    public function setTimeMerge($timeMerge)
-    {
-        return $this->withTimeMerge($timeMerge);
     }
 
     /**
@@ -93,18 +54,6 @@ class DescribeDomainQpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -115,18 +64,6 @@ class DescribeDomainQpsData extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -143,18 +80,6 @@ class DescribeDomainQpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocationNameEn() instead.
-     *
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function setLocationNameEn($locationNameEn)
-    {
-        return $this->withLocationNameEn($locationNameEn);
-    }
-
-    /**
      * @param string $locationNameEn
      *
      * @return $this
@@ -165,18 +90,6 @@ class DescribeDomainQpsData extends RpcRequest
         $this->options['query']['LocationNameEn'] = $locationNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -193,18 +106,6 @@ class DescribeDomainQpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIspNameEn() instead.
-     *
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function setIspNameEn($ispNameEn)
-    {
-        return $this->withIspNameEn($ispNameEn);
-    }
-
-    /**
      * @param string $ispNameEn
      *
      * @return $this
@@ -215,18 +116,6 @@ class DescribeDomainQpsData extends RpcRequest
         $this->options['query']['IspNameEn'] = $ispNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -243,18 +132,6 @@ class DescribeDomainQpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainType() instead.
-     *
-     * @param string $domainType
-     *
-     * @return $this
-     */
-    public function setDomainType($domainType)
-    {
-        return $this->withDomainType($domainType);
-    }
-
-    /**
      * @param string $domainType
      *
      * @return $this
@@ -268,18 +145,6 @@ class DescribeDomainQpsData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -290,18 +155,6 @@ class DescribeDomainQpsData extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**

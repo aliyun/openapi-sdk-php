@@ -2,45 +2,23 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetHttpsOptionConfig
+ * Api SetHttpsOptionConfig
  *
  * @method string getHttp2()
  * @method string getDomainName()
  * @method string getOwnerId()
  * @method string getConfigId()
  */
-class SetHttpsOptionConfig extends RpcRequest
+class SetHttpsOptionConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetHttpsOptionConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHttp2() instead.
-     *
-     * @param string $http2
-     *
-     * @return $this
-     */
-    public function setHttp2($http2)
-    {
-        return $this->withHttp2($http2);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $http2
@@ -53,18 +31,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['Http2'] = $http2;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -81,18 +47,6 @@ class SetHttpsOptionConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -103,18 +57,6 @@ class SetHttpsOptionConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigId() instead.
-     *
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function setConfigId($configId)
-    {
-        return $this->withConfigId($configId);
     }
 
     /**

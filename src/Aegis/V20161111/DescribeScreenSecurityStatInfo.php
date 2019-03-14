@@ -2,40 +2,22 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScreenSecurityStatInfo
+ * Api DescribeScreenSecurityStatInfo
  *
  * @method string getSourceIp()
  * @method string getLang()
  */
-class DescribeScreenSecurityStatInfo extends RpcRequest
+class DescribeScreenSecurityStatInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScreenSecurityStatInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SdkGenerateByApp
+ * Api SdkGenerateByApp
  *
  * @method string getSecurityToken()
  * @method string getAppId()
  * @method string getLanguage()
  */
-class SdkGenerateByApp extends RpcRequest
+class SdkGenerateByApp extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'SdkGenerateByApp';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeReplicationGroup
+ * Api DescribeReplicationGroup
  *
  * @method string getDestinationInstanceIds()
  * @method string getResourceOwnerId()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSourceInstanceId()
  * @method string getOwnerId()
  */
-class DescribeReplicationGroup extends RpcRequest
+class DescribeReplicationGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeReplicationGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationInstanceIds() instead.
-     *
-     * @param string $destinationInstanceIds
-     *
-     * @return $this
-     */
-    public function setDestinationInstanceIds($destinationInstanceIds)
-    {
-        return $this->withDestinationInstanceIds($destinationInstanceIds);
-    }
 
     /**
      * @param string $destinationInstanceIds
@@ -67,18 +37,6 @@ class DescribeReplicationGroup extends RpcRequest
         $this->options['query']['DestinationInstanceIds'] = $destinationInstanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -95,18 +53,6 @@ class DescribeReplicationGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeReplicationGroup extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -145,18 +79,6 @@ class DescribeReplicationGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReplicationGroupId() instead.
-     *
-     * @param string $replicationGroupId
-     *
-     * @return $this
-     */
-    public function setReplicationGroupId($replicationGroupId)
-    {
-        return $this->withReplicationGroupId($replicationGroupId);
-    }
-
-    /**
      * @param string $replicationGroupId
      *
      * @return $this
@@ -167,18 +89,6 @@ class DescribeReplicationGroup extends RpcRequest
         $this->options['query']['ReplicationGroupId'] = $replicationGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -195,18 +105,6 @@ class DescribeReplicationGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceInstanceId() instead.
-     *
-     * @param string $sourceInstanceId
-     *
-     * @return $this
-     */
-    public function setSourceInstanceId($sourceInstanceId)
-    {
-        return $this->withSourceInstanceId($sourceInstanceId);
-    }
-
-    /**
      * @param string $sourceInstanceId
      *
      * @return $this
@@ -217,18 +115,6 @@ class DescribeReplicationGroup extends RpcRequest
         $this->options['query']['SourceInstanceId'] = $sourceInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

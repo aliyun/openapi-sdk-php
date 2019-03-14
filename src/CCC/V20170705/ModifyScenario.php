@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyScenario
+ * Api ModifyScenario
  *
  * @method string getVariables()
  * @method string getInstanceId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getScenarioId()
  */
-class ModifyScenario extends RpcRequest
+class ModifyScenario extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyScenario';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVariables() instead.
-     *
-     * @param string $variables
-     *
-     * @return $this
-     */
-    public function setVariables($variables)
-    {
-        return $this->withVariables($variables);
-    }
 
     /**
      * @param string $variables
@@ -64,18 +34,6 @@ class ModifyScenario extends RpcRequest
         $this->options['query']['Variables'] = $variables;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -92,18 +50,6 @@ class ModifyScenario extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -117,18 +63,6 @@ class ModifyScenario extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -139,18 +73,6 @@ class ModifyScenario extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
     }
 
     /**

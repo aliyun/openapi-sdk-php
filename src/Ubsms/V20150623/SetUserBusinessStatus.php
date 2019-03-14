@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Ubsms\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetUserBusinessStatus
+ * Api SetUserBusinessStatus
  *
  * @method string getUid()
  * @method string getStatusValue()
  * @method string getService()
  * @method string getStatusKey()
  */
-class SetUserBusinessStatus extends RpcRequest
+class SetUserBusinessStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetUserBusinessStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -58,18 +31,6 @@ class SetUserBusinessStatus extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusValue() instead.
-     *
-     * @param string $statusValue
-     *
-     * @return $this
-     */
-    public function setStatusValue($statusValue)
-    {
-        return $this->withStatusValue($statusValue);
     }
 
     /**
@@ -86,18 +47,6 @@ class SetUserBusinessStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withService() instead.
-     *
-     * @param string $service
-     *
-     * @return $this
-     */
-    public function setService($service)
-    {
-        return $this->withService($service);
-    }
-
-    /**
      * @param string $service
      *
      * @return $this
@@ -108,18 +57,6 @@ class SetUserBusinessStatus extends RpcRequest
         $this->options['query']['Service'] = $service;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey() instead.
-     *
-     * @param string $statusKey
-     *
-     * @return $this
-     */
-    public function setStatusKey($statusKey)
-    {
-        return $this->withStatusKey($statusKey);
     }
 
     /**

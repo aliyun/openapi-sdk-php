@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyTask
+ * Api ModifyTask
  *
  * @method string getCaller()
  * @method string getAddress()
@@ -17,40 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAlertRule()
  * @method string getTaskId()
  */
-class ModifyTask extends RpcRequest
+class ModifyTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withCaller() instead.
-     *
-     * @param string $caller
-     *
-     * @return $this
-     */
-    public function setcaller($caller)
-    {
-        return $this->withCaller($caller);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $caller
@@ -63,18 +38,6 @@ class ModifyTask extends RpcRequest
         $this->options['query']['caller'] = $caller;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
     }
 
     /**
@@ -91,18 +54,6 @@ class ModifyTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIspCity() instead.
-     *
-     * @param string $ispCity
-     *
-     * @return $this
-     */
-    public function setIspCity($ispCity)
-    {
-        return $this->withIspCity($ispCity);
-    }
-
-    /**
      * @param string $ispCity
      *
      * @return $this
@@ -113,18 +64,6 @@ class ModifyTask extends RpcRequest
         $this->options['query']['IspCity'] = $ispCity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertIds() instead.
-     *
-     * @param string $alertIds
-     *
-     * @return $this
-     */
-    public function setAlertIds($alertIds)
-    {
-        return $this->withAlertIds($alertIds);
     }
 
     /**
@@ -141,18 +80,6 @@ class ModifyTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOptions() instead.
-     *
-     * @param string $options
-     *
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        return $this->withOptions($options);
-    }
-
-    /**
      * @param string $options
      *
      * @return $this
@@ -163,18 +90,6 @@ class ModifyTask extends RpcRequest
         $this->options['query']['Options'] = $options;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function setTaskName($taskName)
-    {
-        return $this->withTaskName($taskName);
     }
 
     /**
@@ -191,18 +106,6 @@ class ModifyTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
-    }
-
-    /**
      * @param string $interval
      *
      * @return $this
@@ -216,18 +119,6 @@ class ModifyTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertRule() instead.
-     *
-     * @param string $alertRule
-     *
-     * @return $this
-     */
-    public function setAlertRule($alertRule)
-    {
-        return $this->withAlertRule($alertRule);
-    }
-
-    /**
      * @param string $alertRule
      *
      * @return $this
@@ -238,18 +129,6 @@ class ModifyTask extends RpcRequest
         $this->options['query']['AlertRule'] = $alertRule;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

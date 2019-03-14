@@ -2,61 +2,27 @@
 
 namespace AlibabaCloud\Cloudauth\V20180916;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitMaterials
+ * Api SubmitMaterials
  *
  * @method string getResourceOwnerId()
  * @method string getSourceIp()
  * @method array getMaterial()
  * @method string getVerifyToken()
  */
-class SubmitMaterials extends RpcRequest
+class SubmitMaterials extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cloudauth';
 
-    /**
-     * @var string
-     */
     public $version = '2018-09-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitMaterials';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +35,6 @@ class SubmitMaterials extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -97,28 +51,6 @@ class SubmitMaterials extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getMaterial() instead.
-     *
-     * @return array
-     */
-    public function getMaterials()
-    {
-        return $this->getMaterial();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaterial() instead.
-     *
-     * @param array $materials
-     *
-     * @return $this
-     */
-    public function setMaterials(array $materials)
-    {
-        return $this->withMaterial($materials);
-    }
-
-    /**
      * @param array $material
      *
      * @return $this
@@ -132,18 +64,6 @@ class SubmitMaterials extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVerifyToken() instead.
-     *
-     * @param string $verifyToken
-     *
-     * @return $this
-     */
-    public function setVerifyToken($verifyToken)
-    {
-        return $this->withVerifyToken($verifyToken);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AssignJobs
+ * Api AssignJobs
  *
  * @method array getCallingNumber()
  * @method string getInstanceId()
@@ -14,55 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getScenarioId()
  * @method array getJobsJson()
  */
-class AssignJobs extends RpcRequest
+class AssignJobs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'AssignJobs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
-    }
 
     /**
      * @param array $callingNumber
@@ -80,18 +40,6 @@ class AssignJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -102,18 +50,6 @@ class AssignJobs extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -130,18 +66,6 @@ class AssignJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
-    }
-
-    /**
      * @param string $strategyJson
      *
      * @return $this
@@ -155,18 +79,6 @@ class AssignJobs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -177,28 +89,6 @@ class AssignJobs extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getJobsJson() instead.
-     *
-     * @return array
-     */
-    public function getJobsJsons()
-    {
-        return $this->getJobsJson();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobsJson() instead.
-     *
-     * @param array $jobsJsons
-     *
-     * @return $this
-     */
-    public function setJobsJsons(array $jobsJsons)
-    {
-        return $this->withJobsJson($jobsJsons);
     }
 
     /**

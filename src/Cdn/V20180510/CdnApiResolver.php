@@ -31,6 +31,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeCdnDomainDetail describeCdnDomainDetail(array $options = [])
  * @method DescribeCdnDomainLogs describeCdnDomainLogs(array $options = [])
  * @method DescribeCdnHttpsDomainList describeCdnHttpsDomainList(array $options = [])
+ * @method DescribeCdnHttpsDomainSSLInfo describeCdnHttpsDomainSSLInfo(array $options = [])
  * @method DescribeCdnMonitorData describeCdnMonitorData(array $options = [])
  * @method DescribeCdnRegionAndIsp describeCdnRegionAndIsp(array $options = [])
  * @method DescribeCdnService describeCdnService(array $options = [])

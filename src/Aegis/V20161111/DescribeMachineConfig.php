@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeMachineConfig
+ * Api DescribeMachineConfig
  *
  * @method string getResourceOwnerId()
  * @method string getTypes()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getConfig()
  * @method string getTarget()
  */
-class DescribeMachineConfig extends RpcRequest
+class DescribeMachineConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeMachineConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTypes() instead.
-     *
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function setTypes($types)
-    {
-        return $this->withTypes($types);
     }
 
     /**
@@ -96,18 +54,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -118,18 +64,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -146,18 +80,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -168,18 +90,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -196,18 +106,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeMachineConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConfig() instead.
-     *
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        return $this->withConfig($config);
-    }
-
-    /**
      * @param string $config
      *
      * @return $this
@@ -243,18 +129,6 @@ class DescribeMachineConfig extends RpcRequest
         $this->options['query']['Config'] = $config;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTarget() instead.
-     *
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function setTarget($target)
-    {
-        return $this->withTarget($target);
     }
 
     /**

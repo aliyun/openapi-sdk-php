@@ -2,49 +2,40 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateBlockchainApplication
+ * Api CreateBlockchainApplication
  *
+ * @method string getCipherSuit()
  * @method string getSize()
  * @method string getMachineNum()
  * @method string getLiveTime()
  * @method string getBizid()
+ * @method string getBlockchainType()
+ * @method string getBlockchainRegionId()
+ * @method string getTlsAlgo()
+ * @method string getMerkleTreeSuit()
  */
-class CreateBlockchainApplication extends RpcRequest
+class CreateBlockchainApplication extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateBlockchainApplication';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
+     * @param string $cipherSuit
      *
      * @return $this
      */
-    public function setSize($size)
+    public function withCipherSuit($cipherSuit)
     {
-        return $this->withSize($size);
+        $this->data['CipherSuit'] = $cipherSuit;
+        $this->options['query']['CipherSuit'] = $cipherSuit;
+
+        return $this;
     }
 
     /**
@@ -61,18 +52,6 @@ class CreateBlockchainApplication extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMachineNum() instead.
-     *
-     * @param string $machineNum
-     *
-     * @return $this
-     */
-    public function setMachineNum($machineNum)
-    {
-        return $this->withMachineNum($machineNum);
-    }
-
-    /**
      * @param string $machineNum
      *
      * @return $this
@@ -83,18 +62,6 @@ class CreateBlockchainApplication extends RpcRequest
         $this->options['query']['MachineNum'] = $machineNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLiveTime() instead.
-     *
-     * @param string $liveTime
-     *
-     * @return $this
-     */
-    public function setLiveTime($liveTime)
-    {
-        return $this->withLiveTime($liveTime);
     }
 
     /**
@@ -111,18 +78,6 @@ class CreateBlockchainApplication extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
-
-    /**
      * @param string $bizid
      *
      * @return $this
@@ -131,6 +86,58 @@ class CreateBlockchainApplication extends RpcRequest
     {
         $this->data['Bizid'] = $bizid;
         $this->options['query']['Bizid'] = $bizid;
+
+        return $this;
+    }
+
+    /**
+     * @param string $blockchainType
+     *
+     * @return $this
+     */
+    public function withBlockchainType($blockchainType)
+    {
+        $this->data['BlockchainType'] = $blockchainType;
+        $this->options['query']['BlockchainType'] = $blockchainType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $blockchainRegionId
+     *
+     * @return $this
+     */
+    public function withBlockchainRegionId($blockchainRegionId)
+    {
+        $this->data['BlockchainRegionId'] = $blockchainRegionId;
+        $this->options['query']['BlockchainRegionId'] = $blockchainRegionId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $tlsAlgo
+     *
+     * @return $this
+     */
+    public function withTlsAlgo($tlsAlgo)
+    {
+        $this->data['TlsAlgo'] = $tlsAlgo;
+        $this->options['query']['TlsAlgo'] = $tlsAlgo;
+
+        return $this;
+    }
+
+    /**
+     * @param string $merkleTreeSuit
+     *
+     * @return $this
+     */
+    public function withMerkleTreeSuit($merkleTreeSuit)
+    {
+        $this->data['MerkleTreeSuit'] = $merkleTreeSuit;
+        $this->options['query']['MerkleTreeSuit'] = $merkleTreeSuit;
 
         return $this;
     }

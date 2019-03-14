@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateMountTarget
+ * Api CreateMountTarget
  *
  * @method string getVSwitchId()
  * @method string getVpcId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAccessGroupName()
  * @method string getFileSystemId()
  */
-class CreateMountTarget extends RpcRequest
+class CreateMountTarget extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateMountTarget';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
 
     /**
      * @param string $vSwitchId
@@ -64,18 +34,6 @@ class CreateMountTarget extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -92,18 +50,6 @@ class CreateMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -117,18 +63,6 @@ class CreateMountTarget extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
-    }
-
-    /**
      * @param string $accessGroupName
      *
      * @return $this
@@ -139,18 +73,6 @@ class CreateMountTarget extends RpcRequest
         $this->options['query']['AccessGroupName'] = $accessGroupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFileSystemId() instead.
-     *
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function setFileSystemId($fileSystemId)
-    {
-        return $this->withFileSystemId($fileSystemId);
     }
 
     /**

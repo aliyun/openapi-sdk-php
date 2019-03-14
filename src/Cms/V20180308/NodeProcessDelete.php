@@ -2,49 +2,24 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NodeProcessDelete
+ * Api NodeProcessDelete
  *
  * @method string getInstanceId()
  * @method string getName()
  * @method string getId()
  */
-class NodeProcessDelete extends RpcRequest
+class NodeProcessDelete extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'NodeProcessDelete';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $instanceId
@@ -60,18 +35,6 @@ class NodeProcessDelete extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -82,18 +45,6 @@ class NodeProcessDelete extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
     }
 
     /**

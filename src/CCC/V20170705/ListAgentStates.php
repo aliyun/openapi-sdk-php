@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListAgentStates
+ * Api ListAgentStates
  *
  * @method string getAgentIds()
  * @method string getInstanceId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getState()
  * @method string getPageNumber()
  */
-class ListAgentStates extends RpcRequest
+class ListAgentStates extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListAgentStates';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentIds() instead.
-     *
-     * @param string $agentIds
-     *
-     * @return $this
-     */
-    public function setAgentIds($agentIds)
-    {
-        return $this->withAgentIds($agentIds);
-    }
 
     /**
      * @param string $agentIds
@@ -65,18 +35,6 @@ class ListAgentStates extends RpcRequest
         $this->options['query']['AgentIds'] = $agentIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -93,18 +51,6 @@ class ListAgentStates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSkillGroupId() instead.
-     *
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function setSkillGroupId($skillGroupId)
-    {
-        return $this->withSkillGroupId($skillGroupId);
-    }
-
-    /**
      * @param string $skillGroupId
      *
      * @return $this
@@ -115,18 +61,6 @@ class ListAgentStates extends RpcRequest
         $this->options['query']['SkillGroupId'] = $skillGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -143,18 +77,6 @@ class ListAgentStates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
-    }
-
-    /**
      * @param string $state
      *
      * @return $this
@@ -165,18 +87,6 @@ class ListAgentStates extends RpcRequest
         $this->options['query']['State'] = $state;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

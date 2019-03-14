@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BindImagePackage
+ * Api BindImagePackage
  *
  * @method string getEcsInstanceId()
  * @method string getImagePackageInstanceId()
  */
-class BindImagePackage extends RpcRequest
+class BindImagePackage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Market';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'BindImagePackage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEcsInstanceId() instead.
-     *
-     * @param string $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function setEcsInstanceId($ecsInstanceId)
-    {
-        return $this->withEcsInstanceId($ecsInstanceId);
-    }
 
     /**
      * @param string $ecsInstanceId
@@ -56,18 +29,6 @@ class BindImagePackage extends RpcRequest
         $this->options['query']['EcsInstanceId'] = $ecsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImagePackageInstanceId() instead.
-     *
-     * @param string $imagePackageInstanceId
-     *
-     * @return $this
-     */
-    public function setImagePackageInstanceId($imagePackageInstanceId)
-    {
-        return $this->withImagePackageInstanceId($imagePackageInstanceId);
     }
 
     /**

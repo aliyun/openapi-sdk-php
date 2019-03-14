@@ -2,61 +2,35 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateNatGateway
+ * Api CreateNatGateway
  *
  * @method string getResourceOwnerId()
+ * @method string getAutoPay()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getOwnerAccount()
- * @method string getVpcId()
- * @method string getName()
  * @method string getDescription()
  * @method string getOwnerId()
- * @method array getBandwidthPackage()
  * @method string getSpec()
+ * @method string getDuration()
+ * @method string getVpcId()
+ * @method string getName()
+ * @method array getBandwidthPackage()
+ * @method string getInstanceChargeType()
+ * @method string getPricingCycle()
  */
-class CreateNatGateway extends RpcRequest
+class CreateNatGateway extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateNatGateway';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,15 +46,16 @@ class CreateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $autoPay
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withAutoPay($autoPay)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['AutoPay'] = $autoPay;
+        $this->options['query']['AutoPay'] = $autoPay;
+
+        return $this;
     }
 
     /**
@@ -97,18 +72,6 @@ class CreateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -119,18 +82,6 @@ class CreateNatGateway extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,68 +98,6 @@ class CreateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -219,18 +108,6 @@ class CreateNatGateway extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,25 +124,55 @@ class CreateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getBandwidthPackage() instead.
-     *
-     * @return array
-     */
-    public function getBandwidthPackages()
-    {
-        return $this->getBandwidthPackage();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidthPackage() instead.
-     *
-     * @param array $bandwidthPackages
+     * @param string $spec
      *
      * @return $this
      */
-    public function setBandwidthPackages(array $bandwidthPackages)
+    public function withSpec($spec)
     {
-        return $this->withBandwidthPackage($bandwidthPackages);
+        $this->data['Spec'] = $spec;
+        $this->options['query']['Spec'] = $spec;
+
+        return $this;
+    }
+
+    /**
+     * @param string $duration
+     *
+     * @return $this
+     */
+    public function withDuration($duration)
+    {
+        $this->data['Duration'] = $duration;
+        $this->options['query']['Duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * @param string $vpcId
+     *
+     * @return $this
+     */
+    public function withVpcId($vpcId)
+    {
+        $this->data['VpcId'] = $vpcId;
+        $this->options['query']['VpcId'] = $vpcId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function withName($name)
+    {
+        $this->data['Name'] = $name;
+        $this->options['query']['Name'] = $name;
+
+        return $this;
     }
 
     /**
@@ -288,26 +195,27 @@ class CreateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpec() instead.
-     *
-     * @param string $spec
+     * @param string $instanceChargeType
      *
      * @return $this
      */
-    public function setSpec($spec)
+    public function withInstanceChargeType($instanceChargeType)
     {
-        return $this->withSpec($spec);
+        $this->data['InstanceChargeType'] = $instanceChargeType;
+        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
+
+        return $this;
     }
 
     /**
-     * @param string $spec
+     * @param string $pricingCycle
      *
      * @return $this
      */
-    public function withSpec($spec)
+    public function withPricingCycle($pricingCycle)
     {
-        $this->data['Spec'] = $spec;
-        $this->options['query']['Spec'] = $spec;
+        $this->data['PricingCycle'] = $pricingCycle;
+        $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
     }

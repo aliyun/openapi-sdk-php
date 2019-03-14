@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NodeProcesses
+ * Api NodeProcesses
  *
  * @method string getInstanceId()
  */
-class NodeProcesses extends RpcRequest
+class NodeProcesses extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'NodeProcesses';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $instanceId

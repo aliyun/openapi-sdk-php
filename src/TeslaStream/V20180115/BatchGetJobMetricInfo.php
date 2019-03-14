@@ -2,42 +2,18 @@
 
 namespace AlibabaCloud\TeslaStream\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchGetJobMetricInfo
+ * Api BatchGetJobMetricInfo
  *
  * @method string getJobInfos()
  */
-class BatchGetJobMetricInfo extends RpcRequest
+class BatchGetJobMetricInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaStream';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
-
-    /**
-     * @var string
-     */
-    public $action = 'BatchGetJobMetricInfo';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobInfos() instead.
-     *
-     * @param string $jobInfos
-     *
-     * @return $this
-     */
-    public function setJobInfos($jobInfos)
-    {
-        return $this->withJobInfos($jobInfos);
-    }
 
     /**
      * @param string $jobInfos

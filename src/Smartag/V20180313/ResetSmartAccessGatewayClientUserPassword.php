@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ResetSmartAccessGatewayClientUserPassword
+ * Api ResetSmartAccessGatewayClientUserPassword
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getUserName()
  */
-class ResetSmartAccessGatewayClientUserPassword extends RpcRequest
+class ResetSmartAccessGatewayClientUserPassword extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'ResetSmartAccessGatewayClientUserPassword';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
 
     /**

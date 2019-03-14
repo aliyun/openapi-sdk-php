@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyInstanceVpcAttribute
+ * Api ModifyInstanceVpcAttribute
  *
  * @method string getVSwitchId()
  * @method string getPrivateIpAddress()
@@ -15,40 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class ModifyInstanceVpcAttribute extends RpcRequest
+class ModifyInstanceVpcAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyInstanceVpcAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $vSwitchId
@@ -61,18 +36,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddress() instead.
-     *
-     * @param string $privateIpAddress
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddress($privateIpAddress)
-    {
-        return $this->withPrivateIpAddress($privateIpAddress);
     }
 
     /**
@@ -89,18 +52,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -111,18 +62,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -139,18 +78,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -164,18 +91,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -186,18 +101,6 @@ class ModifyInstanceVpcAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

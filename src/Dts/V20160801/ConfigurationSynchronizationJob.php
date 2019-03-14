@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ConfigurationSynchronizationJob
+ * Api ConfigurationSynchronizationJob
  *
  * @method string getSynchronizationJobId()
  * @method string getSourceEndpointInstanceID()
@@ -18,40 +18,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
-class ConfigurationSynchronizationJob extends RpcRequest
+class ConfigurationSynchronizationJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dts';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ConfigurationSynchronizationJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobId() instead.
-     *
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobId($synchronizationJobId)
-    {
-        return $this->withSynchronizationJobId($synchronizationJobId);
-    }
 
     /**
      * @param string $synchronizationJobId
@@ -64,18 +37,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
         $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceID() instead.
-     *
-     * @param string $sourceEndpointInstanceID
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceID($sourceEndpointInstanceID)
-    {
-        return $this->withSourceEndpointInstanceID($sourceEndpointInstanceID);
     }
 
     /**
@@ -92,18 +53,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobName() instead.
-     *
-     * @param string $synchronizationJobName
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobName($synchronizationJobName)
-    {
-        return $this->withSynchronizationJobName($synchronizationJobName);
-    }
-
-    /**
      * @param string $synchronizationJobName
      *
      * @return $this
@@ -114,18 +63,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
         $this->options['query']['SynchronizationJobName'] = $synchronizationJobName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointInstanceID() instead.
-     *
-     * @param string $destinationEndpointInstanceID
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointInstanceID($destinationEndpointInstanceID)
-    {
-        return $this->withDestinationEndpointInstanceID($destinationEndpointInstanceID);
     }
 
     /**
@@ -142,18 +79,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInitializationStructureLoad() instead.
-     *
-     * @param string $initializationStructureLoad
-     *
-     * @return $this
-     */
-    public function setInitializationStructureLoad($initializationStructureLoad)
-    {
-        return $this->withInitializationStructureLoad($initializationStructureLoad);
-    }
-
-    /**
      * @param string $initializationStructureLoad
      *
      * @return $this
@@ -164,18 +89,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
         $this->options['query']['Initialization.StructureLoad'] = $initializationStructureLoad;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInitializationDataLoad() instead.
-     *
-     * @param string $initializationDataLoad
-     *
-     * @return $this
-     */
-    public function setInitializationDataLoad($initializationDataLoad)
-    {
-        return $this->withInitializationDataLoad($initializationDataLoad);
     }
 
     /**
@@ -192,18 +105,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationObject() instead.
-     *
-     * @param string $synchronizationObject
-     *
-     * @return $this
-     */
-    public function setSynchronizationObject($synchronizationObject)
-    {
-        return $this->withSynchronizationObject($synchronizationObject);
-    }
-
-    /**
      * @param string $synchronizationObject
      *
      * @return $this
@@ -214,18 +115,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
         $this->options['query']['SynchronizationObject'] = $synchronizationObject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -242,18 +131,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceType() instead.
-     *
-     * @param string $sourceEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceType($sourceEndpointInstanceType)
-    {
-        return $this->withSourceEndpointInstanceType($sourceEndpointInstanceType);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceType
      *
      * @return $this
@@ -264,18 +141,6 @@ class ConfigurationSynchronizationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceType'] = $sourceEndpointInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointInstanceType() instead.
-     *
-     * @param string $destinationEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointInstanceType($destinationEndpointInstanceType)
-    {
-        return $this->withDestinationEndpointInstanceType($destinationEndpointInstanceType);
     }
 
     /**

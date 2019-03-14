@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeInvitationList
+ * Api DescribeInvitationList
  *
  * @method string getConsortiumId()
  */
-class DescribeInvitationList extends RpcRequest
+class DescribeInvitationList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeInvitationList';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
-    }
 
     /**
      * @param string $consortiumId

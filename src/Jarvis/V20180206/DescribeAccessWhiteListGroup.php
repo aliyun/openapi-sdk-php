@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAccessWhiteListGroup
+ * Api DescribeAccessWhiteListGroup
  *
  * @method string getSrcIP()
  * @method string getSourceIp()
@@ -18,40 +18,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStatus()
  * @method string getSourceCode()
  */
-class DescribeAccessWhiteListGroup extends RpcRequest
+class DescribeAccessWhiteListGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAccessWhiteListGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
-    }
 
     /**
      * @param string $srcIP
@@ -64,18 +37,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
         $this->options['query']['SrcIP'] = $srcIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -92,18 +53,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -114,18 +63,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryProduct() instead.
-     *
-     * @param string $queryProduct
-     *
-     * @return $this
-     */
-    public function setqueryProduct($queryProduct)
-    {
-        return $this->withQueryProduct($queryProduct);
     }
 
     /**
@@ -142,18 +79,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -164,18 +89,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWhiteListType() instead.
-     *
-     * @param string $whiteListType
-     *
-     * @return $this
-     */
-    public function setWhiteListType($whiteListType)
-    {
-        return $this->withWhiteListType($whiteListType);
     }
 
     /**
@@ -192,18 +105,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDstIP() instead.
-     *
-     * @param string $dstIP
-     *
-     * @return $this
-     */
-    public function setDstIP($dstIP)
-    {
-        return $this->withDstIP($dstIP);
-    }
-
-    /**
      * @param string $dstIP
      *
      * @return $this
@@ -214,18 +115,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
         $this->options['query']['DstIP'] = $dstIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -242,18 +131,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
-    }
-
-    /**
      * @param string $status
      *
      * @return $this
@@ -264,18 +141,6 @@ class DescribeAccessWhiteListGroup extends RpcRequest
         $this->options['query']['Status'] = $status;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

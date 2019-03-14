@@ -2,40 +2,22 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ResetAppSecret
+ * Api ResetAppSecret
  *
  * @method string getSecurityToken()
  * @method string getAppKey()
  */
-class ResetAppSecret extends RpcRequest
+class ResetAppSecret extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'ResetAppSecret';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

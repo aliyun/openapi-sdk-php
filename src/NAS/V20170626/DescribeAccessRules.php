@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAccessRules
+ * Api DescribeAccessRules
  *
  * @method string getPageSize()
  * @method string getAccessGroupName()
  * @method string getAccessRuleId()
  * @method string getPageNumber()
  */
-class DescribeAccessRules extends RpcRequest
+class DescribeAccessRules extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAccessRules';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
 
     /**
      * @param string $pageSize
@@ -63,18 +33,6 @@ class DescribeAccessRules extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessGroupName() instead.
-     *
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function setAccessGroupName($accessGroupName)
-    {
-        return $this->withAccessGroupName($accessGroupName);
     }
 
     /**
@@ -91,18 +49,6 @@ class DescribeAccessRules extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessRuleId() instead.
-     *
-     * @param string $accessRuleId
-     *
-     * @return $this
-     */
-    public function setAccessRuleId($accessRuleId)
-    {
-        return $this->withAccessRuleId($accessRuleId);
-    }
-
-    /**
      * @param string $accessRuleId
      *
      * @return $this
@@ -113,18 +59,6 @@ class DescribeAccessRules extends RpcRequest
         $this->options['query']['AccessRuleId'] = $accessRuleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

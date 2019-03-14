@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteChaincode
+ * Api DeleteChaincode
  *
  * @method string getChaincodeId()
  */
-class DeleteChaincode extends RpcRequest
+class DeleteChaincode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteChaincode';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChaincodeId() instead.
-     *
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function setChaincodeId($chaincodeId)
-    {
-        return $this->withChaincodeId($chaincodeId);
-    }
 
     /**
      * @param string $chaincodeId

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerQueryInstanceCreatedByProduct
+ * Api InnerQueryInstanceCreatedByProduct
  *
  * @method string getResourceOwnerId()
  * @method array getPrivateIpAddresses()
@@ -24,45 +24,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getToken()
  * @method string getVSwitchId()
  */
-class InnerQueryInstanceCreatedByProduct extends RpcRequest
+class InnerQueryInstanceCreatedByProduct extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerQueryInstanceCreatedByProduct';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -75,28 +45,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPrivateIpAddresses() instead.
-     *
-     * @return array
-     */
-    public function getPrivateIpAddressess()
-    {
-        return $this->getPrivateIpAddresses();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddresses() instead.
-     *
-     * @param array $privateIpAddressess
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddressess(array $privateIpAddressess)
-    {
-        return $this->withPrivateIpAddresses($privateIpAddressess);
     }
 
     /**
@@ -115,28 +63,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getAliUids() instead.
-     *
-     * @return array
-     */
-    public function getAliUidss()
-    {
-        return $this->getAliUids();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUids() instead.
-     *
-     * @param array $aliUidss
-     *
-     * @return $this
-     */
-    public function setAliUidss(array $aliUidss)
-    {
-        return $this->withAliUids($aliUidss);
-    }
-
-    /**
      * @param array $aliUids
      *
      * @return $this
@@ -149,28 +75,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceTypes() instead.
-     *
-     * @return array
-     */
-    public function getInstanceTypess()
-    {
-        return $this->getInstanceTypes();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceTypes() instead.
-     *
-     * @param array $instanceTypess
-     *
-     * @return $this
-     */
-    public function setInstanceTypess(array $instanceTypess)
-    {
-        return $this->withInstanceTypes($instanceTypess);
     }
 
     /**
@@ -189,18 +93,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -211,18 +103,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
     }
 
     /**
@@ -239,18 +119,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -261,18 +129,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -289,18 +145,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -311,28 +155,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPublicIpAddresses() instead.
-     *
-     * @return array
-     */
-    public function getPublicIpAddressess()
-    {
-        return $this->getPublicIpAddresses();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPublicIpAddresses() instead.
-     *
-     * @param array $publicIpAddressess
-     *
-     * @return $this
-     */
-    public function setPublicIpAddressess(array $publicIpAddressess)
-    {
-        return $this->withPublicIpAddresses($publicIpAddressess);
     }
 
     /**
@@ -351,18 +173,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -373,18 +183,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['proxyId'] = $proxyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -401,18 +199,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -423,18 +209,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -451,18 +225,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -473,18 +235,6 @@ class InnerQueryInstanceCreatedByProduct extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**

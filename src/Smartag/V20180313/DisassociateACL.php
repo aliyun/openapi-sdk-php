@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DisassociateACL
+ * Api DisassociateACL
  *
  * @method string getAclId()
  * @method string getResourceOwnerId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSmartAGId()
  * @method string getOwnerId()
  */
-class DisassociateACL extends RpcRequest
+class DisassociateACL extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'DisassociateACL';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclId() instead.
-     *
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function setAclId($aclId)
-    {
-        return $this->withAclId($aclId);
-    }
 
     /**
      * @param string $aclId
@@ -65,18 +35,6 @@ class DisassociateACL extends RpcRequest
         $this->options['query']['AclId'] = $aclId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -93,18 +51,6 @@ class DisassociateACL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +61,6 @@ class DisassociateACL extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class DisassociateACL extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
      * @param string $smartAGId
      *
      * @return $this
@@ -165,18 +87,6 @@ class DisassociateACL extends RpcRequest
         $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

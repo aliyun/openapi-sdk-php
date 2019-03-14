@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRtcUserCntData
+ * Api DescribeRtcUserCntData
  *
  * @method string getStartTime()
  * @method string getServiceArea()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAppId()
  * @method string getInterval()
  */
-class DescribeRtcUserCntData extends RpcRequest
+class DescribeRtcUserCntData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'rtc';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRtcUserCntData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rtc';
 
     /**

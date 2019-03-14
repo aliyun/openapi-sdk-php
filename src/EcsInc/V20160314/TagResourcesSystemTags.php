@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of TagResourcesSystemTags
+ * Api TagResourcesSystemTags
  *
  * @method string getTagOwnerUid()
  * @method string getScope()
@@ -17,32 +17,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getResourceType()
  */
-class TagResourcesSystemTags extends RpcRequest
+class TagResourcesSystemTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'TagResourcesSystemTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
 
     /**

@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVulMachineList
+ * Api DescribeVulMachineList
  *
  * @method string getSourceIp()
  * @method string getEndTs()
  * @method string getStartTs()
  * @method string getUuids()
  */
-class DescribeVulMachineList extends RpcRequest
+class DescribeVulMachineList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVulMachineList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

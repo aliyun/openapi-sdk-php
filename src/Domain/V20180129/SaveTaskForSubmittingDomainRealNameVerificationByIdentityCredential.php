@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
+ * Api SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
  *
  * @method string getIdentityCredentialType()
  * @method string getUserClientIp()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getIdentityCredentialNo()
  */
-class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends RpcRequest
+class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialType() instead.
-     *
-     * @param string $identityCredentialType
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialType($identityCredentialType)
-    {
-        return $this->withIdentityCredentialType($identityCredentialType);
-    }
 
     /**
      * @param string $identityCredentialType
@@ -60,18 +33,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
         $this->options['query']['IdentityCredentialType'] = $identityCredentialType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -88,18 +49,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredential() instead.
-     *
-     * @param string $identityCredential
-     *
-     * @return $this
-     */
-    public function setIdentityCredential($identityCredential)
-    {
-        return $this->withIdentityCredential($identityCredential);
-    }
-
-    /**
      * @param string $identityCredential
      *
      * @return $this
@@ -110,28 +59,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
         $this->options['query']['IdentityCredential'] = $identityCredential;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDomainName() instead.
-     *
-     * @return array
-     */
-    public function getDomainNames()
-    {
-        return $this->getDomainName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param array $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames(array $domainNames)
-    {
-        return $this->withDomainName($domainNames);
     }
 
     /**
@@ -150,18 +77,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -172,18 +87,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialNo() instead.
-     *
-     * @param string $identityCredentialNo
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialNo($identityCredentialNo)
-    {
-        return $this->withIdentityCredentialNo($identityCredentialNo);
     }
 
     /**

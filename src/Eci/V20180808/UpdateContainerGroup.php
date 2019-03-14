@@ -2,13 +2,14 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateContainerGroup
+ * Api UpdateContainerGroup
  *
  * @method array getContainer()
  * @method string getResourceOwnerId()
+ * @method string getClientToken()
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
@@ -22,32 +23,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method array getVolume()
  */
-class UpdateContainerGroup extends RpcRequest
+class UpdateContainerGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Eci';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateContainerGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'eci';
 
     /**
@@ -126,6 +109,19 @@ class UpdateContainerGroup extends RpcRequest
     {
         $this->data['ResourceOwnerId'] = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function withClientToken($clientToken)
+    {
+        $this->data['ClientToken'] = $clientToken;
+        $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
     }

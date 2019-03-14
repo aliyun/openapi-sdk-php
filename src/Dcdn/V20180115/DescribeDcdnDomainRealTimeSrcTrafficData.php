@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnDomainRealTimeSrcTrafficData
+ * Api DescribeDcdnDomainRealTimeSrcTrafficData
  *
  * @method string getStartTime()
  * @method string getDomainName()
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeDcdnDomainRealTimeSrcTrafficData extends RpcRequest
+class DescribeDcdnDomainRealTimeSrcTrafficData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnDomainRealTimeSrcTrafficData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
 
     /**

@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Httpdns\V20160201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetResolveCountSummary
+ * Api GetResolveCountSummary
  *
  * @method string getGranularity()
  * @method string getTimeSpan()
  */
-class GetResolveCountSummary extends RpcRequest
+class GetResolveCountSummary extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Httpdns';
 
-    /**
-     * @var string
-     */
     public $version = '2016-02-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetResolveCountSummary';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGranularity() instead.
-     *
-     * @param string $granularity
-     *
-     * @return $this
-     */
-    public function setGranularity($granularity)
-    {
-        return $this->withGranularity($granularity);
-    }
 
     /**
      * @param string $granularity
@@ -56,18 +29,6 @@ class GetResolveCountSummary extends RpcRequest
         $this->options['query']['Granularity'] = $granularity;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeSpan() instead.
-     *
-     * @param string $timeSpan
-     *
-     * @return $this
-     */
-    public function setTimeSpan($timeSpan)
-    {
-        return $this->withTimeSpan($timeSpan);
     }
 
     /**

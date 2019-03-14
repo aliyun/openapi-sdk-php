@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AllocateEipAddress
+ * Api AllocateEipAddress
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPricingCycle()
  * @method string getInstanceChargeType()
  */
-class AllocateEipAddress extends RpcRequest
+class AllocateEipAddress extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'AllocateEipAddress';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,18 +43,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -101,18 +59,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
-    }
-
-    /**
      * @param string $autoPay
      *
      * @return $this
@@ -123,18 +69,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['AutoPay'] = $autoPay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -151,18 +85,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -173,18 +95,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['Bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -201,18 +111,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withISP() instead.
-     *
-     * @param string $iSP
-     *
-     * @return $this
-     */
-    public function setISP($iSP)
-    {
-        return $this->withISP($iSP);
-    }
-
-    /**
      * @param string $iSP
      *
      * @return $this
@@ -223,18 +121,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['ISP'] = $iSP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -251,18 +137,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -273,18 +147,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -301,18 +163,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -323,18 +173,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetmode() instead.
-     *
-     * @param string $netmode
-     *
-     * @return $this
-     */
-    public function setNetmode($netmode)
-    {
-        return $this->withNetmode($netmode);
     }
 
     /**
@@ -351,18 +189,6 @@ class AllocateEipAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
-    }
-
-    /**
      * @param string $pricingCycle
      *
      * @return $this
@@ -373,18 +199,6 @@ class AllocateEipAddress extends RpcRequest
         $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
     }
 
     /**

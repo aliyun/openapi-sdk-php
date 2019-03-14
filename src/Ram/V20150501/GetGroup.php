@@ -2,53 +2,22 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetGroup
+ * Api GetGroup
  *
  * @method string getGroupName()
  */
-class GetGroup extends RpcRequest
+class GetGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ram';
 
-    /**
-     * @var string
-     */
     public $version = '2015-05-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetGroup';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
 
     /**
      * @param string $groupName

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateInstance
+ * Api CreateInstance
  *
  * @method string getResourceOwnerId()
  * @method string getHpcClusterId()
@@ -22,6 +22,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPeriod()
  * @method string getDryRun()
  * @method string getOwnerId()
+ * @method string getCapacityReservationPreference()
  * @method string getVSwitchId()
  * @method string getPrivateIpAddress()
  * @method string getSpotStrategy()
@@ -41,9 +42,12 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInternetMaxBandwidthOut()
  * @method string getDescription()
  * @method string getSystemDiskCategory()
+ * @method string getCapacityReservationId()
  * @method string getUserData()
  * @method string getPasswordInherit()
  * @method string getInstanceType()
+ * @method string getHibernationConfigured()
+ * @method array getArn()
  * @method string getInstanceChargeType()
  * @method string getDeploymentSetId()
  * @method string getInnerIpAddress()
@@ -58,40 +62,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSystemDiskSize()
  * @method string getSystemDiskDescription()
  */
-class CreateInstance extends RpcRequest
+class CreateInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -104,18 +83,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHpcClusterId() instead.
-     *
-     * @param string $hpcClusterId
-     *
-     * @return $this
-     */
-    public function setHpcClusterId($hpcClusterId)
-    {
-        return $this->withHpcClusterId($hpcClusterId);
     }
 
     /**
@@ -132,18 +99,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityEnhancementStrategy() instead.
-     *
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        return $this->withSecurityEnhancementStrategy($securityEnhancementStrategy);
-    }
-
-    /**
      * @param string $securityEnhancementStrategy
      *
      * @return $this
@@ -154,18 +109,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
     }
 
     /**
@@ -182,18 +125,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpotPriceLimit() instead.
-     *
-     * @param string $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function setSpotPriceLimit($spotPriceLimit)
-    {
-        return $this->withSpotPriceLimit($spotPriceLimit);
-    }
-
-    /**
      * @param string $spotPriceLimit
      *
      * @return $this
@@ -204,18 +135,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SpotPriceLimit'] = $spotPriceLimit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeletionProtection() instead.
-     *
-     * @param string $deletionProtection
-     *
-     * @return $this
-     */
-    public function setDeletionProtection($deletionProtection)
-    {
-        return $this->withDeletionProtection($deletionProtection);
     }
 
     /**
@@ -232,18 +151,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -254,18 +161,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
     }
 
     /**
@@ -282,18 +177,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
-
-    /**
      * @param string $password
      *
      * @return $this
@@ -304,28 +187,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -345,18 +206,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenewPeriod() instead.
-     *
-     * @param string $autoRenewPeriod
-     *
-     * @return $this
-     */
-    public function setAutoRenewPeriod($autoRenewPeriod)
-    {
-        return $this->withAutoRenewPeriod($autoRenewPeriod);
-    }
-
-    /**
      * @param string $autoRenewPeriod
      *
      * @return $this
@@ -367,18 +216,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['AutoRenewPeriod'] = $autoRenewPeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNodeControllerId() instead.
-     *
-     * @param string $nodeControllerId
-     *
-     * @return $this
-     */
-    public function setNodeControllerId($nodeControllerId)
-    {
-        return $this->withNodeControllerId($nodeControllerId);
     }
 
     /**
@@ -395,18 +232,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -417,18 +242,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
     }
 
     /**
@@ -445,18 +258,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -470,15 +271,16 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
+     * @param string $capacityReservationPreference
      *
      * @return $this
      */
-    public function setVSwitchId($vSwitchId)
+    public function withCapacityReservationPreference($capacityReservationPreference)
     {
-        return $this->withVSwitchId($vSwitchId);
+        $this->data['CapacityReservationPreference'] = $capacityReservationPreference;
+        $this->options['query']['CapacityReservationPreference'] = $capacityReservationPreference;
+
+        return $this;
     }
 
     /**
@@ -495,18 +297,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIpAddress() instead.
-     *
-     * @param string $privateIpAddress
-     *
-     * @return $this
-     */
-    public function setPrivateIpAddress($privateIpAddress)
-    {
-        return $this->withPrivateIpAddress($privateIpAddress);
-    }
-
-    /**
      * @param string $privateIpAddress
      *
      * @return $this
@@ -517,18 +307,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['PrivateIpAddress'] = $privateIpAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpotStrategy() instead.
-     *
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function setSpotStrategy($spotStrategy)
-    {
-        return $this->withSpotStrategy($spotStrategy);
     }
 
     /**
@@ -545,18 +323,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
-    }
-
-    /**
      * @param string $periodUnit
      *
      * @return $this
@@ -567,18 +333,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['PeriodUnit'] = $periodUnit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
     }
 
     /**
@@ -595,18 +349,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
-    }
-
-    /**
      * @param string $autoRenew
      *
      * @return $this
@@ -617,18 +359,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['AutoRenew'] = $autoRenew;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
     }
 
     /**
@@ -645,18 +375,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -667,18 +385,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthIn() instead.
-     *
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        return $this->withInternetMaxBandwidthIn($internetMaxBandwidthIn);
     }
 
     /**
@@ -695,18 +401,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseAdditionalService() instead.
-     *
-     * @param string $useAdditionalService
-     *
-     * @return $this
-     */
-    public function setUseAdditionalService($useAdditionalService)
-    {
-        return $this->withUseAdditionalService($useAdditionalService);
-    }
-
-    /**
      * @param string $useAdditionalService
      *
      * @return $this
@@ -717,18 +411,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['UseAdditionalService'] = $useAdditionalService;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -745,18 +427,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -767,18 +437,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVlanId() instead.
-     *
-     * @param string $vlanId
-     *
-     * @return $this
-     */
-    public function setVlanId($vlanId)
-    {
-        return $this->withVlanId($vlanId);
     }
 
     /**
@@ -795,18 +453,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpotInterruptionBehavior() instead.
-     *
-     * @param string $spotInterruptionBehavior
-     *
-     * @return $this
-     */
-    public function setSpotInterruptionBehavior($spotInterruptionBehavior)
-    {
-        return $this->withSpotInterruptionBehavior($spotInterruptionBehavior);
-    }
-
-    /**
      * @param string $spotInterruptionBehavior
      *
      * @return $this
@@ -817,18 +463,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SpotInterruptionBehavior'] = $spotInterruptionBehavior;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
     }
 
     /**
@@ -845,18 +479,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
-    }
-
-    /**
      * @param string $securityGroupId
      *
      * @return $this
@@ -867,18 +489,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SecurityGroupId'] = $securityGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
     }
 
     /**
@@ -895,18 +505,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -917,18 +515,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
     }
 
     /**
@@ -945,15 +531,16 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
+     * @param string $capacityReservationId
      *
      * @return $this
      */
-    public function setUserData($userData)
+    public function withCapacityReservationId($capacityReservationId)
     {
-        return $this->withUserData($userData);
+        $this->data['CapacityReservationId'] = $capacityReservationId;
+        $this->options['query']['CapacityReservationId'] = $capacityReservationId;
+
+        return $this;
     }
 
     /**
@@ -970,18 +557,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPasswordInherit() instead.
-     *
-     * @param string $passwordInherit
-     *
-     * @return $this
-     */
-    public function setPasswordInherit($passwordInherit)
-    {
-        return $this->withPasswordInherit($passwordInherit);
-    }
-
-    /**
      * @param string $passwordInherit
      *
      * @return $this
@@ -992,18 +567,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['PasswordInherit'] = $passwordInherit;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
     }
 
     /**
@@ -1020,15 +583,33 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
+     * @param string $hibernationConfigured
      *
      * @return $this
      */
-    public function setInstanceChargeType($instanceChargeType)
+    public function withHibernationConfigured($hibernationConfigured)
     {
-        return $this->withInstanceChargeType($instanceChargeType);
+        $this->data['HibernationConfigured'] = $hibernationConfigured;
+        $this->options['query']['HibernationConfigured'] = $hibernationConfigured;
+
+        return $this;
+    }
+
+    /**
+     * @param array $arn
+     *
+     * @return $this
+     */
+    public function withArn(array $arn)
+    {
+        $this->data['Arn'] = $arn;
+        foreach ($arn as $i => $iValue) {
+            $this->options['query']['Arn.' . ($i + 1) . '.Rolearn'] = $arn[$i]['Rolearn'];
+            $this->options['query']['Arn.' . ($i + 1) . '.RoleType'] = $arn[$i]['RoleType'];
+            $this->options['query']['Arn.' . ($i + 1) . '.AssumeRoleFor'] = $arn[$i]['AssumeRoleFor'];
+        }
+
+        return $this;
     }
 
     /**
@@ -1045,18 +626,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeploymentSetId() instead.
-     *
-     * @param string $deploymentSetId
-     *
-     * @return $this
-     */
-    public function setDeploymentSetId($deploymentSetId)
-    {
-        return $this->withDeploymentSetId($deploymentSetId);
-    }
-
-    /**
      * @param string $deploymentSetId
      *
      * @return $this
@@ -1067,18 +636,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['DeploymentSetId'] = $deploymentSetId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInnerIpAddress() instead.
-     *
-     * @param string $innerIpAddress
-     *
-     * @return $this
-     */
-    public function setInnerIpAddress($innerIpAddress)
-    {
-        return $this->withInnerIpAddress($innerIpAddress);
     }
 
     /**
@@ -1095,18 +652,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -1117,18 +662,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -1145,18 +678,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskDiskName() instead.
-     *
-     * @param string $systemDiskDiskName
-     *
-     * @return $this
-     */
-    public function setSystemDiskDiskName($systemDiskDiskName)
-    {
-        return $this->withSystemDiskDiskName($systemDiskDiskName);
-    }
-
-    /**
      * @param string $systemDiskDiskName
      *
      * @return $this
@@ -1167,18 +688,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SystemDisk.DiskName'] = $systemDiskDiskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRamRoleName() instead.
-     *
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function setRamRoleName($ramRoleName)
-    {
-        return $this->withRamRoleName($ramRoleName);
     }
 
     /**
@@ -1195,18 +704,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostId() instead.
-     *
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function setDedicatedHostId($dedicatedHostId)
-    {
-        return $this->withDedicatedHostId($dedicatedHostId);
-    }
-
-    /**
      * @param string $dedicatedHostId
      *
      * @return $this
@@ -1217,18 +714,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**
@@ -1245,18 +730,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreditSpecification() instead.
-     *
-     * @param string $creditSpecification
-     *
-     * @return $this
-     */
-    public function setCreditSpecification($creditSpecification)
-    {
-        return $this->withCreditSpecification($creditSpecification);
-    }
-
-    /**
      * @param string $creditSpecification
      *
      * @return $this
@@ -1267,28 +740,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['CreditSpecification'] = $creditSpecification;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDataDisk() instead.
-     *
-     * @return array
-     */
-    public function getDataDisks()
-    {
-        return $this->getDataDisk();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk() instead.
-     *
-     * @param array $dataDisks
-     *
-     * @return $this
-     */
-    public function setDataDisks(array $dataDisks)
-    {
-        return $this->withDataDisk($dataDisks);
     }
 
     /**
@@ -1315,18 +766,6 @@ class CreateInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
-    }
-
-    /**
      * @param string $systemDiskSize
      *
      * @return $this
@@ -1337,18 +776,6 @@ class CreateInstance extends RpcRequest
         $this->options['query']['SystemDisk.Size'] = $systemDiskSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskDescription() instead.
-     *
-     * @param string $systemDiskDescription
-     *
-     * @return $this
-     */
-    public function setSystemDiskDescription($systemDiskDescription)
-    {
-        return $this->withSystemDiskDescription($systemDiskDescription);
     }
 
     /**

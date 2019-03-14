@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTaskDetailList
+ * Api QueryTaskDetailList
  *
  * @method string getTaskStatus()
  * @method string getInstanceId()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getPageNum()
  */
-class QueryTaskDetailList extends RpcRequest
+class QueryTaskDetailList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTaskDetailList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskStatus() instead.
-     *
-     * @param string $taskStatus
-     *
-     * @return $this
-     */
-    public function setTaskStatus($taskStatus)
-    {
-        return $this->withTaskStatus($taskStatus);
-    }
 
     /**
      * @param string $taskStatus
@@ -67,18 +37,6 @@ class QueryTaskDetailList extends RpcRequest
         $this->options['query']['TaskStatus'] = $taskStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +53,6 @@ class QueryTaskDetailList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -117,18 +63,6 @@ class QueryTaskDetailList extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskNo() instead.
-     *
-     * @param string $taskNo
-     *
-     * @return $this
-     */
-    public function setTaskNo($taskNo)
-    {
-        return $this->withTaskNo($taskNo);
     }
 
     /**
@@ -145,18 +79,6 @@ class QueryTaskDetailList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -167,18 +89,6 @@ class QueryTaskDetailList extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -195,18 +105,6 @@ class QueryTaskDetailList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -217,18 +115,6 @@ class QueryTaskDetailList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

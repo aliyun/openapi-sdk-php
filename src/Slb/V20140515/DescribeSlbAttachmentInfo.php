@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSlbAttachmentInfo
+ * Api DescribeSlbAttachmentInfo
  *
  * @method string getAccessKeyId()
  * @method string getEcsInstanceIds()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTags()
  */
-class DescribeSlbAttachmentInfo extends RpcRequest
+class DescribeSlbAttachmentInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSlbAttachmentInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
 
     /**

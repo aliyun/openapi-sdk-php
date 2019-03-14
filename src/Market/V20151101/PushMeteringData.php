@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PushMeteringData
+ * Api PushMeteringData
  *
  * @method string getMetering()
  */
-class PushMeteringData extends RpcRequest
+class PushMeteringData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Market';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'PushMeteringData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetering() instead.
-     *
-     * @param string $metering
-     *
-     * @return $this
-     */
-    public function setMetering($metering)
-    {
-        return $this->withMetering($metering);
-    }
 
     /**
      * @param string $metering

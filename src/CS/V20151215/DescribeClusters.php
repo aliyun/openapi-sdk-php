@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeClusters
+ * Api DescribeClusters
  *
  * @method string getClusterType()
  * @method string getName()
  */
-class DescribeClusters extends RoaRequest
+class DescribeClusters extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeClusters';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/clusters';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterType() instead.
-     *
-     * @param string $clusterType
-     *
-     * @return $this
-     */
-    public function setclusterType($clusterType)
-    {
-        return $this->withClusterType($clusterType);
-    }
 
     /**
      * @param string $clusterType
@@ -61,18 +31,6 @@ class DescribeClusters extends RoaRequest
         $this->options['query']['clusterType'] = $clusterType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Skyeye\V20171201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetCdnSkyeyeStatusData
+ * Api GetCdnSkyeyeStatusData
  *
  * @method string getNode()
  * @method string getDomain()
@@ -14,35 +14,11 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getFields()
  */
-class GetCdnSkyeyeStatusData extends RpcRequest
+class GetCdnSkyeyeStatusData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Skyeye';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-01';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetCdnSkyeyeStatusData';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNode() instead.
-     *
-     * @param string $node
-     *
-     * @return $this
-     */
-    public function setNode($node)
-    {
-        return $this->withNode($node);
-    }
 
     /**
      * @param string $node
@@ -55,18 +31,6 @@ class GetCdnSkyeyeStatusData extends RpcRequest
         $this->options['query']['Node'] = $node;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
     }
 
     /**
@@ -83,18 +47,6 @@ class GetCdnSkyeyeStatusData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -105,18 +57,6 @@ class GetCdnSkyeyeStatusData extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupBy() instead.
-     *
-     * @param string $groupBy
-     *
-     * @return $this
-     */
-    public function setGroupBy($groupBy)
-    {
-        return $this->withGroupBy($groupBy);
     }
 
     /**
@@ -133,18 +73,6 @@ class GetCdnSkyeyeStatusData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -155,18 +83,6 @@ class GetCdnSkyeyeStatusData extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFields() instead.
-     *
-     * @param string $fields
-     *
-     * @return $this
-     */
-    public function setFields($fields)
-    {
-        return $this->withFields($fields);
     }
 
     /**

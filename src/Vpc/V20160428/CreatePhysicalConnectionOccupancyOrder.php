@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatePhysicalConnectionOccupancyOrder
+ * Api CreatePhysicalConnectionOccupancyOrder
  *
  * @method string getPeriod()
  * @method string getResourceOwnerId()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceChargeType()
  * @method string getPricingCycle()
  */
-class CreatePhysicalConnectionOccupancyOrder extends RpcRequest
+class CreatePhysicalConnectionOccupancyOrder extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatePhysicalConnectionOccupancyOrder';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
 
     /**

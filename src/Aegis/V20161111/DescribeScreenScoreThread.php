@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScreenScoreThread
+ * Api DescribeScreenScoreThread
  *
  * @method string getSourceIp()
  * @method string getEndTime()
  * @method string getStartTime()
  */
-class DescribeScreenScoreThread extends RpcRequest
+class DescribeScreenScoreThread extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScreenScoreThread';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

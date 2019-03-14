@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSdkUrl
+ * Api DescribeSdkUrl
  *
  * @method string getDebug()
  * @method string getSourceIp()
  * @method string getId()
  * @method string getLang()
  */
-class DescribeSdkUrl extends RpcRequest
+class DescribeSdkUrl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSdkUrl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDebug() instead.
-     *
-     * @param string $debug
-     *
-     * @return $this
-     */
-    public function setDebug($debug)
-    {
-        return $this->withDebug($debug);
-    }
 
     /**
      * @param string $debug
@@ -63,18 +33,6 @@ class DescribeSdkUrl extends RpcRequest
         $this->options['query']['Debug'] = $debug;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +49,6 @@ class DescribeSdkUrl extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -113,18 +59,6 @@ class DescribeSdkUrl extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

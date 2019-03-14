@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyVulTarget
+ * Api ModifyVulTarget
  *
  * @method string getSourceIp()
  * @method string getConfig()
  * @method string getTarget()
  */
-class ModifyVulTarget extends RpcRequest
+class ModifyVulTarget extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyVulTarget';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetRule
+ * Api SetRule
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -32,55 +32,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getHealthCheckConnectPort()
  * @method string getHealthCheckHttpCode()
  */
-class SetRule extends RpcRequest
+class SetRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -93,18 +53,6 @@ class SetRule extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -121,18 +69,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckTimeout() instead.
-     *
-     * @param string $healthCheckTimeout
-     *
-     * @return $this
-     */
-    public function setHealthCheckTimeout($healthCheckTimeout)
-    {
-        return $this->withHealthCheckTimeout($healthCheckTimeout);
-    }
-
-    /**
      * @param string $healthCheckTimeout
      *
      * @return $this
@@ -143,18 +79,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthCheckTimeout'] = $healthCheckTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckURI() instead.
-     *
-     * @param string $healthCheckURI
-     *
-     * @return $this
-     */
-    public function setHealthCheckURI($healthCheckURI)
-    {
-        return $this->withHealthCheckURI($healthCheckURI);
     }
 
     /**
@@ -171,18 +95,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
-    }
-
-    /**
      * @param string $ruleName
      *
      * @return $this
@@ -193,18 +105,6 @@ class SetRule extends RpcRequest
         $this->options['query']['RuleName'] = $ruleName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnhealthyThreshold() instead.
-     *
-     * @param string $unhealthyThreshold
-     *
-     * @return $this
-     */
-    public function setUnhealthyThreshold($unhealthyThreshold)
-    {
-        return $this->withUnhealthyThreshold($unhealthyThreshold);
     }
 
     /**
@@ -221,18 +121,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthyThreshold() instead.
-     *
-     * @param string $healthyThreshold
-     *
-     * @return $this
-     */
-    public function setHealthyThreshold($healthyThreshold)
-    {
-        return $this->withHealthyThreshold($healthyThreshold);
-    }
-
-    /**
      * @param string $healthyThreshold
      *
      * @return $this
@@ -243,18 +131,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthyThreshold'] = $healthyThreshold;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScheduler() instead.
-     *
-     * @param string $scheduler
-     *
-     * @return $this
-     */
-    public function setScheduler($scheduler)
-    {
-        return $this->withScheduler($scheduler);
     }
 
     /**
@@ -271,18 +147,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheck() instead.
-     *
-     * @param string $healthCheck
-     *
-     * @return $this
-     */
-    public function setHealthCheck($healthCheck)
-    {
-        return $this->withHealthCheck($healthCheck);
-    }
-
-    /**
      * @param string $healthCheck
      *
      * @return $this
@@ -293,18 +157,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthCheck'] = $healthCheck;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withListenerSync() instead.
-     *
-     * @param string $listenerSync
-     *
-     * @return $this
-     */
-    public function setListenerSync($listenerSync)
-    {
-        return $this->withListenerSync($listenerSync);
     }
 
     /**
@@ -321,18 +173,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCookieTimeout() instead.
-     *
-     * @param string $cookieTimeout
-     *
-     * @return $this
-     */
-    public function setCookieTimeout($cookieTimeout)
-    {
-        return $this->withCookieTimeout($cookieTimeout);
-    }
-
-    /**
      * @param string $cookieTimeout
      *
      * @return $this
@@ -343,18 +183,6 @@ class SetRule extends RpcRequest
         $this->options['query']['CookieTimeout'] = $cookieTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStickySessionType() instead.
-     *
-     * @param string $stickySessionType
-     *
-     * @return $this
-     */
-    public function setStickySessionType($stickySessionType)
-    {
-        return $this->withStickySessionType($stickySessionType);
     }
 
     /**
@@ -371,18 +199,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVServerGroupId() instead.
-     *
-     * @param string $vServerGroupId
-     *
-     * @return $this
-     */
-    public function setVServerGroupId($vServerGroupId)
-    {
-        return $this->withVServerGroupId($vServerGroupId);
-    }
-
-    /**
      * @param string $vServerGroupId
      *
      * @return $this
@@ -393,18 +209,6 @@ class SetRule extends RpcRequest
         $this->options['query']['VServerGroupId'] = $vServerGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCookie() instead.
-     *
-     * @param string $cookie
-     *
-     * @return $this
-     */
-    public function setCookie($cookie)
-    {
-        return $this->withCookie($cookie);
     }
 
     /**
@@ -421,18 +225,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -443,18 +235,6 @@ class SetRule extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStickySession() instead.
-     *
-     * @param string $stickySession
-     *
-     * @return $this
-     */
-    public function setStickySession($stickySession)
-    {
-        return $this->withStickySession($stickySession);
     }
 
     /**
@@ -471,18 +251,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckDomain() instead.
-     *
-     * @param string $healthCheckDomain
-     *
-     * @return $this
-     */
-    public function setHealthCheckDomain($healthCheckDomain)
-    {
-        return $this->withHealthCheckDomain($healthCheckDomain);
-    }
-
-    /**
      * @param string $healthCheckDomain
      *
      * @return $this
@@ -493,18 +261,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthCheckDomain'] = $healthCheckDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -521,18 +277,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -543,18 +287,6 @@ class SetRule extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -571,18 +303,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckInterval() instead.
-     *
-     * @param string $healthCheckInterval
-     *
-     * @return $this
-     */
-    public function setHealthCheckInterval($healthCheckInterval)
-    {
-        return $this->withHealthCheckInterval($healthCheckInterval);
-    }
-
-    /**
      * @param string $healthCheckInterval
      *
      * @return $this
@@ -593,18 +313,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthCheckInterval'] = $healthCheckInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
-     *
-     * @return $this
-     */
-    public function setRuleId($ruleId)
-    {
-        return $this->withRuleId($ruleId);
     }
 
     /**
@@ -621,18 +329,6 @@ class SetRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckConnectPort() instead.
-     *
-     * @param string $healthCheckConnectPort
-     *
-     * @return $this
-     */
-    public function setHealthCheckConnectPort($healthCheckConnectPort)
-    {
-        return $this->withHealthCheckConnectPort($healthCheckConnectPort);
-    }
-
-    /**
      * @param string $healthCheckConnectPort
      *
      * @return $this
@@ -643,18 +339,6 @@ class SetRule extends RpcRequest
         $this->options['query']['HealthCheckConnectPort'] = $healthCheckConnectPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckHttpCode() instead.
-     *
-     * @param string $healthCheckHttpCode
-     *
-     * @return $this
-     */
-    public function setHealthCheckHttpCode($healthCheckHttpCode)
-    {
-        return $this->withHealthCheckHttpCode($healthCheckHttpCode);
     }
 
     /**

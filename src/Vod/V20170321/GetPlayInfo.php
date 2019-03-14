@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetPlayInfo
+ * Api GetPlayInfo
  *
  * @method string getResourceOwnerId()
  * @method string getStreamType()
@@ -24,45 +24,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAuthTimeout()
  * @method string getAuthInfo()
  */
-class GetPlayInfo extends RpcRequest
+class GetPlayInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetPlayInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -75,18 +45,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamType() instead.
-     *
-     * @param string $streamType
-     *
-     * @return $this
-     */
-    public function setStreamType($streamType)
-    {
-        return $this->withStreamType($streamType);
     }
 
     /**
@@ -103,18 +61,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFormats() instead.
-     *
-     * @param string $formats
-     *
-     * @return $this
-     */
-    public function setFormats($formats)
-    {
-        return $this->withFormats($formats);
-    }
-
-    /**
      * @param string $formats
      *
      * @return $this
@@ -125,18 +71,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['Formats'] = $formats;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -153,18 +87,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setChannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -175,18 +97,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['Channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -203,18 +113,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlayerVersion() instead.
-     *
-     * @param string $playerVersion
-     *
-     * @return $this
-     */
-    public function setPlayerVersion($playerVersion)
-    {
-        return $this->withPlayerVersion($playerVersion);
-    }
-
-    /**
      * @param string $playerVersion
      *
      * @return $this
@@ -225,18 +123,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['PlayerVersion'] = $playerVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -253,18 +139,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResultType() instead.
-     *
-     * @param string $resultType
-     *
-     * @return $this
-     */
-    public function setResultType($resultType)
-    {
-        return $this->withResultType($resultType);
-    }
-
-    /**
      * @param string $resultType
      *
      * @return $this
@@ -275,18 +149,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['ResultType'] = $resultType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRand() instead.
-     *
-     * @param string $rand
-     *
-     * @return $this
-     */
-    public function setRand($rand)
-    {
-        return $this->withRand($rand);
     }
 
     /**
@@ -303,18 +165,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReAuthInfo() instead.
-     *
-     * @param string $reAuthInfo
-     *
-     * @return $this
-     */
-    public function setReAuthInfo($reAuthInfo)
-    {
-        return $this->withReAuthInfo($reAuthInfo);
-    }
-
-    /**
      * @param string $reAuthInfo
      *
      * @return $this
@@ -325,18 +175,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['ReAuthInfo'] = $reAuthInfo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPlayConfig() instead.
-     *
-     * @param string $playConfig
-     *
-     * @return $this
-     */
-    public function setPlayConfig($playConfig)
-    {
-        return $this->withPlayConfig($playConfig);
     }
 
     /**
@@ -353,18 +191,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputType() instead.
-     *
-     * @param string $outputType
-     *
-     * @return $this
-     */
-    public function setOutputType($outputType)
-    {
-        return $this->withOutputType($outputType);
-    }
-
-    /**
      * @param string $outputType
      *
      * @return $this
@@ -375,18 +201,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['OutputType'] = $outputType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDefinition() instead.
-     *
-     * @param string $definition
-     *
-     * @return $this
-     */
-    public function setDefinition($definition)
-    {
-        return $this->withDefinition($definition);
     }
 
     /**
@@ -403,18 +217,6 @@ class GetPlayInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthTimeout() instead.
-     *
-     * @param string $authTimeout
-     *
-     * @return $this
-     */
-    public function setAuthTimeout($authTimeout)
-    {
-        return $this->withAuthTimeout($authTimeout);
-    }
-
-    /**
      * @param string $authTimeout
      *
      * @return $this
@@ -425,18 +227,6 @@ class GetPlayInfo extends RpcRequest
         $this->options['query']['AuthTimeout'] = $authTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthInfo() instead.
-     *
-     * @param string $authInfo
-     *
-     * @return $this
-     */
-    public function setAuthInfo($authInfo)
-    {
-        return $this->withAuthInfo($authInfo);
     }
 
     /**

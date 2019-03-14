@@ -2,58 +2,30 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyCloudConnectNetwork
+ * Api ModifyCloudConnectNetwork
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
  * @method string getCcnId()
  * @method string getName()
+ * @method string getCidrBlock()
  * @method string getDescription()
+ * @method string getSnatCidrBlock()
  * @method string getOwnerId()
  */
-class ModifyCloudConnectNetwork extends RpcRequest
+class ModifyCloudConnectNetwork extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyCloudConnectNetwork';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +38,6 @@ class ModifyCloudConnectNetwork extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -94,18 +54,6 @@ class ModifyCloudConnectNetwork extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -116,18 +64,6 @@ class ModifyCloudConnectNetwork extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcnId() instead.
-     *
-     * @param string $ccnId
-     *
-     * @return $this
-     */
-    public function setCcnId($ccnId)
-    {
-        return $this->withCcnId($ccnId);
     }
 
     /**
@@ -144,18 +80,6 @@ class ModifyCloudConnectNetwork extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -169,15 +93,16 @@ class ModifyCloudConnectNetwork extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
+     * @param string $cidrBlock
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function withCidrBlock($cidrBlock)
     {
-        return $this->withDescription($description);
+        $this->data['CidrBlock'] = $cidrBlock;
+        $this->options['query']['CidrBlock'] = $cidrBlock;
+
+        return $this;
     }
 
     /**
@@ -194,15 +119,16 @@ class ModifyCloudConnectNetwork extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param string $snatCidrBlock
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withSnatCidrBlock($snatCidrBlock)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['SnatCidrBlock'] = $snatCidrBlock;
+        $this->options['query']['SnatCidrBlock'] = $snatCidrBlock;
+
+        return $this;
     }
 
     /**

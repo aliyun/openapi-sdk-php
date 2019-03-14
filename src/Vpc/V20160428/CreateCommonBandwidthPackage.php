@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateCommonBandwidthPackage
+ * Api CreateCommonBandwidthPackage
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getName()
  * @method string getRatio()
  */
-class CreateCommonBandwidthPackage extends RpcRequest
+class CreateCommonBandwidthPackage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateCommonBandwidthPackage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,18 +42,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -100,18 +58,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -122,18 +68,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
     }
 
     /**
@@ -150,18 +84,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -172,18 +94,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withISP() instead.
-     *
-     * @param string $iSP
-     *
-     * @return $this
-     */
-    public function setISP($iSP)
-    {
-        return $this->withISP($iSP);
     }
 
     /**
@@ -200,18 +110,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -222,18 +120,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -250,18 +136,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -272,18 +146,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZone() instead.
-     *
-     * @param string $zone
-     *
-     * @return $this
-     */
-    public function setZone($zone)
-    {
-        return $this->withZone($zone);
     }
 
     /**
@@ -300,18 +162,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -325,18 +175,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -347,18 +185,6 @@ class CreateCommonBandwidthPackage extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRatio() instead.
-     *
-     * @param string $ratio
-     *
-     * @return $this
-     */
-    public function setRatio($ratio)
-    {
-        return $this->withRatio($ratio);
     }
 
     /**

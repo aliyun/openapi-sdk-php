@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveBatchTaskForCreatingOrderRenew
+ * Api SaveBatchTaskForCreatingOrderRenew
  *
  * @method string getPromotionNo()
  * @method string getUserClientIp()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getUsePromotion()
  */
-class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
+class SaveBatchTaskForCreatingOrderRenew extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveBatchTaskForCreatingOrderRenew';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
-    }
 
     /**
      * @param string $promotionNo
@@ -64,18 +37,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -86,28 +47,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrderRenewParam() instead.
-     *
-     * @return array
-     */
-    public function getOrderRenewParams()
-    {
-        return $this->getOrderRenewParam();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderRenewParam() instead.
-     *
-     * @param array $orderRenewParams
-     *
-     * @return $this
-     */
-    public function setOrderRenewParams(array $orderRenewParams)
-    {
-        return $this->withOrderRenewParam($orderRenewParams);
     }
 
     /**
@@ -128,18 +67,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
-    }
-
-    /**
      * @param string $couponNo
      *
      * @return $this
@@ -150,18 +77,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['CouponNo'] = $couponNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
     }
 
     /**
@@ -178,18 +93,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -200,18 +103,6 @@ class SaveBatchTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

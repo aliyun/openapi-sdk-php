@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DestroyEthereum
+ * Api DestroyEthereum
  *
  * @method string getEthereumId()
  */
-class DestroyEthereum extends RpcRequest
+class DestroyEthereum extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DestroyEthereum';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEthereumId() instead.
-     *
-     * @param string $ethereumId
-     *
-     * @return $this
-     */
-    public function setEthereumId($ethereumId)
-    {
-        return $this->withEthereumId($ethereumId);
-    }
 
     /**
      * @param string $ethereumId

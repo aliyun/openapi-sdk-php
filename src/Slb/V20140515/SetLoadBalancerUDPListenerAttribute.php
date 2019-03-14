@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetLoadBalancerUDPListenerAttribute
+ * Api SetLoadBalancerUDPListenerAttribute
  *
  * @method string getAccessKeyId()
  * @method string getHealthCheckConnectTimeout()
@@ -39,55 +39,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getHealthCheckConnectPort()
  * @method string getVServerGroup()
  */
-class SetLoadBalancerUDPListenerAttribute extends RpcRequest
+class SetLoadBalancerUDPListenerAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetLoadBalancerUDPListenerAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -100,18 +60,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckConnectTimeout() instead.
-     *
-     * @param string $healthCheckConnectTimeout
-     *
-     * @return $this
-     */
-    public function setHealthCheckConnectTimeout($healthCheckConnectTimeout)
-    {
-        return $this->withHealthCheckConnectTimeout($healthCheckConnectTimeout);
     }
 
     /**
@@ -128,18 +76,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEagleEyeProtocol() instead.
-     *
-     * @param string $eagleEyeProtocol
-     *
-     * @return $this
-     */
-    public function setEagleEyeProtocol($eagleEyeProtocol)
-    {
-        return $this->withEagleEyeProtocol($eagleEyeProtocol);
-    }
-
-    /**
      * @param string $eagleEyeProtocol
      *
      * @return $this
@@ -150,18 +86,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['EagleEyeProtocol'] = $eagleEyeProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -178,18 +102,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -200,18 +112,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUnhealthyThreshold() instead.
-     *
-     * @param string $unhealthyThreshold
-     *
-     * @return $this
-     */
-    public function setUnhealthyThreshold($unhealthyThreshold)
-    {
-        return $this->withUnhealthyThreshold($unhealthyThreshold);
     }
 
     /**
@@ -228,18 +128,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthyThreshold() instead.
-     *
-     * @param string $healthyThreshold
-     *
-     * @return $this
-     */
-    public function setHealthyThreshold($healthyThreshold)
-    {
-        return $this->withHealthyThreshold($healthyThreshold);
-    }
-
-    /**
      * @param string $healthyThreshold
      *
      * @return $this
@@ -250,18 +138,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['HealthyThreshold'] = $healthyThreshold;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclStatus() instead.
-     *
-     * @param string $aclStatus
-     *
-     * @return $this
-     */
-    public function setAclStatus($aclStatus)
-    {
-        return $this->withAclStatus($aclStatus);
     }
 
     /**
@@ -278,18 +154,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScheduler() instead.
-     *
-     * @param string $scheduler
-     *
-     * @return $this
-     */
-    public function setScheduler($scheduler)
-    {
-        return $this->withScheduler($scheduler);
-    }
-
-    /**
      * @param string $scheduler
      *
      * @return $this
@@ -300,18 +164,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['Scheduler'] = $scheduler;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclType() instead.
-     *
-     * @param string $aclType
-     *
-     * @return $this
-     */
-    public function setAclType($aclType)
-    {
-        return $this->withAclType($aclType);
     }
 
     /**
@@ -328,18 +180,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMasterSlaveServerGroup() instead.
-     *
-     * @param string $masterSlaveServerGroup
-     *
-     * @return $this
-     */
-    public function setMasterSlaveServerGroup($masterSlaveServerGroup)
-    {
-        return $this->withMasterSlaveServerGroup($masterSlaveServerGroup);
-    }
-
-    /**
      * @param string $masterSlaveServerGroup
      *
      * @return $this
@@ -350,18 +190,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['MasterSlaveServerGroup'] = $masterSlaveServerGroup;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxConnection() instead.
-     *
-     * @param string $maxConnection
-     *
-     * @return $this
-     */
-    public function setMaxConnection($maxConnection)
-    {
-        return $this->withMaxConnection($maxConnection);
     }
 
     /**
@@ -378,18 +206,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPersistenceTimeout() instead.
-     *
-     * @param string $persistenceTimeout
-     *
-     * @return $this
-     */
-    public function setPersistenceTimeout($persistenceTimeout)
-    {
-        return $this->withPersistenceTimeout($persistenceTimeout);
-    }
-
-    /**
      * @param string $persistenceTimeout
      *
      * @return $this
@@ -400,18 +216,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['PersistenceTimeout'] = $persistenceTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEagleEyeRate() instead.
-     *
-     * @param string $eagleEyeRate
-     *
-     * @return $this
-     */
-    public function setEagleEyeRate($eagleEyeRate)
-    {
-        return $this->withEagleEyeRate($eagleEyeRate);
     }
 
     /**
@@ -428,18 +232,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcIds() instead.
-     *
-     * @param string $vpcIds
-     *
-     * @return $this
-     */
-    public function setVpcIds($vpcIds)
-    {
-        return $this->withVpcIds($vpcIds);
-    }
-
-    /**
      * @param string $vpcIds
      *
      * @return $this
@@ -450,18 +242,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['VpcIds'] = $vpcIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVServerGroupId() instead.
-     *
-     * @param string $vServerGroupId
-     *
-     * @return $this
-     */
-    public function setVServerGroupId($vServerGroupId)
-    {
-        return $this->withVServerGroupId($vServerGroupId);
     }
 
     /**
@@ -478,18 +258,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAclId() instead.
-     *
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function setAclId($aclId)
-    {
-        return $this->withAclId($aclId);
-    }
-
-    /**
      * @param string $aclId
      *
      * @return $this
@@ -500,18 +268,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['AclId'] = $aclId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withListenerPort() instead.
-     *
-     * @param string $listenerPort
-     *
-     * @return $this
-     */
-    public function setListenerPort($listenerPort)
-    {
-        return $this->withListenerPort($listenerPort);
     }
 
     /**
@@ -528,18 +284,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -550,18 +294,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
     }
 
     /**
@@ -578,18 +310,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -600,18 +320,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -628,18 +336,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
-    }
-
-    /**
      * @param string $tags
      *
      * @return $this
@@ -650,18 +346,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['Tags'] = $tags;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerId() instead.
-     *
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function setLoadBalancerId($loadBalancerId)
-    {
-        return $this->withLoadBalancerId($loadBalancerId);
     }
 
     /**
@@ -678,18 +362,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMasterSlaveServerGroupId() instead.
-     *
-     * @param string $masterSlaveServerGroupId
-     *
-     * @return $this
-     */
-    public function setMasterSlaveServerGroupId($masterSlaveServerGroupId)
-    {
-        return $this->withMasterSlaveServerGroupId($masterSlaveServerGroupId);
-    }
-
-    /**
      * @param string $masterSlaveServerGroupId
      *
      * @return $this
@@ -700,18 +372,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['MasterSlaveServerGroupId'] = $masterSlaveServerGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckReq() instead.
-     *
-     * @param string $healthCheckReq
-     *
-     * @return $this
-     */
-    public function sethealthCheckReq($healthCheckReq)
-    {
-        return $this->withHealthCheckReq($healthCheckReq);
     }
 
     /**
@@ -728,18 +388,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckInterval() instead.
-     *
-     * @param string $healthCheckInterval
-     *
-     * @return $this
-     */
-    public function setHealthCheckInterval($healthCheckInterval)
-    {
-        return $this->withHealthCheckInterval($healthCheckInterval);
-    }
-
-    /**
      * @param string $healthCheckInterval
      *
      * @return $this
@@ -750,18 +398,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['HealthCheckInterval'] = $healthCheckInterval;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckExp() instead.
-     *
-     * @param string $healthCheckExp
-     *
-     * @return $this
-     */
-    public function sethealthCheckExp($healthCheckExp)
-    {
-        return $this->withHealthCheckExp($healthCheckExp);
     }
 
     /**
@@ -778,18 +414,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEagleEyeStatus() instead.
-     *
-     * @param string $eagleEyeStatus
-     *
-     * @return $this
-     */
-    public function setEagleEyeStatus($eagleEyeStatus)
-    {
-        return $this->withEagleEyeStatus($eagleEyeStatus);
-    }
-
-    /**
      * @param string $eagleEyeStatus
      *
      * @return $this
@@ -803,18 +427,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckConnectPort() instead.
-     *
-     * @param string $healthCheckConnectPort
-     *
-     * @return $this
-     */
-    public function setHealthCheckConnectPort($healthCheckConnectPort)
-    {
-        return $this->withHealthCheckConnectPort($healthCheckConnectPort);
-    }
-
-    /**
      * @param string $healthCheckConnectPort
      *
      * @return $this
@@ -825,18 +437,6 @@ class SetLoadBalancerUDPListenerAttribute extends RpcRequest
         $this->options['query']['HealthCheckConnectPort'] = $healthCheckConnectPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVServerGroup() instead.
-     *
-     * @param string $vServerGroup
-     *
-     * @return $this
-     */
-    public function setVServerGroup($vServerGroup)
-    {
-        return $this->withVServerGroup($vServerGroup);
     }
 
     /**

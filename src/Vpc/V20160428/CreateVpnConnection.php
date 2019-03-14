@@ -2,64 +2,36 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateVpnConnection
+ * Api CreateVpnConnection
  *
  * @method string getIkeConfig()
  * @method string getResourceOwnerId()
  * @method string getRemoteSubnet()
  * @method string getEffectImmediately()
+ * @method string getAutoConfigRoute()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getOwnerAccount()
  * @method string getIpsecConfig()
  * @method string getVpnGatewayId()
  * @method string getOwnerId()
+ * @method string getHealthCheckConfig()
  * @method string getCustomerGatewayId()
  * @method string getLocalSubnet()
  * @method string getName()
  */
-class CreateVpnConnection extends RpcRequest
+class CreateVpnConnection extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateVpnConnection';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIkeConfig() instead.
-     *
-     * @param string $ikeConfig
-     *
-     * @return $this
-     */
-    public function setIkeConfig($ikeConfig)
-    {
-        return $this->withIkeConfig($ikeConfig);
-    }
 
     /**
      * @param string $ikeConfig
@@ -72,18 +44,6 @@ class CreateVpnConnection extends RpcRequest
         $this->options['query']['IkeConfig'] = $ikeConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +60,6 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemoteSubnet() instead.
-     *
-     * @param string $remoteSubnet
-     *
-     * @return $this
-     */
-    public function setRemoteSubnet($remoteSubnet)
-    {
-        return $this->withRemoteSubnet($remoteSubnet);
-    }
-
-    /**
      * @param string $remoteSubnet
      *
      * @return $this
@@ -122,18 +70,6 @@ class CreateVpnConnection extends RpcRequest
         $this->options['query']['RemoteSubnet'] = $remoteSubnet;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEffectImmediately() instead.
-     *
-     * @param string $effectImmediately
-     *
-     * @return $this
-     */
-    public function setEffectImmediately($effectImmediately)
-    {
-        return $this->withEffectImmediately($effectImmediately);
     }
 
     /**
@@ -150,15 +86,16 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $autoConfigRoute
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withAutoConfigRoute($autoConfigRoute)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['AutoConfigRoute'] = $autoConfigRoute;
+        $this->options['query']['AutoConfigRoute'] = $autoConfigRoute;
+
+        return $this;
     }
 
     /**
@@ -175,18 +112,6 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -197,18 +122,6 @@ class CreateVpnConnection extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -225,18 +138,6 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpsecConfig() instead.
-     *
-     * @param string $ipsecConfig
-     *
-     * @return $this
-     */
-    public function setIpsecConfig($ipsecConfig)
-    {
-        return $this->withIpsecConfig($ipsecConfig);
-    }
-
-    /**
      * @param string $ipsecConfig
      *
      * @return $this
@@ -247,18 +148,6 @@ class CreateVpnConnection extends RpcRequest
         $this->options['query']['IpsecConfig'] = $ipsecConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpnGatewayId() instead.
-     *
-     * @param string $vpnGatewayId
-     *
-     * @return $this
-     */
-    public function setVpnGatewayId($vpnGatewayId)
-    {
-        return $this->withVpnGatewayId($vpnGatewayId);
     }
 
     /**
@@ -275,18 +164,6 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -300,15 +177,16 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomerGatewayId() instead.
-     *
-     * @param string $customerGatewayId
+     * @param string $healthCheckConfig
      *
      * @return $this
      */
-    public function setCustomerGatewayId($customerGatewayId)
+    public function withHealthCheckConfig($healthCheckConfig)
     {
-        return $this->withCustomerGatewayId($customerGatewayId);
+        $this->data['HealthCheckConfig'] = $healthCheckConfig;
+        $this->options['query']['HealthCheckConfig'] = $healthCheckConfig;
+
+        return $this;
     }
 
     /**
@@ -325,18 +203,6 @@ class CreateVpnConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocalSubnet() instead.
-     *
-     * @param string $localSubnet
-     *
-     * @return $this
-     */
-    public function setLocalSubnet($localSubnet)
-    {
-        return $this->withLocalSubnet($localSubnet);
-    }
-
-    /**
      * @param string $localSubnet
      *
      * @return $this
@@ -347,18 +213,6 @@ class CreateVpnConnection extends RpcRequest
         $this->options['query']['LocalSubnet'] = $localSubnet;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeWebLockEvents
+ * Api DescribeWebLockEvents
  *
  * @method string getStatusList()
  * @method string getSourceIp()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getEventName()
  */
-class DescribeWebLockEvents extends RpcRequest
+class DescribeWebLockEvents extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeWebLockEvents';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
 
     /**
      * @param string $statusList
@@ -70,18 +40,6 @@ class DescribeWebLockEvents extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -98,18 +56,6 @@ class DescribeWebLockEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -120,18 +66,6 @@ class DescribeWebLockEvents extends RpcRequest
         $this->options['query']['Level'] = $level;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -148,18 +82,6 @@ class DescribeWebLockEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -170,18 +92,6 @@ class DescribeWebLockEvents extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
     }
 
     /**
@@ -198,18 +108,6 @@ class DescribeWebLockEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function setDealed($dealed)
-    {
-        return $this->withDealed($dealed);
-    }
-
-    /**
      * @param string $dealed
      *
      * @return $this
@@ -220,18 +118,6 @@ class DescribeWebLockEvents extends RpcRequest
         $this->options['query']['Dealed'] = $dealed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -248,18 +134,6 @@ class DescribeWebLockEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
-    }
-
-    /**
      * @param string $tag
      *
      * @return $this
@@ -273,18 +147,6 @@ class DescribeWebLockEvents extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -295,18 +157,6 @@ class DescribeWebLockEvents extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventName() instead.
-     *
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        return $this->withEventName($eventName);
     }
 
     /**

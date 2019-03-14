@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CancelDomainVerification
+ * Api CancelDomainVerification
  *
  * @method string getActionType()
  * @method string getInstanceId()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class CancelDomainVerification extends RpcRequest
+class CancelDomainVerification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'CancelDomainVerification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

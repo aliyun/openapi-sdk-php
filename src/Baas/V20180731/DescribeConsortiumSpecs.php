@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeConsortiumSpecs
+ * Api DescribeConsortiumSpecs
  *
  */
-class DescribeConsortiumSpecs extends RpcRequest
+class DescribeConsortiumSpecs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeConsortiumSpecs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

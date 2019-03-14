@@ -2,36 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateEthereumNode
+ * Api UpdateEthereumNode
  *
  * @method string getNodeName()
  * @method string getDescription()
- * @method string getId()
+ * @method string getNodeId()
  */
-class UpdateEthereumNode extends RpcRequest
+class UpdateEthereumNode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateEthereumNode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
@@ -61,14 +46,14 @@ class UpdateEthereumNode extends RpcRequest
     }
 
     /**
-     * @param string $id
+     * @param string $nodeId
      *
      * @return $this
      */
-    public function withId($id)
+    public function withNodeId($nodeId)
     {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
+        $this->data['NodeId'] = $nodeId;
+        $this->options['query']['NodeId'] = $nodeId;
 
         return $this;
     }

@@ -2,27 +2,15 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTopology
+ * Api QueryTopology
  *
  */
-class QueryTopology extends RpcRequest
+class QueryTopology extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'TeslaMaxCompute';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-04';
-
-    /**
-     * @var string
-     */
-    public $action = 'QueryTopology';
 }

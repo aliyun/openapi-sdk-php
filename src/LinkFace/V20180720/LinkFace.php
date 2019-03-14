@@ -2,40 +2,22 @@
 
 namespace AlibabaCloud\LinkFace\V20180720;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of LinkFace
+ * Api LinkFace
  *
  * @method string getGroupId()
  * @method string getUserId()
  */
-class LinkFace extends RpcRequest
+class LinkFace extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'LinkFace';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'LinkFace';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

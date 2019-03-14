@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemoveEntityMember
+ * Api RemoveEntityMember
  *
  * @method string getRemoveType()
  * @method string getMember()
  * @method string getEntityId()
  */
-class RemoveEntityMember extends RpcRequest
+class RemoveEntityMember extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemoveEntityMember';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemoveType() instead.
-     *
-     * @param string $removeType
-     *
-     * @return $this
-     */
-    public function setRemoveType($removeType)
-    {
-        return $this->withRemoveType($removeType);
-    }
 
     /**
      * @param string $removeType
@@ -65,18 +35,6 @@ class RemoveEntityMember extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMember() instead.
-     *
-     * @param string $member
-     *
-     * @return $this
-     */
-    public function setMember($member)
-    {
-        return $this->withMember($member);
-    }
-
-    /**
      * @param string $member
      *
      * @return $this
@@ -87,18 +45,6 @@ class RemoveEntityMember extends RpcRequest
         $this->options['query']['Member'] = $member;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEntityId() instead.
-     *
-     * @param string $entityId
-     *
-     * @return $this
-     */
-    public function setEntityId($entityId)
-    {
-        return $this->withEntityId($entityId);
     }
 
     /**

@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BidDomain
+ * Api BidDomain
  *
  * @method string getAuctionId()
  * @method string getMaxBid()
  * @method string getCurrency()
  */
-class BidDomain extends RpcRequest
+class BidDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'BidDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuctionId() instead.
-     *
-     * @param string $auctionId
-     *
-     * @return $this
-     */
-    public function setAuctionId($auctionId)
-    {
-        return $this->withAuctionId($auctionId);
-    }
 
     /**
      * @param string $auctionId
@@ -60,18 +33,6 @@ class BidDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxBid() instead.
-     *
-     * @param string $maxBid
-     *
-     * @return $this
-     */
-    public function setMaxBid($maxBid)
-    {
-        return $this->withMaxBid($maxBid);
-    }
-
-    /**
      * @param string $maxBid
      *
      * @return $this
@@ -82,18 +43,6 @@ class BidDomain extends RpcRequest
         $this->options['query']['MaxBid'] = $maxBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrency() instead.
-     *
-     * @param string $currency
-     *
-     * @return $this
-     */
-    public function setCurrency($currency)
-    {
-        return $this->withCurrency($currency);
     }
 
     /**

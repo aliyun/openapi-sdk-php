@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAssetList
+ * Api DescribeAssetList
  *
  * @method string getSourceIp()
  * @method string getPageSize()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getFilterConditions()
  */
-class DescribeAssetList extends RpcRequest
+class DescribeAssetList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAssetList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -64,18 +34,6 @@ class DescribeAssetList extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -92,18 +50,6 @@ class DescribeAssetList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeAssetList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -139,18 +73,6 @@ class DescribeAssetList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilterConditions() instead.
-     *
-     * @param string $filterConditions
-     *
-     * @return $this
-     */
-    public function setFilterConditions($filterConditions)
-    {
-        return $this->withFilterConditions($filterConditions);
     }
 
     /**

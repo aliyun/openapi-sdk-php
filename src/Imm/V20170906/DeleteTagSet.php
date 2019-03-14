@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteTagSet
+ * Api DeleteTagSet
  *
  * @method string getLazyMode()
  * @method string getProject()
  * @method string getSetId()
  * @method string getCheckEmpty()
  */
-class DeleteTagSet extends RpcRequest
+class DeleteTagSet extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteTagSet';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLazyMode() instead.
-     *
-     * @param string $lazyMode
-     *
-     * @return $this
-     */
-    public function setLazyMode($lazyMode)
-    {
-        return $this->withLazyMode($lazyMode);
-    }
 
     /**
      * @param string $lazyMode
@@ -63,18 +33,6 @@ class DeleteTagSet extends RpcRequest
         $this->options['query']['LazyMode'] = $lazyMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -91,18 +49,6 @@ class DeleteTagSet extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -113,18 +59,6 @@ class DeleteTagSet extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckEmpty() instead.
-     *
-     * @param string $checkEmpty
-     *
-     * @return $this
-     */
-    public function setCheckEmpty($checkEmpty)
-    {
-        return $this->withCheckEmpty($checkEmpty);
     }
 
     /**

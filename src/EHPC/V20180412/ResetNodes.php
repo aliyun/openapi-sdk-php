@@ -2,58 +2,21 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ResetNodes
+ * Api ResetNodes
  *
  * @method array getInstance()
  * @method string getClusterId()
  */
-class ResetNodes extends RpcRequest
+class ResetNodes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ResetNodes';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstance() instead.
-     *
-     * @return array
-     */
-    public function getInstances()
-    {
-        return $this->getInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstance() instead.
-     *
-     * @param array $instances
-     *
-     * @return $this
-     */
-    public function setInstances(array $instances)
-    {
-        return $this->withInstance($instances);
-    }
 
     /**
      * @param array $instance
@@ -68,18 +31,6 @@ class ResetNodes extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

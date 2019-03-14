@@ -2,40 +2,22 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLogConfig
+ * Api DescribeLogConfig
  *
  * @method string getLogType()
  * @method string getSecurityToken()
  */
-class DescribeLogConfig extends RpcRequest
+class DescribeLogConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLogConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

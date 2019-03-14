@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBookingDomainInfo
+ * Api QueryBookingDomainInfo
  *
  * @method string getDomainName()
  */
-class QueryBookingDomainInfo extends RpcRequest
+class QueryBookingDomainInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBookingDomainInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
 
     /**
      * @param string $domainName

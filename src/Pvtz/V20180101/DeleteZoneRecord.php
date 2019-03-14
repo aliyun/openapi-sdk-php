@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteZoneRecord
+ * Api DeleteZoneRecord
  *
  * @method string getRecordId()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class DeleteZoneRecord extends RpcRequest
+class DeleteZoneRecord extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'pvtz';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteZoneRecord';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'pvtz';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordId() instead.
-     *
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function setRecordId($recordId)
-    {
-        return $this->withRecordId($recordId);
-    }
 
     /**
      * @param string $recordId
@@ -65,18 +35,6 @@ class DeleteZoneRecord extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -87,18 +45,6 @@ class DeleteZoneRecord extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

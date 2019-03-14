@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NotifyRefund
+ * Api NotifyRefund
  *
  * @method string getRefundExtendParams()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getResourceType()
  */
-class NotifyRefund extends RpcRequest
+class NotifyRefund extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'NotifyRefund';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRefundExtendParams() instead.
-     *
-     * @param string $refundExtendParams
-     *
-     * @return $this
-     */
-    public function setRefundExtendParams($refundExtendParams)
-    {
-        return $this->withRefundExtendParams($refundExtendParams);
-    }
 
     /**
      * @param string $refundExtendParams
@@ -69,18 +39,6 @@ class NotifyRefund extends RpcRequest
         $this->options['query']['RefundExtendParams'] = $refundExtendParams;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +55,6 @@ class NotifyRefund extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -119,18 +65,6 @@ class NotifyRefund extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRefundType() instead.
-     *
-     * @param string $refundType
-     *
-     * @return $this
-     */
-    public function setRefundType($refundType)
-    {
-        return $this->withRefundType($refundType);
     }
 
     /**
@@ -147,18 +81,6 @@ class NotifyRefund extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class NotifyRefund extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderId() instead.
-     *
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        return $this->withOrderId($orderId);
     }
 
     /**
@@ -197,18 +107,6 @@ class NotifyRefund extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -219,28 +117,6 @@ class NotifyRefund extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrderIds() instead.
-     *
-     * @return array
-     */
-    public function getOrderIdss()
-    {
-        return $this->getOrderIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderIds() instead.
-     *
-     * @param array $orderIdss
-     *
-     * @return $this
-     */
-    public function setOrderIdss(array $orderIdss)
-    {
-        return $this->withOrderIds($orderIdss);
     }
 
     /**
@@ -259,18 +135,6 @@ class NotifyRefund extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -281,18 +145,6 @@ class NotifyRefund extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
     }
 
     /**

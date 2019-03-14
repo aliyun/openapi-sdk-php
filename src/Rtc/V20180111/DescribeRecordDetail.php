@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRecordDetail
+ * Api DescribeRecordDetail
  *
  * @method string getStartTime()
  * @method string getEndTime()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAppId()
  * @method string getChannelId()
  */
-class DescribeRecordDetail extends RpcRequest
+class DescribeRecordDetail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'rtc';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRecordDetail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rtc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
 
     /**
      * @param string $startTime
@@ -65,18 +35,6 @@ class DescribeRecordDetail extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -93,18 +51,6 @@ class DescribeRecordDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -115,18 +61,6 @@ class DescribeRecordDetail extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordId() instead.
-     *
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function setRecordId($recordId)
-    {
-        return $this->withRecordId($recordId);
     }
 
     /**
@@ -143,18 +77,6 @@ class DescribeRecordDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -165,18 +87,6 @@ class DescribeRecordDetail extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

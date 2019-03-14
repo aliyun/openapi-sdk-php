@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemoveSignatureApis
+ * Api RemoveSignatureApis
  *
  * @method string getStageName()
  * @method string getSecurityToken()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSignatureId()
  * @method string getApiIds()
  */
-class RemoveSignatureApis extends RpcRequest
+class RemoveSignatureApis extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemoveSignatureApis';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

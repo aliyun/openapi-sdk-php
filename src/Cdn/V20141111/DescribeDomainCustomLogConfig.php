@@ -2,43 +2,19 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainCustomLogConfig
+ * Api DescribeDomainCustomLogConfig
  *
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class DescribeDomainCustomLogConfig extends RpcRequest
+class DescribeDomainCustomLogConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
-
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainCustomLogConfig';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
 
     /**
      * @param string $domainName
@@ -51,18 +27,6 @@ class DescribeDomainCustomLogConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

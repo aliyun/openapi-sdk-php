@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReactivateDomain
+ * Api ReactivateDomain
  *
  * @method string getSecurityToken()
  * @method string getGroupId()
  * @method string getDomainName()
  */
-class ReactivateDomain extends RpcRequest
+class ReactivateDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReactivateDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

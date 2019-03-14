@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateAuditSetting
+ * Api UpdateAuditSetting
  *
  * @method string getSourceIp()
  * @method string getSeed()
  * @method string getCallback()
  */
-class UpdateAuditSetting extends RpcRequest
+class UpdateAuditSetting extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateAuditSetting';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -65,18 +35,6 @@ class UpdateAuditSetting extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSeed() instead.
-     *
-     * @param string $seed
-     *
-     * @return $this
-     */
-    public function setSeed($seed)
-    {
-        return $this->withSeed($seed);
-    }
-
-    /**
      * @param string $seed
      *
      * @return $this
@@ -87,18 +45,6 @@ class UpdateAuditSetting extends RpcRequest
         $this->options['query']['Seed'] = $seed;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallback() instead.
-     *
-     * @param string $callback
-     *
-     * @return $this
-     */
-    public function setCallback($callback)
-    {
-        return $this->withCallback($callback);
     }
 
     /**

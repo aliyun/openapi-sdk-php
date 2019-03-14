@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteCensorTemplate
+ * Api DeleteCensorTemplate
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTemplateId()
  */
-class DeleteCensorTemplate extends RpcRequest
+class DeleteCensorTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteCensorTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
 
     /**

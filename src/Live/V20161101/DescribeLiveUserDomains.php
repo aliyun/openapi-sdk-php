@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLiveUserDomains
+ * Api DescribeLiveUserDomains
  *
  * @method string getSecurityToken()
  * @method string getPageSize()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLiveDomainType()
  * @method string getDomainSearchType()
  */
-class DescribeLiveUserDomains extends RpcRequest
+class DescribeLiveUserDomains extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLiveUserDomains';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -68,18 +38,6 @@ class DescribeLiveUserDomains extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -96,18 +54,6 @@ class DescribeLiveUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -118,18 +64,6 @@ class DescribeLiveUserDomains extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionName() instead.
-     *
-     * @param string $regionName
-     *
-     * @return $this
-     */
-    public function setRegionName($regionName)
-    {
-        return $this->withRegionName($regionName);
     }
 
     /**
@@ -146,18 +80,6 @@ class DescribeLiveUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -168,18 +90,6 @@ class DescribeLiveUserDomains extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -196,18 +106,6 @@ class DescribeLiveUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
-     *
-     * @param string $domainStatus
-     *
-     * @return $this
-     */
-    public function setDomainStatus($domainStatus)
-    {
-        return $this->withDomainStatus($domainStatus);
-    }
-
-    /**
      * @param string $domainStatus
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeLiveUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLiveDomainType() instead.
-     *
-     * @param string $liveDomainType
-     *
-     * @return $this
-     */
-    public function setLiveDomainType($liveDomainType)
-    {
-        return $this->withLiveDomainType($liveDomainType);
-    }
-
-    /**
      * @param string $liveDomainType
      *
      * @return $this
@@ -243,18 +129,6 @@ class DescribeLiveUserDomains extends RpcRequest
         $this->options['query']['LiveDomainType'] = $liveDomainType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainSearchType() instead.
-     *
-     * @param string $domainSearchType
-     *
-     * @return $this
-     */
-    public function setDomainSearchType($domainSearchType)
-    {
-        return $this->withDomainSearchType($domainSearchType);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ots\V20160620;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListVpcInfoByVpc
+ * Api ListVpcInfoByVpc
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -14,50 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNum()
  * @method array getTagInfo()
  */
-class ListVpcInfoByVpc extends RpcRequest
+class ListVpcInfoByVpc extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ots';
 
-    /**
-     * @var string
-     */
     public $version = '2016-06-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListVpcInfoByVpc';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ots';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -70,18 +33,6 @@ class ListVpcInfoByVpc extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -98,18 +49,6 @@ class ListVpcInfoByVpc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -120,18 +59,6 @@ class ListVpcInfoByVpc extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -148,18 +75,6 @@ class ListVpcInfoByVpc extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -170,28 +85,6 @@ class ListVpcInfoByVpc extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTagInfo() instead.
-     *
-     * @return array
-     */
-    public function getTagInfos()
-    {
-        return $this->getTagInfo();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagInfo() instead.
-     *
-     * @param array $tagInfos
-     *
-     * @return $this
-     */
-    public function setTagInfos(array $tagInfos)
-    {
-        return $this->withTagInfo($tagInfos);
     }
 
     /**

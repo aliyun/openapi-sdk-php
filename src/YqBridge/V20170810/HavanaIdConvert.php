@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\YqBridge\V20170810;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of HavanaIdConvert
+ * Api HavanaIdConvert
  *
  * @method string getUid()
  */
-class HavanaIdConvert extends RpcRequest
+class HavanaIdConvert extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'YqBridge';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'HavanaIdConvert';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid

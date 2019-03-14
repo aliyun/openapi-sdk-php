@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDBInstancePerformance
+ * Api DescribeDBInstancePerformance
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNodeId()
  * @method string getKey()
  */
-class DescribeDBInstancePerformance extends RpcRequest
+class DescribeDBInstancePerformance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDBInstancePerformance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -71,18 +41,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -99,18 +57,6 @@ class DescribeDBInstancePerformance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRoleId() instead.
-     *
-     * @param string $roleId
-     *
-     * @return $this
-     */
-    public function setRoleId($roleId)
-    {
-        return $this->withRoleId($roleId);
-    }
-
-    /**
      * @param string $roleId
      *
      * @return $this
@@ -121,18 +67,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['RoleId'] = $roleId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -149,18 +83,6 @@ class DescribeDBInstancePerformance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -171,18 +93,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -199,18 +109,6 @@ class DescribeDBInstancePerformance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReplicaSetRole() instead.
-     *
-     * @param string $replicaSetRole
-     *
-     * @return $this
-     */
-    public function setReplicaSetRole($replicaSetRole)
-    {
-        return $this->withReplicaSetRole($replicaSetRole);
     }
 
     /**
@@ -249,18 +135,6 @@ class DescribeDBInstancePerformance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -271,18 +145,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -299,18 +161,6 @@ class DescribeDBInstancePerformance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNodeId() instead.
-     *
-     * @param string $nodeId
-     *
-     * @return $this
-     */
-    public function setNodeId($nodeId)
-    {
-        return $this->withNodeId($nodeId);
-    }
-
-    /**
      * @param string $nodeId
      *
      * @return $this
@@ -321,18 +171,6 @@ class DescribeDBInstancePerformance extends RpcRequest
         $this->options['query']['NodeId'] = $nodeId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKey() instead.
-     *
-     * @param string $key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        return $this->withKey($key);
     }
 
     /**

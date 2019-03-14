@@ -2,54 +2,26 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListWatermark
+ * Api ListWatermark
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
+ * @method string getPageNo()
+ * @method string getPageSize()
  * @method string getOwnerId()
  */
-class ListWatermark extends RpcRequest
+class ListWatermark extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListWatermark';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +34,6 @@ class ListWatermark extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -90,15 +50,29 @@ class ListWatermark extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
+     * @param string $pageNo
      *
      * @return $this
      */
-    public function setOwnerId($ownerId)
+    public function withPageNo($pageNo)
     {
-        return $this->withOwnerId($ownerId);
+        $this->data['PageNo'] = $pageNo;
+        $this->options['query']['PageNo'] = $pageNo;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function withPageSize($pageSize)
+    {
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
+
+        return $this;
     }
 
     /**

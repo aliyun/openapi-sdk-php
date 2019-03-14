@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddTrafficSpecialControl
+ * Api AddTrafficSpecialControl
  *
  * @method string getTrafficControlId()
  * @method string getSpecialKey()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTrafficValue()
  * @method string getSpecialType()
  */
-class AddTrafficSpecialControl extends RpcRequest
+class AddTrafficSpecialControl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddTrafficSpecialControl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

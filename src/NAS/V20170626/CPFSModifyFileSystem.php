@@ -2,53 +2,24 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CPFSModifyFileSystem
+ * Api CPFSModifyFileSystem
  *
  * @method string getFsId()
+ * @method string getLdapUrl()
  * @method string getFsDesc()
  */
-class CPFSModifyFileSystem extends RpcRequest
+class CPFSModifyFileSystem extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CPFSModifyFileSystem';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nas';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFsId() instead.
-     *
-     * @param string $fsId
-     *
-     * @return $this
-     */
-    public function setFsId($fsId)
-    {
-        return $this->withFsId($fsId);
-    }
 
     /**
      * @param string $fsId
@@ -64,15 +35,16 @@ class CPFSModifyFileSystem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFsDesc() instead.
-     *
-     * @param string $fsDesc
+     * @param string $ldapUrl
      *
      * @return $this
      */
-    public function setFsDesc($fsDesc)
+    public function withLdapUrl($ldapUrl)
     {
-        return $this->withFsDesc($fsDesc);
+        $this->data['LdapUrl'] = $ldapUrl;
+        $this->options['query']['LdapUrl'] = $ldapUrl;
+
+        return $this;
     }
 
     /**

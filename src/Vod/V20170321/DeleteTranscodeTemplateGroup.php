@@ -2,44 +2,26 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteTranscodeTemplateGroup
+ * Api DeleteTranscodeTemplateGroup
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
+ * @method string getTranscodeTemplateIds()
  * @method string getOwnerId()
  * @method string getTranscodeTemplateGroupId()
- * @method string getTranscodeTemplateIdList()
  * @method string getForceDelGroup()
  */
-class DeleteTranscodeTemplateGroup extends RpcRequest
+class DeleteTranscodeTemplateGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteTranscodeTemplateGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**
@@ -69,6 +51,19 @@ class DeleteTranscodeTemplateGroup extends RpcRequest
     }
 
     /**
+     * @param string $transcodeTemplateIds
+     *
+     * @return $this
+     */
+    public function withTranscodeTemplateIds($transcodeTemplateIds)
+    {
+        $this->data['TranscodeTemplateIds'] = $transcodeTemplateIds;
+        $this->options['query']['TranscodeTemplateIds'] = $transcodeTemplateIds;
+
+        return $this;
+    }
+
+    /**
      * @param string $ownerId
      *
      * @return $this
@@ -90,19 +85,6 @@ class DeleteTranscodeTemplateGroup extends RpcRequest
     {
         $this->data['TranscodeTemplateGroupId'] = $transcodeTemplateGroupId;
         $this->options['query']['TranscodeTemplateGroupId'] = $transcodeTemplateGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $transcodeTemplateIdList
-     *
-     * @return $this
-     */
-    public function withTranscodeTemplateIdList($transcodeTemplateIdList)
-    {
-        $this->data['TranscodeTemplateIdList'] = $transcodeTemplateIdList;
-        $this->options['query']['TranscodeTemplateIdList'] = $transcodeTemplateIdList;
 
         return $this;
     }

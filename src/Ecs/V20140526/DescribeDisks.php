@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDisks
+ * Api DescribeDisks
  *
  * @method string getResourceOwnerId()
  * @method string getSnapshotId()
@@ -41,40 +41,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getKMSKeyId()
  * @method string getStatus()
  */
-class DescribeDisks extends RpcRequest
+class DescribeDisks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDisks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -87,18 +62,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSnapshotId() instead.
-     *
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function setSnapshotId($snapshotId)
-    {
-        return $this->withSnapshotId($snapshotId);
     }
 
     /**
@@ -115,18 +78,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Value() instead.
-     *
-     * @param string $filter2Value
-     *
-     * @return $this
-     */
-    public function setFilter2Value($filter2Value)
-    {
-        return $this->withFilter2Value($filter2Value);
-    }
-
-    /**
      * @param string $filter2Value
      *
      * @return $this
@@ -137,18 +88,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['Filter.2.Value'] = $filter2Value;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyId() instead.
-     *
-     * @param string $autoSnapshotPolicyId
-     *
-     * @return $this
-     */
-    public function setAutoSnapshotPolicyId($autoSnapshotPolicyId)
-    {
-        return $this->withAutoSnapshotPolicyId($autoSnapshotPolicyId);
     }
 
     /**
@@ -165,18 +104,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -187,18 +114,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskName() instead.
-     *
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function setDiskName($diskName)
-    {
-        return $this->withDiskName($diskName);
     }
 
     /**
@@ -215,18 +130,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeleteAutoSnapshot() instead.
-     *
-     * @param string $deleteAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setDeleteAutoSnapshot($deleteAutoSnapshot)
-    {
-        return $this->withDeleteAutoSnapshot($deleteAutoSnapshot);
-    }
-
-    /**
      * @param string $deleteAutoSnapshot
      *
      * @return $this
@@ -237,18 +140,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DeleteAutoSnapshot'] = $deleteAutoSnapshot;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -265,18 +156,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskChargeType() instead.
-     *
-     * @param string $diskChargeType
-     *
-     * @return $this
-     */
-    public function setDiskChargeType($diskChargeType)
-    {
-        return $this->withDiskChargeType($diskChargeType);
-    }
-
-    /**
      * @param string $diskChargeType
      *
      * @return $this
@@ -287,18 +166,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DiskChargeType'] = $diskChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLockReason() instead.
-     *
-     * @param string $lockReason
-     *
-     * @return $this
-     */
-    public function setLockReason($lockReason)
-    {
-        return $this->withLockReason($lockReason);
     }
 
     /**
@@ -315,18 +182,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Key() instead.
-     *
-     * @param string $filter1Key
-     *
-     * @return $this
-     */
-    public function setFilter1Key($filter1Key)
-    {
-        return $this->withFilter1Key($filter1Key);
-    }
-
-    /**
      * @param string $filter1Key
      *
      * @return $this
@@ -337,18 +192,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['Filter.1.Key'] = $filter1Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -365,18 +208,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskIds() instead.
-     *
-     * @param string $diskIds
-     *
-     * @return $this
-     */
-    public function setDiskIds($diskIds)
-    {
-        return $this->withDiskIds($diskIds);
-    }
-
-    /**
      * @param string $diskIds
      *
      * @return $this
@@ -387,28 +218,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DiskIds'] = $diskIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -428,18 +237,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeleteWithInstance() instead.
-     *
-     * @param string $deleteWithInstance
-     *
-     * @return $this
-     */
-    public function setDeleteWithInstance($deleteWithInstance)
-    {
-        return $this->withDeleteWithInstance($deleteWithInstance);
-    }
-
-    /**
      * @param string $deleteWithInstance
      *
      * @return $this
@@ -450,18 +247,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DeleteWithInstance'] = $deleteWithInstance;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableAutoSnapshot() instead.
-     *
-     * @param string $enableAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setEnableAutoSnapshot($enableAutoSnapshot)
-    {
-        return $this->withEnableAutoSnapshot($enableAutoSnapshot);
     }
 
     /**
@@ -478,18 +263,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -500,18 +273,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -528,18 +289,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -550,18 +299,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter1Value() instead.
-     *
-     * @param string $filter1Value
-     *
-     * @return $this
-     */
-    public function setFilter1Value($filter1Value)
-    {
-        return $this->withFilter1Value($filter1Value);
     }
 
     /**
@@ -578,18 +315,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPortable() instead.
-     *
-     * @param string $portable
-     *
-     * @return $this
-     */
-    public function setPortable($portable)
-    {
-        return $this->withPortable($portable);
-    }
-
-    /**
      * @param string $portable
      *
      * @return $this
@@ -600,18 +325,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['Portable'] = $portable;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableAutomatedSnapshotPolicy() instead.
-     *
-     * @param string $enableAutomatedSnapshotPolicy
-     *
-     * @return $this
-     */
-    public function setEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy)
-    {
-        return $this->withEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy);
     }
 
     /**
@@ -628,18 +341,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilter2Key() instead.
-     *
-     * @param string $filter2Key
-     *
-     * @return $this
-     */
-    public function setFilter2Key($filter2Key)
-    {
-        return $this->withFilter2Key($filter2Key);
-    }
-
-    /**
      * @param string $filter2Key
      *
      * @return $this
@@ -650,18 +351,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['Filter.2.Key'] = $filter2Key;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -678,18 +367,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskType() instead.
-     *
-     * @param string $diskType
-     *
-     * @return $this
-     */
-    public function setDiskType($diskType)
-    {
-        return $this->withDiskType($diskType);
-    }
-
-    /**
      * @param string $diskType
      *
      * @return $this
@@ -700,28 +377,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['DiskType'] = $diskType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAdditionalAttributes() instead.
-     *
-     * @return array
-     */
-    public function getAdditionalAttributess()
-    {
-        return $this->getAdditionalAttributes();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAdditionalAttributes() instead.
-     *
-     * @param array $additionalAttributess
-     *
-     * @return $this
-     */
-    public function setAdditionalAttributess(array $additionalAttributess)
-    {
-        return $this->withAdditionalAttributes($additionalAttributess);
     }
 
     /**
@@ -740,18 +395,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableShared() instead.
-     *
-     * @param string $enableShared
-     *
-     * @return $this
-     */
-    public function setEnableShared($enableShared)
-    {
-        return $this->withEnableShared($enableShared);
-    }
-
-    /**
      * @param string $enableShared
      *
      * @return $this
@@ -762,18 +405,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['EnableShared'] = $enableShared;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -790,18 +421,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEncrypted() instead.
-     *
-     * @param string $encrypted
-     *
-     * @return $this
-     */
-    public function setEncrypted($encrypted)
-    {
-        return $this->withEncrypted($encrypted);
-    }
-
-    /**
      * @param string $encrypted
      *
      * @return $this
@@ -812,18 +431,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['Encrypted'] = $encrypted;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**
@@ -840,18 +447,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -865,18 +460,6 @@ class DescribeDisks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKMSKeyId() instead.
-     *
-     * @param string $kMSKeyId
-     *
-     * @return $this
-     */
-    public function setKMSKeyId($kMSKeyId)
-    {
-        return $this->withKMSKeyId($kMSKeyId);
-    }
-
-    /**
      * @param string $kMSKeyId
      *
      * @return $this
@@ -887,18 +470,6 @@ class DescribeDisks extends RpcRequest
         $this->options['query']['KMSKeyId'] = $kMSKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyTemplate
+ * Api ModifyTemplate
  *
  * @method string getResourceOwnerId()
  * @method string getSmsType()
@@ -20,40 +20,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getFromType()
  * @method string getSmsContent()
  */
-class ModifyTemplate extends RpcRequest
+class ModifyTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +39,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSmsType() instead.
-     *
-     * @param string $smsType
-     *
-     * @return $this
-     */
-    public function setSmsType($smsType)
-    {
-        return $this->withSmsType($smsType);
     }
 
     /**
@@ -94,18 +55,6 @@ class ModifyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -116,18 +65,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateText() instead.
-     *
-     * @param string $templateText
-     *
-     * @return $this
-     */
-    public function setTemplateText($templateText)
-    {
-        return $this->withTemplateText($templateText);
     }
 
     /**
@@ -144,18 +81,6 @@ class ModifyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateNickName() instead.
-     *
-     * @param string $templateNickName
-     *
-     * @return $this
-     */
-    public function setTemplateNickName($templateNickName)
-    {
-        return $this->withTemplateNickName($templateNickName);
-    }
-
-    /**
      * @param string $templateNickName
      *
      * @return $this
@@ -166,18 +91,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['TemplateNickName'] = $templateNickName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
     }
 
     /**
@@ -194,18 +107,6 @@ class ModifyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -216,18 +117,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**
@@ -244,18 +133,6 @@ class ModifyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateSubject() instead.
-     *
-     * @param string $templateSubject
-     *
-     * @return $this
-     */
-    public function setTemplateSubject($templateSubject)
-    {
-        return $this->withTemplateSubject($templateSubject);
-    }
-
-    /**
      * @param string $templateSubject
      *
      * @return $this
@@ -266,18 +143,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['TemplateSubject'] = $templateSubject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateName() instead.
-     *
-     * @param string $templateName
-     *
-     * @return $this
-     */
-    public function setTemplateName($templateName)
-    {
-        return $this->withTemplateName($templateName);
     }
 
     /**
@@ -294,18 +159,6 @@ class ModifyTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromType() instead.
-     *
-     * @param string $fromType
-     *
-     * @return $this
-     */
-    public function setFromType($fromType)
-    {
-        return $this->withFromType($fromType);
-    }
-
-    /**
      * @param string $fromType
      *
      * @return $this
@@ -316,18 +169,6 @@ class ModifyTemplate extends RpcRequest
         $this->options['query']['FromType'] = $fromType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSmsContent() instead.
-     *
-     * @param string $smsContent
-     *
-     * @return $this
-     */
-    public function setSmsContent($smsContent)
-    {
-        return $this->withSmsContent($smsContent);
     }
 
     /**

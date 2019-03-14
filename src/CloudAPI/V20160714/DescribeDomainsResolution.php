@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainsResolution
+ * Api DescribeDomainsResolution
  *
  * @method string getSecurityToken()
  * @method string getDomainNames()
  * @method string getGroupId()
  */
-class DescribeDomainsResolution extends RpcRequest
+class DescribeDomainsResolution extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainsResolution';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

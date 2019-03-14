@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DestroyOrganization
+ * Api DestroyOrganization
  *
  * @method string getOrganizationId()
  */
-class DestroyOrganization extends RpcRequest
+class DestroyOrganization extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DestroyOrganization';
-
-    /**
-     * @var string
-     */
-    public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $organizationId

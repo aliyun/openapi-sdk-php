@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckConsortiumDomain
+ * Api CheckConsortiumDomain
  *
  * @method string getDomainCode()
  */
-class CheckConsortiumDomain extends RpcRequest
+class CheckConsortiumDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckConsortiumDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainCode() instead.
-     *
-     * @param string $domainCode
-     *
-     * @return $this
-     */
-    public function setDomainCode($domainCode)
-    {
-        return $this->withDomainCode($domainCode);
-    }
 
     /**
      * @param string $domainCode

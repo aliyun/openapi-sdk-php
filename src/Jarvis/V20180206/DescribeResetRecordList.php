@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeResetRecordList
+ * Api DescribeResetRecordList
  *
  * @method string getSrcIP()
  * @method string getPeriod()
@@ -17,40 +17,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getSourceCode()
  */
-class DescribeResetRecordList extends RpcRequest
+class DescribeResetRecordList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeResetRecordList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcIP() instead.
-     *
-     * @param string $srcIP
-     *
-     * @return $this
-     */
-    public function setSrcIP($srcIP)
-    {
-        return $this->withSrcIP($srcIP);
-    }
 
     /**
      * @param string $srcIP
@@ -63,18 +36,6 @@ class DescribeResetRecordList extends RpcRequest
         $this->options['query']['SrcIP'] = $srcIP;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -91,18 +52,6 @@ class DescribeResetRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -113,18 +62,6 @@ class DescribeResetRecordList extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -141,18 +78,6 @@ class DescribeResetRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setcurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -163,18 +88,6 @@ class DescribeResetRecordList extends RpcRequest
         $this->options['query']['currentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDstIP() instead.
-     *
-     * @param string $dstIP
-     *
-     * @return $this
-     */
-    public function setDstIP($dstIP)
-    {
-        return $this->withDstIP($dstIP);
     }
 
     /**
@@ -191,18 +104,6 @@ class DescribeResetRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -216,18 +117,6 @@ class DescribeResetRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -238,18 +127,6 @@ class DescribeResetRecordList extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCode() instead.
-     *
-     * @param string $sourceCode
-     *
-     * @return $this
-     */
-    public function setSourceCode($sourceCode)
-    {
-        return $this->withSourceCode($sourceCode);
     }
 
     /**

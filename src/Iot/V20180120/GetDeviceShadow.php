@@ -2,49 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetDeviceShadow
+ * Api GetDeviceShadow
  *
  * @method string getShadowMessage()
+ * @method string getIotInstanceId()
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class GetDeviceShadow extends RpcRequest
+class GetDeviceShadow extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetDeviceShadow';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShadowMessage() instead.
-     *
-     * @param string $shadowMessage
-     *
-     * @return $this
-     */
-    public function setShadowMessage($shadowMessage)
-    {
-        return $this->withShadowMessage($shadowMessage);
-    }
 
     /**
      * @param string $shadowMessage
@@ -60,15 +34,16 @@ class GetDeviceShadow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setDeviceName($deviceName)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withDeviceName($deviceName);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -82,18 +57,6 @@ class GetDeviceShadow extends RpcRequest
         $this->options['query']['DeviceName'] = $deviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

@@ -2,47 +2,34 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchDeleteDeviceGroupRelations
+ * Api BatchDeleteDeviceGroupRelations
  *
+ * @method string getIotInstanceId()
  * @method string getGroupId()
  * @method array getDevice()
  */
-class BatchDeleteDeviceGroupRelations extends RpcRequest
+class BatchDeleteDeviceGroupRelations extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchDeleteDeviceGroupRelations';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withGroupId($groupId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -56,28 +43,6 @@ class BatchDeleteDeviceGroupRelations extends RpcRequest
         $this->options['query']['GroupId'] = $groupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDevice() instead.
-     *
-     * @return array
-     */
-    public function getDevices()
-    {
-        return $this->getDevice();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDevice() instead.
-     *
-     * @param array $devices
-     *
-     * @return $this
-     */
-    public function setDevices(array $devices)
-    {
-        return $this->withDevice($devices);
     }
 
     /**

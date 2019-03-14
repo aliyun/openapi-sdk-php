@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OperateVul
+ * Api OperateVul
  *
  * @method string getReason()
  * @method string getSourceIp()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getType()
  * @method string getInfo()
  */
-class OperateVul extends RpcRequest
+class OperateVul extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'OperateVul';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

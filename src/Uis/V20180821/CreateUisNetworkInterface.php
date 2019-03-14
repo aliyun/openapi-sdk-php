@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateUisNetworkInterface
+ * Api CreateUisNetworkInterface
  *
  * @method string getVswitchId()
  * @method string getIpAddress()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getOwnerId()
  */
-class CreateUisNetworkInterface extends RpcRequest
+class CreateUisNetworkInterface extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Uis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateUisNetworkInterface';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'uis';
 
     /**

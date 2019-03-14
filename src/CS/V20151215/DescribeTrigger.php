@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeTrigger
+ * Api DescribeTrigger
  *
  * @method string getActionType()
  * @method string getClusterId()
  */
-class DescribeTrigger extends RoaRequest
+class DescribeTrigger extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTrigger';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ActionType]/';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionType() instead.
-     *
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function setActionType($actionType)
-    {
-        return $this->withActionType($actionType);
-    }
 
     /**
      * @param string $actionType
@@ -61,18 +31,6 @@ class DescribeTrigger extends RoaRequest
         $this->pathParameters['ActionType'] = $actionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

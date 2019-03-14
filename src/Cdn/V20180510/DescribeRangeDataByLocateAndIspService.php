@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRangeDataByLocateAndIspService
+ * Api DescribeRangeDataByLocateAndIspService
  *
  * @method string getIspNames()
  * @method string getSecurityToken()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getOwnerId()
  */
-class DescribeRangeDataByLocateAndIspService extends RpcRequest
+class DescribeRangeDataByLocateAndIspService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRangeDataByLocateAndIspService';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIspNames() instead.
-     *
-     * @param string $ispNames
-     *
-     * @return $this
-     */
-    public function setIspNames($ispNames)
-    {
-        return $this->withIspNames($ispNames);
-    }
 
     /**
      * @param string $ispNames
@@ -61,18 +34,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
         $this->options['query']['IspNames'] = $ispNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -89,18 +50,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainNames() instead.
-     *
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames($domainNames)
-    {
-        return $this->withDomainNames($domainNames);
-    }
-
-    /**
      * @param string $domainNames
      *
      * @return $this
@@ -111,18 +60,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
         $this->options['query']['DomainNames'] = $domainNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationNames() instead.
-     *
-     * @param string $locationNames
-     *
-     * @return $this
-     */
-    public function setLocationNames($locationNames)
-    {
-        return $this->withLocationNames($locationNames);
     }
 
     /**
@@ -139,18 +76,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -164,18 +89,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -186,18 +99,6 @@ class DescribeRangeDataByLocateAndIspService extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

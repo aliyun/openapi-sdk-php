@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScdnDomainCertificateInfo
+ * Api DescribeScdnDomainCertificateInfo
  *
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class DescribeScdnDomainCertificateInfo extends RpcRequest
+class DescribeScdnDomainCertificateInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'scdn';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScdnDomainCertificateInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'scdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
 
     /**
      * @param string $domainName
@@ -61,18 +31,6 @@ class DescribeScdnDomainCertificateInfo extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

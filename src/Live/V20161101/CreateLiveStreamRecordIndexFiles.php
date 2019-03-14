@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateLiveStreamRecordIndexFiles
+ * Api CreateLiveStreamRecordIndexFiles
  *
  * @method string getOssBucket()
  * @method string getAppName()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStreamName()
  * @method string getOssObject()
  */
-class CreateLiveStreamRecordIndexFiles extends RpcRequest
+class CreateLiveStreamRecordIndexFiles extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateLiveStreamRecordIndexFiles';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssBucket() instead.
-     *
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function setOssBucket($ossBucket)
-    {
-        return $this->withOssBucket($ossBucket);
-    }
 
     /**
      * @param string $ossBucket
@@ -69,18 +39,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
         $this->options['query']['OssBucket'] = $ossBucket;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -97,18 +55,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -119,18 +65,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -147,18 +81,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOssEndpoint() instead.
-     *
-     * @param string $ossEndpoint
-     *
-     * @return $this
-     */
-    public function setOssEndpoint($ossEndpoint)
-    {
-        return $this->withOssEndpoint($ossEndpoint);
-    }
-
-    /**
      * @param string $ossEndpoint
      *
      * @return $this
@@ -169,18 +91,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
         $this->options['query']['OssEndpoint'] = $ossEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -197,18 +107,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -219,18 +117,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
-    }
-
-    /**
      * @param string $streamName
      *
      * @return $this
@@ -269,18 +143,6 @@ class CreateLiveStreamRecordIndexFiles extends RpcRequest
         $this->options['query']['StreamName'] = $streamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOssObject() instead.
-     *
-     * @param string $ossObject
-     *
-     * @return $this
-     */
-    public function setOssObject($ossObject)
-    {
-        return $this->withOssObject($ossObject);
     }
 
     /**

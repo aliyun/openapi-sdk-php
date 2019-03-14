@@ -2,37 +2,19 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeUserQuota
+ * Api DescribeUserQuota
  *
  */
-class DescribeUserQuota extends RoaRequest
+class DescribeUserQuota extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserQuota';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/quota';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
 }

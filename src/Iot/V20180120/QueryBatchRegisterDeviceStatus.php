@@ -2,48 +2,22 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBatchRegisterDeviceStatus
+ * Api QueryBatchRegisterDeviceStatus
  *
  * @method string getApplyId()
+ * @method string getIotInstanceId()
  * @method string getProductKey()
  */
-class QueryBatchRegisterDeviceStatus extends RpcRequest
+class QueryBatchRegisterDeviceStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBatchRegisterDeviceStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyId() instead.
-     *
-     * @param string $applyId
-     *
-     * @return $this
-     */
-    public function setApplyId($applyId)
-    {
-        return $this->withApplyId($applyId);
-    }
 
     /**
      * @param string $applyId
@@ -59,15 +33,16 @@ class QueryBatchRegisterDeviceStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setProductKey($productKey)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withProductKey($productKey);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

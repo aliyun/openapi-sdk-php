@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteLaunchTemplate
+ * Api DeleteLaunchTemplate
  *
  * @method string getLaunchTemplateName()
  * @method string getResourceOwnerId()
@@ -14,40 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DeleteLaunchTemplate extends RpcRequest
+class DeleteLaunchTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteLaunchTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateName() instead.
-     *
-     * @param string $launchTemplateName
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateName($launchTemplateName)
-    {
-        return $this->withLaunchTemplateName($launchTemplateName);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $launchTemplateName
@@ -60,18 +35,6 @@ class DeleteLaunchTemplate extends RpcRequest
         $this->options['query']['LaunchTemplateName'] = $launchTemplateName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -88,18 +51,6 @@ class DeleteLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateId() instead.
-     *
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateId($launchTemplateId)
-    {
-        return $this->withLaunchTemplateId($launchTemplateId);
-    }
-
-    /**
      * @param string $launchTemplateId
      *
      * @return $this
@@ -110,18 +61,6 @@ class DeleteLaunchTemplate extends RpcRequest
         $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -138,18 +77,6 @@ class DeleteLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -160,18 +87,6 @@ class DeleteLaunchTemplate extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

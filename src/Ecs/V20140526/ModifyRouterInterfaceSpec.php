@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyRouterInterfaceSpec
+ * Api ModifyRouterInterfaceSpec
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -16,40 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getSpec()
  */
-class ModifyRouterInterfaceSpec extends RpcRequest
+class ModifyRouterInterfaceSpec extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyRouterInterfaceSpec';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +37,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -90,18 +53,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -112,18 +63,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -140,18 +79,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserCidr() instead.
-     *
-     * @param string $userCidr
-     *
-     * @return $this
-     */
-    public function setUserCidr($userCidr)
-    {
-        return $this->withUserCidr($userCidr);
-    }
-
-    /**
      * @param string $userCidr
      *
      * @return $this
@@ -162,18 +89,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
         $this->options['query']['UserCidr'] = $userCidr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouterInterfaceId() instead.
-     *
-     * @param string $routerInterfaceId
-     *
-     * @return $this
-     */
-    public function setRouterInterfaceId($routerInterfaceId)
-    {
-        return $this->withRouterInterfaceId($routerInterfaceId);
     }
 
     /**
@@ -190,18 +105,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -212,18 +115,6 @@ class ModifyRouterInterfaceSpec extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpec() instead.
-     *
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function setSpec($spec)
-    {
-        return $this->withSpec($spec);
     }
 
     /**

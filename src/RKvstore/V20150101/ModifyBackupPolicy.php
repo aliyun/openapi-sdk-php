@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyBackupPolicy
+ * Api ModifyBackupPolicy
  *
  * @method string getPreferredBackupTime()
  * @method string getPreferredBackupPeriod()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class ModifyBackupPolicy extends RpcRequest
+class ModifyBackupPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'R-kvstore';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyBackupPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'redisa';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreferredBackupTime() instead.
-     *
-     * @param string $preferredBackupTime
-     *
-     * @return $this
-     */
-    public function setPreferredBackupTime($preferredBackupTime)
-    {
-        return $this->withPreferredBackupTime($preferredBackupTime);
-    }
 
     /**
      * @param string $preferredBackupTime
@@ -67,18 +37,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['PreferredBackupTime'] = $preferredBackupTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreferredBackupPeriod() instead.
-     *
-     * @param string $preferredBackupPeriod
-     *
-     * @return $this
-     */
-    public function setPreferredBackupPeriod($preferredBackupPeriod)
-    {
-        return $this->withPreferredBackupPeriod($preferredBackupPeriod);
     }
 
     /**
@@ -95,18 +53,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -117,18 +63,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -145,18 +79,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -167,18 +89,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -195,18 +105,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -217,18 +115,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

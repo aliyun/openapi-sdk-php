@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetPublicIpTrafficAuditLogStatus
+ * Api SetPublicIpTrafficAuditLogStatus
  *
  * @method string getResourceOwnerId()
  * @method string getPublicIpAddress()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLogStore()
  * @method string getStatus()
  */
-class SetPublicIpTrafficAuditLogStatus extends RpcRequest
+class SetPublicIpTrafficAuditLogStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetPublicIpTrafficAuditLogStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPublicIpAddress() instead.
-     *
-     * @param string $publicIpAddress
-     *
-     * @return $this
-     */
-    public function setPublicIpAddress($publicIpAddress)
-    {
-        return $this->withPublicIpAddress($publicIpAddress);
     }
 
     /**
@@ -96,18 +54,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogProject() instead.
-     *
-     * @param string $logProject
-     *
-     * @return $this
-     */
-    public function setLogProject($logProject)
-    {
-        return $this->withLogProject($logProject);
-    }
-
-    /**
      * @param string $logProject
      *
      * @return $this
@@ -118,18 +64,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['LogProject'] = $logProject;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +80,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPublicIpType() instead.
-     *
-     * @param string $publicIpType
-     *
-     * @return $this
-     */
-    public function setPublicIpType($publicIpType)
-    {
-        return $this->withPublicIpType($publicIpType);
-    }
-
-    /**
      * @param string $publicIpType
      *
      * @return $this
@@ -168,18 +90,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['PublicIpType'] = $publicIpType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +106,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -221,18 +119,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogStore() instead.
-     *
-     * @param string $logStore
-     *
-     * @return $this
-     */
-    public function setLogStore($logStore)
-    {
-        return $this->withLogStore($logStore);
-    }
-
-    /**
      * @param string $logStore
      *
      * @return $this
@@ -243,18 +129,6 @@ class SetPublicIpTrafficAuditLogStatus extends RpcRequest
         $this->options['query']['LogStore'] = $logStore;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

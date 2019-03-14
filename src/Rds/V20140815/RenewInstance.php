@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RenewInstance
+ * Api RenewInstance
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getBusinessInfo()
  */
-class RenewInstance extends RpcRequest
+class RenewInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'RenewInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -95,18 +53,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
-    }
-
-    /**
      * @param string $autoPay
      *
      * @return $this
@@ -117,18 +63,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['AutoPay'] = $autoPay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -145,18 +79,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -167,18 +89,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -195,18 +105,6 @@ class RenewInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +115,6 @@ class RenewInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessInfo() instead.
-     *
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function setBusinessInfo($businessInfo)
-    {
-        return $this->withBusinessInfo($businessInfo);
     }
 
     /**

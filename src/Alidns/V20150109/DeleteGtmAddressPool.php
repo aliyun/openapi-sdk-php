@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteGtmAddressPool
+ * Api DeleteGtmAddressPool
  *
  * @method string getAddrPoolId()
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class DeleteGtmAddressPool extends RpcRequest
+class DeleteGtmAddressPool extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteGtmAddressPool';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddrPoolId() instead.
-     *
-     * @param string $addrPoolId
-     *
-     * @return $this
-     */
-    public function setAddrPoolId($addrPoolId)
-    {
-        return $this->withAddrPoolId($addrPoolId);
-    }
 
     /**
      * @param string $addrPoolId
@@ -65,18 +35,6 @@ class DeleteGtmAddressPool extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -87,18 +45,6 @@ class DeleteGtmAddressPool extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

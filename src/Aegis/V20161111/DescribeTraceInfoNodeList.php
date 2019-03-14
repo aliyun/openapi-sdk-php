@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeTraceInfoNodeList
+ * Api DescribeTraceInfoNodeList
  *
  * @method string getSourceIp()
  * @method string getVertexId()
@@ -15,33 +15,16 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPage()
  * @method string getLang()
  * @method string getType()
+ * @method string getUuid()
  */
-class DescribeTraceInfoNodeList extends RpcRequest
+class DescribeTraceInfoNodeList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTraceInfoNodeList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**
@@ -144,6 +127,19 @@ class DescribeTraceInfoNodeList extends RpcRequest
     {
         $this->data['Type'] = $type;
         $this->options['query']['Type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * @param string $uuid
+     *
+     * @return $this
+     */
+    public function withUuid($uuid)
+    {
+        $this->data['Uuid'] = $uuid;
+        $this->options['query']['Uuid'] = $uuid;
 
         return $this;
     }

@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryFailReasonForDomainRealNameVerification
+ * Api QueryFailReasonForDomainRealNameVerification
  *
  * @method string getRealNameVerificationAction()
  * @method string getUserClientIp()
  * @method string getDomainName()
  * @method string getLang()
  */
-class QueryFailReasonForDomainRealNameVerification extends RpcRequest
+class QueryFailReasonForDomainRealNameVerification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryFailReasonForDomainRealNameVerification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRealNameVerificationAction() instead.
-     *
-     * @param string $realNameVerificationAction
-     *
-     * @return $this
-     */
-    public function setRealNameVerificationAction($realNameVerificationAction)
-    {
-        return $this->withRealNameVerificationAction($realNameVerificationAction);
-    }
 
     /**
      * @param string $realNameVerificationAction
@@ -58,18 +31,6 @@ class QueryFailReasonForDomainRealNameVerification extends RpcRequest
         $this->options['query']['RealNameVerificationAction'] = $realNameVerificationAction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -86,18 +47,6 @@ class QueryFailReasonForDomainRealNameVerification extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -108,18 +57,6 @@ class QueryFailReasonForDomainRealNameVerification extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

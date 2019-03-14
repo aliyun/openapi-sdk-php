@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDomainServerCertificate
+ * Api SetDomainServerCertificate
  *
  * @method string getSecurityToken()
  * @method string getSSLPub()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegion()
  * @method string getSSLPri()
  */
-class SetDomainServerCertificate extends RpcRequest
+class SetDomainServerCertificate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'scdn';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDomainServerCertificate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'scdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -67,18 +37,6 @@ class SetDomainServerCertificate extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLPub() instead.
-     *
-     * @param string $sSLPub
-     *
-     * @return $this
-     */
-    public function setSSLPub($sSLPub)
-    {
-        return $this->withSSLPub($sSLPub);
     }
 
     /**
@@ -95,18 +53,6 @@ class SetDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCertName() instead.
-     *
-     * @param string $certName
-     *
-     * @return $this
-     */
-    public function setCertName($certName)
-    {
-        return $this->withCertName($certName);
-    }
-
-    /**
      * @param string $certName
      *
      * @return $this
@@ -117,18 +63,6 @@ class SetDomainServerCertificate extends RpcRequest
         $this->options['query']['CertName'] = $certName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLProtocol() instead.
-     *
-     * @param string $sSLProtocol
-     *
-     * @return $this
-     */
-    public function setSSLProtocol($sSLProtocol)
-    {
-        return $this->withSSLProtocol($sSLProtocol);
     }
 
     /**
@@ -145,18 +79,6 @@ class SetDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -167,18 +89,6 @@ class SetDomainServerCertificate extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +105,6 @@ class SetDomainServerCertificate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -217,18 +115,6 @@ class SetDomainServerCertificate extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSSLPri() instead.
-     *
-     * @param string $sSLPri
-     *
-     * @return $this
-     */
-    public function setSSLPri($sSLPri)
-    {
-        return $this->withSSLPri($sSLPri);
     }
 
     /**

@@ -2,58 +2,23 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteEventTargets
+ * Api DeleteEventTargets
  *
  * @method array getIds()
  * @method string getRuleName()
  */
-class DeleteEventTargets extends RpcRequest
+class DeleteEventTargets extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteEventTargets';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getIds() instead.
-     *
-     * @return array
-     */
-    public function getIdss()
-    {
-        return $this->getIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param array $idss
-     *
-     * @return $this
-     */
-    public function setIdss(array $idss)
-    {
-        return $this->withIds($idss);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param array $ids
@@ -68,18 +33,6 @@ class DeleteEventTargets extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**

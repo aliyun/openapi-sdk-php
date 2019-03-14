@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FinishDemand
+ * Api FinishDemand
  *
  * @method string getBizId()
  * @method string getMessage()
  */
-class FinishDemand extends RpcRequest
+class FinishDemand extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'FinishDemand';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
-    }
 
     /**
      * @param string $bizId
@@ -56,18 +29,6 @@ class FinishDemand extends RpcRequest
         $this->options['query']['BizId'] = $bizId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
     }
 
     /**

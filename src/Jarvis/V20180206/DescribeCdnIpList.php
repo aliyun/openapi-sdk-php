@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCdnIpList
+ * Api DescribeCdnIpList
  *
  * @method string getSrcIP()
  * @method string getSourceIp()
@@ -15,27 +15,12 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getSourceCode()
  */
-class DescribeCdnIpList extends RpcRequest
+class DescribeCdnIpList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCdnIpList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteInvalidAddress
+ * Api DeleteInvalidAddress
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getToAddress()
  * @method string getOwnerId()
  */
-class DeleteInvalidAddress extends RpcRequest
+class DeleteInvalidAddress extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteInvalidAddress';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -58,18 +31,6 @@ class DeleteInvalidAddress extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -86,18 +47,6 @@ class DeleteInvalidAddress extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToAddress() instead.
-     *
-     * @param string $toAddress
-     *
-     * @return $this
-     */
-    public function setToAddress($toAddress)
-    {
-        return $this->withToAddress($toAddress);
-    }
-
-    /**
      * @param string $toAddress
      *
      * @return $this
@@ -108,18 +57,6 @@ class DeleteInvalidAddress extends RpcRequest
         $this->options['query']['ToAddress'] = $toAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

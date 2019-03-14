@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatePhysicalConnectionSetupOrder
+ * Api CreatePhysicalConnectionSetupOrder
  *
  * @method string getAccessPointId()
  * @method string getRedundantPhysicalConnectionId()
@@ -15,36 +15,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getClientToken()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
- * @method string getType()
  * @method string getOwnerId()
  * @method string getLineOperator()
  */
-class CreatePhysicalConnectionSetupOrder extends RpcRequest
+class CreatePhysicalConnectionSetupOrder extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatePhysicalConnectionSetupOrder';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
 
     /**
@@ -147,19 +128,6 @@ class CreatePhysicalConnectionSetupOrder extends RpcRequest
     {
         $this->data['OwnerAccount'] = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
 
         return $this;
     }

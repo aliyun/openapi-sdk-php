@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCaptchaIpCity
+ * Api DescribeCaptchaIpCity
  *
  * @method string getSourceIp()
  * @method string getConfigName()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTime()
  * @method string getType()
  */
-class DescribeCaptchaIpCity extends RpcRequest
+class DescribeCaptchaIpCity extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'afs';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCaptchaIpCity';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -59,18 +32,6 @@ class DescribeCaptchaIpCity extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigName() instead.
-     *
-     * @param string $configName
-     *
-     * @return $this
-     */
-    public function setConfigName($configName)
-    {
-        return $this->withConfigName($configName);
     }
 
     /**
@@ -87,18 +48,6 @@ class DescribeCaptchaIpCity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRefExtId() instead.
-     *
-     * @param string $refExtId
-     *
-     * @return $this
-     */
-    public function setRefExtId($refExtId)
-    {
-        return $this->withRefExtId($refExtId);
-    }
-
-    /**
      * @param string $refExtId
      *
      * @return $this
@@ -112,18 +61,6 @@ class DescribeCaptchaIpCity extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTime() instead.
-     *
-     * @param string $time
-     *
-     * @return $this
-     */
-    public function setTime($time)
-    {
-        return $this->withTime($time);
-    }
-
-    /**
      * @param string $time
      *
      * @return $this
@@ -134,18 +71,6 @@ class DescribeCaptchaIpCity extends RpcRequest
         $this->options['query']['Time'] = $time;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

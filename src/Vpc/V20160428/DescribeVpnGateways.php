@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVpnGateways
+ * Api DescribeVpnGateways
  *
  * @method string getBusinessStatus()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNumber()
  * @method string getStatus()
  */
-class DescribeVpnGateways extends RpcRequest
+class DescribeVpnGateways extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVpnGateways';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessStatus() instead.
-     *
-     * @param string $businessStatus
-     *
-     * @return $this
-     */
-    public function setBusinessStatus($businessStatus)
-    {
-        return $this->withBusinessStatus($businessStatus);
-    }
 
     /**
      * @param string $businessStatus
@@ -69,18 +39,6 @@ class DescribeVpnGateways extends RpcRequest
         $this->options['query']['BusinessStatus'] = $businessStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeVpnGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeVpnGateways extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeVpnGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeVpnGateways extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeVpnGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpnGatewayId() instead.
-     *
-     * @param string $vpnGatewayId
-     *
-     * @return $this
-     */
-    public function setVpnGatewayId($vpnGatewayId)
-    {
-        return $this->withVpnGatewayId($vpnGatewayId);
-    }
-
-    /**
      * @param string $vpnGatewayId
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeVpnGateways extends RpcRequest
         $this->options['query']['VpnGatewayId'] = $vpnGatewayId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeVpnGateways extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeVpnGateways extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

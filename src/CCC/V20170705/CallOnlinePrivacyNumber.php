@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CallOnlinePrivacyNumber
+ * Api CallOnlinePrivacyNumber
  *
  * @method string getTelA()
  * @method string getTelB()
  * @method string getInstanceId()
  */
-class CallOnlinePrivacyNumber extends RpcRequest
+class CallOnlinePrivacyNumber extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'CallOnlinePrivacyNumber';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTelA() instead.
-     *
-     * @param string $telA
-     *
-     * @return $this
-     */
-    public function setTelA($telA)
-    {
-        return $this->withTelA($telA);
-    }
 
     /**
      * @param string $telA
@@ -65,18 +35,6 @@ class CallOnlinePrivacyNumber extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelB() instead.
-     *
-     * @param string $telB
-     *
-     * @return $this
-     */
-    public function setTelB($telB)
-    {
-        return $this->withTelB($telB);
-    }
-
-    /**
      * @param string $telB
      *
      * @return $this
@@ -87,18 +45,6 @@ class CallOnlinePrivacyNumber extends RpcRequest
         $this->options['query']['TelB'] = $telB;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

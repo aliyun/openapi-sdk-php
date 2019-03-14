@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteConsoleAccessWhiteList
+ * Api DeleteConsoleAccessWhiteList
  *
  * @method string getSourceIp()
  * @method string getLang()
  * @method string getDisableWhitelist()
  * @method string getSourceCode()
  */
-class DeleteConsoleAccessWhiteList extends RpcRequest
+class DeleteConsoleAccessWhiteList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteConsoleAccessWhiteList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

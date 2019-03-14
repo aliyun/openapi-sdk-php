@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Hsm\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeInstances
+ * Api DescribeInstances
  *
  * @method string getResourceOwnerId()
  * @method string getInstanceId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCurrentPage()
  * @method string getHsmStatus()
  */
-class DescribeInstances extends RpcRequest
+class DescribeInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'hsm';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'hsm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -93,18 +51,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -115,18 +61,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -143,18 +77,6 @@ class DescribeInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -165,18 +87,6 @@ class DescribeInstances extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHsmStatus() instead.
-     *
-     * @param string $hsmStatus
-     *
-     * @return $this
-     */
-    public function setHsmStatus($hsmStatus)
-    {
-        return $this->withHsmStatus($hsmStatus);
     }
 
     /**

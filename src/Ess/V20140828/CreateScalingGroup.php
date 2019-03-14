@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateScalingGroup
+ * Api CreateScalingGroup
  *
  * @method string getMultiAZPolicy()
  * @method string getDBInstanceIds()
@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getHealthCheckType()
  * @method string getResourceOwnerAccount()
  * @method string getScalingGroupName()
+ * @method string getClientToken()
  * @method array getVSwitchIds()
  * @method string getOwnerAccount()
  * @method string getMinSize()
@@ -28,45 +29,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getVServerGroup()
  * @method string getRemovalPolicy2()
  */
-class CreateScalingGroup extends RpcRequest
+class CreateScalingGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateScalingGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMultiAZPolicy() instead.
-     *
-     * @param string $multiAZPolicy
-     *
-     * @return $this
-     */
-    public function setMultiAZPolicy($multiAZPolicy)
-    {
-        return $this->withMultiAZPolicy($multiAZPolicy);
-    }
 
     /**
      * @param string $multiAZPolicy
@@ -79,18 +50,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['MultiAZPolicy'] = $multiAZPolicy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceIds() instead.
-     *
-     * @param string $dBInstanceIds
-     *
-     * @return $this
-     */
-    public function setDBInstanceIds($dBInstanceIds)
-    {
-        return $this->withDBInstanceIds($dBInstanceIds);
     }
 
     /**
@@ -107,18 +66,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateId() instead.
-     *
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateId($launchTemplateId)
-    {
-        return $this->withLaunchTemplateId($launchTemplateId);
-    }
-
-    /**
      * @param string $launchTemplateId
      *
      * @return $this
@@ -129,18 +76,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerIds() instead.
-     *
-     * @param string $loadBalancerIds
-     *
-     * @return $this
-     */
-    public function setLoadBalancerIds($loadBalancerIds)
-    {
-        return $this->withLoadBalancerIds($loadBalancerIds);
     }
 
     /**
@@ -157,18 +92,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthCheckType() instead.
-     *
-     * @param string $healthCheckType
-     *
-     * @return $this
-     */
-    public function setHealthCheckType($healthCheckType)
-    {
-        return $this->withHealthCheckType($healthCheckType);
-    }
-
-    /**
      * @param string $healthCheckType
      *
      * @return $this
@@ -179,18 +102,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['HealthCheckType'] = $healthCheckType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -207,18 +118,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupName() instead.
-     *
-     * @param string $scalingGroupName
-     *
-     * @return $this
-     */
-    public function setScalingGroupName($scalingGroupName)
-    {
-        return $this->withScalingGroupName($scalingGroupName);
-    }
-
-    /**
      * @param string $scalingGroupName
      *
      * @return $this
@@ -232,25 +131,16 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getVSwitchIds() instead.
-     *
-     * @return array
-     */
-    public function getVSwitchIdss()
-    {
-        return $this->getVSwitchIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchIds() instead.
-     *
-     * @param array $vSwitchIdss
+     * @param string $clientToken
      *
      * @return $this
      */
-    public function setVSwitchIdss(array $vSwitchIdss)
+    public function withClientToken($clientToken)
     {
-        return $this->withVSwitchIds($vSwitchIdss);
+        $this->data['ClientToken'] = $clientToken;
+        $this->options['query']['ClientToken'] = $clientToken;
+
+        return $this;
     }
 
     /**
@@ -269,18 +159,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -291,18 +169,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMinSize() instead.
-     *
-     * @param string $minSize
-     *
-     * @return $this
-     */
-    public function setMinSize($minSize)
-    {
-        return $this->withMinSize($minSize);
     }
 
     /**
@@ -319,18 +185,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -341,18 +195,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateVersion() instead.
-     *
-     * @param string $launchTemplateVersion
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateVersion($launchTemplateVersion)
-    {
-        return $this->withLaunchTemplateVersion($launchTemplateVersion);
     }
 
     /**
@@ -369,18 +211,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingPolicy() instead.
-     *
-     * @param string $scalingPolicy
-     *
-     * @return $this
-     */
-    public function setScalingPolicy($scalingPolicy)
-    {
-        return $this->withScalingPolicy($scalingPolicy);
-    }
-
-    /**
      * @param string $scalingPolicy
      *
      * @return $this
@@ -391,18 +221,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['ScalingPolicy'] = $scalingPolicy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -419,18 +237,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxSize() instead.
-     *
-     * @param string $maxSize
-     *
-     * @return $this
-     */
-    public function setMaxSize($maxSize)
-    {
-        return $this->withMaxSize($maxSize);
-    }
-
-    /**
      * @param string $maxSize
      *
      * @return $this
@@ -441,28 +247,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['MaxSize'] = $maxSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getLifecycleHook() instead.
-     *
-     * @return array
-     */
-    public function getLifecycleHooks()
-    {
-        return $this->getLifecycleHook();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHook() instead.
-     *
-     * @param array $lifecycleHooks
-     *
-     * @return $this
-     */
-    public function setLifecycleHooks(array $lifecycleHooks)
-    {
-        return $this->withLifecycleHook($lifecycleHooks);
     }
 
     /**
@@ -486,18 +270,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDefaultCooldown() instead.
-     *
-     * @param string $defaultCooldown
-     *
-     * @return $this
-     */
-    public function setDefaultCooldown($defaultCooldown)
-    {
-        return $this->withDefaultCooldown($defaultCooldown);
-    }
-
-    /**
      * @param string $defaultCooldown
      *
      * @return $this
@@ -511,18 +283,6 @@ class CreateScalingGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemovalPolicy1() instead.
-     *
-     * @param string $removalPolicy1
-     *
-     * @return $this
-     */
-    public function setRemovalPolicy1($removalPolicy1)
-    {
-        return $this->withRemovalPolicy1($removalPolicy1);
-    }
-
-    /**
      * @param string $removalPolicy1
      *
      * @return $this
@@ -533,28 +293,6 @@ class CreateScalingGroup extends RpcRequest
         $this->options['query']['RemovalPolicy.1'] = $removalPolicy1;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVServerGroup() instead.
-     *
-     * @return array
-     */
-    public function getVServerGroups()
-    {
-        return $this->getVServerGroup();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVServerGroup() instead.
-     *
-     * @param array $vServerGroups
-     *
-     * @return $this
-     */
-    public function setVServerGroups(array $vServerGroups)
-    {
-        return $this->withVServerGroup($vServerGroups);
     }
 
     /**
@@ -573,18 +311,6 @@ class CreateScalingGroup extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemovalPolicy2() instead.
-     *
-     * @param string $removalPolicy2
-     *
-     * @return $this
-     */
-    public function setRemovalPolicy2($removalPolicy2)
-    {
-        return $this->withRemovalPolicy2($removalPolicy2);
     }
 
     /**

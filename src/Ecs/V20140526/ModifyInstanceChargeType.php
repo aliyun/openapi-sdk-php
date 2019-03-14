@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyInstanceChargeType
+ * Api ModifyInstanceChargeType
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -20,40 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getInstanceIds()
  * @method string getInstanceChargeType()
  */
-class ModifyInstanceChargeType extends RpcRequest
+class ModifyInstanceChargeType extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyInstanceChargeType';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +41,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -94,18 +57,6 @@ class ModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -116,18 +67,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoPay() instead.
-     *
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function setAutoPay($autoPay)
-    {
-        return $this->withAutoPay($autoPay);
     }
 
     /**
@@ -144,18 +83,6 @@ class ModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIncludeDataDisks() instead.
-     *
-     * @param string $includeDataDisks
-     *
-     * @return $this
-     */
-    public function setIncludeDataDisks($includeDataDisks)
-    {
-        return $this->withIncludeDataDisks($includeDataDisks);
-    }
-
-    /**
      * @param string $includeDataDisks
      *
      * @return $this
@@ -166,18 +93,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['IncludeDataDisks'] = $includeDataDisks;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -194,18 +109,6 @@ class ModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -216,18 +119,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -244,18 +135,6 @@ class ModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -266,18 +145,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriodUnit() instead.
-     *
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function setPeriodUnit($periodUnit)
-    {
-        return $this->withPeriodUnit($periodUnit);
     }
 
     /**
@@ -294,18 +161,6 @@ class ModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -316,18 +171,6 @@ class ModifyInstanceChargeType extends RpcRequest
         $this->options['query']['InstanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
     }
 
     /**

@@ -2,52 +2,22 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of TestDialogFlow
+ * Api TestDialogFlow
  *
  * @method string getDialogId()
  */
-class TestDialogFlow extends RpcRequest
+class TestDialogFlow extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'TestDialogFlow';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDialogId() instead.
-     *
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function setDialogId($dialogId)
-    {
-        return $this->withDialogId($dialogId);
-    }
 
     /**
      * @param string $dialogId

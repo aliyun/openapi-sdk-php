@@ -2,46 +2,33 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteDeviceGroup
+ * Api DeleteDeviceGroup
  *
+ * @method string getIotInstanceId()
  * @method string getGroupId()
  */
-class DeleteDeviceGroup extends RpcRequest
+class DeleteDeviceGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteDeviceGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withGroupId($groupId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

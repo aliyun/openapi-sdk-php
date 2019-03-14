@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRiskWhiteList
+ * Api DescribeRiskWhiteList
  *
  * @method string getRiskName()
  * @method string getSourceIp()
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class DescribeRiskWhiteList extends RpcRequest
+class DescribeRiskWhiteList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRiskWhiteList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskName() instead.
-     *
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function setRiskName($riskName)
-    {
-        return $this->withRiskName($riskName);
-    }
 
     /**
      * @param string $riskName
@@ -63,18 +33,6 @@ class DescribeRiskWhiteList extends RpcRequest
         $this->options['query']['RiskName'] = $riskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -91,18 +49,6 @@ class DescribeRiskWhiteList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -113,18 +59,6 @@ class DescribeRiskWhiteList extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

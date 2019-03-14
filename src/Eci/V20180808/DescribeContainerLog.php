@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeContainerLog
+ * Api DescribeContainerLog
  *
  * @method string getResourceOwnerId()
  * @method string getContainerName()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DescribeContainerLog extends RpcRequest
+class DescribeContainerLog extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Eci';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeContainerLog';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'eci';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class DescribeContainerLog extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerName() instead.
-     *
-     * @param string $containerName
-     *
-     * @return $this
-     */
-    public function setContainerName($containerName)
-    {
-        return $this->withContainerName($containerName);
     }
 
     /**
@@ -95,18 +53,6 @@ class DescribeContainerLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeContainerLog extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerGroupId() instead.
-     *
-     * @param string $containerGroupId
-     *
-     * @return $this
-     */
-    public function setContainerGroupId($containerGroupId)
-    {
-        return $this->withContainerGroupId($containerGroupId);
     }
 
     /**
@@ -145,18 +79,6 @@ class DescribeContainerLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -167,18 +89,6 @@ class DescribeContainerLog extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTail() instead.
-     *
-     * @param string $tail
-     *
-     * @return $this
-     */
-    public function setTail($tail)
-    {
-        return $this->withTail($tail);
     }
 
     /**
@@ -195,18 +105,6 @@ class DescribeContainerLog extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -217,18 +115,6 @@ class DescribeContainerLog extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

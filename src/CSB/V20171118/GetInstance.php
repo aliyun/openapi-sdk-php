@@ -2,42 +2,18 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetInstance
+ * Api GetInstance
  *
  * @method string getCsbId()
  */
-class GetInstance extends RpcRequest
+class GetInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'GetInstance';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
 
     /**
      * @param string $csbId

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateVSwitch
+ * Api CreateVSwitch
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCidrBlock()
  * @method string getZoneId()
  */
-class CreateVSwitch extends RpcRequest
+class CreateVSwitch extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateVSwitch';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +40,6 @@ class CreateVSwitch extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -98,18 +56,6 @@ class CreateVSwitch extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -120,18 +66,6 @@ class CreateVSwitch extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -148,18 +82,6 @@ class CreateVSwitch extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -170,18 +92,6 @@ class CreateVSwitch extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -198,18 +108,6 @@ class CreateVSwitch extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6CidrBlock() instead.
-     *
-     * @param string $ipv6CidrBlock
-     *
-     * @return $this
-     */
-    public function setIpv6CidrBlock($ipv6CidrBlock)
-    {
-        return $this->withIpv6CidrBlock($ipv6CidrBlock);
-    }
-
-    /**
      * @param string $ipv6CidrBlock
      *
      * @return $this
@@ -220,18 +118,6 @@ class CreateVSwitch extends RpcRequest
         $this->options['query']['Ipv6CidrBlock'] = $ipv6CidrBlock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -248,18 +134,6 @@ class CreateVSwitch extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchName() instead.
-     *
-     * @param string $vSwitchName
-     *
-     * @return $this
-     */
-    public function setVSwitchName($vSwitchName)
-    {
-        return $this->withVSwitchName($vSwitchName);
-    }
-
-    /**
      * @param string $vSwitchName
      *
      * @return $this
@@ -273,18 +147,6 @@ class CreateVSwitch extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCidrBlock() instead.
-     *
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function setCidrBlock($cidrBlock)
-    {
-        return $this->withCidrBlock($cidrBlock);
-    }
-
-    /**
      * @param string $cidrBlock
      *
      * @return $this
@@ -295,18 +157,6 @@ class CreateVSwitch extends RpcRequest
         $this->options['query']['CidrBlock'] = $cidrBlock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**

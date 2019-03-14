@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetAgentData
+ * Api GetAgentData
  *
  * @method string getInstanceId()
  * @method string getStartDay()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUserId()
  * @method string getPageNumber()
  */
-class GetAgentData extends RpcRequest
+class GetAgentData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetAgentData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -65,18 +35,6 @@ class GetAgentData extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartDay() instead.
-     *
-     * @param string $startDay
-     *
-     * @return $this
-     */
-    public function setStartDay($startDay)
-    {
-        return $this->withStartDay($startDay);
     }
 
     /**
@@ -93,18 +51,6 @@ class GetAgentData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndDay() instead.
-     *
-     * @param string $endDay
-     *
-     * @return $this
-     */
-    public function setEndDay($endDay)
-    {
-        return $this->withEndDay($endDay);
-    }
-
-    /**
      * @param string $endDay
      *
      * @return $this
@@ -115,18 +61,6 @@ class GetAgentData extends RpcRequest
         $this->options['query']['EndDay'] = $endDay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -143,18 +77,6 @@ class GetAgentData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
-    }
-
-    /**
      * @param string $userId
      *
      * @return $this
@@ -165,18 +87,6 @@ class GetAgentData extends RpcRequest
         $this->options['query']['UserId'] = $userId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

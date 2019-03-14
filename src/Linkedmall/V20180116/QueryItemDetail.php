@@ -2,52 +2,35 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryItemDetail
+ * Api QueryItemDetail
  *
- * @method string getBizId()
  * @method string getItemId()
+ * @method string getBizId()
  */
-class QueryItemDetail extends RpcRequest
+class QueryItemDetail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryItemDetail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $itemId
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withItemId($itemId)
     {
-        return $this->withBizId($bizId);
+        $this->data['ItemId'] = $itemId;
+        $this->options['query']['ItemId'] = $itemId;
+
+        return $this;
     }
 
     /**
@@ -59,31 +42,6 @@ class QueryItemDetail extends RpcRequest
     {
         $this->data['BizId'] = $bizId;
         $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItemId() instead.
-     *
-     * @param string $itemId
-     *
-     * @return $this
-     */
-    public function setItemId($itemId)
-    {
-        return $this->withItemId($itemId);
-    }
-
-    /**
-     * @param string $itemId
-     *
-     * @return $this
-     */
-    public function withItemId($itemId)
-    {
-        $this->data['ItemId'] = $itemId;
-        $this->options['query']['ItemId'] = $itemId;
 
         return $this;
     }

@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RefreshDcdnObjectCaches
+ * Api RefreshDcdnObjectCaches
  *
  * @method string getSecurityToken()
  * @method string getObjectPath()
  * @method string getOwnerId()
  * @method string getObjectType()
  */
-class RefreshDcdnObjectCaches extends RpcRequest
+class RefreshDcdnObjectCaches extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'RefreshDcdnObjectCaches';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -63,18 +33,6 @@ class RefreshDcdnObjectCaches extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withObjectPath() instead.
-     *
-     * @param string $objectPath
-     *
-     * @return $this
-     */
-    public function setObjectPath($objectPath)
-    {
-        return $this->withObjectPath($objectPath);
     }
 
     /**
@@ -91,18 +49,6 @@ class RefreshDcdnObjectCaches extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -113,18 +59,6 @@ class RefreshDcdnObjectCaches extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withObjectType() instead.
-     *
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function setObjectType($objectType)
-    {
-        return $this->withObjectType($objectType);
     }
 
     /**

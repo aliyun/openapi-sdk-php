@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSpecialEcs
+ * Api DescribeSpecialEcs
  *
  * @method string getTargetIp()
  * @method string getSourceIp()
  * @method string getLang()
  * @method string getSourceCode()
  */
-class DescribeSpecialEcs extends RpcRequest
+class DescribeSpecialEcs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSpecialEcs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

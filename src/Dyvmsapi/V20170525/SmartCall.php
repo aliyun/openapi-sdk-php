@@ -2,64 +2,42 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SmartCall
+ * Api SmartCall
  *
  * @method string getResourceOwnerId()
  * @method string getVoiceCodeParam()
  * @method string getEarlyMediaAsr()
+ * @method string getSpeed()
+ * @method string getSessionTimeout()
+ * @method string getDynamicId()
+ * @method string getCalledNumber()
+ * @method string getTtsSpeed()
+ * @method string getVoiceCode()
+ * @method string getCalledShowNumber()
+ * @method string getActionCodeTimeBreak()
+ * @method string getTtsConf()
  * @method string getActionCodeBreak()
  * @method string getResourceOwnerAccount()
  * @method string getRecordFlag()
  * @method string getOwnerId()
- * @method string getSpeed()
+ * @method string getTtsVolume()
  * @method string getVolume()
- * @method string getSessionTimeout()
- * @method string getDynamicId()
- * @method string getCalledNumber()
- * @method string getVoiceCode()
  * @method string getMuteTime()
- * @method string getCalledShowNumber()
  * @method string getOutId()
  * @method string getAsrModelId()
  * @method string getPauseTime()
+ * @method string getTtsStyle()
  */
-class SmartCall extends RpcRequest
+class SmartCall extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'SmartCall';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -72,18 +50,6 @@ class SmartCall extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVoiceCodeParam() instead.
-     *
-     * @param string $voiceCodeParam
-     *
-     * @return $this
-     */
-    public function setVoiceCodeParam($voiceCodeParam)
-    {
-        return $this->withVoiceCodeParam($voiceCodeParam);
     }
 
     /**
@@ -100,18 +66,6 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEarlyMediaAsr() instead.
-     *
-     * @param string $earlyMediaAsr
-     *
-     * @return $this
-     */
-    public function setEarlyMediaAsr($earlyMediaAsr)
-    {
-        return $this->withEarlyMediaAsr($earlyMediaAsr);
-    }
-
-    /**
      * @param string $earlyMediaAsr
      *
      * @return $this
@@ -122,118 +76,6 @@ class SmartCall extends RpcRequest
         $this->options['query']['EarlyMediaAsr'] = $earlyMediaAsr;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionCodeBreak() instead.
-     *
-     * @param string $actionCodeBreak
-     *
-     * @return $this
-     */
-    public function setActionCodeBreak($actionCodeBreak)
-    {
-        return $this->withActionCodeBreak($actionCodeBreak);
-    }
-
-    /**
-     * @param string $actionCodeBreak
-     *
-     * @return $this
-     */
-    public function withActionCodeBreak($actionCodeBreak)
-    {
-        $this->data['ActionCodeBreak'] = $actionCodeBreak;
-        $this->options['query']['ActionCodeBreak'] = $actionCodeBreak;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecordFlag() instead.
-     *
-     * @param string $recordFlag
-     *
-     * @return $this
-     */
-    public function setRecordFlag($recordFlag)
-    {
-        return $this->withRecordFlag($recordFlag);
-    }
-
-    /**
-     * @param string $recordFlag
-     *
-     * @return $this
-     */
-    public function withRecordFlag($recordFlag)
-    {
-        $this->data['RecordFlag'] = $recordFlag;
-        $this->options['query']['RecordFlag'] = $recordFlag;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpeed() instead.
-     *
-     * @param string $speed
-     *
-     * @return $this
-     */
-    public function setSpeed($speed)
-    {
-        return $this->withSpeed($speed);
     }
 
     /**
@@ -250,43 +92,6 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function setVolume($volume)
-    {
-        return $this->withVolume($volume);
-    }
-
-    /**
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function withVolume($volume)
-    {
-        $this->data['Volume'] = $volume;
-        $this->options['query']['Volume'] = $volume;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionTimeout() instead.
-     *
-     * @param string $sessionTimeout
-     *
-     * @return $this
-     */
-    public function setSessionTimeout($sessionTimeout)
-    {
-        return $this->withSessionTimeout($sessionTimeout);
-    }
-
-    /**
      * @param string $sessionTimeout
      *
      * @return $this
@@ -297,18 +102,6 @@ class SmartCall extends RpcRequest
         $this->options['query']['SessionTimeout'] = $sessionTimeout;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDynamicId() instead.
-     *
-     * @param string $dynamicId
-     *
-     * @return $this
-     */
-    public function setDynamicId($dynamicId)
-    {
-        return $this->withDynamicId($dynamicId);
     }
 
     /**
@@ -325,18 +118,6 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
-    }
-
-    /**
      * @param string $calledNumber
      *
      * @return $this
@@ -350,15 +131,16 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVoiceCode() instead.
-     *
-     * @param string $voiceCode
+     * @param string $ttsSpeed
      *
      * @return $this
      */
-    public function setVoiceCode($voiceCode)
+    public function withTtsSpeed($ttsSpeed)
     {
-        return $this->withVoiceCode($voiceCode);
+        $this->data['TtsSpeed'] = $ttsSpeed;
+        $this->options['query']['TtsSpeed'] = $ttsSpeed;
+
+        return $this;
     }
 
     /**
@@ -375,15 +157,120 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMuteTime() instead.
-     *
-     * @param string $muteTime
+     * @param string $calledShowNumber
      *
      * @return $this
      */
-    public function setMuteTime($muteTime)
+    public function withCalledShowNumber($calledShowNumber)
     {
-        return $this->withMuteTime($muteTime);
+        $this->data['CalledShowNumber'] = $calledShowNumber;
+        $this->options['query']['CalledShowNumber'] = $calledShowNumber;
+
+        return $this;
+    }
+
+    /**
+     * @param string $actionCodeTimeBreak
+     *
+     * @return $this
+     */
+    public function withActionCodeTimeBreak($actionCodeTimeBreak)
+    {
+        $this->data['ActionCodeTimeBreak'] = $actionCodeTimeBreak;
+        $this->options['query']['ActionCodeTimeBreak'] = $actionCodeTimeBreak;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ttsConf
+     *
+     * @return $this
+     */
+    public function withTtsConf($ttsConf)
+    {
+        $this->data['TtsConf'] = $ttsConf;
+        $this->options['query']['TtsConf'] = $ttsConf;
+
+        return $this;
+    }
+
+    /**
+     * @param string $actionCodeBreak
+     *
+     * @return $this
+     */
+    public function withActionCodeBreak($actionCodeBreak)
+    {
+        $this->data['ActionCodeBreak'] = $actionCodeBreak;
+        $this->options['query']['ActionCodeBreak'] = $actionCodeBreak;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function withResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $recordFlag
+     *
+     * @return $this
+     */
+    public function withRecordFlag($recordFlag)
+    {
+        $this->data['RecordFlag'] = $recordFlag;
+        $this->options['query']['RecordFlag'] = $recordFlag;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function withOwnerId($ownerId)
+    {
+        $this->data['OwnerId'] = $ownerId;
+        $this->options['query']['OwnerId'] = $ownerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ttsVolume
+     *
+     * @return $this
+     */
+    public function withTtsVolume($ttsVolume)
+    {
+        $this->data['TtsVolume'] = $ttsVolume;
+        $this->options['query']['TtsVolume'] = $ttsVolume;
+
+        return $this;
+    }
+
+    /**
+     * @param string $volume
+     *
+     * @return $this
+     */
+    public function withVolume($volume)
+    {
+        $this->data['Volume'] = $volume;
+        $this->options['query']['Volume'] = $volume;
+
+        return $this;
     }
 
     /**
@@ -400,43 +287,6 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCalledShowNumber() instead.
-     *
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function setCalledShowNumber($calledShowNumber)
-    {
-        return $this->withCalledShowNumber($calledShowNumber);
-    }
-
-    /**
-     * @param string $calledShowNumber
-     *
-     * @return $this
-     */
-    public function withCalledShowNumber($calledShowNumber)
-    {
-        $this->data['CalledShowNumber'] = $calledShowNumber;
-        $this->options['query']['CalledShowNumber'] = $calledShowNumber;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOutId() instead.
-     *
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function setOutId($outId)
-    {
-        return $this->withOutId($outId);
-    }
-
-    /**
      * @param string $outId
      *
      * @return $this
@@ -447,18 +297,6 @@ class SmartCall extends RpcRequest
         $this->options['query']['OutId'] = $outId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAsrModelId() instead.
-     *
-     * @param string $asrModelId
-     *
-     * @return $this
-     */
-    public function setAsrModelId($asrModelId)
-    {
-        return $this->withAsrModelId($asrModelId);
     }
 
     /**
@@ -475,18 +313,6 @@ class SmartCall extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPauseTime() instead.
-     *
-     * @param string $pauseTime
-     *
-     * @return $this
-     */
-    public function setPauseTime($pauseTime)
-    {
-        return $this->withPauseTime($pauseTime);
-    }
-
-    /**
      * @param string $pauseTime
      *
      * @return $this
@@ -495,6 +321,19 @@ class SmartCall extends RpcRequest
     {
         $this->data['PauseTime'] = $pauseTime;
         $this->options['query']['PauseTime'] = $pauseTime;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ttsStyle
+     *
+     * @return $this
+     */
+    public function withTtsStyle($ttsStyle)
+    {
+        $this->data['TtsStyle'] = $ttsStyle;
+        $this->options['query']['TtsStyle'] = $ttsStyle;
 
         return $this;
     }

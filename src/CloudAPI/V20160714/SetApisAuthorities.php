@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetApisAuthorities
+ * Api SetApisAuthorities
  *
  * @method string getAuthVaildTime()
  * @method string getStageName()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAuthValidTime()
  * @method string getApiIds()
  */
-class SetApisAuthorities extends RpcRequest
+class SetApisAuthorities extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetApisAuthorities';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

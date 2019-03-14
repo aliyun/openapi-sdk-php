@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeBusinessStatus
+ * Api DescribeBusinessStatus
  *
  * @method string getPassword()
  * @method string getCallerBid()
  */
-class DescribeBusinessStatus extends RpcRequest
+class DescribeBusinessStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms-inner';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeBusinessStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
-    }
 
     /**
      * @param string $password
@@ -56,18 +29,6 @@ class DescribeBusinessStatus extends RpcRequest
         $this->options['query']['Password'] = $password;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerBid() instead.
-     *
-     * @param string $callerBid
-     *
-     * @return $this
-     */
-    public function setcallerBid($callerBid)
-    {
-        return $this->withCallerBid($callerBid);
     }
 
     /**

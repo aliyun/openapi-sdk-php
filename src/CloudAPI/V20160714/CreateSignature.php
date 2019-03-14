@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateSignature
+ * Api CreateSignature
  *
  * @method string getSecurityToken()
  * @method string getSignatureName()
  * @method string getSignatureKey()
  * @method string getSignatureSecret()
  */
-class CreateSignature extends RpcRequest
+class CreateSignature extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateSignature';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

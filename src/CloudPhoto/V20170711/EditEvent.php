@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of EditEvent
+ * Api EditEvent
  *
  * @method string getEventId()
  * @method string getBannerPhotoId()
@@ -20,51 +20,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndAt()
  * @method string getStartAt()
  */
-class EditEvent extends RpcRequest
+class EditEvent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'EditEvent';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param string $eventId
-     *
-     * @return $this
-     */
-    public function setEventId($eventId)
-    {
-        return $this->withEventId($eventId);
-    }
 
     /**
      * @param string $eventId
@@ -77,18 +43,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['EventId'] = $eventId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBannerPhotoId() instead.
-     *
-     * @param string $bannerPhotoId
-     *
-     * @return $this
-     */
-    public function setBannerPhotoId($bannerPhotoId)
-    {
-        return $this->withBannerPhotoId($bannerPhotoId);
     }
 
     /**
@@ -105,18 +59,6 @@ class EditEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWatermarkPhotoId() instead.
-     *
-     * @param string $watermarkPhotoId
-     *
-     * @return $this
-     */
-    public function setWatermarkPhotoId($watermarkPhotoId)
-    {
-        return $this->withWatermarkPhotoId($watermarkPhotoId);
-    }
-
-    /**
      * @param string $watermarkPhotoId
      *
      * @return $this
@@ -127,18 +69,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['WatermarkPhotoId'] = $watermarkPhotoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentity() instead.
-     *
-     * @param string $identity
-     *
-     * @return $this
-     */
-    public function setIdentity($identity)
-    {
-        return $this->withIdentity($identity);
     }
 
     /**
@@ -155,18 +85,6 @@ class EditEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSplashPhotoId() instead.
-     *
-     * @param string $splashPhotoId
-     *
-     * @return $this
-     */
-    public function setSplashPhotoId($splashPhotoId)
-    {
-        return $this->withSplashPhotoId($splashPhotoId);
-    }
-
-    /**
      * @param string $splashPhotoId
      *
      * @return $this
@@ -177,18 +95,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['SplashPhotoId'] = $splashPhotoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -205,18 +111,6 @@ class EditEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWeixinTitle() instead.
-     *
-     * @param string $weixinTitle
-     *
-     * @return $this
-     */
-    public function setWeixinTitle($weixinTitle)
-    {
-        return $this->withWeixinTitle($weixinTitle);
-    }
-
-    /**
      * @param string $weixinTitle
      *
      * @return $this
@@ -227,18 +121,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['WeixinTitle'] = $weixinTitle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
     }
 
     /**
@@ -255,18 +137,6 @@ class EditEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -277,18 +147,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -305,18 +163,6 @@ class EditEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndAt() instead.
-     *
-     * @param string $endAt
-     *
-     * @return $this
-     */
-    public function setEndAt($endAt)
-    {
-        return $this->withEndAt($endAt);
-    }
-
-    /**
      * @param string $endAt
      *
      * @return $this
@@ -327,18 +173,6 @@ class EditEvent extends RpcRequest
         $this->options['query']['EndAt'] = $endAt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartAt() instead.
-     *
-     * @param string $startAt
-     *
-     * @return $this
-     */
-    public function setStartAt($startAt)
-    {
-        return $this->withStartAt($startAt);
     }
 
     /**

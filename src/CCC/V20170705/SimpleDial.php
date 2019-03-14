@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SimpleDial
+ * Api SimpleDial
  *
  * @method string getCaller()
  * @method string getInstanceId()
  * @method string getContractFlowId()
  * @method string getCallee()
  */
-class SimpleDial extends RpcRequest
+class SimpleDial extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'SimpleDial';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCaller() instead.
-     *
-     * @param string $caller
-     *
-     * @return $this
-     */
-    public function setCaller($caller)
-    {
-        return $this->withCaller($caller);
-    }
 
     /**
      * @param string $caller
@@ -63,18 +33,6 @@ class SimpleDial extends RpcRequest
         $this->options['query']['Caller'] = $caller;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -91,18 +49,6 @@ class SimpleDial extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContractFlowId() instead.
-     *
-     * @param string $contractFlowId
-     *
-     * @return $this
-     */
-    public function setContractFlowId($contractFlowId)
-    {
-        return $this->withContractFlowId($contractFlowId);
-    }
-
-    /**
      * @param string $contractFlowId
      *
      * @return $this
@@ -113,18 +59,6 @@ class SimpleDial extends RpcRequest
         $this->options['query']['ContractFlowId'] = $contractFlowId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallee() instead.
-     *
-     * @param string $callee
-     *
-     * @return $this
-     */
-    public function setCallee($callee)
-    {
-        return $this->withCallee($callee);
     }
 
     /**

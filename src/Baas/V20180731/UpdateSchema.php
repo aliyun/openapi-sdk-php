@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateSchema
+ * Api UpdateSchema
  *
  * @method string getSchemaName()
  * @method string getSchemaId()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getCategoryConfigs()
  */
-class UpdateSchema extends RpcRequest
+class UpdateSchema extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateSchema';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSchemaName() instead.
-     *
-     * @param string $schemaName
-     *
-     * @return $this
-     */
-    public function setSchemaName($schemaName)
-    {
-        return $this->withSchemaName($schemaName);
-    }
 
     /**
      * @param string $schemaName
@@ -59,18 +32,6 @@ class UpdateSchema extends RpcRequest
         $this->options['query']['SchemaName'] = $schemaName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSchemaId() instead.
-     *
-     * @param string $schemaId
-     *
-     * @return $this
-     */
-    public function setSchemaId($schemaId)
-    {
-        return $this->withSchemaId($schemaId);
     }
 
     /**
@@ -87,18 +48,6 @@ class UpdateSchema extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizid() instead.
-     *
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function setBizid($bizid)
-    {
-        return $this->withBizid($bizid);
-    }
-
-    /**
      * @param string $bizid
      *
      * @return $this
@@ -112,18 +61,6 @@ class UpdateSchema extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -134,18 +71,6 @@ class UpdateSchema extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategoryConfigs() instead.
-     *
-     * @param string $categoryConfigs
-     *
-     * @return $this
-     */
-    public function setCategoryConfigs($categoryConfigs)
-    {
-        return $this->withCategoryConfigs($categoryConfigs);
     }
 
     /**

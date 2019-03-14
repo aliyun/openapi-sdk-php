@@ -2,52 +2,35 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryAllCities
+ * Api QueryAllCities
  *
- * @method string getBizId()
  * @method string getExtJson()
+ * @method string getBizId()
  */
-class QueryAllCities extends RpcRequest
+class QueryAllCities extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryAllCities';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $extJson
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withExtJson($extJson)
     {
-        return $this->withBizId($bizId);
+        $this->data['ExtJson'] = $extJson;
+        $this->options['query']['ExtJson'] = $extJson;
+
+        return $this;
     }
 
     /**
@@ -59,31 +42,6 @@ class QueryAllCities extends RpcRequest
     {
         $this->data['BizId'] = $bizId;
         $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
 
         return $this;
     }

@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UnsubscribeExportToOSS
+ * Api UnsubscribeExportToOSS
  *
  */
-class UnsubscribeExportToOSS extends RpcRequest
+class UnsubscribeExportToOSS extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'UnsubscribeExportToOSS';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

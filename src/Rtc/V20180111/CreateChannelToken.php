@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateChannelToken
+ * Api CreateChannelToken
  *
  * @method string getSessionId()
  * @method string getUId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAppId()
  * @method string getChannelId()
  */
-class CreateChannelToken extends RpcRequest
+class CreateChannelToken extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'rtc';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateChannelToken';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rtc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
 
     /**
      * @param string $sessionId
@@ -65,18 +35,6 @@ class CreateChannelToken extends RpcRequest
         $this->options['query']['SessionId'] = $sessionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUId() instead.
-     *
-     * @param string $uId
-     *
-     * @return $this
-     */
-    public function setUId($uId)
-    {
-        return $this->withUId($uId);
     }
 
     /**
@@ -93,18 +51,6 @@ class CreateChannelToken extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -115,18 +61,6 @@ class CreateChannelToken extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNonce() instead.
-     *
-     * @param string $nonce
-     *
-     * @return $this
-     */
-    public function setNonce($nonce)
-    {
-        return $this->withNonce($nonce);
     }
 
     /**
@@ -143,18 +77,6 @@ class CreateChannelToken extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -165,18 +87,6 @@ class CreateChannelToken extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

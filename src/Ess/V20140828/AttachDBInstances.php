@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AttachDBInstances
+ * Api AttachDBInstances
  *
  * @method string getResourceOwnerAccount()
  * @method string getScalingGroupId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getDBInstance()
  * @method string getOwnerId()
  */
-class AttachDBInstances extends RpcRequest
+class AttachDBInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'AttachDBInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
 
     /**
      * @param string $resourceOwnerAccount
@@ -64,18 +34,6 @@ class AttachDBInstances extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -92,18 +50,6 @@ class AttachDBInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceAttach() instead.
-     *
-     * @param string $forceAttach
-     *
-     * @return $this
-     */
-    public function setForceAttach($forceAttach)
-    {
-        return $this->withForceAttach($forceAttach);
-    }
-
-    /**
      * @param string $forceAttach
      *
      * @return $this
@@ -114,28 +60,6 @@ class AttachDBInstances extends RpcRequest
         $this->options['query']['ForceAttach'] = $forceAttach;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDBInstance() instead.
-     *
-     * @return array
-     */
-    public function getDBInstances()
-    {
-        return $this->getDBInstance();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstance() instead.
-     *
-     * @param array $dBInstances
-     *
-     * @return $this
-     */
-    public function setDBInstances(array $dBInstances)
-    {
-        return $this->withDBInstance($dBInstances);
     }
 
     /**
@@ -151,18 +75,6 @@ class AttachDBInstances extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

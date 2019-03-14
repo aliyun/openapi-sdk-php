@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeActiveOperationTask
+ * Api DescribeActiveOperationTask
  *
  * @method string getResourceOwnerId()
  * @method string getTaskType()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageSize()
  * @method string getRegion()
  */
-class DescribeActiveOperationTask extends RpcRequest
+class DescribeActiveOperationTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeActiveOperationTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
 
     /**

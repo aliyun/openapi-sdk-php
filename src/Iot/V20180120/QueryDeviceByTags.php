@@ -2,48 +2,35 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryDeviceByTags
+ * Api QueryDeviceByTags
  *
+ * @method string getIotInstanceId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  * @method array getTag()
  */
-class QueryDeviceByTags extends RpcRequest
+class QueryDeviceByTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryDeviceByTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withPageSize($pageSize);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -60,18 +47,6 @@ class QueryDeviceByTags extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -82,28 +57,6 @@ class QueryDeviceByTags extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**

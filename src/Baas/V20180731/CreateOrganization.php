@@ -2,50 +2,39 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateOrganization
+ * Api CreateOrganization
  *
+ * @method string getDuration()
  * @method string getDomain()
  * @method string getSpecName()
  * @method string getName()
  * @method string getDescription()
  * @method string getLocation()
+ * @method string getPeersCount()
+ * @method string getPricingCycle()
  */
-class CreateOrganization extends RpcRequest
+class CreateOrganization extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateOrganization';
+    public $method = 'PUT';
 
     /**
-     * @var string
-     */
-    public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
+     * @param string $duration
      *
      * @return $this
      */
-    public function setDomain($domain)
+    public function withDuration($duration)
     {
-        return $this->withDomain($domain);
+        $this->data['Duration'] = $duration;
+        $this->options['query']['Duration'] = $duration;
+
+        return $this;
     }
 
     /**
@@ -62,18 +51,6 @@ class CreateOrganization extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpecName() instead.
-     *
-     * @param string $specName
-     *
-     * @return $this
-     */
-    public function setSpecName($specName)
-    {
-        return $this->withSpecName($specName);
-    }
-
-    /**
      * @param string $specName
      *
      * @return $this
@@ -84,18 +61,6 @@ class CreateOrganization extends RpcRequest
         $this->options['query']['SpecName'] = $specName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -112,18 +77,6 @@ class CreateOrganization extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -137,18 +90,6 @@ class CreateOrganization extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -157,6 +98,32 @@ class CreateOrganization extends RpcRequest
     {
         $this->data['Location'] = $location;
         $this->options['query']['Location'] = $location;
+
+        return $this;
+    }
+
+    /**
+     * @param string $peersCount
+     *
+     * @return $this
+     */
+    public function withPeersCount($peersCount)
+    {
+        $this->data['PeersCount'] = $peersCount;
+        $this->options['query']['PeersCount'] = $peersCount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pricingCycle
+     *
+     * @return $this
+     */
+    public function withPricingCycle($pricingCycle)
+    {
+        $this->data['PricingCycle'] = $pricingCycle;
+        $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
     }

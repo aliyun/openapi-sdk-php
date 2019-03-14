@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsSubscriptionDelete
+ * Api OnsSubscriptionDelete
  *
  * @method string getPreventCache()
  * @method string getOnsRegionId()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getConsumerId()
  * @method string getTopic()
  */
-class OnsSubscriptionDelete extends RpcRequest
+class OnsSubscriptionDelete extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsSubscriptionDelete';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -59,18 +32,6 @@ class OnsSubscriptionDelete extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -87,18 +48,6 @@ class OnsSubscriptionDelete extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -112,18 +61,6 @@ class OnsSubscriptionDelete extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsumerId() instead.
-     *
-     * @param string $consumerId
-     *
-     * @return $this
-     */
-    public function setConsumerId($consumerId)
-    {
-        return $this->withConsumerId($consumerId);
-    }
-
-    /**
      * @param string $consumerId
      *
      * @return $this
@@ -134,18 +71,6 @@ class OnsSubscriptionDelete extends RpcRequest
         $this->options['query']['ConsumerId'] = $consumerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
     }
 
     /**

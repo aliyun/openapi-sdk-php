@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserDomains
+ * Api DescribeUserDomains
  *
  * @method string getFuncFilter()
  * @method string getDomainName()
@@ -19,41 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSecurityToken()
  * @method string getCdnType()
  * @method string getPageSize()
+ * @method array getTag()
  */
-class DescribeUserDomains extends RpcRequest
+class DescribeUserDomains extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserDomains';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFuncFilter() instead.
-     *
-     * @param string $funcFilter
-     *
-     * @return $this
-     */
-    public function setFuncFilter($funcFilter)
-    {
-        return $this->withFuncFilter($funcFilter);
-    }
 
     /**
      * @param string $funcFilter
@@ -66,18 +40,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['FuncFilter'] = $funcFilter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -94,18 +56,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -116,18 +66,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFuncId() instead.
-     *
-     * @param string $funcId
-     *
-     * @return $this
-     */
-    public function setFuncId($funcId)
-    {
-        return $this->withFuncId($funcId);
     }
 
     /**
@@ -144,18 +82,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -166,18 +92,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
-     *
-     * @param string $domainStatus
-     *
-     * @return $this
-     */
-    public function setDomainStatus($domainStatus)
-    {
-        return $this->withDomainStatus($domainStatus);
     }
 
     /**
@@ -194,18 +108,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainSearchType() instead.
-     *
-     * @param string $domainSearchType
-     *
-     * @return $this
-     */
-    public function setDomainSearchType($domainSearchType)
-    {
-        return $this->withDomainSearchType($domainSearchType);
-    }
-
-    /**
      * @param string $domainSearchType
      *
      * @return $this
@@ -216,18 +118,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['DomainSearchType'] = $domainSearchType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckDomainShow() instead.
-     *
-     * @param string $checkDomainShow
-     *
-     * @return $this
-     */
-    public function setCheckDomainShow($checkDomainShow)
-    {
-        return $this->withCheckDomainShow($checkDomainShow);
     }
 
     /**
@@ -244,18 +134,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -266,18 +144,6 @@ class DescribeUserDomains extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -294,18 +160,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCdnType() instead.
-     *
-     * @param string $cdnType
-     *
-     * @return $this
-     */
-    public function setCdnType($cdnType)
-    {
-        return $this->withCdnType($cdnType);
-    }
-
-    /**
      * @param string $cdnType
      *
      * @return $this
@@ -319,18 +173,6 @@ class DescribeUserDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -339,6 +181,22 @@ class DescribeUserDomains extends RpcRequest
     {
         $this->data['PageSize'] = $pageSize;
         $this->options['query']['PageSize'] = $pageSize;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $i => $iValue) {
+            $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
+            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
+        }
 
         return $this;
     }

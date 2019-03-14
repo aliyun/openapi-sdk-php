@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetLiveStreamsNotifyUrlConfig
+ * Api SetLiveStreamsNotifyUrlConfig
  *
  * @method string getAuthKey()
  * @method string getDomainName()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getAuthType()
  */
-class SetLiveStreamsNotifyUrlConfig extends RpcRequest
+class SetLiveStreamsNotifyUrlConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetLiveStreamsNotifyUrlConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthKey() instead.
-     *
-     * @param string $authKey
-     *
-     * @return $this
-     */
-    public function setAuthKey($authKey)
-    {
-        return $this->withAuthKey($authKey);
-    }
 
     /**
      * @param string $authKey
@@ -64,18 +34,6 @@ class SetLiveStreamsNotifyUrlConfig extends RpcRequest
         $this->options['query']['AuthKey'] = $authKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -92,18 +50,6 @@ class SetLiveStreamsNotifyUrlConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyUrl() instead.
-     *
-     * @param string $notifyUrl
-     *
-     * @return $this
-     */
-    public function setNotifyUrl($notifyUrl)
-    {
-        return $this->withNotifyUrl($notifyUrl);
-    }
-
-    /**
      * @param string $notifyUrl
      *
      * @return $this
@@ -117,18 +63,6 @@ class SetLiveStreamsNotifyUrlConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -139,18 +73,6 @@ class SetLiveStreamsNotifyUrlConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuthType() instead.
-     *
-     * @param string $authType
-     *
-     * @return $this
-     */
-    public function setAuthType($authType)
-    {
-        return $this->withAuthType($authType);
     }
 
     /**

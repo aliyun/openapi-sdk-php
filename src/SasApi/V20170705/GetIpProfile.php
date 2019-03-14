@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetIpProfile
+ * Api GetIpProfile
  *
  * @method string getDeviceIdMd5()
  * @method string getCarrier()
@@ -18,40 +18,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDeviceType()
  * @method string getBusinessType()
  */
-class GetIpProfile extends RpcRequest
+class GetIpProfile extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sas-api';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetIpProfile';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceIdMd5() instead.
-     *
-     * @param string $deviceIdMd5
-     *
-     * @return $this
-     */
-    public function setDeviceIdMd5($deviceIdMd5)
-    {
-        return $this->withDeviceIdMd5($deviceIdMd5);
-    }
 
     /**
      * @param string $deviceIdMd5
@@ -64,18 +37,6 @@ class GetIpProfile extends RpcRequest
         $this->options['query']['DeviceIdMd5'] = $deviceIdMd5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCarrier() instead.
-     *
-     * @param string $carrier
-     *
-     * @return $this
-     */
-    public function setCarrier($carrier)
-    {
-        return $this->withCarrier($carrier);
     }
 
     /**
@@ -92,18 +53,6 @@ class GetIpProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOs() instead.
-     *
-     * @param string $os
-     *
-     * @return $this
-     */
-    public function setOs($os)
-    {
-        return $this->withOs($os);
-    }
-
-    /**
      * @param string $os
      *
      * @return $this
@@ -114,18 +63,6 @@ class GetIpProfile extends RpcRequest
         $this->options['query']['Os'] = $os;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRequestUrl() instead.
-     *
-     * @param string $requestUrl
-     *
-     * @return $this
-     */
-    public function setRequestUrl($requestUrl)
-    {
-        return $this->withRequestUrl($requestUrl);
     }
 
     /**
@@ -142,18 +79,6 @@ class GetIpProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
-    }
-
-    /**
      * @param string $ip
      *
      * @return $this
@@ -164,18 +89,6 @@ class GetIpProfile extends RpcRequest
         $this->options['query']['Ip'] = $ip;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserAgent() instead.
-     *
-     * @param string $userAgent
-     *
-     * @return $this
-     */
-    public function setUserAgent($userAgent)
-    {
-        return $this->withUserAgent($userAgent);
     }
 
     /**
@@ -192,18 +105,6 @@ class GetIpProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConnectionType() instead.
-     *
-     * @param string $connectionType
-     *
-     * @return $this
-     */
-    public function setConnectionType($connectionType)
-    {
-        return $this->withConnectionType($connectionType);
-    }
-
-    /**
      * @param string $connectionType
      *
      * @return $this
@@ -214,18 +115,6 @@ class GetIpProfile extends RpcRequest
         $this->options['query']['ConnectionType'] = $connectionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSensType() instead.
-     *
-     * @param string $sensType
-     *
-     * @return $this
-     */
-    public function setSensType($sensType)
-    {
-        return $this->withSensType($sensType);
     }
 
     /**
@@ -242,18 +131,6 @@ class GetIpProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceType() instead.
-     *
-     * @param string $deviceType
-     *
-     * @return $this
-     */
-    public function setDeviceType($deviceType)
-    {
-        return $this->withDeviceType($deviceType);
-    }
-
-    /**
      * @param string $deviceType
      *
      * @return $this
@@ -264,18 +141,6 @@ class GetIpProfile extends RpcRequest
         $this->options['query']['DeviceType'] = $deviceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessType() instead.
-     *
-     * @param string $businessType
-     *
-     * @return $this
-     */
-    public function setBusinessType($businessType)
-    {
-        return $this->withBusinessType($businessType);
     }
 
     /**

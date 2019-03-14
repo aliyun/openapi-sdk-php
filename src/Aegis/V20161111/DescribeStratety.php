@@ -2,53 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeStratety
+ * Api DescribeStratety
  *
  * @method string getSourceIp()
+ * @method string getStrategyIds()
  * @method string getLang()
  */
-class DescribeStratety extends RpcRequest
+class DescribeStratety extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeStratety';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -64,15 +35,16 @@ class DescribeStratety extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
+     * @param string $strategyIds
      *
      * @return $this
      */
-    public function setLang($lang)
+    public function withStrategyIds($strategyIds)
     {
-        return $this->withLang($lang);
+        $this->data['StrategyIds'] = $strategyIds;
+        $this->options['query']['StrategyIds'] = $strategyIds;
+
+        return $this;
     }
 
     /**

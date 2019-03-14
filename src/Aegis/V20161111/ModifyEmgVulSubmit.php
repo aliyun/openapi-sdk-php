@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyEmgVulSubmit
+ * Api ModifyEmgVulSubmit
  *
  * @method string getSourceIp()
  * @method string getName()
  * @method string getUserAgreement()
  * @method string getLang()
  */
-class ModifyEmgVulSubmit extends RpcRequest
+class ModifyEmgVulSubmit extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyEmgVulSubmit';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -63,18 +33,6 @@ class ModifyEmgVulSubmit extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -91,18 +49,6 @@ class ModifyEmgVulSubmit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserAgreement() instead.
-     *
-     * @param string $userAgreement
-     *
-     * @return $this
-     */
-    public function setUserAgreement($userAgreement)
-    {
-        return $this->withUserAgreement($userAgreement);
-    }
-
-    /**
      * @param string $userAgreement
      *
      * @return $this
@@ -113,18 +59,6 @@ class ModifyEmgVulSubmit extends RpcRequest
         $this->options['query']['UserAgreement'] = $userAgreement;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

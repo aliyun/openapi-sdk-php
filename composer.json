@@ -100,8 +100,7 @@
         "clearCache": "rm -rf cache/*",
         "coverage": "open cache/coverage/index.html",
         "prompts": [
-            "AlibabaCloud\\DumpServices::dump",
-            "@fixer"
+            "AlibabaCloud\\DumpServices::dump"
         ],
         "release": [
             "AlibabaCloud\\Release::release"

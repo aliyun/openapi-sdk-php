@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveBatchTaskForCreatingOrderTransfer
+ * Api SaveBatchTaskForCreatingOrderTransfer
  *
  * @method string getPromotionNo()
  * @method array getOrderTransferParam()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getUsePromotion()
  */
-class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
+class SaveBatchTaskForCreatingOrderTransfer extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveBatchTaskForCreatingOrderTransfer';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
-    }
 
     /**
      * @param string $promotionNo
@@ -61,28 +34,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['PromotionNo'] = $promotionNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrderTransferParam() instead.
-     *
-     * @return array
-     */
-    public function getOrderTransferParams()
-    {
-        return $this->getOrderTransferParam();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderTransferParam() instead.
-     *
-     * @param array $orderTransferParams
-     *
-     * @return $this
-     */
-    public function setOrderTransferParams(array $orderTransferParams)
-    {
-        return $this->withOrderTransferParam($orderTransferParams);
     }
 
     /**
@@ -104,18 +55,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -126,18 +65,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
     }
 
     /**
@@ -154,18 +81,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
-    }
-
-    /**
      * @param string $useCoupon
      *
      * @return $this
@@ -179,18 +94,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -201,18 +104,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

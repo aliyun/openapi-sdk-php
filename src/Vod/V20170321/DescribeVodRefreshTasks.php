@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVodRefreshTasks
+ * Api DescribeVodRefreshTasks
  *
  * @method string getObjectPath()
  * @method string getDomainName()
@@ -20,32 +20,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTaskId()
  * @method string getStatus()
  */
-class DescribeVodRefreshTasks extends RpcRequest
+class DescribeVodRefreshTasks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVodRefreshTasks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

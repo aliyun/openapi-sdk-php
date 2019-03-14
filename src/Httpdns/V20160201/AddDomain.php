@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Httpdns\V20160201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddDomain
+ * Api AddDomain
  *
  * @method string getAccountId()
  * @method string getDomainName()
  */
-class AddDomain extends RpcRequest
+class AddDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Httpdns';
 
-    /**
-     * @var string
-     */
     public $version = '2016-02-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountId() instead.
-     *
-     * @param string $accountId
-     *
-     * @return $this
-     */
-    public function setAccountId($accountId)
-    {
-        return $this->withAccountId($accountId);
-    }
 
     /**
      * @param string $accountId
@@ -56,18 +29,6 @@ class AddDomain extends RpcRequest
         $this->options['query']['AccountId'] = $accountId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**

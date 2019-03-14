@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateMyGroups
+ * Api UpdateMyGroups
  *
  * @method string getContactGroups()
  * @method string getGroupId()
@@ -14,40 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getGroupName()
  * @method string getBindUrls()
  */
-class UpdateMyGroups extends RpcRequest
+class UpdateMyGroups extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateMyGroups';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactGroups() instead.
-     *
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function setContactGroups($contactGroups)
-    {
-        return $this->withContactGroups($contactGroups);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $contactGroups
@@ -60,18 +35,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['ContactGroups'] = $contactGroups;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -88,18 +51,6 @@ class UpdateMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
-    }
-
-    /**
      * @param string $serviceId
      *
      * @return $this
@@ -110,18 +61,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['ServiceId'] = $serviceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**
@@ -138,18 +77,6 @@ class UpdateMyGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
-
-    /**
      * @param string $groupName
      *
      * @return $this
@@ -160,18 +87,6 @@ class UpdateMyGroups extends RpcRequest
         $this->options['query']['GroupName'] = $groupName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBindUrls() instead.
-     *
-     * @param string $bindUrls
-     *
-     * @return $this
-     */
-    public function setBindUrls($bindUrls)
-    {
-        return $this->withBindUrls($bindUrls);
     }
 
     /**

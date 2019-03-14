@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteApiStageVariable
+ * Api DeleteApiStageVariable
  *
  * @method string getSecurityToken()
  * @method string getVariableName()
  * @method string getGroupId()
  * @method string getStageId()
  */
-class DeleteApiStageVariable extends RpcRequest
+class DeleteApiStageVariable extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteApiStageVariable';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

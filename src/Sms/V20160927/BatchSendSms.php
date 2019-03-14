@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Sms\V20160927;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchSendSms
+ * Api BatchSendSms
  *
  * @method string getResourceOwnerId()
  * @method string getSmsResourceOwnerId()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegion()
  * @method string getVersion()
  */
-class BatchSendSms extends RpcRequest
+class BatchSendSms extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sms';
 
-    /**
-     * @var string
-     */
     public $version = '2016-09-27';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchSendSms';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +35,6 @@ class BatchSendSms extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSmsResourceOwnerId() instead.
-     *
-     * @param string $smsResourceOwnerId
-     *
-     * @return $this
-     */
-    public function setSmsResourceOwnerId($smsResourceOwnerId)
-    {
-        return $this->withSmsResourceOwnerId($smsResourceOwnerId);
     }
 
     /**
@@ -90,18 +51,6 @@ class BatchSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
-
-    /**
      * @param string $data
      *
      * @return $this
@@ -112,18 +61,6 @@ class BatchSendSms extends RpcRequest
         $this->options['query']['Data'] = $data;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -140,18 +77,6 @@ class BatchSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMessageID() instead.
-     *
-     * @param string $messageID
-     *
-     * @return $this
-     */
-    public function setMessageID($messageID)
-    {
-        return $this->withMessageID($messageID);
-    }
-
-    /**
      * @param string $messageID
      *
      * @return $this
@@ -162,18 +87,6 @@ class BatchSendSms extends RpcRequest
         $this->options['query']['MessageID'] = $messageID;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -190,18 +103,6 @@ class BatchSendSms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
-    }
-
-    /**
      * @param string $region
      *
      * @return $this
@@ -212,18 +113,6 @@ class BatchSendSms extends RpcRequest
         $this->options['query']['Region'] = $region;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersion() instead.
-     *
-     * @param string $version
-     *
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        return $this->withVersion($version);
     }
 
     /**

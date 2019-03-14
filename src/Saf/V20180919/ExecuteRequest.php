@@ -2,59 +2,25 @@
 
 namespace AlibabaCloud\Saf\V20180919;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ExecuteRequest
+ * Api ExecuteRequest
  *
  * @method string getServiceParameters()
  * @method string getService()
  */
-class ExecuteRequest extends RpcRequest
+class ExecuteRequest extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'saf';
 
-    /**
-     * @var string
-     */
     public $version = '2018-09-19';
 
-    /**
-     * @var string
-     */
-    public $action = 'ExecuteRequest';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'saf';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceParameters() instead.
-     *
-     * @param string $serviceParameters
-     *
-     * @return $this
-     */
-    public function setServiceParameters($serviceParameters)
-    {
-        return $this->withServiceParameters($serviceParameters);
-    }
 
     /**
      * @param string $serviceParameters
@@ -67,18 +33,6 @@ class ExecuteRequest extends RpcRequest
         $this->options['query']['ServiceParameters'] = $serviceParameters;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withService() instead.
-     *
-     * @param string $service
-     *
-     * @return $this
-     */
-    public function setService($service)
-    {
-        return $this->withService($service);
     }
 
     /**

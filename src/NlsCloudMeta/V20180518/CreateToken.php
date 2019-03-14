@@ -2,37 +2,19 @@
 
 namespace AlibabaCloud\NlsCloudMeta\V20180518;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of CreateToken
+ * Api CreateToken
  *
  */
-class CreateToken extends RoaRequest
+class CreateToken extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'nls-cloud-meta';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateToken';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/pop/2018-05-18/tokens';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

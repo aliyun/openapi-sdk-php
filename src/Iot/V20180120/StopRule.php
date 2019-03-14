@@ -2,46 +2,33 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of StopRule
+ * Api StopRule
  *
+ * @method string getIotInstanceId()
  * @method string getRuleId()
  */
-class StopRule extends RpcRequest
+class StopRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'StopRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRuleId() instead.
-     *
-     * @param string $ruleId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setRuleId($ruleId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withRuleId($ruleId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

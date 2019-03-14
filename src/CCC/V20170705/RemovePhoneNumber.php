@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemovePhoneNumber
+ * Api RemovePhoneNumber
  *
  * @method string getInstanceId()
  * @method string getPhoneNumberId()
  */
-class RemovePhoneNumber extends RpcRequest
+class RemovePhoneNumber extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemovePhoneNumber';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -61,18 +31,6 @@ class RemovePhoneNumber extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumberId() instead.
-     *
-     * @param string $phoneNumberId
-     *
-     * @return $this
-     */
-    public function setPhoneNumberId($phoneNumberId)
-    {
-        return $this->withPhoneNumberId($phoneNumberId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerIpLoad
+ * Api InnerIpLoad
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,45 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerIpLoad extends RpcRequest
+class InnerIpLoad extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerIpLoad';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -70,18 +40,6 @@ class InnerIpLoad extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -98,18 +56,6 @@ class InnerIpLoad extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextToken() instead.
-     *
-     * @param string $nextToken
-     *
-     * @return $this
-     */
-    public function setnextToken($nextToken)
-    {
-        return $this->withNextToken($nextToken);
-    }
-
-    /**
      * @param string $nextToken
      *
      * @return $this
@@ -120,18 +66,6 @@ class InnerIpLoad extends RpcRequest
         $this->options['query']['nextToken'] = $nextToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -148,18 +82,6 @@ class InnerIpLoad extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpCategory() instead.
-     *
-     * @param string $ipCategory
-     *
-     * @return $this
-     */
-    public function setipCategory($ipCategory)
-    {
-        return $this->withIpCategory($ipCategory);
-    }
-
-    /**
      * @param string $ipCategory
      *
      * @return $this
@@ -170,18 +92,6 @@ class InnerIpLoad extends RpcRequest
         $this->options['query']['ipCategory'] = $ipCategory;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -198,18 +108,6 @@ class InnerIpLoad extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCount() instead.
-     *
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function setcount($count)
-    {
-        return $this->withCount($count);
-    }
-
-    /**
      * @param string $count
      *
      * @return $this
@@ -220,18 +118,6 @@ class InnerIpLoad extends RpcRequest
         $this->options['query']['count'] = $count;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -248,18 +134,6 @@ class InnerIpLoad extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -273,18 +147,6 @@ class InnerIpLoad extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -295,18 +157,6 @@ class InnerIpLoad extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

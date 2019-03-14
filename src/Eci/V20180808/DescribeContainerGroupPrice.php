@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeContainerGroupPrice
+ * Api DescribeContainerGroupPrice
  *
  * @method string getResourceOwnerId()
  * @method string getMemory()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCpu()
  * @method string getOwnerId()
  */
-class DescribeContainerGroupPrice extends RpcRequest
+class DescribeContainerGroupPrice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Eci';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeContainerGroupPrice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'eci';
 
     /**

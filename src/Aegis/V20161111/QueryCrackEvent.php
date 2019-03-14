@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryCrackEvent
+ * Api QueryCrackEvent
  *
  * @method string getEndTime()
  * @method string getCurrentPage()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUuid()
  * @method string getStatus()
  */
-class QueryCrackEvent extends RpcRequest
+class QueryCrackEvent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryCrackEvent';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
 
     /**
      * @param string $endTime
@@ -64,18 +34,6 @@ class QueryCrackEvent extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**
@@ -92,18 +50,6 @@ class QueryCrackEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -117,18 +63,6 @@ class QueryCrackEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUuid() instead.
-     *
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        return $this->withUuid($uuid);
-    }
-
-    /**
      * @param string $uuid
      *
      * @return $this
@@ -139,18 +73,6 @@ class QueryCrackEvent extends RpcRequest
         $this->options['query']['Uuid'] = $uuid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

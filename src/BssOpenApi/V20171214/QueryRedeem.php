@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryRedeem
+ * Api QueryRedeem
  *
  * @method string getExpiryTimeEnd()
  * @method string getPageSize()
@@ -13,35 +13,11 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNum()
  * @method string getEffectiveOrNot()
  */
-class QueryRedeem extends RpcRequest
+class QueryRedeem extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
-
-    /**
-     * @var string
-     */
-    public $action = 'QueryRedeem';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeEnd() instead.
-     *
-     * @param string $expiryTimeEnd
-     *
-     * @return $this
-     */
-    public function setExpiryTimeEnd($expiryTimeEnd)
-    {
-        return $this->withExpiryTimeEnd($expiryTimeEnd);
-    }
 
     /**
      * @param string $expiryTimeEnd
@@ -54,18 +30,6 @@ class QueryRedeem extends RpcRequest
         $this->options['query']['ExpiryTimeEnd'] = $expiryTimeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -82,18 +46,6 @@ class QueryRedeem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeStart() instead.
-     *
-     * @param string $expiryTimeStart
-     *
-     * @return $this
-     */
-    public function setExpiryTimeStart($expiryTimeStart)
-    {
-        return $this->withExpiryTimeStart($expiryTimeStart);
-    }
-
-    /**
      * @param string $expiryTimeStart
      *
      * @return $this
@@ -107,18 +59,6 @@ class QueryRedeem extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -129,18 +69,6 @@ class QueryRedeem extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEffectiveOrNot() instead.
-     *
-     * @param string $effectiveOrNot
-     *
-     * @return $this
-     */
-    public function setEffectiveOrNot($effectiveOrNot)
-    {
-        return $this->withEffectiveOrNot($effectiveOrNot);
     }
 
     /**

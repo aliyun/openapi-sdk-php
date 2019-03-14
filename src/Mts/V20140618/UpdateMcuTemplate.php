@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateMcuTemplate
+ * Api UpdateMcuTemplate
  *
  * @method string getTemplate()
  * @method string getResourceOwnerId()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTemplateId()
  */
-class UpdateMcuTemplate extends RpcRequest
+class UpdateMcuTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateMcuTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplate() instead.
-     *
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function setTemplate($template)
-    {
-        return $this->withTemplate($template);
-    }
 
     /**
      * @param string $template
@@ -65,18 +35,6 @@ class UpdateMcuTemplate extends RpcRequest
         $this->options['query']['Template'] = $template;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -93,18 +51,6 @@ class UpdateMcuTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -115,18 +61,6 @@ class UpdateMcuTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class UpdateMcuTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -165,18 +87,6 @@ class UpdateMcuTemplate extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddBackendServersAsyn
+ * Api AddBackendServersAsyn
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -17,55 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBackendServers()
  * @method string getTags()
  */
-class AddBackendServersAsyn extends RpcRequest
+class AddBackendServersAsyn extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddBackendServersAsyn';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -78,18 +38,6 @@ class AddBackendServersAsyn extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -106,18 +54,6 @@ class AddBackendServersAsyn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerId() instead.
-     *
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function setLoadBalancerId($loadBalancerId)
-    {
-        return $this->withLoadBalancerId($loadBalancerId);
-    }
-
-    /**
      * @param string $loadBalancerId
      *
      * @return $this
@@ -128,18 +64,6 @@ class AddBackendServersAsyn extends RpcRequest
         $this->options['query']['LoadBalancerId'] = $loadBalancerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -156,18 +80,6 @@ class AddBackendServersAsyn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -178,18 +90,6 @@ class AddBackendServersAsyn extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -206,18 +106,6 @@ class AddBackendServersAsyn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -231,18 +119,6 @@ class AddBackendServersAsyn extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBackendServers() instead.
-     *
-     * @param string $backendServers
-     *
-     * @return $this
-     */
-    public function setBackendServers($backendServers)
-    {
-        return $this->withBackendServers($backendServers);
-    }
-
-    /**
      * @param string $backendServers
      *
      * @return $this
@@ -253,18 +129,6 @@ class AddBackendServersAsyn extends RpcRequest
         $this->options['query']['BackendServers'] = $backendServers;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

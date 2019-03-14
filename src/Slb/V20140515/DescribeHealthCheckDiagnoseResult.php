@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeHealthCheckDiagnoseResult
+ * Api DescribeHealthCheckDiagnoseResult
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -15,32 +15,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method array getTaskId()
  */
-class DescribeHealthCheckDiagnoseResult extends RpcRequest
+class DescribeHealthCheckDiagnoseResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeHealthCheckDiagnoseResult';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
 
     /**

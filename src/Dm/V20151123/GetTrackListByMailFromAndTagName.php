@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetTrackListByMailFromAndTagName
+ * Api GetTrackListByMailFromAndTagName
  *
  * @method string getResourceOwnerId()
  * @method string getOffsetCreateTimeDesc()
@@ -21,40 +21,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAccountName()
  * @method string getPageSize()
  */
-class GetTrackListByMailFromAndTagName extends RpcRequest
+class GetTrackListByMailFromAndTagName extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetTrackListByMailFromAndTagName';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +40,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOffsetCreateTimeDesc() instead.
-     *
-     * @param string $offsetCreateTimeDesc
-     *
-     * @return $this
-     */
-    public function setOffsetCreateTimeDesc($offsetCreateTimeDesc)
-    {
-        return $this->withOffsetCreateTimeDesc($offsetCreateTimeDesc);
     }
 
     /**
@@ -95,18 +56,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOffset() instead.
-     *
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        return $this->withOffset($offset);
-    }
-
-    /**
      * @param string $offset
      *
      * @return $this
@@ -117,18 +66,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['Offset'] = $offset;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -145,18 +82,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -167,18 +92,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -195,18 +108,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +118,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -245,18 +134,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTotal() instead.
-     *
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function setTotal($total)
-    {
-        return $this->withTotal($total);
-    }
-
-    /**
      * @param string $total
      *
      * @return $this
@@ -267,18 +144,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['Total'] = $total;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagName() instead.
-     *
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function setTagName($tagName)
-    {
-        return $this->withTagName($tagName);
     }
 
     /**
@@ -295,18 +160,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOffsetCreateTime() instead.
-     *
-     * @param string $offsetCreateTime
-     *
-     * @return $this
-     */
-    public function setOffsetCreateTime($offsetCreateTime)
-    {
-        return $this->withOffsetCreateTime($offsetCreateTime);
-    }
-
-    /**
      * @param string $offsetCreateTime
      *
      * @return $this
@@ -320,18 +173,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
-    }
-
-    /**
      * @param string $accountName
      *
      * @return $this
@@ -342,18 +183,6 @@ class GetTrackListByMailFromAndTagName extends RpcRequest
         $this->options['query']['AccountName'] = $accountName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**

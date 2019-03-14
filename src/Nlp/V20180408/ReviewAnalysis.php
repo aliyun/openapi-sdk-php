@@ -2,57 +2,24 @@
 
 namespace AlibabaCloud\Nlp\V20180408;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of ReviewAnalysis
+ * Api ReviewAnalysis
  *
  * @method string getDomain()
  */
-class ReviewAnalysis extends RoaRequest
+class ReviewAnalysis extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Nlp';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReviewAnalysis';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/nlp/api/reviewanalysis/[Domain]';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'nlp';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomain() instead.
-     *
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function setDomain($domain)
-    {
-        return $this->withDomain($domain);
-    }
 
     /**
      * @param string $domain

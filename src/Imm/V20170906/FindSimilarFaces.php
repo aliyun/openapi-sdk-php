@@ -2,56 +2,27 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindSimilarFaces
+ * Api FindSimilarFaces
  *
  * @method string getImageUri()
+ * @method string getMinSimilarity()
  * @method string getLimit()
  * @method string getProject()
  * @method string getSetId()
  * @method string getFaceId()
  */
-class FindSimilarFaces extends RpcRequest
+class FindSimilarFaces extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'FindSimilarFaces';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageUri() instead.
-     *
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function setImageUri($imageUri)
-    {
-        return $this->withImageUri($imageUri);
-    }
 
     /**
      * @param string $imageUri
@@ -67,15 +38,16 @@ class FindSimilarFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLimit() instead.
-     *
-     * @param string $limit
+     * @param string $minSimilarity
      *
      * @return $this
      */
-    public function setLimit($limit)
+    public function withMinSimilarity($minSimilarity)
     {
-        return $this->withLimit($limit);
+        $this->data['MinSimilarity'] = $minSimilarity;
+        $this->options['query']['MinSimilarity'] = $minSimilarity;
+
+        return $this;
     }
 
     /**
@@ -92,18 +64,6 @@ class FindSimilarFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +77,6 @@ class FindSimilarFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -139,18 +87,6 @@ class FindSimilarFaces extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceId() instead.
-     *
-     * @param string $faceId
-     *
-     * @return $this
-     */
-    public function setFaceId($faceId)
-    {
-        return $this->withFaceId($faceId);
     }
 
     /**

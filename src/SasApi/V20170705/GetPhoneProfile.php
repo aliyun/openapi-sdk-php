@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetPhoneProfile
+ * Api GetPhoneProfile
  *
  * @method string getPhone()
  * @method string getSensType()
  * @method string getDataVersion()
  * @method string getBusinessType()
  */
-class GetPhoneProfile extends RpcRequest
+class GetPhoneProfile extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sas-api';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetPhoneProfile';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhone() instead.
-     *
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function setPhone($phone)
-    {
-        return $this->withPhone($phone);
-    }
 
     /**
      * @param string $phone
@@ -58,18 +31,6 @@ class GetPhoneProfile extends RpcRequest
         $this->options['query']['Phone'] = $phone;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSensType() instead.
-     *
-     * @param string $sensType
-     *
-     * @return $this
-     */
-    public function setSensType($sensType)
-    {
-        return $this->withSensType($sensType);
     }
 
     /**
@@ -86,18 +47,6 @@ class GetPhoneProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDataVersion() instead.
-     *
-     * @param string $dataVersion
-     *
-     * @return $this
-     */
-    public function setDataVersion($dataVersion)
-    {
-        return $this->withDataVersion($dataVersion);
-    }
-
-    /**
      * @param string $dataVersion
      *
      * @return $this
@@ -108,18 +57,6 @@ class GetPhoneProfile extends RpcRequest
         $this->options['query']['DataVersion'] = $dataVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessType() instead.
-     *
-     * @param string $businessType
-     *
-     * @return $this
-     */
-    public function setBusinessType($businessType)
-    {
-        return $this->withBusinessType($businessType);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyLoadBalancerResourceGroup
+ * Api ModifyLoadBalancerResourceGroup
  *
  * @method string getAccessKeyId()
  * @method string getResourceGroupId()
@@ -17,55 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTags()
  */
-class ModifyLoadBalancerResourceGroup extends RpcRequest
+class ModifyLoadBalancerResourceGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyLoadBalancerResourceGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -78,18 +38,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -106,18 +54,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -128,18 +64,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerId() instead.
-     *
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function setLoadBalancerId($loadBalancerId)
-    {
-        return $this->withLoadBalancerId($loadBalancerId);
     }
 
     /**
@@ -156,18 +80,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNewResourceGroupId() instead.
-     *
-     * @param string $newResourceGroupId
-     *
-     * @return $this
-     */
-    public function setNewResourceGroupId($newResourceGroupId)
-    {
-        return $this->withNewResourceGroupId($newResourceGroupId);
-    }
-
-    /**
      * @param string $newResourceGroupId
      *
      * @return $this
@@ -178,18 +90,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
         $this->options['query']['NewResourceGroupId'] = $newResourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -206,18 +106,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -231,18 +119,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -253,18 +129,6 @@ class ModifyLoadBalancerResourceGroup extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

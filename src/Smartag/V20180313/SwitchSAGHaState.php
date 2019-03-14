@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SwitchSAGHaState
+ * Api SwitchSAGHaState
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSmartAGId()
  * @method string getOwnerId()
  */
-class SwitchSAGHaState extends RpcRequest
+class SwitchSAGHaState extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'SwitchSAGHaState';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class SwitchSAGHaState extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class SwitchSAGHaState extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHaType() instead.
-     *
-     * @param string $haType
-     *
-     * @return $this
-     */
-    public function setHaType($haType)
-    {
-        return $this->withHaType($haType);
-    }
-
-    /**
      * @param string $haType
      *
      * @return $this
@@ -115,18 +61,6 @@ class SwitchSAGHaState extends RpcRequest
         $this->options['query']['HaType'] = $haType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -143,18 +77,6 @@ class SwitchSAGHaState extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSmartAGId() instead.
-     *
-     * @param string $smartAGId
-     *
-     * @return $this
-     */
-    public function setSmartAGId($smartAGId)
-    {
-        return $this->withSmartAGId($smartAGId);
-    }
-
-    /**
      * @param string $smartAGId
      *
      * @return $this
@@ -165,18 +87,6 @@ class SwitchSAGHaState extends RpcRequest
         $this->options['query']['SmartAGId'] = $smartAGId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,59 +2,32 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryRegistrantProfiles
+ * Api QueryRegistrantProfiles
  *
  * @method string getRegistrantOrganization()
  * @method string getUserClientIp()
  * @method string getRegistrantProfileId()
  * @method string getPageSize()
+ * @method string getRegistrantType()
+ * @method string getRegistrantProfileType()
+ * @method string getRealNameStatus()
  * @method string getLang()
  * @method string getPageNum()
  * @method string getDefaultRegistrantProfile()
  * @method string getEmail()
  */
-class QueryRegistrantProfiles extends RpcRequest
+class QueryRegistrantProfiles extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryRegistrantProfiles';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
-    }
 
     /**
      * @param string $registrantOrganization
@@ -67,18 +40,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['RegistrantOrganization'] = $registrantOrganization;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -95,18 +56,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -117,18 +66,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -145,15 +82,42 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
+     * @param string $registrantType
      *
      * @return $this
      */
-    public function setLang($lang)
+    public function withRegistrantType($registrantType)
     {
-        return $this->withLang($lang);
+        $this->data['RegistrantType'] = $registrantType;
+        $this->options['query']['RegistrantType'] = $registrantType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $registrantProfileType
+     *
+     * @return $this
+     */
+    public function withRegistrantProfileType($registrantProfileType)
+    {
+        $this->data['RegistrantProfileType'] = $registrantProfileType;
+        $this->options['query']['RegistrantProfileType'] = $registrantProfileType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $realNameStatus
+     *
+     * @return $this
+     */
+    public function withRealNameStatus($realNameStatus)
+    {
+        $this->data['RealNameStatus'] = $realNameStatus;
+        $this->options['query']['RealNameStatus'] = $realNameStatus;
+
+        return $this;
     }
 
     /**
@@ -170,18 +134,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -195,18 +147,6 @@ class QueryRegistrantProfiles extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDefaultRegistrantProfile() instead.
-     *
-     * @param string $defaultRegistrantProfile
-     *
-     * @return $this
-     */
-    public function setDefaultRegistrantProfile($defaultRegistrantProfile)
-    {
-        return $this->withDefaultRegistrantProfile($defaultRegistrantProfile);
-    }
-
-    /**
      * @param string $defaultRegistrantProfile
      *
      * @return $this
@@ -217,18 +157,6 @@ class QueryRegistrantProfiles extends RpcRequest
         $this->options['query']['DefaultRegistrantProfile'] = $defaultRegistrantProfile;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**

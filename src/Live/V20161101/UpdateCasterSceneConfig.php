@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateCasterSceneConfig
+ * Api UpdateCasterSceneConfig
  *
  * @method array getComponentId()
  * @method string getCasterId()
@@ -13,55 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getLayoutId()
  */
-class UpdateCasterSceneConfig extends RpcRequest
+class UpdateCasterSceneConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateCasterSceneConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getComponentId() instead.
-     *
-     * @return array
-     */
-    public function getComponentIds()
-    {
-        return $this->getComponentId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComponentId() instead.
-     *
-     * @param array $componentIds
-     *
-     * @return $this
-     */
-    public function setComponentIds(array $componentIds)
-    {
-        return $this->withComponentId($componentIds);
-    }
 
     /**
      * @param array $componentId
@@ -79,18 +39,6 @@ class UpdateCasterSceneConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
-
-    /**
      * @param string $casterId
      *
      * @return $this
@@ -101,18 +49,6 @@ class UpdateCasterSceneConfig extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
     }
 
     /**
@@ -129,18 +65,6 @@ class UpdateCasterSceneConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -151,18 +75,6 @@ class UpdateCasterSceneConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLayoutId() instead.
-     *
-     * @param string $layoutId
-     *
-     * @return $this
-     */
-    public function setLayoutId($layoutId)
-    {
-        return $this->withLayoutId($layoutId);
     }
 
     /**

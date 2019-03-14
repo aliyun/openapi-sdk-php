@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateIpControl
+ * Api CreateIpControl
  *
  * @method string getSecurityToken()
  * @method string getIpControlName()
@@ -13,32 +13,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getIpControlPolicys()
  * @method string getDescription()
  */
-class CreateIpControl extends RpcRequest
+class CreateIpControl extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateIpControl';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

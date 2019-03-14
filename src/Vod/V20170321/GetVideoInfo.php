@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetVideoInfo
+ * Api GetVideoInfo
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResultTypes()
  * @method string getOwnerId()
  */
-class GetVideoInfo extends RpcRequest
+class GetVideoInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetVideoInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +34,6 @@ class GetVideoInfo extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -92,18 +50,6 @@ class GetVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
-    }
-
-    /**
      * @param string $videoId
      *
      * @return $this
@@ -117,18 +63,6 @@ class GetVideoInfo extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResultTypes() instead.
-     *
-     * @param string $resultTypes
-     *
-     * @return $this
-     */
-    public function setResultTypes($resultTypes)
-    {
-        return $this->withResultTypes($resultTypes);
-    }
-
-    /**
      * @param string $resultTypes
      *
      * @return $this
@@ -139,18 +73,6 @@ class GetVideoInfo extends RpcRequest
         $this->options['query']['ResultTypes'] = $resultTypes;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

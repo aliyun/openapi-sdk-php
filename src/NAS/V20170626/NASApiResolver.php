@@ -12,6 +12,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CPFSCreateFileSystem cPFSCreateFileSystem(array $options = [])
  * @method CPFSDeleteFileSystem cPFSDeleteFileSystem(array $options = [])
  * @method CPFSDescribeFileSystems cPFSDescribeFileSystems(array $options = [])
+ * @method CPFSDescribeRegions cPFSDescribeRegions(array $options = [])
  * @method CPFSModifyFileSystem cPFSModifyFileSystem(array $options = [])
  * @method CreateAccessGroup createAccessGroup(array $options = [])
  * @method CreateAccessRule createAccessRule(array $options = [])

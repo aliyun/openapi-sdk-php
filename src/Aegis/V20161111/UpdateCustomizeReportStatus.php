@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateCustomizeReportStatus
+ * Api UpdateCustomizeReportStatus
  *
  * @method string getSourceIp()
  * @method string getReportId()
  * @method string getReportStatus()
  */
-class UpdateCustomizeReportStatus extends RpcRequest
+class UpdateCustomizeReportStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateCustomizeReportStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -65,18 +35,6 @@ class UpdateCustomizeReportStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReportId() instead.
-     *
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function setReportId($reportId)
-    {
-        return $this->withReportId($reportId);
-    }
-
-    /**
      * @param string $reportId
      *
      * @return $this
@@ -87,18 +45,6 @@ class UpdateCustomizeReportStatus extends RpcRequest
         $this->options['query']['ReportId'] = $reportId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReportStatus() instead.
-     *
-     * @param string $reportStatus
-     *
-     * @return $this
-     */
-    public function setReportStatus($reportStatus)
-    {
-        return $this->withReportStatus($reportStatus);
     }
 
     /**

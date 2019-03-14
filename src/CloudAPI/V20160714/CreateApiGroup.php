@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateApiGroup
+ * Api CreateApiGroup
  *
  * @method string getSecurityToken()
  * @method string getDescription()
  * @method string getSource()
  * @method string getGroupName()
  */
-class CreateApiGroup extends RpcRequest
+class CreateApiGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateApiGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

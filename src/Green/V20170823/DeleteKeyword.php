@@ -2,55 +2,26 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteKeyword
+ * Api DeleteKeyword
  *
  * @method string getSourceIp()
+ * @method string getKeywords()
  * @method string getKeywordLibId()
  * @method string getIds()
  * @method string getLang()
  */
-class DeleteKeyword extends RpcRequest
+class DeleteKeyword extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteKeyword';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -66,15 +37,16 @@ class DeleteKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeywordLibId() instead.
-     *
-     * @param string $keywordLibId
+     * @param string $keywords
      *
      * @return $this
      */
-    public function setKeywordLibId($keywordLibId)
+    public function withKeywords($keywords)
     {
-        return $this->withKeywordLibId($keywordLibId);
+        $this->data['Keywords'] = $keywords;
+        $this->options['query']['Keywords'] = $keywords;
+
+        return $this;
     }
 
     /**
@@ -91,18 +63,6 @@ class DeleteKeyword extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIds() instead.
-     *
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function setIds($ids)
-    {
-        return $this->withIds($ids);
-    }
-
-    /**
      * @param string $ids
      *
      * @return $this
@@ -113,18 +73,6 @@ class DeleteKeyword extends RpcRequest
         $this->options['query']['Ids'] = $ids;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

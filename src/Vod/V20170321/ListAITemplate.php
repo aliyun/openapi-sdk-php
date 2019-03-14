@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListAITemplate
+ * Api ListAITemplate
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getTemplateType()
  * @method string getOwnerId()
  */
-class ListAITemplate extends RpcRequest
+class ListAITemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListAITemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListAlarmHistory
+ * Api ListAlarmHistory
  *
  * @method string getCursor()
  * @method string getSize()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getId()
  * @method string getStartTime()
  */
-class ListAlarmHistory extends RpcRequest
+class ListAlarmHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListAlarmHistory';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $cursor
@@ -59,18 +34,6 @@ class ListAlarmHistory extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSize() instead.
-     *
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize($size)
-    {
-        return $this->withSize($size);
     }
 
     /**
@@ -87,18 +50,6 @@ class ListAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -112,18 +63,6 @@ class ListAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -134,18 +73,6 @@ class ListAlarmHistory extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**

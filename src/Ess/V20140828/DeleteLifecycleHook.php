@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteLifecycleHook
+ * Api DeleteLifecycleHook
  *
  * @method string getLifecycleHookName()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DeleteLifecycleHook extends RpcRequest
+class DeleteLifecycleHook extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteLifecycleHook';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHookName() instead.
-     *
-     * @param string $lifecycleHookName
-     *
-     * @return $this
-     */
-    public function setLifecycleHookName($lifecycleHookName)
-    {
-        return $this->withLifecycleHookName($lifecycleHookName);
-    }
 
     /**
      * @param string $lifecycleHookName
@@ -65,18 +35,6 @@ class DeleteLifecycleHook extends RpcRequest
         $this->options['query']['LifecycleHookName'] = $lifecycleHookName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class DeleteLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLifecycleHookId() instead.
-     *
-     * @param string $lifecycleHookId
-     *
-     * @return $this
-     */
-    public function setLifecycleHookId($lifecycleHookId)
-    {
-        return $this->withLifecycleHookId($lifecycleHookId);
-    }
-
-    /**
      * @param string $lifecycleHookId
      *
      * @return $this
@@ -115,18 +61,6 @@ class DeleteLifecycleHook extends RpcRequest
         $this->options['query']['LifecycleHookId'] = $lifecycleHookId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -143,18 +77,6 @@ class DeleteLifecycleHook extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -165,18 +87,6 @@ class DeleteLifecycleHook extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

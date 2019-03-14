@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeOrder
+ * Api DescribeOrder
  *
  * @method string getOrderId()
  */
-class DescribeOrder extends RpcRequest
+class DescribeOrder extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Market';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeOrder';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderId() instead.
-     *
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function setOrderId($orderId)
-    {
-        return $this->withOrderId($orderId);
-    }
 
     /**
      * @param string $orderId

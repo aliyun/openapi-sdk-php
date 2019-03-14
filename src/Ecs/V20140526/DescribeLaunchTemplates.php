@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLaunchTemplates
+ * Api DescribeLaunchTemplates
  *
  * @method array getLaunchTemplateName()
  * @method string getResourceOwnerId()
@@ -18,50 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTemplateResourceGroupId()
  * @method string getOwnerId()
  */
-class DescribeLaunchTemplates extends RpcRequest
+class DescribeLaunchTemplates extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLaunchTemplates';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getLaunchTemplateName() instead.
-     *
-     * @return array
-     */
-    public function getLaunchTemplateNames()
-    {
-        return $this->getLaunchTemplateName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateName() instead.
-     *
-     * @param array $launchTemplateNames
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateNames(array $launchTemplateNames)
-    {
-        return $this->withLaunchTemplateName($launchTemplateNames);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param array $launchTemplateName
@@ -79,18 +44,6 @@ class DescribeLaunchTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -101,18 +54,6 @@ class DescribeLaunchTemplates extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -129,18 +70,6 @@ class DescribeLaunchTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -151,28 +80,6 @@ class DescribeLaunchTemplates extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTemplateTag() instead.
-     *
-     * @return array
-     */
-    public function getTemplateTags()
-    {
-        return $this->getTemplateTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateTag() instead.
-     *
-     * @param array $templateTags
-     *
-     * @return $this
-     */
-    public function setTemplateTags(array $templateTags)
-    {
-        return $this->withTemplateTag($templateTags);
     }
 
     /**
@@ -192,28 +99,6 @@ class DescribeLaunchTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getLaunchTemplateId() instead.
-     *
-     * @return array
-     */
-    public function getLaunchTemplateIds()
-    {
-        return $this->getLaunchTemplateId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateId() instead.
-     *
-     * @param array $launchTemplateIds
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateIds(array $launchTemplateIds)
-    {
-        return $this->withLaunchTemplateId($launchTemplateIds);
-    }
-
-    /**
      * @param array $launchTemplateId
      *
      * @return $this
@@ -226,18 +111,6 @@ class DescribeLaunchTemplates extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -254,18 +127,6 @@ class DescribeLaunchTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -279,18 +140,6 @@ class DescribeLaunchTemplates extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateResourceGroupId() instead.
-     *
-     * @param string $templateResourceGroupId
-     *
-     * @return $this
-     */
-    public function setTemplateResourceGroupId($templateResourceGroupId)
-    {
-        return $this->withTemplateResourceGroupId($templateResourceGroupId);
-    }
-
-    /**
      * @param string $templateResourceGroupId
      *
      * @return $this
@@ -301,18 +150,6 @@ class DescribeLaunchTemplates extends RpcRequest
         $this->options['query']['TemplateResourceGroupId'] = $templateResourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

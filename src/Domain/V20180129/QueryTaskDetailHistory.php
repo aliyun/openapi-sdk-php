@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryTaskDetailHistory
+ * Api QueryTaskDetailHistory
  *
  * @method string getTaskStatus()
  * @method string getUserClientIp()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getDomainNameCursor()
  */
-class QueryTaskDetailHistory extends RpcRequest
+class QueryTaskDetailHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryTaskDetailHistory';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskStatus() instead.
-     *
-     * @param string $taskStatus
-     *
-     * @return $this
-     */
-    public function setTaskStatus($taskStatus)
-    {
-        return $this->withTaskStatus($taskStatus);
-    }
 
     /**
      * @param string $taskStatus
@@ -62,18 +35,6 @@ class QueryTaskDetailHistory extends RpcRequest
         $this->options['query']['TaskStatus'] = $taskStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -90,18 +51,6 @@ class QueryTaskDetailHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskNo() instead.
-     *
-     * @param string $taskNo
-     *
-     * @return $this
-     */
-    public function setTaskNo($taskNo)
-    {
-        return $this->withTaskNo($taskNo);
-    }
-
-    /**
      * @param string $taskNo
      *
      * @return $this
@@ -112,18 +61,6 @@ class QueryTaskDetailHistory extends RpcRequest
         $this->options['query']['TaskNo'] = $taskNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -140,18 +77,6 @@ class QueryTaskDetailHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -162,18 +87,6 @@ class QueryTaskDetailHistory extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskDetailNoCursor() instead.
-     *
-     * @param string $taskDetailNoCursor
-     *
-     * @return $this
-     */
-    public function setTaskDetailNoCursor($taskDetailNoCursor)
-    {
-        return $this->withTaskDetailNoCursor($taskDetailNoCursor);
     }
 
     /**
@@ -190,18 +103,6 @@ class QueryTaskDetailHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -212,18 +113,6 @@ class QueryTaskDetailHistory extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainNameCursor() instead.
-     *
-     * @param string $domainNameCursor
-     *
-     * @return $this
-     */
-    public function setDomainNameCursor($domainNameCursor)
-    {
-        return $this->withDomainNameCursor($domainNameCursor);
     }
 
     /**

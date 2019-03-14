@@ -2,70 +2,45 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindImages
+ * Api FindImages
  *
  * @method string getGender()
- * @method string getRemarksAPrefix()
  * @method string getProject()
- * @method string getOrderBy()
+ * @method string getExternalId()
  * @method string getImageSizeRange()
  * @method string getRemarksBPrefix()
- * @method string getTagNames()
- * @method string getSourceUriPrefix()
  * @method string getLocationBoundary()
- * @method string getEmotion()
  * @method string getImageTimeRange()
- * @method string getMarker()
  * @method string getOCRContentsMatch()
- * @method string getCreateTimeRange()
- * @method string getSetId()
+ * @method string getLimit()
+ * @method string getRemarksDPrefix()
  * @method string getSourceType()
- * @method string getUpdateTimeRange()
  * @method string getAgeRange()
  * @method string getOrder()
+ * @method string getRemarksAPrefix()
+ * @method string getGroupId()
+ * @method string getOrderBy()
+ * @method string getTagNames()
+ * @method string getSourceUriPrefix()
+ * @method string getEmotion()
+ * @method string getMarker()
+ * @method string getRemarksCPrefix()
+ * @method string getCreateTimeRange()
+ * @method string getSetId()
+ * @method string getModifyTimeRange()
  */
-class FindImages extends RpcRequest
+class FindImages extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'FindImages';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGender() instead.
-     *
-     * @param string $gender
-     *
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        return $this->withGender($gender);
-    }
 
     /**
      * @param string $gender
@@ -78,43 +53,6 @@ class FindImages extends RpcRequest
         $this->options['query']['Gender'] = $gender;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRemarksAPrefix() instead.
-     *
-     * @param string $remarksAPrefix
-     *
-     * @return $this
-     */
-    public function setRemarksAPrefix($remarksAPrefix)
-    {
-        return $this->withRemarksAPrefix($remarksAPrefix);
-    }
-
-    /**
-     * @param string $remarksAPrefix
-     *
-     * @return $this
-     */
-    public function withRemarksAPrefix($remarksAPrefix)
-    {
-        $this->data['RemarksAPrefix'] = $remarksAPrefix;
-        $this->options['query']['RemarksAPrefix'] = $remarksAPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -131,40 +69,16 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderBy() instead.
-     *
-     * @param string $orderBy
+     * @param string $externalId
      *
      * @return $this
      */
-    public function setOrderBy($orderBy)
+    public function withExternalId($externalId)
     {
-        return $this->withOrderBy($orderBy);
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
+        $this->data['ExternalId'] = $externalId;
+        $this->options['query']['ExternalId'] = $externalId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageSizeRange() instead.
-     *
-     * @param string $imageSizeRange
-     *
-     * @return $this
-     */
-    public function setImageSizeRange($imageSizeRange)
-    {
-        return $this->withImageSizeRange($imageSizeRange);
     }
 
     /**
@@ -181,18 +95,6 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemarksBPrefix() instead.
-     *
-     * @param string $remarksBPrefix
-     *
-     * @return $this
-     */
-    public function setRemarksBPrefix($remarksBPrefix)
-    {
-        return $this->withRemarksBPrefix($remarksBPrefix);
-    }
-
-    /**
      * @param string $remarksBPrefix
      *
      * @return $this
@@ -203,68 +105,6 @@ class FindImages extends RpcRequest
         $this->options['query']['RemarksBPrefix'] = $remarksBPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagNames() instead.
-     *
-     * @param string $tagNames
-     *
-     * @return $this
-     */
-    public function setTagNames($tagNames)
-    {
-        return $this->withTagNames($tagNames);
-    }
-
-    /**
-     * @param string $tagNames
-     *
-     * @return $this
-     */
-    public function withTagNames($tagNames)
-    {
-        $this->data['TagNames'] = $tagNames;
-        $this->options['query']['TagNames'] = $tagNames;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceUriPrefix() instead.
-     *
-     * @param string $sourceUriPrefix
-     *
-     * @return $this
-     */
-    public function setSourceUriPrefix($sourceUriPrefix)
-    {
-        return $this->withSourceUriPrefix($sourceUriPrefix);
-    }
-
-    /**
-     * @param string $sourceUriPrefix
-     *
-     * @return $this
-     */
-    public function withSourceUriPrefix($sourceUriPrefix)
-    {
-        $this->data['SourceUriPrefix'] = $sourceUriPrefix;
-        $this->options['query']['SourceUriPrefix'] = $sourceUriPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationBoundary() instead.
-     *
-     * @param string $locationBoundary
-     *
-     * @return $this
-     */
-    public function setLocationBoundary($locationBoundary)
-    {
-        return $this->withLocationBoundary($locationBoundary);
     }
 
     /**
@@ -281,43 +121,6 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmotion() instead.
-     *
-     * @param string $emotion
-     *
-     * @return $this
-     */
-    public function setEmotion($emotion)
-    {
-        return $this->withEmotion($emotion);
-    }
-
-    /**
-     * @param string $emotion
-     *
-     * @return $this
-     */
-    public function withEmotion($emotion)
-    {
-        $this->data['Emotion'] = $emotion;
-        $this->options['query']['Emotion'] = $emotion;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageTimeRange() instead.
-     *
-     * @param string $imageTimeRange
-     *
-     * @return $this
-     */
-    public function setImageTimeRange($imageTimeRange)
-    {
-        return $this->withImageTimeRange($imageTimeRange);
-    }
-
-    /**
      * @param string $imageTimeRange
      *
      * @return $this
@@ -328,43 +131,6 @@ class FindImages extends RpcRequest
         $this->options['query']['ImageTimeRange'] = $imageTimeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOCRContentsMatch() instead.
-     *
-     * @param string $oCRContentsMatch
-     *
-     * @return $this
-     */
-    public function setOCRContentsMatch($oCRContentsMatch)
-    {
-        return $this->withOCRContentsMatch($oCRContentsMatch);
     }
 
     /**
@@ -381,65 +147,29 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeRange() instead.
-     *
-     * @param string $createTimeRange
+     * @param string $limit
      *
      * @return $this
      */
-    public function setCreateTimeRange($createTimeRange)
+    public function withLimit($limit)
     {
-        return $this->withCreateTimeRange($createTimeRange);
-    }
-
-    /**
-     * @param string $createTimeRange
-     *
-     * @return $this
-     */
-    public function withCreateTimeRange($createTimeRange)
-    {
-        $this->data['CreateTimeRange'] = $createTimeRange;
-        $this->options['query']['CreateTimeRange'] = $createTimeRange;
+        $this->data['Limit'] = $limit;
+        $this->options['query']['Limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
+     * @param string $remarksDPrefix
      *
      * @return $this
      */
-    public function setSetId($setId)
+    public function withRemarksDPrefix($remarksDPrefix)
     {
-        return $this->withSetId($setId);
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
+        $this->data['RemarksDPrefix'] = $remarksDPrefix;
+        $this->options['query']['RemarksDPrefix'] = $remarksDPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceType() instead.
-     *
-     * @param string $sourceType
-     *
-     * @return $this
-     */
-    public function setSourceType($sourceType)
-    {
-        return $this->withSourceType($sourceType);
     }
 
     /**
@@ -456,43 +186,6 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUpdateTimeRange() instead.
-     *
-     * @param string $updateTimeRange
-     *
-     * @return $this
-     */
-    public function setUpdateTimeRange($updateTimeRange)
-    {
-        return $this->withUpdateTimeRange($updateTimeRange);
-    }
-
-    /**
-     * @param string $updateTimeRange
-     *
-     * @return $this
-     */
-    public function withUpdateTimeRange($updateTimeRange)
-    {
-        $this->data['UpdateTimeRange'] = $updateTimeRange;
-        $this->options['query']['UpdateTimeRange'] = $updateTimeRange;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgeRange() instead.
-     *
-     * @param string $ageRange
-     *
-     * @return $this
-     */
-    public function setAgeRange($ageRange)
-    {
-        return $this->withAgeRange($ageRange);
-    }
-
-    /**
      * @param string $ageRange
      *
      * @return $this
@@ -506,18 +199,6 @@ class FindImages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
-    }
-
-    /**
      * @param string $order
      *
      * @return $this
@@ -526,6 +207,149 @@ class FindImages extends RpcRequest
     {
         $this->data['Order'] = $order;
         $this->options['query']['Order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * @param string $remarksAPrefix
+     *
+     * @return $this
+     */
+    public function withRemarksAPrefix($remarksAPrefix)
+    {
+        $this->data['RemarksAPrefix'] = $remarksAPrefix;
+        $this->options['query']['RemarksAPrefix'] = $remarksAPrefix;
+
+        return $this;
+    }
+
+    /**
+     * @param string $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId($groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        $this->options['query']['GroupId'] = $groupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $orderBy
+     *
+     * @return $this
+     */
+    public function withOrderBy($orderBy)
+    {
+        $this->data['OrderBy'] = $orderBy;
+        $this->options['query']['OrderBy'] = $orderBy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $tagNames
+     *
+     * @return $this
+     */
+    public function withTagNames($tagNames)
+    {
+        $this->data['TagNames'] = $tagNames;
+        $this->options['query']['TagNames'] = $tagNames;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sourceUriPrefix
+     *
+     * @return $this
+     */
+    public function withSourceUriPrefix($sourceUriPrefix)
+    {
+        $this->data['SourceUriPrefix'] = $sourceUriPrefix;
+        $this->options['query']['SourceUriPrefix'] = $sourceUriPrefix;
+
+        return $this;
+    }
+
+    /**
+     * @param string $emotion
+     *
+     * @return $this
+     */
+    public function withEmotion($emotion)
+    {
+        $this->data['Emotion'] = $emotion;
+        $this->options['query']['Emotion'] = $emotion;
+
+        return $this;
+    }
+
+    /**
+     * @param string $marker
+     *
+     * @return $this
+     */
+    public function withMarker($marker)
+    {
+        $this->data['Marker'] = $marker;
+        $this->options['query']['Marker'] = $marker;
+
+        return $this;
+    }
+
+    /**
+     * @param string $remarksCPrefix
+     *
+     * @return $this
+     */
+    public function withRemarksCPrefix($remarksCPrefix)
+    {
+        $this->data['RemarksCPrefix'] = $remarksCPrefix;
+        $this->options['query']['RemarksCPrefix'] = $remarksCPrefix;
+
+        return $this;
+    }
+
+    /**
+     * @param string $createTimeRange
+     *
+     * @return $this
+     */
+    public function withCreateTimeRange($createTimeRange)
+    {
+        $this->data['CreateTimeRange'] = $createTimeRange;
+        $this->options['query']['CreateTimeRange'] = $createTimeRange;
+
+        return $this;
+    }
+
+    /**
+     * @param string $setId
+     *
+     * @return $this
+     */
+    public function withSetId($setId)
+    {
+        $this->data['SetId'] = $setId;
+        $this->options['query']['SetId'] = $setId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $modifyTimeRange
+     *
+     * @return $this
+     */
+    public function withModifyTimeRange($modifyTimeRange)
+    {
+        $this->data['ModifyTimeRange'] = $modifyTimeRange;
+        $this->options['query']['ModifyTimeRange'] = $modifyTimeRange;
 
         return $this;
     }

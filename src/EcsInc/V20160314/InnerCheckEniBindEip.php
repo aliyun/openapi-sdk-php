@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerCheckEniBindEip
+ * Api InnerCheckEniBindEip
  *
  * @method string getResourceOwnerId()
  * @method string getAliUid()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEipAddressCount()
  * @method string getOperateType()
  */
-class InnerCheckEniBindEip extends RpcRequest
+class InnerCheckEniBindEip extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerCheckEniBindEip';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class InnerCheckEniBindEip extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -95,18 +53,6 @@ class InnerCheckEniBindEip extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEipAddressKeeped() instead.
-     *
-     * @param string $eipAddressKeeped
-     *
-     * @return $this
-     */
-    public function setEipAddressKeeped($eipAddressKeeped)
-    {
-        return $this->withEipAddressKeeped($eipAddressKeeped);
-    }
-
-    /**
      * @param string $eipAddressKeeped
      *
      * @return $this
@@ -117,18 +63,6 @@ class InnerCheckEniBindEip extends RpcRequest
         $this->options['query']['EipAddressKeeped'] = $eipAddressKeeped;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEniNo() instead.
-     *
-     * @param string $eniNo
-     *
-     * @return $this
-     */
-    public function setEniNo($eniNo)
-    {
-        return $this->withEniNo($eniNo);
     }
 
     /**
@@ -145,18 +79,6 @@ class InnerCheckEniBindEip extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -167,18 +89,6 @@ class InnerCheckEniBindEip extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +105,6 @@ class InnerCheckEniBindEip extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEipAddressCount() instead.
-     *
-     * @param string $eipAddressCount
-     *
-     * @return $this
-     */
-    public function setEipAddressCount($eipAddressCount)
-    {
-        return $this->withEipAddressCount($eipAddressCount);
-    }
-
-    /**
      * @param string $eipAddressCount
      *
      * @return $this
@@ -217,18 +115,6 @@ class InnerCheckEniBindEip extends RpcRequest
         $this->options['query']['EipAddressCount'] = $eipAddressCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperateType() instead.
-     *
-     * @param string $operateType
-     *
-     * @return $this
-     */
-    public function setOperateType($operateType)
-    {
-        return $this->withOperateType($operateType);
     }
 
     /**

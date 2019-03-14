@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAlarmHistory
+ * Api DescribeAlarmHistory
  *
  * @method string getAlertName()
  * @method string getGroupId()
@@ -21,40 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getMetricName()
  * @method string getStatus()
  */
-class DescribeAlarmHistory extends RpcRequest
+class DescribeAlarmHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAlarmHistory';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertName() instead.
-     *
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function setAlertName($alertName)
-    {
-        return $this->withAlertName($alertName);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $alertName
@@ -67,18 +42,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['AlertName'] = $alertName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -95,18 +58,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -117,18 +68,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**
@@ -145,18 +84,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -167,18 +94,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAscending() instead.
-     *
-     * @param string $ascending
-     *
-     * @return $this
-     */
-    public function setAscending($ascending)
-    {
-        return $this->withAscending($ascending);
     }
 
     /**
@@ -195,18 +110,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnlyCount() instead.
-     *
-     * @param string $onlyCount
-     *
-     * @return $this
-     */
-    public function setOnlyCount($onlyCount)
-    {
-        return $this->withOnlyCount($onlyCount);
-    }
-
-    /**
      * @param string $onlyCount
      *
      * @return $this
@@ -217,18 +120,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['OnlyCount'] = $onlyCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
     }
 
     /**
@@ -245,18 +136,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -267,18 +146,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withState() instead.
-     *
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function setState($state)
-    {
-        return $this->withState($state);
     }
 
     /**
@@ -295,18 +162,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -320,18 +175,6 @@ class DescribeAlarmHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
-    }
-
-    /**
      * @param string $metricName
      *
      * @return $this
@@ -342,18 +185,6 @@ class DescribeAlarmHistory extends RpcRequest
         $this->options['query']['MetricName'] = $metricName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

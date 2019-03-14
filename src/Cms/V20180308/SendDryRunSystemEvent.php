@@ -2,50 +2,25 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SendDryRunSystemEvent
+ * Api SendDryRunSystemEvent
  *
  * @method string getProduct()
  * @method string getGroupId()
  * @method string getEventName()
  * @method string getEventContent()
  */
-class SendDryRunSystemEvent extends RpcRequest
+class SendDryRunSystemEvent extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'SendDryRunSystemEvent';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withProduct() instead.
-     *
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        return $this->withProduct($product);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $product
@@ -58,18 +33,6 @@ class SendDryRunSystemEvent extends RpcRequest
         $this->options['query']['Product'] = $product;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -86,18 +49,6 @@ class SendDryRunSystemEvent extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventName() instead.
-     *
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        return $this->withEventName($eventName);
-    }
-
-    /**
      * @param string $eventName
      *
      * @return $this
@@ -108,18 +59,6 @@ class SendDryRunSystemEvent extends RpcRequest
         $this->options['query']['EventName'] = $eventName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventContent() instead.
-     *
-     * @param string $eventContent
-     *
-     * @return $this
-     */
-    public function setEventContent($eventContent)
-    {
-        return $this->withEventContent($eventContent);
     }
 
     /**

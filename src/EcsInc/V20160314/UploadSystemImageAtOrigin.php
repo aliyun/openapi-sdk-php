@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UploadSystemImageAtOrigin
+ * Api UploadSystemImageAtOrigin
  *
  * @method string getMetaData()
  * @method string getResourceOwnerId()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getTag()
  * @method string getMD5()
  */
-class UploadSystemImageAtOrigin extends RpcRequest
+class UploadSystemImageAtOrigin extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'UploadSystemImageAtOrigin';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetaData() instead.
-     *
-     * @param string $metaData
-     *
-     * @return $this
-     */
-    public function setMetaData($metaData)
-    {
-        return $this->withMetaData($metaData);
-    }
 
     /**
      * @param string $metaData
@@ -71,18 +41,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         $this->options['query']['MetaData'] = $metaData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +57,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -121,18 +67,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOsTypeId() instead.
-     *
-     * @param string $osTypeId
-     *
-     * @return $this
-     */
-    public function setOsTypeId($osTypeId)
-    {
-        return $this->withOsTypeId($osTypeId);
     }
 
     /**
@@ -149,18 +83,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -171,18 +93,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -199,18 +109,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFromRegionNo() instead.
-     *
-     * @param string $fromRegionNo
-     *
-     * @return $this
-     */
-    public function setFromRegionNo($fromRegionNo)
-    {
-        return $this->withFromRegionNo($fromRegionNo);
-    }
-
-    /**
      * @param string $fromRegionNo
      *
      * @return $this
@@ -221,18 +119,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         $this->options['query']['FromRegionNo'] = $fromRegionNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -249,18 +135,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageName() instead.
-     *
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function setImageName($imageName)
-    {
-        return $this->withImageName($imageName);
-    }
-
-    /**
      * @param string $imageName
      *
      * @return $this
@@ -271,18 +145,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         $this->options['query']['ImageName'] = $imageName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageUrl() instead.
-     *
-     * @param string $imageUrl
-     *
-     * @return $this
-     */
-    public function setImageUrl($imageUrl)
-    {
-        return $this->withImageUrl($imageUrl);
     }
 
     /**
@@ -299,28 +161,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
-    }
-
-    /**
      * @param array $tag
      *
      * @return $this
@@ -334,18 +174,6 @@ class UploadSystemImageAtOrigin extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMD5() instead.
-     *
-     * @param string $mD5
-     *
-     * @return $this
-     */
-    public function setMD5($mD5)
-    {
-        return $this->withMD5($mD5);
     }
 
     /**

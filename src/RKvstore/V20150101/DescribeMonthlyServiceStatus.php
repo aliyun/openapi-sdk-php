@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeMonthlyServiceStatus
+ * Api DescribeMonthlyServiceStatus
  *
  * @method string getResourceOwnerId()
  * @method string getMonth()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DescribeMonthlyServiceStatus extends RpcRequest
+class DescribeMonthlyServiceStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'R-kvstore';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeMonthlyServiceStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'redisa';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +36,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMonth() instead.
-     *
-     * @param string $month
-     *
-     * @return $this
-     */
-    public function setMonth($month)
-    {
-        return $this->withMonth($month);
     }
 
     /**
@@ -94,18 +52,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -116,18 +62,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -191,18 +101,6 @@ class DescribeMonthlyServiceStatus extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

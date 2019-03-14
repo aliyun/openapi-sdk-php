@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyNotificationConfig
+ * Api ModifyNotificationConfig
  *
  * @method array getSubscriptions()
  * @method string getInstanceId()
@@ -13,55 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTopic()
  * @method string getProducerId()
  */
-class ModifyNotificationConfig extends RpcRequest
+class ModifyNotificationConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyNotificationConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSubscriptions() instead.
-     *
-     * @return array
-     */
-    public function getSubscriptionss()
-    {
-        return $this->getSubscriptions();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptions() instead.
-     *
-     * @param array $subscriptionss
-     *
-     * @return $this
-     */
-    public function setSubscriptionss(array $subscriptionss)
-    {
-        return $this->withSubscriptions($subscriptionss);
-    }
 
     /**
      * @param array $subscriptions
@@ -81,18 +41,6 @@ class ModifyNotificationConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -103,18 +51,6 @@ class ModifyNotificationConfig extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessPoint() instead.
-     *
-     * @param string $accessPoint
-     *
-     * @return $this
-     */
-    public function setAccessPoint($accessPoint)
-    {
-        return $this->withAccessPoint($accessPoint);
     }
 
     /**
@@ -131,18 +67,6 @@ class ModifyNotificationConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -153,18 +77,6 @@ class ModifyNotificationConfig extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProducerId() instead.
-     *
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function setProducerId($producerId)
-    {
-        return $this->withProducerId($producerId);
     }
 
     /**

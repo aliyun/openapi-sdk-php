@@ -2,27 +2,15 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindAllAlarmGroupsForUser
+ * Api FindAllAlarmGroupsForUser
  *
  */
-class FindAllAlarmGroupsForUser extends RpcRequest
+class FindAllAlarmGroupsForUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'FindAllAlarmGroupsForUser';
 }

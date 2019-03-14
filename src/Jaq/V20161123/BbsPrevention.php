@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jaq\V20161123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BbsPrevention
+ * Api BbsPrevention
  *
  * @method string getProtocolVersion()
  * @method string getCurrentUrl()
@@ -28,40 +28,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCallerName()
  * @method string getEmail()
  */
-class BbsPrevention extends RpcRequest
+class BbsPrevention extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jaq';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'BbsPrevention';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProtocolVersion() instead.
-     *
-     * @param string $protocolVersion
-     *
-     * @return $this
-     */
-    public function setProtocolVersion($protocolVersion)
-    {
-        return $this->withProtocolVersion($protocolVersion);
-    }
 
     /**
      * @param string $protocolVersion
@@ -74,18 +47,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['ProtocolVersion'] = $protocolVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentUrl() instead.
-     *
-     * @param string $currentUrl
-     *
-     * @return $this
-     */
-    public function setCurrentUrl($currentUrl)
-    {
-        return $this->withCurrentUrl($currentUrl);
     }
 
     /**
@@ -102,18 +63,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReferer() instead.
-     *
-     * @param string $referer
-     *
-     * @return $this
-     */
-    public function setReferer($referer)
-    {
-        return $this->withReferer($referer);
-    }
-
-    /**
      * @param string $referer
      *
      * @return $this
@@ -124,18 +73,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['Referer'] = $referer;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgent() instead.
-     *
-     * @param string $agent
-     *
-     * @return $this
-     */
-    public function setAgent($agent)
-    {
-        return $this->withAgent($agent);
     }
 
     /**
@@ -152,18 +89,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
-    }
-
-    /**
      * @param string $address
      *
      * @return $this
@@ -174,18 +99,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['Address'] = $address;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCookie() instead.
-     *
-     * @param string $cookie
-     *
-     * @return $this
-     */
-    public function setCookie($cookie)
-    {
-        return $this->withCookie($cookie);
     }
 
     /**
@@ -202,18 +115,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
-    }
-
-    /**
      * @param string $ip
      *
      * @return $this
@@ -224,18 +125,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['Ip'] = $ip;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
     }
 
     /**
@@ -252,18 +141,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSource() instead.
-     *
-     * @param string $source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        return $this->withSource($source);
-    }
-
-    /**
      * @param string $source
      *
      * @return $this
@@ -274,18 +151,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['Source'] = $source;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
     }
 
     /**
@@ -302,18 +167,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
-    }
-
-    /**
      * @param string $userId
      *
      * @return $this
@@ -324,18 +177,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['UserId'] = $userId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdType() instead.
-     *
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function setIdType($idType)
-    {
-        return $this->withIdType($idType);
     }
 
     /**
@@ -352,18 +193,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExtendData() instead.
-     *
-     * @param string $extendData
-     *
-     * @return $this
-     */
-    public function setExtendData($extendData)
-    {
-        return $this->withExtendData($extendData);
-    }
-
-    /**
      * @param string $extendData
      *
      * @return $this
@@ -374,18 +203,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['ExtendData'] = $extendData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCompanyName() instead.
-     *
-     * @param string $companyName
-     *
-     * @return $this
-     */
-    public function setCompanyName($companyName)
-    {
-        return $this->withCompanyName($companyName);
     }
 
     /**
@@ -402,18 +219,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNickName() instead.
-     *
-     * @param string $nickName
-     *
-     * @return $this
-     */
-    public function setNickName($nickName)
-    {
-        return $this->withNickName($nickName);
-    }
-
-    /**
      * @param string $nickName
      *
      * @return $this
@@ -424,18 +229,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['NickName'] = $nickName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJsToken() instead.
-     *
-     * @param string $jsToken
-     *
-     * @return $this
-     */
-    public function setJsToken($jsToken)
-    {
-        return $this->withJsToken($jsToken);
     }
 
     /**
@@ -452,18 +245,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMacAddress() instead.
-     *
-     * @param string $macAddress
-     *
-     * @return $this
-     */
-    public function setMacAddress($macAddress)
-    {
-        return $this->withMacAddress($macAddress);
-    }
-
-    /**
      * @param string $macAddress
      *
      * @return $this
@@ -474,18 +255,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['MacAddress'] = $macAddress;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSDKToken() instead.
-     *
-     * @param string $sDKToken
-     *
-     * @return $this
-     */
-    public function setSDKToken($sDKToken)
-    {
-        return $this->withSDKToken($sDKToken);
     }
 
     /**
@@ -502,18 +271,6 @@ class BbsPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
-    }
-
-    /**
      * @param string $callerName
      *
      * @return $this
@@ -524,18 +281,6 @@ class BbsPrevention extends RpcRequest
         $this->options['query']['CallerName'] = $callerName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**

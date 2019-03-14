@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ResumeLiveStream
+ * Api ResumeLiveStream
  *
  * @method string getAppName()
  * @method string getSecurityToken()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getStreamName()
  */
-class ResumeLiveStream extends RpcRequest
+class ResumeLiveStream extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ResumeLiveStream';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
 
     /**
      * @param string $appName
@@ -60,18 +33,6 @@ class ResumeLiveStream extends RpcRequest
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -88,18 +49,6 @@ class ResumeLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLiveStreamType() instead.
-     *
-     * @param string $liveStreamType
-     *
-     * @return $this
-     */
-    public function setLiveStreamType($liveStreamType)
-    {
-        return $this->withLiveStreamType($liveStreamType);
-    }
-
-    /**
      * @param string $liveStreamType
      *
      * @return $this
@@ -110,18 +59,6 @@ class ResumeLiveStream extends RpcRequest
         $this->options['query']['LiveStreamType'] = $liveStreamType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -138,18 +75,6 @@ class ResumeLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -160,18 +85,6 @@ class ResumeLiveStream extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**

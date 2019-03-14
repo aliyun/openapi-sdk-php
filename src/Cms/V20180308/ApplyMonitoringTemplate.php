@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApplyMonitoringTemplate
+ * Api ApplyMonitoringTemplate
  *
  * @method string getEnableStartTime()
  * @method string getApplyMode()
@@ -16,40 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNotifyLevel()
  * @method string getSilenceTime()
  */
-class ApplyMonitoringTemplate extends RpcRequest
+class ApplyMonitoringTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApplyMonitoringTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableStartTime() instead.
-     *
-     * @param string $enableStartTime
-     *
-     * @return $this
-     */
-    public function setEnableStartTime($enableStartTime)
-    {
-        return $this->withEnableStartTime($enableStartTime);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $enableStartTime
@@ -62,18 +37,6 @@ class ApplyMonitoringTemplate extends RpcRequest
         $this->options['query']['EnableStartTime'] = $enableStartTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyMode() instead.
-     *
-     * @param string $applyMode
-     *
-     * @return $this
-     */
-    public function setApplyMode($applyMode)
-    {
-        return $this->withApplyMode($applyMode);
     }
 
     /**
@@ -90,18 +53,6 @@ class ApplyMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWebhook() instead.
-     *
-     * @param string $webhook
-     *
-     * @return $this
-     */
-    public function setWebhook($webhook)
-    {
-        return $this->withWebhook($webhook);
-    }
-
-    /**
      * @param string $webhook
      *
      * @return $this
@@ -112,18 +63,6 @@ class ApplyMonitoringTemplate extends RpcRequest
         $this->options['query']['Webhook'] = $webhook;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateIds() instead.
-     *
-     * @param string $templateIds
-     *
-     * @return $this
-     */
-    public function setTemplateIds($templateIds)
-    {
-        return $this->withTemplateIds($templateIds);
     }
 
     /**
@@ -140,18 +79,6 @@ class ApplyMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableEndTime() instead.
-     *
-     * @param string $enableEndTime
-     *
-     * @return $this
-     */
-    public function setEnableEndTime($enableEndTime)
-    {
-        return $this->withEnableEndTime($enableEndTime);
-    }
-
-    /**
      * @param string $enableEndTime
      *
      * @return $this
@@ -162,18 +89,6 @@ class ApplyMonitoringTemplate extends RpcRequest
         $this->options['query']['EnableEndTime'] = $enableEndTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -190,18 +105,6 @@ class ApplyMonitoringTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyLevel() instead.
-     *
-     * @param string $notifyLevel
-     *
-     * @return $this
-     */
-    public function setNotifyLevel($notifyLevel)
-    {
-        return $this->withNotifyLevel($notifyLevel);
-    }
-
-    /**
      * @param string $notifyLevel
      *
      * @return $this
@@ -212,18 +115,6 @@ class ApplyMonitoringTemplate extends RpcRequest
         $this->options['query']['NotifyLevel'] = $notifyLevel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSilenceTime() instead.
-     *
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function setSilenceTime($silenceTime)
-    {
-        return $this->withSilenceTime($silenceTime);
     }
 
     /**

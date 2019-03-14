@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetNumberRegionInfo
+ * Api GetNumberRegionInfo
  *
  * @method string getNumber()
  * @method string getInstanceId()
  */
-class GetNumberRegionInfo extends RpcRequest
+class GetNumberRegionInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetNumberRegionInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNumber() instead.
-     *
-     * @param string $number
-     *
-     * @return $this
-     */
-    public function setNumber($number)
-    {
-        return $this->withNumber($number);
-    }
 
     /**
      * @param string $number
@@ -61,18 +31,6 @@ class GetNumberRegionInfo extends RpcRequest
         $this->options['query']['Number'] = $number;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**

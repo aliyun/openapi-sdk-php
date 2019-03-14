@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnRefreshTasks
+ * Api DescribeDcdnRefreshTasks
  *
  * @method string getObjectPath()
  * @method string getDomainName()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTaskId()
  * @method string getStatus()
  */
-class DescribeDcdnRefreshTasks extends RpcRequest
+class DescribeDcdnRefreshTasks extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnRefreshTasks';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withObjectPath() instead.
-     *
-     * @param string $objectPath
-     *
-     * @return $this
-     */
-    public function setObjectPath($objectPath)
-    {
-        return $this->withObjectPath($objectPath);
-    }
 
     /**
      * @param string $objectPath
@@ -71,18 +41,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['ObjectPath'] = $objectPath;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -99,18 +57,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -121,18 +67,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -149,18 +83,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -171,18 +93,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -199,18 +109,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -249,18 +135,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -271,18 +145,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withObjectType() instead.
-     *
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function setObjectType($objectType)
-    {
-        return $this->withObjectType($objectType);
     }
 
     /**
@@ -299,18 +161,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
-    }
-
-    /**
      * @param string $taskId
      *
      * @return $this
@@ -321,18 +171,6 @@ class DescribeDcdnRefreshTasks extends RpcRequest
         $this->options['query']['TaskId'] = $taskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

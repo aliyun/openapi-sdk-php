@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeTrafficControlsByApi
+ * Api DescribeTrafficControlsByApi
  *
  * @method string getStageName()
  * @method string getSecurityToken()
  * @method string getGroupId()
  * @method string getApiId()
  */
-class DescribeTrafficControlsByApi extends RpcRequest
+class DescribeTrafficControlsByApi extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeTrafficControlsByApi';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDomainTrafficData
+ * Api DescribeDomainTrafficData
  *
  * @method string getLocationNameEn()
  * @method string getStartTime()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getInterval()
  */
-class DescribeDomainTrafficData extends RpcRequest
+class DescribeDomainTrafficData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDomainTrafficData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationNameEn() instead.
-     *
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function setLocationNameEn($locationNameEn)
-    {
-        return $this->withLocationNameEn($locationNameEn);
-    }
 
     /**
      * @param string $locationNameEn
@@ -61,18 +34,6 @@ class DescribeDomainTrafficData extends RpcRequest
         $this->options['query']['LocationNameEn'] = $locationNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -89,18 +50,6 @@ class DescribeDomainTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIspNameEn() instead.
-     *
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function setIspNameEn($ispNameEn)
-    {
-        return $this->withIspNameEn($ispNameEn);
-    }
-
-    /**
      * @param string $ispNameEn
      *
      * @return $this
@@ -111,18 +60,6 @@ class DescribeDomainTrafficData extends RpcRequest
         $this->options['query']['IspNameEn'] = $ispNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -139,18 +76,6 @@ class DescribeDomainTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -164,18 +89,6 @@ class DescribeDomainTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +99,6 @@ class DescribeDomainTrafficData extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**

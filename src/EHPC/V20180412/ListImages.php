@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListImages
+ * Api ListImages
  *
  */
-class ListImages extends RpcRequest
+class ListImages extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListImages';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
 }

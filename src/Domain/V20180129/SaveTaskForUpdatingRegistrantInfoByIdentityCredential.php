@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForUpdatingRegistrantInfoByIdentityCredential
+ * Api SaveTaskForUpdatingRegistrantInfoByIdentityCredential
  *
  * @method string getCountry()
  * @method string getIdentityCredentialType()
@@ -32,40 +32,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegistrantName()
  * @method string getZhRegistrantOrganization()
  */
-class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
+class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForUpdatingRegistrantInfoByIdentityCredential';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCountry() instead.
-     *
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        return $this->withCountry($country);
-    }
 
     /**
      * @param string $country
@@ -78,18 +51,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['Country'] = $country;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialType() instead.
-     *
-     * @param string $identityCredentialType
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialType($identityCredentialType)
-    {
-        return $this->withIdentityCredentialType($identityCredentialType);
     }
 
     /**
@@ -106,18 +67,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
-    }
-
-    /**
      * @param string $address
      *
      * @return $this
@@ -128,18 +77,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['Address'] = $address;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTelArea() instead.
-     *
-     * @param string $telArea
-     *
-     * @return $this
-     */
-    public function setTelArea($telArea)
-    {
-        return $this->withTelArea($telArea);
     }
 
     /**
@@ -156,18 +93,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCity() instead.
-     *
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        return $this->withCity($city);
-    }
-
-    /**
      * @param string $city
      *
      * @return $this
@@ -178,18 +103,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['City'] = $city;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhAddress() instead.
-     *
-     * @param string $zhAddress
-     *
-     * @return $this
-     */
-    public function setZhAddress($zhAddress)
-    {
-        return $this->withZhAddress($zhAddress);
     }
 
     /**
@@ -206,18 +119,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantType() instead.
-     *
-     * @param string $registrantType
-     *
-     * @return $this
-     */
-    public function setRegistrantType($registrantType)
-    {
-        return $this->withRegistrantType($registrantType);
-    }
-
-    /**
      * @param string $registrantType
      *
      * @return $this
@@ -228,28 +129,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['RegistrantType'] = $registrantType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDomainName() instead.
-     *
-     * @return array
-     */
-    public function getDomainNames()
-    {
-        return $this->getDomainName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param array $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames(array $domainNames)
-    {
-        return $this->withDomainName($domainNames);
     }
 
     /**
@@ -268,18 +147,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredential() instead.
-     *
-     * @param string $identityCredential
-     *
-     * @return $this
-     */
-    public function setIdentityCredential($identityCredential)
-    {
-        return $this->withIdentityCredential($identityCredential);
-    }
-
-    /**
      * @param string $identityCredential
      *
      * @return $this
@@ -290,18 +157,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['IdentityCredential'] = $identityCredential;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTelephone() instead.
-     *
-     * @param string $telephone
-     *
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        return $this->withTelephone($telephone);
     }
 
     /**
@@ -318,18 +173,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransferOutProhibited() instead.
-     *
-     * @param string $transferOutProhibited
-     *
-     * @return $this
-     */
-    public function setTransferOutProhibited($transferOutProhibited)
-    {
-        return $this->withTransferOutProhibited($transferOutProhibited);
-    }
-
-    /**
      * @param string $transferOutProhibited
      *
      * @return $this
@@ -340,18 +183,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['TransferOutProhibited'] = $transferOutProhibited;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhCity() instead.
-     *
-     * @param string $zhCity
-     *
-     * @return $this
-     */
-    public function setZhCity($zhCity)
-    {
-        return $this->withZhCity($zhCity);
     }
 
     /**
@@ -368,18 +199,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhProvince() instead.
-     *
-     * @param string $zhProvince
-     *
-     * @return $this
-     */
-    public function setZhProvince($zhProvince)
-    {
-        return $this->withZhProvince($zhProvince);
-    }
-
-    /**
      * @param string $zhProvince
      *
      * @return $this
@@ -390,18 +209,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['ZhProvince'] = $zhProvince;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantOrganization() instead.
-     *
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function setRegistrantOrganization($registrantOrganization)
-    {
-        return $this->withRegistrantOrganization($registrantOrganization);
     }
 
     /**
@@ -418,18 +225,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTelExt() instead.
-     *
-     * @param string $telExt
-     *
-     * @return $this
-     */
-    public function setTelExt($telExt)
-    {
-        return $this->withTelExt($telExt);
-    }
-
-    /**
      * @param string $telExt
      *
      * @return $this
@@ -440,18 +235,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['TelExt'] = $telExt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProvince() instead.
-     *
-     * @param string $province
-     *
-     * @return $this
-     */
-    public function setProvince($province)
-    {
-        return $this->withProvince($province);
     }
 
     /**
@@ -468,18 +251,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantName() instead.
-     *
-     * @param string $zhRegistrantName
-     *
-     * @return $this
-     */
-    public function setZhRegistrantName($zhRegistrantName)
-    {
-        return $this->withZhRegistrantName($zhRegistrantName);
-    }
-
-    /**
      * @param string $zhRegistrantName
      *
      * @return $this
@@ -490,18 +261,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['ZhRegistrantName'] = $zhRegistrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPostalCode() instead.
-     *
-     * @param string $postalCode
-     *
-     * @return $this
-     */
-    public function setPostalCode($postalCode)
-    {
-        return $this->withPostalCode($postalCode);
     }
 
     /**
@@ -518,18 +277,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -540,18 +287,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**
@@ -568,18 +303,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIdentityCredentialNo() instead.
-     *
-     * @param string $identityCredentialNo
-     *
-     * @return $this
-     */
-    public function setIdentityCredentialNo($identityCredentialNo)
-    {
-        return $this->withIdentityCredentialNo($identityCredentialNo);
-    }
-
-    /**
      * @param string $identityCredentialNo
      *
      * @return $this
@@ -590,18 +313,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['IdentityCredentialNo'] = $identityCredentialNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
     }
 
     /**
@@ -618,18 +329,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantName() instead.
-     *
-     * @param string $registrantName
-     *
-     * @return $this
-     */
-    public function setRegistrantName($registrantName)
-    {
-        return $this->withRegistrantName($registrantName);
-    }
-
-    /**
      * @param string $registrantName
      *
      * @return $this
@@ -640,18 +339,6 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
         $this->options['query']['RegistrantName'] = $registrantName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZhRegistrantOrganization() instead.
-     *
-     * @param string $zhRegistrantOrganization
-     *
-     * @return $this
-     */
-    public function setZhRegistrantOrganization($zhRegistrantOrganization)
-    {
-        return $this->withZhRegistrantOrganization($zhRegistrantOrganization);
     }
 
     /**

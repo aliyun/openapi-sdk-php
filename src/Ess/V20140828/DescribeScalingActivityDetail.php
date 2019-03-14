@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeScalingActivityDetail
+ * Api DescribeScalingActivityDetail
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  * @method string getScalingActivityId()
  */
-class DescribeScalingActivityDetail extends RpcRequest
+class DescribeScalingActivityDetail extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeScalingActivityDetail';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -63,18 +33,6 @@ class DescribeScalingActivityDetail extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -91,18 +49,6 @@ class DescribeScalingActivityDetail extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -113,18 +59,6 @@ class DescribeScalingActivityDetail extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingActivityId() instead.
-     *
-     * @param string $scalingActivityId
-     *
-     * @return $this
-     */
-    public function setScalingActivityId($scalingActivityId)
-    {
-        return $this->withScalingActivityId($scalingActivityId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ForbidLiveStream
+ * Api ForbidLiveStream
  *
  * @method string getResumeTime()
  * @method string getAppName()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStreamName()
  * @method string getControlStreamAction()
  */
-class ForbidLiveStream extends RpcRequest
+class ForbidLiveStream extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ForbidLiveStream';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResumeTime() instead.
-     *
-     * @param string $resumeTime
-     *
-     * @return $this
-     */
-    public function setResumeTime($resumeTime)
-    {
-        return $this->withResumeTime($resumeTime);
-    }
 
     /**
      * @param string $resumeTime
@@ -67,18 +37,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['ResumeTime'] = $resumeTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
     }
 
     /**
@@ -95,18 +53,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLiveStreamType() instead.
-     *
-     * @param string $liveStreamType
-     *
-     * @return $this
-     */
-    public function setLiveStreamType($liveStreamType)
-    {
-        return $this->withLiveStreamType($liveStreamType);
-    }
-
-    /**
      * @param string $liveStreamType
      *
      * @return $this
@@ -117,18 +63,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['LiveStreamType'] = $liveStreamType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -145,18 +79,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -167,18 +89,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOneshot() instead.
-     *
-     * @param string $oneshot
-     *
-     * @return $this
-     */
-    public function setOneshot($oneshot)
-    {
-        return $this->withOneshot($oneshot);
     }
 
     /**
@@ -195,18 +105,6 @@ class ForbidLiveStream extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
-    }
-
-    /**
      * @param string $streamName
      *
      * @return $this
@@ -217,18 +115,6 @@ class ForbidLiveStream extends RpcRequest
         $this->options['query']['StreamName'] = $streamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withControlStreamAction() instead.
-     *
-     * @param string $controlStreamAction
-     *
-     * @return $this
-     */
-    public function setControlStreamAction($controlStreamAction)
-    {
-        return $this->withControlStreamAction($controlStreamAction);
     }
 
     /**

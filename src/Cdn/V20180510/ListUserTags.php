@@ -2,34 +2,19 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListUserTags
+ * Api ListUserTags
  *
  * @method string getOwnerId()
  */
-class ListUserTags extends RpcRequest
+class ListUserTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListUserTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

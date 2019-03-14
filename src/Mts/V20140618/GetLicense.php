@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetLicense
+ * Api GetLicense
  *
  * @method string getResourceOwnerId()
  * @method string getData()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getType()
  * @method string getLicenseUrl()
  */
-class GetLicense extends RpcRequest
+class GetLicense extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetLicense';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class GetLicense extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
     }
 
     /**
@@ -96,18 +54,6 @@ class GetLicense extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -118,18 +64,6 @@ class GetLicense extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -146,18 +80,6 @@ class GetLicense extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHeader() instead.
-     *
-     * @param string $header
-     *
-     * @return $this
-     */
-    public function setHeader($header)
-    {
-        return $this->withHeader($header);
-    }
-
-    /**
      * @param string $header
      *
      * @return $this
@@ -168,18 +90,6 @@ class GetLicense extends RpcRequest
         $this->options['query']['Header'] = $header;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -196,18 +106,6 @@ class GetLicense extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMediaId() instead.
-     *
-     * @param string $mediaId
-     *
-     * @return $this
-     */
-    public function setMediaId($mediaId)
-    {
-        return $this->withMediaId($mediaId);
-    }
-
-    /**
      * @param string $mediaId
      *
      * @return $this
@@ -221,18 +119,6 @@ class GetLicense extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -243,18 +129,6 @@ class GetLicense extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLicenseUrl() instead.
-     *
-     * @param string $licenseUrl
-     *
-     * @return $this
-     */
-    public function setLicenseUrl($licenseUrl)
-    {
-        return $this->withLicenseUrl($licenseUrl);
     }
 
     /**

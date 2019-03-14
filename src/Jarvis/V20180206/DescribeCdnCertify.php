@@ -2,36 +2,21 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCdnCertify
+ * Api DescribeCdnCertify
  *
  * @method string getSourceIp()
  * @method string getLang()
  * @method string getSourceCode()
  */
-class DescribeCdnCertify extends RpcRequest
+class DescribeCdnCertify extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jarvis';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCdnCertify';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

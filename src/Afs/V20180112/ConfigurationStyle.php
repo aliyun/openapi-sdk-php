@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ConfigurationStyle
+ * Api ConfigurationStyle
  *
  * @method string getSourceIp()
  * @method string getConfigurationMethod()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getApplyType()
  * @method string getScene()
  */
-class ConfigurationStyle extends RpcRequest
+class ConfigurationStyle extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'afs';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ConfigurationStyle';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
 
     /**
      * @param string $sourceIp
@@ -59,18 +32,6 @@ class ConfigurationStyle extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigurationMethod() instead.
-     *
-     * @param string $configurationMethod
-     *
-     * @return $this
-     */
-    public function setConfigurationMethod($configurationMethod)
-    {
-        return $this->withConfigurationMethod($configurationMethod);
     }
 
     /**
@@ -87,18 +48,6 @@ class ConfigurationStyle extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRefExtId() instead.
-     *
-     * @param string $refExtId
-     *
-     * @return $this
-     */
-    public function setRefExtId($refExtId)
-    {
-        return $this->withRefExtId($refExtId);
-    }
-
-    /**
      * @param string $refExtId
      *
      * @return $this
@@ -112,18 +61,6 @@ class ConfigurationStyle extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withApplyType() instead.
-     *
-     * @param string $applyType
-     *
-     * @return $this
-     */
-    public function setApplyType($applyType)
-    {
-        return $this->withApplyType($applyType);
-    }
-
-    /**
      * @param string $applyType
      *
      * @return $this
@@ -134,18 +71,6 @@ class ConfigurationStyle extends RpcRequest
         $this->options['query']['ApplyType'] = $applyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScene() instead.
-     *
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function setScene($scene)
-    {
-        return $this->withScene($scene);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReportTagJobResult
+ * Api ReportTagJobResult
  *
  * @method string getResult()
  * @method string getJobId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTag()
  * @method string getOwnerId()
  */
-class ReportTagJobResult extends RpcRequest
+class ReportTagJobResult extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReportTagJobResult';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResult() instead.
-     *
-     * @param string $result
-     *
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        return $this->withResult($result);
-    }
 
     /**
      * @param string $result
@@ -66,18 +36,6 @@ class ReportTagJobResult extends RpcRequest
         $this->options['query']['Result'] = $result;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withJobId() instead.
-     *
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function setJobId($jobId)
-    {
-        return $this->withJobId($jobId);
     }
 
     /**
@@ -94,18 +52,6 @@ class ReportTagJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -116,18 +62,6 @@ class ReportTagJobResult extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class ReportTagJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class ReportTagJobResult extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
-    }
-
-    /**
      * @param string $tag
      *
      * @return $this
@@ -191,18 +101,6 @@ class ReportTagJobResult extends RpcRequest
         $this->options['query']['Tag'] = $tag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

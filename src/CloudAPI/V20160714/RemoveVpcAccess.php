@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RemoveVpcAccess
+ * Api RemoveVpcAccess
  *
  * @method string getInstanceId()
  * @method string getSecurityToken()
  * @method string getPort()
  * @method string getVpcId()
  */
-class RemoveVpcAccess extends RpcRequest
+class RemoveVpcAccess extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'RemoveVpcAccess';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

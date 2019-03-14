@@ -2,53 +2,23 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeStatisticSummary
+ * Api DescribeStatisticSummary
  *
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class DescribeStatisticSummary extends RpcRequest
+class DescribeStatisticSummary extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'pvtz';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeStatisticSummary';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'pvtz';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
 
     /**
      * @param string $userClientIp
@@ -61,18 +31,6 @@ class DescribeStatisticSummary extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

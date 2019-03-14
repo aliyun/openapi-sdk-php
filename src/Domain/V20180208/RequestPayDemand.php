@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RequestPayDemand
+ * Api RequestPayDemand
  *
  * @method string getPrice()
  * @method string getBizId()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getProduceType()
  * @method string getMessage()
  */
-class RequestPayDemand extends RpcRequest
+class RequestPayDemand extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'RequestPayDemand';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrice() instead.
-     *
-     * @param string $price
-     *
-     * @return $this
-     */
-    public function setPrice($price)
-    {
-        return $this->withPrice($price);
-    }
 
     /**
      * @param string $price
@@ -59,18 +32,6 @@ class RequestPayDemand extends RpcRequest
         $this->options['query']['Price'] = $price;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function setBizId($bizId)
-    {
-        return $this->withBizId($bizId);
     }
 
     /**
@@ -87,18 +48,6 @@ class RequestPayDemand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +61,6 @@ class RequestPayDemand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProduceType() instead.
-     *
-     * @param string $produceType
-     *
-     * @return $this
-     */
-    public function setProduceType($produceType)
-    {
-        return $this->withProduceType($produceType);
-    }
-
-    /**
      * @param string $produceType
      *
      * @return $this
@@ -134,18 +71,6 @@ class RequestPayDemand extends RpcRequest
         $this->options['query']['ProduceType'] = $produceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMessage() instead.
-     *
-     * @param string $message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        return $this->withMessage($message);
     }
 
     /**

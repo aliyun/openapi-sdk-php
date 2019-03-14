@@ -2,49 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PubBroadcast
+ * Api PubBroadcast
  *
  * @method string getTopicFullName()
  * @method string getMessageContent()
+ * @method string getIotInstanceId()
  * @method string getProductKey()
  */
-class PubBroadcast extends RpcRequest
+class PubBroadcast extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'PubBroadcast';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopicFullName() instead.
-     *
-     * @param string $topicFullName
-     *
-     * @return $this
-     */
-    public function setTopicFullName($topicFullName)
-    {
-        return $this->withTopicFullName($topicFullName);
-    }
 
     /**
      * @param string $topicFullName
@@ -57,18 +31,6 @@ class PubBroadcast extends RpcRequest
         $this->options['query']['TopicFullName'] = $topicFullName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMessageContent() instead.
-     *
-     * @param string $messageContent
-     *
-     * @return $this
-     */
-    public function setMessageContent($messageContent)
-    {
-        return $this->withMessageContent($messageContent);
     }
 
     /**
@@ -85,15 +47,16 @@ class PubBroadcast extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setProductKey($productKey)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withProductKey($productKey);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

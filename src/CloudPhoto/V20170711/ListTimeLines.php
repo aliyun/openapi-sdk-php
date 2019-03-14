@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListTimeLines
+ * Api ListTimeLines
  *
  * @method string getCursor()
  * @method string getPhotoSize()
@@ -17,51 +17,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDirection()
  * @method string getOrder()
  */
-class ListTimeLines extends RpcRequest
+class ListTimeLines extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListTimeLines';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCursor() instead.
-     *
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function setCursor($cursor)
-    {
-        return $this->withCursor($cursor);
-    }
 
     /**
      * @param string $cursor
@@ -74,18 +40,6 @@ class ListTimeLines extends RpcRequest
         $this->options['query']['Cursor'] = $cursor;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoSize() instead.
-     *
-     * @param string $photoSize
-     *
-     * @return $this
-     */
-    public function setPhotoSize($photoSize)
-    {
-        return $this->withPhotoSize($photoSize);
     }
 
     /**
@@ -102,18 +56,6 @@ class ListTimeLines extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeLineCount() instead.
-     *
-     * @param string $timeLineCount
-     *
-     * @return $this
-     */
-    public function setTimeLineCount($timeLineCount)
-    {
-        return $this->withTimeLineCount($timeLineCount);
-    }
-
-    /**
      * @param string $timeLineCount
      *
      * @return $this
@@ -124,18 +66,6 @@ class ListTimeLines extends RpcRequest
         $this->options['query']['TimeLineCount'] = $timeLineCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
     }
 
     /**
@@ -152,18 +82,6 @@ class ListTimeLines extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -174,18 +92,6 @@ class ListTimeLines extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeLineUnit() instead.
-     *
-     * @param string $timeLineUnit
-     *
-     * @return $this
-     */
-    public function setTimeLineUnit($timeLineUnit)
-    {
-        return $this->withTimeLineUnit($timeLineUnit);
     }
 
     /**
@@ -202,18 +108,6 @@ class ListTimeLines extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFilterBy() instead.
-     *
-     * @param string $filterBy
-     *
-     * @return $this
-     */
-    public function setFilterBy($filterBy)
-    {
-        return $this->withFilterBy($filterBy);
-    }
-
-    /**
      * @param string $filterBy
      *
      * @return $this
@@ -227,18 +121,6 @@ class ListTimeLines extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDirection() instead.
-     *
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function setDirection($direction)
-    {
-        return $this->withDirection($direction);
-    }
-
-    /**
      * @param string $direction
      *
      * @return $this
@@ -249,18 +131,6 @@ class ListTimeLines extends RpcRequest
         $this->options['query']['Direction'] = $direction;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
     }
 
     /**

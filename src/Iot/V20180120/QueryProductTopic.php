@@ -2,46 +2,33 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryProductTopic
+ * Api QueryProductTopic
  *
+ * @method string getIotInstanceId()
  * @method string getProductKey()
  */
-class QueryProductTopic extends RpcRequest
+class QueryProductTopic extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryProductTopic';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setProductKey($productKey)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withProductKey($productKey);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

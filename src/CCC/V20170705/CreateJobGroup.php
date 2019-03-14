@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateJobGroup
+ * Api CreateJobGroup
  *
  * @method array getCallingNumber()
  * @method string getInstanceId()
@@ -14,55 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getScenarioId()
  */
-class CreateJobGroup extends RpcRequest
+class CreateJobGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateJobGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCallingNumber() instead.
-     *
-     * @return array
-     */
-    public function getCallingNumbers()
-    {
-        return $this->getCallingNumber();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param array $callingNumbers
-     *
-     * @return $this
-     */
-    public function setCallingNumbers(array $callingNumbers)
-    {
-        return $this->withCallingNumber($callingNumbers);
-    }
 
     /**
      * @param array $callingNumber
@@ -80,18 +40,6 @@ class CreateJobGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -102,18 +50,6 @@ class CreateJobGroup extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStrategyJson() instead.
-     *
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function setStrategyJson($strategyJson)
-    {
-        return $this->withStrategyJson($strategyJson);
     }
 
     /**
@@ -130,18 +66,6 @@ class CreateJobGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -155,18 +79,6 @@ class CreateJobGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -177,18 +89,6 @@ class CreateJobGroup extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
     }
 
     /**

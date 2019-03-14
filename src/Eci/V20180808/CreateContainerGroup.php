@@ -2,19 +2,24 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateContainerGroup
+ * Api CreateContainerGroup
  *
  * @method array getContainer()
+ * @method string getGpuSpec()
  * @method string getResourceOwnerId()
  * @method string getMemory()
+ * @method string getClientToken()
  * @method string getSecurityGroupId()
+ * @method string getDnsPolicy()
+ * @method string getResourceGroupId()
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getEipInstanceId()
+ * @method array getArn()
  * @method array getDnsConfigNameServer()
  * @method string getResourceOwnerAccount()
  * @method string getRestartPolicy()
@@ -27,56 +32,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getVolume()
  * @method string getContainerGroupName()
  * @method string getZoneId()
+ * @method string getGpuAmount()
  */
-class CreateContainerGroup extends RpcRequest
+class CreateContainerGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Eci';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateContainerGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'eci';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getContainer() instead.
-     *
-     * @return array
-     */
-    public function getContainers()
-    {
-        return $this->getContainer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainer() instead.
-     *
-     * @param array $containers
-     *
-     * @return $this
-     */
-    public function setContainers(array $containers)
-    {
-        return $this->withContainer($containers);
-    }
 
     /**
      * @param array $container
@@ -137,21 +103,26 @@ class CreateContainerGroup extends RpcRequest
             $this->options['query']['Container.' . ($i + 1) . '.SecurityContext.RunAsUser'] = $container[$i]['SecurityContext.RunAsUser'];
             $this->options['query']['Container.' . ($i + 1) . '.ReadinessProbe.TcpSocket.Port'] = $container[$i]['ReadinessProbe.TcpSocket.Port'];
             $this->options['query']['Container.' . ($i + 1) . '.LivenessProbe.TcpSocket.Port'] = $container[$i]['LivenessProbe.TcpSocket.Port'];
+            $this->options['query']['Container.' . ($i + 1) . '.Stdin'] = $container[$i]['Stdin'];
+            $this->options['query']['Container.' . ($i + 1) . '.StdinOnce'] = $container[$i]['StdinOnce'];
+            $this->options['query']['Container.' . ($i + 1) . '.Tty'] = $container[$i]['Tty'];
+            $this->options['query']['Container.' . ($i + 1) . '.GpuAmount'] = $container[$i]['GpuAmount'];
         }
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
+     * @param string $gpuSpec
      *
      * @return $this
      */
-    public function setResourceOwnerId($resourceOwnerId)
+    public function withGpuSpec($gpuSpec)
     {
-        return $this->withResourceOwnerId($resourceOwnerId);
+        $this->data['GpuSpec'] = $gpuSpec;
+        $this->options['query']['GpuSpec'] = $gpuSpec;
+
+        return $this;
     }
 
     /**
@@ -168,18 +139,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMemory() instead.
-     *
-     * @param string $memory
-     *
-     * @return $this
-     */
-    public function setMemory($memory)
-    {
-        return $this->withMemory($memory);
-    }
-
-    /**
      * @param string $memory
      *
      * @return $this
@@ -193,15 +152,16 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
+     * @param string $clientToken
      *
      * @return $this
      */
-    public function setSecurityGroupId($securityGroupId)
+    public function withClientToken($clientToken)
     {
-        return $this->withSecurityGroupId($securityGroupId);
+        $this->data['ClientToken'] = $clientToken;
+        $this->options['query']['ClientToken'] = $clientToken;
+
+        return $this;
     }
 
     /**
@@ -218,25 +178,29 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getInitContainer() instead.
-     *
-     * @return array
-     */
-    public function getInitContainers()
-    {
-        return $this->getInitContainer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInitContainer() instead.
-     *
-     * @param array $initContainers
+     * @param string $dnsPolicy
      *
      * @return $this
      */
-    public function setInitContainers(array $initContainers)
+    public function withDnsPolicy($dnsPolicy)
     {
-        return $this->withInitContainer($initContainers);
+        $this->data['DnsPolicy'] = $dnsPolicy;
+        $this->options['query']['DnsPolicy'] = $dnsPolicy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceGroupId
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($resourceGroupId)
+    {
+        $this->data['ResourceGroupId'] = $resourceGroupId;
+        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
+
+        return $this;
     }
 
     /**
@@ -280,28 +244,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getImageRegistryCredential() instead.
-     *
-     * @return array
-     */
-    public function getImageRegistryCredentials()
-    {
-        return $this->getImageRegistryCredential();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageRegistryCredential() instead.
-     *
-     * @param array $imageRegistryCredentials
-     *
-     * @return $this
-     */
-    public function setImageRegistryCredentials(array $imageRegistryCredentials)
-    {
-        return $this->withImageRegistryCredential($imageRegistryCredentials);
-    }
-
-    /**
      * @param array $imageRegistryCredential
      *
      * @return $this
@@ -316,28 +258,6 @@ class CreateContainerGroup extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
     }
 
     /**
@@ -357,18 +277,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEipInstanceId() instead.
-     *
-     * @param string $eipInstanceId
-     *
-     * @return $this
-     */
-    public function setEipInstanceId($eipInstanceId)
-    {
-        return $this->withEipInstanceId($eipInstanceId);
-    }
-
-    /**
      * @param string $eipInstanceId
      *
      * @return $this
@@ -382,25 +290,20 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigNameServer() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigNameServers()
-    {
-        return $this->getDnsConfigNameServer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigNameServer() instead.
-     *
-     * @param array $dnsConfigNameServers
+     * @param array $arn
      *
      * @return $this
      */
-    public function setDnsConfigNameServers(array $dnsConfigNameServers)
+    public function withArn(array $arn)
     {
-        return $this->withDnsConfigNameServer($dnsConfigNameServers);
+        $this->data['Arn'] = $arn;
+        foreach ($arn as $i => $iValue) {
+            $this->options['query']['Arn.' . ($i + 1) . '.RoleArn'] = $arn[$i]['RoleArn'];
+            $this->options['query']['Arn.' . ($i + 1) . '.RoleType'] = $arn[$i]['RoleType'];
+            $this->options['query']['Arn.' . ($i + 1) . '.AssumeRoleFor'] = $arn[$i]['AssumeRoleFor'];
+        }
+
+        return $this;
     }
 
     /**
@@ -419,18 +322,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -441,18 +332,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRestartPolicy() instead.
-     *
-     * @param string $restartPolicy
-     *
-     * @return $this
-     */
-    public function setRestartPolicy($restartPolicy)
-    {
-        return $this->withRestartPolicy($restartPolicy);
     }
 
     /**
@@ -469,18 +348,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -491,28 +358,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigOption() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigOptions()
-    {
-        return $this->getDnsConfigOption();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigOption() instead.
-     *
-     * @param array $dnsConfigOptions
-     *
-     * @return $this
-     */
-    public function setDnsConfigOptions(array $dnsConfigOptions)
-    {
-        return $this->withDnsConfigOption($dnsConfigOptions);
     }
 
     /**
@@ -532,18 +377,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCpu() instead.
-     *
-     * @param string $cpu
-     *
-     * @return $this
-     */
-    public function setCpu($cpu)
-    {
-        return $this->withCpu($cpu);
-    }
-
-    /**
      * @param string $cpu
      *
      * @return $this
@@ -554,28 +387,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['Cpu'] = $cpu;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDnsConfigSearch() instead.
-     *
-     * @return array
-     */
-    public function getDnsConfigSearchs()
-    {
-        return $this->getDnsConfigSearch();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDnsConfigSearch() instead.
-     *
-     * @param array $dnsConfigSearchs
-     *
-     * @return $this
-     */
-    public function setDnsConfigSearchs(array $dnsConfigSearchs)
-    {
-        return $this->withDnsConfigSearch($dnsConfigSearchs);
     }
 
     /**
@@ -594,18 +405,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -619,18 +418,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -641,28 +428,6 @@ class CreateContainerGroup extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getVolume() instead.
-     *
-     * @return array
-     */
-    public function getVolumes()
-    {
-        return $this->getVolume();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVolume() instead.
-     *
-     * @param array $volumes
-     *
-     * @return $this
-     */
-    public function setVolumes(array $volumes)
-    {
-        return $this->withVolume($volumes);
     }
 
     /**
@@ -688,18 +453,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withContainerGroupName() instead.
-     *
-     * @param string $containerGroupName
-     *
-     * @return $this
-     */
-    public function setContainerGroupName($containerGroupName)
-    {
-        return $this->withContainerGroupName($containerGroupName);
-    }
-
-    /**
      * @param string $containerGroupName
      *
      * @return $this
@@ -713,18 +466,6 @@ class CreateContainerGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -733,6 +474,19 @@ class CreateContainerGroup extends RpcRequest
     {
         $this->data['ZoneId'] = $zoneId;
         $this->options['query']['ZoneId'] = $zoneId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $gpuAmount
+     *
+     * @return $this
+     */
+    public function withGpuAmount($gpuAmount)
+    {
+        $this->data['GpuAmount'] = $gpuAmount;
+        $this->options['query']['GpuAmount'] = $gpuAmount;
 
         return $this;
     }

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateIPv6TranslatorEntry
+ * Api CreateIPv6TranslatorEntry
  *
  * @method string getBackendIpv4Port()
  * @method string getAclId()
@@ -23,45 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTransProtocol()
  * @method string getIpv6TranslatorId()
  */
-class CreateIPv6TranslatorEntry extends RpcRequest
+class CreateIPv6TranslatorEntry extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateIPv6TranslatorEntry';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackendIpv4Port() instead.
-     *
-     * @param string $backendIpv4Port
-     *
-     * @return $this
-     */
-    public function setBackendIpv4Port($backendIpv4Port)
-    {
-        return $this->withBackendIpv4Port($backendIpv4Port);
-    }
 
     /**
      * @param string $backendIpv4Port
@@ -74,18 +44,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['BackendIpv4Port'] = $backendIpv4Port;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclId() instead.
-     *
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function setAclId($aclId)
-    {
-        return $this->withAclId($aclId);
     }
 
     /**
@@ -102,18 +60,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -124,18 +70,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -152,18 +86,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntryName() instead.
-     *
-     * @param string $entryName
-     *
-     * @return $this
-     */
-    public function setEntryName($entryName)
-    {
-        return $this->withEntryName($entryName);
-    }
-
-    /**
      * @param string $entryName
      *
      * @return $this
@@ -174,18 +96,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['EntryName'] = $entryName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -202,18 +112,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -224,18 +122,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclStatus() instead.
-     *
-     * @param string $aclStatus
-     *
-     * @return $this
-     */
-    public function setAclStatus($aclStatus)
-    {
-        return $this->withAclStatus($aclStatus);
     }
 
     /**
@@ -252,18 +138,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEntryBandwidth() instead.
-     *
-     * @param string $entryBandwidth
-     *
-     * @return $this
-     */
-    public function setEntryBandwidth($entryBandwidth)
-    {
-        return $this->withEntryBandwidth($entryBandwidth);
-    }
-
-    /**
      * @param string $entryBandwidth
      *
      * @return $this
@@ -274,18 +148,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['EntryBandwidth'] = $entryBandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclType() instead.
-     *
-     * @param string $aclType
-     *
-     * @return $this
-     */
-    public function setAclType($aclType)
-    {
-        return $this->withAclType($aclType);
     }
 
     /**
@@ -302,18 +164,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllocateIpv6Port() instead.
-     *
-     * @param string $allocateIpv6Port
-     *
-     * @return $this
-     */
-    public function setAllocateIpv6Port($allocateIpv6Port)
-    {
-        return $this->withAllocateIpv6Port($allocateIpv6Port);
-    }
-
-    /**
      * @param string $allocateIpv6Port
      *
      * @return $this
@@ -324,18 +174,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['AllocateIpv6Port'] = $allocateIpv6Port;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEntryDescription() instead.
-     *
-     * @param string $entryDescription
-     *
-     * @return $this
-     */
-    public function setEntryDescription($entryDescription)
-    {
-        return $this->withEntryDescription($entryDescription);
     }
 
     /**
@@ -352,18 +190,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBackendIpv4Addr() instead.
-     *
-     * @param string $backendIpv4Addr
-     *
-     * @return $this
-     */
-    public function setBackendIpv4Addr($backendIpv4Addr)
-    {
-        return $this->withBackendIpv4Addr($backendIpv4Addr);
-    }
-
-    /**
      * @param string $backendIpv4Addr
      *
      * @return $this
@@ -377,18 +203,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTransProtocol() instead.
-     *
-     * @param string $transProtocol
-     *
-     * @return $this
-     */
-    public function setTransProtocol($transProtocol)
-    {
-        return $this->withTransProtocol($transProtocol);
-    }
-
-    /**
      * @param string $transProtocol
      *
      * @return $this
@@ -399,18 +213,6 @@ class CreateIPv6TranslatorEntry extends RpcRequest
         $this->options['query']['TransProtocol'] = $transProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpv6TranslatorId() instead.
-     *
-     * @param string $ipv6TranslatorId
-     *
-     * @return $this
-     */
-    public function setIpv6TranslatorId($ipv6TranslatorId)
-    {
-        return $this->withIpv6TranslatorId($ipv6TranslatorId);
     }
 
     /**

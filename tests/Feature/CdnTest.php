@@ -43,4 +43,22 @@ class CdnTest extends TestCase
         $result = $request->request();
         self::assertEquals('False', $result['CdnIp']);
     }
+
+    public function testSetMethod()
+    {
+        $with = AlibabaCloud::cdn()->v20180510()
+                            ->describeIpInfo()
+                            ->withIP('192.168.0.1')
+                            ->connectTimeout(20)
+                            ->timeout(25)
+                            ->withSecurityToken('token');
+
+        $set = AlibabaCloud::cdn()->v20180510()
+                           ->describeIpInfo()
+                           ->withIP('192.168.0.1')
+                           ->connectTimeout(20)
+                           ->timeout(25)
+                           ->setSecurityToken('token');
+        self::assertTrue(json_encode($set) === json_encode($with));
+    }
 }

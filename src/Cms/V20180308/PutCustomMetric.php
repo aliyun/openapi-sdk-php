@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PutCustomMetric
+ * Api PutCustomMetric
  *
  * @method string getMetricList()
  */
-class PutCustomMetric extends RpcRequest
+class PutCustomMetric extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'PutCustomMetric';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricList() instead.
-     *
-     * @param string $metricList
-     *
-     * @return $this
-     */
-    public function setMetricList($metricList)
-    {
-        return $this->withMetricList($metricList);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $metricList

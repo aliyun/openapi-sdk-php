@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApplyAutoSnapshotPolicy
+ * Api ApplyAutoSnapshotPolicy
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDiskIds()
  * @method string getOwnerId()
  */
-class ApplyAutoSnapshotPolicy extends RpcRequest
+class ApplyAutoSnapshotPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApplyAutoSnapshotPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -59,18 +34,6 @@ class ApplyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -87,18 +50,6 @@ class ApplyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoSnapshotPolicyId() instead.
-     *
-     * @param string $autoSnapshotPolicyId
-     *
-     * @return $this
-     */
-    public function setautoSnapshotPolicyId($autoSnapshotPolicyId)
-    {
-        return $this->withAutoSnapshotPolicyId($autoSnapshotPolicyId);
-    }
-
-    /**
      * @param string $autoSnapshotPolicyId
      *
      * @return $this
@@ -112,18 +63,6 @@ class ApplyAutoSnapshotPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDiskIds() instead.
-     *
-     * @param string $diskIds
-     *
-     * @return $this
-     */
-    public function setdiskIds($diskIds)
-    {
-        return $this->withDiskIds($diskIds);
-    }
-
-    /**
      * @param string $diskIds
      *
      * @return $this
@@ -134,18 +73,6 @@ class ApplyAutoSnapshotPolicy extends RpcRequest
         $this->options['query']['diskIds'] = $diskIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

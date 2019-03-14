@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OpenScdnService
+ * Api OpenScdnService
  *
  * @method string getEndDate()
  * @method string getSecurityToken()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDDoSBasic()
  * @method string getCcProtection()
  */
-class OpenScdnService extends RpcRequest
+class OpenScdnService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'scdn';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'OpenScdnService';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'scdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndDate() instead.
-     *
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function setEndDate($endDate)
-    {
-        return $this->withEndDate($endDate);
-    }
 
     /**
      * @param string $endDate
@@ -69,18 +39,6 @@ class OpenScdnService extends RpcRequest
         $this->options['query']['EndDate'] = $endDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -97,18 +55,6 @@ class OpenScdnService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBandwidth() instead.
-     *
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function setBandwidth($bandwidth)
-    {
-        return $this->withBandwidth($bandwidth);
-    }
-
-    /**
      * @param string $bandwidth
      *
      * @return $this
@@ -119,18 +65,6 @@ class OpenScdnService extends RpcRequest
         $this->options['query']['Bandwidth'] = $bandwidth;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainCount() instead.
-     *
-     * @param string $domainCount
-     *
-     * @return $this
-     */
-    public function setDomainCount($domainCount)
-    {
-        return $this->withDomainCount($domainCount);
     }
 
     /**
@@ -147,18 +81,6 @@ class OpenScdnService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -169,18 +91,6 @@ class OpenScdnService extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProtectType() instead.
-     *
-     * @param string $protectType
-     *
-     * @return $this
-     */
-    public function setProtectType($protectType)
-    {
-        return $this->withProtectType($protectType);
     }
 
     /**
@@ -197,18 +107,6 @@ class OpenScdnService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDate() instead.
-     *
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function setStartDate($startDate)
-    {
-        return $this->withStartDate($startDate);
-    }
-
-    /**
      * @param string $startDate
      *
      * @return $this
@@ -219,18 +117,6 @@ class OpenScdnService extends RpcRequest
         $this->options['query']['StartDate'] = $startDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withElasticProtection() instead.
-     *
-     * @param string $elasticProtection
-     *
-     * @return $this
-     */
-    public function setElasticProtection($elasticProtection)
-    {
-        return $this->withElasticProtection($elasticProtection);
     }
 
     /**
@@ -247,18 +133,6 @@ class OpenScdnService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDDoSBasic() instead.
-     *
-     * @param string $dDoSBasic
-     *
-     * @return $this
-     */
-    public function setDDoSBasic($dDoSBasic)
-    {
-        return $this->withDDoSBasic($dDoSBasic);
-    }
-
-    /**
      * @param string $dDoSBasic
      *
      * @return $this
@@ -269,18 +143,6 @@ class OpenScdnService extends RpcRequest
         $this->options['query']['DDoSBasic'] = $dDoSBasic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcProtection() instead.
-     *
-     * @param string $ccProtection
-     *
-     * @return $this
-     */
-    public function setCcProtection($ccProtection)
-    {
-        return $this->withCcProtection($ccProtection);
     }
 
     /**

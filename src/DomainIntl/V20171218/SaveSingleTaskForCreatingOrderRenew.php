@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveSingleTaskForCreatingOrderRenew
+ * Api SaveSingleTaskForCreatingOrderRenew
  *
  * @method string getSubscriptionDuration()
  * @method string getPromotionNo()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getUsePromotion()
  */
-class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
+class SaveSingleTaskForCreatingOrderRenew extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveSingleTaskForCreatingOrderRenew';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionDuration() instead.
-     *
-     * @param string $subscriptionDuration
-     *
-     * @return $this
-     */
-    public function setSubscriptionDuration($subscriptionDuration)
-    {
-        return $this->withSubscriptionDuration($subscriptionDuration);
-    }
 
     /**
      * @param string $subscriptionDuration
@@ -68,18 +38,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['SubscriptionDuration'] = $subscriptionDuration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPromotionNo() instead.
-     *
-     * @param string $promotionNo
-     *
-     * @return $this
-     */
-    public function setPromotionNo($promotionNo)
-    {
-        return $this->withPromotionNo($promotionNo);
     }
 
     /**
@@ -96,18 +54,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentExpirationDate() instead.
-     *
-     * @param string $currentExpirationDate
-     *
-     * @return $this
-     */
-    public function setCurrentExpirationDate($currentExpirationDate)
-    {
-        return $this->withCurrentExpirationDate($currentExpirationDate);
-    }
-
-    /**
      * @param string $currentExpirationDate
      *
      * @return $this
@@ -118,18 +64,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['CurrentExpirationDate'] = $currentExpirationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -146,18 +80,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -168,18 +90,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCouponNo() instead.
-     *
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function setCouponNo($couponNo)
-    {
-        return $this->withCouponNo($couponNo);
     }
 
     /**
@@ -196,18 +106,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseCoupon() instead.
-     *
-     * @param string $useCoupon
-     *
-     * @return $this
-     */
-    public function setUseCoupon($useCoupon)
-    {
-        return $this->withUseCoupon($useCoupon);
-    }
-
-    /**
      * @param string $useCoupon
      *
      * @return $this
@@ -221,18 +119,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -243,18 +129,6 @@ class SaveSingleTaskForCreatingOrderRenew extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsePromotion() instead.
-     *
-     * @param string $usePromotion
-     *
-     * @return $this
-     */
-    public function setUsePromotion($usePromotion)
-    {
-        return $this->withUsePromotion($usePromotion);
     }
 
     /**

@@ -2,41 +2,23 @@
 
 namespace AlibabaCloud\LinkFace\V20180720;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteDeviceAllGroup
+ * Api DeleteDeviceAllGroup
  *
  * @method string getIotId()
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class DeleteDeviceAllGroup extends RpcRequest
+class DeleteDeviceAllGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'LinkFace';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteDeviceAllGroup';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLoadBalancers
+ * Api DescribeLoadBalancers
  *
  * @method string getResourceOwnerAccount()
  * @method string getScalingGroupId()
  * @method string getOwnerId()
  */
-class DescribeLoadBalancers extends RpcRequest
+class DescribeLoadBalancers extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLoadBalancers';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
 
     /**
      * @param string $resourceOwnerAccount
@@ -65,18 +35,6 @@ class DescribeLoadBalancers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
-    }
-
-    /**
      * @param string $scalingGroupId
      *
      * @return $this
@@ -87,18 +45,6 @@ class DescribeLoadBalancers extends RpcRequest
         $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,52 +2,36 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteCaster
+ * Api DeleteCaster
  *
+ * @method string getSecurityToken()
  * @method string getCasterId()
  * @method string getOwnerId()
  */
-class DeleteCaster extends RpcRequest
+class DeleteCaster extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteCaster';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
+     * @param string $securityToken
      *
      * @return $this
      */
-    public function setCasterId($casterId)
+    public function withSecurityToken($securityToken)
     {
-        return $this->withCasterId($casterId);
+        $this->data['SecurityToken'] = $securityToken;
+        $this->options['query']['SecurityToken'] = $securityToken;
+
+        return $this;
     }
 
     /**
@@ -61,18 +45,6 @@ class DeleteCaster extends RpcRequest
         $this->options['query']['CasterId'] = $casterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

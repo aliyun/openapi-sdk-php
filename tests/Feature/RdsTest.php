@@ -48,4 +48,24 @@ class RdsTest extends TestCase
             );
         }
     }
+
+    public function testSetMethod()
+    {
+        $with = AlibabaCloud::rds()
+                            ->v20140815()
+                            ->deleteDatabase()
+                            ->withDBInstanceId(\time())
+                            ->withDBName('name')
+                            ->connectTimeout(20)
+                            ->timeout(25);
+
+        $set = AlibabaCloud::rds()
+                           ->v20140815()
+                           ->deleteDatabase()
+                           ->setDBInstanceId(\time())
+                           ->setDBName('name')
+                           ->connectTimeout(20)
+                           ->timeout(25);
+        self::assertTrue(json_encode($set) === json_encode($with));
+    }
 }

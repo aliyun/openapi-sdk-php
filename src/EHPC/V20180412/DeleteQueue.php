@@ -2,35 +2,20 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteQueue
+ * Api DeleteQueue
  *
  * @method string getQueueName()
  * @method string getClusterId()
  */
-class DeleteQueue extends RpcRequest
+class DeleteQueue extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteQueue';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
 
     /**

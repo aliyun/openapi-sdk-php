@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of OnsMessagePageQueryByTopic
+ * Api OnsMessagePageQueryByTopic
  *
  * @method string getPreventCache()
  * @method string getOnsRegionId()
@@ -17,40 +17,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCurrentPage()
  * @method string getTaskId()
  */
-class OnsMessagePageQueryByTopic extends RpcRequest
+class OnsMessagePageQueryByTopic extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ons';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'OnsMessagePageQueryByTopic';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreventCache() instead.
-     *
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function setPreventCache($preventCache)
-    {
-        return $this->withPreventCache($preventCache);
-    }
 
     /**
      * @param string $preventCache
@@ -63,18 +36,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
         $this->options['query']['PreventCache'] = $preventCache;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnsRegionId() instead.
-     *
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function setOnsRegionId($onsRegionId)
-    {
-        return $this->withOnsRegionId($onsRegionId);
     }
 
     /**
@@ -91,18 +52,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOnsPlatform() instead.
-     *
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function setOnsPlatform($onsPlatform)
-    {
-        return $this->withOnsPlatform($onsPlatform);
-    }
-
-    /**
      * @param string $onsPlatform
      *
      * @return $this
@@ -113,18 +62,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
         $this->options['query']['OnsPlatform'] = $onsPlatform;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -141,18 +78,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -163,18 +88,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
         $this->options['query']['Topic'] = $topic;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -191,18 +104,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBeginTime() instead.
-     *
-     * @param string $beginTime
-     *
-     * @return $this
-     */
-    public function setBeginTime($beginTime)
-    {
-        return $this->withBeginTime($beginTime);
-    }
-
-    /**
      * @param string $beginTime
      *
      * @return $this
@@ -216,18 +117,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
-    }
-
-    /**
      * @param string $currentPage
      *
      * @return $this
@@ -238,18 +127,6 @@ class OnsMessagePageQueryByTopic extends RpcRequest
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

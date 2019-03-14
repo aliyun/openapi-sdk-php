@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\ImageSearch\V20180120;
 
-use AlibabaCloud\Client\Request\RoaRequest;
 use AlibabaCloud\ImageSearch\V20180120\Traits\SearchItemTrait;
+use AlibabaCloud\Roa;
 
 /**
- * Request of SearchItem
+ * Api SearchItem
  *
  * @method string getInstanceName()
  */
-class SearchItem extends RoaRequest
+class SearchItem extends Roa
 {
     use SearchItemTrait;
-
-    /**
-     * @var string
-     */
     public $product = 'ImageSearch';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'SearchItem';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/item/search';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setinstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
-    }
 
     /**
      * @param string $instanceName

@@ -2,37 +2,22 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddEthereumNode
+ * Api AddEthereumNode
  *
  * @method string getNodeName()
+ * @method string getEthereumId()
  * @method string getDescription()
- * @method string getId()
  * @method string getExternalNode()
  */
-class AddEthereumNode extends RpcRequest
+class AddEthereumNode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddEthereumNode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
@@ -49,6 +34,19 @@ class AddEthereumNode extends RpcRequest
     }
 
     /**
+     * @param string $ethereumId
+     *
+     * @return $this
+     */
+    public function withEthereumId($ethereumId)
+    {
+        $this->data['EthereumId'] = $ethereumId;
+        $this->options['query']['EthereumId'] = $ethereumId;
+
+        return $this;
+    }
+
+    /**
      * @param string $description
      *
      * @return $this
@@ -57,19 +55,6 @@ class AddEthereumNode extends RpcRequest
     {
         $this->data['Description'] = $description;
         $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
 
         return $this;
     }

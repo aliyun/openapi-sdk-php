@@ -2,47 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetContacts
+ * Api GetContacts
  *
  * @method string getGroupName()
  */
-class GetContacts extends RpcRequest
+class GetContacts extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetContacts';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupName() instead.
-     *
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function setGroupName($groupName)
-    {
-        return $this->withGroupName($groupName);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $groupName

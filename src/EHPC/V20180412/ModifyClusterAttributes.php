@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyClusterAttributes
+ * Api ModifyClusterAttributes
  *
  * @method string getName()
  * @method string getDescription()
  * @method string getClusterId()
  */
-class ModifyClusterAttributes extends RpcRequest
+class ModifyClusterAttributes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyClusterAttributes';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
 
     /**
      * @param string $name
@@ -60,18 +33,6 @@ class ModifyClusterAttributes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -82,18 +43,6 @@ class ModifyClusterAttributes extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
     }
 
     /**

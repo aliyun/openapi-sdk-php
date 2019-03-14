@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AttachLoadBalancers
+ * Api AttachLoadBalancers
  *
  * @method array getLoadBalancer()
  * @method string getResourceOwnerAccount()
@@ -13,55 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getForceAttach()
  * @method string getOwnerId()
  */
-class AttachLoadBalancers extends RpcRequest
+class AttachLoadBalancers extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ess';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'AttachLoadBalancers';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ess';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getLoadBalancer() instead.
-     *
-     * @return array
-     */
-    public function getLoadBalancers()
-    {
-        return $this->getLoadBalancer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancer() instead.
-     *
-     * @param array $loadBalancers
-     *
-     * @return $this
-     */
-    public function setLoadBalancers(array $loadBalancers)
-    {
-        return $this->withLoadBalancer($loadBalancers);
-    }
 
     /**
      * @param array $loadBalancer
@@ -79,18 +39,6 @@ class AttachLoadBalancers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -101,18 +49,6 @@ class AttachLoadBalancers extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScalingGroupId() instead.
-     *
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function setScalingGroupId($scalingGroupId)
-    {
-        return $this->withScalingGroupId($scalingGroupId);
     }
 
     /**
@@ -129,18 +65,6 @@ class AttachLoadBalancers extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForceAttach() instead.
-     *
-     * @param string $forceAttach
-     *
-     * @return $this
-     */
-    public function setForceAttach($forceAttach)
-    {
-        return $this->withForceAttach($forceAttach);
-    }
-
-    /**
      * @param string $forceAttach
      *
      * @return $this
@@ -151,18 +75,6 @@ class AttachLoadBalancers extends RpcRequest
         $this->options['query']['ForceAttach'] = $forceAttach;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

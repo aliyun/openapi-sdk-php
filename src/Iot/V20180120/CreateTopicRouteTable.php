@@ -2,58 +2,22 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateTopicRouteTable
+ * Api CreateTopicRouteTable
  *
  * @method array getDstTopic()
+ * @method string getIotInstanceId()
  * @method string getSrcTopic()
  */
-class CreateTopicRouteTable extends RpcRequest
+class CreateTopicRouteTable extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateTopicRouteTable';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDstTopic() instead.
-     *
-     * @return array
-     */
-    public function getDstTopics()
-    {
-        return $this->getDstTopic();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDstTopic() instead.
-     *
-     * @param array $dstTopics
-     *
-     * @return $this
-     */
-    public function setDstTopics(array $dstTopics)
-    {
-        return $this->withDstTopic($dstTopics);
-    }
 
     /**
      * @param array $dstTopic
@@ -71,15 +35,16 @@ class CreateTopicRouteTable extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcTopic() instead.
-     *
-     * @param string $srcTopic
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setSrcTopic($srcTopic)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withSrcTopic($srcTopic);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

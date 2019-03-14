@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetForwardSchemeConfig
+ * Api SetForwardSchemeConfig
  *
  * @method string getSchemeOrigin()
  * @method string getSchemeOriginPort()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDomainName()
  * @method string getOwnerId()
  */
-class SetForwardSchemeConfig extends RpcRequest
+class SetForwardSchemeConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetForwardSchemeConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSchemeOrigin() instead.
-     *
-     * @param string $schemeOrigin
-     *
-     * @return $this
-     */
-    public function setSchemeOrigin($schemeOrigin)
-    {
-        return $this->withSchemeOrigin($schemeOrigin);
-    }
 
     /**
      * @param string $schemeOrigin
@@ -60,18 +33,6 @@ class SetForwardSchemeConfig extends RpcRequest
         $this->options['query']['SchemeOrigin'] = $schemeOrigin;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSchemeOriginPort() instead.
-     *
-     * @param string $schemeOriginPort
-     *
-     * @return $this
-     */
-    public function setSchemeOriginPort($schemeOriginPort)
-    {
-        return $this->withSchemeOriginPort($schemeOriginPort);
     }
 
     /**
@@ -88,18 +49,6 @@ class SetForwardSchemeConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -110,18 +59,6 @@ class SetForwardSchemeConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnable() instead.
-     *
-     * @param string $enable
-     *
-     * @return $this
-     */
-    public function setEnable($enable)
-    {
-        return $this->withEnable($enable);
     }
 
     /**
@@ -138,18 +75,6 @@ class SetForwardSchemeConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -160,18 +85,6 @@ class SetForwardSchemeConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

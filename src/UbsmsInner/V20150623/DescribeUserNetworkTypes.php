@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeUserNetworkTypes
+ * Api DescribeUserNetworkTypes
  *
  * @method string getUid()
  * @method string getServiceCode()
  * @method array getRegionIds()
  * @method string getBid()
  */
-class DescribeUserNetworkTypes extends RpcRequest
+class DescribeUserNetworkTypes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms-inner';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserNetworkTypes';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -58,18 +31,6 @@ class DescribeUserNetworkTypes extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
     }
 
     /**
@@ -86,28 +47,6 @@ class DescribeUserNetworkTypes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getRegionIds() instead.
-     *
-     * @return array
-     */
-    public function getRegionIdss()
-    {
-        return $this->getRegionIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionIds() instead.
-     *
-     * @param array $regionIdss
-     *
-     * @return $this
-     */
-    public function setRegionIdss(array $regionIdss)
-    {
-        return $this->withRegionIds($regionIdss);
-    }
-
-    /**
      * @param array $regionIds
      *
      * @return $this
@@ -120,18 +59,6 @@ class DescribeUserNetworkTypes extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

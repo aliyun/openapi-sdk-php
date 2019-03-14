@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDisksFullStatus
+ * Api DescribeDisksFullStatus
  *
  * @method array getEventId()
  * @method string getResourceOwnerId()
@@ -21,50 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEventType()
  * @method string getStatus()
  */
-class DescribeDisksFullStatus extends RpcRequest
+class DescribeDisksFullStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDisksFullStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getEventId() instead.
-     *
-     * @return array
-     */
-    public function getEventIds()
-    {
-        return $this->getEventId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventId() instead.
-     *
-     * @param array $eventIds
-     *
-     * @return $this
-     */
-    public function setEventIds(array $eventIds)
-    {
-        return $this->withEventId($eventIds);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param array $eventId
@@ -82,18 +47,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -104,18 +57,6 @@ class DescribeDisksFullStatus extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -132,18 +73,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventTimeStart() instead.
-     *
-     * @param string $eventTimeStart
-     *
-     * @return $this
-     */
-    public function setEventTimeStart($eventTimeStart)
-    {
-        return $this->withEventTimeStart($eventTimeStart);
-    }
-
-    /**
      * @param string $eventTimeStart
      *
      * @return $this
@@ -157,18 +86,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -179,28 +96,6 @@ class DescribeDisksFullStatus extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getDiskId() instead.
-     *
-     * @return array
-     */
-    public function getDiskIds()
-    {
-        return $this->getDiskId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskId() instead.
-     *
-     * @param array $diskIds
-     *
-     * @return $this
-     */
-    public function setDiskIds(array $diskIds)
-    {
-        return $this->withDiskId($diskIds);
     }
 
     /**
@@ -219,18 +114,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -241,18 +124,6 @@ class DescribeDisksFullStatus extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -269,18 +140,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -291,18 +150,6 @@ class DescribeDisksFullStatus extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEventTimeEnd() instead.
-     *
-     * @param string $eventTimeEnd
-     *
-     * @return $this
-     */
-    public function setEventTimeEnd($eventTimeEnd)
-    {
-        return $this->withEventTimeEnd($eventTimeEnd);
     }
 
     /**
@@ -319,18 +166,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHealthStatus() instead.
-     *
-     * @param string $healthStatus
-     *
-     * @return $this
-     */
-    public function setHealthStatus($healthStatus)
-    {
-        return $this->withHealthStatus($healthStatus);
-    }
-
-    /**
      * @param string $healthStatus
      *
      * @return $this
@@ -344,18 +179,6 @@ class DescribeDisksFullStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventType() instead.
-     *
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        return $this->withEventType($eventType);
-    }
-
-    /**
      * @param string $eventType
      *
      * @return $this
@@ -366,18 +189,6 @@ class DescribeDisksFullStatus extends RpcRequest
         $this->options['query']['EventType'] = $eventType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**

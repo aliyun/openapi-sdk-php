@@ -2,52 +2,22 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of ListDataSet
+ * Api ListDataSet
  *
  * @method string getInstanceId()
  */
-class ListDataSet extends RoaRequest
+class ListDataSet extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Airec';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListDataSet';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'airec';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RegisterMediaDetailPerson
+ * Api RegisterMediaDetailPerson
  *
  * @method string getResourceOwnerId()
  * @method string getImages()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCategory()
  * @method string getPersonName()
  */
-class RegisterMediaDetailPerson extends RpcRequest
+class RegisterMediaDetailPerson extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'RegisterMediaDetailPerson';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class RegisterMediaDetailPerson extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImages() instead.
-     *
-     * @param string $images
-     *
-     * @return $this
-     */
-    public function setImages($images)
-    {
-        return $this->withImages($images);
     }
 
     /**
@@ -95,18 +53,6 @@ class RegisterMediaDetailPerson extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +63,6 @@ class RegisterMediaDetailPerson extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -145,18 +79,6 @@ class RegisterMediaDetailPerson extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPersonLib() instead.
-     *
-     * @param string $personLib
-     *
-     * @return $this
-     */
-    public function setPersonLib($personLib)
-    {
-        return $this->withPersonLib($personLib);
-    }
-
-    /**
      * @param string $personLib
      *
      * @return $this
@@ -167,18 +89,6 @@ class RegisterMediaDetailPerson extends RpcRequest
         $this->options['query']['PersonLib'] = $personLib;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +105,6 @@ class RegisterMediaDetailPerson extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -217,18 +115,6 @@ class RegisterMediaDetailPerson extends RpcRequest
         $this->options['query']['Category'] = $category;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPersonName() instead.
-     *
-     * @param string $personName
-     *
-     * @return $this
-     */
-    public function setPersonName($personName)
-    {
-        return $this->withPersonName($personName);
     }
 
     /**

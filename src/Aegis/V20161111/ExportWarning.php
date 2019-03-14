@@ -2,136 +2,35 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ExportWarning
+ * Api ExportWarning
  *
+ * @method string getStatusList()
+ * @method string getRiskLevels()
+ * @method string getExportType()
+ * @method string getDealed()
  * @method string getTypeNames()
  * @method string getIsSummaryExport()
  * @method string getRiskName()
- * @method string getStatusList()
+ * @method string getRiskIds()
  * @method string getSourceIp()
- * @method string getRiskLevels()
- * @method string getDealed()
  * @method string getStrategyId()
+ * @method string getLang()
+ * @method string getTypeName()
  * @method string getSubTypeNames()
  * @method string getUuids()
  */
-class ExportWarning extends RpcRequest
+class ExportWarning extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ExportWarning';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTypeNames() instead.
-     *
-     * @param string $typeNames
-     *
-     * @return $this
-     */
-    public function setTypeNames($typeNames)
-    {
-        return $this->withTypeNames($typeNames);
-    }
-
-    /**
-     * @param string $typeNames
-     *
-     * @return $this
-     */
-    public function withTypeNames($typeNames)
-    {
-        $this->data['TypeNames'] = $typeNames;
-        $this->options['query']['TypeNames'] = $typeNames;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsSummaryExport() instead.
-     *
-     * @param string $isSummaryExport
-     *
-     * @return $this
-     */
-    public function setIsSummaryExport($isSummaryExport)
-    {
-        return $this->withIsSummaryExport($isSummaryExport);
-    }
-
-    /**
-     * @param string $isSummaryExport
-     *
-     * @return $this
-     */
-    public function withIsSummaryExport($isSummaryExport)
-    {
-        $this->data['IsSummaryExport'] = $isSummaryExport;
-        $this->options['query']['IsSummaryExport'] = $isSummaryExport;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskName() instead.
-     *
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function setRiskName($riskName)
-    {
-        return $this->withRiskName($riskName);
-    }
-
-    /**
-     * @param string $riskName
-     *
-     * @return $this
-     */
-    public function withRiskName($riskName)
-    {
-        $this->data['RiskName'] = $riskName;
-        $this->options['query']['RiskName'] = $riskName;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusList() instead.
-     *
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function setStatusList($statusList)
-    {
-        return $this->withStatusList($statusList);
-    }
 
     /**
      * @param string $statusList
@@ -144,43 +43,6 @@ class ExportWarning extends RpcRequest
         $this->options['query']['StatusList'] = $statusList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRiskLevels() instead.
-     *
-     * @param string $riskLevels
-     *
-     * @return $this
-     */
-    public function setRiskLevels($riskLevels)
-    {
-        return $this->withRiskLevels($riskLevels);
     }
 
     /**
@@ -197,15 +59,16 @@ class ExportWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDealed() instead.
-     *
-     * @param string $dealed
+     * @param string $exportType
      *
      * @return $this
      */
-    public function setDealed($dealed)
+    public function withExportType($exportType)
     {
-        return $this->withDealed($dealed);
+        $this->data['ExportType'] = $exportType;
+        $this->options['query']['ExportType'] = $exportType;
+
+        return $this;
     }
 
     /**
@@ -222,15 +85,68 @@ class ExportWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStrategyId() instead.
-     *
-     * @param string $strategyId
+     * @param string $typeNames
      *
      * @return $this
      */
-    public function setStrategyId($strategyId)
+    public function withTypeNames($typeNames)
     {
-        return $this->withStrategyId($strategyId);
+        $this->data['TypeNames'] = $typeNames;
+        $this->options['query']['TypeNames'] = $typeNames;
+
+        return $this;
+    }
+
+    /**
+     * @param string $isSummaryExport
+     *
+     * @return $this
+     */
+    public function withIsSummaryExport($isSummaryExport)
+    {
+        $this->data['IsSummaryExport'] = $isSummaryExport;
+        $this->options['query']['IsSummaryExport'] = $isSummaryExport;
+
+        return $this;
+    }
+
+    /**
+     * @param string $riskName
+     *
+     * @return $this
+     */
+    public function withRiskName($riskName)
+    {
+        $this->data['RiskName'] = $riskName;
+        $this->options['query']['RiskName'] = $riskName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $riskIds
+     *
+     * @return $this
+     */
+    public function withRiskIds($riskIds)
+    {
+        $this->data['RiskIds'] = $riskIds;
+        $this->options['query']['RiskIds'] = $riskIds;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sourceIp
+     *
+     * @return $this
+     */
+    public function withSourceIp($sourceIp)
+    {
+        $this->data['SourceIp'] = $sourceIp;
+        $this->options['query']['SourceIp'] = $sourceIp;
+
+        return $this;
     }
 
     /**
@@ -247,15 +163,29 @@ class ExportWarning extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubTypeNames() instead.
-     *
-     * @param string $subTypeNames
+     * @param string $lang
      *
      * @return $this
      */
-    public function setSubTypeNames($subTypeNames)
+    public function withLang($lang)
     {
-        return $this->withSubTypeNames($subTypeNames);
+        $this->data['Lang'] = $lang;
+        $this->options['query']['Lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * @param string $typeName
+     *
+     * @return $this
+     */
+    public function withTypeName($typeName)
+    {
+        $this->data['TypeName'] = $typeName;
+        $this->options['query']['TypeName'] = $typeName;
+
+        return $this;
     }
 
     /**
@@ -269,18 +199,6 @@ class ExportWarning extends RpcRequest
         $this->options['query']['SubTypeNames'] = $subTypeNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUuids() instead.
-     *
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function setUuids($uuids)
-    {
-        return $this->withUuids($uuids);
     }
 
     /**

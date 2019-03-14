@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReleaseDedicatedHost
+ * Api ReleaseDedicatedHost
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDedicatedHostId()
  * @method string getOwnerId()
  */
-class ReleaseDedicatedHost extends RpcRequest
+class ReleaseDedicatedHost extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReleaseDedicatedHost';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -59,18 +34,6 @@ class ReleaseDedicatedHost extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -87,18 +50,6 @@ class ReleaseDedicatedHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -112,18 +63,6 @@ class ReleaseDedicatedHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDedicatedHostId() instead.
-     *
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function setDedicatedHostId($dedicatedHostId)
-    {
-        return $this->withDedicatedHostId($dedicatedHostId);
-    }
-
-    /**
      * @param string $dedicatedHostId
      *
      * @return $this
@@ -134,18 +73,6 @@ class ReleaseDedicatedHost extends RpcRequest
         $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

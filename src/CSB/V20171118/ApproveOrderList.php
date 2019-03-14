@@ -2,53 +2,22 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApproveOrderList
+ * Api ApproveOrderList
  *
  * @method string getData()
  */
-class ApproveOrderList extends RpcRequest
+class ApproveOrderList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApproveOrderList';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
 
     /**
      * @param string $data

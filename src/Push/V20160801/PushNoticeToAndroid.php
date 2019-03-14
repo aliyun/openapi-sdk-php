@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of PushNoticeToAndroid
+ * Api PushNoticeToAndroid
  *
  * @method string getExtParameters()
  * @method string getAppKey()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getJobKey()
  * @method string getTarget()
  */
-class PushNoticeToAndroid extends RpcRequest
+class PushNoticeToAndroid extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Push';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'PushNoticeToAndroid';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtParameters() instead.
-     *
-     * @param string $extParameters
-     *
-     * @return $this
-     */
-    public function setExtParameters($extParameters)
-    {
-        return $this->withExtParameters($extParameters);
-    }
 
     /**
      * @param string $extParameters
@@ -61,18 +34,6 @@ class PushNoticeToAndroid extends RpcRequest
         $this->options['query']['ExtParameters'] = $extParameters;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setAppKey($appKey)
-    {
-        return $this->withAppKey($appKey);
     }
 
     /**
@@ -89,18 +50,6 @@ class PushNoticeToAndroid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTargetValue() instead.
-     *
-     * @param string $targetValue
-     *
-     * @return $this
-     */
-    public function setTargetValue($targetValue)
-    {
-        return $this->withTargetValue($targetValue);
-    }
-
-    /**
      * @param string $targetValue
      *
      * @return $this
@@ -111,18 +60,6 @@ class PushNoticeToAndroid extends RpcRequest
         $this->options['query']['TargetValue'] = $targetValue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -139,18 +76,6 @@ class PushNoticeToAndroid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBody() instead.
-     *
-     * @param string $body
-     *
-     * @return $this
-     */
-    public function setBody($body)
-    {
-        return $this->withBody($body);
-    }
-
-    /**
      * @param string $body
      *
      * @return $this
@@ -164,18 +89,6 @@ class PushNoticeToAndroid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJobKey() instead.
-     *
-     * @param string $jobKey
-     *
-     * @return $this
-     */
-    public function setJobKey($jobKey)
-    {
-        return $this->withJobKey($jobKey);
-    }
-
-    /**
      * @param string $jobKey
      *
      * @return $this
@@ -186,18 +99,6 @@ class PushNoticeToAndroid extends RpcRequest
         $this->options['query']['JobKey'] = $jobKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTarget() instead.
-     *
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function setTarget($target)
-    {
-        return $this->withTarget($target);
     }
 
     /**

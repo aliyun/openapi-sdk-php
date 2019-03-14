@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CompareFace
+ * Api CompareFace
  *
  * @method string getSrcUriB()
  * @method string getSrcUriA()
  * @method string getProject()
  */
-class CompareFace extends RpcRequest
+class CompareFace extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'CompareFace';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUriB() instead.
-     *
-     * @param string $srcUriB
-     *
-     * @return $this
-     */
-    public function setSrcUriB($srcUriB)
-    {
-        return $this->withSrcUriB($srcUriB);
-    }
 
     /**
      * @param string $srcUriB
@@ -65,18 +35,6 @@ class CompareFace extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUriA() instead.
-     *
-     * @param string $srcUriA
-     *
-     * @return $this
-     */
-    public function setSrcUriA($srcUriA)
-    {
-        return $this->withSrcUriA($srcUriA);
-    }
-
-    /**
      * @param string $srcUriA
      *
      * @return $this
@@ -87,18 +45,6 @@ class CompareFace extends RpcRequest
         $this->options['query']['SrcUriA'] = $srcUriA;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**

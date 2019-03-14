@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetAccountProfile
+ * Api GetAccountProfile
  *
  * @method string getDeviceIdMd5()
  * @method string getCarrier()
@@ -20,40 +20,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAccessTimestamp()
  * @method string getBusinessType()
  */
-class GetAccountProfile extends RpcRequest
+class GetAccountProfile extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sas-api';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetAccountProfile';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceIdMd5() instead.
-     *
-     * @param string $deviceIdMd5
-     *
-     * @return $this
-     */
-    public function setDeviceIdMd5($deviceIdMd5)
-    {
-        return $this->withDeviceIdMd5($deviceIdMd5);
-    }
 
     /**
      * @param string $deviceIdMd5
@@ -66,18 +39,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['DeviceIdMd5'] = $deviceIdMd5;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCarrier() instead.
-     *
-     * @param string $carrier
-     *
-     * @return $this
-     */
-    public function setCarrier($carrier)
-    {
-        return $this->withCarrier($carrier);
     }
 
     /**
@@ -94,18 +55,6 @@ class GetAccountProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOs() instead.
-     *
-     * @param string $os
-     *
-     * @return $this
-     */
-    public function setOs($os)
-    {
-        return $this->withOs($os);
-    }
-
-    /**
      * @param string $os
      *
      * @return $this
@@ -116,18 +65,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['Os'] = $os;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhone() instead.
-     *
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function setPhone($phone)
-    {
-        return $this->withPhone($phone);
     }
 
     /**
@@ -144,18 +81,6 @@ class GetAccountProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestUrl() instead.
-     *
-     * @param string $requestUrl
-     *
-     * @return $this
-     */
-    public function setRequestUrl($requestUrl)
-    {
-        return $this->withRequestUrl($requestUrl);
-    }
-
-    /**
      * @param string $requestUrl
      *
      * @return $this
@@ -166,18 +91,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['RequestUrl'] = $requestUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
     }
 
     /**
@@ -194,18 +107,6 @@ class GetAccountProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserAgent() instead.
-     *
-     * @param string $userAgent
-     *
-     * @return $this
-     */
-    public function setUserAgent($userAgent)
-    {
-        return $this->withUserAgent($userAgent);
-    }
-
-    /**
      * @param string $userAgent
      *
      * @return $this
@@ -216,18 +117,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['UserAgent'] = $userAgent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConnectionType() instead.
-     *
-     * @param string $connectionType
-     *
-     * @return $this
-     */
-    public function setConnectionType($connectionType)
-    {
-        return $this->withConnectionType($connectionType);
     }
 
     /**
@@ -244,18 +133,6 @@ class GetAccountProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSensType() instead.
-     *
-     * @param string $sensType
-     *
-     * @return $this
-     */
-    public function setSensType($sensType)
-    {
-        return $this->withSensType($sensType);
-    }
-
-    /**
      * @param string $sensType
      *
      * @return $this
@@ -266,18 +143,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['SensType'] = $sensType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceType() instead.
-     *
-     * @param string $deviceType
-     *
-     * @return $this
-     */
-    public function setDeviceType($deviceType)
-    {
-        return $this->withDeviceType($deviceType);
     }
 
     /**
@@ -294,18 +159,6 @@ class GetAccountProfile extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccessTimestamp() instead.
-     *
-     * @param string $accessTimestamp
-     *
-     * @return $this
-     */
-    public function setAccessTimestamp($accessTimestamp)
-    {
-        return $this->withAccessTimestamp($accessTimestamp);
-    }
-
-    /**
      * @param string $accessTimestamp
      *
      * @return $this
@@ -316,18 +169,6 @@ class GetAccountProfile extends RpcRequest
         $this->options['query']['AccessTimestamp'] = $accessTimestamp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBusinessType() instead.
-     *
-     * @param string $businessType
-     *
-     * @return $this
-     */
-    public function setBusinessType($businessType)
-    {
-        return $this->withBusinessType($businessType);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySurvey
+ * Api ModifySurvey
  *
  * @method string getSurveyId()
  * @method string getInstanceId()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getScenarioId()
  * @method string getFlowId()
  */
-class ModifySurvey extends RpcRequest
+class ModifySurvey extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySurvey';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSurveyId() instead.
-     *
-     * @param string $surveyId
-     *
-     * @return $this
-     */
-    public function setSurveyId($surveyId)
-    {
-        return $this->withSurveyId($surveyId);
-    }
 
     /**
      * @param string $surveyId
@@ -71,18 +41,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['SurveyId'] = $surveyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -99,18 +57,6 @@ class ModifySurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRole() instead.
-     *
-     * @param string $role
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        return $this->withRole($role);
-    }
-
-    /**
      * @param string $role
      *
      * @return $this
@@ -121,18 +67,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['Role'] = $role;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRound() instead.
-     *
-     * @param string $round
-     *
-     * @return $this
-     */
-    public function setRound($round)
-    {
-        return $this->withRound($round);
     }
 
     /**
@@ -149,18 +83,6 @@ class ModifySurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFlowJson() instead.
-     *
-     * @param string $flowJson
-     *
-     * @return $this
-     */
-    public function setFlowJson($flowJson)
-    {
-        return $this->withFlowJson($flowJson);
-    }
-
-    /**
      * @param string $flowJson
      *
      * @return $this
@@ -171,18 +93,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['FlowJson'] = $flowJson;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -199,18 +109,6 @@ class ModifySurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGlobalQuestions() instead.
-     *
-     * @param string $globalQuestions
-     *
-     * @return $this
-     */
-    public function setGlobalQuestions($globalQuestions)
-    {
-        return $this->withGlobalQuestions($globalQuestions);
-    }
-
-    /**
      * @param string $globalQuestions
      *
      * @return $this
@@ -221,18 +119,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['GlobalQuestions'] = $globalQuestions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -249,18 +135,6 @@ class ModifySurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCorpora() instead.
-     *
-     * @param string $corpora
-     *
-     * @return $this
-     */
-    public function setCorpora($corpora)
-    {
-        return $this->withCorpora($corpora);
-    }
-
-    /**
      * @param string $corpora
      *
      * @return $this
@@ -271,18 +145,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['Corpora'] = $corpora;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpeechOptimizationParam() instead.
-     *
-     * @param string $speechOptimizationParam
-     *
-     * @return $this
-     */
-    public function setSpeechOptimizationParam($speechOptimizationParam)
-    {
-        return $this->withSpeechOptimizationParam($speechOptimizationParam);
     }
 
     /**
@@ -299,18 +161,6 @@ class ModifySurvey extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
-    }
-
-    /**
      * @param string $scenarioId
      *
      * @return $this
@@ -321,18 +171,6 @@ class ModifySurvey extends RpcRequest
         $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFlowId() instead.
-     *
-     * @param string $flowId
-     *
-     * @return $this
-     */
-    public function setFlowId($flowId)
-    {
-        return $this->withFlowId($flowId);
     }
 
     /**

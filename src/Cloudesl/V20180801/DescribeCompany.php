@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Cloudesl\V20180801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCompany
+ * Api DescribeCompany
  *
  */
-class DescribeCompany extends RpcRequest
+class DescribeCompany extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'cloudesl';
 
-    /**
-     * @var string
-     */
     public $version = '2018-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCompany';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

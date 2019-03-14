@@ -2,57 +2,20 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteContainerApps
+ * Api DeleteContainerApps
  *
  * @method array getContainerApp()
  */
-class DeleteContainerApps extends RpcRequest
+class DeleteContainerApps extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EHPC';
 
-    /**
-     * @var string
-     */
     public $version = '2018-04-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteContainerApps';
-
-    /**
-     * @var string
-     */
     public $serviceCode = 'ehs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getContainerApp() instead.
-     *
-     * @return array
-     */
-    public function getContainerApps()
-    {
-        return $this->getContainerApp();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContainerApp() instead.
-     *
-     * @param array $containerApps
-     *
-     * @return $this
-     */
-    public function setContainerApps(array $containerApps)
-    {
-        return $this->withContainerApp($containerApps);
-    }
 
     /**
      * @param array $containerApp

@@ -2,74 +2,45 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateApi
+ * Api CreateApi
  *
- * @method string getResultDescriptions()
  * @method string getWebSocketApiType()
- * @method string getVisibility()
- * @method string getGroupId()
  * @method string getErrorCodeSamples()
  * @method string getDescription()
- * @method string getServiceConfig()
+ * @method string getDisableInternet()
  * @method string getConstantParameters()
- * @method string getResultType()
  * @method string getAuthType()
  * @method string getAllowSignatureMethod()
  * @method string getServiceParameters()
  * @method string getFailResultSample()
- * @method string getApiName()
  * @method string getSystemParameters()
  * @method string getServiceParametersMap()
- * @method string getResultSample()
  * @method string getSecurityToken()
  * @method string getOpenIdConnectConfig()
  * @method string getRequestParameters()
+ * @method string getResultDescriptions()
+ * @method string getVisibility()
+ * @method string getGroupId()
+ * @method string getServiceConfig()
+ * @method string getResultType()
+ * @method string getApiName()
+ * @method string getResultSample()
+ * @method string getForceNonceCheck()
  * @method string getRequestConfig()
  * @method string getResultBodyModel()
  */
-class CreateApi extends RpcRequest
+class CreateApi extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateApi';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $resultDescriptions
-     *
-     * @return $this
-     */
-    public function withResultDescriptions($resultDescriptions)
-    {
-        $this->data['ResultDescriptions'] = $resultDescriptions;
-        $this->options['query']['ResultDescriptions'] = $resultDescriptions;
-
-        return $this;
-    }
 
     /**
      * @param string $webSocketApiType
@@ -80,32 +51,6 @@ class CreateApi extends RpcRequest
     {
         $this->data['WebSocketApiType'] = $webSocketApiType;
         $this->options['query']['WebSocketApiType'] = $webSocketApiType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $visibility
-     *
-     * @return $this
-     */
-    public function withVisibility($visibility)
-    {
-        $this->data['Visibility'] = $visibility;
-        $this->options['query']['Visibility'] = $visibility;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
 
         return $this;
     }
@@ -137,14 +82,14 @@ class CreateApi extends RpcRequest
     }
 
     /**
-     * @param string $serviceConfig
+     * @param string $disableInternet
      *
      * @return $this
      */
-    public function withServiceConfig($serviceConfig)
+    public function withDisableInternet($disableInternet)
     {
-        $this->data['ServiceConfig'] = $serviceConfig;
-        $this->options['query']['ServiceConfig'] = $serviceConfig;
+        $this->data['DisableInternet'] = $disableInternet;
+        $this->options['query']['DisableInternet'] = $disableInternet;
 
         return $this;
     }
@@ -158,19 +103,6 @@ class CreateApi extends RpcRequest
     {
         $this->data['ConstantParameters'] = $constantParameters;
         $this->options['query']['ConstantParameters'] = $constantParameters;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resultType
-     *
-     * @return $this
-     */
-    public function withResultType($resultType)
-    {
-        $this->data['ResultType'] = $resultType;
-        $this->options['query']['ResultType'] = $resultType;
 
         return $this;
     }
@@ -228,19 +160,6 @@ class CreateApi extends RpcRequest
     }
 
     /**
-     * @param string $apiName
-     *
-     * @return $this
-     */
-    public function withApiName($apiName)
-    {
-        $this->data['ApiName'] = $apiName;
-        $this->options['query']['ApiName'] = $apiName;
-
-        return $this;
-    }
-
-    /**
      * @param string $systemParameters
      *
      * @return $this
@@ -262,19 +181,6 @@ class CreateApi extends RpcRequest
     {
         $this->data['ServiceParametersMap'] = $serviceParametersMap;
         $this->options['query']['ServiceParametersMap'] = $serviceParametersMap;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resultSample
-     *
-     * @return $this
-     */
-    public function withResultSample($resultSample)
-    {
-        $this->data['ResultSample'] = $resultSample;
-        $this->options['query']['ResultSample'] = $resultSample;
 
         return $this;
     }
@@ -314,6 +220,110 @@ class CreateApi extends RpcRequest
     {
         $this->data['RequestParameters'] = $requestParameters;
         $this->options['query']['RequestParameters'] = $requestParameters;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resultDescriptions
+     *
+     * @return $this
+     */
+    public function withResultDescriptions($resultDescriptions)
+    {
+        $this->data['ResultDescriptions'] = $resultDescriptions;
+        $this->options['query']['ResultDescriptions'] = $resultDescriptions;
+
+        return $this;
+    }
+
+    /**
+     * @param string $visibility
+     *
+     * @return $this
+     */
+    public function withVisibility($visibility)
+    {
+        $this->data['Visibility'] = $visibility;
+        $this->options['query']['Visibility'] = $visibility;
+
+        return $this;
+    }
+
+    /**
+     * @param string $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId($groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        $this->options['query']['GroupId'] = $groupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $serviceConfig
+     *
+     * @return $this
+     */
+    public function withServiceConfig($serviceConfig)
+    {
+        $this->data['ServiceConfig'] = $serviceConfig;
+        $this->options['query']['ServiceConfig'] = $serviceConfig;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resultType
+     *
+     * @return $this
+     */
+    public function withResultType($resultType)
+    {
+        $this->data['ResultType'] = $resultType;
+        $this->options['query']['ResultType'] = $resultType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $apiName
+     *
+     * @return $this
+     */
+    public function withApiName($apiName)
+    {
+        $this->data['ApiName'] = $apiName;
+        $this->options['query']['ApiName'] = $apiName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resultSample
+     *
+     * @return $this
+     */
+    public function withResultSample($resultSample)
+    {
+        $this->data['ResultSample'] = $resultSample;
+        $this->options['query']['ResultSample'] = $resultSample;
+
+        return $this;
+    }
+
+    /**
+     * @param string $forceNonceCheck
+     *
+     * @return $this
+     */
+    public function withForceNonceCheck($forceNonceCheck)
+    {
+        $this->data['ForceNonceCheck'] = $forceNonceCheck;
+        $this->options['query']['ForceNonceCheck'] = $forceNonceCheck;
 
         return $this;
     }

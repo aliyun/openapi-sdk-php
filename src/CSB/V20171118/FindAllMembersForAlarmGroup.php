@@ -2,42 +2,18 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindAllMembersForAlarmGroup
+ * Api FindAllMembersForAlarmGroup
  *
  * @method string getButlerGroupId()
  */
-class FindAllMembersForAlarmGroup extends RpcRequest
+class FindAllMembersForAlarmGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'FindAllMembersForAlarmGroup';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withButlerGroupId() instead.
-     *
-     * @param string $butlerGroupId
-     *
-     * @return $this
-     */
-    public function setButlerGroupId($butlerGroupId)
-    {
-        return $this->withButlerGroupId($butlerGroupId);
-    }
 
     /**
      * @param string $butlerGroupId

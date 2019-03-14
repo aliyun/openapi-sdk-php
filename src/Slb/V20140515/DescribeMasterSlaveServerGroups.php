@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeMasterSlaveServerGroups
+ * Api DescribeMasterSlaveServerGroups
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -16,55 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTags()
  */
-class DescribeMasterSlaveServerGroups extends RpcRequest
+class DescribeMasterSlaveServerGroups extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeMasterSlaveServerGroups';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -77,18 +37,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -105,18 +53,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerId() instead.
-     *
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function setLoadBalancerId($loadBalancerId)
-    {
-        return $this->withLoadBalancerId($loadBalancerId);
-    }
-
-    /**
      * @param string $loadBalancerId
      *
      * @return $this
@@ -127,18 +63,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
         $this->options['query']['LoadBalancerId'] = $loadBalancerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -155,18 +79,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIncludeListener() instead.
-     *
-     * @param string $includeListener
-     *
-     * @return $this
-     */
-    public function setIncludeListener($includeListener)
-    {
-        return $this->withIncludeListener($includeListener);
-    }
-
-    /**
      * @param string $includeListener
      *
      * @return $this
@@ -177,18 +89,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
         $this->options['query']['IncludeListener'] = $includeListener;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -205,18 +105,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -227,18 +115,6 @@ class DescribeMasterSlaveServerGroups extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**

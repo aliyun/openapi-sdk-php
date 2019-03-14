@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetMySuccessApplies
+ * Api GetMySuccessApplies
  *
  */
-class GetMySuccessApplies extends RpcRequest
+class GetMySuccessApplies extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetMySuccessApplies';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

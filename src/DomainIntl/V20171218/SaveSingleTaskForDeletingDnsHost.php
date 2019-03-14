@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveSingleTaskForDeletingDnsHost
+ * Api SaveSingleTaskForDeletingDnsHost
  *
  * @method string getInstanceId()
  * @method array getIp()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getUserClientIp()
  * @method string getLang()
  */
-class SaveSingleTaskForDeletingDnsHost extends RpcRequest
+class SaveSingleTaskForDeletingDnsHost extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveSingleTaskForDeletingDnsHost';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -64,28 +34,6 @@ class SaveSingleTaskForDeletingDnsHost extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getIp() instead.
-     *
-     * @return array
-     */
-    public function getIps()
-    {
-        return $this->getIp();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param array $ips
-     *
-     * @return $this
-     */
-    public function setIps(array $ips)
-    {
-        return $this->withIp($ips);
     }
 
     /**
@@ -104,18 +52,6 @@ class SaveSingleTaskForDeletingDnsHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDnsName() instead.
-     *
-     * @param string $dnsName
-     *
-     * @return $this
-     */
-    public function setDnsName($dnsName)
-    {
-        return $this->withDnsName($dnsName);
-    }
-
-    /**
      * @param string $dnsName
      *
      * @return $this
@@ -129,18 +65,6 @@ class SaveSingleTaskForDeletingDnsHost extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -151,18 +75,6 @@ class SaveSingleTaskForDeletingDnsHost extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

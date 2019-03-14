@@ -2,49 +2,23 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryPageByApplyId
+ * Api QueryPageByApplyId
  *
  * @method string getApplyId()
+ * @method string getIotInstanceId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryPageByApplyId extends RpcRequest
+class QueryPageByApplyId extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryPageByApplyId';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withApplyId() instead.
-     *
-     * @param string $applyId
-     *
-     * @return $this
-     */
-    public function setApplyId($applyId)
-    {
-        return $this->withApplyId($applyId);
-    }
 
     /**
      * @param string $applyId
@@ -60,15 +34,16 @@ class QueryPageByApplyId extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setPageSize($pageSize)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withPageSize($pageSize);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -82,18 +57,6 @@ class QueryPageByApplyId extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

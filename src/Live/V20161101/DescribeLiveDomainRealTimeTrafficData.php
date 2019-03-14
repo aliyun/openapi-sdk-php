@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeLiveDomainRealTimeTrafficData
+ * Api DescribeLiveDomainRealTimeTrafficData
  *
  * @method string getLocationNameEn()
  * @method string getStartTime()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
+class DescribeLiveDomainRealTimeTrafficData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeLiveDomainRealTimeTrafficData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationNameEn() instead.
-     *
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function setLocationNameEn($locationNameEn)
-    {
-        return $this->withLocationNameEn($locationNameEn);
-    }
 
     /**
      * @param string $locationNameEn
@@ -65,18 +35,6 @@ class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
         $this->options['query']['LocationNameEn'] = $locationNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -93,18 +51,6 @@ class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIspNameEn() instead.
-     *
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function setIspNameEn($ispNameEn)
-    {
-        return $this->withIspNameEn($ispNameEn);
-    }
-
-    /**
      * @param string $ispNameEn
      *
      * @return $this
@@ -115,18 +61,6 @@ class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
         $this->options['query']['IspNameEn'] = $ispNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -143,18 +77,6 @@ class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -165,18 +87,6 @@ class DescribeLiveDomainRealTimeTrafficData extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

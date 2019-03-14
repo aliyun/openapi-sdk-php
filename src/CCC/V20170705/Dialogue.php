@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of Dialogue
+ * Api Dialogue
  *
  * @method string getCallId()
  * @method string getCallingNumber()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTaskId()
  * @method string getUtterance()
  */
-class Dialogue extends RpcRequest
+class Dialogue extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'Dialogue';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallId() instead.
-     *
-     * @param string $callId
-     *
-     * @return $this
-     */
-    public function setCallId($callId)
-    {
-        return $this->withCallId($callId);
-    }
 
     /**
      * @param string $callId
@@ -69,18 +39,6 @@ class Dialogue extends RpcRequest
         $this->options['query']['CallId'] = $callId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallingNumber() instead.
-     *
-     * @param string $callingNumber
-     *
-     * @return $this
-     */
-    public function setCallingNumber($callingNumber)
-    {
-        return $this->withCallingNumber($callingNumber);
     }
 
     /**
@@ -97,18 +55,6 @@ class Dialogue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -119,18 +65,6 @@ class Dialogue extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCalledNumber() instead.
-     *
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function setCalledNumber($calledNumber)
-    {
-        return $this->withCalledNumber($calledNumber);
     }
 
     /**
@@ -147,18 +81,6 @@ class Dialogue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withActionKey() instead.
-     *
-     * @param string $actionKey
-     *
-     * @return $this
-     */
-    public function setActionKey($actionKey)
-    {
-        return $this->withActionKey($actionKey);
-    }
-
-    /**
      * @param string $actionKey
      *
      * @return $this
@@ -169,18 +91,6 @@ class Dialogue extends RpcRequest
         $this->options['query']['ActionKey'] = $actionKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionParams() instead.
-     *
-     * @param string $actionParams
-     *
-     * @return $this
-     */
-    public function setActionParams($actionParams)
-    {
-        return $this->withActionParams($actionParams);
     }
 
     /**
@@ -197,18 +107,6 @@ class Dialogue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallType() instead.
-     *
-     * @param string $callType
-     *
-     * @return $this
-     */
-    public function setCallType($callType)
-    {
-        return $this->withCallType($callType);
-    }
-
-    /**
      * @param string $callType
      *
      * @return $this
@@ -219,18 +117,6 @@ class Dialogue extends RpcRequest
         $this->options['query']['CallType'] = $callType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScenarioId() instead.
-     *
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function setScenarioId($scenarioId)
-    {
-        return $this->withScenarioId($scenarioId);
     }
 
     /**
@@ -247,18 +133,6 @@ class Dialogue extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
-    }
-
-    /**
      * @param string $taskId
      *
      * @return $this
@@ -269,18 +143,6 @@ class Dialogue extends RpcRequest
         $this->options['query']['TaskId'] = $taskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUtterance() instead.
-     *
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function setUtterance($utterance)
-    {
-        return $this->withUtterance($utterance);
     }
 
     /**

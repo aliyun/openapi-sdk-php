@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeIpv6Addresses
+ * Api DescribeIpv6Addresses
  *
  * @method string getResourceOwnerId()
  * @method string getIpv6InternetBandwidthId()
@@ -23,45 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getIpv6Address()
  * @method string getAssociatedInstanceId()
  */
-class DescribeIpv6Addresses extends RpcRequest
+class DescribeIpv6Addresses extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeIpv6Addresses';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -74,18 +44,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpv6InternetBandwidthId() instead.
-     *
-     * @param string $ipv6InternetBandwidthId
-     *
-     * @return $this
-     */
-    public function setIpv6InternetBandwidthId($ipv6InternetBandwidthId)
-    {
-        return $this->withIpv6InternetBandwidthId($ipv6InternetBandwidthId);
     }
 
     /**
@@ -102,18 +60,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -124,18 +70,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -152,18 +86,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAssociatedInstanceType() instead.
-     *
-     * @param string $associatedInstanceType
-     *
-     * @return $this
-     */
-    public function setAssociatedInstanceType($associatedInstanceType)
-    {
-        return $this->withAssociatedInstanceType($associatedInstanceType);
-    }
-
-    /**
      * @param string $associatedInstanceType
      *
      * @return $this
@@ -174,18 +96,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['AssociatedInstanceType'] = $associatedInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -202,18 +112,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -224,18 +122,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -252,18 +138,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -274,18 +148,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -302,18 +164,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6AddressId() instead.
-     *
-     * @param string $ipv6AddressId
-     *
-     * @return $this
-     */
-    public function setIpv6AddressId($ipv6AddressId)
-    {
-        return $this->withIpv6AddressId($ipv6AddressId);
-    }
-
-    /**
      * @param string $ipv6AddressId
      *
      * @return $this
@@ -324,18 +174,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['Ipv6AddressId'] = $ipv6AddressId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -352,18 +190,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -377,18 +203,6 @@ class DescribeIpv6Addresses extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6Address() instead.
-     *
-     * @param string $ipv6Address
-     *
-     * @return $this
-     */
-    public function setIpv6Address($ipv6Address)
-    {
-        return $this->withIpv6Address($ipv6Address);
-    }
-
-    /**
      * @param string $ipv6Address
      *
      * @return $this
@@ -399,18 +213,6 @@ class DescribeIpv6Addresses extends RpcRequest
         $this->options['query']['Ipv6Address'] = $ipv6Address;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAssociatedInstanceId() instead.
-     *
-     * @param string $associatedInstanceId
-     *
-     * @return $this
-     */
-    public function setAssociatedInstanceId($associatedInstanceId)
-    {
-        return $this->withAssociatedInstanceId($associatedInstanceId);
     }
 
     /**

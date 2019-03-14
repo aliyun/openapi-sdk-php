@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDcdnDomainWebsocketTrafficData
+ * Api DescribeDcdnDomainWebsocketTrafficData
  *
  * @method string getLocationNameEn()
  * @method string getStartTime()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getInterval()
  */
-class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
+class DescribeDcdnDomainWebsocketTrafficData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDcdnDomainWebsocketTrafficData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocationNameEn() instead.
-     *
-     * @param string $locationNameEn
-     *
-     * @return $this
-     */
-    public function setLocationNameEn($locationNameEn)
-    {
-        return $this->withLocationNameEn($locationNameEn);
-    }
 
     /**
      * @param string $locationNameEn
@@ -68,18 +38,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
         $this->options['query']['LocationNameEn'] = $locationNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -96,18 +54,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIspNameEn() instead.
-     *
-     * @param string $ispNameEn
-     *
-     * @return $this
-     */
-    public function setIspNameEn($ispNameEn)
-    {
-        return $this->withIspNameEn($ispNameEn);
-    }
-
-    /**
      * @param string $ispNameEn
      *
      * @return $this
@@ -118,18 +64,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
         $this->options['query']['IspNameEn'] = $ispNameEn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFixTimeGap() instead.
-     *
-     * @param string $fixTimeGap
-     *
-     * @return $this
-     */
-    public function setFixTimeGap($fixTimeGap)
-    {
-        return $this->withFixTimeGap($fixTimeGap);
     }
 
     /**
@@ -146,18 +80,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeMerge() instead.
-     *
-     * @param string $timeMerge
-     *
-     * @return $this
-     */
-    public function setTimeMerge($timeMerge)
-    {
-        return $this->withTimeMerge($timeMerge);
-    }
-
-    /**
      * @param string $timeMerge
      *
      * @return $this
@@ -168,18 +90,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
         $this->options['query']['TimeMerge'] = $timeMerge;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -196,18 +106,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -243,18 +129,6 @@ class DescribeDcdnDomainWebsocketTrafficData extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInterval() instead.
-     *
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function setInterval($interval)
-    {
-        return $this->withInterval($interval);
     }
 
     /**

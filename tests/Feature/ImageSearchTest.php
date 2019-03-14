@@ -35,19 +35,18 @@ class ImageSearchTest extends TestCase
      */
     public function testAddItem()
     {
-        $result = AlibabaCloud::imageSearch()
-                              ->v20180120()
-                              ->addItem()
-                              ->withInstanceName('sdktest')
-                              ->withCateId('0')
-                              ->withCustContent('{"key":"value"}')
-                              ->withItemId('1234')
-                              ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
-
+        $request = AlibabaCloud::imageSearch()
+                               ->v20180120()
+                               ->addItem()
+                               ->withInstanceName('sdktest')
+                               ->withCateId('0')
+                               ->withCustContent('{"key":"value"}')
+                               ->withItemId('1234')
+                               ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                               ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                               ->connectTimeout(30)
+                               ->timeout(35);
+        $result  = $request->request();
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
     }
@@ -98,5 +97,29 @@ class ImageSearchTest extends TestCase
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
+    }
+
+    public function testSetMethod()
+    {
+        $with = AlibabaCloud::imageSearch()
+                            ->v20180120()
+                            ->deleteItem()
+                            ->withInstanceName('sdktest')
+                            ->withItemId('1234')
+                            ->addPicture('picture')
+                            ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                            ->connectTimeout(30)
+                            ->timeout(35);
+
+        $set = AlibabaCloud::imageSearch()
+                           ->v20180120()
+                           ->deleteItem()
+                           ->setInstanceName('sdktest')
+                           ->setItemId('1234')
+                           ->addPicture('picture')
+                           ->host('imagesearch.cn-shanghai.aliyuncs.com')
+                           ->connectTimeout(30)
+                           ->timeout(35);
+        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }

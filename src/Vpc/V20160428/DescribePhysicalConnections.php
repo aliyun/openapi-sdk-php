@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribePhysicalConnections
+ * Api DescribePhysicalConnections
  *
  * @method array getFilter()
  * @method string getResourceOwnerId()
@@ -14,57 +14,18 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getPageSize()
  * @method string getOwnerId()
+ * @method string getIncludeReservationData()
  * @method string getPageNumber()
  */
-class DescribePhysicalConnections extends RpcRequest
+class DescribePhysicalConnections extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribePhysicalConnections';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
-    }
 
     /**
      * @param array $filter
@@ -85,18 +46,6 @@ class DescribePhysicalConnections extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -107,18 +56,6 @@ class DescribePhysicalConnections extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -135,18 +72,6 @@ class DescribePhysicalConnections extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -157,18 +82,6 @@ class DescribePhysicalConnections extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -185,18 +98,6 @@ class DescribePhysicalConnections extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -207,18 +108,6 @@ class DescribePhysicalConnections extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -235,15 +124,16 @@ class DescribePhysicalConnections extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
+     * @param string $includeReservationData
      *
      * @return $this
      */
-    public function setPageNumber($pageNumber)
+    public function withIncludeReservationData($includeReservationData)
     {
-        return $this->withPageNumber($pageNumber);
+        $this->data['IncludeReservationData'] = $includeReservationData;
+        $this->options['query']['IncludeReservationData'] = $includeReservationData;
+
+        return $this;
     }
 
     /**

@@ -2,13 +2,14 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryInstanceBill
+ * Api QueryInstanceBill
  *
  * @method string getIsBillingItem()
  * @method string getProductCode()
+ * @method string getIsHideZeroCharge()
  * @method string getSubscriptionType()
  * @method string getPageSize()
  * @method string getBillingCycle()
@@ -16,40 +17,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNum()
  * @method string getProductType()
  */
-class QueryInstanceBill extends RpcRequest
+class QueryInstanceBill extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryInstanceBill';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsBillingItem() instead.
-     *
-     * @param string $isBillingItem
-     *
-     * @return $this
-     */
-    public function setIsBillingItem($isBillingItem)
-    {
-        return $this->withIsBillingItem($isBillingItem);
-    }
 
     /**
      * @param string $isBillingItem
@@ -62,18 +36,6 @@ class QueryInstanceBill extends RpcRequest
         $this->options['query']['IsBillingItem'] = $isBillingItem;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
     }
 
     /**
@@ -90,15 +52,16 @@ class QueryInstanceBill extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
+     * @param string $isHideZeroCharge
      *
      * @return $this
      */
-    public function setSubscriptionType($subscriptionType)
+    public function withIsHideZeroCharge($isHideZeroCharge)
     {
-        return $this->withSubscriptionType($subscriptionType);
+        $this->data['IsHideZeroCharge'] = $isHideZeroCharge;
+        $this->options['query']['IsHideZeroCharge'] = $isHideZeroCharge;
+
+        return $this;
     }
 
     /**
@@ -115,18 +78,6 @@ class QueryInstanceBill extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -137,18 +88,6 @@ class QueryInstanceBill extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBillingCycle() instead.
-     *
-     * @param string $billingCycle
-     *
-     * @return $this
-     */
-    public function setBillingCycle($billingCycle)
-    {
-        return $this->withBillingCycle($billingCycle);
     }
 
     /**
@@ -165,18 +104,6 @@ class QueryInstanceBill extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -190,18 +117,6 @@ class QueryInstanceBill extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -212,18 +127,6 @@ class QueryInstanceBill extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

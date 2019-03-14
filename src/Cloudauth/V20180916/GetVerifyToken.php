@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cloudauth\V20180916;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetVerifyToken
+ * Api GetVerifyToken
  *
  * @method string getUserData()
  * @method string getResourceOwnerId()
@@ -15,51 +15,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVerifyConfigs()
  * @method string getTicketId()
  */
-class GetVerifyToken extends RpcRequest
+class GetVerifyToken extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cloudauth';
 
-    /**
-     * @var string
-     */
     public $version = '2018-09-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetVerifyToken';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
 
     /**
      * @param string $userData
@@ -72,18 +38,6 @@ class GetVerifyToken extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +54,6 @@ class GetVerifyToken extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBiz() instead.
-     *
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function setBiz($biz)
-    {
-        return $this->withBiz($biz);
-    }
-
-    /**
      * @param string $biz
      *
      * @return $this
@@ -122,18 +64,6 @@ class GetVerifyToken extends RpcRequest
         $this->options['query']['Biz'] = $biz;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
     }
 
     /**
@@ -150,18 +80,6 @@ class GetVerifyToken extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBinding() instead.
-     *
-     * @param string $binding
-     *
-     * @return $this
-     */
-    public function setBinding($binding)
-    {
-        return $this->withBinding($binding);
-    }
-
-    /**
      * @param string $binding
      *
      * @return $this
@@ -175,18 +93,6 @@ class GetVerifyToken extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVerifyConfigs() instead.
-     *
-     * @param string $verifyConfigs
-     *
-     * @return $this
-     */
-    public function setVerifyConfigs($verifyConfigs)
-    {
-        return $this->withVerifyConfigs($verifyConfigs);
-    }
-
-    /**
      * @param string $verifyConfigs
      *
      * @return $this
@@ -197,18 +103,6 @@ class GetVerifyToken extends RpcRequest
         $this->options['query']['VerifyConfigs'] = $verifyConfigs;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTicketId() instead.
-     *
-     * @param string $ticketId
-     *
-     * @return $this
-     */
-    public function setTicketId($ticketId)
-    {
-        return $this->withTicketId($ticketId);
     }
 
     /**

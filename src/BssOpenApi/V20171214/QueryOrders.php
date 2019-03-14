@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryOrders
+ * Api QueryOrders
  *
  * @method string getProductCode()
  * @method string getSubscriptionType()
@@ -18,40 +18,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getProductType()
  * @method string getOrderType()
  */
-class QueryOrders extends RpcRequest
+class QueryOrders extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryOrders';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
 
     /**
      * @param string $productCode
@@ -64,18 +37,6 @@ class QueryOrders extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
     }
 
     /**
@@ -92,18 +53,6 @@ class QueryOrders extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -114,18 +63,6 @@ class QueryOrders extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPaymentStatus() instead.
-     *
-     * @param string $paymentStatus
-     *
-     * @return $this
-     */
-    public function setPaymentStatus($paymentStatus)
-    {
-        return $this->withPaymentStatus($paymentStatus);
     }
 
     /**
@@ -142,18 +79,6 @@ class QueryOrders extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeStart() instead.
-     *
-     * @param string $createTimeStart
-     *
-     * @return $this
-     */
-    public function setCreateTimeStart($createTimeStart)
-    {
-        return $this->withCreateTimeStart($createTimeStart);
-    }
-
-    /**
      * @param string $createTimeStart
      *
      * @return $this
@@ -164,18 +89,6 @@ class QueryOrders extends RpcRequest
         $this->options['query']['CreateTimeStart'] = $createTimeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -192,18 +105,6 @@ class QueryOrders extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -214,18 +115,6 @@ class QueryOrders extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeEnd() instead.
-     *
-     * @param string $createTimeEnd
-     *
-     * @return $this
-     */
-    public function setCreateTimeEnd($createTimeEnd)
-    {
-        return $this->withCreateTimeEnd($createTimeEnd);
     }
 
     /**
@@ -242,18 +131,6 @@ class QueryOrders extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
-    }
-
-    /**
      * @param string $productType
      *
      * @return $this
@@ -264,18 +141,6 @@ class QueryOrders extends RpcRequest
         $this->options['query']['ProductType'] = $productType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

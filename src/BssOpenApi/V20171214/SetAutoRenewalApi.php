@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetAutoRenewalApi
+ * Api SetAutoRenewalApi
  *
  * @method string getProductCode()
  * @method string getInstanceIDs()
@@ -16,40 +16,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getProductType()
  */
-class SetAutoRenewalApi extends RpcRequest
+class SetAutoRenewalApi extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetAutoRenewalApi';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
-    }
 
     /**
      * @param string $productCode
@@ -62,18 +35,6 @@ class SetAutoRenewalApi extends RpcRequest
         $this->options['query']['ProductCode'] = $productCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIDs() instead.
-     *
-     * @param string $instanceIDs
-     *
-     * @return $this
-     */
-    public function setInstanceIDs($instanceIDs)
-    {
-        return $this->withInstanceIDs($instanceIDs);
     }
 
     /**
@@ -90,18 +51,6 @@ class SetAutoRenewalApi extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionType() instead.
-     *
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function setSubscriptionType($subscriptionType)
-    {
-        return $this->withSubscriptionType($subscriptionType);
-    }
-
-    /**
      * @param string $subscriptionType
      *
      * @return $this
@@ -112,18 +61,6 @@ class SetAutoRenewalApi extends RpcRequest
         $this->options['query']['SubscriptionType'] = $subscriptionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRenewalPeriodUnit() instead.
-     *
-     * @param string $renewalPeriodUnit
-     *
-     * @return $this
-     */
-    public function setRenewalPeriodUnit($renewalPeriodUnit)
-    {
-        return $this->withRenewalPeriodUnit($renewalPeriodUnit);
     }
 
     /**
@@ -140,18 +77,6 @@ class SetAutoRenewalApi extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRenewalPeriod() instead.
-     *
-     * @param string $renewalPeriod
-     *
-     * @return $this
-     */
-    public function setRenewalPeriod($renewalPeriod)
-    {
-        return $this->withRenewalPeriod($renewalPeriod);
-    }
-
-    /**
      * @param string $renewalPeriod
      *
      * @return $this
@@ -162,18 +87,6 @@ class SetAutoRenewalApi extends RpcRequest
         $this->options['query']['RenewalPeriod'] = $renewalPeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIsAutoRenewal() instead.
-     *
-     * @param string $isAutoRenewal
-     *
-     * @return $this
-     */
-    public function setIsAutoRenewal($isAutoRenewal)
-    {
-        return $this->withIsAutoRenewal($isAutoRenewal);
     }
 
     /**
@@ -190,18 +103,6 @@ class SetAutoRenewalApi extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -212,18 +113,6 @@ class SetAutoRenewalApi extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductType() instead.
-     *
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function setProductType($productType)
-    {
-        return $this->withProductType($productType);
     }
 
     /**

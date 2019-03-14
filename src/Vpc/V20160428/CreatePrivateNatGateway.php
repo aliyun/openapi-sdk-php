@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreatePrivateNatGateway
+ * Api CreatePrivateNatGateway
  *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
@@ -20,45 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getName()
  * @method string getChargeType()
  */
-class CreatePrivateNatGateway extends RpcRequest
+class CreatePrivateNatGateway extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreatePrivateNatGateway';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -71,18 +41,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -99,18 +57,6 @@ class CreatePrivateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withData() instead.
-     *
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        return $this->withData($data);
-    }
-
-    /**
      * @param string $data
      *
      * @return $this
@@ -121,18 +67,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['Data'] = $data;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -149,18 +83,6 @@ class CreatePrivateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -171,18 +93,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -199,18 +109,6 @@ class CreatePrivateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -221,18 +119,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -249,18 +135,6 @@ class CreatePrivateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpec() instead.
-     *
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function setSpec($spec)
-    {
-        return $this->withSpec($spec);
-    }
-
-    /**
      * @param string $spec
      *
      * @return $this
@@ -271,18 +145,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['Spec'] = $spec;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setvpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -299,18 +161,6 @@ class CreatePrivateNatGateway extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -321,18 +171,6 @@ class CreatePrivateNatGateway extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
     }
 
     /**

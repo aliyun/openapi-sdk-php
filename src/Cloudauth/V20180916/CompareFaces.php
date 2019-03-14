@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cloudauth\V20180916;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CompareFaces
+ * Api CompareFaces
  *
  * @method string getSourceImageType()
  * @method string getResourceOwnerId()
@@ -14,51 +14,17 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSourceImageValue()
  * @method string getTargetImageValue()
  */
-class CompareFaces extends RpcRequest
+class CompareFaces extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cloudauth';
 
-    /**
-     * @var string
-     */
     public $version = '2018-09-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'CompareFaces';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceImageType() instead.
-     *
-     * @param string $sourceImageType
-     *
-     * @return $this
-     */
-    public function setSourceImageType($sourceImageType)
-    {
-        return $this->withSourceImageType($sourceImageType);
-    }
 
     /**
      * @param string $sourceImageType
@@ -71,18 +37,6 @@ class CompareFaces extends RpcRequest
         $this->options['query']['SourceImageType'] = $sourceImageType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -99,18 +53,6 @@ class CompareFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceIp() instead.
-     *
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function setSourceIp($sourceIp)
-    {
-        return $this->withSourceIp($sourceIp);
-    }
-
-    /**
      * @param string $sourceIp
      *
      * @return $this
@@ -121,18 +63,6 @@ class CompareFaces extends RpcRequest
         $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetImageType() instead.
-     *
-     * @param string $targetImageType
-     *
-     * @return $this
-     */
-    public function setTargetImageType($targetImageType)
-    {
-        return $this->withTargetImageType($targetImageType);
     }
 
     /**
@@ -149,18 +79,6 @@ class CompareFaces extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceImageValue() instead.
-     *
-     * @param string $sourceImageValue
-     *
-     * @return $this
-     */
-    public function setSourceImageValue($sourceImageValue)
-    {
-        return $this->withSourceImageValue($sourceImageValue);
-    }
-
-    /**
      * @param string $sourceImageValue
      *
      * @return $this
@@ -171,18 +89,6 @@ class CompareFaces extends RpcRequest
         $this->options['query']['SourceImageValue'] = $sourceImageValue;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTargetImageValue() instead.
-     *
-     * @param string $targetImageValue
-     *
-     * @return $this
-     */
-    public function setTargetImageValue($targetImageValue)
-    {
-        return $this->withTargetImageValue($targetImageValue);
     }
 
     /**

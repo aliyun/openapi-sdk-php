@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRouteTableList
+ * Api DescribeRouteTableList
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -18,47 +18,18 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRouterId()
  * @method string getVpcId()
  * @method string getPageSize()
+ * @method array getTag()
  * @method string getRouteTableId()
  */
-class DescribeRouteTableList extends RpcRequest
+class DescribeRouteTableList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRouteTableList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -71,18 +42,6 @@ class DescribeRouteTableList extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -99,18 +58,6 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -121,18 +68,6 @@ class DescribeRouteTableList extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -149,18 +84,6 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -171,18 +94,6 @@ class DescribeRouteTableList extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouterType() instead.
-     *
-     * @param string $routerType
-     *
-     * @return $this
-     */
-    public function setRouterType($routerType)
-    {
-        return $this->withRouterType($routerType);
     }
 
     /**
@@ -199,18 +110,6 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
-    }
-
-    /**
      * @param string $resourceGroupId
      *
      * @return $this
@@ -221,18 +120,6 @@ class DescribeRouteTableList extends RpcRequest
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableName() instead.
-     *
-     * @param string $routeTableName
-     *
-     * @return $this
-     */
-    public function setRouteTableName($routeTableName)
-    {
-        return $this->withRouteTableName($routeTableName);
     }
 
     /**
@@ -249,18 +136,6 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRouterId() instead.
-     *
-     * @param string $routerId
-     *
-     * @return $this
-     */
-    public function setRouterId($routerId)
-    {
-        return $this->withRouterId($routerId);
-    }
-
-    /**
      * @param string $routerId
      *
      * @return $this
@@ -271,18 +146,6 @@ class DescribeRouteTableList extends RpcRequest
         $this->options['query']['RouterId'] = $routerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
     }
 
     /**
@@ -299,18 +162,6 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -324,15 +175,19 @@ class DescribeRouteTableList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableId() instead.
-     *
-     * @param string $routeTableId
+     * @param array $tag
      *
      * @return $this
      */
-    public function setRouteTableId($routeTableId)
+    public function withTag(array $tag)
     {
-        return $this->withRouteTableId($routeTableId);
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $i => $iValue) {
+            $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
+            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
+        }
+
+        return $this;
     }
 
     /**

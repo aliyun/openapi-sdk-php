@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Lubancloud\V20180509;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitGenerateTask
+ * Api SubmitGenerateTask
  *
  * @method string getImageCount()
  * @method string getActionPoint()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getPropertyId()
  * @method string getHeight()
  */
-class SubmitGenerateTask extends RpcRequest
+class SubmitGenerateTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'lubancloud';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitGenerateTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'luban';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageCount() instead.
-     *
-     * @param string $imageCount
-     *
-     * @return $this
-     */
-    public function setImageCount($imageCount)
-    {
-        return $this->withImageCount($imageCount);
-    }
 
     /**
      * @param string $imageCount
@@ -68,18 +38,6 @@ class SubmitGenerateTask extends RpcRequest
         $this->options['query']['ImageCount'] = $imageCount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionPoint() instead.
-     *
-     * @param string $actionPoint
-     *
-     * @return $this
-     */
-    public function setActionPoint($actionPoint)
-    {
-        return $this->withActionPoint($actionPoint);
     }
 
     /**
@@ -96,18 +54,6 @@ class SubmitGenerateTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogoImagePath() instead.
-     *
-     * @param string $logoImagePath
-     *
-     * @return $this
-     */
-    public function setLogoImagePath($logoImagePath)
-    {
-        return $this->withLogoImagePath($logoImagePath);
-    }
-
-    /**
      * @param string $logoImagePath
      *
      * @return $this
@@ -121,18 +67,6 @@ class SubmitGenerateTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
-    }
-
-    /**
      * @param string $type
      *
      * @return $this
@@ -143,28 +77,6 @@ class SubmitGenerateTask extends RpcRequest
         $this->options['query']['Type'] = $type;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMajorImagePath() instead.
-     *
-     * @return array
-     */
-    public function getMajorImagePaths()
-    {
-        return $this->getMajorImagePath();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMajorImagePath() instead.
-     *
-     * @param array $majorImagePaths
-     *
-     * @return $this
-     */
-    public function setMajorImagePaths(array $majorImagePaths)
-    {
-        return $this->withMajorImagePath($majorImagePaths);
     }
 
     /**
@@ -183,18 +95,6 @@ class SubmitGenerateTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withWidth() instead.
-     *
-     * @param string $width
-     *
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        return $this->withWidth($width);
-    }
-
-    /**
      * @param string $width
      *
      * @return $this
@@ -205,28 +105,6 @@ class SubmitGenerateTask extends RpcRequest
         $this->options['query']['Width'] = $width;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getCopyWrite() instead.
-     *
-     * @return array
-     */
-    public function getCopyWrites()
-    {
-        return $this->getCopyWrite();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCopyWrite() instead.
-     *
-     * @param array $copyWrites
-     *
-     * @return $this
-     */
-    public function setCopyWrites(array $copyWrites)
-    {
-        return $this->withCopyWrite($copyWrites);
     }
 
     /**
@@ -245,28 +123,6 @@ class SubmitGenerateTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getPropertyId() instead.
-     *
-     * @return array
-     */
-    public function getPropertyIds()
-    {
-        return $this->getPropertyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPropertyId() instead.
-     *
-     * @param array $propertyIds
-     *
-     * @return $this
-     */
-    public function setPropertyIds(array $propertyIds)
-    {
-        return $this->withPropertyId($propertyIds);
-    }
-
-    /**
      * @param array $propertyId
      *
      * @return $this
@@ -279,18 +135,6 @@ class SubmitGenerateTask extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHeight() instead.
-     *
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        return $this->withHeight($height);
     }
 
     /**

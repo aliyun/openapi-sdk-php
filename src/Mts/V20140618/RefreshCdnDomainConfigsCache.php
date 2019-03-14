@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RefreshCdnDomainConfigsCache
+ * Api RefreshCdnDomainConfigsCache
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDomains()
  * @method string getOwnerId()
  */
-class RefreshCdnDomainConfigsCache extends RpcRequest
+class RefreshCdnDomainConfigsCache extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'RefreshCdnDomainConfigsCache';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +34,6 @@ class RefreshCdnDomainConfigsCache extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -92,18 +50,6 @@ class RefreshCdnDomainConfigsCache extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -117,18 +63,6 @@ class RefreshCdnDomainConfigsCache extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomains() instead.
-     *
-     * @param string $domains
-     *
-     * @return $this
-     */
-    public function setDomains($domains)
-    {
-        return $this->withDomains($domains);
-    }
-
-    /**
      * @param string $domains
      *
      * @return $this
@@ -139,18 +73,6 @@ class RefreshCdnDomainConfigsCache extends RpcRequest
         $this->options['query']['Domains'] = $domains;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

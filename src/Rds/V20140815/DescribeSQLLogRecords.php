@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSQLLogRecords
+ * Api DescribeSQLLogRecords
  *
  * @method string getSQLId()
  * @method string getResourceOwnerId()
@@ -23,45 +23,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getUser()
  */
-class DescribeSQLLogRecords extends RpcRequest
+class DescribeSQLLogRecords extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSQLLogRecords';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSQLId() instead.
-     *
-     * @param string $sQLId
-     *
-     * @return $this
-     */
-    public function setSQLId($sQLId)
-    {
-        return $this->withSQLId($sQLId);
-    }
 
     /**
      * @param string $sQLId
@@ -74,18 +44,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['SQLId'] = $sQLId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -102,18 +60,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -124,18 +70,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -152,18 +86,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -174,18 +96,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -202,18 +112,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -224,18 +122,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -252,18 +138,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryKeywords() instead.
-     *
-     * @param string $queryKeywords
-     *
-     * @return $this
-     */
-    public function setQueryKeywords($queryKeywords)
-    {
-        return $this->withQueryKeywords($queryKeywords);
-    }
-
-    /**
      * @param string $queryKeywords
      *
      * @return $this
@@ -274,18 +148,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['QueryKeywords'] = $queryKeywords;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -302,18 +164,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDatabase() instead.
-     *
-     * @param string $database
-     *
-     * @return $this
-     */
-    public function setDatabase($database)
-    {
-        return $this->withDatabase($database);
-    }
-
-    /**
      * @param string $database
      *
      * @return $this
@@ -324,18 +174,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['Database'] = $database;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForm() instead.
-     *
-     * @param string $form
-     *
-     * @return $this
-     */
-    public function setForm($form)
-    {
-        return $this->withForm($form);
     }
 
     /**
@@ -352,18 +190,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -377,18 +203,6 @@ class DescribeSQLLogRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -399,18 +213,6 @@ class DescribeSQLLogRecords extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUser() instead.
-     *
-     * @param string $user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        return $this->withUser($user);
     }
 
     /**

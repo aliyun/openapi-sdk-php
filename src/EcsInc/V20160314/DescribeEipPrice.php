@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeEipPrice
+ * Api DescribeEipPrice
  *
  * @method string getResourceOwnerId()
  * @method string getAmount()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getOrderType()
  */
-class DescribeEipPrice extends RpcRequest
+class DescribeEipPrice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeEipPrice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -68,18 +38,6 @@ class DescribeEipPrice extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAmount() instead.
-     *
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        return $this->withAmount($amount);
     }
 
     /**
@@ -96,18 +54,6 @@ class DescribeEipPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -118,18 +64,6 @@ class DescribeEipPrice extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -146,18 +80,6 @@ class DescribeEipPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -168,18 +90,6 @@ class DescribeEipPrice extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -196,18 +106,6 @@ class DescribeEipPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
-    }
-
-    /**
      * @param string $internetMaxBandwidthOut
      *
      * @return $this
@@ -221,18 +119,6 @@ class DescribeEipPrice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -243,18 +129,6 @@ class DescribeEipPrice extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

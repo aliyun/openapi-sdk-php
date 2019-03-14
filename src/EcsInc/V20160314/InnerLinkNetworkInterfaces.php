@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerLinkNetworkInterfaces
+ * Api InnerLinkNetworkInterfaces
  *
  * @method string getResourceOwnerId()
  * @method string getDestNetworkInterfaceId()
@@ -14,32 +14,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method array getSrcNetworkInterface()
  */
-class InnerLinkNetworkInterfaces extends RpcRequest
+class InnerLinkNetworkInterfaces extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerLinkNetworkInterfaces';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
 
     /**

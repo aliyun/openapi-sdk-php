@@ -2,56 +2,43 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of EnablePhysicalConnection
+ * Api EnablePhysicalConnection
  *
+ * @method string getPeriod()
  * @method string getResourceOwnerId()
+ * @method string getAutoPay()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getPhysicalConnectionId()
  * @method string getOwnerAccount()
  * @method string getOwnerId()
+ * @method string getInstanceChargeType()
+ * @method string getPricingCycle()
  */
-class EnablePhysicalConnection extends RpcRequest
+class EnablePhysicalConnection extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'EnablePhysicalConnection';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
+     * @param string $period
      *
      * @return $this
      */
-    public function setResourceOwnerId($resourceOwnerId)
+    public function withPeriod($period)
     {
-        return $this->withResourceOwnerId($resourceOwnerId);
+        $this->data['Period'] = $period;
+        $this->options['query']['Period'] = $period;
+
+        return $this;
     }
 
     /**
@@ -68,15 +55,16 @@ class EnablePhysicalConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
+     * @param string $autoPay
      *
      * @return $this
      */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
+    public function withAutoPay($autoPay)
     {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
+        $this->data['AutoPay'] = $autoPay;
+        $this->options['query']['AutoPay'] = $autoPay;
+
+        return $this;
     }
 
     /**
@@ -93,18 +81,6 @@ class EnablePhysicalConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -115,18 +91,6 @@ class EnablePhysicalConnection extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhysicalConnectionId() instead.
-     *
-     * @param string $physicalConnectionId
-     *
-     * @return $this
-     */
-    public function setPhysicalConnectionId($physicalConnectionId)
-    {
-        return $this->withPhysicalConnectionId($physicalConnectionId);
     }
 
     /**
@@ -143,18 +107,6 @@ class EnablePhysicalConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +120,6 @@ class EnablePhysicalConnection extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -188,6 +128,32 @@ class EnablePhysicalConnection extends RpcRequest
     {
         $this->data['OwnerId'] = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $instanceChargeType
+     *
+     * @return $this
+     */
+    public function withInstanceChargeType($instanceChargeType)
+    {
+        $this->data['InstanceChargeType'] = $instanceChargeType;
+        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pricingCycle
+     *
+     * @return $this
+     */
+    public function withPricingCycle($pricingCycle)
+    {
+        $this->data['PricingCycle'] = $pricingCycle;
+        $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
     }

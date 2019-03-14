@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryFailReasonForDomainRealNameVerification
+ * Api QueryFailReasonForDomainRealNameVerification
  *
  * @method string getRealNameVerificationAction()
  * @method string getUserClientIp()
  * @method string getDomainName()
  * @method string getLang()
  */
-class QueryFailReasonForDomainRealNameVerification extends RpcRequest
+class QueryFailReasonForDomainRealNameVerification extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryFailReasonForDomainRealNameVerification';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

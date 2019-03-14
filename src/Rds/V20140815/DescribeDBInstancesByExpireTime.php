@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDBInstancesByExpireTime
+ * Api DescribeDBInstancesByExpireTime
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getExpirePeriod()
  * @method string getProxyId()
  */
-class DescribeDBInstancesByExpireTime extends RpcRequest
+class DescribeDBInstancesByExpireTime extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDBInstancesByExpireTime';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -69,18 +39,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpired() instead.
-     *
-     * @param string $expired
-     *
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        return $this->withExpired($expired);
-    }
-
-    /**
      * @param string $expired
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
         $this->options['query']['Expired'] = $expired;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpirePeriod() instead.
-     *
-     * @param string $expirePeriod
-     *
-     * @return $this
-     */
-    public function setExpirePeriod($expirePeriod)
-    {
-        return $this->withExpirePeriod($expirePeriod);
-    }
-
-    /**
      * @param string $expirePeriod
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeDBInstancesByExpireTime extends RpcRequest
         $this->options['query']['ExpirePeriod'] = $expirePeriod;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

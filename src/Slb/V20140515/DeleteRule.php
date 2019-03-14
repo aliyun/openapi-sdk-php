@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteRule
+ * Api DeleteRule
  *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
@@ -16,55 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class DeleteRule extends RpcRequest
+class DeleteRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Slb';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'slb';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getAccessKeyId() instead.
-     *
-     * @return string
-     */
-    public function getaccess_key_id()
-    {
-        return $this->getAccessKeyId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccessKeyId() instead.
-     *
-     * @param string $access_key_id
-     *
-     * @return $this
-     */
-    public function setaccess_key_id($access_key_id)
-    {
-        return $this->withAccessKeyId($access_key_id);
-    }
 
     /**
      * @param string $accessKeyId
@@ -77,18 +37,6 @@ class DeleteRule extends RpcRequest
         $this->options['query']['access_key_id'] = $accessKeyId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -105,18 +53,6 @@ class DeleteRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withListenerPort() instead.
-     *
-     * @param string $listenerPort
-     *
-     * @return $this
-     */
-    public function setListenerPort($listenerPort)
-    {
-        return $this->withListenerPort($listenerPort);
-    }
-
-    /**
      * @param string $listenerPort
      *
      * @return $this
@@ -127,18 +63,6 @@ class DeleteRule extends RpcRequest
         $this->options['query']['ListenerPort'] = $listenerPort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoadBalancerId() instead.
-     *
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function setLoadBalancerId($loadBalancerId)
-    {
-        return $this->withLoadBalancerId($loadBalancerId);
     }
 
     /**
@@ -155,18 +79,6 @@ class DeleteRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainList() instead.
-     *
-     * @param string $domainList
-     *
-     * @return $this
-     */
-    public function setDomainList($domainList)
-    {
-        return $this->withDomainList($domainList);
-    }
-
-    /**
      * @param string $domainList
      *
      * @return $this
@@ -177,18 +89,6 @@ class DeleteRule extends RpcRequest
         $this->options['query']['DomainList'] = $domainList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -205,18 +105,6 @@ class DeleteRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -227,18 +115,6 @@ class DeleteRule extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

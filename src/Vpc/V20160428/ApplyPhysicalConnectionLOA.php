@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ApplyPhysicalConnectionLOA
+ * Api ApplyPhysicalConnectionLOA
  *
  * @method string getResourceOwnerId()
  * @method string getPeerLocation()
@@ -16,38 +16,19 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getConstructionTime()
  * @method string getOwnerId()
- * @method string getLineOperator()
  * @method string getInstanceId()
  * @method string getCompanyName()
  * @method string getSi()
  * @method array getPMInfo()
  */
-class ApplyPhysicalConnectionLOA extends RpcRequest
+class ApplyPhysicalConnectionLOA extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'ApplyPhysicalConnectionLOA';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
 
     /**
@@ -163,19 +144,6 @@ class ApplyPhysicalConnectionLOA extends RpcRequest
     {
         $this->data['OwnerId'] = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lineOperator
-     *
-     * @return $this
-     */
-    public function withLineOperator($lineOperator)
-    {
-        $this->data['LineOperator'] = $lineOperator;
-        $this->options['query']['LineOperator'] = $lineOperator;
 
         return $this;
     }

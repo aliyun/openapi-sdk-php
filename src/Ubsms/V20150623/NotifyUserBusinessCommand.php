@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ubsms\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NotifyUserBusinessCommand
+ * Api NotifyUserBusinessCommand
  *
  * @method string getUid()
  * @method string getPassword()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCmd()
  * @method string getRegion()
  */
-class NotifyUserBusinessCommand extends RpcRequest
+class NotifyUserBusinessCommand extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'NotifyUserBusinessCommand';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -61,18 +34,6 @@ class NotifyUserBusinessCommand extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -89,18 +50,6 @@ class NotifyUserBusinessCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
@@ -111,18 +60,6 @@ class NotifyUserBusinessCommand extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
     }
 
     /**
@@ -139,18 +76,6 @@ class NotifyUserBusinessCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -164,18 +89,6 @@ class NotifyUserBusinessCommand extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCmd() instead.
-     *
-     * @param string $cmd
-     *
-     * @return $this
-     */
-    public function setCmd($cmd)
-    {
-        return $this->withCmd($cmd);
-    }
-
-    /**
      * @param string $cmd
      *
      * @return $this
@@ -186,18 +99,6 @@ class NotifyUserBusinessCommand extends RpcRequest
         $this->options['query']['Cmd'] = $cmd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**

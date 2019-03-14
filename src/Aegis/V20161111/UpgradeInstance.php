@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpgradeInstance
+ * Api UpgradeInstance
  *
  * @method string getInstanceId()
  * @method string getClientToken()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getVersionCode()
  */
-class UpgradeInstance extends RpcRequest
+class UpgradeInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpgradeInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -64,18 +34,6 @@ class UpgradeInstance extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -92,18 +50,6 @@ class UpgradeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVmNumber() instead.
-     *
-     * @param string $vmNumber
-     *
-     * @return $this
-     */
-    public function setVmNumber($vmNumber)
-    {
-        return $this->withVmNumber($vmNumber);
-    }
-
-    /**
      * @param string $vmNumber
      *
      * @return $this
@@ -117,18 +63,6 @@ class UpgradeInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -139,18 +73,6 @@ class UpgradeInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersionCode() instead.
-     *
-     * @param string $versionCode
-     *
-     * @return $this
-     */
-    public function setVersionCode($versionCode)
-    {
-        return $this->withVersionCode($versionCode);
     }
 
     /**

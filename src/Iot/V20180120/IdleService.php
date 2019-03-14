@@ -2,34 +2,19 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of IdleService
+ * Api IdleService
  *
  * @method string getIotInstanceId()
  */
-class IdleService extends RpcRequest
+class IdleService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'IdleService';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

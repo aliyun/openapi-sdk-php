@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateUserUsageDataExportTask
+ * Api CreateUserUsageDataExportTask
  *
  * @method string getTaskName()
  * @method string getLanguage()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class CreateUserUsageDataExportTask extends RpcRequest
+class CreateUserUsageDataExportTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateUserUsageDataExportTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskName() instead.
-     *
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function setTaskName($taskName)
-    {
-        return $this->withTaskName($taskName);
-    }
 
     /**
      * @param string $taskName
@@ -59,18 +32,6 @@ class CreateUserUsageDataExportTask extends RpcRequest
         $this->options['query']['TaskName'] = $taskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLanguage() instead.
-     *
-     * @param string $language
-     *
-     * @return $this
-     */
-    public function setLanguage($language)
-    {
-        return $this->withLanguage($language);
     }
 
     /**
@@ -87,18 +48,6 @@ class CreateUserUsageDataExportTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -112,18 +61,6 @@ class CreateUserUsageDataExportTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -134,18 +71,6 @@ class CreateUserUsageDataExportTask extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

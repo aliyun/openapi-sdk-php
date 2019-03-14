@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCheckWarningSummary
+ * Api DescribeCheckWarningSummary
  *
  * @method string getRiskName()
  * @method string getSourceIp()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStatus()
  * @method string getUuids()
  */
-class DescribeCheckWarningSummary extends RpcRequest
+class DescribeCheckWarningSummary extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCheckWarningSummary';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

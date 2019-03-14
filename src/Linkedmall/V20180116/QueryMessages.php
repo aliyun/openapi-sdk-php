@@ -2,53 +2,36 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryMessages
+ * Api QueryMessages
  *
+ * @method string getExtJson()
  * @method string getBizId()
  * @method string getTopic()
- * @method string getExtJson()
  */
-class QueryMessages extends RpcRequest
+class QueryMessages extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryMessages';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBizId() instead.
-     *
-     * @param string $bizId
+     * @param string $extJson
      *
      * @return $this
      */
-    public function setBizId($bizId)
+    public function withExtJson($extJson)
     {
-        return $this->withBizId($bizId);
+        $this->data['ExtJson'] = $extJson;
+        $this->options['query']['ExtJson'] = $extJson;
+
+        return $this;
     }
 
     /**
@@ -65,18 +48,6 @@ class QueryMessages extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTopic() instead.
-     *
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function setTopic($topic)
-    {
-        return $this->withTopic($topic);
-    }
-
-    /**
      * @param string $topic
      *
      * @return $this
@@ -85,31 +56,6 @@ class QueryMessages extends RpcRequest
     {
         $this->data['Topic'] = $topic;
         $this->options['query']['Topic'] = $topic;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExtJson() instead.
-     *
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function setExtJson($extJson)
-    {
-        return $this->withExtJson($extJson);
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
 
         return $this;
     }

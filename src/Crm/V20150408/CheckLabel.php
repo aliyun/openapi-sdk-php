@@ -2,49 +2,24 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckLabel
+ * Api CheckLabel
  *
  * @method string getLabelSeries()
  * @method string getPK()
  * @method string getLabelName()
  */
-class CheckLabel extends RpcRequest
+class CheckLabel extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Crm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-04-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckLabel';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
+    public $serviceCode = 'crm';
 
     /**
      * @param string $labelSeries
@@ -60,18 +35,6 @@ class CheckLabel extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPK() instead.
-     *
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function setPK($pK)
-    {
-        return $this->withPK($pK);
-    }
-
-    /**
      * @param string $pK
      *
      * @return $this
@@ -82,18 +45,6 @@ class CheckLabel extends RpcRequest
         $this->options['query']['PK'] = $pK;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabelName() instead.
-     *
-     * @param string $labelName
-     *
-     * @return $this
-     */
-    public function setLabelName($labelName)
-    {
-        return $this->withLabelName($labelName);
     }
 
     /**

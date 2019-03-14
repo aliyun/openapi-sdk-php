@@ -15,6 +15,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetQuotaHistoryInfo getQuotaHistoryInfo(array $options = [])
  * @method GetQuotaInstance getQuotaInstance(array $options = [])
  * @method GetUserInstance getUserInstance(array $options = [])
+ * @method ListUserQuotas listUserQuotas(array $options = [])
  * @method QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
  * @method QueryResourceInventory queryResourceInventory(array $options = [])
  * @method QueryTopology queryTopology(array $options = [])

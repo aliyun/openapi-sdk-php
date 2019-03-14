@@ -12,6 +12,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeBidRelationByBid describeBidRelationByBid(array $options = [])
  * @method DescribeBidUserBusinessStatus describeBidUserBusinessStatus(array $options = [])
  * @method DescribeBusinessStatus describeBusinessStatus(array $options = [])
+ * @method DescribeBusinessStatusAndKeep describeBusinessStatusAndKeep(array $options = [])
  * @method DescribeBusinessStatusOfUser describeBusinessStatusOfUser(array $options = [])
  * @method DescribeUserBusinessStatus describeUserBusinessStatus(array $options = [])
  * @method DescribeUserNetworkType describeUserNetworkType(array $options = [])

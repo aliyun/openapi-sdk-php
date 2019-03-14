@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeOrganizationDeletable
+ * Api DescribeOrganizationDeletable
  *
  * @method string getOrganizationId()
  * @method string getLocation()
  */
-class DescribeOrganizationDeletable extends RpcRequest
+class DescribeOrganizationDeletable extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeOrganizationDeletable';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
 
     /**
      * @param string $organizationId
@@ -56,18 +29,6 @@ class DescribeOrganizationDeletable extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
     }
 
     /**

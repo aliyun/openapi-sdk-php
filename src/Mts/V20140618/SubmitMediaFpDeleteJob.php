@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitMediaFpDeleteJob
+ * Api SubmitMediaFpDeleteJob
  *
  * @method string getUserData()
  * @method string getResourceOwnerId()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPipelineId()
  * @method string getPrimaryKey()
  */
-class SubmitMediaFpDeleteJob extends RpcRequest
+class SubmitMediaFpDeleteJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitMediaFpDeleteJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
 
     /**

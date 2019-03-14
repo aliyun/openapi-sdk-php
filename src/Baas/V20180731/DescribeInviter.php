@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeInviter
+ * Api DescribeInviter
  *
  * @method string getCode()
  */
-class DescribeInviter extends RpcRequest
+class DescribeInviter extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeInviter';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCode() instead.
-     *
-     * @param string $code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        return $this->withCode($code);
-    }
 
     /**
      * @param string $code

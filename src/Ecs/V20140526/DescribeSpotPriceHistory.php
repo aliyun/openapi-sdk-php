@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeSpotPriceHistory
+ * Api DescribeSpotPriceHistory
  *
  * @method string getResourceOwnerId()
  * @method string getIoOptimized()
@@ -20,40 +20,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getZoneId()
  */
-class DescribeSpotPriceHistory extends RpcRequest
+class DescribeSpotPriceHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeSpotPriceHistory';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -66,18 +41,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
     }
 
     /**
@@ -94,18 +57,6 @@ class DescribeSpotPriceHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -116,18 +67,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -144,18 +83,6 @@ class DescribeSpotPriceHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function setInstanceType($instanceType)
-    {
-        return $this->withInstanceType($instanceType);
-    }
-
-    /**
      * @param string $instanceType
      *
      * @return $this
@@ -166,18 +93,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['InstanceType'] = $instanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOffset() instead.
-     *
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        return $this->withOffset($offset);
     }
 
     /**
@@ -194,18 +109,6 @@ class DescribeSpotPriceHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -216,18 +119,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -244,18 +135,6 @@ class DescribeSpotPriceHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -266,18 +145,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOSType() instead.
-     *
-     * @param string $oSType
-     *
-     * @return $this
-     */
-    public function setOSType($oSType)
-    {
-        return $this->withOSType($oSType);
     }
 
     /**
@@ -294,18 +161,6 @@ class DescribeSpotPriceHistory extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -316,18 +171,6 @@ class DescribeSpotPriceHistory extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**

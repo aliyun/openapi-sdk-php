@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeImageSupportInstanceTypes
+ * Api DescribeImageSupportInstanceTypes
  *
  * @method string getActionType()
  * @method array getFilter()
@@ -14,40 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  */
-class DescribeImageSupportInstanceTypes extends RpcRequest
+class DescribeImageSupportInstanceTypes extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeImageSupportInstanceTypes';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionType() instead.
-     *
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function setActionType($actionType)
-    {
-        return $this->withActionType($actionType);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $actionType
@@ -60,28 +35,6 @@ class DescribeImageSupportInstanceTypes extends RpcRequest
         $this->options['query']['ActionType'] = $actionType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getFilter() instead.
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return $this->getFilter();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFilter() instead.
-     *
-     * @param array $filters
-     *
-     * @return $this
-     */
-    public function setFilters(array $filters)
-    {
-        return $this->withFilter($filters);
     }
 
     /**
@@ -101,18 +54,6 @@ class DescribeImageSupportInstanceTypes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -123,18 +64,6 @@ class DescribeImageSupportInstanceTypes extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
     }
 
     /**
@@ -151,18 +80,6 @@ class DescribeImageSupportInstanceTypes extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -173,18 +90,6 @@ class DescribeImageSupportInstanceTypes extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

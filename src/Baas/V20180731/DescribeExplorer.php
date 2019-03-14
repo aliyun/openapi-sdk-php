@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeExplorer
+ * Api DescribeExplorer
  *
  * @method string getOrganizationId()
  * @method string getExBody()
  * @method string getExUrl()
  * @method string getExMethod()
  */
-class DescribeExplorer extends RpcRequest
+class DescribeExplorer extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeExplorer';
-
-    /**
-     * @var string
-     */
-    public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
+    public $method = 'POST';
 
     /**
      * @param string $organizationId
@@ -58,18 +31,6 @@ class DescribeExplorer extends RpcRequest
         $this->options['query']['OrganizationId'] = $organizationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExBody() instead.
-     *
-     * @param string $exBody
-     *
-     * @return $this
-     */
-    public function setExBody($exBody)
-    {
-        return $this->withExBody($exBody);
     }
 
     /**
@@ -86,18 +47,6 @@ class DescribeExplorer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExUrl() instead.
-     *
-     * @param string $exUrl
-     *
-     * @return $this
-     */
-    public function setExUrl($exUrl)
-    {
-        return $this->withExUrl($exUrl);
-    }
-
-    /**
      * @param string $exUrl
      *
      * @return $this
@@ -108,18 +57,6 @@ class DescribeExplorer extends RpcRequest
         $this->options['query']['ExUrl'] = $exUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExMethod() instead.
-     *
-     * @param string $exMethod
-     *
-     * @return $this
-     */
-    public function setExMethod($exMethod)
-    {
-        return $this->withExMethod($exMethod);
     }
 
     /**

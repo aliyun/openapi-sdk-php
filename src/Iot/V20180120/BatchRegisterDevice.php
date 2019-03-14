@@ -2,47 +2,34 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchRegisterDevice
+ * Api BatchRegisterDevice
  *
+ * @method string getIotInstanceId()
  * @method string getCount()
  * @method string getProductKey()
  */
-class BatchRegisterDevice extends RpcRequest
+class BatchRegisterDevice extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchRegisterDevice';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCount() instead.
-     *
-     * @param string $count
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setCount($count)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withCount($count);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -56,18 +43,6 @@ class BatchRegisterDevice extends RpcRequest
         $this->options['query']['Count'] = $count;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

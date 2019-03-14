@@ -2,55 +2,25 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateZoneRemark
+ * Api UpdateZoneRemark
  *
  * @method string getUserClientIp()
  * @method string getZoneId()
  * @method string getRemark()
  * @method string getLang()
  */
-class UpdateZoneRemark extends RpcRequest
+class UpdateZoneRemark extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'pvtz';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateZoneRemark';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'pvtz';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
 
     /**
      * @param string $userClientIp
@@ -63,18 +33,6 @@ class UpdateZoneRemark extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**
@@ -91,18 +49,6 @@ class UpdateZoneRemark extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemark() instead.
-     *
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function setRemark($remark)
-    {
-        return $this->withRemark($remark);
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -113,18 +59,6 @@ class UpdateZoneRemark extends RpcRequest
         $this->options['query']['Remark'] = $remark;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

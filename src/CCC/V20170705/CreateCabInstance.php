@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateCabInstance
+ * Api CreateCabInstance
  *
  * @method string getMaxConcurrentConversation()
  * @method string getInstanceName()
  * @method string getCallCenterInstanceId()
  * @method string getInstanceDescription()
  */
-class CreateCabInstance extends RpcRequest
+class CreateCabInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateCabInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
 
     /**

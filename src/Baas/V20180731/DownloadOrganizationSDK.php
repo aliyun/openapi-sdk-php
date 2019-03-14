@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DownloadOrganizationSDK
+ * Api DownloadOrganizationSDK
  *
  * @method string getOrganizationId()
  * @method string getLocation()
  * @method string getUsername()
  */
-class DownloadOrganizationSDK extends RpcRequest
+class DownloadOrganizationSDK extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DownloadOrganizationSDK';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
 
     /**
      * @param string $organizationId
@@ -60,18 +33,6 @@ class DownloadOrganizationSDK extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
-
-    /**
      * @param string $location
      *
      * @return $this
@@ -82,18 +43,6 @@ class DownloadOrganizationSDK extends RpcRequest
         $this->options['query']['Location'] = $location;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUsername() instead.
-     *
-     * @param string $username
-     *
-     * @return $this
-     */
-    public function setUsername($username)
-    {
-        return $this->withUsername($username);
     }
 
     /**

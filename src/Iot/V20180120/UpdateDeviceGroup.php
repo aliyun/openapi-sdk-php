@@ -2,48 +2,22 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateDeviceGroup
+ * Api UpdateDeviceGroup
  *
  * @method string getGroupDesc()
+ * @method string getIotInstanceId()
  * @method string getGroupId()
  */
-class UpdateDeviceGroup extends RpcRequest
+class UpdateDeviceGroup extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateDeviceGroup';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupDesc() instead.
-     *
-     * @param string $groupDesc
-     *
-     * @return $this
-     */
-    public function setGroupDesc($groupDesc)
-    {
-        return $this->withGroupDesc($groupDesc);
-    }
 
     /**
      * @param string $groupDesc
@@ -59,15 +33,16 @@ class UpdateDeviceGroup extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setGroupId($groupId)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withGroupId($groupId);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**

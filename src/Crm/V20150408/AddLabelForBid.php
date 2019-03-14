@@ -2,50 +2,25 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddLabelForBid
+ * Api AddLabelForBid
  *
  * @method string getLabelSeries()
  * @method string getEndTime()
  * @method string getPK()
  * @method string getLabel()
  */
-class AddLabelForBid extends RpcRequest
+class AddLabelForBid extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Crm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-04-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddLabelForBid';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabelSeries() instead.
-     *
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function setLabelSeries($labelSeries)
-    {
-        return $this->withLabelSeries($labelSeries);
-    }
+    public $serviceCode = 'crm';
 
     /**
      * @param string $labelSeries
@@ -58,18 +33,6 @@ class AddLabelForBid extends RpcRequest
         $this->options['query']['LabelSeries'] = $labelSeries;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -86,18 +49,6 @@ class AddLabelForBid extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPK() instead.
-     *
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function setPK($pK)
-    {
-        return $this->withPK($pK);
-    }
-
-    /**
      * @param string $pK
      *
      * @return $this
@@ -108,18 +59,6 @@ class AddLabelForBid extends RpcRequest
         $this->options['query']['PK'] = $pK;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLabel() instead.
-     *
-     * @param string $label
-     *
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        return $this->withLabel($label);
     }
 
     /**

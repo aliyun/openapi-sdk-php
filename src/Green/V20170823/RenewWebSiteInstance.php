@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RenewWebSiteInstance
+ * Api RenewWebSiteInstance
  *
  * @method string getDuration()
  * @method string getInstanceId()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPricingCycle()
  * @method string getOrderType()
  */
-class RenewWebSiteInstance extends RpcRequest
+class RenewWebSiteInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
     public $version = '2017-08-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'RenewWebSiteInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'green';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuration() instead.
-     *
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function setDuration($duration)
-    {
-        return $this->withDuration($duration);
-    }
 
     /**
      * @param string $duration
@@ -67,18 +37,6 @@ class RenewWebSiteInstance extends RpcRequest
         $this->options['query']['Duration'] = $duration;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -95,18 +53,6 @@ class RenewWebSiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -117,18 +63,6 @@ class RenewWebSiteInstance extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderNum() instead.
-     *
-     * @param string $orderNum
-     *
-     * @return $this
-     */
-    public function setOrderNum($orderNum)
-    {
-        return $this->withOrderNum($orderNum);
     }
 
     /**
@@ -145,18 +79,6 @@ class RenewWebSiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCommodityCode() instead.
-     *
-     * @param string $commodityCode
-     *
-     * @return $this
-     */
-    public function setCommodityCode($commodityCode)
-    {
-        return $this->withCommodityCode($commodityCode);
-    }
-
-    /**
      * @param string $commodityCode
      *
      * @return $this
@@ -167,18 +89,6 @@ class RenewWebSiteInstance extends RpcRequest
         $this->options['query']['CommodityCode'] = $commodityCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -195,18 +105,6 @@ class RenewWebSiteInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPricingCycle() instead.
-     *
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function setPricingCycle($pricingCycle)
-    {
-        return $this->withPricingCycle($pricingCycle);
-    }
-
-    /**
      * @param string $pricingCycle
      *
      * @return $this
@@ -217,18 +115,6 @@ class RenewWebSiteInstance extends RpcRequest
         $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setOrderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

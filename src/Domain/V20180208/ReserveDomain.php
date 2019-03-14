@@ -2,58 +2,21 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ReserveDomain
+ * Api ReserveDomain
  *
  * @method array getChannels()
  * @method string getDomainName()
  */
-class ReserveDomain extends RpcRequest
+class ReserveDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'ReserveDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getChannels() instead.
-     *
-     * @return array
-     */
-    public function getChannelss()
-    {
-        return $this->getChannels();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannels() instead.
-     *
-     * @param array $channelss
-     *
-     * @return $this
-     */
-    public function setChannelss(array $channelss)
-    {
-        return $this->withChannels($channelss);
-    }
 
     /**
      * @param array $channels
@@ -68,18 +31,6 @@ class ReserveDomain extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**

@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCandidateOrganizations
+ * Api DescribeCandidateOrganizations
  *
  * @method string getLocation()
  */
-class DescribeCandidateOrganizations extends RpcRequest
+class DescribeCandidateOrganizations extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCandidateOrganizations';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
 
     /**
      * @param string $location

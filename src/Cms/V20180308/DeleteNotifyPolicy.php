@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteNotifyPolicy
+ * Api DeleteNotifyPolicy
  *
  * @method string getPolicyType()
  * @method string getAlertName()
@@ -13,40 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getId()
  * @method string getDimensions()
  */
-class DeleteNotifyPolicy extends RpcRequest
+class DeleteNotifyPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteNotifyPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withPolicyType() instead.
-     *
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function setPolicyType($policyType)
-    {
-        return $this->withPolicyType($policyType);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $policyType
@@ -59,18 +34,6 @@ class DeleteNotifyPolicy extends RpcRequest
         $this->options['query']['PolicyType'] = $policyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAlertName() instead.
-     *
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function setAlertName($alertName)
-    {
-        return $this->withAlertName($alertName);
     }
 
     /**
@@ -87,18 +50,6 @@ class DeleteNotifyPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
-    }
-
-    /**
      * @param string $groupId
      *
      * @return $this
@@ -112,18 +63,6 @@ class DeleteNotifyPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -134,18 +73,6 @@ class DeleteNotifyPolicy extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
     }
 
     /**

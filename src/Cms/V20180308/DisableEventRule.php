@@ -2,58 +2,23 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DisableEventRule
+ * Api DisableEventRule
  *
  * @method array getRuleNames()
  * @method string getRuleName()
  */
-class DisableEventRule extends RpcRequest
+class DisableEventRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DisableEventRule';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getRuleNames() instead.
-     *
-     * @return array
-     */
-    public function getRuleNamess()
-    {
-        return $this->getRuleNames();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleNames() instead.
-     *
-     * @param array $ruleNamess
-     *
-     * @return $this
-     */
-    public function setRuleNamess(array $ruleNamess)
-    {
-        return $this->withRuleNames($ruleNamess);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param array $ruleNames
@@ -68,18 +33,6 @@ class DisableEventRule extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRuleName() instead.
-     *
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function setRuleName($ruleName)
-    {
-        return $this->withRuleName($ruleName);
     }
 
     /**

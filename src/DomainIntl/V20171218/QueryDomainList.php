@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryDomainList
+ * Api QueryDomainList
  *
  * @method string getEndExpirationDate()
  * @method string getProductDomainType()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getQueryType()
  * @method string getStartRegistrationDate()
  */
-class QueryDomainList extends RpcRequest
+class QueryDomainList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryDomainList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndExpirationDate() instead.
-     *
-     * @param string $endExpirationDate
-     *
-     * @return $this
-     */
-    public function setEndExpirationDate($endExpirationDate)
-    {
-        return $this->withEndExpirationDate($endExpirationDate);
-    }
 
     /**
      * @param string $endExpirationDate
@@ -72,18 +42,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['EndExpirationDate'] = $endExpirationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductDomainType() instead.
-     *
-     * @param string $productDomainType
-     *
-     * @return $this
-     */
-    public function setProductDomainType($productDomainType)
-    {
-        return $this->withProductDomainType($productDomainType);
     }
 
     /**
@@ -100,18 +58,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderKeyType() instead.
-     *
-     * @param string $orderKeyType
-     *
-     * @return $this
-     */
-    public function setOrderKeyType($orderKeyType)
-    {
-        return $this->withOrderKeyType($orderKeyType);
-    }
-
-    /**
      * @param string $orderKeyType
      *
      * @return $this
@@ -122,18 +68,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['OrderKeyType'] = $orderKeyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -150,18 +84,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartExpirationDate() instead.
-     *
-     * @param string $startExpirationDate
-     *
-     * @return $this
-     */
-    public function setStartExpirationDate($startExpirationDate)
-    {
-        return $this->withStartExpirationDate($startExpirationDate);
-    }
-
-    /**
      * @param string $startExpirationDate
      *
      * @return $this
@@ -172,18 +94,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['StartExpirationDate'] = $startExpirationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**
@@ -200,18 +110,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrderByType() instead.
-     *
-     * @param string $orderByType
-     *
-     * @return $this
-     */
-    public function setOrderByType($orderByType)
-    {
-        return $this->withOrderByType($orderByType);
-    }
-
-    /**
      * @param string $orderByType
      *
      * @return $this
@@ -222,18 +120,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['OrderByType'] = $orderByType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndRegistrationDate() instead.
-     *
-     * @param string $endRegistrationDate
-     *
-     * @return $this
-     */
-    public function setEndRegistrationDate($endRegistrationDate)
-    {
-        return $this->withEndRegistrationDate($endRegistrationDate);
     }
 
     /**
@@ -250,18 +136,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -272,18 +146,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -300,18 +162,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -325,18 +175,6 @@ class QueryDomainList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryType() instead.
-     *
-     * @param string $queryType
-     *
-     * @return $this
-     */
-    public function setQueryType($queryType)
-    {
-        return $this->withQueryType($queryType);
-    }
-
-    /**
      * @param string $queryType
      *
      * @return $this
@@ -347,18 +185,6 @@ class QueryDomainList extends RpcRequest
         $this->options['query']['QueryType'] = $queryType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartRegistrationDate() instead.
-     *
-     * @param string $startRegistrationDate
-     *
-     * @return $this
-     */
-    public function setStartRegistrationDate($startRegistrationDate)
-    {
-        return $this->withStartRegistrationDate($startRegistrationDate);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeAlarms
+ * Api DescribeAlarms
  *
  * @method string getEnableState()
  * @method string getNames()
@@ -19,40 +19,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPage()
  * @method string getMetricName()
  */
-class DescribeAlarms extends RpcRequest
+class DescribeAlarms extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeAlarms';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableState() instead.
-     *
-     * @param string $enableState
-     *
-     * @return $this
-     */
-    public function setEnableState($enableState)
-    {
-        return $this->withEnableState($enableState);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $enableState
@@ -65,18 +40,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['EnableState'] = $enableState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNames() instead.
-     *
-     * @param string $names
-     *
-     * @return $this
-     */
-    public function setNames($names)
-    {
-        return $this->withNames($names);
     }
 
     /**
@@ -93,18 +56,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDisplayName() instead.
-     *
-     * @param string $displayName
-     *
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        return $this->withDisplayName($displayName);
-    }
-
-    /**
      * @param string $displayName
      *
      * @return $this
@@ -115,18 +66,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['DisplayName'] = $displayName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withGroupId() instead.
-     *
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function setGroupId($groupId)
-    {
-        return $this->withGroupId($groupId);
     }
 
     /**
@@ -143,18 +82,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
-    }
-
-    /**
      * @param string $namespace
      *
      * @return $this
@@ -165,18 +92,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['Namespace'] = $namespace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -193,18 +108,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlertState() instead.
-     *
-     * @param string $alertState
-     *
-     * @return $this
-     */
-    public function setAlertState($alertState)
-    {
-        return $this->withAlertState($alertState);
-    }
-
-    /**
      * @param string $alertState
      *
      * @return $this
@@ -215,18 +118,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['AlertState'] = $alertState;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNameKeyword() instead.
-     *
-     * @param string $nameKeyword
-     *
-     * @return $this
-     */
-    public function setNameKeyword($nameKeyword)
-    {
-        return $this->withNameKeyword($nameKeyword);
     }
 
     /**
@@ -243,18 +134,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGroupBy() instead.
-     *
-     * @param string $groupBy
-     *
-     * @return $this
-     */
-    public function setGroupBy($groupBy)
-    {
-        return $this->withGroupBy($groupBy);
-    }
-
-    /**
      * @param string $groupBy
      *
      * @return $this
@@ -268,18 +147,6 @@ class DescribeAlarms extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPage() instead.
-     *
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        return $this->withPage($page);
-    }
-
-    /**
      * @param string $page
      *
      * @return $this
@@ -290,18 +157,6 @@ class DescribeAlarms extends RpcRequest
         $this->options['query']['Page'] = $page;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**

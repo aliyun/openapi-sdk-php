@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UnicomOrderConfirm
+ * Api UnicomOrderConfirm
  *
  * @method string getTmsCode()
  * @method string getResourceOwnerId()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTmsOrderCode()
  * @method string getTradeId()
  */
-class UnicomOrderConfirm extends RpcRequest
+class UnicomOrderConfirm extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Smartag';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-13';
 
-    /**
-     * @var string
-     */
-    public $action = 'UnicomOrderConfirm';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'smartag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTmsCode() instead.
-     *
-     * @param string $tmsCode
-     *
-     * @return $this
-     */
-    public function setTmsCode($tmsCode)
-    {
-        return $this->withTmsCode($tmsCode);
-    }
 
     /**
      * @param string $tmsCode
@@ -72,18 +42,6 @@ class UnicomOrderConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -94,28 +52,6 @@ class UnicomOrderConfirm extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrderItem() instead.
-     *
-     * @return array
-     */
-    public function getOrderItems()
-    {
-        return $this->getOrderItem();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderItem() instead.
-     *
-     * @param array $orderItems
-     *
-     * @return $this
-     */
-    public function setOrderItems(array $orderItems)
-    {
-        return $this->withOrderItem($orderItems);
     }
 
     /**
@@ -143,18 +79,6 @@ class UnicomOrderConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerUserId() instead.
-     *
-     * @param string $ownerUserId
-     *
-     * @return $this
-     */
-    public function setOwnerUserId($ownerUserId)
-    {
-        return $this->withOwnerUserId($ownerUserId);
-    }
-
-    /**
      * @param string $ownerUserId
      *
      * @return $this
@@ -165,18 +89,6 @@ class UnicomOrderConfirm extends RpcRequest
         $this->options['query']['OwnerUserId'] = $ownerUserId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -193,18 +105,6 @@ class UnicomOrderConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -215,18 +115,6 @@ class UnicomOrderConfirm extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderPostFee() instead.
-     *
-     * @param string $orderPostFee
-     *
-     * @return $this
-     */
-    public function setOrderPostFee($orderPostFee)
-    {
-        return $this->withOrderPostFee($orderPostFee);
     }
 
     /**
@@ -243,18 +131,6 @@ class UnicomOrderConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -268,18 +144,6 @@ class UnicomOrderConfirm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTmsOrderCode() instead.
-     *
-     * @param string $tmsOrderCode
-     *
-     * @return $this
-     */
-    public function setTmsOrderCode($tmsOrderCode)
-    {
-        return $this->withTmsOrderCode($tmsOrderCode);
-    }
-
-    /**
      * @param string $tmsOrderCode
      *
      * @return $this
@@ -290,18 +154,6 @@ class UnicomOrderConfirm extends RpcRequest
         $this->options['query']['TmsOrderCode'] = $tmsOrderCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTradeId() instead.
-     *
-     * @param string $tradeId
-     *
-     * @return $this
-     */
-    public function setTradeId($tradeId)
-    {
-        return $this->withTradeId($tradeId);
     }
 
     /**

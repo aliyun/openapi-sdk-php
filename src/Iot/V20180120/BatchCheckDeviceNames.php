@@ -2,57 +2,34 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchCheckDeviceNames
+ * Api BatchCheckDeviceNames
  *
+ * @method string getIotInstanceId()
  * @method array getDeviceName()
  * @method string getProductKey()
  */
-class BatchCheckDeviceNames extends RpcRequest
+class BatchCheckDeviceNames extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchCheckDeviceNames';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceName() instead.
-     *
-     * @return array
-     */
-    public function getDeviceNames()
-    {
-        return $this->getDeviceName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param array $deviceNames
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setDeviceNames(array $deviceNames)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withDeviceName($deviceNames);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -68,18 +45,6 @@ class BatchCheckDeviceNames extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

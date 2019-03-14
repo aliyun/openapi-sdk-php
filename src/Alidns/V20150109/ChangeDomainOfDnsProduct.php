@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ChangeDomainOfDnsProduct
+ * Api ChangeDomainOfDnsProduct
  *
  * @method string getInstanceId()
  * @method string getNewDomain()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getForce()
  * @method string getLang()
  */
-class ChangeDomainOfDnsProduct extends RpcRequest
+class ChangeDomainOfDnsProduct extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'ChangeDomainOfDnsProduct';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -64,18 +34,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewDomain() instead.
-     *
-     * @param string $newDomain
-     *
-     * @return $this
-     */
-    public function setNewDomain($newDomain)
-    {
-        return $this->withNewDomain($newDomain);
     }
 
     /**
@@ -92,18 +50,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
-
-    /**
      * @param string $userClientIp
      *
      * @return $this
@@ -117,18 +63,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
-    }
-
-    /**
      * @param string $force
      *
      * @return $this
@@ -139,18 +73,6 @@ class ChangeDomainOfDnsProduct extends RpcRequest
         $this->options['query']['Force'] = $force;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

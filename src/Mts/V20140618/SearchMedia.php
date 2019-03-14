@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SearchMedia
+ * Api SearchMedia
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTag()
  * @method string getKeyWord()
  */
-class SearchMedia extends RpcRequest
+class SearchMedia extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SearchMedia';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,18 +43,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -101,18 +59,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -123,18 +69,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -151,18 +85,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -173,18 +95,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTitle() instead.
-     *
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        return $this->withTitle($title);
     }
 
     /**
@@ -201,18 +111,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -223,18 +121,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCateId() instead.
-     *
-     * @param string $cateId
-     *
-     * @return $this
-     */
-    public function setCateId($cateId)
-    {
-        return $this->withCateId($cateId);
     }
 
     /**
@@ -251,18 +137,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -273,18 +147,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFrom() instead.
-     *
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function setFrom($from)
-    {
-        return $this->withFrom($from);
     }
 
     /**
@@ -301,18 +163,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSortBy() instead.
-     *
-     * @param string $sortBy
-     *
-     * @return $this
-     */
-    public function setSortBy($sortBy)
-    {
-        return $this->withSortBy($sortBy);
-    }
-
-    /**
      * @param string $sortBy
      *
      * @return $this
@@ -323,18 +173,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['SortBy'] = $sortBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTo() instead.
-     *
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function setTo($to)
-    {
-        return $this->withTo($to);
     }
 
     /**
@@ -351,18 +189,6 @@ class SearchMedia extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function setTag($tag)
-    {
-        return $this->withTag($tag);
-    }
-
-    /**
      * @param string $tag
      *
      * @return $this
@@ -373,18 +199,6 @@ class SearchMedia extends RpcRequest
         $this->options['query']['Tag'] = $tag;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKeyWord() instead.
-     *
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function setKeyWord($keyWord)
-    {
-        return $this->withKeyWord($keyWord);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeDNSSLBSubDomains
+ * Api DescribeDNSSLBSubDomains
  *
  * @method string getUserClientIp()
  * @method string getDomainName()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getPageNumber()
  */
-class DescribeDNSSLBSubDomains extends RpcRequest
+class DescribeDNSSLBSubDomains extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeDNSSLBSubDomains';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
-    }
 
     /**
      * @param string $userClientIp
@@ -64,18 +34,6 @@ class DescribeDNSSLBSubDomains extends RpcRequest
         $this->options['query']['UserClientIp'] = $userClientIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -92,18 +50,6 @@ class DescribeDNSSLBSubDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -117,18 +63,6 @@ class DescribeDNSSLBSubDomains extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -139,18 +73,6 @@ class DescribeDNSSLBSubDomains extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**

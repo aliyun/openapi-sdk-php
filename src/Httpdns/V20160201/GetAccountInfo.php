@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\Httpdns\V20160201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of GetAccountInfo
+ * Api GetAccountInfo
  *
  */
-class GetAccountInfo extends RpcRequest
+class GetAccountInfo extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Httpdns';
 
-    /**
-     * @var string
-     */
     public $version = '2016-02-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'GetAccountInfo';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

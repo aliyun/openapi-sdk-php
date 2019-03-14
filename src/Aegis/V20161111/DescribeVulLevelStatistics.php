@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeVulLevelStatistics
+ * Api DescribeVulLevelStatistics
  *
  * @method string getSourceIp()
  * @method string getEndTs()
  * @method string getStartTs()
  * @method string getUuids()
  */
-class DescribeVulLevelStatistics extends RpcRequest
+class DescribeVulLevelStatistics extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeVulLevelStatistics';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

@@ -2,32 +2,17 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryAccountBalance
+ * Api QueryAccountBalance
  *
  */
-class QueryAccountBalance extends RpcRequest
+class QueryAccountBalance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryAccountBalance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 }

@@ -2,48 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeConsortiumChannels
+ * Api DescribeConsortiumChannels
  *
  * @method string getLocation()
  * @method string getConsortiumId()
  */
-class DescribeConsortiumChannels extends RpcRequest
+class DescribeConsortiumChannels extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeConsortiumChannels';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocation() instead.
-     *
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function setLocation($location)
-    {
-        return $this->withLocation($location);
-    }
 
     /**
      * @param string $location
@@ -56,18 +29,6 @@ class DescribeConsortiumChannels extends RpcRequest
         $this->options['query']['Location'] = $location;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConsortiumId() instead.
-     *
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function setConsortiumId($consortiumId)
-    {
-        return $this->withConsortiumId($consortiumId);
     }
 
     /**

@@ -2,32 +2,19 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of RunPodInstances
+ * Api RunPodInstances
  *
  */
-class RunPodInstances extends RpcRequest
+class RunPodInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'RunPodInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
+
+    public $serviceCode = 'ecs';
 }

@@ -2,63 +2,23 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckInspectText
+ * Api CheckInspectText
  *
  * @method array getSentence()
  * @method string getCcsInstanceId()
  */
-class CheckInspectText extends RpcRequest
+class CheckInspectText extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckInspectText';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getSentence() instead.
-     *
-     * @return array
-     */
-    public function getSentences()
-    {
-        return $this->getSentence();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSentence() instead.
-     *
-     * @param array $sentences
-     *
-     * @return $this
-     */
-    public function setSentences(array $sentences)
-    {
-        return $this->withSentence($sentences);
-    }
 
     /**
      * @param array $sentence
@@ -76,18 +36,6 @@ class CheckInspectText extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCcsInstanceId() instead.
-     *
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function setCcsInstanceId($ccsInstanceId)
-    {
-        return $this->withCcsInstanceId($ccsInstanceId);
     }
 
     /**

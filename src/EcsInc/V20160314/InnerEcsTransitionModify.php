@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerEcsTransitionModify
+ * Api InnerEcsTransitionModify
  *
  * @method string getResourceOwnerId()
  * @method string getTransitionTime()
@@ -25,45 +25,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getIsExpireTransition()
  * @method string getProxyId()
  */
-class InnerEcsTransitionModify extends RpcRequest
+class InnerEcsTransitionModify extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerEcsTransitionModify';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -76,18 +46,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTransitionTime() instead.
-     *
-     * @param string $transitionTime
-     *
-     * @return $this
-     */
-    public function setTransitionTime($transitionTime)
-    {
-        return $this->withTransitionTime($transitionTime);
     }
 
     /**
@@ -104,18 +62,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -126,18 +72,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -154,18 +88,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -176,18 +98,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -204,18 +114,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceType() instead.
-     *
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function setResourceType($resourceType)
-    {
-        return $this->withResourceType($resourceType);
-    }
-
-    /**
      * @param string $resourceType
      *
      * @return $this
@@ -226,18 +124,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
     }
 
     /**
@@ -254,18 +140,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -276,18 +150,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkTransType() instead.
-     *
-     * @param string $networkTransType
-     *
-     * @return $this
-     */
-    public function setNetworkTransType($networkTransType)
-    {
-        return $this->withNetworkTransType($networkTransType);
     }
 
     /**
@@ -304,18 +166,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAsync() instead.
-     *
-     * @param string $async
-     *
-     * @return $this
-     */
-    public function setasync($async)
-    {
-        return $this->withAsync($async);
-    }
-
-    /**
      * @param string $async
      *
      * @return $this
@@ -326,28 +176,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['async'] = $async;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceId() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIds()
-    {
-        return $this->getInstanceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function setInstanceIds(array $instanceIds)
-    {
-        return $this->withInstanceId($instanceIds);
     }
 
     /**
@@ -366,18 +194,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestId() instead.
-     *
-     * @param string $requestId
-     *
-     * @return $this
-     */
-    public function setRequestId($requestId)
-    {
-        return $this->withRequestId($requestId);
-    }
-
-    /**
      * @param string $requestId
      *
      * @return $this
@@ -388,18 +204,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['RequestId'] = $requestId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -416,18 +220,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -441,18 +233,6 @@ class InnerEcsTransitionModify extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIsExpireTransition() instead.
-     *
-     * @param string $isExpireTransition
-     *
-     * @return $this
-     */
-    public function setIsExpireTransition($isExpireTransition)
-    {
-        return $this->withIsExpireTransition($isExpireTransition);
-    }
-
-    /**
      * @param string $isExpireTransition
      *
      * @return $this
@@ -463,18 +243,6 @@ class InnerEcsTransitionModify extends RpcRequest
         $this->options['query']['IsExpireTransition'] = $isExpireTransition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

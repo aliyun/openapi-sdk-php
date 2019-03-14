@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateShardingDBInstance
+ * Api CreateShardingDBInstance
  *
  * @method string getResourceOwnerId()
  * @method string getClientToken()
@@ -32,45 +32,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getZoneId()
  * @method string getChargeType()
  */
-class CreateShardingDBInstance extends RpcRequest
+class CreateShardingDBInstance extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateShardingDBInstance';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -83,18 +53,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -111,18 +69,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEngineVersion() instead.
-     *
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function setEngineVersion($engineVersion)
-    {
-        return $this->withEngineVersion($engineVersion);
-    }
-
-    /**
      * @param string $engineVersion
      *
      * @return $this
@@ -136,18 +82,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -158,28 +92,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getReplicaSet() instead.
-     *
-     * @return array
-     */
-    public function getReplicaSets()
-    {
-        return $this->getReplicaSet();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReplicaSet() instead.
-     *
-     * @param array $replicaSets
-     *
-     * @return $this
-     */
-    public function setReplicaSets(array $replicaSets)
-    {
-        return $this->withReplicaSet($replicaSets);
     }
 
     /**
@@ -199,18 +111,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStorageEngine() instead.
-     *
-     * @param string $storageEngine
-     *
-     * @return $this
-     */
-    public function setStorageEngine($storageEngine)
-    {
-        return $this->withStorageEngine($storageEngine);
-    }
-
-    /**
      * @param string $storageEngine
      *
      * @return $this
@@ -221,18 +121,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['StorageEngine'] = $storageEngine;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -249,18 +137,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEngine() instead.
-     *
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function setEngine($engine)
-    {
-        return $this->withEngine($engine);
-    }
-
-    /**
      * @param string $engine
      *
      * @return $this
@@ -271,18 +147,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['Engine'] = $engine;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceDescription() instead.
-     *
-     * @param string $dBInstanceDescription
-     *
-     * @return $this
-     */
-    public function setDBInstanceDescription($dBInstanceDescription)
-    {
-        return $this->withDBInstanceDescription($dBInstanceDescription);
     }
 
     /**
@@ -299,18 +163,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -321,18 +173,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRestoreTime() instead.
-     *
-     * @param string $restoreTime
-     *
-     * @return $this
-     */
-    public function setRestoreTime($restoreTime)
-    {
-        return $this->withRestoreTime($restoreTime);
     }
 
     /**
@@ -349,18 +189,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -371,18 +199,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcDBInstanceId() instead.
-     *
-     * @param string $srcDBInstanceId
-     *
-     * @return $this
-     */
-    public function setSrcDBInstanceId($srcDBInstanceId)
-    {
-        return $this->withSrcDBInstanceId($srcDBInstanceId);
     }
 
     /**
@@ -399,18 +215,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -421,28 +225,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getConfigServer() instead.
-     *
-     * @return array
-     */
-    public function getConfigServers()
-    {
-        return $this->getConfigServer();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withConfigServer() instead.
-     *
-     * @param array $configServers
-     *
-     * @return $this
-     */
-    public function setConfigServers(array $configServers)
-    {
-        return $this->withConfigServer($configServers);
     }
 
     /**
@@ -462,18 +244,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -484,28 +254,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getMongos() instead.
-     *
-     * @return array
-     */
-    public function getMongoss()
-    {
-        return $this->getMongos();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMongos() instead.
-     *
-     * @param array $mongoss
-     *
-     * @return $this
-     */
-    public function setMongoss(array $mongoss)
-    {
-        return $this->withMongos($mongoss);
     }
 
     /**
@@ -524,18 +272,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityIPList() instead.
-     *
-     * @param string $securityIPList
-     *
-     * @return $this
-     */
-    public function setSecurityIPList($securityIPList)
-    {
-        return $this->withSecurityIPList($securityIPList);
-    }
-
-    /**
      * @param string $securityIPList
      *
      * @return $this
@@ -546,18 +282,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['SecurityIPList'] = $securityIPList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -574,18 +298,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAccountPassword() instead.
-     *
-     * @param string $accountPassword
-     *
-     * @return $this
-     */
-    public function setAccountPassword($accountPassword)
-    {
-        return $this->withAccountPassword($accountPassword);
-    }
-
-    /**
      * @param string $accountPassword
      *
      * @return $this
@@ -596,18 +308,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['AccountPassword'] = $accountPassword;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAutoRenew() instead.
-     *
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function setAutoRenew($autoRenew)
-    {
-        return $this->withAutoRenew($autoRenew);
     }
 
     /**
@@ -624,18 +324,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -649,18 +337,6 @@ class CreateShardingDBInstance extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -671,18 +347,6 @@ class CreateShardingDBInstance extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChargeType() instead.
-     *
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function setChargeType($chargeType)
-    {
-        return $this->withChargeType($chargeType);
     }
 
     /**

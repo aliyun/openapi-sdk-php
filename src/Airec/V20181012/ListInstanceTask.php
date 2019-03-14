@@ -2,39 +2,21 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of ListInstanceTask
+ * Api ListInstanceTask
  *
  * @method string getInstanceId()
  */
-class ListInstanceTask extends RoaRequest
+class ListInstanceTask extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Airec';
 
-    /**
-     * @var string
-     */
     public $version = '2018-10-12';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListInstanceTask';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/openapi/instances/[InstanceId]/tasks';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'airec';
 
     /**

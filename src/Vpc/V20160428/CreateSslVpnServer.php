@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateSslVpnServer
+ * Api CreateSslVpnServer
  *
  * @method string getCipher()
  * @method string getResourceOwnerId()
@@ -21,45 +21,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getProto()
  * @method string getName()
  */
-class CreateSslVpnServer extends RpcRequest
+class CreateSslVpnServer extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateSslVpnServer';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCipher() instead.
-     *
-     * @param string $cipher
-     *
-     * @return $this
-     */
-    public function setCipher($cipher)
-    {
-        return $this->withCipher($cipher);
-    }
 
     /**
      * @param string $cipher
@@ -72,18 +42,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['Cipher'] = $cipher;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -100,18 +58,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientIpPool() instead.
-     *
-     * @param string $clientIpPool
-     *
-     * @return $this
-     */
-    public function setClientIpPool($clientIpPool)
-    {
-        return $this->withClientIpPool($clientIpPool);
-    }
-
-    /**
      * @param string $clientIpPool
      *
      * @return $this
@@ -122,18 +68,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['ClientIpPool'] = $clientIpPool;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -150,18 +84,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -172,18 +94,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCompress() instead.
-     *
-     * @param string $compress
-     *
-     * @return $this
-     */
-    public function setCompress($compress)
-    {
-        return $this->withCompress($compress);
     }
 
     /**
@@ -200,18 +110,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -222,18 +120,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpnGatewayId() instead.
-     *
-     * @param string $vpnGatewayId
-     *
-     * @return $this
-     */
-    public function setVpnGatewayId($vpnGatewayId)
-    {
-        return $this->withVpnGatewayId($vpnGatewayId);
     }
 
     /**
@@ -250,18 +136,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -272,18 +146,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocalSubnet() instead.
-     *
-     * @param string $localSubnet
-     *
-     * @return $this
-     */
-    public function setLocalSubnet($localSubnet)
-    {
-        return $this->withLocalSubnet($localSubnet);
     }
 
     /**
@@ -300,18 +162,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPort() instead.
-     *
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function setPort($port)
-    {
-        return $this->withPort($port);
-    }
-
-    /**
      * @param string $port
      *
      * @return $this
@@ -325,18 +175,6 @@ class CreateSslVpnServer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProto() instead.
-     *
-     * @param string $proto
-     *
-     * @return $this
-     */
-    public function setProto($proto)
-    {
-        return $this->withProto($proto);
-    }
-
-    /**
      * @param string $proto
      *
      * @return $this
@@ -347,18 +185,6 @@ class CreateSslVpnServer extends RpcRequest
         $this->options['query']['Proto'] = $proto;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**

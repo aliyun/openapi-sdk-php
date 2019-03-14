@@ -2,37 +2,19 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of DescribeUserIoOptimizedInstances
+ * Api DescribeUserIoOptimizedInstances
  *
  */
-class DescribeUserIoOptimizedInstances extends RoaRequest
+class DescribeUserIoOptimizedInstances extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeUserIoOptimizedInstances';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/instances/io_optimized';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
 }

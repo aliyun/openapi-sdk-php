@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateSynchronizationJob
+ * Api CreateSynchronizationJob
  *
  * @method string getPeriod()
  * @method string getDestRegion()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
-class CreateSynchronizationJob extends RpcRequest
+class CreateSynchronizationJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dts';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateSynchronizationJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
 
     /**
      * @param string $period
@@ -65,18 +38,6 @@ class CreateSynchronizationJob extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestRegion() instead.
-     *
-     * @param string $destRegion
-     *
-     * @return $this
-     */
-    public function setDestRegion($destRegion)
-    {
-        return $this->withDestRegion($destRegion);
     }
 
     /**
@@ -93,18 +54,6 @@ class CreateSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -115,18 +64,6 @@ class CreateSynchronizationJob extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSynchronizationJobClass() instead.
-     *
-     * @param string $synchronizationJobClass
-     *
-     * @return $this
-     */
-    public function setSynchronizationJobClass($synchronizationJobClass)
-    {
-        return $this->withSynchronizationJobClass($synchronizationJobClass);
     }
 
     /**
@@ -143,18 +80,6 @@ class CreateSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setnetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -165,18 +90,6 @@ class CreateSynchronizationJob extends RpcRequest
         $this->options['query']['networkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +106,6 @@ class CreateSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceRegion() instead.
-     *
-     * @param string $sourceRegion
-     *
-     * @return $this
-     */
-    public function setSourceRegion($sourceRegion)
-    {
-        return $this->withSourceRegion($sourceRegion);
-    }
-
-    /**
      * @param string $sourceRegion
      *
      * @return $this
@@ -215,18 +116,6 @@ class CreateSynchronizationJob extends RpcRequest
         $this->options['query']['SourceRegion'] = $sourceRegion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPayType() instead.
-     *
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function setPayType($payType)
-    {
-        return $this->withPayType($payType);
     }
 
     /**
@@ -243,18 +132,6 @@ class CreateSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUsedTime() instead.
-     *
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function setUsedTime($usedTime)
-    {
-        return $this->withUsedTime($usedTime);
-    }
-
-    /**
      * @param string $usedTime
      *
      * @return $this
@@ -268,18 +145,6 @@ class CreateSynchronizationJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceEndpointInstanceType() instead.
-     *
-     * @param string $sourceEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setSourceEndpointInstanceType($sourceEndpointInstanceType)
-    {
-        return $this->withSourceEndpointInstanceType($sourceEndpointInstanceType);
-    }
-
-    /**
      * @param string $sourceEndpointInstanceType
      *
      * @return $this
@@ -290,18 +155,6 @@ class CreateSynchronizationJob extends RpcRequest
         $this->options['query']['SourceEndpoint.InstanceType'] = $sourceEndpointInstanceType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationEndpointInstanceType() instead.
-     *
-     * @param string $destinationEndpointInstanceType
-     *
-     * @return $this
-     */
-    public function setDestinationEndpointInstanceType($destinationEndpointInstanceType)
-    {
-        return $this->withDestinationEndpointInstanceType($destinationEndpointInstanceType);
     }
 
     /**

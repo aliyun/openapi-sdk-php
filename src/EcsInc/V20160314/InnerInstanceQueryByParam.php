@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerInstanceQueryByParam
+ * Api InnerInstanceQueryByParam
  *
  * @method string getStartOfInternetTx()
  * @method string getResourceOwnerId()
@@ -44,45 +44,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getIntranetIp()
  * @method string getOrderType()
  */
-class InnerInstanceQueryByParam extends RpcRequest
+class InnerInstanceQueryByParam extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerInstanceQueryByParam';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartOfInternetTx() instead.
-     *
-     * @param string $startOfInternetTx
-     *
-     * @return $this
-     */
-    public function setstartOfInternetTx($startOfInternetTx)
-    {
-        return $this->withStartOfInternetTx($startOfInternetTx);
-    }
 
     /**
      * @param string $startOfInternetTx
@@ -95,18 +65,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['startOfInternetTx'] = $startOfInternetTx;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -123,18 +81,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIzNo() instead.
-     *
-     * @param string $izNo
-     *
-     * @return $this
-     */
-    public function setizNo($izNo)
-    {
-        return $this->withIzNo($izNo);
-    }
-
-    /**
      * @param string $izNo
      *
      * @return $this
@@ -145,18 +91,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['izNo'] = $izNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetIp() instead.
-     *
-     * @param string $internetIp
-     *
-     * @return $this
-     */
-    public function setinternetIp($internetIp)
-    {
-        return $this->withInternetIp($internetIp);
     }
 
     /**
@@ -173,18 +107,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -195,18 +117,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcInstanceId() instead.
-     *
-     * @param string $vpcInstanceId
-     *
-     * @return $this
-     */
-    public function setvpcInstanceId($vpcInstanceId)
-    {
-        return $this->withVpcInstanceId($vpcInstanceId);
     }
 
     /**
@@ -223,18 +133,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setnetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -245,18 +143,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['networkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotSyncHouyi() instead.
-     *
-     * @param string $notSyncHouyi
-     *
-     * @return $this
-     */
-    public function setnotSyncHouyi($notSyncHouyi)
-    {
-        return $this->withNotSyncHouyi($notSyncHouyi);
     }
 
     /**
@@ -273,18 +159,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -295,18 +169,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHostname() instead.
-     *
-     * @param string $hostname
-     *
-     * @return $this
-     */
-    public function sethostname($hostname)
-    {
-        return $this->withHostname($hostname);
     }
 
     /**
@@ -323,18 +185,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneNo() instead.
-     *
-     * @param string $zoneNo
-     *
-     * @return $this
-     */
-    public function setzoneNo($zoneNo)
-    {
-        return $this->withZoneNo($zoneNo);
-    }
-
-    /**
      * @param string $zoneNo
      *
      * @return $this
@@ -345,18 +195,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['zoneNo'] = $zoneNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCores() instead.
-     *
-     * @param string $cores
-     *
-     * @return $this
-     */
-    public function setcores($cores)
-    {
-        return $this->withCores($cores);
     }
 
     /**
@@ -373,18 +211,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMem() instead.
-     *
-     * @param string $mem
-     *
-     * @return $this
-     */
-    public function setmem($mem)
-    {
-        return $this->withMem($mem);
-    }
-
-    /**
      * @param string $mem
      *
      * @return $this
@@ -395,18 +221,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['mem'] = $mem;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBizStatus() instead.
-     *
-     * @param string $bizStatus
-     *
-     * @return $this
-     */
-    public function setbizStatus($bizStatus)
-    {
-        return $this->withBizStatus($bizStatus);
     }
 
     /**
@@ -423,18 +237,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setpageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -445,18 +247,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['pageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -473,18 +263,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchInstanceId() instead.
-     *
-     * @param string $vSwitchInstanceId
-     *
-     * @return $this
-     */
-    public function setvSwitchInstanceId($vSwitchInstanceId)
-    {
-        return $this->withVSwitchInstanceId($vSwitchInstanceId);
-    }
-
-    /**
      * @param string $vSwitchInstanceId
      *
      * @return $this
@@ -495,18 +273,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['vSwitchInstanceId'] = $vSwitchInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**
@@ -523,18 +289,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setorder($order)
-    {
-        return $this->withOrder($order);
-    }
-
-    /**
      * @param string $order
      *
      * @return $this
@@ -545,18 +299,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['order'] = $order;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDeviceCategory() instead.
-     *
-     * @param string $systemDeviceCategory
-     *
-     * @return $this
-     */
-    public function setsystemDeviceCategory($systemDeviceCategory)
-    {
-        return $this->withSystemDeviceCategory($systemDeviceCategory);
     }
 
     /**
@@ -573,18 +315,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgentId() instead.
-     *
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function setagentId($agentId)
-    {
-        return $this->withAgentId($agentId);
-    }
-
-    /**
      * @param string $agentId
      *
      * @return $this
@@ -595,18 +325,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['agentId'] = $agentId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageType() instead.
-     *
-     * @param string $imageType
-     *
-     * @return $this
-     */
-    public function setimageType($imageType)
-    {
-        return $this->withImageType($imageType);
     }
 
     /**
@@ -623,18 +341,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -645,18 +351,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -673,18 +367,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndOfInternetTx() instead.
-     *
-     * @param string $endOfInternetTx
-     *
-     * @return $this
-     */
-    public function setendOfInternetTx($endOfInternetTx)
-    {
-        return $this->withEndOfInternetTx($endOfInternetTx);
-    }
-
-    /**
      * @param string $endOfInternetTx
      *
      * @return $this
@@ -695,18 +377,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['endOfInternetTx'] = $endOfInternetTx;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -723,18 +393,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -745,18 +403,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setregionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
     }
 
     /**
@@ -773,18 +419,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setinstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -795,18 +429,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['instanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setpageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -823,18 +445,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageIndexId() instead.
-     *
-     * @param string $imageIndexId
-     *
-     * @return $this
-     */
-    public function setimageIndexId($imageIndexId)
-    {
-        return $this->withImageIndexId($imageIndexId);
-    }
-
-    /**
      * @param string $imageIndexId
      *
      * @return $this
@@ -845,18 +455,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['imageIndexId'] = $imageIndexId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**
@@ -873,18 +471,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIzId() instead.
-     *
-     * @param string $izId
-     *
-     * @return $this
-     */
-    public function setizId($izId)
-    {
-        return $this->withIzId($izId);
-    }
-
-    /**
      * @param string $izId
      *
      * @return $this
@@ -895,18 +481,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['izId'] = $izId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatus() instead.
-     *
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function setstatus($status)
-    {
-        return $this->withStatus($status);
     }
 
     /**
@@ -923,18 +497,6 @@ class InnerInstanceQueryByParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIntranetIp() instead.
-     *
-     * @param string $intranetIp
-     *
-     * @return $this
-     */
-    public function setintranetIp($intranetIp)
-    {
-        return $this->withIntranetIp($intranetIp);
-    }
-
-    /**
      * @param string $intranetIp
      *
      * @return $this
@@ -945,18 +507,6 @@ class InnerInstanceQueryByParam extends RpcRequest
         $this->options['query']['intranetIp'] = $intranetIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderType() instead.
-     *
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function setorderType($orderType)
-    {
-        return $this->withOrderType($orderType);
     }
 
     /**

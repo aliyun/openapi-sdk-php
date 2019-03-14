@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForUpdatingRegistrantInfoByIdentityCredential
+ * Api SaveTaskForUpdatingRegistrantInfoByIdentityCredential
  *
  * @method string getCountry()
  * @method string getIdentityCredentialType()
@@ -27,32 +27,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEmail()
  * @method string getRegistrantName()
  */
-class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends RpcRequest
+class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain-intl';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForUpdatingRegistrantInfoByIdentityCredential';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'domain';
 
     /**

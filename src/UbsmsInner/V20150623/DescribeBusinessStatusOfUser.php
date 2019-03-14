@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeBusinessStatusOfUser
+ * Api DescribeBusinessStatusOfUser
  *
  * @method string getUid()
  * @method string getPassword()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getStatusKey()
  * @method string getCallerBid()
  */
-class DescribeBusinessStatusOfUser extends RpcRequest
+class DescribeBusinessStatusOfUser extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ubsms-inner';
 
-    /**
-     * @var string
-     */
     public $version = '2015-06-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeBusinessStatusOfUser';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUid() instead.
-     *
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        return $this->withUid($uid);
-    }
 
     /**
      * @param string $uid
@@ -59,18 +32,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         $this->options['query']['Uid'] = $uid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPassword() instead.
-     *
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        return $this->withPassword($password);
     }
 
     /**
@@ -87,18 +48,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceCode() instead.
-     *
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function setServiceCode($serviceCode)
-    {
-        return $this->withServiceCode($serviceCode);
-    }
-
-    /**
      * @param string $serviceCode
      *
      * @return $this
@@ -109,28 +58,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         $this->options['query']['ServiceCode'] = $serviceCode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getStatusKey() instead.
-     *
-     * @return array
-     */
-    public function getStatusKeys()
-    {
-        return $this->getStatusKey();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatusKey() instead.
-     *
-     * @param array $statusKeys
-     *
-     * @return $this
-     */
-    public function setStatusKeys(array $statusKeys)
-    {
-        return $this->withStatusKey($statusKeys);
     }
 
     /**
@@ -146,18 +73,6 @@ class DescribeBusinessStatusOfUser extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerBid() instead.
-     *
-     * @param string $callerBid
-     *
-     * @return $this
-     */
-    public function setcallerBid($callerBid)
-    {
-        return $this->withCallerBid($callerBid);
     }
 
     /**

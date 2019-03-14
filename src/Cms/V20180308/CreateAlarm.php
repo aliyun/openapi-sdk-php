@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateAlarm
+ * Api CreateAlarm
  *
  * @method string getPeriod()
  * @method string getWebhook()
@@ -24,40 +24,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDimensions()
  * @method string getStatistics()
  */
-class CreateAlarm extends RpcRequest
+class CreateAlarm extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateAlarm';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param string $period
@@ -70,18 +45,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWebhook() instead.
-     *
-     * @param string $webhook
-     *
-     * @return $this
-     */
-    public function setWebhook($webhook)
-    {
-        return $this->withWebhook($webhook);
     }
 
     /**
@@ -98,18 +61,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -120,18 +71,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactGroups() instead.
-     *
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function setContactGroups($contactGroups)
-    {
-        return $this->withContactGroups($contactGroups);
     }
 
     /**
@@ -148,18 +87,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -170,18 +97,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withThreshold() instead.
-     *
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function setThreshold($threshold)
-    {
-        return $this->withThreshold($threshold);
     }
 
     /**
@@ -198,18 +113,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -220,18 +123,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -248,18 +139,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNamespace() instead.
-     *
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function setNamespace($namespace)
-    {
-        return $this->withNamespace($namespace);
-    }
-
-    /**
      * @param string $namespace
      *
      * @return $this
@@ -270,18 +149,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['Namespace'] = $namespace;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEvaluationCount() instead.
-     *
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function setEvaluationCount($evaluationCount)
-    {
-        return $this->withEvaluationCount($evaluationCount);
     }
 
     /**
@@ -298,18 +165,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSilenceTime() instead.
-     *
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function setSilenceTime($silenceTime)
-    {
-        return $this->withSilenceTime($silenceTime);
-    }
-
-    /**
      * @param string $silenceTime
      *
      * @return $this
@@ -320,18 +175,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['SilenceTime'] = $silenceTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMetricName() instead.
-     *
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function setMetricName($metricName)
-    {
-        return $this->withMetricName($metricName);
     }
 
     /**
@@ -348,18 +191,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyType() instead.
-     *
-     * @param string $notifyType
-     *
-     * @return $this
-     */
-    public function setNotifyType($notifyType)
-    {
-        return $this->withNotifyType($notifyType);
-    }
-
-    /**
      * @param string $notifyType
      *
      * @return $this
@@ -370,18 +201,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['NotifyType'] = $notifyType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withComparisonOperator() instead.
-     *
-     * @param string $comparisonOperator
-     *
-     * @return $this
-     */
-    public function setComparisonOperator($comparisonOperator)
-    {
-        return $this->withComparisonOperator($comparisonOperator);
     }
 
     /**
@@ -398,18 +217,6 @@ class CreateAlarm extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDimensions() instead.
-     *
-     * @param string $dimensions
-     *
-     * @return $this
-     */
-    public function setDimensions($dimensions)
-    {
-        return $this->withDimensions($dimensions);
-    }
-
-    /**
      * @param string $dimensions
      *
      * @return $this
@@ -420,18 +227,6 @@ class CreateAlarm extends RpcRequest
         $this->options['query']['Dimensions'] = $dimensions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStatistics() instead.
-     *
-     * @param string $statistics
-     *
-     * @return $this
-     */
-    public function setStatistics($statistics)
-    {
-        return $this->withStatistics($statistics);
     }
 
     /**

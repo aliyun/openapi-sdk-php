@@ -2,57 +2,22 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of TaskConfigUnhealthy
+ * Api TaskConfigUnhealthy
  *
  * @method array getTaskIdList()
  */
-class TaskConfigUnhealthy extends RpcRequest
+class TaskConfigUnhealthy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cms';
 
-    /**
-     * @var string
-     */
     public $version = '2018-03-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'TaskConfigUnhealthy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use getTaskIdList() instead.
-     *
-     * @return array
-     */
-    public function getTaskIdLists()
-    {
-        return $this->getTaskIdList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIdList() instead.
-     *
-     * @param array $taskIdLists
-     *
-     * @return $this
-     */
-    public function setTaskIdLists(array $taskIdLists)
-    {
-        return $this->withTaskIdList($taskIdLists);
-    }
+    public $serviceCode = 'cms';
 
     /**
      * @param array $taskIdList

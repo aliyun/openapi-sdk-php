@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of MigrateToOtherRegion
+ * Api MigrateToOtherRegion
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -19,32 +19,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getTargetRegionId()
  * @method string getSwitchTime()
  */
-class MigrateToOtherRegion extends RpcRequest
+class MigrateToOtherRegion extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'MigrateToOtherRegion';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
 
     /**

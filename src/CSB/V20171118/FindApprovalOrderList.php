@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindApprovalOrderList
+ * Api FindApprovalOrderList
  *
  * @method string getProjectName()
  * @method string getCsbId()
@@ -15,41 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNum()
  * @method string getOnlyPending()
  */
-class FindApprovalOrderList extends RpcRequest
+class FindApprovalOrderList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'FindApprovalOrderList';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
-
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProjectName() instead.
-     *
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function setProjectName($projectName)
-    {
-        return $this->withProjectName($projectName);
-    }
 
     /**
      * @param string $projectName
@@ -62,18 +34,6 @@ class FindApprovalOrderList extends RpcRequest
         $this->options['query']['ProjectName'] = $projectName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
     }
 
     /**
@@ -90,18 +50,6 @@ class FindApprovalOrderList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAlias() instead.
-     *
-     * @param string $alias
-     *
-     * @return $this
-     */
-    public function setAlias($alias)
-    {
-        return $this->withAlias($alias);
-    }
-
-    /**
      * @param string $alias
      *
      * @return $this
@@ -112,18 +60,6 @@ class FindApprovalOrderList extends RpcRequest
         $this->options['query']['Alias'] = $alias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withServiceName() instead.
-     *
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function setServiceName($serviceName)
-    {
-        return $this->withServiceName($serviceName);
     }
 
     /**
@@ -140,18 +76,6 @@ class FindApprovalOrderList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceId() instead.
-     *
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function setServiceId($serviceId)
-    {
-        return $this->withServiceId($serviceId);
-    }
-
-    /**
      * @param string $serviceId
      *
      * @return $this
@@ -165,18 +89,6 @@ class FindApprovalOrderList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
-    }
-
-    /**
      * @param string $pageNum
      *
      * @return $this
@@ -187,18 +99,6 @@ class FindApprovalOrderList extends RpcRequest
         $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOnlyPending() instead.
-     *
-     * @param string $onlyPending
-     *
-     * @return $this
-     */
-    public function setOnlyPending($onlyPending)
-    {
-        return $this->withOnlyPending($onlyPending);
     }
 
     /**

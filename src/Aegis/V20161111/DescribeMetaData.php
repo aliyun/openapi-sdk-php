@@ -2,42 +2,24 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeMetaData
+ * Api DescribeMetaData
  *
  * @method string getProjectName()
  * @method string getSourceIp()
  * @method string getLogStoreName()
  * @method string getRegionNo()
  */
-class DescribeMetaData extends RpcRequest
+class DescribeMetaData extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeMetaData';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

@@ -2,56 +2,25 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteCasService
+ * Api DeleteCasService
  *
  * @method string getLeafOnly()
  * @method string getCasCsbName()
  * @method string getSrcUserId()
  * @method string getCasServiceId()
  */
-class DeleteCasService extends RpcRequest
+class DeleteCasService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteCasService';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLeafOnly() instead.
-     *
-     * @param string $leafOnly
-     *
-     * @return $this
-     */
-    public function setLeafOnly($leafOnly)
-    {
-        return $this->withLeafOnly($leafOnly);
-    }
 
     /**
      * @param string $leafOnly
@@ -64,18 +33,6 @@ class DeleteCasService extends RpcRequest
         $this->options['query']['LeafOnly'] = $leafOnly;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasCsbName() instead.
-     *
-     * @param string $casCsbName
-     *
-     * @return $this
-     */
-    public function setCasCsbName($casCsbName)
-    {
-        return $this->withCasCsbName($casCsbName);
     }
 
     /**
@@ -92,18 +49,6 @@ class DeleteCasService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUserId() instead.
-     *
-     * @param string $srcUserId
-     *
-     * @return $this
-     */
-    public function setSrcUserId($srcUserId)
-    {
-        return $this->withSrcUserId($srcUserId);
-    }
-
-    /**
      * @param string $srcUserId
      *
      * @return $this
@@ -114,18 +59,6 @@ class DeleteCasService extends RpcRequest
         $this->options['query']['SrcUserId'] = $srcUserId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasServiceId() instead.
-     *
-     * @param string $casServiceId
-     *
-     * @return $this
-     */
-    public function setCasServiceId($casServiceId)
-    {
-        return $this->withCasServiceId($casServiceId);
     }
 
     /**

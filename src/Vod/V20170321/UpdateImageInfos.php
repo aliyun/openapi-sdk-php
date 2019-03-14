@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateImageInfos
+ * Api UpdateImageInfos
  *
  * @method string getResourceOwnerId()
  * @method string getUpdateContent()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceRealOwnerId()
  * @method string getOwnerId()
  */
-class UpdateImageInfos extends RpcRequest
+class UpdateImageInfos extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateImageInfos';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -64,18 +34,6 @@ class UpdateImageInfos extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUpdateContent() instead.
-     *
-     * @param string $updateContent
-     *
-     * @return $this
-     */
-    public function setUpdateContent($updateContent)
-    {
-        return $this->withUpdateContent($updateContent);
     }
 
     /**
@@ -92,18 +50,6 @@ class UpdateImageInfos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +63,6 @@ class UpdateImageInfos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceRealOwnerId() instead.
-     *
-     * @param string $resourceRealOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceRealOwnerId($resourceRealOwnerId)
-    {
-        return $this->withResourceRealOwnerId($resourceRealOwnerId);
-    }
-
-    /**
      * @param string $resourceRealOwnerId
      *
      * @return $this
@@ -139,18 +73,6 @@ class UpdateImageInfos extends RpcRequest
         $this->options['query']['ResourceRealOwnerId'] = $resourceRealOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

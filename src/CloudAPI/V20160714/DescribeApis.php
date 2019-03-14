@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeApis
+ * Api DescribeApis
  *
  * @method string getApiName()
  * @method string getCatalogId()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getApiId()
  * @method string getPageNumber()
  */
-class DescribeApis extends RpcRequest
+class DescribeApis extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudAPI';
 
-    /**
-     * @var string
-     */
     public $version = '2016-07-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeApis';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'apigateway';
 
     /**

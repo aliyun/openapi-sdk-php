@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QuerySmsStatistics
+ * Api QuerySmsStatistics
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getStartTime()
  * @method string getOwnerId()
  */
-class QuerySmsStatistics extends RpcRequest
+class QuerySmsStatistics extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'QuerySmsStatistics';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -60,18 +33,6 @@ class QuerySmsStatistics extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -88,18 +49,6 @@ class QuerySmsStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -110,18 +59,6 @@ class QuerySmsStatistics extends RpcRequest
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFromType() instead.
-     *
-     * @param string $fromType
-     *
-     * @return $this
-     */
-    public function setFromType($fromType)
-    {
-        return $this->withFromType($fromType);
     }
 
     /**
@@ -138,18 +75,6 @@ class QuerySmsStatistics extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -160,18 +85,6 @@ class QuerySmsStatistics extends RpcRequest
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

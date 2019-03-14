@@ -2,59 +2,35 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeForwardTableEntries
+ * Api DescribeForwardTableEntries
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
- * @method string getForwardEntryId()
+ * @method string getIpProtocol()
+ * @method string getForwardEntryName()
  * @method string getOwnerAccount()
  * @method string getForwardTableId()
- * @method string getPageSize()
  * @method string getOwnerId()
+ * @method string getInternalIp()
  * @method string getPageNumber()
+ * @method string getForwardEntryId()
+ * @method string getInternalPort()
+ * @method string getPageSize()
+ * @method string getExternalIp()
+ * @method string getExternalPort()
  */
-class DescribeForwardTableEntries extends RpcRequest
+class DescribeForwardTableEntries extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeForwardTableEntries';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +43,6 @@ class DescribeForwardTableEntries extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -95,40 +59,29 @@ class DescribeForwardTableEntries extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForwardEntryId() instead.
-     *
-     * @param string $forwardEntryId
+     * @param string $ipProtocol
      *
      * @return $this
      */
-    public function setForwardEntryId($forwardEntryId)
+    public function withIpProtocol($ipProtocol)
     {
-        return $this->withForwardEntryId($forwardEntryId);
-    }
-
-    /**
-     * @param string $forwardEntryId
-     *
-     * @return $this
-     */
-    public function withForwardEntryId($forwardEntryId)
-    {
-        $this->data['ForwardEntryId'] = $forwardEntryId;
-        $this->options['query']['ForwardEntryId'] = $forwardEntryId;
+        $this->data['IpProtocol'] = $ipProtocol;
+        $this->options['query']['IpProtocol'] = $ipProtocol;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
+     * @param string $forwardEntryName
      *
      * @return $this
      */
-    public function setOwnerAccount($ownerAccount)
+    public function withForwardEntryName($forwardEntryName)
     {
-        return $this->withOwnerAccount($ownerAccount);
+        $this->data['ForwardEntryName'] = $forwardEntryName;
+        $this->options['query']['ForwardEntryName'] = $forwardEntryName;
+
+        return $this;
     }
 
     /**
@@ -145,18 +98,6 @@ class DescribeForwardTableEntries extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withForwardTableId() instead.
-     *
-     * @param string $forwardTableId
-     *
-     * @return $this
-     */
-    public function setForwardTableId($forwardTableId)
-    {
-        return $this->withForwardTableId($forwardTableId);
-    }
-
-    /**
      * @param string $forwardTableId
      *
      * @return $this
@@ -167,43 +108,6 @@ class DescribeForwardTableEntries extends RpcRequest
         $this->options['query']['ForwardTableId'] = $forwardTableId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -220,15 +124,16 @@ class DescribeForwardTableEntries extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
+     * @param string $internalIp
      *
      * @return $this
      */
-    public function setPageNumber($pageNumber)
+    public function withInternalIp($internalIp)
     {
-        return $this->withPageNumber($pageNumber);
+        $this->data['InternalIp'] = $internalIp;
+        $this->options['query']['InternalIp'] = $internalIp;
+
+        return $this;
     }
 
     /**
@@ -240,6 +145,71 @@ class DescribeForwardTableEntries extends RpcRequest
     {
         $this->data['PageNumber'] = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
+
+        return $this;
+    }
+
+    /**
+     * @param string $forwardEntryId
+     *
+     * @return $this
+     */
+    public function withForwardEntryId($forwardEntryId)
+    {
+        $this->data['ForwardEntryId'] = $forwardEntryId;
+        $this->options['query']['ForwardEntryId'] = $forwardEntryId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $internalPort
+     *
+     * @return $this
+     */
+    public function withInternalPort($internalPort)
+    {
+        $this->data['InternalPort'] = $internalPort;
+        $this->options['query']['InternalPort'] = $internalPort;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function withPageSize($pageSize)
+    {
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
+
+        return $this;
+    }
+
+    /**
+     * @param string $externalIp
+     *
+     * @return $this
+     */
+    public function withExternalIp($externalIp)
+    {
+        $this->data['ExternalIp'] = $externalIp;
+        $this->options['query']['ExternalIp'] = $externalIp;
+
+        return $this;
+    }
+
+    /**
+     * @param string $externalPort
+     *
+     * @return $this
+     */
+    public function withExternalPort($externalPort)
+    {
+        $this->data['ExternalPort'] = $externalPort;
+        $this->options['query']['ExternalPort'] = $externalPort;
 
         return $this;
     }

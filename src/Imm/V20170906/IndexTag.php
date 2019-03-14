@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of IndexTag
+ * Api IndexTag
  *
  * @method string getSrcUris()
  * @method string getModelId()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSetId()
  * @method string getForce()
  */
-class IndexTag extends RpcRequest
+class IndexTag extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'imm';
 
-    /**
-     * @var string
-     */
     public $version = '2017-09-06';
 
-    /**
-     * @var string
-     */
-    public $action = 'IndexTag';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
-     * @param string $srcUris
-     *
-     * @return $this
-     */
-    public function setSrcUris($srcUris)
-    {
-        return $this->withSrcUris($srcUris);
-    }
 
     /**
      * @param string $srcUris
@@ -64,18 +34,6 @@ class IndexTag extends RpcRequest
         $this->options['query']['SrcUris'] = $srcUris;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withModelId() instead.
-     *
-     * @param string $modelId
-     *
-     * @return $this
-     */
-    public function setModelId($modelId)
-    {
-        return $this->withModelId($modelId);
     }
 
     /**
@@ -92,18 +50,6 @@ class IndexTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
@@ -117,18 +63,6 @@ class IndexTag extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
-    }
-
-    /**
      * @param string $setId
      *
      * @return $this
@@ -139,18 +73,6 @@ class IndexTag extends RpcRequest
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyActiveOperationPendingTask
+ * Api ModifyActiveOperationPendingTask
  *
  * @method string getVpcTaskIdList()
  * @method string getIpAddress()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getSwitchTime()
  * @method string getRegion()
  */
-class ModifyActiveOperationPendingTask extends RpcRequest
+class ModifyActiveOperationPendingTask extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyActiveOperationPendingTask';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVpcTaskIdList() instead.
-     *
-     * @param string $vpcTaskIdList
-     *
-     * @return $this
-     */
-    public function setVpcTaskIdList($vpcTaskIdList)
-    {
-        return $this->withVpcTaskIdList($vpcTaskIdList);
-    }
 
     /**
      * @param string $vpcTaskIdList
@@ -73,18 +43,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['VpcTaskIdList'] = $vpcTaskIdList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpAddress() instead.
-     *
-     * @param string $ipAddress
-     *
-     * @return $this
-     */
-    public function setIpAddress($ipAddress)
-    {
-        return $this->withIpAddress($ipAddress);
     }
 
     /**
@@ -101,18 +59,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -123,18 +69,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -151,18 +85,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -173,18 +95,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskIdList() instead.
-     *
-     * @param string $taskIdList
-     *
-     * @return $this
-     */
-    public function setTaskIdList($taskIdList)
-    {
-        return $this->withTaskIdList($taskIdList);
     }
 
     /**
@@ -201,18 +111,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcInstanceId() instead.
-     *
-     * @param string $vpcInstanceId
-     *
-     * @return $this
-     */
-    public function setVpcInstanceId($vpcInstanceId)
-    {
-        return $this->withVpcInstanceId($vpcInstanceId);
-    }
-
-    /**
      * @param string $vpcInstanceId
      *
      * @return $this
@@ -223,18 +121,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['VpcInstanceId'] = $vpcInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -251,18 +137,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
-
-    /**
      * @param string $vSwitchId
      *
      * @return $this
@@ -273,18 +147,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -301,18 +163,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -323,18 +173,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTunnelId() instead.
-     *
-     * @param string $tunnelId
-     *
-     * @return $this
-     */
-    public function setTunnelId($tunnelId)
-    {
-        return $this->withTunnelId($tunnelId);
     }
 
     /**
@@ -351,18 +189,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSwitchTime() instead.
-     *
-     * @param string $switchTime
-     *
-     * @return $this
-     */
-    public function setSwitchTime($switchTime)
-    {
-        return $this->withSwitchTime($switchTime);
-    }
-
-    /**
      * @param string $switchTime
      *
      * @return $this
@@ -373,18 +199,6 @@ class ModifyActiveOperationPendingTask extends RpcRequest
         $this->options['query']['SwitchTime'] = $switchTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**

@@ -2,50 +2,23 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetForceRedirectConfig
+ * Api SetForceRedirectConfig
  *
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getRedirectType()
  * @method string getOwnerId()
  */
-class SetForceRedirectConfig extends RpcRequest
+class SetForceRedirectConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetForceRedirectConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -58,18 +31,6 @@ class SetForceRedirectConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -86,18 +47,6 @@ class SetForceRedirectConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRedirectType() instead.
-     *
-     * @param string $redirectType
-     *
-     * @return $this
-     */
-    public function setRedirectType($redirectType)
-    {
-        return $this->withRedirectType($redirectType);
-    }
-
-    /**
      * @param string $redirectType
      *
      * @return $this
@@ -108,18 +57,6 @@ class SetForceRedirectConfig extends RpcRequest
         $this->options['query']['RedirectType'] = $redirectType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

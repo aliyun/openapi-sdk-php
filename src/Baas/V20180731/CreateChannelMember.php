@@ -2,58 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateChannelMember
+ * Api CreateChannelMember
  *
  * @method array getOrganization()
  * @method string getChannelId()
  */
-class CreateChannelMember extends RpcRequest
+class CreateChannelMember extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateChannelMember';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getOrganization() instead.
-     *
-     * @return array
-     */
-    public function getOrganizations()
-    {
-        return $this->getOrganization();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganization() instead.
-     *
-     * @param array $organizations
-     *
-     * @return $this
-     */
-    public function setOrganizations(array $organizations)
-    {
-        return $this->withOrganization($organizations);
-    }
 
     /**
      * @param array $organization
@@ -68,18 +31,6 @@ class CreateChannelMember extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

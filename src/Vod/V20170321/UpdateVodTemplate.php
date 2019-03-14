@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateVodTemplate
+ * Api UpdateVodTemplate
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -14,45 +14,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVodTemplateId()
  * @method string getOwnerId()
  */
-class UpdateVodTemplate extends RpcRequest
+class UpdateVodTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'vod';
 
-    /**
-     * @var string
-     */
     public $version = '2017-03-21';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateVodTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -65,18 +35,6 @@ class UpdateVodTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -93,18 +51,6 @@ class UpdateVodTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateConfig() instead.
-     *
-     * @param string $templateConfig
-     *
-     * @return $this
-     */
-    public function setTemplateConfig($templateConfig)
-    {
-        return $this->withTemplateConfig($templateConfig);
-    }
-
-    /**
      * @param string $templateConfig
      *
      * @return $this
@@ -115,18 +61,6 @@ class UpdateVodTemplate extends RpcRequest
         $this->options['query']['TemplateConfig'] = $templateConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -143,18 +77,6 @@ class UpdateVodTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVodTemplateId() instead.
-     *
-     * @param string $vodTemplateId
-     *
-     * @return $this
-     */
-    public function setVodTemplateId($vodTemplateId)
-    {
-        return $this->withVodTemplateId($vodTemplateId);
-    }
-
-    /**
      * @param string $vodTemplateId
      *
      * @return $this
@@ -165,18 +87,6 @@ class UpdateVodTemplate extends RpcRequest
         $this->options['query']['VodTemplateId'] = $vodTemplateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteRouteEntry
+ * Api DeleteRouteEntry
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
@@ -16,40 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method array getNextHopList()
  * @method string getRouteTableId()
  */
-class DeleteRouteEntry extends RpcRequest
+class DeleteRouteEntry extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteRouteEntry';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $resourceOwnerId
@@ -62,18 +37,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -90,18 +53,6 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestinationCidrBlock() instead.
-     *
-     * @param string $destinationCidrBlock
-     *
-     * @return $this
-     */
-    public function setDestinationCidrBlock($destinationCidrBlock)
-    {
-        return $this->withDestinationCidrBlock($destinationCidrBlock);
-    }
-
-    /**
      * @param string $destinationCidrBlock
      *
      * @return $this
@@ -112,18 +63,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['DestinationCidrBlock'] = $destinationCidrBlock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -140,18 +79,6 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNextHopId() instead.
-     *
-     * @param string $nextHopId
-     *
-     * @return $this
-     */
-    public function setNextHopId($nextHopId)
-    {
-        return $this->withNextHopId($nextHopId);
-    }
-
-    /**
      * @param string $nextHopId
      *
      * @return $this
@@ -162,18 +89,6 @@ class DeleteRouteEntry extends RpcRequest
         $this->options['query']['NextHopId'] = $nextHopId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -190,28 +105,6 @@ class DeleteRouteEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getNextHopList() instead.
-     *
-     * @return array
-     */
-    public function getNextHopLists()
-    {
-        return $this->getNextHopList();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextHopList() instead.
-     *
-     * @param array $nextHopLists
-     *
-     * @return $this
-     */
-    public function setNextHopLists(array $nextHopLists)
-    {
-        return $this->withNextHopList($nextHopLists);
-    }
-
-    /**
      * @param array $nextHopList
      *
      * @return $this
@@ -225,18 +118,6 @@ class DeleteRouteEntry extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableId() instead.
-     *
-     * @param string $routeTableId
-     *
-     * @return $this
-     */
-    public function setRouteTableId($routeTableId)
-    {
-        return $this->withRouteTableId($routeTableId);
     }
 
     /**

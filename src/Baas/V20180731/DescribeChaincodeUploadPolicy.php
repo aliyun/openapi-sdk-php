@@ -2,47 +2,20 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeChaincodeUploadPolicy
+ * Api DescribeChaincodeUploadPolicy
  *
  * @method string getOrganizationId()
  */
-class DescribeChaincodeUploadPolicy extends RpcRequest
+class DescribeChaincodeUploadPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeChaincodeUploadPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'PUT';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrganizationId() instead.
-     *
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function setOrganizationId($organizationId)
-    {
-        return $this->withOrganizationId($organizationId);
-    }
 
     /**
      * @param string $organizationId

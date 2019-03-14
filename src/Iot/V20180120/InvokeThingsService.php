@@ -2,50 +2,24 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InvokeThingsService
+ * Api InvokeThingsService
  *
  * @method string getArgs()
  * @method string getIdentifier()
+ * @method string getIotInstanceId()
  * @method array getDeviceName()
  * @method string getProductKey()
  */
-class InvokeThingsService extends RpcRequest
+class InvokeThingsService extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'InvokeThingsService';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withArgs() instead.
-     *
-     * @param string $args
-     *
-     * @return $this
-     */
-    public function setArgs($args)
-    {
-        return $this->withArgs($args);
-    }
 
     /**
      * @param string $args
@@ -58,18 +32,6 @@ class InvokeThingsService extends RpcRequest
         $this->options['query']['Args'] = $args;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdentifier() instead.
-     *
-     * @param string $identifier
-     *
-     * @return $this
-     */
-    public function setIdentifier($identifier)
-    {
-        return $this->withIdentifier($identifier);
     }
 
     /**
@@ -86,25 +48,16 @@ class InvokeThingsService extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDeviceName() instead.
-     *
-     * @return array
-     */
-    public function getDeviceNames()
-    {
-        return $this->getDeviceName();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param array $deviceNames
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setDeviceNames(array $deviceNames)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withDeviceName($deviceNames);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -120,18 +73,6 @@ class InvokeThingsService extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**

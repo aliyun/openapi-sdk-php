@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SendTestByTemplate
+ * Api SendTestByTemplate
  *
  * @method string getBirthday()
  * @method string getResourceOwnerId()
@@ -19,40 +19,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getEmail()
  * @method string getUserName()
  */
-class SendTestByTemplate extends RpcRequest
+class SendTestByTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dm';
 
-    /**
-     * @var string
-     */
     public $version = '2015-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'SendTestByTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBirthday() instead.
-     *
-     * @param string $birthday
-     *
-     * @return $this
-     */
-    public function setBirthday($birthday)
-    {
-        return $this->withBirthday($birthday);
-    }
 
     /**
      * @param string $birthday
@@ -65,18 +38,6 @@ class SendTestByTemplate extends RpcRequest
         $this->options['query']['Birthday'] = $birthday;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -93,18 +54,6 @@ class SendTestByTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGender() instead.
-     *
-     * @param string $gender
-     *
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        return $this->withGender($gender);
-    }
-
-    /**
      * @param string $gender
      *
      * @return $this
@@ -115,18 +64,6 @@ class SendTestByTemplate extends RpcRequest
         $this->options['query']['Gender'] = $gender;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -143,18 +80,6 @@ class SendTestByTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMobile() instead.
-     *
-     * @param string $mobile
-     *
-     * @return $this
-     */
-    public function setMobile($mobile)
-    {
-        return $this->withMobile($mobile);
-    }
-
-    /**
      * @param string $mobile
      *
      * @return $this
@@ -165,18 +90,6 @@ class SendTestByTemplate extends RpcRequest
         $this->options['query']['Mobile'] = $mobile;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -193,18 +106,6 @@ class SendTestByTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
@@ -215,18 +116,6 @@ class SendTestByTemplate extends RpcRequest
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountName() instead.
-     *
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function setAccountName($accountName)
-    {
-        return $this->withAccountName($accountName);
     }
 
     /**
@@ -243,18 +132,6 @@ class SendTestByTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNickName() instead.
-     *
-     * @param string $nickName
-     *
-     * @return $this
-     */
-    public function setNickName($nickName)
-    {
-        return $this->withNickName($nickName);
-    }
-
-    /**
      * @param string $nickName
      *
      * @return $this
@@ -268,18 +145,6 @@ class SendTestByTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
-    }
-
-    /**
      * @param string $email
      *
      * @return $this
@@ -290,18 +155,6 @@ class SendTestByTemplate extends RpcRequest
         $this->options['query']['Email'] = $email;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

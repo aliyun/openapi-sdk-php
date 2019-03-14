@@ -2,50 +2,24 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDeviceProperty
+ * Api SetDeviceProperty
  *
  * @method string getIotId()
+ * @method string getIotInstanceId()
  * @method string getDeviceName()
  * @method string getProductKey()
  * @method string getItems()
  */
-class SetDeviceProperty extends RpcRequest
+class SetDeviceProperty extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Iot';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDeviceProperty';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
 
     /**
      * @param string $iotId
@@ -61,15 +35,16 @@ class SetDeviceProperty extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
+     * @param string $iotInstanceId
      *
      * @return $this
      */
-    public function setDeviceName($deviceName)
+    public function withIotInstanceId($iotInstanceId)
     {
-        return $this->withDeviceName($deviceName);
+        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->options['query']['IotInstanceId'] = $iotInstanceId;
+
+        return $this;
     }
 
     /**
@@ -86,18 +61,6 @@ class SetDeviceProperty extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
-    }
-
-    /**
      * @param string $productKey
      *
      * @return $this
@@ -108,18 +71,6 @@ class SetDeviceProperty extends RpcRequest
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withItems() instead.
-     *
-     * @param string $items
-     *
-     * @return $this
-     */
-    public function setItems($items)
-    {
-        return $this->withItems($items);
     }
 
     /**

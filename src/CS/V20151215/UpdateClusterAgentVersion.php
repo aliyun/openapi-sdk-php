@@ -2,58 +2,25 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\Client\Request\RoaRequest;
+use AlibabaCloud\Roa;
 
 /**
- * Request of UpdateClusterAgentVersion
+ * Api UpdateClusterAgentVersion
  *
  * @method string getClusterId()
  * @method string getVersion()
  */
-class UpdateClusterAgentVersion extends RoaRequest
+class UpdateClusterAgentVersion extends Roa
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateClusterAgentVersion';
-
-    /**
-     * @var string
-     */
     public $pathPattern = '/admin/clusters/[ClusterId]/agent/[Version]/modify';
 
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClusterId() instead.
-     *
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function setClusterId($clusterId)
-    {
-        return $this->withClusterId($clusterId);
-    }
 
     /**
      * @param string $clusterId
@@ -66,18 +33,6 @@ class UpdateClusterAgentVersion extends RoaRequest
         $this->pathParameters['ClusterId'] = $clusterId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersion() instead.
-     *
-     * @param string $version
-     *
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        return $this->withVersion($version);
     }
 
     /**

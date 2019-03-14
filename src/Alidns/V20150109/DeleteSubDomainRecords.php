@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DeleteSubDomainRecords
+ * Api DeleteSubDomainRecords
  *
  * @method string getRR()
  * @method string getUserClientIp()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getLang()
  * @method string getType()
  */
-class DeleteSubDomainRecords extends RpcRequest
+class DeleteSubDomainRecords extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'DeleteSubDomainRecords';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRR() instead.
-     *
-     * @param string $rR
-     *
-     * @return $this
-     */
-    public function setRR($rR)
-    {
-        return $this->withRR($rR);
-    }
 
     /**
      * @param string $rR
@@ -64,18 +34,6 @@ class DeleteSubDomainRecords extends RpcRequest
         $this->options['query']['RR'] = $rR;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -92,18 +50,6 @@ class DeleteSubDomainRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -117,18 +63,6 @@ class DeleteSubDomainRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -139,18 +73,6 @@ class DeleteSubDomainRecords extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withType() instead.
-     *
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        return $this->withType($type);
     }
 
     /**

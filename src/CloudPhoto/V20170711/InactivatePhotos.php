@@ -2,61 +2,27 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InactivatePhotos
+ * Api InactivatePhotos
  *
  * @method string getLibraryId()
  * @method array getPhotoId()
  * @method string getStoreName()
  * @method string getInactiveTime()
  */
-class InactivatePhotos extends RpcRequest
+class InactivatePhotos extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CloudPhoto';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'InactivatePhotos';
-
-    /**
-     * @var string
-     */
     public $scheme = 'https';
 
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLibraryId() instead.
-     *
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function setLibraryId($libraryId)
-    {
-        return $this->withLibraryId($libraryId);
-    }
 
     /**
      * @param string $libraryId
@@ -69,28 +35,6 @@ class InactivatePhotos extends RpcRequest
         $this->options['query']['LibraryId'] = $libraryId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPhotoId() instead.
-     *
-     * @return array
-     */
-    public function getPhotoIds()
-    {
-        return $this->getPhotoId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPhotoId() instead.
-     *
-     * @param array $photoIds
-     *
-     * @return $this
-     */
-    public function setPhotoIds(array $photoIds)
-    {
-        return $this->withPhotoId($photoIds);
     }
 
     /**
@@ -109,18 +53,6 @@ class InactivatePhotos extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStoreName() instead.
-     *
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function setStoreName($storeName)
-    {
-        return $this->withStoreName($storeName);
-    }
-
-    /**
      * @param string $storeName
      *
      * @return $this
@@ -131,18 +63,6 @@ class InactivatePhotos extends RpcRequest
         $this->options['query']['StoreName'] = $storeName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInactiveTime() instead.
-     *
-     * @param string $inactiveTime
-     *
-     * @return $this
-     */
-    public function setInactiveTime($inactiveTime)
-    {
-        return $this->withInactiveTime($inactiveTime);
     }
 
     /**

@@ -2,54 +2,24 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeCasterSceneAudio
+ * Api DescribeCasterSceneAudio
  *
  * @method string getCasterId()
  * @method string getSceneId()
  * @method string getOwnerId()
  */
-class DescribeCasterSceneAudio extends RpcRequest
+class DescribeCasterSceneAudio extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeCasterSceneAudio';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCasterId() instead.
-     *
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function setCasterId($casterId)
-    {
-        return $this->withCasterId($casterId);
-    }
 
     /**
      * @param string $casterId
@@ -65,18 +35,6 @@ class DescribeCasterSceneAudio extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSceneId() instead.
-     *
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function setSceneId($sceneId)
-    {
-        return $this->withSceneId($sceneId);
-    }
-
-    /**
      * @param string $sceneId
      *
      * @return $this
@@ -87,18 +45,6 @@ class DescribeCasterSceneAudio extends RpcRequest
         $this->options['query']['SceneId'] = $sceneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

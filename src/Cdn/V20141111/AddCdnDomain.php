@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddCdnDomain
+ * Api AddCdnDomain
  *
  * @method string getTopLevelDomain()
  * @method string getSources()
@@ -22,40 +22,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCheckUrl()
  * @method string getRegion()
  */
-class AddCdnDomain extends RpcRequest
+class AddCdnDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddCdnDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopLevelDomain() instead.
-     *
-     * @param string $topLevelDomain
-     *
-     * @return $this
-     */
-    public function setTopLevelDomain($topLevelDomain)
-    {
-        return $this->withTopLevelDomain($topLevelDomain);
-    }
 
     /**
      * @param string $topLevelDomain
@@ -68,18 +41,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['TopLevelDomain'] = $topLevelDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSources() instead.
-     *
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function setSources($sources)
-    {
-        return $this->withSources($sources);
     }
 
     /**
@@ -96,18 +57,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -118,18 +67,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -146,18 +83,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -168,18 +93,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -196,18 +109,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourcePort() instead.
-     *
-     * @param string $sourcePort
-     *
-     * @return $this
-     */
-    public function setSourcePort($sourcePort)
-    {
-        return $this->withSourcePort($sourcePort);
-    }
-
-    /**
      * @param string $sourcePort
      *
      * @return $this
@@ -218,18 +119,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['SourcePort'] = $sourcePort;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriorities() instead.
-     *
-     * @param string $priorities
-     *
-     * @return $this
-     */
-    public function setPriorities($priorities)
-    {
-        return $this->withPriorities($priorities);
     }
 
     /**
@@ -246,18 +135,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -268,18 +145,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCdnType() instead.
-     *
-     * @param string $cdnType
-     *
-     * @return $this
-     */
-    public function setCdnType($cdnType)
-    {
-        return $this->withCdnType($cdnType);
     }
 
     /**
@@ -296,18 +161,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
-    }
-
-    /**
      * @param string $scope
      *
      * @return $this
@@ -318,18 +171,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['Scope'] = $scope;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceType() instead.
-     *
-     * @param string $sourceType
-     *
-     * @return $this
-     */
-    public function setSourceType($sourceType)
-    {
-        return $this->withSourceType($sourceType);
     }
 
     /**
@@ -346,18 +187,6 @@ class AddCdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCheckUrl() instead.
-     *
-     * @param string $checkUrl
-     *
-     * @return $this
-     */
-    public function setCheckUrl($checkUrl)
-    {
-        return $this->withCheckUrl($checkUrl);
-    }
-
-    /**
      * @param string $checkUrl
      *
      * @return $this
@@ -368,18 +197,6 @@ class AddCdnDomain extends RpcRequest
         $this->options['query']['CheckUrl'] = $checkUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**

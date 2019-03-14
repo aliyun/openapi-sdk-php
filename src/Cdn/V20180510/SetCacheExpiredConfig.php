@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetCacheExpiredConfig
+ * Api SetCacheExpiredConfig
  *
  * @method string getCacheType()
  * @method string getSecurityToken()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getTTL()
  */
-class SetCacheExpiredConfig extends RpcRequest
+class SetCacheExpiredConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetCacheExpiredConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCacheType() instead.
-     *
-     * @param string $cacheType
-     *
-     * @return $this
-     */
-    public function setCacheType($cacheType)
-    {
-        return $this->withCacheType($cacheType);
-    }
 
     /**
      * @param string $cacheType
@@ -61,18 +34,6 @@ class SetCacheExpiredConfig extends RpcRequest
         $this->options['query']['CacheType'] = $cacheType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -89,18 +50,6 @@ class SetCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -111,18 +60,6 @@ class SetCacheExpiredConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWeight() instead.
-     *
-     * @param string $weight
-     *
-     * @return $this
-     */
-    public function setWeight($weight)
-    {
-        return $this->withWeight($weight);
     }
 
     /**
@@ -139,18 +76,6 @@ class SetCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCacheContent() instead.
-     *
-     * @param string $cacheContent
-     *
-     * @return $this
-     */
-    public function setCacheContent($cacheContent)
-    {
-        return $this->withCacheContent($cacheContent);
-    }
-
-    /**
      * @param string $cacheContent
      *
      * @return $this
@@ -164,18 +89,6 @@ class SetCacheExpiredConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +99,6 @@ class SetCacheExpiredConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTTL() instead.
-     *
-     * @param string $tTL
-     *
-     * @return $this
-     */
-    public function setTTL($tTL)
-    {
-        return $this->withTTL($tTL);
     }
 
     /**

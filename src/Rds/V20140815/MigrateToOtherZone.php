@@ -2,14 +2,15 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of MigrateToOtherZone
+ * Api MigrateToOtherZone
  *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
+ * @method string getZoneIdSlave1()
  * @method string getZoneIdSlave2()
  * @method string getOwnerId()
  * @method string getVSwitchId()
@@ -18,47 +19,16 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getZoneId()
  * @method string getDBInstanceId()
  * @method string getCategory()
- * @method string getZoneIdSlave1 ()
  */
-class MigrateToOtherZone extends RpcRequest
+class MigrateToOtherZone extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'MigrateToOtherZone';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -71,18 +41,6 @@ class MigrateToOtherZone extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -99,18 +57,6 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -124,15 +70,16 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneIdSlave2() instead.
-     *
-     * @param string $zoneIdSlave2
+     * @param string $zoneIdSlave1
      *
      * @return $this
      */
-    public function setZoneIdSlave2($zoneIdSlave2)
+    public function withZoneIdSlave1($zoneIdSlave1)
     {
-        return $this->withZoneIdSlave2($zoneIdSlave2);
+        $this->data['ZoneIdSlave1'] = $zoneIdSlave1;
+        $this->options['query']['ZoneIdSlave1'] = $zoneIdSlave1;
+
+        return $this;
     }
 
     /**
@@ -149,18 +96,6 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -171,18 +106,6 @@ class MigrateToOtherZone extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -199,18 +122,6 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEffectiveTime() instead.
-     *
-     * @param string $effectiveTime
-     *
-     * @return $this
-     */
-    public function setEffectiveTime($effectiveTime)
-    {
-        return $this->withEffectiveTime($effectiveTime);
-    }
-
-    /**
      * @param string $effectiveTime
      *
      * @return $this
@@ -221,18 +132,6 @@ class MigrateToOtherZone extends RpcRequest
         $this->options['query']['EffectiveTime'] = $effectiveTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVPCId() instead.
-     *
-     * @param string $vPCId
-     *
-     * @return $this
-     */
-    public function setVPCId($vPCId)
-    {
-        return $this->withVPCId($vPCId);
     }
 
     /**
@@ -249,18 +148,6 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
-    }
-
-    /**
      * @param string $zoneId
      *
      * @return $this
@@ -271,18 +158,6 @@ class MigrateToOtherZone extends RpcRequest
         $this->options['query']['ZoneId'] = $zoneId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
     }
 
     /**
@@ -299,18 +174,6 @@ class MigrateToOtherZone extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
-    }
-
-    /**
      * @param string $category
      *
      * @return $this
@@ -319,31 +182,6 @@ class MigrateToOtherZone extends RpcRequest
     {
         $this->data['Category'] = $category;
         $this->options['query']['Category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneIdSlave1 () instead.
-     *
-     * @param string $zoneIdSlave1
-     *
-     * @return $this
-     */
-    public function setZoneIdSlave1($zoneIdSlave1)
-    {
-        return $this->withZoneIdSlave1($zoneIdSlave1);
-    }
-
-    /**
-     * @param string $zoneIdSlave1
-     *
-     * @return $this
-     */
-    public function withZoneIdSlave1($zoneIdSlave1)
-    {
-        $this->data['ZoneIdSlave1 '] = $zoneIdSlave1 ;
-        $this->options['query']['ZoneIdSlave1 '] = $zoneIdSlave1 ;
 
         return $this;
     }

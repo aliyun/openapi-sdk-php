@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyConsumptionTimestamp
+ * Api ModifyConsumptionTimestamp
  *
  * @method string getSubscriptionInstanceId()
  * @method string getConsumptionTimestamp()
  * @method string getOwnerId()
  */
-class ModifyConsumptionTimestamp extends RpcRequest
+class ModifyConsumptionTimestamp extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dts';
 
-    /**
-     * @var string
-     */
     public $version = '2016-08-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyConsumptionTimestamp';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSubscriptionInstanceId() instead.
-     *
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function setSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        return $this->withSubscriptionInstanceId($subscriptionInstanceId);
-    }
 
     /**
      * @param string $subscriptionInstanceId
@@ -60,18 +33,6 @@ class ModifyConsumptionTimestamp extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withConsumptionTimestamp() instead.
-     *
-     * @param string $consumptionTimestamp
-     *
-     * @return $this
-     */
-    public function setConsumptionTimestamp($consumptionTimestamp)
-    {
-        return $this->withConsumptionTimestamp($consumptionTimestamp);
-    }
-
-    /**
      * @param string $consumptionTimestamp
      *
      * @return $this
@@ -82,18 +43,6 @@ class ModifyConsumptionTimestamp extends RpcRequest
         $this->options['query']['ConsumptionTimestamp'] = $consumptionTimestamp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

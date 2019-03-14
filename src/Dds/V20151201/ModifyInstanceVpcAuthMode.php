@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyInstanceVpcAuthMode
+ * Api ModifyInstanceVpcAuthMode
  *
  * @method string getResourceOwnerId()
  * @method string getSecurityToken()
@@ -16,32 +16,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getNodeId()
  */
-class ModifyInstanceVpcAuthMode extends RpcRequest
+class ModifyInstanceVpcAuthMode extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dds';
 
-    /**
-     * @var string
-     */
     public $version = '2015-12-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyInstanceVpcAuthMode';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dds';
 
     /**

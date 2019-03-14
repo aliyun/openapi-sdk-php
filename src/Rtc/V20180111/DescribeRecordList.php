@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeRecordList
+ * Api DescribeRecordList
  *
  * @method string getSortType()
  * @method string getStartTime()
@@ -18,45 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPageNo()
  * @method string getAppId()
  */
-class DescribeRecordList extends RpcRequest
+class DescribeRecordList extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'rtc';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeRecordList';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rtc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSortType() instead.
-     *
-     * @param string $sortType
-     *
-     * @return $this
-     */
-    public function setSortType($sortType)
-    {
-        return $this->withSortType($sortType);
-    }
 
     /**
      * @param string $sortType
@@ -69,18 +39,6 @@ class DescribeRecordList extends RpcRequest
         $this->options['query']['SortType'] = $sortType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -97,18 +55,6 @@ class DescribeRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withServiceArea() instead.
-     *
-     * @param string $serviceArea
-     *
-     * @return $this
-     */
-    public function setServiceArea($serviceArea)
-    {
-        return $this->withServiceArea($serviceArea);
-    }
-
-    /**
      * @param string $serviceArea
      *
      * @return $this
@@ -119,18 +65,6 @@ class DescribeRecordList extends RpcRequest
         $this->options['query']['ServiceArea'] = $serviceArea;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -147,18 +81,6 @@ class DescribeRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        return $this->withId($id);
-    }
-
-    /**
      * @param string $id
      *
      * @return $this
@@ -169,18 +91,6 @@ class DescribeRecordList extends RpcRequest
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -197,18 +107,6 @@ class DescribeRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -219,18 +117,6 @@ class DescribeRecordList extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdType() instead.
-     *
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function setIdType($idType)
-    {
-        return $this->withIdType($idType);
     }
 
     /**
@@ -247,18 +133,6 @@ class DescribeRecordList extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
-    }
-
-    /**
      * @param string $pageNo
      *
      * @return $this
@@ -269,18 +143,6 @@ class DescribeRecordList extends RpcRequest
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**

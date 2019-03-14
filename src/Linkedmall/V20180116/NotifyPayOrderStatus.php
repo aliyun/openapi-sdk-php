@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of NotifyPayOrderStatus
+ * Api NotifyPayOrderStatus
  *
  * @method string getAmount()
  * @method string getPayTypes()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOperationDate()
  * @method string getChannelId()
  */
-class NotifyPayOrderStatus extends RpcRequest
+class NotifyPayOrderStatus extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
-    public $action = 'NotifyPayOrderStatus';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAmount() instead.
-     *
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        return $this->withAmount($amount);
-    }
 
     /**
      * @param string $amount
@@ -64,18 +34,6 @@ class NotifyPayOrderStatus extends RpcRequest
         $this->options['query']['Amount'] = $amount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPayTypes() instead.
-     *
-     * @param string $payTypes
-     *
-     * @return $this
-     */
-    public function setPayTypes($payTypes)
-    {
-        return $this->withPayTypes($payTypes);
     }
 
     /**
@@ -92,18 +50,6 @@ class NotifyPayOrderStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRequestId() instead.
-     *
-     * @param string $requestId
-     *
-     * @return $this
-     */
-    public function setRequestId($requestId)
-    {
-        return $this->withRequestId($requestId);
-    }
-
-    /**
      * @param string $requestId
      *
      * @return $this
@@ -117,18 +63,6 @@ class NotifyPayOrderStatus extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperationDate() instead.
-     *
-     * @param string $operationDate
-     *
-     * @return $this
-     */
-    public function setOperationDate($operationDate)
-    {
-        return $this->withOperationDate($operationDate);
-    }
-
-    /**
      * @param string $operationDate
      *
      * @return $this
@@ -139,18 +73,6 @@ class NotifyPayOrderStatus extends RpcRequest
         $this->options['query']['OperationDate'] = $operationDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

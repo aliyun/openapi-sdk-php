@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UntagResourcesSystemTags
+ * Api UntagResourcesSystemTags
  *
  * @method string getResourceOwnerId()
  * @method string getTagOwnerUid()
@@ -18,32 +18,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getResourceType()
  * @method array getTagKey()
  */
-class UntagResourcesSystemTags extends RpcRequest
+class UntagResourcesSystemTags extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'UntagResourcesSystemTags';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddIPv6TranslatorAclListEntry
+ * Api AddIPv6TranslatorAclListEntry
  *
  * @method string getAclId()
  * @method string getResourceOwnerId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAclEntryComment()
  * @method string getOwnerId()
  */
-class AddIPv6TranslatorAclListEntry extends RpcRequest
+class AddIPv6TranslatorAclListEntry extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Vpc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-04-28';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddIPv6TranslatorAclListEntry';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vpc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAclId() instead.
-     *
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function setAclId($aclId)
-    {
-        return $this->withAclId($aclId);
-    }
 
     /**
      * @param string $aclId
@@ -66,18 +36,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
         $this->options['query']['AclId'] = $aclId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +52,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAclEntryIp() instead.
-     *
-     * @param string $aclEntryIp
-     *
-     * @return $this
-     */
-    public function setAclEntryIp($aclEntryIp)
-    {
-        return $this->withAclEntryIp($aclEntryIp);
-    }
-
-    /**
      * @param string $aclEntryIp
      *
      * @return $this
@@ -116,18 +62,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
         $this->options['query']['AclEntryIp'] = $aclEntryIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -169,18 +91,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAclEntryComment() instead.
-     *
-     * @param string $aclEntryComment
-     *
-     * @return $this
-     */
-    public function setAclEntryComment($aclEntryComment)
-    {
-        return $this->withAclEntryComment($aclEntryComment);
-    }
-
-    /**
      * @param string $aclEntryComment
      *
      * @return $this
@@ -191,18 +101,6 @@ class AddIPv6TranslatorAclListEntry extends RpcRequest
         $this->options['query']['AclEntryComment'] = $aclEntryComment;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

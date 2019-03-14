@@ -2,52 +2,22 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ListCallMeasureSummaryReports
+ * Api ListCallMeasureSummaryReports
  *
  * @method string getIntervalType()
  */
-class ListCallMeasureSummaryReports extends RpcRequest
+class ListCallMeasureSummaryReports extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ListCallMeasureSummaryReports';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIntervalType() instead.
-     *
-     * @param string $intervalType
-     *
-     * @return $this
-     */
-    public function setIntervalType($intervalType)
-    {
-        return $this->withIntervalType($intervalType);
-    }
 
     /**
      * @param string $intervalType

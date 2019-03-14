@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySecurityGroupRule
+ * Api ModifySecurityGroupRule
  *
  * @method string getNicType()
  * @method string getResourceOwnerId()
@@ -28,40 +28,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDestCidrIp()
  * @method string getSourceGroupId()
  */
-class ModifySecurityGroupRule extends RpcRequest
+class ModifySecurityGroupRule extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySecurityGroupRule';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withNicType() instead.
-     *
-     * @param string $nicType
-     *
-     * @return $this
-     */
-    public function setNicType($nicType)
-    {
-        return $this->withNicType($nicType);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $nicType
@@ -74,18 +49,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['NicType'] = $nicType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -102,18 +65,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourcePortRange() instead.
-     *
-     * @param string $sourcePortRange
-     *
-     * @return $this
-     */
-    public function setSourcePortRange($sourcePortRange)
-    {
-        return $this->withSourcePortRange($sourcePortRange);
-    }
-
-    /**
      * @param string $sourcePortRange
      *
      * @return $this
@@ -124,18 +75,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['SourcePortRange'] = $sourcePortRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -152,18 +91,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
-    }
-
-    /**
      * @param string $securityGroupId
      *
      * @return $this
@@ -174,18 +101,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['SecurityGroupId'] = $securityGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
     }
 
     /**
@@ -202,18 +117,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupOwnerId() instead.
-     *
-     * @param string $sourceGroupOwnerId
-     *
-     * @return $this
-     */
-    public function setSourceGroupOwnerId($sourceGroupOwnerId)
-    {
-        return $this->withSourceGroupOwnerId($sourceGroupOwnerId);
-    }
-
-    /**
      * @param string $sourceGroupOwnerId
      *
      * @return $this
@@ -224,18 +127,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['SourceGroupOwnerId'] = $sourceGroupOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupOwnerAccount() instead.
-     *
-     * @param string $sourceGroupOwnerAccount
-     *
-     * @return $this
-     */
-    public function setSourceGroupOwnerAccount($sourceGroupOwnerAccount)
-    {
-        return $this->withSourceGroupOwnerAccount($sourceGroupOwnerAccount);
     }
 
     /**
@@ -252,18 +143,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIpv6SourceCidrIp() instead.
-     *
-     * @param string $ipv6SourceCidrIp
-     *
-     * @return $this
-     */
-    public function setIpv6SourceCidrIp($ipv6SourceCidrIp)
-    {
-        return $this->withIpv6SourceCidrIp($ipv6SourceCidrIp);
-    }
-
-    /**
      * @param string $ipv6SourceCidrIp
      *
      * @return $this
@@ -274,18 +153,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['Ipv6SourceCidrIp'] = $ipv6SourceCidrIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpv6DestCidrIp() instead.
-     *
-     * @param string $ipv6DestCidrIp
-     *
-     * @return $this
-     */
-    public function setIpv6DestCidrIp($ipv6DestCidrIp)
-    {
-        return $this->withIpv6DestCidrIp($ipv6DestCidrIp);
     }
 
     /**
@@ -302,18 +169,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPolicy() instead.
-     *
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function setPolicy($policy)
-    {
-        return $this->withPolicy($policy);
-    }
-
-    /**
      * @param string $policy
      *
      * @return $this
@@ -324,18 +179,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['Policy'] = $policy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPortRange() instead.
-     *
-     * @param string $portRange
-     *
-     * @return $this
-     */
-    public function setPortRange($portRange)
-    {
-        return $this->withPortRange($portRange);
     }
 
     /**
@@ -352,18 +195,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -374,18 +205,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpProtocol() instead.
-     *
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function setIpProtocol($ipProtocol)
-    {
-        return $this->withIpProtocol($ipProtocol);
     }
 
     /**
@@ -402,18 +221,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -424,18 +231,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceCidrIp() instead.
-     *
-     * @param string $sourceCidrIp
-     *
-     * @return $this
-     */
-    public function setSourceCidrIp($sourceCidrIp)
-    {
-        return $this->withSourceCidrIp($sourceCidrIp);
     }
 
     /**
@@ -452,18 +247,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -474,18 +257,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPriority() instead.
-     *
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        return $this->withPriority($priority);
     }
 
     /**
@@ -502,18 +273,6 @@ class ModifySecurityGroupRule extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDestCidrIp() instead.
-     *
-     * @param string $destCidrIp
-     *
-     * @return $this
-     */
-    public function setDestCidrIp($destCidrIp)
-    {
-        return $this->withDestCidrIp($destCidrIp);
-    }
-
-    /**
      * @param string $destCidrIp
      *
      * @return $this
@@ -524,18 +283,6 @@ class ModifySecurityGroupRule extends RpcRequest
         $this->options['query']['DestCidrIp'] = $destCidrIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceGroupId() instead.
-     *
-     * @param string $sourceGroupId
-     *
-     * @return $this
-     */
-    public function setSourceGroupId($sourceGroupId)
-    {
-        return $this->withSourceGroupId($sourceGroupId);
     }
 
     /**

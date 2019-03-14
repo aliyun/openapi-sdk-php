@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID
+ * Api SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID
  *
  * @method string getInstanceId()
  * @method string getUserClientIp()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getRegistrantProfileId()
  * @method string getLang()
  */
-class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends RpcRequest
+class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-29';
 
-    /**
-     * @var string
-     */
-    public $action = 'SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
 
     /**
      * @param string $instanceId
@@ -59,18 +32,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID exten
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function setUserClientIp($userClientIp)
-    {
-        return $this->withUserClientIp($userClientIp);
     }
 
     /**
@@ -87,18 +48,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID exten
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +61,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID exten
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegistrantProfileId() instead.
-     *
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function setRegistrantProfileId($registrantProfileId)
-    {
-        return $this->withRegistrantProfileId($registrantProfileId);
-    }
-
-    /**
      * @param string $registrantProfileId
      *
      * @return $this
@@ -134,18 +71,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID exten
         $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
     }
 
     /**

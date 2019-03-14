@@ -2,43 +2,19 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of FindAlarmHistory
+ * Api FindAlarmHistory
  *
  * @method string getCsbId()
  * @method string getTimeWindow()
  */
-class FindAlarmHistory extends RpcRequest
+class FindAlarmHistory extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
     public $version = '2017-11-18';
-
-    /**
-     * @var string
-     */
-    public $action = 'FindAlarmHistory';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCsbId() instead.
-     *
-     * @param string $csbId
-     *
-     * @return $this
-     */
-    public function setCsbId($csbId)
-    {
-        return $this->withCsbId($csbId);
-    }
 
     /**
      * @param string $csbId
@@ -51,18 +27,6 @@ class FindAlarmHistory extends RpcRequest
         $this->options['query']['CsbId'] = $csbId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTimeWindow() instead.
-     *
-     * @param string $timeWindow
-     *
-     * @return $this
-     */
-    public function setTimeWindow($timeWindow)
-    {
-        return $this->withTimeWindow($timeWindow);
     }
 
     /**

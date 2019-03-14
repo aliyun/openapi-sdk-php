@@ -3,6 +3,7 @@
 namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
 use PHPUnit\Framework\TestCase;
 
@@ -14,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 class JaqTest extends TestCase
 {
     /**
-     * @throws \AlibabaCloud\Client\Exception\ClientException
+     * @throws ClientException
      */
     public function setUp()
     {

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of AddDcdnDomain
+ * Api AddDcdnDomain
  *
  * @method string getTopLevelDomain()
  * @method string getResourceGroupId()
@@ -17,45 +17,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getCheckUrl()
  */
-class AddDcdnDomain extends RpcRequest
+class AddDcdnDomain extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'dcdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-01-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'AddDcdnDomain';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'dcdn';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopLevelDomain() instead.
-     *
-     * @param string $topLevelDomain
-     *
-     * @return $this
-     */
-    public function setTopLevelDomain($topLevelDomain)
-    {
-        return $this->withTopLevelDomain($topLevelDomain);
-    }
 
     /**
      * @param string $topLevelDomain
@@ -68,18 +38,6 @@ class AddDcdnDomain extends RpcRequest
         $this->options['query']['TopLevelDomain'] = $topLevelDomain;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -96,18 +54,6 @@ class AddDcdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSources() instead.
-     *
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function setSources($sources)
-    {
-        return $this->withSources($sources);
-    }
-
-    /**
      * @param string $sources
      *
      * @return $this
@@ -118,18 +64,6 @@ class AddDcdnDomain extends RpcRequest
         $this->options['query']['Sources'] = $sources;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -146,18 +80,6 @@ class AddDcdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -168,18 +90,6 @@ class AddDcdnDomain extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
     }
 
     /**
@@ -196,18 +106,6 @@ class AddDcdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -221,18 +119,6 @@ class AddDcdnDomain extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -243,18 +129,6 @@ class AddDcdnDomain extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckUrl() instead.
-     *
-     * @param string $checkUrl
-     *
-     * @return $this
-     */
-    public function setCheckUrl($checkUrl)
-    {
-        return $this->withCheckUrl($checkUrl);
     }
 
     /**

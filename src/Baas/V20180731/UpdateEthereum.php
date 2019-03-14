@@ -2,36 +2,21 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of UpdateEthereum
+ * Api UpdateEthereum
  *
  * @method string getName()
  * @method string getDescription()
  * @method string getId()
  */
-class UpdateEthereum extends RpcRequest
+class UpdateEthereum extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Baas';
 
-    /**
-     * @var string
-     */
     public $version = '2018-07-31';
 
-    /**
-     * @var string
-     */
-    public $action = 'UpdateEthereum';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
     /**

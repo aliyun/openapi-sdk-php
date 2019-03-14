@@ -2,55 +2,26 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryKnowledges
+ * Api QueryKnowledges
  *
  * @method string getPageSize()
  * @method string getCoreWordName()
  * @method string getKnowledgeTitle()
  * @method string getPageNumber()
+ * @method string getCategoryId()
  */
-class QueryKnowledges extends RpcRequest
+class QueryKnowledges extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Chatbot';
 
-    /**
-     * @var string
-     */
     public $version = '2017-10-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryKnowledges';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'beebot';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
 
     /**
      * @param string $pageSize
@@ -63,18 +34,6 @@ class QueryKnowledges extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCoreWordName() instead.
-     *
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function setCoreWordName($coreWordName)
-    {
-        return $this->withCoreWordName($coreWordName);
     }
 
     /**
@@ -91,18 +50,6 @@ class QueryKnowledges extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKnowledgeTitle() instead.
-     *
-     * @param string $knowledgeTitle
-     *
-     * @return $this
-     */
-    public function setKnowledgeTitle($knowledgeTitle)
-    {
-        return $this->withKnowledgeTitle($knowledgeTitle);
-    }
-
-    /**
      * @param string $knowledgeTitle
      *
      * @return $this
@@ -116,18 +63,6 @@ class QueryKnowledges extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
-    }
-
-    /**
      * @param string $pageNumber
      *
      * @return $this
@@ -136,6 +71,19 @@ class QueryKnowledges extends RpcRequest
     {
         $this->data['PageNumber'] = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
+
+        return $this;
+    }
+
+    /**
+     * @param string $categoryId
+     *
+     * @return $this
+     */
+    public function withCategoryId($categoryId)
+    {
+        $this->data['CategoryId'] = $categoryId;
+        $this->options['query']['CategoryId'] = $categoryId;
 
         return $this;
     }

@@ -2,95 +2,44 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyBackupPolicy
+ * Api ModifyBackupPolicy
  *
- * @method string getPreferredBackupPeriod()
  * @method string getResourceOwnerId()
- * @method string getResourceOwnerAccount()
  * @method string getLocalLogRetentionHours()
- * @method string getOwnerAccount()
  * @method string getLogBackupFrequency()
  * @method string getBackupLog()
- * @method string getLocalLogRetentionSpace()
- * @method string getOwnerId()
- * @method string getDuplication()
- * @method string getPreferredBackupTime()
- * @method string getBackupRetentionPeriod()
  * @method string getDuplicationContent()
  * @method string getHighSpaceUsageProtection()
  * @method string getDBInstanceId()
+ * @method string getEnableBackupLog()
+ * @method string getEnableCrossRegionLogBackup()
+ * @method string getBackupPolicyMode()
+ * @method string getPreferredBackupPeriod()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getLocalLogRetentionSpace()
+ * @method string getOwnerId()
+ * @method string getCrossBackupRegion()
+ * @method string getDuplication()
+ * @method string getPreferredBackupTime()
+ * @method string getBackupRetentionPeriod()
+ * @method string getCrossRegionBackupRetention()
+ * @method string getEnableCrossRegionBackup()
  * @method string getDuplicationLocation()
  * @method string getLogBackupRetentionPeriod()
- * @method string getEnableBackupLog()
- * @method string getBackupPolicyMode()
  */
-class ModifyBackupPolicy extends RpcRequest
+class ModifyBackupPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyBackupPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreferredBackupPeriod() instead.
-     *
-     * @param string $preferredBackupPeriod
-     *
-     * @return $this
-     */
-    public function setPreferredBackupPeriod($preferredBackupPeriod)
-    {
-        return $this->withPreferredBackupPeriod($preferredBackupPeriod);
-    }
-
-    /**
-     * @param string $preferredBackupPeriod
-     *
-     * @return $this
-     */
-    public function withPreferredBackupPeriod($preferredBackupPeriod)
-    {
-        $this->data['PreferredBackupPeriod'] = $preferredBackupPeriod;
-        $this->options['query']['PreferredBackupPeriod'] = $preferredBackupPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -103,43 +52,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLocalLogRetentionHours() instead.
-     *
-     * @param string $localLogRetentionHours
-     *
-     * @return $this
-     */
-    public function setLocalLogRetentionHours($localLogRetentionHours)
-    {
-        return $this->withLocalLogRetentionHours($localLogRetentionHours);
     }
 
     /**
@@ -156,43 +68,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogBackupFrequency() instead.
-     *
-     * @param string $logBackupFrequency
-     *
-     * @return $this
-     */
-    public function setLogBackupFrequency($logBackupFrequency)
-    {
-        return $this->withLogBackupFrequency($logBackupFrequency);
-    }
-
-    /**
      * @param string $logBackupFrequency
      *
      * @return $this
@@ -203,18 +78,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['LogBackupFrequency'] = $logBackupFrequency;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupLog() instead.
-     *
-     * @param string $backupLog
-     *
-     * @return $this
-     */
-    public function setBackupLog($backupLog)
-    {
-        return $this->withBackupLog($backupLog);
     }
 
     /**
@@ -231,143 +94,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocalLogRetentionSpace() instead.
-     *
-     * @param string $localLogRetentionSpace
-     *
-     * @return $this
-     */
-    public function setLocalLogRetentionSpace($localLogRetentionSpace)
-    {
-        return $this->withLocalLogRetentionSpace($localLogRetentionSpace);
-    }
-
-    /**
-     * @param string $localLogRetentionSpace
-     *
-     * @return $this
-     */
-    public function withLocalLogRetentionSpace($localLogRetentionSpace)
-    {
-        $this->data['LocalLogRetentionSpace'] = $localLogRetentionSpace;
-        $this->options['query']['LocalLogRetentionSpace'] = $localLogRetentionSpace;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuplication() instead.
-     *
-     * @param string $duplication
-     *
-     * @return $this
-     */
-    public function setDuplication($duplication)
-    {
-        return $this->withDuplication($duplication);
-    }
-
-    /**
-     * @param string $duplication
-     *
-     * @return $this
-     */
-    public function withDuplication($duplication)
-    {
-        $this->data['Duplication'] = $duplication;
-        $this->options['query']['Duplication'] = $duplication;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPreferredBackupTime() instead.
-     *
-     * @param string $preferredBackupTime
-     *
-     * @return $this
-     */
-    public function setPreferredBackupTime($preferredBackupTime)
-    {
-        return $this->withPreferredBackupTime($preferredBackupTime);
-    }
-
-    /**
-     * @param string $preferredBackupTime
-     *
-     * @return $this
-     */
-    public function withPreferredBackupTime($preferredBackupTime)
-    {
-        $this->data['PreferredBackupTime'] = $preferredBackupTime;
-        $this->options['query']['PreferredBackupTime'] = $preferredBackupTime;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBackupRetentionPeriod() instead.
-     *
-     * @param string $backupRetentionPeriod
-     *
-     * @return $this
-     */
-    public function setBackupRetentionPeriod($backupRetentionPeriod)
-    {
-        return $this->withBackupRetentionPeriod($backupRetentionPeriod);
-    }
-
-    /**
-     * @param string $backupRetentionPeriod
-     *
-     * @return $this
-     */
-    public function withBackupRetentionPeriod($backupRetentionPeriod)
-    {
-        $this->data['BackupRetentionPeriod'] = $backupRetentionPeriod;
-        $this->options['query']['BackupRetentionPeriod'] = $backupRetentionPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuplicationContent() instead.
-     *
-     * @param string $duplicationContent
-     *
-     * @return $this
-     */
-    public function setDuplicationContent($duplicationContent)
-    {
-        return $this->withDuplicationContent($duplicationContent);
-    }
-
-    /**
      * @param string $duplicationContent
      *
      * @return $this
@@ -378,18 +104,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['DuplicationContent'] = $duplicationContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withHighSpaceUsageProtection() instead.
-     *
-     * @param string $highSpaceUsageProtection
-     *
-     * @return $this
-     */
-    public function setHighSpaceUsageProtection($highSpaceUsageProtection)
-    {
-        return $this->withHighSpaceUsageProtection($highSpaceUsageProtection);
     }
 
     /**
@@ -406,18 +120,6 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -428,68 +130,6 @@ class ModifyBackupPolicy extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDuplicationLocation() instead.
-     *
-     * @param string $duplicationLocation
-     *
-     * @return $this
-     */
-    public function setDuplicationLocation($duplicationLocation)
-    {
-        return $this->withDuplicationLocation($duplicationLocation);
-    }
-
-    /**
-     * @param string $duplicationLocation
-     *
-     * @return $this
-     */
-    public function withDuplicationLocation($duplicationLocation)
-    {
-        $this->data['DuplicationLocation'] = $duplicationLocation;
-        $this->options['query']['DuplicationLocation'] = $duplicationLocation;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLogBackupRetentionPeriod() instead.
-     *
-     * @param string $logBackupRetentionPeriod
-     *
-     * @return $this
-     */
-    public function setLogBackupRetentionPeriod($logBackupRetentionPeriod)
-    {
-        return $this->withLogBackupRetentionPeriod($logBackupRetentionPeriod);
-    }
-
-    /**
-     * @param string $logBackupRetentionPeriod
-     *
-     * @return $this
-     */
-    public function withLogBackupRetentionPeriod($logBackupRetentionPeriod)
-    {
-        $this->data['LogBackupRetentionPeriod'] = $logBackupRetentionPeriod;
-        $this->options['query']['LogBackupRetentionPeriod'] = $logBackupRetentionPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableBackupLog() instead.
-     *
-     * @param string $enableBackupLog
-     *
-     * @return $this
-     */
-    public function setEnableBackupLog($enableBackupLog)
-    {
-        return $this->withEnableBackupLog($enableBackupLog);
     }
 
     /**
@@ -506,15 +146,16 @@ class ModifyBackupPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBackupPolicyMode() instead.
-     *
-     * @param string $backupPolicyMode
+     * @param string $enableCrossRegionLogBackup
      *
      * @return $this
      */
-    public function setBackupPolicyMode($backupPolicyMode)
+    public function withEnableCrossRegionLogBackup($enableCrossRegionLogBackup)
     {
-        return $this->withBackupPolicyMode($backupPolicyMode);
+        $this->data['EnableCrossRegionLogBackup'] = $enableCrossRegionLogBackup;
+        $this->options['query']['EnableCrossRegionLogBackup'] = $enableCrossRegionLogBackup;
+
+        return $this;
     }
 
     /**
@@ -526,6 +167,175 @@ class ModifyBackupPolicy extends RpcRequest
     {
         $this->data['BackupPolicyMode'] = $backupPolicyMode;
         $this->options['query']['BackupPolicyMode'] = $backupPolicyMode;
+
+        return $this;
+    }
+
+    /**
+     * @param string $preferredBackupPeriod
+     *
+     * @return $this
+     */
+    public function withPreferredBackupPeriod($preferredBackupPeriod)
+    {
+        $this->data['PreferredBackupPeriod'] = $preferredBackupPeriod;
+        $this->options['query']['PreferredBackupPeriod'] = $preferredBackupPeriod;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function withResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function withOwnerAccount($ownerAccount)
+    {
+        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->options['query']['OwnerAccount'] = $ownerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $localLogRetentionSpace
+     *
+     * @return $this
+     */
+    public function withLocalLogRetentionSpace($localLogRetentionSpace)
+    {
+        $this->data['LocalLogRetentionSpace'] = $localLogRetentionSpace;
+        $this->options['query']['LocalLogRetentionSpace'] = $localLogRetentionSpace;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function withOwnerId($ownerId)
+    {
+        $this->data['OwnerId'] = $ownerId;
+        $this->options['query']['OwnerId'] = $ownerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $crossBackupRegion
+     *
+     * @return $this
+     */
+    public function withCrossBackupRegion($crossBackupRegion)
+    {
+        $this->data['CrossBackupRegion'] = $crossBackupRegion;
+        $this->options['query']['CrossBackupRegion'] = $crossBackupRegion;
+
+        return $this;
+    }
+
+    /**
+     * @param string $duplication
+     *
+     * @return $this
+     */
+    public function withDuplication($duplication)
+    {
+        $this->data['Duplication'] = $duplication;
+        $this->options['query']['Duplication'] = $duplication;
+
+        return $this;
+    }
+
+    /**
+     * @param string $preferredBackupTime
+     *
+     * @return $this
+     */
+    public function withPreferredBackupTime($preferredBackupTime)
+    {
+        $this->data['PreferredBackupTime'] = $preferredBackupTime;
+        $this->options['query']['PreferredBackupTime'] = $preferredBackupTime;
+
+        return $this;
+    }
+
+    /**
+     * @param string $backupRetentionPeriod
+     *
+     * @return $this
+     */
+    public function withBackupRetentionPeriod($backupRetentionPeriod)
+    {
+        $this->data['BackupRetentionPeriod'] = $backupRetentionPeriod;
+        $this->options['query']['BackupRetentionPeriod'] = $backupRetentionPeriod;
+
+        return $this;
+    }
+
+    /**
+     * @param string $crossRegionBackupRetention
+     *
+     * @return $this
+     */
+    public function withCrossRegionBackupRetention($crossRegionBackupRetention)
+    {
+        $this->data['CrossRegionBackupRetention'] = $crossRegionBackupRetention;
+        $this->options['query']['CrossRegionBackupRetention'] = $crossRegionBackupRetention;
+
+        return $this;
+    }
+
+    /**
+     * @param string $enableCrossRegionBackup
+     *
+     * @return $this
+     */
+    public function withEnableCrossRegionBackup($enableCrossRegionBackup)
+    {
+        $this->data['EnableCrossRegionBackup'] = $enableCrossRegionBackup;
+        $this->options['query']['EnableCrossRegionBackup'] = $enableCrossRegionBackup;
+
+        return $this;
+    }
+
+    /**
+     * @param string $duplicationLocation
+     *
+     * @return $this
+     */
+    public function withDuplicationLocation($duplicationLocation)
+    {
+        $this->data['DuplicationLocation'] = $duplicationLocation;
+        $this->options['query']['DuplicationLocation'] = $duplicationLocation;
+
+        return $this;
+    }
+
+    /**
+     * @param string $logBackupRetentionPeriod
+     *
+     * @return $this
+     */
+    public function withLogBackupRetentionPeriod($logBackupRetentionPeriod)
+    {
+        $this->data['LogBackupRetentionPeriod'] = $logBackupRetentionPeriod;
+        $this->options['query']['LogBackupRetentionPeriod'] = $logBackupRetentionPeriod;
 
         return $this;
     }

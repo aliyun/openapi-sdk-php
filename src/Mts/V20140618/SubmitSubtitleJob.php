@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SubmitSubtitleJob
+ * Api SubmitSubtitleJob
  *
  * @method string getUserData()
  * @method string getResourceOwnerId()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getPipelineId()
  */
-class SubmitSubtitleJob extends RpcRequest
+class SubmitSubtitleJob extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Mts';
 
-    /**
-     * @var string
-     */
     public $version = '2014-06-18';
 
-    /**
-     * @var string
-     */
-    public $action = 'SubmitSubtitleJob';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'mts';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
 
     /**
      * @param string $userData
@@ -67,18 +37,6 @@ class SubmitSubtitleJob extends RpcRequest
         $this->options['query']['UserData'] = $userData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -95,18 +53,6 @@ class SubmitSubtitleJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOutputConfig() instead.
-     *
-     * @param string $outputConfig
-     *
-     * @return $this
-     */
-    public function setOutputConfig($outputConfig)
-    {
-        return $this->withOutputConfig($outputConfig);
-    }
-
-    /**
      * @param string $outputConfig
      *
      * @return $this
@@ -117,18 +63,6 @@ class SubmitSubtitleJob extends RpcRequest
         $this->options['query']['OutputConfig'] = $outputConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInputConfig() instead.
-     *
-     * @param string $inputConfig
-     *
-     * @return $this
-     */
-    public function setInputConfig($inputConfig)
-    {
-        return $this->withInputConfig($inputConfig);
     }
 
     /**
@@ -145,18 +79,6 @@ class SubmitSubtitleJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -167,18 +89,6 @@ class SubmitSubtitleJob extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -195,18 +105,6 @@ class SubmitSubtitleJob extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -217,18 +115,6 @@ class SubmitSubtitleJob extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPipelineId() instead.
-     *
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function setPipelineId($pipelineId)
-    {
-        return $this->withPipelineId($pipelineId);
     }
 
     /**

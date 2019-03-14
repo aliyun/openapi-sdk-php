@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CheckImageSupportCloudinit
+ * Api CheckImageSupportCloudinit
  *
  * @method string getVSwitchId()
  * @method string getResourceOwnerId()
@@ -15,45 +15,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNetworkType()
  * @method string getOwnerId()
  */
-class CheckImageSupportCloudinit extends RpcRequest
+class CheckImageSupportCloudinit extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'CheckImageSupportCloudinit';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
-    }
 
     /**
      * @param string $vSwitchId
@@ -66,18 +36,6 @@ class CheckImageSupportCloudinit extends RpcRequest
         $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -94,18 +52,6 @@ class CheckImageSupportCloudinit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -116,18 +62,6 @@ class CheckImageSupportCloudinit extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -144,18 +78,6 @@ class CheckImageSupportCloudinit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
-    }
-
-    /**
      * @param string $ioOptimized
      *
      * @return $this
@@ -169,18 +91,6 @@ class CheckImageSupportCloudinit extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -191,18 +101,6 @@ class CheckImageSupportCloudinit extends RpcRequest
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

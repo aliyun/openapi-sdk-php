@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetRefererRegexConfig
+ * Api SetRefererRegexConfig
  *
  * @method string getSecurityToken()
  * @method string getReferRegexs()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getReferType()
  * @method string getOwnerId()
  */
-class SetRefererRegexConfig extends RpcRequest
+class SetRefererRegexConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2014-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetRefererRegexConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
 
     /**
      * @param string $securityToken
@@ -59,18 +32,6 @@ class SetRefererRegexConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReferRegexs() instead.
-     *
-     * @param string $referRegexs
-     *
-     * @return $this
-     */
-    public function setReferRegexs($referRegexs)
-    {
-        return $this->withReferRegexs($referRegexs);
     }
 
     /**
@@ -87,18 +48,6 @@ class SetRefererRegexConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +61,6 @@ class SetRefererRegexConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReferType() instead.
-     *
-     * @param string $referType
-     *
-     * @return $this
-     */
-    public function setReferType($referType)
-    {
-        return $this->withReferType($referType);
-    }
-
-    /**
      * @param string $referType
      *
      * @return $this
@@ -134,18 +71,6 @@ class SetRefererRegexConfig extends RpcRequest
         $this->options['query']['ReferType'] = $referType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

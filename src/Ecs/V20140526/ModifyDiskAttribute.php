@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyDiskAttribute
+ * Api ModifyDiskAttribute
  *
  * @method string getDiskName()
  * @method string getDeleteAutoSnapshot()
@@ -18,40 +18,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getDeleteWithInstance()
  */
-class ModifyDiskAttribute extends RpcRequest
+class ModifyDiskAttribute extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyDiskAttribute';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskName() instead.
-     *
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function setDiskName($diskName)
-    {
-        return $this->withDiskName($diskName);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $diskName
@@ -64,18 +39,6 @@ class ModifyDiskAttribute extends RpcRequest
         $this->options['query']['DiskName'] = $diskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeleteAutoSnapshot() instead.
-     *
-     * @param string $deleteAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setDeleteAutoSnapshot($deleteAutoSnapshot)
-    {
-        return $this->withDeleteAutoSnapshot($deleteAutoSnapshot);
     }
 
     /**
@@ -92,18 +55,6 @@ class ModifyDiskAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -114,18 +65,6 @@ class ModifyDiskAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnableAutoSnapshot() instead.
-     *
-     * @param string $enableAutoSnapshot
-     *
-     * @return $this
-     */
-    public function setEnableAutoSnapshot($enableAutoSnapshot)
-    {
-        return $this->withEnableAutoSnapshot($enableAutoSnapshot);
     }
 
     /**
@@ -142,18 +81,6 @@ class ModifyDiskAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -164,18 +91,6 @@ class ModifyDiskAttribute extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -192,18 +107,6 @@ class ModifyDiskAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -214,18 +117,6 @@ class ModifyDiskAttribute extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDiskId() instead.
-     *
-     * @param string $diskId
-     *
-     * @return $this
-     */
-    public function setDiskId($diskId)
-    {
-        return $this->withDiskId($diskId);
     }
 
     /**
@@ -242,18 +133,6 @@ class ModifyDiskAttribute extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -264,18 +143,6 @@ class ModifyDiskAttribute extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeleteWithInstance() instead.
-     *
-     * @param string $deleteWithInstance
-     *
-     * @return $this
-     */
-    public function setDeleteWithInstance($deleteWithInstance)
-    {
-        return $this->withDeleteWithInstance($deleteWithInstance);
     }
 
     /**

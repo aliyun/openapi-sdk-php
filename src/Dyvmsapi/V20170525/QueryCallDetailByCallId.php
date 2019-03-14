@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryCallDetailByCallId
+ * Api QueryCallDetailByCallId
  *
  * @method string getCallId()
  * @method string getResourceOwnerId()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getProdId()
  * @method string getOwnerId()
  */
-class QueryCallDetailByCallId extends RpcRequest
+class QueryCallDetailByCallId extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Dyvmsapi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryCallDetailByCallId';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallId() instead.
-     *
-     * @param string $callId
-     *
-     * @return $this
-     */
-    public function setCallId($callId)
-    {
-        return $this->withCallId($callId);
-    }
 
     /**
      * @param string $callId
@@ -60,18 +33,6 @@ class QueryCallDetailByCallId extends RpcRequest
         $this->options['query']['CallId'] = $callId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -88,18 +49,6 @@ class QueryCallDetailByCallId extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withQueryDate() instead.
-     *
-     * @param string $queryDate
-     *
-     * @return $this
-     */
-    public function setQueryDate($queryDate)
-    {
-        return $this->withQueryDate($queryDate);
-    }
-
-    /**
      * @param string $queryDate
      *
      * @return $this
@@ -110,18 +59,6 @@ class QueryCallDetailByCallId extends RpcRequest
         $this->options['query']['QueryDate'] = $queryDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -138,18 +75,6 @@ class QueryCallDetailByCallId extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProdId() instead.
-     *
-     * @param string $prodId
-     *
-     * @return $this
-     */
-    public function setProdId($prodId)
-    {
-        return $this->withProdId($prodId);
-    }
-
-    /**
      * @param string $prodId
      *
      * @return $this
@@ -160,18 +85,6 @@ class QueryCallDetailByCallId extends RpcRequest
         $this->options['query']['ProdId'] = $prodId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetRefererConfig
+ * Api SetRefererConfig
  *
  * @method string getReferList()
  * @method string getSecurityToken()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getAllowEmpty()
  */
-class SetRefererConfig extends RpcRequest
+class SetRefererConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetRefererConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReferList() instead.
-     *
-     * @param string $referList
-     *
-     * @return $this
-     */
-    public function setReferList($referList)
-    {
-        return $this->withReferList($referList);
-    }
 
     /**
      * @param string $referList
@@ -61,18 +34,6 @@ class SetRefererConfig extends RpcRequest
         $this->options['query']['ReferList'] = $referList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -89,18 +50,6 @@ class SetRefererConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -111,18 +60,6 @@ class SetRefererConfig extends RpcRequest
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withReferType() instead.
-     *
-     * @param string $referType
-     *
-     * @return $this
-     */
-    public function setReferType($referType)
-    {
-        return $this->withReferType($referType);
     }
 
     /**
@@ -139,18 +76,6 @@ class SetRefererConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDisableAst() instead.
-     *
-     * @param string $disableAst
-     *
-     * @return $this
-     */
-    public function setDisableAst($disableAst)
-    {
-        return $this->withDisableAst($disableAst);
-    }
-
-    /**
      * @param string $disableAst
      *
      * @return $this
@@ -164,18 +89,6 @@ class SetRefererConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +99,6 @@ class SetRefererConfig extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAllowEmpty() instead.
-     *
-     * @param string $allowEmpty
-     *
-     * @return $this
-     */
-    public function setAllowEmpty($allowEmpty)
-    {
-        return $this->withAllowEmpty($allowEmpty);
     }
 
     /**

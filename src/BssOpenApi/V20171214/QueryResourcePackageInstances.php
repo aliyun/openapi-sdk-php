@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryResourcePackageInstances
+ * Api QueryResourcePackageInstances
  *
  * @method string getExpiryTimeEnd()
  * @method string getProductCode()
@@ -14,40 +14,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getExpiryTimeStart()
  * @method string getPageNum()
  */
-class QueryResourcePackageInstances extends RpcRequest
+class QueryResourcePackageInstances extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryResourcePackageInstances';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeEnd() instead.
-     *
-     * @param string $expiryTimeEnd
-     *
-     * @return $this
-     */
-    public function setExpiryTimeEnd($expiryTimeEnd)
-    {
-        return $this->withExpiryTimeEnd($expiryTimeEnd);
-    }
 
     /**
      * @param string $expiryTimeEnd
@@ -60,18 +33,6 @@ class QueryResourcePackageInstances extends RpcRequest
         $this->options['query']['ExpiryTimeEnd'] = $expiryTimeEnd;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductCode() instead.
-     *
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function setProductCode($productCode)
-    {
-        return $this->withProductCode($productCode);
     }
 
     /**
@@ -88,18 +49,6 @@ class QueryResourcePackageInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -110,18 +59,6 @@ class QueryResourcePackageInstances extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -138,18 +75,6 @@ class QueryResourcePackageInstances extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExpiryTimeStart() instead.
-     *
-     * @param string $expiryTimeStart
-     *
-     * @return $this
-     */
-    public function setExpiryTimeStart($expiryTimeStart)
-    {
-        return $this->withExpiryTimeStart($expiryTimeStart);
-    }
-
-    /**
      * @param string $expiryTimeStart
      *
      * @return $this
@@ -160,18 +85,6 @@ class QueryResourcePackageInstances extends RpcRequest
         $this->options['query']['ExpiryTimeStart'] = $expiryTimeStart;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNum() instead.
-     *
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function setPageNum($pageNum)
-    {
-        return $this->withPageNum($pageNum);
     }
 
     /**

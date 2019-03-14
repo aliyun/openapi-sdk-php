@@ -2,55 +2,26 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifyPhoneNumber
+ * Api ModifyPhoneNumber
  *
  * @method string getContactFlowId()
  * @method string getInstanceId()
  * @method string getPhoneNumberId()
  * @method string getUsage()
+ * @method array getSkillGroupId()
  */
-class ModifyPhoneNumber extends RpcRequest
+class ModifyPhoneNumber extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'CCC';
 
-    /**
-     * @var string
-     */
     public $version = '2017-07-05';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifyPhoneNumber';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ccc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactFlowId() instead.
-     *
-     * @param string $contactFlowId
-     *
-     * @return $this
-     */
-    public function setContactFlowId($contactFlowId)
-    {
-        return $this->withContactFlowId($contactFlowId);
-    }
 
     /**
      * @param string $contactFlowId
@@ -63,18 +34,6 @@ class ModifyPhoneNumber extends RpcRequest
         $this->options['query']['ContactFlowId'] = $contactFlowId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
     }
 
     /**
@@ -91,18 +50,6 @@ class ModifyPhoneNumber extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumberId() instead.
-     *
-     * @param string $phoneNumberId
-     *
-     * @return $this
-     */
-    public function setPhoneNumberId($phoneNumberId)
-    {
-        return $this->withPhoneNumberId($phoneNumberId);
-    }
-
-    /**
      * @param string $phoneNumberId
      *
      * @return $this
@@ -116,18 +63,6 @@ class ModifyPhoneNumber extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUsage() instead.
-     *
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function setUsage($usage)
-    {
-        return $this->withUsage($usage);
-    }
-
-    /**
      * @param string $usage
      *
      * @return $this
@@ -136,6 +71,21 @@ class ModifyPhoneNumber extends RpcRequest
     {
         $this->data['Usage'] = $usage;
         $this->options['query']['Usage'] = $usage;
+
+        return $this;
+    }
+
+    /**
+     * @param array $skillGroupId
+     *
+     * @return $this
+     */
+    public function withSkillGroupId(array $skillGroupId)
+    {
+        $this->data['SkillGroupId'] = $skillGroupId;
+        foreach ($skillGroupId as $i => $iValue) {
+            $this->options['query']['SkillGroupId.' . ($i + 1)] = $iValue;
+        }
 
         return $this;
     }

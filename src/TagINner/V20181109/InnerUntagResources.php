@@ -2,62 +2,35 @@
 
 namespace AlibabaCloud\TagINner\V20181109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerUntagResources
+ * Api InnerUntagResources
  *
  * @method string getResourceOwnerId()
+ * @method string getRelease()
  * @method string getTagOwnerUid()
  * @method string getDeleteAll()
  * @method string getScope()
+ * @method string getTagOperator()
  * @method string getTagOwnerBid()
  * @method array getResourceId()
  * @method string getResourceOwnerAccount()
  * @method string getOwnerAccount()
  * @method string getOwnerId()
+ * @method string getResourceType()
  * @method array getTagKey()
  * @method string getCategory()
  */
-class InnerUntagResources extends RpcRequest
+class InnerUntagResources extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Tag-Inner';
 
-    /**
-     * @var string
-     */
     public $version = '2018-11-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerUntagResources';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'tag';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,15 +46,16 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerUid() instead.
-     *
-     * @param string $tagOwnerUid
+     * @param string $release
      *
      * @return $this
      */
-    public function setTagOwnerUid($tagOwnerUid)
+    public function withRelease($release)
     {
-        return $this->withTagOwnerUid($tagOwnerUid);
+        $this->data['Release'] = $release;
+        $this->options['query']['Release'] = $release;
+
+        return $this;
     }
 
     /**
@@ -98,18 +72,6 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDeleteAll() instead.
-     *
-     * @param string $deleteAll
-     *
-     * @return $this
-     */
-    public function setDeleteAll($deleteAll)
-    {
-        return $this->withDeleteAll($deleteAll);
-    }
-
-    /**
      * @param string $deleteAll
      *
      * @return $this
@@ -120,18 +82,6 @@ class InnerUntagResources extends RpcRequest
         $this->options['query']['DeleteAll'] = $deleteAll;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withScope() instead.
-     *
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        return $this->withScope($scope);
     }
 
     /**
@@ -148,15 +98,16 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTagOwnerBid() instead.
-     *
-     * @param string $tagOwnerBid
+     * @param string $tagOperator
      *
      * @return $this
      */
-    public function setTagOwnerBid($tagOwnerBid)
+    public function withTagOperator($tagOperator)
     {
-        return $this->withTagOwnerBid($tagOwnerBid);
+        $this->data['TagOperator'] = $tagOperator;
+        $this->options['query']['TagOperator'] = $tagOperator;
+
+        return $this;
     }
 
     /**
@@ -170,28 +121,6 @@ class InnerUntagResources extends RpcRequest
         $this->options['query']['TagOwnerBid'] = $tagOwnerBid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getResourceId() instead.
-     *
-     * @return array
-     */
-    public function getResourceIds()
-    {
-        return $this->getResourceId();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceId() instead.
-     *
-     * @param array $resourceIds
-     *
-     * @return $this
-     */
-    public function setResourceIds(array $resourceIds)
-    {
-        return $this->withResourceId($resourceIds);
     }
 
     /**
@@ -210,18 +139,6 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -232,18 +149,6 @@ class InnerUntagResources extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -260,18 +165,6 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -285,25 +178,16 @@ class InnerUntagResources extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTagKey() instead.
-     *
-     * @return array
-     */
-    public function getTagKeys()
-    {
-        return $this->getTagKey();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagKey() instead.
-     *
-     * @param array $tagKeys
+     * @param string $resourceType
      *
      * @return $this
      */
-    public function setTagKeys(array $tagKeys)
+    public function withResourceType($resourceType)
     {
-        return $this->withTagKey($tagKeys);
+        $this->data['ResourceType'] = $resourceType;
+        $this->options['query']['ResourceType'] = $resourceType;
+
+        return $this;
     }
 
     /**
@@ -319,18 +203,6 @@ class InnerUntagResources extends RpcRequest
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCategory() instead.
-     *
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function setCategory($category)
-    {
-        return $this->withCategory($category);
     }
 
     /**

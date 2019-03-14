@@ -9,6 +9,7 @@ use AlibabaCloud\ApiResolverTrait;
  *
  * @package   AlibabaCloud\BssOpenApi\V20171214
  *
+ * @method ApplyInvoice applyInvoice(array $options = [])
  * @method ConvertChargeType convertChargeType(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateResourcePackage createResourcePackage(array $options = [])
@@ -26,8 +27,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryBill queryBill(array $options = [])
  * @method QueryBillOverview queryBillOverview(array $options = [])
  * @method QueryCashCoupons queryCashCoupons(array $options = [])
+ * @method QueryCustomerAddressList queryCustomerAddressList(array $options = [])
+ * @method QueryEvaluateList queryEvaluateList(array $options = [])
  * @method QueryInstanceBill queryInstanceBill(array $options = [])
  * @method QueryInstanceGaapCost queryInstanceGaapCost(array $options = [])
+ * @method QueryInvoicingCustomerList queryInvoicingCustomerList(array $options = [])
  * @method QueryMonthlyBill queryMonthlyBill(array $options = [])
  * @method QueryMonthlyInstanceConsumption queryMonthlyInstanceConsumption(array $options = [])
  * @method QueryOrders queryOrders(array $options = [])
@@ -38,6 +42,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QuerySettlementBill querySettlementBill(array $options = [])
  * @method QueryUserAvailableCreditAmount queryUserAvailableCreditAmount(array $options = [])
  * @method QueryUserCoupon queryUserCoupon(array $options = [])
+ * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method QueryUserValueCard queryUserValueCard(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method SetAutoRenewalApi setAutoRenewalApi(array $options = [])

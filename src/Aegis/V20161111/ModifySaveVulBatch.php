@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySaveVulBatch
+ * Api ModifySaveVulBatch
  *
  * @method string getBatchName()
  * @method string getAliasName()
@@ -20,32 +20,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getNecessity()
  * @method string getUuids()
  */
-class ModifySaveVulBatch extends RpcRequest
+class ModifySaveVulBatch extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'aegis';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-11';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySaveVulBatch';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'vipaegis';
 
     /**

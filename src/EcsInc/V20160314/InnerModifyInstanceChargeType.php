@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InnerModifyInstanceChargeType
+ * Api InnerModifyInstanceChargeType
  *
  * @method string getResourceOwnerId()
  * @method string getDryRun()
@@ -22,45 +22,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerModifyInstanceChargeType extends RpcRequest
+class InnerModifyInstanceChargeType extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InnerModifyInstanceChargeType';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -73,18 +43,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setdryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
     }
 
     /**
@@ -101,18 +59,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -123,18 +69,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -151,18 +85,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -173,18 +95,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['channel'] = $channel;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -201,18 +111,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBuyerId() instead.
-     *
-     * @param string $buyerId
-     *
-     * @return $this
-     */
-    public function setbuyerId($buyerId)
-    {
-        return $this->withBuyerId($buyerId);
-    }
-
-    /**
      * @param string $buyerId
      *
      * @return $this
@@ -223,18 +121,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['buyerId'] = $buyerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
     }
 
     /**
@@ -251,18 +137,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -273,18 +147,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegionNo() instead.
-     *
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function setregionNo($regionNo)
-    {
-        return $this->withRegionNo($regionNo);
     }
 
     /**
@@ -301,18 +163,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function setinstanceIds($instanceIds)
-    {
-        return $this->withInstanceIds($instanceIds);
-    }
-
-    /**
      * @param string $instanceIds
      *
      * @return $this
@@ -323,18 +173,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['instanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setaliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -351,18 +189,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setbid($bid)
-    {
-        return $this->withBid($bid);
-    }
-
-    /**
      * @param string $bid
      *
      * @return $this
@@ -373,18 +199,6 @@ class InnerModifyInstanceChargeType extends RpcRequest
         $this->options['query']['bid'] = $bid;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
     }
 
     /**

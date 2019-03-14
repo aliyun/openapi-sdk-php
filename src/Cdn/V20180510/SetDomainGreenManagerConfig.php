@@ -2,43 +2,34 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetDomainGreenManagerConfig
+ * Api SetDomainGreenManagerConfig
  *
+ * @method string getEnable()
  * @method string getDomainName()
  * @method string getOwnerId()
- * @method string getEnable()
  */
-class SetDomainGreenManagerConfig extends RpcRequest
+class SetDomainGreenManagerConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetDomainGreenManagerConfig';
+    public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
+     * @param string $enable
      *
      * @return $this
      */
-    public function setDomainName($domainName)
+    public function withEnable($enable)
     {
-        return $this->withDomainName($domainName);
+        $this->data['Enable'] = $enable;
+        $this->options['query']['Enable'] = $enable;
+
+        return $this;
     }
 
     /**
@@ -55,18 +46,6 @@ class SetDomainGreenManagerConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -75,31 +54,6 @@ class SetDomainGreenManagerConfig extends RpcRequest
     {
         $this->data['OwnerId'] = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEnable() instead.
-     *
-     * @param string $enable
-     *
-     * @return $this
-     */
-    public function setEnable($enable)
-    {
-        return $this->withEnable($enable);
-    }
-
-    /**
-     * @param string $enable
-     *
-     * @return $this
-     */
-    public function withEnable($enable)
-    {
-        $this->data['Enable'] = $enable;
-        $this->options['query']['Enable'] = $enable;
 
         return $this;
     }

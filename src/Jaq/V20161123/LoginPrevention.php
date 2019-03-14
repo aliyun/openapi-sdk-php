@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Jaq\V20161123;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of LoginPrevention
+ * Api LoginPrevention
  *
  * @method string getProtocolVersion()
  * @method string getCurrentUrl()
@@ -36,40 +36,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getPasswordHash()
  * @method string getUserName()
  */
-class LoginPrevention extends RpcRequest
+class LoginPrevention extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'jaq';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-23';
 
-    /**
-     * @var string
-     */
-    public $action = 'LoginPrevention';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProtocolVersion() instead.
-     *
-     * @param string $protocolVersion
-     *
-     * @return $this
-     */
-    public function setProtocolVersion($protocolVersion)
-    {
-        return $this->withProtocolVersion($protocolVersion);
-    }
 
     /**
      * @param string $protocolVersion
@@ -82,18 +55,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['ProtocolVersion'] = $protocolVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentUrl() instead.
-     *
-     * @param string $currentUrl
-     *
-     * @return $this
-     */
-    public function setCurrentUrl($currentUrl)
-    {
-        return $this->withCurrentUrl($currentUrl);
     }
 
     /**
@@ -110,18 +71,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withReferer() instead.
-     *
-     * @param string $referer
-     *
-     * @return $this
-     */
-    public function setReferer($referer)
-    {
-        return $this->withReferer($referer);
-    }
-
-    /**
      * @param string $referer
      *
      * @return $this
@@ -132,18 +81,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['Referer'] = $referer;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegisterIp() instead.
-     *
-     * @param string $registerIp
-     *
-     * @return $this
-     */
-    public function setRegisterIp($registerIp)
-    {
-        return $this->withRegisterIp($registerIp);
     }
 
     /**
@@ -160,18 +97,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgent() instead.
-     *
-     * @param string $agent
-     *
-     * @return $this
-     */
-    public function setAgent($agent)
-    {
-        return $this->withAgent($agent);
-    }
-
-    /**
      * @param string $agent
      *
      * @return $this
@@ -182,18 +107,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['Agent'] = $agent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIDNumber() instead.
-     *
-     * @param string $iDNumber
-     *
-     * @return $this
-     */
-    public function setIDNumber($iDNumber)
-    {
-        return $this->withIDNumber($iDNumber);
     }
 
     /**
@@ -210,18 +123,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPhoneNumber() instead.
-     *
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        return $this->withPhoneNumber($phoneNumber);
-    }
-
-    /**
      * @param string $phoneNumber
      *
      * @return $this
@@ -232,18 +133,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['PhoneNumber'] = $phoneNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSource() instead.
-     *
-     * @param string $source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        return $this->withSource($source);
     }
 
     /**
@@ -260,18 +149,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSessionId() instead.
-     *
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function setSessionId($sessionId)
-    {
-        return $this->withSessionId($sessionId);
-    }
-
-    /**
      * @param string $sessionId
      *
      * @return $this
@@ -282,18 +159,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['SessionId'] = $sessionId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserId() instead.
-     *
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        return $this->withUserId($userId);
     }
 
     /**
@@ -310,18 +175,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withBankCardNumber() instead.
-     *
-     * @param string $bankCardNumber
-     *
-     * @return $this
-     */
-    public function setBankCardNumber($bankCardNumber)
-    {
-        return $this->withBankCardNumber($bankCardNumber);
-    }
-
-    /**
      * @param string $bankCardNumber
      *
      * @return $this
@@ -332,18 +185,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['BankCardNumber'] = $bankCardNumber;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAccountExist() instead.
-     *
-     * @param string $accountExist
-     *
-     * @return $this
-     */
-    public function setAccountExist($accountExist)
-    {
-        return $this->withAccountExist($accountExist);
     }
 
     /**
@@ -360,18 +201,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withExtendData() instead.
-     *
-     * @param string $extendData
-     *
-     * @return $this
-     */
-    public function setExtendData($extendData)
-    {
-        return $this->withExtendData($extendData);
-    }
-
-    /**
      * @param string $extendData
      *
      * @return $this
@@ -382,18 +211,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['ExtendData'] = $extendData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMacAddress() instead.
-     *
-     * @param string $macAddress
-     *
-     * @return $this
-     */
-    public function setMacAddress($macAddress)
-    {
-        return $this->withMacAddress($macAddress);
     }
 
     /**
@@ -410,18 +227,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPasswordCorrect() instead.
-     *
-     * @param string $passwordCorrect
-     *
-     * @return $this
-     */
-    public function setPasswordCorrect($passwordCorrect)
-    {
-        return $this->withPasswordCorrect($passwordCorrect);
-    }
-
-    /**
      * @param string $passwordCorrect
      *
      * @return $this
@@ -432,18 +237,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['PasswordCorrect'] = $passwordCorrect;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCallerName() instead.
-     *
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function setCallerName($callerName)
-    {
-        return $this->withCallerName($callerName);
     }
 
     /**
@@ -460,18 +253,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmail() instead.
-     *
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        return $this->withEmail($email);
-    }
-
-    /**
      * @param string $email
      *
      * @return $this
@@ -482,18 +263,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['Email'] = $email;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAddress() instead.
-     *
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        return $this->withAddress($address);
     }
 
     /**
@@ -510,18 +279,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCookie() instead.
-     *
-     * @param string $cookie
-     *
-     * @return $this
-     */
-    public function setCookie($cookie)
-    {
-        return $this->withCookie($cookie);
-    }
-
-    /**
      * @param string $cookie
      *
      * @return $this
@@ -532,18 +289,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['Cookie'] = $cookie;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIp() instead.
-     *
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function setIp($ip)
-    {
-        return $this->withIp($ip);
     }
 
     /**
@@ -560,18 +305,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRegisterDate() instead.
-     *
-     * @param string $registerDate
-     *
-     * @return $this
-     */
-    public function setRegisterDate($registerDate)
-    {
-        return $this->withRegisterDate($registerDate);
-    }
-
-    /**
      * @param string $registerDate
      *
      * @return $this
@@ -582,18 +315,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['RegisterDate'] = $registerDate;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIdType() instead.
-     *
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function setIdType($idType)
-    {
-        return $this->withIdType($idType);
     }
 
     /**
@@ -610,18 +331,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCompanyName() instead.
-     *
-     * @param string $companyName
-     *
-     * @return $this
-     */
-    public function setCompanyName($companyName)
-    {
-        return $this->withCompanyName($companyName);
-    }
-
-    /**
      * @param string $companyName
      *
      * @return $this
@@ -632,18 +341,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['CompanyName'] = $companyName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLoginType() instead.
-     *
-     * @param string $loginType
-     *
-     * @return $this
-     */
-    public function setLoginType($loginType)
-    {
-        return $this->withLoginType($loginType);
     }
 
     /**
@@ -660,18 +357,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withJsToken() instead.
-     *
-     * @param string $jsToken
-     *
-     * @return $this
-     */
-    public function setJsToken($jsToken)
-    {
-        return $this->withJsToken($jsToken);
-    }
-
-    /**
      * @param string $jsToken
      *
      * @return $this
@@ -682,18 +367,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['JsToken'] = $jsToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSDKToken() instead.
-     *
-     * @param string $sDKToken
-     *
-     * @return $this
-     */
-    public function setSDKToken($sDKToken)
-    {
-        return $this->withSDKToken($sDKToken);
     }
 
     /**
@@ -710,18 +383,6 @@ class LoginPrevention extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPasswordHash() instead.
-     *
-     * @param string $passwordHash
-     *
-     * @return $this
-     */
-    public function setPasswordHash($passwordHash)
-    {
-        return $this->withPasswordHash($passwordHash);
-    }
-
-    /**
      * @param string $passwordHash
      *
      * @return $this
@@ -732,18 +393,6 @@ class LoginPrevention extends RpcRequest
         $this->options['query']['PasswordHash'] = $passwordHash;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withUserName() instead.
-     *
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function setUserName($userName)
-    {
-        return $this->withUserName($userName);
     }
 
     /**

@@ -2,49 +2,22 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QueryBidRecords
+ * Api QueryBidRecords
  *
  * @method string getAuctionId()
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryBidRecords extends RpcRequest
+class QueryBidRecords extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Domain';
 
-    /**
-     * @var string
-     */
     public $version = '2018-02-08';
 
-    /**
-     * @var string
-     */
-    public $action = 'QueryBidRecords';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAuctionId() instead.
-     *
-     * @param string $auctionId
-     *
-     * @return $this
-     */
-    public function setAuctionId($auctionId)
-    {
-        return $this->withAuctionId($auctionId);
-    }
 
     /**
      * @param string $auctionId
@@ -60,18 +33,6 @@ class QueryBidRecords extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -82,18 +43,6 @@ class QueryBidRecords extends RpcRequest
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

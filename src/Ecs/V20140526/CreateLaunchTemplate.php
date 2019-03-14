@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of CreateLaunchTemplate
+ * Api CreateLaunchTemplate
  *
  * @method string getLaunchTemplateName()
  * @method string getResourceOwnerId()
@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDescription()
  * @method string getSystemDiskCategory()
  * @method string getUserData()
+ * @method string getPasswordInherit()
  * @method string getInstanceType()
  * @method string getInstanceChargeType()
  * @method string getEnableVmOsConfig()
@@ -51,40 +52,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getVpcId()
  * @method string getSystemDiskDescription()
  */
-class CreateLaunchTemplate extends RpcRequest
+class CreateLaunchTemplate extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
-    public $action = 'CreateLaunchTemplate';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withLaunchTemplateName() instead.
-     *
-     * @param string $launchTemplateName
-     *
-     * @return $this
-     */
-    public function setLaunchTemplateName($launchTemplateName)
-    {
-        return $this->withLaunchTemplateName($launchTemplateName);
-    }
+    public $serviceCode = 'ecs';
 
     /**
      * @param string $launchTemplateName
@@ -97,18 +73,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['LaunchTemplateName'] = $launchTemplateName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -125,18 +89,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityEnhancementStrategy() instead.
-     *
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        return $this->withSecurityEnhancementStrategy($securityEnhancementStrategy);
-    }
-
-    /**
      * @param string $securityEnhancementStrategy
      *
      * @return $this
@@ -147,18 +99,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -175,18 +115,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeyPairName() instead.
-     *
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function setKeyPairName($keyPairName)
-    {
-        return $this->withKeyPairName($keyPairName);
-    }
-
-    /**
      * @param string $keyPairName
      *
      * @return $this
@@ -197,18 +125,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['KeyPairName'] = $keyPairName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpotPriceLimit() instead.
-     *
-     * @param string $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function setSpotPriceLimit($spotPriceLimit)
-    {
-        return $this->withSpotPriceLimit($spotPriceLimit);
     }
 
     /**
@@ -225,18 +141,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageOwnerAlias() instead.
-     *
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function setImageOwnerAlias($imageOwnerAlias)
-    {
-        return $this->withImageOwnerAlias($imageOwnerAlias);
-    }
-
-    /**
      * @param string $imageOwnerAlias
      *
      * @return $this
@@ -247,18 +151,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['ImageOwnerAlias'] = $imageOwnerAlias;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function setResourceGroupId($resourceGroupId)
-    {
-        return $this->withResourceGroupId($resourceGroupId);
     }
 
     /**
@@ -275,18 +167,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withHostName() instead.
-     *
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function setHostName($hostName)
-    {
-        return $this->withHostName($hostName);
-    }
-
-    /**
      * @param string $hostName
      *
      * @return $this
@@ -300,18 +180,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskIops() instead.
-     *
-     * @param string $systemDiskIops
-     *
-     * @return $this
-     */
-    public function setSystemDiskIops($systemDiskIops)
-    {
-        return $this->withSystemDiskIops($systemDiskIops);
-    }
-
-    /**
      * @param string $systemDiskIops
      *
      * @return $this
@@ -322,28 +190,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['SystemDisk.Iops'] = $systemDiskIops;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getTemplateTag() instead.
-     *
-     * @return array
-     */
-    public function getTemplateTags()
-    {
-        return $this->getTemplateTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateTag() instead.
-     *
-     * @param array $templateTags
-     *
-     * @return $this
-     */
-    public function setTemplateTags(array $templateTags)
-    {
-        return $this->withTemplateTag($templateTags);
     }
 
     /**
@@ -363,28 +209,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getTag() instead.
-     *
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->getTag();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTag() instead.
-     *
-     * @param array $tags
-     *
-     * @return $this
-     */
-    public function setTags(array $tags)
-    {
-        return $this->withTag($tags);
-    }
-
-    /**
      * @param array $tag
      *
      * @return $this
@@ -401,18 +225,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
-    }
-
-    /**
      * @param string $period
      *
      * @return $this
@@ -423,18 +235,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateResourceGroupId() instead.
-     *
-     * @param string $templateResourceGroupId
-     *
-     * @return $this
-     */
-    public function setTemplateResourceGroupId($templateResourceGroupId)
-    {
-        return $this->withTemplateResourceGroupId($templateResourceGroupId);
     }
 
     /**
@@ -451,18 +251,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -473,18 +261,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVSwitchId() instead.
-     *
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function setVSwitchId($vSwitchId)
-    {
-        return $this->withVSwitchId($vSwitchId);
     }
 
     /**
@@ -501,18 +277,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSpotStrategy() instead.
-     *
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function setSpotStrategy($spotStrategy)
-    {
-        return $this->withSpotStrategy($spotStrategy);
-    }
-
-    /**
      * @param string $spotStrategy
      *
      * @return $this
@@ -523,18 +287,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['SpotStrategy'] = $spotStrategy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceName() instead.
-     *
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function setInstanceName($instanceName)
-    {
-        return $this->withInstanceName($instanceName);
     }
 
     /**
@@ -551,18 +303,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetChargeType() instead.
-     *
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function setInternetChargeType($internetChargeType)
-    {
-        return $this->withInternetChargeType($internetChargeType);
-    }
-
-    /**
      * @param string $internetChargeType
      *
      * @return $this
@@ -573,18 +313,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['InternetChargeType'] = $internetChargeType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withZoneId() instead.
-     *
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function setZoneId($zoneId)
-    {
-        return $this->withZoneId($zoneId);
     }
 
     /**
@@ -601,18 +329,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthIn() instead.
-     *
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        return $this->withInternetMaxBandwidthIn($internetMaxBandwidthIn);
-    }
-
-    /**
      * @param string $internetMaxBandwidthIn
      *
      * @return $this
@@ -623,18 +339,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVersionDescription() instead.
-     *
-     * @param string $versionDescription
-     *
-     * @return $this
-     */
-    public function setVersionDescription($versionDescription)
-    {
-        return $this->withVersionDescription($versionDescription);
     }
 
     /**
@@ -651,18 +355,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageId() instead.
-     *
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function setImageId($imageId)
-    {
-        return $this->withImageId($imageId);
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -673,18 +365,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['ImageId'] = $imageId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIoOptimized() instead.
-     *
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function setIoOptimized($ioOptimized)
-    {
-        return $this->withIoOptimized($ioOptimized);
     }
 
     /**
@@ -701,18 +381,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityGroupId() instead.
-     *
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function setSecurityGroupId($securityGroupId)
-    {
-        return $this->withSecurityGroupId($securityGroupId);
-    }
-
-    /**
      * @param string $securityGroupId
      *
      * @return $this
@@ -723,18 +391,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['SecurityGroupId'] = $securityGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInternetMaxBandwidthOut() instead.
-     *
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        return $this->withInternetMaxBandwidthOut($internetMaxBandwidthOut);
     }
 
     /**
@@ -751,18 +407,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDescription() instead.
-     *
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        return $this->withDescription($description);
-    }
-
-    /**
      * @param string $description
      *
      * @return $this
@@ -773,18 +417,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['Description'] = $description;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskCategory() instead.
-     *
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function setSystemDiskCategory($systemDiskCategory)
-    {
-        return $this->withSystemDiskCategory($systemDiskCategory);
     }
 
     /**
@@ -801,18 +433,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserData() instead.
-     *
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function setUserData($userData)
-    {
-        return $this->withUserData($userData);
-    }
-
-    /**
      * @param string $userData
      *
      * @return $this
@@ -826,15 +446,16 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceType() instead.
-     *
-     * @param string $instanceType
+     * @param string $passwordInherit
      *
      * @return $this
      */
-    public function setInstanceType($instanceType)
+    public function withPasswordInherit($passwordInherit)
     {
-        return $this->withInstanceType($instanceType);
+        $this->data['PasswordInherit'] = $passwordInherit;
+        $this->options['query']['PasswordInherit'] = $passwordInherit;
+
+        return $this;
     }
 
     /**
@@ -851,18 +472,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceChargeType() instead.
-     *
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function setInstanceChargeType($instanceChargeType)
-    {
-        return $this->withInstanceChargeType($instanceChargeType);
-    }
-
-    /**
      * @param string $instanceChargeType
      *
      * @return $this
@@ -876,18 +485,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEnableVmOsConfig() instead.
-     *
-     * @param string $enableVmOsConfig
-     *
-     * @return $this
-     */
-    public function setEnableVmOsConfig($enableVmOsConfig)
-    {
-        return $this->withEnableVmOsConfig($enableVmOsConfig);
-    }
-
-    /**
      * @param string $enableVmOsConfig
      *
      * @return $this
@@ -898,28 +495,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['EnableVmOsConfig'] = $enableVmOsConfig;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getNetworkInterface() instead.
-     *
-     * @return array
-     */
-    public function getNetworkInterfaces()
-    {
-        return $this->getNetworkInterface();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkInterface() instead.
-     *
-     * @param array $networkInterfaces
-     *
-     * @return $this
-     */
-    public function setNetworkInterfaces(array $networkInterfaces)
-    {
-        return $this->withNetworkInterface($networkInterfaces);
     }
 
     /**
@@ -942,18 +517,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -964,18 +527,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -992,18 +543,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskDiskName() instead.
-     *
-     * @param string $systemDiskDiskName
-     *
-     * @return $this
-     */
-    public function setSystemDiskDiskName($systemDiskDiskName)
-    {
-        return $this->withSystemDiskDiskName($systemDiskDiskName);
-    }
-
-    /**
      * @param string $systemDiskDiskName
      *
      * @return $this
@@ -1014,18 +553,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['SystemDisk.DiskName'] = $systemDiskDiskName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRamRoleName() instead.
-     *
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function setRamRoleName($ramRoleName)
-    {
-        return $this->withRamRoleName($ramRoleName);
     }
 
     /**
@@ -1042,18 +569,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAutoReleaseTime() instead.
-     *
-     * @param string $autoReleaseTime
-     *
-     * @return $this
-     */
-    public function setAutoReleaseTime($autoReleaseTime)
-    {
-        return $this->withAutoReleaseTime($autoReleaseTime);
-    }
-
-    /**
      * @param string $autoReleaseTime
      *
      * @return $this
@@ -1064,18 +579,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['AutoReleaseTime'] = $autoReleaseTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSpotDuration() instead.
-     *
-     * @param string $spotDuration
-     *
-     * @return $this
-     */
-    public function setSpotDuration($spotDuration)
-    {
-        return $this->withSpotDuration($spotDuration);
     }
 
     /**
@@ -1092,28 +595,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use getDataDisk() instead.
-     *
-     * @return array
-     */
-    public function getDataDisks()
-    {
-        return $this->getDataDisk();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDataDisk() instead.
-     *
-     * @param array $dataDisks
-     *
-     * @return $this
-     */
-    public function setDataDisks(array $dataDisks)
-    {
-        return $this->withDataDisk($dataDisks);
-    }
-
-    /**
      * @param array $dataDisk
      *
      * @return $this
@@ -1126,25 +607,13 @@ class CreateLaunchTemplate extends RpcRequest
             $this->options['query']['DataDisk.' . ($i + 1) . '.SnapshotId'] = $dataDisk[$i]['SnapshotId'];
             $this->options['query']['DataDisk.' . ($i + 1) . '.Category'] = $dataDisk[$i]['Category'];
             $this->options['query']['DataDisk.' . ($i + 1) . '.Encrypted'] = $dataDisk[$i]['Encrypted'];
-            $this->options['query']['DataDisk.' . ($i + 1) . '.KMSKeyId'] = $dataDisk[$i]['KMSKeyId'];
             $this->options['query']['DataDisk.' . ($i + 1) . '.DiskName'] = $dataDisk[$i]['DiskName'];
             $this->options['query']['DataDisk.' . ($i + 1) . '.Description'] = $dataDisk[$i]['Description'];
             $this->options['query']['DataDisk.' . ($i + 1) . '.DeleteWithInstance'] = $dataDisk[$i]['DeleteWithInstance'];
+            $this->options['query']['DataDisk.' . ($i + 1) . '.Device'] = $dataDisk[$i]['Device'];
         }
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskSize() instead.
-     *
-     * @param string $systemDiskSize
-     *
-     * @return $this
-     */
-    public function setSystemDiskSize($systemDiskSize)
-    {
-        return $this->withSystemDiskSize($systemDiskSize);
     }
 
     /**
@@ -1161,18 +630,6 @@ class CreateLaunchTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withVpcId() instead.
-     *
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function setVpcId($vpcId)
-    {
-        return $this->withVpcId($vpcId);
-    }
-
-    /**
      * @param string $vpcId
      *
      * @return $this
@@ -1183,18 +640,6 @@ class CreateLaunchTemplate extends RpcRequest
         $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSystemDiskDescription() instead.
-     *
-     * @param string $systemDiskDescription
-     *
-     * @return $this
-     */
-    public function setSystemDiskDescription($systemDiskDescription)
-    {
-        return $this->withSystemDiskDescription($systemDiskDescription);
     }
 
     /**

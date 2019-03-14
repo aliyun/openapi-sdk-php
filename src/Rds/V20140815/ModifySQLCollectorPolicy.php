@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of ModifySQLCollectorPolicy
+ * Api ModifySQLCollectorPolicy
  *
  * @method string getResourceOwnerId()
  * @method string getStoragePeriod()
@@ -16,45 +16,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getDBInstanceId()
  * @method string getOwnerId()
  */
-class ModifySQLCollectorPolicy extends RpcRequest
+class ModifySQLCollectorPolicy extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Rds';
 
-    /**
-     * @var string
-     */
     public $version = '2014-08-15';
 
-    /**
-     * @var string
-     */
-    public $action = 'ModifySQLCollectorPolicy';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'rds';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -67,18 +37,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStoragePeriod() instead.
-     *
-     * @param string $storagePeriod
-     *
-     * @return $this
-     */
-    public function setStoragePeriod($storagePeriod)
-    {
-        return $this->withStoragePeriod($storagePeriod);
     }
 
     /**
@@ -95,18 +53,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -117,18 +63,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
     }
 
     /**
@@ -145,18 +79,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSQLCollectorStatus() instead.
-     *
-     * @param string $sQLCollectorStatus
-     *
-     * @return $this
-     */
-    public function setSQLCollectorStatus($sQLCollectorStatus)
-    {
-        return $this->withSQLCollectorStatus($sQLCollectorStatus);
-    }
-
-    /**
      * @param string $sQLCollectorStatus
      *
      * @return $this
@@ -167,18 +89,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
         $this->options['query']['SQLCollectorStatus'] = $sQLCollectorStatus;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -195,18 +105,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDBInstanceId() instead.
-     *
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function setDBInstanceId($dBInstanceId)
-    {
-        return $this->withDBInstanceId($dBInstanceId);
-    }
-
-    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -217,18 +115,6 @@ class ModifySQLCollectorPolicy extends RpcRequest
         $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

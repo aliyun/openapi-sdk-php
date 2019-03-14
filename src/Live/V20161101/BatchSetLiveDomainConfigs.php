@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of BatchSetLiveDomainConfigs
+ * Api BatchSetLiveDomainConfigs
  *
  * @method string getFunctions()
  * @method string getSecurityToken()
@@ -13,45 +13,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerAccount()
  * @method string getOwnerId()
  */
-class BatchSetLiveDomainConfigs extends RpcRequest
+class BatchSetLiveDomainConfigs extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'BatchSetLiveDomainConfigs';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFunctions() instead.
-     *
-     * @param string $functions
-     *
-     * @return $this
-     */
-    public function setFunctions($functions)
-    {
-        return $this->withFunctions($functions);
-    }
 
     /**
      * @param string $functions
@@ -64,18 +34,6 @@ class BatchSetLiveDomainConfigs extends RpcRequest
         $this->options['query']['Functions'] = $functions;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -92,18 +50,6 @@ class BatchSetLiveDomainConfigs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainNames() instead.
-     *
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function setDomainNames($domainNames)
-    {
-        return $this->withDomainNames($domainNames);
-    }
-
-    /**
      * @param string $domainNames
      *
      * @return $this
@@ -117,18 +63,6 @@ class BatchSetLiveDomainConfigs extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
-    }
-
-    /**
      * @param string $ownerAccount
      *
      * @return $this
@@ -139,18 +73,6 @@ class BatchSetLiveDomainConfigs extends RpcRequest
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

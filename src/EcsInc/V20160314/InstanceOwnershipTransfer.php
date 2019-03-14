@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of InstanceOwnershipTransfer
+ * Api InstanceOwnershipTransfer
  *
  * @method string getResourceOwnerId()
  * @method string getToVSwitchId()
@@ -27,45 +27,15 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAppKey()
  * @method string getBid()
  */
-class InstanceOwnershipTransfer extends RpcRequest
+class InstanceOwnershipTransfer extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'EcsInc';
 
-    /**
-     * @var string
-     */
     public $version = '2016-03-14';
 
-    /**
-     * @var string
-     */
-    public $action = 'InstanceOwnershipTransfer';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'ecs';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -78,18 +48,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withToVSwitchId() instead.
-     *
-     * @param string $toVSwitchId
-     *
-     * @return $this
-     */
-    public function setToVSwitchId($toVSwitchId)
-    {
-        return $this->withToVSwitchId($toVSwitchId);
     }
 
     /**
@@ -106,18 +64,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientToken() instead.
-     *
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function setClientToken($clientToken)
-    {
-        return $this->withClientToken($clientToken);
-    }
-
-    /**
      * @param string $clientToken
      *
      * @return $this
@@ -128,18 +74,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setchannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -156,18 +90,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOperator() instead.
-     *
-     * @param string $operator
-     *
-     * @return $this
-     */
-    public function setoperator($operator)
-    {
-        return $this->withOperator($operator);
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -178,18 +100,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['operator'] = $operator;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAliUid() instead.
-     *
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function setAliUid($aliUid)
-    {
-        return $this->withAliUid($aliUid);
     }
 
     /**
@@ -206,18 +116,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProxyId() instead.
-     *
-     * @param string $proxyId
-     *
-     * @return $this
-     */
-    public function setproxyId($proxyId)
-    {
-        return $this->withProxyId($proxyId);
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -231,18 +129,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDryRun() instead.
-     *
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function setDryRun($dryRun)
-    {
-        return $this->withDryRun($dryRun);
-    }
-
-    /**
      * @param string $dryRun
      *
      * @return $this
@@ -253,28 +139,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getPrivateIps() instead.
-     *
-     * @return array
-     */
-    public function getPrivateIpss()
-    {
-        return $this->getPrivateIps();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPrivateIps() instead.
-     *
-     * @param array $privateIpss
-     *
-     * @return $this
-     */
-    public function setPrivateIpss(array $privateIpss)
-    {
-        return $this->withPrivateIps($privateIpss);
     }
 
     /**
@@ -293,18 +157,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -315,18 +167,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -343,18 +183,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withKeepPublicIp() instead.
-     *
-     * @param string $keepPublicIp
-     *
-     * @return $this
-     */
-    public function setKeepPublicIp($keepPublicIp)
-    {
-        return $this->withKeepPublicIp($keepPublicIp);
-    }
-
-    /**
      * @param string $keepPublicIp
      *
      * @return $this
@@ -365,18 +193,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['KeepPublicIp'] = $keepPublicIp;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -393,18 +209,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToken() instead.
-     *
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function settoken($token)
-    {
-        return $this->withToken($token);
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -415,18 +219,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['token'] = $token;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewOwnerId() instead.
-     *
-     * @param string $newOwnerId
-     *
-     * @return $this
-     */
-    public function setNewOwnerId($newOwnerId)
-    {
-        return $this->withNewOwnerId($newOwnerId);
     }
 
     /**
@@ -443,18 +235,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withToSecurityGroupId() instead.
-     *
-     * @param string $toSecurityGroupId
-     *
-     * @return $this
-     */
-    public function setToSecurityGroupId($toSecurityGroupId)
-    {
-        return $this->withToSecurityGroupId($toSecurityGroupId);
-    }
-
-    /**
      * @param string $toSecurityGroupId
      *
      * @return $this
@@ -465,28 +245,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['ToSecurityGroupId'] = $toSecurityGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use getInstanceIds() instead.
-     *
-     * @return array
-     */
-    public function getInstanceIdss()
-    {
-        return $this->getInstanceIds();
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
-     * @param array $instanceIdss
-     *
-     * @return $this
-     */
-    public function setInstanceIdss(array $instanceIdss)
-    {
-        return $this->withInstanceIds($instanceIdss);
     }
 
     /**
@@ -505,18 +263,6 @@ class InstanceOwnershipTransfer extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppKey() instead.
-     *
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function setappKey($appKey)
-    {
-        return $this->withAppKey($appKey);
-    }
-
-    /**
      * @param string $appKey
      *
      * @return $this
@@ -527,18 +273,6 @@ class InstanceOwnershipTransfer extends RpcRequest
         $this->options['query']['appKey'] = $appKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withBid() instead.
-     *
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function setBid($bid)
-    {
-        return $this->withBid($bid);
     }
 
     /**

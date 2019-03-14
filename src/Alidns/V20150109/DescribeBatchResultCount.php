@@ -2,53 +2,37 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of DescribeBatchResultCount
+ * Api DescribeBatchResultCount
  *
+ * @method string getBatchType()
  * @method string getUserClientIp()
  * @method string getLang()
  * @method string getTaskId()
  */
-class DescribeBatchResultCount extends RpcRequest
+class DescribeBatchResultCount extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Alidns';
 
-    /**
-     * @var string
-     */
     public $version = '2015-01-09';
 
-    /**
-     * @var string
-     */
-    public $action = 'DescribeBatchResultCount';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'alidns';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUserClientIp() instead.
-     *
-     * @param string $userClientIp
+     * @param string $batchType
      *
      * @return $this
      */
-    public function setUserClientIp($userClientIp)
+    public function withBatchType($batchType)
     {
-        return $this->withUserClientIp($userClientIp);
+        $this->data['BatchType'] = $batchType;
+        $this->options['query']['BatchType'] = $batchType;
+
+        return $this;
     }
 
     /**
@@ -65,18 +49,6 @@ class DescribeBatchResultCount extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLang() instead.
-     *
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function setLang($lang)
-    {
-        return $this->withLang($lang);
-    }
-
-    /**
      * @param string $lang
      *
      * @return $this
@@ -87,18 +59,6 @@ class DescribeBatchResultCount extends RpcRequest
         $this->options['query']['Lang'] = $lang;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetBoardCallback
+ * Api SetBoardCallback
  *
  * @method string getAuthKey()
  * @method string getCallbackEnable()
@@ -15,32 +15,14 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getAppId()
  * @method string getAuthSwitch()
  */
-class SetBoardCallback extends RpcRequest
+class SetBoardCallback extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetBoardCallback';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
     public $serviceCode = 'live';
 
     /**

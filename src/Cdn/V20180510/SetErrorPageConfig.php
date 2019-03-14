@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of SetErrorPageConfig
+ * Api SetErrorPageConfig
  *
  * @method string getPageType()
  * @method string getSecurityToken()
@@ -13,40 +13,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getCustomPageUrl()
  * @method string getOwnerId()
  */
-class SetErrorPageConfig extends RpcRequest
+class SetErrorPageConfig extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
-    public $action = 'SetErrorPageConfig';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageType() instead.
-     *
-     * @param string $pageType
-     *
-     * @return $this
-     */
-    public function setPageType($pageType)
-    {
-        return $this->withPageType($pageType);
-    }
 
     /**
      * @param string $pageType
@@ -59,18 +32,6 @@ class SetErrorPageConfig extends RpcRequest
         $this->options['query']['PageType'] = $pageType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -87,18 +48,6 @@ class SetErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
-    }
-
-    /**
      * @param string $domainName
      *
      * @return $this
@@ -112,18 +61,6 @@ class SetErrorPageConfig extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCustomPageUrl() instead.
-     *
-     * @param string $customPageUrl
-     *
-     * @return $this
-     */
-    public function setCustomPageUrl($customPageUrl)
-    {
-        return $this->withCustomPageUrl($customPageUrl);
-    }
-
-    /**
      * @param string $customPageUrl
      *
      * @return $this
@@ -134,18 +71,6 @@ class SetErrorPageConfig extends RpcRequest
         $this->options['query']['CustomPageUrl'] = $customPageUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

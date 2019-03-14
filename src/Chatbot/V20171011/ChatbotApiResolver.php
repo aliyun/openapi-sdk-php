@@ -53,6 +53,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method RemoveSynonym removeSynonym(array $options = [])
  * @method TestDialogFlow testDialogFlow(array $options = [])
  * @method UpdateCategory updateCategory(array $options = [])
+ * @method UpdateCoreWord updateCoreWord(array $options = [])
  * @method UpdateDialog updateDialog(array $options = [])
  * @method UpdateDialogFlow updateDialogFlow(array $options = [])
  * @method UpdateEntity updateEntity(array $options = [])

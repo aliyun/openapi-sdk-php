@@ -2,10 +2,10 @@
 
 namespace AlibabaCloud\Sms\V20160927;
 
-use AlibabaCloud\Client\Request\RpcRequest;
+use AlibabaCloud\Rpc;
 
 /**
- * Request of QuerySmsDetailByPage
+ * Api QuerySmsDetailByPage
  *
  * @method string getRecNum()
  * @method string getResourceOwnerId()
@@ -15,40 +15,13 @@ use AlibabaCloud\Client\Request\RpcRequest;
  * @method string getOwnerId()
  * @method string getQueryTime()
  */
-class QuerySmsDetailByPage extends RpcRequest
+class QuerySmsDetailByPage extends Rpc
 {
-
-    /**
-     * @var string
-     */
     public $product = 'Sms';
 
-    /**
-     * @var string
-     */
     public $version = '2016-09-27';
 
-    /**
-     * @var string
-     */
-    public $action = 'QuerySmsDetailByPage';
-
-    /**
-     * @var string
-     */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRecNum() instead.
-     *
-     * @param string $recNum
-     *
-     * @return $this
-     */
-    public function setRecNum($recNum)
-    {
-        return $this->withRecNum($recNum);
-    }
 
     /**
      * @param string $recNum
@@ -61,18 +34,6 @@ class QuerySmsDetailByPage extends RpcRequest
         $this->options['query']['RecNum'] = $recNum;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -89,18 +50,6 @@ class QuerySmsDetailByPage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
-    }
-
-    /**
      * @param string $resourceOwnerAccount
      *
      * @return $this
@@ -111,18 +60,6 @@ class QuerySmsDetailByPage extends RpcRequest
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function setPageNo($pageNo)
-    {
-        return $this->withPageNo($pageNo);
     }
 
     /**
@@ -139,18 +76,6 @@ class QuerySmsDetailByPage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
-    }
-
-    /**
      * @param string $pageSize
      *
      * @return $this
@@ -164,18 +89,6 @@ class QuerySmsDetailByPage extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -186,18 +99,6 @@ class QuerySmsDetailByPage extends RpcRequest
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withQueryTime() instead.
-     *
-     * @param string $queryTime
-     *
-     * @return $this
-     */
-    public function setQueryTime($queryTime)
-    {
-        return $this->withQueryTime($queryTime);
     }
 
     /**
