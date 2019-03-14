@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.1.0 - 2019-03-14
+- IDE auto-prompt for unlabeling discarded methods.
+- Reduce size.
+- Added support for 127 Api.
+- Functional testing increased from 28 to 35.
+
+
 ## 1.0.10 - 2019-03-13
 - Update Docs.
 
