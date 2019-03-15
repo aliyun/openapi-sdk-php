@@ -39,11 +39,11 @@ class DescribeVodDomainConfigs extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withFunctionNames() instead.
-     *
      * @param string $functionNames
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withFunctionNames() instead.
+     *
      */
     public function setFunctionNames($functionNames)
     {
@@ -57,22 +57,10 @@ class DescribeVodDomainConfigs extends RpcRequest
      */
     public function withFunctionNames($functionNames)
     {
-        $this->data['FunctionNames'] = $functionNames;
+        $this->data['FunctionNames']             = $functionNames;
         $this->options['query']['FunctionNames'] = $functionNames;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -82,22 +70,10 @@ class DescribeVodDomainConfigs extends RpcRequest
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -107,22 +83,10 @@ class DescribeVodDomainConfigs extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -132,7 +96,7 @@ class DescribeVodDomainConfigs extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

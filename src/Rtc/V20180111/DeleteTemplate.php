@@ -44,22 +44,10 @@ class DeleteTemplate extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**
@@ -69,22 +57,10 @@ class DeleteTemplate extends RpcRequest
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**
@@ -94,7 +70,7 @@ class DeleteTemplate extends RpcRequest
      */
     public function withAppId($appId)
     {
-        $this->data['AppId'] = $appId;
+        $this->data['AppId']             = $appId;
         $this->options['query']['AppId'] = $appId;
 
         return $this;

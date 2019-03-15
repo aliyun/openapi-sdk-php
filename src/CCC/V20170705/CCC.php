@@ -100,7 +100,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ListSkillGroupStates listSkillGroupStates(array $options = [])
  * @method static ListSkillGroupSummaryReports listSkillGroupSummaryReports(array $options = [])
  * @method static ListSkillGroupSummaryReportsByInterval listSkillGroupSummaryReportsByInterval(array $options = [])
- * @method static ListSkillGroupSummaryReportsSinceMidnight listSkillGroupSummaryReportsSinceMidnight(array $options = [])
+ * @method static ListSkillGroupSummaryReportsSinceMidnight listSkillGroupSummaryReportsSinceMidnight(array $options =
+ *         [])
  * @method static ListSkillGroups listSkillGroups(array $options = [])
  * @method static ListSkillGroupsOfUser listSkillGroupsOfUser(array $options = [])
  * @method static ListSurveys listSurveys(array $options = [])

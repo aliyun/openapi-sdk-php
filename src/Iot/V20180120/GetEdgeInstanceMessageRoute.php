@@ -32,40 +32,16 @@ class GetEdgeInstanceMessageRoute extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
      */
     public function withInstanceId($instanceId)
     {
-        $this->data['InstanceId'] = $instanceId;
+        $this->data['InstanceId']             = $instanceId;
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteId() instead.
-     *
-     * @param string $routeId
-     *
-     * @return $this
-     */
-    public function setRouteId($routeId)
-    {
-        return $this->withRouteId($routeId);
     }
 
     /**
@@ -75,7 +51,7 @@ class GetEdgeInstanceMessageRoute extends RpcRequest
      */
     public function withRouteId($routeId)
     {
-        $this->data['RouteId'] = $routeId;
+        $this->data['RouteId']             = $routeId;
         $this->options['query']['RouteId'] = $routeId;
 
         return $this;

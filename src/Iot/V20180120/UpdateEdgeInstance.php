@@ -33,40 +33,16 @@ class UpdateEdgeInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
      */
     public function withInstanceId($instanceId)
     {
-        $this->data['InstanceId'] = $instanceId;
+        $this->data['InstanceId']             = $instanceId;
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -76,22 +52,10 @@ class UpdateEdgeInstance extends RpcRequest
      */
     public function withName($name)
     {
-        $this->data['Name'] = $name;
+        $this->data['Name']             = $name;
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTags() instead.
-     *
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        return $this->withTags($tags);
     }
 
     /**
@@ -101,7 +65,7 @@ class UpdateEdgeInstance extends RpcRequest
      */
     public function withTags($tags)
     {
-        $this->data['Tags'] = $tags;
+        $this->data['Tags']             = $tags;
         $this->options['query']['Tags'] = $tags;
 
         return $this;

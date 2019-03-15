@@ -44,7 +44,7 @@ class GetLayoutInfo extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
@@ -57,7 +57,7 @@ class GetLayoutInfo extends RpcRequest
      */
     public function withLayoutId($layoutId)
     {
-        $this->data['LayoutId'] = $layoutId;
+        $this->data['LayoutId']             = $layoutId;
         $this->options['query']['LayoutId'] = $layoutId;
 
         return $this;
@@ -70,7 +70,7 @@ class GetLayoutInfo extends RpcRequest
      */
     public function withAppId($appId)
     {
-        $this->data['AppId'] = $appId;
+        $this->data['AppId']             = $appId;
         $this->options['query']['AppId'] = $appId;
 
         return $this;

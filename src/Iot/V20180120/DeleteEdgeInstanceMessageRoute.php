@@ -38,7 +38,7 @@ class DeleteEdgeInstanceMessageRoute extends RpcRequest
      */
     public function withInstanceId($instanceId)
     {
-        $this->data['InstanceId'] = $instanceId;
+        $this->data['InstanceId']             = $instanceId;
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
@@ -51,7 +51,7 @@ class DeleteEdgeInstanceMessageRoute extends RpcRequest
      */
     public function withRouteId($routeId)
     {
-        $this->data['RouteId'] = $routeId;
+        $this->data['RouteId']             = $routeId;
         $this->options['query']['RouteId'] = $routeId;
 
         return $this;

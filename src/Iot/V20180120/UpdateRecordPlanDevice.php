@@ -39,7 +39,7 @@ class UpdateRecordPlanDevice extends RpcRequest
      */
     public function withIotId($iotId)
     {
-        $this->data['IotId'] = $iotId;
+        $this->data['IotId']             = $iotId;
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
@@ -52,7 +52,7 @@ class UpdateRecordPlanDevice extends RpcRequest
      */
     public function withPlanId($planId)
     {
-        $this->data['PlanId'] = $planId;
+        $this->data['PlanId']             = $planId;
         $this->options['query']['PlanId'] = $planId;
 
         return $this;
@@ -65,7 +65,7 @@ class UpdateRecordPlanDevice extends RpcRequest
      */
     public function withStreamType($streamType)
     {
-        $this->data['StreamType'] = $streamType;
+        $this->data['StreamType']             = $streamType;
         $this->options['query']['StreamType'] = $streamType;
 
         return $this;

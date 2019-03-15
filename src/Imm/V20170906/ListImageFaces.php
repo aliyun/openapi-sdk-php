@@ -40,40 +40,16 @@ class ListImageFaces extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMaxKeys() instead.
-     *
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function setMaxKeys($maxKeys)
-    {
-        return $this->withMaxKeys($maxKeys);
-    }
-
-    /**
      * @param string $maxKeys
      *
      * @return $this
      */
     public function withMaxKeys($maxKeys)
     {
-        $this->data['MaxKeys'] = $maxKeys;
+        $this->data['MaxKeys']             = $maxKeys;
         $this->options['query']['MaxKeys'] = $maxKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**
@@ -83,22 +59,10 @@ class ListImageFaces extends RpcRequest
      */
     public function withMarker($marker)
     {
-        $this->data['Marker'] = $marker;
+        $this->data['Marker']             = $marker;
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -108,22 +72,10 @@ class ListImageFaces extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -133,22 +85,10 @@ class ListImageFaces extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcUri() instead.
-     *
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function setSrcUri($srcUri)
-    {
-        return $this->withSrcUri($srcUri);
     }
 
     /**
@@ -158,7 +98,7 @@ class ListImageFaces extends RpcRequest
      */
     public function withSrcUri($srcUri)
     {
-        $this->data['SrcUri'] = $srcUri;
+        $this->data['SrcUri']             = $srcUri;
         $this->options['query']['SrcUri'] = $srcUri;
 
         return $this;

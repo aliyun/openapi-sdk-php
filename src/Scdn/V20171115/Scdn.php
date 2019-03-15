@@ -32,12 +32,15 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeScdnDomainPvData describeScdnDomainPvData(array $options = [])
  * @method static DescribeScdnDomainQpsData describeScdnDomainQpsData(array $options = [])
  * @method static DescribeScdnDomainRealTimeBpsData describeScdnDomainRealTimeBpsData(array $options = [])
- * @method static DescribeScdnDomainRealTimeByteHitRateData describeScdnDomainRealTimeByteHitRateData(array $options = [])
+ * @method static DescribeScdnDomainRealTimeByteHitRateData describeScdnDomainRealTimeByteHitRateData(array $options =
+ *         [])
  * @method static DescribeScdnDomainRealTimeHttpCodeData describeScdnDomainRealTimeHttpCodeData(array $options = [])
  * @method static DescribeScdnDomainRealTimeQpsData describeScdnDomainRealTimeQpsData(array $options = [])
- * @method static DescribeScdnDomainRealTimeReqHitRateData describeScdnDomainRealTimeReqHitRateData(array $options = [])
+ * @method static DescribeScdnDomainRealTimeReqHitRateData describeScdnDomainRealTimeReqHitRateData(array $options =
+ *         [])
  * @method static DescribeScdnDomainRealTimeSrcBpsData describeScdnDomainRealTimeSrcBpsData(array $options = [])
- * @method static DescribeScdnDomainRealTimeSrcTrafficData describeScdnDomainRealTimeSrcTrafficData(array $options = [])
+ * @method static DescribeScdnDomainRealTimeSrcTrafficData describeScdnDomainRealTimeSrcTrafficData(array $options =
+ *         [])
  * @method static DescribeScdnDomainRealTimeTrafficData describeScdnDomainRealTimeTrafficData(array $options = [])
  * @method static DescribeScdnDomainRegionData describeScdnDomainRegionData(array $options = [])
  * @method static DescribeScdnDomainTopReferVisit describeScdnDomainTopReferVisit(array $options = [])

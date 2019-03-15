@@ -45,11 +45,11 @@ class SetMessageCallback extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallbackType() instead.
-     *
      * @param string $callbackType
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCallbackType() instead.
+     *
      */
     public function setCallbackType($callbackType)
     {
@@ -63,18 +63,18 @@ class SetMessageCallback extends RpcRequest
      */
     public function withCallbackType($callbackType)
     {
-        $this->data['CallbackType'] = $callbackType;
+        $this->data['CallbackType']             = $callbackType;
         $this->options['query']['CallbackType'] = $callbackType;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthKey() instead.
-     *
      * @param string $authKey
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withAuthKey() instead.
+     *
      */
     public function setAuthKey($authKey)
     {
@@ -88,22 +88,10 @@ class SetMessageCallback extends RpcRequest
      */
     public function withAuthKey($authKey)
     {
-        $this->data['AuthKey'] = $authKey;
+        $this->data['AuthKey']             = $authKey;
         $this->options['query']['AuthKey'] = $authKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -113,18 +101,18 @@ class SetMessageCallback extends RpcRequest
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallbackSwitch() instead.
-     *
      * @param string $callbackSwitch
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCallbackSwitch() instead.
+     *
      */
     public function setCallbackSwitch($callbackSwitch)
     {
@@ -138,22 +126,10 @@ class SetMessageCallback extends RpcRequest
      */
     public function withCallbackSwitch($callbackSwitch)
     {
-        $this->data['CallbackSwitch'] = $callbackSwitch;
+        $this->data['CallbackSwitch']             = $callbackSwitch;
         $this->options['query']['CallbackSwitch'] = $callbackSwitch;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -163,22 +139,10 @@ class SetMessageCallback extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -188,18 +152,18 @@ class SetMessageCallback extends RpcRequest
      */
     public function withOwnerAccount($ownerAccount)
     {
-        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->data['OwnerAccount']             = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEventTypeList() instead.
-     *
      * @param string $eventTypeList
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withEventTypeList() instead.
+     *
      */
     public function setEventTypeList($eventTypeList)
     {
@@ -213,18 +177,18 @@ class SetMessageCallback extends RpcRequest
      */
     public function withEventTypeList($eventTypeList)
     {
-        $this->data['EventTypeList'] = $eventTypeList;
+        $this->data['EventTypeList']             = $eventTypeList;
         $this->options['query']['EventTypeList'] = $eventTypeList;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthSwitch() instead.
-     *
      * @param string $authSwitch
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withAuthSwitch() instead.
+     *
      */
     public function setAuthSwitch($authSwitch)
     {
@@ -238,18 +202,18 @@ class SetMessageCallback extends RpcRequest
      */
     public function withAuthSwitch($authSwitch)
     {
-        $this->data['AuthSwitch'] = $authSwitch;
+        $this->data['AuthSwitch']             = $authSwitch;
         $this->options['query']['AuthSwitch'] = $authSwitch;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCallbackURL() instead.
-     *
      * @param string $callbackURL
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCallbackURL() instead.
+     *
      */
     public function setCallbackURL($callbackURL)
     {
@@ -263,22 +227,10 @@ class SetMessageCallback extends RpcRequest
      */
     public function withCallbackURL($callbackURL)
     {
-        $this->data['CallbackURL'] = $callbackURL;
+        $this->data['CallbackURL']             = $callbackURL;
         $this->options['query']['CallbackURL'] = $callbackURL;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -288,7 +240,7 @@ class SetMessageCallback extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

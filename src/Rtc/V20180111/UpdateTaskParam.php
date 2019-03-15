@@ -41,9 +41,9 @@ class UpdateTaskParam extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
+     * @return array
      * @deprecated deprecated since version 2.0, Use getMixPanes() instead.
      *
-     * @return array
      */
     public function getMixPaness()
     {
@@ -51,11 +51,11 @@ class UpdateTaskParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMixPanes() instead.
-     *
      * @param array $mixPaness
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withMixPanes() instead.
+     *
      */
     public function setMixPaness(array $mixPaness)
     {
@@ -71,8 +71,8 @@ class UpdateTaskParam extends RpcRequest
     {
         $this->data['MixPanes'] = $mixPanes;
         foreach ($mixPanes as $i => $iValue) {
-            $this->options['query']['MixPanes.' . ($i + 1) . '.PaneId'] = $mixPanes[$i]['PaneId'];
-            $this->options['query']['MixPanes.' . ($i + 1) . '.UserId'] = $mixPanes[$i]['UserId'];
+            $this->options['query']['MixPanes.' . ($i + 1) . '.PaneId']     = $mixPanes[$i]['PaneId'];
+            $this->options['query']['MixPanes.' . ($i + 1) . '.UserId']     = $mixPanes[$i]['UserId'];
             $this->options['query']['MixPanes.' . ($i + 1) . '.SourceType'] = $mixPanes[$i]['SourceType'];
         }
 
@@ -86,22 +86,10 @@ class UpdateTaskParam extends RpcRequest
      */
     public function withTaskId($taskId)
     {
-        $this->data['TaskId'] = $taskId;
+        $this->data['TaskId']             = $taskId;
         $this->options['query']['TaskId'] = $taskId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -111,22 +99,10 @@ class UpdateTaskParam extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**
@@ -136,7 +112,7 @@ class UpdateTaskParam extends RpcRequest
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
@@ -149,7 +125,7 @@ class UpdateTaskParam extends RpcRequest
      */
     public function withAppId($appId)
     {
-        $this->data['AppId'] = $appId;
+        $this->data['AppId']             = $appId;
         $this->options['query']['AppId'] = $appId;
 
         return $this;
@@ -162,7 +138,7 @@ class UpdateTaskParam extends RpcRequest
      */
     public function withChannelId($channelId)
     {
-        $this->data['ChannelId'] = $channelId;
+        $this->data['ChannelId']             = $channelId;
         $this->options['query']['ChannelId'] = $channelId;
 
         return $this;

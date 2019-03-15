@@ -34,40 +34,16 @@ class QueryLiveStreaming extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotId() instead.
-     *
-     * @param string $iotId
-     *
-     * @return $this
-     */
-    public function setIotId($iotId)
-    {
-        return $this->withIotId($iotId);
-    }
-
-    /**
      * @param string $iotId
      *
      * @return $this
      */
     public function withIotId($iotId)
     {
-        $this->data['IotId'] = $iotId;
+        $this->data['IotId']             = $iotId;
         $this->options['query']['IotId'] = $iotId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamType() instead.
-     *
-     * @param string $streamType
-     *
-     * @return $this
-     */
-    public function setStreamType($streamType)
-    {
-        return $this->withStreamType($streamType);
     }
 
     /**
@@ -77,22 +53,10 @@ class QueryLiveStreaming extends RpcRequest
      */
     public function withStreamType($streamType)
     {
-        $this->data['StreamType'] = $streamType;
+        $this->data['StreamType']             = $streamType;
         $this->options['query']['StreamType'] = $streamType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withShouldEncrypt() instead.
-     *
-     * @param string $shouldEncrypt
-     *
-     * @return $this
-     */
-    public function setShouldEncrypt($shouldEncrypt)
-    {
-        return $this->withShouldEncrypt($shouldEncrypt);
     }
 
     /**
@@ -102,22 +66,10 @@ class QueryLiveStreaming extends RpcRequest
      */
     public function withShouldEncrypt($shouldEncrypt)
     {
-        $this->data['ShouldEncrypt'] = $shouldEncrypt;
+        $this->data['ShouldEncrypt']             = $shouldEncrypt;
         $this->options['query']['ShouldEncrypt'] = $shouldEncrypt;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEncryptType() instead.
-     *
-     * @param string $encryptType
-     *
-     * @return $this
-     */
-    public function setEncryptType($encryptType)
-    {
-        return $this->withEncryptType($encryptType);
     }
 
     /**
@@ -127,7 +79,7 @@ class QueryLiveStreaming extends RpcRequest
      */
     public function withEncryptType($encryptType)
     {
-        $this->data['EncryptType'] = $encryptType;
+        $this->data['EncryptType']             = $encryptType;
         $this->options['query']['EncryptType'] = $encryptType;
 
         return $this;

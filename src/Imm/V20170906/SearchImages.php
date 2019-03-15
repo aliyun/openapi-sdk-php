@@ -54,36 +54,24 @@ class SearchImages extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withGender() instead.
-     *
-     * @param string $gender
-     *
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        return $this->withGender($gender);
-    }
-
-    /**
      * @param string $gender
      *
      * @return $this
      */
     public function withGender($gender)
     {
-        $this->data['Gender'] = $gender;
+        $this->data['Gender']             = $gender;
         $this->options['query']['Gender'] = $gender;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemarksAPrefix() instead.
-     *
      * @param string $remarksAPrefix
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withRemarksAPrefix() instead.
+     *
      */
     public function setRemarksAPrefix($remarksAPrefix)
     {
@@ -97,22 +85,10 @@ class SearchImages extends RpcRequest
      */
     public function withRemarksAPrefix($remarksAPrefix)
     {
-        $this->data['RemarksAPrefix'] = $remarksAPrefix;
+        $this->data['RemarksAPrefix']             = $remarksAPrefix;
         $this->options['query']['RemarksAPrefix'] = $remarksAPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -122,22 +98,10 @@ class SearchImages extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrderBy() instead.
-     *
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function setOrderBy($orderBy)
-    {
-        return $this->withOrderBy($orderBy);
     }
 
     /**
@@ -147,22 +111,10 @@ class SearchImages extends RpcRequest
      */
     public function withOrderBy($orderBy)
     {
-        $this->data['OrderBy'] = $orderBy;
+        $this->data['OrderBy']             = $orderBy;
         $this->options['query']['OrderBy'] = $orderBy;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withImageSizeRange() instead.
-     *
-     * @param string $imageSizeRange
-     *
-     * @return $this
-     */
-    public function setImageSizeRange($imageSizeRange)
-    {
-        return $this->withImageSizeRange($imageSizeRange);
     }
 
     /**
@@ -172,18 +124,18 @@ class SearchImages extends RpcRequest
      */
     public function withImageSizeRange($imageSizeRange)
     {
-        $this->data['ImageSizeRange'] = $imageSizeRange;
+        $this->data['ImageSizeRange']             = $imageSizeRange;
         $this->options['query']['ImageSizeRange'] = $imageSizeRange;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withRemarksBPrefix() instead.
-     *
      * @param string $remarksBPrefix
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withRemarksBPrefix() instead.
+     *
      */
     public function setRemarksBPrefix($remarksBPrefix)
     {
@@ -197,22 +149,10 @@ class SearchImages extends RpcRequest
      */
     public function withRemarksBPrefix($remarksBPrefix)
     {
-        $this->data['RemarksBPrefix'] = $remarksBPrefix;
+        $this->data['RemarksBPrefix']             = $remarksBPrefix;
         $this->options['query']['RemarksBPrefix'] = $remarksBPrefix;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTagNames() instead.
-     *
-     * @param string $tagNames
-     *
-     * @return $this
-     */
-    public function setTagNames($tagNames)
-    {
-        return $this->withTagNames($tagNames);
     }
 
     /**
@@ -222,18 +162,18 @@ class SearchImages extends RpcRequest
      */
     public function withTagNames($tagNames)
     {
-        $this->data['TagNames'] = $tagNames;
+        $this->data['TagNames']             = $tagNames;
         $this->options['query']['TagNames'] = $tagNames;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSourceUriPrefix() instead.
-     *
      * @param string $sourceUriPrefix
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSourceUriPrefix() instead.
+     *
      */
     public function setSourceUriPrefix($sourceUriPrefix)
     {
@@ -247,18 +187,18 @@ class SearchImages extends RpcRequest
      */
     public function withSourceUriPrefix($sourceUriPrefix)
     {
-        $this->data['SourceUriPrefix'] = $sourceUriPrefix;
+        $this->data['SourceUriPrefix']             = $sourceUriPrefix;
         $this->options['query']['SourceUriPrefix'] = $sourceUriPrefix;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLocationBoundary() instead.
-     *
      * @param string $locationBoundary
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withLocationBoundary() instead.
+     *
      */
     public function setLocationBoundary($locationBoundary)
     {
@@ -272,18 +212,18 @@ class SearchImages extends RpcRequest
      */
     public function withLocationBoundary($locationBoundary)
     {
-        $this->data['LocationBoundary'] = $locationBoundary;
+        $this->data['LocationBoundary']             = $locationBoundary;
         $this->options['query']['LocationBoundary'] = $locationBoundary;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEmotion() instead.
-     *
      * @param string $emotion
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withEmotion() instead.
+     *
      */
     public function setEmotion($emotion)
     {
@@ -297,18 +237,18 @@ class SearchImages extends RpcRequest
      */
     public function withEmotion($emotion)
     {
-        $this->data['Emotion'] = $emotion;
+        $this->data['Emotion']             = $emotion;
         $this->options['query']['Emotion'] = $emotion;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withImageTimeRange() instead.
-     *
      * @param string $imageTimeRange
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withImageTimeRange() instead.
+     *
      */
     public function setImageTimeRange($imageTimeRange)
     {
@@ -322,22 +262,10 @@ class SearchImages extends RpcRequest
      */
     public function withImageTimeRange($imageTimeRange)
     {
-        $this->data['ImageTimeRange'] = $imageTimeRange;
+        $this->data['ImageTimeRange']             = $imageTimeRange;
         $this->options['query']['ImageTimeRange'] = $imageTimeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**
@@ -347,18 +275,18 @@ class SearchImages extends RpcRequest
      */
     public function withMarker($marker)
     {
-        $this->data['Marker'] = $marker;
+        $this->data['Marker']             = $marker;
         $this->options['query']['Marker'] = $marker;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOCRContentsMatch() instead.
-     *
      * @param string $oCRContentsMatch
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withOCRContentsMatch() instead.
+     *
      */
     public function setOCRContentsMatch($oCRContentsMatch)
     {
@@ -372,18 +300,18 @@ class SearchImages extends RpcRequest
      */
     public function withOCRContentsMatch($oCRContentsMatch)
     {
-        $this->data['OCRContentsMatch'] = $oCRContentsMatch;
+        $this->data['OCRContentsMatch']             = $oCRContentsMatch;
         $this->options['query']['OCRContentsMatch'] = $oCRContentsMatch;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCreateTimeRange() instead.
-     *
      * @param string $createTimeRange
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCreateTimeRange() instead.
+     *
      */
     public function setCreateTimeRange($createTimeRange)
     {
@@ -397,22 +325,10 @@ class SearchImages extends RpcRequest
      */
     public function withCreateTimeRange($createTimeRange)
     {
-        $this->data['CreateTimeRange'] = $createTimeRange;
+        $this->data['CreateTimeRange']             = $createTimeRange;
         $this->options['query']['CreateTimeRange'] = $createTimeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -422,22 +338,10 @@ class SearchImages extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSourceType() instead.
-     *
-     * @param string $sourceType
-     *
-     * @return $this
-     */
-    public function setSourceType($sourceType)
-    {
-        return $this->withSourceType($sourceType);
     }
 
     /**
@@ -447,18 +351,18 @@ class SearchImages extends RpcRequest
      */
     public function withSourceType($sourceType)
     {
-        $this->data['SourceType'] = $sourceType;
+        $this->data['SourceType']             = $sourceType;
         $this->options['query']['SourceType'] = $sourceType;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUpdateTimeRange() instead.
-     *
      * @param string $updateTimeRange
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withUpdateTimeRange() instead.
+     *
      */
     public function setUpdateTimeRange($updateTimeRange)
     {
@@ -472,22 +376,10 @@ class SearchImages extends RpcRequest
      */
     public function withUpdateTimeRange($updateTimeRange)
     {
-        $this->data['UpdateTimeRange'] = $updateTimeRange;
+        $this->data['UpdateTimeRange']             = $updateTimeRange;
         $this->options['query']['UpdateTimeRange'] = $updateTimeRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgeRange() instead.
-     *
-     * @param string $ageRange
-     *
-     * @return $this
-     */
-    public function setAgeRange($ageRange)
-    {
-        return $this->withAgeRange($ageRange);
     }
 
     /**
@@ -497,22 +389,10 @@ class SearchImages extends RpcRequest
      */
     public function withAgeRange($ageRange)
     {
-        $this->data['AgeRange'] = $ageRange;
+        $this->data['AgeRange']             = $ageRange;
         $this->options['query']['AgeRange'] = $ageRange;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOrder() instead.
-     *
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function setOrder($order)
-    {
-        return $this->withOrder($order);
     }
 
     /**
@@ -522,7 +402,7 @@ class SearchImages extends RpcRequest
      */
     public function withOrder($order)
     {
-        $this->data['Order'] = $order;
+        $this->data['Order']             = $order;
         $this->options['query']['Order'] = $order;
 
         return $this;

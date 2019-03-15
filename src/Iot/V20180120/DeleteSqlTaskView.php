@@ -32,11 +32,11 @@ class DeleteSqlTaskView extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withId() instead.
-     *
      * @param string $id
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withId() instead.
+     *
      */
     public function setId($id)
     {
@@ -50,22 +50,10 @@ class DeleteSqlTaskView extends RpcRequest
      */
     public function withId($id)
     {
-        $this->data['Id'] = $id;
+        $this->data['Id']             = $id;
         $this->options['query']['Id'] = $id;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**
@@ -75,7 +63,7 @@ class DeleteSqlTaskView extends RpcRequest
      */
     public function withTaskId($taskId)
     {
-        $this->data['TaskId'] = $taskId;
+        $this->data['TaskId']             = $taskId;
         $this->options['query']['TaskId'] = $taskId;
 
         return $this;

@@ -43,40 +43,16 @@ class AddMultipleStreamMixService extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppName() instead.
-     *
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function setAppName($appName)
-    {
-        return $this->withAppName($appName);
-    }
-
-    /**
      * @param string $appName
      *
      * @return $this
      */
     public function withAppName($appName)
     {
-        $this->data['AppName'] = $appName;
+        $this->data['AppName']             = $appName;
         $this->options['query']['AppName'] = $appName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -86,22 +62,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -111,22 +75,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixStreamName() instead.
-     *
-     * @param string $mixStreamName
-     *
-     * @return $this
-     */
-    public function setMixStreamName($mixStreamName)
-    {
-        return $this->withMixStreamName($mixStreamName);
     }
 
     /**
@@ -136,22 +88,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withMixStreamName($mixStreamName)
     {
-        $this->data['MixStreamName'] = $mixStreamName;
+        $this->data['MixStreamName']             = $mixStreamName;
         $this->options['query']['MixStreamName'] = $mixStreamName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixDomainName() instead.
-     *
-     * @param string $mixDomainName
-     *
-     * @return $this
-     */
-    public function setMixDomainName($mixDomainName)
-    {
-        return $this->withMixDomainName($mixDomainName);
     }
 
     /**
@@ -161,22 +101,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withMixDomainName($mixDomainName)
     {
-        $this->data['MixDomainName'] = $mixDomainName;
+        $this->data['MixDomainName']             = $mixDomainName;
         $this->options['query']['MixDomainName'] = $mixDomainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -186,22 +114,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMixAppName() instead.
-     *
-     * @param string $mixAppName
-     *
-     * @return $this
-     */
-    public function setMixAppName($mixAppName)
-    {
-        return $this->withMixAppName($mixAppName);
     }
 
     /**
@@ -211,22 +127,10 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withMixAppName($mixAppName)
     {
-        $this->data['MixAppName'] = $mixAppName;
+        $this->data['MixAppName']             = $mixAppName;
         $this->options['query']['MixAppName'] = $mixAppName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStreamName() instead.
-     *
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function setStreamName($streamName)
-    {
-        return $this->withStreamName($streamName);
     }
 
     /**
@@ -236,7 +140,7 @@ class AddMultipleStreamMixService extends RpcRequest
      */
     public function withStreamName($streamName)
     {
-        $this->data['StreamName'] = $streamName;
+        $this->data['StreamName']             = $streamName;
         $this->options['query']['StreamName'] = $streamName;
 
         return $this;

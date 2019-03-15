@@ -40,36 +40,24 @@ class IndexFace extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withChain() instead.
-     *
-     * @param string $chain
-     *
-     * @return $this
-     */
-    public function setChain($chain)
-    {
-        return $this->withChain($chain);
-    }
-
-    /**
      * @param string $chain
      *
      * @return $this
      */
     public function withChain($chain)
     {
-        $this->data['Chain'] = $chain;
+        $this->data['Chain']             = $chain;
         $this->options['query']['Chain'] = $chain;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
      * @param string $srcUris
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
+     *
      */
     public function setSrcUris($srcUris)
     {
@@ -83,22 +71,10 @@ class IndexFace extends RpcRequest
      */
     public function withSrcUris($srcUris)
     {
-        $this->data['SrcUris'] = $srcUris;
+        $this->data['SrcUris']             = $srcUris;
         $this->options['query']['SrcUris'] = $srcUris;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -108,22 +84,10 @@ class IndexFace extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -133,22 +97,10 @@ class IndexFace extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withForce() instead.
-     *
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function setForce($force)
-    {
-        return $this->withForce($force);
     }
 
     /**
@@ -158,7 +110,7 @@ class IndexFace extends RpcRequest
      */
     public function withForce($force)
     {
-        $this->data['Force'] = $force;
+        $this->data['Force']             = $force;
         $this->options['query']['Force'] = $force;
 
         return $this;

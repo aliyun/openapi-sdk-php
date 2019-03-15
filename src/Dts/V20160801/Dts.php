@@ -29,7 +29,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeSubscriptionObjectModifyStatus describeSubscriptionObjectModifyStatus(array $options = [])
  * @method static DescribeSynchronizationJobStatus describeSynchronizationJobStatus(array $options = [])
  * @method static DescribeSynchronizationJobs describeSynchronizationJobs(array $options = [])
- * @method static DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options = [])
+ * @method static DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options =
+ *         [])
  * @method static DtsApiResolver dtsApiResolver(array $options = [])
  * @method static ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
  * @method static ModifyMigrationObject modifyMigrationObject(array $options = [])

@@ -54,7 +54,7 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotAsrAppKey($agentBotAsrAppKey)
     {
-        $this->data['AgentBotAsrAppKey'] = $agentBotAsrAppKey;
+        $this->data['AgentBotAsrAppKey']             = $agentBotAsrAppKey;
         $this->options['query']['AgentBotAsrAppKey'] = $agentBotAsrAppKey;
 
         return $this;
@@ -67,12 +67,11 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withIvrTemplate($ivrTemplate)
     {
-        $this->data['IvrTemplate'] = $ivrTemplate;
+        $this->data['IvrTemplate']             = $ivrTemplate;
         $this->options['query']['IvrTemplate'] = $ivrTemplate;
 
         return $this;
     }
-
 
     /**
      * @param string $agentBotTtsUserData
@@ -81,7 +80,7 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotTtsUserData($agentBotTtsUserData)
     {
-        $this->data['AgentBotTtsUserData'] = $agentBotTtsUserData;
+        $this->data['AgentBotTtsUserData']             = $agentBotTtsUserData;
         $this->options['query']['AgentBotTtsUserData'] = $agentBotTtsUserData;
 
         return $this;
@@ -94,7 +93,7 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withPublishAllMedia($publishAllMedia)
     {
-        $this->data['PublishAllMedia'] = $publishAllMedia;
+        $this->data['PublishAllMedia']             = $publishAllMedia;
         $this->options['query']['PublishAllMedia'] = $publishAllMedia;
 
         return $this;
@@ -107,22 +106,10 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotAsrUserData($agentBotAsrUserData)
     {
-        $this->data['AgentBotAsrUserData'] = $agentBotAsrUserData;
+        $this->data['AgentBotAsrUserData']             = $agentBotAsrUserData;
         $this->options['query']['AgentBotAsrUserData'] = $agentBotAsrUserData;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotEndPoint() instead.
-     *
-     * @param string $agentBotEndPoint
-     *
-     * @return $this
-     */
-    public function setAgentBotEndPoint($agentBotEndPoint)
-    {
-        return $this->withAgentBotEndPoint($agentBotEndPoint);
     }
 
     /**
@@ -132,16 +119,16 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotEndPoint($agentBotEndPoint)
     {
-        $this->data['AgentBotEndPoint'] = $agentBotEndPoint;
+        $this->data['AgentBotEndPoint']             = $agentBotEndPoint;
         $this->options['query']['AgentBotEndPoint'] = $agentBotEndPoint;
 
         return $this;
     }
 
     /**
+     * @return array
      * @deprecated deprecated since version 2.0, Use getNumber() instead.
      *
-     * @return array
      */
     public function getNumbers()
     {
@@ -149,11 +136,11 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNumber() instead.
-     *
      * @param array $numbers
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withNumber() instead.
+     *
      */
     public function setNumbers(array $numbers)
     {
@@ -176,40 +163,16 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
      */
     public function withInstanceId($instanceId)
     {
-        $this->data['InstanceId'] = $instanceId;
+        $this->data['InstanceId']             = $instanceId;
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIvrContent() instead.
-     *
-     * @param string $ivrContent
-     *
-     * @return $this
-     */
-    public function setIvrContent($ivrContent)
-    {
-        return $this->withIvrContent($ivrContent);
     }
 
     /**
@@ -219,22 +182,10 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withIvrContent($ivrContent)
     {
-        $this->data['IvrContent'] = $ivrContent;
+        $this->data['IvrContent']             = $ivrContent;
         $this->options['query']['IvrContent'] = $ivrContent;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotScenarioId() instead.
-     *
-     * @param string $agentBotScenarioId
-     *
-     * @return $this
-     */
-    public function setAgentBotScenarioId($agentBotScenarioId)
-    {
-        return $this->withAgentBotScenarioId($agentBotScenarioId);
     }
 
     /**
@@ -244,18 +195,18 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotScenarioId($agentBotScenarioId)
     {
-        $this->data['AgentBotScenarioId'] = $agentBotScenarioId;
+        $this->data['AgentBotScenarioId']             = $agentBotScenarioId;
         $this->options['query']['AgentBotScenarioId'] = $agentBotScenarioId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withUseTianGong() instead.
-     *
      * @param string $useTianGong
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withUseTianGong() instead.
+     *
      */
     public function setUseTianGong($useTianGong)
     {
@@ -269,22 +220,10 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withUseTianGong($useTianGong)
     {
-        $this->data['UseTianGong'] = $useTianGong;
+        $this->data['UseTianGong']             = $useTianGong;
         $this->options['query']['UseTianGong'] = $useTianGong;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotTtsAppKey() instead.
-     *
-     * @param string $agentBotTtsAppKey
-     *
-     * @return $this
-     */
-    public function setAgentBotTtsAppKey($agentBotTtsAppKey)
-    {
-        return $this->withAgentBotTtsAppKey($agentBotTtsAppKey);
     }
 
     /**
@@ -294,22 +233,10 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withAgentBotTtsAppKey($agentBotTtsAppKey)
     {
-        $this->data['AgentBotTtsAppKey'] = $agentBotTtsAppKey;
+        $this->data['AgentBotTtsAppKey']             = $agentBotTtsAppKey;
         $this->options['query']['AgentBotTtsAppKey'] = $agentBotTtsAppKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withContactFlowName() instead.
-     *
-     * @param string $contactFlowName
-     *
-     * @return $this
-     */
-    public function setContactFlowName($contactFlowName)
-    {
-        return $this->withContactFlowName($contactFlowName);
     }
 
     /**
@@ -319,7 +246,7 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
      */
     public function withContactFlowName($contactFlowName)
     {
-        $this->data['ContactFlowName'] = $contactFlowName;
+        $this->data['ContactFlowName']             = $contactFlowName;
         $this->options['query']['ContactFlowName'] = $contactFlowName;
 
         return $this;

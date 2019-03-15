@@ -46,7 +46,7 @@ class DeleteTranscodeTemplates extends RpcRequest
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
@@ -59,7 +59,7 @@ class DeleteTranscodeTemplates extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
@@ -72,7 +72,7 @@ class DeleteTranscodeTemplates extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
@@ -85,7 +85,7 @@ class DeleteTranscodeTemplates extends RpcRequest
      */
     public function withTranscodeTemplateGroupId($transcodeTemplateGroupId)
     {
-        $this->data['TranscodeTemplateGroupId'] = $transcodeTemplateGroupId;
+        $this->data['TranscodeTemplateGroupId']             = $transcodeTemplateGroupId;
         $this->options['query']['TranscodeTemplateGroupId'] = $transcodeTemplateGroupId;
 
         return $this;
@@ -98,7 +98,7 @@ class DeleteTranscodeTemplates extends RpcRequest
      */
     public function withTranscodeTemplateIdList($transcodeTemplateIdList)
     {
-        $this->data['TranscodeTemplateIdList'] = $transcodeTemplateIdList;
+        $this->data['TranscodeTemplateIdList']             = $transcodeTemplateIdList;
         $this->options['query']['TranscodeTemplateIdList'] = $transcodeTemplateIdList;
 
         return $this;

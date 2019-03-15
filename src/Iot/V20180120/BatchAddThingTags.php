@@ -58,7 +58,7 @@ class BatchAddThingTags extends RpcRequest
      */
     public function withIotInstanceId($iotInstanceId)
     {
-        $this->data['IotInstanceId'] = $iotInstanceId;
+        $this->data['IotInstanceId']             = $iotInstanceId;
         $this->options['query']['IotInstanceId'] = $iotInstanceId;
 
         return $this;

@@ -44,40 +44,16 @@ class GetVideoPlayInfo extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSignVersion() instead.
-     *
-     * @param string $signVersion
-     *
-     * @return $this
-     */
-    public function setSignVersion($signVersion)
-    {
-        return $this->withSignVersion($signVersion);
-    }
-
-    /**
      * @param string $signVersion
      *
      * @return $this
      */
     public function withSignVersion($signVersion)
     {
-        $this->data['SignVersion'] = $signVersion;
+        $this->data['SignVersion']             = $signVersion;
         $this->options['query']['SignVersion'] = $signVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
     }
 
     /**
@@ -87,18 +63,18 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientVersion() instead.
-     *
      * @param string $clientVersion
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withClientVersion() instead.
+     *
      */
     public function setClientVersion($clientVersion)
     {
@@ -112,22 +88,10 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withClientVersion($clientVersion)
     {
-        $this->data['ClientVersion'] = $clientVersion;
+        $this->data['ClientVersion']             = $clientVersion;
         $this->options['query']['ClientVersion'] = $clientVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -137,22 +101,10 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannel() instead.
-     *
-     * @param string $channel
-     *
-     * @return $this
-     */
-    public function setChannel($channel)
-    {
-        return $this->withChannel($channel);
     }
 
     /**
@@ -162,18 +114,18 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withChannel($channel)
     {
-        $this->data['Channel'] = $channel;
+        $this->data['Channel']             = $channel;
         $this->options['query']['Channel'] = $channel;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlaySign() instead.
-     *
      * @param string $playSign
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withPlaySign() instead.
+     *
      */
     public function setPlaySign($playSign)
     {
@@ -187,22 +139,10 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withPlaySign($playSign)
     {
-        $this->data['PlaySign'] = $playSign;
+        $this->data['PlaySign']             = $playSign;
         $this->options['query']['PlaySign'] = $playSign;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -212,22 +152,10 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withVideoId($videoId)
     {
-        $this->data['VideoId'] = $videoId;
+        $this->data['VideoId']             = $videoId;
         $this->options['query']['VideoId'] = $videoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -237,18 +165,18 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withClientTS() instead.
-     *
      * @param string $clientTS
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withClientTS() instead.
+     *
      */
     public function setClientTS($clientTS)
     {
@@ -262,7 +190,7 @@ class GetVideoPlayInfo extends RpcRequest
      */
     public function withClientTS($clientTS)
     {
-        $this->data['ClientTS'] = $clientTS;
+        $this->data['ClientTS']             = $clientTS;
         $this->options['query']['ClientTS'] = $clientTS;
 
         return $this;

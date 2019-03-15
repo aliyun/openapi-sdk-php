@@ -33,40 +33,16 @@ class QueryMeasureTop extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withStartDay() instead.
-     *
-     * @param string $startDay
-     *
-     * @return $this
-     */
-    public function setStartDay($startDay)
-    {
-        return $this->withStartDay($startDay);
-    }
-
-    /**
      * @param string $startDay
      *
      * @return $this
      */
     public function withStartDay($startDay)
     {
-        $this->data['StartDay'] = $startDay;
+        $this->data['StartDay']             = $startDay;
         $this->options['query']['StartDay'] = $startDay;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSustainDays() instead.
-     *
-     * @param string $sustainDays
-     *
-     * @return $this
-     */
-    public function setSustainDays($sustainDays)
-    {
-        return $this->withSustainDays($sustainDays);
     }
 
     /**
@@ -76,22 +52,10 @@ class QueryMeasureTop extends RpcRequest
      */
     public function withSustainDays($sustainDays)
     {
-        $this->data['SustainDays'] = $sustainDays;
+        $this->data['SustainDays']             = $sustainDays;
         $this->options['query']['SustainDays'] = $sustainDays;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTopCount() instead.
-     *
-     * @param string $topCount
-     *
-     * @return $this
-     */
-    public function setTopCount($topCount)
-    {
-        return $this->withTopCount($topCount);
     }
 
     /**
@@ -101,7 +65,7 @@ class QueryMeasureTop extends RpcRequest
      */
     public function withTopCount($topCount)
     {
-        $this->data['TopCount'] = $topCount;
+        $this->data['TopCount']             = $topCount;
         $this->options['query']['TopCount'] = $topCount;
 
         return $this;

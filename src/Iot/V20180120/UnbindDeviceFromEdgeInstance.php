@@ -34,40 +34,16 @@ class UnbindDeviceFromEdgeInstance extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceId() instead.
-     *
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function setInstanceId($instanceId)
-    {
-        return $this->withInstanceId($instanceId);
-    }
-
-    /**
      * @param string $instanceId
      *
      * @return $this
      */
     public function withInstanceId($instanceId)
     {
-        $this->data['InstanceId'] = $instanceId;
+        $this->data['InstanceId']             = $instanceId;
         $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceName() instead.
-     *
-     * @param string $deviceName
-     *
-     * @return $this
-     */
-    public function setDeviceName($deviceName)
-    {
-        return $this->withDeviceName($deviceName);
     }
 
     /**
@@ -77,22 +53,10 @@ class UnbindDeviceFromEdgeInstance extends RpcRequest
      */
     public function withDeviceName($deviceName)
     {
-        $this->data['DeviceName'] = $deviceName;
+        $this->data['DeviceName']             = $deviceName;
         $this->options['query']['DeviceName'] = $deviceName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**
@@ -102,22 +66,10 @@ class UnbindDeviceFromEdgeInstance extends RpcRequest
      */
     public function withProductKey($productKey)
     {
-        $this->data['ProductKey'] = $productKey;
+        $this->data['ProductKey']             = $productKey;
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDeviceType() instead.
-     *
-     * @param string $deviceType
-     *
-     * @return $this
-     */
-    public function setDeviceType($deviceType)
-    {
-        return $this->withDeviceType($deviceType);
     }
 
     /**
@@ -127,7 +79,7 @@ class UnbindDeviceFromEdgeInstance extends RpcRequest
      */
     public function withDeviceType($deviceType)
     {
-        $this->data['DeviceType'] = $deviceType;
+        $this->data['DeviceType']             = $deviceType;
         $this->options['query']['DeviceType'] = $deviceType;
 
         return $this;

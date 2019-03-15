@@ -39,7 +39,7 @@ class UpdateRecordPlan extends RpcRequest
      */
     public function withPlanId($planId)
     {
-        $this->data['PlanId'] = $planId;
+        $this->data['PlanId']             = $planId;
         $this->options['query']['PlanId'] = $planId;
 
         return $this;
@@ -52,7 +52,7 @@ class UpdateRecordPlan extends RpcRequest
      */
     public function withName($name)
     {
-        $this->data['Name'] = $name;
+        $this->data['Name']             = $name;
         $this->options['query']['Name'] = $name;
 
         return $this;
@@ -65,7 +65,7 @@ class UpdateRecordPlan extends RpcRequest
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;

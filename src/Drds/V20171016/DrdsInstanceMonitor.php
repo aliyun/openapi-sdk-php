@@ -34,40 +34,16 @@ class DrdsInstanceMonitor extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
      */
     public function withEndTime($endTime)
     {
-        $this->data['EndTime'] = $endTime;
+        $this->data['EndTime']             = $endTime;
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -77,18 +53,18 @@ class DrdsInstanceMonitor extends RpcRequest
      */
     public function withStartTime($startTime)
     {
-        $this->data['StartTime'] = $startTime;
+        $this->data['StartTime']             = $startTime;
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
-     *
      * @param string $drdsInstanceId
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withDrdsInstanceId() instead.
+     *
      */
     public function setDrdsInstanceId($drdsInstanceId)
     {
@@ -102,22 +78,10 @@ class DrdsInstanceMonitor extends RpcRequest
      */
     public function withDrdsInstanceId($drdsInstanceId)
     {
-        $this->data['DrdsInstanceId'] = $drdsInstanceId;
+        $this->data['DrdsInstanceId']             = $drdsInstanceId;
         $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withKey() instead.
-     *
-     * @param string $key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        return $this->withKey($key);
     }
 
     /**
@@ -127,7 +91,7 @@ class DrdsInstanceMonitor extends RpcRequest
      */
     public function withKey($key)
     {
-        $this->data['Key'] = $key;
+        $this->data['Key']             = $key;
         $this->options['query']['Key'] = $key;
 
         return $this;
