@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the CloudPhoto based on the method name as the Api name.
  *
- * @package   AlibabaCloud\CloudPhoto\V20170711
  *
  * @method ActivatePhotos activatePhotos(array $options = [])
  * @method AddAlbumPhotos addAlbumPhotos(array $options = [])

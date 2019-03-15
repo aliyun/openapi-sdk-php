@@ -5,9 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListCallMeasureSummaryReports
- *
  * @method string getIntervalType()
+ * @method $this withIntervalType($value)
  */
 class ListCallMeasureSummaryReports extends Rpc
 {
@@ -18,17 +17,4 @@ class ListCallMeasureSummaryReports extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $intervalType
-     *
-     * @return $this
-     */
-    public function withIntervalType($intervalType)
-    {
-        $this->data['IntervalType'] = $intervalType;
-        $this->options['query']['IntervalType'] = $intervalType;
-
-        return $this;
-    }
 }

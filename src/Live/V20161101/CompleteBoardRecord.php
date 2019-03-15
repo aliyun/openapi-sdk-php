@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CompleteBoardRecord
- *
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRecordId()
+ * @method $this withRecordId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class CompleteBoardRecord extends Rpc
 {
@@ -21,56 +23,4 @@ class CompleteBoardRecord extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function withRecordId($recordId)
-    {
-        $this->data['RecordId'] = $recordId;
-        $this->options['query']['RecordId'] = $recordId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
 }

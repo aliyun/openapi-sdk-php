@@ -5,18 +5,26 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerModifyEniQosGroup
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTx()
+ * @method $this withTx($value)
  * @method string getRx()
+ * @method $this withRx($value)
  * @method string getRxPps()
+ * @method $this withRxPps($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getQosGroupName()
+ * @method $this withQosGroupName($value)
  * @method string getRegionNo()
+ * @method $this withRegionNo($value)
  * @method string getTxPps()
+ * @method $this withTxPps($value)
  */
 class InnerModifyEniQosGroup extends Rpc
 {
@@ -27,134 +35,4 @@ class InnerModifyEniQosGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tx
-     *
-     * @return $this
-     */
-    public function withTx($tx)
-    {
-        $this->data['Tx'] = $tx;
-        $this->options['query']['Tx'] = $tx;
-
-        return $this;
-    }
-
-    /**
-     * @param string $rx
-     *
-     * @return $this
-     */
-    public function withRx($rx)
-    {
-        $this->data['Rx'] = $rx;
-        $this->options['query']['Rx'] = $rx;
-
-        return $this;
-    }
-
-    /**
-     * @param string $rxPps
-     *
-     * @return $this
-     */
-    public function withRxPps($rxPps)
-    {
-        $this->data['RxPps'] = $rxPps;
-        $this->options['query']['RxPps'] = $rxPps;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $qosGroupName
-     *
-     * @return $this
-     */
-    public function withQosGroupName($qosGroupName)
-    {
-        $this->data['QosGroupName'] = $qosGroupName;
-        $this->options['query']['QosGroupName'] = $qosGroupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function withRegionNo($regionNo)
-    {
-        $this->data['RegionNo'] = $regionNo;
-        $this->options['query']['RegionNo'] = $regionNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $txPps
-     *
-     * @return $this
-     */
-    public function withTxPps($txPps)
-    {
-        $this->data['TxPps'] = $txPps;
-        $this->options['query']['TxPps'] = $txPps;
-
-        return $this;
-    }
 }

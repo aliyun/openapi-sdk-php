@@ -5,50 +5,83 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateLaunchTemplateVersion
- *
  * @method string getLaunchTemplateName()
+ * @method $this withLaunchTemplateName($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSecurityEnhancementStrategy()
+ * @method $this withSecurityEnhancementStrategy($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
  * @method string getSpotPriceLimit()
+ * @method $this withSpotPriceLimit($value)
  * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getHostName()
+ * @method $this withHostName($value)
  * @method string getSystemDiskIops()
  * @method array getTag()
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getInternetMaxBandwidthIn()
+ * @method $this withInternetMaxBandwidthIn($value)
  * @method string getVersionDescription()
+ * @method $this withVersionDescription($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
  * @method string getInternetMaxBandwidthOut()
+ * @method $this withInternetMaxBandwidthOut($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getSystemDiskCategory()
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getPasswordInherit()
+ * @method $this withPasswordInherit($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getEnableVmOsConfig()
+ * @method $this withEnableVmOsConfig($value)
  * @method array getNetworkInterface()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
+ * @method $this withRamRoleName($value)
  * @method string getAutoReleaseTime()
+ * @method $this withAutoReleaseTime($value)
  * @method string getSpotDuration()
+ * @method $this withSpotDuration($value)
  * @method array getDataDisk()
  * @method string getSystemDiskSize()
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getSystemDiskDescription()
  */
 class CreateLaunchTemplateVersion extends Rpc
@@ -60,123 +93,6 @@ class CreateLaunchTemplateVersion extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $launchTemplateName
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateName($launchTemplateName)
-    {
-        $this->data['LaunchTemplateName'] = $launchTemplateName;
-        $this->options['query']['LaunchTemplateName'] = $launchTemplateName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function withSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        $this->data['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
-        $this->options['query']['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function withKeyPairName($keyPairName)
-    {
-        $this->data['KeyPairName'] = $keyPairName;
-        $this->options['query']['KeyPairName'] = $keyPairName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function withSpotPriceLimit($spotPriceLimit)
-    {
-        $this->data['SpotPriceLimit'] = $spotPriceLimit;
-        $this->options['query']['SpotPriceLimit'] = $spotPriceLimit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function withImageOwnerAlias($imageOwnerAlias)
-    {
-        $this->data['ImageOwnerAlias'] = $imageOwnerAlias;
-        $this->options['query']['ImageOwnerAlias'] = $imageOwnerAlias;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function withHostName($hostName)
-    {
-        $this->data['HostName'] = $hostName;
-        $this->options['query']['HostName'] = $hostName;
-
-        return $this;
-    }
 
     /**
      * @param string $systemDiskIops
@@ -208,201 +124,6 @@ class CreateLaunchTemplateVersion extends Rpc
     }
 
     /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateId($launchTemplateId)
-    {
-        $this->data['LaunchTemplateId'] = $launchTemplateId;
-        $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function withInternetChargeType($internetChargeType)
-    {
-        $this->data['InternetChargeType'] = $internetChargeType;
-        $this->options['query']['InternetChargeType'] = $internetChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        $this->data['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
-        $this->options['query']['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
-
-        return $this;
-    }
-
-    /**
-     * @param string $versionDescription
-     *
-     * @return $this
-     */
-    public function withVersionDescription($versionDescription)
-    {
-        $this->data['VersionDescription'] = $versionDescription;
-        $this->options['query']['VersionDescription'] = $versionDescription;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function withIoOptimized($ioOptimized)
-    {
-        $this->data['IoOptimized'] = $ioOptimized;
-        $this->options['query']['IoOptimized'] = $ioOptimized;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function withSecurityGroupId($securityGroupId)
-    {
-        $this->data['SecurityGroupId'] = $securityGroupId;
-        $this->options['query']['SecurityGroupId'] = $securityGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        $this->data['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-        $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * @param string $systemDiskCategory
      *
      * @return $this
@@ -411,71 +132,6 @@ class CreateLaunchTemplateVersion extends Rpc
     {
         $this->data['SystemDiskCategory'] = $systemDiskCategory;
         $this->options['query']['SystemDisk.Category'] = $systemDiskCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $passwordInherit
-     *
-     * @return $this
-     */
-    public function withPasswordInherit($passwordInherit)
-    {
-        $this->data['PasswordInherit'] = $passwordInherit;
-        $this->options['query']['PasswordInherit'] = $passwordInherit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableVmOsConfig
-     *
-     * @return $this
-     */
-    public function withEnableVmOsConfig($enableVmOsConfig)
-    {
-        $this->data['EnableVmOsConfig'] = $enableVmOsConfig;
-        $this->options['query']['EnableVmOsConfig'] = $enableVmOsConfig;
 
         return $this;
     }
@@ -500,32 +156,6 @@ class CreateLaunchTemplateVersion extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $systemDiskDiskName
      *
      * @return $this
@@ -534,45 +164,6 @@ class CreateLaunchTemplateVersion extends Rpc
     {
         $this->data['SystemDiskDiskName'] = $systemDiskDiskName;
         $this->options['query']['SystemDisk.DiskName'] = $systemDiskDiskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function withRamRoleName($ramRoleName)
-    {
-        $this->data['RamRoleName'] = $ramRoleName;
-        $this->options['query']['RamRoleName'] = $ramRoleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoReleaseTime
-     *
-     * @return $this
-     */
-    public function withAutoReleaseTime($autoReleaseTime)
-    {
-        $this->data['AutoReleaseTime'] = $autoReleaseTime;
-        $this->options['query']['AutoReleaseTime'] = $autoReleaseTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotDuration
-     *
-     * @return $this
-     */
-    public function withSpotDuration($spotDuration)
-    {
-        $this->data['SpotDuration'] = $spotDuration;
-        $this->options['query']['SpotDuration'] = $spotDuration;
 
         return $this;
     }
@@ -608,19 +199,6 @@ class CreateLaunchTemplateVersion extends Rpc
     {
         $this->data['SystemDiskSize'] = $systemDiskSize;
         $this->options['query']['SystemDisk.Size'] = $systemDiskSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
 
         return $this;
     }

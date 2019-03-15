@@ -5,14 +5,18 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetCallMeasureSummaryReport
- *
  * @method string getIntervalType()
+ * @method $this withIntervalType($value)
  * @method string getMonth()
+ * @method $this withMonth($value)
  * @method string getYear()
+ * @method $this withYear($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDay()
+ * @method $this withDay($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class GetCallMeasureSummaryReport extends Rpc
 {
@@ -23,82 +27,4 @@ class GetCallMeasureSummaryReport extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $intervalType
-     *
-     * @return $this
-     */
-    public function withIntervalType($intervalType)
-    {
-        $this->data['IntervalType'] = $intervalType;
-        $this->options['query']['IntervalType'] = $intervalType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $month
-     *
-     * @return $this
-     */
-    public function withMonth($month)
-    {
-        $this->data['Month'] = $month;
-        $this->options['query']['Month'] = $month;
-
-        return $this;
-    }
-
-    /**
-     * @param string $year
-     *
-     * @return $this
-     */
-    public function withYear($year)
-    {
-        $this->data['Year'] = $year;
-        $this->options['query']['Year'] = $year;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $day
-     *
-     * @return $this
-     */
-    public function withDay($day)
-    {
-        $this->data['Day'] = $day;
-        $this->options['query']['Day'] = $day;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

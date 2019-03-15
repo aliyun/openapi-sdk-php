@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api ListDiversify
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListDiversify extends Roa
 {
@@ -18,17 +17,4 @@ class ListDiversify extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

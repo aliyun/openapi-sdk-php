@@ -5,19 +5,24 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCopyProgressAtOrigin
- *
  * @method string getTag4Value()
  * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTag2Key()
  * @method string getTag5Key()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getFromRegionNo()
+ * @method $this withFromRegionNo($value)
  * @method string getTag3Key()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getTag5Value()
  * @method string getTag1Key()
  * @method string getTag1Value()
@@ -49,32 +54,6 @@ class DescribeCopyProgressAtOrigin extends Rpc
     }
 
     /**
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId($resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        $this->options['query']['ResourceId'] = $resourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag2Key
      *
      * @return $this
@@ -101,45 +80,6 @@ class DescribeCopyProgressAtOrigin extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromRegionNo
-     *
-     * @return $this
-     */
-    public function withFromRegionNo($fromRegionNo)
-    {
-        $this->data['FromRegionNo'] = $fromRegionNo;
-        $this->options['query']['FromRegionNo'] = $fromRegionNo;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag3Key
      *
      * @return $this
@@ -148,32 +88,6 @@ class DescribeCopyProgressAtOrigin extends Rpc
     {
         $this->data['Tag3Key'] = $tag3Key;
         $this->options['query']['Tag.3.Key'] = $tag3Key;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }

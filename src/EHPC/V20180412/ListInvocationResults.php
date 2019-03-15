@@ -5,14 +5,17 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListInvocationResults
- *
  * @method array getInstance()
  * @method string getInvokeRecordStatus()
+ * @method $this withInvokeRecordStatus($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getCommandId()
+ * @method $this withCommandId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListInvocationResults extends Rpc
 {
@@ -33,71 +36,6 @@ class ListInvocationResults extends Rpc
         foreach ($instance as $i => $iValue) {
             $this->options['query']['Instance.' . ($i + 1) . '.Id'] = $instance[$i]['Id'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $invokeRecordStatus
-     *
-     * @return $this
-     */
-    public function withInvokeRecordStatus($invokeRecordStatus)
-    {
-        $this->data['InvokeRecordStatus'] = $invokeRecordStatus;
-        $this->options['query']['InvokeRecordStatus'] = $invokeRecordStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $commandId
-     *
-     * @return $this
-     */
-    public function withCommandId($commandId)
-    {
-        $this->data['CommandId'] = $commandId;
-        $this->options['query']['CommandId'] = $commandId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }

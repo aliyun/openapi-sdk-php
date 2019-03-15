@@ -5,10 +5,10 @@ namespace AlibabaCloud\Saf\V20180919;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ExecuteRequest
- *
  * @method string getServiceParameters()
+ * @method $this withServiceParameters($value)
  * @method string getService()
+ * @method $this withService($value)
  */
 class ExecuteRequest extends Rpc
 {
@@ -21,30 +21,4 @@ class ExecuteRequest extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'saf';
-
-    /**
-     * @param string $serviceParameters
-     *
-     * @return $this
-     */
-    public function withServiceParameters($serviceParameters)
-    {
-        $this->data['ServiceParameters'] = $serviceParameters;
-        $this->options['query']['ServiceParameters'] = $serviceParameters;
-
-        return $this;
-    }
-
-    /**
-     * @param string $service
-     *
-     * @return $this
-     */
-    public function withService($service)
-    {
-        $this->data['Service'] = $service;
-        $this->options['query']['Service'] = $service;
-
-        return $this;
-    }
 }

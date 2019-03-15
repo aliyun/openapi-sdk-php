@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateProject
- *
  * @method string getNewServiceRole()
+ * @method $this withNewServiceRole($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getNewCU()
+ * @method $this withNewCU($value)
  */
 class UpdateProject extends Rpc
 {
@@ -20,43 +21,4 @@ class UpdateProject extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $newServiceRole
-     *
-     * @return $this
-     */
-    public function withNewServiceRole($newServiceRole)
-    {
-        $this->data['NewServiceRole'] = $newServiceRole;
-        $this->options['query']['NewServiceRole'] = $newServiceRole;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newCU
-     *
-     * @return $this
-     */
-    public function withNewCU($newCU)
-    {
-        $this->data['NewCU'] = $newCU;
-        $this->options['query']['NewCU'] = $newCU;
-
-        return $this;
-    }
 }

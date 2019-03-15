@@ -5,21 +5,30 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerDescribeTags
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getOwnerBid()
+ * @method $this withOwnerBid($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getCreateBy()
+ * @method $this withCreateBy($value)
  * @method string getScope()
+ * @method $this withScope($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method array getTag()
  * @method string getOwnerUid()
+ * @method $this withOwnerUid($value)
  * @method array getResourceId()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class InnerDescribeTags extends Rpc
 {
@@ -30,84 +39,6 @@ class InnerDescribeTags extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerBid
-     *
-     * @return $this
-     */
-    public function withOwnerBid($ownerBid)
-    {
-        $this->data['OwnerBid'] = $ownerBid;
-        $this->options['query']['OwnerBid'] = $ownerBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $createBy
-     *
-     * @return $this
-     */
-    public function withCreateBy($createBy)
-    {
-        $this->data['CreateBy'] = $createBy;
-        $this->options['query']['CreateBy'] = $createBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function withScope($scope)
-    {
-        $this->data['Scope'] = $scope;
-        $this->options['query']['Scope'] = $scope;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -126,19 +57,6 @@ class InnerDescribeTags extends Rpc
     }
 
     /**
-     * @param string $ownerUid
-     *
-     * @return $this
-     */
-    public function withOwnerUid($ownerUid)
-    {
-        $this->data['OwnerUid'] = $ownerUid;
-        $this->options['query']['OwnerUid'] = $ownerUid;
-
-        return $this;
-    }
-
-    /**
      * @param array $resourceId
      *
      * @return $this
@@ -149,58 +67,6 @@ class InnerDescribeTags extends Rpc
         foreach ($resourceId as $i => $iValue) {
             $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function withCategory($category)
-    {
-        $this->data['Category'] = $category;
-        $this->options['query']['Category'] = $category;
 
         return $this;
     }

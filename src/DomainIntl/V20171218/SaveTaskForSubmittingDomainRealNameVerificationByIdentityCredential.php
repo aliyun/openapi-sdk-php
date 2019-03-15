@@ -5,14 +5,17 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
- *
  * @method string getIdentityCredentialType()
+ * @method $this withIdentityCredentialType($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getIdentityCredential()
+ * @method $this withIdentityCredential($value)
  * @method array getDomainName()
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getIdentityCredentialNo()
+ * @method $this withIdentityCredentialNo($value)
  */
 class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends Rpc
 {
@@ -25,45 +28,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
     public $serviceCode = 'domain';
 
     /**
-     * @param string $identityCredentialType
-     *
-     * @return $this
-     */
-    public function withIdentityCredentialType($identityCredentialType)
-    {
-        $this->data['IdentityCredentialType'] = $identityCredentialType;
-        $this->options['query']['IdentityCredentialType'] = $identityCredentialType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $identityCredential
-     *
-     * @return $this
-     */
-    public function withIdentityCredential($identityCredential)
-    {
-        $this->data['IdentityCredential'] = $identityCredential;
-        $this->options['query']['IdentityCredential'] = $identityCredential;
-
-        return $this;
-    }
-
-    /**
      * @param array $domainName
      *
      * @return $this
@@ -74,32 +38,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
         foreach ($domainName as $i => $iValue) {
             $this->options['query']['DomainName.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $identityCredentialNo
-     *
-     * @return $this
-     */
-    public function withIdentityCredentialNo($identityCredentialNo)
-    {
-        $this->data['IdentityCredentialNo'] = $identityCredentialNo;
-        $this->options['query']['IdentityCredentialNo'] = $identityCredentialNo;
 
         return $this;
     }

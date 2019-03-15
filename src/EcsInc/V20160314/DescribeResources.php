@@ -5,14 +5,17 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResources
- *
  * @method array getFilter()
  * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getMarker()
+ * @method $this withMarker($value)
  * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getMaxItems()
+ * @method $this withMaxItems($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
 class DescribeResources extends Rpc
 {
@@ -37,71 +40,6 @@ class DescribeResources extends Rpc
             $this->options['query']['Filter.' . ($i + 1) . '.AttributeName'] = $filter[$i]['AttributeName'];
             $this->options['query']['Filter.' . ($i + 1) . '.Operation'] = $filter[$i]['Operation'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function withProduct($product)
-    {
-        $this->data['Product'] = $product;
-        $this->options['query']['Product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function withKeyword($keyword)
-    {
-        $this->data['Keyword'] = $keyword;
-        $this->options['query']['Keyword'] = $keyword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxItems
-     *
-     * @return $this
-     */
-    public function withMaxItems($maxItems)
-    {
-        $this->data['MaxItems'] = $maxItems;
-        $this->options['query']['MaxItems'] = $maxItems;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }

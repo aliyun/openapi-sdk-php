@@ -5,12 +5,13 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateInstance
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getNetwork()
+ * @method $this withNetwork($value)
  */
 class UpdateInstance extends Rpc
 {
@@ -31,45 +32,6 @@ class UpdateInstance extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $network
-     *
-     * @return $this
-     */
-    public function withNetwork($network)
-    {
-        $this->data['Network'] = $network;
-        $this->options['query']['Network'] = $network;
 
         return $this;
     }

@@ -5,32 +5,54 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api FindImages
- *
  * @method string getGender()
+ * @method $this withGender($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getExternalId()
+ * @method $this withExternalId($value)
  * @method string getImageSizeRange()
+ * @method $this withImageSizeRange($value)
  * @method string getRemarksBPrefix()
+ * @method $this withRemarksBPrefix($value)
  * @method string getLocationBoundary()
+ * @method $this withLocationBoundary($value)
  * @method string getImageTimeRange()
+ * @method $this withImageTimeRange($value)
  * @method string getOCRContentsMatch()
+ * @method $this withOCRContentsMatch($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  * @method string getRemarksDPrefix()
+ * @method $this withRemarksDPrefix($value)
  * @method string getSourceType()
+ * @method $this withSourceType($value)
  * @method string getAgeRange()
+ * @method $this withAgeRange($value)
  * @method string getOrder()
+ * @method $this withOrder($value)
  * @method string getRemarksAPrefix()
+ * @method $this withRemarksAPrefix($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getTagNames()
+ * @method $this withTagNames($value)
  * @method string getSourceUriPrefix()
+ * @method $this withSourceUriPrefix($value)
  * @method string getEmotion()
+ * @method $this withEmotion($value)
  * @method string getMarker()
+ * @method $this withMarker($value)
  * @method string getRemarksCPrefix()
+ * @method $this withRemarksCPrefix($value)
  * @method string getCreateTimeRange()
+ * @method $this withCreateTimeRange($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  * @method string getModifyTimeRange()
+ * @method $this withModifyTimeRange($value)
  */
 class FindImages extends Rpc
 {
@@ -41,316 +63,4 @@ class FindImages extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $gender
-     *
-     * @return $this
-     */
-    public function withGender($gender)
-    {
-        $this->data['Gender'] = $gender;
-        $this->options['query']['Gender'] = $gender;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $externalId
-     *
-     * @return $this
-     */
-    public function withExternalId($externalId)
-    {
-        $this->data['ExternalId'] = $externalId;
-        $this->options['query']['ExternalId'] = $externalId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageSizeRange
-     *
-     * @return $this
-     */
-    public function withImageSizeRange($imageSizeRange)
-    {
-        $this->data['ImageSizeRange'] = $imageSizeRange;
-        $this->options['query']['ImageSizeRange'] = $imageSizeRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remarksBPrefix
-     *
-     * @return $this
-     */
-    public function withRemarksBPrefix($remarksBPrefix)
-    {
-        $this->data['RemarksBPrefix'] = $remarksBPrefix;
-        $this->options['query']['RemarksBPrefix'] = $remarksBPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $locationBoundary
-     *
-     * @return $this
-     */
-    public function withLocationBoundary($locationBoundary)
-    {
-        $this->data['LocationBoundary'] = $locationBoundary;
-        $this->options['query']['LocationBoundary'] = $locationBoundary;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageTimeRange
-     *
-     * @return $this
-     */
-    public function withImageTimeRange($imageTimeRange)
-    {
-        $this->data['ImageTimeRange'] = $imageTimeRange;
-        $this->options['query']['ImageTimeRange'] = $imageTimeRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $oCRContentsMatch
-     *
-     * @return $this
-     */
-    public function withOCRContentsMatch($oCRContentsMatch)
-    {
-        $this->data['OCRContentsMatch'] = $oCRContentsMatch;
-        $this->options['query']['OCRContentsMatch'] = $oCRContentsMatch;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remarksDPrefix
-     *
-     * @return $this
-     */
-    public function withRemarksDPrefix($remarksDPrefix)
-    {
-        $this->data['RemarksDPrefix'] = $remarksDPrefix;
-        $this->options['query']['RemarksDPrefix'] = $remarksDPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceType
-     *
-     * @return $this
-     */
-    public function withSourceType($sourceType)
-    {
-        $this->data['SourceType'] = $sourceType;
-        $this->options['query']['SourceType'] = $sourceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ageRange
-     *
-     * @return $this
-     */
-    public function withAgeRange($ageRange)
-    {
-        $this->data['AgeRange'] = $ageRange;
-        $this->options['query']['AgeRange'] = $ageRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remarksAPrefix
-     *
-     * @return $this
-     */
-    public function withRemarksAPrefix($remarksAPrefix)
-    {
-        $this->data['RemarksAPrefix'] = $remarksAPrefix;
-        $this->options['query']['RemarksAPrefix'] = $remarksAPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tagNames
-     *
-     * @return $this
-     */
-    public function withTagNames($tagNames)
-    {
-        $this->data['TagNames'] = $tagNames;
-        $this->options['query']['TagNames'] = $tagNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceUriPrefix
-     *
-     * @return $this
-     */
-    public function withSourceUriPrefix($sourceUriPrefix)
-    {
-        $this->data['SourceUriPrefix'] = $sourceUriPrefix;
-        $this->options['query']['SourceUriPrefix'] = $sourceUriPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $emotion
-     *
-     * @return $this
-     */
-    public function withEmotion($emotion)
-    {
-        $this->data['Emotion'] = $emotion;
-        $this->options['query']['Emotion'] = $emotion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remarksCPrefix
-     *
-     * @return $this
-     */
-    public function withRemarksCPrefix($remarksCPrefix)
-    {
-        $this->data['RemarksCPrefix'] = $remarksCPrefix;
-        $this->options['query']['RemarksCPrefix'] = $remarksCPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $createTimeRange
-     *
-     * @return $this
-     */
-    public function withCreateTimeRange($createTimeRange)
-    {
-        $this->data['CreateTimeRange'] = $createTimeRange;
-        $this->options['query']['CreateTimeRange'] = $createTimeRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $modifyTimeRange
-     *
-     * @return $this
-     */
-    public function withModifyTimeRange($modifyTimeRange)
-    {
-        $this->data['ModifyTimeRange'] = $modifyTimeRange;
-        $this->options['query']['ModifyTimeRange'] = $modifyTimeRange;
-
-        return $this;
-    }
 }

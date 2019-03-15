@@ -5,24 +5,29 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddTagsToResource
- *
  * @method string getTag4value()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTag2key()
  * @method string getTag5key()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getTag3key()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTag5value()
  * @method string getTags()
+ * @method $this withTags($value)
  * @method string getTag1key()
  * @method string getTag1value()
  * @method string getTag2value()
  * @method string getTag4key()
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getTag3value()
  * @method string getProxyId()
  */
@@ -45,19 +50,6 @@ class AddTagsToResource extends Rpc
     {
         $this->data['Tag4value'] = $tag4value;
         $this->options['query']['Tag.4.value'] = $tag4value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -89,45 +81,6 @@ class AddTagsToResource extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag3key
      *
      * @return $this
@@ -141,19 +94,6 @@ class AddTagsToResource extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag5value
      *
      * @return $this
@@ -162,19 +102,6 @@ class AddTagsToResource extends Rpc
     {
         $this->data['Tag5value'] = $tag5value;
         $this->options['query']['Tag.5.value'] = $tag5value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
 
         return $this;
     }
@@ -227,19 +154,6 @@ class AddTagsToResource extends Rpc
     {
         $this->data['Tag4key'] = $tag4key;
         $this->options['query']['Tag.4.key'] = $tag4key;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
 
         return $this;
     }

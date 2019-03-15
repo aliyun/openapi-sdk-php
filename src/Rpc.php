@@ -13,4 +13,12 @@ class Rpc extends RpcRequest
 {
     use ActionResolverTrait;
     use CallTrait;
+
+    /**
+     * @return mixed
+     */
+    private function &getParameterPosition()
+    {
+        return $this->options['query'];
+    }
 }

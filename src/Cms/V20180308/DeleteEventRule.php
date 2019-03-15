@@ -5,10 +5,9 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteEventRule
- *
  * @method array getRuleNames()
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  */
 class DeleteEventRule extends Rpc
 {
@@ -31,19 +30,6 @@ class DeleteEventRule extends Rpc
         foreach ($ruleNames as $i => $iValue) {
             $this->options['query']['RuleNames.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
 
         return $this;
     }

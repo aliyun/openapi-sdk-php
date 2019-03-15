@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteVideoDna
- *
  * @method string getClientInfo()
  */
 class DeleteVideoDna extends Roa

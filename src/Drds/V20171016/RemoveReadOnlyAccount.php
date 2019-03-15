@@ -5,11 +5,12 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveReadOnlyAccount
- *
  * @method string getDbName()
+ * @method $this withDbName($value)
  * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
  */
 class RemoveReadOnlyAccount extends Rpc
 {
@@ -18,43 +19,4 @@ class RemoveReadOnlyAccount extends Rpc
     public $version = '2017-10-16';
 
     public $method = 'POST';
-
-    /**
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function withDbName($dbName)
-    {
-        $this->data['DbName'] = $dbName;
-        $this->options['query']['DbName'] = $dbName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function withAccountName($accountName)
-    {
-        $this->data['AccountName'] = $accountName;
-        $this->options['query']['AccountName'] = $accountName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function withDrdsInstanceId($drdsInstanceId)
-    {
-        $this->data['DrdsInstanceId'] = $drdsInstanceId;
-        $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
-
-        return $this;
-    }
 }

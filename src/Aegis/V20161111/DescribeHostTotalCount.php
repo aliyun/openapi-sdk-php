@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeHostTotalCount
- *
  * @method string getEventLevels()
+ * @method $this withEventLevels($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLastDays()
+ * @method $this withLastDays($value)
  * @method string getEventTypes()
+ * @method $this withEventTypes($value)
  */
 class DescribeHostTotalCount extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeHostTotalCount extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $eventLevels
-     *
-     * @return $this
-     */
-    public function withEventLevels($eventLevels)
-    {
-        $this->data['EventLevels'] = $eventLevels;
-        $this->options['query']['EventLevels'] = $eventLevels;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lastDays
-     *
-     * @return $this
-     */
-    public function withLastDays($lastDays)
-    {
-        $this->data['LastDays'] = $lastDays;
-        $this->options['query']['LastDays'] = $lastDays;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventTypes
-     *
-     * @return $this
-     */
-    public function withEventTypes($eventTypes)
-    {
-        $this->data['EventTypes'] = $eventTypes;
-        $this->options['query']['EventTypes'] = $eventTypes;
-
-        return $this;
-    }
 }

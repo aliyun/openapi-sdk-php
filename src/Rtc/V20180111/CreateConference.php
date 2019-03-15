@@ -5,15 +5,20 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateConference
- *
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getConferenceName()
+ * @method $this withConferenceName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getRemindNotice()
+ * @method $this withRemindNotice($value)
  */
 class CreateConference extends Rpc
 {
@@ -24,95 +29,4 @@ class CreateConference extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rtc';
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $conferenceName
-     *
-     * @return $this
-     */
-    public function withConferenceName($conferenceName)
-    {
-        $this->data['ConferenceName'] = $conferenceName;
-        $this->options['query']['ConferenceName'] = $conferenceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remindNotice
-     *
-     * @return $this
-     */
-    public function withRemindNotice($remindNotice)
-    {
-        $this->data['RemindNotice'] = $remindNotice;
-        $this->options['query']['RemindNotice'] = $remindNotice;
-
-        return $this;
-    }
 }

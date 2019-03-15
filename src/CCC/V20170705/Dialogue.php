@@ -5,18 +5,26 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api Dialogue
- *
  * @method string getCallId()
+ * @method $this withCallId($value)
  * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
  * @method string getActionKey()
+ * @method $this withActionKey($value)
  * @method string getActionParams()
+ * @method $this withActionParams($value)
  * @method string getCallType()
+ * @method $this withCallType($value)
  * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getUtterance()
+ * @method $this withUtterance($value)
  */
 class Dialogue extends Rpc
 {
@@ -27,134 +35,4 @@ class Dialogue extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $callId
-     *
-     * @return $this
-     */
-    public function withCallId($callId)
-    {
-        $this->data['CallId'] = $callId;
-        $this->options['query']['CallId'] = $callId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $callingNumber
-     *
-     * @return $this
-     */
-    public function withCallingNumber($callingNumber)
-    {
-        $this->data['CallingNumber'] = $callingNumber;
-        $this->options['query']['CallingNumber'] = $callingNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function withCalledNumber($calledNumber)
-    {
-        $this->data['CalledNumber'] = $calledNumber;
-        $this->options['query']['CalledNumber'] = $calledNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $actionKey
-     *
-     * @return $this
-     */
-    public function withActionKey($actionKey)
-    {
-        $this->data['ActionKey'] = $actionKey;
-        $this->options['query']['ActionKey'] = $actionKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $actionParams
-     *
-     * @return $this
-     */
-    public function withActionParams($actionParams)
-    {
-        $this->data['ActionParams'] = $actionParams;
-        $this->options['query']['ActionParams'] = $actionParams;
-
-        return $this;
-    }
-
-    /**
-     * @param string $callType
-     *
-     * @return $this
-     */
-    public function withCallType($callType)
-    {
-        $this->data['CallType'] = $callType;
-        $this->options['query']['CallType'] = $callType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function withScenarioId($scenarioId)
-    {
-        $this->data['ScenarioId'] = $scenarioId;
-        $this->options['query']['ScenarioId'] = $scenarioId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function withUtterance($utterance)
-    {
-        $this->data['Utterance'] = $utterance;
-        $this->options['query']['Utterance'] = $utterance;
-
-        return $this;
-    }
 }

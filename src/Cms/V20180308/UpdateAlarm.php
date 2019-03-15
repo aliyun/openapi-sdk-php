@@ -5,22 +5,34 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateAlarm
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getWebhook()
+ * @method $this withWebhook($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getContactGroups()
+ * @method $this withContactGroups($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getThreshold()
+ * @method $this withThreshold($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
  * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
  * @method string getId()
+ * @method $this withId($value)
  * @method string getNotifyType()
+ * @method $this withNotifyType($value)
  * @method string getComparisonOperator()
+ * @method $this withComparisonOperator($value)
  * @method string getStatistics()
+ * @method $this withStatistics($value)
  */
 class UpdateAlarm extends Rpc
 {
@@ -31,186 +43,4 @@ class UpdateAlarm extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $webhook
-     *
-     * @return $this
-     */
-    public function withWebhook($webhook)
-    {
-        $this->data['Webhook'] = $webhook;
-        $this->options['query']['Webhook'] = $webhook;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactGroups
-     *
-     * @return $this
-     */
-    public function withContactGroups($contactGroups)
-    {
-        $this->data['ContactGroups'] = $contactGroups;
-        $this->options['query']['ContactGroups'] = $contactGroups;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function withThreshold($threshold)
-    {
-        $this->data['Threshold'] = $threshold;
-        $this->options['query']['Threshold'] = $threshold;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function withEvaluationCount($evaluationCount)
-    {
-        $this->data['EvaluationCount'] = $evaluationCount;
-        $this->options['query']['EvaluationCount'] = $evaluationCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $silenceTime
-     *
-     * @return $this
-     */
-    public function withSilenceTime($silenceTime)
-    {
-        $this->data['SilenceTime'] = $silenceTime;
-        $this->options['query']['SilenceTime'] = $silenceTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $notifyType
-     *
-     * @return $this
-     */
-    public function withNotifyType($notifyType)
-    {
-        $this->data['NotifyType'] = $notifyType;
-        $this->options['query']['NotifyType'] = $notifyType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $comparisonOperator
-     *
-     * @return $this
-     */
-    public function withComparisonOperator($comparisonOperator)
-    {
-        $this->data['ComparisonOperator'] = $comparisonOperator;
-        $this->options['query']['ComparisonOperator'] = $comparisonOperator;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statistics
-     *
-     * @return $this
-     */
-    public function withStatistics($statistics)
-    {
-        $this->data['Statistics'] = $statistics;
-        $this->options['query']['Statistics'] = $statistics;
-
-        return $this;
-    }
 }

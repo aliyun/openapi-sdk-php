@@ -5,14 +5,16 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CancelJobs
- *
  * @method string getAll()
+ * @method $this withAll($value)
  * @method array getJobId()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method array getJobReferenceId()
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  */
 class CancelJobs extends Rpc
 {
@@ -23,19 +25,6 @@ class CancelJobs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $all
-     *
-     * @return $this
-     */
-    public function withAll($all)
-    {
-        $this->data['All'] = $all;
-        $this->options['query']['All'] = $all;
-
-        return $this;
-    }
 
     /**
      * @param array $jobId
@@ -53,19 +42,6 @@ class CancelJobs extends Rpc
     }
 
     /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
      * @param array $jobReferenceId
      *
      * @return $this
@@ -76,32 +52,6 @@ class CancelJobs extends Rpc
         foreach ($jobReferenceId as $i => $iValue) {
             $this->options['query']['JobReferenceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function withScenarioId($scenarioId)
-    {
-        $this->data['ScenarioId'] = $scenarioId;
-        $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
     }

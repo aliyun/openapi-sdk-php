@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDomainConfigs
- *
  * @method string getFunctionNames()
+ * @method $this withFunctionNames($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDomainConfigs extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeDomainConfigs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $functionNames
-     *
-     * @return $this
-     */
-    public function withFunctionNames($functionNames)
-    {
-        $this->data['FunctionNames'] = $functionNames;
-        $this->options['query']['FunctionNames'] = $functionNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

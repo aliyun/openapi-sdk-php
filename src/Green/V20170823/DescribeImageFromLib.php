@@ -5,13 +5,16 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeImageFromLib
- *
  * @method string getTotalCount()
+ * @method $this withTotalCount($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getImageLibId()
+ * @method $this withImageLibId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeImageFromLib extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeImageFromLib extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $totalCount
-     *
-     * @return $this
-     */
-    public function withTotalCount($totalCount)
-    {
-        $this->data['TotalCount'] = $totalCount;
-        $this->options['query']['TotalCount'] = $totalCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageLibId
-     *
-     * @return $this
-     */
-    public function withImageLibId($imageLibId)
-    {
-        $this->data['ImageLibId'] = $imageLibId;
-        $this->options['query']['ImageLibId'] = $imageLibId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
 }

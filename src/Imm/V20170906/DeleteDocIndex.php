@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteDocIndex
- *
  * @method string getSet()
+ * @method $this withSet($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getUniqueId()
+ * @method $this withUniqueId($value)
  */
 class DeleteDocIndex extends Rpc
 {
@@ -20,43 +21,4 @@ class DeleteDocIndex extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $set
-     *
-     * @return $this
-     */
-    public function withSet($set)
-    {
-        $this->data['Set'] = $set;
-        $this->options['query']['Set'] = $set;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uniqueId
-     *
-     * @return $this
-     */
-    public function withUniqueId($uniqueId)
-    {
-        $this->data['UniqueId'] = $uniqueId;
-        $this->options['query']['UniqueId'] = $uniqueId;
-
-        return $this;
-    }
 }

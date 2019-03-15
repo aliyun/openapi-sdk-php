@@ -5,9 +5,8 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteJobTemplates
- *
  * @method string getTemplates()
+ * @method $this withTemplates($value)
  */
 class DeleteJobTemplates extends Rpc
 {
@@ -16,17 +15,4 @@ class DeleteJobTemplates extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $templates
-     *
-     * @return $this
-     */
-    public function withTemplates($templates)
-    {
-        $this->data['Templates'] = $templates;
-        $this->options['query']['Templates'] = $templates;
-
-        return $this;
-    }
 }

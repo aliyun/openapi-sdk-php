@@ -5,8 +5,6 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListScenarioTemplates
- *
  */
 class ListScenarioTemplates extends Rpc
 {

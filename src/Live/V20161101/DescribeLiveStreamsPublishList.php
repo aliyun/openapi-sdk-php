@@ -5,19 +5,28 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLiveStreamsPublishList
- *
  * @method string getStreamType()
+ * @method $this withStreamType($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getAppName()
+ * @method $this withAppName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStreamName()
+ * @method $this withStreamName($value)
  * @method string getQueryType()
+ * @method $this withQueryType($value)
  */
 class DescribeLiveStreamsPublishList extends Rpc
 {
@@ -28,147 +37,4 @@ class DescribeLiveStreamsPublishList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $streamType
-     *
-     * @return $this
-     */
-    public function withStreamType($streamType)
-    {
-        $this->data['StreamType'] = $streamType;
-        $this->options['query']['StreamType'] = $streamType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function withAppName($appName)
-    {
-        $this->data['AppName'] = $appName;
-        $this->options['query']['AppName'] = $appName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function withStreamName($streamName)
-    {
-        $this->data['StreamName'] = $streamName;
-        $this->options['query']['StreamName'] = $streamName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $queryType
-     *
-     * @return $this
-     */
-    public function withQueryType($queryType)
-    {
-        $this->data['QueryType'] = $queryType;
-        $this->options['query']['QueryType'] = $queryType;
-
-        return $this;
-    }
 }

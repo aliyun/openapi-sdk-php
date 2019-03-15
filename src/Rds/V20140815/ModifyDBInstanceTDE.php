@@ -5,17 +5,24 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyDBInstanceTDE
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBName()
+ * @method $this withDBName($value)
  * @method string getResourceOwnerAccount()
- * @method string getRoleARN()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getEncryptionKey()
+ * @method $this withEncryptionKey($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTDEStatus()
+ * @method $this withTDEStatus($value)
  */
 class ModifyDBInstanceTDE extends Rpc
 {
@@ -26,121 +33,4 @@ class ModifyDBInstanceTDE extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBName
-     *
-     * @return $this
-     */
-    public function withDBName($dBName)
-    {
-        $this->data['DBName'] = $dBName;
-        $this->options['query']['DBName'] = $dBName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roleARN
-     *
-     * @return $this
-     */
-    public function withRoleARN($roleARN)
-    {
-        $this->data['RoleARN'] = $roleARN;
-        $this->options['query']['RoleARN'] = $roleARN;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $encryptionKey
-     *
-     * @return $this
-     */
-    public function withEncryptionKey($encryptionKey)
-    {
-        $this->data['EncryptionKey'] = $encryptionKey;
-        $this->options['query']['EncryptionKey'] = $encryptionKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tDEStatus
-     *
-     * @return $this
-     */
-    public function withTDEStatus($tDEStatus)
-    {
-        $this->data['TDEStatus'] = $tDEStatus;
-        $this->options['query']['TDEStatus'] = $tDEStatus;
-
-        return $this;
-    }
 }

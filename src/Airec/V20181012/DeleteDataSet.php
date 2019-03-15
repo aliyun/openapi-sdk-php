@@ -5,10 +5,10 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteDataSet
- *
  * @method string getVersionId()
+ * @method $this withVersionId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DeleteDataSet extends Roa
 {
@@ -21,30 +21,4 @@ class DeleteDataSet extends Roa
     public $method = 'DELETE';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $versionId
-     *
-     * @return $this
-     */
-    public function withVersionId($versionId)
-    {
-        $this->data['VersionId'] = $versionId;
-        $this->pathParameters['VersionId'] = $versionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

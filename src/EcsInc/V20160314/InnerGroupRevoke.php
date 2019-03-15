@@ -5,20 +5,22 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerGroupRevoke
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourceGroupNo()
  * @method string getPortRange()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getLevel()
  * @method string getIpProtocol()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSourceCidrIp()
  * @method string getChannel()
  * @method string getNic()
  * @method string getVpcInstanceId()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDestCidrIp()
  * @method string getOperator()
  * @method string getToken()
@@ -39,19 +41,6 @@ class InnerGroupRevoke extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
 
     /**
      * @param string $sourceGroupNo
@@ -80,19 +69,6 @@ class InnerGroupRevoke extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -114,19 +90,6 @@ class InnerGroupRevoke extends Rpc
     {
         $this->data['IpProtocol'] = $ipProtocol;
         $this->options['query']['ipProtocol'] = $ipProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -179,19 +142,6 @@ class InnerGroupRevoke extends Rpc
     {
         $this->data['VpcInstanceId'] = $vpcInstanceId;
         $this->options['query']['vpcInstanceId'] = $vpcInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

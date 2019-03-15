@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Smartag based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Smartag\V20180313
  *
  * @method ActivateSmartAccessGateway activateSmartAccessGateway(array $options = [])
  * @method AddACLRule addACLRule(array $options = [])

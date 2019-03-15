@@ -5,16 +5,22 @@ namespace AlibabaCloud\Domain\V20180129;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryTaskDetailHistory
- *
  * @method string getTaskStatus()
+ * @method $this withTaskStatus($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getTaskNo()
+ * @method $this withTaskNo($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTaskDetailNoCursor()
+ * @method $this withTaskDetailNoCursor($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getDomainNameCursor()
+ * @method $this withDomainNameCursor($value)
  */
 class QueryTaskDetailHistory extends Rpc
 {
@@ -23,108 +29,4 @@ class QueryTaskDetailHistory extends Rpc
     public $version = '2018-01-29';
 
     public $method = 'POST';
-
-    /**
-     * @param string $taskStatus
-     *
-     * @return $this
-     */
-    public function withTaskStatus($taskStatus)
-    {
-        $this->data['TaskStatus'] = $taskStatus;
-        $this->options['query']['TaskStatus'] = $taskStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskNo
-     *
-     * @return $this
-     */
-    public function withTaskNo($taskNo)
-    {
-        $this->data['TaskNo'] = $taskNo;
-        $this->options['query']['TaskNo'] = $taskNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskDetailNoCursor
-     *
-     * @return $this
-     */
-    public function withTaskDetailNoCursor($taskDetailNoCursor)
-    {
-        $this->data['TaskDetailNoCursor'] = $taskDetailNoCursor;
-        $this->options['query']['TaskDetailNoCursor'] = $taskDetailNoCursor;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainNameCursor
-     *
-     * @return $this
-     */
-    public function withDomainNameCursor($domainNameCursor)
-    {
-        $this->data['DomainNameCursor'] = $domainNameCursor;
-        $this->options['query']['DomainNameCursor'] = $domainNameCursor;
-
-        return $this;
-    }
 }

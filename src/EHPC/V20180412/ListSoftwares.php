@@ -5,9 +5,8 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListSoftwares
- *
  * @method string getEhpcVersion()
+ * @method $this withEhpcVersion($value)
  */
 class ListSoftwares extends Rpc
 {
@@ -16,17 +15,4 @@ class ListSoftwares extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $ehpcVersion
-     *
-     * @return $this
-     */
-    public function withEhpcVersion($ehpcVersion)
-    {
-        $this->data['EhpcVersion'] = $ehpcVersion;
-        $this->options['query']['EhpcVersion'] = $ehpcVersion;
-
-        return $this;
-    }
 }

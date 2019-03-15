@@ -5,17 +5,23 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAccessPoints
- *
  * @method array getFilter()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHostOperator()
+ * @method $this withHostOperator($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeAccessPoints extends Rpc
 {
@@ -41,110 +47,6 @@ class DescribeAccessPoints extends Rpc
             }
             $this->options['query']['Filter.' . ($i + 1) . '.Key'] = $filter[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hostOperator
-     *
-     * @return $this
-     */
-    public function withHostOperator($hostOperator)
-    {
-        $this->data['HostOperator'] = $hostOperator;
-        $this->options['query']['HostOperator'] = $hostOperator;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }

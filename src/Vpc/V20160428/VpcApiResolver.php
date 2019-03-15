@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Vpc based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Vpc\V20160428
  *
  * @method ActivateRouterInterface activateRouterInterface(array $options = [])
  * @method ActiveFlowLog activeFlowLog(array $options = [])

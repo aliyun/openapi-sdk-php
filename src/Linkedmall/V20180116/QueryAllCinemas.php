@@ -5,12 +5,14 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAllCinemas
- *
  * @method string getCityCode()
+ * @method $this withCityCode($value)
  * @method string getExtJson()
+ * @method $this withExtJson($value)
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class QueryAllCinemas extends Rpc
 {
@@ -21,56 +23,4 @@ class QueryAllCinemas extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $cityCode
-     *
-     * @return $this
-     */
-    public function withCityCode($cityCode)
-    {
-        $this->data['CityCode'] = $cityCode;
-        $this->options['query']['CityCode'] = $cityCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

@@ -5,18 +5,19 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ConfigureMigrationJob
- *
  * @method string getSourceEndpointInstanceID()
  * @method string getCheckpoint()
+ * @method $this withCheckpoint($value)
  * @method string getSourceEndpointEngineName()
  * @method string getSourceEndpointOracleSID()
  * @method string getDestinationEndpointInstanceID()
  * @method string getSourceEndpointIP()
  * @method string getDestinationEndpointPassword()
  * @method string getMigrationObject()
+ * @method $this withMigrationObject($value)
  * @method string getMigrationModeDataIntialization()
  * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointEngineName()
  * @method string getMigrationModeStructureIntialization()
@@ -31,11 +32,14 @@ use AlibabaCloud\Rpc;
  * @method string getSourceEndpointRegion()
  * @method string getSourceEndpointRole()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDestinationEndpointDataBaseName()
  * @method string getSourceEndpointPassword()
  * @method string getMigrationReserved()
+ * @method $this withMigrationReserved($value)
  * @method string getDestinationEndpointIP()
  * @method string getMigrationJobName()
+ * @method $this withMigrationJobName($value)
  * @method string getDestinationEndpointInstanceType()
  */
 class ConfigureMigrationJob extends Rpc
@@ -55,19 +59,6 @@ class ConfigureMigrationJob extends Rpc
     {
         $this->data['SourceEndpointInstanceID'] = $sourceEndpointInstanceID;
         $this->options['query']['SourceEndpoint.InstanceID'] = $sourceEndpointInstanceID;
-
-        return $this;
-    }
-
-    /**
-     * @param string $checkpoint
-     *
-     * @return $this
-     */
-    public function withCheckpoint($checkpoint)
-    {
-        $this->data['Checkpoint'] = $checkpoint;
-        $this->options['query']['Checkpoint'] = $checkpoint;
 
         return $this;
     }
@@ -138,19 +129,6 @@ class ConfigureMigrationJob extends Rpc
     }
 
     /**
-     * @param string $migrationObject
-     *
-     * @return $this
-     */
-    public function withMigrationObject($migrationObject)
-    {
-        $this->data['MigrationObject'] = $migrationObject;
-        $this->options['query']['MigrationObject'] = $migrationObject;
-
-        return $this;
-    }
-
-    /**
      * @param string $migrationModeDataIntialization
      *
      * @return $this
@@ -159,19 +137,6 @@ class ConfigureMigrationJob extends Rpc
     {
         $this->data['MigrationModeDataIntialization'] = $migrationModeDataIntialization;
         $this->options['query']['MigrationMode.DataIntialization'] = $migrationModeDataIntialization;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrationJobId
-     *
-     * @return $this
-     */
-    public function withMigrationJobId($migrationJobId)
-    {
-        $this->data['MigrationJobId'] = $migrationJobId;
-        $this->options['query']['MigrationJobId'] = $migrationJobId;
 
         return $this;
     }
@@ -346,19 +311,6 @@ class ConfigureMigrationJob extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $destinationEndpointDataBaseName
      *
      * @return $this
@@ -385,19 +337,6 @@ class ConfigureMigrationJob extends Rpc
     }
 
     /**
-     * @param string $migrationReserved
-     *
-     * @return $this
-     */
-    public function withMigrationReserved($migrationReserved)
-    {
-        $this->data['MigrationReserved'] = $migrationReserved;
-        $this->options['query']['MigrationReserved'] = $migrationReserved;
-
-        return $this;
-    }
-
-    /**
      * @param string $destinationEndpointIP
      *
      * @return $this
@@ -406,19 +345,6 @@ class ConfigureMigrationJob extends Rpc
     {
         $this->data['DestinationEndpointIP'] = $destinationEndpointIP;
         $this->options['query']['DestinationEndpoint.IP'] = $destinationEndpointIP;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrationJobName
-     *
-     * @return $this
-     */
-    public function withMigrationJobName($migrationJobName)
-    {
-        $this->data['MigrationJobName'] = $migrationJobName;
-        $this->options['query']['MigrationJobName'] = $migrationJobName;
 
         return $this;
     }

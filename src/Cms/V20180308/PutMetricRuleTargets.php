@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PutMetricRuleTargets
- *
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  * @method string getActions()
+ * @method $this withActions($value)
  * @method array getTargets()
  */
 class PutMetricRuleTargets extends Rpc
@@ -20,32 +20,6 @@ class PutMetricRuleTargets extends Rpc
     public $method = 'PUT';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $actions
-     *
-     * @return $this
-     */
-    public function withActions($actions)
-    {
-        $this->data['Actions'] = $actions;
-        $this->options['query']['Actions'] = $actions;
-
-        return $this;
-    }
 
     /**
      * @param array $targets

@@ -5,8 +5,6 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAvailableFileSystemTypes
- *
  */
 class ListAvailableFileSystemTypes extends Rpc
 {

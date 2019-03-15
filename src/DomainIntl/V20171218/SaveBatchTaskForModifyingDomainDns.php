@@ -5,13 +5,14 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SaveBatchTaskForModifyingDomainDns
- *
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method array getDomainName()
  * @method array getDomainNameServer()
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getAliyunDns()
+ * @method $this withAliyunDns($value)
  */
 class SaveBatchTaskForModifyingDomainDns extends Rpc
 {
@@ -22,19 +23,6 @@ class SaveBatchTaskForModifyingDomainDns extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'domain';
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
 
     /**
      * @param array $domainName
@@ -62,32 +50,6 @@ class SaveBatchTaskForModifyingDomainDns extends Rpc
         foreach ($domainNameServer as $i => $iValue) {
             $this->options['query']['DomainNameServer.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliyunDns
-     *
-     * @return $this
-     */
-    public function withAliyunDns($aliyunDns)
-    {
-        $this->data['AliyunDns'] = $aliyunDns;
-        $this->options['query']['AliyunDns'] = $aliyunDns;
 
         return $this;
     }

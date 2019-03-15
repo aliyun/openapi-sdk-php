@@ -5,11 +5,11 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteInstance
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  */
 class DeleteInstance extends Rpc
 {
@@ -30,32 +30,6 @@ class DeleteInstance extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
 
         return $this;
     }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TwoPartiesCall
- *
  * @method string getCaller()
+ * @method $this withCaller($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getCalleeCustomer()
+ * @method $this withCalleeCustomer($value)
  * @method string getCalleeAgent()
+ * @method $this withCalleeAgent($value)
  */
 class TwoPartiesCall extends Rpc
 {
@@ -21,56 +23,4 @@ class TwoPartiesCall extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $caller
-     *
-     * @return $this
-     */
-    public function withCaller($caller)
-    {
-        $this->data['Caller'] = $caller;
-        $this->options['query']['Caller'] = $caller;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $calleeCustomer
-     *
-     * @return $this
-     */
-    public function withCalleeCustomer($calleeCustomer)
-    {
-        $this->data['CalleeCustomer'] = $calleeCustomer;
-        $this->options['query']['CalleeCustomer'] = $calleeCustomer;
-
-        return $this;
-    }
-
-    /**
-     * @param string $calleeAgent
-     *
-     * @return $this
-     */
-    public function withCalleeAgent($calleeAgent)
-    {
-        $this->data['CalleeAgent'] = $calleeAgent;
-        $this->options['query']['CalleeAgent'] = $calleeAgent;
-
-        return $this;
-    }
 }

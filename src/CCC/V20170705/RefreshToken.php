@@ -5,9 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RefreshToken
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class RefreshToken extends Rpc
 {
@@ -18,17 +17,4 @@ class RefreshToken extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

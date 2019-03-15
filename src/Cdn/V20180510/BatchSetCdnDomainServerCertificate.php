@@ -5,18 +5,26 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BatchSetCdnDomainServerCertificate
- *
  * @method string getForceSet()
+ * @method $this withForceSet($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getCertType()
+ * @method $this withCertType($value)
  * @method string getSSLPub()
+ * @method $this withSSLPub($value)
  * @method string getCertName()
+ * @method $this withCertName($value)
  * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRegion()
+ * @method $this withRegion($value)
  * @method string getSSLPri()
+ * @method $this withSSLPri($value)
  */
 class BatchSetCdnDomainServerCertificate extends Rpc
 {
@@ -25,134 +33,4 @@ class BatchSetCdnDomainServerCertificate extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $forceSet
-     *
-     * @return $this
-     */
-    public function withForceSet($forceSet)
-    {
-        $this->data['ForceSet'] = $forceSet;
-        $this->options['query']['ForceSet'] = $forceSet;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $certType
-     *
-     * @return $this
-     */
-    public function withCertType($certType)
-    {
-        $this->data['CertType'] = $certType;
-        $this->options['query']['CertType'] = $certType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sSLPub
-     *
-     * @return $this
-     */
-    public function withSSLPub($sSLPub)
-    {
-        $this->data['SSLPub'] = $sSLPub;
-        $this->options['query']['SSLPub'] = $sSLPub;
-
-        return $this;
-    }
-
-    /**
-     * @param string $certName
-     *
-     * @return $this
-     */
-    public function withCertName($certName)
-    {
-        $this->data['CertName'] = $certName;
-        $this->options['query']['CertName'] = $certName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sSLProtocol
-     *
-     * @return $this
-     */
-    public function withSSLProtocol($sSLProtocol)
-    {
-        $this->data['SSLProtocol'] = $sSLProtocol;
-        $this->options['query']['SSLProtocol'] = $sSLProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function withRegion($region)
-    {
-        $this->data['Region'] = $region;
-        $this->options['query']['Region'] = $region;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sSLPri
-     *
-     * @return $this
-     */
-    public function withSSLPri($sSLPri)
-    {
-        $this->data['SSLPri'] = $sSLPri;
-        $this->options['query']['SSLPri'] = $sSLPri;
-
-        return $this;
-    }
 }

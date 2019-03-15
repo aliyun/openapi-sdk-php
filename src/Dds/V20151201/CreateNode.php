@@ -5,20 +5,30 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateNode
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNodeType()
+ * @method $this withNodeType($value)
  * @method string getAutoPay()
+ * @method $this withAutoPay($value)
  * @method string getFromApp()
+ * @method $this withFromApp($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getNodeStorage()
+ * @method $this withNodeStorage($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getNodeClass()
+ * @method $this withNodeClass($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  */
 class CreateNode extends Rpc
 {
@@ -29,160 +39,4 @@ class CreateNode extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nodeType
-     *
-     * @return $this
-     */
-    public function withNodeType($nodeType)
-    {
-        $this->data['NodeType'] = $nodeType;
-        $this->options['query']['NodeType'] = $nodeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function withAutoPay($autoPay)
-    {
-        $this->data['AutoPay'] = $autoPay;
-        $this->options['query']['AutoPay'] = $autoPay;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromApp
-     *
-     * @return $this
-     */
-    public function withFromApp($fromApp)
-    {
-        $this->data['FromApp'] = $fromApp;
-        $this->options['query']['FromApp'] = $fromApp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nodeStorage
-     *
-     * @return $this
-     */
-    public function withNodeStorage($nodeStorage)
-    {
-        $this->data['NodeStorage'] = $nodeStorage;
-        $this->options['query']['NodeStorage'] = $nodeStorage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nodeClass
-     *
-     * @return $this
-     */
-    public function withNodeClass($nodeClass)
-    {
-        $this->data['NodeClass'] = $nodeClass;
-        $this->options['query']['NodeClass'] = $nodeClass;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
 }

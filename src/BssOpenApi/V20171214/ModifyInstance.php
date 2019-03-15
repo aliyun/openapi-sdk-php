@@ -5,15 +5,19 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyInstance
- *
  * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSubscriptionType()
+ * @method $this withSubscriptionType($value)
  * @method string getModifyType()
+ * @method $this withModifyType($value)
  * @method array getParameter()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getProductType()
+ * @method $this withProductType($value)
  */
 class ModifyInstance extends Rpc
 {
@@ -22,58 +26,6 @@ class ModifyInstance extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function withProductCode($productCode)
-    {
-        $this->data['ProductCode'] = $productCode;
-        $this->options['query']['ProductCode'] = $productCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function withSubscriptionType($subscriptionType)
-    {
-        $this->data['SubscriptionType'] = $subscriptionType;
-        $this->options['query']['SubscriptionType'] = $subscriptionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $modifyType
-     *
-     * @return $this
-     */
-    public function withModifyType($modifyType)
-    {
-        $this->data['ModifyType'] = $modifyType;
-        $this->options['query']['ModifyType'] = $modifyType;
-
-        return $this;
-    }
 
     /**
      * @param array $parameter
@@ -87,32 +39,6 @@ class ModifyInstance extends Rpc
             $this->options['query']['Parameter.' . ($i + 1) . '.Code'] = $parameter[$i]['Code'];
             $this->options['query']['Parameter.' . ($i + 1) . '.Value'] = $parameter[$i]['Value'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function withProductType($productType)
-    {
-        $this->data['ProductType'] = $productType;
-        $this->options['query']['ProductType'] = $productType;
 
         return $this;
     }

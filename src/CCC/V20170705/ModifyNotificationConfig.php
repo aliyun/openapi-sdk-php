@@ -5,13 +5,15 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyNotificationConfig
- *
  * @method array getSubscriptions()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
  * @method string getTopic()
+ * @method $this withTopic($value)
  * @method string getProducerId()
+ * @method $this withProducerId($value)
  */
 class ModifyNotificationConfig extends Rpc
 {
@@ -36,58 +38,6 @@ class ModifyNotificationConfig extends Rpc
             $this->options['query']['Subscriptions.' . ($i + 1) . '.Name'] = $subscriptions[$i]['Name'];
             $this->options['query']['Subscriptions.' . ($i + 1) . '.Selected'] = $subscriptions[$i]['Selected'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accessPoint
-     *
-     * @return $this
-     */
-    public function withAccessPoint($accessPoint)
-    {
-        $this->data['AccessPoint'] = $accessPoint;
-        $this->options['query']['AccessPoint'] = $accessPoint;
-
-        return $this;
-    }
-
-    /**
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function withTopic($topic)
-    {
-        $this->data['Topic'] = $topic;
-        $this->options['query']['Topic'] = $topic;
-
-        return $this;
-    }
-
-    /**
-     * @param string $producerId
-     *
-     * @return $this
-     */
-    public function withProducerId($producerId)
-    {
-        $this->data['ProducerId'] = $producerId;
-        $this->options['query']['ProducerId'] = $producerId;
 
         return $this;
     }

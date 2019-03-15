@@ -5,11 +5,12 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetSimilarPhotos
- *
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getPhotoId()
+ * @method $this withPhotoId($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  */
 class GetSimilarPhotos extends Rpc
 {
@@ -22,43 +23,4 @@ class GetSimilarPhotos extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $photoId
-     *
-     * @return $this
-     */
-    public function withPhotoId($photoId)
-    {
-        $this->data['PhotoId'] = $photoId;
-        $this->options['query']['PhotoId'] = $photoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
 }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeMetaData
- *
  * @method string getProjectName()
+ * @method $this withProjectName($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLogStoreName()
+ * @method $this withLogStoreName($value)
  * @method string getRegionNo()
+ * @method $this withRegionNo($value)
  */
 class DescribeMetaData extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeMetaData extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function withProjectName($projectName)
-    {
-        $this->data['ProjectName'] = $projectName;
-        $this->options['query']['ProjectName'] = $projectName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $logStoreName
-     *
-     * @return $this
-     */
-    public function withLogStoreName($logStoreName)
-    {
-        $this->data['LogStoreName'] = $logStoreName;
-        $this->options['query']['LogStoreName'] = $logStoreName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function withRegionNo($regionNo)
-    {
-        $this->data['RegionNo'] = $regionNo;
-        $this->options['query']['RegionNo'] = $regionNo;
-
-        return $this;
-    }
 }

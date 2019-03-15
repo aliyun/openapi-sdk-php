@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cdn\V20141111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RefreshObjectCaches
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getObjectPath()
+ * @method $this withObjectPath($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getObjectType()
+ * @method $this withObjectType($value)
  */
 class RefreshObjectCaches extends Rpc
 {
@@ -19,56 +21,4 @@ class RefreshObjectCaches extends Rpc
     public $version = '2014-11-11';
 
     public $method = 'POST';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $objectPath
-     *
-     * @return $this
-     */
-    public function withObjectPath($objectPath)
-    {
-        $this->data['ObjectPath'] = $objectPath;
-        $this->options['query']['ObjectPath'] = $objectPath;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function withObjectType($objectType)
-    {
-        $this->data['ObjectType'] = $objectType;
-        $this->options['query']['ObjectType'] = $objectType;
-
-        return $this;
-    }
 }

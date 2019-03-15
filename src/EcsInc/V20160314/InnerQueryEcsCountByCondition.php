@@ -5,20 +5,28 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerQueryEcsCountByCondition
- *
  * @method string getBizRegionId()
+ * @method $this withBizRegionId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method array getTagValue()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getVSwitchId()
  * @method string getMetric()
+ * @method $this withMetric($value)
  * @method string getTagKey()
+ * @method $this withTagKey($value)
  */
 class InnerQueryEcsCountByCondition extends Rpc
 {
@@ -29,58 +37,6 @@ class InnerQueryEcsCountByCondition extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $bizRegionId
-     *
-     * @return $this
-     */
-    public function withBizRegionId($bizRegionId)
-    {
-        $this->data['BizRegionId'] = $bizRegionId;
-        $this->options['query']['BizRegionId'] = $bizRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
 
     /**
      * @param array $tagValue
@@ -98,58 +54,6 @@ class InnerQueryEcsCountByCondition extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param array $vSwitchId
      *
      * @return $this
@@ -160,32 +64,6 @@ class InnerQueryEcsCountByCondition extends Rpc
         foreach ($vSwitchId as $i => $iValue) {
             $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function withMetric($metric)
-    {
-        $this->data['Metric'] = $metric;
-        $this->options['query']['Metric'] = $metric;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tagKey
-     *
-     * @return $this
-     */
-    public function withTagKey($tagKey)
-    {
-        $this->data['TagKey'] = $tagKey;
-        $this->options['query']['TagKey'] = $tagKey;
 
         return $this;
     }

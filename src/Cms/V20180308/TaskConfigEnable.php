@@ -5,10 +5,9 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TaskConfigEnable
- *
  * @method array getIdList()
  * @method string getEnabled()
+ * @method $this withEnabled($value)
  */
 class TaskConfigEnable extends Rpc
 {
@@ -31,19 +30,6 @@ class TaskConfigEnable extends Rpc
         foreach ($idList as $i => $iValue) {
             $this->options['query']['IdList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $enabled
-     *
-     * @return $this
-     */
-    public function withEnabled($enabled)
-    {
-        $this->data['Enabled'] = $enabled;
-        $this->options['query']['Enabled'] = $enabled;
 
         return $this;
     }

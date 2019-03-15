@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeWhiteListStrategyList
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getStrategyIds()
+ * @method $this withStrategyIds($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeWhiteListStrategyList extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeWhiteListStrategyList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $strategyIds
-     *
-     * @return $this
-     */
-    public function withStrategyIds($strategyIds)
-    {
-        $this->data['StrategyIds'] = $strategyIds;
-        $this->options['query']['StrategyIds'] = $strategyIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

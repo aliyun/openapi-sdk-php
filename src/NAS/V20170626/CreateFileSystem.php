@@ -5,11 +5,12 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateFileSystem
- *
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getProtocolType()
+ * @method $this withProtocolType($value)
  * @method string getStorageType()
+ * @method $this withStorageType($value)
  */
 class CreateFileSystem extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateFileSystem extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $protocolType
-     *
-     * @return $this
-     */
-    public function withProtocolType($protocolType)
-    {
-        $this->data['ProtocolType'] = $protocolType;
-        $this->options['query']['ProtocolType'] = $protocolType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storageType
-     *
-     * @return $this
-     */
-    public function withStorageType($storageType)
-    {
-        $this->data['StorageType'] = $storageType;
-        $this->options['query']['StorageType'] = $storageType;
-
-        return $this;
-    }
 }

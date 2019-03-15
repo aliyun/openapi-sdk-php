@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of GetLayoutInfo
- *
  * @method string getOwnerId()
  * @method string getLayoutId()
  * @method string getAppId()

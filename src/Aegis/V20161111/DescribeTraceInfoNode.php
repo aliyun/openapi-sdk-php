@@ -5,15 +5,20 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeTraceInfoNode
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getVertexId()
+ * @method $this withVertexId($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getUuid()
+ * @method $this withUuid($value)
  * @method string getEventName()
+ * @method $this withEventName($value)
  */
 class DescribeTraceInfoNode extends Rpc
 {
@@ -24,95 +29,4 @@ class DescribeTraceInfoNode extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vertexId
-     *
-     * @return $this
-     */
-    public function withVertexId($vertexId)
-    {
-        $this->data['VertexId'] = $vertexId;
-        $this->options['query']['VertexId'] = $vertexId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function withUuid($uuid)
-    {
-        $this->data['Uuid'] = $uuid;
-        $this->options['query']['Uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function withEventName($eventName)
-    {
-        $this->data['EventName'] = $eventName;
-        $this->options['query']['EventName'] = $eventName;
-
-        return $this;
-    }
 }

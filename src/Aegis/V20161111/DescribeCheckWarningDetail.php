@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCheckWarningDetail
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getCheckWarningId()
+ * @method $this withCheckWarningId($value)
  */
 class DescribeCheckWarningDetail extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeCheckWarningDetail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $checkWarningId
-     *
-     * @return $this
-     */
-    public function withCheckWarningId($checkWarningId)
-    {
-        $this->data['CheckWarningId'] = $checkWarningId;
-        $this->options['query']['CheckWarningId'] = $checkWarningId;
-
-        return $this;
-    }
 }

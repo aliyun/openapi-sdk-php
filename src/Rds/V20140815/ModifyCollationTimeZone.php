@@ -5,14 +5,18 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyCollationTimeZone
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getTimezone()
+ * @method $this withTimezone($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getCollation()
+ * @method $this withCollation($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ModifyCollationTimeZone extends Rpc
 {
@@ -23,82 +27,4 @@ class ModifyCollationTimeZone extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $timezone
-     *
-     * @return $this
-     */
-    public function withTimezone($timezone)
-    {
-        $this->data['Timezone'] = $timezone;
-        $this->options['query']['Timezone'] = $timezone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $collation
-     *
-     * @return $this
-     */
-    public function withCollation($collation)
-    {
-        $this->data['Collation'] = $collation;
-        $this->options['query']['Collation'] = $collation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

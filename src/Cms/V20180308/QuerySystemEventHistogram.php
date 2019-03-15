@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QuerySystemEventHistogram
- *
  * @method string getQueryJson()
+ * @method $this withQueryJson($value)
  */
 class QuerySystemEventHistogram extends Rpc
 {
@@ -18,17 +17,4 @@ class QuerySystemEventHistogram extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $queryJson
-     *
-     * @return $this
-     */
-    public function withQueryJson($queryJson)
-    {
-        $this->data['QueryJson'] = $queryJson;
-        $this->options['query']['QueryJson'] = $queryJson;
-
-        return $this;
-    }
 }

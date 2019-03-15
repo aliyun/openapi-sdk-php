@@ -5,11 +5,10 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerEcsQueryByParam
- *
  * @method string getStartOfInternetTx()
  * @method string getEcsIds()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIzNo()
  * @method string getInternetIp()
  * @method string getImageId()
@@ -35,9 +34,12 @@ use AlibabaCloud\Rpc;
  * @method string getAgentId()
  * @method string getImageType()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEndOfInternetTx()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRegionIndexId()
  * @method string getToken()
  * @method string getRegionNo()
@@ -84,19 +86,6 @@ class InnerEcsQueryByParam extends Rpc
     {
         $this->data['EcsIds'] = $ecsIds;
         $this->options['query']['ecsIds'] = $ecsIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -414,32 +403,6 @@ class InnerEcsQueryByParam extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $endOfInternetTx
      *
      * @return $this
@@ -448,19 +411,6 @@ class InnerEcsQueryByParam extends Rpc
     {
         $this->data['EndOfInternetTx'] = $endOfInternetTx;
         $this->options['query']['endOfInternetTx'] = $endOfInternetTx;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

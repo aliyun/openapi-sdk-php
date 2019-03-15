@@ -5,13 +5,15 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UnbindInstance2Vpc
- *
  * @method string getAccessKeyId()
  * @method string getInstanceVpcName()
+ * @method $this withInstanceVpcName($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getRegionNo()
+ * @method $this withRegionNo($value)
  */
 class UnbindInstance2Vpc extends Rpc
 {
@@ -32,58 +34,6 @@ class UnbindInstance2Vpc extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceVpcName
-     *
-     * @return $this
-     */
-    public function withInstanceVpcName($instanceVpcName)
-    {
-        $this->data['InstanceVpcName'] = $instanceVpcName;
-        $this->options['query']['InstanceVpcName'] = $instanceVpcName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function withRegionNo($regionNo)
-    {
-        $this->data['RegionNo'] = $regionNo;
-        $this->options['query']['RegionNo'] = $regionNo;
 
         return $this;
     }

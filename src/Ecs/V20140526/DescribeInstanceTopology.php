@@ -5,8 +5,6 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeInstanceTopology
- *
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()
  * @method string getInstanceIds()
@@ -34,18 +32,6 @@ class DescribeInstanceTopology extends RpcRequest
      * @var string
      */
     public $method = 'POST';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -108,18 +94,6 @@ class DescribeInstanceTopology extends RpcRequest
         $this->options['query']['InstanceIds'] = $instanceIds;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**

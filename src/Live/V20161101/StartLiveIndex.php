@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of StartLiveIndex
- *
  * @method string getOssBucket()
  * @method string getTokenId()
  * @method string getDomainName()

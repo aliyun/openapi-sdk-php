@@ -5,9 +5,8 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DownloadBizview
- *
  * @method string getBizid()
+ * @method $this withBizid($value)
  */
 class DownloadBizview extends Rpc
 {
@@ -16,17 +15,4 @@ class DownloadBizview extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'POST';
-
-    /**
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function withBizid($bizid)
-    {
-        $this->data['Bizid'] = $bizid;
-        $this->options['query']['Bizid'] = $bizid;
-
-        return $this;
-    }
 }

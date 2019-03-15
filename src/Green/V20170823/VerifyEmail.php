@@ -5,11 +5,12 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api VerifyEmail
- *
  * @method string getVerifyCode()
+ * @method $this withVerifyCode($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class VerifyEmail extends Rpc
 {
@@ -20,43 +21,4 @@ class VerifyEmail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $verifyCode
-     *
-     * @return $this
-     */
-    public function withVerifyCode($verifyCode)
-    {
-        $this->data['VerifyCode'] = $verifyCode;
-        $this->options['query']['VerifyCode'] = $verifyCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

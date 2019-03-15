@@ -5,11 +5,12 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InstallChaincode
- *
  * @method string getOrganizationId()
+ * @method $this withOrganizationId($value)
  * @method string getChaincodeId()
+ * @method $this withChaincodeId($value)
  * @method string getLocation()
+ * @method $this withLocation($value)
  */
 class InstallChaincode extends Rpc
 {
@@ -18,43 +19,4 @@ class InstallChaincode extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'PUT';
-
-    /**
-     * @param string $organizationId
-     *
-     * @return $this
-     */
-    public function withOrganizationId($organizationId)
-    {
-        $this->data['OrganizationId'] = $organizationId;
-        $this->options['query']['OrganizationId'] = $organizationId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chaincodeId
-     *
-     * @return $this
-     */
-    public function withChaincodeId($chaincodeId)
-    {
-        $this->data['ChaincodeId'] = $chaincodeId;
-        $this->options['query']['ChaincodeId'] = $chaincodeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $location
-     *
-     * @return $this
-     */
-    public function withLocation($location)
-    {
-        $this->data['Location'] = $location;
-        $this->options['query']['Location'] = $location;
-
-        return $this;
-    }
 }

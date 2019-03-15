@@ -5,15 +5,20 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateStore
- *
  * @method string getComments()
+ * @method $this withComments($value)
  * @method string getPhone()
+ * @method $this withPhone($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getGroups()
+ * @method $this withGroups($value)
  * @method string getOutId()
+ * @method $this withOutId($value)
  * @method string getStoreId()
+ * @method $this withStoreId($value)
  * @method string getBrand()
+ * @method $this withBrand($value)
  */
 class UpdateStore extends Rpc
 {
@@ -22,95 +27,4 @@ class UpdateStore extends Rpc
     public $version = '2018-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $comments
-     *
-     * @return $this
-     */
-    public function withComments($comments)
-    {
-        $this->data['Comments'] = $comments;
-        $this->options['query']['Comments'] = $comments;
-
-        return $this;
-    }
-
-    /**
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function withPhone($phone)
-    {
-        $this->data['Phone'] = $phone;
-        $this->options['query']['Phone'] = $phone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groups
-     *
-     * @return $this
-     */
-    public function withGroups($groups)
-    {
-        $this->data['Groups'] = $groups;
-        $this->options['query']['Groups'] = $groups;
-
-        return $this;
-    }
-
-    /**
-     * @param string $outId
-     *
-     * @return $this
-     */
-    public function withOutId($outId)
-    {
-        $this->data['OutId'] = $outId;
-        $this->options['query']['OutId'] = $outId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function withStoreId($storeId)
-    {
-        $this->data['StoreId'] = $storeId;
-        $this->options['query']['StoreId'] = $storeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $brand
-     *
-     * @return $this
-     */
-    public function withBrand($brand)
-    {
-        $this->data['Brand'] = $brand;
-        $this->options['query']['Brand'] = $brand;
-
-        return $this;
-    }
 }

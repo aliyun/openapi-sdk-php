@@ -5,18 +5,25 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateDefaultVpc
- *
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEnableDefaultVSwitch()
+ * @method $this withEnableDefaultVSwitch($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEnableIpv6()
+ * @method $this withEnableIpv6($value)
  * @method array getZoneId()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIpv6CidrBlock()
+ * @method $this withIpv6CidrBlock($value)
  */
 class CreateDefaultVpc extends Rpc
 {
@@ -29,97 +36,6 @@ class CreateDefaultVpc extends Rpc
     public $serviceCode = 'vpc';
 
     /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableDefaultVSwitch
-     *
-     * @return $this
-     */
-    public function withEnableDefaultVSwitch($enableDefaultVSwitch)
-    {
-        $this->data['EnableDefaultVSwitch'] = $enableDefaultVSwitch;
-        $this->options['query']['EnableDefaultVSwitch'] = $enableDefaultVSwitch;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableIpv6
-     *
-     * @return $this
-     */
-    public function withEnableIpv6($enableIpv6)
-    {
-        $this->data['EnableIpv6'] = $enableIpv6;
-        $this->options['query']['EnableIpv6'] = $enableIpv6;
-
-        return $this;
-    }
-
-    /**
      * @param array $zoneId
      *
      * @return $this
@@ -130,32 +46,6 @@ class CreateDefaultVpc extends Rpc
         foreach ($zoneId as $i => $iValue) {
             $this->options['query']['ZoneId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6CidrBlock
-     *
-     * @return $this
-     */
-    public function withIpv6CidrBlock($ipv6CidrBlock)
-    {
-        $this->data['Ipv6CidrBlock'] = $ipv6CidrBlock;
-        $this->options['query']['Ipv6CidrBlock'] = $ipv6CidrBlock;
 
         return $this;
     }

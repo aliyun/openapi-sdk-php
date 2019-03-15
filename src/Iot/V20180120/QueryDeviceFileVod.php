@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of QueryDeviceFileVod
- *
  * @method string getIotId()
  * @method string getFileName()
  * @method string getShouldEncrypt()

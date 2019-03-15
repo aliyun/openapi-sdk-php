@@ -5,8 +5,6 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of SetPathCacheExpiredConfig
- *
  * @method string getDomainName()
  * @method string getWeight()
  * @method string getCacheContent()

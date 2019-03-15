@@ -5,28 +5,46 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RevokeSecurityGroup
- *
  * @method string getNicType()
+ * @method $this withNicType($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourcePortRange()
+ * @method $this withSourcePortRange($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getSourceGroupOwnerId()
+ * @method $this withSourceGroupOwnerId($value)
  * @method string getSourceGroupOwnerAccount()
+ * @method $this withSourceGroupOwnerAccount($value)
  * @method string getIpv6DestCidrIp()
+ * @method $this withIpv6DestCidrIp($value)
  * @method string getIpv6SourceCidrIp()
+ * @method $this withIpv6SourceCidrIp($value)
  * @method string getPolicy()
+ * @method $this withPolicy($value)
  * @method string getPortRange()
+ * @method $this withPortRange($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSourceCidrIp()
+ * @method $this withSourceCidrIp($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPriority()
+ * @method $this withPriority($value)
  * @method string getDestCidrIp()
+ * @method $this withDestCidrIp($value)
  * @method string getSourceGroupId()
+ * @method $this withSourceGroupId($value)
  */
 class RevokeSecurityGroup extends Rpc
 {
@@ -37,264 +55,4 @@ class RevokeSecurityGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $nicType
-     *
-     * @return $this
-     */
-    public function withNicType($nicType)
-    {
-        $this->data['NicType'] = $nicType;
-        $this->options['query']['NicType'] = $nicType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourcePortRange
-     *
-     * @return $this
-     */
-    public function withSourcePortRange($sourcePortRange)
-    {
-        $this->data['SourcePortRange'] = $sourcePortRange;
-        $this->options['query']['SourcePortRange'] = $sourcePortRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function withSecurityGroupId($securityGroupId)
-    {
-        $this->data['SecurityGroupId'] = $securityGroupId;
-        $this->options['query']['SecurityGroupId'] = $securityGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceGroupOwnerId
-     *
-     * @return $this
-     */
-    public function withSourceGroupOwnerId($sourceGroupOwnerId)
-    {
-        $this->data['SourceGroupOwnerId'] = $sourceGroupOwnerId;
-        $this->options['query']['SourceGroupOwnerId'] = $sourceGroupOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceGroupOwnerAccount
-     *
-     * @return $this
-     */
-    public function withSourceGroupOwnerAccount($sourceGroupOwnerAccount)
-    {
-        $this->data['SourceGroupOwnerAccount'] = $sourceGroupOwnerAccount;
-        $this->options['query']['SourceGroupOwnerAccount'] = $sourceGroupOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6DestCidrIp
-     *
-     * @return $this
-     */
-    public function withIpv6DestCidrIp($ipv6DestCidrIp)
-    {
-        $this->data['Ipv6DestCidrIp'] = $ipv6DestCidrIp;
-        $this->options['query']['Ipv6DestCidrIp'] = $ipv6DestCidrIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6SourceCidrIp
-     *
-     * @return $this
-     */
-    public function withIpv6SourceCidrIp($ipv6SourceCidrIp)
-    {
-        $this->data['Ipv6SourceCidrIp'] = $ipv6SourceCidrIp;
-        $this->options['query']['Ipv6SourceCidrIp'] = $ipv6SourceCidrIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function withPolicy($policy)
-    {
-        $this->data['Policy'] = $policy;
-        $this->options['query']['Policy'] = $policy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $portRange
-     *
-     * @return $this
-     */
-    public function withPortRange($portRange)
-    {
-        $this->data['PortRange'] = $portRange;
-        $this->options['query']['PortRange'] = $portRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function withIpProtocol($ipProtocol)
-    {
-        $this->data['IpProtocol'] = $ipProtocol;
-        $this->options['query']['IpProtocol'] = $ipProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceCidrIp
-     *
-     * @return $this
-     */
-    public function withSourceCidrIp($sourceCidrIp)
-    {
-        $this->data['SourceCidrIp'] = $sourceCidrIp;
-        $this->options['query']['SourceCidrIp'] = $sourceCidrIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function withPriority($priority)
-    {
-        $this->data['Priority'] = $priority;
-        $this->options['query']['Priority'] = $priority;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destCidrIp
-     *
-     * @return $this
-     */
-    public function withDestCidrIp($destCidrIp)
-    {
-        $this->data['DestCidrIp'] = $destCidrIp;
-        $this->options['query']['DestCidrIp'] = $destCidrIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceGroupId
-     *
-     * @return $this
-     */
-    public function withSourceGroupId($sourceGroupId)
-    {
-        $this->data['SourceGroupId'] = $sourceGroupId;
-        $this->options['query']['SourceGroupId'] = $sourceGroupId;
-
-        return $this;
-    }
 }

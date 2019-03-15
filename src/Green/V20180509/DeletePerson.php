@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeletePerson
- *
  * @method string getClientInfo()
  */
 class DeletePerson extends Roa

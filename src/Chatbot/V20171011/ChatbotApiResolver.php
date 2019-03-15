@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Chatbot based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Chatbot\V20171011
  *
  * @method ActivatePerspective activatePerspective(array $options = [])
  * @method AddSynonym addSynonym(array $options = [])

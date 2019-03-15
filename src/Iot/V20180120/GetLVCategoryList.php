@@ -4,10 +4,6 @@ namespace AlibabaCloud\Iot\V20180120;
 
 use AlibabaCloud\Client\Request\RpcRequest;
 
-/**
- * Request of GetLVCategoryList
- *
- */
 class GetLVCategoryList extends RpcRequest
 {
 

@@ -5,11 +5,12 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeShardDbConnectionInfo
- *
  * @method string getDbName()
+ * @method $this withDbName($value)
  * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
  * @method string getSubDbName()
+ * @method $this withSubDbName($value)
  */
 class DescribeShardDbConnectionInfo extends Rpc
 {
@@ -18,43 +19,4 @@ class DescribeShardDbConnectionInfo extends Rpc
     public $version = '2017-10-16';
 
     public $method = 'POST';
-
-    /**
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function withDbName($dbName)
-    {
-        $this->data['DbName'] = $dbName;
-        $this->options['query']['DbName'] = $dbName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function withDrdsInstanceId($drdsInstanceId)
-    {
-        $this->data['DrdsInstanceId'] = $drdsInstanceId;
-        $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subDbName
-     *
-     * @return $this
-     */
-    public function withSubDbName($subDbName)
-    {
-        $this->data['SubDbName'] = $subDbName;
-        $this->options['query']['SubDbName'] = $subDbName;
-
-        return $this;
-    }
 }

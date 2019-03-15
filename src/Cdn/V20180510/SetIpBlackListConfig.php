@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetIpBlackListConfig
- *
  * @method string getBlockIps()
+ * @method $this withBlockIps($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConfigId()
+ * @method $this withConfigId($value)
  */
 class SetIpBlackListConfig extends Rpc
 {
@@ -19,56 +21,4 @@ class SetIpBlackListConfig extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $blockIps
-     *
-     * @return $this
-     */
-    public function withBlockIps($blockIps)
-    {
-        $this->data['BlockIps'] = $blockIps;
-        $this->options['query']['BlockIps'] = $blockIps;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $configId
-     *
-     * @return $this
-     */
-    public function withConfigId($configId)
-    {
-        $this->data['ConfigId'] = $configId;
-        $this->options['query']['ConfigId'] = $configId;
-
-        return $this;
-    }
 }

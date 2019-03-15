@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the TagINner based on the method name as the Api name.
  *
- * @package   AlibabaCloud\TagINner\V20181109
  *
  * @method InnerFixRegion innerFixRegion(array $options = [])
  * @method InnerListTagResources innerListTagResources(array $options = [])

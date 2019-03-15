@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api JoinBoard
- *
  * @method string getBoardId()
+ * @method $this withBoardId($value)
  * @method string getAppUid()
+ * @method $this withAppUid($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class JoinBoard extends Rpc
 {
@@ -21,56 +23,4 @@ class JoinBoard extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $boardId
-     *
-     * @return $this
-     */
-    public function withBoardId($boardId)
-    {
-        $this->data['BoardId'] = $boardId;
-        $this->options['query']['BoardId'] = $boardId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appUid
-     *
-     * @return $this
-     */
-    public function withAppUid($appUid)
-    {
-        $this->data['AppUid'] = $appUid;
-        $this->options['query']['AppUid'] = $appUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
 }

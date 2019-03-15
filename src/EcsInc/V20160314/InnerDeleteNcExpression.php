@@ -5,10 +5,10 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerDeleteNcExpression
- *
  * @method string getGrayBid()
+ * @method $this withGrayBid($value)
  * @method string getGrayAliUid()
+ * @method $this withGrayAliUid($value)
  * @method array getEcsInstanceId()
  * @method array getVSwitchId()
  */
@@ -21,32 +21,6 @@ class InnerDeleteNcExpression extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $grayBid
-     *
-     * @return $this
-     */
-    public function withGrayBid($grayBid)
-    {
-        $this->data['GrayBid'] = $grayBid;
-        $this->options['query']['GrayBid'] = $grayBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $grayAliUid
-     *
-     * @return $this
-     */
-    public function withGrayAliUid($grayAliUid)
-    {
-        $this->data['GrayAliUid'] = $grayAliUid;
-        $this->options['query']['GrayAliUid'] = $grayAliUid;
-
-        return $this;
-    }
 
     /**
      * @param array $ecsInstanceId

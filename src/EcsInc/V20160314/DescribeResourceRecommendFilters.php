@@ -5,13 +5,16 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResourceRecommendFilters
- *
  * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getAttributeValue()
+ * @method $this withAttributeValue($value)
  * @method string getAttributeName()
+ * @method $this withAttributeName($value)
  * @method string getMaxItems()
+ * @method $this withMaxItems($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
 class DescribeResourceRecommendFilters extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeResourceRecommendFilters extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function withProduct($product)
-    {
-        $this->data['Product'] = $product;
-        $this->options['query']['Product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * @param string $attributeValue
-     *
-     * @return $this
-     */
-    public function withAttributeValue($attributeValue)
-    {
-        $this->data['AttributeValue'] = $attributeValue;
-        $this->options['query']['AttributeValue'] = $attributeValue;
-
-        return $this;
-    }
-
-    /**
-     * @param string $attributeName
-     *
-     * @return $this
-     */
-    public function withAttributeName($attributeName)
-    {
-        $this->data['AttributeName'] = $attributeName;
-        $this->options['query']['AttributeName'] = $attributeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxItems
-     *
-     * @return $this
-     */
-    public function withMaxItems($maxItems)
-    {
-        $this->data['MaxItems'] = $maxItems;
-        $this->options['query']['MaxItems'] = $maxItems;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
-
-        return $this;
-    }
 }

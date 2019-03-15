@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetContactIdentifyByOutBoundTaskId
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getOutboundTaskId()
+ * @method $this withOutboundTaskId($value)
  */
 class GetContactIdentifyByOutBoundTaskId extends Rpc
 {
@@ -19,30 +19,4 @@ class GetContactIdentifyByOutBoundTaskId extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $outboundTaskId
-     *
-     * @return $this
-     */
-    public function withOutboundTaskId($outboundTaskId)
-    {
-        $this->data['OutboundTaskId'] = $outboundTaskId;
-        $this->options['query']['OutboundTaskId'] = $outboundTaskId;
-
-        return $this;
-    }
 }

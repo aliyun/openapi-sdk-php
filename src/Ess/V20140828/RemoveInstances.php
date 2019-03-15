@@ -5,27 +5,31 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveInstances
- *
  * @method string getInstanceId10()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId12()
  * @method string getInstanceId11()
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getInstanceId20()
  * @method string getInstanceId1()
  * @method string getRemovePolicy()
+ * @method $this withRemovePolicy($value)
  * @method string getInstanceId3()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInstanceId2()
  * @method string getInstanceId5()
  * @method string getInstanceId4()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInstanceId7()
  * @method string getInstanceId6()
  * @method string getInstanceId9()
  * @method string getInstanceId8()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInstanceId18()
  * @method string getInstanceId17()
  * @method string getInstanceId19()
@@ -58,19 +62,6 @@ class RemoveInstances extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId12
      *
      * @return $this
@@ -92,19 +83,6 @@ class RemoveInstances extends Rpc
     {
         $this->data['InstanceId11'] = $instanceId11;
         $this->options['query']['InstanceId.11'] = $instanceId11;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
     }
@@ -136,19 +114,6 @@ class RemoveInstances extends Rpc
     }
 
     /**
-     * @param string $removePolicy
-     *
-     * @return $this
-     */
-    public function withRemovePolicy($removePolicy)
-    {
-        $this->data['RemovePolicy'] = $removePolicy;
-        $this->options['query']['RemovePolicy'] = $removePolicy;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId3
      *
      * @return $this
@@ -157,19 +122,6 @@ class RemoveInstances extends Rpc
     {
         $this->data['InstanceId3'] = $instanceId3;
         $this->options['query']['InstanceId.3'] = $instanceId3;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
     }
@@ -209,19 +161,6 @@ class RemoveInstances extends Rpc
     {
         $this->data['InstanceId4'] = $instanceId4;
         $this->options['query']['InstanceId.4'] = $instanceId4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -274,19 +213,6 @@ class RemoveInstances extends Rpc
     {
         $this->data['InstanceId8'] = $instanceId8;
         $this->options['query']['InstanceId.8'] = $instanceId8;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

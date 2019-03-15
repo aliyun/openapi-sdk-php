@@ -5,13 +5,16 @@ namespace AlibabaCloud\Skyeye\V20171201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SendAlertContent
- *
  * @method string getAlertTarget()
+ * @method $this withAlertTarget($value)
  * @method string getAlertInfoName()
+ * @method $this withAlertInfoName($value)
  * @method string getAlertText()
+ * @method $this withAlertText($value)
  * @method string getTitle()
+ * @method $this withTitle($value)
  * @method string getTags()
+ * @method $this withTags($value)
  */
 class SendAlertContent extends Rpc
 {
@@ -20,69 +23,4 @@ class SendAlertContent extends Rpc
     public $version = '2017-12-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $alertTarget
-     *
-     * @return $this
-     */
-    public function withAlertTarget($alertTarget)
-    {
-        $this->data['AlertTarget'] = $alertTarget;
-        $this->options['query']['AlertTarget'] = $alertTarget;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alertInfoName
-     *
-     * @return $this
-     */
-    public function withAlertInfoName($alertInfoName)
-    {
-        $this->data['AlertInfoName'] = $alertInfoName;
-        $this->options['query']['AlertInfoName'] = $alertInfoName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alertText
-     *
-     * @return $this
-     */
-    public function withAlertText($alertText)
-    {
-        $this->data['AlertText'] = $alertText;
-        $this->options['query']['AlertText'] = $alertText;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function withTitle($title)
-    {
-        $this->data['Title'] = $title;
-        $this->options['query']['Title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
-
-        return $this;
-    }
 }

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCompany
- *
  */
 class DescribeCompany extends Rpc
 {

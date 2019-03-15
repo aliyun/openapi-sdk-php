@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetUser
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  */
 class GetUser extends Rpc
 {
@@ -19,30 +19,4 @@ class GetUser extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
 }

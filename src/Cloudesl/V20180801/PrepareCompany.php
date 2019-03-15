@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PrepareCompany
- *
  * @method string getPlatform()
+ * @method $this withPlatform($value)
  */
 class PrepareCompany extends Rpc
 {
@@ -16,17 +15,4 @@ class PrepareCompany extends Rpc
     public $version = '2018-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function withPlatform($platform)
-    {
-        $this->data['Platform'] = $platform;
-        $this->options['query']['Platform'] = $platform;
-
-        return $this;
-    }
 }

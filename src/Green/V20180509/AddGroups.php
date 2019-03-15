@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api AddGroups
- *
  * @method string getClientInfo()
  */
 class AddGroups extends Roa

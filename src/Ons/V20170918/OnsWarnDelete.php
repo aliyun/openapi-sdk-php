@@ -5,13 +5,16 @@ namespace AlibabaCloud\Ons\V20170918;
 use AlibabaCloud\Rpc;
 
 /**
- * Api OnsWarnDelete
- *
  * @method string getPreventCache()
+ * @method $this withPreventCache($value)
  * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
  * @method string getConsumerId()
+ * @method $this withConsumerId($value)
  * @method string getTopic()
+ * @method $this withTopic($value)
  */
 class OnsWarnDelete extends Rpc
 {
@@ -20,69 +23,4 @@ class OnsWarnDelete extends Rpc
     public $version = '2017-09-18';
 
     public $method = 'POST';
-
-    /**
-     * @param string $preventCache
-     *
-     * @return $this
-     */
-    public function withPreventCache($preventCache)
-    {
-        $this->data['PreventCache'] = $preventCache;
-        $this->options['query']['PreventCache'] = $preventCache;
-
-        return $this;
-    }
-
-    /**
-     * @param string $onsRegionId
-     *
-     * @return $this
-     */
-    public function withOnsRegionId($onsRegionId)
-    {
-        $this->data['OnsRegionId'] = $onsRegionId;
-        $this->options['query']['OnsRegionId'] = $onsRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $onsPlatform
-     *
-     * @return $this
-     */
-    public function withOnsPlatform($onsPlatform)
-    {
-        $this->data['OnsPlatform'] = $onsPlatform;
-        $this->options['query']['OnsPlatform'] = $onsPlatform;
-
-        return $this;
-    }
-
-    /**
-     * @param string $consumerId
-     *
-     * @return $this
-     */
-    public function withConsumerId($consumerId)
-    {
-        $this->data['ConsumerId'] = $consumerId;
-        $this->options['query']['ConsumerId'] = $consumerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function withTopic($topic)
-    {
-        $this->data['Topic'] = $topic;
-        $this->options['query']['Topic'] = $topic;
-
-        return $this;
-    }
 }

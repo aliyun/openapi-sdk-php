@@ -5,14 +5,18 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeActiveOperationTaskType
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIsHistory()
+ * @method $this withIsHistory($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeActiveOperationTaskType extends Rpc
 {
@@ -23,82 +27,4 @@ class DescribeActiveOperationTaskType extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isHistory
-     *
-     * @return $this
-     */
-    public function withIsHistory($isHistory)
-    {
-        $this->data['IsHistory'] = $isHistory;
-        $this->options['query']['IsHistory'] = $isHistory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

@@ -5,18 +5,25 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResourceModificationCapacity
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTargetInstanceType()
+ * @method $this withTargetInstanceType($value)
  * @method string getMigrateAcrossZone()
+ * @method $this withMigrateAcrossZone($value)
  * @method string getTargetSystemDiskCategory()
+ * @method $this withTargetSystemDiskCategory($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getInstanceId()
  * @method string getBid()
+ * @method $this withBid($value)
  */
 class DescribeResourceModificationCapacity extends Rpc
 {
@@ -29,110 +36,6 @@ class DescribeResourceModificationCapacity extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetInstanceType
-     *
-     * @return $this
-     */
-    public function withTargetInstanceType($targetInstanceType)
-    {
-        $this->data['TargetInstanceType'] = $targetInstanceType;
-        $this->options['query']['TargetInstanceType'] = $targetInstanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrateAcrossZone
-     *
-     * @return $this
-     */
-    public function withMigrateAcrossZone($migrateAcrossZone)
-    {
-        $this->data['MigrateAcrossZone'] = $migrateAcrossZone;
-        $this->options['query']['MigrateAcrossZone'] = $migrateAcrossZone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetSystemDiskCategory
-     *
-     * @return $this
-     */
-    public function withTargetSystemDiskCategory($targetSystemDiskCategory)
-    {
-        $this->data['TargetSystemDiskCategory'] = $targetSystemDiskCategory;
-        $this->options['query']['TargetSystemDiskCategory'] = $targetSystemDiskCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param array $instanceId
      *
      * @return $this
@@ -143,19 +46,6 @@ class DescribeResourceModificationCapacity extends Rpc
         foreach ($instanceId as $i => $iValue) {
             $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
 
         return $this;
     }

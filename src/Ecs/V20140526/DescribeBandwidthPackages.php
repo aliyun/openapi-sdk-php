@@ -5,16 +5,22 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBandwidthPackages
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getBandwidthPackageId()
+ * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeBandwidthPackages extends Rpc
 {
@@ -25,108 +31,4 @@ class DescribeBandwidthPackages extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function withBandwidthPackageId($bandwidthPackageId)
-    {
-        $this->data['BandwidthPackageId'] = $bandwidthPackageId;
-        $this->options['query']['BandwidthPackageId'] = $bandwidthPackageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $natGatewayId
-     *
-     * @return $this
-     */
-    public function withNatGatewayId($natGatewayId)
-    {
-        $this->data['NatGatewayId'] = $natGatewayId;
-        $this->options['query']['NatGatewayId'] = $natGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

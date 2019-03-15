@@ -5,11 +5,12 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAgentState
- *
  * @method string getAgentId()
+ * @method $this withAgentId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDn()
+ * @method $this withDn($value)
  */
 class GetAgentState extends Rpc
 {
@@ -20,43 +21,4 @@ class GetAgentState extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function withAgentId($agentId)
-    {
-        $this->data['AgentId'] = $agentId;
-        $this->options['query']['AgentId'] = $agentId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dn
-     *
-     * @return $this
-     */
-    public function withDn($dn)
-    {
-        $this->data['Dn'] = $dn;
-        $this->options['query']['Dn'] = $dn;
-
-        return $this;
-    }
 }

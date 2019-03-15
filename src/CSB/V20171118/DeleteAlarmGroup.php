@@ -5,9 +5,8 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteAlarmGroup
- *
  * @method string getId()
+ * @method $this withId($value)
  */
 class DeleteAlarmGroup extends Rpc
 {
@@ -16,17 +15,4 @@ class DeleteAlarmGroup extends Rpc
     public $version = '2017-11-18';
 
     public $method = 'POST';
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
 }

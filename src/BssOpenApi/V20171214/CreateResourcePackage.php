@@ -5,15 +5,20 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateResourcePackage
- *
  * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getSpecification()
+ * @method $this withSpecification($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPackageType()
+ * @method $this withPackageType($value)
  * @method string getEffectiveDate()
+ * @method $this withEffectiveDate($value)
  * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
  */
 class CreateResourcePackage extends Rpc
 {
@@ -22,95 +27,4 @@ class CreateResourcePackage extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function withDuration($duration)
-    {
-        $this->data['Duration'] = $duration;
-        $this->options['query']['Duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function withProductCode($productCode)
-    {
-        $this->data['ProductCode'] = $productCode;
-        $this->options['query']['ProductCode'] = $productCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $specification
-     *
-     * @return $this
-     */
-    public function withSpecification($specification)
-    {
-        $this->data['Specification'] = $specification;
-        $this->options['query']['Specification'] = $specification;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $packageType
-     *
-     * @return $this
-     */
-    public function withPackageType($packageType)
-    {
-        $this->data['PackageType'] = $packageType;
-        $this->options['query']['PackageType'] = $packageType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $effectiveDate
-     *
-     * @return $this
-     */
-    public function withEffectiveDate($effectiveDate)
-    {
-        $this->data['EffectiveDate'] = $effectiveDate;
-        $this->options['query']['EffectiveDate'] = $effectiveDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function withPricingCycle($pricingCycle)
-    {
-        $this->data['PricingCycle'] = $pricingCycle;
-        $this->options['query']['PricingCycle'] = $pricingCycle;
-
-        return $this;
-    }
 }

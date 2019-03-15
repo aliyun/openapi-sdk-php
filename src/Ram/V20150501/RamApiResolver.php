@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ram based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ram\V20150501
  *
  * @method AddUserToGroup addUserToGroup(array $options = [])
  * @method AttachPolicyToGroup attachPolicyToGroup(array $options = [])

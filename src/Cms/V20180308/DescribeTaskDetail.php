@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeTaskDetail
- *
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class DescribeTaskDetail extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeTaskDetail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

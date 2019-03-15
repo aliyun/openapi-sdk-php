@@ -5,22 +5,33 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyScalingGroup
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getScalingGroupName()
+ * @method $this withScalingGroupName($value)
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method array getVSwitchIds()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getActiveScalingConfigurationId()
+ * @method $this withActiveScalingConfigurationId($value)
  * @method string getMinSize()
+ * @method $this withMinSize($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getLaunchTemplateVersion()
+ * @method $this withLaunchTemplateVersion($value)
  * @method string getMaxSize()
+ * @method $this withMaxSize($value)
  * @method string getDefaultCooldown()
+ * @method $this withDefaultCooldown($value)
  * @method string getRemovalPolicy1()
  * @method string getRemovalPolicy2()
  */
@@ -35,84 +46,6 @@ class ModifyScalingGroup extends Rpc
     public $serviceCode = 'ess';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $healthCheckType
-     *
-     * @return $this
-     */
-    public function withHealthCheckType($healthCheckType)
-    {
-        $this->data['HealthCheckType'] = $healthCheckType;
-        $this->options['query']['HealthCheckType'] = $healthCheckType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateId($launchTemplateId)
-    {
-        $this->data['LaunchTemplateId'] = $launchTemplateId;
-        $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupName
-     *
-     * @return $this
-     */
-    public function withScalingGroupName($scalingGroupName)
-    {
-        $this->data['ScalingGroupName'] = $scalingGroupName;
-        $this->options['query']['ScalingGroupName'] = $scalingGroupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param array $vSwitchIds
      *
      * @return $this
@@ -123,97 +56,6 @@ class ModifyScalingGroup extends Rpc
         foreach ($vSwitchIds as $i => $iValue) {
             $this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $activeScalingConfigurationId
-     *
-     * @return $this
-     */
-    public function withActiveScalingConfigurationId($activeScalingConfigurationId)
-    {
-        $this->data['ActiveScalingConfigurationId'] = $activeScalingConfigurationId;
-        $this->options['query']['ActiveScalingConfigurationId'] = $activeScalingConfigurationId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $minSize
-     *
-     * @return $this
-     */
-    public function withMinSize($minSize)
-    {
-        $this->data['MinSize'] = $minSize;
-        $this->options['query']['MinSize'] = $minSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $launchTemplateVersion
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateVersion($launchTemplateVersion)
-    {
-        $this->data['LaunchTemplateVersion'] = $launchTemplateVersion;
-        $this->options['query']['LaunchTemplateVersion'] = $launchTemplateVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxSize
-     *
-     * @return $this
-     */
-    public function withMaxSize($maxSize)
-    {
-        $this->data['MaxSize'] = $maxSize;
-        $this->options['query']['MaxSize'] = $maxSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $defaultCooldown
-     *
-     * @return $this
-     */
-    public function withDefaultCooldown($defaultCooldown)
-    {
-        $this->data['DefaultCooldown'] = $defaultCooldown;
-        $this->options['query']['DefaultCooldown'] = $defaultCooldown;
 
         return $this;
     }

@@ -5,15 +5,20 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MarkOssResult
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getIds()
+ * @method $this withIds($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getStock()
+ * @method $this withStock($value)
  * @method string getOperation()
+ * @method $this withOperation($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getScene()
+ * @method $this withScene($value)
  */
 class MarkOssResult extends Rpc
 {
@@ -24,95 +29,4 @@ class MarkOssResult extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function withIds($ids)
-    {
-        $this->data['Ids'] = $ids;
-        $this->options['query']['Ids'] = $ids;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stock
-     *
-     * @return $this
-     */
-    public function withStock($stock)
-    {
-        $this->data['Stock'] = $stock;
-        $this->options['query']['Stock'] = $stock;
-
-        return $this;
-    }
-
-    /**
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function withOperation($operation)
-    {
-        $this->data['Operation'] = $operation;
-        $this->options['query']['Operation'] = $operation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function withScene($scene)
-    {
-        $this->data['Scene'] = $scene;
-        $this->options['query']['Scene'] = $scene;
-
-        return $this;
-    }
 }

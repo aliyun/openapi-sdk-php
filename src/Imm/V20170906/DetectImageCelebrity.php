@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DetectImageCelebrity
- *
  * @method string getImageUri()
+ * @method $this withImageUri($value)
  * @method string getLibrary()
+ * @method $this withLibrary($value)
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class DetectImageCelebrity extends Rpc
 {
@@ -20,43 +21,4 @@ class DetectImageCelebrity extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function withImageUri($imageUri)
-    {
-        $this->data['ImageUri'] = $imageUri;
-        $this->options['query']['ImageUri'] = $imageUri;
-
-        return $this;
-    }
-
-    /**
-     * @param string $library
-     *
-     * @return $this
-     */
-    public function withLibrary($library)
-    {
-        $this->data['Library'] = $library;
-        $this->options['query']['Library'] = $library;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

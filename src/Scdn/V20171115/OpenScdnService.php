@@ -5,18 +5,26 @@ namespace AlibabaCloud\Scdn\V20171115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api OpenScdnService
- *
  * @method string getEndDate()
+ * @method $this withEndDate($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getBandwidth()
+ * @method $this withBandwidth($value)
  * @method string getDomainCount()
+ * @method $this withDomainCount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getProtectType()
+ * @method $this withProtectType($value)
  * @method string getStartDate()
+ * @method $this withStartDate($value)
  * @method string getElasticProtection()
+ * @method $this withElasticProtection($value)
  * @method string getDDoSBasic()
+ * @method $this withDDoSBasic($value)
  * @method string getCcProtection()
+ * @method $this withCcProtection($value)
  */
 class OpenScdnService extends Rpc
 {
@@ -27,134 +35,4 @@ class OpenScdnService extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'scdn';
-
-    /**
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function withEndDate($endDate)
-    {
-        $this->data['EndDate'] = $endDate;
-        $this->options['query']['EndDate'] = $endDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function withBandwidth($bandwidth)
-    {
-        $this->data['Bandwidth'] = $bandwidth;
-        $this->options['query']['Bandwidth'] = $bandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainCount
-     *
-     * @return $this
-     */
-    public function withDomainCount($domainCount)
-    {
-        $this->data['DomainCount'] = $domainCount;
-        $this->options['query']['DomainCount'] = $domainCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $protectType
-     *
-     * @return $this
-     */
-    public function withProtectType($protectType)
-    {
-        $this->data['ProtectType'] = $protectType;
-        $this->options['query']['ProtectType'] = $protectType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function withStartDate($startDate)
-    {
-        $this->data['StartDate'] = $startDate;
-        $this->options['query']['StartDate'] = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $elasticProtection
-     *
-     * @return $this
-     */
-    public function withElasticProtection($elasticProtection)
-    {
-        $this->data['ElasticProtection'] = $elasticProtection;
-        $this->options['query']['ElasticProtection'] = $elasticProtection;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dDoSBasic
-     *
-     * @return $this
-     */
-    public function withDDoSBasic($dDoSBasic)
-    {
-        $this->data['DDoSBasic'] = $dDoSBasic;
-        $this->options['query']['DDoSBasic'] = $dDoSBasic;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccProtection
-     *
-     * @return $this
-     */
-    public function withCcProtection($ccProtection)
-    {
-        $this->data['CcProtection'] = $ccProtection;
-        $this->options['query']['CcProtection'] = $ccProtection;
-
-        return $this;
-    }
 }

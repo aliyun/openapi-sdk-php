@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cdn\V20141111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteFCTrigger
- *
  * @method string getTriggerARN()
+ * @method $this withTriggerARN($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DeleteFCTrigger extends Rpc
 {
@@ -17,30 +17,4 @@ class DeleteFCTrigger extends Rpc
     public $version = '2014-11-11';
 
     public $method = 'POST';
-
-    /**
-     * @param string $triggerARN
-     *
-     * @return $this
-     */
-    public function withTriggerARN($triggerARN)
-    {
-        $this->data['TriggerARN'] = $triggerARN;
-        $this->options['query']['TriggerARN'] = $triggerARN;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

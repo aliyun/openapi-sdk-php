@@ -5,20 +5,29 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UploadSystemImageAtOrigin
- *
  * @method string getMetaData()
+ * @method $this withMetaData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOsTypeId()
+ * @method $this withOsTypeId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getFromRegionNo()
+ * @method $this withFromRegionNo($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getImageName()
+ * @method $this withImageName($value)
  * @method string getImageUrl()
+ * @method $this withImageUrl($value)
  * @method array getTag()
  * @method string getMD5()
+ * @method $this withMD5($value)
  */
 class UploadSystemImageAtOrigin extends Rpc
 {
@@ -29,136 +38,6 @@ class UploadSystemImageAtOrigin extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $metaData
-     *
-     * @return $this
-     */
-    public function withMetaData($metaData)
-    {
-        $this->data['MetaData'] = $metaData;
-        $this->options['query']['MetaData'] = $metaData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $osTypeId
-     *
-     * @return $this
-     */
-    public function withOsTypeId($osTypeId)
-    {
-        $this->data['OsTypeId'] = $osTypeId;
-        $this->options['query']['OsTypeId'] = $osTypeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromRegionNo
-     *
-     * @return $this
-     */
-    public function withFromRegionNo($fromRegionNo)
-    {
-        $this->data['FromRegionNo'] = $fromRegionNo;
-        $this->options['query']['FromRegionNo'] = $fromRegionNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function withImageName($imageName)
-    {
-        $this->data['ImageName'] = $imageName;
-        $this->options['query']['ImageName'] = $imageName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageUrl
-     *
-     * @return $this
-     */
-    public function withImageUrl($imageUrl)
-    {
-        $this->data['ImageUrl'] = $imageUrl;
-        $this->options['query']['ImageUrl'] = $imageUrl;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -172,19 +51,6 @@ class UploadSystemImageAtOrigin extends Rpc
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $mD5
-     *
-     * @return $this
-     */
-    public function withMD5($mD5)
-    {
-        $this->data['MD5'] = $mD5;
-        $this->options['query']['MD5'] = $mD5;
 
         return $this;
     }

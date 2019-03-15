@@ -5,32 +5,51 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateShardingDBInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method array getReplicaSet()
  * @method string getStorageEngine()
+ * @method $this withStorageEngine($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getEngine()
+ * @method $this withEngine($value)
  * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getSrcDBInstanceId()
+ * @method $this withSrcDBInstanceId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method array getConfigServer()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getMongos()
  * @method string getSecurityIPList()
+ * @method $this withSecurityIPList($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
  * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  */
 class CreateShardingDBInstance extends Rpc
 {
@@ -41,58 +60,6 @@ class CreateShardingDBInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function withEngineVersion($engineVersion)
-    {
-        $this->data['EngineVersion'] = $engineVersion;
-        $this->options['query']['EngineVersion'] = $engineVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
 
     /**
      * @param array $replicaSet
@@ -106,123 +73,6 @@ class CreateShardingDBInstance extends Rpc
             $this->options['query']['ReplicaSet.' . ($i + 1) . '.Storage'] = $replicaSet[$i]['Storage'];
             $this->options['query']['ReplicaSet.' . ($i + 1) . '.Class'] = $replicaSet[$i]['Class'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storageEngine
-     *
-     * @return $this
-     */
-    public function withStorageEngine($storageEngine)
-    {
-        $this->data['StorageEngine'] = $storageEngine;
-        $this->options['query']['StorageEngine'] = $storageEngine;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function withEngine($engine)
-    {
-        $this->data['Engine'] = $engine;
-        $this->options['query']['Engine'] = $engine;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceDescription
-     *
-     * @return $this
-     */
-    public function withDBInstanceDescription($dBInstanceDescription)
-    {
-        $this->data['DBInstanceDescription'] = $dBInstanceDescription;
-        $this->options['query']['DBInstanceDescription'] = $dBInstanceDescription;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $restoreTime
-     *
-     * @return $this
-     */
-    public function withRestoreTime($restoreTime)
-    {
-        $this->data['RestoreTime'] = $restoreTime;
-        $this->options['query']['RestoreTime'] = $restoreTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcDBInstanceId
-     *
-     * @return $this
-     */
-    public function withSrcDBInstanceId($srcDBInstanceId)
-    {
-        $this->data['SrcDBInstanceId'] = $srcDBInstanceId;
-        $this->options['query']['SrcDBInstanceId'] = $srcDBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -244,19 +94,6 @@ class CreateShardingDBInstance extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param array $mongos
      *
      * @return $this
@@ -267,97 +104,6 @@ class CreateShardingDBInstance extends Rpc
         foreach ($mongos as $i => $iValue) {
             $this->options['query']['Mongos.' . ($i + 1) . '.Class'] = $mongos[$i]['Class'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityIPList
-     *
-     * @return $this
-     */
-    public function withSecurityIPList($securityIPList)
-    {
-        $this->data['SecurityIPList'] = $securityIPList;
-        $this->options['query']['SecurityIPList'] = $securityIPList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountPassword
-     *
-     * @return $this
-     */
-    public function withAccountPassword($accountPassword)
-    {
-        $this->data['AccountPassword'] = $accountPassword;
-        $this->options['query']['AccountPassword'] = $accountPassword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function withAutoRenew($autoRenew)
-    {
-        $this->data['AutoRenew'] = $autoRenew;
-        $this->options['query']['AutoRenew'] = $autoRenew;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
 
         return $this;
     }

@@ -5,13 +5,15 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeJoinRuleList
- *
  * @method string getWarnLevel()
+ * @method $this withWarnLevel($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getRemark()
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeJoinRuleList extends Rpc
 {
@@ -24,45 +26,6 @@ class DescribeJoinRuleList extends Rpc
     public $serviceCode = 'vipaegis';
 
     /**
-     * @param string $warnLevel
-     *
-     * @return $this
-     */
-    public function withWarnLevel($warnLevel)
-    {
-        $this->data['WarnLevel'] = $warnLevel;
-        $this->options['query']['WarnLevel'] = $warnLevel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
      * @param string $remark
      *
      * @return $this
@@ -71,19 +34,6 @@ class DescribeJoinRuleList extends Rpc
     {
         $this->data['Remark'] = $remark;
         $this->options['query']['remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
     }

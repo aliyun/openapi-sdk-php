@@ -5,9 +5,8 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeRegionSharedServices
- *
  * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class DescribeRegionSharedServices extends Roa
 {
@@ -18,17 +17,4 @@ class DescribeRegionSharedServices extends Roa
     public $pathPattern = '/region/[Region]/shared_services';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function withRegion($region)
-    {
-        $this->data['Region'] = $region;
-        $this->pathParameters['Region'] = $region;
-
-        return $this;
-    }
 }

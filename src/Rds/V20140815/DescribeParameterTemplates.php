@@ -5,16 +5,22 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeParameterTemplates
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getEngine()
+ * @method $this withEngine($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class DescribeParameterTemplates extends Rpc
 {
@@ -25,108 +31,4 @@ class DescribeParameterTemplates extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function withEngine($engine)
-    {
-        $this->data['Engine'] = $engine;
-        $this->options['query']['Engine'] = $engine;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function withEngineVersion($engineVersion)
-    {
-        $this->data['EngineVersion'] = $engineVersion;
-        $this->options['query']['EngineVersion'] = $engineVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function withCategory($category)
-    {
-        $this->data['Category'] = $category;
-        $this->options['query']['Category'] = $category;
-
-        return $this;
-    }
 }

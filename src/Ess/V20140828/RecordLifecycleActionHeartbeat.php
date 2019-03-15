@@ -5,14 +5,15 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RecordLifecycleActionHeartbeat
- *
  * @method string getLifecycleActionToken()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getHeartbeatTimeout()
  * @method string getLifecycleHookId()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class RecordLifecycleActionHeartbeat extends Rpc
 {
@@ -33,19 +34,6 @@ class RecordLifecycleActionHeartbeat extends Rpc
     {
         $this->data['LifecycleActionToken'] = $lifecycleActionToken;
         $this->options['query']['lifecycleActionToken'] = $lifecycleActionToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
     }
@@ -72,32 +60,6 @@ class RecordLifecycleActionHeartbeat extends Rpc
     {
         $this->data['LifecycleHookId'] = $lifecycleHookId;
         $this->options['query']['lifecycleHookId'] = $lifecycleHookId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

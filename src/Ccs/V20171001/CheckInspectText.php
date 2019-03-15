@@ -5,10 +5,9 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CheckInspectText
- *
  * @method array getSentence()
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  */
 class CheckInspectText extends Rpc
 {
@@ -34,19 +33,6 @@ class CheckInspectText extends Rpc
             $this->options['query']['Sentence.' . ($i + 1) . '.StartTime'] = $sentence[$i]['StartTime'];
             $this->options['query']['Sentence.' . ($i + 1) . '.Content'] = $sentence[$i]['Content'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
 
         return $this;
     }

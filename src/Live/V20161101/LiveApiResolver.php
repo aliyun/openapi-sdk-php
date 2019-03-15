@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Live based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Live\V20161101
  *
  * @method AddCasterComponent addCasterComponent(array $options = [])
  * @method AddCasterEpisode addCasterEpisode(array $options = [])

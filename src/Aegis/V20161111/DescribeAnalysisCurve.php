@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAnalysisCurve
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getStartTimeStamp()
+ * @method $this withStartTimeStamp($value)
  * @method string getEndTimeStamp()
+ * @method $this withEndTimeStamp($value)
  */
 class DescribeAnalysisCurve extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeAnalysisCurve extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTimeStamp
-     *
-     * @return $this
-     */
-    public function withStartTimeStamp($startTimeStamp)
-    {
-        $this->data['StartTimeStamp'] = $startTimeStamp;
-        $this->options['query']['StartTimeStamp'] = $startTimeStamp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTimeStamp
-     *
-     * @return $this
-     */
-    public function withEndTimeStamp($endTimeStamp)
-    {
-        $this->data['EndTimeStamp'] = $endTimeStamp;
-        $this->options['query']['EndTimeStamp'] = $endTimeStamp;
-
-        return $this;
-    }
 }

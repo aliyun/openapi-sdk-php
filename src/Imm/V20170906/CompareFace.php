@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CompareFace
- *
  * @method string getSrcUriB()
+ * @method $this withSrcUriB($value)
  * @method string getSrcUriA()
+ * @method $this withSrcUriA($value)
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class CompareFace extends Rpc
 {
@@ -20,43 +21,4 @@ class CompareFace extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $srcUriB
-     *
-     * @return $this
-     */
-    public function withSrcUriB($srcUriB)
-    {
-        $this->data['SrcUriB'] = $srcUriB;
-        $this->options['query']['SrcUriB'] = $srcUriB;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcUriA
-     *
-     * @return $this
-     */
-    public function withSrcUriA($srcUriA)
-    {
-        $this->data['SrcUriA'] = $srcUriA;
-        $this->options['query']['SrcUriA'] = $srcUriA;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

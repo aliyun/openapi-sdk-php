@@ -5,15 +5,20 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ReserveMovieSeat
- *
  * @method string getSeatIds()
+ * @method $this withSeatIds($value)
  * @method string getBizUid()
+ * @method $this withBizUid($value)
  * @method string getExtJson()
+ * @method $this withExtJson($value)
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getMobile()
+ * @method $this withMobile($value)
  * @method string getSeatNames()
+ * @method $this withSeatNames($value)
  * @method string getScheduleId()
+ * @method $this withScheduleId($value)
  */
 class ReserveMovieSeat extends Rpc
 {
@@ -24,95 +29,4 @@ class ReserveMovieSeat extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $seatIds
-     *
-     * @return $this
-     */
-    public function withSeatIds($seatIds)
-    {
-        $this->data['SeatIds'] = $seatIds;
-        $this->options['query']['SeatIds'] = $seatIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizUid
-     *
-     * @return $this
-     */
-    public function withBizUid($bizUid)
-    {
-        $this->data['BizUid'] = $bizUid;
-        $this->options['query']['BizUid'] = $bizUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mobile
-     *
-     * @return $this
-     */
-    public function withMobile($mobile)
-    {
-        $this->data['Mobile'] = $mobile;
-        $this->options['query']['Mobile'] = $mobile;
-
-        return $this;
-    }
-
-    /**
-     * @param string $seatNames
-     *
-     * @return $this
-     */
-    public function withSeatNames($seatNames)
-    {
-        $this->data['SeatNames'] = $seatNames;
-        $this->options['query']['SeatNames'] = $seatNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scheduleId
-     *
-     * @return $this
-     */
-    public function withScheduleId($scheduleId)
-    {
-        $this->data['ScheduleId'] = $scheduleId;
-        $this->options['query']['ScheduleId'] = $scheduleId;
-
-        return $this;
-    }
 }

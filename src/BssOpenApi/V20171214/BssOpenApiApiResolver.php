@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the BssOpenApi based on the method name as the Api name.
  *
- * @package   AlibabaCloud\BssOpenApi\V20171214
  *
  * @method ApplyInvoice applyInvoice(array $options = [])
  * @method ConvertChargeType convertChargeType(array $options = [])

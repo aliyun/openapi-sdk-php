@@ -5,9 +5,8 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddSupplierNewItems
- *
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method array getItemList()
  */
 class AddSupplierNewItems extends Rpc
@@ -19,19 +18,6 @@ class AddSupplierNewItems extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
 
     /**
      * @param array $itemList

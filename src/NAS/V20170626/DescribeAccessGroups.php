@@ -5,11 +5,12 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAccessGroups
- *
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeAccessGroups extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeAccessGroups extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function withAccessGroupName($accessGroupName)
-    {
-        $this->data['AccessGroupName'] = $accessGroupName;
-        $this->options['query']['AccessGroupName'] = $accessGroupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

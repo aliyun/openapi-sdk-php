@@ -5,19 +5,28 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryCensorJobList
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
  * @method string getStartOfJobCreatedTimeRange()
+ * @method $this withStartOfJobCreatedTimeRange($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getMaximumPageSize()
+ * @method $this withMaximumPageSize($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  * @method string getJobIds()
+ * @method $this withJobIds($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getEndOfJobCreatedTimeRange()
+ * @method $this withEndOfJobCreatedTimeRange($value)
  */
 class QueryCensorJobList extends Rpc
 {
@@ -28,147 +37,4 @@ class QueryCensorJobList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function withNextPageToken($nextPageToken)
-    {
-        $this->data['NextPageToken'] = $nextPageToken;
-        $this->options['query']['NextPageToken'] = $nextPageToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startOfJobCreatedTimeRange
-     *
-     * @return $this
-     */
-    public function withStartOfJobCreatedTimeRange($startOfJobCreatedTimeRange)
-    {
-        $this->data['StartOfJobCreatedTimeRange'] = $startOfJobCreatedTimeRange;
-        $this->options['query']['StartOfJobCreatedTimeRange'] = $startOfJobCreatedTimeRange;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function withMaximumPageSize($maximumPageSize)
-    {
-        $this->data['MaximumPageSize'] = $maximumPageSize;
-        $this->options['query']['MaximumPageSize'] = $maximumPageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function withPipelineId($pipelineId)
-    {
-        $this->data['PipelineId'] = $pipelineId;
-        $this->options['query']['PipelineId'] = $pipelineId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $jobIds
-     *
-     * @return $this
-     */
-    public function withJobIds($jobIds)
-    {
-        $this->data['JobIds'] = $jobIds;
-        $this->options['query']['JobIds'] = $jobIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endOfJobCreatedTimeRange
-     *
-     * @return $this
-     */
-    public function withEndOfJobCreatedTimeRange($endOfJobCreatedTimeRange)
-    {
-        $this->data['EndOfJobCreatedTimeRange'] = $endOfJobCreatedTimeRange;
-        $this->options['query']['EndOfJobCreatedTimeRange'] = $endOfJobCreatedTimeRange;
-
-        return $this;
-    }
 }

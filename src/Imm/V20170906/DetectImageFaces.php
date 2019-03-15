@@ -5,10 +5,10 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DetectImageFaces
- *
  * @method string getImageUri()
+ * @method $this withImageUri($value)
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class DetectImageFaces extends Rpc
 {
@@ -19,30 +19,4 @@ class DetectImageFaces extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function withImageUri($imageUri)
-    {
-        $this->data['ImageUri'] = $imageUri;
-        $this->options['query']['ImageUri'] = $imageUri;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

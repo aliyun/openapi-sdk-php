@@ -5,17 +5,24 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitMcuJob
- *
  * @method string getTemplate()
+ * @method $this withTemplate($value)
  * @method string getInput()
+ * @method $this withInput($value)
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
 class SubmitMcuJob extends Rpc
 {
@@ -26,121 +33,4 @@ class SubmitMcuJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function withTemplate($template)
-    {
-        $this->data['Template'] = $template;
-        $this->options['query']['Template'] = $template;
-
-        return $this;
-    }
-
-    /**
-     * @param string $input
-     *
-     * @return $this
-     */
-    public function withInput($input)
-    {
-        $this->data['Input'] = $input;
-        $this->options['query']['Input'] = $input;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function withTemplateId($templateId)
-    {
-        $this->data['TemplateId'] = $templateId;
-        $this->options['query']['TemplateId'] = $templateId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function withPipelineId($pipelineId)
-    {
-        $this->data['PipelineId'] = $pipelineId;
-        $this->options['query']['PipelineId'] = $pipelineId;
-
-        return $this;
-    }
 }

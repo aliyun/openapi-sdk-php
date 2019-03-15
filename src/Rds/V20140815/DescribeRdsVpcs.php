@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeRdsVpcs
- *
  * @method string getResourceOwnerId()
  * @method string getSecurityToken()
  * @method string getResourceOwnerAccount()

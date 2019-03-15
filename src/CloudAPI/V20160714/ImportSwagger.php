@@ -5,12 +5,14 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ImportSwagger
- *
  * @method string getDataFormat()
+ * @method $this withDataFormat($value)
  * @method string getData()
+ * @method $this withData($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getOverwrite()
+ * @method $this withOverwrite($value)
  */
 class ImportSwagger extends Rpc
 {
@@ -21,56 +23,4 @@ class ImportSwagger extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $dataFormat
-     *
-     * @return $this
-     */
-    public function withDataFormat($dataFormat)
-    {
-        $this->data['DataFormat'] = $dataFormat;
-        $this->options['query']['DataFormat'] = $dataFormat;
-
-        return $this;
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function withData($data)
-    {
-        $this->data['Data'] = $data;
-        $this->options['query']['Data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $overwrite
-     *
-     * @return $this
-     */
-    public function withOverwrite($overwrite)
-    {
-        $this->data['Overwrite'] = $overwrite;
-        $this->options['query']['Overwrite'] = $overwrite;
-
-        return $this;
-    }
 }

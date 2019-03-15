@@ -5,15 +5,20 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyFlowLogAttribute
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getFlowLogId()
+ * @method $this withFlowLogId($value)
  * @method string getFlowLogName()
+ * @method $this withFlowLogName($value)
  */
 class ModifyFlowLogAttribute extends Rpc
 {
@@ -24,95 +29,4 @@ class ModifyFlowLogAttribute extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $flowLogId
-     *
-     * @return $this
-     */
-    public function withFlowLogId($flowLogId)
-    {
-        $this->data['FlowLogId'] = $flowLogId;
-        $this->options['query']['FlowLogId'] = $flowLogId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $flowLogName
-     *
-     * @return $this
-     */
-    public function withFlowLogName($flowLogName)
-    {
-        $this->data['FlowLogName'] = $flowLogName;
-        $this->options['query']['FlowLogName'] = $flowLogName;
-
-        return $this;
-    }
 }

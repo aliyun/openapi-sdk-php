@@ -5,13 +5,16 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAppAttributes
- *
  * @method string getAppName()
+ * @method $this withAppName($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeAppAttributes extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeAppAttributes extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function withAppName($appName)
-    {
-        $this->data['AppName'] = $appName;
-        $this->options['query']['AppName'] = $appName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

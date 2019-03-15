@@ -5,21 +5,25 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ConfigureSynchronizationJob
- *
  * @method string getSourceEndpointInstanceId()
  * @method string getCheckpoint()
+ * @method $this withCheckpoint($value)
  * @method string getDestinationEndpointInstanceId()
  * @method string getSourceEndpointIP()
  * @method string getSynchronizationObjects()
+ * @method $this withSynchronizationObjects($value)
  * @method string getDestinationEndpointPassword()
  * @method string getDataInitialization()
+ * @method $this withDataInitialization($value)
  * @method string getStructureInitialization()
+ * @method $this withStructureInitialization($value)
  * @method string getPartitionKeyModifyTimeMInute()
  * @method string getPartitionKeyModifyTimeDAy()
  * @method string getSourceEndpointInstanceType()
  * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
  * @method string getSynchronizationJobName()
+ * @method $this withSynchronizationJobName($value)
  * @method string getSourceEndpointUserName()
  * @method string getPartitionKeyModifyTimeMOnth()
  * @method string getSourceEndpointPort()
@@ -29,9 +33,11 @@ use AlibabaCloud\Rpc;
  * @method string getPartitionKeyModifyTimeYEar()
  * @method string getSourceEndpointRole()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPartitionKeyModifyTimeHOur()
  * @method string getSourceEndpointPassword()
  * @method string getMigrationReserved()
+ * @method $this withMigrationReserved($value)
  * @method string getDestinationEndpointIP()
  * @method string getDestinationEndpointInstanceType()
  */
@@ -52,19 +58,6 @@ class ConfigureSynchronizationJob extends Rpc
     {
         $this->data['SourceEndpointInstanceId'] = $sourceEndpointInstanceId;
         $this->options['query']['SourceEndpoint.InstanceId'] = $sourceEndpointInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $checkpoint
-     *
-     * @return $this
-     */
-    public function withCheckpoint($checkpoint)
-    {
-        $this->data['Checkpoint'] = $checkpoint;
-        $this->options['query']['Checkpoint'] = $checkpoint;
 
         return $this;
     }
@@ -96,19 +89,6 @@ class ConfigureSynchronizationJob extends Rpc
     }
 
     /**
-     * @param string $synchronizationObjects
-     *
-     * @return $this
-     */
-    public function withSynchronizationObjects($synchronizationObjects)
-    {
-        $this->data['SynchronizationObjects'] = $synchronizationObjects;
-        $this->options['query']['SynchronizationObjects'] = $synchronizationObjects;
-
-        return $this;
-    }
-
-    /**
      * @param string $destinationEndpointPassword
      *
      * @return $this
@@ -117,32 +97,6 @@ class ConfigureSynchronizationJob extends Rpc
     {
         $this->data['DestinationEndpointPassword'] = $destinationEndpointPassword;
         $this->options['query']['DestinationEndpoint.Password'] = $destinationEndpointPassword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dataInitialization
-     *
-     * @return $this
-     */
-    public function withDataInitialization($dataInitialization)
-    {
-        $this->data['DataInitialization'] = $dataInitialization;
-        $this->options['query']['DataInitialization'] = $dataInitialization;
-
-        return $this;
-    }
-
-    /**
-     * @param string $structureInitialization
-     *
-     * @return $this
-     */
-    public function withStructureInitialization($structureInitialization)
-    {
-        $this->data['StructureInitialization'] = $structureInitialization;
-        $this->options['query']['StructureInitialization'] = $structureInitialization;
 
         return $this;
     }
@@ -182,32 +136,6 @@ class ConfigureSynchronizationJob extends Rpc
     {
         $this->data['SourceEndpointInstanceType'] = $sourceEndpointInstanceType;
         $this->options['query']['SourceEndpoint.InstanceType'] = $sourceEndpointInstanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function withSynchronizationJobId($synchronizationJobId)
-    {
-        $this->data['SynchronizationJobId'] = $synchronizationJobId;
-        $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $synchronizationJobName
-     *
-     * @return $this
-     */
-    public function withSynchronizationJobName($synchronizationJobName)
-    {
-        $this->data['SynchronizationJobName'] = $synchronizationJobName;
-        $this->options['query']['SynchronizationJobName'] = $synchronizationJobName;
 
         return $this;
     }
@@ -317,19 +245,6 @@ class ConfigureSynchronizationJob extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $partitionKeyModifyTimeHOur
      *
      * @return $this
@@ -351,19 +266,6 @@ class ConfigureSynchronizationJob extends Rpc
     {
         $this->data['SourceEndpointPassword'] = $sourceEndpointPassword;
         $this->options['query']['SourceEndpoint.Password'] = $sourceEndpointPassword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrationReserved
-     *
-     * @return $this
-     */
-    public function withMigrationReserved($migrationReserved)
-    {
-        $this->data['MigrationReserved'] = $migrationReserved;
-        $this->options['query']['MigrationReserved'] = $migrationReserved;
 
         return $this;
     }

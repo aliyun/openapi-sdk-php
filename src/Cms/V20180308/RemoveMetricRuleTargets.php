@@ -5,12 +5,11 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveMetricRuleTargets
- *
  * @method array getContactGroupTargetIds()
  * @method array getTargetIds()
  * @method array getWebhookTargetIds()
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  */
 class RemoveMetricRuleTargets extends Rpc
 {
@@ -63,19 +62,6 @@ class RemoveMetricRuleTargets extends Rpc
         foreach ($webhookTargetIds as $i => $iValue) {
             $this->options['query']['WebhookTargetIds.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
 
         return $this;
     }

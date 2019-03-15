@@ -5,11 +5,12 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDomainRecordInfo
- *
  * @method string getRecordId()
+ * @method $this withRecordId($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeDomainRecordInfo extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeDomainRecordInfo extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'alidns';
-
-    /**
-     * @param string $recordId
-     *
-     * @return $this
-     */
-    public function withRecordId($recordId)
-    {
-        $this->data['RecordId'] = $recordId;
-        $this->options['query']['RecordId'] = $recordId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

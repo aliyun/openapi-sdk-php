@@ -5,11 +5,12 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateMyGroupMembers
- *
  * @method string getReaders()
+ * @method $this withReaders($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getMasters()
+ * @method $this withMasters($value)
  */
 class UpdateMyGroupMembers extends Rpc
 {
@@ -20,43 +21,4 @@ class UpdateMyGroupMembers extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $readers
-     *
-     * @return $this
-     */
-    public function withReaders($readers)
-    {
-        $this->data['Readers'] = $readers;
-        $this->options['query']['Readers'] = $readers;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $masters
-     *
-     * @return $this
-     */
-    public function withMasters($masters)
-    {
-        $this->data['Masters'] = $masters;
-        $this->options['query']['Masters'] = $masters;
-
-        return $this;
-    }
 }

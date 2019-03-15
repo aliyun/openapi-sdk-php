@@ -5,17 +5,24 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeEipPrice
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAmount()
+ * @method $this withAmount($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInternetMaxBandwidthOut()
+ * @method $this withInternetMaxBandwidthOut($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeEipPrice extends Rpc
 {
@@ -26,121 +33,4 @@ class DescribeEipPrice extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function withAmount($amount)
-    {
-        $this->data['Amount'] = $amount;
-        $this->options['query']['Amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function withInternetChargeType($internetChargeType)
-    {
-        $this->data['InternetChargeType'] = $internetChargeType;
-        $this->options['query']['InternetChargeType'] = $internetChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        $this->data['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-        $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
-
-        return $this;
-    }
 }

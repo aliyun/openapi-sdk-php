@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateLiveDetectNotifyConfig
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getNotifyUrl()
+ * @method $this withNotifyUrl($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class UpdateLiveDetectNotifyConfig extends Rpc
 {
@@ -21,56 +23,4 @@ class UpdateLiveDetectNotifyConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $notifyUrl
-     *
-     * @return $this
-     */
-    public function withNotifyUrl($notifyUrl)
-    {
-        $this->data['NotifyUrl'] = $notifyUrl;
-        $this->options['query']['NotifyUrl'] = $notifyUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

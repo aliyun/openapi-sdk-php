@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetTaskList
- *
  * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class GetTaskList extends Rpc
 {
@@ -19,30 +19,4 @@ class GetTaskList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function withJobId($jobId)
-    {
-        $this->data['JobId'] = $jobId;
-        $this->options['query']['JobId'] = $jobId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

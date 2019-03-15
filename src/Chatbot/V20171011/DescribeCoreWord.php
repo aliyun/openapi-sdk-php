@@ -5,9 +5,8 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCoreWord
- *
  * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
  */
 class DescribeCoreWord extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeCoreWord extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function withCoreWordName($coreWordName)
-    {
-        $this->data['CoreWordName'] = $coreWordName;
-        $this->options['query']['CoreWordName'] = $coreWordName;
-
-        return $this;
-    }
 }

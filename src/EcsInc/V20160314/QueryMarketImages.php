@@ -5,18 +5,26 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryMarketImages
- *
  * @method string getSupportIoOptimized()
+ * @method $this withSupportIoOptimized($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getExtra()
+ * @method $this withExtra($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getMarketImageCategory()
+ * @method $this withMarketImageCategory($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class QueryMarketImages extends Rpc
 {
@@ -27,134 +35,4 @@ class QueryMarketImages extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $supportIoOptimized
-     *
-     * @return $this
-     */
-    public function withSupportIoOptimized($supportIoOptimized)
-    {
-        $this->data['SupportIoOptimized'] = $supportIoOptimized;
-        $this->options['query']['SupportIoOptimized'] = $supportIoOptimized;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function withPageNo($pageNo)
-    {
-        $this->data['PageNo'] = $pageNo;
-        $this->options['query']['PageNo'] = $pageNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $extra
-     *
-     * @return $this
-     */
-    public function withExtra($extra)
-    {
-        $this->data['Extra'] = $extra;
-        $this->options['query']['Extra'] = $extra;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $marketImageCategory
-     *
-     * @return $this
-     */
-    public function withMarketImageCategory($marketImageCategory)
-    {
-        $this->data['MarketImageCategory'] = $marketImageCategory;
-        $this->options['query']['MarketImageCategory'] = $marketImageCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

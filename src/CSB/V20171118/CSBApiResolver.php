@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the CSB based on the method name as the Api name.
  *
- * @package   AlibabaCloud\CSB\V20171118
  *
  * @method AddMember2AlarmGroup addMember2AlarmGroup(array $options = [])
  * @method ApproveOrderList approveOrderList(array $options = [])

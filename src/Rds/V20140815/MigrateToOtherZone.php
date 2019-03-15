@@ -5,20 +5,30 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MigrateToOtherZone
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getZoneIdSlave1()
+ * @method $this withZoneIdSlave1($value)
  * @method string getZoneIdSlave2()
+ * @method $this withZoneIdSlave2($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
  * @method string getVPCId()
+ * @method $this withVPCId($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class MigrateToOtherZone extends Rpc
 {
@@ -29,160 +39,4 @@ class MigrateToOtherZone extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneIdSlave1
-     *
-     * @return $this
-     */
-    public function withZoneIdSlave1($zoneIdSlave1)
-    {
-        $this->data['ZoneIdSlave1'] = $zoneIdSlave1;
-        $this->options['query']['ZoneIdSlave1'] = $zoneIdSlave1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneIdSlave2
-     *
-     * @return $this
-     */
-    public function withZoneIdSlave2($zoneIdSlave2)
-    {
-        $this->data['ZoneIdSlave2'] = $zoneIdSlave2;
-        $this->options['query']['ZoneIdSlave2'] = $zoneIdSlave2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $effectiveTime
-     *
-     * @return $this
-     */
-    public function withEffectiveTime($effectiveTime)
-    {
-        $this->data['EffectiveTime'] = $effectiveTime;
-        $this->options['query']['EffectiveTime'] = $effectiveTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vPCId
-     *
-     * @return $this
-     */
-    public function withVPCId($vPCId)
-    {
-        $this->data['VPCId'] = $vPCId;
-        $this->options['query']['VPCId'] = $vPCId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function withCategory($category)
-    {
-        $this->data['Category'] = $category;
-        $this->options['query']['Category'] = $category;
-
-        return $this;
-    }
 }

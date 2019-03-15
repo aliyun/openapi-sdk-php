@@ -5,9 +5,8 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBlockchainConfigOption
- *
  * @method string getPurpose()
+ * @method $this withPurpose($value)
  */
 class DescribeBlockchainConfigOption extends Rpc
 {
@@ -16,17 +15,4 @@ class DescribeBlockchainConfigOption extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'PUT';
-
-    /**
-     * @param string $purpose
-     *
-     * @return $this
-     */
-    public function withPurpose($purpose)
-    {
-        $this->data['Purpose'] = $purpose;
-        $this->options['query']['Purpose'] = $purpose;
-
-        return $this;
-    }
 }

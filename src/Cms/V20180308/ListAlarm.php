@@ -5,16 +5,22 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAlarm
- *
  * @method string getIsEnable()
+ * @method $this withIsEnable($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getId()
+ * @method $this withId($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getDimension()
+ * @method $this withDimension($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListAlarm extends Rpc
 {
@@ -25,108 +31,4 @@ class ListAlarm extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $isEnable
-     *
-     * @return $this
-     */
-    public function withIsEnable($isEnable)
-    {
-        $this->data['IsEnable'] = $isEnable;
-        $this->options['query']['IsEnable'] = $isEnable;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function withNamespace($namespace)
-    {
-        $this->data['Namespace'] = $namespace;
-        $this->options['query']['Namespace'] = $namespace;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dimension
-     *
-     * @return $this
-     */
-    public function withDimension($dimension)
-    {
-        $this->data['Dimension'] = $dimension;
-        $this->options['query']['Dimension'] = $dimension;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

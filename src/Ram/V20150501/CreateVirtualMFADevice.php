@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateVirtualMFADevice
- *
  * @method string getVirtualMFADeviceName()
+ * @method $this withVirtualMFADeviceName($value)
  */
 class CreateVirtualMFADevice extends Rpc
 {
@@ -18,17 +17,4 @@ class CreateVirtualMFADevice extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $virtualMFADeviceName
-     *
-     * @return $this
-     */
-    public function withVirtualMFADeviceName($virtualMFADeviceName)
-    {
-        $this->data['VirtualMFADeviceName'] = $virtualMFADeviceName;
-        $this->options['query']['VirtualMFADeviceName'] = $virtualMFADeviceName;
-
-        return $this;
-    }
 }

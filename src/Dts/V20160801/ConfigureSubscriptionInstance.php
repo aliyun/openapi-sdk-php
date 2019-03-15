@@ -5,16 +5,18 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ConfigureSubscriptionInstance
- *
  * @method string getSourceEndpointInstanceID()
  * @method string getSourceEndpointOwnerID()
  * @method string getSubscriptionDataTypeDML()
  * @method string getSubscriptionObject()
+ * @method $this withSubscriptionObject($value)
  * @method string getSubscriptionInstanceName()
+ * @method $this withSubscriptionInstanceName($value)
  * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
  * @method string getSourceEndpointRole()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSourceEndpointInstanceType()
  * @method string getSubscriptionDataTypeDDL()
  */
@@ -66,45 +68,6 @@ class ConfigureSubscriptionInstance extends Rpc
     }
 
     /**
-     * @param string $subscriptionObject
-     *
-     * @return $this
-     */
-    public function withSubscriptionObject($subscriptionObject)
-    {
-        $this->data['SubscriptionObject'] = $subscriptionObject;
-        $this->options['query']['SubscriptionObject'] = $subscriptionObject;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subscriptionInstanceName
-     *
-     * @return $this
-     */
-    public function withSubscriptionInstanceName($subscriptionInstanceName)
-    {
-        $this->data['SubscriptionInstanceName'] = $subscriptionInstanceName;
-        $this->options['query']['SubscriptionInstanceName'] = $subscriptionInstanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subscriptionInstanceId
-     *
-     * @return $this
-     */
-    public function withSubscriptionInstanceId($subscriptionInstanceId)
-    {
-        $this->data['SubscriptionInstanceId'] = $subscriptionInstanceId;
-        $this->options['query']['SubscriptionInstanceId'] = $subscriptionInstanceId;
-
-        return $this;
-    }
-
-    /**
      * @param string $sourceEndpointRole
      *
      * @return $this
@@ -113,19 +76,6 @@ class ConfigureSubscriptionInstance extends Rpc
     {
         $this->data['SourceEndpointRole'] = $sourceEndpointRole;
         $this->options['query']['SourceEndpoint.Role'] = $sourceEndpointRole;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

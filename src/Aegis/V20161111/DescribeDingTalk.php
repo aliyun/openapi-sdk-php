@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDingTalk
- *
  * @method string getRuleActionName()
+ * @method $this withRuleActionName($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class DescribeDingTalk extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeDingTalk extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $ruleActionName
-     *
-     * @return $this
-     */
-    public function withRuleActionName($ruleActionName)
-    {
-        $this->data['RuleActionName'] = $ruleActionName;
-        $this->options['query']['RuleActionName'] = $ruleActionName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

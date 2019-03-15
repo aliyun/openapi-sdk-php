@@ -5,13 +5,16 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryLoginEvent
- *
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getUuid()
+ * @method $this withUuid($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class QueryLoginEvent extends Rpc
 {
@@ -22,69 +25,4 @@ class QueryLoginEvent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function withUuid($uuid)
-    {
-        $this->data['Uuid'] = $uuid;
-        $this->options['query']['Uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

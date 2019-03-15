@@ -5,16 +5,21 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddCasterEpisodeGroup
- *
  * @method string getSideOutputUrl()
+ * @method $this withSideOutputUrl($value)
  * @method array getItem()
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getRepeatNum()
+ * @method $this withRepeatNum($value)
  * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class AddCasterEpisodeGroup extends Rpc
 {
@@ -25,19 +30,6 @@ class AddCasterEpisodeGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $sideOutputUrl
-     *
-     * @return $this
-     */
-    public function withSideOutputUrl($sideOutputUrl)
-    {
-        $this->data['SideOutputUrl'] = $sideOutputUrl;
-        $this->options['query']['SideOutputUrl'] = $sideOutputUrl;
-
-        return $this;
-    }
 
     /**
      * @param array $item
@@ -51,84 +43,6 @@ class AddCasterEpisodeGroup extends Rpc
             $this->options['query']['Item.' . ($i + 1) . '.VodUrl'] = $item[$i]['VodUrl'];
             $this->options['query']['Item.' . ($i + 1) . '.ItemName'] = $item[$i]['ItemName'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $repeatNum
-     *
-     * @return $this
-     */
-    public function withRepeatNum($repeatNum)
-    {
-        $this->data['RepeatNum'] = $repeatNum;
-        $this->options['query']['RepeatNum'] = $repeatNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $callbackUrl
-     *
-     * @return $this
-     */
-    public function withCallbackUrl($callbackUrl)
-    {
-        $this->data['CallbackUrl'] = $callbackUrl;
-        $this->options['query']['CallbackUrl'] = $callbackUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

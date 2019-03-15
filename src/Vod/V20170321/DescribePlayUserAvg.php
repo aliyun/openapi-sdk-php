@@ -5,11 +5,12 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribePlayUserAvg
- *
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribePlayUserAvg extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribePlayUserAvg extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

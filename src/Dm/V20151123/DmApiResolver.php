@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Dm based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Dm\V20151123
  *
  * @method AddIpfilter addIpfilter(array $options = [])
  * @method ApproveMailTemplate approveMailTemplate(array $options = [])

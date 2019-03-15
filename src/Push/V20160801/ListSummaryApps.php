@@ -5,8 +5,6 @@ namespace AlibabaCloud\Push\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListSummaryApps
- *
  */
 class ListSummaryApps extends Rpc
 {

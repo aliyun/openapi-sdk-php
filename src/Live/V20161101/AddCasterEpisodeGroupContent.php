@@ -5,11 +5,12 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddCasterEpisodeGroupContent
- *
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getContent()
+ * @method $this withContent($value)
  */
 class AddCasterEpisodeGroupContent extends Rpc
 {
@@ -20,43 +21,4 @@ class AddCasterEpisodeGroupContent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function withContent($content)
-    {
-        $this->data['Content'] = $content;
-        $this->options['query']['Content'] = $content;
-
-        return $this;
-    }
 }

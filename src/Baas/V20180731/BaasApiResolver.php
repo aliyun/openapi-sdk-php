@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Baas based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Baas\V20180731
  *
  * @method AcceptEthereumInvitation acceptEthereumInvitation(array $options = [])
  * @method AcceptInvitation acceptInvitation(array $options = [])

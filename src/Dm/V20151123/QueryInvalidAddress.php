@@ -5,16 +5,22 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryInvalidAddress
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getLength()
+ * @method $this withLength($value)
  * @method string getNextStart()
+ * @method $this withNextStart($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getKeyWord()
+ * @method $this withKeyWord($value)
  */
 class QueryInvalidAddress extends Rpc
 {
@@ -23,108 +29,4 @@ class QueryInvalidAddress extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $length
-     *
-     * @return $this
-     */
-    public function withLength($length)
-    {
-        $this->data['Length'] = $length;
-        $this->options['query']['Length'] = $length;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nextStart
-     *
-     * @return $this
-     */
-    public function withNextStart($nextStart)
-    {
-        $this->data['NextStart'] = $nextStart;
-        $this->options['query']['NextStart'] = $nextStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function withKeyWord($keyWord)
-    {
-        $this->data['KeyWord'] = $keyWord;
-        $this->options['query']['KeyWord'] = $keyWord;
-
-        return $this;
-    }
 }

@@ -5,14 +5,18 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSubscriptionInstance
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getRegion()
+ * @method $this withRegion($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  * @method string getUsedTime()
+ * @method $this withUsedTime($value)
  */
 class CreateSubscriptionInstance extends Rpc
 {
@@ -21,82 +25,4 @@ class CreateSubscriptionInstance extends Rpc
     public $version = '2016-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function withRegion($region)
-    {
-        $this->data['Region'] = $region;
-        $this->options['query']['Region'] = $region;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function withUsedTime($usedTime)
-    {
-        $this->data['UsedTime'] = $usedTime;
-        $this->options['query']['UsedTime'] = $usedTime;
-
-        return $this;
-    }
 }

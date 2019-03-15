@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the EcsInc based on the method name as the Api name.
  *
- * @package   AlibabaCloud\EcsInc\V20160314
  *
  * @method AddSystemTag addSystemTag(array $options = [])
  * @method AddSystemTags addSystemTags(array $options = [])

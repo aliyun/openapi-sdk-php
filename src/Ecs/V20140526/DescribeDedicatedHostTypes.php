@@ -5,15 +5,20 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDedicatedHostTypes
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSupportedInstanceTypeFamily()
+ * @method $this withSupportedInstanceTypeFamily($value)
  * @method string getDedicatedHostType()
+ * @method $this withDedicatedHostType($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getSupportedInstanceTypesList()
+ * @method $this withSupportedInstanceTypesList($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDedicatedHostTypes extends Rpc
 {
@@ -24,95 +29,4 @@ class DescribeDedicatedHostTypes extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $supportedInstanceTypeFamily
-     *
-     * @return $this
-     */
-    public function withSupportedInstanceTypeFamily($supportedInstanceTypeFamily)
-    {
-        $this->data['SupportedInstanceTypeFamily'] = $supportedInstanceTypeFamily;
-        $this->options['query']['SupportedInstanceTypeFamily'] = $supportedInstanceTypeFamily;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dedicatedHostType
-     *
-     * @return $this
-     */
-    public function withDedicatedHostType($dedicatedHostType)
-    {
-        $this->data['DedicatedHostType'] = $dedicatedHostType;
-        $this->options['query']['DedicatedHostType'] = $dedicatedHostType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $supportedInstanceTypesList
-     *
-     * @return $this
-     */
-    public function withSupportedInstanceTypesList($supportedInstanceTypesList)
-    {
-        $this->data['SupportedInstanceTypesList'] = $supportedInstanceTypesList;
-        $this->options['query']['SupportedInstanceTypesList'] = $supportedInstanceTypesList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

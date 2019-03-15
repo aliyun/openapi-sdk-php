@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateMyGroupInstances
- *
  * @method string getInstances()
+ * @method $this withInstances($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
 class UpdateMyGroupInstances extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdateMyGroupInstances extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $instances
-     *
-     * @return $this
-     */
-    public function withInstances($instances)
-    {
-        $this->data['Instances'] = $instances;
-        $this->options['query']['Instances'] = $instances;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
 }

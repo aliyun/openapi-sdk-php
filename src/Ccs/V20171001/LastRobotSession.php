@@ -5,11 +5,12 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api LastRobotSession
- *
  * @method string getSceneId()
+ * @method $this withSceneId($value)
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  * @method string getVisitorId()
+ * @method $this withVisitorId($value)
  */
 class LastRobotSession extends Rpc
 {
@@ -20,43 +21,4 @@ class LastRobotSession extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccs';
-
-    /**
-     * @param string $sceneId
-     *
-     * @return $this
-     */
-    public function withSceneId($sceneId)
-    {
-        $this->data['SceneId'] = $sceneId;
-        $this->options['query']['SceneId'] = $sceneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $visitorId
-     *
-     * @return $this
-     */
-    public function withVisitorId($visitorId)
-    {
-        $this->data['VisitorId'] = $visitorId;
-        $this->options['query']['VisitorId'] = $visitorId;
-
-        return $this;
-    }
 }

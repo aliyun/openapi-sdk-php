@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of SetEventRecordPlan
- *
  * @method string getName()
  * @method string getEventTypes()
  * @method string getPreRecordDuration()

@@ -5,32 +5,44 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribePrice
- *
  * @method string getDataDisk3Size()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getDataDisk3Category()
  * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
  * @method string getInternetMaxBandwidthOut()
+ * @method $this withInternetMaxBandwidthOut($value)
  * @method string getSystemDiskCategory()
  * @method string getDataDisk4Category()
  * @method string getDataDisk4Size()
  * @method string getPriceUnit()
+ * @method $this withPriceUnit($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getDataDisk2Category()
  * @method string getDataDisk1Size()
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getAmount()
+ * @method $this withAmount($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDataDisk2Size()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getDataDisk1Category()
  * @method string getSystemDiskSize()
  * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
  * @method string getInstanceNetworkType()
+ * @method $this withInstanceNetworkType($value)
  */
 class DescribePrice extends Rpc
 {
@@ -56,32 +68,6 @@ class DescribePrice extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
      * @param string $dataDisk3Category
      *
      * @return $this
@@ -90,32 +76,6 @@ class DescribePrice extends Rpc
     {
         $this->data['DataDisk3Category'] = $dataDisk3Category;
         $this->options['query']['DataDisk.3.Category'] = $dataDisk3Category;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function withIoOptimized($ioOptimized)
-    {
-        $this->data['IoOptimized'] = $ioOptimized;
-        $this->options['query']['IoOptimized'] = $ioOptimized;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        $this->data['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-        $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
 
         return $this;
     }
@@ -160,32 +120,6 @@ class DescribePrice extends Rpc
     }
 
     /**
-     * @param string $priceUnit
-     *
-     * @return $this
-     */
-    public function withPriceUnit($priceUnit)
-    {
-        $this->data['PriceUnit'] = $priceUnit;
-        $this->options['query']['PriceUnit'] = $priceUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
      * @param string $dataDisk2Category
      *
      * @return $this
@@ -212,58 +146,6 @@ class DescribePrice extends Rpc
     }
 
     /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function withAmount($amount)
-    {
-        $this->data['Amount'] = $amount;
-        $this->options['query']['Amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $dataDisk2Size
      *
      * @return $this
@@ -272,32 +154,6 @@ class DescribePrice extends Rpc
     {
         $this->data['DataDisk2Size'] = $dataDisk2Size;
         $this->options['query']['DataDisk.2.Size'] = $dataDisk2Size;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }
@@ -324,32 +180,6 @@ class DescribePrice extends Rpc
     {
         $this->data['SystemDiskSize'] = $systemDiskSize;
         $this->options['query']['SystemDisk.Size'] = $systemDiskSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function withInternetChargeType($internetChargeType)
-    {
-        $this->data['InternetChargeType'] = $internetChargeType;
-        $this->options['query']['InternetChargeType'] = $internetChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceNetworkType
-     *
-     * @return $this
-     */
-    public function withInstanceNetworkType($instanceNetworkType)
-    {
-        $this->data['InstanceNetworkType'] = $instanceNetworkType;
-        $this->options['query']['InstanceNetworkType'] = $instanceNetworkType;
 
         return $this;
     }

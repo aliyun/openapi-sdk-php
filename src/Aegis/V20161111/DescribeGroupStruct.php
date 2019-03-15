@@ -5,9 +5,8 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeGroupStruct
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTagIdList()
  * @method string getRemark()
  */
@@ -20,19 +19,6 @@ class DescribeGroupStruct extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 
     /**
      * @param string $tagIdList

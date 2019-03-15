@@ -5,18 +5,26 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api StopInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getConfirmStop()
+ * @method $this withConfirmStop($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getStoppedMode()
+ * @method $this withStoppedMode($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getHibernate()
+ * @method $this withHibernate($value)
  * @method string getForceStop()
+ * @method $this withForceStop($value)
  */
 class StopInstance extends Rpc
 {
@@ -27,134 +35,4 @@ class StopInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $confirmStop
-     *
-     * @return $this
-     */
-    public function withConfirmStop($confirmStop)
-    {
-        $this->data['ConfirmStop'] = $confirmStop;
-        $this->options['query']['ConfirmStop'] = $confirmStop;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stoppedMode
-     *
-     * @return $this
-     */
-    public function withStoppedMode($stoppedMode)
-    {
-        $this->data['StoppedMode'] = $stoppedMode;
-        $this->options['query']['StoppedMode'] = $stoppedMode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hibernate
-     *
-     * @return $this
-     */
-    public function withHibernate($hibernate)
-    {
-        $this->data['Hibernate'] = $hibernate;
-        $this->options['query']['Hibernate'] = $hibernate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $forceStop
-     *
-     * @return $this
-     */
-    public function withForceStop($forceStop)
-    {
-        $this->data['ForceStop'] = $forceStop;
-        $this->options['query']['ForceStop'] = $forceStop;
-
-        return $this;
-    }
 }

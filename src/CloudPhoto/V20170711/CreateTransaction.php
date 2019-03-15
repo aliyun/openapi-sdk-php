@@ -5,14 +5,18 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateTransaction
- *
  * @method string getExt()
+ * @method $this withExt($value)
  * @method string getSize()
+ * @method $this withSize($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getForce()
+ * @method $this withForce($value)
  * @method string getMd5()
+ * @method $this withMd5($value)
  */
 class CreateTransaction extends Rpc
 {
@@ -25,82 +29,4 @@ class CreateTransaction extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $ext
-     *
-     * @return $this
-     */
-    public function withExt($ext)
-    {
-        $this->data['Ext'] = $ext;
-        $this->options['query']['Ext'] = $ext;
-
-        return $this;
-    }
-
-    /**
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function withSize($size)
-    {
-        $this->data['Size'] = $size;
-        $this->options['query']['Size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $force
-     *
-     * @return $this
-     */
-    public function withForce($force)
-    {
-        $this->data['Force'] = $force;
-        $this->options['query']['Force'] = $force;
-
-        return $this;
-    }
-
-    /**
-     * @param string $md5
-     *
-     * @return $this
-     */
-    public function withMd5($md5)
-    {
-        $this->data['Md5'] = $md5;
-        $this->options['query']['Md5'] = $md5;
-
-        return $this;
-    }
 }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteMedia
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getName()
+ * @method $this withName($value)
  */
 class DeleteMedia extends Rpc
 {
@@ -19,30 +19,4 @@ class DeleteMedia extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
 }

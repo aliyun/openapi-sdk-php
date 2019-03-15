@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of ListImageFaces
- *
  * @method string getMaxKeys()
  * @method string getMarker()
  * @method string getProject()

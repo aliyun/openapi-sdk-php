@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api AddPerson
- *
  * @method string getClientInfo()
  */
 class AddPerson extends Roa

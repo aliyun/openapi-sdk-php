@@ -5,13 +5,16 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDcdnDomainTopUrlVisit
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getSortBy()
+ * @method $this withSortBy($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainTopUrlVisit extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeDcdnDomainTopUrlVisit extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dcdn';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sortBy
-     *
-     * @return $this
-     */
-    public function withSortBy($sortBy)
-    {
-        $this->data['SortBy'] = $sortBy;
-        $this->options['query']['SortBy'] = $sortBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

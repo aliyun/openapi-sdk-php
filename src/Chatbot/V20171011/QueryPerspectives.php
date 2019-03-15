@@ -5,8 +5,6 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryPerspectives
- *
  */
 class QueryPerspectives extends Rpc
 {

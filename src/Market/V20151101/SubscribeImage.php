@@ -5,9 +5,8 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubscribeImage
- *
  * @method string getProductCode()
+ * @method $this withProductCode($value)
  */
 class SubscribeImage extends Rpc
 {
@@ -16,17 +15,4 @@ class SubscribeImage extends Rpc
     public $version = '2015-11-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function withProductCode($productCode)
-    {
-        $this->data['ProductCode'] = $productCode;
-        $this->options['query']['ProductCode'] = $productCode;
-
-        return $this;
-    }
 }

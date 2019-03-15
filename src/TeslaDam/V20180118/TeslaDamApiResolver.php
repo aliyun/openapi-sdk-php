@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the TeslaDam based on the method name as the Api name.
  *
- * @package   AlibabaCloud\TeslaDam\V20180118
  *
  * @method Action action(array $options = [])
  * @method ActionDiskCheck actionDiskCheck(array $options = [])

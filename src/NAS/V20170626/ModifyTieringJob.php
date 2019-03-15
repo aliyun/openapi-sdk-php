@@ -5,17 +5,24 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyTieringJob
- *
  * @method string getVolume()
+ * @method $this withVolume($value)
  * @method string getPath()
+ * @method $this withPath($value)
  * @method string getHour()
+ * @method $this withHour($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getWeekday()
+ * @method $this withWeekday($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getRecursive()
+ * @method $this withRecursive($value)
  * @method string getEnabled()
+ * @method $this withEnabled($value)
  * @method string getPolicy()
+ * @method $this withPolicy($value)
  */
 class ModifyTieringJob extends Rpc
 {
@@ -26,121 +33,4 @@ class ModifyTieringJob extends Rpc
     public $method = 'PUT';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $volume
-     *
-     * @return $this
-     */
-    public function withVolume($volume)
-    {
-        $this->data['Volume'] = $volume;
-        $this->options['query']['Volume'] = $volume;
-
-        return $this;
-    }
-
-    /**
-     * @param string $path
-     *
-     * @return $this
-     */
-    public function withPath($path)
-    {
-        $this->data['Path'] = $path;
-        $this->options['query']['Path'] = $path;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hour
-     *
-     * @return $this
-     */
-    public function withHour($hour)
-    {
-        $this->data['Hour'] = $hour;
-        $this->options['query']['Hour'] = $hour;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $weekday
-     *
-     * @return $this
-     */
-    public function withWeekday($weekday)
-    {
-        $this->data['Weekday'] = $weekday;
-        $this->options['query']['Weekday'] = $weekday;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $recursive
-     *
-     * @return $this
-     */
-    public function withRecursive($recursive)
-    {
-        $this->data['Recursive'] = $recursive;
-        $this->options['query']['Recursive'] = $recursive;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enabled
-     *
-     * @return $this
-     */
-    public function withEnabled($enabled)
-    {
-        $this->data['Enabled'] = $enabled;
-        $this->options['query']['Enabled'] = $enabled;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function withPolicy($policy)
-    {
-        $this->data['Policy'] = $policy;
-        $this->options['query']['Policy'] = $policy;
-
-        return $this;
-    }
 }

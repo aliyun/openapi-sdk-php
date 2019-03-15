@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the RKvstore based on the method name as the Api name.
  *
- * @package   AlibabaCloud\RKvstore\V20150101
  *
  * @method AddBindingTunnel addBindingTunnel(array $options = [])
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])

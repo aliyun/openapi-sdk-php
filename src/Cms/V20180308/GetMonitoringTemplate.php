@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetMonitoringTemplate
- *
  * @method string getName()
+ * @method $this withName($value)
  * @method string getId()
+ * @method $this withId($value)
  */
 class GetMonitoringTemplate extends Rpc
 {
@@ -19,30 +19,4 @@ class GetMonitoringTemplate extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
 }

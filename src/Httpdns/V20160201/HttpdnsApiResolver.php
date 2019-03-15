@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Httpdns based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Httpdns\V20160201
  *
  * @method AddDomain addDomain(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])

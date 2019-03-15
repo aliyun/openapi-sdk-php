@@ -5,10 +5,10 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetTagSet
- *
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  */
 class GetTagSet extends Rpc
 {
@@ -19,30 +19,4 @@ class GetTagSet extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
 }

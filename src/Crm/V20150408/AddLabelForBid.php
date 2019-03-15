@@ -5,12 +5,14 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddLabelForBid
- *
  * @method string getLabelSeries()
+ * @method $this withLabelSeries($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getPK()
+ * @method $this withPK($value)
  * @method string getLabel()
+ * @method $this withLabel($value)
  */
 class AddLabelForBid extends Rpc
 {
@@ -21,56 +23,4 @@ class AddLabelForBid extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'crm';
-
-    /**
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function withLabelSeries($labelSeries)
-    {
-        $this->data['LabelSeries'] = $labelSeries;
-        $this->options['query']['LabelSeries'] = $labelSeries;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function withPK($pK)
-    {
-        $this->data['PK'] = $pK;
-        $this->options['query']['PK'] = $pK;
-
-        return $this;
-    }
-
-    /**
-     * @param string $label
-     *
-     * @return $this
-     */
-    public function withLabel($label)
-    {
-        $this->data['Label'] = $label;
-        $this->options['query']['Label'] = $label;
-
-        return $this;
-    }
 }

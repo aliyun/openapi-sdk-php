@@ -5,22 +5,33 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetAutoScaleConfig
- *
  * @method string getShrinkIdleTimes()
+ * @method $this withShrinkIdleTimes($value)
  * @method string getGrowTimeoutInMinutes()
+ * @method $this withGrowTimeoutInMinutes($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getEnableAutoGrow()
+ * @method $this withEnableAutoGrow($value)
  * @method string getSpotPriceLimit()
+ * @method $this withSpotPriceLimit($value)
  * @method string getEnableAutoShrink()
+ * @method $this withEnableAutoShrink($value)
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  * @method string getMaxNodesInCluster()
+ * @method $this withMaxNodesInCluster($value)
  * @method string getExcludeNodes()
+ * @method $this withExcludeNodes($value)
  * @method string getShrinkIntervalInMinutes()
+ * @method $this withShrinkIntervalInMinutes($value)
  * @method array getQueues()
  * @method string getExtraNodesGrowRatio()
+ * @method $this withExtraNodesGrowRatio($value)
  * @method string getGrowIntervalInMinutes()
+ * @method $this withGrowIntervalInMinutes($value)
  * @method string getGrowRatio()
+ * @method $this withGrowRatio($value)
  */
 class SetAutoScaleConfig extends Rpc
 {
@@ -29,136 +40,6 @@ class SetAutoScaleConfig extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $shrinkIdleTimes
-     *
-     * @return $this
-     */
-    public function withShrinkIdleTimes($shrinkIdleTimes)
-    {
-        $this->data['ShrinkIdleTimes'] = $shrinkIdleTimes;
-        $this->options['query']['ShrinkIdleTimes'] = $shrinkIdleTimes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $growTimeoutInMinutes
-     *
-     * @return $this
-     */
-    public function withGrowTimeoutInMinutes($growTimeoutInMinutes)
-    {
-        $this->data['GrowTimeoutInMinutes'] = $growTimeoutInMinutes;
-        $this->options['query']['GrowTimeoutInMinutes'] = $growTimeoutInMinutes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableAutoGrow
-     *
-     * @return $this
-     */
-    public function withEnableAutoGrow($enableAutoGrow)
-    {
-        $this->data['EnableAutoGrow'] = $enableAutoGrow;
-        $this->options['query']['EnableAutoGrow'] = $enableAutoGrow;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function withSpotPriceLimit($spotPriceLimit)
-    {
-        $this->data['SpotPriceLimit'] = $spotPriceLimit;
-        $this->options['query']['SpotPriceLimit'] = $spotPriceLimit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableAutoShrink
-     *
-     * @return $this
-     */
-    public function withEnableAutoShrink($enableAutoShrink)
-    {
-        $this->data['EnableAutoShrink'] = $enableAutoShrink;
-        $this->options['query']['EnableAutoShrink'] = $enableAutoShrink;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxNodesInCluster
-     *
-     * @return $this
-     */
-    public function withMaxNodesInCluster($maxNodesInCluster)
-    {
-        $this->data['MaxNodesInCluster'] = $maxNodesInCluster;
-        $this->options['query']['MaxNodesInCluster'] = $maxNodesInCluster;
-
-        return $this;
-    }
-
-    /**
-     * @param string $excludeNodes
-     *
-     * @return $this
-     */
-    public function withExcludeNodes($excludeNodes)
-    {
-        $this->data['ExcludeNodes'] = $excludeNodes;
-        $this->options['query']['ExcludeNodes'] = $excludeNodes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $shrinkIntervalInMinutes
-     *
-     * @return $this
-     */
-    public function withShrinkIntervalInMinutes($shrinkIntervalInMinutes)
-    {
-        $this->data['ShrinkIntervalInMinutes'] = $shrinkIntervalInMinutes;
-        $this->options['query']['ShrinkIntervalInMinutes'] = $shrinkIntervalInMinutes;
-
-        return $this;
-    }
 
     /**
      * @param array $queues
@@ -179,45 +60,6 @@ class SetAutoScaleConfig extends Rpc
             $this->options['query']['Queues.' . ($i + 1) . '.SpotPriceLimit'] = $queues[$i]['SpotPriceLimit'];
             $this->options['query']['Queues.' . ($i + 1) . '.EnableAutoShrink'] = $queues[$i]['EnableAutoShrink'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $extraNodesGrowRatio
-     *
-     * @return $this
-     */
-    public function withExtraNodesGrowRatio($extraNodesGrowRatio)
-    {
-        $this->data['ExtraNodesGrowRatio'] = $extraNodesGrowRatio;
-        $this->options['query']['ExtraNodesGrowRatio'] = $extraNodesGrowRatio;
-
-        return $this;
-    }
-
-    /**
-     * @param string $growIntervalInMinutes
-     *
-     * @return $this
-     */
-    public function withGrowIntervalInMinutes($growIntervalInMinutes)
-    {
-        $this->data['GrowIntervalInMinutes'] = $growIntervalInMinutes;
-        $this->options['query']['GrowIntervalInMinutes'] = $growIntervalInMinutes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $growRatio
-     *
-     * @return $this
-     */
-    public function withGrowRatio($growRatio)
-    {
-        $this->data['GrowRatio'] = $growRatio;
-        $this->options['query']['GrowRatio'] = $growRatio;
 
         return $this;
     }

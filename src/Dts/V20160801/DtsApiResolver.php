@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Dts based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Dts\V20160801
  *
  * @method ConfigurationSynchronizationJob configurationSynchronizationJob(array $options = [])
  * @method ConfigureMigrationJob configureMigrationJob(array $options = [])

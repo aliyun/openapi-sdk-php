@@ -5,11 +5,12 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RequestServiceOfCloudDBExpert
- *
  * @method string getServiceRequestParam()
+ * @method $this withServiceRequestParam($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getServiceRequestType()
+ * @method $this withServiceRequestType($value)
  */
 class RequestServiceOfCloudDBExpert extends Rpc
 {
@@ -20,43 +21,4 @@ class RequestServiceOfCloudDBExpert extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $serviceRequestParam
-     *
-     * @return $this
-     */
-    public function withServiceRequestParam($serviceRequestParam)
-    {
-        $this->data['ServiceRequestParam'] = $serviceRequestParam;
-        $this->options['query']['ServiceRequestParam'] = $serviceRequestParam;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceRequestType
-     *
-     * @return $this
-     */
-    public function withServiceRequestType($serviceRequestType)
-    {
-        $this->data['ServiceRequestType'] = $serviceRequestType;
-        $this->options['query']['ServiceRequestType'] = $serviceRequestType;
-
-        return $this;
-    }
 }

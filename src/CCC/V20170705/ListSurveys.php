@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListSurveys
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  */
 class ListSurveys extends Rpc
 {
@@ -19,30 +19,4 @@ class ListSurveys extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function withScenarioId($scenarioId)
-    {
-        $this->data['ScenarioId'] = $scenarioId;
-        $this->options['query']['ScenarioId'] = $scenarioId;
-
-        return $this;
-    }
 }

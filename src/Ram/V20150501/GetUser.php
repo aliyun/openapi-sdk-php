@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetUser
- *
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class GetUser extends Rpc
 {
@@ -18,17 +17,4 @@ class GetUser extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

@@ -5,16 +5,22 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetRenewalApi
- *
  * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getInstanceIDs()
+ * @method $this withInstanceIDs($value)
  * @method string getSubscriptionType()
+ * @method $this withSubscriptionType($value)
  * @method string getRenewalStatus()
+ * @method $this withRenewalStatus($value)
  * @method string getRenewalPeriodUnit()
+ * @method $this withRenewalPeriodUnit($value)
  * @method string getRenewalPeriod()
+ * @method $this withRenewalPeriod($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getProductType()
+ * @method $this withProductType($value)
  */
 class SetRenewalApi extends Rpc
 {
@@ -23,108 +29,4 @@ class SetRenewalApi extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function withProductCode($productCode)
-    {
-        $this->data['ProductCode'] = $productCode;
-        $this->options['query']['ProductCode'] = $productCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceIDs
-     *
-     * @return $this
-     */
-    public function withInstanceIDs($instanceIDs)
-    {
-        $this->data['InstanceIDs'] = $instanceIDs;
-        $this->options['query']['InstanceIDs'] = $instanceIDs;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subscriptionType
-     *
-     * @return $this
-     */
-    public function withSubscriptionType($subscriptionType)
-    {
-        $this->data['SubscriptionType'] = $subscriptionType;
-        $this->options['query']['SubscriptionType'] = $subscriptionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $renewalStatus
-     *
-     * @return $this
-     */
-    public function withRenewalStatus($renewalStatus)
-    {
-        $this->data['RenewalStatus'] = $renewalStatus;
-        $this->options['query']['RenewalStatus'] = $renewalStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $renewalPeriodUnit
-     *
-     * @return $this
-     */
-    public function withRenewalPeriodUnit($renewalPeriodUnit)
-    {
-        $this->data['RenewalPeriodUnit'] = $renewalPeriodUnit;
-        $this->options['query']['RenewalPeriodUnit'] = $renewalPeriodUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $renewalPeriod
-     *
-     * @return $this
-     */
-    public function withRenewalPeriod($renewalPeriod)
-    {
-        $this->data['RenewalPeriod'] = $renewalPeriod;
-        $this->options['query']['RenewalPeriod'] = $renewalPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function withProductType($productType)
-    {
-        $this->data['ProductType'] = $productType;
-        $this->options['query']['ProductType'] = $productType;
-
-        return $this;
-    }
 }

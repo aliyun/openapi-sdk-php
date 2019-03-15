@@ -5,12 +5,14 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteTagByName
- *
  * @method string getTagName()
+ * @method $this withTagName($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  * @method string getSrcUri()
+ * @method $this withSrcUri($value)
  */
 class DeleteTagByName extends Rpc
 {
@@ -21,56 +23,4 @@ class DeleteTagByName extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function withTagName($tagName)
-    {
-        $this->data['TagName'] = $tagName;
-        $this->options['query']['TagName'] = $tagName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function withSrcUri($srcUri)
-    {
-        $this->data['SrcUri'] = $srcUri;
-        $this->options['query']['SrcUri'] = $srcUri;
-
-        return $this;
-    }
 }

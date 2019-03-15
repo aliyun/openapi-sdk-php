@@ -5,8 +5,6 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAccountAlias
- *
  */
 class GetAccountAlias extends Rpc
 {

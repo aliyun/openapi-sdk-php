@@ -5,22 +5,34 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeEvents
- *
  * @method string getEventId()
+ * @method $this withEventId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getEffectTime()
+ * @method $this withEffectTime($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getLimitTime()
+ * @method $this withLimitTime($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPlanTime()
+ * @method $this withPlanTime($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getExpireTime()
+ * @method $this withExpireTime($value)
  * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getEventType()
+ * @method $this withEventType($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeEvents extends Rpc
 {
@@ -31,186 +43,4 @@ class DescribeEvents extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $eventId
-     *
-     * @return $this
-     */
-    public function withEventId($eventId)
-    {
-        $this->data['EventId'] = $eventId;
-        $this->options['query']['EventId'] = $eventId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $effectTime
-     *
-     * @return $this
-     */
-    public function withEffectTime($effectTime)
-    {
-        $this->data['EffectTime'] = $effectTime;
-        $this->options['query']['EffectTime'] = $effectTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limitTime
-     *
-     * @return $this
-     */
-    public function withLimitTime($limitTime)
-    {
-        $this->data['LimitTime'] = $limitTime;
-        $this->options['query']['LimitTime'] = $limitTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $planTime
-     *
-     * @return $this
-     */
-    public function withPlanTime($planTime)
-    {
-        $this->data['PlanTime'] = $planTime;
-        $this->options['query']['PlanTime'] = $planTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $expireTime
-     *
-     * @return $this
-     */
-    public function withExpireTime($expireTime)
-    {
-        $this->data['ExpireTime'] = $expireTime;
-        $this->options['query']['ExpireTime'] = $expireTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId($resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        $this->options['query']['ResourceId'] = $resourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function withEventType($eventType)
-    {
-        $this->data['EventType'] = $eventType;
-        $this->options['query']['EventType'] = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

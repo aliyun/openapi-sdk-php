@@ -5,11 +5,12 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDcdnDomainsBySource
- *
  * @method string getSources()
+ * @method $this withSources($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainsBySource extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeDcdnDomainsBySource extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dcdn';
-
-    /**
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function withSources($sources)
-    {
-        $this->data['Sources'] = $sources;
-        $this->options['query']['Sources'] = $sources;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

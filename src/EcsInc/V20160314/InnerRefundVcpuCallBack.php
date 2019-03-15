@@ -5,16 +5,22 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerRefundVcpuCallBack
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getVcpuTotal()
+ * @method $this withVcpuTotal($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIsSuccess()
+ * @method $this withIsSuccess($value)
  * @method array getInstanceIds()
  */
 class InnerRefundVcpuCallBack extends Rpc
@@ -26,110 +32,6 @@ class InnerRefundVcpuCallBack extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vcpuTotal
-     *
-     * @return $this
-     */
-    public function withVcpuTotal($vcpuTotal)
-    {
-        $this->data['VcpuTotal'] = $vcpuTotal;
-        $this->options['query']['VcpuTotal'] = $vcpuTotal;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isSuccess
-     *
-     * @return $this
-     */
-    public function withIsSuccess($isSuccess)
-    {
-        $this->data['IsSuccess'] = $isSuccess;
-        $this->options['query']['IsSuccess'] = $isSuccess;
-
-        return $this;
-    }
 
     /**
      * @param array $instanceIds

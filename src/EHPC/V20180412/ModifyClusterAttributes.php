@@ -5,11 +5,12 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyClusterAttributes
- *
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class ModifyClusterAttributes extends Rpc
 {
@@ -18,43 +19,4 @@ class ModifyClusterAttributes extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

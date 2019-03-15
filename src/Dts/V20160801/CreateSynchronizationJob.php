@@ -5,17 +5,23 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSynchronizationJob
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getDestRegion()
+ * @method $this withDestRegion($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSynchronizationJobClass()
+ * @method $this withSynchronizationJobClass($value)
  * @method string getNetworkType()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSourceRegion()
+ * @method $this withSourceRegion($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  * @method string getUsedTime()
+ * @method $this withUsedTime($value)
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
@@ -28,58 +34,6 @@ class CreateSynchronizationJob extends Rpc
     public $method = 'POST';
 
     /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destRegion
-     *
-     * @return $this
-     */
-    public function withDestRegion($destRegion)
-    {
-        $this->data['DestRegion'] = $destRegion;
-        $this->options['query']['DestRegion'] = $destRegion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $synchronizationJobClass
-     *
-     * @return $this
-     */
-    public function withSynchronizationJobClass($synchronizationJobClass)
-    {
-        $this->data['SynchronizationJobClass'] = $synchronizationJobClass;
-        $this->options['query']['SynchronizationJobClass'] = $synchronizationJobClass;
-
-        return $this;
-    }
-
-    /**
      * @param string $networkType
      *
      * @return $this
@@ -88,58 +42,6 @@ class CreateSynchronizationJob extends Rpc
     {
         $this->data['NetworkType'] = $networkType;
         $this->options['query']['networkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceRegion
-     *
-     * @return $this
-     */
-    public function withSourceRegion($sourceRegion)
-    {
-        $this->data['SourceRegion'] = $sourceRegion;
-        $this->options['query']['SourceRegion'] = $sourceRegion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function withUsedTime($usedTime)
-    {
-        $this->data['UsedTime'] = $usedTime;
-        $this->options['query']['UsedTime'] = $usedTime;
 
         return $this;
     }

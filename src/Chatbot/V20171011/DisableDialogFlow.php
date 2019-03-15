@@ -5,9 +5,8 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DisableDialogFlow
- *
  * @method string getDialogId()
+ * @method $this withDialogId($value)
  */
 class DisableDialogFlow extends Rpc
 {
@@ -18,17 +17,4 @@ class DisableDialogFlow extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function withDialogId($dialogId)
-    {
-        $this->data['DialogId'] = $dialogId;
-        $this->options['query']['DialogId'] = $dialogId;
-
-        return $this;
-    }
 }

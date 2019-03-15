@@ -5,11 +5,12 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateDialog
- *
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getDialogId()
+ * @method $this withDialogId($value)
  * @method string getDialogName()
+ * @method $this withDialogName($value)
  */
 class UpdateDialog extends Rpc
 {
@@ -20,43 +21,4 @@ class UpdateDialog extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function withDialogId($dialogId)
-    {
-        $this->data['DialogId'] = $dialogId;
-        $this->options['query']['DialogId'] = $dialogId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dialogName
-     *
-     * @return $this
-     */
-    public function withDialogName($dialogName)
-    {
-        $this->data['DialogName'] = $dialogName;
-        $this->options['query']['DialogName'] = $dialogName;
-
-        return $this;
-    }
 }

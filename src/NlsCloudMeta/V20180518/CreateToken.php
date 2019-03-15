@@ -5,8 +5,6 @@ namespace AlibabaCloud\NlsCloudMeta\V20180518;
 use AlibabaCloud\Roa;
 
 /**
- * Api CreateToken
- *
  */
 class CreateToken extends Roa
 {

@@ -5,10 +5,10 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api BindSLB
- *
  * @method string getSlbID()
+ * @method $this withSlbID($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class BindSLB extends Roa
 {
@@ -21,30 +21,4 @@ class BindSLB extends Roa
     public $method = 'POST';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $slbID
-     *
-     * @return $this
-     */
-    public function withSlbID($slbID)
-    {
-        $this->data['SlbID'] = $slbID;
-        $this->pathParameters['SlbID'] = $slbID;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

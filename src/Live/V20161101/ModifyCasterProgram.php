@@ -5,11 +5,11 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyCasterProgram
- *
  * @method string getCasterId()
+ * @method $this withCasterId($value)
  * @method array getEpisode()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ModifyCasterProgram extends Rpc
 {
@@ -20,19 +20,6 @@ class ModifyCasterProgram extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function withCasterId($casterId)
-    {
-        $this->data['CasterId'] = $casterId;
-        $this->options['query']['CasterId'] = $casterId;
-
-        return $this;
-    }
 
     /**
      * @param array $episode
@@ -54,19 +41,6 @@ class ModifyCasterProgram extends Rpc
             $this->options['query']['Episode.' . ($i + 1) . '.StartTime'] = $episode[$i]['StartTime'];
             $this->options['query']['Episode.' . ($i + 1) . '.EpisodeId'] = $episode[$i]['EpisodeId'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

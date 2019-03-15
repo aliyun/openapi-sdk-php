@@ -5,15 +5,19 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerQueryExplanation
- *
  * @method string getActionType()
+ * @method $this withActionType($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getFilter()
  * @method string getEntityType()
+ * @method $this withEntityType($value)
  */
 class InnerQueryExplanation extends Rpc
 {
@@ -24,71 +28,6 @@ class InnerQueryExplanation extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function withActionType($actionType)
-    {
-        $this->data['ActionType'] = $actionType;
-        $this->options['query']['ActionType'] = $actionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 
     /**
      * @param array $filter
@@ -102,19 +41,6 @@ class InnerQueryExplanation extends Rpc
             $this->options['query']['Filter.' . ($i + 1) . '.Key'] = $filter[$i]['Key'];
             $this->options['query']['Filter.' . ($i + 1) . '.Value'] = $filter[$i]['Value'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $entityType
-     *
-     * @return $this
-     */
-    public function withEntityType($entityType)
-    {
-        $this->data['EntityType'] = $entityType;
-        $this->options['query']['EntityType'] = $entityType;
 
         return $this;
     }

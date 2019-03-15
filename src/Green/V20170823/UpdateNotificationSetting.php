@@ -5,14 +5,18 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateNotificationSetting
- *
  * @method string getRealtimeMessageList()
+ * @method $this withRealtimeMessageList($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getReminderModeList()
+ * @method $this withReminderModeList($value)
  * @method string getScheduleMessageTime()
+ * @method $this withScheduleMessageTime($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getScheduleMessageTimeZone()
+ * @method $this withScheduleMessageTimeZone($value)
  */
 class UpdateNotificationSetting extends Rpc
 {
@@ -23,82 +27,4 @@ class UpdateNotificationSetting extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $realtimeMessageList
-     *
-     * @return $this
-     */
-    public function withRealtimeMessageList($realtimeMessageList)
-    {
-        $this->data['RealtimeMessageList'] = $realtimeMessageList;
-        $this->options['query']['RealtimeMessageList'] = $realtimeMessageList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $reminderModeList
-     *
-     * @return $this
-     */
-    public function withReminderModeList($reminderModeList)
-    {
-        $this->data['ReminderModeList'] = $reminderModeList;
-        $this->options['query']['ReminderModeList'] = $reminderModeList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scheduleMessageTime
-     *
-     * @return $this
-     */
-    public function withScheduleMessageTime($scheduleMessageTime)
-    {
-        $this->data['ScheduleMessageTime'] = $scheduleMessageTime;
-        $this->options['query']['ScheduleMessageTime'] = $scheduleMessageTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scheduleMessageTimeZone
-     *
-     * @return $this
-     */
-    public function withScheduleMessageTimeZone($scheduleMessageTimeZone)
-    {
-        $this->data['ScheduleMessageTimeZone'] = $scheduleMessageTimeZone;
-        $this->options['query']['ScheduleMessageTimeZone'] = $scheduleMessageTimeZone;
-
-        return $this;
-    }
 }

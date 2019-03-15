@@ -5,13 +5,16 @@ namespace AlibabaCloud\Scdn\V20171115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateScdnDomain
- *
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSources()
+ * @method $this withSources($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class UpdateScdnDomain extends Rpc
 {
@@ -22,69 +25,4 @@ class UpdateScdnDomain extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'scdn';
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function withSources($sources)
-    {
-        $this->data['Sources'] = $sources;
-        $this->options['query']['Sources'] = $sources;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

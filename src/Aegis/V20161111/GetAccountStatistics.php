@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAccountStatistics
- *
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class GetAccountStatistics extends Rpc
 {
@@ -19,30 +19,4 @@ class GetAccountStatistics extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
 }

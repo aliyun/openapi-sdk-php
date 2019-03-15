@@ -5,18 +5,26 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeVpnConnectionLogs
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getMinutePeriod()
+ * @method $this withMinutePeriod($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getVpnConnectionId()
+ * @method $this withVpnConnectionId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getTo()
+ * @method $this withTo($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeVpnConnectionLogs extends Rpc
 {
@@ -27,134 +35,4 @@ class DescribeVpnConnectionLogs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $minutePeriod
-     *
-     * @return $this
-     */
-    public function withMinutePeriod($minutePeriod)
-    {
-        $this->data['MinutePeriod'] = $minutePeriod;
-        $this->options['query']['MinutePeriod'] = $minutePeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpnConnectionId
-     *
-     * @return $this
-     */
-    public function withVpnConnectionId($vpnConnectionId)
-    {
-        $this->data['VpnConnectionId'] = $vpnConnectionId;
-        $this->options['query']['VpnConnectionId'] = $vpnConnectionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function withTo($to)
-    {
-        $this->data['To'] = $to;
-        $this->options['query']['To'] = $to;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

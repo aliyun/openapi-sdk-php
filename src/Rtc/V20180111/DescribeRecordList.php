@@ -5,18 +5,26 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRecordList
- *
  * @method string getSortType()
+ * @method $this withSortType($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getServiceArea()
+ * @method $this withServiceArea($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getId()
+ * @method $this withId($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIdType()
+ * @method $this withIdType($value)
  * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class DescribeRecordList extends Rpc
 {
@@ -27,134 +35,4 @@ class DescribeRecordList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rtc';
-
-    /**
-     * @param string $sortType
-     *
-     * @return $this
-     */
-    public function withSortType($sortType)
-    {
-        $this->data['SortType'] = $sortType;
-        $this->options['query']['SortType'] = $sortType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceArea
-     *
-     * @return $this
-     */
-    public function withServiceArea($serviceArea)
-    {
-        $this->data['ServiceArea'] = $serviceArea;
-        $this->options['query']['ServiceArea'] = $serviceArea;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function withIdType($idType)
-    {
-        $this->data['IdType'] = $idType;
-        $this->options['query']['IdType'] = $idType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function withPageNo($pageNo)
-    {
-        $this->data['PageNo'] = $pageNo;
-        $this->options['query']['PageNo'] = $pageNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
 }

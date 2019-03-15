@@ -5,10 +5,10 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeletePornBatchDetectJob
- *
  * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class DeletePornBatchDetectJob extends Rpc
 {
@@ -19,30 +19,4 @@ class DeletePornBatchDetectJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $jobId
-     *
-     * @return $this
-     */
-    public function withJobId($jobId)
-    {
-        $this->data['JobId'] = $jobId;
-        $this->options['query']['JobId'] = $jobId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

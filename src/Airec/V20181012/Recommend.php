@@ -5,10 +5,9 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api Recommend
- *
  * @method string getReturnCount()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getIp()
  * @method string getSceneId()
  * @method string getImei()
@@ -33,19 +32,6 @@ class Recommend extends Roa
     {
         $this->data['ReturnCount'] = $returnCount;
         $this->options['query']['ReturnCount'] = $returnCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
 
         return $this;
     }

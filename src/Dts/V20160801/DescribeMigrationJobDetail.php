@@ -5,15 +5,18 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeMigrationJobDetail
- *
  * @method string getMigrationModeDataSynchronization()
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getMigrationModeDataInitialization()
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
  * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getMigrationModeStructureInitialization()
  */
 class DescribeMigrationJobDetail extends Rpc
@@ -38,19 +41,6 @@ class DescribeMigrationJobDetail extends Rpc
     }
 
     /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
      * @param string $migrationModeDataInitialization
      *
      * @return $this
@@ -59,58 +49,6 @@ class DescribeMigrationJobDetail extends Rpc
     {
         $this->data['MigrationModeDataInitialization'] = $migrationModeDataInitialization;
         $this->options['query']['MigrationMode.DataInitialization'] = $migrationModeDataInitialization;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrationJobId
-     *
-     * @return $this
-     */
-    public function withMigrationJobId($migrationJobId)
-    {
-        $this->data['MigrationJobId'] = $migrationJobId;
-        $this->options['query']['MigrationJobId'] = $migrationJobId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function withPageNum($pageNum)
-    {
-        $this->data['PageNum'] = $pageNum;
-        $this->options['query']['PageNum'] = $pageNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

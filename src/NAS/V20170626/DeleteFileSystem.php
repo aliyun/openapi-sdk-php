@@ -5,9 +5,8 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteFileSystem
- *
  * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
  */
 class DeleteFileSystem extends Rpc
 {
@@ -18,17 +17,4 @@ class DeleteFileSystem extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function withFileSystemId($fileSystemId)
-    {
-        $this->data['FileSystemId'] = $fileSystemId;
-        $this->options['query']['FileSystemId'] = $fileSystemId;
-
-        return $this;
-    }
 }

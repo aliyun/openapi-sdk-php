@@ -5,18 +5,22 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerProduce
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getOrderIdCallbackToken()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getOrderUid()
+ * @method $this withOrderUid($value)
  * @method string getAppKey()
  * @method string getProxyId()
  */
@@ -29,19 +33,6 @@ class InnerProduce extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
 
     /**
      * @param string $orderIdCallbackToken
@@ -57,45 +48,6 @@ class InnerProduce extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderId
-     *
-     * @return $this
-     */
-    public function withOrderId($orderId)
-    {
-        $this->data['OrderId'] = $orderId;
-        $this->options['query']['OrderId'] = $orderId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -104,19 +56,6 @@ class InnerProduce extends Rpc
     {
         $this->data['Channel'] = $channel;
         $this->options['query']['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -143,19 +82,6 @@ class InnerProduce extends Rpc
     {
         $this->data['Token'] = $token;
         $this->options['query']['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderUid
-     *
-     * @return $this
-     */
-    public function withOrderUid($orderUid)
-    {
-        $this->data['OrderUid'] = $orderUid;
-        $this->options['query']['OrderUid'] = $orderUid;
 
         return $this;
     }

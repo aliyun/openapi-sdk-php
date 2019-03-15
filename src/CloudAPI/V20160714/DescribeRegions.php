@@ -5,10 +5,10 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRegions
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getLanguage()
+ * @method $this withLanguage($value)
  */
 class DescribeRegions extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeRegions extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $language
-     *
-     * @return $this
-     */
-    public function withLanguage($language)
-    {
-        $this->data['Language'] = $language;
-        $this->options['query']['Language'] = $language;
-
-        return $this;
-    }
 }

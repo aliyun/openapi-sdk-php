@@ -5,19 +5,28 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeNatGateways
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpec()
+ * @method $this withSpec($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  */
 class DescribeNatGateways extends Rpc
 {
@@ -28,147 +37,4 @@ class DescribeNatGateways extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function withSpec($spec)
-    {
-        $this->data['Spec'] = $spec;
-        $this->options['query']['Spec'] = $spec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $natGatewayId
-     *
-     * @return $this
-     */
-    public function withNatGatewayId($natGatewayId)
-    {
-        $this->data['NatGatewayId'] = $natGatewayId;
-        $this->options['query']['NatGatewayId'] = $natGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
 }

@@ -5,17 +5,24 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyMedia
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getFileName()
+ * @method $this withFileName($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOssFilePath()
+ * @method $this withOssFilePath($value)
  * @method string getUploadResult()
+ * @method $this withUploadResult($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getContent()
+ * @method $this withContent($value)
  * @method string getOssFileName()
+ * @method $this withOssFileName($value)
  */
 class ModifyMedia extends Rpc
 {
@@ -26,121 +33,4 @@ class ModifyMedia extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fileName
-     *
-     * @return $this
-     */
-    public function withFileName($fileName)
-    {
-        $this->data['FileName'] = $fileName;
-        $this->options['query']['FileName'] = $fileName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ossFilePath
-     *
-     * @return $this
-     */
-    public function withOssFilePath($ossFilePath)
-    {
-        $this->data['OssFilePath'] = $ossFilePath;
-        $this->options['query']['OssFilePath'] = $ossFilePath;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uploadResult
-     *
-     * @return $this
-     */
-    public function withUploadResult($uploadResult)
-    {
-        $this->data['UploadResult'] = $uploadResult;
-        $this->options['query']['UploadResult'] = $uploadResult;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function withContent($content)
-    {
-        $this->data['Content'] = $content;
-        $this->options['query']['Content'] = $content;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ossFileName
-     *
-     * @return $this
-     */
-    public function withOssFileName($ossFileName)
-    {
-        $this->data['OssFileName'] = $ossFileName;
-        $this->options['query']['OssFileName'] = $ossFileName;
-
-        return $this;
-    }
 }

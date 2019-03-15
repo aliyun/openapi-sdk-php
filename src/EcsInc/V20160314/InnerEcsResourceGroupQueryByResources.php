@@ -5,21 +5,28 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerEcsResourceGroupQueryByResources
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getRegionNo()
+ * @method $this withRegionNo($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getBid()
+ * @method $this withBid($value)
  * @method string getProxyId()
  * @method string getResourceIds()
+ * @method $this withResourceIds($value)
  */
 class InnerEcsResourceGroupQueryByResources extends Rpc
 {
@@ -32,45 +39,6 @@ class InnerEcsResourceGroupQueryByResources extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -79,32 +47,6 @@ class InnerEcsResourceGroupQueryByResources extends Rpc
     {
         $this->data['Channel'] = $channel;
         $this->options['query']['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }
@@ -136,45 +78,6 @@ class InnerEcsResourceGroupQueryByResources extends Rpc
     }
 
     /**
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function withRegionNo($regionNo)
-    {
-        $this->data['RegionNo'] = $regionNo;
-        $this->options['query']['RegionNo'] = $regionNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
-
-        return $this;
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -183,19 +86,6 @@ class InnerEcsResourceGroupQueryByResources extends Rpc
     {
         $this->data['ProxyId'] = $proxyId;
         $this->options['query']['proxyId'] = $proxyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceIds
-     *
-     * @return $this
-     */
-    public function withResourceIds($resourceIds)
-    {
-        $this->data['ResourceIds'] = $resourceIds;
-        $this->options['query']['ResourceIds'] = $resourceIds;
 
         return $this;
     }

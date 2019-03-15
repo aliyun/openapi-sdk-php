@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BatchDeleteWhiteList
- *
  * @method string getRiskIdList()
+ * @method $this withRiskIdList($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class BatchDeleteWhiteList extends Rpc
 {
@@ -19,30 +19,4 @@ class BatchDeleteWhiteList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $riskIdList
-     *
-     * @return $this
-     */
-    public function withRiskIdList($riskIdList)
-    {
-        $this->data['RiskIdList'] = $riskIdList;
-        $this->options['query']['RiskIdList'] = $riskIdList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

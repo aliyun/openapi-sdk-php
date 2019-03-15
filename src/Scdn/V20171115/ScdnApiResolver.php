@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Scdn based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Scdn\V20171115
  *
  * @method AddScdnDomain addScdnDomain(array $options = [])
  * @method BatchDeleteScdnDomainConfigs batchDeleteScdnDomainConfigs(array $options = [])

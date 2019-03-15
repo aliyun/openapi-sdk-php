@@ -5,10 +5,10 @@ namespace AlibabaCloud\Hsm\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ReleaseInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ReleaseInstance extends Rpc
 {
@@ -19,30 +19,4 @@ class ReleaseInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'hsm';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

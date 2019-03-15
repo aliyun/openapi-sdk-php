@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PushAllTask
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTasks()
+ * @method $this withTasks($value)
  * @method string getUuids()
+ * @method $this withUuids($value)
  */
 class PushAllTask extends Rpc
 {
@@ -21,56 +23,4 @@ class PushAllTask extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tasks
-     *
-     * @return $this
-     */
-    public function withTasks($tasks)
-    {
-        $this->data['Tasks'] = $tasks;
-        $this->options['query']['Tasks'] = $tasks;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function withUuids($uuids)
-    {
-        $this->data['Uuids'] = $uuids;
-        $this->options['query']['Uuids'] = $uuids;
-
-        return $this;
-    }
 }

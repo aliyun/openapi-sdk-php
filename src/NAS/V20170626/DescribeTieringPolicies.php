@@ -5,8 +5,6 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeTieringPolicies
- *
  */
 class DescribeTieringPolicies extends Rpc
 {

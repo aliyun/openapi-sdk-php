@@ -5,11 +5,12 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api EvaluateRobotSession
- *
  * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getSatisfaction()
+ * @method $this withSatisfaction($value)
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  */
 class EvaluateRobotSession extends Rpc
 {
@@ -20,43 +21,4 @@ class EvaluateRobotSession extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccs';
-
-    /**
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function withSessionId($sessionId)
-    {
-        $this->data['SessionId'] = $sessionId;
-        $this->options['query']['SessionId'] = $sessionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $satisfaction
-     *
-     * @return $this
-     */
-    public function withSatisfaction($satisfaction)
-    {
-        $this->data['Satisfaction'] = $satisfaction;
-        $this->options['query']['Satisfaction'] = $satisfaction;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
-
-        return $this;
-    }
 }

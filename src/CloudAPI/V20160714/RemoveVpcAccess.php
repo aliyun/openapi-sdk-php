@@ -5,12 +5,14 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveVpcAccess
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getPort()
+ * @method $this withPort($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class RemoveVpcAccess extends Rpc
 {
@@ -21,56 +23,4 @@ class RemoveVpcAccess extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function withPort($port)
-    {
-        $this->data['Port'] = $port;
-        $this->options['query']['Port'] = $port;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
 }

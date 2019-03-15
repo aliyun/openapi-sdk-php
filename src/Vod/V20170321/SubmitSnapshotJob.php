@@ -5,19 +5,28 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitSnapshotJob
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getCount()
+ * @method $this withCount($value)
  * @method string getVideoId()
+ * @method $this withVideoId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpecifiedOffsetTime()
+ * @method $this withSpecifiedOffsetTime($value)
  * @method string getWidth()
+ * @method $this withWidth($value)
  * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getSpriteSnapshotConfig()
+ * @method $this withSpriteSnapshotConfig($value)
  * @method string getSnapshotTemplateId()
+ * @method $this withSnapshotTemplateId($value)
  * @method string getHeight()
+ * @method $this withHeight($value)
  */
 class SubmitSnapshotJob extends Rpc
 {
@@ -28,147 +37,4 @@ class SubmitSnapshotJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function withCount($count)
-    {
-        $this->data['Count'] = $count;
-        $this->options['query']['Count'] = $count;
-
-        return $this;
-    }
-
-    /**
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function withVideoId($videoId)
-    {
-        $this->data['VideoId'] = $videoId;
-        $this->options['query']['VideoId'] = $videoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $specifiedOffsetTime
-     *
-     * @return $this
-     */
-    public function withSpecifiedOffsetTime($specifiedOffsetTime)
-    {
-        $this->data['SpecifiedOffsetTime'] = $specifiedOffsetTime;
-        $this->options['query']['SpecifiedOffsetTime'] = $specifiedOffsetTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $width
-     *
-     * @return $this
-     */
-    public function withWidth($width)
-    {
-        $this->data['Width'] = $width;
-        $this->options['query']['Width'] = $width;
-
-        return $this;
-    }
-
-    /**
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function withInterval($interval)
-    {
-        $this->data['Interval'] = $interval;
-        $this->options['query']['Interval'] = $interval;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spriteSnapshotConfig
-     *
-     * @return $this
-     */
-    public function withSpriteSnapshotConfig($spriteSnapshotConfig)
-    {
-        $this->data['SpriteSnapshotConfig'] = $spriteSnapshotConfig;
-        $this->options['query']['SpriteSnapshotConfig'] = $spriteSnapshotConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotTemplateId
-     *
-     * @return $this
-     */
-    public function withSnapshotTemplateId($snapshotTemplateId)
-    {
-        $this->data['SnapshotTemplateId'] = $snapshotTemplateId;
-        $this->options['query']['SnapshotTemplateId'] = $snapshotTemplateId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function withHeight($height)
-    {
-        $this->data['Height'] = $height;
-        $this->options['query']['Height'] = $height;
-
-        return $this;
-    }
 }

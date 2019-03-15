@@ -5,17 +5,23 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRuleAttributes
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getListenerPort()
+ * @method $this withListenerPort($value)
  * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDomain()
+ * @method $this withDomain($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getUrl()
+ * @method $this withUrl($value)
  */
 class DescribeRuleAttributes extends Rpc
 {
@@ -36,110 +42,6 @@ class DescribeRuleAttributes extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $listenerPort
-     *
-     * @return $this
-     */
-    public function withListenerPort($listenerPort)
-    {
-        $this->data['ListenerPort'] = $listenerPort;
-        $this->options['query']['ListenerPort'] = $listenerPort;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function withLoadBalancerId($loadBalancerId)
-    {
-        $this->data['LoadBalancerId'] = $loadBalancerId;
-        $this->options['query']['LoadBalancerId'] = $loadBalancerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function withDomain($domain)
-    {
-        $this->data['Domain'] = $domain;
-        $this->options['query']['Domain'] = $domain;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $url
-     *
-     * @return $this
-     */
-    public function withUrl($url)
-    {
-        $this->data['Url'] = $url;
-        $this->options['query']['Url'] = $url;
 
         return $this;
     }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListUsersOfSkillGroup
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListUsersOfSkillGroup extends Rpc
 {
@@ -21,56 +23,4 @@ class ListUsersOfSkillGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function withSkillGroupId($skillGroupId)
-    {
-        $this->data['SkillGroupId'] = $skillGroupId;
-        $this->options['query']['SkillGroupId'] = $skillGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

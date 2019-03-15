@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Vod based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Vod\V20170321
  *
  * @method AddAITemplate addAITemplate(array $options = [])
  * @method AddCategory addCategory(array $options = [])

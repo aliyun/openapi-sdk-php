@@ -5,10 +5,9 @@ namespace AlibabaCloud\Domain\V20180208;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ReserveDomain
- *
  * @method array getChannels()
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  */
 class ReserveDomain extends Rpc
 {
@@ -29,19 +28,6 @@ class ReserveDomain extends Rpc
         foreach ($channels as $i => $iValue) {
             $this->options['query']['Channels.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
 
         return $this;
     }

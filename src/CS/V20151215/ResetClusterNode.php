@@ -5,10 +5,10 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api ResetClusterNode
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class ResetClusterNode extends Roa
 {
@@ -21,30 +21,4 @@ class ResetClusterNode extends Roa
     public $method = 'POST';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

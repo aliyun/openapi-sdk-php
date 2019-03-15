@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSet
- *
  * @method string getSetName()
+ * @method $this withSetName($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  */
 class CreateSet extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateSet extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $setName
-     *
-     * @return $this
-     */
-    public function withSetName($setName)
-    {
-        $this->data['SetName'] = $setName;
-        $this->options['query']['SetName'] = $setName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
 }

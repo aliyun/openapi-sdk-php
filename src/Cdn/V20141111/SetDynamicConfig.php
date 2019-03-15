@@ -5,16 +5,22 @@ namespace AlibabaCloud\Cdn\V20141111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetDynamicConfig
- *
  * @method string getDynamicOrigin()
+ * @method $this withDynamicOrigin($value)
  * @method string getStaticType()
+ * @method $this withStaticType($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getStaticUri()
+ * @method $this withStaticUri($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getStaticPath()
+ * @method $this withStaticPath($value)
  * @method string getDynamicCacheControl()
+ * @method $this withDynamicCacheControl($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class SetDynamicConfig extends Rpc
 {
@@ -23,108 +29,4 @@ class SetDynamicConfig extends Rpc
     public $version = '2014-11-11';
 
     public $method = 'POST';
-
-    /**
-     * @param string $dynamicOrigin
-     *
-     * @return $this
-     */
-    public function withDynamicOrigin($dynamicOrigin)
-    {
-        $this->data['DynamicOrigin'] = $dynamicOrigin;
-        $this->options['query']['DynamicOrigin'] = $dynamicOrigin;
-
-        return $this;
-    }
-
-    /**
-     * @param string $staticType
-     *
-     * @return $this
-     */
-    public function withStaticType($staticType)
-    {
-        $this->data['StaticType'] = $staticType;
-        $this->options['query']['StaticType'] = $staticType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $staticUri
-     *
-     * @return $this
-     */
-    public function withStaticUri($staticUri)
-    {
-        $this->data['StaticUri'] = $staticUri;
-        $this->options['query']['StaticUri'] = $staticUri;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $staticPath
-     *
-     * @return $this
-     */
-    public function withStaticPath($staticPath)
-    {
-        $this->data['StaticPath'] = $staticPath;
-        $this->options['query']['StaticPath'] = $staticPath;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dynamicCacheControl
-     *
-     * @return $this
-     */
-    public function withDynamicCacheControl($dynamicCacheControl)
-    {
-        $this->data['DynamicCacheControl'] = $dynamicCacheControl;
-        $this->options['query']['DynamicCacheControl'] = $dynamicCacheControl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

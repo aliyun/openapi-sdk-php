@@ -5,11 +5,11 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubscribeExportToOSS
- *
  * @method string getBucketOwnerId()
+ * @method $this withBucketOwnerId($value)
  * @method array getSubscribeType()
  * @method string getSubscribeBucket()
+ * @method $this withSubscribeBucket($value)
  */
 class SubscribeExportToOSS extends Rpc
 {
@@ -18,19 +18,6 @@ class SubscribeExportToOSS extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $bucketOwnerId
-     *
-     * @return $this
-     */
-    public function withBucketOwnerId($bucketOwnerId)
-    {
-        $this->data['BucketOwnerId'] = $bucketOwnerId;
-        $this->options['query']['BucketOwnerId'] = $bucketOwnerId;
-
-        return $this;
-    }
 
     /**
      * @param array $subscribeType
@@ -43,19 +30,6 @@ class SubscribeExportToOSS extends Rpc
         foreach ($subscribeType as $i => $iValue) {
             $this->options['query']['SubscribeType.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $subscribeBucket
-     *
-     * @return $this
-     */
-    public function withSubscribeBucket($subscribeBucket)
-    {
-        $this->data['SubscribeBucket'] = $subscribeBucket;
-        $this->options['query']['SubscribeBucket'] = $subscribeBucket;
 
         return $this;
     }

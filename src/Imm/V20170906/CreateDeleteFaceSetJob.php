@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of CreateDeleteFaceSetJob
- *
  * @method string getNotifyTopicName()
  * @method string getNotifyEndpoint()
  * @method string getProject()

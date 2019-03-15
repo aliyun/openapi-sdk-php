@@ -5,8 +5,6 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListCurrentClientVersion
- *
  */
 class ListCurrentClientVersion extends Rpc
 {

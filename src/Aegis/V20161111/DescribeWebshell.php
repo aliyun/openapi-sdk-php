@@ -5,13 +5,16 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeWebshell
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getDealed()
+ * @method $this withDealed($value)
  * @method string getTag()
+ * @method $this withTag($value)
  */
 class DescribeWebshell extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeWebshell extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function withDealed($dealed)
-    {
-        $this->data['Dealed'] = $dealed;
-        $this->options['query']['Dealed'] = $dealed;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function withTag($tag)
-    {
-        $this->data['Tag'] = $tag;
-        $this->options['query']['Tag'] = $tag;
-
-        return $this;
-    }
 }

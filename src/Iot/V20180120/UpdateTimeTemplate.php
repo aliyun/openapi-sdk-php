@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of UpdateTimeTemplate
- *
  * @method string getTemplateId()
  * @method string getName()
  * @method string getAllDay()
@@ -61,18 +59,6 @@ class UpdateTimeTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
@@ -83,18 +69,6 @@ class UpdateTimeTemplate extends RpcRequest
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAllDay() instead.
-     *
-     * @param string $allDay
-     *
-     * @return $this
-     */
-    public function setAllDay($allDay)
-    {
-        return $this->withAllDay($allDay);
     }
 
     /**

@@ -5,17 +5,21 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitGenerateTask
- *
  * @method string getImageCount()
+ * @method $this withImageCount($value)
  * @method string getActionPoint()
+ * @method $this withActionPoint($value)
  * @method string getLogoImagePath()
+ * @method $this withLogoImagePath($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method array getMajorImagePath()
  * @method string getWidth()
+ * @method $this withWidth($value)
  * @method array getCopyWrite()
  * @method array getPropertyId()
  * @method string getHeight()
+ * @method $this withHeight($value)
  */
 class SubmitGenerateTask extends Rpc
 {
@@ -28,58 +32,6 @@ class SubmitGenerateTask extends Rpc
     public $serviceCode = 'luban';
 
     /**
-     * @param string $imageCount
-     *
-     * @return $this
-     */
-    public function withImageCount($imageCount)
-    {
-        $this->data['ImageCount'] = $imageCount;
-        $this->options['query']['ImageCount'] = $imageCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $actionPoint
-     *
-     * @return $this
-     */
-    public function withActionPoint($actionPoint)
-    {
-        $this->data['ActionPoint'] = $actionPoint;
-        $this->options['query']['ActionPoint'] = $actionPoint;
-
-        return $this;
-    }
-
-    /**
-     * @param string $logoImagePath
-     *
-     * @return $this
-     */
-    public function withLogoImagePath($logoImagePath)
-    {
-        $this->data['LogoImagePath'] = $logoImagePath;
-        $this->options['query']['LogoImagePath'] = $logoImagePath;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * @param array $majorImagePath
      *
      * @return $this
@@ -90,19 +42,6 @@ class SubmitGenerateTask extends Rpc
         foreach ($majorImagePath as $i => $iValue) {
             $this->options['query']['MajorImagePath.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $width
-     *
-     * @return $this
-     */
-    public function withWidth($width)
-    {
-        $this->data['Width'] = $width;
-        $this->options['query']['Width'] = $width;
 
         return $this;
     }
@@ -133,19 +72,6 @@ class SubmitGenerateTask extends Rpc
         foreach ($propertyId as $i => $iValue) {
             $this->options['query']['PropertyId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $height
-     *
-     * @return $this
-     */
-    public function withHeight($height)
-    {
-        $this->data['Height'] = $height;
-        $this->options['query']['Height'] = $height;
 
         return $this;
     }

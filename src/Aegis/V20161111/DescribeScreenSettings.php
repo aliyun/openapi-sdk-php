@@ -5,9 +5,8 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScreenSettings
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class DescribeScreenSettings extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeScreenSettings extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

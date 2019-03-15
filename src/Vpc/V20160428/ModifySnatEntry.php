@@ -5,16 +5,22 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifySnatEntry
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSnatEntryName()
+ * @method $this withSnatEntryName($value)
  * @method string getSnatTableId()
+ * @method $this withSnatTableId($value)
  * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSnatIp()
+ * @method $this withSnatIp($value)
  */
 class ModifySnatEntry extends Rpc
 {
@@ -25,108 +31,4 @@ class ModifySnatEntry extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snatEntryName
-     *
-     * @return $this
-     */
-    public function withSnatEntryName($snatEntryName)
-    {
-        $this->data['SnatEntryName'] = $snatEntryName;
-        $this->options['query']['SnatEntryName'] = $snatEntryName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snatTableId
-     *
-     * @return $this
-     */
-    public function withSnatTableId($snatTableId)
-    {
-        $this->data['SnatTableId'] = $snatTableId;
-        $this->options['query']['SnatTableId'] = $snatTableId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snatEntryId
-     *
-     * @return $this
-     */
-    public function withSnatEntryId($snatEntryId)
-    {
-        $this->data['SnatEntryId'] = $snatEntryId;
-        $this->options['query']['SnatEntryId'] = $snatEntryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snatIp
-     *
-     * @return $this
-     */
-    public function withSnatIp($snatIp)
-    {
-        $this->data['SnatIp'] = $snatIp;
-        $this->options['query']['SnatIp'] = $snatIp;
-
-        return $this;
-    }
 }

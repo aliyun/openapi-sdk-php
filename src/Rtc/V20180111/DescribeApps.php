@@ -5,14 +5,18 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeApps
- *
  * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getOrder()
+ * @method $this withOrder($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeApps extends Rpc
 {
@@ -23,82 +27,4 @@ class DescribeApps extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rtc';
-
-    /**
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function withPageNum($pageNum)
-    {
-        $this->data['PageNum'] = $pageNum;
-        $this->options['query']['PageNum'] = $pageNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

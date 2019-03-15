@@ -5,41 +5,66 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDisks
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getFilter2Value()
  * @method string getAutoSnapshotPolicyId()
+ * @method $this withAutoSnapshotPolicyId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getDiskName()
+ * @method $this withDiskName($value)
  * @method string getDeleteAutoSnapshot()
+ * @method $this withDeleteAutoSnapshot($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDiskChargeType()
+ * @method $this withDiskChargeType($value)
  * @method string getLockReason()
+ * @method $this withLockReason($value)
  * @method string getFilter1Key()
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDiskIds()
+ * @method $this withDiskIds($value)
  * @method array getTag()
  * @method string getDeleteWithInstance()
+ * @method $this withDeleteWithInstance($value)
  * @method string getEnableAutoSnapshot()
+ * @method $this withEnableAutoSnapshot($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getFilter1Value()
  * @method string getPortable()
+ * @method $this withPortable($value)
  * @method string getEnableAutomatedSnapshotPolicy()
+ * @method $this withEnableAutomatedSnapshotPolicy($value)
  * @method string getFilter2Key()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDiskType()
+ * @method $this withDiskType($value)
  * @method array getAdditionalAttributes()
  * @method string getEnableShared()
+ * @method $this withEnableShared($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getEncrypted()
+ * @method $this withEncrypted($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getKMSKeyId()
+ * @method $this withKMSKeyId($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeDisks extends Rpc
 {
@@ -50,32 +75,6 @@ class DescribeDisks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function withSnapshotId($snapshotId)
-    {
-        $this->data['SnapshotId'] = $snapshotId;
-        $this->options['query']['SnapshotId'] = $snapshotId;
-
-        return $this;
-    }
 
     /**
      * @param string $filter2Value
@@ -91,97 +90,6 @@ class DescribeDisks extends Rpc
     }
 
     /**
-     * @param string $autoSnapshotPolicyId
-     *
-     * @return $this
-     */
-    public function withAutoSnapshotPolicyId($autoSnapshotPolicyId)
-    {
-        $this->data['AutoSnapshotPolicyId'] = $autoSnapshotPolicyId;
-        $this->options['query']['AutoSnapshotPolicyId'] = $autoSnapshotPolicyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $diskName
-     *
-     * @return $this
-     */
-    public function withDiskName($diskName)
-    {
-        $this->data['DiskName'] = $diskName;
-        $this->options['query']['DiskName'] = $diskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $deleteAutoSnapshot
-     *
-     * @return $this
-     */
-    public function withDeleteAutoSnapshot($deleteAutoSnapshot)
-    {
-        $this->data['DeleteAutoSnapshot'] = $deleteAutoSnapshot;
-        $this->options['query']['DeleteAutoSnapshot'] = $deleteAutoSnapshot;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $diskChargeType
-     *
-     * @return $this
-     */
-    public function withDiskChargeType($diskChargeType)
-    {
-        $this->data['DiskChargeType'] = $diskChargeType;
-        $this->options['query']['DiskChargeType'] = $diskChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lockReason
-     *
-     * @return $this
-     */
-    public function withLockReason($lockReason)
-    {
-        $this->data['LockReason'] = $lockReason;
-        $this->options['query']['LockReason'] = $lockReason;
-
-        return $this;
-    }
-
-    /**
      * @param string $filter1Key
      *
      * @return $this
@@ -190,32 +98,6 @@ class DescribeDisks extends Rpc
     {
         $this->data['Filter1Key'] = $filter1Key;
         $this->options['query']['Filter.1.Key'] = $filter1Key;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $diskIds
-     *
-     * @return $this
-     */
-    public function withDiskIds($diskIds)
-    {
-        $this->data['DiskIds'] = $diskIds;
-        $this->options['query']['DiskIds'] = $diskIds;
 
         return $this;
     }
@@ -237,71 +119,6 @@ class DescribeDisks extends Rpc
     }
 
     /**
-     * @param string $deleteWithInstance
-     *
-     * @return $this
-     */
-    public function withDeleteWithInstance($deleteWithInstance)
-    {
-        $this->data['DeleteWithInstance'] = $deleteWithInstance;
-        $this->options['query']['DeleteWithInstance'] = $deleteWithInstance;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableAutoSnapshot
-     *
-     * @return $this
-     */
-    public function withEnableAutoSnapshot($enableAutoSnapshot)
-    {
-        $this->data['EnableAutoSnapshot'] = $enableAutoSnapshot;
-        $this->options['query']['EnableAutoSnapshot'] = $enableAutoSnapshot;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $filter1Value
      *
      * @return $this
@@ -310,32 +127,6 @@ class DescribeDisks extends Rpc
     {
         $this->data['Filter1Value'] = $filter1Value;
         $this->options['query']['Filter.1.Value'] = $filter1Value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $portable
-     *
-     * @return $this
-     */
-    public function withPortable($portable)
-    {
-        $this->data['Portable'] = $portable;
-        $this->options['query']['Portable'] = $portable;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableAutomatedSnapshotPolicy
-     *
-     * @return $this
-     */
-    public function withEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy)
-    {
-        $this->data['EnableAutomatedSnapshotPolicy'] = $enableAutomatedSnapshotPolicy;
-        $this->options['query']['EnableAutomatedSnapshotPolicy'] = $enableAutomatedSnapshotPolicy;
 
         return $this;
     }
@@ -354,32 +145,6 @@ class DescribeDisks extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $diskType
-     *
-     * @return $this
-     */
-    public function withDiskType($diskType)
-    {
-        $this->data['DiskType'] = $diskType;
-        $this->options['query']['DiskType'] = $diskType;
-
-        return $this;
-    }
-
-    /**
      * @param array $additionalAttributes
      *
      * @return $this
@@ -390,97 +155,6 @@ class DescribeDisks extends Rpc
         foreach ($additionalAttributes as $i => $iValue) {
             $this->options['query']['AdditionalAttributes.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableShared
-     *
-     * @return $this
-     */
-    public function withEnableShared($enableShared)
-    {
-        $this->data['EnableShared'] = $enableShared;
-        $this->options['query']['EnableShared'] = $enableShared;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $encrypted
-     *
-     * @return $this
-     */
-    public function withEncrypted($encrypted)
-    {
-        $this->data['Encrypted'] = $encrypted;
-        $this->options['query']['Encrypted'] = $encrypted;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function withCategory($category)
-    {
-        $this->data['Category'] = $category;
-        $this->options['query']['Category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @param string $kMSKeyId
-     *
-     * @return $this
-     */
-    public function withKMSKeyId($kMSKeyId)
-    {
-        $this->data['KMSKeyId'] = $kMSKeyId;
-        $this->options['query']['KMSKeyId'] = $kMSKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
 
         return $this;
     }

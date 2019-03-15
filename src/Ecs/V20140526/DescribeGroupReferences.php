@@ -5,8 +5,6 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeGroupReferences
- *
  * @method array getGroupNo()
  */
 class DescribeGroupReferences extends Rpc

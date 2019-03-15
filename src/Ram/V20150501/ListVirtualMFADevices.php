@@ -5,8 +5,6 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListVirtualMFADevices
- *
  */
 class ListVirtualMFADevices extends Rpc
 {

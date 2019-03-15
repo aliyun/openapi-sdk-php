@@ -5,21 +5,32 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateMonitorInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getPassWord()
+ * @method $this withPassWord($value)
  * @method string getConnectionInfo()
+ * @method $this withConnectionInfo($value)
  * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getEngine()
+ * @method $this withEngine($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class CreateMonitorInstance extends Rpc
 {
@@ -30,173 +41,4 @@ class CreateMonitorInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $passWord
-     *
-     * @return $this
-     */
-    public function withPassWord($passWord)
-    {
-        $this->data['PassWord'] = $passWord;
-        $this->options['query']['PassWord'] = $passWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $connectionInfo
-     *
-     * @return $this
-     */
-    public function withConnectionInfo($connectionInfo)
-    {
-        $this->data['ConnectionInfo'] = $connectionInfo;
-        $this->options['query']['ConnectionInfo'] = $connectionInfo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function withAccountName($accountName)
-    {
-        $this->data['AccountName'] = $accountName;
-        $this->options['query']['AccountName'] = $accountName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engine
-     *
-     * @return $this
-     */
-    public function withEngine($engine)
-    {
-        $this->data['Engine'] = $engine;
-        $this->options['query']['Engine'] = $engine;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
 }

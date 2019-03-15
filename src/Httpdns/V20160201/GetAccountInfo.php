@@ -5,8 +5,6 @@ namespace AlibabaCloud\Httpdns\V20160201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAccountInfo
- *
  */
 class GetAccountInfo extends Rpc
 {

@@ -5,12 +5,14 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateGroupFacesJob
- *
  * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
  * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  */
 class CreateGroupFacesJob extends Rpc
 {
@@ -21,56 +23,4 @@ class CreateGroupFacesJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function withNotifyTopicName($notifyTopicName)
-    {
-        $this->data['NotifyTopicName'] = $notifyTopicName;
-        $this->options['query']['NotifyTopicName'] = $notifyTopicName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function withNotifyEndpoint($notifyEndpoint)
-    {
-        $this->data['NotifyEndpoint'] = $notifyEndpoint;
-        $this->options['query']['NotifyEndpoint'] = $notifyEndpoint;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
 }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the EHPC based on the method name as the Api name.
  *
- * @package   AlibabaCloud\EHPC\V20180412
  *
  * @method AddContainerApp addContainerApp(array $options = [])
  * @method AddLocalNodes addLocalNodes(array $options = [])

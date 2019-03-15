@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of UpdateTaskParam
- *
  * @method array getMixPanes()
  * @method string getTaskId()
  * @method string getOwnerId()
@@ -82,18 +80,6 @@ class UpdateTaskParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
-    }
-
-    /**
      * @param string $taskId
      *
      * @return $this
@@ -157,18 +143,6 @@ class UpdateTaskParam extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
-    }
-
-    /**
      * @param string $appId
      *
      * @return $this
@@ -179,18 +153,6 @@ class UpdateTaskParam extends RpcRequest
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**

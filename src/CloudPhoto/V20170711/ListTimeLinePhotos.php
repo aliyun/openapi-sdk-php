@@ -5,17 +5,24 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListTimeLinePhotos
- *
  * @method string getSize()
+ * @method $this withSize($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getPage()
+ * @method $this withPage($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getFilterBy()
+ * @method $this withFilterBy($value)
  * @method string getDirection()
+ * @method $this withDirection($value)
  * @method string getOrder()
+ * @method $this withOrder($value)
  */
 class ListTimeLinePhotos extends Rpc
 {
@@ -28,121 +35,4 @@ class ListTimeLinePhotos extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function withSize($size)
-    {
-        $this->data['Size'] = $size;
-        $this->options['query']['Size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function withPage($page)
-    {
-        $this->data['Page'] = $page;
-        $this->options['query']['Page'] = $page;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $filterBy
-     *
-     * @return $this
-     */
-    public function withFilterBy($filterBy)
-    {
-        $this->data['FilterBy'] = $filterBy;
-        $this->options['query']['FilterBy'] = $filterBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function withDirection($direction)
-    {
-        $this->data['Direction'] = $direction;
-        $this->options['query']['Direction'] = $direction;
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
-
-        return $this;
-    }
 }

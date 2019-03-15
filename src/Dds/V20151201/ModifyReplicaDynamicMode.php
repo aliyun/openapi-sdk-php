@@ -5,15 +5,20 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyReplicaDynamicMode
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDynamicMode()
+ * @method $this withDynamicMode($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getReplicaId()
+ * @method $this withReplicaId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ModifyReplicaDynamicMode extends Rpc
 {
@@ -24,95 +29,4 @@ class ModifyReplicaDynamicMode extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dynamicMode
-     *
-     * @return $this
-     */
-    public function withDynamicMode($dynamicMode)
-    {
-        $this->data['DynamicMode'] = $dynamicMode;
-        $this->options['query']['DynamicMode'] = $dynamicMode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $replicaId
-     *
-     * @return $this
-     */
-    public function withReplicaId($replicaId)
-    {
-        $this->data['ReplicaId'] = $replicaId;
-        $this->options['query']['ReplicaId'] = $replicaId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

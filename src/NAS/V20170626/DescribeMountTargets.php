@@ -5,12 +5,14 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeMountTargets
- *
  * @method string getMountTargetDomain()
+ * @method $this withMountTargetDomain($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
  */
 class DescribeMountTargets extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeMountTargets extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $mountTargetDomain
-     *
-     * @return $this
-     */
-    public function withMountTargetDomain($mountTargetDomain)
-    {
-        $this->data['MountTargetDomain'] = $mountTargetDomain;
-        $this->options['query']['MountTargetDomain'] = $mountTargetDomain;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function withFileSystemId($fileSystemId)
-    {
-        $this->data['FileSystemId'] = $fileSystemId;
-        $this->options['query']['FileSystemId'] = $fileSystemId;
-
-        return $this;
-    }
 }

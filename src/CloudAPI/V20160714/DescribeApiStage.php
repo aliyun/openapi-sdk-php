@@ -5,11 +5,12 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeApiStage
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getStageId()
+ * @method $this withStageId($value)
  */
 class DescribeApiStage extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeApiStage extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stageId
-     *
-     * @return $this
-     */
-    public function withStageId($stageId)
-    {
-        $this->data['StageId'] = $stageId;
-        $this->options['query']['StageId'] = $stageId;
-
-        return $this;
-    }
 }

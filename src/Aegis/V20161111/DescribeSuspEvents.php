@@ -5,19 +5,28 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeSuspEvents
- *
  * @method string getAlarmUniqueInfo()
+ * @method $this withAlarmUniqueInfo($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDealed()
+ * @method $this withDealed($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getLevels()
+ * @method $this withLevels($value)
  * @method string getParentEventTypes()
+ * @method $this withParentEventTypes($value)
  */
 class DescribeSuspEvents extends Rpc
 {
@@ -28,147 +37,4 @@ class DescribeSuspEvents extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $alarmUniqueInfo
-     *
-     * @return $this
-     */
-    public function withAlarmUniqueInfo($alarmUniqueInfo)
-    {
-        $this->data['AlarmUniqueInfo'] = $alarmUniqueInfo;
-        $this->options['query']['AlarmUniqueInfo'] = $alarmUniqueInfo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function withDealed($dealed)
-    {
-        $this->data['Dealed'] = $dealed;
-        $this->options['query']['Dealed'] = $dealed;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $levels
-     *
-     * @return $this
-     */
-    public function withLevels($levels)
-    {
-        $this->data['Levels'] = $levels;
-        $this->options['query']['Levels'] = $levels;
-
-        return $this;
-    }
-
-    /**
-     * @param string $parentEventTypes
-     *
-     * @return $this
-     */
-    public function withParentEventTypes($parentEventTypes)
-    {
-        $this->data['ParentEventTypes'] = $parentEventTypes;
-        $this->options['query']['ParentEventTypes'] = $parentEventTypes;
-
-        return $this;
-    }
 }

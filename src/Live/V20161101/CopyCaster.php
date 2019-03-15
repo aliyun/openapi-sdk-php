@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CopyCaster
- *
  * @method string getSrcCasterId()
+ * @method $this withSrcCasterId($value)
  * @method string getCasterName()
+ * @method $this withCasterName($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CopyCaster extends Rpc
 {
@@ -21,56 +23,4 @@ class CopyCaster extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $srcCasterId
-     *
-     * @return $this
-     */
-    public function withSrcCasterId($srcCasterId)
-    {
-        $this->data['SrcCasterId'] = $srcCasterId;
-        $this->options['query']['SrcCasterId'] = $srcCasterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $casterName
-     *
-     * @return $this
-     */
-    public function withCasterName($casterName)
-    {
-        $this->data['CasterName'] = $casterName;
-        $this->options['query']['CasterName'] = $casterName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

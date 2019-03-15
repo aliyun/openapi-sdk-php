@@ -5,15 +5,20 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteIPv6TranslatorEntry
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIpv6TranslatorEntryId()
+ * @method $this withIpv6TranslatorEntryId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DeleteIPv6TranslatorEntry extends Rpc
 {
@@ -24,95 +29,4 @@ class DeleteIPv6TranslatorEntry extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6TranslatorEntryId
-     *
-     * @return $this
-     */
-    public function withIpv6TranslatorEntryId($ipv6TranslatorEntryId)
-    {
-        $this->data['Ipv6TranslatorEntryId'] = $ipv6TranslatorEntryId;
-        $this->options['query']['Ipv6TranslatorEntryId'] = $ipv6TranslatorEntryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6TranslatorId
-     *
-     * @return $this
-     */
-    public function withIpv6TranslatorId($ipv6TranslatorId)
-    {
-        $this->data['Ipv6TranslatorId'] = $ipv6TranslatorId;
-        $this->options['query']['Ipv6TranslatorId'] = $ipv6TranslatorId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Alidns based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Alidns\V20150109
  *
  * @method AddDomain addDomain(array $options = [])
  * @method AddDomainGroup addDomainGroup(array $options = [])

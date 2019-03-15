@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api TextScan
- *
  * @method string getClientInfo()
  */
 class TextScan extends Roa

@@ -5,17 +5,24 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyVpcAttribute
- *
  * @method string getVpcName()
+ * @method $this withVpcName($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
  * @method string getEnableIPv6()
+ * @method $this withEnableIPv6($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ModifyVpcAttribute extends Rpc
 {
@@ -26,121 +33,4 @@ class ModifyVpcAttribute extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $vpcName
-     *
-     * @return $this
-     */
-    public function withVpcName($vpcName)
-    {
-        $this->data['VpcName'] = $vpcName;
-        $this->options['query']['VpcName'] = $vpcName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function withCidrBlock($cidrBlock)
-    {
-        $this->data['CidrBlock'] = $cidrBlock;
-        $this->options['query']['CidrBlock'] = $cidrBlock;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableIPv6
-     *
-     * @return $this
-     */
-    public function withEnableIPv6($enableIPv6)
-    {
-        $this->data['EnableIPv6'] = $enableIPv6;
-        $this->options['query']['EnableIPv6'] = $enableIPv6;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

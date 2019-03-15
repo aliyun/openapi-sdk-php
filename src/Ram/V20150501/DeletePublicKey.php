@@ -5,10 +5,10 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeletePublicKey
- *
  * @method string getUserPublicKeyId()
+ * @method $this withUserPublicKeyId($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class DeletePublicKey extends Rpc
 {
@@ -19,30 +19,4 @@ class DeletePublicKey extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $userPublicKeyId
-     *
-     * @return $this
-     */
-    public function withUserPublicKeyId($userPublicKeyId)
-    {
-        $this->data['UserPublicKeyId'] = $userPublicKeyId;
-        $this->options['query']['UserPublicKeyId'] = $userPublicKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

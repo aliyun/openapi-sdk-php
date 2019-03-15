@@ -5,14 +5,18 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeIpControls
- *
  * @method string getIpControlId()
+ * @method $this withIpControlId($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getIpControlName()
+ * @method $this withIpControlName($value)
  * @method string getIpControlType()
+ * @method $this withIpControlType($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeIpControls extends Rpc
 {
@@ -23,82 +27,4 @@ class DescribeIpControls extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $ipControlId
-     *
-     * @return $this
-     */
-    public function withIpControlId($ipControlId)
-    {
-        $this->data['IpControlId'] = $ipControlId;
-        $this->options['query']['IpControlId'] = $ipControlId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipControlName
-     *
-     * @return $this
-     */
-    public function withIpControlName($ipControlName)
-    {
-        $this->data['IpControlName'] = $ipControlName;
-        $this->options['query']['IpControlName'] = $ipControlName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipControlType
-     *
-     * @return $this
-     */
-    public function withIpControlType($ipControlType)
-    {
-        $this->data['IpControlType'] = $ipControlType;
-        $this->options['query']['IpControlType'] = $ipControlType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

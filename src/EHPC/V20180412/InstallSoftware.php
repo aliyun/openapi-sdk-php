@@ -5,10 +5,10 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InstallSoftware
- *
  * @method string getApplication()
+ * @method $this withApplication($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class InstallSoftware extends Rpc
 {
@@ -17,30 +17,4 @@ class InstallSoftware extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $application
-     *
-     * @return $this
-     */
-    public function withApplication($application)
-    {
-        $this->data['Application'] = $application;
-        $this->options['query']['Application'] = $application;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

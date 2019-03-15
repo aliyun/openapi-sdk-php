@@ -5,15 +5,20 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddIdentityCertifiedForBidUser
- *
  * @method string getBidType()
+ * @method $this withBidType($value)
  * @method string getLicenseNumber()
+ * @method $this withLicenseNumber($value)
  * @method string getLicenseType()
+ * @method $this withLicenseType($value)
  * @method string getPhone()
+ * @method $this withPhone($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPK()
+ * @method $this withPK($value)
  * @method string getIsEnterprise()
+ * @method $this withIsEnterprise($value)
  */
 class AddIdentityCertifiedForBidUser extends Rpc
 {
@@ -24,95 +29,4 @@ class AddIdentityCertifiedForBidUser extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'crm';
-
-    /**
-     * @param string $bidType
-     *
-     * @return $this
-     */
-    public function withBidType($bidType)
-    {
-        $this->data['BidType'] = $bidType;
-        $this->options['query']['BidType'] = $bidType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $licenseNumber
-     *
-     * @return $this
-     */
-    public function withLicenseNumber($licenseNumber)
-    {
-        $this->data['LicenseNumber'] = $licenseNumber;
-        $this->options['query']['LicenseNumber'] = $licenseNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $licenseType
-     *
-     * @return $this
-     */
-    public function withLicenseType($licenseType)
-    {
-        $this->data['LicenseType'] = $licenseType;
-        $this->options['query']['LicenseType'] = $licenseType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $phone
-     *
-     * @return $this
-     */
-    public function withPhone($phone)
-    {
-        $this->data['Phone'] = $phone;
-        $this->options['query']['Phone'] = $phone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function withPK($pK)
-    {
-        $this->data['PK'] = $pK;
-        $this->options['query']['PK'] = $pK;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isEnterprise
-     *
-     * @return $this
-     */
-    public function withIsEnterprise($isEnterprise)
-    {
-        $this->data['IsEnterprise'] = $isEnterprise;
-        $this->options['query']['IsEnterprise'] = $isEnterprise;
-
-        return $this;
-    }
 }

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api CreateInstance
- *
  */
 class CreateInstance extends Roa
 {

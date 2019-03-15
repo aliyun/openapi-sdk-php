@@ -5,9 +5,8 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAliyunPkByAliyunId
- *
  * @method string getAliyunId()
+ * @method $this withAliyunId($value)
  */
 class GetAliyunPkByAliyunId extends Rpc
 {
@@ -18,17 +17,4 @@ class GetAliyunPkByAliyunId extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'crm';
-
-    /**
-     * @param string $aliyunId
-     *
-     * @return $this
-     */
-    public function withAliyunId($aliyunId)
-    {
-        $this->data['AliyunId'] = $aliyunId;
-        $this->options['query']['AliyunId'] = $aliyunId;
-
-        return $this;
-    }
 }

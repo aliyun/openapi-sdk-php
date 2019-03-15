@@ -5,9 +5,8 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ReplaceCredential
- *
  * @method string getCredentialId()
+ * @method $this withCredentialId($value)
  */
 class ReplaceCredential extends Rpc
 {
@@ -18,17 +17,4 @@ class ReplaceCredential extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $credentialId
-     *
-     * @return $this
-     */
-    public function withCredentialId($credentialId)
-    {
-        $this->data['CredentialId'] = $credentialId;
-        $this->options['query']['CredentialId'] = $credentialId;
-
-        return $this;
-    }
 }

@@ -5,13 +5,16 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListImages
- *
  * @method string getMarker()
+ * @method $this withMarker($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
  */
 class ListImages extends Rpc
 {
@@ -22,69 +25,4 @@ class ListImages extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $createTimeStart
-     *
-     * @return $this
-     */
-    public function withCreateTimeStart($createTimeStart)
-    {
-        $this->data['CreateTimeStart'] = $createTimeStart;
-        $this->options['query']['CreateTimeStart'] = $createTimeStart;
-
-        return $this;
-    }
 }

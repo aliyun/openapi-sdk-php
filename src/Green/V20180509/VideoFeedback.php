@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api VideoFeedback
- *
  * @method string getClientInfo()
  */
 class VideoFeedback extends Roa

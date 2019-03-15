@@ -5,17 +5,19 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerImageModify
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOsTypeId()
  * @method string getChannel()
  * @method string getRemark()
  * @method string getImageSize()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVirtBaseImageId()
  * @method string getOperator()
  * @method string getImageCategory()
@@ -24,6 +26,7 @@ use AlibabaCloud\Rpc;
  * @method string getImageName()
  * @method string getIsPublic()
  * @method string getImageVersion()
+ * @method $this withImageVersion($value)
  * @method string getAliUid()
  * @method string getBid()
  * @method string getProxyId()
@@ -39,19 +42,6 @@ class InnerImageModify extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $imageId
      *
      * @return $this
@@ -60,32 +50,6 @@ class InnerImageModify extends Rpc
     {
         $this->data['ImageId'] = $imageId;
         $this->options['query']['imageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -138,19 +102,6 @@ class InnerImageModify extends Rpc
     {
         $this->data['ImageSize'] = $imageSize;
         $this->options['query']['imageSize'] = $imageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -242,19 +193,6 @@ class InnerImageModify extends Rpc
     {
         $this->data['IsPublic'] = $isPublic;
         $this->options['query']['isPublic'] = $isPublic;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageVersion
-     *
-     * @return $this
-     */
-    public function withImageVersion($imageVersion)
-    {
-        $this->data['ImageVersion'] = $imageVersion;
-        $this->options['query']['ImageVersion'] = $imageVersion;
 
         return $this;
     }

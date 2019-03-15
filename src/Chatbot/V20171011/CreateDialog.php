@@ -5,11 +5,12 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateDialog
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getDialogName()
+ * @method $this withDialogName($value)
  */
 class CreateDialog extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateDialog extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dialogName
-     *
-     * @return $this
-     */
-    public function withDialogName($dialogName)
-    {
-        $this->data['DialogName'] = $dialogName;
-        $this->options['query']['DialogName'] = $dialogName;
-
-        return $this;
-    }
 }

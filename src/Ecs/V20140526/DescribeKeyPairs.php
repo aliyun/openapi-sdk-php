@@ -5,17 +5,23 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeKeyPairs
- *
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getKeyPairFingerPrint()
+ * @method $this withKeyPairFingerPrint($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
  * @method array getTag()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeKeyPairs extends Rpc
 {
@@ -26,84 +32,6 @@ class DescribeKeyPairs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyPairFingerPrint
-     *
-     * @return $this
-     */
-    public function withKeyPairFingerPrint($keyPairFingerPrint)
-    {
-        $this->data['KeyPairFingerPrint'] = $keyPairFingerPrint;
-        $this->options['query']['KeyPairFingerPrint'] = $keyPairFingerPrint;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function withKeyPairName($keyPairName)
-    {
-        $this->data['KeyPairName'] = $keyPairName;
-        $this->options['query']['KeyPairName'] = $keyPairName;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -117,32 +45,6 @@ class DescribeKeyPairs extends Rpc
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }

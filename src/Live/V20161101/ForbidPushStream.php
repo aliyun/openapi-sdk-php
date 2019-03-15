@@ -5,13 +5,16 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ForbidPushStream
- *
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRoomId()
+ * @method $this withRoomId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class ForbidPushStream extends Rpc
 {
@@ -22,69 +25,4 @@ class ForbidPushStream extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function withRoomId($roomId)
-    {
-        $this->data['RoomId'] = $roomId;
-        $this->options['query']['RoomId'] = $roomId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
 }

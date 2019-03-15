@@ -5,13 +5,16 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api LaunchShortMessageAppraise
- *
  * @method string getAcid()
+ * @method $this withAcid($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getContactType()
+ * @method $this withContactType($value)
  * @method string getPhoneNumbers()
+ * @method $this withPhoneNumbers($value)
  * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
  */
 class LaunchShortMessageAppraise extends Rpc
 {
@@ -22,69 +25,4 @@ class LaunchShortMessageAppraise extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $acid
-     *
-     * @return $this
-     */
-    public function withAcid($acid)
-    {
-        $this->data['Acid'] = $acid;
-        $this->options['query']['Acid'] = $acid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function withContactType($contactType)
-    {
-        $this->data['ContactType'] = $contactType;
-        $this->options['query']['ContactType'] = $contactType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $phoneNumbers
-     *
-     * @return $this
-     */
-    public function withPhoneNumbers($phoneNumbers)
-    {
-        $this->data['PhoneNumbers'] = $phoneNumbers;
-        $this->options['query']['PhoneNumbers'] = $phoneNumbers;
-
-        return $this;
-    }
-
-    /**
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function withSkillGroupId($skillGroupId)
-    {
-        $this->data['SkillGroupId'] = $skillGroupId;
-        $this->options['query']['SkillGroupId'] = $skillGroupId;
-
-        return $this;
-    }
 }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PublishUnionCasService
- *
  * @method string getCasCsbName()
+ * @method $this withCasCsbName($value)
  * @method string getData()
+ * @method $this withData($value)
  */
 class PublishUnionCasService extends Rpc
 {
@@ -19,30 +19,4 @@ class PublishUnionCasService extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $casCsbName
-     *
-     * @return $this
-     */
-    public function withCasCsbName($casCsbName)
-    {
-        $this->data['CasCsbName'] = $casCsbName;
-        $this->options['query']['CasCsbName'] = $casCsbName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function withData($data)
-    {
-        $this->data['Data'] = $data;
-        $this->options['query']['Data'] = $data;
-
-        return $this;
-    }
 }

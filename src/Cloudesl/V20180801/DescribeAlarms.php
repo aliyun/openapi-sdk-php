@@ -5,17 +5,24 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAlarms
- *
  * @method string getErrorType()
+ * @method $this withErrorType($value)
  * @method string getToAlarmTime()
+ * @method $this withToAlarmTime($value)
  * @method string getAlarmType()
+ * @method $this withAlarmType($value)
  * @method string getFromAlarmTime()
+ * @method $this withFromAlarmTime($value)
  * @method string getAlarmId()
+ * @method $this withAlarmId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStoreId()
+ * @method $this withStoreId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getAlarmStatus()
+ * @method $this withAlarmStatus($value)
  */
 class DescribeAlarms extends Rpc
 {
@@ -24,121 +31,4 @@ class DescribeAlarms extends Rpc
     public $version = '2018-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $errorType
-     *
-     * @return $this
-     */
-    public function withErrorType($errorType)
-    {
-        $this->data['ErrorType'] = $errorType;
-        $this->options['query']['ErrorType'] = $errorType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $toAlarmTime
-     *
-     * @return $this
-     */
-    public function withToAlarmTime($toAlarmTime)
-    {
-        $this->data['ToAlarmTime'] = $toAlarmTime;
-        $this->options['query']['ToAlarmTime'] = $toAlarmTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alarmType
-     *
-     * @return $this
-     */
-    public function withAlarmType($alarmType)
-    {
-        $this->data['AlarmType'] = $alarmType;
-        $this->options['query']['AlarmType'] = $alarmType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromAlarmTime
-     *
-     * @return $this
-     */
-    public function withFromAlarmTime($fromAlarmTime)
-    {
-        $this->data['FromAlarmTime'] = $fromAlarmTime;
-        $this->options['query']['FromAlarmTime'] = $fromAlarmTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alarmId
-     *
-     * @return $this
-     */
-    public function withAlarmId($alarmId)
-    {
-        $this->data['AlarmId'] = $alarmId;
-        $this->options['query']['AlarmId'] = $alarmId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function withStoreId($storeId)
-    {
-        $this->data['StoreId'] = $storeId;
-        $this->options['query']['StoreId'] = $storeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alarmStatus
-     *
-     * @return $this
-     */
-    public function withAlarmStatus($alarmStatus)
-    {
-        $this->data['AlarmStatus'] = $alarmStatus;
-        $this->options['query']['AlarmStatus'] = $alarmStatus;
-
-        return $this;
-    }
 }

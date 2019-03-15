@@ -5,12 +5,14 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MarkAuditContent
- *
  * @method string getAuditIllegalReasons()
+ * @method $this withAuditIllegalReasons($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getAuditResult()
+ * @method $this withAuditResult($value)
  * @method string getIds()
+ * @method $this withIds($value)
  */
 class MarkAuditContent extends Rpc
 {
@@ -21,56 +23,4 @@ class MarkAuditContent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $auditIllegalReasons
-     *
-     * @return $this
-     */
-    public function withAuditIllegalReasons($auditIllegalReasons)
-    {
-        $this->data['AuditIllegalReasons'] = $auditIllegalReasons;
-        $this->options['query']['AuditIllegalReasons'] = $auditIllegalReasons;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $auditResult
-     *
-     * @return $this
-     */
-    public function withAuditResult($auditResult)
-    {
-        $this->data['AuditResult'] = $auditResult;
-        $this->options['query']['AuditResult'] = $auditResult;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function withIds($ids)
-    {
-        $this->data['Ids'] = $ids;
-        $this->options['query']['Ids'] = $ids;
-
-        return $this;
-    }
 }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the UbsmsInner based on the method name as the Api name.
  *
- * @package   AlibabaCloud\UbsmsInner\V20150623
  *
  * @method DescribeBidRelationByBid describeBidRelationByBid(array $options = [])
  * @method DescribeBidUserBusinessStatus describeBidUserBusinessStatus(array $options = [])

@@ -5,15 +5,20 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRecommendInstanceType
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getScene()
+ * @method $this withScene($value)
  */
 class DescribeRecommendInstanceType extends Rpc
 {
@@ -24,95 +29,4 @@ class DescribeRecommendInstanceType extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function withScene($scene)
-    {
-        $this->data['Scene'] = $scene;
-        $this->options['query']['Scene'] = $scene;
-
-        return $this;
-    }
 }

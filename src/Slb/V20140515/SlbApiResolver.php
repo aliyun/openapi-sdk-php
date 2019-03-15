@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Slb based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Slb\V20140515
  *
  * @method AddAccessControlListEntry addAccessControlListEntry(array $options = [])
  * @method AddBackendServers addBackendServers(array $options = [])

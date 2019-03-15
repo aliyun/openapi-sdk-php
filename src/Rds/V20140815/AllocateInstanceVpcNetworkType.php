@@ -5,17 +5,24 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AllocateInstanceVpcNetworkType
- *
  * @method string getTargetVpcId()
+ * @method $this withTargetVpcId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTargetZoneId()
+ * @method $this withTargetZoneId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getTargetRegionId()
+ * @method $this withTargetRegionId($value)
  * @method string getTargetVSwitchId()
+ * @method $this withTargetVSwitchId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class AllocateInstanceVpcNetworkType extends Rpc
 {
@@ -26,121 +33,4 @@ class AllocateInstanceVpcNetworkType extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $targetVpcId
-     *
-     * @return $this
-     */
-    public function withTargetVpcId($targetVpcId)
-    {
-        $this->data['TargetVpcId'] = $targetVpcId;
-        $this->options['query']['TargetVpcId'] = $targetVpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetZoneId
-     *
-     * @return $this
-     */
-    public function withTargetZoneId($targetZoneId)
-    {
-        $this->data['TargetZoneId'] = $targetZoneId;
-        $this->options['query']['TargetZoneId'] = $targetZoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetRegionId
-     *
-     * @return $this
-     */
-    public function withTargetRegionId($targetRegionId)
-    {
-        $this->data['TargetRegionId'] = $targetRegionId;
-        $this->options['query']['TargetRegionId'] = $targetRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetVSwitchId
-     *
-     * @return $this
-     */
-    public function withTargetVSwitchId($targetVSwitchId)
-    {
-        $this->data['TargetVSwitchId'] = $targetVSwitchId;
-        $this->options['query']['TargetVSwitchId'] = $targetVSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

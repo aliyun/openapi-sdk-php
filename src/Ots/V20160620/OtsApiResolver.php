@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ots based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ots\V20160620
  *
  * @method BindInstance2Vpc bindInstance2Vpc(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])

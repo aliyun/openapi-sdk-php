@@ -5,11 +5,12 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteEvent
- *
  * @method string getEventId()
+ * @method $this withEventId($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  */
 class DeleteEvent extends Rpc
 {
@@ -22,43 +23,4 @@ class DeleteEvent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $eventId
-     *
-     * @return $this
-     */
-    public function withEventId($eventId)
-    {
-        $this->data['EventId'] = $eventId;
-        $this->options['query']['EventId'] = $eventId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
 }

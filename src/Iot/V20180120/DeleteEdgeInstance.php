@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DeleteEdgeInstance
- *
  * @method string getInstanceId()
  */
 class DeleteEdgeInstance extends RpcRequest

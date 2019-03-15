@@ -7,8 +7,6 @@ use AlibabaCloud\Client\AlibabaCloud;
 /**
  * Find service based on the static method name as service name.
  *
- * @package   AlibabaCloud
- *
  * @mixin     AlibabaCloud
  *
  * @codeCoverageIgnore

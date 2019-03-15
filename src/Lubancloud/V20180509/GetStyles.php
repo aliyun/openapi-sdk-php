@@ -5,8 +5,6 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetStyles
- *
  */
 class GetStyles extends Rpc
 {

@@ -5,13 +5,15 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AttachDBInstances
- *
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getForceAttach()
+ * @method $this withForceAttach($value)
  * @method array getDBInstance()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class AttachDBInstances extends Rpc
 {
@@ -24,45 +26,6 @@ class AttachDBInstances extends Rpc
     public $serviceCode = 'ess';
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $forceAttach
-     *
-     * @return $this
-     */
-    public function withForceAttach($forceAttach)
-    {
-        $this->data['ForceAttach'] = $forceAttach;
-        $this->options['query']['ForceAttach'] = $forceAttach;
-
-        return $this;
-    }
-
-    /**
      * @param array $dBInstance
      *
      * @return $this
@@ -73,19 +36,6 @@ class AttachDBInstances extends Rpc
         foreach ($dBInstance as $i => $iValue) {
             $this->options['query']['DBInstance.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

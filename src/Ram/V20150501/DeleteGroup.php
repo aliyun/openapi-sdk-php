@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteGroup
- *
  * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
 class DeleteGroup extends Rpc
 {
@@ -18,17 +17,4 @@ class DeleteGroup extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function withGroupName($groupName)
-    {
-        $this->data['GroupName'] = $groupName;
-        $this->options['query']['GroupName'] = $groupName;
-
-        return $this;
-    }
 }

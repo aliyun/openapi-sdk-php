@@ -5,17 +5,22 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api StartMPUTask
- *
  * @method array getUserPanes()
  * @method string getBackgroundColor()
+ * @method $this withBackgroundColor($value)
  * @method array getLayoutIds()
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getStreamURL()
+ * @method $this withStreamURL($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getMediaEncode()
+ * @method $this withMediaEncode($value)
  * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
 class StartMPUTask extends Rpc
 {
@@ -45,19 +50,6 @@ class StartMPUTask extends Rpc
     }
 
     /**
-     * @param string $backgroundColor
-     *
-     * @return $this
-     */
-    public function withBackgroundColor($backgroundColor)
-    {
-        $this->data['BackgroundColor'] = $backgroundColor;
-        $this->options['query']['BackgroundColor'] = $backgroundColor;
-
-        return $this;
-    }
-
-    /**
      * @param array $layoutIds
      *
      * @return $this
@@ -68,84 +60,6 @@ class StartMPUTask extends Rpc
         foreach ($layoutIds as $i => $iValue) {
             $this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $streamURL
-     *
-     * @return $this
-     */
-    public function withStreamURL($streamURL)
-    {
-        $this->data['StreamURL'] = $streamURL;
-        $this->options['query']['StreamURL'] = $streamURL;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mediaEncode
-     *
-     * @return $this
-     */
-    public function withMediaEncode($mediaEncode)
-    {
-        $this->data['MediaEncode'] = $mediaEncode;
-        $this->options['query']['MediaEncode'] = $mediaEncode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function withChannelId($channelId)
-    {
-        $this->data['ChannelId'] = $channelId;
-        $this->options['query']['ChannelId'] = $channelId;
 
         return $this;
     }

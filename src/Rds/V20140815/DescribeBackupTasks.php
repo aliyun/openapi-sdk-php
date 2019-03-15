@@ -5,18 +5,26 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBackupTasks
- *
  * @method string getBackupJobId()
+ * @method $this withBackupJobId($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getFlag()
+ * @method $this withFlag($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getBackupMode()
+ * @method $this withBackupMode($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getBackupJobStatus()
+ * @method $this withBackupJobStatus($value)
  */
 class DescribeBackupTasks extends Rpc
 {
@@ -27,134 +35,4 @@ class DescribeBackupTasks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $backupJobId
-     *
-     * @return $this
-     */
-    public function withBackupJobId($backupJobId)
-    {
-        $this->data['BackupJobId'] = $backupJobId;
-        $this->options['query']['BackupJobId'] = $backupJobId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $flag
-     *
-     * @return $this
-     */
-    public function withFlag($flag)
-    {
-        $this->data['Flag'] = $flag;
-        $this->options['query']['Flag'] = $flag;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $backupMode
-     *
-     * @return $this
-     */
-    public function withBackupMode($backupMode)
-    {
-        $this->data['BackupMode'] = $backupMode;
-        $this->options['query']['BackupMode'] = $backupMode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $backupJobStatus
-     *
-     * @return $this
-     */
-    public function withBackupJobStatus($backupJobStatus)
-    {
-        $this->data['BackupJobStatus'] = $backupJobStatus;
-        $this->options['query']['BackupJobStatus'] = $backupJobStatus;
-
-        return $this;
-    }
 }

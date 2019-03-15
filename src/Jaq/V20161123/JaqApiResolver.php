@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Jaq based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Jaq\V20161123
  *
  * @method ActivityPrevention activityPrevention(array $options = [])
  * @method AfsAppCheck afsAppCheck(array $options = [])

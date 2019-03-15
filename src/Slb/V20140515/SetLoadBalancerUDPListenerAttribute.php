@@ -5,39 +5,65 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetLoadBalancerUDPListenerAttribute
- *
  * @method string getAccessKeyId()
  * @method string getHealthCheckConnectTimeout()
+ * @method $this withHealthCheckConnectTimeout($value)
  * @method string getEagleEyeProtocol()
+ * @method $this withEagleEyeProtocol($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getUnhealthyThreshold()
+ * @method $this withUnhealthyThreshold($value)
  * @method string getHealthyThreshold()
+ * @method $this withHealthyThreshold($value)
  * @method string getAclStatus()
+ * @method $this withAclStatus($value)
  * @method string getScheduler()
+ * @method $this withScheduler($value)
  * @method string getAclType()
+ * @method $this withAclType($value)
  * @method string getMasterSlaveServerGroup()
+ * @method $this withMasterSlaveServerGroup($value)
  * @method string getMaxConnection()
+ * @method $this withMaxConnection($value)
  * @method string getPersistenceTimeout()
+ * @method $this withPersistenceTimeout($value)
  * @method string getEagleEyeRate()
+ * @method $this withEagleEyeRate($value)
  * @method string getVpcIds()
+ * @method $this withVpcIds($value)
  * @method string getVServerGroupId()
+ * @method $this withVServerGroupId($value)
  * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getListenerPort()
+ * @method $this withListenerPort($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
+ * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTags()
+ * @method $this withTags($value)
  * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
  * @method string getMasterSlaveServerGroupId()
+ * @method $this withMasterSlaveServerGroupId($value)
  * @method string getHealthCheckReq()
  * @method string getHealthCheckInterval()
+ * @method $this withHealthCheckInterval($value)
  * @method string getHealthCheckExp()
  * @method string getEagleEyeStatus()
+ * @method $this withEagleEyeStatus($value)
  * @method string getHealthCheckConnectPort()
+ * @method $this withHealthCheckConnectPort($value)
  * @method string getVServerGroup()
+ * @method $this withVServerGroup($value)
  */
 class SetLoadBalancerUDPListenerAttribute extends Rpc
 {
@@ -63,318 +89,6 @@ class SetLoadBalancerUDPListenerAttribute extends Rpc
     }
 
     /**
-     * @param string $healthCheckConnectTimeout
-     *
-     * @return $this
-     */
-    public function withHealthCheckConnectTimeout($healthCheckConnectTimeout)
-    {
-        $this->data['HealthCheckConnectTimeout'] = $healthCheckConnectTimeout;
-        $this->options['query']['HealthCheckConnectTimeout'] = $healthCheckConnectTimeout;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eagleEyeProtocol
-     *
-     * @return $this
-     */
-    public function withEagleEyeProtocol($eagleEyeProtocol)
-    {
-        $this->data['EagleEyeProtocol'] = $eagleEyeProtocol;
-        $this->options['query']['EagleEyeProtocol'] = $eagleEyeProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $unhealthyThreshold
-     *
-     * @return $this
-     */
-    public function withUnhealthyThreshold($unhealthyThreshold)
-    {
-        $this->data['UnhealthyThreshold'] = $unhealthyThreshold;
-        $this->options['query']['UnhealthyThreshold'] = $unhealthyThreshold;
-
-        return $this;
-    }
-
-    /**
-     * @param string $healthyThreshold
-     *
-     * @return $this
-     */
-    public function withHealthyThreshold($healthyThreshold)
-    {
-        $this->data['HealthyThreshold'] = $healthyThreshold;
-        $this->options['query']['HealthyThreshold'] = $healthyThreshold;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aclStatus
-     *
-     * @return $this
-     */
-    public function withAclStatus($aclStatus)
-    {
-        $this->data['AclStatus'] = $aclStatus;
-        $this->options['query']['AclStatus'] = $aclStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scheduler
-     *
-     * @return $this
-     */
-    public function withScheduler($scheduler)
-    {
-        $this->data['Scheduler'] = $scheduler;
-        $this->options['query']['Scheduler'] = $scheduler;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aclType
-     *
-     * @return $this
-     */
-    public function withAclType($aclType)
-    {
-        $this->data['AclType'] = $aclType;
-        $this->options['query']['AclType'] = $aclType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $masterSlaveServerGroup
-     *
-     * @return $this
-     */
-    public function withMasterSlaveServerGroup($masterSlaveServerGroup)
-    {
-        $this->data['MasterSlaveServerGroup'] = $masterSlaveServerGroup;
-        $this->options['query']['MasterSlaveServerGroup'] = $masterSlaveServerGroup;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxConnection
-     *
-     * @return $this
-     */
-    public function withMaxConnection($maxConnection)
-    {
-        $this->data['MaxConnection'] = $maxConnection;
-        $this->options['query']['MaxConnection'] = $maxConnection;
-
-        return $this;
-    }
-
-    /**
-     * @param string $persistenceTimeout
-     *
-     * @return $this
-     */
-    public function withPersistenceTimeout($persistenceTimeout)
-    {
-        $this->data['PersistenceTimeout'] = $persistenceTimeout;
-        $this->options['query']['PersistenceTimeout'] = $persistenceTimeout;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eagleEyeRate
-     *
-     * @return $this
-     */
-    public function withEagleEyeRate($eagleEyeRate)
-    {
-        $this->data['EagleEyeRate'] = $eagleEyeRate;
-        $this->options['query']['EagleEyeRate'] = $eagleEyeRate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcIds
-     *
-     * @return $this
-     */
-    public function withVpcIds($vpcIds)
-    {
-        $this->data['VpcIds'] = $vpcIds;
-        $this->options['query']['VpcIds'] = $vpcIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vServerGroupId
-     *
-     * @return $this
-     */
-    public function withVServerGroupId($vServerGroupId)
-    {
-        $this->data['VServerGroupId'] = $vServerGroupId;
-        $this->options['query']['VServerGroupId'] = $vServerGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aclId
-     *
-     * @return $this
-     */
-    public function withAclId($aclId)
-    {
-        $this->data['AclId'] = $aclId;
-        $this->options['query']['AclId'] = $aclId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $listenerPort
-     *
-     * @return $this
-     */
-    public function withListenerPort($listenerPort)
-    {
-        $this->data['ListenerPort'] = $listenerPort;
-        $this->options['query']['ListenerPort'] = $listenerPort;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function withBandwidth($bandwidth)
-    {
-        $this->data['Bandwidth'] = $bandwidth;
-        $this->options['query']['Bandwidth'] = $bandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function withLoadBalancerId($loadBalancerId)
-    {
-        $this->data['LoadBalancerId'] = $loadBalancerId;
-        $this->options['query']['LoadBalancerId'] = $loadBalancerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $masterSlaveServerGroupId
-     *
-     * @return $this
-     */
-    public function withMasterSlaveServerGroupId($masterSlaveServerGroupId)
-    {
-        $this->data['MasterSlaveServerGroupId'] = $masterSlaveServerGroupId;
-        $this->options['query']['MasterSlaveServerGroupId'] = $masterSlaveServerGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param string $healthCheckReq
      *
      * @return $this
@@ -388,19 +102,6 @@ class SetLoadBalancerUDPListenerAttribute extends Rpc
     }
 
     /**
-     * @param string $healthCheckInterval
-     *
-     * @return $this
-     */
-    public function withHealthCheckInterval($healthCheckInterval)
-    {
-        $this->data['HealthCheckInterval'] = $healthCheckInterval;
-        $this->options['query']['HealthCheckInterval'] = $healthCheckInterval;
-
-        return $this;
-    }
-
-    /**
      * @param string $healthCheckExp
      *
      * @return $this
@@ -409,45 +110,6 @@ class SetLoadBalancerUDPListenerAttribute extends Rpc
     {
         $this->data['HealthCheckExp'] = $healthCheckExp;
         $this->options['query']['healthCheckExp'] = $healthCheckExp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eagleEyeStatus
-     *
-     * @return $this
-     */
-    public function withEagleEyeStatus($eagleEyeStatus)
-    {
-        $this->data['EagleEyeStatus'] = $eagleEyeStatus;
-        $this->options['query']['EagleEyeStatus'] = $eagleEyeStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $healthCheckConnectPort
-     *
-     * @return $this
-     */
-    public function withHealthCheckConnectPort($healthCheckConnectPort)
-    {
-        $this->data['HealthCheckConnectPort'] = $healthCheckConnectPort;
-        $this->options['query']['HealthCheckConnectPort'] = $healthCheckConnectPort;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vServerGroup
-     *
-     * @return $this
-     */
-    public function withVServerGroup($vServerGroup)
-    {
-        $this->data['VServerGroup'] = $vServerGroup;
-        $this->options['query']['VServerGroup'] = $vServerGroup;
 
         return $this;
     }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Cloudauth based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Cloudauth\V20180916
  *
  * @method CompareFaces compareFaces(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])

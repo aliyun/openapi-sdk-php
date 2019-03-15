@@ -5,12 +5,13 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListInstance
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method array getTagInfo()
  */
 class ListInstance extends Rpc
@@ -30,45 +31,6 @@ class ListInstance extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function withPageNum($pageNum)
-    {
-        $this->data['PageNum'] = $pageNum;
-        $this->options['query']['PageNum'] = $pageNum;
 
         return $this;
     }

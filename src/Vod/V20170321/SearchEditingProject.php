@@ -5,19 +5,28 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SearchEditingProject
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTitle()
+ * @method $this withTitle($value)
  * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getSortBy()
+ * @method $this withSortBy($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class SearchEditingProject extends Rpc
 {
@@ -28,147 +37,4 @@ class SearchEditingProject extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function withTitle($title)
-    {
-        $this->data['Title'] = $title;
-        $this->options['query']['Title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function withPageNo($pageNo)
-    {
-        $this->data['PageNo'] = $pageNo;
-        $this->options['query']['PageNo'] = $pageNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sortBy
-     *
-     * @return $this
-     */
-    public function withSortBy($sortBy)
-    {
-        $this->data['SortBy'] = $sortBy;
-        $this->options['query']['SortBy'] = $sortBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

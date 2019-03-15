@@ -5,8 +5,6 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TaskConfigUnhealthy
- *
  * @method array getTaskIdList()
  */
 class TaskConfigUnhealthy extends Rpc

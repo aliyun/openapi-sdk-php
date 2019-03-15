@@ -5,23 +5,35 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResourceCreationCapacity
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
  * @method array getDataDiskCategory()
  * @method string getSystemDiskCategory()
+ * @method $this withSystemDiskCategory($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getNetworkCategory()
+ * @method $this withNetworkCategory($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getAmount()
+ * @method $this withAmount($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getBid()
+ * @method $this withBid($value)
  */
 class DescribeResourceCreationCapacity extends Rpc
 {
@@ -34,32 +46,6 @@ class DescribeResourceCreationCapacity extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function withIoOptimized($ioOptimized)
-    {
-        $this->data['IoOptimized'] = $ioOptimized;
-        $this->options['query']['IoOptimized'] = $ioOptimized;
-
-        return $this;
-    }
-
-    /**
      * @param array $dataDiskCategory
      *
      * @return $this
@@ -70,162 +56,6 @@ class DescribeResourceCreationCapacity extends Rpc
         foreach ($dataDiskCategory as $i => $iValue) {
             $this->options['query']['DataDiskCategory.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $systemDiskCategory
-     *
-     * @return $this
-     */
-    public function withSystemDiskCategory($systemDiskCategory)
-    {
-        $this->data['SystemDiskCategory'] = $systemDiskCategory;
-        $this->options['query']['SystemDiskCategory'] = $systemDiskCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkCategory
-     *
-     * @return $this
-     */
-    public function withNetworkCategory($networkCategory)
-    {
-        $this->data['NetworkCategory'] = $networkCategory;
-        $this->options['query']['NetworkCategory'] = $networkCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function withAmount($amount)
-    {
-        $this->data['Amount'] = $amount;
-        $this->options['query']['Amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
 
         return $this;
     }

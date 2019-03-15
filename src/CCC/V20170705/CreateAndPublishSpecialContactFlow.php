@@ -5,8 +5,6 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of CreateAndPublishSpecialContactFlow
- *
  * @method string getAgentBotAsrAppKey()
  * @method string getIvrTemplate()
  * @method string getAgentBotTtsUserData()
@@ -50,18 +48,6 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
     public $serviceCode = 'ccc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotAsrAppKey() instead.
-     *
-     * @param string $agentBotAsrAppKey
-     *
-     * @return $this
-     */
-    public function setAgentBotAsrAppKey($agentBotAsrAppKey)
-    {
-        return $this->withAgentBotAsrAppKey($agentBotAsrAppKey);
-    }
-
-    /**
      * @param string $agentBotAsrAppKey
      *
      * @return $this
@@ -72,18 +58,6 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
         $this->options['query']['AgentBotAsrAppKey'] = $agentBotAsrAppKey;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIvrTemplate() instead.
-     *
-     * @param string $ivrTemplate
-     *
-     * @return $this
-     */
-    public function setIvrTemplate($ivrTemplate)
-    {
-        return $this->withIvrTemplate($ivrTemplate);
     }
 
     /**
@@ -99,17 +73,6 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
         return $this;
     }
 
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotTtsUserData() instead.
-     *
-     * @param string $agentBotTtsUserData
-     *
-     * @return $this
-     */
-    public function setAgentBotTtsUserData($agentBotTtsUserData)
-    {
-        return $this->withAgentBotTtsUserData($agentBotTtsUserData);
-    }
 
     /**
      * @param string $agentBotTtsUserData
@@ -125,18 +88,6 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPublishAllMedia() instead.
-     *
-     * @param string $publishAllMedia
-     *
-     * @return $this
-     */
-    public function setPublishAllMedia($publishAllMedia)
-    {
-        return $this->withPublishAllMedia($publishAllMedia);
-    }
-
-    /**
      * @param string $publishAllMedia
      *
      * @return $this
@@ -147,18 +98,6 @@ class CreateAndPublishSpecialContactFlow extends RpcRequest
         $this->options['query']['PublishAllMedia'] = $publishAllMedia;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAgentBotAsrUserData() instead.
-     *
-     * @param string $agentBotAsrUserData
-     *
-     * @return $this
-     */
-    public function setAgentBotAsrUserData($agentBotAsrUserData)
-    {
-        return $this->withAgentBotAsrUserData($agentBotAsrUserData);
     }
 
     /**

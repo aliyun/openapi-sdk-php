@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateMyGroupAlertBatch
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getGroupAlertJsonArray()
+ * @method $this withGroupAlertJsonArray($value)
  */
 class CreateMyGroupAlertBatch extends Rpc
 {
@@ -19,30 +19,4 @@ class CreateMyGroupAlertBatch extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupAlertJsonArray
-     *
-     * @return $this
-     */
-    public function withGroupAlertJsonArray($groupAlertJsonArray)
-    {
-        $this->data['GroupAlertJsonArray'] = $groupAlertJsonArray;
-        $this->options['query']['GroupAlertJsonArray'] = $groupAlertJsonArray;
-
-        return $this;
-    }
 }

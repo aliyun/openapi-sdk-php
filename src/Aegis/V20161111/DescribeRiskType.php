@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRiskType
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getStrategyId()
+ * @method $this withStrategyId($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getUuids()
+ * @method $this withUuids($value)
  */
 class DescribeRiskType extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeRiskType extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function withStrategyId($strategyId)
-    {
-        $this->data['StrategyId'] = $strategyId;
-        $this->options['query']['StrategyId'] = $strategyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuids
-     *
-     * @return $this
-     */
-    public function withUuids($uuids)
-    {
-        $this->data['Uuids'] = $uuids;
-        $this->options['query']['Uuids'] = $uuids;
-
-        return $this;
-    }
 }

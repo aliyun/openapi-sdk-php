@@ -5,10 +5,9 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerDiskQueryByParam
- *
  * @method string getFuzzyDiskName()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIzNo()
  * @method string getPrePayEcsInstanceIds()
  * @method string getAutoSnapshotPolicyId()
@@ -27,13 +26,16 @@ use AlibabaCloud\Rpc;
  * @method string getEcsInstanceId()
  * @method string getEnableAutoSnapshot()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getActive()
  * @method string getImageNo()
  * @method string getCreateTimeFrom()
  * @method string getEnableAutomatedSnapshotPolicy()
  * @method string getPortable()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDiskType()
  * @method string getToken()
  * @method string getTags()
@@ -63,19 +65,6 @@ class InnerDiskQueryByParam extends Rpc
     {
         $this->data['FuzzyDiskName'] = $fuzzyDiskName;
         $this->options['query']['fuzzyDiskName'] = $fuzzyDiskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -302,32 +291,6 @@ class InnerDiskQueryByParam extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $active
      *
      * @return $this
@@ -388,19 +351,6 @@ class InnerDiskQueryByParam extends Rpc
     {
         $this->data['Portable'] = $portable;
         $this->options['query']['portable'] = $portable;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

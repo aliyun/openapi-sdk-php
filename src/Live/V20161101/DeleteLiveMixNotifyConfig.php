@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DeleteLiveMixNotifyConfig
- *
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getOwnerId()
@@ -40,18 +38,6 @@ class DeleteLiveMixNotifyConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
@@ -62,18 +48,6 @@ class DeleteLiveMixNotifyConfig extends RpcRequest
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**

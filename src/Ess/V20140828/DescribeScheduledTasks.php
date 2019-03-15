@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScheduledTasks
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getScheduledAction2()
  * @method string getScheduledAction1()
  * @method string getScheduledAction6()
@@ -18,6 +17,7 @@ use AlibabaCloud\Rpc;
  * @method string getScheduledAction8()
  * @method string getScheduledAction7()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getScheduledTaskName20()
  * @method string getScheduledTaskName19()
  * @method string getScheduledTaskName18()
@@ -29,6 +29,7 @@ use AlibabaCloud\Rpc;
  * @method string getScheduledTaskName17()
  * @method string getScheduledTaskName16()
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getScheduledTaskName15()
  * @method string getScheduledTaskName14()
  * @method string getScheduledTaskId2()
@@ -44,6 +45,7 @@ use AlibabaCloud\Rpc;
  * @method string getScheduledAction20()
  * @method string getScheduledTaskId7()
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getScheduledTaskId12()
  * @method string getScheduledTaskName7()
  * @method string getScheduledTaskId9()
@@ -62,7 +64,9 @@ use AlibabaCloud\Rpc;
  * @method string getScheduledTaskId15()
  * @method string getScheduledTaskName2()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getScheduledAction18()
  * @method string getScheduledAction19()
  * @method string getScheduledAction16()
@@ -83,19 +87,6 @@ class DescribeScheduledTasks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ess';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
 
     /**
      * @param string $scheduledAction2
@@ -210,19 +201,6 @@ class DescribeScheduledTasks extends Rpc
     {
         $this->data['ScheduledAction7'] = $scheduledAction7;
         $this->options['query']['ScheduledAction.7'] = $scheduledAction7;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -353,19 +331,6 @@ class DescribeScheduledTasks extends Rpc
     {
         $this->data['ScheduledTaskName16'] = $scheduledTaskName16;
         $this->options['query']['ScheduledTaskName.16'] = $scheduledTaskName16;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }
@@ -548,19 +513,6 @@ class DescribeScheduledTasks extends Rpc
     {
         $this->data['ScheduledTaskId7'] = $scheduledTaskId7;
         $this->options['query']['ScheduledTaskId.7'] = $scheduledTaskId7;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }
@@ -782,32 +734,6 @@ class DescribeScheduledTasks extends Rpc
     {
         $this->data['ScheduledTaskName2'] = $scheduledTaskName2;
         $this->options['query']['ScheduledTaskName.2'] = $scheduledTaskName2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }

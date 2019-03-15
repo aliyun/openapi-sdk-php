@@ -5,9 +5,8 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetStatisticsByUuid
- *
  * @method string getUuid()
+ * @method $this withUuid($value)
  */
 class GetStatisticsByUuid extends Rpc
 {
@@ -18,17 +17,4 @@ class GetStatisticsByUuid extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function withUuid($uuid)
-    {
-        $this->data['Uuid'] = $uuid;
-        $this->options['query']['Uuid'] = $uuid;
-
-        return $this;
-    }
 }

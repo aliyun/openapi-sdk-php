@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteVirtualMFADevice
- *
  * @method string getSerialNumber()
+ * @method $this withSerialNumber($value)
  */
 class DeleteVirtualMFADevice extends Rpc
 {
@@ -18,17 +17,4 @@ class DeleteVirtualMFADevice extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $serialNumber
-     *
-     * @return $this
-     */
-    public function withSerialNumber($serialNumber)
-    {
-        $this->data['SerialNumber'] = $serialNumber;
-        $this->options['query']['SerialNumber'] = $serialNumber;
-
-        return $this;
-    }
 }

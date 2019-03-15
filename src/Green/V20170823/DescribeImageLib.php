@@ -5,10 +5,10 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeImageLib
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getServiceModule()
+ * @method $this withServiceModule($value)
  */
 class DescribeImageLib extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeImageLib extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceModule
-     *
-     * @return $this
-     */
-    public function withServiceModule($serviceModule)
-    {
-        $this->data['ServiceModule'] = $serviceModule;
-        $this->options['query']['ServiceModule'] = $serviceModule;
-
-        return $this;
-    }
 }

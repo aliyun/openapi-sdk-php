@@ -5,13 +5,15 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateMPULayout
- *
  * @method string getCropMode()
+ * @method $this withCropMode($value)
  * @method array getPanes()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getAudioMixCount()
+ * @method $this withAudioMixCount($value)
  */
 class CreateMPULayout extends Rpc
 {
@@ -22,19 +24,6 @@ class CreateMPULayout extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rtc';
-
-    /**
-     * @param string $cropMode
-     *
-     * @return $this
-     */
-    public function withCropMode($cropMode)
-    {
-        $this->data['CropMode'] = $cropMode;
-        $this->options['query']['CropMode'] = $cropMode;
-
-        return $this;
-    }
 
     /**
      * @param array $panes
@@ -53,45 +42,6 @@ class CreateMPULayout extends Rpc
             $this->options['query']['Panes.' . ($i + 1) . '.Height'] = $panes[$i]['Height'];
             $this->options['query']['Panes.' . ($i + 1) . '.ZOrder'] = $panes[$i]['ZOrder'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $audioMixCount
-     *
-     * @return $this
-     */
-    public function withAudioMixCount($audioMixCount)
-    {
-        $this->data['AudioMixCount'] = $audioMixCount;
-        $this->options['query']['AudioMixCount'] = $audioMixCount;
 
         return $this;
     }

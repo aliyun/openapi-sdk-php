@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of CreateCADConversionTask
- *
  * @method string getSrcType()
  * @method string getBaseCol()
  * @method string getNotifyTopicName()
@@ -49,18 +47,6 @@ class CreateCADConversionTask extends RpcRequest
      * @var string
      */
     public $serviceCode = 'imm';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSrcType() instead.
-     *
-     * @param string $srcType
-     *
-     * @return $this
-     */
-    public function setSrcType($srcType)
-    {
-        return $this->withSrcType($srcType);
-    }
 
     /**
      * @param string $srcType

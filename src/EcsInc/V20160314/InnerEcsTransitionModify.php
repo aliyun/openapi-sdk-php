@@ -5,24 +5,33 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerEcsTransitionModify
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTransitionTime()
+ * @method $this withTransitionTime($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getNetworkTransType()
+ * @method $this withNetworkTransType($value)
  * @method string getAsync()
  * @method array getInstanceId()
  * @method string getRequestId()
+ * @method $this withRequestId($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getBid()
+ * @method $this withBid($value)
  * @method string getIsExpireTransition()
+ * @method $this withIsExpireTransition($value)
  * @method string getProxyId()
  */
 class InnerEcsTransitionModify extends Rpc
@@ -36,58 +45,6 @@ class InnerEcsTransitionModify extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $transitionTime
-     *
-     * @return $this
-     */
-    public function withTransitionTime($transitionTime)
-    {
-        $this->data['TransitionTime'] = $transitionTime;
-        $this->options['query']['TransitionTime'] = $transitionTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -96,32 +53,6 @@ class InnerEcsTransitionModify extends Rpc
     {
         $this->data['Channel'] = $channel;
         $this->options['query']['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }
@@ -153,19 +84,6 @@ class InnerEcsTransitionModify extends Rpc
     }
 
     /**
-     * @param string $networkTransType
-     *
-     * @return $this
-     */
-    public function withNetworkTransType($networkTransType)
-    {
-        $this->data['NetworkTransType'] = $networkTransType;
-        $this->options['query']['NetworkTransType'] = $networkTransType;
-
-        return $this;
-    }
-
-    /**
      * @param string $async
      *
      * @return $this
@@ -189,58 +107,6 @@ class InnerEcsTransitionModify extends Rpc
         foreach ($instanceId as $i => $iValue) {
             $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $requestId
-     *
-     * @return $this
-     */
-    public function withRequestId($requestId)
-    {
-        $this->data['RequestId'] = $requestId;
-        $this->options['query']['RequestId'] = $requestId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isExpireTransition
-     *
-     * @return $this
-     */
-    public function withIsExpireTransition($isExpireTransition)
-    {
-        $this->data['IsExpireTransition'] = $isExpireTransition;
-        $this->options['query']['IsExpireTransition'] = $isExpireTransition;
 
         return $this;
     }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetMyGroupAlert
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getAlertName()
+ * @method $this withAlertName($value)
  */
 class GetMyGroupAlert extends Rpc
 {
@@ -19,30 +19,4 @@ class GetMyGroupAlert extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function withAlertName($alertName)
-    {
-        $this->data['AlertName'] = $alertName;
-        $this->options['query']['AlertName'] = $alertName;
-
-        return $this;
-    }
 }

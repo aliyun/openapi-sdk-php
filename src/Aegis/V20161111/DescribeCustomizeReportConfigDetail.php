@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCustomizeReportConfigDetail
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getReportId()
+ * @method $this withReportId($value)
  */
 class DescribeCustomizeReportConfigDetail extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeCustomizeReportConfigDetail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $reportId
-     *
-     * @return $this
-     */
-    public function withReportId($reportId)
-    {
-        $this->data['ReportId'] = $reportId;
-        $this->options['query']['ReportId'] = $reportId;
-
-        return $this;
-    }
 }

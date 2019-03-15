@@ -5,13 +5,16 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateDomainTrackName
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCnameTrackRecord()
+ * @method $this withCnameTrackRecord($value)
  * @method string getDomainId()
+ * @method $this withDomainId($value)
  */
 class UpdateDomainTrackName extends Rpc
 {
@@ -20,69 +23,4 @@ class UpdateDomainTrackName extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cnameTrackRecord
-     *
-     * @return $this
-     */
-    public function withCnameTrackRecord($cnameTrackRecord)
-    {
-        $this->data['CnameTrackRecord'] = $cnameTrackRecord;
-        $this->options['query']['CnameTrackRecord'] = $cnameTrackRecord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainId
-     *
-     * @return $this
-     */
-    public function withDomainId($domainId)
-    {
-        $this->data['DomainId'] = $domainId;
-        $this->options['query']['DomainId'] = $domainId;
-
-        return $this;
-    }
 }

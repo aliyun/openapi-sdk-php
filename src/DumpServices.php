@@ -88,8 +88,6 @@ use AlibabaCloud\Client\AlibabaCloud;
 /**
  * Find service based on the static method name as service name.
  *
- * @package   AlibabaCloud
- *
  * @mixin     AlibabaCloud
  *
  * @codeCoverageIgnore
@@ -134,7 +132,6 @@ use AlibabaCloud\VersionResolverTrait;
 /**
  * Find the specified version of the $productName based on the method name as the version name.
  *
- * @package   AlibabaCloud\\{$productName}
  *{$method}
  */
 class {$productName}
@@ -220,7 +217,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the $product based on the method name as the Api name.
  *
- * @package   AlibabaCloud\\{$product}\\{$version}
  *{$method}
  */
 class {$product}ApiResolver
@@ -264,7 +260,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Class Find the specified Api of the $product based on the method name as the Api name.
  *
- * @package   AlibabaCloud\\{$product}
  *{$method}
  */
 class {$product}

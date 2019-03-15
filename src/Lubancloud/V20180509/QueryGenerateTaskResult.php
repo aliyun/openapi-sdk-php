@@ -5,9 +5,8 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryGenerateTaskResult
- *
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class QueryGenerateTaskResult extends Rpc
 {
@@ -18,17 +17,4 @@ class QueryGenerateTaskResult extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'luban';
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

@@ -5,9 +5,8 @@ namespace AlibabaCloud\LinkFace\V20180720;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryFace
- *
  * @method string getUserId()
+ * @method $this withUserId($value)
  */
 class QueryFace extends Rpc
 {
@@ -18,17 +17,4 @@ class QueryFace extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
 }

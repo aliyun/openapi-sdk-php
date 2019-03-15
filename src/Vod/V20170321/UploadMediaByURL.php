@@ -5,18 +5,26 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UploadMediaByURL
- *
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTemplateGroupId()
+ * @method $this withTemplateGroupId($value)
  * @method string getUploadMetadatas()
+ * @method $this withUploadMetadatas($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getUploadURLs()
+ * @method $this withUploadURLs($value)
  * @method string getMessageCallback()
+ * @method $this withMessageCallback($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPriority()
+ * @method $this withPriority($value)
  * @method string getStorageLocation()
+ * @method $this withStorageLocation($value)
  */
 class UploadMediaByURL extends Rpc
 {
@@ -27,134 +35,4 @@ class UploadMediaByURL extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateGroupId
-     *
-     * @return $this
-     */
-    public function withTemplateGroupId($templateGroupId)
-    {
-        $this->data['TemplateGroupId'] = $templateGroupId;
-        $this->options['query']['TemplateGroupId'] = $templateGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uploadMetadatas
-     *
-     * @return $this
-     */
-    public function withUploadMetadatas($uploadMetadatas)
-    {
-        $this->data['UploadMetadatas'] = $uploadMetadatas;
-        $this->options['query']['UploadMetadatas'] = $uploadMetadatas;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uploadURLs
-     *
-     * @return $this
-     */
-    public function withUploadURLs($uploadURLs)
-    {
-        $this->data['UploadURLs'] = $uploadURLs;
-        $this->options['query']['UploadURLs'] = $uploadURLs;
-
-        return $this;
-    }
-
-    /**
-     * @param string $messageCallback
-     *
-     * @return $this
-     */
-    public function withMessageCallback($messageCallback)
-    {
-        $this->data['MessageCallback'] = $messageCallback;
-        $this->options['query']['MessageCallback'] = $messageCallback;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function withPriority($priority)
-    {
-        $this->data['Priority'] = $priority;
-        $this->options['query']['Priority'] = $priority;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storageLocation
-     *
-     * @return $this
-     */
-    public function withStorageLocation($storageLocation)
-    {
-        $this->data['StorageLocation'] = $storageLocation;
-        $this->options['query']['StorageLocation'] = $storageLocation;
-
-        return $this;
-    }
 }

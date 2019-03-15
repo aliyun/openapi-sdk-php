@@ -5,12 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CommitContactFlowVersionModification
- *
  * @method string getCanvas()
+ * @method $this withCanvas($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getContactFlowVersionId()
+ * @method $this withContactFlowVersionId($value)
  * @method string getContent()
+ * @method $this withContent($value)
  */
 class CommitContactFlowVersionModification extends Rpc
 {
@@ -21,56 +23,4 @@ class CommitContactFlowVersionModification extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $canvas
-     *
-     * @return $this
-     */
-    public function withCanvas($canvas)
-    {
-        $this->data['Canvas'] = $canvas;
-        $this->options['query']['Canvas'] = $canvas;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactFlowVersionId
-     *
-     * @return $this
-     */
-    public function withContactFlowVersionId($contactFlowVersionId)
-    {
-        $this->data['ContactFlowVersionId'] = $contactFlowVersionId;
-        $this->options['query']['ContactFlowVersionId'] = $contactFlowVersionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function withContent($content)
-    {
-        $this->data['Content'] = $content;
-        $this->options['query']['Content'] = $content;
-
-        return $this;
-    }
 }

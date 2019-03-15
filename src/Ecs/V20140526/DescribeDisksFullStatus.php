@@ -5,21 +5,28 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDisksFullStatus
- *
  * @method array getEventId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getEventTimeStart()
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method array getDiskId()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getEventTimeEnd()
  * @method string getHealthStatus()
+ * @method $this withHealthStatus($value)
  * @method string getEventType()
+ * @method $this withEventType($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeDisksFullStatus extends Rpc
 {
@@ -47,32 +54,6 @@ class DescribeDisksFullStatus extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
      * @param string $eventTimeStart
      *
      * @return $this
@@ -81,19 +62,6 @@ class DescribeDisksFullStatus extends Rpc
     {
         $this->data['EventTimeStart'] = $eventTimeStart;
         $this->options['query']['EventTime.Start'] = $eventTimeStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }
@@ -114,45 +82,6 @@ class DescribeDisksFullStatus extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $eventTimeEnd
      *
      * @return $this
@@ -161,45 +90,6 @@ class DescribeDisksFullStatus extends Rpc
     {
         $this->data['EventTimeEnd'] = $eventTimeEnd;
         $this->options['query']['EventTime.End'] = $eventTimeEnd;
-
-        return $this;
-    }
-
-    /**
-     * @param string $healthStatus
-     *
-     * @return $this
-     */
-    public function withHealthStatus($healthStatus)
-    {
-        $this->data['HealthStatus'] = $healthStatus;
-        $this->options['query']['HealthStatus'] = $healthStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function withEventType($eventType)
-    {
-        $this->data['EventType'] = $eventType;
-        $this->options['query']['EventType'] = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
 
         return $this;
     }

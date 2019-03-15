@@ -5,8 +5,6 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TaskConfigDelete
- *
  * @method array getIdList()
  */
 class TaskConfigDelete extends Rpc

@@ -5,10 +5,10 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteService
- *
  * @method string getServiceName()
+ * @method $this withServiceName($value)
  * @method string getServiceId()
+ * @method $this withServiceId($value)
  */
 class DeleteService extends Rpc
 {
@@ -19,30 +19,4 @@ class DeleteService extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $serviceName
-     *
-     * @return $this
-     */
-    public function withServiceName($serviceName)
-    {
-        $this->data['ServiceName'] = $serviceName;
-        $this->options['query']['ServiceName'] = $serviceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function withServiceId($serviceId)
-    {
-        $this->data['ServiceId'] = $serviceId;
-        $this->options['query']['ServiceId'] = $serviceId;
-
-        return $this;
-    }
 }

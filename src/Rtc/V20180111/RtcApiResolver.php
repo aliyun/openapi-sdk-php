@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Rtc based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Rtc\V20180111
  *
  * @method CreateChannel createChannel(array $options = [])
  * @method CreateChannelToken createChannelToken(array $options = [])

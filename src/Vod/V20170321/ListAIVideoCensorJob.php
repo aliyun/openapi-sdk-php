@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of ListAIVideoCensorJob
- *
  * @method string getAIVideoCensorJobIds()
  * @method string getResourceOwnerId()
  * @method string getResourceOwnerAccount()

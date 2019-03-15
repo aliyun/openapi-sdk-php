@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteCustomMetric
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getMetricName()
+ * @method $this withMetricName($value)
  * @method string getUUID()
+ * @method $this withUUID($value)
  * @method string getMd5()
+ * @method $this withMd5($value)
  */
 class DeleteCustomMetric extends Rpc
 {
@@ -21,56 +23,4 @@ class DeleteCustomMetric extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function withMetricName($metricName)
-    {
-        $this->data['MetricName'] = $metricName;
-        $this->options['query']['MetricName'] = $metricName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uUID
-     *
-     * @return $this
-     */
-    public function withUUID($uUID)
-    {
-        $this->data['UUID'] = $uUID;
-        $this->options['query']['UUID'] = $uUID;
-
-        return $this;
-    }
-
-    /**
-     * @param string $md5
-     *
-     * @return $this
-     */
-    public function withMd5($md5)
-    {
-        $this->data['Md5'] = $md5;
-        $this->options['query']['Md5'] = $md5;
-
-        return $this;
-    }
 }

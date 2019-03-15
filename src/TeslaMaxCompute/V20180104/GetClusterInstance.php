@@ -5,82 +5,20 @@ namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetClusterInstance
- *
  * @method string getCluster()
+ * @method $this withCluster($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getRegion()
+ * @method $this withRegion($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class GetClusterInstance extends Rpc
 {
     public $product = 'TeslaMaxCompute';
 
     public $version = '2018-01-04';
-
-    /**
-     * @param string $cluster
-     *
-     * @return $this
-     */
-    public function withCluster($cluster)
-    {
-        $this->data['Cluster'] = $cluster;
-        $this->options['query']['Cluster'] = $cluster;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function withPageNum($pageNum)
-    {
-        $this->data['PageNum'] = $pageNum;
-        $this->options['query']['PageNum'] = $pageNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function withRegion($region)
-    {
-        $this->data['Region'] = $region;
-        $this->options['query']['Region'] = $region;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

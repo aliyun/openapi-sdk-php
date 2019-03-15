@@ -5,12 +5,14 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListVideoTasks
- *
  * @method string getMaxKeys()
+ * @method $this withMaxKeys($value)
  * @method string getTaskType()
+ * @method $this withTaskType($value)
  * @method string getMarker()
+ * @method $this withMarker($value)
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class ListVideoTasks extends Rpc
 {
@@ -21,56 +23,4 @@ class ListVideoTasks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function withMaxKeys($maxKeys)
-    {
-        $this->data['MaxKeys'] = $maxKeys;
-        $this->options['query']['MaxKeys'] = $maxKeys;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function withTaskType($taskType)
-    {
-        $this->data['TaskType'] = $taskType;
-        $this->options['query']['TaskType'] = $taskType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

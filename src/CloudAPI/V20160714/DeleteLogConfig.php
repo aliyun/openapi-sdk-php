@@ -5,10 +5,10 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteLogConfig
- *
  * @method string getLogType()
+ * @method $this withLogType($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DeleteLogConfig extends Rpc
 {
@@ -19,30 +19,4 @@ class DeleteLogConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $logType
-     *
-     * @return $this
-     */
-    public function withLogType($logType)
-    {
-        $this->data['LogType'] = $logType;
-        $this->options['query']['LogType'] = $logType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
 }

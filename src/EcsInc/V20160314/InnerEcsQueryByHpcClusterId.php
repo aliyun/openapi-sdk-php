@@ -5,19 +5,25 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerEcsQueryByHpcClusterId
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHpcClusterId()
+ * @method $this withHpcClusterId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getProxyId()
  */
 class InnerEcsQueryByHpcClusterId extends Rpc
@@ -31,58 +37,6 @@ class InnerEcsQueryByHpcClusterId extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hpcClusterId
-     *
-     * @return $this
-     */
-    public function withHpcClusterId($hpcClusterId)
-    {
-        $this->data['HpcClusterId'] = $hpcClusterId;
-        $this->options['query']['HpcClusterId'] = $hpcClusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -91,19 +45,6 @@ class InnerEcsQueryByHpcClusterId extends Rpc
     {
         $this->data['Channel'] = $channel;
         $this->options['query']['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -130,45 +71,6 @@ class InnerEcsQueryByHpcClusterId extends Rpc
     {
         $this->data['Token'] = $token;
         $this->options['query']['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNo
-     *
-     * @return $this
-     */
-    public function withPageNo($pageNo)
-    {
-        $this->data['PageNo'] = $pageNo;
-        $this->options['query']['PageNo'] = $pageNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
 
         return $this;
     }

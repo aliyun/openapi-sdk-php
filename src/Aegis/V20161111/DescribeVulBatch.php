@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeVulBatch
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getResource()
+ * @method $this withResource($value)
  */
 class DescribeVulBatch extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeVulBatch extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resource
-     *
-     * @return $this
-     */
-    public function withResource($resource)
-    {
-        $this->data['Resource'] = $resource;
-        $this->options['query']['Resource'] = $resource;
-
-        return $this;
-    }
 }

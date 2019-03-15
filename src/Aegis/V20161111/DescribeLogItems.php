@@ -5,21 +5,32 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLogItems
- *
  * @method string getLoginOffset()
+ * @method $this withLoginOffset($value)
  * @method string getProcessSnapshotOffset()
+ * @method $this withProcessSnapshotOffset($value)
  * @method string getPortSnapshotOffset()
+ * @method $this withPortSnapshotOffset($value)
  * @method string getQuery()
+ * @method $this withQuery($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getNetworkOffset()
+ * @method $this withNetworkOffset($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getAccountSnapshotOffset()
+ * @method $this withAccountSnapshotOffset($value)
  * @method string getProcessOffset()
+ * @method $this withProcessOffset($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getCrackOffset()
+ * @method $this withCrackOffset($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class DescribeLogItems extends Rpc
 {
@@ -30,173 +41,4 @@ class DescribeLogItems extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $loginOffset
-     *
-     * @return $this
-     */
-    public function withLoginOffset($loginOffset)
-    {
-        $this->data['LoginOffset'] = $loginOffset;
-        $this->options['query']['LoginOffset'] = $loginOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $processSnapshotOffset
-     *
-     * @return $this
-     */
-    public function withProcessSnapshotOffset($processSnapshotOffset)
-    {
-        $this->data['ProcessSnapshotOffset'] = $processSnapshotOffset;
-        $this->options['query']['ProcessSnapshotOffset'] = $processSnapshotOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $portSnapshotOffset
-     *
-     * @return $this
-     */
-    public function withPortSnapshotOffset($portSnapshotOffset)
-    {
-        $this->data['PortSnapshotOffset'] = $portSnapshotOffset;
-        $this->options['query']['PortSnapshotOffset'] = $portSnapshotOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $query
-     *
-     * @return $this
-     */
-    public function withQuery($query)
-    {
-        $this->data['Query'] = $query;
-        $this->options['query']['Query'] = $query;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkOffset
-     *
-     * @return $this
-     */
-    public function withNetworkOffset($networkOffset)
-    {
-        $this->data['NetworkOffset'] = $networkOffset;
-        $this->options['query']['NetworkOffset'] = $networkOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountSnapshotOffset
-     *
-     * @return $this
-     */
-    public function withAccountSnapshotOffset($accountSnapshotOffset)
-    {
-        $this->data['AccountSnapshotOffset'] = $accountSnapshotOffset;
-        $this->options['query']['AccountSnapshotOffset'] = $accountSnapshotOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $processOffset
-     *
-     * @return $this
-     */
-    public function withProcessOffset($processOffset)
-    {
-        $this->data['ProcessOffset'] = $processOffset;
-        $this->options['query']['ProcessOffset'] = $processOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $crackOffset
-     *
-     * @return $this
-     */
-    public function withCrackOffset($crackOffset)
-    {
-        $this->data['CrackOffset'] = $crackOffset;
-        $this->options['query']['CrackOffset'] = $crackOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
 }

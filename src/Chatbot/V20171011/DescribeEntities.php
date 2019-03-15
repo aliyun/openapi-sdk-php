@@ -5,9 +5,8 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeEntities
- *
  * @method string getEntityId()
+ * @method $this withEntityId($value)
  */
 class DescribeEntities extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeEntities extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $entityId
-     *
-     * @return $this
-     */
-    public function withEntityId($entityId)
-    {
-        $this->data['EntityId'] = $entityId;
-        $this->options['query']['EntityId'] = $entityId;
-
-        return $this;
-    }
 }

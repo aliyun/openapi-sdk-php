@@ -5,19 +5,28 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddCasterVideoResource
- *
  * @method string getVodUrl()
+ * @method $this withVodUrl($value)
  * @method string getCasterId()
+ * @method $this withCasterId($value)
  * @method string getEndOffset()
+ * @method $this withEndOffset($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getMaterialId()
+ * @method $this withMaterialId($value)
  * @method string getBeginOffset()
+ * @method $this withBeginOffset($value)
  * @method string getLiveStreamUrl()
+ * @method $this withLiveStreamUrl($value)
  * @method string getLocationId()
+ * @method $this withLocationId($value)
  * @method string getPtsCallbackInterval()
+ * @method $this withPtsCallbackInterval($value)
  * @method string getResourceName()
+ * @method $this withResourceName($value)
  * @method string getRepeatNum()
+ * @method $this withRepeatNum($value)
  */
 class AddCasterVideoResource extends Rpc
 {
@@ -28,147 +37,4 @@ class AddCasterVideoResource extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $vodUrl
-     *
-     * @return $this
-     */
-    public function withVodUrl($vodUrl)
-    {
-        $this->data['VodUrl'] = $vodUrl;
-        $this->options['query']['VodUrl'] = $vodUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function withCasterId($casterId)
-    {
-        $this->data['CasterId'] = $casterId;
-        $this->options['query']['CasterId'] = $casterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endOffset
-     *
-     * @return $this
-     */
-    public function withEndOffset($endOffset)
-    {
-        $this->data['EndOffset'] = $endOffset;
-        $this->options['query']['EndOffset'] = $endOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $materialId
-     *
-     * @return $this
-     */
-    public function withMaterialId($materialId)
-    {
-        $this->data['MaterialId'] = $materialId;
-        $this->options['query']['MaterialId'] = $materialId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $beginOffset
-     *
-     * @return $this
-     */
-    public function withBeginOffset($beginOffset)
-    {
-        $this->data['BeginOffset'] = $beginOffset;
-        $this->options['query']['BeginOffset'] = $beginOffset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $liveStreamUrl
-     *
-     * @return $this
-     */
-    public function withLiveStreamUrl($liveStreamUrl)
-    {
-        $this->data['LiveStreamUrl'] = $liveStreamUrl;
-        $this->options['query']['LiveStreamUrl'] = $liveStreamUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $locationId
-     *
-     * @return $this
-     */
-    public function withLocationId($locationId)
-    {
-        $this->data['LocationId'] = $locationId;
-        $this->options['query']['LocationId'] = $locationId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ptsCallbackInterval
-     *
-     * @return $this
-     */
-    public function withPtsCallbackInterval($ptsCallbackInterval)
-    {
-        $this->data['PtsCallbackInterval'] = $ptsCallbackInterval;
-        $this->options['query']['PtsCallbackInterval'] = $ptsCallbackInterval;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceName
-     *
-     * @return $this
-     */
-    public function withResourceName($resourceName)
-    {
-        $this->data['ResourceName'] = $resourceName;
-        $this->options['query']['ResourceName'] = $resourceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $repeatNum
-     *
-     * @return $this
-     */
-    public function withRepeatNum($repeatNum)
-    {
-        $this->data['RepeatNum'] = $repeatNum;
-        $this->options['query']['RepeatNum'] = $repeatNum;
-
-        return $this;
-    }
 }

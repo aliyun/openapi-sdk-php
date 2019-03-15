@@ -5,19 +5,27 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyLoadBalancerPayType
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAutoPay()
+ * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTags()
+ * @method $this withTags($value)
  * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
  */
 class ModifyLoadBalancerPayType extends Rpc
 {
@@ -38,136 +46,6 @@ class ModifyLoadBalancerPayType extends Rpc
     {
         $this->data['AccessKeyId'] = $accessKeyId;
         $this->options['query']['access_key_id'] = $accessKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function withAutoPay($autoPay)
-    {
-        $this->data['AutoPay'] = $autoPay;
-        $this->options['query']['AutoPay'] = $autoPay;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function withDuration($duration)
-    {
-        $this->data['Duration'] = $duration;
-        $this->options['query']['Duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function withLoadBalancerId($loadBalancerId)
-    {
-        $this->data['LoadBalancerId'] = $loadBalancerId;
-        $this->options['query']['LoadBalancerId'] = $loadBalancerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function withPricingCycle($pricingCycle)
-    {
-        $this->data['PricingCycle'] = $pricingCycle;
-        $this->options['query']['PricingCycle'] = $pricingCycle;
 
         return $this;
     }

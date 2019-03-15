@@ -5,10 +5,10 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateServiceQPS
- *
  * @method string getQps()
+ * @method $this withQps($value)
  * @method string getServiceId()
+ * @method $this withServiceId($value)
  */
 class UpdateServiceQPS extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdateServiceQPS extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $qps
-     *
-     * @return $this
-     */
-    public function withQps($qps)
-    {
-        $this->data['Qps'] = $qps;
-        $this->options['query']['Qps'] = $qps;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceId
-     *
-     * @return $this
-     */
-    public function withServiceId($serviceId)
-    {
-        $this->data['ServiceId'] = $serviceId;
-        $this->options['query']['ServiceId'] = $serviceId;
-
-        return $this;
-    }
 }

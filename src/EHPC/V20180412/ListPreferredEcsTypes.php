@@ -5,11 +5,12 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListPreferredEcsTypes
- *
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  */
 class ListPreferredEcsTypes extends Rpc
 {
@@ -18,43 +19,4 @@ class ListPreferredEcsTypes extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
 }

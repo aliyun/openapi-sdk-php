@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ecs based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ecs\V20140526
  *
  * @method AcceptInquiredSystemEvent acceptInquiredSystemEvent(array $options = [])
  * @method ActivateRouterInterface activateRouterInterface(array $options = [])

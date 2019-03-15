@@ -5,16 +5,22 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeVpnConnections
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCustomerGatewayId()
+ * @method $this withCustomerGatewayId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeVpnConnections extends Rpc
 {
@@ -25,108 +31,4 @@ class DescribeVpnConnections extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpnGatewayId
-     *
-     * @return $this
-     */
-    public function withVpnGatewayId($vpnGatewayId)
-    {
-        $this->data['VpnGatewayId'] = $vpnGatewayId;
-        $this->options['query']['VpnGatewayId'] = $vpnGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customerGatewayId
-     *
-     * @return $this
-     */
-    public function withCustomerGatewayId($customerGatewayId)
-    {
-        $this->data['CustomerGatewayId'] = $customerGatewayId;
-        $this->options['query']['CustomerGatewayId'] = $customerGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

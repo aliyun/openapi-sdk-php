@@ -5,14 +5,18 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateUser
- *
  * @method string getNewUserName()
+ * @method $this withNewUserName($value)
  * @method string getNewDisplayName()
+ * @method $this withNewDisplayName($value)
  * @method string getNewMobilePhone()
+ * @method $this withNewMobilePhone($value)
  * @method string getNewComments()
+ * @method $this withNewComments($value)
  * @method string getNewEmail()
+ * @method $this withNewEmail($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class UpdateUser extends Rpc
 {
@@ -23,82 +27,4 @@ class UpdateUser extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $newUserName
-     *
-     * @return $this
-     */
-    public function withNewUserName($newUserName)
-    {
-        $this->data['NewUserName'] = $newUserName;
-        $this->options['query']['NewUserName'] = $newUserName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newDisplayName
-     *
-     * @return $this
-     */
-    public function withNewDisplayName($newDisplayName)
-    {
-        $this->data['NewDisplayName'] = $newDisplayName;
-        $this->options['query']['NewDisplayName'] = $newDisplayName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newMobilePhone
-     *
-     * @return $this
-     */
-    public function withNewMobilePhone($newMobilePhone)
-    {
-        $this->data['NewMobilePhone'] = $newMobilePhone;
-        $this->options['query']['NewMobilePhone'] = $newMobilePhone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newComments
-     *
-     * @return $this
-     */
-    public function withNewComments($newComments)
-    {
-        $this->data['NewComments'] = $newComments;
-        $this->options['query']['NewComments'] = $newComments;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newEmail
-     *
-     * @return $this
-     */
-    public function withNewEmail($newEmail)
-    {
-        $this->data['NewEmail'] = $newEmail;
-        $this->options['query']['NewEmail'] = $newEmail;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

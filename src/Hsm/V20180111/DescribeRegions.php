@@ -5,10 +5,10 @@ namespace AlibabaCloud\Hsm\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRegions
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class DescribeRegions extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeRegions extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'hsm';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

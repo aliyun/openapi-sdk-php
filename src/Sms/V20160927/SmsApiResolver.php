@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Sms based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Sms\V20160927
  *
  * @method BatchSendSms batchSendSms(array $options = [])
  * @method CreateMarketing createMarketing(array $options = [])

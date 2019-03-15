@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api ListDataSet
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListDataSet extends Roa
 {
@@ -18,17 +17,4 @@ class ListDataSet extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

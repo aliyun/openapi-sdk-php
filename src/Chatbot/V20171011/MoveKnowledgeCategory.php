@@ -5,10 +5,10 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MoveKnowledgeCategory
- *
  * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
  * @method string getCategoryId()
+ * @method $this withCategoryId($value)
  */
 class MoveKnowledgeCategory extends Rpc
 {
@@ -19,30 +19,4 @@ class MoveKnowledgeCategory extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function withKnowledgeId($knowledgeId)
-    {
-        $this->data['KnowledgeId'] = $knowledgeId;
-        $this->options['query']['KnowledgeId'] = $knowledgeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function withCategoryId($categoryId)
-    {
-        $this->data['CategoryId'] = $categoryId;
-        $this->options['query']['CategoryId'] = $categoryId;
-
-        return $this;
-    }
 }

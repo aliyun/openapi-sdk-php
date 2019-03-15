@@ -5,9 +5,8 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAvailableRecoveryTime
- *
  * @method string getBackupId()
+ * @method $this withBackupId($value)
  */
 class DescribeAvailableRecoveryTime extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeAvailableRecoveryTime extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $backupId
-     *
-     * @return $this
-     */
-    public function withBackupId($backupId)
-    {
-        $this->data['BackupId'] = $backupId;
-        $this->options['query']['BackupId'] = $backupId;
-
-        return $this;
-    }
 }

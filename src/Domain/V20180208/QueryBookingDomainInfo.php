@@ -5,9 +5,8 @@ namespace AlibabaCloud\Domain\V20180208;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryBookingDomainInfo
- *
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  */
 class QueryBookingDomainInfo extends Rpc
 {
@@ -16,17 +15,4 @@ class QueryBookingDomainInfo extends Rpc
     public $version = '2018-02-08';
 
     public $method = 'POST';
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
 }

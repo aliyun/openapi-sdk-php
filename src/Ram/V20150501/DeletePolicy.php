@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeletePolicy
- *
  * @method string getPolicyName()
+ * @method $this withPolicyName($value)
  */
 class DeletePolicy extends Rpc
 {
@@ -18,17 +17,4 @@ class DeletePolicy extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $policyName
-     *
-     * @return $this
-     */
-    public function withPolicyName($policyName)
-    {
-        $this->data['PolicyName'] = $policyName;
-        $this->options['query']['PolicyName'] = $policyName;
-
-        return $this;
-    }
 }

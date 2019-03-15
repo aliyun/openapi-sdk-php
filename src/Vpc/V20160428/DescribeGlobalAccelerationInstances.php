@@ -5,22 +5,34 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeGlobalAccelerationInstances
- *
  * @method string getIpAddress()
+ * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getBandwidthType()
+ * @method $this withBandwidthType($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getServiceLocation()
+ * @method $this withServiceLocation($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIncludeReservationData()
+ * @method $this withIncludeReservationData($value)
  * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getServerId()
+ * @method $this withServerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeGlobalAccelerationInstances extends Rpc
 {
@@ -31,186 +43,4 @@ class DescribeGlobalAccelerationInstances extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $ipAddress
-     *
-     * @return $this
-     */
-    public function withIpAddress($ipAddress)
-    {
-        $this->data['IpAddress'] = $ipAddress;
-        $this->options['query']['IpAddress'] = $ipAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidthType
-     *
-     * @return $this
-     */
-    public function withBandwidthType($bandwidthType)
-    {
-        $this->data['BandwidthType'] = $bandwidthType;
-        $this->options['query']['BandwidthType'] = $bandwidthType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceLocation
-     *
-     * @return $this
-     */
-    public function withServiceLocation($serviceLocation)
-    {
-        $this->data['ServiceLocation'] = $serviceLocation;
-        $this->options['query']['ServiceLocation'] = $serviceLocation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $includeReservationData
-     *
-     * @return $this
-     */
-    public function withIncludeReservationData($includeReservationData)
-    {
-        $this->data['IncludeReservationData'] = $includeReservationData;
-        $this->options['query']['IncludeReservationData'] = $includeReservationData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $globalAccelerationInstanceId
-     *
-     * @return $this
-     */
-    public function withGlobalAccelerationInstanceId($globalAccelerationInstanceId)
-    {
-        $this->data['GlobalAccelerationInstanceId'] = $globalAccelerationInstanceId;
-        $this->options['query']['GlobalAccelerationInstanceId'] = $globalAccelerationInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serverId
-     *
-     * @return $this
-     */
-    public function withServerId($serverId)
-    {
-        $this->data['ServerId'] = $serverId;
-        $this->options['query']['ServerId'] = $serverId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

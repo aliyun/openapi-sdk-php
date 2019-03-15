@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api AddVideoDna
- *
  * @method string getClientInfo()
  */
 class AddVideoDna extends Roa

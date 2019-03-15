@@ -5,28 +5,46 @@ namespace AlibabaCloud\Jaq\V20161123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BbsPrevention
- *
  * @method string getProtocolVersion()
+ * @method $this withProtocolVersion($value)
  * @method string getCurrentUrl()
+ * @method $this withCurrentUrl($value)
  * @method string getReferer()
+ * @method $this withReferer($value)
  * @method string getAgent()
+ * @method $this withAgent($value)
  * @method string getAddress()
+ * @method $this withAddress($value)
  * @method string getCookie()
+ * @method $this withCookie($value)
  * @method string getIp()
+ * @method $this withIp($value)
  * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
  * @method string getSource()
+ * @method $this withSource($value)
  * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getIdType()
+ * @method $this withIdType($value)
  * @method string getExtendData()
+ * @method $this withExtendData($value)
  * @method string getCompanyName()
+ * @method $this withCompanyName($value)
  * @method string getNickName()
+ * @method $this withNickName($value)
  * @method string getJsToken()
+ * @method $this withJsToken($value)
  * @method string getMacAddress()
+ * @method $this withMacAddress($value)
  * @method string getSDKToken()
+ * @method $this withSDKToken($value)
  * @method string getCallerName()
+ * @method $this withCallerName($value)
  * @method string getEmail()
+ * @method $this withEmail($value)
  */
 class BbsPrevention extends Rpc
 {
@@ -35,264 +53,4 @@ class BbsPrevention extends Rpc
     public $version = '2016-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $protocolVersion
-     *
-     * @return $this
-     */
-    public function withProtocolVersion($protocolVersion)
-    {
-        $this->data['ProtocolVersion'] = $protocolVersion;
-        $this->options['query']['ProtocolVersion'] = $protocolVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentUrl
-     *
-     * @return $this
-     */
-    public function withCurrentUrl($currentUrl)
-    {
-        $this->data['CurrentUrl'] = $currentUrl;
-        $this->options['query']['CurrentUrl'] = $currentUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $referer
-     *
-     * @return $this
-     */
-    public function withReferer($referer)
-    {
-        $this->data['Referer'] = $referer;
-        $this->options['query']['Referer'] = $referer;
-
-        return $this;
-    }
-
-    /**
-     * @param string $agent
-     *
-     * @return $this
-     */
-    public function withAgent($agent)
-    {
-        $this->data['Agent'] = $agent;
-        $this->options['query']['Agent'] = $agent;
-
-        return $this;
-    }
-
-    /**
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function withAddress($address)
-    {
-        $this->data['Address'] = $address;
-        $this->options['query']['Address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cookie
-     *
-     * @return $this
-     */
-    public function withCookie($cookie)
-    {
-        $this->data['Cookie'] = $cookie;
-        $this->options['query']['Cookie'] = $cookie;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function withIp($ip)
-    {
-        $this->data['Ip'] = $ip;
-        $this->options['query']['Ip'] = $ip;
-
-        return $this;
-    }
-
-    /**
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function withPhoneNumber($phoneNumber)
-    {
-        $this->data['PhoneNumber'] = $phoneNumber;
-        $this->options['query']['PhoneNumber'] = $phoneNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $source
-     *
-     * @return $this
-     */
-    public function withSource($source)
-    {
-        $this->data['Source'] = $source;
-        $this->options['query']['Source'] = $source;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function withSessionId($sessionId)
-    {
-        $this->data['SessionId'] = $sessionId;
-        $this->options['query']['SessionId'] = $sessionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $idType
-     *
-     * @return $this
-     */
-    public function withIdType($idType)
-    {
-        $this->data['IdType'] = $idType;
-        $this->options['query']['IdType'] = $idType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $extendData
-     *
-     * @return $this
-     */
-    public function withExtendData($extendData)
-    {
-        $this->data['ExtendData'] = $extendData;
-        $this->options['query']['ExtendData'] = $extendData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $companyName
-     *
-     * @return $this
-     */
-    public function withCompanyName($companyName)
-    {
-        $this->data['CompanyName'] = $companyName;
-        $this->options['query']['CompanyName'] = $companyName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nickName
-     *
-     * @return $this
-     */
-    public function withNickName($nickName)
-    {
-        $this->data['NickName'] = $nickName;
-        $this->options['query']['NickName'] = $nickName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $jsToken
-     *
-     * @return $this
-     */
-    public function withJsToken($jsToken)
-    {
-        $this->data['JsToken'] = $jsToken;
-        $this->options['query']['JsToken'] = $jsToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $macAddress
-     *
-     * @return $this
-     */
-    public function withMacAddress($macAddress)
-    {
-        $this->data['MacAddress'] = $macAddress;
-        $this->options['query']['MacAddress'] = $macAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sDKToken
-     *
-     * @return $this
-     */
-    public function withSDKToken($sDKToken)
-    {
-        $this->data['SDKToken'] = $sDKToken;
-        $this->options['query']['SDKToken'] = $sDKToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $callerName
-     *
-     * @return $this
-     */
-    public function withCallerName($callerName)
-    {
-        $this->data['CallerName'] = $callerName;
-        $this->options['query']['CallerName'] = $callerName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function withEmail($email)
-    {
-        $this->data['Email'] = $email;
-        $this->options['query']['Email'] = $email;
-
-        return $this;
-    }
 }

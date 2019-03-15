@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api ModifyInstance
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ModifyInstance extends Roa
 {
@@ -20,17 +19,4 @@ class ModifyInstance extends Roa
     public $method = 'PUT';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

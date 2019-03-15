@@ -5,10 +5,10 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeDataSetMessage
- *
  * @method string getVersionId()
+ * @method $this withVersionId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DescribeDataSetMessage extends Roa
 {
@@ -19,30 +19,4 @@ class DescribeDataSetMessage extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/messages';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $versionId
-     *
-     * @return $this
-     */
-    public function withVersionId($versionId)
-    {
-        $this->data['VersionId'] = $versionId;
-        $this->pathParameters['VersionId'] = $versionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

@@ -5,13 +5,16 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api OperateSuspiciousTargetConfig
- *
  * @method string getTargetOperations()
+ * @method $this withTargetOperations($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTargetType()
+ * @method $this withTargetType($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getType()
+ * @method $this withType($value)
  */
 class OperateSuspiciousTargetConfig extends Rpc
 {
@@ -22,69 +25,4 @@ class OperateSuspiciousTargetConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $targetOperations
-     *
-     * @return $this
-     */
-    public function withTargetOperations($targetOperations)
-    {
-        $this->data['TargetOperations'] = $targetOperations;
-        $this->options['query']['TargetOperations'] = $targetOperations;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetType
-     *
-     * @return $this
-     */
-    public function withTargetType($targetType)
-    {
-        $this->data['TargetType'] = $targetType;
-        $this->options['query']['TargetType'] = $targetType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
 }

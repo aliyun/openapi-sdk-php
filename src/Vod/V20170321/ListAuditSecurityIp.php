@@ -5,9 +5,8 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAuditSecurityIp
- *
  * @method string getSecurityGroupName()
+ * @method $this withSecurityGroupName($value)
  */
 class ListAuditSecurityIp extends Rpc
 {
@@ -18,17 +17,4 @@ class ListAuditSecurityIp extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $securityGroupName
-     *
-     * @return $this
-     */
-    public function withSecurityGroupName($securityGroupName)
-    {
-        $this->data['SecurityGroupName'] = $securityGroupName;
-        $this->options['query']['SecurityGroupName'] = $securityGroupName;
-
-        return $this;
-    }
 }

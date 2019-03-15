@@ -5,14 +5,18 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ChatRobotSession
- *
  * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
  * @method string getJsonFactors()
+ * @method $this withJsonFactors($value)
  * @method string getIntentionId()
+ * @method $this withIntentionId($value)
  * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  * @method string getUtterance()
+ * @method $this withUtterance($value)
  */
 class ChatRobotSession extends Rpc
 {
@@ -23,82 +27,4 @@ class ChatRobotSession extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccs';
-
-    /**
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function withKnowledgeId($knowledgeId)
-    {
-        $this->data['KnowledgeId'] = $knowledgeId;
-        $this->options['query']['KnowledgeId'] = $knowledgeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $jsonFactors
-     *
-     * @return $this
-     */
-    public function withJsonFactors($jsonFactors)
-    {
-        $this->data['JsonFactors'] = $jsonFactors;
-        $this->options['query']['JsonFactors'] = $jsonFactors;
-
-        return $this;
-    }
-
-    /**
-     * @param string $intentionId
-     *
-     * @return $this
-     */
-    public function withIntentionId($intentionId)
-    {
-        $this->data['IntentionId'] = $intentionId;
-        $this->options['query']['IntentionId'] = $intentionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function withSessionId($sessionId)
-    {
-        $this->data['SessionId'] = $sessionId;
-        $this->options['query']['SessionId'] = $sessionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function withUtterance($utterance)
-    {
-        $this->data['Utterance'] = $utterance;
-        $this->options['query']['Utterance'] = $utterance;
-
-        return $this;
-    }
 }

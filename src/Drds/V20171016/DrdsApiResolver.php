@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Drds based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Drds\V20171016
  *
  * @method AddTagsToInstance addTagsToInstance(array $options = [])
  * @method CreateDrdsAccount createDrdsAccount(array $options = [])

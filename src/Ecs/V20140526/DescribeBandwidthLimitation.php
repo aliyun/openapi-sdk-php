@@ -5,17 +5,24 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBandwidthLimitation
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOperationType()
+ * @method $this withOperationType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  */
 class DescribeBandwidthLimitation extends Rpc
 {
@@ -26,121 +33,4 @@ class DescribeBandwidthLimitation extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId($resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        $this->options['query']['ResourceId'] = $resourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $operationType
-     *
-     * @return $this
-     */
-    public function withOperationType($operationType)
-    {
-        $this->data['OperationType'] = $operationType;
-        $this->options['query']['OperationType'] = $operationType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
 }

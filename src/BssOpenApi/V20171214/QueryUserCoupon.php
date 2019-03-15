@@ -5,8 +5,6 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryUserCoupon
- *
  */
 class QueryUserCoupon extends Rpc
 {

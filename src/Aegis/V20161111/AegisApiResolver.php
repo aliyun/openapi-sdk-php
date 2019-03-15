@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Aegis based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Aegis\V20161111
  *
  * @method AutoUpgradeSas autoUpgradeSas(array $options = [])
  * @method BatchDeleteWhiteList batchDeleteWhiteList(array $options = [])
@@ -181,7 +180,9 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeWhiteListGroupStruct describeWhiteListGroupStruct(array $options = [])
  * @method DescribeWhiteListProcess describeWhiteListProcess(array $options = [])
  * @method DescribeWhiteListStrategyCount describeWhiteListStrategyCount(array $options = [])
+ * @method DescribeWhiteListStrategyList describeWhiteListStrategyList(array $options = [])
  * @method DescribeWhiteListStrategyStatistics describeWhiteListStrategyStatistics(array $options = [])
+ * @method DescribeWhiteListStrategyUuidCount describeWhiteListStrategyUuidCount(array $options = [])
  * @method DescribeYesterdayStatistics describeYesterdayStatistics(array $options = [])
  * @method Describesummary describesummary(array $options = [])
  * @method DownloadLog downloadLog(array $options = [])
@@ -246,6 +247,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method TransformLeakage transformLeakage(array $options = [])
  * @method UpdateCustomizeReportStatus updateCustomizeReportStatus(array $options = [])
  * @method UpdateWhiteListProcessStatus updateWhiteListProcessStatus(array $options = [])
+ * @method UpdateWhiteListStrategyRelation updateWhiteListStrategyRelation(array $options = [])
  * @method UpdateWhiteListStrategyStatus updateWhiteListStrategyStatus(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
  * @method ValidateHcWarnings validateHcWarnings(array $options = [])

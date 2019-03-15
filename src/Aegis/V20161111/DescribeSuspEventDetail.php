@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeSuspEventDetail
- *
  * @method string getSuspiciousEventId()
+ * @method $this withSuspiciousEventId($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeSuspEventDetail extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeSuspEventDetail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $suspiciousEventId
-     *
-     * @return $this
-     */
-    public function withSuspiciousEventId($suspiciousEventId)
-    {
-        $this->data['SuspiciousEventId'] = $suspiciousEventId;
-        $this->options['query']['SuspiciousEventId'] = $suspiciousEventId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

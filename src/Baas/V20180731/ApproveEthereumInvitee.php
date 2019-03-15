@@ -5,9 +5,8 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ApproveEthereumInvitee
- *
  * @method string getId()
+ * @method $this withId($value)
  * @method array getInvitee()
  */
 class ApproveEthereumInvitee extends Rpc
@@ -17,19 +16,6 @@ class ApproveEthereumInvitee extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'POST';
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
 
     /**
      * @param array $invitee

@@ -5,13 +5,16 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUser
- *
  * @method string getComments()
+ * @method $this withComments($value)
  * @method string getDisplayName()
+ * @method $this withDisplayName($value)
  * @method string getMobilePhone()
+ * @method $this withMobilePhone($value)
  * @method string getEmail()
+ * @method $this withEmail($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class CreateUser extends Rpc
 {
@@ -22,69 +25,4 @@ class CreateUser extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $comments
-     *
-     * @return $this
-     */
-    public function withComments($comments)
-    {
-        $this->data['Comments'] = $comments;
-        $this->options['query']['Comments'] = $comments;
-
-        return $this;
-    }
-
-    /**
-     * @param string $displayName
-     *
-     * @return $this
-     */
-    public function withDisplayName($displayName)
-    {
-        $this->data['DisplayName'] = $displayName;
-        $this->options['query']['DisplayName'] = $displayName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mobilePhone
-     *
-     * @return $this
-     */
-    public function withMobilePhone($mobilePhone)
-    {
-        $this->data['MobilePhone'] = $mobilePhone;
-        $this->options['query']['MobilePhone'] = $mobilePhone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function withEmail($email)
-    {
-        $this->data['Email'] = $email;
-        $this->options['query']['Email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

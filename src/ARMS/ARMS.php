@@ -7,7 +7,6 @@ use AlibabaCloud\VersionResolverTrait;
 /**
  * Find the specified version of the ARMS based on the method name as the version name.
  *
- * @package   AlibabaCloud\ARMS
  *
  * @method V20181015\ARMSApiResolver v20181015()
  */

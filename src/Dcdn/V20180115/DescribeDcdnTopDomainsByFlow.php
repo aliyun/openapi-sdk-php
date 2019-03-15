@@ -5,13 +5,16 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDcdnTopDomainsByFlow
- *
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDcdnTopDomainsByFlow extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeDcdnTopDomainsByFlow extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dcdn';
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function withProduct($product)
-    {
-        $this->data['Product'] = $product;
-        $this->options['query']['Product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

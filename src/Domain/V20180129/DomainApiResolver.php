@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Domain based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Domain\V20180129
  *
  * @method AcknowledgeTaskResult acknowledgeTaskResult(array $options = [])
  * @method BatchFuzzyMatchDomainSensitiveWord batchFuzzyMatchDomainSensitiveWord(array $options = [])

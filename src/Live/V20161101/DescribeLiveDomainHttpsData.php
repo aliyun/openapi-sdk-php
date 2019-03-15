@@ -5,13 +5,16 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLiveDomainHttpsData
- *
  * @method string getDomainNames()
+ * @method $this withDomainNames($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeLiveDomainHttpsData extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeLiveDomainHttpsData extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function withDomainNames($domainNames)
-    {
-        $this->data['DomainNames'] = $domainNames;
-        $this->options['query']['DomainNames'] = $domainNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function withInterval($interval)
-    {
-        $this->data['Interval'] = $interval;
-        $this->options['query']['Interval'] = $interval;
-
-        return $this;
-    }
 }

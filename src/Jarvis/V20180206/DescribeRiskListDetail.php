@@ -5,15 +5,15 @@ namespace AlibabaCloud\Jarvis\V20180206;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRiskListDetail
- *
  * @method string getRiskType()
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method string getQueryProduct()
  * @method string getCurrentPage()
  * @method string getRiskDescribe()
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getSrcUid()
  * @method string getSourceCode()
  * @method string getQueryRegionId()
@@ -36,19 +36,6 @@ class DescribeRiskListDetail extends Rpc
     {
         $this->data['RiskType'] = $riskType;
         $this->options['query']['riskType'] = $riskType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
 
         return $this;
     }
@@ -101,19 +88,6 @@ class DescribeRiskListDetail extends Rpc
     {
         $this->data['RiskDescribe'] = $riskDescribe;
         $this->options['query']['riskDescribe'] = $riskDescribe;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
 
         return $this;
     }

@@ -5,18 +5,26 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryUsableSnapshots
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSnapshotNickName()
+ * @method $this withSnapshotNickName($value)
  * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getOffset()
+ * @method $this withOffset($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getCreationStartTime()
+ * @method $this withCreationStartTime($value)
  * @method string getCreationEndTime()
+ * @method $this withCreationEndTime($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class QueryUsableSnapshots extends Rpc
 {
@@ -27,134 +35,4 @@ class QueryUsableSnapshots extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotNickName
-     *
-     * @return $this
-     */
-    public function withSnapshotNickName($snapshotNickName)
-    {
-        $this->data['SnapshotNickName'] = $snapshotNickName;
-        $this->options['query']['SnapshotNickName'] = $snapshotNickName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function withSnapshotId($snapshotId)
-    {
-        $this->data['SnapshotId'] = $snapshotId;
-        $this->options['query']['SnapshotId'] = $snapshotId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function withOffset($offset)
-    {
-        $this->data['Offset'] = $offset;
-        $this->options['query']['Offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $creationStartTime
-     *
-     * @return $this
-     */
-    public function withCreationStartTime($creationStartTime)
-    {
-        $this->data['CreationStartTime'] = $creationStartTime;
-        $this->options['query']['CreationStartTime'] = $creationStartTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $creationEndTime
-     *
-     * @return $this
-     */
-    public function withCreationEndTime($creationEndTime)
-    {
-        $this->data['CreationEndTime'] = $creationEndTime;
-        $this->options['query']['CreationEndTime'] = $creationEndTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

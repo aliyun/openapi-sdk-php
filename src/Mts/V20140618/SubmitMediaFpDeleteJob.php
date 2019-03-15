@@ -5,16 +5,22 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitMediaFpDeleteJob
- *
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getFpDBId()
+ * @method $this withFpDBId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  * @method string getPrimaryKey()
+ * @method $this withPrimaryKey($value)
  */
 class SubmitMediaFpDeleteJob extends Rpc
 {
@@ -25,108 +31,4 @@ class SubmitMediaFpDeleteJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fpDBId
-     *
-     * @return $this
-     */
-    public function withFpDBId($fpDBId)
-    {
-        $this->data['FpDBId'] = $fpDBId;
-        $this->options['query']['FpDBId'] = $fpDBId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function withPipelineId($pipelineId)
-    {
-        $this->data['PipelineId'] = $pipelineId;
-        $this->options['query']['PipelineId'] = $pipelineId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $primaryKey
-     *
-     * @return $this
-     */
-    public function withPrimaryKey($primaryKey)
-    {
-        $this->data['PrimaryKey'] = $primaryKey;
-        $this->options['query']['PrimaryKey'] = $primaryKey;
-
-        return $this;
-    }
 }

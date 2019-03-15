@@ -5,20 +5,30 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDcdnRefreshTasks
- *
  * @method string getObjectPath()
+ * @method $this withObjectPath($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getObjectType()
+ * @method $this withObjectType($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeDcdnRefreshTasks extends Rpc
 {
@@ -29,160 +39,4 @@ class DescribeDcdnRefreshTasks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dcdn';
-
-    /**
-     * @param string $objectPath
-     *
-     * @return $this
-     */
-    public function withObjectPath($objectPath)
-    {
-        $this->data['ObjectPath'] = $objectPath;
-        $this->options['query']['ObjectPath'] = $objectPath;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function withObjectType($objectType)
-    {
-        $this->data['ObjectType'] = $objectType;
-        $this->options['query']['ObjectType'] = $objectType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

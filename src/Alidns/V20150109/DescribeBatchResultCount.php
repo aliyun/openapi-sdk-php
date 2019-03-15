@@ -5,12 +5,14 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBatchResultCount
- *
  * @method string getBatchType()
+ * @method $this withBatchType($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class DescribeBatchResultCount extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeBatchResultCount extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'alidns';
-
-    /**
-     * @param string $batchType
-     *
-     * @return $this
-     */
-    public function withBatchType($batchType)
-    {
-        $this->data['BatchType'] = $batchType;
-        $this->options['query']['BatchType'] = $batchType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PutEvent
- *
  * @method string getEventInfo()
+ * @method $this withEventInfo($value)
  */
 class PutEvent extends Rpc
 {
@@ -18,17 +17,4 @@ class PutEvent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $eventInfo
-     *
-     * @return $this
-     */
-    public function withEventInfo($eventInfo)
-    {
-        $this->data['EventInfo'] = $eventInfo;
-        $this->options['query']['EventInfo'] = $eventInfo;
-
-        return $this;
-    }
 }

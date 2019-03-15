@@ -5,11 +5,12 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeUploadInfo
- *
  * @method string getBiz()
+ * @method $this withBiz($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeUploadInfo extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeUploadInfo extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function withBiz($biz)
-    {
-        $this->data['Biz'] = $biz;
-        $this->options['query']['Biz'] = $biz;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

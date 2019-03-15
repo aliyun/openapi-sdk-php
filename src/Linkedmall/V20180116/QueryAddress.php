@@ -5,11 +5,12 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAddress
- *
  * @method string getIp()
+ * @method $this withIp($value)
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getLevel3DivisionCode()
+ * @method $this withLevel3DivisionCode($value)
  */
 class QueryAddress extends Rpc
 {
@@ -20,43 +21,4 @@ class QueryAddress extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function withIp($ip)
-    {
-        $this->data['Ip'] = $ip;
-        $this->options['query']['Ip'] = $ip;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $level3DivisionCode
-     *
-     * @return $this
-     */
-    public function withLevel3DivisionCode($level3DivisionCode)
-    {
-        $this->data['Level3DivisionCode'] = $level3DivisionCode;
-        $this->options['query']['Level3DivisionCode'] = $level3DivisionCode;
-
-        return $this;
-    }
 }

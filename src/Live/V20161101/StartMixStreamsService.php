@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of StartMixStreamsService
- *
  * @method string getMixType()
  * @method string getSecurityToken()
  * @method string getMainDomainName()

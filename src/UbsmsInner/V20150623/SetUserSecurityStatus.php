@@ -5,30 +5,50 @@ namespace AlibabaCloud\UbsmsInner\V20150623;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetUserSecurityStatus
- *
  * @method string getStatusKey10()
+ * @method $this withStatusKey10($value)
  * @method string getUid()
+ * @method $this withUid($value)
  * @method string getStatusValue1()
+ * @method $this withStatusValue1($value)
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getStatusValue2()
+ * @method $this withStatusValue2($value)
  * @method string getStatusKey3()
+ * @method $this withStatusKey3($value)
  * @method string getStatusValue3()
+ * @method $this withStatusValue3($value)
  * @method string getStatusKey4()
+ * @method $this withStatusKey4($value)
  * @method string getStatusValue4()
+ * @method $this withStatusValue4($value)
  * @method string getStatusKey1()
+ * @method $this withStatusKey1($value)
  * @method string getStatusValue5()
+ * @method $this withStatusValue5($value)
  * @method string getStatusKey2()
+ * @method $this withStatusKey2($value)
  * @method string getStatusValue6()
+ * @method $this withStatusValue6($value)
  * @method string getStatusKey7()
+ * @method $this withStatusKey7($value)
  * @method string getStatusValue7()
+ * @method $this withStatusValue7($value)
  * @method string getStatusKey8()
+ * @method $this withStatusKey8($value)
  * @method string getStatusValue8()
+ * @method $this withStatusValue8($value)
  * @method string getStatusKey5()
+ * @method $this withStatusKey5($value)
  * @method string getStatusValue9()
+ * @method $this withStatusValue9($value)
  * @method string getStatusKey6()
+ * @method $this withStatusKey6($value)
  * @method string getStatusValue10()
+ * @method $this withStatusValue10($value)
  * @method string getStatusKey9()
+ * @method $this withStatusKey9($value)
  */
 class SetUserSecurityStatus extends Rpc
 {
@@ -37,290 +57,4 @@ class SetUserSecurityStatus extends Rpc
     public $version = '2015-06-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $statusKey10
-     *
-     * @return $this
-     */
-    public function withStatusKey10($statusKey10)
-    {
-        $this->data['StatusKey10'] = $statusKey10;
-        $this->options['query']['StatusKey10'] = $statusKey10;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function withUid($uid)
-    {
-        $this->data['Uid'] = $uid;
-        $this->options['query']['Uid'] = $uid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue1
-     *
-     * @return $this
-     */
-    public function withStatusValue1($statusValue1)
-    {
-        $this->data['StatusValue1'] = $statusValue1;
-        $this->options['query']['StatusValue1'] = $statusValue1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue2
-     *
-     * @return $this
-     */
-    public function withStatusValue2($statusValue2)
-    {
-        $this->data['StatusValue2'] = $statusValue2;
-        $this->options['query']['StatusValue2'] = $statusValue2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey3
-     *
-     * @return $this
-     */
-    public function withStatusKey3($statusKey3)
-    {
-        $this->data['StatusKey3'] = $statusKey3;
-        $this->options['query']['StatusKey3'] = $statusKey3;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue3
-     *
-     * @return $this
-     */
-    public function withStatusValue3($statusValue3)
-    {
-        $this->data['StatusValue3'] = $statusValue3;
-        $this->options['query']['StatusValue3'] = $statusValue3;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey4
-     *
-     * @return $this
-     */
-    public function withStatusKey4($statusKey4)
-    {
-        $this->data['StatusKey4'] = $statusKey4;
-        $this->options['query']['StatusKey4'] = $statusKey4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue4
-     *
-     * @return $this
-     */
-    public function withStatusValue4($statusValue4)
-    {
-        $this->data['StatusValue4'] = $statusValue4;
-        $this->options['query']['StatusValue4'] = $statusValue4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey1
-     *
-     * @return $this
-     */
-    public function withStatusKey1($statusKey1)
-    {
-        $this->data['StatusKey1'] = $statusKey1;
-        $this->options['query']['StatusKey1'] = $statusKey1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue5
-     *
-     * @return $this
-     */
-    public function withStatusValue5($statusValue5)
-    {
-        $this->data['StatusValue5'] = $statusValue5;
-        $this->options['query']['StatusValue5'] = $statusValue5;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey2
-     *
-     * @return $this
-     */
-    public function withStatusKey2($statusKey2)
-    {
-        $this->data['StatusKey2'] = $statusKey2;
-        $this->options['query']['StatusKey2'] = $statusKey2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue6
-     *
-     * @return $this
-     */
-    public function withStatusValue6($statusValue6)
-    {
-        $this->data['StatusValue6'] = $statusValue6;
-        $this->options['query']['StatusValue6'] = $statusValue6;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey7
-     *
-     * @return $this
-     */
-    public function withStatusKey7($statusKey7)
-    {
-        $this->data['StatusKey7'] = $statusKey7;
-        $this->options['query']['StatusKey7'] = $statusKey7;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue7
-     *
-     * @return $this
-     */
-    public function withStatusValue7($statusValue7)
-    {
-        $this->data['StatusValue7'] = $statusValue7;
-        $this->options['query']['StatusValue7'] = $statusValue7;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey8
-     *
-     * @return $this
-     */
-    public function withStatusKey8($statusKey8)
-    {
-        $this->data['StatusKey8'] = $statusKey8;
-        $this->options['query']['StatusKey8'] = $statusKey8;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue8
-     *
-     * @return $this
-     */
-    public function withStatusValue8($statusValue8)
-    {
-        $this->data['StatusValue8'] = $statusValue8;
-        $this->options['query']['StatusValue8'] = $statusValue8;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey5
-     *
-     * @return $this
-     */
-    public function withStatusKey5($statusKey5)
-    {
-        $this->data['StatusKey5'] = $statusKey5;
-        $this->options['query']['StatusKey5'] = $statusKey5;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue9
-     *
-     * @return $this
-     */
-    public function withStatusValue9($statusValue9)
-    {
-        $this->data['StatusValue9'] = $statusValue9;
-        $this->options['query']['StatusValue9'] = $statusValue9;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey6
-     *
-     * @return $this
-     */
-    public function withStatusKey6($statusKey6)
-    {
-        $this->data['StatusKey6'] = $statusKey6;
-        $this->options['query']['StatusKey6'] = $statusKey6;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusValue10
-     *
-     * @return $this
-     */
-    public function withStatusValue10($statusValue10)
-    {
-        $this->data['StatusValue10'] = $statusValue10;
-        $this->options['query']['StatusValue10'] = $statusValue10;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statusKey9
-     *
-     * @return $this
-     */
-    public function withStatusKey9($statusKey9)
-    {
-        $this->data['StatusKey9'] = $statusKey9;
-        $this->options['query']['StatusKey9'] = $statusKey9;
-
-        return $this;
-    }
 }

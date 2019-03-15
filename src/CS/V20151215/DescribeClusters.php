@@ -5,8 +5,6 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeClusters
- *
  * @method string getClusterType()
  * @method string getName()
  */

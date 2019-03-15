@@ -5,15 +5,20 @@ namespace AlibabaCloud\Cdn\V20141111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetRefererConfig
- *
  * @method string getReferList()
+ * @method $this withReferList($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getReferType()
+ * @method $this withReferType($value)
  * @method string getDisableAst()
+ * @method $this withDisableAst($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAllowEmpty()
+ * @method $this withAllowEmpty($value)
  */
 class SetRefererConfig extends Rpc
 {
@@ -22,95 +27,4 @@ class SetRefererConfig extends Rpc
     public $version = '2014-11-11';
 
     public $method = 'POST';
-
-    /**
-     * @param string $referList
-     *
-     * @return $this
-     */
-    public function withReferList($referList)
-    {
-        $this->data['ReferList'] = $referList;
-        $this->options['query']['ReferList'] = $referList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $referType
-     *
-     * @return $this
-     */
-    public function withReferType($referType)
-    {
-        $this->data['ReferType'] = $referType;
-        $this->options['query']['ReferType'] = $referType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $disableAst
-     *
-     * @return $this
-     */
-    public function withDisableAst($disableAst)
-    {
-        $this->data['DisableAst'] = $disableAst;
-        $this->options['query']['DisableAst'] = $disableAst;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $allowEmpty
-     *
-     * @return $this
-     */
-    public function withAllowEmpty($allowEmpty)
-    {
-        $this->data['AllowEmpty'] = $allowEmpty;
-        $this->options['query']['AllowEmpty'] = $allowEmpty;
-
-        return $this;
-    }
 }

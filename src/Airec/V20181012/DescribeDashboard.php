@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeDashboard
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getEndDate()
  * @method string getStartDate()
  */
@@ -20,19 +19,6 @@ class DescribeDashboard extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 
     /**
      * @param string $endDate

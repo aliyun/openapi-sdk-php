@@ -5,10 +5,10 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeCustomOcrTemplate
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getIds()
+ * @method $this withIds($value)
  */
 class DescribeCustomOcrTemplate extends Rpc
 {
@@ -19,30 +19,4 @@ class DescribeCustomOcrTemplate extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ids
-     *
-     * @return $this
-     */
-    public function withIds($ids)
-    {
-        $this->data['Ids'] = $ids;
-        $this->options['query']['Ids'] = $ids;
-
-        return $this;
-    }
 }

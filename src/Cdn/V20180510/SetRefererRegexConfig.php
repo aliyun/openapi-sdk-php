@@ -5,13 +5,16 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetRefererRegexConfig
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getReferRegexs()
+ * @method $this withReferRegexs($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getReferType()
+ * @method $this withReferType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class SetRefererRegexConfig extends Rpc
 {
@@ -20,69 +23,4 @@ class SetRefererRegexConfig extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $referRegexs
-     *
-     * @return $this
-     */
-    public function withReferRegexs($referRegexs)
-    {
-        $this->data['ReferRegexs'] = $referRegexs;
-        $this->options['query']['ReferRegexs'] = $referRegexs;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $referType
-     *
-     * @return $this
-     */
-    public function withReferType($referType)
-    {
-        $this->data['ReferType'] = $referType;
-        $this->options['query']['ReferType'] = $referType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }
