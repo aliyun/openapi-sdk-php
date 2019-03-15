@@ -5,17 +5,24 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryMediaList
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIncludeSummaryList()
+ * @method $this withIncludeSummaryList($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getIncludeSnapshotList()
+ * @method $this withIncludeSnapshotList($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getMediaIds()
+ * @method $this withMediaIds($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIncludePlayList()
+ * @method $this withIncludePlayList($value)
  * @method string getIncludeMediaInfo()
+ * @method $this withIncludeMediaInfo($value)
  */
 class QueryMediaList extends Rpc
 {
@@ -26,121 +33,4 @@ class QueryMediaList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $includeSummaryList
-     *
-     * @return $this
-     */
-    public function withIncludeSummaryList($includeSummaryList)
-    {
-        $this->data['IncludeSummaryList'] = $includeSummaryList;
-        $this->options['query']['IncludeSummaryList'] = $includeSummaryList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $includeSnapshotList
-     *
-     * @return $this
-     */
-    public function withIncludeSnapshotList($includeSnapshotList)
-    {
-        $this->data['IncludeSnapshotList'] = $includeSnapshotList;
-        $this->options['query']['IncludeSnapshotList'] = $includeSnapshotList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mediaIds
-     *
-     * @return $this
-     */
-    public function withMediaIds($mediaIds)
-    {
-        $this->data['MediaIds'] = $mediaIds;
-        $this->options['query']['MediaIds'] = $mediaIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $includePlayList
-     *
-     * @return $this
-     */
-    public function withIncludePlayList($includePlayList)
-    {
-        $this->data['IncludePlayList'] = $includePlayList;
-        $this->options['query']['IncludePlayList'] = $includePlayList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $includeMediaInfo
-     *
-     * @return $this
-     */
-    public function withIncludeMediaInfo($includeMediaInfo)
-    {
-        $this->data['IncludeMediaInfo'] = $includeMediaInfo;
-        $this->options['query']['IncludeMediaInfo'] = $includeMediaInfo;
-
-        return $this;
-    }
 }

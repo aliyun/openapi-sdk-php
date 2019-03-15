@@ -5,12 +5,13 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Rpc;
 
 /**
- * Api OperateBatchDomain
- *
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method array getDomainRecordInfo()
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getType()
+ * @method $this withType($value)
  */
 class OperateBatchDomain extends Rpc
 {
@@ -21,19 +22,6 @@ class OperateBatchDomain extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'alidns';
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
 
     /**
      * @param array $domainRecordInfo
@@ -52,32 +40,6 @@ class OperateBatchDomain extends Rpc
             $this->options['query']['DomainRecordInfo.' . ($i + 1) . '.Value'] = $domainRecordInfo[$i]['Value'];
             $this->options['query']['DomainRecordInfo.' . ($i + 1) . '.Ttl'] = $domainRecordInfo[$i]['Ttl'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
 
         return $this;
     }

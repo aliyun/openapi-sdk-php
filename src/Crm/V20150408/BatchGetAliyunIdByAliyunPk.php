@@ -5,8 +5,6 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BatchGetAliyunIdByAliyunPk
- *
  * @method array getPkList()
  */
 class BatchGetAliyunIdByAliyunPk extends Rpc

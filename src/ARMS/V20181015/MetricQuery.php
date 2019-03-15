@@ -5,19 +5,25 @@ namespace AlibabaCloud\ARMS\V20181015;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MetricQuery
- *
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method array getFilters()
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getIintervalInSec()
+ * @method $this withIintervalInSec($value)
  * @method array getMeasures()
  * @method string getMetric()
+ * @method $this withMetric($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  * @method array getDimensions()
  * @method string getOrder()
+ * @method $this withOrder($value)
  */
 class MetricQuery extends Rpc
 {
@@ -26,32 +32,6 @@ class MetricQuery extends Rpc
     public $version = '2018-10-15';
 
     public $method = 'POST';
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
-
-        return $this;
-    }
 
     /**
      * @param array $filters
@@ -65,32 +45,6 @@ class MetricQuery extends Rpc
             $this->options['query']['Filters.' . ($i + 1) . '.Value'] = $filters[$i]['Value'];
             $this->options['query']['Filters.' . ($i + 1) . '.Key'] = $filters[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $iintervalInSec
-     *
-     * @return $this
-     */
-    public function withIintervalInSec($iintervalInSec)
-    {
-        $this->data['IintervalInSec'] = $iintervalInSec;
-        $this->options['query']['IintervalInSec'] = $iintervalInSec;
 
         return $this;
     }
@@ -111,45 +65,6 @@ class MetricQuery extends Rpc
     }
 
     /**
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function withMetric($metric)
-    {
-        $this->data['Metric'] = $metric;
-        $this->options['query']['Metric'] = $metric;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
      * @param array $dimensions
      *
      * @return $this
@@ -160,19 +75,6 @@ class MetricQuery extends Rpc
         foreach ($dimensions as $i => $iValue) {
             $this->options['query']['Dimensions.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
 
         return $this;
     }

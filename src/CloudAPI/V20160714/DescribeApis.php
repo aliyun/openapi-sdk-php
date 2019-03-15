@@ -5,16 +5,22 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeApis
- *
  * @method string getApiName()
+ * @method $this withApiName($value)
  * @method string getCatalogId()
+ * @method $this withCatalogId($value)
  * @method string getVisibility()
+ * @method $this withVisibility($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiId()
+ * @method $this withApiId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeApis extends Rpc
 {
@@ -25,108 +31,4 @@ class DescribeApis extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $apiName
-     *
-     * @return $this
-     */
-    public function withApiName($apiName)
-    {
-        $this->data['ApiName'] = $apiName;
-        $this->options['query']['ApiName'] = $apiName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $catalogId
-     *
-     * @return $this
-     */
-    public function withCatalogId($catalogId)
-    {
-        $this->data['CatalogId'] = $catalogId;
-        $this->options['query']['CatalogId'] = $catalogId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $visibility
-     *
-     * @return $this
-     */
-    public function withVisibility($visibility)
-    {
-        $this->data['Visibility'] = $visibility;
-        $this->options['query']['Visibility'] = $visibility;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $apiId
-     *
-     * @return $this
-     */
-    public function withApiId($apiId)
-    {
-        $this->data['ApiId'] = $apiId;
-        $this->options['query']['ApiId'] = $apiId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

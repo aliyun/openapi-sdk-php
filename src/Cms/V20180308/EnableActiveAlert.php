@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api EnableActiveAlert
- *
  * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  */
 class EnableActiveAlert extends Rpc
 {
@@ -19,30 +19,4 @@ class EnableActiveAlert extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function withProduct($product)
-    {
-        $this->data['Product'] = $product;
-        $this->options['query']['Product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
 }

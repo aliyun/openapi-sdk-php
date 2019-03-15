@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Dyvmsapi based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Dyvmsapi\V20170525
  *
  * @method AddRtcAccount addRtcAccount(array $options = [])
  * @method AddVoipAccount addVoipAccount(array $options = [])

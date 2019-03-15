@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeBandwidthPackagePublicIpMonitorData
- *
  * @method string getResourceOwnerId()
  * @method string getPeriod()
  * @method string getResourceOwnerAccount()

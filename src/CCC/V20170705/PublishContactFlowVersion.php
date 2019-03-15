@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PublishContactFlowVersion
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getContactFlowVersionId()
+ * @method $this withContactFlowVersionId($value)
  */
 class PublishContactFlowVersion extends Rpc
 {
@@ -19,30 +19,4 @@ class PublishContactFlowVersion extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactFlowVersionId
-     *
-     * @return $this
-     */
-    public function withContactFlowVersionId($contactFlowVersionId)
-    {
-        $this->data['ContactFlowVersionId'] = $contactFlowVersionId;
-        $this->options['query']['ContactFlowVersionId'] = $contactFlowVersionId;
-
-        return $this;
-    }
 }

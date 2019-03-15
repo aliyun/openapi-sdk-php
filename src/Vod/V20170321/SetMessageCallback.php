@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of SetMessageCallback
- *
  * @method string getCallbackType()
  * @method string getAuthKey()
  * @method string getResourceOwnerId()

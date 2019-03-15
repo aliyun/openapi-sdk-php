@@ -5,18 +5,26 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerRenewInstance
- *
  * @method string getCommodity()
+ * @method $this withCommodity($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getFromApp()
+ * @method $this withFromApp($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class InnerRenewInstance extends Rpc
 {
@@ -27,134 +35,4 @@ class InnerRenewInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $commodity
-     *
-     * @return $this
-     */
-    public function withCommodity($commodity)
-    {
-        $this->data['Commodity'] = $commodity;
-        $this->options['query']['Commodity'] = $commodity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromApp
-     *
-     * @return $this
-     */
-    public function withFromApp($fromApp)
-    {
-        $this->data['FromApp'] = $fromApp;
-        $this->options['query']['FromApp'] = $fromApp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function withBusinessInfo($businessInfo)
-    {
-        $this->data['BusinessInfo'] = $businessInfo;
-        $this->options['query']['BusinessInfo'] = $businessInfo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
-
-        return $this;
-    }
 }

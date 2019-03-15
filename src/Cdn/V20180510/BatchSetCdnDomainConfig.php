@@ -5,13 +5,16 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BatchSetCdnDomainConfig
- *
  * @method string getFunctions()
+ * @method $this withFunctions($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainNames()
+ * @method $this withDomainNames($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class BatchSetCdnDomainConfig extends Rpc
 {
@@ -20,69 +23,4 @@ class BatchSetCdnDomainConfig extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $functions
-     *
-     * @return $this
-     */
-    public function withFunctions($functions)
-    {
-        $this->data['Functions'] = $functions;
-        $this->options['query']['Functions'] = $functions;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function withDomainNames($domainNames)
-    {
-        $this->data['DomainNames'] = $domainNames;
-        $this->options['query']['DomainNames'] = $domainNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

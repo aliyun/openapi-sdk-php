@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of UpdateEdgeInstance
- *
  * @method string getInstanceId()
  * @method string getName()
  * @method string getTags()

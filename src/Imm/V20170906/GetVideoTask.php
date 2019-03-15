@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetVideoTask
- *
  * @method string getTaskType()
+ * @method $this withTaskType($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class GetVideoTask extends Rpc
 {
@@ -20,43 +21,4 @@ class GetVideoTask extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function withTaskType($taskType)
-    {
-        $this->data['TaskType'] = $taskType;
-        $this->options['query']['TaskType'] = $taskType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

@@ -5,28 +5,44 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AllocateDedicatedHosts
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getActionOnMaintenance()
+ * @method $this withActionOnMaintenance($value)
  * @method array getTag()
  * @method string getDedicatedHostType()
+ * @method $this withDedicatedHostType($value)
  * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getQuantity()
+ * @method $this withQuantity($value)
  * @method string getDedicatedHostName()
+ * @method $this withDedicatedHostName($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getAutoReleaseTime()
+ * @method $this withAutoReleaseTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
  * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getNetworkAttributesSlbUdpTimeout()
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getNetworkAttributesUdpTimeout()
  */
 class AllocateDedicatedHosts extends Rpc
@@ -38,71 +54,6 @@ class AllocateDedicatedHosts extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $actionOnMaintenance
-     *
-     * @return $this
-     */
-    public function withActionOnMaintenance($actionOnMaintenance)
-    {
-        $this->data['ActionOnMaintenance'] = $actionOnMaintenance;
-        $this->options['query']['ActionOnMaintenance'] = $actionOnMaintenance;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -121,149 +72,6 @@ class AllocateDedicatedHosts extends Rpc
     }
 
     /**
-     * @param string $dedicatedHostType
-     *
-     * @return $this
-     */
-    public function withDedicatedHostType($dedicatedHostType)
-    {
-        $this->data['DedicatedHostType'] = $dedicatedHostType;
-        $this->options['query']['DedicatedHostType'] = $dedicatedHostType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoRenewPeriod
-     *
-     * @return $this
-     */
-    public function withAutoRenewPeriod($autoRenewPeriod)
-    {
-        $this->data['AutoRenewPeriod'] = $autoRenewPeriod;
-        $this->options['query']['AutoRenewPeriod'] = $autoRenewPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function withQuantity($quantity)
-    {
-        $this->data['Quantity'] = $quantity;
-        $this->options['query']['Quantity'] = $quantity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dedicatedHostName
-     *
-     * @return $this
-     */
-    public function withDedicatedHostName($dedicatedHostName)
-    {
-        $this->data['DedicatedHostName'] = $dedicatedHostName;
-        $this->options['query']['DedicatedHostName'] = $dedicatedHostName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoReleaseTime
-     *
-     * @return $this
-     */
-    public function withAutoReleaseTime($autoReleaseTime)
-    {
-        $this->data['AutoReleaseTime'] = $autoReleaseTime;
-        $this->options['query']['AutoReleaseTime'] = $autoReleaseTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function withPeriodUnit($periodUnit)
-    {
-        $this->data['PeriodUnit'] = $periodUnit;
-        $this->options['query']['PeriodUnit'] = $periodUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function withAutoRenew($autoRenew)
-    {
-        $this->data['AutoRenew'] = $autoRenew;
-        $this->options['query']['AutoRenew'] = $autoRenew;
-
-        return $this;
-    }
-
-    /**
      * @param string $networkAttributesSlbUdpTimeout
      *
      * @return $this
@@ -272,32 +80,6 @@ class AllocateDedicatedHosts extends Rpc
     {
         $this->data['NetworkAttributesSlbUdpTimeout'] = $networkAttributesSlbUdpTimeout;
         $this->options['query']['NetworkAttributes.SlbUdpTimeout'] = $networkAttributesSlbUdpTimeout;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
 
         return $this;
     }

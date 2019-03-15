@@ -5,14 +5,18 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAgentStates
- *
  * @method string getAgentIds()
+ * @method $this withAgentIds($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListAgentStates extends Rpc
 {
@@ -23,82 +27,4 @@ class ListAgentStates extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $agentIds
-     *
-     * @return $this
-     */
-    public function withAgentIds($agentIds)
-    {
-        $this->data['AgentIds'] = $agentIds;
-        $this->options['query']['AgentIds'] = $agentIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $skillGroupId
-     *
-     * @return $this
-     */
-    public function withSkillGroupId($skillGroupId)
-    {
-        $this->data['SkillGroupId'] = $skillGroupId;
-        $this->options['query']['SkillGroupId'] = $skillGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

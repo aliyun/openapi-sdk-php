@@ -7,7 +7,6 @@ use AlibabaCloud\VersionResolverTrait;
 /**
  * Find the specified version of the Skyeye based on the method name as the version name.
  *
- * @package   AlibabaCloud\Skyeye
  *
  * @method V20171201\SkyeyeApiResolver v20171201()
  */

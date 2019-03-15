@@ -5,16 +5,22 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateInstance
- *
  * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getIsAutoRenew()
+ * @method $this withIsAutoRenew($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getVmNumber()
+ * @method $this withVmNumber($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVersionCode()
+ * @method $this withVersionCode($value)
  * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
  * @method string getAutoRenewDuration()
+ * @method $this withAutoRenewDuration($value)
  */
 class CreateInstance extends Rpc
 {
@@ -25,108 +31,4 @@ class CreateInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function withDuration($duration)
-    {
-        $this->data['Duration'] = $duration;
-        $this->options['query']['Duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isAutoRenew
-     *
-     * @return $this
-     */
-    public function withIsAutoRenew($isAutoRenew)
-    {
-        $this->data['IsAutoRenew'] = $isAutoRenew;
-        $this->options['query']['IsAutoRenew'] = $isAutoRenew;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vmNumber
-     *
-     * @return $this
-     */
-    public function withVmNumber($vmNumber)
-    {
-        $this->data['VmNumber'] = $vmNumber;
-        $this->options['query']['VmNumber'] = $vmNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $versionCode
-     *
-     * @return $this
-     */
-    public function withVersionCode($versionCode)
-    {
-        $this->data['VersionCode'] = $versionCode;
-        $this->options['query']['VersionCode'] = $versionCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function withPricingCycle($pricingCycle)
-    {
-        $this->data['PricingCycle'] = $pricingCycle;
-        $this->options['query']['PricingCycle'] = $pricingCycle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoRenewDuration
-     *
-     * @return $this
-     */
-    public function withAutoRenewDuration($autoRenewDuration)
-    {
-        $this->data['AutoRenewDuration'] = $autoRenewDuration;
-        $this->options['query']['AutoRenewDuration'] = $autoRenewDuration;
-
-        return $this;
-    }
 }

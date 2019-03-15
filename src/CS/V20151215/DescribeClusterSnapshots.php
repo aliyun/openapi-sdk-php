@@ -5,9 +5,8 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeClusterSnapshots
- *
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class DescribeClusterSnapshots extends Roa
 {
@@ -18,17 +17,4 @@ class DescribeClusterSnapshots extends Roa
     public $pathPattern = '/clusters/[ClusterId]/snapshots';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

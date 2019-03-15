@@ -5,10 +5,9 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ResetNodes
- *
  * @method array getInstance()
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class ResetNodes extends Rpc
 {
@@ -29,19 +28,6 @@ class ResetNodes extends Rpc
         foreach ($instance as $i => $iValue) {
             $this->options['query']['Instance.' . ($i + 1) . '.Id'] = $instance[$i]['Id'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
 
         return $this;
     }

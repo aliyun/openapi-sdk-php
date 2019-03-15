@@ -5,9 +5,8 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeInvitationList
- *
  * @method string getConsortiumId()
+ * @method $this withConsortiumId($value)
  */
 class DescribeInvitationList extends Rpc
 {
@@ -16,17 +15,4 @@ class DescribeInvitationList extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'PUT';
-
-    /**
-     * @param string $consortiumId
-     *
-     * @return $this
-     */
-    public function withConsortiumId($consortiumId)
-    {
-        $this->data['ConsortiumId'] = $consortiumId;
-        $this->options['query']['ConsortiumId'] = $consortiumId;
-
-        return $this;
-    }
 }

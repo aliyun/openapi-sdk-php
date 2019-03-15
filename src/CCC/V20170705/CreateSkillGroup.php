@@ -5,13 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSkillGroup
- *
  * @method array getSkillLevel()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method array getOutboundPhoneNumberId()
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method array getUserId()
  */
 class CreateSkillGroup extends Rpc
@@ -40,19 +41,6 @@ class CreateSkillGroup extends Rpc
     }
 
     /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
      * @param array $outboundPhoneNumberId
      *
      * @return $this
@@ -63,32 +51,6 @@ class CreateSkillGroup extends Rpc
         foreach ($outboundPhoneNumberId as $i => $iValue) {
             $this->options['query']['OutboundPhoneNumberId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
 
         return $this;
     }

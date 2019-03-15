@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of GetFaceSetDetail
- *
  * @method string getMarker()
  * @method string getProject()
  * @method string getSetId()

@@ -5,12 +5,14 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api OperateUser
- *
  * @method string getBizid()
+ * @method $this withBizid($value)
  * @method string getBid()
+ * @method $this withBid($value)
  * @method string getOperation()
+ * @method $this withOperation($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class OperateUser extends Rpc
 {
@@ -19,56 +21,4 @@ class OperateUser extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'POST';
-
-    /**
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function withBizid($bizid)
-    {
-        $this->data['Bizid'] = $bizid;
-        $this->options['query']['Bizid'] = $bizid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $operation
-     *
-     * @return $this
-     */
-    public function withOperation($operation)
-    {
-        $this->data['Operation'] = $operation;
-        $this->options['query']['Operation'] = $operation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

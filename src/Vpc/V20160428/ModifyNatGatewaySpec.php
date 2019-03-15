@@ -5,16 +5,22 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyNatGatewaySpec
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAutoPay()
+ * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpec()
+ * @method $this withSpec($value)
  */
 class ModifyNatGatewaySpec extends Rpc
 {
@@ -25,108 +31,4 @@ class ModifyNatGatewaySpec extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function withAutoPay($autoPay)
-    {
-        $this->data['AutoPay'] = $autoPay;
-        $this->options['query']['AutoPay'] = $autoPay;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $natGatewayId
-     *
-     * @return $this
-     */
-    public function withNatGatewayId($natGatewayId)
-    {
-        $this->data['NatGatewayId'] = $natGatewayId;
-        $this->options['query']['NatGatewayId'] = $natGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function withSpec($spec)
-    {
-        $this->data['Spec'] = $spec;
-        $this->options['query']['Spec'] = $spec;
-
-        return $this;
-    }
 }

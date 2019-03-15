@@ -5,35 +5,60 @@ namespace AlibabaCloud\Smartag\V20180313;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSmartAccessGateway
- *
  * @method string getMaxBandWidth()
+ * @method $this withMaxBandWidth($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getReceiverTown()
+ * @method $this withReceiverTown($value)
  * @method string getReceiverDistrict()
+ * @method $this withReceiverDistrict($value)
  * @method string getUserCount()
+ * @method $this withUserCount($value)
  * @method string getReceiverAddress()
+ * @method $this withReceiverAddress($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getBuyerMessage()
+ * @method $this withBuyerMessage($value)
  * @method string getHardWareSpec()
+ * @method $this withHardWareSpec($value)
  * @method string getReceiverEmail()
+ * @method $this withReceiverEmail($value)
  * @method string getReceiverState()
+ * @method $this withReceiverState($value)
  * @method string getReceiverCity()
+ * @method $this withReceiverCity($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getAutoPay()
+ * @method $this withAutoPay($value)
  * @method string getReceiverMobile()
+ * @method $this withReceiverMobile($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getReceiverPhone()
+ * @method $this withReceiverPhone($value)
  * @method string getReceiverName()
+ * @method $this withReceiverName($value)
  * @method string getHaType()
+ * @method $this withHaType($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getReceiverCountry()
+ * @method $this withReceiverCountry($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getDataPlan()
+ * @method $this withDataPlan($value)
  * @method string getReceiverZip()
+ * @method $this withReceiverZip($value)
  */
 class CreateSmartAccessGateway extends Rpc
 {
@@ -44,355 +69,4 @@ class CreateSmartAccessGateway extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'smartag';
-
-    /**
-     * @param string $maxBandWidth
-     *
-     * @return $this
-     */
-    public function withMaxBandWidth($maxBandWidth)
-    {
-        $this->data['MaxBandWidth'] = $maxBandWidth;
-        $this->options['query']['MaxBandWidth'] = $maxBandWidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverTown
-     *
-     * @return $this
-     */
-    public function withReceiverTown($receiverTown)
-    {
-        $this->data['ReceiverTown'] = $receiverTown;
-        $this->options['query']['ReceiverTown'] = $receiverTown;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverDistrict
-     *
-     * @return $this
-     */
-    public function withReceiverDistrict($receiverDistrict)
-    {
-        $this->data['ReceiverDistrict'] = $receiverDistrict;
-        $this->options['query']['ReceiverDistrict'] = $receiverDistrict;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userCount
-     *
-     * @return $this
-     */
-    public function withUserCount($userCount)
-    {
-        $this->data['UserCount'] = $userCount;
-        $this->options['query']['UserCount'] = $userCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverAddress
-     *
-     * @return $this
-     */
-    public function withReceiverAddress($receiverAddress)
-    {
-        $this->data['ReceiverAddress'] = $receiverAddress;
-        $this->options['query']['ReceiverAddress'] = $receiverAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $buyerMessage
-     *
-     * @return $this
-     */
-    public function withBuyerMessage($buyerMessage)
-    {
-        $this->data['BuyerMessage'] = $buyerMessage;
-        $this->options['query']['BuyerMessage'] = $buyerMessage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hardWareSpec
-     *
-     * @return $this
-     */
-    public function withHardWareSpec($hardWareSpec)
-    {
-        $this->data['HardWareSpec'] = $hardWareSpec;
-        $this->options['query']['HardWareSpec'] = $hardWareSpec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverEmail
-     *
-     * @return $this
-     */
-    public function withReceiverEmail($receiverEmail)
-    {
-        $this->data['ReceiverEmail'] = $receiverEmail;
-        $this->options['query']['ReceiverEmail'] = $receiverEmail;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverState
-     *
-     * @return $this
-     */
-    public function withReceiverState($receiverState)
-    {
-        $this->data['ReceiverState'] = $receiverState;
-        $this->options['query']['ReceiverState'] = $receiverState;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverCity
-     *
-     * @return $this
-     */
-    public function withReceiverCity($receiverCity)
-    {
-        $this->data['ReceiverCity'] = $receiverCity;
-        $this->options['query']['ReceiverCity'] = $receiverCity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoPay
-     *
-     * @return $this
-     */
-    public function withAutoPay($autoPay)
-    {
-        $this->data['AutoPay'] = $autoPay;
-        $this->options['query']['AutoPay'] = $autoPay;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverMobile
-     *
-     * @return $this
-     */
-    public function withReceiverMobile($receiverMobile)
-    {
-        $this->data['ReceiverMobile'] = $receiverMobile;
-        $this->options['query']['ReceiverMobile'] = $receiverMobile;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverPhone
-     *
-     * @return $this
-     */
-    public function withReceiverPhone($receiverPhone)
-    {
-        $this->data['ReceiverPhone'] = $receiverPhone;
-        $this->options['query']['ReceiverPhone'] = $receiverPhone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverName
-     *
-     * @return $this
-     */
-    public function withReceiverName($receiverName)
-    {
-        $this->data['ReceiverName'] = $receiverName;
-        $this->options['query']['ReceiverName'] = $receiverName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $haType
-     *
-     * @return $this
-     */
-    public function withHaType($haType)
-    {
-        $this->data['HaType'] = $haType;
-        $this->options['query']['HaType'] = $haType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverCountry
-     *
-     * @return $this
-     */
-    public function withReceiverCountry($receiverCountry)
-    {
-        $this->data['ReceiverCountry'] = $receiverCountry;
-        $this->options['query']['ReceiverCountry'] = $receiverCountry;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dataPlan
-     *
-     * @return $this
-     */
-    public function withDataPlan($dataPlan)
-    {
-        $this->data['DataPlan'] = $dataPlan;
-        $this->options['query']['DataPlan'] = $dataPlan;
-
-        return $this;
-    }
-
-    /**
-     * @param string $receiverZip
-     *
-     * @return $this
-     */
-    public function withReceiverZip($receiverZip)
-    {
-        $this->data['ReceiverZip'] = $receiverZip;
-        $this->options['query']['ReceiverZip'] = $receiverZip;
-
-        return $this;
-    }
 }

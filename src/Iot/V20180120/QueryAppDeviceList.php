@@ -5,14 +5,16 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAppDeviceList
- *
  * @method array getProductKeyList()
  * @method array getCategoryKeyList()
  * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method array getTagList()
  */
 class QueryAppDeviceList extends Rpc
@@ -49,58 +51,6 @@ class QueryAppDeviceList extends Rpc
         foreach ($categoryKeyList as $i => $iValue) {
             $this->options['query']['CategoryKeyList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $iotInstanceId
-     *
-     * @return $this
-     */
-    public function withIotInstanceId($iotInstanceId)
-    {
-        $this->data['IotInstanceId'] = $iotInstanceId;
-        $this->options['query']['IotInstanceId'] = $iotInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function withAppKey($appKey)
-    {
-        $this->data['AppKey'] = $appKey;
-        $this->options['query']['AppKey'] = $appKey;
 
         return $this;
     }

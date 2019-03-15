@@ -5,32 +5,41 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScalingInstances
- *
  * @method string getInstanceId10()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId12()
  * @method string getInstanceId11()
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getLifecycleState()
+ * @method $this withLifecycleState($value)
  * @method string getCreationType()
+ * @method $this withCreationType($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getInstanceId20()
  * @method string getInstanceId1()
  * @method string getInstanceId3()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInstanceId2()
  * @method string getInstanceId5()
  * @method string getInstanceId4()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInstanceId7()
  * @method string getInstanceId6()
  * @method string getInstanceId9()
  * @method string getInstanceId8()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getScalingConfigurationId()
+ * @method $this withScalingConfigurationId($value)
  * @method string getHealthStatus()
+ * @method $this withHealthStatus($value)
  * @method string getInstanceId18()
  * @method string getInstanceId17()
  * @method string getInstanceId19()
@@ -63,19 +72,6 @@ class DescribeScalingInstances extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId12
      *
      * @return $this
@@ -97,71 +93,6 @@ class DescribeScalingInstances extends Rpc
     {
         $this->data['InstanceId11'] = $instanceId11;
         $this->options['query']['InstanceId.11'] = $instanceId11;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lifecycleState
-     *
-     * @return $this
-     */
-    public function withLifecycleState($lifecycleState)
-    {
-        $this->data['LifecycleState'] = $lifecycleState;
-        $this->options['query']['LifecycleState'] = $lifecycleState;
-
-        return $this;
-    }
-
-    /**
-     * @param string $creationType
-     *
-     * @return $this
-     */
-    public function withCreationType($creationType)
-    {
-        $this->data['CreationType'] = $creationType;
-        $this->options['query']['CreationType'] = $creationType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }
@@ -206,19 +137,6 @@ class DescribeScalingInstances extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId2
      *
      * @return $this
@@ -253,19 +171,6 @@ class DescribeScalingInstances extends Rpc
     {
         $this->data['InstanceId4'] = $instanceId4;
         $this->options['query']['InstanceId.4'] = $instanceId4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -318,45 +223,6 @@ class DescribeScalingInstances extends Rpc
     {
         $this->data['InstanceId8'] = $instanceId8;
         $this->options['query']['InstanceId.8'] = $instanceId8;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingConfigurationId
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId($scalingConfigurationId)
-    {
-        $this->data['ScalingConfigurationId'] = $scalingConfigurationId;
-        $this->options['query']['ScalingConfigurationId'] = $scalingConfigurationId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $healthStatus
-     *
-     * @return $this
-     */
-    public function withHealthStatus($healthStatus)
-    {
-        $this->data['HealthStatus'] = $healthStatus;
-        $this->options['query']['HealthStatus'] = $healthStatus;
 
         return $this;
     }

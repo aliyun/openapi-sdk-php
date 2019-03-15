@@ -5,12 +5,14 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BindMFADevice
- *
  * @method string getSerialNumber()
+ * @method $this withSerialNumber($value)
  * @method string getAuthenticationCode2()
+ * @method $this withAuthenticationCode2($value)
  * @method string getAuthenticationCode1()
+ * @method $this withAuthenticationCode1($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class BindMFADevice extends Rpc
 {
@@ -21,56 +23,4 @@ class BindMFADevice extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $serialNumber
-     *
-     * @return $this
-     */
-    public function withSerialNumber($serialNumber)
-    {
-        $this->data['SerialNumber'] = $serialNumber;
-        $this->options['query']['SerialNumber'] = $serialNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $authenticationCode2
-     *
-     * @return $this
-     */
-    public function withAuthenticationCode2($authenticationCode2)
-    {
-        $this->data['AuthenticationCode2'] = $authenticationCode2;
-        $this->options['query']['AuthenticationCode2'] = $authenticationCode2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $authenticationCode1
-     *
-     * @return $this
-     */
-    public function withAuthenticationCode1($authenticationCode1)
-    {
-        $this->data['AuthenticationCode1'] = $authenticationCode1;
-        $this->options['query']['AuthenticationCode1'] = $authenticationCode1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

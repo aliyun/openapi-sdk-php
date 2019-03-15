@@ -5,24 +5,37 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateMCTemplate
- *
  * @method string getPolitics()
+ * @method $this withPolitics($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getContraband()
+ * @method $this withContraband($value)
  * @method string getAd()
+ * @method $this withAd($value)
  * @method string getAbuse()
+ * @method $this withAbuse($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getQrcode()
+ * @method $this withQrcode($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getPorn()
+ * @method $this withPorn($value)
  * @method string getTerrorism()
+ * @method $this withTerrorism($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getLogo()
+ * @method $this withLogo($value)
  * @method string getSpam()
  * @method string getLive()
+ * @method $this withLive($value)
  */
 class UpdateMCTemplate extends Rpc
 {
@@ -35,188 +48,6 @@ class UpdateMCTemplate extends Rpc
     public $serviceCode = 'mts';
 
     /**
-     * @param string $politics
-     *
-     * @return $this
-     */
-    public function withPolitics($politics)
-    {
-        $this->data['Politics'] = $politics;
-        $this->options['query']['Politics'] = $politics;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contraband
-     *
-     * @return $this
-     */
-    public function withContraband($contraband)
-    {
-        $this->data['Contraband'] = $contraband;
-        $this->options['query']['Contraband'] = $contraband;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ad
-     *
-     * @return $this
-     */
-    public function withAd($ad)
-    {
-        $this->data['Ad'] = $ad;
-        $this->options['query']['Ad'] = $ad;
-
-        return $this;
-    }
-
-    /**
-     * @param string $abuse
-     *
-     * @return $this
-     */
-    public function withAbuse($abuse)
-    {
-        $this->data['Abuse'] = $abuse;
-        $this->options['query']['Abuse'] = $abuse;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $qrcode
-     *
-     * @return $this
-     */
-    public function withQrcode($qrcode)
-    {
-        $this->data['Qrcode'] = $qrcode;
-        $this->options['query']['Qrcode'] = $qrcode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function withTemplateId($templateId)
-    {
-        $this->data['TemplateId'] = $templateId;
-        $this->options['query']['TemplateId'] = $templateId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $porn
-     *
-     * @return $this
-     */
-    public function withPorn($porn)
-    {
-        $this->data['Porn'] = $porn;
-        $this->options['query']['Porn'] = $porn;
-
-        return $this;
-    }
-
-    /**
-     * @param string $terrorism
-     *
-     * @return $this
-     */
-    public function withTerrorism($terrorism)
-    {
-        $this->data['Terrorism'] = $terrorism;
-        $this->options['query']['Terrorism'] = $terrorism;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $logo
-     *
-     * @return $this
-     */
-    public function withLogo($logo)
-    {
-        $this->data['Logo'] = $logo;
-        $this->options['query']['Logo'] = $logo;
-
-        return $this;
-    }
-
-    /**
      * @param string $spam
      *
      * @return $this
@@ -225,19 +56,6 @@ class UpdateMCTemplate extends Rpc
     {
         $this->data['Spam'] = $spam;
         $this->options['query']['spam'] = $spam;
-
-        return $this;
-    }
-
-    /**
-     * @param string $live
-     *
-     * @return $this
-     */
-    public function withLive($live)
-    {
-        $this->data['Live'] = $live;
-        $this->options['query']['Live'] = $live;
 
         return $this;
     }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DownloadUnreachableContacts
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
  */
 class DownloadUnreachableContacts extends Rpc
 {
@@ -19,30 +19,4 @@ class DownloadUnreachableContacts extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $jobGroupId
-     *
-     * @return $this
-     */
-    public function withJobGroupId($jobGroupId)
-    {
-        $this->data['JobGroupId'] = $jobGroupId;
-        $this->options['query']['JobGroupId'] = $jobGroupId;
-
-        return $this;
-    }
 }

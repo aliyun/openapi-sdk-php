@@ -5,20 +5,30 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyPrivateDNatEntry
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPrivateNatGatewayId()
+ * @method $this withPrivateNatGatewayId($value)
  * @method string getDNatIp()
+ * @method $this withDNatIp($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPrivateDNatEntryId()
+ * @method $this withPrivateDNatEntryId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDestinationIp()
+ * @method $this withDestinationIp($value)
  * @method string getDestinationPort()
+ * @method $this withDestinationPort($value)
  * @method string getDNatPort()
+ * @method $this withDNatPort($value)
  */
 class ModifyPrivateDNatEntry extends Rpc
 {
@@ -29,160 +39,4 @@ class ModifyPrivateDNatEntry extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $privateNatGatewayId
-     *
-     * @return $this
-     */
-    public function withPrivateNatGatewayId($privateNatGatewayId)
-    {
-        $this->data['PrivateNatGatewayId'] = $privateNatGatewayId;
-        $this->options['query']['PrivateNatGatewayId'] = $privateNatGatewayId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dNatIp
-     *
-     * @return $this
-     */
-    public function withDNatIp($dNatIp)
-    {
-        $this->data['DNatIp'] = $dNatIp;
-        $this->options['query']['DNatIp'] = $dNatIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipProtocol
-     *
-     * @return $this
-     */
-    public function withIpProtocol($ipProtocol)
-    {
-        $this->data['IpProtocol'] = $ipProtocol;
-        $this->options['query']['IpProtocol'] = $ipProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $privateDNatEntryId
-     *
-     * @return $this
-     */
-    public function withPrivateDNatEntryId($privateDNatEntryId)
-    {
-        $this->data['PrivateDNatEntryId'] = $privateDNatEntryId;
-        $this->options['query']['PrivateDNatEntryId'] = $privateDNatEntryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationIp
-     *
-     * @return $this
-     */
-    public function withDestinationIp($destinationIp)
-    {
-        $this->data['DestinationIp'] = $destinationIp;
-        $this->options['query']['DestinationIp'] = $destinationIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationPort
-     *
-     * @return $this
-     */
-    public function withDestinationPort($destinationPort)
-    {
-        $this->data['DestinationPort'] = $destinationPort;
-        $this->options['query']['DestinationPort'] = $destinationPort;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dNatPort
-     *
-     * @return $this
-     */
-    public function withDNatPort($dNatPort)
-    {
-        $this->data['DNatPort'] = $dNatPort;
-        $this->options['query']['DNatPort'] = $dNatPort;
-
-        return $this;
-    }
 }

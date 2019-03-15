@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAvailableCrossRegion
- *
  */
 class DescribeAvailableCrossRegion extends Rpc
 {

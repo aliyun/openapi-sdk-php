@@ -5,17 +5,22 @@ namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 use AlibabaCloud\Rpc;
 
 /**
- * Api WhereInDimQuery
- *
  * @method string getWhereInKey()
+ * @method $this withWhereInKey($value)
  * @method array getMeasures()
  * @method string getIntervalInSec()
+ * @method $this withIntervalInSec($value)
  * @method string getDateStr()
+ * @method $this withDateStr($value)
  * @method string getIsDrillDown()
+ * @method $this withIsDrillDown($value)
  * @method string getMinTime()
+ * @method $this withMinTime($value)
  * @method string getDatasetId()
+ * @method $this withDatasetId($value)
  * @method array getWhereInValues()
  * @method string getMaxTime()
+ * @method $this withMaxTime($value)
  * @method array getDimensions()
  */
 class WhereInDimQuery extends Rpc
@@ -25,19 +30,6 @@ class WhereInDimQuery extends Rpc
     public $version = '2017-11-30';
 
     public $method = 'POST';
-
-    /**
-     * @param string $whereInKey
-     *
-     * @return $this
-     */
-    public function withWhereInKey($whereInKey)
-    {
-        $this->data['WhereInKey'] = $whereInKey;
-        $this->options['query']['WhereInKey'] = $whereInKey;
-
-        return $this;
-    }
 
     /**
      * @param array $measures
@@ -55,71 +47,6 @@ class WhereInDimQuery extends Rpc
     }
 
     /**
-     * @param string $intervalInSec
-     *
-     * @return $this
-     */
-    public function withIntervalInSec($intervalInSec)
-    {
-        $this->data['IntervalInSec'] = $intervalInSec;
-        $this->options['query']['IntervalInSec'] = $intervalInSec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dateStr
-     *
-     * @return $this
-     */
-    public function withDateStr($dateStr)
-    {
-        $this->data['DateStr'] = $dateStr;
-        $this->options['query']['DateStr'] = $dateStr;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isDrillDown
-     *
-     * @return $this
-     */
-    public function withIsDrillDown($isDrillDown)
-    {
-        $this->data['IsDrillDown'] = $isDrillDown;
-        $this->options['query']['IsDrillDown'] = $isDrillDown;
-
-        return $this;
-    }
-
-    /**
-     * @param string $minTime
-     *
-     * @return $this
-     */
-    public function withMinTime($minTime)
-    {
-        $this->data['MinTime'] = $minTime;
-        $this->options['query']['MinTime'] = $minTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $datasetId
-     *
-     * @return $this
-     */
-    public function withDatasetId($datasetId)
-    {
-        $this->data['DatasetId'] = $datasetId;
-        $this->options['query']['DatasetId'] = $datasetId;
-
-        return $this;
-    }
-
-    /**
      * @param array $whereInValues
      *
      * @return $this
@@ -130,19 +57,6 @@ class WhereInDimQuery extends Rpc
         foreach ($whereInValues as $i => $iValue) {
             $this->options['query']['WhereInValues.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxTime
-     *
-     * @return $this
-     */
-    public function withMaxTime($maxTime)
-    {
-        $this->data['MaxTime'] = $maxTime;
-        $this->options['query']['MaxTime'] = $maxTime;
 
         return $this;
     }

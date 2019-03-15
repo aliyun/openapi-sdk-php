@@ -5,15 +5,20 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerAddEntityConstraints
- *
  * @method string getEntityKey()
+ * @method $this withEntityKey($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getEntityProperties()
+ * @method $this withEntityProperties($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getEntityType()
+ * @method $this withEntityType($value)
  */
 class InnerAddEntityConstraints extends Rpc
 {
@@ -24,95 +29,4 @@ class InnerAddEntityConstraints extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $entityKey
-     *
-     * @return $this
-     */
-    public function withEntityKey($entityKey)
-    {
-        $this->data['EntityKey'] = $entityKey;
-        $this->options['query']['EntityKey'] = $entityKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $entityProperties
-     *
-     * @return $this
-     */
-    public function withEntityProperties($entityProperties)
-    {
-        $this->data['EntityProperties'] = $entityProperties;
-        $this->options['query']['EntityProperties'] = $entityProperties;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $entityType
-     *
-     * @return $this
-     */
-    public function withEntityType($entityType)
-    {
-        $this->data['EntityType'] = $entityType;
-        $this->options['query']['EntityType'] = $entityType;
-
-        return $this;
-    }
 }

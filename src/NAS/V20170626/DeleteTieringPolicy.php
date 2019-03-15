@@ -5,9 +5,8 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteTieringPolicy
- *
  * @method string getName()
+ * @method $this withName($value)
  */
 class DeleteTieringPolicy extends Rpc
 {
@@ -16,17 +15,4 @@ class DeleteTieringPolicy extends Rpc
     public $version = '2017-06-26';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
 }

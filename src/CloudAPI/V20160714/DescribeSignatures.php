@@ -5,13 +5,16 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeSignatures
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getSignatureName()
+ * @method $this withSignatureName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getSignatureId()
+ * @method $this withSignatureId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeSignatures extends Rpc
 {
@@ -22,69 +25,4 @@ class DescribeSignatures extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $signatureName
-     *
-     * @return $this
-     */
-    public function withSignatureName($signatureName)
-    {
-        $this->data['SignatureName'] = $signatureName;
-        $this->options['query']['SignatureName'] = $signatureName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $signatureId
-     *
-     * @return $this
-     */
-    public function withSignatureId($signatureId)
-    {
-        $this->data['SignatureId'] = $signatureId;
-        $this->options['query']['SignatureId'] = $signatureId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

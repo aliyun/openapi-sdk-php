@@ -5,21 +5,32 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAlarmHistory
- *
  * @method string getAlertName()
+ * @method $this withAlertName($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getAscending()
+ * @method $this withAscending($value)
  * @method string getOnlyCount()
+ * @method $this withOnlyCount($value)
  * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getPage()
+ * @method $this withPage($value)
  * @method string getMetricName()
+ * @method $this withMetricName($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeAlarmHistory extends Rpc
 {
@@ -30,173 +41,4 @@ class DescribeAlarmHistory extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $alertName
-     *
-     * @return $this
-     */
-    public function withAlertName($alertName)
-    {
-        $this->data['AlertName'] = $alertName;
-        $this->options['query']['AlertName'] = $alertName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ascending
-     *
-     * @return $this
-     */
-    public function withAscending($ascending)
-    {
-        $this->data['Ascending'] = $ascending;
-        $this->options['query']['Ascending'] = $ascending;
-
-        return $this;
-    }
-
-    /**
-     * @param string $onlyCount
-     *
-     * @return $this
-     */
-    public function withOnlyCount($onlyCount)
-    {
-        $this->data['OnlyCount'] = $onlyCount;
-        $this->options['query']['OnlyCount'] = $onlyCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $namespace
-     *
-     * @return $this
-     */
-    public function withNamespace($namespace)
-    {
-        $this->data['Namespace'] = $namespace;
-        $this->options['query']['Namespace'] = $namespace;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function withPage($page)
-    {
-        $this->data['Page'] = $page;
-        $this->options['query']['Page'] = $page;
-
-        return $this;
-    }
-
-    /**
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function withMetricName($metricName)
-    {
-        $this->data['MetricName'] = $metricName;
-        $this->options['query']['MetricName'] = $metricName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

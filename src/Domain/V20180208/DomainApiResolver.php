@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Domain based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Domain\V20180208
  *
  * @method AcceptDemand acceptDemand(array $options = [])
  * @method BidDomain bidDomain(array $options = [])

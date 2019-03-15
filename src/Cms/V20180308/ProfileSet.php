@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ProfileSet
- *
  * @method string getEnableInstallAgentNewECS()
+ * @method $this withEnableInstallAgentNewECS($value)
  * @method string getEnableActiveAlert()
+ * @method $this withEnableActiveAlert($value)
  * @method string getAutoInstall()
+ * @method $this withAutoInstall($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  */
 class ProfileSet extends Rpc
 {
@@ -21,56 +23,4 @@ class ProfileSet extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $enableInstallAgentNewECS
-     *
-     * @return $this
-     */
-    public function withEnableInstallAgentNewECS($enableInstallAgentNewECS)
-    {
-        $this->data['EnableInstallAgentNewECS'] = $enableInstallAgentNewECS;
-        $this->options['query']['EnableInstallAgentNewECS'] = $enableInstallAgentNewECS;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enableActiveAlert
-     *
-     * @return $this
-     */
-    public function withEnableActiveAlert($enableActiveAlert)
-    {
-        $this->data['EnableActiveAlert'] = $enableActiveAlert;
-        $this->options['query']['EnableActiveAlert'] = $enableActiveAlert;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoInstall
-     *
-     * @return $this
-     */
-    public function withAutoInstall($autoInstall)
-    {
-        $this->data['AutoInstall'] = $autoInstall;
-        $this->options['query']['AutoInstall'] = $autoInstall;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
 }

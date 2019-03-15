@@ -5,17 +5,24 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeMachineConfig
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTypes()
+ * @method $this withTypes($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getConfig()
+ * @method $this withConfig($value)
  * @method string getTarget()
+ * @method $this withTarget($value)
  */
 class DescribeMachineConfig extends Rpc
 {
@@ -26,121 +33,4 @@ class DescribeMachineConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $types
-     *
-     * @return $this
-     */
-    public function withTypes($types)
-    {
-        $this->data['Types'] = $types;
-        $this->options['query']['Types'] = $types;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function withConfig($config)
-    {
-        $this->data['Config'] = $config;
-        $this->options['query']['Config'] = $config;
-
-        return $this;
-    }
-
-    /**
-     * @param string $target
-     *
-     * @return $this
-     */
-    public function withTarget($target)
-    {
-        $this->data['Target'] = $target;
-        $this->options['query']['Target'] = $target;
-
-        return $this;
-    }
 }

@@ -5,19 +5,28 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResourcesModification
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getMemory()
+ * @method $this withMemory($value)
  * @method string getCores()
+ * @method $this withCores($value)
  * @method string getMigrateAcrossZone()
+ * @method $this withMigrateAcrossZone($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOperationType()
+ * @method $this withOperationType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDestinationResource()
+ * @method $this withDestinationResource($value)
  */
 class DescribeResourcesModification extends Rpc
 {
@@ -28,147 +37,4 @@ class DescribeResourcesModification extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $memory
-     *
-     * @return $this
-     */
-    public function withMemory($memory)
-    {
-        $this->data['Memory'] = $memory;
-        $this->options['query']['Memory'] = $memory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cores
-     *
-     * @return $this
-     */
-    public function withCores($cores)
-    {
-        $this->data['Cores'] = $cores;
-        $this->options['query']['Cores'] = $cores;
-
-        return $this;
-    }
-
-    /**
-     * @param string $migrateAcrossZone
-     *
-     * @return $this
-     */
-    public function withMigrateAcrossZone($migrateAcrossZone)
-    {
-        $this->data['MigrateAcrossZone'] = $migrateAcrossZone;
-        $this->options['query']['MigrateAcrossZone'] = $migrateAcrossZone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId($resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        $this->options['query']['ResourceId'] = $resourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $operationType
-     *
-     * @return $this
-     */
-    public function withOperationType($operationType)
-    {
-        $this->data['OperationType'] = $operationType;
-        $this->options['query']['OperationType'] = $operationType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationResource
-     *
-     * @return $this
-     */
-    public function withDestinationResource($destinationResource)
-    {
-        $this->data['DestinationResource'] = $destinationResource;
-        $this->options['query']['DestinationResource'] = $destinationResource;
-
-        return $this;
-    }
 }

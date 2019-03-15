@@ -6,8 +6,6 @@ use AlibabaCloud\ImageSearch\V20180120\Traits\DeleteItemTrait;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteItem
- *
  * @method string getInstanceName()
  */
 class DeleteItem extends Roa

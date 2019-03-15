@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeMetricRuleTargets
- *
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  */
 class DescribeMetricRuleTargets extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeMetricRuleTargets extends Rpc
     public $method = 'PUT';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
-
-        return $this;
-    }
 }

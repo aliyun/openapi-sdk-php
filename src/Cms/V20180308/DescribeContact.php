@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeContact
- *
  * @method string getContactName()
+ * @method $this withContactName($value)
  */
 class DescribeContact extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeContact extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $contactName
-     *
-     * @return $this
-     */
-    public function withContactName($contactName)
-    {
-        $this->data['ContactName'] = $contactName;
-        $this->options['query']['ContactName'] = $contactName;
-
-        return $this;
-    }
 }

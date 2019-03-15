@@ -5,10 +5,10 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAllCities
- *
  * @method string getExtJson()
+ * @method $this withExtJson($value)
  * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class QueryAllCities extends Rpc
 {
@@ -19,30 +19,4 @@ class QueryAllCities extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $extJson
-     *
-     * @return $this
-     */
-    public function withExtJson($extJson)
-    {
-        $this->data['ExtJson'] = $extJson;
-        $this->options['query']['ExtJson'] = $extJson;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
 }

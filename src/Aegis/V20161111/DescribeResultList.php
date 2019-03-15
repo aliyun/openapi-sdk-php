@@ -5,17 +5,24 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeResultList
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getUuidList()
+ * @method $this withUuidList($value)
  * @method string getDealed()
+ * @method $this withDealed($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeResultList extends Rpc
 {
@@ -26,121 +33,4 @@ class DescribeResultList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuidList
-     *
-     * @return $this
-     */
-    public function withUuidList($uuidList)
-    {
-        $this->data['UuidList'] = $uuidList;
-        $this->options['query']['UuidList'] = $uuidList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function withDealed($dealed)
-    {
-        $this->data['Dealed'] = $dealed;
-        $this->options['query']['Dealed'] = $dealed;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
 }

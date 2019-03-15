@@ -5,12 +5,13 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MuteAudio
- *
  * @method array getParticipantIds()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConferenceId()
+ * @method $this withConferenceId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class MuteAudio extends Rpc
 {
@@ -33,45 +34,6 @@ class MuteAudio extends Rpc
         foreach ($participantIds as $i => $iValue) {
             $this->options['query']['ParticipantIds.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $conferenceId
-     *
-     * @return $this
-     */
-    public function withConferenceId($conferenceId)
-    {
-        $this->data['ConferenceId'] = $conferenceId;
-        $this->options['query']['ConferenceId'] = $conferenceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
 
         return $this;
     }

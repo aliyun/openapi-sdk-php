@@ -5,18 +5,23 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerReleasePublicIpAddress
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getPublicIpAddress()
+ * @method $this withPublicIpAddress($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getAliUid()
  * @method string getBid()
  * @method string getProxyId()
@@ -32,58 +37,6 @@ class InnerReleasePublicIpAddress extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $channel
      *
      * @return $this
@@ -92,19 +45,6 @@ class InnerReleasePublicIpAddress extends Rpc
     {
         $this->data['Channel'] = $channel;
         $this->options['query']['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -131,32 +71,6 @@ class InnerReleasePublicIpAddress extends Rpc
     {
         $this->data['Token'] = $token;
         $this->options['query']['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * @param string $publicIpAddress
-     *
-     * @return $this
-     */
-    public function withPublicIpAddress($publicIpAddress)
-    {
-        $this->data['PublicIpAddress'] = $publicIpAddress;
-        $this->options['query']['PublicIpAddress'] = $publicIpAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
     }

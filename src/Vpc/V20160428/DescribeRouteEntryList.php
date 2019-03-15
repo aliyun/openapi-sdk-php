@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeRouteEntryList
- *
  * @method string getResourceOwnerId()
  * @method string getRouteEntryName()
  * @method string getNetworkType()

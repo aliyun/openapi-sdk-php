@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Green based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Green\V20170823
  *
  * @method CreatCustomOcrTemplate creatCustomOcrTemplate(array $options = [])
  * @method CreateCdiBag createCdiBag(array $options = [])

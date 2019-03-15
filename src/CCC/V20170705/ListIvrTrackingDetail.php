@@ -5,16 +5,22 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListIvrTrackingDetail
- *
  * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getContactId()
+ * @method $this withContactId($value)
  * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getStopTime()
+ * @method $this withStopTime($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListIvrTrackingDetail extends Rpc
 {
@@ -25,108 +31,4 @@ class ListIvrTrackingDetail extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $callingNumber
-     *
-     * @return $this
-     */
-    public function withCallingNumber($callingNumber)
-    {
-        $this->data['CallingNumber'] = $callingNumber;
-        $this->options['query']['CallingNumber'] = $callingNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactId
-     *
-     * @return $this
-     */
-    public function withContactId($contactId)
-    {
-        $this->data['ContactId'] = $contactId;
-        $this->options['query']['ContactId'] = $contactId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $calledNumber
-     *
-     * @return $this
-     */
-    public function withCalledNumber($calledNumber)
-    {
-        $this->data['CalledNumber'] = $calledNumber;
-        $this->options['query']['CalledNumber'] = $calledNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stopTime
-     *
-     * @return $this
-     */
-    public function withStopTime($stopTime)
-    {
-        $this->data['StopTime'] = $stopTime;
-        $this->options['query']['StopTime'] = $stopTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

@@ -5,13 +5,16 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateScenarioFromTemplate
- *
  * @method string getVariables()
+ * @method $this withVariables($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
 class CreateScenarioFromTemplate extends Rpc
 {
@@ -22,69 +25,4 @@ class CreateScenarioFromTemplate extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $variables
-     *
-     * @return $this
-     */
-    public function withVariables($variables)
-    {
-        $this->data['Variables'] = $variables;
-        $this->options['query']['Variables'] = $variables;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function withTemplateId($templateId)
-    {
-        $this->data['TemplateId'] = $templateId;
-        $this->options['query']['TemplateId'] = $templateId;
-
-        return $this;
-    }
 }

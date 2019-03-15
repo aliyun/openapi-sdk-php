@@ -5,19 +5,28 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateEvent
- *
  * @method string getBannerPhotoId()
+ * @method $this withBannerPhotoId($value)
  * @method string getWatermarkPhotoId()
+ * @method $this withWatermarkPhotoId($value)
  * @method string getIdentity()
+ * @method $this withIdentity($value)
  * @method string getSplashPhotoId()
+ * @method $this withSplashPhotoId($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getWeixinTitle()
+ * @method $this withWeixinTitle($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getTitle()
+ * @method $this withTitle($value)
  * @method string getEndAt()
+ * @method $this withEndAt($value)
  * @method string getStartAt()
+ * @method $this withStartAt($value)
  */
 class CreateEvent extends Rpc
 {
@@ -30,147 +39,4 @@ class CreateEvent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $bannerPhotoId
-     *
-     * @return $this
-     */
-    public function withBannerPhotoId($bannerPhotoId)
-    {
-        $this->data['BannerPhotoId'] = $bannerPhotoId;
-        $this->options['query']['BannerPhotoId'] = $bannerPhotoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $watermarkPhotoId
-     *
-     * @return $this
-     */
-    public function withWatermarkPhotoId($watermarkPhotoId)
-    {
-        $this->data['WatermarkPhotoId'] = $watermarkPhotoId;
-        $this->options['query']['WatermarkPhotoId'] = $watermarkPhotoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $identity
-     *
-     * @return $this
-     */
-    public function withIdentity($identity)
-    {
-        $this->data['Identity'] = $identity;
-        $this->options['query']['Identity'] = $identity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $splashPhotoId
-     *
-     * @return $this
-     */
-    public function withSplashPhotoId($splashPhotoId)
-    {
-        $this->data['SplashPhotoId'] = $splashPhotoId;
-        $this->options['query']['SplashPhotoId'] = $splashPhotoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $weixinTitle
-     *
-     * @return $this
-     */
-    public function withWeixinTitle($weixinTitle)
-    {
-        $this->data['WeixinTitle'] = $weixinTitle;
-        $this->options['query']['WeixinTitle'] = $weixinTitle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function withTitle($title)
-    {
-        $this->data['Title'] = $title;
-        $this->options['query']['Title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endAt
-     *
-     * @return $this
-     */
-    public function withEndAt($endAt)
-    {
-        $this->data['EndAt'] = $endAt;
-        $this->options['query']['EndAt'] = $endAt;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startAt
-     *
-     * @return $this
-     */
-    public function withStartAt($startAt)
-    {
-        $this->data['StartAt'] = $startAt;
-        $this->options['query']['StartAt'] = $startAt;
-
-        return $this;
-    }
 }

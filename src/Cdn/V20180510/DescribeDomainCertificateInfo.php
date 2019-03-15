@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDomainCertificateInfo
- *
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDomainCertificateInfo extends Rpc
 {
@@ -17,30 +17,4 @@ class DescribeDomainCertificateInfo extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

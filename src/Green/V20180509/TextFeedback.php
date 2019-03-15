@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api TextFeedback
- *
  * @method string getClientInfo()
  */
 class TextFeedback extends Roa

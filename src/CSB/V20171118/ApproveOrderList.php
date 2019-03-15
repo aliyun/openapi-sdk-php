@@ -5,9 +5,8 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ApproveOrderList
- *
  * @method string getData()
+ * @method $this withData($value)
  */
 class ApproveOrderList extends Rpc
 {
@@ -18,17 +17,4 @@ class ApproveOrderList extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function withData($data)
-    {
-        $this->data['Data'] = $data;
-        $this->options['query']['Data'] = $data;
-
-        return $this;
-    }
 }

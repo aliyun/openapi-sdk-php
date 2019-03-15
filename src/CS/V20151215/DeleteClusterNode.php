@@ -5,12 +5,12 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteClusterNode
- *
  * @method string getReleaseInstance()
  * @method string getIp()
+ * @method $this withIp($value)
  * @method string getForce()
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class DeleteClusterNode extends Roa
 {
@@ -38,19 +38,6 @@ class DeleteClusterNode extends Roa
     }
 
     /**
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function withIp($ip)
-    {
-        $this->data['Ip'] = $ip;
-        $this->pathParameters['Ip'] = $ip;
-
-        return $this;
-    }
-
-    /**
      * @param string $force
      *
      * @return $this
@@ -59,19 +46,6 @@ class DeleteClusterNode extends Roa
     {
         $this->data['Force'] = $force;
         $this->options['query']['force'] = $force;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
 
         return $this;
     }

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api VideoAsyncScanResults
- *
  * @method string getClientInfo()
  */
 class VideoAsyncScanResults extends Roa

@@ -5,11 +5,12 @@ namespace AlibabaCloud\Afs\V20180112;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AnalyzeNvc
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getData()
+ * @method $this withData($value)
  * @method string getScoreJsonStr()
+ * @method $this withScoreJsonStr($value)
  */
 class AnalyzeNvc extends Rpc
 {
@@ -18,43 +19,4 @@ class AnalyzeNvc extends Rpc
     public $version = '2018-01-12';
 
     public $method = 'POST';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function withData($data)
-    {
-        $this->data['Data'] = $data;
-        $this->options['query']['Data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scoreJsonStr
-     *
-     * @return $this
-     */
-    public function withScoreJsonStr($scoreJsonStr)
-    {
-        $this->data['ScoreJsonStr'] = $scoreJsonStr;
-        $this->options['query']['ScoreJsonStr'] = $scoreJsonStr;
-
-        return $this;
-    }
 }

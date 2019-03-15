@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of QueryRecordPlanDevices
- *
  * @method string getPlanId()
  * @method string getCurrentPage()
  * @method string getPageSize()
@@ -35,18 +33,6 @@ class QueryRecordPlanDevices extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPlanId() instead.
-     *
-     * @param string $planId
-     *
-     * @return $this
-     */
-    public function setPlanId($planId)
-    {
-        return $this->withPlanId($planId);
-    }
-
-    /**
      * @param string $planId
      *
      * @return $this
@@ -57,18 +43,6 @@ class QueryRecordPlanDevices extends RpcRequest
         $this->options['query']['PlanId'] = $planId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCurrentPage() instead.
-     *
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function setCurrentPage($currentPage)
-    {
-        return $this->withCurrentPage($currentPage);
     }
 
     /**

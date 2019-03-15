@@ -5,16 +5,22 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRegionPublicIpAddress
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getKbpsBandwidth()
+ * @method $this withKbpsBandwidth($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
+ * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getResourceUid()
+ * @method $this withResourceUid($value)
  * @method string getResourceBid()
+ * @method $this withResourceBid($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeRegionPublicIpAddress extends Rpc
 {
@@ -25,108 +31,4 @@ class DescribeRegionPublicIpAddress extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $kbpsBandwidth
-     *
-     * @return $this
-     */
-    public function withKbpsBandwidth($kbpsBandwidth)
-    {
-        $this->data['KbpsBandwidth'] = $kbpsBandwidth;
-        $this->options['query']['KbpsBandwidth'] = $kbpsBandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function withBandwidth($bandwidth)
-    {
-        $this->data['Bandwidth'] = $bandwidth;
-        $this->options['query']['Bandwidth'] = $bandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceUid
-     *
-     * @return $this
-     */
-    public function withResourceUid($resourceUid)
-    {
-        $this->data['ResourceUid'] = $resourceUid;
-        $this->options['query']['ResourceUid'] = $resourceUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceBid
-     *
-     * @return $this
-     */
-    public function withResourceBid($resourceBid)
-    {
-        $this->data['ResourceBid'] = $resourceBid;
-        $this->options['query']['ResourceBid'] = $resourceBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

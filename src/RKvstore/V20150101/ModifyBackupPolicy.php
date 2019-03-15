@@ -5,16 +5,22 @@ namespace AlibabaCloud\RKvstore\V20150101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyBackupPolicy
- *
  * @method string getPreferredBackupTime()
+ * @method $this withPreferredBackupTime($value)
  * @method string getPreferredBackupPeriod()
+ * @method $this withPreferredBackupPeriod($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ModifyBackupPolicy extends Rpc
 {
@@ -25,108 +31,4 @@ class ModifyBackupPolicy extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'redisa';
-
-    /**
-     * @param string $preferredBackupTime
-     *
-     * @return $this
-     */
-    public function withPreferredBackupTime($preferredBackupTime)
-    {
-        $this->data['PreferredBackupTime'] = $preferredBackupTime;
-        $this->options['query']['PreferredBackupTime'] = $preferredBackupTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $preferredBackupPeriod
-     *
-     * @return $this
-     */
-    public function withPreferredBackupPeriod($preferredBackupPeriod)
-    {
-        $this->data['PreferredBackupPeriod'] = $preferredBackupPeriod;
-        $this->options['query']['PreferredBackupPeriod'] = $preferredBackupPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

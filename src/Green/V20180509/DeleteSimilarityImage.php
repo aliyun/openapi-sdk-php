@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteSimilarityImage
- *
  * @method string getClientInfo()
  */
 class DeleteSimilarityImage extends Roa

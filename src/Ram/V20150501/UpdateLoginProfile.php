@@ -5,12 +5,14 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateLoginProfile
- *
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getPasswordResetRequired()
+ * @method $this withPasswordResetRequired($value)
  * @method string getMFABindRequired()
+ * @method $this withMFABindRequired($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class UpdateLoginProfile extends Rpc
 {
@@ -21,56 +23,4 @@ class UpdateLoginProfile extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $passwordResetRequired
-     *
-     * @return $this
-     */
-    public function withPasswordResetRequired($passwordResetRequired)
-    {
-        $this->data['PasswordResetRequired'] = $passwordResetRequired;
-        $this->options['query']['PasswordResetRequired'] = $passwordResetRequired;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mFABindRequired
-     *
-     * @return $this
-     */
-    public function withMFABindRequired($mFABindRequired)
-    {
-        $this->data['MFABindRequired'] = $mFABindRequired;
-        $this->options['query']['MFABindRequired'] = $mFABindRequired;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

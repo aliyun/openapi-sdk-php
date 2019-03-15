@@ -5,18 +5,26 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreatePhoto
- *
  * @method string getTakenAt()
+ * @method $this withTakenAt($value)
  * @method string getPhotoTitle()
+ * @method $this withPhotoTitle($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getShareExpireTime()
+ * @method $this withShareExpireTime($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getUploadType()
+ * @method $this withUploadType($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getStaging()
+ * @method $this withStaging($value)
  * @method string getFileId()
+ * @method $this withFileId($value)
  */
 class CreatePhoto extends Rpc
 {
@@ -29,134 +37,4 @@ class CreatePhoto extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $takenAt
-     *
-     * @return $this
-     */
-    public function withTakenAt($takenAt)
-    {
-        $this->data['TakenAt'] = $takenAt;
-        $this->options['query']['TakenAt'] = $takenAt;
-
-        return $this;
-    }
-
-    /**
-     * @param string $photoTitle
-     *
-     * @return $this
-     */
-    public function withPhotoTitle($photoTitle)
-    {
-        $this->data['PhotoTitle'] = $photoTitle;
-        $this->options['query']['PhotoTitle'] = $photoTitle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $shareExpireTime
-     *
-     * @return $this
-     */
-    public function withShareExpireTime($shareExpireTime)
-    {
-        $this->data['ShareExpireTime'] = $shareExpireTime;
-        $this->options['query']['ShareExpireTime'] = $shareExpireTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uploadType
-     *
-     * @return $this
-     */
-    public function withUploadType($uploadType)
-    {
-        $this->data['UploadType'] = $uploadType;
-        $this->options['query']['UploadType'] = $uploadType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function withSessionId($sessionId)
-    {
-        $this->data['SessionId'] = $sessionId;
-        $this->options['query']['SessionId'] = $sessionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $staging
-     *
-     * @return $this
-     */
-    public function withStaging($staging)
-    {
-        $this->data['Staging'] = $staging;
-        $this->options['query']['Staging'] = $staging;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fileId
-     *
-     * @return $this
-     */
-    public function withFileId($fileId)
-    {
-        $this->data['FileId'] = $fileId;
-        $this->options['query']['FileId'] = $fileId;
-
-        return $this;
-    }
 }

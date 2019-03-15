@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeVodUserDomains
- *
  * @method string getFuncFilter()
  * @method string getDomainName()
  * @method string getOwnerId()
@@ -47,18 +45,6 @@ class DescribeVodUserDomains extends RpcRequest
      * @var string
      */
     public $serviceCode = 'vod';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFuncFilter() instead.
-     *
-     * @param string $funcFilter
-     *
-     * @return $this
-     */
-    public function setFuncFilter($funcFilter)
-    {
-        return $this->withFuncFilter($funcFilter);
-    }
 
     /**
      * @param string $funcFilter

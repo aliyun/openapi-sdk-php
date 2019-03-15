@@ -5,20 +5,30 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyEipPayType
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
+ * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getUsedTime()
+ * @method $this withUsedTime($value)
  * @method string getKbpsBandwidth()
+ * @method $this withKbpsBandwidth($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getResourceUid()
+ * @method $this withResourceUid($value)
  * @method string getResourceBid()
+ * @method $this withResourceBid($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  */
 class ModifyEipPayType extends Rpc
 {
@@ -29,160 +39,4 @@ class ModifyEipPayType extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function withBandwidth($bandwidth)
-    {
-        $this->data['Bandwidth'] = $bandwidth;
-        $this->options['query']['Bandwidth'] = $bandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function withUsedTime($usedTime)
-    {
-        $this->data['UsedTime'] = $usedTime;
-        $this->options['query']['UsedTime'] = $usedTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $kbpsBandwidth
-     *
-     * @return $this
-     */
-    public function withKbpsBandwidth($kbpsBandwidth)
-    {
-        $this->data['KbpsBandwidth'] = $kbpsBandwidth;
-        $this->options['query']['KbpsBandwidth'] = $kbpsBandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceUid
-     *
-     * @return $this
-     */
-    public function withResourceUid($resourceUid)
-    {
-        $this->data['ResourceUid'] = $resourceUid;
-        $this->options['query']['ResourceUid'] = $resourceUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceBid
-     *
-     * @return $this
-     */
-    public function withResourceBid($resourceBid)
-    {
-        $this->data['ResourceBid'] = $resourceBid;
-        $this->options['query']['ResourceBid'] = $resourceBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
 }

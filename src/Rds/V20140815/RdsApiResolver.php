@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Rds based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Rds\V20140815
  *
  * @method AddDBInstanceNetworkType addDBInstanceNetworkType(array $options = [])
  * @method AddTagsToResource addTagsToResource(array $options = [])
@@ -42,7 +41,9 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescibeImportsFromDatabase descibeImportsFromDatabase(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeActiveOperationTask describeActiveOperationTask(array $options = [])
+ * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
  * @method DescribeAvailableInstanceClass describeAvailableInstanceClass(array $options = [])
+ * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method DescribeBackupDatabase describeBackupDatabase(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
@@ -52,6 +53,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeCharacterSetName describeCharacterSetName(array $options = [])
  * @method DescribeCloudDbExpertService describeCloudDbExpertService(array $options = [])
  * @method DescribeCollationTimeZones describeCollationTimeZones(array $options = [])
+ * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
  * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
  * @method DescribeDBInstanceByTags describeDBInstanceByTags(array $options = [])
  * @method DescribeDBInstanceEncryptionKey describeDBInstanceEncryptionKey(array $options = [])

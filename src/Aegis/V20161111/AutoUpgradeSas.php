@@ -5,9 +5,8 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AutoUpgradeSas
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class AutoUpgradeSas extends Rpc
 {
@@ -18,17 +17,4 @@ class AutoUpgradeSas extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

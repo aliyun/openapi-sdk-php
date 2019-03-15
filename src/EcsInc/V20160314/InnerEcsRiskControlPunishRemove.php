@@ -5,23 +5,26 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerEcsRiskControlPunishRemove
- *
  * @method string getReason()
  * @method string getBussinessCode()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCoordinate()
  * @method string getSignatureCode()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getChannel()
  * @method string getPunishResult()
  * @method string getActionCode()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
  * @method string getAsync()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getAliUid()
  * @method string getBid()
  * @method string getProxyId()
@@ -63,19 +66,6 @@ class InnerEcsRiskControlPunishRemove extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $coordinate
      *
      * @return $this
@@ -97,32 +87,6 @@ class InnerEcsRiskControlPunishRemove extends Rpc
     {
         $this->data['SignatureCode'] = $signatureCode;
         $this->options['query']['signatureCode'] = $signatureCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -167,19 +131,6 @@ class InnerEcsRiskControlPunishRemove extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $operator
      *
      * @return $this
@@ -214,19 +165,6 @@ class InnerEcsRiskControlPunishRemove extends Rpc
     {
         $this->data['Async'] = $async;
         $this->options['query']['async'] = $async;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
     }

@@ -5,22 +5,34 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeIPv6Translators
- *
  * @method string getBusinessStatus()
+ * @method $this withBusinessStatus($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getAllocateIpv6Addr()
+ * @method $this withAllocateIpv6Addr($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getAllocateIpv4Addr()
+ * @method $this withAllocateIpv4Addr($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSpec()
+ * @method $this withSpec($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeIPv6Translators extends Rpc
 {
@@ -31,186 +43,4 @@ class DescribeIPv6Translators extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $businessStatus
-     *
-     * @return $this
-     */
-    public function withBusinessStatus($businessStatus)
-    {
-        $this->data['BusinessStatus'] = $businessStatus;
-        $this->options['query']['BusinessStatus'] = $businessStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $allocateIpv6Addr
-     *
-     * @return $this
-     */
-    public function withAllocateIpv6Addr($allocateIpv6Addr)
-    {
-        $this->data['AllocateIpv6Addr'] = $allocateIpv6Addr;
-        $this->options['query']['AllocateIpv6Addr'] = $allocateIpv6Addr;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $allocateIpv4Addr
-     *
-     * @return $this
-     */
-    public function withAllocateIpv4Addr($allocateIpv4Addr)
-    {
-        $this->data['AllocateIpv4Addr'] = $allocateIpv4Addr;
-        $this->options['query']['AllocateIpv4Addr'] = $allocateIpv4Addr;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spec
-     *
-     * @return $this
-     */
-    public function withSpec($spec)
-    {
-        $this->data['Spec'] = $spec;
-        $this->options['query']['Spec'] = $spec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipv6TranslatorId
-     *
-     * @return $this
-     */
-    public function withIpv6TranslatorId($ipv6TranslatorId)
-    {
-        $this->data['Ipv6TranslatorId'] = $ipv6TranslatorId;
-        $this->options['query']['Ipv6TranslatorId'] = $ipv6TranslatorId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

@@ -5,19 +5,26 @@ namespace AlibabaCloud\TagINner\V20181109;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TagResourcesSystemTags
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTagOwnerUid()
+ * @method $this withTagOwnerUid($value)
  * @method string getScope()
+ * @method $this withScope($value)
  * @method string getTagOperator()
+ * @method $this withTagOperator($value)
  * @method array getTag()
  * @method string getTagOwnerBid()
+ * @method $this withTagOwnerBid($value)
  * @method array getResourceId()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
 class TagResourcesSystemTags extends Rpc
 {
@@ -28,58 +35,6 @@ class TagResourcesSystemTags extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'tag';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tagOwnerUid
-     *
-     * @return $this
-     */
-    public function withTagOwnerUid($tagOwnerUid)
-    {
-        $this->data['TagOwnerUid'] = $tagOwnerUid;
-        $this->options['query']['TagOwnerUid'] = $tagOwnerUid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function withScope($scope)
-    {
-        $this->data['Scope'] = $scope;
-        $this->options['query']['Scope'] = $scope;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tagOperator
-     *
-     * @return $this
-     */
-    public function withTagOperator($tagOperator)
-    {
-        $this->data['TagOperator'] = $tagOperator;
-        $this->options['query']['TagOperator'] = $tagOperator;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -98,19 +53,6 @@ class TagResourcesSystemTags extends Rpc
     }
 
     /**
-     * @param string $tagOwnerBid
-     *
-     * @return $this
-     */
-    public function withTagOwnerBid($tagOwnerBid)
-    {
-        $this->data['TagOwnerBid'] = $tagOwnerBid;
-        $this->options['query']['TagOwnerBid'] = $tagOwnerBid;
-
-        return $this;
-    }
-
-    /**
      * @param array $resourceId
      *
      * @return $this
@@ -121,58 +63,6 @@ class TagResourcesSystemTags extends Rpc
         foreach ($resourceId as $i => $iValue) {
             $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }

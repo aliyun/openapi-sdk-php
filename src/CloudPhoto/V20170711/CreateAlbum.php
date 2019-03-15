@@ -5,12 +5,14 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateAlbum
- *
  * @method string getAlbumName()
+ * @method $this withAlbumName($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  */
 class CreateAlbum extends Rpc
 {
@@ -23,56 +25,4 @@ class CreateAlbum extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $albumName
-     *
-     * @return $this
-     */
-    public function withAlbumName($albumName)
-    {
-        $this->data['AlbumName'] = $albumName;
-        $this->options['query']['AlbumName'] = $albumName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
 }

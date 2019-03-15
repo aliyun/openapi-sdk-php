@@ -5,15 +5,19 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AssignPrivateIpAddresses
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSecondaryPrivateIpAddressCount()
+ * @method $this withSecondaryPrivateIpAddressCount($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getPrivateIpAddress()
  * @method string getNetworkInterfaceId()
+ * @method $this withNetworkInterfaceId($value)
  */
 class AssignPrivateIpAddresses extends Rpc
 {
@@ -26,71 +30,6 @@ class AssignPrivateIpAddresses extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $secondaryPrivateIpAddressCount
-     *
-     * @return $this
-     */
-    public function withSecondaryPrivateIpAddressCount($secondaryPrivateIpAddressCount)
-    {
-        $this->data['SecondaryPrivateIpAddressCount'] = $secondaryPrivateIpAddressCount;
-        $this->options['query']['SecondaryPrivateIpAddressCount'] = $secondaryPrivateIpAddressCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param array $privateIpAddress
      *
      * @return $this
@@ -101,19 +40,6 @@ class AssignPrivateIpAddresses extends Rpc
         foreach ($privateIpAddress as $i => $iValue) {
             $this->options['query']['PrivateIpAddress.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkInterfaceId
-     *
-     * @return $this
-     */
-    public function withNetworkInterfaceId($networkInterfaceId)
-    {
-        $this->data['NetworkInterfaceId'] = $networkInterfaceId;
-        $this->options['query']['NetworkInterfaceId'] = $networkInterfaceId;
 
         return $this;
     }

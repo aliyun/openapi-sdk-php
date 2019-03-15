@@ -5,11 +5,12 @@ namespace AlibabaCloud\UbsmsInner\V20150623;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBusinessStatusOfUser
- *
  * @method string getUid()
+ * @method $this withUid($value)
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getServiceCode()
+ * @method $this withServiceCode($value)
  * @method array getStatusKey()
  * @method string getCallerBid()
  */
@@ -20,45 +21,6 @@ class DescribeBusinessStatusOfUser extends Rpc
     public $version = '2015-06-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $uid
-     *
-     * @return $this
-     */
-    public function withUid($uid)
-    {
-        $this->data['Uid'] = $uid;
-        $this->options['query']['Uid'] = $uid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function withServiceCode($serviceCode)
-    {
-        $this->data['ServiceCode'] = $serviceCode;
-        $this->options['query']['ServiceCode'] = $serviceCode;
-
-        return $this;
-    }
 
     /**
      * @param array $statusKey

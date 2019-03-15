@@ -5,12 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetConfig
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getObjectType()
+ * @method $this withObjectType($value)
  * @method string getObjectId()
+ * @method $this withObjectId($value)
  */
 class GetConfig extends Rpc
 {
@@ -21,56 +23,4 @@ class GetConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $objectType
-     *
-     * @return $this
-     */
-    public function withObjectType($objectType)
-    {
-        $this->data['ObjectType'] = $objectType;
-        $this->options['query']['ObjectType'] = $objectType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $objectId
-     *
-     * @return $this
-     */
-    public function withObjectId($objectId)
-    {
-        $this->data['ObjectId'] = $objectId;
-        $this->options['query']['ObjectId'] = $objectId;
-
-        return $this;
-    }
 }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\Sts\V20150401;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AssumeRole
- *
  * @method string getRoleArn()
+ * @method $this withRoleArn($value)
  * @method string getRoleSessionName()
+ * @method $this withRoleSessionName($value)
  * @method string getDurationSeconds()
+ * @method $this withDurationSeconds($value)
  * @method string getPolicy()
+ * @method $this withPolicy($value)
  */
 class AssumeRole extends Rpc
 {
@@ -21,56 +23,4 @@ class AssumeRole extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $roleArn
-     *
-     * @return $this
-     */
-    public function withRoleArn($roleArn)
-    {
-        $this->data['RoleArn'] = $roleArn;
-        $this->options['query']['RoleArn'] = $roleArn;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roleSessionName
-     *
-     * @return $this
-     */
-    public function withRoleSessionName($roleSessionName)
-    {
-        $this->data['RoleSessionName'] = $roleSessionName;
-        $this->options['query']['RoleSessionName'] = $roleSessionName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $durationSeconds
-     *
-     * @return $this
-     */
-    public function withDurationSeconds($durationSeconds)
-    {
-        $this->data['DurationSeconds'] = $durationSeconds;
-        $this->options['query']['DurationSeconds'] = $durationSeconds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policy
-     *
-     * @return $this
-     */
-    public function withPolicy($policy)
-    {
-        $this->data['Policy'] = $policy;
-        $this->options['query']['Policy'] = $policy;
-
-        return $this;
-    }
 }

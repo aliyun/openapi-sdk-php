@@ -5,14 +5,18 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRtcUserCntData
- *
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getServiceArea()
+ * @method $this withServiceArea($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeRtcUserCntData extends Rpc
 {
@@ -23,82 +27,4 @@ class DescribeRtcUserCntData extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rtc';
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceArea
-     *
-     * @return $this
-     */
-    public function withServiceArea($serviceArea)
-    {
-        $this->data['ServiceArea'] = $serviceArea;
-        $this->options['query']['ServiceArea'] = $serviceArea;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $interval
-     *
-     * @return $this
-     */
-    public function withInterval($interval)
-    {
-        $this->data['Interval'] = $interval;
-        $this->options['query']['Interval'] = $interval;
-
-        return $this;
-    }
 }

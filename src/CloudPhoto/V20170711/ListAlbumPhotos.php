@@ -5,15 +5,20 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAlbumPhotos
- *
  * @method string getCursor()
+ * @method $this withCursor($value)
  * @method string getSize()
+ * @method $this withSize($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getAlbumId()
+ * @method $this withAlbumId($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getDirection()
+ * @method $this withDirection($value)
  */
 class ListAlbumPhotos extends Rpc
 {
@@ -26,95 +31,4 @@ class ListAlbumPhotos extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $cursor
-     *
-     * @return $this
-     */
-    public function withCursor($cursor)
-    {
-        $this->data['Cursor'] = $cursor;
-        $this->options['query']['Cursor'] = $cursor;
-
-        return $this;
-    }
-
-    /**
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function withSize($size)
-    {
-        $this->data['Size'] = $size;
-        $this->options['query']['Size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $albumId
-     *
-     * @return $this
-     */
-    public function withAlbumId($albumId)
-    {
-        $this->data['AlbumId'] = $albumId;
-        $this->options['query']['AlbumId'] = $albumId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function withDirection($direction)
-    {
-        $this->data['Direction'] = $direction;
-        $this->options['query']['Direction'] = $direction;
-
-        return $this;
-    }
 }

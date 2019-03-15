@@ -5,10 +5,10 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetHotlineRecord
- *
  * @method string getId()
+ * @method $this withId($value)
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  */
 class GetHotlineRecord extends Rpc
 {
@@ -19,30 +19,4 @@ class GetHotlineRecord extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccs';
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
-
-        return $this;
-    }
 }

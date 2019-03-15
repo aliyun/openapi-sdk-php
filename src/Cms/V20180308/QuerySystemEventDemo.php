@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QuerySystemEventDemo
- *
  * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getEventName()
+ * @method $this withEventName($value)
  */
 class QuerySystemEventDemo extends Rpc
 {
@@ -19,30 +19,4 @@ class QuerySystemEventDemo extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $product
-     *
-     * @return $this
-     */
-    public function withProduct($product)
-    {
-        $this->data['Product'] = $product;
-        $this->options['query']['Product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function withEventName($eventName)
-    {
-        $this->data['EventName'] = $eventName;
-        $this->options['query']['EventName'] = $eventName;
-
-        return $this;
-    }
 }

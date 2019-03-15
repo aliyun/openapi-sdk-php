@@ -5,8 +5,6 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BuyOriginPictures
- *
  * @method array getPictureId()
  */
 class BuyOriginPictures extends Rpc

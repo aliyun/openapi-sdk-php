@@ -5,10 +5,9 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CancelOrder
- *
  * @method array getLmOrderIdList()
  * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class CancelOrder extends Rpc
 {
@@ -31,19 +30,6 @@ class CancelOrder extends Rpc
         foreach ($lmOrderIdList as $i => $iValue) {
             $this->options['query']['LmOrderIdList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
 
         return $this;
     }

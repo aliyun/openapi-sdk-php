@@ -5,10 +5,9 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateChannelMember
- *
  * @method array getOrganization()
  * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
 class CreateChannelMember extends Rpc
 {
@@ -29,19 +28,6 @@ class CreateChannelMember extends Rpc
         foreach ($organization as $i => $iValue) {
             $this->options['query']['Organization.' . ($i + 1) . '.Id'] = $organization[$i]['Id'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function withChannelId($channelId)
-    {
-        $this->data['ChannelId'] = $channelId;
-        $this->options['query']['ChannelId'] = $channelId;
 
         return $this;
     }

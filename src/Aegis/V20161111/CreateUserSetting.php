@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUserSetting
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getAlertLevels()
+ * @method $this withAlertLevels($value)
  * @method string getInvalidWarningKeepDays()
+ * @method $this withInvalidWarningKeepDays($value)
  */
 class CreateUserSetting extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateUserSetting extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alertLevels
-     *
-     * @return $this
-     */
-    public function withAlertLevels($alertLevels)
-    {
-        $this->data['AlertLevels'] = $alertLevels;
-        $this->options['query']['AlertLevels'] = $alertLevels;
-
-        return $this;
-    }
-
-    /**
-     * @param string $invalidWarningKeepDays
-     *
-     * @return $this
-     */
-    public function withInvalidWarningKeepDays($invalidWarningKeepDays)
-    {
-        $this->data['InvalidWarningKeepDays'] = $invalidWarningKeepDays;
-        $this->options['query']['InvalidWarningKeepDays'] = $invalidWarningKeepDays;
-
-        return $this;
-    }
 }

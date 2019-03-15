@@ -5,18 +5,26 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitMCJob
- *
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImages()
+ * @method $this withImages($value)
  * @method string getTexts()
+ * @method $this withTexts($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getVideo()
+ * @method $this withVideo($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCensorConfig()
+ * @method $this withCensorConfig($value)
  * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
 class SubmitMCJob extends Rpc
 {
@@ -27,134 +35,4 @@ class SubmitMCJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $images
-     *
-     * @return $this
-     */
-    public function withImages($images)
-    {
-        $this->data['Images'] = $images;
-        $this->options['query']['Images'] = $images;
-
-        return $this;
-    }
-
-    /**
-     * @param string $texts
-     *
-     * @return $this
-     */
-    public function withTexts($texts)
-    {
-        $this->data['Texts'] = $texts;
-        $this->options['query']['Texts'] = $texts;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $video
-     *
-     * @return $this
-     */
-    public function withVideo($video)
-    {
-        $this->data['Video'] = $video;
-        $this->options['query']['Video'] = $video;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $censorConfig
-     *
-     * @return $this
-     */
-    public function withCensorConfig($censorConfig)
-    {
-        $this->data['CensorConfig'] = $censorConfig;
-        $this->options['query']['CensorConfig'] = $censorConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function withPipelineId($pipelineId)
-    {
-        $this->data['PipelineId'] = $pipelineId;
-        $this->options['query']['PipelineId'] = $pipelineId;
-
-        return $this;
-    }
 }

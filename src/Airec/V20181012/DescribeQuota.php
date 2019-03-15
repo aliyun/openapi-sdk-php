@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeQuota
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DescribeQuota extends Roa
 {
@@ -18,17 +17,4 @@ class DescribeQuota extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/quota';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

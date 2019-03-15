@@ -5,9 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetSmsConfig
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method array getScenario()
  */
 class GetSmsConfig extends Rpc
@@ -19,19 +18,6 @@ class GetSmsConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 
     /**
      * @param array $scenario

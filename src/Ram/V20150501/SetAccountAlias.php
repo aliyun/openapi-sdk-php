@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SetAccountAlias
- *
  * @method string getAccountAlias()
+ * @method $this withAccountAlias($value)
  */
 class SetAccountAlias extends Rpc
 {
@@ -18,17 +17,4 @@ class SetAccountAlias extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $accountAlias
-     *
-     * @return $this
-     */
-    public function withAccountAlias($accountAlias)
-    {
-        $this->data['AccountAlias'] = $accountAlias;
-        $this->options['query']['AccountAlias'] = $accountAlias;
-
-        return $this;
-    }
 }

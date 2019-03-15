@@ -5,17 +5,24 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api NodeList
- *
  * @method string getHostName()
+ * @method $this withHostName($value)
  * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
  * @method string getInstanceRegionId()
+ * @method $this withInstanceRegionId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getKeyWord()
+ * @method $this withKeyWord($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getSerialNumbers()
+ * @method $this withSerialNumbers($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class NodeList extends Rpc
 {
@@ -26,121 +33,4 @@ class NodeList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function withHostName($hostName)
-    {
-        $this->data['HostName'] = $hostName;
-        $this->options['query']['HostName'] = $hostName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceIds
-     *
-     * @return $this
-     */
-    public function withInstanceIds($instanceIds)
-    {
-        $this->data['InstanceIds'] = $instanceIds;
-        $this->options['query']['InstanceIds'] = $instanceIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceRegionId
-     *
-     * @return $this
-     */
-    public function withInstanceRegionId($instanceRegionId)
-    {
-        $this->data['InstanceRegionId'] = $instanceRegionId;
-        $this->options['query']['InstanceRegionId'] = $instanceRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function withKeyWord($keyWord)
-    {
-        $this->data['KeyWord'] = $keyWord;
-        $this->options['query']['KeyWord'] = $keyWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serialNumbers
-     *
-     * @return $this
-     */
-    public function withSerialNumbers($serialNumbers)
-    {
-        $this->data['SerialNumbers'] = $serialNumbers;
-        $this->options['query']['SerialNumbers'] = $serialNumbers;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

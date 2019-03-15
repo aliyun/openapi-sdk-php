@@ -5,11 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AssignUsers
- *
  * @method array getUserRamId()
  * @method array getSkillLevel()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method array getRoleId()
  * @method array getSkillGroupId()
  */
@@ -49,19 +48,6 @@ class AssignUsers extends Rpc
         foreach ($skillLevel as $i => $iValue) {
             $this->options['query']['SkillLevel.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
     }

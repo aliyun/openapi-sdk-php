@@ -5,11 +5,11 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetAlbumsByNames
- *
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method array getName()
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  */
 class GetAlbumsByNames extends Rpc
 {
@@ -24,19 +24,6 @@ class GetAlbumsByNames extends Rpc
     public $serviceCode = 'cloudphoto';
 
     /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
      * @param array $name
      *
      * @return $this
@@ -47,19 +34,6 @@ class GetAlbumsByNames extends Rpc
         foreach ($name as $i => $iValue) {
             $this->options['query']['Name.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
 
         return $this;
     }

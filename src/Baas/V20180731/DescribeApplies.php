@@ -5,12 +5,14 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeApplies
- *
  * @method string getCurrent()
+ * @method $this withCurrent($value)
  * @method string getBizid()
+ * @method $this withBizid($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeApplies extends Rpc
 {
@@ -19,56 +21,4 @@ class DescribeApplies extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'POST';
-
-    /**
-     * @param string $current
-     *
-     * @return $this
-     */
-    public function withCurrent($current)
-    {
-        $this->data['Current'] = $current;
-        $this->options['query']['Current'] = $current;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function withBizid($bizid)
-    {
-        $this->data['Bizid'] = $bizid;
-        $this->options['query']['Bizid'] = $bizid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

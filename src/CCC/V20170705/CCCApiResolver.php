@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the CCC based on the method name as the Api name.
  *
- * @package   AlibabaCloud\CCC\V20170705
  *
  * @method AddBulkPhoneNumbers addBulkPhoneNumbers(array $options = [])
  * @method AddNumberToSkillGroup addNumberToSkillGroup(array $options = [])

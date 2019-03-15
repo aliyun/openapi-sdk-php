@@ -5,14 +5,18 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GenerateAgentStatisticReport
- *
  * @method string getAgentId()
+ * @method $this withAgentId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getEndDate()
+ * @method $this withEndDate($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStartDate()
+ * @method $this withStartDate($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class GenerateAgentStatisticReport extends Rpc
 {
@@ -23,82 +27,4 @@ class GenerateAgentStatisticReport extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $agentId
-     *
-     * @return $this
-     */
-    public function withAgentId($agentId)
-    {
-        $this->data['AgentId'] = $agentId;
-        $this->options['query']['AgentId'] = $agentId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function withEndDate($endDate)
-    {
-        $this->data['EndDate'] = $endDate;
-        $this->options['query']['EndDate'] = $endDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function withStartDate($startDate)
-    {
-        $this->data['StartDate'] = $startDate;
-        $this->options['query']['StartDate'] = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

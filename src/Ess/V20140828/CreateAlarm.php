@@ -5,23 +5,34 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateAlarm
- *
  * @method string getMetricType()
+ * @method $this withMetricType($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method array getAlarmAction()
  * @method string getThreshold()
+ * @method $this withThreshold($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
  * @method string getMetricName()
+ * @method $this withMetricName($value)
  * @method string getComparisonOperator()
+ * @method $this withComparisonOperator($value)
  * @method array getDimension()
  * @method string getStatistics()
+ * @method $this withStatistics($value)
  */
 class CreateAlarm extends Rpc
 {
@@ -32,84 +43,6 @@ class CreateAlarm extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ess';
-
-    /**
-     * @param string $metricType
-     *
-     * @return $this
-     */
-    public function withMetricType($metricType)
-    {
-        $this->data['MetricType'] = $metricType;
-        $this->options['query']['MetricType'] = $metricType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
 
     /**
      * @param array $alarmAction
@@ -127,84 +60,6 @@ class CreateAlarm extends Rpc
     }
 
     /**
-     * @param string $threshold
-     *
-     * @return $this
-     */
-    public function withThreshold($threshold)
-    {
-        $this->data['Threshold'] = $threshold;
-        $this->options['query']['Threshold'] = $threshold;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $evaluationCount
-     *
-     * @return $this
-     */
-    public function withEvaluationCount($evaluationCount)
-    {
-        $this->data['EvaluationCount'] = $evaluationCount;
-        $this->options['query']['EvaluationCount'] = $evaluationCount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $metricName
-     *
-     * @return $this
-     */
-    public function withMetricName($metricName)
-    {
-        $this->data['MetricName'] = $metricName;
-        $this->options['query']['MetricName'] = $metricName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $comparisonOperator
-     *
-     * @return $this
-     */
-    public function withComparisonOperator($comparisonOperator)
-    {
-        $this->data['ComparisonOperator'] = $comparisonOperator;
-        $this->options['query']['ComparisonOperator'] = $comparisonOperator;
-
-        return $this;
-    }
-
-    /**
      * @param array $dimension
      *
      * @return $this
@@ -216,19 +71,6 @@ class CreateAlarm extends Rpc
             $this->options['query']['Dimension.' . ($i + 1) . '.DimensionValue'] = $dimension[$i]['DimensionValue'];
             $this->options['query']['Dimension.' . ($i + 1) . '.DimensionKey'] = $dimension[$i]['DimensionKey'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $statistics
-     *
-     * @return $this
-     */
-    public function withStatistics($statistics)
-    {
-        $this->data['Statistics'] = $statistics;
-        $this->options['query']['Statistics'] = $statistics;
 
         return $this;
     }

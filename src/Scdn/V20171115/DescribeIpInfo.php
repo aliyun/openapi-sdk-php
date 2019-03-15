@@ -5,8 +5,6 @@ namespace AlibabaCloud\Scdn\V20171115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeIpInfo
- *
  */
 class DescribeIpInfo extends Rpc
 {

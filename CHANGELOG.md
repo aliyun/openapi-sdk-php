@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.1.2 - 2019-03-15
+- Add `Iot` Tests.
+- Add `Aegis` Apis.
+
+
 ## 1.1.1 - 2019-03-14
 - Add `DescribeWhiteListStrategyList` for `Aegis`.
 - Add `DescribeAvailableCrossRegion` for `Rds`.

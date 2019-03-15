@@ -5,13 +5,15 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetPublicAccessUrls
- *
  * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method array getPhotoId()
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getZoomType()
+ * @method $this withZoomType($value)
  */
 class GetPublicAccessUrls extends Rpc
 {
@@ -26,32 +28,6 @@ class GetPublicAccessUrls extends Rpc
     public $serviceCode = 'cloudphoto';
 
     /**
-     * @param string $domainType
-     *
-     * @return $this
-     */
-    public function withDomainType($domainType)
-    {
-        $this->data['DomainType'] = $domainType;
-        $this->options['query']['DomainType'] = $domainType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
      * @param array $photoId
      *
      * @return $this
@@ -62,32 +38,6 @@ class GetPublicAccessUrls extends Rpc
         foreach ($photoId as $i => $iValue) {
             $this->options['query']['PhotoId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoomType
-     *
-     * @return $this
-     */
-    public function withZoomType($zoomType)
-    {
-        $this->data['ZoomType'] = $zoomType;
-        $this->options['query']['ZoomType'] = $zoomType;
 
         return $this;
     }

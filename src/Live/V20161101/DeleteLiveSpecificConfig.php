@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DeleteLiveSpecificConfig
- *
  * @method string getSecurityToken()
  * @method string getConfigId()
  * @method string getDomainName()

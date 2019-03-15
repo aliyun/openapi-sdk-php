@@ -5,17 +5,24 @@ namespace AlibabaCloud\Smartag\V20180313;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateCloudConnectNetwork
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getSnatCidrBlock()
+ * @method $this withSnatCidrBlock($value)
  * @method string getIsDefault()
+ * @method $this withIsDefault($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateCloudConnectNetwork extends Rpc
 {
@@ -26,121 +33,4 @@ class CreateCloudConnectNetwork extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'smartag';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cidrBlock
-     *
-     * @return $this
-     */
-    public function withCidrBlock($cidrBlock)
-    {
-        $this->data['CidrBlock'] = $cidrBlock;
-        $this->options['query']['CidrBlock'] = $cidrBlock;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snatCidrBlock
-     *
-     * @return $this
-     */
-    public function withSnatCidrBlock($snatCidrBlock)
-    {
-        $this->data['SnatCidrBlock'] = $snatCidrBlock;
-        $this->options['query']['SnatCidrBlock'] = $snatCidrBlock;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isDefault
-     *
-     * @return $this
-     */
-    public function withIsDefault($isDefault)
-    {
-        $this->data['IsDefault'] = $isDefault;
-        $this->options['query']['IsDefault'] = $isDefault;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

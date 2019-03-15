@@ -5,15 +5,20 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeAnalysisLogs
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getQuery()
+ * @method $this withQuery($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getTo()
+ * @method $this withTo($value)
  * @method string getReverse()
+ * @method $this withReverse($value)
  */
 class DescribeAnalysisLogs extends Rpc
 {
@@ -24,95 +29,4 @@ class DescribeAnalysisLogs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $query
-     *
-     * @return $this
-     */
-    public function withQuery($query)
-    {
-        $this->data['Query'] = $query;
-        $this->options['query']['Query'] = $query;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $to
-     *
-     * @return $this
-     */
-    public function withTo($to)
-    {
-        $this->data['To'] = $to;
-        $this->options['query']['To'] = $to;
-
-        return $this;
-    }
-
-    /**
-     * @param string $reverse
-     *
-     * @return $this
-     */
-    public function withReverse($reverse)
-    {
-        $this->data['Reverse'] = $reverse;
-        $this->options['query']['Reverse'] = $reverse;
-
-        return $this;
-    }
 }

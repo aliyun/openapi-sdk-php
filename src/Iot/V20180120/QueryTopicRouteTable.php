@@ -5,10 +5,10 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryTopicRouteTable
- *
  * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getTopic()
+ * @method $this withTopic($value)
  */
 class QueryTopicRouteTable extends Rpc
 {
@@ -17,30 +17,4 @@ class QueryTopicRouteTable extends Rpc
     public $version = '2018-01-20';
 
     public $method = 'POST';
-
-    /**
-     * @param string $iotInstanceId
-     *
-     * @return $this
-     */
-    public function withIotInstanceId($iotInstanceId)
-    {
-        $this->data['IotInstanceId'] = $iotInstanceId;
-        $this->options['query']['IotInstanceId'] = $iotInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $topic
-     *
-     * @return $this
-     */
-    public function withTopic($topic)
-    {
-        $this->data['Topic'] = $topic;
-        $this->options['query']['Topic'] = $topic;
-
-        return $this;
-    }
 }

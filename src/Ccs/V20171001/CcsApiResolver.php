@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ccs based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ccs\V20171001
  *
  * @method AssumeOss assumeOss(array $options = [])
  * @method ChatRobotSession chatRobotSession(array $options = [])

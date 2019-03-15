@@ -5,13 +5,16 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api IgnoreHcCheckWarnings
- *
  * @method string getReason()
+ * @method $this withReason($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getCheckWarningIds()
+ * @method $this withCheckWarningIds($value)
  * @method string getRiskId()
+ * @method $this withRiskId($value)
  * @method string getType()
+ * @method $this withType($value)
  */
 class IgnoreHcCheckWarnings extends Rpc
 {
@@ -22,69 +25,4 @@ class IgnoreHcCheckWarnings extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function withReason($reason)
-    {
-        $this->data['Reason'] = $reason;
-        $this->options['query']['Reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $checkWarningIds
-     *
-     * @return $this
-     */
-    public function withCheckWarningIds($checkWarningIds)
-    {
-        $this->data['CheckWarningIds'] = $checkWarningIds;
-        $this->options['query']['CheckWarningIds'] = $checkWarningIds;
-
-        return $this;
-    }
-
-    /**
-     * @param string $riskId
-     *
-     * @return $this
-     */
-    public function withRiskId($riskId)
-    {
-        $this->data['RiskId'] = $riskId;
-        $this->options['query']['RiskId'] = $riskId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
 }

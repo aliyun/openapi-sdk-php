@@ -5,11 +5,12 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api StopVisualService
- *
  * @method string getPort()
+ * @method $this withPort($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getCidrIp()
+ * @method $this withCidrIp($value)
  */
 class StopVisualService extends Rpc
 {
@@ -18,43 +19,4 @@ class StopVisualService extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $port
-     *
-     * @return $this
-     */
-    public function withPort($port)
-    {
-        $this->data['Port'] = $port;
-        $this->options['query']['Port'] = $port;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $cidrIp
-     *
-     * @return $this
-     */
-    public function withCidrIp($cidrIp)
-    {
-        $this->data['CidrIp'] = $cidrIp;
-        $this->options['query']['CidrIp'] = $cidrIp;
-
-        return $this;
-    }
 }

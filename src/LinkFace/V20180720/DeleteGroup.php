@@ -5,9 +5,8 @@ namespace AlibabaCloud\LinkFace\V20180720;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteGroup
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
 class DeleteGroup extends Rpc
 {
@@ -18,17 +17,4 @@ class DeleteGroup extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
 }

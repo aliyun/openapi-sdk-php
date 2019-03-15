@@ -5,14 +5,18 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CompleteLifecycleAction
- *
  * @method string getLifecycleActionToken()
+ * @method $this withLifecycleActionToken($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getLifecycleHookId()
+ * @method $this withLifecycleHookId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getLifecycleActionResult()
+ * @method $this withLifecycleActionResult($value)
  */
 class CompleteLifecycleAction extends Rpc
 {
@@ -23,82 +27,4 @@ class CompleteLifecycleAction extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ess';
-
-    /**
-     * @param string $lifecycleActionToken
-     *
-     * @return $this
-     */
-    public function withLifecycleActionToken($lifecycleActionToken)
-    {
-        $this->data['LifecycleActionToken'] = $lifecycleActionToken;
-        $this->options['query']['LifecycleActionToken'] = $lifecycleActionToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lifecycleHookId
-     *
-     * @return $this
-     */
-    public function withLifecycleHookId($lifecycleHookId)
-    {
-        $this->data['LifecycleHookId'] = $lifecycleHookId;
-        $this->options['query']['LifecycleHookId'] = $lifecycleHookId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lifecycleActionResult
-     *
-     * @return $this
-     */
-    public function withLifecycleActionResult($lifecycleActionResult)
-    {
-        $this->data['LifecycleActionResult'] = $lifecycleActionResult;
-        $this->options['query']['LifecycleActionResult'] = $lifecycleActionResult;
-
-        return $this;
-    }
 }

@@ -5,31 +5,50 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeImages
- *
  * @method string getActionType()
+ * @method $this withActionType($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getUsage()
+ * @method $this withUsage($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getIsSupportIoOptimized()
+ * @method $this withIsSupportIoOptimized($value)
  * @method string getImageName()
+ * @method $this withImageName($value)
  * @method string getIsSupportCloudinit()
+ * @method $this withIsSupportCloudinit($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method array getTag()
  * @method string getArchitecture()
+ * @method $this withArchitecture($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getShowExpired()
+ * @method $this withShowExpired($value)
  * @method string getOSType()
+ * @method $this withOSType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getFilter()
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeImages extends Rpc
 {
@@ -40,175 +59,6 @@ class DescribeImages extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function withActionType($actionType)
-    {
-        $this->data['ActionType'] = $actionType;
-        $this->options['query']['ActionType'] = $actionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function withSnapshotId($snapshotId)
-    {
-        $this->data['SnapshotId'] = $snapshotId;
-        $this->options['query']['SnapshotId'] = $snapshotId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function withUsage($usage)
-    {
-        $this->data['Usage'] = $usage;
-        $this->options['query']['Usage'] = $usage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageOwnerAlias
-     *
-     * @return $this
-     */
-    public function withImageOwnerAlias($imageOwnerAlias)
-    {
-        $this->data['ImageOwnerAlias'] = $imageOwnerAlias;
-        $this->options['query']['ImageOwnerAlias'] = $imageOwnerAlias;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isSupportIoOptimized
-     *
-     * @return $this
-     */
-    public function withIsSupportIoOptimized($isSupportIoOptimized)
-    {
-        $this->data['IsSupportIoOptimized'] = $isSupportIoOptimized;
-        $this->options['query']['IsSupportIoOptimized'] = $isSupportIoOptimized;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageName
-     *
-     * @return $this
-     */
-    public function withImageName($imageName)
-    {
-        $this->data['ImageName'] = $imageName;
-        $this->options['query']['ImageName'] = $imageName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isSupportCloudinit
-     *
-     * @return $this
-     */
-    public function withIsSupportCloudinit($isSupportCloudinit)
-    {
-        $this->data['IsSupportCloudinit'] = $isSupportCloudinit;
-        $this->options['query']['IsSupportCloudinit'] = $isSupportCloudinit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -227,97 +77,6 @@ class DescribeImages extends Rpc
     }
 
     /**
-     * @param string $architecture
-     *
-     * @return $this
-     */
-    public function withArchitecture($architecture)
-    {
-        $this->data['Architecture'] = $architecture;
-        $this->options['query']['Architecture'] = $architecture;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $showExpired
-     *
-     * @return $this
-     */
-    public function withShowExpired($showExpired)
-    {
-        $this->data['ShowExpired'] = $showExpired;
-        $this->options['query']['ShowExpired'] = $showExpired;
-
-        return $this;
-    }
-
-    /**
-     * @param string $oSType
-     *
-     * @return $this
-     */
-    public function withOSType($oSType)
-    {
-        $this->data['OSType'] = $oSType;
-        $this->options['query']['OSType'] = $oSType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param array $filter
      *
      * @return $this
@@ -329,19 +88,6 @@ class DescribeImages extends Rpc
             $this->options['query']['Filter.' . ($i + 1) . '.Value'] = $filter[$i]['Value'];
             $this->options['query']['Filter.' . ($i + 1) . '.Key'] = $filter[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
 
         return $this;
     }

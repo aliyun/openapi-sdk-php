@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of AddLiveMixNotifyConfig
- *
  * @method string getSecurityToken()
  * @method string getDomainName()
  * @method string getNotifyUrl()

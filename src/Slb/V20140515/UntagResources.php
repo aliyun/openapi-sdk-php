@@ -5,8 +5,6 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of UntagResources
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
  * @method array getResourceId()

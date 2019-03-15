@@ -5,8 +5,6 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRegions
- *
  */
 class DescribeRegions extends Rpc
 {

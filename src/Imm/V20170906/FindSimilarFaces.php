@@ -5,14 +5,18 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api FindSimilarFaces
- *
  * @method string getImageUri()
+ * @method $this withImageUri($value)
  * @method string getMinSimilarity()
+ * @method $this withMinSimilarity($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  * @method string getFaceId()
+ * @method $this withFaceId($value)
  */
 class FindSimilarFaces extends Rpc
 {
@@ -23,82 +27,4 @@ class FindSimilarFaces extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $imageUri
-     *
-     * @return $this
-     */
-    public function withImageUri($imageUri)
-    {
-        $this->data['ImageUri'] = $imageUri;
-        $this->options['query']['ImageUri'] = $imageUri;
-
-        return $this;
-    }
-
-    /**
-     * @param string $minSimilarity
-     *
-     * @return $this
-     */
-    public function withMinSimilarity($minSimilarity)
-    {
-        $this->data['MinSimilarity'] = $minSimilarity;
-        $this->options['query']['MinSimilarity'] = $minSimilarity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $faceId
-     *
-     * @return $this
-     */
-    public function withFaceId($faceId)
-    {
-        $this->data['FaceId'] = $faceId;
-        $this->options['query']['FaceId'] = $faceId;
-
-        return $this;
-    }
 }

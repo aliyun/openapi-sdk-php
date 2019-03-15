@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of CreateIndexFaceJob
- *
  * @method string getChain()
  * @method string getSrcUris()
  * @method string getNotifyTopicName()

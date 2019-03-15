@@ -5,10 +5,9 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryCustomerAddressList
- *
  * @method string getCallerBid()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCallerUid()
  */
 class QueryCustomerAddressList extends Rpc
@@ -28,19 +27,6 @@ class QueryCustomerAddressList extends Rpc
     {
         $this->data['CallerBid'] = $callerBid;
         $this->options['query']['callerBid'] = $callerBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

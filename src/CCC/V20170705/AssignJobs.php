@@ -5,13 +5,15 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AssignJobs
- *
  * @method array getCallingNumber()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getStrategyJson()
+ * @method $this withStrategyJson($value)
  * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  * @method array getJobsJson()
  */
 class AssignJobs extends Rpc
@@ -35,58 +37,6 @@ class AssignJobs extends Rpc
         foreach ($callingNumber as $i => $iValue) {
             $this->options['query']['CallingNumber.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $strategyJson
-     *
-     * @return $this
-     */
-    public function withStrategyJson($strategyJson)
-    {
-        $this->data['StrategyJson'] = $strategyJson;
-        $this->options['query']['StrategyJson'] = $strategyJson;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function withScenarioId($scenarioId)
-    {
-        $this->data['ScenarioId'] = $scenarioId;
-        $this->options['query']['ScenarioId'] = $scenarioId;
 
         return $this;
     }

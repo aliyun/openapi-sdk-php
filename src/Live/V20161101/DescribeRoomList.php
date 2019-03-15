@@ -5,18 +5,26 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRoomList
- *
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getAnchorId()
+ * @method $this withAnchorId($value)
  * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getRoomStatus()
+ * @method $this withRoomStatus($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getOrder()
+ * @method $this withOrder($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRoomId()
+ * @method $this withRoomId($value)
  * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class DescribeRoomList extends Rpc
 {
@@ -27,134 +35,4 @@ class DescribeRoomList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $anchorId
-     *
-     * @return $this
-     */
-    public function withAnchorId($anchorId)
-    {
-        $this->data['AnchorId'] = $anchorId;
-        $this->options['query']['AnchorId'] = $anchorId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNum
-     *
-     * @return $this
-     */
-    public function withPageNum($pageNum)
-    {
-        $this->data['PageNum'] = $pageNum;
-        $this->options['query']['PageNum'] = $pageNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roomStatus
-     *
-     * @return $this
-     */
-    public function withRoomStatus($roomStatus)
-    {
-        $this->data['RoomStatus'] = $roomStatus;
-        $this->options['query']['RoomStatus'] = $roomStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roomId
-     *
-     * @return $this
-     */
-    public function withRoomId($roomId)
-    {
-        $this->data['RoomId'] = $roomId;
-        $this->options['query']['RoomId'] = $roomId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function withAppId($appId)
-    {
-        $this->data['AppId'] = $appId;
-        $this->options['query']['AppId'] = $appId;
-
-        return $this;
-    }
 }

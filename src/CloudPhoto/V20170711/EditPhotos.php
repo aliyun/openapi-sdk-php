@@ -5,15 +5,19 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api EditPhotos
- *
  * @method string getTakenAt()
+ * @method $this withTakenAt($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getShareExpireTime()
+ * @method $this withShareExpireTime($value)
  * @method array getPhotoId()
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getTitle()
+ * @method $this withTitle($value)
  */
 class EditPhotos extends Rpc
 {
@@ -28,45 +32,6 @@ class EditPhotos extends Rpc
     public $serviceCode = 'cloudphoto';
 
     /**
-     * @param string $takenAt
-     *
-     * @return $this
-     */
-    public function withTakenAt($takenAt)
-    {
-        $this->data['TakenAt'] = $takenAt;
-        $this->options['query']['TakenAt'] = $takenAt;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $shareExpireTime
-     *
-     * @return $this
-     */
-    public function withShareExpireTime($shareExpireTime)
-    {
-        $this->data['ShareExpireTime'] = $shareExpireTime;
-        $this->options['query']['ShareExpireTime'] = $shareExpireTime;
-
-        return $this;
-    }
-
-    /**
      * @param array $photoId
      *
      * @return $this
@@ -77,45 +42,6 @@ class EditPhotos extends Rpc
         foreach ($photoId as $i => $iValue) {
             $this->options['query']['PhotoId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function withTitle($title)
-    {
-        $this->data['Title'] = $title;
-        $this->options['query']['Title'] = $title;
 
         return $this;
     }

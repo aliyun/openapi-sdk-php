@@ -5,13 +5,12 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PutEventTargets
- *
  * @method array getWebhookParameters()
  * @method array getContactParameters()
  * @method array getSlsParameters()
  * @method array getFcParameters()
  * @method string getRuleName()
+ * @method $this withRuleName($value)
  * @method array getMnsParameters()
  */
 class PutEventTargets extends Rpc
@@ -91,19 +90,6 @@ class PutEventTargets extends Rpc
             $this->options['query']['FcParameters.' . ($i + 1) . '.Id'] = $fcParameters[$i]['Id'];
             $this->options['query']['FcParameters.' . ($i + 1) . '.Region'] = $fcParameters[$i]['Region'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ruleName
-     *
-     * @return $this
-     */
-    public function withRuleName($ruleName)
-    {
-        $this->data['RuleName'] = $ruleName;
-        $this->options['query']['RuleName'] = $ruleName;
 
         return $this;
     }

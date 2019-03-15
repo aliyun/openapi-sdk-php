@@ -5,9 +5,8 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteRole
- *
  * @method string getRoleName()
+ * @method $this withRoleName($value)
  */
 class DeleteRole extends Rpc
 {
@@ -18,17 +17,4 @@ class DeleteRole extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function withRoleName($roleName)
-    {
-        $this->data['RoleName'] = $roleName;
-        $this->options['query']['RoleName'] = $roleName;
-
-        return $this;
-    }
 }

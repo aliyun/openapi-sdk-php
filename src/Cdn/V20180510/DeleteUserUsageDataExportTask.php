@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteUserUsageDataExportTask
- *
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class DeleteUserUsageDataExportTask extends Rpc
 {
@@ -17,30 +17,4 @@ class DeleteUserUsageDataExportTask extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

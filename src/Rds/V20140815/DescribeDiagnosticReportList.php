@@ -5,9 +5,8 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDiagnosticReportList
- *
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  */
 class DescribeDiagnosticReportList extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeDiagnosticReportList extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
 }

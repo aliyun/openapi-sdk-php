@@ -5,19 +5,27 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CopyImage
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getDestinationImageName()
+ * @method $this withDestinationImageName($value)
  * @method string getDestinationRegionId()
+ * @method $this withDestinationRegionId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getEncrypted()
+ * @method $this withEncrypted($value)
  * @method array getTag()
  * @method string getKmsKeyId()
+ * @method $this withKmsKeyId($value)
  * @method string getDestinationDescription()
+ * @method $this withDestinationDescription($value)
  */
 class CopyImage extends Rpc
 {
@@ -28,110 +36,6 @@ class CopyImage extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationImageName
-     *
-     * @return $this
-     */
-    public function withDestinationImageName($destinationImageName)
-    {
-        $this->data['DestinationImageName'] = $destinationImageName;
-        $this->options['query']['DestinationImageName'] = $destinationImageName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationRegionId
-     *
-     * @return $this
-     */
-    public function withDestinationRegionId($destinationRegionId)
-    {
-        $this->data['DestinationRegionId'] = $destinationRegionId;
-        $this->options['query']['DestinationRegionId'] = $destinationRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $encrypted
-     *
-     * @return $this
-     */
-    public function withEncrypted($encrypted)
-    {
-        $this->data['Encrypted'] = $encrypted;
-        $this->options['query']['Encrypted'] = $encrypted;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -145,32 +49,6 @@ class CopyImage extends Rpc
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $kmsKeyId
-     *
-     * @return $this
-     */
-    public function withKmsKeyId($kmsKeyId)
-    {
-        $this->data['KmsKeyId'] = $kmsKeyId;
-        $this->options['query']['KmsKeyId'] = $kmsKeyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $destinationDescription
-     *
-     * @return $this
-     */
-    public function withDestinationDescription($destinationDescription)
-    {
-        $this->data['DestinationDescription'] = $destinationDescription;
-        $this->options['query']['DestinationDescription'] = $destinationDescription;
 
         return $this;
     }

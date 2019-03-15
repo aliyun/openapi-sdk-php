@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Imm based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Imm\V20170906
  *
  * @method CompareFace compareFace(array $options = [])
  * @method CompareImageFaces compareImageFaces(array $options = [])

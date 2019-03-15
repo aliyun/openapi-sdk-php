@@ -5,10 +5,9 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ToggleFeatures
- *
  * @method array getDisabledFeatures()
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method array getEnabledFeatures()
  */
 class ToggleFeatures extends Rpc
@@ -34,19 +33,6 @@ class ToggleFeatures extends Rpc
         foreach ($disabledFeatures as $i => $iValue) {
             $this->options['query']['DisabledFeatures.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
 
         return $this;
     }

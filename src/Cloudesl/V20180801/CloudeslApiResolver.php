@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Cloudesl based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Cloudesl\V20180801
  *
  * @method BatchInsertItems batchInsertItems(array $options = [])
  * @method BindEslDevice bindEslDevice(array $options = [])

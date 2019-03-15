@@ -5,9 +5,8 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeOssCallbackSetting
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  */
 class DescribeOssCallbackSetting extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeOssCallbackSetting extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
 }

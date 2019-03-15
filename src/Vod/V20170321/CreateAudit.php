@@ -5,9 +5,8 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateAudit
- *
  * @method string getAuditContent()
+ * @method $this withAuditContent($value)
  */
 class CreateAudit extends Rpc
 {
@@ -18,17 +17,4 @@ class CreateAudit extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $auditContent
-     *
-     * @return $this
-     */
-    public function withAuditContent($auditContent)
-    {
-        $this->data['AuditContent'] = $auditContent;
-        $this->options['query']['AuditContent'] = $auditContent;
-
-        return $this;
-    }
 }

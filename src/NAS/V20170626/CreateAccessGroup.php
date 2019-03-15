@@ -5,11 +5,12 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateAccessGroup
- *
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getAccessGroupType()
+ * @method $this withAccessGroupType($value)
  * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
  */
 class CreateAccessGroup extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateAccessGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accessGroupType
-     *
-     * @return $this
-     */
-    public function withAccessGroupType($accessGroupType)
-    {
-        $this->data['AccessGroupType'] = $accessGroupType;
-        $this->options['query']['AccessGroupType'] = $accessGroupType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function withAccessGroupName($accessGroupName)
-    {
-        $this->data['AccessGroupName'] = $accessGroupName;
-        $this->options['query']['AccessGroupName'] = $accessGroupName;
-
-        return $this;
-    }
 }

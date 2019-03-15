@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Crm based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Crm\V20150408
  *
  * @method AddIdentityCertifiedForBidUser addIdentityCertifiedForBidUser(array $options = [])
  * @method AddLabel addLabel(array $options = [])

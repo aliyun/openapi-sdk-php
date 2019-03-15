@@ -5,11 +5,12 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteCasterVideoResource
- *
  * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getCasterId()
+ * @method $this withCasterId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DeleteCasterVideoResource extends Rpc
 {
@@ -20,43 +21,4 @@ class DeleteCasterVideoResource extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId($resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        $this->options['query']['ResourceId'] = $resourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function withCasterId($casterId)
-    {
-        $this->data['CasterId'] = $casterId;
-        $this->options['query']['CasterId'] = $casterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

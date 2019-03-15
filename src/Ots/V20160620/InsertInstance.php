@@ -5,15 +5,18 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InsertInstance
- *
  * @method string getAccessKeyId()
  * @method string getClusterType()
+ * @method $this withClusterType($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method array getTagInfo()
  * @method string getNetwork()
+ * @method $this withNetwork($value)
  */
 class InsertInstance extends Rpc
 {
@@ -39,58 +42,6 @@ class InsertInstance extends Rpc
     }
 
     /**
-     * @param string $clusterType
-     *
-     * @return $this
-     */
-    public function withClusterType($clusterType)
-    {
-        $this->data['ClusterType'] = $clusterType;
-        $this->options['query']['ClusterType'] = $clusterType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * @param array $tagInfo
      *
      * @return $this
@@ -102,19 +53,6 @@ class InsertInstance extends Rpc
             $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $tagInfo[$i]['TagValue'];
             $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $tagInfo[$i]['TagKey'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $network
-     *
-     * @return $this
-     */
-    public function withNetwork($network)
-    {
-        $this->data['Network'] = $network;
-        $this->options['query']['Network'] = $network;
 
         return $this;
     }

@@ -5,14 +5,18 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateWebSiteInstance
- *
  * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOrderNum()
+ * @method $this withOrderNum($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class CreateWebSiteInstance extends Rpc
 {
@@ -23,82 +27,4 @@ class CreateWebSiteInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $duration
-     *
-     * @return $this
-     */
-    public function withDuration($duration)
-    {
-        $this->data['Duration'] = $duration;
-        $this->options['query']['Duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderNum
-     *
-     * @return $this
-     */
-    public function withOrderNum($orderNum)
-    {
-        $this->data['OrderNum'] = $orderNum;
-        $this->options['query']['OrderNum'] = $orderNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pricingCycle
-     *
-     * @return $this
-     */
-    public function withPricingCycle($pricingCycle)
-    {
-        $this->data['PricingCycle'] = $pricingCycle;
-        $this->options['query']['PricingCycle'] = $pricingCycle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
-
-        return $this;
-    }
 }

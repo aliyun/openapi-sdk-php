@@ -5,14 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddCasterLayout
- *
  * @method array getBlendList()
  * @method array getAudioLayer()
  * @method array getVideoLayer()
  * @method string getCasterId()
+ * @method $this withCasterId($value)
  * @method array getMixList()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class AddCasterLayout extends Rpc
 {
@@ -79,19 +79,6 @@ class AddCasterLayout extends Rpc
     }
 
     /**
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function withCasterId($casterId)
-    {
-        $this->data['CasterId'] = $casterId;
-        $this->options['query']['CasterId'] = $casterId;
-
-        return $this;
-    }
-
-    /**
      * @param array $mixList
      *
      * @return $this
@@ -102,19 +89,6 @@ class AddCasterLayout extends Rpc
         foreach ($mixList as $i => $iValue) {
             $this->options['query']['MixList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

@@ -5,24 +5,37 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SaveBatchTaskForUpdatingContactInfoByNewContact
- *
  * @method string getCountry()
+ * @method $this withCountry($value)
  * @method string getAddress()
+ * @method $this withAddress($value)
  * @method string getTelArea()
+ * @method $this withTelArea($value)
  * @method string getContactType()
+ * @method $this withContactType($value)
  * @method string getCity()
+ * @method $this withCity($value)
  * @method array getDomainName()
  * @method string getTelephone()
+ * @method $this withTelephone($value)
  * @method string getTransferOutProhibited()
+ * @method $this withTransferOutProhibited($value)
  * @method string getRegistrantOrganization()
+ * @method $this withRegistrantOrganization($value)
  * @method string getTelExt()
+ * @method $this withTelExt($value)
  * @method string getProvince()
+ * @method $this withProvince($value)
  * @method string getPostalCode()
+ * @method $this withPostalCode($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getEmail()
+ * @method $this withEmail($value)
  * @method string getRegistrantName()
+ * @method $this withRegistrantName($value)
  */
 class SaveBatchTaskForUpdatingContactInfoByNewContact extends Rpc
 {
@@ -35,71 +48,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends Rpc
     public $serviceCode = 'domain';
 
     /**
-     * @param string $country
-     *
-     * @return $this
-     */
-    public function withCountry($country)
-    {
-        $this->data['Country'] = $country;
-        $this->options['query']['Country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function withAddress($address)
-    {
-        $this->data['Address'] = $address;
-        $this->options['query']['Address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @param string $telArea
-     *
-     * @return $this
-     */
-    public function withTelArea($telArea)
-    {
-        $this->data['TelArea'] = $telArea;
-        $this->options['query']['TelArea'] = $telArea;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contactType
-     *
-     * @return $this
-     */
-    public function withContactType($contactType)
-    {
-        $this->data['ContactType'] = $contactType;
-        $this->options['query']['ContactType'] = $contactType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $city
-     *
-     * @return $this
-     */
-    public function withCity($city)
-    {
-        $this->data['City'] = $city;
-        $this->options['query']['City'] = $city;
-
-        return $this;
-    }
-
-    /**
      * @param array $domainName
      *
      * @return $this
@@ -110,136 +58,6 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends Rpc
         foreach ($domainName as $i => $iValue) {
             $this->options['query']['DomainName.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $telephone
-     *
-     * @return $this
-     */
-    public function withTelephone($telephone)
-    {
-        $this->data['Telephone'] = $telephone;
-        $this->options['query']['Telephone'] = $telephone;
-
-        return $this;
-    }
-
-    /**
-     * @param string $transferOutProhibited
-     *
-     * @return $this
-     */
-    public function withTransferOutProhibited($transferOutProhibited)
-    {
-        $this->data['TransferOutProhibited'] = $transferOutProhibited;
-        $this->options['query']['TransferOutProhibited'] = $transferOutProhibited;
-
-        return $this;
-    }
-
-    /**
-     * @param string $registrantOrganization
-     *
-     * @return $this
-     */
-    public function withRegistrantOrganization($registrantOrganization)
-    {
-        $this->data['RegistrantOrganization'] = $registrantOrganization;
-        $this->options['query']['RegistrantOrganization'] = $registrantOrganization;
-
-        return $this;
-    }
-
-    /**
-     * @param string $telExt
-     *
-     * @return $this
-     */
-    public function withTelExt($telExt)
-    {
-        $this->data['TelExt'] = $telExt;
-        $this->options['query']['TelExt'] = $telExt;
-
-        return $this;
-    }
-
-    /**
-     * @param string $province
-     *
-     * @return $this
-     */
-    public function withProvince($province)
-    {
-        $this->data['Province'] = $province;
-        $this->options['query']['Province'] = $province;
-
-        return $this;
-    }
-
-    /**
-     * @param string $postalCode
-     *
-     * @return $this
-     */
-    public function withPostalCode($postalCode)
-    {
-        $this->data['PostalCode'] = $postalCode;
-        $this->options['query']['PostalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $email
-     *
-     * @return $this
-     */
-    public function withEmail($email)
-    {
-        $this->data['Email'] = $email;
-        $this->options['query']['Email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * @param string $registrantName
-     *
-     * @return $this
-     */
-    public function withRegistrantName($registrantName)
-    {
-        $this->data['RegistrantName'] = $registrantName;
-        $this->options['query']['RegistrantName'] = $registrantName;
 
         return $this;
     }

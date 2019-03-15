@@ -5,14 +5,15 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PickOutboundNumbersByTags
- *
  * @method array getPrioritizedCallerArea()
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method array getServiceTag()
  * @method array getSkillGroupId()
  * @method string getCount()
+ * @method $this withCount($value)
  * @method string getCalleeNumber()
+ * @method $this withCalleeNumber($value)
  */
 class PickOutboundNumbersByTags extends Rpc
 {
@@ -35,19 +36,6 @@ class PickOutboundNumbersByTags extends Rpc
         foreach ($prioritizedCallerArea as $i => $iValue) {
             $this->options['query']['PrioritizedCallerArea.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
 
         return $this;
     }
@@ -78,32 +66,6 @@ class PickOutboundNumbersByTags extends Rpc
         foreach ($skillGroupId as $i => $iValue) {
             $this->options['query']['SkillGroupId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $count
-     *
-     * @return $this
-     */
-    public function withCount($count)
-    {
-        $this->data['Count'] = $count;
-        $this->options['query']['Count'] = $count;
-
-        return $this;
-    }
-
-    /**
-     * @param string $calleeNumber
-     *
-     * @return $this
-     */
-    public function withCalleeNumber($calleeNumber)
-    {
-        $this->data['CalleeNumber'] = $calleeNumber;
-        $this->options['query']['CalleeNumber'] = $calleeNumber;
 
         return $this;
     }

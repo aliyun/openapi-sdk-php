@@ -5,9 +5,8 @@ namespace AlibabaCloud\Sts\V20150401;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GenerateSessionAccessKey
- *
  * @method string getDurationSeconds()
+ * @method $this withDurationSeconds($value)
  */
 class GenerateSessionAccessKey extends Rpc
 {
@@ -18,17 +17,4 @@ class GenerateSessionAccessKey extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $durationSeconds
-     *
-     * @return $this
-     */
-    public function withDurationSeconds($durationSeconds)
-    {
-        $this->data['DurationSeconds'] = $durationSeconds;
-        $this->options['query']['DurationSeconds'] = $durationSeconds;
-
-        return $this;
-    }
 }

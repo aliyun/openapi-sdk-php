@@ -5,11 +5,12 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetPolicyVersion
- *
  * @method string getVersionId()
+ * @method $this withVersionId($value)
  * @method string getPolicyType()
+ * @method $this withPolicyType($value)
  * @method string getPolicyName()
+ * @method $this withPolicyName($value)
  */
 class GetPolicyVersion extends Rpc
 {
@@ -20,43 +21,4 @@ class GetPolicyVersion extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $versionId
-     *
-     * @return $this
-     */
-    public function withVersionId($versionId)
-    {
-        $this->data['VersionId'] = $versionId;
-        $this->options['query']['VersionId'] = $versionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function withPolicyType($policyType)
-    {
-        $this->data['PolicyType'] = $policyType;
-        $this->options['query']['PolicyType'] = $policyType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policyName
-     *
-     * @return $this
-     */
-    public function withPolicyName($policyName)
-    {
-        $this->data['PolicyName'] = $policyName;
-        $this->options['query']['PolicyName'] = $policyName;
-
-        return $this;
-    }
 }

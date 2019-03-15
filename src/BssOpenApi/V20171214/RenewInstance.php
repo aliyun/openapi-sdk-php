@@ -5,14 +5,18 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RenewInstance
- *
  * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getRenewPeriod()
+ * @method $this withRenewPeriod($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getProductType()
+ * @method $this withProductType($value)
  */
 class RenewInstance extends Rpc
 {
@@ -21,82 +25,4 @@ class RenewInstance extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $productCode
-     *
-     * @return $this
-     */
-    public function withProductCode($productCode)
-    {
-        $this->data['ProductCode'] = $productCode;
-        $this->options['query']['ProductCode'] = $productCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $renewPeriod
-     *
-     * @return $this
-     */
-    public function withRenewPeriod($renewPeriod)
-    {
-        $this->data['RenewPeriod'] = $renewPeriod;
-        $this->options['query']['RenewPeriod'] = $renewPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $productType
-     *
-     * @return $this
-     */
-    public function withProductType($productType)
-    {
-        $this->data['ProductType'] = $productType;
-        $this->options['query']['ProductType'] = $productType;
-
-        return $this;
-    }
 }

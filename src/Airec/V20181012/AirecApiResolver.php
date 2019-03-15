@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Airec based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Airec\V20181012
  *
  * @method AttachDataset attachDataset(array $options = [])
  * @method CreateDiversify createDiversify(array $options = [])

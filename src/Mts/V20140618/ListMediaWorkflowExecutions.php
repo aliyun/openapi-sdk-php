@@ -5,17 +5,24 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListMediaWorkflowExecutions
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInputFileURL()
+ * @method $this withInputFileURL($value)
  * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getMaximumPageSize()
+ * @method $this withMaximumPageSize($value)
  * @method string getMediaWorkflowId()
+ * @method $this withMediaWorkflowId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getMediaWorkflowName()
+ * @method $this withMediaWorkflowName($value)
  */
 class ListMediaWorkflowExecutions extends Rpc
 {
@@ -26,121 +33,4 @@ class ListMediaWorkflowExecutions extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'mts';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $inputFileURL
-     *
-     * @return $this
-     */
-    public function withInputFileURL($inputFileURL)
-    {
-        $this->data['InputFileURL'] = $inputFileURL;
-        $this->options['query']['InputFileURL'] = $inputFileURL;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nextPageToken
-     *
-     * @return $this
-     */
-    public function withNextPageToken($nextPageToken)
-    {
-        $this->data['NextPageToken'] = $nextPageToken;
-        $this->options['query']['NextPageToken'] = $nextPageToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maximumPageSize
-     *
-     * @return $this
-     */
-    public function withMaximumPageSize($maximumPageSize)
-    {
-        $this->data['MaximumPageSize'] = $maximumPageSize;
-        $this->options['query']['MaximumPageSize'] = $maximumPageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mediaWorkflowId
-     *
-     * @return $this
-     */
-    public function withMediaWorkflowId($mediaWorkflowId)
-    {
-        $this->data['MediaWorkflowId'] = $mediaWorkflowId;
-        $this->options['query']['MediaWorkflowId'] = $mediaWorkflowId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mediaWorkflowName
-     *
-     * @return $this
-     */
-    public function withMediaWorkflowName($mediaWorkflowName)
-    {
-        $this->data['MediaWorkflowName'] = $mediaWorkflowName;
-        $this->options['query']['MediaWorkflowName'] = $mediaWorkflowName;
-
-        return $this;
-    }
 }

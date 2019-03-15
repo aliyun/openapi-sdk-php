@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetContacts
- *
  * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
 class GetContacts extends Rpc
 {
@@ -18,17 +17,4 @@ class GetContacts extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function withGroupName($groupName)
-    {
-        $this->data['GroupName'] = $groupName;
-        $this->options['query']['GroupName'] = $groupName;
-
-        return $this;
-    }
 }

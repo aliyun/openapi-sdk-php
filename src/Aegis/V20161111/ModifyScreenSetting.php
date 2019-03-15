@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyScreenSetting
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getScreenTitle()
+ * @method $this withScreenTitle($value)
  * @method string getScreenIdSetting()
+ * @method $this withScreenIdSetting($value)
  */
 class ModifyScreenSetting extends Rpc
 {
@@ -20,43 +21,4 @@ class ModifyScreenSetting extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $screenTitle
-     *
-     * @return $this
-     */
-    public function withScreenTitle($screenTitle)
-    {
-        $this->data['ScreenTitle'] = $screenTitle;
-        $this->options['query']['ScreenTitle'] = $screenTitle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $screenIdSetting
-     *
-     * @return $this
-     */
-    public function withScreenIdSetting($screenIdSetting)
-    {
-        $this->data['ScreenIdSetting'] = $screenIdSetting;
-        $this->options['query']['ScreenIdSetting'] = $screenIdSetting;
-
-        return $this;
-    }
 }

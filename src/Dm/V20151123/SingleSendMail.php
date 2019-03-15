@@ -5,23 +5,36 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SingleSendMail
- *
  * @method string getHtmlBody()
+ * @method $this withHtmlBody($value)
  * @method string getFromAlias()
+ * @method $this withFromAlias($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getToAddress()
+ * @method $this withToAddress($value)
  * @method string getClickTrace()
+ * @method $this withClickTrace($value)
  * @method string getSubject()
+ * @method $this withSubject($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getReplyAddressAlias()
+ * @method $this withReplyAddressAlias($value)
  * @method string getTagName()
+ * @method $this withTagName($value)
  * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getReplyToAddress()
+ * @method $this withReplyToAddress($value)
  * @method string getReplyAddress()
+ * @method $this withReplyAddress($value)
  * @method string getAddressType()
+ * @method $this withAddressType($value)
  * @method string getTextBody()
+ * @method $this withTextBody($value)
  */
 class SingleSendMail extends Rpc
 {
@@ -30,199 +43,4 @@ class SingleSendMail extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $htmlBody
-     *
-     * @return $this
-     */
-    public function withHtmlBody($htmlBody)
-    {
-        $this->data['HtmlBody'] = $htmlBody;
-        $this->options['query']['HtmlBody'] = $htmlBody;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromAlias
-     *
-     * @return $this
-     */
-    public function withFromAlias($fromAlias)
-    {
-        $this->data['FromAlias'] = $fromAlias;
-        $this->options['query']['FromAlias'] = $fromAlias;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $toAddress
-     *
-     * @return $this
-     */
-    public function withToAddress($toAddress)
-    {
-        $this->data['ToAddress'] = $toAddress;
-        $this->options['query']['ToAddress'] = $toAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clickTrace
-     *
-     * @return $this
-     */
-    public function withClickTrace($clickTrace)
-    {
-        $this->data['ClickTrace'] = $clickTrace;
-        $this->options['query']['ClickTrace'] = $clickTrace;
-
-        return $this;
-    }
-
-    /**
-     * @param string $subject
-     *
-     * @return $this
-     */
-    public function withSubject($subject)
-    {
-        $this->data['Subject'] = $subject;
-        $this->options['query']['Subject'] = $subject;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $replyAddressAlias
-     *
-     * @return $this
-     */
-    public function withReplyAddressAlias($replyAddressAlias)
-    {
-        $this->data['ReplyAddressAlias'] = $replyAddressAlias;
-        $this->options['query']['ReplyAddressAlias'] = $replyAddressAlias;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function withTagName($tagName)
-    {
-        $this->data['TagName'] = $tagName;
-        $this->options['query']['TagName'] = $tagName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function withAccountName($accountName)
-    {
-        $this->data['AccountName'] = $accountName;
-        $this->options['query']['AccountName'] = $accountName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $replyToAddress
-     *
-     * @return $this
-     */
-    public function withReplyToAddress($replyToAddress)
-    {
-        $this->data['ReplyToAddress'] = $replyToAddress;
-        $this->options['query']['ReplyToAddress'] = $replyToAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $replyAddress
-     *
-     * @return $this
-     */
-    public function withReplyAddress($replyAddress)
-    {
-        $this->data['ReplyAddress'] = $replyAddress;
-        $this->options['query']['ReplyAddress'] = $replyAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $addressType
-     *
-     * @return $this
-     */
-    public function withAddressType($addressType)
-    {
-        $this->data['AddressType'] = $addressType;
-        $this->options['query']['AddressType'] = $addressType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $textBody
-     *
-     * @return $this
-     */
-    public function withTextBody($textBody)
-    {
-        $this->data['TextBody'] = $textBody;
-        $this->options['query']['TextBody'] = $textBody;
-
-        return $this;
-    }
 }

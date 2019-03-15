@@ -5,18 +5,26 @@ namespace AlibabaCloud\RKvstore\V20150101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeInstancesByExpireTime
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getHasExpiredRes()
+ * @method $this withHasExpiredRes($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getExpirePeriod()
+ * @method $this withExpirePeriod($value)
  */
 class DescribeInstancesByExpireTime extends Rpc
 {
@@ -27,134 +35,4 @@ class DescribeInstancesByExpireTime extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'redisa';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hasExpiredRes
-     *
-     * @return $this
-     */
-    public function withHasExpiredRes($hasExpiredRes)
-    {
-        $this->data['HasExpiredRes'] = $hasExpiredRes;
-        $this->options['query']['HasExpiredRes'] = $hasExpiredRes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $expirePeriod
-     *
-     * @return $this
-     */
-    public function withExpirePeriod($expirePeriod)
-    {
-        $this->data['ExpirePeriod'] = $expirePeriod;
-        $this->options['query']['ExpirePeriod'] = $expirePeriod;
-
-        return $this;
-    }
 }

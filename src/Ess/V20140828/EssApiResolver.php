@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ess based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ess\V20140828
  *
  * @method AttachDBInstances attachDBInstances(array $options = [])
  * @method AttachInstances attachInstances(array $options = [])

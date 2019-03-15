@@ -5,9 +5,8 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api ScaleCluster
- *
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class ScaleCluster extends Roa
 {
@@ -20,17 +19,4 @@ class ScaleCluster extends Roa
     public $method = 'PUT';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

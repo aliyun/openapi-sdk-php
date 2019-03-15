@@ -5,9 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListScenarios
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListScenarios extends Rpc
 {
@@ -18,17 +17,4 @@ class ListScenarios extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

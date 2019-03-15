@@ -5,27 +5,37 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InstanceOwnershipTransfer
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getToVSwitchId()
+ * @method $this withToVSwitchId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getChannel()
  * @method string getOperator()
  * @method string getAliUid()
+ * @method $this withAliUid($value)
  * @method string getProxyId()
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method array getPrivateIps()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getKeepPublicIp()
+ * @method $this withKeepPublicIp($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getToken()
  * @method string getNewOwnerId()
+ * @method $this withNewOwnerId($value)
  * @method string getToSecurityGroupId()
+ * @method $this withToSecurityGroupId($value)
  * @method array getInstanceIds()
  * @method string getAppKey()
  * @method string getBid()
+ * @method $this withBid($value)
  */
 class InstanceOwnershipTransfer extends Rpc
 {
@@ -36,45 +46,6 @@ class InstanceOwnershipTransfer extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $toVSwitchId
-     *
-     * @return $this
-     */
-    public function withToVSwitchId($toVSwitchId)
-    {
-        $this->data['ToVSwitchId'] = $toVSwitchId;
-        $this->options['query']['ToVSwitchId'] = $toVSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
 
     /**
      * @param string $channel
@@ -103,19 +74,6 @@ class InstanceOwnershipTransfer extends Rpc
     }
 
     /**
-     * @param string $aliUid
-     *
-     * @return $this
-     */
-    public function withAliUid($aliUid)
-    {
-        $this->data['AliUid'] = $aliUid;
-        $this->options['query']['AliUid'] = $aliUid;
-
-        return $this;
-    }
-
-    /**
      * @param string $proxyId
      *
      * @return $this
@@ -124,19 +82,6 @@ class InstanceOwnershipTransfer extends Rpc
     {
         $this->data['ProxyId'] = $proxyId;
         $this->options['query']['proxyId'] = $proxyId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
 
         return $this;
     }
@@ -157,58 +102,6 @@ class InstanceOwnershipTransfer extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keepPublicIp
-     *
-     * @return $this
-     */
-    public function withKeepPublicIp($keepPublicIp)
-    {
-        $this->data['KeepPublicIp'] = $keepPublicIp;
-        $this->options['query']['KeepPublicIp'] = $keepPublicIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $token
      *
      * @return $this
@@ -217,32 +110,6 @@ class InstanceOwnershipTransfer extends Rpc
     {
         $this->data['Token'] = $token;
         $this->options['query']['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newOwnerId
-     *
-     * @return $this
-     */
-    public function withNewOwnerId($newOwnerId)
-    {
-        $this->data['NewOwnerId'] = $newOwnerId;
-        $this->options['query']['NewOwnerId'] = $newOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $toSecurityGroupId
-     *
-     * @return $this
-     */
-    public function withToSecurityGroupId($toSecurityGroupId)
-    {
-        $this->data['ToSecurityGroupId'] = $toSecurityGroupId;
-        $this->options['query']['ToSecurityGroupId'] = $toSecurityGroupId;
 
         return $this;
     }
@@ -271,19 +138,6 @@ class InstanceOwnershipTransfer extends Rpc
     {
         $this->data['AppKey'] = $appKey;
         $this->options['query']['appKey'] = $appKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
 
         return $this;
     }

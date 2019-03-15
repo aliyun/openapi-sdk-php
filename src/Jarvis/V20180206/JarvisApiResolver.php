@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Jarvis based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Jarvis\V20180206
  *
  * @method CreateAccessWhiteListGroup createAccessWhiteListGroup(array $options = [])
  * @method CreateAllEcsWhiteList createAllEcsWhiteList(array $options = [])

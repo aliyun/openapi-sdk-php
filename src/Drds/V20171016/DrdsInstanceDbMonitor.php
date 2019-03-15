@@ -5,8 +5,6 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DrdsInstanceDbMonitor
- *
  * @method string getDbName()
  * @method string getEndTime()
  * @method string getStartTime()

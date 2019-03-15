@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListTagResources
- *
  * @method string getResourceId47()
  * @method string getResourceId48()
  * @method string getResourceId49()
@@ -39,6 +37,7 @@ use AlibabaCloud\Rpc;
  * @method string getResourceId30()
  * @method string getResourceId31()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceId32()
  * @method string getResourceId33()
  * @method string getResourceId34()
@@ -61,6 +60,7 @@ use AlibabaCloud\Rpc;
  * @method string getResourceId24()
  * @method string getTag14Key()
  * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getTag13Value()
  * @method string getResourceId14()
  * @method string getResourceId15()
@@ -69,10 +69,12 @@ use AlibabaCloud\Rpc;
  * @method string getResourceId17()
  * @method string getResourceId18()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getResourceId19()
  * @method string getTag19Key()
  * @method string getResourceId10()
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getResourceId11()
  * @method string getTag5Value()
  * @method string getResourceId12()
@@ -81,6 +83,7 @@ use AlibabaCloud\Rpc;
  * @method string getTag19Value()
  * @method string getTag4Value()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTag17Key()
  * @method string getTag3Key()
  * @method string getTag1Value()
@@ -520,19 +523,6 @@ class ListTagResources extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $resourceId32
      *
      * @return $this
@@ -806,19 +796,6 @@ class ListTagResources extends Rpc
     }
 
     /**
-     * @param string $nextToken
-     *
-     * @return $this
-     */
-    public function withNextToken($nextToken)
-    {
-        $this->data['NextToken'] = $nextToken;
-        $this->options['query']['NextToken'] = $nextToken;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag13Value
      *
      * @return $this
@@ -910,19 +887,6 @@ class ListTagResources extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $resourceId19
      *
      * @return $this
@@ -957,19 +921,6 @@ class ListTagResources extends Rpc
     {
         $this->data['ResourceId10'] = $resourceId10;
         $this->options['query']['ResourceId.10'] = $resourceId10;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }
@@ -1061,19 +1012,6 @@ class ListTagResources extends Rpc
     {
         $this->data['Tag4Value'] = $tag4Value;
         $this->options['query']['Tag.4.Value'] = $tag4Value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }

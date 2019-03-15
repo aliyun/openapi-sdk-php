@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the SasApi based on the method name as the Api name.
  *
- * @package   AlibabaCloud\SasApi\V20170705
  *
  * @method DescribeAccountProfileByKey describeAccountProfileByKey(array $options = [])
  * @method DescribeAccountProfileByKeyWord describeAccountProfileByKeyWord(array $options = [])

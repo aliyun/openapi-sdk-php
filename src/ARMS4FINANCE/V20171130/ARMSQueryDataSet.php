@@ -5,15 +5,19 @@ namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ARMSQueryDataSet
- *
  * @method array getMeasures()
  * @method string getIntervalInSec()
+ * @method $this withIntervalInSec($value)
  * @method string getDateStr()
+ * @method $this withDateStr($value)
  * @method string getIsDrillDown()
+ * @method $this withIsDrillDown($value)
  * @method string getMinTime()
+ * @method $this withMinTime($value)
  * @method string getDatasetId()
+ * @method $this withDatasetId($value)
  * @method string getMaxTime()
+ * @method $this withMaxTime($value)
  * @method array getDimensions()
  */
 class ARMSQueryDataSet extends Rpc
@@ -35,84 +39,6 @@ class ARMSQueryDataSet extends Rpc
         foreach ($measures as $i => $iValue) {
             $this->options['query']['Measures.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $intervalInSec
-     *
-     * @return $this
-     */
-    public function withIntervalInSec($intervalInSec)
-    {
-        $this->data['IntervalInSec'] = $intervalInSec;
-        $this->options['query']['IntervalInSec'] = $intervalInSec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dateStr
-     *
-     * @return $this
-     */
-    public function withDateStr($dateStr)
-    {
-        $this->data['DateStr'] = $dateStr;
-        $this->options['query']['DateStr'] = $dateStr;
-
-        return $this;
-    }
-
-    /**
-     * @param string $isDrillDown
-     *
-     * @return $this
-     */
-    public function withIsDrillDown($isDrillDown)
-    {
-        $this->data['IsDrillDown'] = $isDrillDown;
-        $this->options['query']['IsDrillDown'] = $isDrillDown;
-
-        return $this;
-    }
-
-    /**
-     * @param string $minTime
-     *
-     * @return $this
-     */
-    public function withMinTime($minTime)
-    {
-        $this->data['MinTime'] = $minTime;
-        $this->options['query']['MinTime'] = $minTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $datasetId
-     *
-     * @return $this
-     */
-    public function withDatasetId($datasetId)
-    {
-        $this->data['DatasetId'] = $datasetId;
-        $this->options['query']['DatasetId'] = $datasetId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxTime
-     *
-     * @return $this
-     */
-    public function withMaxTime($maxTime)
-    {
-        $this->data['MaxTime'] = $maxTime;
-        $this->options['query']['MaxTime'] = $maxTime;
 
         return $this;
     }

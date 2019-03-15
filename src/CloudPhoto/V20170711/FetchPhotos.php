@@ -5,15 +5,20 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api FetchPhotos
- *
  * @method string getSize()
+ * @method $this withSize($value)
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getState()
+ * @method $this withState($value)
  * @method string getPage()
+ * @method $this withPage($value)
  * @method string getOrder()
+ * @method $this withOrder($value)
  */
 class FetchPhotos extends Rpc
 {
@@ -26,95 +31,4 @@ class FetchPhotos extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function withSize($size)
-    {
-        $this->data['Size'] = $size;
-        $this->options['query']['Size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $state
-     *
-     * @return $this
-     */
-    public function withState($state)
-    {
-        $this->data['State'] = $state;
-        $this->options['query']['State'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * @param string $page
-     *
-     * @return $this
-     */
-    public function withPage($page)
-    {
-        $this->data['Page'] = $page;
-        $this->options['query']['Page'] = $page;
-
-        return $this;
-    }
-
-    /**
-     * @param string $order
-     *
-     * @return $this
-     */
-    public function withOrder($order)
-    {
-        $this->data['Order'] = $order;
-        $this->options['query']['Order'] = $order;
-
-        return $this;
-    }
 }

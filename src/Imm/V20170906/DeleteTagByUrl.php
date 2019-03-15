@@ -5,11 +5,12 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteTagByUrl
- *
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  * @method string getSrcUri()
+ * @method $this withSrcUri($value)
  */
 class DeleteTagByUrl extends Rpc
 {
@@ -20,43 +21,4 @@ class DeleteTagByUrl extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function withSrcUri($srcUri)
-    {
-        $this->data['SrcUri'] = $srcUri;
-        $this->options['query']['SrcUri'] = $srcUri;
-
-        return $this;
-    }
 }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddPhoneNumber
- *
  * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getUsage()
+ * @method $this withUsage($value)
  * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
  */
 class AddPhoneNumber extends Rpc
 {
@@ -21,56 +23,4 @@ class AddPhoneNumber extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $contactFlowId
-     *
-     * @return $this
-     */
-    public function withContactFlowId($contactFlowId)
-    {
-        $this->data['ContactFlowId'] = $contactFlowId;
-        $this->options['query']['ContactFlowId'] = $contactFlowId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usage
-     *
-     * @return $this
-     */
-    public function withUsage($usage)
-    {
-        $this->data['Usage'] = $usage;
-        $this->options['query']['Usage'] = $usage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $phoneNumber
-     *
-     * @return $this
-     */
-    public function withPhoneNumber($phoneNumber)
-    {
-        $this->data['PhoneNumber'] = $phoneNumber;
-        $this->options['query']['PhoneNumber'] = $phoneNumber;
-
-        return $this;
-    }
 }

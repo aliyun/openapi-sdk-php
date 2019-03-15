@@ -5,17 +5,24 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScreenAttackAnalysisData
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getData()
+ * @method $this withData($value)
  * @method string getBase64()
+ * @method $this withBase64($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getType()
+ * @method $this withType($value)
  */
 class DescribeScreenAttackAnalysisData extends Rpc
 {
@@ -26,121 +33,4 @@ class DescribeScreenAttackAnalysisData extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return $this
-     */
-    public function withData($data)
-    {
-        $this->data['Data'] = $data;
-        $this->options['query']['Data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * @param string $base64
-     *
-     * @return $this
-     */
-    public function withBase64($base64)
-    {
-        $this->data['Base64'] = $base64;
-        $this->options['query']['Base64'] = $base64;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
 }

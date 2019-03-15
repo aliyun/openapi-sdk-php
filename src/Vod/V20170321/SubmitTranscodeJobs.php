@@ -5,17 +5,24 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitTranscodeJobs
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTemplateGroupId()
+ * @method $this withTemplateGroupId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getVideoId()
+ * @method $this withVideoId($value)
  * @method string getOverrideParams()
+ * @method $this withOverrideParams($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPriority()
+ * @method $this withPriority($value)
  * @method string getEncryptConfig()
+ * @method $this withEncryptConfig($value)
  * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
 class SubmitTranscodeJobs extends Rpc
 {
@@ -26,121 +33,4 @@ class SubmitTranscodeJobs extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateGroupId
-     *
-     * @return $this
-     */
-    public function withTemplateGroupId($templateGroupId)
-    {
-        $this->data['TemplateGroupId'] = $templateGroupId;
-        $this->options['query']['TemplateGroupId'] = $templateGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function withVideoId($videoId)
-    {
-        $this->data['VideoId'] = $videoId;
-        $this->options['query']['VideoId'] = $videoId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $overrideParams
-     *
-     * @return $this
-     */
-    public function withOverrideParams($overrideParams)
-    {
-        $this->data['OverrideParams'] = $overrideParams;
-        $this->options['query']['OverrideParams'] = $overrideParams;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $priority
-     *
-     * @return $this
-     */
-    public function withPriority($priority)
-    {
-        $this->data['Priority'] = $priority;
-        $this->options['query']['Priority'] = $priority;
-
-        return $this;
-    }
-
-    /**
-     * @param string $encryptConfig
-     *
-     * @return $this
-     */
-    public function withEncryptConfig($encryptConfig)
-    {
-        $this->data['EncryptConfig'] = $encryptConfig;
-        $this->options['query']['EncryptConfig'] = $encryptConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pipelineId
-     *
-     * @return $this
-     */
-    public function withPipelineId($pipelineId)
-    {
-        $this->data['PipelineId'] = $pipelineId;
-        $this->options['query']['PipelineId'] = $pipelineId;
-
-        return $this;
-    }
 }

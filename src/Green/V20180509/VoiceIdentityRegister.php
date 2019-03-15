@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api VoiceIdentityRegister
- *
  * @method string getClientInfo()
  */
 class VoiceIdentityRegister extends Roa

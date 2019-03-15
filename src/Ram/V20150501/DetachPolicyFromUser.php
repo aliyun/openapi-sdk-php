@@ -5,11 +5,12 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DetachPolicyFromUser
- *
  * @method string getPolicyType()
+ * @method $this withPolicyType($value)
  * @method string getPolicyName()
+ * @method $this withPolicyName($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class DetachPolicyFromUser extends Rpc
 {
@@ -20,43 +21,4 @@ class DetachPolicyFromUser extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $policyType
-     *
-     * @return $this
-     */
-    public function withPolicyType($policyType)
-    {
-        $this->data['PolicyType'] = $policyType;
-        $this->options['query']['PolicyType'] = $policyType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $policyName
-     *
-     * @return $this
-     */
-    public function withPolicyName($policyName)
-    {
-        $this->data['PolicyName'] = $policyName;
-        $this->options['query']['PolicyName'] = $policyName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

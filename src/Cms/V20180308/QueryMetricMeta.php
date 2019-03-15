@@ -5,13 +5,16 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryMetricMeta
- *
  * @method string getMetric()
+ * @method $this withMetric($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getLabels()
+ * @method $this withLabels($value)
  */
 class QueryMetricMeta extends Rpc
 {
@@ -22,69 +25,4 @@ class QueryMetricMeta extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $metric
-     *
-     * @return $this
-     */
-    public function withMetric($metric)
-    {
-        $this->data['Metric'] = $metric;
-        $this->options['query']['Metric'] = $metric;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $labels
-     *
-     * @return $this
-     */
-    public function withLabels($labels)
-    {
-        $this->data['Labels'] = $labels;
-        $this->options['query']['Labels'] = $labels;
-
-        return $this;
-    }
 }

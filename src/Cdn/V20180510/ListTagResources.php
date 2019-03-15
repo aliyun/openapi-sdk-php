@@ -5,8 +5,6 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of ListTagResources
- *
  * @method string getTagOwnerUid()
  * @method string getScope()
  * @method string getTagOwnerBid()

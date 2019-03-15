@@ -5,10 +5,10 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveIdentityCertifiedForBidUser
- *
  * @method string getBidType()
+ * @method $this withBidType($value)
  * @method string getPK()
+ * @method $this withPK($value)
  */
 class RemoveIdentityCertifiedForBidUser extends Rpc
 {
@@ -19,30 +19,4 @@ class RemoveIdentityCertifiedForBidUser extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'crm';
-
-    /**
-     * @param string $bidType
-     *
-     * @return $this
-     */
-    public function withBidType($bidType)
-    {
-        $this->data['BidType'] = $bidType;
-        $this->options['query']['BidType'] = $bidType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pK
-     *
-     * @return $this
-     */
-    public function withPK($pK)
-    {
-        $this->data['PK'] = $pK;
-        $this->options['query']['PK'] = $pK;
-
-        return $this;
-    }
 }

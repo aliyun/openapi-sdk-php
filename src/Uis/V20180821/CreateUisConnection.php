@@ -5,18 +5,26 @@ namespace AlibabaCloud\Uis\V20180821;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUisConnection
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getUisProtocol()
+ * @method $this withUisProtocol($value)
  * @method string getSslConfig()
+ * @method $this withSslConfig($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getGreConfig()
+ * @method $this withGreConfig($value)
  */
 class CreateUisConnection extends Rpc
 {
@@ -27,134 +35,4 @@ class CreateUisConnection extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'uis';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uisNodeId
-     *
-     * @return $this
-     */
-    public function withUisNodeId($uisNodeId)
-    {
-        $this->data['UisNodeId'] = $uisNodeId;
-        $this->options['query']['UisNodeId'] = $uisNodeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uisProtocol
-     *
-     * @return $this
-     */
-    public function withUisProtocol($uisProtocol)
-    {
-        $this->data['UisProtocol'] = $uisProtocol;
-        $this->options['query']['UisProtocol'] = $uisProtocol;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sslConfig
-     *
-     * @return $this
-     */
-    public function withSslConfig($sslConfig)
-    {
-        $this->data['SslConfig'] = $sslConfig;
-        $this->options['query']['SslConfig'] = $sslConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $greConfig
-     *
-     * @return $this
-     */
-    public function withGreConfig($greConfig)
-    {
-        $this->data['GreConfig'] = $greConfig;
-        $this->options['query']['GreConfig'] = $greConfig;
-
-        return $this;
-    }
 }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Push based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Push\V20160801
  *
  * @method BindAlias bindAlias(array $options = [])
  * @method BindPhone bindPhone(array $options = [])

@@ -5,10 +5,10 @@ namespace AlibabaCloud\Jarvis\V20180206;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDdosDefenseInfo
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getSrcUid()
  * @method string getSourceCode()
  */
@@ -19,32 +19,6 @@ class DescribeDdosDefenseInfo extends Rpc
     public $version = '2018-02-06';
 
     public $method = 'POST';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 
     /**
      * @param string $srcUid

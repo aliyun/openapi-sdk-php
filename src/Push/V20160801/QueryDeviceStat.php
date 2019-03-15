@@ -5,13 +5,16 @@ namespace AlibabaCloud\Push\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryDeviceStat
- *
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getDeviceType()
+ * @method $this withDeviceType($value)
  * @method string getQueryType()
+ * @method $this withQueryType($value)
  */
 class QueryDeviceStat extends Rpc
 {
@@ -20,69 +23,4 @@ class QueryDeviceStat extends Rpc
     public $version = '2016-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function withAppKey($appKey)
-    {
-        $this->data['AppKey'] = $appKey;
-        $this->options['query']['AppKey'] = $appKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $deviceType
-     *
-     * @return $this
-     */
-    public function withDeviceType($deviceType)
-    {
-        $this->data['DeviceType'] = $deviceType;
-        $this->options['query']['DeviceType'] = $deviceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $queryType
-     *
-     * @return $this
-     */
-    public function withQueryType($queryType)
-    {
-        $this->data['QueryType'] = $queryType;
-        $this->options['query']['QueryType'] = $queryType;
-
-        return $this;
-    }
 }

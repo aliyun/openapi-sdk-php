@@ -5,20 +5,30 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ApplyPhysicalConnectionLOA
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
+ * @method $this withBandwidth($value)
  * @method string getLineType()
+ * @method $this withLineType($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getConstructionTime()
+ * @method $this withConstructionTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getCompanyName()
+ * @method $this withCompanyName($value)
  * @method string getSi()
+ * @method $this withSi($value)
  * @method array getPMInfo()
  */
 class ApplyPhysicalConnectionLOA extends Rpc
@@ -30,162 +40,6 @@ class ApplyPhysicalConnectionLOA extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $peerLocation
-     *
-     * @return $this
-     */
-    public function withPeerLocation($peerLocation)
-    {
-        $this->data['PeerLocation'] = $peerLocation;
-        $this->options['query']['PeerLocation'] = $peerLocation;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidth
-     *
-     * @return $this
-     */
-    public function withBandwidth($bandwidth)
-    {
-        $this->data['Bandwidth'] = $bandwidth;
-        $this->options['query']['Bandwidth'] = $bandwidth;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lineType
-     *
-     * @return $this
-     */
-    public function withLineType($lineType)
-    {
-        $this->data['LineType'] = $lineType;
-        $this->options['query']['LineType'] = $lineType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $constructionTime
-     *
-     * @return $this
-     */
-    public function withConstructionTime($constructionTime)
-    {
-        $this->data['ConstructionTime'] = $constructionTime;
-        $this->options['query']['ConstructionTime'] = $constructionTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $companyName
-     *
-     * @return $this
-     */
-    public function withCompanyName($companyName)
-    {
-        $this->data['CompanyName'] = $companyName;
-        $this->options['query']['CompanyName'] = $companyName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $si
-     *
-     * @return $this
-     */
-    public function withSi($si)
-    {
-        $this->data['Si'] = $si;
-        $this->options['query']['Si'] = $si;
-
-        return $this;
-    }
 
     /**
      * @param array $pMInfo

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Roa;
 
 /**
- * Api SetPerson
- *
  * @method string getClientInfo()
  */
 class SetPerson extends Roa

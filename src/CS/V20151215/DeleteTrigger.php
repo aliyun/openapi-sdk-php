@@ -5,10 +5,10 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DeleteTrigger
- *
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getApplicationId()
+ * @method $this withApplicationId($value)
  */
 class DeleteTrigger extends Roa
 {
@@ -21,30 +21,4 @@ class DeleteTrigger extends Roa
     public $method = 'DELETE';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $applicationId
-     *
-     * @return $this
-     */
-    public function withApplicationId($applicationId)
-    {
-        $this->data['ApplicationId'] = $applicationId;
-        $this->pathParameters['ApplicationId'] = $applicationId;
-
-        return $this;
-    }
 }

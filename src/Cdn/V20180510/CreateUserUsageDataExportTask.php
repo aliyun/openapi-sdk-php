@@ -5,13 +5,16 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUserUsageDataExportTask
- *
  * @method string getTaskName()
+ * @method $this withTaskName($value)
  * @method string getLanguage()
+ * @method $this withLanguage($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateUserUsageDataExportTask extends Rpc
 {
@@ -20,69 +23,4 @@ class CreateUserUsageDataExportTask extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function withTaskName($taskName)
-    {
-        $this->data['TaskName'] = $taskName;
-        $this->options['query']['TaskName'] = $taskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $language
-     *
-     * @return $this
-     */
-    public function withLanguage($language)
-    {
-        $this->data['Language'] = $language;
-        $this->options['query']['Language'] = $language;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

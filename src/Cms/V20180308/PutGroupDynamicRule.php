@@ -5,10 +5,10 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PutGroupDynamicRule
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getGroupRuleArrayJson()
+ * @method $this withGroupRuleArrayJson($value)
  */
 class PutGroupDynamicRule extends Rpc
 {
@@ -19,30 +19,4 @@ class PutGroupDynamicRule extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupRuleArrayJson
-     *
-     * @return $this
-     */
-    public function withGroupRuleArrayJson($groupRuleArrayJson)
-    {
-        $this->data['GroupRuleArrayJson'] = $groupRuleArrayJson;
-        $this->options['query']['GroupRuleArrayJson'] = $groupRuleArrayJson;
-
-        return $this;
-    }
 }

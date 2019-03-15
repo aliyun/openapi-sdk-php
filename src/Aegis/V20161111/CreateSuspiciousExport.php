@@ -5,17 +5,24 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSuspiciousExport
- *
  * @method string getStatusList()
+ * @method $this withStatusList($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getEventNameRemark()
+ * @method $this withEventNameRemark($value)
  * @method string getLevel()
+ * @method $this withLevel($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getDealed()
+ * @method $this withDealed($value)
  * @method string getEventType()
+ * @method $this withEventType($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getTag()
+ * @method $this withTag($value)
  */
 class CreateSuspiciousExport extends Rpc
 {
@@ -26,121 +33,4 @@ class CreateSuspiciousExport extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $statusList
-     *
-     * @return $this
-     */
-    public function withStatusList($statusList)
-    {
-        $this->data['StatusList'] = $statusList;
-        $this->options['query']['StatusList'] = $statusList;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventNameRemark
-     *
-     * @return $this
-     */
-    public function withEventNameRemark($eventNameRemark)
-    {
-        $this->data['EventNameRemark'] = $eventNameRemark;
-        $this->options['query']['EventNameRemark'] = $eventNameRemark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function withLevel($level)
-    {
-        $this->data['Level'] = $level;
-        $this->options['query']['Level'] = $level;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dealed
-     *
-     * @return $this
-     */
-    public function withDealed($dealed)
-    {
-        $this->data['Dealed'] = $dealed;
-        $this->options['query']['Dealed'] = $dealed;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function withEventType($eventType)
-    {
-        $this->data['EventType'] = $eventType;
-        $this->options['query']['EventType'] = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function withTag($tag)
-    {
-        $this->data['Tag'] = $tag;
-        $this->options['query']['Tag'] = $tag;
-
-        return $this;
-    }
 }

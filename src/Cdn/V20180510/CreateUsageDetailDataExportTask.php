@@ -5,15 +5,20 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUsageDetailDataExportTask
- *
  * @method string getDomainNames()
+ * @method $this withDomainNames($value)
  * @method string getTaskName()
+ * @method $this withTaskName($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getGroup()
+ * @method $this withGroup($value)
  * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateUsageDetailDataExportTask extends Rpc
 {
@@ -22,95 +27,4 @@ class CreateUsageDetailDataExportTask extends Rpc
     public $version = '2018-05-10';
 
     public $method = 'POST';
-
-    /**
-     * @param string $domainNames
-     *
-     * @return $this
-     */
-    public function withDomainNames($domainNames)
-    {
-        $this->data['DomainNames'] = $domainNames;
-        $this->options['query']['DomainNames'] = $domainNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function withTaskName($taskName)
-    {
-        $this->data['TaskName'] = $taskName;
-        $this->options['query']['TaskName'] = $taskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $group
-     *
-     * @return $this
-     */
-    public function withGroup($group)
-    {
-        $this->data['Group'] = $group;
-        $this->options['query']['Group'] = $group;
-
-        return $this;
-    }
-
-    /**
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function withEndTime($endTime)
-    {
-        $this->data['EndTime'] = $endTime;
-        $this->options['query']['EndTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

@@ -5,16 +5,20 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateInstance
- *
  * @method array getUserObject()
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method array getPhoneNumber()
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getStorageMaxDays()
+ * @method $this withStorageMaxDays($value)
  * @method string getStorageMaxSize()
+ * @method $this withStorageMaxSize($value)
  * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
  * @method array getAdminRamId()
  */
 class CreateInstance extends Rpc
@@ -43,32 +47,6 @@ class CreateInstance extends Rpc
     }
 
     /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
      * @param array $phoneNumber
      *
      * @return $this
@@ -79,58 +57,6 @@ class CreateInstance extends Rpc
         foreach ($phoneNumber as $i => $iValue) {
             $this->options['query']['PhoneNumber.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storageMaxDays
-     *
-     * @return $this
-     */
-    public function withStorageMaxDays($storageMaxDays)
-    {
-        $this->data['StorageMaxDays'] = $storageMaxDays;
-        $this->options['query']['StorageMaxDays'] = $storageMaxDays;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storageMaxSize
-     *
-     * @return $this
-     */
-    public function withStorageMaxSize($storageMaxSize)
-    {
-        $this->data['StorageMaxSize'] = $storageMaxSize;
-        $this->options['query']['StorageMaxSize'] = $storageMaxSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $directoryId
-     *
-     * @return $this
-     */
-    public function withDirectoryId($directoryId)
-    {
-        $this->data['DirectoryId'] = $directoryId;
-        $this->options['query']['DirectoryId'] = $directoryId;
 
         return $this;
     }

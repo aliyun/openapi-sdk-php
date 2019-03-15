@@ -5,8 +5,6 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of QueryRecordPlans
- *
  * @method string getCurrentPage()
  * @method string getPageSize()
  */

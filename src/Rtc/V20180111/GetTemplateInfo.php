@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of GetTemplateInfo
- *
  * @method string getOwnerId()
  * @method string getTemplateId()
  * @method string getAppId()
@@ -38,18 +36,6 @@ class GetTemplateInfo extends RpcRequest
      * @var string
      */
     public $serviceCode = 'rtc';
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
 
     /**
      * @param string $ownerId

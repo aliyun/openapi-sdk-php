@@ -5,10 +5,10 @@ namespace AlibabaCloud\LinkFace\V20180720;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAllGroups
- *
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class QueryAllGroups extends Rpc
 {
@@ -19,30 +19,4 @@ class QueryAllGroups extends Rpc
     public $scheme = 'https';
 
     public $method = 'POST';
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $currentPage
-     *
-     * @return $this
-     */
-    public function withCurrentPage($currentPage)
-    {
-        $this->data['CurrentPage'] = $currentPage;
-        $this->options['query']['CurrentPage'] = $currentPage;
-
-        return $this;
-    }
 }

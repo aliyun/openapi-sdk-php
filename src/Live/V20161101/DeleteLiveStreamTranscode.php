@@ -5,13 +5,16 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteLiveStreamTranscode
- *
  * @method string getApp()
+ * @method $this withApp($value)
  * @method string getTemplate()
+ * @method $this withTemplate($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomain()
+ * @method $this withDomain($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DeleteLiveStreamTranscode extends Rpc
 {
@@ -22,69 +25,4 @@ class DeleteLiveStreamTranscode extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $app
-     *
-     * @return $this
-     */
-    public function withApp($app)
-    {
-        $this->data['App'] = $app;
-        $this->options['query']['App'] = $app;
-
-        return $this;
-    }
-
-    /**
-     * @param string $template
-     *
-     * @return $this
-     */
-    public function withTemplate($template)
-    {
-        $this->data['Template'] = $template;
-        $this->options['query']['Template'] = $template;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domain
-     *
-     * @return $this
-     */
-    public function withDomain($domain)
-    {
-        $this->data['Domain'] = $domain;
-        $this->options['query']['Domain'] = $domain;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

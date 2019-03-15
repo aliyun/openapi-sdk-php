@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the ARMS based on the method name as the Api name.
  *
- * @package   AlibabaCloud\ARMS\V20181015
  *
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  * @method MetricQuery metricQuery(array $options = [])

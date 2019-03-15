@@ -5,10 +5,10 @@ namespace AlibabaCloud\Ccs\V20171001;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetInspectResult
- *
  * @method string getCcsInstanceId()
+ * @method $this withCcsInstanceId($value)
  * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class GetInspectResult extends Rpc
 {
@@ -19,30 +19,4 @@ class GetInspectResult extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccs';
-
-    /**
-     * @param string $ccsInstanceId
-     *
-     * @return $this
-     */
-    public function withCcsInstanceId($ccsInstanceId)
-    {
-        $this->data['CcsInstanceId'] = $ccsInstanceId;
-        $this->options['query']['CcsInstanceId'] = $ccsInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function withTaskId($taskId)
-    {
-        $this->data['TaskId'] = $taskId;
-        $this->options['query']['TaskId'] = $taskId;
-
-        return $this;
-    }
 }

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of CreateLayout
- *
  * @method string getCropMode()
  * @method array getPanes()
  * @method string getOwnerId()

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of UpdateFaceGroupById
- *
  * @method string getProject()
  * @method string getSetId()
  * @method string getNewGroupId()

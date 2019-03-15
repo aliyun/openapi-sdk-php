@@ -5,17 +5,24 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddDcdnIpaDomain
- *
  * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSources()
+ * @method $this withSources($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getScope()
+ * @method $this withScope($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCheckUrl()
+ * @method $this withCheckUrl($value)
  */
 class AddDcdnIpaDomain extends Rpc
 {
@@ -26,121 +33,4 @@ class AddDcdnIpaDomain extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'dcdn';
-
-    /**
-     * @param string $topLevelDomain
-     *
-     * @return $this
-     */
-    public function withTopLevelDomain($topLevelDomain)
-    {
-        $this->data['TopLevelDomain'] = $topLevelDomain;
-        $this->options['query']['TopLevelDomain'] = $topLevelDomain;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sources
-     *
-     * @return $this
-     */
-    public function withSources($sources)
-    {
-        $this->data['Sources'] = $sources;
-        $this->options['query']['Sources'] = $sources;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function withScope($scope)
-    {
-        $this->data['Scope'] = $scope;
-        $this->options['query']['Scope'] = $scope;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $checkUrl
-     *
-     * @return $this
-     */
-    public function withCheckUrl($checkUrl)
-    {
-        $this->data['CheckUrl'] = $checkUrl;
-        $this->options['query']['CheckUrl'] = $checkUrl;
-
-        return $this;
-    }
 }

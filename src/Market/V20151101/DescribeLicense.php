@@ -5,9 +5,8 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLicense
- *
  * @method string getLicenseCode()
+ * @method $this withLicenseCode($value)
  */
 class DescribeLicense extends Rpc
 {
@@ -16,17 +15,4 @@ class DescribeLicense extends Rpc
     public $version = '2015-11-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $licenseCode
-     *
-     * @return $this
-     */
-    public function withLicenseCode($licenseCode)
-    {
-        $this->data['LicenseCode'] = $licenseCode;
-        $this->options['query']['LicenseCode'] = $licenseCode;
-
-        return $this;
-    }
 }

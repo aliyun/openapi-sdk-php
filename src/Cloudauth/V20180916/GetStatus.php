@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cloudauth\V20180916;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetStatus
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getBiz()
+ * @method $this withBiz($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTicketId()
+ * @method $this withTicketId($value)
  */
 class GetStatus extends Rpc
 {
@@ -23,56 +25,4 @@ class GetStatus extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $biz
-     *
-     * @return $this
-     */
-    public function withBiz($biz)
-    {
-        $this->data['Biz'] = $biz;
-        $this->options['query']['Biz'] = $biz;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ticketId
-     *
-     * @return $this
-     */
-    public function withTicketId($ticketId)
-    {
-        $this->data['TicketId'] = $ticketId;
-        $this->options['query']['TicketId'] = $ticketId;
-
-        return $this;
-    }
 }

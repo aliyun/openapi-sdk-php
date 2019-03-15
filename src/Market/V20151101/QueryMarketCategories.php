@@ -5,8 +5,6 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryMarketCategories
- *
  */
 class QueryMarketCategories extends Rpc
 {

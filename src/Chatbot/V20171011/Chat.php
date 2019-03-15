@@ -5,16 +5,21 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api Chat
- *
  * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
  * @method string getSenderId()
+ * @method $this withSenderId($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSenderNick()
+ * @method $this withSenderNick($value)
  * @method array getPerspective()
  * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getTag()
+ * @method $this withTag($value)
  * @method string getUtterance()
+ * @method $this withUtterance($value)
  */
 class Chat extends Rpc
 {
@@ -27,58 +32,6 @@ class Chat extends Rpc
     public $serviceCode = 'beebot';
 
     /**
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function withKnowledgeId($knowledgeId)
-    {
-        $this->data['KnowledgeId'] = $knowledgeId;
-        $this->options['query']['KnowledgeId'] = $knowledgeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $senderId
-     *
-     * @return $this
-     */
-    public function withSenderId($senderId)
-    {
-        $this->data['SenderId'] = $senderId;
-        $this->options['query']['SenderId'] = $senderId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $senderNick
-     *
-     * @return $this
-     */
-    public function withSenderNick($senderNick)
-    {
-        $this->data['SenderNick'] = $senderNick;
-        $this->options['query']['SenderNick'] = $senderNick;
-
-        return $this;
-    }
-
-    /**
      * @param array $perspective
      *
      * @return $this
@@ -89,45 +42,6 @@ class Chat extends Rpc
         foreach ($perspective as $i => $iValue) {
             $this->options['query']['Perspective.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $sessionId
-     *
-     * @return $this
-     */
-    public function withSessionId($sessionId)
-    {
-        $this->data['SessionId'] = $sessionId;
-        $this->options['query']['SessionId'] = $sessionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function withTag($tag)
-    {
-        $this->data['Tag'] = $tag;
-        $this->options['query']['Tag'] = $tag;
-
-        return $this;
-    }
-
-    /**
-     * @param string $utterance
-     *
-     * @return $this
-     */
-    public function withUtterance($utterance)
-    {
-        $this->data['Utterance'] = $utterance;
-        $this->options['query']['Utterance'] = $utterance;
 
         return $this;
     }

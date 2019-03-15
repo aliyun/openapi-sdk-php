@@ -5,14 +5,18 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CheckReplyToMailAddress
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getMailAddressId()
+ * @method $this withMailAddressId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class CheckReplyToMailAddress extends Rpc
 {
@@ -21,82 +25,4 @@ class CheckReplyToMailAddress extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mailAddressId
-     *
-     * @return $this
-     */
-    public function withMailAddressId($mailAddressId)
-    {
-        $this->data['MailAddressId'] = $mailAddressId;
-        $this->options['query']['MailAddressId'] = $mailAddressId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function withRegion($region)
-    {
-        $this->data['Region'] = $region;
-        $this->options['query']['Region'] = $region;
-
-        return $this;
-    }
 }

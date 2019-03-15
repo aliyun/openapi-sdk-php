@@ -5,14 +5,18 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ExportSnapshot
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getOssBucket()
+ * @method $this withOssBucket($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getRoleName()
+ * @method $this withRoleName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ExportSnapshot extends Rpc
 {
@@ -23,82 +27,4 @@ class ExportSnapshot extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $snapshotId
-     *
-     * @return $this
-     */
-    public function withSnapshotId($snapshotId)
-    {
-        $this->data['SnapshotId'] = $snapshotId;
-        $this->options['query']['SnapshotId'] = $snapshotId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ossBucket
-     *
-     * @return $this
-     */
-    public function withOssBucket($ossBucket)
-    {
-        $this->data['OssBucket'] = $ossBucket;
-        $this->options['query']['OssBucket'] = $ossBucket;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function withRoleName($roleName)
-    {
-        $this->data['RoleName'] = $roleName;
-        $this->options['query']['RoleName'] = $roleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

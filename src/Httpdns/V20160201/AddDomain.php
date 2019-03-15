@@ -5,10 +5,10 @@ namespace AlibabaCloud\Httpdns\V20160201;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AddDomain
- *
  * @method string getAccountId()
+ * @method $this withAccountId($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  */
 class AddDomain extends Rpc
 {
@@ -17,30 +17,4 @@ class AddDomain extends Rpc
     public $version = '2016-02-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $accountId
-     *
-     * @return $this
-     */
-    public function withAccountId($accountId)
-    {
-        $this->data['AccountId'] = $accountId;
-        $this->options['query']['AccountId'] = $accountId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
 }

@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SaveSuspEventUserSetting
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getLevelsOn()
+ * @method $this withLevelsOn($value)
  */
 class SaveSuspEventUserSetting extends Rpc
 {
@@ -20,43 +21,4 @@ class SaveSuspEventUserSetting extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $from
-     *
-     * @return $this
-     */
-    public function withFrom($from)
-    {
-        $this->data['From'] = $from;
-        $this->options['query']['From'] = $from;
-
-        return $this;
-    }
-
-    /**
-     * @param string $levelsOn
-     *
-     * @return $this
-     */
-    public function withLevelsOn($levelsOn)
-    {
-        $this->data['LevelsOn'] = $levelsOn;
-        $this->options['query']['LevelsOn'] = $levelsOn;
-
-        return $this;
-    }
 }

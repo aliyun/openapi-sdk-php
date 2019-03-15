@@ -5,8 +5,6 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api ListInstance
- *
  */
 class ListInstance extends Roa
 {

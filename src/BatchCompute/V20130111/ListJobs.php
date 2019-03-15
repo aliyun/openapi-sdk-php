@@ -5,8 +5,6 @@ namespace AlibabaCloud\BatchCompute\V20130111;
 use AlibabaCloud\Roa;
 
 /**
- * Api ListJobs
- *
  * @method string getResourceOwnerId()
  */
 class ListJobs extends Roa

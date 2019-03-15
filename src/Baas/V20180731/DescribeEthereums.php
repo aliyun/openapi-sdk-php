@@ -5,8 +5,6 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeEthereums
- *
  */
 class DescribeEthereums extends Rpc
 {

@@ -5,19 +5,27 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TagResourceVSwitch
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getOwnerBid()
+ * @method $this withOwnerBid($value)
  * @method string getScope()
+ * @method $this withScope($value)
  * @method string getOwnerUid()
+ * @method $this withOwnerUid($value)
  * @method array getResourceId()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getRelatedResourceId()
+ * @method $this withRelatedResourceId($value)
  * @method string getRelatedProduct()
+ * @method $this withRelatedProduct($value)
  */
 class TagResourceVSwitch extends Rpc
 {
@@ -30,58 +38,6 @@ class TagResourceVSwitch extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerBid
-     *
-     * @return $this
-     */
-    public function withOwnerBid($ownerBid)
-    {
-        $this->data['OwnerBid'] = $ownerBid;
-        $this->options['query']['OwnerBid'] = $ownerBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scope
-     *
-     * @return $this
-     */
-    public function withScope($scope)
-    {
-        $this->data['Scope'] = $scope;
-        $this->options['query']['Scope'] = $scope;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerUid
-     *
-     * @return $this
-     */
-    public function withOwnerUid($ownerUid)
-    {
-        $this->data['OwnerUid'] = $ownerUid;
-        $this->options['query']['OwnerUid'] = $ownerUid;
-
-        return $this;
-    }
-
-    /**
      * @param array $resourceId
      *
      * @return $this
@@ -92,84 +48,6 @@ class TagResourceVSwitch extends Rpc
         foreach ($resourceId as $i => $iValue) {
             $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $relatedResourceId
-     *
-     * @return $this
-     */
-    public function withRelatedResourceId($relatedResourceId)
-    {
-        $this->data['RelatedResourceId'] = $relatedResourceId;
-        $this->options['query']['RelatedResourceId'] = $relatedResourceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $relatedProduct
-     *
-     * @return $this
-     */
-    public function withRelatedProduct($relatedProduct)
-    {
-        $this->data['RelatedProduct'] = $relatedProduct;
-        $this->options['query']['RelatedProduct'] = $relatedProduct;
 
         return $this;
     }

@@ -5,12 +5,13 @@ namespace AlibabaCloud\Cloudauth\V20180916;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SubmitMaterials
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method array getMaterial()
  * @method string getVerifyToken()
+ * @method $this withVerifyToken($value)
  */
 class SubmitMaterials extends Rpc
 {
@@ -25,32 +26,6 @@ class SubmitMaterials extends Rpc
     public $serviceCode = 'cloudauth';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
      * @param array $material
      *
      * @return $this
@@ -62,19 +37,6 @@ class SubmitMaterials extends Rpc
             $this->options['query']['Material.' . ($i + 1) . '.MaterialType'] = $material[$i]['MaterialType'];
             $this->options['query']['Material.' . ($i + 1) . '.Value'] = $material[$i]['Value'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $verifyToken
-     *
-     * @return $this
-     */
-    public function withVerifyToken($verifyToken)
-    {
-        $this->data['VerifyToken'] = $verifyToken;
-        $this->options['query']['VerifyToken'] = $verifyToken;
 
         return $this;
     }

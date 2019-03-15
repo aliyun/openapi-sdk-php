@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Ons based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Ons\V20170918
  *
  * @method OnsConsumerAccumulate onsConsumerAccumulate(array $options = [])
  * @method OnsConsumerGetConnection onsConsumerGetConnection(array $options = [])

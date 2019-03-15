@@ -5,13 +5,16 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateTagJob
- *
  * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
  * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getExternalID()
+ * @method $this withExternalID($value)
  * @method string getSrcUri()
+ * @method $this withSrcUri($value)
  */
 class CreateTagJob extends Rpc
 {
@@ -22,69 +25,4 @@ class CreateTagJob extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $notifyTopicName
-     *
-     * @return $this
-     */
-    public function withNotifyTopicName($notifyTopicName)
-    {
-        $this->data['NotifyTopicName'] = $notifyTopicName;
-        $this->options['query']['NotifyTopicName'] = $notifyTopicName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $notifyEndpoint
-     *
-     * @return $this
-     */
-    public function withNotifyEndpoint($notifyEndpoint)
-    {
-        $this->data['NotifyEndpoint'] = $notifyEndpoint;
-        $this->options['query']['NotifyEndpoint'] = $notifyEndpoint;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $externalID
-     *
-     * @return $this
-     */
-    public function withExternalID($externalID)
-    {
-        $this->data['ExternalID'] = $externalID;
-        $this->options['query']['ExternalID'] = $externalID;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcUri
-     *
-     * @return $this
-     */
-    public function withSrcUri($srcUri)
-    {
-        $this->data['SrcUri'] = $srcUri;
-        $this->options['query']['SrcUri'] = $srcUri;
-
-        return $this;
-    }
 }

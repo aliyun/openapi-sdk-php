@@ -6,13 +6,12 @@ use AlibabaCloud\ImageSearch\V20180120\Traits\AddItemTrait;
 use AlibabaCloud\Roa;
 
 /**
- * Api AddItem
- *
  * @method string getInstanceName()
  */
 class AddItem extends Roa
 {
-    use  AddItemTrait;
+    use AddItemTrait;
+
     public $product = 'ImageSearch';
 
     public $version = '2018-01-20';

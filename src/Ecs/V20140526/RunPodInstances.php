@@ -5,8 +5,6 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RunPodInstances
- *
  */
 class RunPodInstances extends Rpc
 {

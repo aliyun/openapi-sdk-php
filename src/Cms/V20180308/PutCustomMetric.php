@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api PutCustomMetric
- *
  * @method string getMetricList()
+ * @method $this withMetricList($value)
  */
 class PutCustomMetric extends Rpc
 {
@@ -18,17 +17,4 @@ class PutCustomMetric extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $metricList
-     *
-     * @return $this
-     */
-    public function withMetricList($metricList)
-    {
-        $this->data['MetricList'] = $metricList;
-        $this->options['query']['MetricList'] = $metricList;
-
-        return $this;
-    }
 }

@@ -5,8 +5,6 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of DescribeVodDomainConfigs
- *
  * @method string getFunctionNames()
  * @method string getSecurityToken()
  * @method string getDomainName()

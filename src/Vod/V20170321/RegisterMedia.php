@@ -5,15 +5,20 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RegisterMedia
- *
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTemplateGroupId()
+ * @method $this withTemplateGroupId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRegisterMetadatas()
+ * @method $this withRegisterMetadatas($value)
  * @method string getWorkFlowId()
+ * @method $this withWorkFlowId($value)
  */
 class RegisterMedia extends Rpc
 {
@@ -24,95 +29,4 @@ class RegisterMedia extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $templateGroupId
-     *
-     * @return $this
-     */
-    public function withTemplateGroupId($templateGroupId)
-    {
-        $this->data['TemplateGroupId'] = $templateGroupId;
-        $this->options['query']['TemplateGroupId'] = $templateGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $registerMetadatas
-     *
-     * @return $this
-     */
-    public function withRegisterMetadatas($registerMetadatas)
-    {
-        $this->data['RegisterMetadatas'] = $registerMetadatas;
-        $this->options['query']['RegisterMetadatas'] = $registerMetadatas;
-
-        return $this;
-    }
-
-    /**
-     * @param string $workFlowId
-     *
-     * @return $this
-     */
-    public function withWorkFlowId($workFlowId)
-    {
-        $this->data['WorkFlowId'] = $workFlowId;
-        $this->options['query']['WorkFlowId'] = $workFlowId;
-
-        return $this;
-    }
 }

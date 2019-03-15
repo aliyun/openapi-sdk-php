@@ -5,12 +5,14 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeTrafficControlsByApi
- *
  * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getApiId()
+ * @method $this withApiId($value)
  */
 class DescribeTrafficControlsByApi extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeTrafficControlsByApi extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $stageName
-     *
-     * @return $this
-     */
-    public function withStageName($stageName)
-    {
-        $this->data['StageName'] = $stageName;
-        $this->options['query']['StageName'] = $stageName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $apiId
-     *
-     * @return $this
-     */
-    public function withApiId($apiId)
-    {
-        $this->data['ApiId'] = $apiId;
-        $this->options['query']['ApiId'] = $apiId;
-
-        return $this;
-    }
 }

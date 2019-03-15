@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the CloudAPI based on the method name as the Api name.
  *
- * @package   AlibabaCloud\CloudAPI\V20160714
  *
  * @method AbolishApi abolishApi(array $options = [])
  * @method AddIpControlPolicyItem addIpControlPolicyItem(array $options = [])

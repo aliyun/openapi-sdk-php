@@ -5,11 +5,12 @@ namespace AlibabaCloud\Scdn\V20171115;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScdnIpInfo
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getIP()
+ * @method $this withIP($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeScdnIpInfo extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeScdnIpInfo extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'scdn';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $iP
-     *
-     * @return $this
-     */
-    public function withIP($iP)
-    {
-        $this->data['IP'] = $iP;
-        $this->options['query']['IP'] = $iP;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

@@ -5,17 +5,20 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerMonitorDataDescribeDisk
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method string getDiskId()
+ * @method $this withDiskId($value)
  * @method string getAliUid()
  * @method string getPeriod()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getEndTime()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getMetrics()
  * @method string getBid()
  */
@@ -30,19 +33,6 @@ class InnerMonitorDataDescribeDisk extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $startTime
      *
      * @return $this
@@ -51,19 +41,6 @@ class InnerMonitorDataDescribeDisk extends Rpc
     {
         $this->data['StartTime'] = $startTime;
         $this->options['query']['startTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $diskId
-     *
-     * @return $this
-     */
-    public function withDiskId($diskId)
-    {
-        $this->data['DiskId'] = $diskId;
-        $this->options['query']['DiskId'] = $diskId;
 
         return $this;
     }
@@ -95,32 +72,6 @@ class InnerMonitorDataDescribeDisk extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $endTime
      *
      * @return $this
@@ -129,19 +80,6 @@ class InnerMonitorDataDescribeDisk extends Rpc
     {
         $this->data['EndTime'] = $endTime;
         $this->options['query']['endTime'] = $endTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

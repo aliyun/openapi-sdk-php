@@ -5,16 +5,22 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateCaster
- *
  * @method string getCasterTemplate()
+ * @method $this withCasterTemplate($value)
  * @method string getExpireTime()
+ * @method $this withExpireTime($value)
  * @method string getNormType()
+ * @method $this withNormType($value)
  * @method string getCasterName()
+ * @method $this withCasterName($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPurchaseTime()
+ * @method $this withPurchaseTime($value)
  */
 class CreateCaster extends Rpc
 {
@@ -25,108 +31,4 @@ class CreateCaster extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $casterTemplate
-     *
-     * @return $this
-     */
-    public function withCasterTemplate($casterTemplate)
-    {
-        $this->data['CasterTemplate'] = $casterTemplate;
-        $this->options['query']['CasterTemplate'] = $casterTemplate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $expireTime
-     *
-     * @return $this
-     */
-    public function withExpireTime($expireTime)
-    {
-        $this->data['ExpireTime'] = $expireTime;
-        $this->options['query']['ExpireTime'] = $expireTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $normType
-     *
-     * @return $this
-     */
-    public function withNormType($normType)
-    {
-        $this->data['NormType'] = $normType;
-        $this->options['query']['NormType'] = $normType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $casterName
-     *
-     * @return $this
-     */
-    public function withCasterName($casterName)
-    {
-        $this->data['CasterName'] = $casterName;
-        $this->options['query']['CasterName'] = $casterName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $purchaseTime
-     *
-     * @return $this
-     */
-    public function withPurchaseTime($purchaseTime)
-    {
-        $this->data['PurchaseTime'] = $purchaseTime;
-        $this->options['query']['PurchaseTime'] = $purchaseTime;
-
-        return $this;
-    }
 }

@@ -5,14 +5,18 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateOrUpdateDataSource
- *
  * @method string getProjectName()
+ * @method $this withProjectName($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLogStoreName()
+ * @method $this withLogStoreName($value)
  * @method string getDatasourceDescription()
+ * @method $this withDatasourceDescription($value)
  * @method string getFields()
+ * @method $this withFields($value)
  * @method string getRegionNo()
+ * @method $this withRegionNo($value)
  */
 class CreateOrUpdateDataSource extends Rpc
 {
@@ -23,82 +27,4 @@ class CreateOrUpdateDataSource extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $projectName
-     *
-     * @return $this
-     */
-    public function withProjectName($projectName)
-    {
-        $this->data['ProjectName'] = $projectName;
-        $this->options['query']['ProjectName'] = $projectName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $logStoreName
-     *
-     * @return $this
-     */
-    public function withLogStoreName($logStoreName)
-    {
-        $this->data['LogStoreName'] = $logStoreName;
-        $this->options['query']['LogStoreName'] = $logStoreName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $datasourceDescription
-     *
-     * @return $this
-     */
-    public function withDatasourceDescription($datasourceDescription)
-    {
-        $this->data['DatasourceDescription'] = $datasourceDescription;
-        $this->options['query']['DatasourceDescription'] = $datasourceDescription;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fields
-     *
-     * @return $this
-     */
-    public function withFields($fields)
-    {
-        $this->data['Fields'] = $fields;
-        $this->options['query']['Fields'] = $fields;
-
-        return $this;
-    }
-
-    /**
-     * @param string $regionNo
-     *
-     * @return $this
-     */
-    public function withRegionNo($regionNo)
-    {
-        $this->data['RegionNo'] = $regionNo;
-        $this->options['query']['RegionNo'] = $regionNo;
-
-        return $this;
-    }
 }

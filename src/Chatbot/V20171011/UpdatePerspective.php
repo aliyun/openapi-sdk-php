@@ -5,10 +5,10 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdatePerspective
- *
  * @method string getPerspectiveId()
+ * @method $this withPerspectiveId($value)
  * @method string getName()
+ * @method $this withName($value)
  */
 class UpdatePerspective extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdatePerspective extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $perspectiveId
-     *
-     * @return $this
-     */
-    public function withPerspectiveId($perspectiveId)
-    {
-        $this->data['PerspectiveId'] = $perspectiveId;
-        $this->options['query']['PerspectiveId'] = $perspectiveId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
 }

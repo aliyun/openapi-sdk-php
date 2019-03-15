@@ -5,8 +5,6 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Rpc;
 
 /**
- * Api FindAllAlarmGroupsForUser
- *
  */
 class FindAllAlarmGroupsForUser extends Rpc
 {

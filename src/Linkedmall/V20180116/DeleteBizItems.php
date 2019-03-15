@@ -5,11 +5,11 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteBizItems
- *
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method array getItemIdList()
  * @method string getSubBizId()
+ * @method $this withSubBizId($value)
  */
 class DeleteBizItems extends Rpc
 {
@@ -22,19 +22,6 @@ class DeleteBizItems extends Rpc
     public $serviceCode = 'linkedmall';
 
     /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
-
-    /**
      * @param array $itemIdList
      *
      * @return $this
@@ -45,19 +32,6 @@ class DeleteBizItems extends Rpc
         foreach ($itemIdList as $i => $iValue) {
             $this->options['query']['ItemIdList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $subBizId
-     *
-     * @return $this
-     */
-    public function withSubBizId($subBizId)
-    {
-        $this->data['SubBizId'] = $subBizId;
-        $this->options['query']['SubBizId'] = $subBizId;
 
         return $this;
     }

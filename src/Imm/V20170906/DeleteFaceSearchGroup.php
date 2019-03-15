@@ -5,10 +5,10 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteFaceSearchGroup
- *
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
 class DeleteFaceSearchGroup extends Rpc
 {
@@ -19,30 +19,4 @@ class DeleteFaceSearchGroup extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function withGroupName($groupName)
-    {
-        $this->data['GroupName'] = $groupName;
-        $this->options['query']['GroupName'] = $groupName;
-
-        return $this;
-    }
 }

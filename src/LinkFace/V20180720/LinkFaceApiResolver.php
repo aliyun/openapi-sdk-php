@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the LinkFace based on the method name as the Api name.
  *
- * @package   AlibabaCloud\LinkFace\V20180720
  *
  * @method CreateGroup createGroup(array $options = [])
  * @method DeleteDeviceAllGroup deleteDeviceAllGroup(array $options = [])

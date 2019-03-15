@@ -5,13 +5,12 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api EnableScalingGroup
- *
  * @method string getLoadBalancerWeight6()
  * @method string getLoadBalancerWeight11()
  * @method string getLoadBalancerWeight7()
  * @method string getLoadBalancerWeight12()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getLoadBalancerWeight8()
  * @method string getLoadBalancerWeight9()
  * @method string getLoadBalancerWeight10()
@@ -24,11 +23,13 @@ use AlibabaCloud\Rpc;
  * @method string getLoadBalancerWeight5()
  * @method string getLoadBalancerWeight14()
  * @method string getActiveScalingConfigurationId()
+ * @method $this withActiveScalingConfigurationId($value)
  * @method string getLoadBalancerWeight1()
  * @method string getInstanceId1()
  * @method string getLoadBalancerWeight20()
  * @method string getInstanceId3()
  * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
  * @method string getInstanceId2()
  * @method string getInstanceId5()
  * @method string getInstanceId4()
@@ -37,6 +38,7 @@ use AlibabaCloud\Rpc;
  * @method string getInstanceId9()
  * @method string getInstanceId8()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getLoadBalancerWeight19()
  * @method string getLoadBalancerWeight17()
  * @method string getLoadBalancerWeight18()
@@ -44,10 +46,14 @@ use AlibabaCloud\Rpc;
  * @method string getInstanceId12()
  * @method string getInstanceId11()
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getInstanceId20()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getLaunchTemplateVersion()
+ * @method $this withLaunchTemplateVersion($value)
  * @method string getInstanceId18()
  * @method string getInstanceId17()
  * @method string getInstanceId19()
@@ -114,19 +120,6 @@ class EnableScalingGroup extends Rpc
     {
         $this->data['LoadBalancerWeight12'] = $loadBalancerWeight12;
         $this->options['query']['LoadBalancerWeight.12'] = $loadBalancerWeight12;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -275,19 +268,6 @@ class EnableScalingGroup extends Rpc
     }
 
     /**
-     * @param string $activeScalingConfigurationId
-     *
-     * @return $this
-     */
-    public function withActiveScalingConfigurationId($activeScalingConfigurationId)
-    {
-        $this->data['ActiveScalingConfigurationId'] = $activeScalingConfigurationId;
-        $this->options['query']['ActiveScalingConfigurationId'] = $activeScalingConfigurationId;
-
-        return $this;
-    }
-
-    /**
      * @param string $loadBalancerWeight1
      *
      * @return $this
@@ -335,19 +315,6 @@ class EnableScalingGroup extends Rpc
     {
         $this->data['InstanceId3'] = $instanceId3;
         $this->options['query']['InstanceId.3'] = $instanceId3;
-
-        return $this;
-    }
-
-    /**
-     * @param string $launchTemplateId
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateId($launchTemplateId)
-    {
-        $this->data['LaunchTemplateId'] = $launchTemplateId;
-        $this->options['query']['LaunchTemplateId'] = $launchTemplateId;
 
         return $this;
     }
@@ -444,19 +411,6 @@ class EnableScalingGroup extends Rpc
     }
 
     /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
      * @param string $loadBalancerWeight19
      *
      * @return $this
@@ -535,19 +489,6 @@ class EnableScalingGroup extends Rpc
     }
 
     /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId20
      *
      * @return $this
@@ -556,45 +497,6 @@ class EnableScalingGroup extends Rpc
     {
         $this->data['InstanceId20'] = $instanceId20;
         $this->options['query']['InstanceId.20'] = $instanceId20;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $launchTemplateVersion
-     *
-     * @return $this
-     */
-    public function withLaunchTemplateVersion($launchTemplateVersion)
-    {
-        $this->data['LaunchTemplateVersion'] = $launchTemplateVersion;
-        $this->options['query']['LaunchTemplateVersion'] = $launchTemplateVersion;
 
         return $this;
     }

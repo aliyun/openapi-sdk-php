@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Dcdn based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Dcdn\V20180115
  *
  * @method AddDcdnDomain addDcdnDomain(array $options = [])
  * @method AddDcdnIpaDomain addDcdnIpaDomain(array $options = [])

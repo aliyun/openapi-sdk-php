@@ -5,10 +5,10 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateCategory
- *
  * @method string getName()
+ * @method $this withName($value)
  * @method string getCategoryId()
+ * @method $this withCategoryId($value)
  */
 class UpdateCategory extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdateCategory extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $categoryId
-     *
-     * @return $this
-     */
-    public function withCategoryId($categoryId)
-    {
-        $this->data['CategoryId'] = $categoryId;
-        $this->options['query']['CategoryId'] = $categoryId;
-
-        return $this;
-    }
 }

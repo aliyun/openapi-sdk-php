@@ -5,10 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api LaunchAppraise
- *
  * @method string getAcid()
+ * @method $this withAcid($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class LaunchAppraise extends Rpc
 {
@@ -19,30 +19,4 @@ class LaunchAppraise extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $acid
-     *
-     * @return $this
-     */
-    public function withAcid($acid)
-    {
-        $this->data['Acid'] = $acid;
-        $this->options['query']['Acid'] = $acid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

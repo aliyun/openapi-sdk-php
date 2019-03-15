@@ -5,9 +5,8 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateTagSet
- *
  * @method string getProject()
+ * @method $this withProject($value)
  */
 class CreateTagSet extends Rpc
 {
@@ -18,17 +17,4 @@ class CreateTagSet extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
 }

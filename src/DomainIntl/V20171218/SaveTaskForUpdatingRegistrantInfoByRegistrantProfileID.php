@@ -5,13 +5,15 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID
- *
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getRegistrantProfileId()
+ * @method $this withRegistrantProfileId($value)
  * @method array getDomainName()
  * @method string getTransferOutProhibited()
+ * @method $this withTransferOutProhibited($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
 {
@@ -24,32 +26,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
     public $serviceCode = 'domain';
 
     /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $registrantProfileId
-     *
-     * @return $this
-     */
-    public function withRegistrantProfileId($registrantProfileId)
-    {
-        $this->data['RegistrantProfileId'] = $registrantProfileId;
-        $this->options['query']['RegistrantProfileId'] = $registrantProfileId;
-
-        return $this;
-    }
-
-    /**
      * @param array $domainName
      *
      * @return $this
@@ -60,32 +36,6 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
         foreach ($domainName as $i => $iValue) {
             $this->options['query']['DomainName.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $transferOutProhibited
-     *
-     * @return $this
-     */
-    public function withTransferOutProhibited($transferOutProhibited)
-    {
-        $this->data['TransferOutProhibited'] = $transferOutProhibited;
-        $this->options['query']['TransferOutProhibited'] = $transferOutProhibited;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
 
         return $this;
     }

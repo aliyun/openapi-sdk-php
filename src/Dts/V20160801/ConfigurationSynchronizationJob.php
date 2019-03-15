@@ -5,16 +5,18 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ConfigurationSynchronizationJob
- *
  * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
  * @method string getSourceEndpointInstanceID()
  * @method string getSynchronizationJobName()
+ * @method $this withSynchronizationJobName($value)
  * @method string getDestinationEndpointInstanceID()
  * @method string getInitializationStructureLoad()
  * @method string getInitializationDataLoad()
  * @method string getSynchronizationObject()
+ * @method $this withSynchronizationObject($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
@@ -27,19 +29,6 @@ class ConfigurationSynchronizationJob extends Rpc
     public $method = 'POST';
 
     /**
-     * @param string $synchronizationJobId
-     *
-     * @return $this
-     */
-    public function withSynchronizationJobId($synchronizationJobId)
-    {
-        $this->data['SynchronizationJobId'] = $synchronizationJobId;
-        $this->options['query']['SynchronizationJobId'] = $synchronizationJobId;
-
-        return $this;
-    }
-
-    /**
      * @param string $sourceEndpointInstanceID
      *
      * @return $this
@@ -48,19 +37,6 @@ class ConfigurationSynchronizationJob extends Rpc
     {
         $this->data['SourceEndpointInstanceID'] = $sourceEndpointInstanceID;
         $this->options['query']['SourceEndpoint.InstanceID'] = $sourceEndpointInstanceID;
-
-        return $this;
-    }
-
-    /**
-     * @param string $synchronizationJobName
-     *
-     * @return $this
-     */
-    public function withSynchronizationJobName($synchronizationJobName)
-    {
-        $this->data['SynchronizationJobName'] = $synchronizationJobName;
-        $this->options['query']['SynchronizationJobName'] = $synchronizationJobName;
 
         return $this;
     }
@@ -100,32 +76,6 @@ class ConfigurationSynchronizationJob extends Rpc
     {
         $this->data['InitializationDataLoad'] = $initializationDataLoad;
         $this->options['query']['Initialization.DataLoad'] = $initializationDataLoad;
-
-        return $this;
-    }
-
-    /**
-     * @param string $synchronizationObject
-     *
-     * @return $this
-     */
-    public function withSynchronizationObject($synchronizationObject)
-    {
-        $this->data['SynchronizationObject'] = $synchronizationObject;
-        $this->options['query']['SynchronizationObject'] = $synchronizationObject;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

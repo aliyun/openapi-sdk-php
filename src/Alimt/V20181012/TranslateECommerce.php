@@ -5,13 +5,16 @@ namespace AlibabaCloud\Alimt\V20181012;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TranslateECommerce
- *
  * @method string getSourceLanguage()
+ * @method $this withSourceLanguage($value)
  * @method string getSourceText()
+ * @method $this withSourceText($value)
  * @method string getFormatType()
+ * @method $this withFormatType($value)
  * @method string getTargetLanguage()
+ * @method $this withTargetLanguage($value)
  * @method string getScene()
+ * @method $this withScene($value)
  */
 class TranslateECommerce extends Rpc
 {
@@ -22,69 +25,4 @@ class TranslateECommerce extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'alimt';
-
-    /**
-     * @param string $sourceLanguage
-     *
-     * @return $this
-     */
-    public function withSourceLanguage($sourceLanguage)
-    {
-        $this->data['SourceLanguage'] = $sourceLanguage;
-        $this->options['query']['SourceLanguage'] = $sourceLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceText
-     *
-     * @return $this
-     */
-    public function withSourceText($sourceText)
-    {
-        $this->data['SourceText'] = $sourceText;
-        $this->options['query']['SourceText'] = $sourceText;
-
-        return $this;
-    }
-
-    /**
-     * @param string $formatType
-     *
-     * @return $this
-     */
-    public function withFormatType($formatType)
-    {
-        $this->data['FormatType'] = $formatType;
-        $this->options['query']['FormatType'] = $formatType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetLanguage
-     *
-     * @return $this
-     */
-    public function withTargetLanguage($targetLanguage)
-    {
-        $this->data['TargetLanguage'] = $targetLanguage;
-        $this->options['query']['TargetLanguage'] = $targetLanguage;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function withScene($scene)
-    {
-        $this->data['Scene'] = $scene;
-        $this->options['query']['Scene'] = $scene;
-
-        return $this;
-    }
 }

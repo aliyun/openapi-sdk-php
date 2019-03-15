@@ -5,9 +5,8 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerGroupAuthorize
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getChannel()
  * @method string getNic()
  * @method string getVpcInstanceId()
@@ -18,11 +17,14 @@ use AlibabaCloud\Rpc;
  * @method string getSourceGroupNo()
  * @method string getPortRange()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getLevel()
  * @method string getIpProtocol()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSourceCidrIp()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getDestCidrIp()
  * @method string getToken()
  * @method string getSourceGroupOwnerAliUid()
@@ -40,19 +42,6 @@ class InnerGroupAuthorize extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
 
     /**
      * @param string $channel
@@ -172,19 +161,6 @@ class InnerGroupAuthorize extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $level
      *
      * @return $this
@@ -211,19 +187,6 @@ class InnerGroupAuthorize extends Rpc
     }
 
     /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $sourceCidrIp
      *
      * @return $this
@@ -232,19 +195,6 @@ class InnerGroupAuthorize extends Rpc
     {
         $this->data['SourceCidrIp'] = $sourceCidrIp;
         $this->options['query']['sourceCidrIp'] = $sourceCidrIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

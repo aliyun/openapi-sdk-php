@@ -5,15 +5,20 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RemoveCommonBandwidthPackageIp
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getBandwidthPackageId()
+ * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getIpInstanceId()
+ * @method $this withIpInstanceId($value)
  * @method string getIpVersion()
+ * @method $this withIpVersion($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class RemoveCommonBandwidthPackageIp extends Rpc
 {
@@ -24,95 +29,4 @@ class RemoveCommonBandwidthPackageIp extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vpc';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bandwidthPackageId
-     *
-     * @return $this
-     */
-    public function withBandwidthPackageId($bandwidthPackageId)
-    {
-        $this->data['BandwidthPackageId'] = $bandwidthPackageId;
-        $this->options['query']['BandwidthPackageId'] = $bandwidthPackageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipInstanceId
-     *
-     * @return $this
-     */
-    public function withIpInstanceId($ipInstanceId)
-    {
-        $this->data['IpInstanceId'] = $ipInstanceId;
-        $this->options['query']['IpInstanceId'] = $ipInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipVersion
-     *
-     * @return $this
-     */
-    public function withIpVersion($ipVersion)
-    {
-        $this->data['IpVersion'] = $ipVersion;
-        $this->options['query']['IpVersion'] = $ipVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

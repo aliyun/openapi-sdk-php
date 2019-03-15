@@ -5,27 +5,33 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeScalingRules
- *
  * @method string getScalingRuleName1()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getScalingRuleName2()
  * @method string getScalingRuleName3()
  * @method string getScalingRuleName4()
  * @method string getScalingRuleName5()
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getScalingRuleName6()
  * @method string getScalingRuleName7()
  * @method string getScalingRuleName8()
  * @method string getScalingRuleAri9()
  * @method string getScalingRuleName9()
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getScalingRuleType()
+ * @method $this withScalingRuleType($value)
  * @method string getScalingRuleId10()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getScalingRuleAri1()
  * @method string getScalingRuleAri2()
  * @method string getScalingRuleName10()
@@ -40,6 +46,7 @@ use AlibabaCloud\Rpc;
  * @method string getScalingRuleAri8()
  * @method string getScalingRuleId4()
  * @method string getShowAlarmRules()
+ * @method $this withShowAlarmRules($value)
  * @method string getScalingRuleId5()
  * @method string getScalingRuleId6()
  * @method string getScalingRuleId7()
@@ -66,19 +73,6 @@ class DescribeScalingRules extends Rpc
     {
         $this->data['ScalingRuleName1'] = $scalingRuleName1;
         $this->options['query']['ScalingRuleName.1'] = $scalingRuleName1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -131,19 +125,6 @@ class DescribeScalingRules extends Rpc
     {
         $this->data['ScalingRuleName5'] = $scalingRuleName5;
         $this->options['query']['ScalingRuleName.5'] = $scalingRuleName5;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
 
         return $this;
     }
@@ -214,45 +195,6 @@ class DescribeScalingRules extends Rpc
     }
 
     /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scalingRuleType
-     *
-     * @return $this
-     */
-    public function withScalingRuleType($scalingRuleType)
-    {
-        $this->data['ScalingRuleType'] = $scalingRuleType;
-        $this->options['query']['ScalingRuleType'] = $scalingRuleType;
-
-        return $this;
-    }
-
-    /**
      * @param string $scalingRuleId10
      *
      * @return $this
@@ -261,45 +203,6 @@ class DescribeScalingRules extends Rpc
     {
         $this->data['ScalingRuleId10'] = $scalingRuleId10;
         $this->options['query']['ScalingRuleId.10'] = $scalingRuleId10;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -469,19 +372,6 @@ class DescribeScalingRules extends Rpc
     {
         $this->data['ScalingRuleId4'] = $scalingRuleId4;
         $this->options['query']['ScalingRuleId.4'] = $scalingRuleId4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $showAlarmRules
-     *
-     * @return $this
-     */
-    public function withShowAlarmRules($showAlarmRules)
-    {
-        $this->data['ShowAlarmRules'] = $showAlarmRules;
-        $this->options['query']['ShowAlarmRules'] = $showAlarmRules;
 
         return $this;
     }

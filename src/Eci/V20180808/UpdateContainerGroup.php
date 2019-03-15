@@ -5,22 +5,27 @@ namespace AlibabaCloud\Eci\V20180808;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateContainerGroup
- *
  * @method array getContainer()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getContainerGroupId()
+ * @method $this withContainerGroupId($value)
  * @method array getDnsConfigNameServer()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getRestartPolicy()
+ * @method $this withRestartPolicy($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method array getDnsConfigOption()
  * @method array getDnsConfigSearch()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getVolume()
  */
 class UpdateContainerGroup extends Rpc
@@ -96,32 +101,6 @@ class UpdateContainerGroup extends Rpc
                 $this->options['query']['Container.' . ($i + 1) . '.SecurityContext.Capability.Add.' . ($j + 1)] = $jValue;
             }
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
 
         return $this;
     }
@@ -203,19 +182,6 @@ class UpdateContainerGroup extends Rpc
     }
 
     /**
-     * @param string $containerGroupId
-     *
-     * @return $this
-     */
-    public function withContainerGroupId($containerGroupId)
-    {
-        $this->data['ContainerGroupId'] = $containerGroupId;
-        $this->options['query']['ContainerGroupId'] = $containerGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param array $dnsConfigNameServer
      *
      * @return $this
@@ -226,45 +192,6 @@ class UpdateContainerGroup extends Rpc
         foreach ($dnsConfigNameServer as $i => $iValue) {
             $this->options['query']['DnsConfig.NameServer.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $restartPolicy
-     *
-     * @return $this
-     */
-    public function withRestartPolicy($restartPolicy)
-    {
-        $this->data['RestartPolicy'] = $restartPolicy;
-        $this->options['query']['RestartPolicy'] = $restartPolicy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -296,19 +223,6 @@ class UpdateContainerGroup extends Rpc
         foreach ($dnsConfigSearch as $i => $iValue) {
             $this->options['query']['DnsConfig.Search.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

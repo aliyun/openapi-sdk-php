@@ -5,32 +5,54 @@ namespace AlibabaCloud\RKvstore\V20150101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RebuildInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNodeType()
+ * @method $this withNodeType($value)
  * @method string getCouponNo()
+ * @method $this withCouponNo($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
  * @method string getCapacity()
+ * @method $this withCapacity($value)
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getSrcDBInstanceId()
+ * @method $this withSrcDBInstanceId($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getBackupId()
+ * @method $this withBackupId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getToken()
+ * @method $this withToken($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class RebuildInstance extends Rpc
 {
@@ -41,316 +63,4 @@ class RebuildInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'redisa';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nodeType
-     *
-     * @return $this
-     */
-    public function withNodeType($nodeType)
-    {
-        $this->data['NodeType'] = $nodeType;
-        $this->options['query']['NodeType'] = $nodeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $couponNo
-     *
-     * @return $this
-     */
-    public function withCouponNo($couponNo)
-    {
-        $this->data['CouponNo'] = $couponNo;
-        $this->options['query']['CouponNo'] = $couponNo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $engineVersion
-     *
-     * @return $this
-     */
-    public function withEngineVersion($engineVersion)
-    {
-        $this->data['EngineVersion'] = $engineVersion;
-        $this->options['query']['EngineVersion'] = $engineVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceClass
-     *
-     * @return $this
-     */
-    public function withInstanceClass($instanceClass)
-    {
-        $this->data['InstanceClass'] = $instanceClass;
-        $this->options['query']['InstanceClass'] = $instanceClass;
-
-        return $this;
-    }
-
-    /**
-     * @param string $capacity
-     *
-     * @return $this
-     */
-    public function withCapacity($capacity)
-    {
-        $this->data['Capacity'] = $capacity;
-        $this->options['query']['Capacity'] = $capacity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function withBusinessInfo($businessInfo)
-    {
-        $this->data['BusinessInfo'] = $businessInfo;
-        $this->options['query']['BusinessInfo'] = $businessInfo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcDBInstanceId
-     *
-     * @return $this
-     */
-    public function withSrcDBInstanceId($srcDBInstanceId)
-    {
-        $this->data['SrcDBInstanceId'] = $srcDBInstanceId;
-        $this->options['query']['SrcDBInstanceId'] = $srcDBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $backupId
-     *
-     * @return $this
-     */
-    public function withBackupId($backupId)
-    {
-        $this->data['BackupId'] = $backupId;
-        $this->options['query']['BackupId'] = $backupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function withToken($token)
-    {
-        $this->data['Token'] = $token;
-        $this->options['query']['Token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $config
-     *
-     * @return $this
-     */
-    public function withConfig($config)
-    {
-        $this->data['Config'] = $config;
-        $this->options['query']['Config'] = $config;
-
-        return $this;
-    }
 }

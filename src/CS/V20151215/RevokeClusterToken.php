@@ -5,9 +5,8 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api RevokeClusterToken
- *
  * @method string getToken()
+ * @method $this withToken($value)
  */
 class RevokeClusterToken extends Roa
 {
@@ -20,17 +19,4 @@ class RevokeClusterToken extends Roa
     public $method = 'DELETE';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $token
-     *
-     * @return $this
-     */
-    public function withToken($token)
-    {
-        $this->data['Token'] = $token;
-        $this->pathParameters['Token'] = $token;
-
-        return $this;
-    }
 }

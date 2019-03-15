@@ -5,16 +5,22 @@ namespace AlibabaCloud\Cloudauth\V20180916;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DetectFaceAttributes
- *
  * @method string getMaxNumPhotosPerCategory()
+ * @method $this withMaxNumPhotosPerCategory($value)
  * @method string getMaxFaceNum()
+ * @method $this withMaxFaceNum($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getRetAttributes()
+ * @method $this withRetAttributes($value)
  * @method string getMaterialValue()
+ * @method $this withMaterialValue($value)
  * @method string getDontSaveDB()
+ * @method $this withDontSaveDB($value)
  * @method string getClientTag()
+ * @method $this withClientTag($value)
  */
 class DetectFaceAttributes extends Rpc
 {
@@ -27,108 +33,4 @@ class DetectFaceAttributes extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @param string $maxNumPhotosPerCategory
-     *
-     * @return $this
-     */
-    public function withMaxNumPhotosPerCategory($maxNumPhotosPerCategory)
-    {
-        $this->data['MaxNumPhotosPerCategory'] = $maxNumPhotosPerCategory;
-        $this->options['query']['MaxNumPhotosPerCategory'] = $maxNumPhotosPerCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxFaceNum
-     *
-     * @return $this
-     */
-    public function withMaxFaceNum($maxFaceNum)
-    {
-        $this->data['MaxFaceNum'] = $maxFaceNum;
-        $this->options['query']['MaxFaceNum'] = $maxFaceNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $retAttributes
-     *
-     * @return $this
-     */
-    public function withRetAttributes($retAttributes)
-    {
-        $this->data['RetAttributes'] = $retAttributes;
-        $this->options['query']['RetAttributes'] = $retAttributes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $materialValue
-     *
-     * @return $this
-     */
-    public function withMaterialValue($materialValue)
-    {
-        $this->data['MaterialValue'] = $materialValue;
-        $this->options['query']['MaterialValue'] = $materialValue;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dontSaveDB
-     *
-     * @return $this
-     */
-    public function withDontSaveDB($dontSaveDB)
-    {
-        $this->data['DontSaveDB'] = $dontSaveDB;
-        $this->options['query']['DontSaveDB'] = $dontSaveDB;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientTag
-     *
-     * @return $this
-     */
-    public function withClientTag($clientTag)
-    {
-        $this->data['ClientTag'] = $clientTag;
-        $this->options['query']['ClientTag'] = $clientTag;
-
-        return $this;
-    }
 }

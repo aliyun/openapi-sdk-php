@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Mts based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Mts\V20140618
  *
  * @method ActivateMediaWorkflow activateMediaWorkflow(array $options = [])
  * @method AddAsrPipeline addAsrPipeline(array $options = [])

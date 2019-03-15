@@ -5,11 +5,12 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryCashCoupons
- *
  * @method string getExpiryTimeEnd()
+ * @method $this withExpiryTimeEnd($value)
  * @method string getExpiryTimeStart()
+ * @method $this withExpiryTimeStart($value)
  * @method string getEffectiveOrNot()
+ * @method $this withEffectiveOrNot($value)
  */
 class QueryCashCoupons extends Rpc
 {
@@ -18,43 +19,4 @@ class QueryCashCoupons extends Rpc
     public $version = '2017-12-14';
 
     public $method = 'POST';
-
-    /**
-     * @param string $expiryTimeEnd
-     *
-     * @return $this
-     */
-    public function withExpiryTimeEnd($expiryTimeEnd)
-    {
-        $this->data['ExpiryTimeEnd'] = $expiryTimeEnd;
-        $this->options['query']['ExpiryTimeEnd'] = $expiryTimeEnd;
-
-        return $this;
-    }
-
-    /**
-     * @param string $expiryTimeStart
-     *
-     * @return $this
-     */
-    public function withExpiryTimeStart($expiryTimeStart)
-    {
-        $this->data['ExpiryTimeStart'] = $expiryTimeStart;
-        $this->options['query']['ExpiryTimeStart'] = $expiryTimeStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $effectiveOrNot
-     *
-     * @return $this
-     */
-    public function withEffectiveOrNot($effectiveOrNot)
-    {
-        $this->data['EffectiveOrNot'] = $effectiveOrNot;
-        $this->options['query']['EffectiveOrNot'] = $effectiveOrNot;
-
-        return $this;
-    }
 }

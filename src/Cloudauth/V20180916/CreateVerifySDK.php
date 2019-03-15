@@ -5,12 +5,14 @@ namespace AlibabaCloud\Cloudauth\V20180916;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateVerifySDK
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getAppUrl()
+ * @method $this withAppUrl($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getPlatform()
+ * @method $this withPlatform($value)
  */
 class CreateVerifySDK extends Rpc
 {
@@ -21,56 +23,4 @@ class CreateVerifySDK extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudauth';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appUrl
-     *
-     * @return $this
-     */
-    public function withAppUrl($appUrl)
-    {
-        $this->data['AppUrl'] = $appUrl;
-        $this->options['query']['AppUrl'] = $appUrl;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $platform
-     *
-     * @return $this
-     */
-    public function withPlatform($platform)
-    {
-        $this->data['Platform'] = $platform;
-        $this->options['query']['Platform'] = $platform;
-
-        return $this;
-    }
 }

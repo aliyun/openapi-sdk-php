@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the DmsEnterprise based on the method name as the Api name.
  *
- * @package   AlibabaCloud\DmsEnterprise\V20181101
  *
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])

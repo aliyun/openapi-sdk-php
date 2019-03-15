@@ -27,8 +27,10 @@ trait CallTrait
 
         if (\strpos($name, 'with') === 0) {
             $parameterName = $this->propertyNameByMethodName($name, 4);
-            $this->__set($parameterName, $arguments[0]);
-            $this->pathParameters[$parameterName] = $arguments[0];
+
+            $value                                        = $arguments[0];
+            $this->data[$parameterName]                   = $value;
+            $this->getParameterPosition()[$parameterName] = $value;
 
             return $this;
         }

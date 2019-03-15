@@ -5,16 +5,21 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api TaskConfigCreate
- *
  * @method array getInstanceList()
  * @method string getJsonData()
+ * @method $this withJsonData($value)
  * @method string getTaskType()
+ * @method $this withTaskType($value)
  * @method string getTaskScope()
+ * @method $this withTaskScope($value)
  * @method string getAlertConfig()
+ * @method $this withAlertConfig($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getTaskName()
+ * @method $this withTaskName($value)
  * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
 class TaskConfigCreate extends Rpc
 {
@@ -37,97 +42,6 @@ class TaskConfigCreate extends Rpc
         foreach ($instanceList as $i => $iValue) {
             $this->options['query']['InstanceList.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $jsonData
-     *
-     * @return $this
-     */
-    public function withJsonData($jsonData)
-    {
-        $this->data['JsonData'] = $jsonData;
-        $this->options['query']['JsonData'] = $jsonData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskType
-     *
-     * @return $this
-     */
-    public function withTaskType($taskType)
-    {
-        $this->data['TaskType'] = $taskType;
-        $this->options['query']['TaskType'] = $taskType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskScope
-     *
-     * @return $this
-     */
-    public function withTaskScope($taskScope)
-    {
-        $this->data['TaskScope'] = $taskScope;
-        $this->options['query']['TaskScope'] = $taskScope;
-
-        return $this;
-    }
-
-    /**
-     * @param string $alertConfig
-     *
-     * @return $this
-     */
-    public function withAlertConfig($alertConfig)
-    {
-        $this->data['AlertConfig'] = $alertConfig;
-        $this->options['query']['AlertConfig'] = $alertConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $taskName
-     *
-     * @return $this
-     */
-    public function withTaskName($taskName)
-    {
-        $this->data['TaskName'] = $taskName;
-        $this->options['query']['TaskName'] = $taskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function withGroupName($groupName)
-    {
-        $this->data['GroupName'] = $groupName;
-        $this->options['query']['GroupName'] = $groupName;
 
         return $this;
     }

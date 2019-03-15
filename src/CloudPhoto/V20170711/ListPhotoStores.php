@@ -5,8 +5,6 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListPhotoStores
- *
  */
 class ListPhotoStores extends Rpc
 {

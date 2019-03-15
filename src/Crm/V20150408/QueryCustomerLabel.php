@@ -5,9 +5,8 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryCustomerLabel
- *
  * @method string getLabelSeries()
+ * @method $this withLabelSeries($value)
  */
 class QueryCustomerLabel extends Rpc
 {
@@ -18,17 +17,4 @@ class QueryCustomerLabel extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'crm';
-
-    /**
-     * @param string $labelSeries
-     *
-     * @return $this
-     */
-    public function withLabelSeries($labelSeries)
-    {
-        $this->data['LabelSeries'] = $labelSeries;
-        $this->options['query']['LabelSeries'] = $labelSeries;
-
-        return $this;
-    }
 }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Iot based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Iot\V20180120
  *
  * @method ActiveDevice activeDevice(array $options = [])
  * @method AddEventRecordPlanDevice addEventRecordPlanDevice(array $options = [])

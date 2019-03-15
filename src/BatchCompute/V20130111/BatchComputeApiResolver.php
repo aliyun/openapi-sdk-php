@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the BatchCompute based on the method name as the Api name.
  *
- * @package   AlibabaCloud\BatchCompute\V20130111
  *
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])

@@ -5,17 +5,23 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ExportImage
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getOSSBucket()
+ * @method $this withOSSBucket($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOSSPrefix()
+ * @method $this withOSSPrefix($value)
  * @method string getRoleName()
+ * @method $this withRoleName($value)
  * @method string getEnableCompress()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getImageFormat()
+ * @method $this withImageFormat($value)
  */
 class ExportImage extends Rpc
 {
@@ -28,84 +34,6 @@ class ExportImage extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $oSSBucket
-     *
-     * @return $this
-     */
-    public function withOSSBucket($oSSBucket)
-    {
-        $this->data['OSSBucket'] = $oSSBucket;
-        $this->options['query']['OSSBucket'] = $oSSBucket;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $oSSPrefix
-     *
-     * @return $this
-     */
-    public function withOSSPrefix($oSSPrefix)
-    {
-        $this->data['OSSPrefix'] = $oSSPrefix;
-        $this->options['query']['OSSPrefix'] = $oSSPrefix;
-
-        return $this;
-    }
-
-    /**
-     * @param string $roleName
-     *
-     * @return $this
-     */
-    public function withRoleName($roleName)
-    {
-        $this->data['RoleName'] = $roleName;
-        $this->options['query']['RoleName'] = $roleName;
-
-        return $this;
-    }
-
-    /**
      * @param string $enableCompress
      *
      * @return $this
@@ -114,32 +42,6 @@ class ExportImage extends Rpc
     {
         $this->data['EnableCompress'] = $enableCompress;
         $this->options['query']['enableCompress'] = $enableCompress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageFormat
-     *
-     * @return $this
-     */
-    public function withImageFormat($imageFormat)
-    {
-        $this->data['ImageFormat'] = $imageFormat;
-        $this->options['query']['ImageFormat'] = $imageFormat;
 
         return $this;
     }

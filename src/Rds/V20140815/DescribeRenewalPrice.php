@@ -5,23 +5,36 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeRenewalPrice
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getQuantity()
+ * @method $this withQuantity($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getUsedTime()
+ * @method $this withUsedTime($value)
  * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
  * @method string getPromotionCode()
+ * @method $this withPromotionCode($value)
  * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getTimeType()
+ * @method $this withTimeType($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeRenewalPrice extends Rpc
 {
@@ -32,199 +45,4 @@ class DescribeRenewalPrice extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function withQuantity($quantity)
-    {
-        $this->data['Quantity'] = $quantity;
-        $this->options['query']['Quantity'] = $quantity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $commodityCode
-     *
-     * @return $this
-     */
-    public function withCommodityCode($commodityCode)
-    {
-        $this->data['CommodityCode'] = $commodityCode;
-        $this->options['query']['CommodityCode'] = $commodityCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $usedTime
-     *
-     * @return $this
-     */
-    public function withUsedTime($usedTime)
-    {
-        $this->data['UsedTime'] = $usedTime;
-        $this->options['query']['UsedTime'] = $usedTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceClass
-     *
-     * @return $this
-     */
-    public function withDBInstanceClass($dBInstanceClass)
-    {
-        $this->data['DBInstanceClass'] = $dBInstanceClass;
-        $this->options['query']['DBInstanceClass'] = $dBInstanceClass;
-
-        return $this;
-    }
-
-    /**
-     * @param string $promotionCode
-     *
-     * @return $this
-     */
-    public function withPromotionCode($promotionCode)
-    {
-        $this->data['PromotionCode'] = $promotionCode;
-        $this->options['query']['PromotionCode'] = $promotionCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dBInstanceId
-     *
-     * @return $this
-     */
-    public function withDBInstanceId($dBInstanceId)
-    {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $timeType
-     *
-     * @return $this
-     */
-    public function withTimeType($timeType)
-    {
-        $this->data['TimeType'] = $timeType;
-        $this->options['query']['TimeType'] = $timeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $businessInfo
-     *
-     * @return $this
-     */
-    public function withBusinessInfo($businessInfo)
-    {
-        $this->data['BusinessInfo'] = $businessInfo;
-        $this->options['query']['BusinessInfo'] = $businessInfo;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
-
-        return $this;
-    }
 }

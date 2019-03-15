@@ -5,16 +5,22 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateSign
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSignName()
+ * @method $this withSignName($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getFileNames()
+ * @method $this withFileNames($value)
  * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getFromType()
+ * @method $this withFromType($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateSign extends Rpc
 {
@@ -23,108 +29,4 @@ class CreateSign extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $signName
-     *
-     * @return $this
-     */
-    public function withSignName($signName)
-    {
-        $this->data['SignName'] = $signName;
-        $this->options['query']['SignName'] = $signName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fileNames
-     *
-     * @return $this
-     */
-    public function withFileNames($fileNames)
-    {
-        $this->data['FileNames'] = $fileNames;
-        $this->options['query']['FileNames'] = $fileNames;
-
-        return $this;
-    }
-
-    /**
-     * @param string $remark
-     *
-     * @return $this
-     */
-    public function withRemark($remark)
-    {
-        $this->data['Remark'] = $remark;
-        $this->options['query']['Remark'] = $remark;
-
-        return $this;
-    }
-
-    /**
-     * @param string $signType
-     *
-     * @return $this
-     */
-    public function withSignType($signType)
-    {
-        $this->data['SignType'] = $signType;
-        $this->options['query']['SignType'] = $signType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromType
-     *
-     * @return $this
-     */
-    public function withFromType($fromType)
-    {
-        $this->data['FromType'] = $fromType;
-        $this->options['query']['FromType'] = $fromType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

@@ -5,9 +5,8 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetPhotoStore
- *
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  */
 class GetPhotoStore extends Rpc
 {
@@ -20,17 +19,4 @@ class GetPhotoStore extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cloudphoto';
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
 }

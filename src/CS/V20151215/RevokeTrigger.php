@@ -5,10 +5,10 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api RevokeTrigger
- *
  * @method string getActionType()
+ * @method $this withActionType($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class RevokeTrigger extends Roa
 {
@@ -21,30 +21,4 @@ class RevokeTrigger extends Roa
     public $method = 'DELETE';
 
     public $serviceCode = 'cs';
-
-    /**
-     * @param string $actionType
-     *
-     * @return $this
-     */
-    public function withActionType($actionType)
-    {
-        $this->data['ActionType'] = $actionType;
-        $this->pathParameters['ActionType'] = $actionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
-
-        return $this;
-    }
 }

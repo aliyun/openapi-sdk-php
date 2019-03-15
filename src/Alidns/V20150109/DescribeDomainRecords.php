@@ -5,21 +5,32 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeDomainRecords
- *
  * @method string getValueKeyWord()
+ * @method $this withValueKeyWord($value)
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getSearchMode()
+ * @method $this withSearchMode($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getKeyWord()
+ * @method $this withKeyWord($value)
  * @method string getTypeKeyWord()
+ * @method $this withTypeKeyWord($value)
  * @method string getRRKeyWord()
+ * @method $this withRRKeyWord($value)
  * @method string getDirection()
+ * @method $this withDirection($value)
  */
 class DescribeDomainRecords extends Rpc
 {
@@ -30,173 +41,4 @@ class DescribeDomainRecords extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'alidns';
-
-    /**
-     * @param string $valueKeyWord
-     *
-     * @return $this
-     */
-    public function withValueKeyWord($valueKeyWord)
-    {
-        $this->data['ValueKeyWord'] = $valueKeyWord;
-        $this->options['query']['ValueKeyWord'] = $valueKeyWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderBy
-     *
-     * @return $this
-     */
-    public function withOrderBy($orderBy)
-    {
-        $this->data['OrderBy'] = $orderBy;
-        $this->options['query']['OrderBy'] = $orderBy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userClientIp
-     *
-     * @return $this
-     */
-    public function withUserClientIp($userClientIp)
-    {
-        $this->data['UserClientIp'] = $userClientIp;
-        $this->options['query']['UserClientIp'] = $userClientIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $searchMode
-     *
-     * @return $this
-     */
-    public function withSearchMode($searchMode)
-    {
-        $this->data['SearchMode'] = $searchMode;
-        $this->options['query']['SearchMode'] = $searchMode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyWord
-     *
-     * @return $this
-     */
-    public function withKeyWord($keyWord)
-    {
-        $this->data['KeyWord'] = $keyWord;
-        $this->options['query']['KeyWord'] = $keyWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $typeKeyWord
-     *
-     * @return $this
-     */
-    public function withTypeKeyWord($typeKeyWord)
-    {
-        $this->data['TypeKeyWord'] = $typeKeyWord;
-        $this->options['query']['TypeKeyWord'] = $typeKeyWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $rRKeyWord
-     *
-     * @return $this
-     */
-    public function withRRKeyWord($rRKeyWord)
-    {
-        $this->data['RRKeyWord'] = $rRKeyWord;
-        $this->options['query']['RRKeyWord'] = $rRKeyWord;
-
-        return $this;
-    }
-
-    /**
-     * @param string $direction
-     *
-     * @return $this
-     */
-    public function withDirection($direction)
-    {
-        $this->data['Direction'] = $direction;
-        $this->options['query']['Direction'] = $direction;
-
-        return $this;
-    }
 }

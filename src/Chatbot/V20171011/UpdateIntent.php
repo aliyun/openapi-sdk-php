@@ -5,10 +5,10 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateIntent
- *
  * @method string getIntentDefinition()
+ * @method $this withIntentDefinition($value)
  * @method string getIntentId()
+ * @method $this withIntentId($value)
  */
 class UpdateIntent extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdateIntent extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $intentDefinition
-     *
-     * @return $this
-     */
-    public function withIntentDefinition($intentDefinition)
-    {
-        $this->data['IntentDefinition'] = $intentDefinition;
-        $this->options['query']['IntentDefinition'] = $intentDefinition;
-
-        return $this;
-    }
-
-    /**
-     * @param string $intentId
-     *
-     * @return $this
-     */
-    public function withIntentId($intentId)
-    {
-        $this->data['IntentId'] = $intentId;
-        $this->options['query']['IntentId'] = $intentId;
-
-        return $this;
-    }
 }

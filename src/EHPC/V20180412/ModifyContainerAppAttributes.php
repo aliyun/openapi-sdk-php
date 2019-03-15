@@ -5,10 +5,10 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyContainerAppAttributes
- *
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getContainerId()
+ * @method $this withContainerId($value)
  */
 class ModifyContainerAppAttributes extends Rpc
 {
@@ -17,30 +17,4 @@ class ModifyContainerAppAttributes extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $containerId
-     *
-     * @return $this
-     */
-    public function withContainerId($containerId)
-    {
-        $this->data['ContainerId'] = $containerId;
-        $this->options['query']['ContainerId'] = $containerId;
-
-        return $this;
-    }
 }

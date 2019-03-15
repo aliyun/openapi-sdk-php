@@ -5,12 +5,14 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CopyCasterSceneConfig
- *
  * @method string getFromSceneId()
+ * @method $this withFromSceneId($value)
  * @method string getCasterId()
+ * @method $this withCasterId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getToSceneId()
+ * @method $this withToSceneId($value)
  */
 class CopyCasterSceneConfig extends Rpc
 {
@@ -21,56 +23,4 @@ class CopyCasterSceneConfig extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $fromSceneId
-     *
-     * @return $this
-     */
-    public function withFromSceneId($fromSceneId)
-    {
-        $this->data['FromSceneId'] = $fromSceneId;
-        $this->options['query']['FromSceneId'] = $fromSceneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $casterId
-     *
-     * @return $this
-     */
-    public function withCasterId($casterId)
-    {
-        $this->data['CasterId'] = $casterId;
-        $this->options['query']['CasterId'] = $casterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $toSceneId
-     *
-     * @return $this
-     */
-    public function withToSceneId($toSceneId)
-    {
-        $this->data['ToSceneId'] = $toSceneId;
-        $this->options['query']['ToSceneId'] = $toSceneId;
-
-        return $this;
-    }
 }

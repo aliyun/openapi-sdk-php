@@ -5,10 +5,10 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RenameBlockchain
- *
  * @method string getBizid()
+ * @method $this withBizid($value)
  * @method string getNewName()
+ * @method $this withNewName($value)
  */
 class RenameBlockchain extends Rpc
 {
@@ -17,30 +17,4 @@ class RenameBlockchain extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'PUT';
-
-    /**
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function withBizid($bizid)
-    {
-        $this->data['Bizid'] = $bizid;
-        $this->options['query']['Bizid'] = $bizid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $newName
-     *
-     * @return $this
-     */
-    public function withNewName($newName)
-    {
-        $this->data['NewName'] = $newName;
-        $this->options['query']['NewName'] = $newName;
-
-        return $this;
-    }
 }

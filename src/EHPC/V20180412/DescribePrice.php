@@ -5,12 +5,13 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribePrice
- *
  * @method string getPriceUnit()
+ * @method $this withPriceUnit($value)
  * @method array getCommodities()
  * @method string getChargeType()
+ * @method $this withChargeType($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribePrice extends Rpc
 {
@@ -19,19 +20,6 @@ class DescribePrice extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $priceUnit
-     *
-     * @return $this
-     */
-    public function withPriceUnit($priceUnit)
-    {
-        $this->data['PriceUnit'] = $priceUnit;
-        $this->options['query']['PriceUnit'] = $priceUnit;
-
-        return $this;
-    }
 
     /**
      * @param array $commodities
@@ -50,32 +38,6 @@ class DescribePrice extends Rpc
             $this->options['query']['Commodities.' . ($i + 1) . '.InstanceType'] = $commodities[$i]['InstanceType'];
             $this->options['query']['Commodities.' . ($i + 1) . '.NetworkType'] = $commodities[$i]['NetworkType'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $chargeType
-     *
-     * @return $this
-     */
-    public function withChargeType($chargeType)
-    {
-        $this->data['ChargeType'] = $chargeType;
-        $this->options['query']['ChargeType'] = $chargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
 
         return $this;
     }

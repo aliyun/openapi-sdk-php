@@ -5,13 +5,14 @@ namespace AlibabaCloud\UbsmsInner\V20150623;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBidUserBusinessStatus
- *
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getServiceCode()
+ * @method $this withServiceCode($value)
  * @method array getStatusKey()
  * @method string getCallerBid()
  * @method string getBid()
+ * @method $this withBid($value)
  */
 class DescribeBidUserBusinessStatus extends Rpc
 {
@@ -20,32 +21,6 @@ class DescribeBidUserBusinessStatus extends Rpc
     public $version = '2015-06-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serviceCode
-     *
-     * @return $this
-     */
-    public function withServiceCode($serviceCode)
-    {
-        $this->data['ServiceCode'] = $serviceCode;
-        $this->options['query']['ServiceCode'] = $serviceCode;
-
-        return $this;
-    }
 
     /**
      * @param array $statusKey
@@ -71,19 +46,6 @@ class DescribeBidUserBusinessStatus extends Rpc
     {
         $this->data['CallerBid'] = $callerBid;
         $this->options['query']['callerBid'] = $callerBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
 
         return $this;
     }

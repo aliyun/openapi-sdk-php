@@ -5,8 +5,6 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeUserQuota
- *
  */
 class DescribeUserQuota extends Roa
 {

@@ -5,14 +5,18 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateMailAddress
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getReplyAddress()
+ * @method $this withReplyAddress($value)
  * @method string getSendtype()
+ * @method $this withSendtype($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateMailAddress extends Rpc
 {
@@ -21,82 +25,4 @@ class CreateMailAddress extends Rpc
     public $version = '2015-11-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accountName
-     *
-     * @return $this
-     */
-    public function withAccountName($accountName)
-    {
-        $this->data['AccountName'] = $accountName;
-        $this->options['query']['AccountName'] = $accountName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $replyAddress
-     *
-     * @return $this
-     */
-    public function withReplyAddress($replyAddress)
-    {
-        $this->data['ReplyAddress'] = $replyAddress;
-        $this->options['query']['ReplyAddress'] = $replyAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sendtype
-     *
-     * @return $this
-     */
-    public function withSendtype($sendtype)
-    {
-        $this->data['Sendtype'] = $sendtype;
-        $this->options['query']['Sendtype'] = $sendtype;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

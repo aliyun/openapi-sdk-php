@@ -5,12 +5,14 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InviteUser
- *
  * @method string getBizid()
+ * @method $this withBizid($value)
  * @method string getBid()
+ * @method $this withBid($value)
  * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getUserEmail()
+ * @method $this withUserEmail($value)
  */
 class InviteUser extends Rpc
 {
@@ -19,56 +21,4 @@ class InviteUser extends Rpc
     public $version = '2018-07-31';
 
     public $method = 'POST';
-
-    /**
-     * @param string $bizid
-     *
-     * @return $this
-     */
-    public function withBizid($bizid)
-    {
-        $this->data['Bizid'] = $bizid;
-        $this->options['query']['Bizid'] = $bizid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function withUserId($userId)
-    {
-        $this->data['UserId'] = $userId;
-        $this->options['query']['UserId'] = $userId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userEmail
-     *
-     * @return $this
-     */
-    public function withUserEmail($userEmail)
-    {
-        $this->data['UserEmail'] = $userEmail;
-        $this->options['query']['UserEmail'] = $userEmail;
-
-        return $this;
-    }
 }

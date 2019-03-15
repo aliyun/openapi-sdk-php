@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeWhiteListGroupStruct
- *
  * @method string getNeedMachineNum()
+ * @method $this withNeedMachineNum($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeWhiteListGroupStruct extends Rpc
 {
@@ -20,43 +21,4 @@ class DescribeWhiteListGroupStruct extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $needMachineNum
-     *
-     * @return $this
-     */
-    public function withNeedMachineNum($needMachineNum)
-    {
-        $this->data['NeedMachineNum'] = $needMachineNum;
-        $this->options['query']['NeedMachineNum'] = $needMachineNum;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
 }

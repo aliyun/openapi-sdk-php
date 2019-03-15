@@ -5,34 +5,49 @@ namespace AlibabaCloud\Eci\V20180808;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateContainerGroup
- *
  * @method array getContainer()
  * @method string getGpuSpec()
+ * @method $this withGpuSpec($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getMemory()
+ * @method $this withMemory($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
  * @method string getDnsPolicy()
+ * @method $this withDnsPolicy($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getEipInstanceId()
+ * @method $this withEipInstanceId($value)
  * @method array getArn()
  * @method array getDnsConfigNameServer()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getRestartPolicy()
+ * @method $this withRestartPolicy($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method array getDnsConfigOption()
  * @method string getCpu()
+ * @method $this withCpu($value)
  * @method array getDnsConfigSearch()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method array getVolume()
  * @method string getContainerGroupName()
+ * @method $this withContainerGroupName($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getGpuAmount()
+ * @method $this withGpuAmount($value)
  */
 class CreateContainerGroup extends Rpc
 {
@@ -113,97 +128,6 @@ class CreateContainerGroup extends Rpc
     }
 
     /**
-     * @param string $gpuSpec
-     *
-     * @return $this
-     */
-    public function withGpuSpec($gpuSpec)
-    {
-        $this->data['GpuSpec'] = $gpuSpec;
-        $this->options['query']['GpuSpec'] = $gpuSpec;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $memory
-     *
-     * @return $this
-     */
-    public function withMemory($memory)
-    {
-        $this->data['Memory'] = $memory;
-        $this->options['query']['Memory'] = $memory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function withSecurityGroupId($securityGroupId)
-    {
-        $this->data['SecurityGroupId'] = $securityGroupId;
-        $this->options['query']['SecurityGroupId'] = $securityGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dnsPolicy
-     *
-     * @return $this
-     */
-    public function withDnsPolicy($dnsPolicy)
-    {
-        $this->data['DnsPolicy'] = $dnsPolicy;
-        $this->options['query']['DnsPolicy'] = $dnsPolicy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param array $initContainer
      *
      * @return $this
@@ -277,19 +201,6 @@ class CreateContainerGroup extends Rpc
     }
 
     /**
-     * @param string $eipInstanceId
-     *
-     * @return $this
-     */
-    public function withEipInstanceId($eipInstanceId)
-    {
-        $this->data['EipInstanceId'] = $eipInstanceId;
-        $this->options['query']['EipInstanceId'] = $eipInstanceId;
-
-        return $this;
-    }
-
-    /**
      * @param array $arn
      *
      * @return $this
@@ -322,45 +233,6 @@ class CreateContainerGroup extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $restartPolicy
-     *
-     * @return $this
-     */
-    public function withRestartPolicy($restartPolicy)
-    {
-        $this->data['RestartPolicy'] = $restartPolicy;
-        $this->options['query']['RestartPolicy'] = $restartPolicy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param array $dnsConfigOption
      *
      * @return $this
@@ -377,19 +249,6 @@ class CreateContainerGroup extends Rpc
     }
 
     /**
-     * @param string $cpu
-     *
-     * @return $this
-     */
-    public function withCpu($cpu)
-    {
-        $this->data['Cpu'] = $cpu;
-        $this->options['query']['Cpu'] = $cpu;
-
-        return $this;
-    }
-
-    /**
      * @param array $dnsConfigSearch
      *
      * @return $this
@@ -400,32 +259,6 @@ class CreateContainerGroup extends Rpc
         foreach ($dnsConfigSearch as $i => $iValue) {
             $this->options['query']['DnsConfig.Search.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
 
         return $this;
     }
@@ -448,45 +281,6 @@ class CreateContainerGroup extends Rpc
             }
             $this->options['query']['Volume.' . ($i + 1) . '.Type'] = $volume[$i]['Type'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $containerGroupName
-     *
-     * @return $this
-     */
-    public function withContainerGroupName($containerGroupName)
-    {
-        $this->data['ContainerGroupName'] = $containerGroupName;
-        $this->options['query']['ContainerGroupName'] = $containerGroupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $gpuAmount
-     *
-     * @return $this
-     */
-    public function withGpuAmount($gpuAmount)
-    {
-        $this->data['GpuAmount'] = $gpuAmount;
-        $this->options['query']['GpuAmount'] = $gpuAmount;
 
         return $this;
     }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\Push\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryAliases
- *
  * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method string getDeviceId()
+ * @method $this withDeviceId($value)
  */
 class QueryAliases extends Rpc
 {
@@ -17,30 +17,4 @@ class QueryAliases extends Rpc
     public $version = '2016-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function withAppKey($appKey)
-    {
-        $this->data['AppKey'] = $appKey;
-        $this->options['query']['AppKey'] = $appKey;
-
-        return $this;
-    }
-
-    /**
-     * @param string $deviceId
-     *
-     * @return $this
-     */
-    public function withDeviceId($deviceId)
-    {
-        $this->data['DeviceId'] = $deviceId;
-        $this->options['query']['DeviceId'] = $deviceId;
-
-        return $this;
-    }
 }

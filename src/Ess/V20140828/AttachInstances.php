@@ -5,14 +5,13 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Rpc;
 
 /**
- * Api AttachInstances
- *
  * @method string getInstanceId10()
  * @method string getLoadBalancerWeight6()
  * @method string getLoadBalancerWeight11()
  * @method string getLoadBalancerWeight7()
  * @method string getLoadBalancerWeight12()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getInstanceId12()
  * @method string getLoadBalancerWeight8()
  * @method string getInstanceId11()
@@ -23,6 +22,7 @@ use AlibabaCloud\Rpc;
  * @method string getLoadBalancerWeight3()
  * @method string getLoadBalancerWeight16()
  * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getLoadBalancerWeight4()
  * @method string getLoadBalancerWeight13()
  * @method string getLoadBalancerWeight5()
@@ -33,15 +33,18 @@ use AlibabaCloud\Rpc;
  * @method string getLoadBalancerWeight20()
  * @method string getInstanceId3()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInstanceId2()
  * @method string getInstanceId5()
  * @method string getInstanceId4()
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInstanceId7()
  * @method string getInstanceId6()
  * @method string getInstanceId9()
  * @method string getInstanceId8()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInstanceId18()
  * @method string getLoadBalancerWeight19()
  * @method string getInstanceId17()
@@ -124,19 +127,6 @@ class AttachInstances extends Rpc
     {
         $this->data['LoadBalancerWeight12'] = $loadBalancerWeight12;
         $this->options['query']['LoadBalancerWeight.12'] = $loadBalancerWeight12;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -259,19 +249,6 @@ class AttachInstances extends Rpc
     }
 
     /**
-     * @param string $scalingGroupId
-     *
-     * @return $this
-     */
-    public function withScalingGroupId($scalingGroupId)
-    {
-        $this->data['ScalingGroupId'] = $scalingGroupId;
-        $this->options['query']['ScalingGroupId'] = $scalingGroupId;
-
-        return $this;
-    }
-
-    /**
      * @param string $loadBalancerWeight4
      *
      * @return $this
@@ -389,19 +366,6 @@ class AttachInstances extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $instanceId2
      *
      * @return $this
@@ -436,19 +400,6 @@ class AttachInstances extends Rpc
     {
         $this->data['InstanceId4'] = $instanceId4;
         $this->options['query']['InstanceId.4'] = $instanceId4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
     }
@@ -501,19 +452,6 @@ class AttachInstances extends Rpc
     {
         $this->data['InstanceId8'] = $instanceId8;
         $this->options['query']['InstanceId.8'] = $instanceId8;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }

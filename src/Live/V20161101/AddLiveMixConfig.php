@@ -5,8 +5,6 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Request\RpcRequest;
 
 /**
- * Request of AddLiveMixConfig
- *
  * @method string getTemplate()
  * @method string getAppName()
  * @method string getSecurityToken()

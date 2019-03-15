@@ -5,9 +5,8 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeKnowledge
- *
  * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
  */
 class DescribeKnowledge extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeKnowledge extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $knowledgeId
-     *
-     * @return $this
-     */
-    public function withKnowledgeId($knowledgeId)
-    {
-        $this->data['KnowledgeId'] = $knowledgeId;
-        $this->options['query']['KnowledgeId'] = $knowledgeId;
-
-        return $this;
-    }
 }

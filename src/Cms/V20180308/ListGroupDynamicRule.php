@@ -5,9 +5,8 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListGroupDynamicRule
- *
  * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
 class ListGroupDynamicRule extends Rpc
 {
@@ -18,17 +17,4 @@ class ListGroupDynamicRule extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $groupId
-     *
-     * @return $this
-     */
-    public function withGroupId($groupId)
-    {
-        $this->data['GroupId'] = $groupId;
-        $this->options['query']['GroupId'] = $groupId;
-
-        return $this;
-    }
 }

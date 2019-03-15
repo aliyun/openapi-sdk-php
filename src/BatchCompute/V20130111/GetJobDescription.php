@@ -5,10 +5,9 @@ namespace AlibabaCloud\BatchCompute\V20130111;
 use AlibabaCloud\Roa;
 
 /**
- * Api GetJobDescription
- *
  * @method string getResourceOwnerId()
  * @method string getResourceName()
+ * @method $this withResourceName($value)
  */
 class GetJobDescription extends Roa
 {
@@ -27,19 +26,6 @@ class GetJobDescription extends Roa
     {
         $this->data['ResourceOwnerId'] = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceName
-     *
-     * @return $this
-     */
-    public function withResourceName($resourceName)
-    {
-        $this->data['ResourceName'] = $resourceName;
-        $this->pathParameters['ResourceName'] = $resourceName;
 
         return $this;
     }

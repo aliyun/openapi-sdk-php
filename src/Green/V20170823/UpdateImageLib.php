@@ -5,15 +5,20 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateImageLib
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getEnable()
+ * @method $this withEnable($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getBizTypes()
+ * @method $this withBizTypes($value)
  * @method string getId()
+ * @method $this withId($value)
  * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getScene()
+ * @method $this withScene($value)
  */
 class UpdateImageLib extends Rpc
 {
@@ -24,95 +29,4 @@ class UpdateImageLib extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $enable
-     *
-     * @return $this
-     */
-    public function withEnable($enable)
-    {
-        $this->data['Enable'] = $enable;
-        $this->options['query']['Enable'] = $enable;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizTypes
-     *
-     * @return $this
-     */
-    public function withBizTypes($bizTypes)
-    {
-        $this->data['BizTypes'] = $bizTypes;
-        $this->options['query']['BizTypes'] = $bizTypes;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $category
-     *
-     * @return $this
-     */
-    public function withCategory($category)
-    {
-        $this->data['Category'] = $category;
-        $this->options['query']['Category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function withScene($scene)
-    {
-        $this->data['Scene'] = $scene;
-        $this->options['query']['Scene'] = $scene;
-
-        return $this;
-    }
 }

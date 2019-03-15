@@ -5,10 +5,9 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Roa;
 
 /**
- * Api DescribeClusterNodes
- *
  * @method string getPageSize()
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getPageNumber()
  */
 class DescribeClusterNodes extends Roa
@@ -30,19 +29,6 @@ class DescribeClusterNodes extends Roa
     {
         $this->data['PageSize'] = $pageSize;
         $this->options['query']['pageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->pathParameters['ClusterId'] = $clusterId;
 
         return $this;
     }

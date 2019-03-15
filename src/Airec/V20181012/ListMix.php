@@ -5,9 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Roa;
 
 /**
- * Api ListMix
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListMix extends Roa
 {
@@ -18,17 +17,4 @@ class ListMix extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
 
     public $serviceCode = 'airec';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->pathParameters['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

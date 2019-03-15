@@ -5,12 +5,13 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api InnerDescribeNcExpression
- *
  * @method string getGrayBid()
+ * @method $this withGrayBid($value)
  * @method string getGrayAliUid()
+ * @method $this withGrayAliUid($value)
  * @method array getEcsInstanceId()
  * @method string getExpression()
+ * @method $this withExpression($value)
  * @method array getVSwitchId()
  */
 class InnerDescribeNcExpression extends Rpc
@@ -24,32 +25,6 @@ class InnerDescribeNcExpression extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $grayBid
-     *
-     * @return $this
-     */
-    public function withGrayBid($grayBid)
-    {
-        $this->data['GrayBid'] = $grayBid;
-        $this->options['query']['GrayBid'] = $grayBid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $grayAliUid
-     *
-     * @return $this
-     */
-    public function withGrayAliUid($grayAliUid)
-    {
-        $this->data['GrayAliUid'] = $grayAliUid;
-        $this->options['query']['GrayAliUid'] = $grayAliUid;
-
-        return $this;
-    }
-
-    /**
      * @param array $ecsInstanceId
      *
      * @return $this
@@ -60,19 +35,6 @@ class InnerDescribeNcExpression extends Rpc
         foreach ($ecsInstanceId as $i => $iValue) {
             $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $expression
-     *
-     * @return $this
-     */
-    public function withExpression($expression)
-    {
-        $this->data['Expression'] = $expression;
-        $this->options['query']['Expression'] = $expression;
 
         return $this;
     }

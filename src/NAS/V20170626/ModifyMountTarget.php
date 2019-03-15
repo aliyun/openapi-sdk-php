@@ -5,12 +5,14 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyMountTarget
- *
  * @method string getMountTargetDomain()
+ * @method $this withMountTargetDomain($value)
  * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
  * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
  * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class ModifyMountTarget extends Rpc
 {
@@ -21,56 +23,4 @@ class ModifyMountTarget extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'nas';
-
-    /**
-     * @param string $mountTargetDomain
-     *
-     * @return $this
-     */
-    public function withMountTargetDomain($mountTargetDomain)
-    {
-        $this->data['MountTargetDomain'] = $mountTargetDomain;
-        $this->options['query']['MountTargetDomain'] = $mountTargetDomain;
-
-        return $this;
-    }
-
-    /**
-     * @param string $accessGroupName
-     *
-     * @return $this
-     */
-    public function withAccessGroupName($accessGroupName)
-    {
-        $this->data['AccessGroupName'] = $accessGroupName;
-        $this->options['query']['AccessGroupName'] = $accessGroupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fileSystemId
-     *
-     * @return $this
-     */
-    public function withFileSystemId($fileSystemId)
-    {
-        $this->data['FileSystemId'] = $fileSystemId;
-        $this->options['query']['FileSystemId'] = $fileSystemId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $status
-     *
-     * @return $this
-     */
-    public function withStatus($status)
-    {
-        $this->data['Status'] = $status;
-        $this->options['query']['Status'] = $status;
-
-        return $this;
-    }
 }

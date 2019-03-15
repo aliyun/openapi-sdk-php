@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Linkedmall based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Linkedmall\V20180116
  *
  * @method AddSupplierNewItems addSupplierNewItems(array $options = [])
  * @method CancelOrder cancelOrder(array $options = [])

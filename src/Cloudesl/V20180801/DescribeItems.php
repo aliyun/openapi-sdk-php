@@ -5,17 +5,24 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeItems
- *
  * @method string getItemId()
+ * @method $this withItemId($value)
  * @method string getBePromotion()
+ * @method $this withBePromotion($value)
  * @method string getShelfCode()
+ * @method $this withShelfCode($value)
  * @method string getItemTitle()
+ * @method $this withItemTitle($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStoreId()
+ * @method $this withStoreId($value)
  * @method string getSkuId()
+ * @method $this withSkuId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getItemBarCode()
+ * @method $this withItemBarCode($value)
  */
 class DescribeItems extends Rpc
 {
@@ -24,121 +31,4 @@ class DescribeItems extends Rpc
     public $version = '2018-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $itemId
-     *
-     * @return $this
-     */
-    public function withItemId($itemId)
-    {
-        $this->data['ItemId'] = $itemId;
-        $this->options['query']['ItemId'] = $itemId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bePromotion
-     *
-     * @return $this
-     */
-    public function withBePromotion($bePromotion)
-    {
-        $this->data['BePromotion'] = $bePromotion;
-        $this->options['query']['BePromotion'] = $bePromotion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $shelfCode
-     *
-     * @return $this
-     */
-    public function withShelfCode($shelfCode)
-    {
-        $this->data['ShelfCode'] = $shelfCode;
-        $this->options['query']['ShelfCode'] = $shelfCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $itemTitle
-     *
-     * @return $this
-     */
-    public function withItemTitle($itemTitle)
-    {
-        $this->data['ItemTitle'] = $itemTitle;
-        $this->options['query']['ItemTitle'] = $itemTitle;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function withStoreId($storeId)
-    {
-        $this->data['StoreId'] = $storeId;
-        $this->options['query']['StoreId'] = $storeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $skuId
-     *
-     * @return $this
-     */
-    public function withSkuId($skuId)
-    {
-        $this->data['SkuId'] = $skuId;
-        $this->options['query']['SkuId'] = $skuId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $itemBarCode
-     *
-     * @return $this
-     */
-    public function withItemBarCode($itemBarCode)
-    {
-        $this->data['ItemBarCode'] = $itemBarCode;
-        $this->options['query']['ItemBarCode'] = $itemBarCode;
-
-        return $this;
-    }
 }

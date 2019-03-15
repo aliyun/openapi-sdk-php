@@ -5,11 +5,10 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UntagResources
- *
  * @method string getResourceId47()
  * @method string getResourceId48()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceId49()
  * @method string getResourceId40()
  * @method string getResourceId41()
@@ -40,12 +39,14 @@ use AlibabaCloud\Rpc;
  * @method string getTagKey21()
  * @method string getResourceId36()
  * @method string getAll()
+ * @method $this withAll($value)
  * @method string getResourceId37()
  * @method string getResourceId38()
  * @method string getResourceId39()
  * @method string getResourceId30()
  * @method string getResourceId31()
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceId32()
  * @method string getResourceId33()
  * @method string getResourceId34()
@@ -68,11 +69,13 @@ use AlibabaCloud\Rpc;
  * @method string getTagKey18()
  * @method string getResourceId18()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getResourceId19()
  * @method string getResourceId50()
  * @method string getResourceId51()
  * @method string getResourceId10()
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getResourceId11()
  * @method string getResourceId12()
  * @method string getResourceId13()
@@ -117,19 +120,6 @@ class UntagResources extends Rpc
     {
         $this->data['ResourceId48'] = $resourceId48;
         $this->options['query']['ResourceId.48'] = $resourceId48;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -512,19 +502,6 @@ class UntagResources extends Rpc
     }
 
     /**
-     * @param string $all
-     *
-     * @return $this
-     */
-    public function withAll($all)
-    {
-        $this->data['All'] = $all;
-        $this->options['query']['All'] = $all;
-
-        return $this;
-    }
-
-    /**
      * @param string $resourceId37
      *
      * @return $this
@@ -585,19 +562,6 @@ class UntagResources extends Rpc
     {
         $this->data['ResourceId31'] = $resourceId31;
         $this->options['query']['ResourceId.31'] = $resourceId31;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
@@ -876,19 +840,6 @@ class UntagResources extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $resourceId19
      *
      * @return $this
@@ -936,19 +887,6 @@ class UntagResources extends Rpc
     {
         $this->data['ResourceId10'] = $resourceId10;
         $this->options['query']['ResourceId.10'] = $resourceId10;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }

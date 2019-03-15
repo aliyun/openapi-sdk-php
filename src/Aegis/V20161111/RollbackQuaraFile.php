@@ -5,13 +5,16 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api RollbackQuaraFile
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getEventType()
+ * @method $this withEventType($value)
  * @method string getTag()
+ * @method $this withTag($value)
  * @method string getUuid()
+ * @method $this withUuid($value)
  * @method string getEventName()
+ * @method $this withEventName($value)
  */
 class RollbackQuaraFile extends Rpc
 {
@@ -22,69 +25,4 @@ class RollbackQuaraFile extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventType
-     *
-     * @return $this
-     */
-    public function withEventType($eventType)
-    {
-        $this->data['EventType'] = $eventType;
-        $this->options['query']['EventType'] = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tag
-     *
-     * @return $this
-     */
-    public function withTag($tag)
-    {
-        $this->data['Tag'] = $tag;
-        $this->options['query']['Tag'] = $tag;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uuid
-     *
-     * @return $this
-     */
-    public function withUuid($uuid)
-    {
-        $this->data['Uuid'] = $uuid;
-        $this->options['query']['Uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $eventName
-     *
-     * @return $this
-     */
-    public function withEventName($eventName)
-    {
-        $this->data['EventName'] = $eventName;
-        $this->options['query']['EventName'] = $eventName;
-
-        return $this;
-    }
 }

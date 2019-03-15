@@ -5,10 +5,10 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UpdateCoreWord
- *
  * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
  * @method string getCoreWordCode()
+ * @method $this withCoreWordCode($value)
  */
 class UpdateCoreWord extends Rpc
 {
@@ -19,30 +19,4 @@ class UpdateCoreWord extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function withCoreWordName($coreWordName)
-    {
-        $this->data['CoreWordName'] = $coreWordName;
-        $this->options['query']['CoreWordName'] = $coreWordName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $coreWordCode
-     *
-     * @return $this
-     */
-    public function withCoreWordCode($coreWordCode)
-    {
-        $this->data['CoreWordCode'] = $coreWordCode;
-        $this->options['query']['CoreWordCode'] = $coreWordCode;
-
-        return $this;
-    }
 }

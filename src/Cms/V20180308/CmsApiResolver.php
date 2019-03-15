@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Cms based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Cms\V20180308
  *
  * @method AccessKeyGet accessKeyGet(array $options = [])
  * @method AddMyGroupInstances addMyGroupInstances(array $options = [])

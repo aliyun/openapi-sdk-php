@@ -5,11 +5,12 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CallOnlinePrivacyNumber
- *
  * @method string getTelA()
+ * @method $this withTelA($value)
  * @method string getTelB()
+ * @method $this withTelB($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class CallOnlinePrivacyNumber extends Rpc
 {
@@ -20,43 +21,4 @@ class CallOnlinePrivacyNumber extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $telA
-     *
-     * @return $this
-     */
-    public function withTelA($telA)
-    {
-        $this->data['TelA'] = $telA;
-        $this->options['query']['TelA'] = $telA;
-
-        return $this;
-    }
-
-    /**
-     * @param string $telB
-     *
-     * @return $this
-     */
-    public function withTelB($telB)
-    {
-        $this->data['TelB'] = $telB;
-        $this->options['query']['TelB'] = $telB;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
 }

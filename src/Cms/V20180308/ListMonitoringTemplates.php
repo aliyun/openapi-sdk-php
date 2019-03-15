@@ -5,15 +5,20 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListMonitoringTemplates
- *
  * @method string getTotal()
+ * @method $this withTotal($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getId()
+ * @method $this withId($value)
  * @method string getHistory()
+ * @method $this withHistory($value)
  * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListMonitoringTemplates extends Rpc
 {
@@ -24,95 +29,4 @@ class ListMonitoringTemplates extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $total
-     *
-     * @return $this
-     */
-    public function withTotal($total)
-    {
-        $this->data['Total'] = $total;
-        $this->options['query']['Total'] = $total;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $id
-     *
-     * @return $this
-     */
-    public function withId($id)
-    {
-        $this->data['Id'] = $id;
-        $this->options['query']['Id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * @param string $history
-     *
-     * @return $this
-     */
-    public function withHistory($history)
-    {
-        $this->data['History'] = $history;
-        $this->options['query']['History'] = $history;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function withKeyword($keyword)
-    {
-        $this->data['Keyword'] = $keyword;
-        $this->options['query']['Keyword'] = $keyword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

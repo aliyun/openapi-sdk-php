@@ -5,19 +5,24 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DetailCenterResourceAtOrigin
- *
  * @method string getCenterResourceId()
+ * @method $this withCenterResourceId($value)
  * @method string getTag4Value()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTag2Key()
  * @method string getTag5Key()
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getTag3Key()
  * @method string getFromRegionId()
+ * @method $this withFromRegionId($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getTag5Value()
  * @method string getTag1Key()
  * @method string getTag1Value()
@@ -36,19 +41,6 @@ class DetailCenterResourceAtOrigin extends Rpc
     public $serviceCode = 'ecs';
 
     /**
-     * @param string $centerResourceId
-     *
-     * @return $this
-     */
-    public function withCenterResourceId($centerResourceId)
-    {
-        $this->data['CenterResourceId'] = $centerResourceId;
-        $this->options['query']['CenterResourceId'] = $centerResourceId;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag4Value
      *
      * @return $this
@@ -57,19 +49,6 @@ class DetailCenterResourceAtOrigin extends Rpc
     {
         $this->data['Tag4Value'] = $tag4Value;
         $this->options['query']['Tag.4.Value'] = $tag4Value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
     }
@@ -101,32 +80,6 @@ class DetailCenterResourceAtOrigin extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $tag3Key
      *
      * @return $this
@@ -135,45 +88,6 @@ class DetailCenterResourceAtOrigin extends Rpc
     {
         $this->data['Tag3Key'] = $tag3Key;
         $this->options['query']['Tag.3.Key'] = $tag3Key;
-
-        return $this;
-    }
-
-    /**
-     * @param string $fromRegionId
-     *
-     * @return $this
-     */
-    public function withFromRegionId($fromRegionId)
-    {
-        $this->data['FromRegionId'] = $fromRegionId;
-        $this->options['query']['FromRegionId'] = $fromRegionId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;
     }

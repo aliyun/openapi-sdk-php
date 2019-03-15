@@ -5,16 +5,22 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ForbidLiveStream
- *
  * @method string getResumeTime()
+ * @method $this withResumeTime($value)
  * @method string getAppName()
+ * @method $this withAppName($value)
  * @method string getLiveStreamType()
+ * @method $this withLiveStreamType($value)
  * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOneshot()
+ * @method $this withOneshot($value)
  * @method string getStreamName()
+ * @method $this withStreamName($value)
  * @method string getControlStreamAction()
+ * @method $this withControlStreamAction($value)
  */
 class ForbidLiveStream extends Rpc
 {
@@ -25,108 +31,4 @@ class ForbidLiveStream extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'live';
-
-    /**
-     * @param string $resumeTime
-     *
-     * @return $this
-     */
-    public function withResumeTime($resumeTime)
-    {
-        $this->data['ResumeTime'] = $resumeTime;
-        $this->options['query']['ResumeTime'] = $resumeTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appName
-     *
-     * @return $this
-     */
-    public function withAppName($appName)
-    {
-        $this->data['AppName'] = $appName;
-        $this->options['query']['AppName'] = $appName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $liveStreamType
-     *
-     * @return $this
-     */
-    public function withLiveStreamType($liveStreamType)
-    {
-        $this->data['LiveStreamType'] = $liveStreamType;
-        $this->options['query']['LiveStreamType'] = $liveStreamType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function withDomainName($domainName)
-    {
-        $this->data['DomainName'] = $domainName;
-        $this->options['query']['DomainName'] = $domainName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $oneshot
-     *
-     * @return $this
-     */
-    public function withOneshot($oneshot)
-    {
-        $this->data['Oneshot'] = $oneshot;
-        $this->options['query']['Oneshot'] = $oneshot;
-
-        return $this;
-    }
-
-    /**
-     * @param string $streamName
-     *
-     * @return $this
-     */
-    public function withStreamName($streamName)
-    {
-        $this->data['StreamName'] = $streamName;
-        $this->options['query']['StreamName'] = $streamName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $controlStreamAction
-     *
-     * @return $this
-     */
-    public function withControlStreamAction($controlStreamAction)
-    {
-        $this->data['ControlStreamAction'] = $controlStreamAction;
-        $this->options['query']['ControlStreamAction'] = $controlStreamAction;
-
-        return $this;
-    }
 }

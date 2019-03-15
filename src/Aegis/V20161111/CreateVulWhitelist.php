@@ -5,11 +5,12 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateVulWhitelist
- *
  * @method string getReason()
+ * @method $this withReason($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getWhitelist()
+ * @method $this withWhitelist($value)
  */
 class CreateVulWhitelist extends Rpc
 {
@@ -20,43 +21,4 @@ class CreateVulWhitelist extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $reason
-     *
-     * @return $this
-     */
-    public function withReason($reason)
-    {
-        $this->data['Reason'] = $reason;
-        $this->options['query']['Reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $whitelist
-     *
-     * @return $this
-     */
-    public function withWhitelist($whitelist)
-    {
-        $this->data['Whitelist'] = $whitelist;
-        $this->options['query']['Whitelist'] = $whitelist;
-
-        return $this;
-    }
 }

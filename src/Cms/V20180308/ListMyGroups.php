@@ -5,16 +5,22 @@ namespace AlibabaCloud\Cms\V20180308;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListMyGroups
- *
  * @method string getSelectContactGroups()
+ * @method $this withSelectContactGroups($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getType()
+ * @method $this withType($value)
  * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getBindUrls()
+ * @method $this withBindUrls($value)
  */
 class ListMyGroups extends Rpc
 {
@@ -25,108 +31,4 @@ class ListMyGroups extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'cms';
-
-    /**
-     * @param string $selectContactGroups
-     *
-     * @return $this
-     */
-    public function withSelectContactGroups($selectContactGroups)
-    {
-        $this->data['SelectContactGroups'] = $selectContactGroups;
-        $this->options['query']['SelectContactGroups'] = $selectContactGroups;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyword
-     *
-     * @return $this
-     */
-    public function withKeyword($keyword)
-    {
-        $this->data['Keyword'] = $keyword;
-        $this->options['query']['Keyword'] = $keyword;
-
-        return $this;
-    }
-
-    /**
-     * @param string $type
-     *
-     * @return $this
-     */
-    public function withType($type)
-    {
-        $this->data['Type'] = $type;
-        $this->options['query']['Type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * @param string $groupName
-     *
-     * @return $this
-     */
-    public function withGroupName($groupName)
-    {
-        $this->data['GroupName'] = $groupName;
-        $this->options['query']['GroupName'] = $groupName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bindUrls
-     *
-     * @return $this
-     */
-    public function withBindUrls($bindUrls)
-    {
-        $this->data['BindUrls'] = $bindUrls;
-        $this->options['query']['BindUrls'] = $bindUrls;
-
-        return $this;
-    }
 }

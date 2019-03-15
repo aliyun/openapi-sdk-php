@@ -5,9 +5,8 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QuerySystemEntities
- *
  * @method string getEntityName()
+ * @method $this withEntityName($value)
  */
 class QuerySystemEntities extends Rpc
 {
@@ -18,17 +17,4 @@ class QuerySystemEntities extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $entityName
-     *
-     * @return $this
-     */
-    public function withEntityName($entityName)
-    {
-        $this->data['EntityName'] = $entityName;
-        $this->options['query']['EntityName'] = $entityName;
-
-        return $this;
-    }
 }

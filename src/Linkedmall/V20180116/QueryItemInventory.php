@@ -5,11 +5,12 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryItemInventory
- *
  * @method string getDivisionCode()
+ * @method $this withDivisionCode($value)
  * @method string getIp()
+ * @method $this withIp($value)
  * @method string getBizId()
+ * @method $this withBizId($value)
  * @method array getItemList()
  */
 class QueryItemInventory extends Rpc
@@ -21,45 +22,6 @@ class QueryItemInventory extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'linkedmall';
-
-    /**
-     * @param string $divisionCode
-     *
-     * @return $this
-     */
-    public function withDivisionCode($divisionCode)
-    {
-        $this->data['DivisionCode'] = $divisionCode;
-        $this->options['query']['DivisionCode'] = $divisionCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ip
-     *
-     * @return $this
-     */
-    public function withIp($ip)
-    {
-        $this->data['Ip'] = $ip;
-        $this->options['query']['Ip'] = $ip;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bizId
-     *
-     * @return $this
-     */
-    public function withBizId($bizId)
-    {
-        $this->data['BizId'] = $bizId;
-        $this->options['query']['BizId'] = $bizId;
-
-        return $this;
-    }
 
     /**
      * @param array $itemList

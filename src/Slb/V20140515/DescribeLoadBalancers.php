@@ -5,34 +5,56 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeLoadBalancers
- *
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getAddressIPVersion()
+ * @method $this withAddressIPVersion($value)
  * @method string getMasterZoneId()
+ * @method $this withMasterZoneId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getLoadBalancerName()
+ * @method $this withLoadBalancerName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getAddressType()
+ * @method $this withAddressType($value)
  * @method string getSlaveZoneId()
+ * @method $this withSlaveZoneId($value)
  * @method array getTag()
  * @method string getFuzzy()
+ * @method $this withFuzzy($value)
  * @method string getAddress()
+ * @method $this withAddress($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getServerId()
+ * @method $this withServerId($value)
  * @method string getLoadBalancerStatus()
+ * @method $this withLoadBalancerStatus($value)
  * @method string getTags()
+ * @method $this withTags($value)
  * @method string getServerIntranetAddress()
+ * @method $this withServerIntranetAddress($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
  * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
  * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getPayType()
+ * @method $this withPayType($value)
  */
 class DescribeLoadBalancers extends Rpc
 {
@@ -58,136 +80,6 @@ class DescribeLoadBalancers extends Rpc
     }
 
     /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function withNetworkType($networkType)
-    {
-        $this->data['NetworkType'] = $networkType;
-        $this->options['query']['NetworkType'] = $networkType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $addressIPVersion
-     *
-     * @return $this
-     */
-    public function withAddressIPVersion($addressIPVersion)
-    {
-        $this->data['AddressIPVersion'] = $addressIPVersion;
-        $this->options['query']['AddressIPVersion'] = $addressIPVersion;
-
-        return $this;
-    }
-
-    /**
-     * @param string $masterZoneId
-     *
-     * @return $this
-     */
-    public function withMasterZoneId($masterZoneId)
-    {
-        $this->data['MasterZoneId'] = $masterZoneId;
-        $this->options['query']['MasterZoneId'] = $masterZoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerName
-     *
-     * @return $this
-     */
-    public function withLoadBalancerName($loadBalancerName)
-    {
-        $this->data['LoadBalancerName'] = $loadBalancerName;
-        $this->options['query']['LoadBalancerName'] = $loadBalancerName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $addressType
-     *
-     * @return $this
-     */
-    public function withAddressType($addressType)
-    {
-        $this->data['AddressType'] = $addressType;
-        $this->options['query']['AddressType'] = $addressType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $slaveZoneId
-     *
-     * @return $this
-     */
-    public function withSlaveZoneId($slaveZoneId)
-    {
-        $this->data['SlaveZoneId'] = $slaveZoneId;
-        $this->options['query']['SlaveZoneId'] = $slaveZoneId;
-
-        return $this;
-    }
-
-    /**
      * @param array $tag
      *
      * @return $this
@@ -199,188 +91,6 @@ class DescribeLoadBalancers extends Rpc
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $fuzzy
-     *
-     * @return $this
-     */
-    public function withFuzzy($fuzzy)
-    {
-        $this->data['Fuzzy'] = $fuzzy;
-        $this->options['query']['Fuzzy'] = $fuzzy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $address
-     *
-     * @return $this
-     */
-    public function withAddress($address)
-    {
-        $this->data['Address'] = $address;
-        $this->options['query']['Address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serverId
-     *
-     * @return $this
-     */
-    public function withServerId($serverId)
-    {
-        $this->data['ServerId'] = $serverId;
-        $this->options['query']['ServerId'] = $serverId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerStatus
-     *
-     * @return $this
-     */
-    public function withLoadBalancerStatus($loadBalancerStatus)
-    {
-        $this->data['LoadBalancerStatus'] = $loadBalancerStatus;
-        $this->options['query']['LoadBalancerStatus'] = $loadBalancerStatus;
-
-        return $this;
-    }
-
-    /**
-     * @param string $tags
-     *
-     * @return $this
-     */
-    public function withTags($tags)
-    {
-        $this->data['Tags'] = $tags;
-        $this->options['query']['Tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * @param string $serverIntranetAddress
-     *
-     * @return $this
-     */
-    public function withServerIntranetAddress($serverIntranetAddress)
-    {
-        $this->data['ServerIntranetAddress'] = $serverIntranetAddress;
-        $this->options['query']['ServerIntranetAddress'] = $serverIntranetAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $loadBalancerId
-     *
-     * @return $this
-     */
-    public function withLoadBalancerId($loadBalancerId)
-    {
-        $this->data['LoadBalancerId'] = $loadBalancerId;
-        $this->options['query']['LoadBalancerId'] = $loadBalancerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function withInternetChargeType($internetChargeType)
-    {
-        $this->data['InternetChargeType'] = $internetChargeType;
-        $this->options['query']['InternetChargeType'] = $internetChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vpcId
-     *
-     * @return $this
-     */
-    public function withVpcId($vpcId)
-    {
-        $this->data['VpcId'] = $vpcId;
-        $this->options['query']['VpcId'] = $vpcId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $payType
-     *
-     * @return $this
-     */
-    public function withPayType($payType)
-    {
-        $this->data['PayType'] = $payType;
-        $this->options['query']['PayType'] = $payType;
 
         return $this;
     }

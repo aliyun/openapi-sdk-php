@@ -5,8 +5,6 @@ namespace AlibabaCloud\IDST\V20170922;
 use AlibabaCloud\Roa;
 
 /**
- * Api RoaSearch
- *
  * @method string getVid()
  * @method string getApp()
  * @method string getS()

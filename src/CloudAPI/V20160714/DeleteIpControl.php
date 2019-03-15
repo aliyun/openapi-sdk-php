@@ -5,10 +5,10 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteIpControl
- *
  * @method string getIpControlId()
+ * @method $this withIpControlId($value)
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DeleteIpControl extends Rpc
 {
@@ -19,30 +19,4 @@ class DeleteIpControl extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $ipControlId
-     *
-     * @return $this
-     */
-    public function withIpControlId($ipControlId)
-    {
-        $this->data['IpControlId'] = $ipControlId;
-        $this->options['query']['IpControlId'] = $ipControlId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
 }

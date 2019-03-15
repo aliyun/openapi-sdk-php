@@ -5,14 +5,18 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeImagePrice
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getAmount()
+ * @method $this withAmount($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getPriceUnit()
+ * @method $this withPriceUnit($value)
  * @method string getSkuCode()
+ * @method $this withSkuCode($value)
  * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeImagePrice extends Rpc
 {
@@ -21,82 +25,4 @@ class DescribeImagePrice extends Rpc
     public $version = '2018-04-12';
 
     public $serviceCode = 'ehs';
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $amount
-     *
-     * @return $this
-     */
-    public function withAmount($amount)
-    {
-        $this->data['Amount'] = $amount;
-        $this->options['query']['Amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $priceUnit
-     *
-     * @return $this
-     */
-    public function withPriceUnit($priceUnit)
-    {
-        $this->data['PriceUnit'] = $priceUnit;
-        $this->options['query']['PriceUnit'] = $priceUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $skuCode
-     *
-     * @return $this
-     */
-    public function withSkuCode($skuCode)
-    {
-        $this->data['SkuCode'] = $skuCode;
-        $this->options['query']['SkuCode'] = $skuCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $orderType
-     *
-     * @return $this
-     */
-    public function withOrderType($orderType)
-    {
-        $this->data['OrderType'] = $orderType;
-        $this->options['query']['OrderType'] = $orderType;
-
-        return $this;
-    }
 }

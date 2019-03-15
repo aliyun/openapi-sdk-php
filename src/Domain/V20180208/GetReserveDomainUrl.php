@@ -5,8 +5,6 @@ namespace AlibabaCloud\Domain\V20180208;
 use AlibabaCloud\Rpc;
 
 /**
- * Api GetReserveDomainUrl
- *
  */
 class GetReserveDomainUrl extends Rpc
 {

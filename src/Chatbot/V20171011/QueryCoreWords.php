@@ -5,12 +5,14 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryCoreWords
- *
  * @method string getSynonym()
+ * @method $this withSynonym($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class QueryCoreWords extends Rpc
 {
@@ -21,56 +23,4 @@ class QueryCoreWords extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $synonym
-     *
-     * @return $this
-     */
-    public function withSynonym($synonym)
-    {
-        $this->data['Synonym'] = $synonym;
-        $this->options['query']['Synonym'] = $synonym;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $coreWordName
-     *
-     * @return $this
-     */
-    public function withCoreWordName($coreWordName)
-    {
-        $this->data['CoreWordName'] = $coreWordName;
-        $this->options['query']['CoreWordName'] = $coreWordName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

@@ -5,12 +5,14 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeSasLeftCondition
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getConditionType()
+ * @method $this withConditionType($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getFilterConditions()
+ * @method $this withFilterConditions($value)
  */
 class DescribeSasLeftCondition extends Rpc
 {
@@ -21,56 +23,4 @@ class DescribeSasLeftCondition extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $conditionType
-     *
-     * @return $this
-     */
-    public function withConditionType($conditionType)
-    {
-        $this->data['ConditionType'] = $conditionType;
-        $this->options['query']['ConditionType'] = $conditionType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $filterConditions
-     *
-     * @return $this
-     */
-    public function withFilterConditions($filterConditions)
-    {
-        $this->data['FilterConditions'] = $filterConditions;
-        $this->options['query']['FilterConditions'] = $filterConditions;
-
-        return $this;
-    }
 }

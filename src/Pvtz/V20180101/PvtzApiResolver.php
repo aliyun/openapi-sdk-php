@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Pvtz based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Pvtz\V20180101
  *
  * @method AddZone addZone(array $options = [])
  * @method AddZoneRecord addZoneRecord(array $options = [])

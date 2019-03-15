@@ -5,13 +5,15 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\Rpc;
 
 /**
- * Api MoveFacePhotos
- *
  * @method string getLibraryId()
+ * @method $this withLibraryId($value)
  * @method string getTargetFaceId()
+ * @method $this withTargetFaceId($value)
  * @method array getPhotoId()
  * @method string getStoreName()
+ * @method $this withStoreName($value)
  * @method string getSourceFaceId()
+ * @method $this withSourceFaceId($value)
  */
 class MoveFacePhotos extends Rpc
 {
@@ -26,32 +28,6 @@ class MoveFacePhotos extends Rpc
     public $serviceCode = 'cloudphoto';
 
     /**
-     * @param string $libraryId
-     *
-     * @return $this
-     */
-    public function withLibraryId($libraryId)
-    {
-        $this->data['LibraryId'] = $libraryId;
-        $this->options['query']['LibraryId'] = $libraryId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $targetFaceId
-     *
-     * @return $this
-     */
-    public function withTargetFaceId($targetFaceId)
-    {
-        $this->data['TargetFaceId'] = $targetFaceId;
-        $this->options['query']['TargetFaceId'] = $targetFaceId;
-
-        return $this;
-    }
-
-    /**
      * @param array $photoId
      *
      * @return $this
@@ -62,32 +38,6 @@ class MoveFacePhotos extends Rpc
         foreach ($photoId as $i => $iValue) {
             $this->options['query']['PhotoId.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeName
-     *
-     * @return $this
-     */
-    public function withStoreName($storeName)
-    {
-        $this->data['StoreName'] = $storeName;
-        $this->options['query']['StoreName'] = $storeName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceFaceId
-     *
-     * @return $this
-     */
-    public function withSourceFaceId($sourceFaceId)
-    {
-        $this->data['SourceFaceId'] = $sourceFaceId;
-        $this->options['query']['SourceFaceId'] = $sourceFaceId;
 
         return $this;
     }

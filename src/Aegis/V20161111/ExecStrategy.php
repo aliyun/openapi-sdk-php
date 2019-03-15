@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ExecStrategy
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getStrategyId()
+ * @method $this withStrategyId($value)
  */
 class ExecStrategy extends Rpc
 {
@@ -19,30 +19,4 @@ class ExecStrategy extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $strategyId
-     *
-     * @return $this
-     */
-    public function withStrategyId($strategyId)
-    {
-        $this->data['StrategyId'] = $strategyId;
-        $this->options['query']['StrategyId'] = $strategyId;
-
-        return $this;
-    }
 }

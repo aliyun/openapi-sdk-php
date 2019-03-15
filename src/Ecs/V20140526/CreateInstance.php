@@ -5,59 +5,104 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateInstance
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHpcClusterId()
+ * @method $this withHpcClusterId($value)
  * @method string getSecurityEnhancementStrategy()
+ * @method $this withSecurityEnhancementStrategy($value)
  * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
  * @method string getSpotPriceLimit()
+ * @method $this withSpotPriceLimit($value)
  * @method string getDeletionProtection()
+ * @method $this withDeletionProtection($value)
  * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getHostName()
+ * @method $this withHostName($value)
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method array getTag()
  * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
  * @method string getNodeControllerId()
+ * @method $this withNodeControllerId($value)
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getCapacityReservationPreference()
+ * @method $this withCapacityReservationPreference($value)
  * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
  * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
  * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
  * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getInternetMaxBandwidthIn()
+ * @method $this withInternetMaxBandwidthIn($value)
  * @method string getUseAdditionalService()
+ * @method $this withUseAdditionalService($value)
  * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getVlanId()
+ * @method $this withVlanId($value)
  * @method string getSpotInterruptionBehavior()
+ * @method $this withSpotInterruptionBehavior($value)
  * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
  * @method string getInternetMaxBandwidthOut()
+ * @method $this withInternetMaxBandwidthOut($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getSystemDiskCategory()
  * @method string getCapacityReservationId()
+ * @method $this withCapacityReservationId($value)
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getPasswordInherit()
+ * @method $this withPasswordInherit($value)
  * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getHibernationConfigured()
+ * @method $this withHibernationConfigured($value)
  * @method array getArn()
  * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getDeploymentSetId()
+ * @method $this withDeploymentSetId($value)
  * @method string getInnerIpAddress()
+ * @method $this withInnerIpAddress($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
+ * @method $this withRamRoleName($value)
  * @method string getDedicatedHostId()
+ * @method $this withDedicatedHostId($value)
  * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getCreditSpecification()
+ * @method $this withCreditSpecification($value)
  * @method array getDataDisk()
  * @method string getSystemDiskSize()
  * @method string getSystemDiskDescription()
@@ -71,123 +116,6 @@ class CreateInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ecs';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hpcClusterId
-     *
-     * @return $this
-     */
-    public function withHpcClusterId($hpcClusterId)
-    {
-        $this->data['HpcClusterId'] = $hpcClusterId;
-        $this->options['query']['HpcClusterId'] = $hpcClusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityEnhancementStrategy
-     *
-     * @return $this
-     */
-    public function withSecurityEnhancementStrategy($securityEnhancementStrategy)
-    {
-        $this->data['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
-        $this->options['query']['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $keyPairName
-     *
-     * @return $this
-     */
-    public function withKeyPairName($keyPairName)
-    {
-        $this->data['KeyPairName'] = $keyPairName;
-        $this->options['query']['KeyPairName'] = $keyPairName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function withSpotPriceLimit($spotPriceLimit)
-    {
-        $this->data['SpotPriceLimit'] = $spotPriceLimit;
-        $this->options['query']['SpotPriceLimit'] = $spotPriceLimit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $deletionProtection
-     *
-     * @return $this
-     */
-    public function withDeletionProtection($deletionProtection)
-    {
-        $this->data['DeletionProtection'] = $deletionProtection;
-        $this->options['query']['DeletionProtection'] = $deletionProtection;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceGroupId
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($resourceGroupId)
-    {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
-        $this->options['query']['ResourceGroupId'] = $resourceGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hostName
-     *
-     * @return $this
-     */
-    public function withHostName($hostName)
-    {
-        $this->data['HostName'] = $hostName;
-        $this->options['query']['HostName'] = $hostName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
 
     /**
      * @param array $tag
@@ -206,318 +134,6 @@ class CreateInstance extends Rpc
     }
 
     /**
-     * @param string $autoRenewPeriod
-     *
-     * @return $this
-     */
-    public function withAutoRenewPeriod($autoRenewPeriod)
-    {
-        $this->data['AutoRenewPeriod'] = $autoRenewPeriod;
-        $this->options['query']['AutoRenewPeriod'] = $autoRenewPeriod;
-
-        return $this;
-    }
-
-    /**
-     * @param string $nodeControllerId
-     *
-     * @return $this
-     */
-    public function withNodeControllerId($nodeControllerId)
-    {
-        $this->data['NodeControllerId'] = $nodeControllerId;
-        $this->options['query']['NodeControllerId'] = $nodeControllerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dryRun
-     *
-     * @return $this
-     */
-    public function withDryRun($dryRun)
-    {
-        $this->data['DryRun'] = $dryRun;
-        $this->options['query']['DryRun'] = $dryRun;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $capacityReservationPreference
-     *
-     * @return $this
-     */
-    public function withCapacityReservationPreference($capacityReservationPreference)
-    {
-        $this->data['CapacityReservationPreference'] = $capacityReservationPreference;
-        $this->options['query']['CapacityReservationPreference'] = $capacityReservationPreference;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId($vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        $this->options['query']['VSwitchId'] = $vSwitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $privateIpAddress
-     *
-     * @return $this
-     */
-    public function withPrivateIpAddress($privateIpAddress)
-    {
-        $this->data['PrivateIpAddress'] = $privateIpAddress;
-        $this->options['query']['PrivateIpAddress'] = $privateIpAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotStrategy
-     *
-     * @return $this
-     */
-    public function withSpotStrategy($spotStrategy)
-    {
-        $this->data['SpotStrategy'] = $spotStrategy;
-        $this->options['query']['SpotStrategy'] = $spotStrategy;
-
-        return $this;
-    }
-
-    /**
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function withPeriodUnit($periodUnit)
-    {
-        $this->data['PeriodUnit'] = $periodUnit;
-        $this->options['query']['PeriodUnit'] = $periodUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceName
-     *
-     * @return $this
-     */
-    public function withInstanceName($instanceName)
-    {
-        $this->data['InstanceName'] = $instanceName;
-        $this->options['query']['InstanceName'] = $instanceName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $autoRenew
-     *
-     * @return $this
-     */
-    public function withAutoRenew($autoRenew)
-    {
-        $this->data['AutoRenew'] = $autoRenew;
-        $this->options['query']['AutoRenew'] = $autoRenew;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetChargeType
-     *
-     * @return $this
-     */
-    public function withInternetChargeType($internetChargeType)
-    {
-        $this->data['InternetChargeType'] = $internetChargeType;
-        $this->options['query']['InternetChargeType'] = $internetChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthIn
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthIn($internetMaxBandwidthIn)
-    {
-        $this->data['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
-        $this->options['query']['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
-
-        return $this;
-    }
-
-    /**
-     * @param string $useAdditionalService
-     *
-     * @return $this
-     */
-    public function withUseAdditionalService($useAdditionalService)
-    {
-        $this->data['UseAdditionalService'] = $useAdditionalService;
-        $this->options['query']['UseAdditionalService'] = $useAdditionalService;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageId
-     *
-     * @return $this
-     */
-    public function withImageId($imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        $this->options['query']['ImageId'] = $imageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $vlanId
-     *
-     * @return $this
-     */
-    public function withVlanId($vlanId)
-    {
-        $this->data['VlanId'] = $vlanId;
-        $this->options['query']['VlanId'] = $vlanId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $spotInterruptionBehavior
-     *
-     * @return $this
-     */
-    public function withSpotInterruptionBehavior($spotInterruptionBehavior)
-    {
-        $this->data['SpotInterruptionBehavior'] = $spotInterruptionBehavior;
-        $this->options['query']['SpotInterruptionBehavior'] = $spotInterruptionBehavior;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ioOptimized
-     *
-     * @return $this
-     */
-    public function withIoOptimized($ioOptimized)
-    {
-        $this->data['IoOptimized'] = $ioOptimized;
-        $this->options['query']['IoOptimized'] = $ioOptimized;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function withSecurityGroupId($securityGroupId)
-    {
-        $this->data['SecurityGroupId'] = $securityGroupId;
-        $this->options['query']['SecurityGroupId'] = $securityGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $internetMaxBandwidthOut
-     *
-     * @return $this
-     */
-    public function withInternetMaxBandwidthOut($internetMaxBandwidthOut)
-    {
-        $this->data['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-        $this->options['query']['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * @param string $systemDiskCategory
      *
      * @return $this
@@ -526,71 +142,6 @@ class CreateInstance extends Rpc
     {
         $this->data['SystemDiskCategory'] = $systemDiskCategory;
         $this->options['query']['SystemDisk.Category'] = $systemDiskCategory;
-
-        return $this;
-    }
-
-    /**
-     * @param string $capacityReservationId
-     *
-     * @return $this
-     */
-    public function withCapacityReservationId($capacityReservationId)
-    {
-        $this->data['CapacityReservationId'] = $capacityReservationId;
-        $this->options['query']['CapacityReservationId'] = $capacityReservationId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $passwordInherit
-     *
-     * @return $this
-     */
-    public function withPasswordInherit($passwordInherit)
-    {
-        $this->data['PasswordInherit'] = $passwordInherit;
-        $this->options['query']['PasswordInherit'] = $passwordInherit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceType
-     *
-     * @return $this
-     */
-    public function withInstanceType($instanceType)
-    {
-        $this->data['InstanceType'] = $instanceType;
-        $this->options['query']['InstanceType'] = $instanceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hibernationConfigured
-     *
-     * @return $this
-     */
-    public function withHibernationConfigured($hibernationConfigured)
-    {
-        $this->data['HibernationConfigured'] = $hibernationConfigured;
-        $this->options['query']['HibernationConfigured'] = $hibernationConfigured;
 
         return $this;
     }
@@ -613,71 +164,6 @@ class CreateInstance extends Rpc
     }
 
     /**
-     * @param string $instanceChargeType
-     *
-     * @return $this
-     */
-    public function withInstanceChargeType($instanceChargeType)
-    {
-        $this->data['InstanceChargeType'] = $instanceChargeType;
-        $this->options['query']['InstanceChargeType'] = $instanceChargeType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $deploymentSetId
-     *
-     * @return $this
-     */
-    public function withDeploymentSetId($deploymentSetId)
-    {
-        $this->data['DeploymentSetId'] = $deploymentSetId;
-        $this->options['query']['DeploymentSetId'] = $deploymentSetId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $innerIpAddress
-     *
-     * @return $this
-     */
-    public function withInnerIpAddress($innerIpAddress)
-    {
-        $this->data['InnerIpAddress'] = $innerIpAddress;
-        $this->options['query']['InnerIpAddress'] = $innerIpAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
      * @param string $systemDiskDiskName
      *
      * @return $this
@@ -686,58 +172,6 @@ class CreateInstance extends Rpc
     {
         $this->data['SystemDiskDiskName'] = $systemDiskDiskName;
         $this->options['query']['SystemDisk.DiskName'] = $systemDiskDiskName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ramRoleName
-     *
-     * @return $this
-     */
-    public function withRamRoleName($ramRoleName)
-    {
-        $this->data['RamRoleName'] = $ramRoleName;
-        $this->options['query']['RamRoleName'] = $ramRoleName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dedicatedHostId
-     *
-     * @return $this
-     */
-    public function withDedicatedHostId($dedicatedHostId)
-    {
-        $this->data['DedicatedHostId'] = $dedicatedHostId;
-        $this->options['query']['DedicatedHostId'] = $dedicatedHostId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clusterId
-     *
-     * @return $this
-     */
-    public function withClusterId($clusterId)
-    {
-        $this->data['ClusterId'] = $clusterId;
-        $this->options['query']['ClusterId'] = $clusterId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $creditSpecification
-     *
-     * @return $this
-     */
-    public function withCreditSpecification($creditSpecification)
-    {
-        $this->data['CreditSpecification'] = $creditSpecification;
-        $this->options['query']['CreditSpecification'] = $creditSpecification;
 
         return $this;
     }

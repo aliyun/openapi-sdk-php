@@ -5,10 +5,10 @@ namespace AlibabaCloud\Push\V20160801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryPushStat
- *
  * @method string getMessageId()
+ * @method $this withMessageId($value)
  * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class QueryPushStat extends Rpc
 {
@@ -17,30 +17,4 @@ class QueryPushStat extends Rpc
     public $version = '2016-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $messageId
-     *
-     * @return $this
-     */
-    public function withMessageId($messageId)
-    {
-        $this->data['MessageId'] = $messageId;
-        $this->options['query']['MessageId'] = $messageId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $appKey
-     *
-     * @return $this
-     */
-    public function withAppKey($appKey)
-    {
-        $this->data['AppKey'] = $appKey;
-        $this->options['query']['AppKey'] = $appKey;
-
-        return $this;
-    }
 }

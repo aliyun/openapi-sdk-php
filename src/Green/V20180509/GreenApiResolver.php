@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Green based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Green\V20180509
  *
  * @method AddFaces addFaces(array $options = [])
  * @method AddGroups addGroups(array $options = [])

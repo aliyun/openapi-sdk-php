@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Cdn based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Cdn\V20180510
  *
  * @method AddCdnDomain addCdnDomain(array $options = [])
  * @method AddFCTrigger addFCTrigger(array $options = [])

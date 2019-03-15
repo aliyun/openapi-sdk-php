@@ -5,11 +5,12 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api UploadImageToLib
- *
  * @method string getImages()
+ * @method $this withImages($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getImageLibId()
+ * @method $this withImageLibId($value)
  */
 class UploadImageToLib extends Rpc
 {
@@ -20,43 +21,4 @@ class UploadImageToLib extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $images
-     *
-     * @return $this
-     */
-    public function withImages($images)
-    {
-        $this->data['Images'] = $images;
-        $this->options['query']['Images'] = $images;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $imageLibId
-     *
-     * @return $this
-     */
-    public function withImageLibId($imageLibId)
-    {
-        $this->data['ImageLibId'] = $imageLibId;
-        $this->options['query']['ImageLibId'] = $imageLibId;
-
-        return $this;
-    }
 }

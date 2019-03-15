@@ -5,10 +5,10 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifySasAssetStatisticsColumn
- *
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getStatisticsColumn()
+ * @method $this withStatisticsColumn($value)
  */
 class ModifySasAssetStatisticsColumn extends Rpc
 {
@@ -19,30 +19,4 @@ class ModifySasAssetStatisticsColumn extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vipaegis';
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $statisticsColumn
-     *
-     * @return $this
-     */
-    public function withStatisticsColumn($statisticsColumn)
-    {
-        $this->data['StatisticsColumn'] = $statisticsColumn;
-        $this->options['query']['StatisticsColumn'] = $statisticsColumn;
-
-        return $this;
-    }
 }

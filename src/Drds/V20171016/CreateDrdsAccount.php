@@ -5,12 +5,14 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateDrdsAccount
- *
  * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getDbName()
+ * @method $this withDbName($value)
  * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
  * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class CreateDrdsAccount extends Rpc
 {
@@ -19,56 +21,4 @@ class CreateDrdsAccount extends Rpc
     public $version = '2017-10-16';
 
     public $method = 'POST';
-
-    /**
-     * @param string $password
-     *
-     * @return $this
-     */
-    public function withPassword($password)
-    {
-        $this->data['Password'] = $password;
-        $this->options['query']['Password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dbName
-     *
-     * @return $this
-     */
-    public function withDbName($dbName)
-    {
-        $this->data['DbName'] = $dbName;
-        $this->options['query']['DbName'] = $dbName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $drdsInstanceId
-     *
-     * @return $this
-     */
-    public function withDrdsInstanceId($drdsInstanceId)
-    {
-        $this->data['DrdsInstanceId'] = $drdsInstanceId;
-        $this->options['query']['DrdsInstanceId'] = $drdsInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userName
-     *
-     * @return $this
-     */
-    public function withUserName($userName)
-    {
-        $this->data['UserName'] = $userName;
-        $this->options['query']['UserName'] = $userName;
-
-        return $this;
-    }
 }

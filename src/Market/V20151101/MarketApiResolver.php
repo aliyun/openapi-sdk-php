@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Market based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Market\V20151101
  *
  * @method ActivateLicense activateLicense(array $options = [])
  * @method BindImagePackage bindImagePackage(array $options = [])

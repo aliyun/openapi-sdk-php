@@ -5,13 +5,16 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ModifyScenario
- *
  * @method string getVariables()
+ * @method $this withVariables($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  */
 class ModifyScenario extends Rpc
 {
@@ -22,69 +25,4 @@ class ModifyScenario extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $variables
-     *
-     * @return $this
-     */
-    public function withVariables($variables)
-    {
-        $this->data['Variables'] = $variables;
-        $this->options['query']['Variables'] = $variables;
-
-        return $this;
-    }
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scenarioId
-     *
-     * @return $this
-     */
-    public function withScenarioId($scenarioId)
-    {
-        $this->data['ScenarioId'] = $scenarioId;
-        $this->options['query']['ScenarioId'] = $scenarioId;
-
-        return $this;
-    }
 }

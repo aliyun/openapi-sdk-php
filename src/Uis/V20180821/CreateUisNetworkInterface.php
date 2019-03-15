@@ -5,18 +5,26 @@ namespace AlibabaCloud\Uis\V20180821;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateUisNetworkInterface
- *
  * @method string getVswitchId()
+ * @method $this withVswitchId($value)
  * @method string getIpAddress()
+ * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateUisNetworkInterface extends Rpc
 {
@@ -27,134 +35,4 @@ class CreateUisNetworkInterface extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'uis';
-
-    /**
-     * @param string $vswitchId
-     *
-     * @return $this
-     */
-    public function withVswitchId($vswitchId)
-    {
-        $this->data['VswitchId'] = $vswitchId;
-        $this->options['query']['VswitchId'] = $vswitchId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ipAddress
-     *
-     * @return $this
-     */
-    public function withIpAddress($ipAddress)
-    {
-        $this->data['IpAddress'] = $ipAddress;
-        $this->options['query']['IpAddress'] = $ipAddress;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $uisNodeId
-     *
-     * @return $this
-     */
-    public function withUisNodeId($uisNodeId)
-    {
-        $this->data['UisNodeId'] = $uisNodeId;
-        $this->options['query']['UisNodeId'] = $uisNodeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function withOwnerAccount($ownerAccount)
-    {
-        $this->data['OwnerAccount'] = $ownerAccount;
-        $this->options['query']['OwnerAccount'] = $ownerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $securityGroupId
-     *
-     * @return $this
-     */
-    public function withSecurityGroupId($securityGroupId)
-    {
-        $this->data['SecurityGroupId'] = $securityGroupId;
-        $this->options['query']['SecurityGroupId'] = $securityGroupId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
 }

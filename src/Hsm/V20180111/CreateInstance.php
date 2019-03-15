@@ -5,16 +5,22 @@ namespace AlibabaCloud\Hsm\V20180111;
 use AlibabaCloud\Rpc;
 
 /**
- * Api CreateInstance
- *
  * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getQuantity()
+ * @method $this withQuantity($value)
  * @method string getHsmDeviceType()
+ * @method $this withHsmDeviceType($value)
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getHsmOem()
+ * @method $this withHsmOem($value)
  */
 class CreateInstance extends Rpc
 {
@@ -25,108 +31,4 @@ class CreateInstance extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'hsm';
-
-    /**
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function withPeriod($period)
-    {
-        $this->data['Period'] = $period;
-        $this->options['query']['Period'] = $period;
-
-        return $this;
-    }
-
-    /**
-     * @param string $periodUnit
-     *
-     * @return $this
-     */
-    public function withPeriodUnit($periodUnit)
-    {
-        $this->data['PeriodUnit'] = $periodUnit;
-        $this->options['query']['PeriodUnit'] = $periodUnit;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $quantity
-     *
-     * @return $this
-     */
-    public function withQuantity($quantity)
-    {
-        $this->data['Quantity'] = $quantity;
-        $this->options['query']['Quantity'] = $quantity;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hsmDeviceType
-     *
-     * @return $this
-     */
-    public function withHsmDeviceType($hsmDeviceType)
-    {
-        $this->data['HsmDeviceType'] = $hsmDeviceType;
-        $this->options['query']['HsmDeviceType'] = $hsmDeviceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $clientToken
-     *
-     * @return $this
-     */
-    public function withClientToken($clientToken)
-    {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
-
-        return $this;
-    }
-
-    /**
-     * @param string $zoneId
-     *
-     * @return $this
-     */
-    public function withZoneId($zoneId)
-    {
-        $this->data['ZoneId'] = $zoneId;
-        $this->options['query']['ZoneId'] = $zoneId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $hsmOem
-     *
-     * @return $this
-     */
-    public function withHsmOem($hsmOem)
-    {
-        $this->data['HsmOem'] = $hsmOem;
-        $this->options['query']['HsmOem'] = $hsmOem;
-
-        return $this;
-    }
 }

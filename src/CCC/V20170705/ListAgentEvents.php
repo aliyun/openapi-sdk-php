@@ -5,15 +5,20 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListAgentEvents
- *
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getStopTime()
+ * @method $this withStopTime($value)
  * @method string getEvent()
+ * @method $this withEvent($value)
  * @method string getRamId()
+ * @method $this withRamId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListAgentEvents extends Rpc
 {
@@ -24,95 +29,4 @@ class ListAgentEvents extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'ccc';
-
-    /**
-     * @param string $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId($instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        $this->options['query']['InstanceId'] = $instanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function withStartTime($startTime)
-    {
-        $this->data['StartTime'] = $startTime;
-        $this->options['query']['StartTime'] = $startTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $stopTime
-     *
-     * @return $this
-     */
-    public function withStopTime($stopTime)
-    {
-        $this->data['StopTime'] = $stopTime;
-        $this->options['query']['StopTime'] = $stopTime;
-
-        return $this;
-    }
-
-    /**
-     * @param string $event
-     *
-     * @return $this
-     */
-    public function withEvent($event)
-    {
-        $this->data['Event'] = $event;
-        $this->options['query']['Event'] = $event;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ramId
-     *
-     * @return $this
-     */
-    public function withRamId($ramId)
-    {
-        $this->data['RamId'] = $ramId;
-        $this->options['query']['RamId'] = $ramId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

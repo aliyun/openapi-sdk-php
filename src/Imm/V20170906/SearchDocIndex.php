@@ -5,27 +5,44 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api SearchDocIndex
- *
  * @method string getModifiedTimeEnd()
+ * @method $this withModifiedTimeEnd($value)
  * @method string getCustomKey1()
+ * @method $this withCustomKey1($value)
  * @method string getSet()
+ * @method $this withSet($value)
  * @method string getSizeLimitEnd()
+ * @method $this withSizeLimitEnd($value)
  * @method string getCustomKey5()
+ * @method $this withCustomKey5($value)
  * @method string getOffset()
+ * @method $this withOffset($value)
  * @method string getCustomKey4()
+ * @method $this withCustomKey4($value)
  * @method string getCustomKey3()
+ * @method $this withCustomKey3($value)
  * @method string getCustomKey2()
+ * @method $this withCustomKey2($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getModifiedTimeStart()
+ * @method $this withModifiedTimeStart($value)
  * @method string getPageNumLimitStart()
+ * @method $this withPageNumLimitStart($value)
  * @method string getCustomKey6()
+ * @method $this withCustomKey6($value)
  * @method string getContent()
+ * @method $this withContent($value)
  * @method string getPageNumLimitEnd()
+ * @method $this withPageNumLimitEnd($value)
  * @method string getContentType()
+ * @method $this withContentType($value)
  * @method string getSizeLimitStart()
+ * @method $this withSizeLimitStart($value)
  * @method string getName()
+ * @method $this withName($value)
  * @method string getLimit()
+ * @method $this withLimit($value)
  */
 class SearchDocIndex extends Rpc
 {
@@ -36,251 +53,4 @@ class SearchDocIndex extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $modifiedTimeEnd
-     *
-     * @return $this
-     */
-    public function withModifiedTimeEnd($modifiedTimeEnd)
-    {
-        $this->data['ModifiedTimeEnd'] = $modifiedTimeEnd;
-        $this->options['query']['ModifiedTimeEnd'] = $modifiedTimeEnd;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey1
-     *
-     * @return $this
-     */
-    public function withCustomKey1($customKey1)
-    {
-        $this->data['CustomKey1'] = $customKey1;
-        $this->options['query']['CustomKey1'] = $customKey1;
-
-        return $this;
-    }
-
-    /**
-     * @param string $set
-     *
-     * @return $this
-     */
-    public function withSet($set)
-    {
-        $this->data['Set'] = $set;
-        $this->options['query']['Set'] = $set;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sizeLimitEnd
-     *
-     * @return $this
-     */
-    public function withSizeLimitEnd($sizeLimitEnd)
-    {
-        $this->data['SizeLimitEnd'] = $sizeLimitEnd;
-        $this->options['query']['SizeLimitEnd'] = $sizeLimitEnd;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey5
-     *
-     * @return $this
-     */
-    public function withCustomKey5($customKey5)
-    {
-        $this->data['CustomKey5'] = $customKey5;
-        $this->options['query']['CustomKey5'] = $customKey5;
-
-        return $this;
-    }
-
-    /**
-     * @param string $offset
-     *
-     * @return $this
-     */
-    public function withOffset($offset)
-    {
-        $this->data['Offset'] = $offset;
-        $this->options['query']['Offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey4
-     *
-     * @return $this
-     */
-    public function withCustomKey4($customKey4)
-    {
-        $this->data['CustomKey4'] = $customKey4;
-        $this->options['query']['CustomKey4'] = $customKey4;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey3
-     *
-     * @return $this
-     */
-    public function withCustomKey3($customKey3)
-    {
-        $this->data['CustomKey3'] = $customKey3;
-        $this->options['query']['CustomKey3'] = $customKey3;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey2
-     *
-     * @return $this
-     */
-    public function withCustomKey2($customKey2)
-    {
-        $this->data['CustomKey2'] = $customKey2;
-        $this->options['query']['CustomKey2'] = $customKey2;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $modifiedTimeStart
-     *
-     * @return $this
-     */
-    public function withModifiedTimeStart($modifiedTimeStart)
-    {
-        $this->data['ModifiedTimeStart'] = $modifiedTimeStart;
-        $this->options['query']['ModifiedTimeStart'] = $modifiedTimeStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumLimitStart
-     *
-     * @return $this
-     */
-    public function withPageNumLimitStart($pageNumLimitStart)
-    {
-        $this->data['PageNumLimitStart'] = $pageNumLimitStart;
-        $this->options['query']['PageNumLimitStart'] = $pageNumLimitStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $customKey6
-     *
-     * @return $this
-     */
-    public function withCustomKey6($customKey6)
-    {
-        $this->data['CustomKey6'] = $customKey6;
-        $this->options['query']['CustomKey6'] = $customKey6;
-
-        return $this;
-    }
-
-    /**
-     * @param string $content
-     *
-     * @return $this
-     */
-    public function withContent($content)
-    {
-        $this->data['Content'] = $content;
-        $this->options['query']['Content'] = $content;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumLimitEnd
-     *
-     * @return $this
-     */
-    public function withPageNumLimitEnd($pageNumLimitEnd)
-    {
-        $this->data['PageNumLimitEnd'] = $pageNumLimitEnd;
-        $this->options['query']['PageNumLimitEnd'] = $pageNumLimitEnd;
-
-        return $this;
-    }
-
-    /**
-     * @param string $contentType
-     *
-     * @return $this
-     */
-    public function withContentType($contentType)
-    {
-        $this->data['ContentType'] = $contentType;
-        $this->options['query']['ContentType'] = $contentType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sizeLimitStart
-     *
-     * @return $this
-     */
-    public function withSizeLimitStart($sizeLimitStart)
-    {
-        $this->data['SizeLimitStart'] = $sizeLimitStart;
-        $this->options['query']['SizeLimitStart'] = $sizeLimitStart;
-
-        return $this;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function withName($name)
-    {
-        $this->data['Name'] = $name;
-        $this->options['query']['Name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * @param string $limit
-     *
-     * @return $this
-     */
-    public function withLimit($limit)
-    {
-        $this->data['Limit'] = $limit;
-        $this->options['query']['Limit'] = $limit;
-
-        return $this;
-    }
 }

@@ -5,11 +5,11 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DeleteTopicRouteTable
- *
  * @method array getDstTopic()
  * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getSrcTopic()
+ * @method $this withSrcTopic($value)
  */
 class DeleteTopicRouteTable extends Rpc
 {
@@ -30,32 +30,6 @@ class DeleteTopicRouteTable extends Rpc
         foreach ($dstTopic as $i => $iValue) {
             $this->options['query']['DstTopic.' . ($i + 1)] = $iValue;
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $iotInstanceId
-     *
-     * @return $this
-     */
-    public function withIotInstanceId($iotInstanceId)
-    {
-        $this->data['IotInstanceId'] = $iotInstanceId;
-        $this->options['query']['IotInstanceId'] = $iotInstanceId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $srcTopic
-     *
-     * @return $this
-     */
-    public function withSrcTopic($srcTopic)
-    {
-        $this->data['SrcTopic'] = $srcTopic;
-        $this->options['query']['SrcTopic'] = $srcTopic;
 
         return $this;
     }

@@ -7,7 +7,6 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Find the specified Api of the Eci based on the method name as the Api name.
  *
- * @package   AlibabaCloud\Eci\V20180808
  *
  * @method CreateContainerGroup createContainerGroup(array $options = [])
  * @method DeleteContainerGroup deleteContainerGroup(array $options = [])

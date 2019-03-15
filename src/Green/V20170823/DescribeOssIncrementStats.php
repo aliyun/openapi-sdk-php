@@ -5,14 +5,18 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeOssIncrementStats
- *
  * @method string getEndDate()
+ * @method $this withEndDate($value)
  * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
+ * @method $this withLang($value)
  * @method string getStartDate()
+ * @method $this withStartDate($value)
  * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getScene()
+ * @method $this withScene($value)
  */
 class DescribeOssIncrementStats extends Rpc
 {
@@ -23,82 +27,4 @@ class DescribeOssIncrementStats extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'green';
-
-    /**
-     * @param string $endDate
-     *
-     * @return $this
-     */
-    public function withEndDate($endDate)
-    {
-        $this->data['EndDate'] = $endDate;
-        $this->options['query']['EndDate'] = $endDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $sourceIp
-     *
-     * @return $this
-     */
-    public function withSourceIp($sourceIp)
-    {
-        $this->data['SourceIp'] = $sourceIp;
-        $this->options['query']['SourceIp'] = $sourceIp;
-
-        return $this;
-    }
-
-    /**
-     * @param string $lang
-     *
-     * @return $this
-     */
-    public function withLang($lang)
-    {
-        $this->data['Lang'] = $lang;
-        $this->options['query']['Lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * @param string $startDate
-     *
-     * @return $this
-     */
-    public function withStartDate($startDate)
-    {
-        $this->data['StartDate'] = $startDate;
-        $this->options['query']['StartDate'] = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceType
-     *
-     * @return $this
-     */
-    public function withResourceType($resourceType)
-    {
-        $this->data['ResourceType'] = $resourceType;
-        $this->options['query']['ResourceType'] = $resourceType;
-
-        return $this;
-    }
-
-    /**
-     * @param string $scene
-     *
-     * @return $this
-     */
-    public function withScene($scene)
-    {
-        $this->data['Scene'] = $scene;
-        $this->options['query']['Scene'] = $scene;
-
-        return $this;
-    }
 }

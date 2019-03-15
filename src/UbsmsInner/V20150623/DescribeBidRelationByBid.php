@@ -5,10 +5,10 @@ namespace AlibabaCloud\UbsmsInner\V20150623;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBidRelationByBid
- *
  * @method string getRequestid()
+ * @method $this withRequestid($value)
  * @method string getBid()
+ * @method $this withBid($value)
  */
 class DescribeBidRelationByBid extends Rpc
 {
@@ -17,30 +17,4 @@ class DescribeBidRelationByBid extends Rpc
     public $version = '2015-06-23';
 
     public $method = 'POST';
-
-    /**
-     * @param string $requestid
-     *
-     * @return $this
-     */
-    public function withRequestid($requestid)
-    {
-        $this->data['Requestid'] = $requestid;
-        $this->options['query']['Requestid'] = $requestid;
-
-        return $this;
-    }
-
-    /**
-     * @param string $bid
-     *
-     * @return $this
-     */
-    public function withBid($bid)
-    {
-        $this->data['Bid'] = $bid;
-        $this->options['query']['Bid'] = $bid;
-
-        return $this;
-    }
 }

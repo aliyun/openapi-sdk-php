@@ -5,13 +5,16 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ListTagPhotos
- *
  * @method string getTagName()
+ * @method $this withTagName($value)
  * @method string getMaxKeys()
+ * @method $this withMaxKeys($value)
  * @method string getMarker()
+ * @method $this withMarker($value)
  * @method string getProject()
+ * @method $this withProject($value)
  * @method string getSetId()
+ * @method $this withSetId($value)
  */
 class ListTagPhotos extends Rpc
 {
@@ -22,69 +25,4 @@ class ListTagPhotos extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'imm';
-
-    /**
-     * @param string $tagName
-     *
-     * @return $this
-     */
-    public function withTagName($tagName)
-    {
-        $this->data['TagName'] = $tagName;
-        $this->options['query']['TagName'] = $tagName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function withMaxKeys($maxKeys)
-    {
-        $this->data['MaxKeys'] = $maxKeys;
-        $this->options['query']['MaxKeys'] = $maxKeys;
-
-        return $this;
-    }
-
-    /**
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function withMarker($marker)
-    {
-        $this->data['Marker'] = $marker;
-        $this->options['query']['Marker'] = $marker;
-
-        return $this;
-    }
-
-    /**
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function withProject($project)
-    {
-        $this->data['Project'] = $project;
-        $this->options['query']['Project'] = $project;
-
-        return $this;
-    }
-
-    /**
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function withSetId($setId)
-    {
-        $this->data['SetId'] = $setId;
-        $this->options['query']['SetId'] = $setId;
-
-        return $this;
-    }
 }

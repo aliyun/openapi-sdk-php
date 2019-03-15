@@ -5,12 +5,13 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeProducts
- *
  * @method array getFilter()
  * @method string getSearchTerm()
+ * @method $this withSearchTerm($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeProducts extends Rpc
 {
@@ -32,45 +33,6 @@ class DescribeProducts extends Rpc
             $this->options['query']['Filter.' . ($i + 1) . '.Value'] = $filter[$i]['Value'];
             $this->options['query']['Filter.' . ($i + 1) . '.Key'] = $filter[$i]['Key'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $searchTerm
-     *
-     * @return $this
-     */
-    public function withSearchTerm($searchTerm)
-    {
-        $this->data['SearchTerm'] = $searchTerm;
-        $this->options['query']['SearchTerm'] = $searchTerm;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }

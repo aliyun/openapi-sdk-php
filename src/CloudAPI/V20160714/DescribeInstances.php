@@ -5,9 +5,8 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeInstances
- *
  * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DescribeInstances extends Rpc
 {
@@ -18,17 +17,4 @@ class DescribeInstances extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'apigateway';
-
-    /**
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function withSecurityToken($securityToken)
-    {
-        $this->data['SecurityToken'] = $securityToken;
-        $this->options['query']['SecurityToken'] = $securityToken;
-
-        return $this;
-    }
 }

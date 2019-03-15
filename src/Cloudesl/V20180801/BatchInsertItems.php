@@ -5,10 +5,9 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BatchInsertItems
- *
  * @method array getItemInfo()
  * @method string getStoreId()
+ * @method $this withStoreId($value)
  */
 class BatchInsertItems extends Rpc
 {
@@ -69,19 +68,6 @@ class BatchInsertItems extends Rpc
             $this->options['query']['ItemInfo.' . ($i + 1) . '.SkuId'] = $itemInfo[$i]['SkuId'];
             $this->options['query']['ItemInfo.' . ($i + 1) . '.PromotionText'] = $itemInfo[$i]['PromotionText'];
         }
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function withStoreId($storeId)
-    {
-        $this->data['StoreId'] = $storeId;
-        $this->options['query']['StoreId'] = $storeId;
 
         return $this;
     }

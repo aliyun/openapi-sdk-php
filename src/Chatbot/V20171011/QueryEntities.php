@@ -5,12 +5,14 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Rpc;
 
 /**
- * Api QueryEntities
- *
  * @method string getEntityName()
+ * @method $this withEntityName($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDialogId()
+ * @method $this withDialogId($value)
  * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class QueryEntities extends Rpc
 {
@@ -21,56 +23,4 @@ class QueryEntities extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'beebot';
-
-    /**
-     * @param string $entityName
-     *
-     * @return $this
-     */
-    public function withEntityName($entityName)
-    {
-        $this->data['EntityName'] = $entityName;
-        $this->options['query']['EntityName'] = $entityName;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function withPageSize($pageSize)
-    {
-        $this->data['PageSize'] = $pageSize;
-        $this->options['query']['PageSize'] = $pageSize;
-
-        return $this;
-    }
-
-    /**
-     * @param string $dialogId
-     *
-     * @return $this
-     */
-    public function withDialogId($dialogId)
-    {
-        $this->data['DialogId'] = $dialogId;
-        $this->options['query']['DialogId'] = $dialogId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function withPageNumber($pageNumber)
-    {
-        $this->data['PageNumber'] = $pageNumber;
-        $this->options['query']['PageNumber'] = $pageNumber;
-
-        return $this;
-    }
 }

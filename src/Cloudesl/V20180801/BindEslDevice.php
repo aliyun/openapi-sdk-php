@@ -5,11 +5,12 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Rpc;
 
 /**
- * Api BindEslDevice
- *
  * @method string getEslBarCode()
+ * @method $this withEslBarCode($value)
  * @method string getStoreId()
+ * @method $this withStoreId($value)
  * @method string getItemBarCode()
+ * @method $this withItemBarCode($value)
  */
 class BindEslDevice extends Rpc
 {
@@ -18,43 +19,4 @@ class BindEslDevice extends Rpc
     public $version = '2018-08-01';
 
     public $method = 'POST';
-
-    /**
-     * @param string $eslBarCode
-     *
-     * @return $this
-     */
-    public function withEslBarCode($eslBarCode)
-    {
-        $this->data['EslBarCode'] = $eslBarCode;
-        $this->options['query']['EslBarCode'] = $eslBarCode;
-
-        return $this;
-    }
-
-    /**
-     * @param string $storeId
-     *
-     * @return $this
-     */
-    public function withStoreId($storeId)
-    {
-        $this->data['StoreId'] = $storeId;
-        $this->options['query']['StoreId'] = $storeId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $itemBarCode
-     *
-     * @return $this
-     */
-    public function withItemBarCode($itemBarCode)
-    {
-        $this->data['ItemBarCode'] = $itemBarCode;
-        $this->options['query']['ItemBarCode'] = $itemBarCode;
-
-        return $this;
-    }
 }

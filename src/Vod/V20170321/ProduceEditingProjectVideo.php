@@ -5,19 +5,28 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Rpc;
 
 /**
- * Api ProduceEditingProjectVideo
- *
  * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getMediaMetadata()
+ * @method $this withMediaMetadata($value)
  * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTitle()
+ * @method $this withTitle($value)
  * @method string getCoverURL()
+ * @method $this withCoverURL($value)
  * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getTimeline()
+ * @method $this withTimeline($value)
  * @method string getProduceConfig()
+ * @method $this withProduceConfig($value)
  * @method string getProjectId()
+ * @method $this withProjectId($value)
  */
 class ProduceEditingProjectVideo extends Rpc
 {
@@ -28,147 +37,4 @@ class ProduceEditingProjectVideo extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'vod';
-
-    /**
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function withResourceOwnerId($resourceOwnerId)
-    {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
-        $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $mediaMetadata
-     *
-     * @return $this
-     */
-    public function withMediaMetadata($mediaMetadata)
-    {
-        $this->data['MediaMetadata'] = $mediaMetadata;
-        $this->options['query']['MediaMetadata'] = $mediaMetadata;
-
-        return $this;
-    }
-
-    /**
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function withResourceOwnerAccount($resourceOwnerAccount)
-    {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
-        $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
-
-        return $this;
-    }
-
-    /**
-     * @param string $description
-     *
-     * @return $this
-     */
-    public function withDescription($description)
-    {
-        $this->data['Description'] = $description;
-        $this->options['query']['Description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function withOwnerId($ownerId)
-    {
-        $this->data['OwnerId'] = $ownerId;
-        $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $title
-     *
-     * @return $this
-     */
-    public function withTitle($title)
-    {
-        $this->data['Title'] = $title;
-        $this->options['query']['Title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * @param string $coverURL
-     *
-     * @return $this
-     */
-    public function withCoverURL($coverURL)
-    {
-        $this->data['CoverURL'] = $coverURL;
-        $this->options['query']['CoverURL'] = $coverURL;
-
-        return $this;
-    }
-
-    /**
-     * @param string $userData
-     *
-     * @return $this
-     */
-    public function withUserData($userData)
-    {
-        $this->data['UserData'] = $userData;
-        $this->options['query']['UserData'] = $userData;
-
-        return $this;
-    }
-
-    /**
-     * @param string $timeline
-     *
-     * @return $this
-     */
-    public function withTimeline($timeline)
-    {
-        $this->data['Timeline'] = $timeline;
-        $this->options['query']['Timeline'] = $timeline;
-
-        return $this;
-    }
-
-    /**
-     * @param string $produceConfig
-     *
-     * @return $this
-     */
-    public function withProduceConfig($produceConfig)
-    {
-        $this->data['ProduceConfig'] = $produceConfig;
-        $this->options['query']['ProduceConfig'] = $produceConfig;
-
-        return $this;
-    }
-
-    /**
-     * @param string $projectId
-     *
-     * @return $this
-     */
-    public function withProjectId($projectId)
-    {
-        $this->data['ProjectId'] = $projectId;
-        $this->options['query']['ProjectId'] = $projectId;
-
-        return $this;
-    }
 }
