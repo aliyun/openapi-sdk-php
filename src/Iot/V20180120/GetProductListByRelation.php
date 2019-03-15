@@ -41,7 +41,7 @@ class GetProductListByRelation extends RpcRequest
      */
     public function withCategoryKey($categoryKey)
     {
-        $this->data['CategoryKey'] = $categoryKey;
+        $this->data['CategoryKey']             = $categoryKey;
         $this->options['query']['CategoryKey'] = $categoryKey;
 
         return $this;
@@ -54,7 +54,7 @@ class GetProductListByRelation extends RpcRequest
      */
     public function withProductName($productName)
     {
-        $this->data['ProductName'] = $productName;
+        $this->data['ProductName']             = $productName;
         $this->options['query']['ProductName'] = $productName;
 
         return $this;
@@ -67,7 +67,7 @@ class GetProductListByRelation extends RpcRequest
      */
     public function withRelated($related)
     {
-        $this->data['Related'] = $related;
+        $this->data['Related']             = $related;
         $this->options['query']['Related'] = $related;
 
         return $this;
@@ -80,7 +80,7 @@ class GetProductListByRelation extends RpcRequest
      */
     public function withCurrentPage($currentPage)
     {
-        $this->data['CurrentPage'] = $currentPage;
+        $this->data['CurrentPage']             = $currentPage;
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
@@ -93,7 +93,7 @@ class GetProductListByRelation extends RpcRequest
      */
     public function withPageSize($pageSize)
     {
-        $this->data['PageSize'] = $pageSize;
+        $this->data['PageSize']             = $pageSize;
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;

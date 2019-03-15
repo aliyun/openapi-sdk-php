@@ -32,40 +32,16 @@ class SetRecordPlan extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
-    }
-
-    /**
      * @param string $name
      *
      * @return $this
      */
     public function withName($name)
     {
-        $this->data['Name'] = $name;
+        $this->data['Name']             = $name;
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
     }
 
     /**
@@ -75,7 +51,7 @@ class SetRecordPlan extends RpcRequest
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;

@@ -43,40 +43,16 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPeriod() instead.
-     *
-     * @param string $period
-     *
-     * @return $this
-     */
-    public function setPeriod($period)
-    {
-        return $this->withPeriod($period);
     }
 
     /**
@@ -86,22 +62,10 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withPeriod($period)
     {
-        $this->data['Period'] = $period;
+        $this->data['Period']             = $period;
         $this->options['query']['Period'] = $period;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -111,22 +75,10 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -136,22 +88,10 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withOwnerAccount($ownerAccount)
     {
-        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->data['OwnerAccount']             = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -161,18 +101,18 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withEndTime($endTime)
     {
-        $this->data['EndTime'] = $endTime;
+        $this->data['EndTime']             = $endTime;
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAllocationId() instead.
-     *
      * @param string $allocationId
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withAllocationId() instead.
+     *
      */
     public function setAllocationId($allocationId)
     {
@@ -186,22 +126,10 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withAllocationId($allocationId)
     {
-        $this->data['AllocationId'] = $allocationId;
+        $this->data['AllocationId']             = $allocationId;
         $this->options['query']['AllocationId'] = $allocationId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -211,22 +139,10 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withStartTime($startTime)
     {
-        $this->data['StartTime'] = $startTime;
+        $this->data['StartTime']             = $startTime;
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -236,7 +152,7 @@ class DescribeBandwidthPackagePublicIpMonitorData extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

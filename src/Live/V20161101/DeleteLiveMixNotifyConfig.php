@@ -44,7 +44,7 @@ class DeleteLiveMixNotifyConfig extends RpcRequest
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
@@ -57,22 +57,10 @@ class DeleteLiveMixNotifyConfig extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -82,7 +70,7 @@ class DeleteLiveMixNotifyConfig extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

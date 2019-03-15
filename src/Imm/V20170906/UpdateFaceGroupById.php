@@ -39,40 +39,16 @@ class UpdateFaceGroupById extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
-    }
-
-    /**
      * @param string $project
      *
      * @return $this
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -82,22 +58,10 @@ class UpdateFaceGroupById extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNewGroupId() instead.
-     *
-     * @param string $newGroupId
-     *
-     * @return $this
-     */
-    public function setNewGroupId($newGroupId)
-    {
-        return $this->withNewGroupId($newGroupId);
     }
 
     /**
@@ -107,22 +71,10 @@ class UpdateFaceGroupById extends RpcRequest
      */
     public function withNewGroupId($newGroupId)
     {
-        $this->data['NewGroupId'] = $newGroupId;
+        $this->data['NewGroupId']             = $newGroupId;
         $this->options['query']['NewGroupId'] = $newGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFaceIds() instead.
-     *
-     * @param string $faceIds
-     *
-     * @return $this
-     */
-    public function setFaceIds($faceIds)
-    {
-        return $this->withFaceIds($faceIds);
     }
 
     /**
@@ -132,7 +84,7 @@ class UpdateFaceGroupById extends RpcRequest
      */
     public function withFaceIds($faceIds)
     {
-        $this->data['FaceIds'] = $faceIds;
+        $this->data['FaceIds']             = $faceIds;
         $this->options['query']['FaceIds'] = $faceIds;
 
         return $this;

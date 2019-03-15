@@ -37,40 +37,16 @@ class ListFaceSets extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
-    }
-
-    /**
      * @param string $marker
      *
      * @return $this
      */
     public function withMarker($marker)
     {
-        $this->data['Marker'] = $marker;
+        $this->data['Marker']             = $marker;
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -80,7 +56,7 @@ class ListFaceSets extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;

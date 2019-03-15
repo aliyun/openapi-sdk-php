@@ -43,36 +43,24 @@ class SetVodDomainCertificate extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSSLPub() instead.
-     *
      * @param string $sSLPub
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSSLPub() instead.
+     *
      */
     public function setSSLPub($sSLPub)
     {
@@ -86,18 +74,18 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withSSLPub($sSLPub)
     {
-        $this->data['SSLPub'] = $sSLPub;
+        $this->data['SSLPub']             = $sSLPub;
         $this->options['query']['SSLPub'] = $sSLPub;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCertName() instead.
-     *
      * @param string $certName
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCertName() instead.
+     *
      */
     public function setCertName($certName)
     {
@@ -111,18 +99,18 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withCertName($certName)
     {
-        $this->data['CertName'] = $certName;
+        $this->data['CertName']             = $certName;
         $this->options['query']['CertName'] = $certName;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSSLProtocol() instead.
-     *
      * @param string $sSLProtocol
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSSLProtocol() instead.
+     *
      */
     public function setSSLProtocol($sSLProtocol)
     {
@@ -136,22 +124,10 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withSSLProtocol($sSLProtocol)
     {
-        $this->data['SSLProtocol'] = $sSLProtocol;
+        $this->data['SSLProtocol']             = $sSLProtocol;
         $this->options['query']['SSLProtocol'] = $sSLProtocol;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -161,22 +137,10 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -186,22 +150,10 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRegion() instead.
-     *
-     * @param string $region
-     *
-     * @return $this
-     */
-    public function setRegion($region)
-    {
-        return $this->withRegion($region);
     }
 
     /**
@@ -211,18 +163,18 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withRegion($region)
     {
-        $this->data['Region'] = $region;
+        $this->data['Region']             = $region;
         $this->options['query']['Region'] = $region;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSSLPri() instead.
-     *
      * @param string $sSLPri
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSSLPri() instead.
+     *
      */
     public function setSSLPri($sSLPri)
     {
@@ -236,7 +188,7 @@ class SetVodDomainCertificate extends RpcRequest
      */
     public function withSSLPri($sSLPri)
     {
-        $this->data['SSLPri'] = $sSLPri;
+        $this->data['SSLPri']             = $sSLPri;
         $this->options['query']['SSLPri'] = $sSLPri;
 
         return $this;

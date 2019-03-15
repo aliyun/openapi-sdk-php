@@ -39,11 +39,11 @@ class ListFaceJobs extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCondition() instead.
-     *
      * @param string $condition
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCondition() instead.
+     *
      */
     public function setCondition($condition)
     {
@@ -57,22 +57,10 @@ class ListFaceJobs extends RpcRequest
      */
     public function withCondition($condition)
     {
-        $this->data['Condition'] = $condition;
+        $this->data['Condition']             = $condition;
         $this->options['query']['Condition'] = $condition;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMaxKeys() instead.
-     *
-     * @param string $maxKeys
-     *
-     * @return $this
-     */
-    public function setMaxKeys($maxKeys)
-    {
-        return $this->withMaxKeys($maxKeys);
     }
 
     /**
@@ -82,22 +70,10 @@ class ListFaceJobs extends RpcRequest
      */
     public function withMaxKeys($maxKeys)
     {
-        $this->data['MaxKeys'] = $maxKeys;
+        $this->data['MaxKeys']             = $maxKeys;
         $this->options['query']['MaxKeys'] = $maxKeys;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withMarker() instead.
-     *
-     * @param string $marker
-     *
-     * @return $this
-     */
-    public function setMarker($marker)
-    {
-        return $this->withMarker($marker);
     }
 
     /**
@@ -107,22 +83,10 @@ class ListFaceJobs extends RpcRequest
      */
     public function withMarker($marker)
     {
-        $this->data['Marker'] = $marker;
+        $this->data['Marker']             = $marker;
         $this->options['query']['Marker'] = $marker;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -132,7 +96,7 @@ class ListFaceJobs extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;

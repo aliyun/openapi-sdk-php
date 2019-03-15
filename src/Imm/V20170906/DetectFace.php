@@ -37,11 +37,11 @@ class DetectFace extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
-     *
      * @param string $srcUris
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withSrcUris() instead.
+     *
      */
     public function setSrcUris($srcUris)
     {
@@ -55,22 +55,10 @@ class DetectFace extends RpcRequest
      */
     public function withSrcUris($srcUris)
     {
-        $this->data['SrcUris'] = $srcUris;
+        $this->data['SrcUris']             = $srcUris;
         $this->options['query']['SrcUris'] = $srcUris;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -80,7 +68,7 @@ class DetectFace extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;

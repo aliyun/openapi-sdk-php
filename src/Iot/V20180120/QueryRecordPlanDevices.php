@@ -39,7 +39,7 @@ class QueryRecordPlanDevices extends RpcRequest
      */
     public function withPlanId($planId)
     {
-        $this->data['PlanId'] = $planId;
+        $this->data['PlanId']             = $planId;
         $this->options['query']['PlanId'] = $planId;
 
         return $this;
@@ -52,22 +52,10 @@ class QueryRecordPlanDevices extends RpcRequest
      */
     public function withCurrentPage($currentPage)
     {
-        $this->data['CurrentPage'] = $currentPage;
+        $this->data['CurrentPage']             = $currentPage;
         $this->options['query']['CurrentPage'] = $currentPage;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -77,7 +65,7 @@ class QueryRecordPlanDevices extends RpcRequest
      */
     public function withPageSize($pageSize)
     {
-        $this->data['PageSize'] = $pageSize;
+        $this->data['PageSize']             = $pageSize;
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;

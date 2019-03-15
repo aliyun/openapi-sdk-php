@@ -37,40 +37,16 @@ class DescribeVodUserResourcePackage extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -80,7 +56,7 @@ class DescribeVodUserResourcePackage extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

@@ -45,40 +45,16 @@ class DescribeCdnDomainLogs extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -88,18 +64,18 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
-     *
      * @param string $pageNo
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withPageNo() instead.
+     *
      */
     public function setPageNo($pageNo)
     {
@@ -113,22 +89,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withPageNo($pageNo)
     {
-        $this->data['PageNo'] = $pageNo;
+        $this->data['PageNo']             = $pageNo;
         $this->options['query']['PageNo'] = $pageNo;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -138,22 +102,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withOwnerAccount($ownerAccount)
     {
-        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->data['OwnerAccount']             = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -163,22 +115,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -188,22 +128,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withPageSize($pageSize)
     {
-        $this->data['PageSize'] = $pageSize;
+        $this->data['PageSize']             = $pageSize;
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndTime() instead.
-     *
-     * @param string $endTime
-     *
-     * @return $this
-     */
-    public function setEndTime($endTime)
-    {
-        return $this->withEndTime($endTime);
     }
 
     /**
@@ -213,22 +141,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withEndTime($endTime)
     {
-        $this->data['EndTime'] = $endTime;
+        $this->data['EndTime']             = $endTime;
         $this->options['query']['EndTime'] = $endTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartTime() instead.
-     *
-     * @param string $startTime
-     *
-     * @return $this
-     */
-    public function setStartTime($startTime)
-    {
-        return $this->withStartTime($startTime);
     }
 
     /**
@@ -238,22 +154,10 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withStartTime($startTime)
     {
-        $this->data['StartTime'] = $startTime;
+        $this->data['StartTime']             = $startTime;
         $this->options['query']['StartTime'] = $startTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -263,18 +167,18 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLogDay() instead.
-     *
      * @param string $logDay
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withLogDay() instead.
+     *
      */
     public function setLogDay($logDay)
     {
@@ -288,7 +192,7 @@ class DescribeCdnDomainLogs extends RpcRequest
      */
     public function withLogDay($logDay)
     {
-        $this->data['LogDay'] = $logDay;
+        $this->data['LogDay']             = $logDay;
         $this->options['query']['LogDay'] = $logDay;
 
         return $this;

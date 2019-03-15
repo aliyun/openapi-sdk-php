@@ -32,11 +32,11 @@ class ImportTslFromOss extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTslUrl() instead.
-     *
      * @param string $tslUrl
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withTslUrl() instead.
+     *
      */
     public function setTslUrl($tslUrl)
     {
@@ -50,22 +50,10 @@ class ImportTslFromOss extends RpcRequest
      */
     public function withTslUrl($tslUrl)
     {
-        $this->data['TslUrl'] = $tslUrl;
+        $this->data['TslUrl']             = $tslUrl;
         $this->options['query']['TslUrl'] = $tslUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProductKey() instead.
-     *
-     * @param string $productKey
-     *
-     * @return $this
-     */
-    public function setProductKey($productKey)
-    {
-        return $this->withProductKey($productKey);
     }
 
     /**
@@ -75,7 +63,7 @@ class ImportTslFromOss extends RpcRequest
      */
     public function withProductKey($productKey)
     {
-        $this->data['ProductKey'] = $productKey;
+        $this->data['ProductKey']             = $productKey;
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;

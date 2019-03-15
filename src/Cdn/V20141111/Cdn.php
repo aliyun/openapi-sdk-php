@@ -93,7 +93,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLiveStreamTranscodeInfo describeLiveStreamTranscodeInfo(array $options = [])
  * @method static DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method static DescribeLiveStreamsControlHistory describeLiveStreamsControlHistory(array $options = [])
- * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options = [])
+ * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options
+ *         = [])
  * @method static DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
  * @method static DescribeLiveStreamsPublishList describeLiveStreamsPublishList(array $options = [])
  * @method static DescribeRangeDataByLocateAndIspService describeRangeDataByLocateAndIspService(array $options = [])

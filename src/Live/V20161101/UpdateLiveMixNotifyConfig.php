@@ -39,40 +39,16 @@ class UpdateLiveMixNotifyConfig extends RpcRequest
     public $serviceCode = 'live';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
-    }
-
-    /**
      * @param string $securityToken
      *
      * @return $this
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -82,22 +58,10 @@ class UpdateLiveMixNotifyConfig extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNotifyUrl() instead.
-     *
-     * @param string $notifyUrl
-     *
-     * @return $this
-     */
-    public function setNotifyUrl($notifyUrl)
-    {
-        return $this->withNotifyUrl($notifyUrl);
     }
 
     /**
@@ -107,22 +71,10 @@ class UpdateLiveMixNotifyConfig extends RpcRequest
      */
     public function withNotifyUrl($notifyUrl)
     {
-        $this->data['NotifyUrl'] = $notifyUrl;
+        $this->data['NotifyUrl']             = $notifyUrl;
         $this->options['query']['NotifyUrl'] = $notifyUrl;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -132,7 +84,7 @@ class UpdateLiveMixNotifyConfig extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

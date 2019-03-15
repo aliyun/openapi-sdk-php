@@ -39,40 +39,16 @@ class DeleteFaceSet extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withLazyMode() instead.
-     *
-     * @param string $lazyMode
-     *
-     * @return $this
-     */
-    public function setLazyMode($lazyMode)
-    {
-        return $this->withLazyMode($lazyMode);
-    }
-
-    /**
      * @param string $lazyMode
      *
      * @return $this
      */
     public function withLazyMode($lazyMode)
     {
-        $this->data['LazyMode'] = $lazyMode;
+        $this->data['LazyMode']             = $lazyMode;
         $this->options['query']['LazyMode'] = $lazyMode;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -82,22 +58,10 @@ class DeleteFaceSet extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -107,22 +71,10 @@ class DeleteFaceSet extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckEmpty() instead.
-     *
-     * @param string $checkEmpty
-     *
-     * @return $this
-     */
-    public function setCheckEmpty($checkEmpty)
-    {
-        return $this->withCheckEmpty($checkEmpty);
     }
 
     /**
@@ -132,7 +84,7 @@ class DeleteFaceSet extends RpcRequest
      */
     public function withCheckEmpty($checkEmpty)
     {
-        $this->data['CheckEmpty'] = $checkEmpty;
+        $this->data['CheckEmpty']             = $checkEmpty;
         $this->options['query']['CheckEmpty'] = $checkEmpty;
 
         return $this;

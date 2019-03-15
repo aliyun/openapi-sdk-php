@@ -124,7 +124,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ModifyMySQLDBInstanceDelay modifyMySQLDBInstanceDelay(array $options = [])
  * @method static ModifyParameter modifyParameter(array $options = [])
  * @method static ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
- * @method static ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options = [])
+ * @method static ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options
+ *         = [])
  * @method static ModifyReplicaDescription modifyReplicaDescription(array $options = [])
  * @method static ModifyResourceGroup modifyResourceGroup(array $options = [])
  * @method static ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])

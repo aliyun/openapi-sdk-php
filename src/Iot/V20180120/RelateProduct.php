@@ -37,7 +37,7 @@ class RelateProduct extends RpcRequest
      */
     public function withProductKey($productKey)
     {
-        $this->data['ProductKey'] = $productKey;
+        $this->data['ProductKey']             = $productKey;
         $this->options['query']['ProductKey'] = $productKey;
 
         return $this;

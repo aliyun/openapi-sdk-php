@@ -53,22 +53,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withFuncFilter($funcFilter)
     {
-        $this->data['FuncFilter'] = $funcFilter;
+        $this->data['FuncFilter']             = $funcFilter;
         $this->options['query']['FuncFilter'] = $funcFilter;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDomainName() instead.
-     *
-     * @param string $domainName
-     *
-     * @return $this
-     */
-    public function setDomainName($domainName)
-    {
-        return $this->withDomainName($domainName);
     }
 
     /**
@@ -78,22 +66,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withDomainName($domainName)
     {
-        $this->data['DomainName'] = $domainName;
+        $this->data['DomainName']             = $domainName;
         $this->options['query']['DomainName'] = $domainName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -103,22 +79,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withFuncId() instead.
-     *
-     * @param string $funcId
-     *
-     * @return $this
-     */
-    public function setFuncId($funcId)
-    {
-        return $this->withFuncId($funcId);
     }
 
     /**
@@ -128,22 +92,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withFuncId($funcId)
     {
-        $this->data['FuncId'] = $funcId;
+        $this->data['FuncId']             = $funcId;
         $this->options['query']['FuncId'] = $funcId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageNumber() instead.
-     *
-     * @param string $pageNumber
-     *
-     * @return $this
-     */
-    public function setPageNumber($pageNumber)
-    {
-        return $this->withPageNumber($pageNumber);
     }
 
     /**
@@ -153,18 +105,18 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withPageNumber($pageNumber)
     {
-        $this->data['PageNumber'] = $pageNumber;
+        $this->data['PageNumber']             = $pageNumber;
         $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
-     *
      * @param string $domainStatus
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withDomainStatus() instead.
+     *
      */
     public function setDomainStatus($domainStatus)
     {
@@ -178,18 +130,18 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withDomainStatus($domainStatus)
     {
-        $this->data['DomainStatus'] = $domainStatus;
+        $this->data['DomainStatus']             = $domainStatus;
         $this->options['query']['DomainStatus'] = $domainStatus;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withDomainSearchType() instead.
-     *
      * @param string $domainSearchType
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withDomainSearchType() instead.
+     *
      */
     public function setDomainSearchType($domainSearchType)
     {
@@ -203,18 +155,18 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withDomainSearchType($domainSearchType)
     {
-        $this->data['DomainSearchType'] = $domainSearchType;
+        $this->data['DomainSearchType']             = $domainSearchType;
         $this->options['query']['DomainSearchType'] = $domainSearchType;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCheckDomainShow() instead.
-     *
      * @param string $checkDomainShow
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCheckDomainShow() instead.
+     *
      */
     public function setCheckDomainShow($checkDomainShow)
     {
@@ -228,18 +180,18 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withCheckDomainShow($checkDomainShow)
     {
-        $this->data['CheckDomainShow'] = $checkDomainShow;
+        $this->data['CheckDomainShow']             = $checkDomainShow;
         $this->options['query']['CheckDomainShow'] = $checkDomainShow;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
-     *
      * @param string $resourceGroupId
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withResourceGroupId() instead.
+     *
      */
     public function setResourceGroupId($resourceGroupId)
     {
@@ -253,22 +205,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withResourceGroupId($resourceGroupId)
     {
-        $this->data['ResourceGroupId'] = $resourceGroupId;
+        $this->data['ResourceGroupId']             = $resourceGroupId;
         $this->options['query']['ResourceGroupId'] = $resourceGroupId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSecurityToken() instead.
-     *
-     * @param string $securityToken
-     *
-     * @return $this
-     */
-    public function setSecurityToken($securityToken)
-    {
-        return $this->withSecurityToken($securityToken);
     }
 
     /**
@@ -278,18 +218,18 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withSecurityToken($securityToken)
     {
-        $this->data['SecurityToken'] = $securityToken;
+        $this->data['SecurityToken']             = $securityToken;
         $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withCdnType() instead.
-     *
      * @param string $cdnType
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withCdnType() instead.
+     *
      */
     public function setCdnType($cdnType)
     {
@@ -303,22 +243,10 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withCdnType($cdnType)
     {
-        $this->data['CdnType'] = $cdnType;
+        $this->data['CdnType']             = $cdnType;
         $this->options['query']['CdnType'] = $cdnType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withPageSize() instead.
-     *
-     * @param string $pageSize
-     *
-     * @return $this
-     */
-    public function setPageSize($pageSize)
-    {
-        return $this->withPageSize($pageSize);
     }
 
     /**
@@ -328,7 +256,7 @@ class DescribeVodUserDomains extends RpcRequest
      */
     public function withPageSize($pageSize)
     {
-        $this->data['PageSize'] = $pageSize;
+        $this->data['PageSize']             = $pageSize;
         $this->options['query']['PageSize'] = $pageSize;
 
         return $this;

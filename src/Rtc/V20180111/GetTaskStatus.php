@@ -39,40 +39,16 @@ class GetTaskStatus extends RpcRequest
     public $serviceCode = 'rtc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withAppId() instead.
-     *
-     * @param string $appId
-     *
-     * @return $this
-     */
-    public function setAppId($appId)
-    {
-        return $this->withAppId($appId);
     }
 
     /**
@@ -82,22 +58,10 @@ class GetTaskStatus extends RpcRequest
      */
     public function withAppId($appId)
     {
-        $this->data['AppId'] = $appId;
+        $this->data['AppId']             = $appId;
         $this->options['query']['AppId'] = $appId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withChannelId() instead.
-     *
-     * @param string $channelId
-     *
-     * @return $this
-     */
-    public function setChannelId($channelId)
-    {
-        return $this->withChannelId($channelId);
     }
 
     /**
@@ -107,22 +71,10 @@ class GetTaskStatus extends RpcRequest
      */
     public function withChannelId($channelId)
     {
-        $this->data['ChannelId'] = $channelId;
+        $this->data['ChannelId']             = $channelId;
         $this->options['query']['ChannelId'] = $channelId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withTaskId() instead.
-     *
-     * @param string $taskId
-     *
-     * @return $this
-     */
-    public function setTaskId($taskId)
-    {
-        return $this->withTaskId($taskId);
     }
 
     /**
@@ -132,7 +84,7 @@ class GetTaskStatus extends RpcRequest
      */
     public function withTaskId($taskId)
     {
-        $this->data['TaskId'] = $taskId;
+        $this->data['TaskId']             = $taskId;
         $this->options['query']['TaskId'] = $taskId;
 
         return $this;

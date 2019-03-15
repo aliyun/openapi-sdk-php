@@ -31,25 +31,13 @@ class DeleteTimeTemplate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;

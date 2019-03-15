@@ -48,40 +48,16 @@ class DescribeRouteEntryList extends RpcRequest
     public $serviceCode = 'vpc';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteEntryName() instead.
-     *
-     * @param string $routeEntryName
-     *
-     * @return $this
-     */
-    public function setRouteEntryName($routeEntryName)
-    {
-        return $this->withRouteEntryName($routeEntryName);
     }
 
     /**
@@ -91,22 +67,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withRouteEntryName($routeEntryName)
     {
-        $this->data['RouteEntryName'] = $routeEntryName;
+        $this->data['RouteEntryName']             = $routeEntryName;
         $this->options['query']['RouteEntryName'] = $routeEntryName;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNetworkType() instead.
-     *
-     * @param string $networkType
-     *
-     * @return $this
-     */
-    public function setNetworkType($networkType)
-    {
-        return $this->withNetworkType($networkType);
     }
 
     /**
@@ -116,22 +80,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withNetworkType($networkType)
     {
-        $this->data['NetworkType'] = $networkType;
+        $this->data['NetworkType']             = $networkType;
         $this->options['query']['NetworkType'] = $networkType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteEntryType() instead.
-     *
-     * @param string $routeEntryType
-     *
-     * @return $this
-     */
-    public function setRouteEntryType($routeEntryType)
-    {
-        return $this->withRouteEntryType($routeEntryType);
     }
 
     /**
@@ -141,22 +93,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withRouteEntryType($routeEntryType)
     {
-        $this->data['RouteEntryType'] = $routeEntryType;
+        $this->data['RouteEntryType']             = $routeEntryType;
         $this->options['query']['RouteEntryType'] = $routeEntryType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withIpVersion() instead.
-     *
-     * @param string $ipVersion
-     *
-     * @return $this
-     */
-    public function setIpVersion($ipVersion)
-    {
-        return $this->withIpVersion($ipVersion);
     }
 
     /**
@@ -166,22 +106,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withIpVersion($ipVersion)
     {
-        $this->data['IpVersion'] = $ipVersion;
+        $this->data['IpVersion']             = $ipVersion;
         $this->options['query']['IpVersion'] = $ipVersion;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextHopId() instead.
-     *
-     * @param string $nextHopId
-     *
-     * @return $this
-     */
-    public function setNextHopId($nextHopId)
-    {
-        return $this->withNextHopId($nextHopId);
     }
 
     /**
@@ -191,22 +119,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withNextHopId($nextHopId)
     {
-        $this->data['NextHopId'] = $nextHopId;
+        $this->data['NextHopId']             = $nextHopId;
         $this->options['query']['NextHopId'] = $nextHopId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withNextHopType() instead.
-     *
-     * @param string $nextHopType
-     *
-     * @return $this
-     */
-    public function setNextHopType($nextHopType)
-    {
-        return $this->withNextHopType($nextHopType);
     }
 
     /**
@@ -216,22 +132,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withNextHopType($nextHopType)
     {
-        $this->data['NextHopType'] = $nextHopType;
+        $this->data['NextHopType']             = $nextHopType;
         $this->options['query']['NextHopType'] = $nextHopType;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteTableId() instead.
-     *
-     * @param string $routeTableId
-     *
-     * @return $this
-     */
-    public function setRouteTableId($routeTableId)
-    {
-        return $this->withRouteTableId($routeTableId);
     }
 
     /**
@@ -241,22 +145,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withRouteTableId($routeTableId)
     {
-        $this->data['RouteTableId'] = $routeTableId;
+        $this->data['RouteTableId']             = $routeTableId;
         $this->options['query']['RouteTableId'] = $routeTableId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -266,22 +158,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withDestinationCidrBlock() instead.
-     *
-     * @param string $destinationCidrBlock
-     *
-     * @return $this
-     */
-    public function setDestinationCidrBlock($destinationCidrBlock)
-    {
-        return $this->withDestinationCidrBlock($destinationCidrBlock);
     }
 
     /**
@@ -291,22 +171,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withDestinationCidrBlock($destinationCidrBlock)
     {
-        $this->data['DestinationCidrBlock'] = $destinationCidrBlock;
+        $this->data['DestinationCidrBlock']             = $destinationCidrBlock;
         $this->options['query']['DestinationCidrBlock'] = $destinationCidrBlock;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -316,22 +184,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withOwnerAccount($ownerAccount)
     {
-        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->data['OwnerAccount']             = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -341,22 +197,10 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withRouteEntryId() instead.
-     *
-     * @param string $routeEntryId
-     *
-     * @return $this
-     */
-    public function setRouteEntryId($routeEntryId)
-    {
-        return $this->withRouteEntryId($routeEntryId);
     }
 
     /**
@@ -366,7 +210,7 @@ class DescribeRouteEntryList extends RpcRequest
      */
     public function withRouteEntryId($routeEntryId)
     {
-        $this->data['RouteEntryId'] = $routeEntryId;
+        $this->data['RouteEntryId']             = $routeEntryId;
         $this->options['query']['RouteEntryId'] = $routeEntryId;
 
         return $this;

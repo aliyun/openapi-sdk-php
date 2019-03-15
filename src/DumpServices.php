@@ -57,6 +57,7 @@ class DumpServices
                     return true;
                 }
             }
+
             return false;
         } catch (ReflectionException $e) {
             echo $e->getMessage();
@@ -143,6 +144,7 @@ EOT;
 
         $fileName = $productDirectory . DIRECTORY_SEPARATOR . $productName . '.php';
         \file_put_contents($fileName, $php);
+
         return true;
     }
 
@@ -183,6 +185,7 @@ EOT;
                 $apis[] = \basename($apiDirectory);
             }
         }
+
         return $apis;
     }
 

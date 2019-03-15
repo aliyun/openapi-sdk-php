@@ -40,11 +40,11 @@ class CreateDeleteFaceSetJob extends RpcRequest
     public $serviceCode = 'imm';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
-     *
      * @param string $notifyTopicName
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withNotifyTopicName() instead.
+     *
      */
     public function setNotifyTopicName($notifyTopicName)
     {
@@ -58,18 +58,18 @@ class CreateDeleteFaceSetJob extends RpcRequest
      */
     public function withNotifyTopicName($notifyTopicName)
     {
-        $this->data['NotifyTopicName'] = $notifyTopicName;
+        $this->data['NotifyTopicName']             = $notifyTopicName;
         $this->options['query']['NotifyTopicName'] = $notifyTopicName;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
-     *
      * @param string $notifyEndpoint
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withNotifyEndpoint() instead.
+     *
      */
     public function setNotifyEndpoint($notifyEndpoint)
     {
@@ -83,22 +83,10 @@ class CreateDeleteFaceSetJob extends RpcRequest
      */
     public function withNotifyEndpoint($notifyEndpoint)
     {
-        $this->data['NotifyEndpoint'] = $notifyEndpoint;
+        $this->data['NotifyEndpoint']             = $notifyEndpoint;
         $this->options['query']['NotifyEndpoint'] = $notifyEndpoint;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withProject() instead.
-     *
-     * @param string $project
-     *
-     * @return $this
-     */
-    public function setProject($project)
-    {
-        return $this->withProject($project);
     }
 
     /**
@@ -108,22 +96,10 @@ class CreateDeleteFaceSetJob extends RpcRequest
      */
     public function withProject($project)
     {
-        $this->data['Project'] = $project;
+        $this->data['Project']             = $project;
         $this->options['query']['Project'] = $project;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withSetId() instead.
-     *
-     * @param string $setId
-     *
-     * @return $this
-     */
-    public function setSetId($setId)
-    {
-        return $this->withSetId($setId);
     }
 
     /**
@@ -133,22 +109,10 @@ class CreateDeleteFaceSetJob extends RpcRequest
      */
     public function withSetId($setId)
     {
-        $this->data['SetId'] = $setId;
+        $this->data['SetId']             = $setId;
         $this->options['query']['SetId'] = $setId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withCheckEmpty() instead.
-     *
-     * @param string $checkEmpty
-     *
-     * @return $this
-     */
-    public function setCheckEmpty($checkEmpty)
-    {
-        return $this->withCheckEmpty($checkEmpty);
     }
 
     /**
@@ -158,7 +122,7 @@ class CreateDeleteFaceSetJob extends RpcRequest
      */
     public function withCheckEmpty($checkEmpty)
     {
-        $this->data['CheckEmpty'] = $checkEmpty;
+        $this->data['CheckEmpty']             = $checkEmpty;
         $this->options['query']['CheckEmpty'] = $checkEmpty;
 
         return $this;

@@ -41,40 +41,16 @@ class UpdateWorkFlow extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -84,22 +60,10 @@ class UpdateWorkFlow extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withName() instead.
-     *
-     * @param string $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        return $this->withName($name);
     }
 
     /**
@@ -109,22 +73,10 @@ class UpdateWorkFlow extends RpcRequest
      */
     public function withName($name)
     {
-        $this->data['Name'] = $name;
+        $this->data['Name']             = $name;
         $this->options['query']['Name'] = $name;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withActionList() instead.
-     *
-     * @param string $actionList
-     *
-     * @return $this
-     */
-    public function setActionList($actionList)
-    {
-        return $this->withActionList($actionList);
     }
 
     /**
@@ -134,22 +86,10 @@ class UpdateWorkFlow extends RpcRequest
      */
     public function withActionList($actionList)
     {
-        $this->data['ActionList'] = $actionList;
+        $this->data['ActionList']             = $actionList;
         $this->options['query']['ActionList'] = $actionList;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -159,22 +99,10 @@ class UpdateWorkFlow extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withWorkFlowId() instead.
-     *
-     * @param string $workFlowId
-     *
-     * @return $this
-     */
-    public function setWorkFlowId($workFlowId)
-    {
-        return $this->withWorkFlowId($workFlowId);
     }
 
     /**
@@ -184,7 +112,7 @@ class UpdateWorkFlow extends RpcRequest
      */
     public function withWorkFlowId($workFlowId)
     {
-        $this->data['WorkFlowId'] = $workFlowId;
+        $this->data['WorkFlowId']             = $workFlowId;
         $this->options['query']['WorkFlowId'] = $workFlowId;
 
         return $this;

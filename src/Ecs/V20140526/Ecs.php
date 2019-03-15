@@ -179,7 +179,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeVRouters describeVRouters(array $options = [])
  * @method static DescribeVSwitches describeVSwitches(array $options = [])
  * @method static DescribeVirtualBorderRouters describeVirtualBorderRouters(array $options = [])
- * @method static DescribeVirtualBorderRoutersForPhysicalConnection describeVirtualBorderRoutersForPhysicalConnection(array $options = [])
+ * @method static DescribeVirtualBorderRoutersForPhysicalConnection
+ *         describeVirtualBorderRoutersForPhysicalConnection(array $options = [])
  * @method static DescribeVpcs describeVpcs(array $options = [])
  * @method static DescribeZones describeZones(array $options = [])
  * @method static DetachClassicLinkVpc detachClassicLinkVpc(array $options = [])

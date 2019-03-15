@@ -43,7 +43,7 @@ class ListTagResources extends RpcRequest
      */
     public function withTagOwnerUid($tagOwnerUid)
     {
-        $this->data['TagOwnerUid'] = $tagOwnerUid;
+        $this->data['TagOwnerUid']             = $tagOwnerUid;
         $this->options['query']['TagOwnerUid'] = $tagOwnerUid;
 
         return $this;
@@ -56,7 +56,7 @@ class ListTagResources extends RpcRequest
      */
     public function withScope($scope)
     {
-        $this->data['Scope'] = $scope;
+        $this->data['Scope']             = $scope;
         $this->options['query']['Scope'] = $scope;
 
         return $this;
@@ -69,7 +69,7 @@ class ListTagResources extends RpcRequest
      */
     public function withTagOwnerBid($tagOwnerBid)
     {
-        $this->data['TagOwnerBid'] = $tagOwnerBid;
+        $this->data['TagOwnerBid']             = $tagOwnerBid;
         $this->options['query']['TagOwnerBid'] = $tagOwnerBid;
 
         return $this;
@@ -84,7 +84,7 @@ class ListTagResources extends RpcRequest
     {
         $this->data['Tag'] = $tag;
         foreach ($tag as $i => $iValue) {
-            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $tag[$i]['Key'];
+            $this->options['query']['Tag.' . ($i + 1) . '.Key']   = $tag[$i]['Key'];
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $tag[$i]['Value'];
         }
 
@@ -113,7 +113,7 @@ class ListTagResources extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
@@ -126,7 +126,7 @@ class ListTagResources extends RpcRequest
      */
     public function withResourceType($resourceType)
     {
-        $this->data['ResourceType'] = $resourceType;
+        $this->data['ResourceType']             = $resourceType;
         $this->options['query']['ResourceType'] = $resourceType;
 
         return $this;

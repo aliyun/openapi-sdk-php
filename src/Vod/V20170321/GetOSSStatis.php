@@ -42,40 +42,16 @@ class GetOSSStatis extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withStartStatisTime() instead.
-     *
-     * @param string $startStatisTime
-     *
-     * @return $this
-     */
-    public function setStartStatisTime($startStatisTime)
-    {
-        return $this->withStartStatisTime($startStatisTime);
     }
 
     /**
@@ -85,22 +61,10 @@ class GetOSSStatis extends RpcRequest
      */
     public function withStartStatisTime($startStatisTime)
     {
-        $this->data['StartStatisTime'] = $startStatisTime;
+        $this->data['StartStatisTime']             = $startStatisTime;
         $this->options['query']['StartStatisTime'] = $startStatisTime;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -110,22 +74,10 @@ class GetOSSStatis extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withLevel() instead.
-     *
-     * @param string $level
-     *
-     * @return $this
-     */
-    public function setLevel($level)
-    {
-        return $this->withLevel($level);
     }
 
     /**
@@ -135,22 +87,10 @@ class GetOSSStatis extends RpcRequest
      */
     public function withLevel($level)
     {
-        $this->data['Level'] = $level;
+        $this->data['Level']             = $level;
         $this->options['query']['Level'] = $level;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerAccount() instead.
-     *
-     * @param string $ownerAccount
-     *
-     * @return $this
-     */
-    public function setOwnerAccount($ownerAccount)
-    {
-        return $this->withOwnerAccount($ownerAccount);
     }
 
     /**
@@ -160,22 +100,10 @@ class GetOSSStatis extends RpcRequest
      */
     public function withOwnerAccount($ownerAccount)
     {
-        $this->data['OwnerAccount'] = $ownerAccount;
+        $this->data['OwnerAccount']             = $ownerAccount;
         $this->options['query']['OwnerAccount'] = $ownerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -185,22 +113,10 @@ class GetOSSStatis extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withEndStatisTime() instead.
-     *
-     * @param string $endStatisTime
-     *
-     * @return $this
-     */
-    public function setEndStatisTime($endStatisTime)
-    {
-        return $this->withEndStatisTime($endStatisTime);
     }
 
     /**
@@ -210,7 +126,7 @@ class GetOSSStatis extends RpcRequest
      */
     public function withEndStatisTime($endStatisTime)
     {
-        $this->data['EndStatisTime'] = $endStatisTime;
+        $this->data['EndStatisTime']             = $endStatisTime;
         $this->options['query']['EndStatisTime'] = $endStatisTime;
 
         return $this;

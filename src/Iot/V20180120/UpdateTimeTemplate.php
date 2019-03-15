@@ -34,25 +34,13 @@ class UpdateTimeTemplate extends RpcRequest
     public $method = 'POST';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTemplateId() instead.
-     *
-     * @param string $templateId
-     *
-     * @return $this
-     */
-    public function setTemplateId($templateId)
-    {
-        return $this->withTemplateId($templateId);
-    }
-
-    /**
      * @param string $templateId
      *
      * @return $this
      */
     public function withTemplateId($templateId)
     {
-        $this->data['TemplateId'] = $templateId;
+        $this->data['TemplateId']             = $templateId;
         $this->options['query']['TemplateId'] = $templateId;
 
         return $this;
@@ -65,7 +53,7 @@ class UpdateTimeTemplate extends RpcRequest
      */
     public function withName($name)
     {
-        $this->data['Name'] = $name;
+        $this->data['Name']             = $name;
         $this->options['query']['Name'] = $name;
 
         return $this;
@@ -78,16 +66,16 @@ class UpdateTimeTemplate extends RpcRequest
      */
     public function withAllDay($allDay)
     {
-        $this->data['AllDay'] = $allDay;
+        $this->data['AllDay']             = $allDay;
         $this->options['query']['AllDay'] = $allDay;
 
         return $this;
     }
 
     /**
+     * @return array
      * @deprecated deprecated since version 2.0, Use getTimeSections() instead.
      *
-     * @return array
      */
     public function getTimeSectionss()
     {
@@ -95,11 +83,11 @@ class UpdateTimeTemplate extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withTimeSections() instead.
-     *
      * @param array $timeSectionss
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withTimeSections() instead.
+     *
      */
     public function setTimeSectionss(array $timeSectionss)
     {
@@ -116,8 +104,8 @@ class UpdateTimeTemplate extends RpcRequest
         $this->data['TimeSections'] = $timeSections;
         foreach ($timeSections as $i => $iValue) {
             $this->options['query']['TimeSections.' . ($i + 1) . '.DayOfWeek'] = $timeSections[$i]['DayOfWeek'];
-            $this->options['query']['TimeSections.' . ($i + 1) . '.End'] = $timeSections[$i]['End'];
-            $this->options['query']['TimeSections.' . ($i + 1) . '.Begin'] = $timeSections[$i]['Begin'];
+            $this->options['query']['TimeSections.' . ($i + 1) . '.End']       = $timeSections[$i]['End'];
+            $this->options['query']['TimeSections.' . ($i + 1) . '.Begin']     = $timeSections[$i]['Begin'];
         }
 
         return $this;

@@ -31,9 +31,9 @@ class ActiveDevice extends RpcRequest
     public $method = 'POST';
 
     /**
+     * @return array
      * @deprecated deprecated since version 2.0, Use getIotIdList() instead.
      *
-     * @return array
      */
     public function getIotIdLists()
     {
@@ -41,11 +41,11 @@ class ActiveDevice extends RpcRequest
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withIotIdList() instead.
-     *
      * @param array $iotIdLists
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withIotIdList() instead.
+     *
      */
     public function setIotIdLists(array $iotIdLists)
     {

@@ -40,22 +40,10 @@ class DescribeInstanceTopology extends RpcRequest
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -65,18 +53,18 @@ class DescribeInstanceTopology extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
-     *
      * @param string $instanceIds
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withInstanceIds() instead.
+     *
      */
     public function setInstanceIds($instanceIds)
     {
@@ -90,7 +78,7 @@ class DescribeInstanceTopology extends RpcRequest
      */
     public function withInstanceIds($instanceIds)
     {
-        $this->data['InstanceIds'] = $instanceIds;
+        $this->data['InstanceIds']             = $instanceIds;
         $this->options['query']['InstanceIds'] = $instanceIds;
 
         return $this;
@@ -103,7 +91,7 @@ class DescribeInstanceTopology extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;

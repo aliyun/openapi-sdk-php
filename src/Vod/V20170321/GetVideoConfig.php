@@ -40,40 +40,16 @@ class GetVideoConfig extends RpcRequest
     public $serviceCode = 'vod';
 
     /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerId() instead.
-     *
-     * @param string $resourceOwnerId
-     *
-     * @return $this
-     */
-    public function setResourceOwnerId($resourceOwnerId)
-    {
-        return $this->withResourceOwnerId($resourceOwnerId);
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
      */
     public function withResourceOwnerId($resourceOwnerId)
     {
-        $this->data['ResourceOwnerId'] = $resourceOwnerId;
+        $this->data['ResourceOwnerId']             = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withResourceOwnerAccount() instead.
-     *
-     * @param string $resourceOwnerAccount
-     *
-     * @return $this
-     */
-    public function setResourceOwnerAccount($resourceOwnerAccount)
-    {
-        return $this->withResourceOwnerAccount($resourceOwnerAccount);
     }
 
     /**
@@ -83,22 +59,10 @@ class GetVideoConfig extends RpcRequest
      */
     public function withResourceOwnerAccount($resourceOwnerAccount)
     {
-        $this->data['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->data['ResourceOwnerAccount']             = $resourceOwnerAccount;
         $this->options['query']['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withVideoId() instead.
-     *
-     * @param string $videoId
-     *
-     * @return $this
-     */
-    public function setVideoId($videoId)
-    {
-        return $this->withVideoId($videoId);
     }
 
     /**
@@ -108,22 +72,10 @@ class GetVideoConfig extends RpcRequest
      */
     public function withVideoId($videoId)
     {
-        $this->data['VideoId'] = $videoId;
+        $this->data['VideoId']             = $videoId;
         $this->options['query']['VideoId'] = $videoId;
 
         return $this;
-    }
-
-    /**
-     * @deprecated deprecated since version 2.0, Use withOwnerId() instead.
-     *
-     * @param string $ownerId
-     *
-     * @return $this
-     */
-    public function setOwnerId($ownerId)
-    {
-        return $this->withOwnerId($ownerId);
     }
 
     /**
@@ -133,18 +85,18 @@ class GetVideoConfig extends RpcRequest
      */
     public function withOwnerId($ownerId)
     {
-        $this->data['OwnerId'] = $ownerId;
+        $this->data['OwnerId']             = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
 
         return $this;
     }
 
     /**
-     * @deprecated deprecated since version 2.0, Use withAuthInfo() instead.
-     *
      * @param string $authInfo
      *
      * @return $this
+     * @deprecated deprecated since version 2.0, Use withAuthInfo() instead.
+     *
      */
     public function setAuthInfo($authInfo)
     {
@@ -158,7 +110,7 @@ class GetVideoConfig extends RpcRequest
      */
     public function withAuthInfo($authInfo)
     {
-        $this->data['AuthInfo'] = $authInfo;
+        $this->data['AuthInfo']             = $authInfo;
         $this->options['query']['AuthInfo'] = $authInfo;
 
         return $this;
