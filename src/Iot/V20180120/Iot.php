@@ -5,9 +5,7 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Iot based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Iot\V20180120
+ * @deprecated
  *
  * @method static ActiveDevice activeDevice(array $options = [])
  * @method static AddEventRecordPlanDevice addEventRecordPlanDevice(array $options = [])

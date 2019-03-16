@@ -5,9 +5,7 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the CS based on the method name as the Api name.
- *
- * @package   AlibabaCloud\CS\V20151215
+ * @deprecated
  *
  * @method static AttachInstances attachInstances(array $options = [])
  * @method static BatchUpdateSharedService batchUpdateSharedService(array $options = [])

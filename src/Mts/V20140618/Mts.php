@@ -5,9 +5,7 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Mts based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Mts\V20140618
+ * @deprecated
  *
  * @method static ActivateMediaWorkflow activateMediaWorkflow(array $options = [])
  * @method static AddAsrPipeline addAsrPipeline(array $options = [])

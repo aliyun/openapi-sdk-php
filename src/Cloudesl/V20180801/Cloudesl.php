@@ -5,9 +5,7 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Cloudesl based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Cloudesl\V20180801
+ * @deprecated
  *
  * @method static BatchInsertItems batchInsertItems(array $options = [])
  * @method static BindEslDevice bindEslDevice(array $options = [])

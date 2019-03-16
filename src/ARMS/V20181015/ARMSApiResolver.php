@@ -5,11 +5,10 @@ namespace AlibabaCloud\ARMS\V20181015;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the ARMS based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  * @method MetricQuery metricQuery(array $options = [])
+ * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
 class ARMSApiResolver
 {

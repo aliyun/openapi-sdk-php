@@ -5,9 +5,7 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Live based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Live\V20161101
+ * @deprecated
  *
  * @method static AddCasterComponent addCasterComponent(array $options = [])
  * @method static AddCasterEpisode addCasterEpisode(array $options = [])
@@ -124,8 +122,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLiveStreamTranscodeInfo describeLiveStreamTranscodeInfo(array $options = [])
  * @method static DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method static DescribeLiveStreamsControlHistory describeLiveStreamsControlHistory(array $options = [])
- * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options
- *         = [])
+ * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData($options = [])
  * @method static DescribeLiveStreamsNotifyUrlConfig describeLiveStreamsNotifyUrlConfig(array $options = [])
  * @method static DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
  * @method static DescribeLiveStreamsPublishList describeLiveStreamsPublishList(array $options = [])

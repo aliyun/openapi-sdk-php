@@ -5,8 +5,7 @@ namespace AlibabaCloud\EHPC;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the EHPC based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180412\EHPCApiResolver v20180412()
  */

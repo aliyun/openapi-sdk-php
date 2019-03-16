@@ -5,9 +5,7 @@ namespace AlibabaCloud\Slb\V20140515;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Slb based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Slb\V20140515
+ * @deprecated
  *
  * @method static AddAccessControlListEntry addAccessControlListEntry(array $options = [])
  * @method static AddBackendServers addBackendServers(array $options = [])
@@ -48,8 +46,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeAccessControlLists describeAccessControlLists(array $options = [])
  * @method static DescribeAutoRenewStatus describeAutoRenewStatus(array $options = [])
  * @method static DescribeCACertificates describeCACertificates(array $options = [])
- * @method static DescribeCertificateRelatedListenersAndRules describeCertificateRelatedListenersAndRules(array
- *         $options = [])
+ * @method static DescribeCertificateRelatedListenersAndRules describeCertificateRelatedListenersAndRules(array $options = [])
  * @method static DescribeDomainExtensions describeDomainExtensions(array $options = [])
  * @method static DescribeHealthStatus describeHealthStatus(array $options = [])
  * @method static DescribeIdleInstances describeIdleInstances(array $options = [])
@@ -57,21 +54,16 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLoadBalancerAttribute describeLoadBalancerAttribute(array $options = [])
  * @method static DescribeLoadBalancerAutoReleaseTime describeLoadBalancerAutoReleaseTime(array $options = [])
  * @method static DescribeLoadBalancerBackendServers describeLoadBalancerBackendServers(array $options = [])
- * @method static DescribeLoadBalancerHTTPListenerAttribute describeLoadBalancerHTTPListenerAttribute(array $options =
- *         [])
- * @method static DescribeLoadBalancerHTTPSListenerAttribute describeLoadBalancerHTTPSListenerAttribute(array $options
- *         = [])
- * @method static DescribeLoadBalancerTCPListenerAttribute describeLoadBalancerTCPListenerAttribute(array $options =
- *         [])
- * @method static DescribeLoadBalancerUDPListenerAttribute describeLoadBalancerUDPListenerAttribute(array $options =
- *         [])
+ * @method static DescribeLoadBalancerHTTPListenerAttribute describeLoadBalancerHTTPListenerAttribute(array $options = [])
+ * @method static DescribeLoadBalancerHTTPSListenerAttribute describeLoadBalancerHTTPSListenerAttribute(array $options = [])
+ * @method static DescribeLoadBalancerTCPListenerAttribute describeLoadBalancerTCPListenerAttribute(array $options = [])
+ * @method static DescribeLoadBalancerUDPListenerAttribute describeLoadBalancerUDPListenerAttribute(array $options = [])
  * @method static DescribeLoadBalancers describeLoadBalancers(array $options = [])
  * @method static DescribeLoadBalancersPro describeLoadBalancersPro(array $options = [])
  * @method static DescribeLoadBalancersRelatedEcs describeLoadBalancersRelatedEcs(array $options = [])
  * @method static DescribeMasterSlaveServerGroupAttribute describeMasterSlaveServerGroupAttribute(array $options = [])
  * @method static DescribeMasterSlaveServerGroups describeMasterSlaveServerGroups(array $options = [])
- * @method static DescribeMasterSlaveVServerGroupAttribute describeMasterSlaveVServerGroupAttribute(array $options =
- *         [])
+ * @method static DescribeMasterSlaveVServerGroupAttribute describeMasterSlaveVServerGroupAttribute(array $options = [])
  * @method static DescribeMasterSlaveVServerGroups describeMasterSlaveVServerGroups(array $options = [])
  * @method static DescribeRegions describeRegions(array $options = [])
  * @method static DescribeRuleAttribute describeRuleAttribute(array $options = [])

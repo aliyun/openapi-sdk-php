@@ -5,8 +5,7 @@ namespace AlibabaCloud\Market;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Market based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20151101\MarketApiResolver v20151101()
  */

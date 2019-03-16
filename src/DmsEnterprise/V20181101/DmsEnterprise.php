@@ -5,9 +5,7 @@ namespace AlibabaCloud\DmsEnterprise\V20181101;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the DmsEnterprise based on the method name as the Api name.
- *
- * @package   AlibabaCloud\DmsEnterprise\V20181101
+ * @deprecated
  *
  * @method static DeleteUser deleteUser(array $options = [])
  * @method static DisableUser disableUser(array $options = [])

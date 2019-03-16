@@ -5,9 +5,7 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the CloudAPI based on the method name as the Api name.
- *
- * @package   AlibabaCloud\CloudAPI\V20160714
+ * @deprecated
  *
  * @method static AbolishApi abolishApi(array $options = [])
  * @method static AddIpControlPolicyItem addIpControlPolicyItem(array $options = [])

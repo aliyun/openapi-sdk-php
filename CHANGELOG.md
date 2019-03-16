@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 1.2.0 - 2019-03-16
+- Redesign the request class to reduce the code size.
+- Support `Yundun`.
+- Support `Actiontrail`.
+- Support `industry-brain`.
+- Support `welfare-inner`.
+- Support `xspace`.
+- Support `ROS`.
+- Support `openanalytics`.
+- Support `Cbn`.
+- Support `cr`.
+- Support `MoPen`.
+- Support `Snsuapi`.
+- Support `finmall`.
+- Support `Emr`.
+
 ## 1.1.2 - 2019-03-15
 - Add `Iot` Tests.
 - Add `Aegis` Apis.

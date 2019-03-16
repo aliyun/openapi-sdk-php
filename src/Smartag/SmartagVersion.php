@@ -5,9 +5,7 @@ namespace AlibabaCloud\Smartag;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Smartag based on the method name as the version name.
- *
- * @package   AlibabaCloud\Smartag
+ * @deprecated
  *
  * @method static V20180313\SmartagApiResolver v20180313()
  */

@@ -5,8 +5,7 @@ namespace AlibabaCloud\CCC;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the CCC based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20170705\CCCApiResolver v20170705()
  */

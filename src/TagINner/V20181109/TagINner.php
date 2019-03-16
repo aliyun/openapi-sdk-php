@@ -5,9 +5,7 @@ namespace AlibabaCloud\TagINner\V20181109;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the TagINner based on the method name as the Api name.
- *
- * @package   AlibabaCloud\TagINner\V20181109
+ * @deprecated
  *
  * @method static InnerListTagResources innerListTagResources(array $options = [])
  * @method static InnerTagResources innerTagResources(array $options = [])

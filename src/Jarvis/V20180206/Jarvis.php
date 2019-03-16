@@ -5,9 +5,7 @@ namespace AlibabaCloud\Jarvis\V20180206;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Jarvis based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Jarvis\V20180206
+ * @deprecated
  *
  * @method static CreateAccessWhiteListGroup createAccessWhiteListGroup(array $options = [])
  * @method static CreateCdnSubscription createCdnSubscription(array $options = [])

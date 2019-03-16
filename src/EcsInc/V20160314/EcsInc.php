@@ -5,9 +5,7 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the EcsInc based on the method name as the Api name.
- *
- * @package   AlibabaCloud\EcsInc\V20160314
+ * @deprecated
  *
  * @method static AddSystemTag addSystemTag(array $options = [])
  * @method static AddSystemTags addSystemTags(array $options = [])

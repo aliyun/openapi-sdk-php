@@ -5,9 +5,7 @@ namespace AlibabaCloud\Ots;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Ots based on the method name as the version name.
- *
- * @package   AlibabaCloud\Ots
+ * @deprecated
  *
  * @method static V20160620\OtsApiResolver v20160620()
  */

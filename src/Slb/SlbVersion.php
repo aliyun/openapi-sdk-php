@@ -5,9 +5,7 @@ namespace AlibabaCloud\Slb;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Slb based on the method name as the version name.
- *
- * @package   AlibabaCloud\Slb
+ * @deprecated
  *
  * @method static V20140515\SlbApiResolver v20140515()
  */

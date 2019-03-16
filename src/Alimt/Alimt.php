@@ -5,8 +5,7 @@ namespace AlibabaCloud\Alimt;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Alimt based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20181012\AlimtApiResolver v20181012()
  */

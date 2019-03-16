@@ -5,9 +5,7 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Alidns based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Alidns\V20150109
+ * @deprecated
  *
  * @method static AddDomain addDomain(array $options = [])
  * @method static AddDomainGroup addDomainGroup(array $options = [])

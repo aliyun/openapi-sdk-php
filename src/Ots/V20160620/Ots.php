@@ -5,9 +5,7 @@ namespace AlibabaCloud\Ots\V20160620;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Ots based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Ots\V20160620
+ * @deprecated
  *
  * @method static BindInstance2Vpc bindInstance2Vpc(array $options = [])
  * @method static DeleteInstance deleteInstance(array $options = [])

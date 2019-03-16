@@ -5,8 +5,7 @@ namespace AlibabaCloud\LinkFace;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the LinkFace based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180720\LinkFaceApiResolver v20180720()
  */

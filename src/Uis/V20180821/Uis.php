@@ -5,9 +5,7 @@ namespace AlibabaCloud\Uis\V20180821;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Uis based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Uis\V20180821
+ * @deprecated
  *
  * @method static AddHighPriorityIp addHighPriorityIp(array $options = [])
  * @method static AddUisNodeIp addUisNodeIp(array $options = [])

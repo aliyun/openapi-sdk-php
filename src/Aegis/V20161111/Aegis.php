@@ -5,9 +5,7 @@ namespace AlibabaCloud\Aegis\V20161111;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Aegis based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Aegis\V20161111
+ * @deprecated
  *
  * @method static AegisApiResolver aegisApiResolver(array $options = [])
  * @method static AutoUpgradeSas autoUpgradeSas(array $options = [])

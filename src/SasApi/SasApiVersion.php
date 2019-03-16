@@ -5,9 +5,7 @@ namespace AlibabaCloud\SasApi;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the SasApi based on the method name as the version name.
- *
- * @package   AlibabaCloud\SasApi
+ * @deprecated
  *
  * @method static V20170705\SasApiApiResolver v20170705()
  */

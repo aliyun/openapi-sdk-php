@@ -5,9 +5,7 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the DomainIntl based on the method name as the Api name.
- *
- * @package   AlibabaCloud\DomainIntl\V20171218
+ * @deprecated
  *
  * @method static AcknowledgeTaskResult acknowledgeTaskResult(array $options = [])
  * @method static BatchFuzzyMatchDomainSensitiveWord batchFuzzyMatchDomainSensitiveWord(array $options = [])
@@ -49,7 +47,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static SaveBatchTaskForTransferProhibitionLock saveBatchTaskForTransferProhibitionLock(array $options = [])
  * @method static SaveBatchTaskForUpdateProhibitionLock saveBatchTaskForUpdateProhibitionLock(array $options = [])
  * @method static SaveBatchTaskForUpdatingContactInfo saveBatchTaskForUpdatingContactInfo(array $options = [])
- * @method static SaveBatchTaskForUpdatingContactInfoByNewContact saveBatchTaskForUpdatingContactInfoByNewContact(array $options = [])
+ * @method static SaveBatchTaskForUpdatingContactInfoByNewContact saveBatchTaskForUpdatingContactInfoByNewContact($options = [])
  * @method static SaveRegistrantProfile saveRegistrantProfile(array $options = [])
  * @method static SaveSingleTaskForAddingDSRecord saveSingleTaskForAddingDSRecord(array $options = [])
  * @method static SaveSingleTaskForApprovingTransferOut saveSingleTaskForApprovingTransferOut(array $options = [])

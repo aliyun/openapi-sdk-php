@@ -65,6 +65,7 @@ class BatchDeleteMessage extends BaseRequest
         }
         $xmlWriter->endElement();
         $xmlWriter->endDocument();
+
         return $xmlWriter->outputMemory();
     }
 

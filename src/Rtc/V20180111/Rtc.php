@@ -5,9 +5,7 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Rtc based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Rtc\V20180111
+ * @deprecated
  *
  * @method static CreateChannel createChannel(array $options = [])
  * @method static CreateChannelToken createChannelToken(array $options = [])

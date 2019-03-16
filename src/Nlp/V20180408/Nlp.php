@@ -5,9 +5,7 @@ namespace AlibabaCloud\Nlp\V20180408;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Nlp based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Nlp\V20180408
+ * @deprecated
  *
  * @method static Entity entity(array $options = [])
  * @method static IE iE(array $options = [])

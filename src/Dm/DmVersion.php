@@ -5,9 +5,7 @@ namespace AlibabaCloud\Dm;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Dm based on the method name as the version name.
- *
- * @package   AlibabaCloud\Dm
+ * @deprecated
  *
  * @method static V20151123\DmApiResolver v20151123()
  */

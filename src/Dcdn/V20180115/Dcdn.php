@@ -5,9 +5,7 @@ namespace AlibabaCloud\Dcdn\V20180115;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Dcdn based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Dcdn\V20180115
+ * @deprecated
  *
  * @method static AddDcdnDomain addDcdnDomain(array $options = [])
  * @method static BatchDeleteDcdnDomainConfig batchDeleteDcdnDomainConfig(array $options = [])

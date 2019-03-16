@@ -5,9 +5,7 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Lubancloud based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Lubancloud\V20180509
+ * @deprecated
  *
  * @method static BuyOriginPictures buyOriginPictures(array $options = [])
  * @method static GetStyles getStyles(array $options = [])

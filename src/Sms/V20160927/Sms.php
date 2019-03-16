@@ -5,9 +5,7 @@ namespace AlibabaCloud\Sms\V20160927;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Sms based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Sms\V20160927
+ * @deprecated
  *
  * @method static BatchSendSms batchSendSms(array $options = [])
  * @method static CreateMarketing createMarketing(array $options = [])

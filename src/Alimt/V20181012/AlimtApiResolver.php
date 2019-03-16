@@ -5,8 +5,7 @@ namespace AlibabaCloud\Alimt\V20181012;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Alimt based on the method name as the Api name.
- *
+ * Resolve Api based on the method name.
  *
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])

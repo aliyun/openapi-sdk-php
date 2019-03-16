@@ -5,9 +5,7 @@ namespace AlibabaCloud\Smartag\V20180313;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Smartag based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Smartag\V20180313
+ * @deprecated
  *
  * @method static ActivateSmartAccessGateway activateSmartAccessGateway(array $options = [])
  * @method static AddACLRule addACLRule(array $options = [])

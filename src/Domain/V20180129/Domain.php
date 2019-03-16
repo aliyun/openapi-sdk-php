@@ -5,9 +5,7 @@ namespace AlibabaCloud\Domain\V20180129;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Domain based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Domain\V20180129
+ * @deprecated
  *
  * @method static AcknowledgeTaskResult acknowledgeTaskResult(array $options = [])
  * @method static BatchFuzzyMatchDomainSensitiveWord batchFuzzyMatchDomainSensitiveWord(array $options = [])
@@ -43,15 +41,12 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static QueryDomainSuffix queryDomainSuffix(array $options = [])
  * @method static QueryEmailVerification queryEmailVerification(array $options = [])
  * @method static QueryEnsAssociation queryEnsAssociation(array $options = [])
- * @method static QueryFailReasonForDomainRealNameVerification queryFailReasonForDomainRealNameVerification(array
- *         $options = [])
- * @method static QueryFailReasonForRegistrantProfileRealNameVerification
- *         queryFailReasonForRegistrantProfileRealNameVerification(array $options = [])
+ * @method static QueryFailReasonForDomainRealNameVerification queryFailReasonForDomainRealNameVerification(array $options = [])
+ * @method static QueryFailReasonForRegistrantProfileRealNameVerification queryFailReasonForRegistrantProfileRealNameVerification(array $options = [])
  * @method static QueryFailingReasonListForQualification queryFailingReasonListForQualification(array $options = [])
  * @method static QueryLocalEnsAssociation queryLocalEnsAssociation(array $options = [])
  * @method static QueryQualificationDetail queryQualificationDetail(array $options = [])
- * @method static QueryRegistrantProfileRealNameVerificationInfo queryRegistrantProfileRealNameVerificationInfo(array
- *         $options = [])
+ * @method static QueryRegistrantProfileRealNameVerificationInfo queryRegistrantProfileRealNameVerificationInfo(array $options = [])
  * @method static QueryRegistrantProfiles queryRegistrantProfiles(array $options = [])
  * @method static QueryServerLock queryServerLock(array $options = [])
  * @method static QueryTaskDetailHistory queryTaskDetailHistory(array $options = [])
@@ -73,10 +68,8 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static SaveBatchTaskForModifyingDomainDns saveBatchTaskForModifyingDomainDns(array $options = [])
  * @method static SaveBatchTaskForTransferProhibitionLock saveBatchTaskForTransferProhibitionLock(array $options = [])
  * @method static SaveBatchTaskForUpdateProhibitionLock saveBatchTaskForUpdateProhibitionLock(array $options = [])
- * @method static SaveBatchTaskForUpdatingContactInfoByNewContact saveBatchTaskForUpdatingContactInfoByNewContact(array
- *         $options = [])
- * @method static SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId
- *         saveBatchTaskForUpdatingContactInfoByRegistrantProfileId(array $options = [])
+ * @method static SaveBatchTaskForUpdatingContactInfoByNewContact saveBatchTaskForUpdatingContactInfoByNewContact(array $options = [])
+ * @method static SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId saveBatchTaskForUpdatingContactInfoByRegistrantProfileId(array $options = [])
  * @method static SaveDomainGroup saveDomainGroup(array $options = [])
  * @method static SaveRegistrantProfile saveRegistrantProfile(array $options = [])
  * @method static SaveSingleTaskForAddingDSRecord saveSingleTaskForAddingDSRecord(array $options = [])
@@ -95,28 +88,21 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static SaveSingleTaskForDomainNameProxyService saveSingleTaskForDomainNameProxyService(array $options = [])
  * @method static SaveSingleTaskForModifyingDSRecord saveSingleTaskForModifyingDSRecord(array $options = [])
  * @method static SaveSingleTaskForModifyingDnsHost saveSingleTaskForModifyingDnsHost(array $options = [])
- * @method static SaveSingleTaskForQueryingTransferAuthorizationCode
- *         saveSingleTaskForQueryingTransferAuthorizationCode(array $options = [])
+ * @method static SaveSingleTaskForQueryingTransferAuthorizationCode saveSingleTaskForQueryingTransferAuthorizationCode(array $options = [])
  * @method static SaveSingleTaskForSynchronizingDSRecord saveSingleTaskForSynchronizingDSRecord(array $options = [])
  * @method static SaveSingleTaskForSynchronizingDnsHost saveSingleTaskForSynchronizingDnsHost(array $options = [])
- * @method static SaveSingleTaskForTransferProhibitionLock saveSingleTaskForTransferProhibitionLock(array $options =
- *         [])
+ * @method static SaveSingleTaskForTransferProhibitionLock saveSingleTaskForTransferProhibitionLock(array $options = [])
  * @method static SaveSingleTaskForUpdateProhibitionLock saveSingleTaskForUpdateProhibitionLock(array $options = [])
  * @method static SaveSingleTaskForUpdatingContactInfo saveSingleTaskForUpdatingContactInfo(array $options = [])
  * @method static SaveTaskForSubmittingDomainDelete saveTaskForSubmittingDomainDelete(array $options = [])
- * @method static SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
- *         saveTaskForSubmittingDomainRealNameVerificationByIdentityCredential(array $options = [])
- * @method static SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID
- *         saveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID(array $options = [])
- * @method static SaveTaskForUpdatingRegistrantInfoByIdentityCredential
- *         saveTaskForUpdatingRegistrantInfoByIdentityCredential(array $options = [])
- * @method static SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID
- *         saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(array $options = [])
+ * @method static SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential saveTaskForSubmittingDomainRealNameVerificationByIdentityCredential(array $options = [])
+ * @method static SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID saveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID(array $options = [])
+ * @method static SaveTaskForUpdatingRegistrantInfoByIdentityCredential saveTaskForUpdatingRegistrantInfoByIdentityCredential(array $options = [])
+ * @method static SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(array $options = [])
  * @method static ScrollDomainList scrollDomainList(array $options = [])
  * @method static SubmitEmailVerification submitEmailVerification(array $options = [])
  * @method static TransferInCheckMailToken transferInCheckMailToken(array $options = [])
- * @method static TransferInReenterTransferAuthorizationCode transferInReenterTransferAuthorizationCode(array $options
- *         = [])
+ * @method static TransferInReenterTransferAuthorizationCode transferInReenterTransferAuthorizationCode(array $options = [])
  * @method static TransferInRefetchWhoisEmail transferInRefetchWhoisEmail(array $options = [])
  * @method static TransferInResendMailToken transferInResendMailToken(array $options = [])
  * @method static UpdateDomainToDomainGroup updateDomainToDomainGroup(array $options = [])

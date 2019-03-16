@@ -5,9 +5,7 @@ namespace AlibabaCloud\NAS\V20170626;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the NAS based on the method name as the Api name.
- *
- * @package   AlibabaCloud\NAS\V20170626
+ * @deprecated
  *
  * @method static CPFSCreateFileSystem cPFSCreateFileSystem(array $options = [])
  * @method static CPFSDeleteFileSystem cPFSDeleteFileSystem(array $options = [])

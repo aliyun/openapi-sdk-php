@@ -5,9 +5,7 @@ namespace AlibabaCloud\Chatbot;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Chatbot based on the method name as the version name.
- *
- * @package   AlibabaCloud\Chatbot
+ * @deprecated
  *
  * @method static V20171011\ChatbotApiResolver v20171011()
  */
