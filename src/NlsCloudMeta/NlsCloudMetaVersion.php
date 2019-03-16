@@ -5,9 +5,7 @@ namespace AlibabaCloud\NlsCloudMeta;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the NlsCloudMeta based on the method name as the version name.
- *
- * @package   AlibabaCloud\NlsCloudMeta
+ * @deprecated
  *
  * @method static V20180518\NlsCloudMetaApiResolver v20180518()
  */

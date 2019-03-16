@@ -5,9 +5,7 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Airec based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Airec\V20181012
+ * @deprecated
  *
  * @method static AirecApiResolver airecApiResolver(array $options = [])
  * @method static AttachDataset attachDataset(array $options = [])

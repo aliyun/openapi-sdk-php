@@ -5,8 +5,7 @@ namespace AlibabaCloud\Jaq;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Jaq based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20161123\JaqApiResolver v20161123()
  */

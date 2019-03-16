@@ -5,8 +5,7 @@ namespace AlibabaCloud\Afs;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Afs based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180112\AfsApiResolver v20180112()
  */

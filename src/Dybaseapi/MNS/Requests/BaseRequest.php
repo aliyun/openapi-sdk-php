@@ -51,6 +51,14 @@ abstract class BaseRequest
     abstract public function generateQueryString();
 
     /**
+     * @return mixed
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
      * @param $body
      */
     public function setBody($body)
@@ -61,9 +69,9 @@ abstract class BaseRequest
     /**
      * @return mixed
      */
-    public function getBody()
+    public function getQueryString()
     {
-        return $this->body;
+        return $this->queryString;
     }
 
     /**
@@ -72,14 +80,6 @@ abstract class BaseRequest
     public function setQueryString($queryString)
     {
         $this->queryString = $queryString;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getQueryString()
-    {
-        return $this->queryString;
     }
 
     /**

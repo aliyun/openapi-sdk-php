@@ -4,7 +4,6 @@ namespace AlibabaCloud;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use ReflectionException;
-use Stringy\Stringy;
 
 /**
  * CLass DumpServices
@@ -36,74 +35,6 @@ class DumpServices
     }
 
     /**
-     * @return string
-     */
-    private static function getServiceResolverTraitFilePath()
-    {
-        return __DIR__ . DIRECTORY_SEPARATOR . 'ServiceResolverTrait.php';
-    }
-
-    /**
-     * @param string $methodName
-     *
-     * @return bool
-     */
-    private static function isStaticMethodExists($methodName)
-    {
-        try {
-            $class = new \ReflectionClass(AlibabaCloud::class);
-            foreach ($class->getMethods() as $method) {
-                if ($method->name === $methodName) {
-                    return true;
-                }
-            }
-
-            return false;
-        } catch (ReflectionException $e) {
-            echo $e->getMessage();
-            exit(-1);
-        }
-    }
-
-    /**
-     * @return void
-     */
-    private static function generateServiceResolverTraitFile()
-    {
-        $method = '';
-        foreach (self::$products as $product) {
-            $lcProduct = \lcfirst($product);
-            if (self::isStaticMethodExists($lcProduct)) {
-                $lcProduct .= 'Service';
-            }
-            $method .= \PHP_EOL . " * @method static {$product}\\{$product} {$lcProduct}()";
-        }
-
-        $php = <<<EOT
-<?php
-
-namespace AlibabaCloud;
-
-use AlibabaCloud\Client\AlibabaCloud;
-
-/**
- * Find service based on the static method name as service name.
- *
- * @mixin     AlibabaCloud
- *
- * @codeCoverageIgnore
- *{$method}
- */
-trait ServiceResolverTrait
-{
-}
-
-EOT;
-
-        \file_put_contents(self::getServiceResolverTraitFilePath(), $php);
-    }
-
-    /**
      * @param string $productDirectory
      *
      * @return bool
@@ -131,8 +62,7 @@ namespace AlibabaCloud\\{$productName};
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the $productName based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *{$method}
  */
 class {$productName}
@@ -159,7 +89,6 @@ EOT;
         foreach (glob($productDirectory . DIRECTORY_SEPARATOR . '*') as $versionDirectory) {
             // Product have versions.
             if (is_dir($versionDirectory) && \mb_strlen(\basename($versionDirectory)) === 9) {
-                self::generateApiResolverFile($versionDirectory);
                 $versions[] = \basename($versionDirectory);
             }
         }
@@ -187,50 +116,6 @@ EOT;
         }
 
         return $apis;
-    }
-
-    /**
-     * @param string $versionDirectory
-     *
-     * @return void
-     */
-    private static function generateApiResolverFile($versionDirectory)
-    {
-        $version = basename($versionDirectory);
-        $product = \basename(\dirname($versionDirectory));
-
-        $apis   = self::getApis($versionDirectory);
-        $method = '';
-        foreach ($apis as $api) {
-            $api   = \str_replace('.php', '', $api);
-            $lcApi = \lcfirst($api);
-            // Avoid adding the itself and ApiResolver  to the code
-            if ($api !== $product && !Stringy::create($api)->endsWith('ApiResolver')) {
-                $method .= \PHP_EOL . " * @method $api {$lcApi}(array \$options = [])";
-            }
-        }
-
-        $php = <<<EOT
-<?php
-
-namespace AlibabaCloud\\{$product}\\{$version};
-
-use AlibabaCloud\ApiResolverTrait;
-
-/**
- * Find the specified Api of the $product based on the method name as the Api name.
- *
- *{$method}
- */
-class {$product}ApiResolver
-{
-    use ApiResolverTrait;
-}
-
-EOT;
-
-        $fileName = $versionDirectory . DIRECTORY_SEPARATOR . $product . 'ApiResolver.php';
-        \file_put_contents($fileName, $php);
     }
 
     /**
@@ -274,5 +159,73 @@ EOT;
 
         $fileName = $directory . DIRECTORY_SEPARATOR . $product . '.php';
         \file_put_contents($fileName, $php);
+    }
+
+    /**
+     * @return void
+     */
+    private static function generateServiceResolverTraitFile()
+    {
+        $method = '';
+        foreach (self::$products as $product) {
+            $lcProduct = \lcfirst($product);
+            if (self::isStaticMethodExists($lcProduct)) {
+                $lcProduct .= 'Service';
+            }
+            $method .= \PHP_EOL . " * @method static {$product}\\{$product} {$lcProduct}()";
+        }
+
+        $php = <<<EOT
+<?php
+
+namespace AlibabaCloud;
+
+use AlibabaCloud\Client\AlibabaCloud;
+
+/**
+ * Resolve product based on the static method name.
+ *
+ * @mixin     AlibabaCloud
+ *
+ * @codeCoverageIgnore
+ *{$method}
+ */
+trait ServiceResolverTrait
+{
+}
+
+EOT;
+
+        \file_put_contents(self::getServiceResolverTraitFilePath(), $php);
+    }
+
+    /**
+     * @param string $methodName
+     *
+     * @return bool
+     */
+    private static function isStaticMethodExists($methodName)
+    {
+        try {
+            $class = new \ReflectionClass(AlibabaCloud::class);
+            foreach ($class->getMethods() as $method) {
+                if ($method->name === $methodName) {
+                    return true;
+                }
+            }
+
+            return false;
+        } catch (ReflectionException $e) {
+            echo $e->getMessage();
+            exit(-1);
+        }
+    }
+
+    /**
+     * @return string
+     */
+    private static function getServiceResolverTraitFilePath()
+    {
+        return __DIR__ . DIRECTORY_SEPARATOR . 'ServiceResolverTrait.php';
     }
 }

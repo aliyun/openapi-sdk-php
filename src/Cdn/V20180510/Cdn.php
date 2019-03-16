@@ -5,9 +5,7 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Cdn based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Cdn\V20180510
+ * @deprecated
  *
  * @method static AddCdnDomain addCdnDomain(array $options = [])
  * @method static AddFCTrigger addFCTrigger(array $options = [])
@@ -121,7 +119,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static SetLocationAccessRestriction setLocationAccessRestriction(array $options = [])
  * @method static SetOptimizeConfig setOptimizeConfig(array $options = [])
  * @method static SetPageCompressConfig setPageCompressConfig(array $options = [])
- * @method static SetPathCacheExpiredConfig setPathCacheExpiredConfig(array $options = [])
  * @method static SetRangeConfig setRangeConfig(array $options = [])
  * @method static SetRefererConfig setRefererConfig(array $options = [])
  * @method static SetRefererRegexConfig setRefererRegexConfig(array $options = [])

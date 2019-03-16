@@ -41,6 +41,46 @@ trait AddItemTrait
         $encodePicContent             = base64_encode($picContent);
         $this->picMap[$encodePicName] = $encodePicContent;
         $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $itemId
+     *
+     * @return $this
+     */
+    public function withItemId($itemId)
+    {
+        $this->itemId = $itemId;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $cateId
+     *
+     * @return $this
+     */
+    public function withCateId($cateId)
+    {
+        $this->cateId = $cateId;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $custContent
+     *
+     * @return $this
+     */
+    public function withCustContent($custContent)
+    {
+        $this->custContent = $custContent;
+        $this->buildPostContent();
+
         return $this;
     }
 
@@ -102,41 +142,5 @@ trait AddItemTrait
         }
 
         return $meta . '^' . $body;
-    }
-
-    /**
-     * @param mixed $itemId
-     *
-     * @return $this
-     */
-    public function withItemId($itemId)
-    {
-        $this->itemId = $itemId;
-        $this->buildPostContent();
-        return $this;
-    }
-
-    /**
-     * @param mixed $cateId
-     *
-     * @return $this
-     */
-    public function withCateId($cateId)
-    {
-        $this->cateId = $cateId;
-        $this->buildPostContent();
-        return $this;
-    }
-
-    /**
-     * @param mixed $custContent
-     *
-     * @return $this
-     */
-    public function withCustContent($custContent)
-    {
-        $this->custContent = $custContent;
-        $this->buildPostContent();
-        return $this;
     }
 }

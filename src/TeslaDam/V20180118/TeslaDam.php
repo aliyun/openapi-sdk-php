@@ -5,9 +5,7 @@ namespace AlibabaCloud\TeslaDam\V20180118;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the TeslaDam based on the method name as the Api name.
- *
- * @package   AlibabaCloud\TeslaDam\V20180118
+ * @deprecated
  *
  * @method static Action action(array $options = [])
  * @method static ActionDiskCheck actionDiskCheck(array $options = [])

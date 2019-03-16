@@ -5,8 +5,7 @@ namespace AlibabaCloud\Dm;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Dm based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20151123\DmApiResolver v20151123()
  */

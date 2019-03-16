@@ -5,9 +5,7 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Baas based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Baas\V20180731
+ * @deprecated
  *
  * @method static AcceptInvitation acceptInvitation(array $options = [])
  * @method static ApplyBlockchain applyBlockchain(array $options = [])

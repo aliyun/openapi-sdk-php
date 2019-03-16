@@ -5,9 +5,7 @@ namespace AlibabaCloud\Ecs\V20140526;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Ecs based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Ecs\V20140526
+ * @deprecated
  *
  * @method static AcceptInquiredSystemEvent acceptInquiredSystemEvent(array $options = [])
  * @method static ActivateRouterInterface activateRouterInterface(array $options = [])
@@ -135,7 +133,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeInstancePhysicalAttribute describeInstancePhysicalAttribute(array $options = [])
  * @method static DescribeInstanceRamRole describeInstanceRamRole(array $options = [])
  * @method static DescribeInstanceStatus describeInstanceStatus(array $options = [])
- * @method static DescribeInstanceTopology describeInstanceTopology(array $options = [])
  * @method static DescribeInstanceTypeFamilies describeInstanceTypeFamilies(array $options = [])
  * @method static DescribeInstanceTypes describeInstanceTypes(array $options = [])
  * @method static DescribeInstanceVncPasswd describeInstanceVncPasswd(array $options = [])

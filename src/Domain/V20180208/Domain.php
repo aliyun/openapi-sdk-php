@@ -5,9 +5,7 @@ namespace AlibabaCloud\Domain\V20180208;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Domain based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Domain\V20180208
+ * @deprecated
  *
  * @method static AcceptDemand acceptDemand(array $options = [])
  * @method static BidDomain bidDomain(array $options = [])

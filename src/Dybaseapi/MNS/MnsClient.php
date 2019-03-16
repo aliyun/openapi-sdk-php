@@ -52,6 +52,34 @@ class MnsClient
 
     /**
      * @param BaseRequest $request
+     *
+     * @return Result
+     * @throws ClientException
+     * @throws ServerException
+     */
+    public function sendRequest(BaseRequest $request)
+    {
+        $this->addRequiredHeaders($request);
+
+        $queryString = $request->getQueryString();
+        $body        = $request->getBody();
+
+        $result = HttpHelper::curl(
+            $this->endpoint . '/' . $request->getResourcePath() . "?$queryString",
+            strtoupper($request->getMethod()),
+            $body,
+            $request->getHeaders()
+        );
+
+        if (!$result->isSuccess()) {
+            throw new ServerException($result);
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param BaseRequest $request
      */
     private function addRequiredHeaders(BaseRequest $request)
     {
@@ -79,33 +107,5 @@ class MnsClient
             Constants::AUTHORIZATION,
             Constants::MNS . ' ' . $this->accessId . ':' . $sign
         );
-    }
-
-    /**
-     * @param BaseRequest $request
-     *
-     * @return Result
-     * @throws ClientException
-     * @throws ServerException
-     */
-    public function sendRequest(BaseRequest $request)
-    {
-        $this->addRequiredHeaders($request);
-
-        $queryString = $request->getQueryString();
-        $body        = $request->getBody();
-
-        $result = HttpHelper::curl(
-            $this->endpoint . '/' . $request->getResourcePath() . "?$queryString",
-            strtoupper($request->getMethod()),
-            $body,
-            $request->getHeaders()
-        );
-
-        if (!$result->isSuccess()) {
-            throw new ServerException($result);
-        }
-
-        return $result;
     }
 }

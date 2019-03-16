@@ -5,9 +5,7 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Live based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Live\V20161101
+ * @deprecated
  *
  * @method static AddCasterComponent addCasterComponent(array $options = [])
  * @method static AddCasterEpisode addCasterEpisode(array $options = [])
@@ -22,14 +20,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static AddLiveDetectNotifyConfig addLiveDetectNotifyConfig(array $options = [])
  * @method static AddLiveDomain addLiveDomain(array $options = [])
  * @method static AddLiveDomainMapping addLiveDomainMapping(array $options = [])
- * @method static AddLiveMixConfig addLiveMixConfig(array $options = [])
- * @method static AddLiveMixNotifyConfig addLiveMixNotifyConfig(array $options = [])
  * @method static AddLivePullStreamInfoConfig addLivePullStreamInfoConfig(array $options = [])
  * @method static AddLiveRecordNotifyConfig addLiveRecordNotifyConfig(array $options = [])
  * @method static AddLiveRecordVodConfig addLiveRecordVodConfig(array $options = [])
  * @method static AddLiveSnapshotDetectPornConfig addLiveSnapshotDetectPornConfig(array $options = [])
  * @method static AddLiveStreamTranscode addLiveStreamTranscode(array $options = [])
- * @method static AddMultipleStreamMixService addMultipleStreamMixService(array $options = [])
  * @method static AddTrancodeSEI addTrancodeSEI(array $options = [])
  * @method static AllowPushStream allowPushStream(array $options = [])
  * @method static ApplyBoardToken applyBoardToken(array $options = [])
@@ -59,13 +54,10 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DeleteLiveDomain deleteLiveDomain(array $options = [])
  * @method static DeleteLiveDomainMapping deleteLiveDomainMapping(array $options = [])
  * @method static DeleteLiveLazyPullStreamInfoConfig deleteLiveLazyPullStreamInfoConfig(array $options = [])
- * @method static DeleteLiveMixConfig deleteLiveMixConfig(array $options = [])
- * @method static DeleteLiveMixNotifyConfig deleteLiveMixNotifyConfig(array $options = [])
  * @method static DeleteLivePullStreamInfoConfig deleteLivePullStreamInfoConfig(array $options = [])
  * @method static DeleteLiveRecordNotifyConfig deleteLiveRecordNotifyConfig(array $options = [])
  * @method static DeleteLiveRecordVodConfig deleteLiveRecordVodConfig(array $options = [])
  * @method static DeleteLiveSnapshotDetectPornConfig deleteLiveSnapshotDetectPornConfig(array $options = [])
- * @method static DeleteLiveSpecificConfig deleteLiveSpecificConfig(array $options = [])
  * @method static DeleteLiveStreamTranscode deleteLiveStreamTranscode(array $options = [])
  * @method static DeleteLiveStreamsNotifyUrlConfig deleteLiveStreamsNotifyUrlConfig(array $options = [])
  * @method static DeleteRoom deleteRoom(array $options = [])
@@ -105,8 +97,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLiveDomainTranscodeData describeLiveDomainTranscodeData(array $options = [])
  * @method static DescribeLiveDomainUvData describeLiveDomainUvData(array $options = [])
  * @method static DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
- * @method static DescribeLiveMixConfig describeLiveMixConfig(array $options = [])
- * @method static DescribeLiveMixNotifyConfig describeLiveMixNotifyConfig(array $options = [])
  * @method static DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
  * @method static DescribeLiveRecordConfig describeLiveRecordConfig(array $options = [])
  * @method static DescribeLiveRecordNotifyConfig describeLiveRecordNotifyConfig(array $options = [])
@@ -124,8 +114,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLiveStreamTranscodeInfo describeLiveStreamTranscodeInfo(array $options = [])
  * @method static DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method static DescribeLiveStreamsControlHistory describeLiveStreamsControlHistory(array $options = [])
- * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options
- *         = [])
+ * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData($options = [])
  * @method static DescribeLiveStreamsNotifyUrlConfig describeLiveStreamsNotifyUrlConfig(array $options = [])
  * @method static DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
  * @method static DescribeLiveStreamsPublishList describeLiveStreamsPublishList(array $options = [])
@@ -154,7 +143,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ModifyCasterVideoResource modifyCasterVideoResource(array $options = [])
  * @method static RealTimeRecordCommand realTimeRecordCommand(array $options = [])
  * @method static RealTimeSnapshotCommand realTimeSnapshotCommand(array $options = [])
- * @method static RemoveMultipleStreamMixService removeMultipleStreamMixService(array $options = [])
  * @method static ResumeLiveStream resumeLiveStream(array $options = [])
  * @method static SendRoomNotification sendRoomNotification(array $options = [])
  * @method static SendRoomUserNotification sendRoomUserNotification(array $options = [])
@@ -168,21 +156,15 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static StartCaster startCaster(array $options = [])
  * @method static StartCasterScene startCasterScene(array $options = [])
  * @method static StartLiveDomain startLiveDomain(array $options = [])
- * @method static StartLiveIndex startLiveIndex(array $options = [])
- * @method static StartMixStreamsService startMixStreamsService(array $options = [])
- * @method static StartMultipleStreamMixService startMultipleStreamMixService(array $options = [])
  * @method static StopCaster stopCaster(array $options = [])
  * @method static StopCasterScene stopCasterScene(array $options = [])
  * @method static StopLiveDomain stopLiveDomain(array $options = [])
  * @method static StopLiveIndex stopLiveIndex(array $options = [])
- * @method static StopMixStreamsService stopMixStreamsService(array $options = [])
- * @method static StopMultipleStreamMixService stopMultipleStreamMixService(array $options = [])
  * @method static UpdateBoard updateBoard(array $options = [])
  * @method static UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method static UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
  * @method static UpdateLiveAppSnapshotConfig updateLiveAppSnapshotConfig(array $options = [])
  * @method static UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
- * @method static UpdateLiveMixNotifyConfig updateLiveMixNotifyConfig(array $options = [])
  * @method static UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
  * @method static UpdateLiveSnapshotDetectPornConfig updateLiveSnapshotDetectPornConfig(array $options = [])
  */

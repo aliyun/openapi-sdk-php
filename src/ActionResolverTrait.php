@@ -2,12 +2,15 @@
 
 namespace AlibabaCloud;
 
+use AlibabaCloud\Client\Request\Request;
+
 /**
  * Trait ActionResolverTrait
  *
  * @package AlibabaCloud
  * @mixin Rpc
  * @mixin Roa
+ * @mixin Request
  */
 trait ActionResolverTrait
 {

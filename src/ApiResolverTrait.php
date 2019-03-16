@@ -13,6 +13,17 @@ trait ApiResolverTrait
 {
 
     /**
+     * @param $name
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    public static function __callStatic($name, $arguments)
+    {
+        return (new static())->__call($name, $arguments);
+    }
+
+    /**
      * @param $api
      * @param $arguments
      *
@@ -36,17 +47,6 @@ trait ApiResolverTrait
             "{$serviceName} contains no $api",
             'SDK.ApiNotFound'
         );
-    }
-
-    /**
-     * @param $name
-     * @param $arguments
-     *
-     * @return mixed
-     */
-    public static function __callStatic($name, $arguments)
-    {
-        return (new static())->__call($name, $arguments);
     }
 
     /**

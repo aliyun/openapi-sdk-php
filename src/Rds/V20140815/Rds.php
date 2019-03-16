@@ -5,9 +5,7 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Rds based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Rds\V20140815
+ * @deprecated
  *
  * @method static AddDBInstanceNetworkType addDBInstanceNetworkType(array $options = [])
  * @method static AddTagsToResource addTagsToResource(array $options = [])
@@ -78,8 +76,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeParameters describeParameters(array $options = [])
  * @method static DescribePrice describePrice(array $options = [])
  * @method static DescribeProxyFunctionSupport describeProxyFunctionSupport(array $options = [])
- * @method static DescribeRdsVSwitchs describeRdsVSwitchs(array $options = [])
- * @method static DescribeRdsVpcs describeRdsVpcs(array $options = [])
  * @method static DescribeRegions describeRegions(array $options = [])
  * @method static DescribeRenewalPrice describeRenewalPrice(array $options = [])
  * @method static DescribeResourceUsage describeResourceUsage(array $options = [])
@@ -124,8 +120,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ModifyMySQLDBInstanceDelay modifyMySQLDBInstanceDelay(array $options = [])
  * @method static ModifyParameter modifyParameter(array $options = [])
  * @method static ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
- * @method static ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options
- *         = [])
+ * @method static ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options = [])
  * @method static ModifyReplicaDescription modifyReplicaDescription(array $options = [])
  * @method static ModifyResourceGroup modifyResourceGroup(array $options = [])
  * @method static ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])

@@ -35,15 +35,12 @@ class IotTest extends TestCase
     {
         $result = AlibabaCloud::iot()
                               ->v20180120()
-                              ->bindFunctionToEdgeInstance()
-                              ->withInstanceId('id')
-                              ->withRoleArn('arn')
-                              ->withServiceName('name')
-                              ->withFunctionName('name')
-                              ->withRunMode('name')
+                              ->batchGetDeviceState()
+                              ->withIotInstanceId('id')
+                              ->withProductKey('key')
                               ->connectTimeout(20)
                               ->timeout(25)
                               ->request();
-        self::assertEquals('edge instance not found', $result['ErrorMessage']);
+        self::assertEquals('物联网平台实例不存在', $result['ErrorMessage']);
     }
 }

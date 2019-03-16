@@ -5,8 +5,7 @@ namespace AlibabaCloud\Cdn;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Cdn based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20141111\CdnApiResolver v20141111()
  * @method V20180510\CdnApiResolver v20180510()

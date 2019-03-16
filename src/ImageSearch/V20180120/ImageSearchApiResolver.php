@@ -5,12 +5,11 @@ namespace AlibabaCloud\ImageSearch\V20180120;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the ImageSearch based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method AddItem addItem(array $options = [])
- * @method DeleteItem deleteItem(array $options = [])
  * @method SearchItem searchItem(array $options = [])
+ * @method DeleteItem deleteItem(array $options = [])
+ * @method AddItem addItem(array $options = [])
  */
 class ImageSearchApiResolver
 {

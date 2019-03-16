@@ -5,9 +5,7 @@ namespace AlibabaCloud\Dds\V20151201;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Dds based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Dds\V20151201
+ * @deprecated
  *
  * @method static AddBindingTunnel addBindingTunnel(array $options = [])
  * @method static AddMonitorNode addMonitorNode(array $options = [])

@@ -5,15 +5,14 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Lubancloud based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method BuyOriginPictures buyOriginPictures(array $options = [])
- * @method GetStyles getStyles(array $options = [])
  * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
- * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
  * @method SubmitCutoutTask submitCutoutTask(array $options = [])
+ * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
  * @method SubmitGenerateTask submitGenerateTask(array $options = [])
+ * @method GetStyles getStyles(array $options = [])
+ * @method BuyOriginPictures buyOriginPictures(array $options = [])
  */
 class LubancloudApiResolver
 {

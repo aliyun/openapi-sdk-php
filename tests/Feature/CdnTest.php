@@ -33,7 +33,8 @@ class CdnTest extends TestCase
      */
     public function testCdn()
     {
-        $request = AlibabaCloud::cdn()->v20180510()
+        $request = AlibabaCloud::cdn()
+                               ->v20180510()
                                ->describeIpInfo()
                                ->withIP('192.168.0.1')
                                ->connectTimeout(20)
@@ -46,14 +47,16 @@ class CdnTest extends TestCase
 
     public function testSetMethod()
     {
-        $with = AlibabaCloud::cdn()->v20180510()
+        $with = AlibabaCloud::cdn()
+                            ->v20180510()
                             ->describeIpInfo()
                             ->withIP('192.168.0.1')
                             ->connectTimeout(20)
                             ->timeout(25)
                             ->withSecurityToken('token');
 
-        $set = AlibabaCloud::cdn()->v20180510()
+        $set = AlibabaCloud::cdn()
+                           ->v20180510()
                            ->describeIpInfo()
                            ->withIP('192.168.0.1')
                            ->connectTimeout(20)

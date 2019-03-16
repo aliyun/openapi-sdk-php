@@ -5,9 +5,7 @@ namespace AlibabaCloud\Cdn\V20141111;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Cdn based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Cdn\V20141111
+ * @deprecated
  *
  * @method static AddCdnDomain addCdnDomain(array $options = [])
  * @method static AddFCTrigger addFCTrigger(array $options = [])
@@ -93,8 +91,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeLiveStreamTranscodeInfo describeLiveStreamTranscodeInfo(array $options = [])
  * @method static DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method static DescribeLiveStreamsControlHistory describeLiveStreamsControlHistory(array $options = [])
- * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options
- *         = [])
+ * @method static DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData($options = [])
  * @method static DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
  * @method static DescribeLiveStreamsPublishList describeLiveStreamsPublishList(array $options = [])
  * @method static DescribeRangeDataByLocateAndIspService describeRangeDataByLocateAndIspService(array $options = [])

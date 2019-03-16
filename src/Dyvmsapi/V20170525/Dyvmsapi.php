@@ -5,9 +5,7 @@ namespace AlibabaCloud\Dyvmsapi\V20170525;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Dyvmsapi based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Dyvmsapi\V20170525
+ * @deprecated
  *
  * @method static AddRtcAccount addRtcAccount(array $options = [])
  * @method static AddVoipAccount addVoipAccount(array $options = [])

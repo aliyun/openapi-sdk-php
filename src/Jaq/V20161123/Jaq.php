@@ -5,9 +5,7 @@ namespace AlibabaCloud\Jaq\V20161123;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Jaq based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Jaq\V20161123
+ * @deprecated
  *
  * @method static ActivityPrevention activityPrevention(array $options = [])
  * @method static AfsAppCheck afsAppCheck(array $options = [])

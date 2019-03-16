@@ -5,9 +5,7 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Green based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Green\V20180509
+ * @deprecated
  *
  * @method static AddFaces addFaces(array $options = [])
  * @method static AddGroups addGroups(array $options = [])

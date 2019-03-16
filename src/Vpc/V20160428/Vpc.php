@@ -5,9 +5,7 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Vpc based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Vpc\V20160428
+ * @deprecated
  *
  * @method static ActivateRouterInterface activateRouterInterface(array $options = [])
  * @method static ActiveFlowLog activeFlowLog(array $options = [])
@@ -22,8 +20,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static AssociateEipAddress associateEipAddress(array $options = [])
  * @method static AssociateGlobalAccelerationInstance associateGlobalAccelerationInstance(array $options = [])
  * @method static AssociateHaVip associateHaVip(array $options = [])
- * @method static AssociatePhysicalConnectionToVirtualBorderRouter
- *         associatePhysicalConnectionToVirtualBorderRouter(array $options = [])
+ * @method static AssociatePhysicalConnectionToVirtualBorderRouter associatePhysicalConnectionToVirtualBorderRouter(array $options = [])
  * @method static AssociateRouteTable associateRouteTable(array $options = [])
  * @method static CancelPhysicalConnection cancelPhysicalConnection(array $options = [])
  * @method static ConnectRouterInterface connectRouterInterface(array $options = [])
@@ -99,8 +96,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DeleteVpnConnection deleteVpnConnection(array $options = [])
  * @method static DeleteVpnGateway deleteVpnGateway(array $options = [])
  * @method static DescribeAccessPoints describeAccessPoints(array $options = [])
- * @method static DescribeBandwidthPackagePublicIpMonitorData describeBandwidthPackagePublicIpMonitorData(array
- *         $options = [])
  * @method static DescribeBandwidthPackages describeBandwidthPackages(array $options = [])
  * @method static DescribeBgpGroups describeBgpGroups(array $options = [])
  * @method static DescribeBgpPeers describeBgpPeers(array $options = [])
@@ -129,17 +124,14 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribePrivateDNatEntries describePrivateDNatEntries(array $options = [])
  * @method static DescribePrivateNatGateways describePrivateNatGateways(array $options = [])
  * @method static DescribePrivateSNatEntries describePrivateSNatEntries(array $options = [])
- * @method static DescribePublicIpTrafficAuditLogAttribute describePublicIpTrafficAuditLogAttribute(array $options =
- *         [])
+ * @method static DescribePublicIpTrafficAuditLogAttribute describePublicIpTrafficAuditLogAttribute(array $options = [])
  * @method static DescribeRegionPublicIpAddress describeRegionPublicIpAddress(array $options = [])
  * @method static DescribeRegions describeRegions(array $options = [])
- * @method static DescribeRouteEntryList describeRouteEntryList(array $options = [])
  * @method static DescribeRouteTableList describeRouteTableList(array $options = [])
  * @method static DescribeRouteTables describeRouteTables(array $options = [])
  * @method static DescribeRouterInterfaces describeRouterInterfaces(array $options = [])
  * @method static DescribeRouterInterfacesForGlobal describeRouterInterfacesForGlobal(array $options = [])
- * @method static DescribeServerRelatedGlobalAccelerationInstances
- *         describeServerRelatedGlobalAccelerationInstances(array $options = [])
+ * @method static DescribeServerRelatedGlobalAccelerationInstances describeServerRelatedGlobalAccelerationInstances(array $options = [])
  * @method static DescribeSnatTableEntries describeSnatTableEntries(array $options = [])
  * @method static DescribeSslVpnClientCert describeSslVpnClientCert(array $options = [])
  * @method static DescribeSslVpnClientCerts describeSslVpnClientCerts(array $options = [])
@@ -150,8 +142,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeVSwitchAttributes describeVSwitchAttributes(array $options = [])
  * @method static DescribeVSwitches describeVSwitches(array $options = [])
  * @method static DescribeVirtualBorderRouters describeVirtualBorderRouters(array $options = [])
- * @method static DescribeVirtualBorderRoutersForPhysicalConnection
- *         describeVirtualBorderRoutersForPhysicalConnection(array $options = [])
+ * @method static DescribeVirtualBorderRoutersForPhysicalConnection describeVirtualBorderRoutersForPhysicalConnection(array $options = [])
  * @method static DescribeVpcAttribute describeVpcAttribute(array $options = [])
  * @method static DescribeVpcs describeVpcs(array $options = [])
  * @method static DescribeVpnConnection describeVpnConnection(array $options = [])
@@ -175,8 +166,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ModifyEipPayType modifyEipPayType(array $options = [])
  * @method static ModifyFlowLogAttribute modifyFlowLogAttribute(array $options = [])
  * @method static ModifyForwardEntry modifyForwardEntry(array $options = [])
- * @method static ModifyGlobalAccelerationInstanceAttributes modifyGlobalAccelerationInstanceAttributes(array $options
- *         = [])
+ * @method static ModifyGlobalAccelerationInstanceAttributes modifyGlobalAccelerationInstanceAttributes(array $options = [])
  * @method static ModifyGlobalAccelerationInstanceSpec modifyGlobalAccelerationInstanceSpec(array $options = [])
  * @method static ModifyHaVipAttribute modifyHaVipAttribute(array $options = [])
  * @method static ModifyIPv6TranslatorAclAttribute modifyIPv6TranslatorAclAttribute(array $options = [])
@@ -229,8 +219,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static UnassociateEipAddress unassociateEipAddress(array $options = [])
  * @method static UnassociateGlobalAccelerationInstance unassociateGlobalAccelerationInstance(array $options = [])
  * @method static UnassociateHaVip unassociateHaVip(array $options = [])
- * @method static UnassociatePhysicalConnectionFromVirtualBorderRouter
- *         unassociatePhysicalConnectionFromVirtualBorderRouter(array $options = [])
+ * @method static UnassociatePhysicalConnectionFromVirtualBorderRouter unassociatePhysicalConnectionFromVirtualBorderRouter(array $options = [])
  * @method static UnassociateRouteTable unassociateRouteTable(array $options = [])
  * @method static VpcApiResolver vpcApiResolver(array $options = [])
  */

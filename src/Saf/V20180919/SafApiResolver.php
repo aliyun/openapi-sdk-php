@@ -5,8 +5,7 @@ namespace AlibabaCloud\Saf\V20180919;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Saf based on the method name as the Api name.
- *
+ * Resolve Api based on the method name.
  *
  * @method ExecuteRequest executeRequest(array $options = [])
  */

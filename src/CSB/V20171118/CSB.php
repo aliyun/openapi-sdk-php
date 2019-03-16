@@ -5,9 +5,7 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the CSB based on the method name as the Api name.
- *
- * @package   AlibabaCloud\CSB\V20171118
+ * @deprecated
  *
  * @method static AddMember2AlarmGroup addMember2AlarmGroup(array $options = [])
  * @method static ApproveOrderList approveOrderList(array $options = [])

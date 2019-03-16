@@ -5,8 +5,7 @@ namespace AlibabaCloud\TagINner;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the TagINner based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20181109\TagINnerApiResolver v20181109()
  */

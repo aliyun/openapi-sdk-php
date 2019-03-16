@@ -5,9 +5,7 @@ namespace AlibabaCloud\Drds\V20171016;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Drds based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Drds\V20171016
+ * @deprecated
  *
  * @method static AddTagsToInstance addTagsToInstance(array $options = [])
  * @method static CreateDrdsAccount createDrdsAccount(array $options = [])
@@ -32,8 +30,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeShardDBs describeShardDBs(array $options = [])
  * @method static DescribeShardDbConnectionInfo describeShardDbConnectionInfo(array $options = [])
  * @method static DrdsApiResolver drdsApiResolver(array $options = [])
- * @method static DrdsInstanceDbMonitor drdsInstanceDbMonitor(array $options = [])
- * @method static DrdsInstanceMonitor drdsInstanceMonitor(array $options = [])
  * @method static ModifyDrdsDBPasswd modifyDrdsDBPasswd(array $options = [])
  * @method static ModifyDrdsInstanceDescription modifyDrdsInstanceDescription(array $options = [])
  * @method static ModifyDrdsIpWhiteList modifyDrdsIpWhiteList(array $options = [])

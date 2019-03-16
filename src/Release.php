@@ -16,7 +16,7 @@ class Release
     /**
      * Version of the Client
      */
-    const VERSION = '1.1.2';
+    const VERSION = '1.2.1';
 
     /**
      * @param Event $event
@@ -29,52 +29,6 @@ class Release
         }
         self::updateChangelogFile($arguments[0], $arguments[1]);
         self::changeVersionInCode($arguments[0]);
-    }
-
-    /**
-     * @return string
-     */
-    private static function getCodeFile()
-    {
-        return __DIR__ . '/Release.php';
-    }
-
-    /**
-     * @return string
-     */
-    private static function getChangeLogFile()
-    {
-        return __DIR__ . '/../CHANGELOG.md';
-    }
-
-    /**
-     * @return string
-     */
-    private static function getCodeContent()
-    {
-        return file_get_contents(self::getCodeFile());
-    }
-
-    /**
-     * @return string
-     */
-    private static function getChangeLogContent()
-    {
-        return file_get_contents(self::getChangeLogFile());
-    }
-
-    /**
-     * @param $version
-     */
-    private static function changeVersionInCode($version)
-    {
-        $symbol  = "'";
-        $content = preg_replace(
-            "/const VERSION = \'(.*)\';/",
-            "const VERSION = $symbol$version$symbol;",
-            self::getCodeContent()
-        );
-        file_put_contents(self::getCodeFile(), $content);
     }
 
     /**
@@ -112,5 +66,51 @@ class Release
         }
 
         return $string;
+    }
+
+    /**
+     * @return string
+     */
+    private static function getChangeLogContent()
+    {
+        return file_get_contents(self::getChangeLogFile());
+    }
+
+    /**
+     * @return string
+     */
+    private static function getChangeLogFile()
+    {
+        return __DIR__ . '/../CHANGELOG.md';
+    }
+
+    /**
+     * @param $version
+     */
+    private static function changeVersionInCode($version)
+    {
+        $symbol  = "'";
+        $content = preg_replace(
+            "/const VERSION = \'(.*)\';/",
+            "const VERSION = $symbol$version$symbol;",
+            self::getCodeContent()
+        );
+        file_put_contents(self::getCodeFile(), $content);
+    }
+
+    /**
+     * @return string
+     */
+    private static function getCodeContent()
+    {
+        return file_get_contents(self::getCodeFile());
+    }
+
+    /**
+     * @return string
+     */
+    private static function getCodeFile()
+    {
+        return __DIR__ . '/Release.php';
     }
 }
