@@ -5,9 +5,7 @@ namespace AlibabaCloud\Ram\V20150501;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Ram based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Ram\V20150501
+ * @deprecated
  *
  * @method static AddUserToGroup addUserToGroup(array $options = [])
  * @method static AttachPolicyToGroup attachPolicyToGroup(array $options = [])

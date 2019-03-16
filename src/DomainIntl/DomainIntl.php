@@ -5,8 +5,7 @@ namespace AlibabaCloud\DomainIntl;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the DomainIntl based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20171218\DomainIntlApiResolver v20171218()
  */

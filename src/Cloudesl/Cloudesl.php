@@ -5,8 +5,7 @@ namespace AlibabaCloud\Cloudesl;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Cloudesl based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180801\CloudeslApiResolver v20180801()
  */

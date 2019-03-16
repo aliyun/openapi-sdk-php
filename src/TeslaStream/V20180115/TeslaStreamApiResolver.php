@@ -5,12 +5,11 @@ namespace AlibabaCloud\TeslaStream\V20180115;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the TeslaStream based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
- * @method BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
  * @method GetJobTopology getJobTopology(array $options = [])
+ * @method BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
+ * @method BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
  */
 class TeslaStreamApiResolver
 {

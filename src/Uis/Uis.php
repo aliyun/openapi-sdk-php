@@ -5,8 +5,7 @@ namespace AlibabaCloud\Uis;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Uis based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180821\UisApiResolver v20180821()
  */

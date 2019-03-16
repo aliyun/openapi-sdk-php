@@ -5,8 +5,7 @@ namespace AlibabaCloud\Ess;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Ess based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20140828\EssApiResolver v20140828()
  */

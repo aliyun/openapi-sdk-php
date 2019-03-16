@@ -5,9 +5,7 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the CCC based on the method name as the Api name.
- *
- * @package   AlibabaCloud\CCC\V20170705
+ * @deprecated
  *
  * @method static AddNumberToSkillGroup addNumberToSkillGroup(array $options = [])
  * @method static AddPhoneNumber addPhoneNumber(array $options = [])
@@ -100,8 +98,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static ListSkillGroupStates listSkillGroupStates(array $options = [])
  * @method static ListSkillGroupSummaryReports listSkillGroupSummaryReports(array $options = [])
  * @method static ListSkillGroupSummaryReportsByInterval listSkillGroupSummaryReportsByInterval(array $options = [])
- * @method static ListSkillGroupSummaryReportsSinceMidnight listSkillGroupSummaryReportsSinceMidnight(array $options =
- *         [])
+ * @method static ListSkillGroupSummaryReportsSinceMidnight listSkillGroupSummaryReportsSinceMidnight($options = [])
  * @method static ListSkillGroups listSkillGroups(array $options = [])
  * @method static ListSkillGroupsOfUser listSkillGroupsOfUser(array $options = [])
  * @method static ListSurveys listSurveys(array $options = [])

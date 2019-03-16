@@ -5,9 +5,7 @@ namespace AlibabaCloud\Hsm\V20180111;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Hsm based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Hsm\V20180111
+ * @deprecated
  *
  * @method static ConfigNetwork configNetwork(array $options = [])
  * @method static ConfigWhiteList configWhiteList(array $options = [])

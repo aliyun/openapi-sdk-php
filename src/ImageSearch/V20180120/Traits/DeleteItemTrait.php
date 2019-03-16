@@ -28,6 +28,20 @@ trait DeleteItemTrait
     {
         $this->picList[] = $deletePictureName;
         $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $itemId
+     *
+     * @return $this
+     */
+    public function withItemId($itemId)
+    {
+        $this->itemId = $itemId;
+        $this->buildPostContent();
+
         return $this;
     }
 
@@ -81,17 +95,5 @@ trait DeleteItemTrait
         }
 
         return $meta . '^' . $body;
-    }
-
-    /**
-     * @param mixed $itemId
-     *
-     * @return $this
-     */
-    public function withItemId($itemId)
-    {
-        $this->itemId = $itemId;
-        $this->buildPostContent();
-        return $this;
     }
 }

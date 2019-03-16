@@ -5,9 +5,7 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Imm based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Imm\V20170906
+ * @deprecated
  *
  * @method static CompareFace compareFace(array $options = [])
  * @method static CompareImageFaces compareImageFaces(array $options = [])

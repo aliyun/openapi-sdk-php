@@ -5,9 +5,7 @@ namespace AlibabaCloud\SasApi\V20170705;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the SasApi based on the method name as the Api name.
- *
- * @package   AlibabaCloud\SasApi\V20170705
+ * @deprecated
  *
  * @method static DescribeAccountProfileByKey describeAccountProfileByKey(array $options = [])
  * @method static DescribeAccountProfileByKeyWord describeAccountProfileByKeyWord(array $options = [])

@@ -5,11 +5,10 @@ namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the ARMS4FINANCE based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  * @method WhereInDimQuery whereInDimQuery(array $options = [])
+ * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
 class ARMS4FINANCEApiResolver
 {

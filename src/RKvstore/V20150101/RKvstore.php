@@ -5,9 +5,7 @@ namespace AlibabaCloud\RKvstore\V20150101;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the RKvstore based on the method name as the Api name.
- *
- * @package   AlibabaCloud\RKvstore\V20150101
+ * @deprecated
  *
  * @method static AddBindingTunnel addBindingTunnel(array $options = [])
  * @method static AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])

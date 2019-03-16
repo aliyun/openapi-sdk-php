@@ -28,6 +28,17 @@ trait VersionResolverTrait
     }
 
     /**
+     * @param $name
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    public static function __callStatic($name, $arguments)
+    {
+        return (new static(true))->__call($name, $arguments);
+    }
+
+    /**
      * @param      $version
      * @param      $arguments
      *
@@ -55,17 +66,6 @@ trait VersionResolverTrait
             "$serviceName Versions contains no {$version}",
             'SDK.VersionNotFound'
         );
-    }
-
-    /**
-     * @param $name
-     * @param $arguments
-     *
-     * @return mixed
-     */
-    public static function __callStatic($name, $arguments)
-    {
-        return (new static(true))->__call($name, $arguments);
     }
 
     /**

@@ -5,11 +5,10 @@ namespace AlibabaCloud\NlsFiletrans\V20180817;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the NlsFiletrans based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method GetTaskResult getTaskResult(array $options = [])
  * @method SubmitTask submitTask(array $options = [])
+ * @method GetTaskResult getTaskResult(array $options = [])
  */
 class NlsFiletransApiResolver
 {

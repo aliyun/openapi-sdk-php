@@ -5,8 +5,7 @@ namespace AlibabaCloud\Dyvmsapi;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Dyvmsapi based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20170525\DyvmsapiApiResolver v20170525()
  */

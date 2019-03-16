@@ -5,9 +5,7 @@ namespace AlibabaCloud\Afs\V20180112;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Afs based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Afs\V20180112
+ * @deprecated
  *
  * @method static AfsApiResolver afsApiResolver(array $options = [])
  * @method static AnalyzeNvc analyzeNvc(array $options = [])

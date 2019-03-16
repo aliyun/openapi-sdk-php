@@ -5,9 +5,7 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Green based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Green\V20170823
+ * @deprecated
  *
  * @method static CreateCdiBag createCdiBag(array $options = [])
  * @method static CreateCdiBaseBag createCdiBaseBag(array $options = [])

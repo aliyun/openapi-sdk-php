@@ -5,9 +5,7 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Chatbot based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Chatbot\V20171011
+ * @deprecated
  *
  * @method static ActivatePerspective activatePerspective(array $options = [])
  * @method static AddSynonym addSynonym(array $options = [])

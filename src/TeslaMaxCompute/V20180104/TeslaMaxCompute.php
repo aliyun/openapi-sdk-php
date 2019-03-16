@@ -5,9 +5,7 @@ namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the TeslaMaxCompute based on the method name as the Api name.
- *
- * @package   AlibabaCloud\TeslaMaxCompute\V20180104
+ * @deprecated
  *
  * @method static GetClusterInstance getClusterInstance(array $options = [])
  * @method static GetInstancesStatusCount getInstancesStatusCount(array $options = [])

@@ -5,9 +5,7 @@ namespace AlibabaCloud\YqBridge\V20170810;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the YqBridge based on the method name as the Api name.
- *
- * @package   AlibabaCloud\YqBridge\V20170810
+ * @deprecated
  *
  * @method static CheckCloudUser checkCloudUser(array $options = [])
  * @method static CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])

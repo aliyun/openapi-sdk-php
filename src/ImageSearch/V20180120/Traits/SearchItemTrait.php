@@ -60,6 +60,58 @@ trait SearchItemTrait
     }
 
     /**
+     * @param mixed $start
+     *
+     * @return $this
+     */
+    public function withStart($start)
+    {
+        $this->start = $start;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $num
+     *
+     * @return $this
+     */
+    public function withNum($num)
+    {
+        $this->num = $num;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $cateId
+     *
+     * @return $this
+     */
+    public function withCateId($cateId)
+    {
+        $this->cateId = $cateId;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
+     * @param mixed $searchPicture
+     *
+     * @return $this
+     */
+    public function withSearchPicture($searchPicture)
+    {
+        $this->searchPicture = $searchPicture;
+        $this->buildPostContent();
+
+        return $this;
+    }
+
+    /**
      * @param $map
      *
      * @return string
@@ -78,54 +130,7 @@ trait SearchItemTrait
             $body  .= $value;
             $start += strlen($value);
         }
+
         return $meta . '^' . $body;
-    }
-
-    /**
-     * @param mixed $start
-     *
-     * @return $this
-     */
-    public function withStart($start)
-    {
-        $this->start = $start;
-        $this->buildPostContent();
-        return $this;
-    }
-
-    /**
-     * @param mixed $num
-     *
-     * @return $this
-     */
-    public function withNum($num)
-    {
-        $this->num = $num;
-        $this->buildPostContent();
-        return $this;
-    }
-
-    /**
-     * @param mixed $cateId
-     *
-     * @return $this
-     */
-    public function withCateId($cateId)
-    {
-        $this->cateId = $cateId;
-        $this->buildPostContent();
-        return $this;
-    }
-
-    /**
-     * @param mixed $searchPicture
-     *
-     * @return $this
-     */
-    public function withSearchPicture($searchPicture)
-    {
-        $this->searchPicture = $searchPicture;
-        $this->buildPostContent();
-        return $this;
     }
 }

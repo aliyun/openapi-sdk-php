@@ -5,9 +5,7 @@ namespace AlibabaCloud\BatchCompute\V20130111;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the BatchCompute based on the method name as the Api name.
- *
- * @package   AlibabaCloud\BatchCompute\V20130111
+ * @deprecated
  *
  * @method static BatchComputeApiResolver batchComputeApiResolver(array $options = [])
  * @method static DeleteImage deleteImage(array $options = [])

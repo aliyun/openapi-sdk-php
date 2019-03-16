@@ -5,9 +5,7 @@ namespace AlibabaCloud\Eci\V20180808;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Eci based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Eci\V20180808
+ * @deprecated
  *
  * @method static CreateContainerGroup createContainerGroup(array $options = [])
  * @method static DeleteContainerGroup deleteContainerGroup(array $options = [])

@@ -5,9 +5,7 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Crm based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Crm\V20150408
+ * @deprecated
  *
  * @method static AddIdentityCertifiedForBidUser addIdentityCertifiedForBidUser(array $options = [])
  * @method static AddLabel addLabel(array $options = [])

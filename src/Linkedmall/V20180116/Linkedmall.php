@@ -5,9 +5,7 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Linkedmall based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Linkedmall\V20180116
+ * @deprecated
  *
  * @method static CreateMovieTicketOrder createMovieTicketOrder(array $options = [])
  * @method static CreateOrder createOrder(array $options = [])

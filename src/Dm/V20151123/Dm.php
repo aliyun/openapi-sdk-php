@@ -5,9 +5,7 @@ namespace AlibabaCloud\Dm\V20151123;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Dm based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Dm\V20151123
+ * @deprecated
  *
  * @method static AddIpfilter addIpfilter(array $options = [])
  * @method static ApproveMailTemplate approveMailTemplate(array $options = [])

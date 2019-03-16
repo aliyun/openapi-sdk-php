@@ -5,9 +5,7 @@ namespace AlibabaCloud\EHPC\V20180412;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the EHPC based on the method name as the Api name.
- *
- * @package   AlibabaCloud\EHPC\V20180412
+ * @deprecated
  *
  * @method static AddContainerApp addContainerApp(array $options = [])
  * @method static AddLocalNodes addLocalNodes(array $options = [])

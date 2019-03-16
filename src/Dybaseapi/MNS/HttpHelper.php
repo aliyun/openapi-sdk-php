@@ -88,6 +88,7 @@ class HttpHelper
         foreach ($postFildes as $apiParamKey => $apiParamValue) {
             $content .= "$apiParamKey=" . urlencode($apiParamValue) . '&';
         }
+
         return substr($content, 0, -1);
     }
 
@@ -102,6 +103,7 @@ class HttpHelper
         foreach ($headers as $key => $value) {
             $httpHeader[] = $key . ':' . $value;
         }
+
         return $httpHeader;
     }
 }

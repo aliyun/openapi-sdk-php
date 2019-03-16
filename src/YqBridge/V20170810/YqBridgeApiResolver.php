@@ -5,14 +5,13 @@ namespace AlibabaCloud\YqBridge\V20170810;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the YqBridge based on the method name as the Api name.
+ * Resolve Api based on the method name.
  *
- *
- * @method CheckCloudUser checkCloudUser(array $options = [])
- * @method CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])
  * @method GetUserLabel getUserLabel(array $options = [])
- * @method HavanaIdConvert havanaIdConvert(array $options = [])
+ * @method CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])
  * @method ResetAccountPwdInWhiteList resetAccountPwdInWhiteList(array $options = [])
+ * @method HavanaIdConvert havanaIdConvert(array $options = [])
+ * @method CheckCloudUser checkCloudUser(array $options = [])
  */
 class YqBridgeApiResolver
 {

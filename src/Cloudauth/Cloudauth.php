@@ -5,8 +5,7 @@ namespace AlibabaCloud\Cloudauth;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Cloudauth based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20180916\CloudauthApiResolver v20180916()
  */

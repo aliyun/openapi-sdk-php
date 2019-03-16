@@ -5,9 +5,7 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Market based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Market\V20151101
+ * @deprecated
  *
  * @method static ActivateLicense activateLicense(array $options = [])
  * @method static BindImagePackage bindImagePackage(array $options = [])

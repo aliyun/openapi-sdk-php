@@ -5,9 +5,7 @@ namespace AlibabaCloud\ARMS;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the ARMS based on the method name as the version name.
- *
- * @package   AlibabaCloud\ARMS
+ * @deprecated
  *
  * @method static V20181015\ARMSApiResolver v20181015()
  */

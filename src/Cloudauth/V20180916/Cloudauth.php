@@ -5,9 +5,7 @@ namespace AlibabaCloud\Cloudauth\V20180916;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the Cloudauth based on the method name as the Api name.
- *
- * @package   AlibabaCloud\Cloudauth\V20180916
+ * @deprecated
  *
  * @method static CloudauthApiResolver cloudauthApiResolver(array $options = [])
  * @method static CompareFaces compareFaces(array $options = [])

@@ -5,8 +5,7 @@ namespace AlibabaCloud\Ons;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Ons based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20170918\OnsApiResolver v20170918()
  */

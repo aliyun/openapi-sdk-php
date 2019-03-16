@@ -5,8 +5,7 @@ namespace AlibabaCloud\CS;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the CS based on the method name as the version name.
- *
+ * Resolve version based on the method name.
  *
  * @method V20151215\CSApiResolver v20151215()
  */

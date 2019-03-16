@@ -5,9 +5,7 @@ namespace AlibabaCloud\Cloudauth;
 use AlibabaCloud\VersionResolverTrait;
 
 /**
- * Find the specified version of the Cloudauth based on the method name as the version name.
- *
- * @package   AlibabaCloud\Cloudauth
+ * @deprecated
  *
  * @method static V20180916\CloudauthApiResolver v20180916()
  */

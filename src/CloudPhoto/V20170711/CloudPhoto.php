@@ -5,9 +5,7 @@ namespace AlibabaCloud\CloudPhoto\V20170711;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the CloudPhoto based on the method name as the Api name.
- *
- * @package   AlibabaCloud\CloudPhoto\V20170711
+ * @deprecated
  *
  * @method static ActivatePhotos activatePhotos(array $options = [])
  * @method static AddAlbumPhotos addAlbumPhotos(array $options = [])

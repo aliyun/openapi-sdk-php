@@ -5,9 +5,7 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
- * Find the specified Api of the BssOpenApi based on the method name as the Api name.
- *
- * @package   AlibabaCloud\BssOpenApi\V20171214
+ * @deprecated
  *
  * @method static BssOpenApiApiResolver bssOpenApiApiResolver(array $options = [])
  * @method static ConvertChargeType convertChargeType(array $options = [])
