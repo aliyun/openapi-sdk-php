@@ -26,6 +26,8 @@ class V20141111Rpc extends Rpc
  */
 class ListFCTrigger extends V20141111Rpc
 {
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

@@ -16,9 +16,6 @@ class V20171001Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
-
-    /** @var string */
     public $serviceCode = 'ccs';
 }
 
@@ -90,6 +87,8 @@ class QueryHotlineRecord extends V20171001Rpc
  */
 class QueryServiceRecord extends V20171001Rpc
 {
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -100,8 +99,6 @@ class QueryServiceRecord extends V20171001Rpc
  */
 class GetServiceRecord extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -118,8 +115,6 @@ class GetServiceRecord extends V20171001Rpc
  */
 class ProceedTicket extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -144,8 +139,6 @@ class ProceedTicket extends V20171001Rpc
  */
 class QueryRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -158,8 +151,6 @@ class QueryRobotSession extends V20171001Rpc
  */
 class LastRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -172,8 +163,6 @@ class LastRobotSession extends V20171001Rpc
  */
 class EvaluateRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -190,8 +179,6 @@ class EvaluateRobotSession extends V20171001Rpc
  */
 class CreateRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -202,8 +189,6 @@ class CreateRobotSession extends V20171001Rpc
  */
 class CloseRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -222,8 +207,6 @@ class CloseRobotSession extends V20171001Rpc
  */
 class ChatRobotSession extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -234,8 +217,6 @@ class ChatRobotSession extends V20171001Rpc
  */
 class AssumeOss extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -248,8 +229,6 @@ class AssumeOss extends V20171001Rpc
  */
 class CheckInspectAudio extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -259,9 +238,6 @@ class CheckInspectAudio extends V20171001Rpc
  */
 class CheckInspectText extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
-
 
     /**
      * @param array $value
@@ -290,8 +266,6 @@ class CheckInspectText extends V20171001Rpc
  */
 class GetInspectResult extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -308,8 +282,6 @@ class GetInspectResult extends V20171001Rpc
  */
 class CreateTicket extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -332,6 +304,4 @@ class CreateTicket extends V20171001Rpc
  */
 class QueryTicket extends V20171001Rpc
 {
-    /** @var string */
-    public $scheme = 'http';
 }

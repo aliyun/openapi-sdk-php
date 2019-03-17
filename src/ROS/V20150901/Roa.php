@@ -11,9 +11,6 @@ class V20150901Roa extends Roa
 
     /** @var string */
     public $version = '2015-09-01';
-
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**
@@ -26,6 +23,9 @@ class CancelUpdateStack extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/cancel';
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -68,9 +68,6 @@ class GetStackPolicy extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -83,6 +80,9 @@ class UpdateStack extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -209,9 +209,6 @@ class DescribeTemplate extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/template';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 class ValidateTemplate extends V20150901Roa
@@ -233,9 +230,6 @@ class DescribeStackDetail extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -250,8 +244,6 @@ class DescribeStacks extends V20150901Roa
     /** @var string */
     public $pathPattern = '/stacks';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -327,9 +319,6 @@ class DescribeResourceTypeTemplate extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/resource_types/[TypeName]/template';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -344,9 +333,6 @@ class DescribeResourceDetail extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources/[ResourceName]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -359,9 +345,6 @@ class DescribeResources extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -372,9 +355,6 @@ class DescribeResourceTypeDetail extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/resource_types/[TypeName]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -385,8 +365,6 @@ class DescribeResourceTypes extends V20150901Roa
     /** @var string */
     public $pathPattern = '/resource_types';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -457,8 +435,6 @@ class DescribeEvents extends V20150901Roa
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/events';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -530,7 +506,4 @@ class DescribeRegions extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/regions';
-
-    /** @var string */
-    public $method = 'GET';
 }

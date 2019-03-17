@@ -13,9 +13,6 @@ class V20181012Roa extends Roa
     public $version = '2018-10-12';
 
     /** @var string */
-    public $method = 'POST';
-
-    /** @var string */
     public $serviceCode = 'airec';
 }
 
@@ -37,6 +34,9 @@ class ValidateInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/validate';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -47,6 +47,9 @@ class UpgradeInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/upgrade';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -59,9 +62,6 @@ class DescribeDataSetMessage extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/messages';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -74,9 +74,6 @@ class DescribeDataSetReport extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/report';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -102,9 +99,6 @@ class ListDataSource extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSources';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -118,8 +112,6 @@ class DescribeDashboard extends V20181012Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -156,6 +148,9 @@ class RunInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/import';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -166,9 +161,6 @@ class DescribeSchema extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/schema';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -179,9 +171,6 @@ class DescribeQuota extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/quota';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -192,15 +181,15 @@ class PushIntervention extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/intervene';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 class ListInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -228,6 +217,9 @@ class StopDataSet extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/actions/stop';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -240,6 +232,9 @@ class AttachDataset extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/actions/current';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -250,9 +245,6 @@ class ListDataSet extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -280,9 +272,6 @@ class DescribeDiversify extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies/[Name]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -293,9 +282,6 @@ class ListDiversify extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -321,6 +307,9 @@ class CreateDiversify extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -363,9 +352,6 @@ class DescribeMix extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -376,9 +362,6 @@ class ListMix extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -389,6 +372,9 @@ class CreateMix extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -425,9 +411,6 @@ class DescribeInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -444,8 +427,6 @@ class Recommend extends V20181012Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/recommend';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -523,10 +504,16 @@ class PushDocument extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/tables/[TableName]/actions/bulk';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 class CreateInstance extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances';
+
+    /** @var string */
+    public $method = 'POST';
 }

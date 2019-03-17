@@ -11,13 +11,12 @@ class V20180104Rpc extends Rpc
 
     /** @var string */
     public $version = '2018-01-04';
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 class ListUserQuotas extends V20180104Rpc
 {
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -26,20 +25,14 @@ class ListUserQuotas extends V20180104Rpc
  */
 class QueryCustomerSaleInfo extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 class QueryResourceInventory extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 class QueryTopology extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -56,8 +49,6 @@ class QueryTopology extends V20180104Rpc
  */
 class GetClusterInstance extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -72,8 +63,6 @@ class GetClusterInstance extends V20180104Rpc
  */
 class GetInstancesStatusCount extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -90,8 +79,6 @@ class GetInstancesStatusCount extends V20180104Rpc
  */
 class GetProjectInstance extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -108,8 +95,6 @@ class GetProjectInstance extends V20180104Rpc
  */
 class GetQuotaHistoryInfo extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -130,8 +115,6 @@ class GetQuotaHistoryInfo extends V20180104Rpc
  */
 class GetQuotaInstance extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -148,6 +131,4 @@ class GetQuotaInstance extends V20180104Rpc
  */
 class GetUserInstance extends V20180104Rpc
 {
-    /** @var string */
-    public $method = 'GET';
 }

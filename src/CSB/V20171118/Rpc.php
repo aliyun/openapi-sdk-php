@@ -25,6 +25,8 @@ class V20171118Rpc extends Rpc
  */
 class DeleteAlarmRule extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -35,6 +37,8 @@ class DeleteAlarmRule extends V20171118Rpc
  */
 class CreateOrUpdateAlarmRule extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -45,6 +49,9 @@ class CreateOrUpdateAlarmRule extends V20171118Rpc
  */
 class FindAllAlarmRuleForService extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
+
     /** @var string */
     public $method = 'GET';
 }
@@ -58,6 +65,9 @@ class FindAllAlarmRuleForService extends V20171118Rpc
 class FindAlarmHistory extends V20171118Rpc
 {
     /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -69,6 +79,8 @@ class FindAlarmHistory extends V20171118Rpc
  */
 class AddMember2AlarmGroup extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -79,6 +91,8 @@ class AddMember2AlarmGroup extends V20171118Rpc
  */
 class CreateOrUpdateAlarmGroup extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -87,6 +101,8 @@ class CreateOrUpdateAlarmGroup extends V20171118Rpc
  */
 class DeleteAlarmGroup extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -97,10 +113,15 @@ class DeleteAlarmGroup extends V20171118Rpc
  */
 class DeleteMemberFromAlarmGroup extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
 }
 
 class FindAllAlarmGroupsForUser extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
+
     /** @var string */
     public $method = 'GET';
 }
@@ -111,6 +132,9 @@ class FindAllAlarmGroupsForUser extends V20171118Rpc
  */
 class FindAllMembersForAlarmGroup extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
+
     /** @var string */
     public $method = 'GET';
 }
@@ -123,6 +147,9 @@ class FindAllMembersForAlarmGroup extends V20171118Rpc
  */
 class FindAlarmRule extends V20171118Rpc
 {
+    /** @var string */
+    public $scheme = 'http';
+
     /** @var string */
     public $method = 'GET';
 }
