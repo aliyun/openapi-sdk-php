@@ -16,7 +16,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static CancelJobs cancelJobs(array $options = [])
  * @method static CancelPredictiveJobs cancelPredictiveJobs(array $options = [])
  * @method static CommitContactFlowVersionModification commitContactFlowVersionModification(array $options = [])
- * @method static CreateAndPublishSpecialContactFlow createAndPublishSpecialContactFlow(array $options = [])
  * @method static CreateBatchJobs createBatchJobs(array $options = [])
  * @method static CreateCCCPostOrder createCCCPostOrder(array $options = [])
  * @method static CreateContactFlow createContactFlow(array $options = [])

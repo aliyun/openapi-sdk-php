@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20140526Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Ecs';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2014-05-26';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'ecs';
 }
 

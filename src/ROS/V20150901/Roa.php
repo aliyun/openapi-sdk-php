@@ -6,19 +6,13 @@ use AlibabaCloud\Roa;
 
 class V20150901Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'ROS';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2015-09-01';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -30,8 +24,8 @@ class V20150901Roa extends Roa
  */
 class CancelUpdateStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/cancel';
-
 }
 
 /**
@@ -42,8 +36,10 @@ class CancelUpdateStack extends V20150901Roa
  */
 class ContinueCreateStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/continue';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -55,8 +51,10 @@ class ContinueCreateStack extends V20150901Roa
  */
 class SetStackPolicy extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -68,8 +66,10 @@ class SetStackPolicy extends V20150901Roa
  */
 class GetStackPolicy extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -81,8 +81,8 @@ class GetStackPolicy extends V20150901Roa
  */
 class UpdateStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
-
 }
 
 /**
@@ -94,8 +94,10 @@ class UpdateStack extends V20150901Roa
  */
 class WaitConditions extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/waitcondition';
 
+    /** @var string */
     public $method = 'POST';
 
     /**
@@ -166,15 +168,19 @@ class WaitConditions extends V20150901Roa
 
 class InquiryStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/inquiry';
 
+    /** @var string */
     public $method = 'POST';
 }
 
 class PreviewStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/preview';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -186,8 +192,10 @@ class PreviewStack extends V20150901Roa
  */
 class DoActions extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/actions';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -199,15 +207,19 @@ class DoActions extends V20150901Roa
  */
 class DescribeTemplate extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/template';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class ValidateTemplate extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/validate';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -219,8 +231,10 @@ class ValidateTemplate extends V20150901Roa
  */
 class DescribeStackDetail extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -233,8 +247,10 @@ class DescribeStackDetail extends V20150901Roa
  */
 class DescribeStacks extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -309,8 +325,10 @@ class DescribeStacks extends V20150901Roa
  */
 class DescribeResourceTypeTemplate extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/resource_types/[TypeName]/template';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -324,8 +342,10 @@ class DescribeResourceTypeTemplate extends V20150901Roa
  */
 class DescribeResourceDetail extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources/[ResourceName]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -337,8 +357,10 @@ class DescribeResourceDetail extends V20150901Roa
  */
 class DescribeResources extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -348,8 +370,10 @@ class DescribeResources extends V20150901Roa
  */
 class DescribeResourceTypeDetail extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/resource_types/[TypeName]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -358,8 +382,10 @@ class DescribeResourceTypeDetail extends V20150901Roa
  */
 class DescribeResourceTypes extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/resource_types';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -384,15 +410,19 @@ class DescribeResourceTypes extends V20150901Roa
  */
 class AbandonStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/abandon';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
 class CreateStacks extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -404,8 +434,10 @@ class CreateStacks extends V20150901Roa
  */
 class DeleteStack extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -422,8 +454,10 @@ class DeleteStack extends V20150901Roa
  */
 class DescribeEvents extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/events';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -494,7 +528,9 @@ class DescribeEvents extends V20150901Roa
 
 class DescribeRegions extends V20150901Roa
 {
+    /** @var string */
     public $pathPattern = '/regions';
 
+    /** @var string */
     public $method = 'GET';
 }

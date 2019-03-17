@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20171115Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'scdn';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-11-15';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'scdn';
 }
 
@@ -211,6 +203,7 @@ class DescribeScdnDomainRealTimeSrcTrafficData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeQpsData extends V20171115Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -226,6 +219,7 @@ class DescribeScdnDomainRealTimeQpsData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeByteHitRateData extends V20171115Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -259,6 +253,7 @@ class DescribeScdnDomainRegionData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeBpsData extends V20171115Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -302,6 +297,7 @@ class DescribeScdnDomainRealTimeSrcBpsData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeReqHitRateData extends V20171115Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -331,6 +327,7 @@ class BatchUpdateScdnDomain extends V20171115Rpc
  */
 class DescribeScdnDomainCname extends V20171115Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

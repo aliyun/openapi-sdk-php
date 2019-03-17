@@ -6,19 +6,13 @@ use AlibabaCloud\Rpc;
 
 class V20180510Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Cdn';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-05-10';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -142,6 +136,7 @@ class DescribeRealtimeDeliveryAcc extends V20180510Rpc
  */
 class ListFCTrigger extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -779,6 +774,7 @@ class ModifyHttpHeaderConfig extends V20180510Rpc
  */
 class DescribeCustomLogConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -844,6 +840,7 @@ class SetRefererRegexConfig extends V20180510Rpc
  */
 class DescribeDomainRealTimeReqHitRateData extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -885,6 +882,7 @@ class BatchAddCdnDomain extends V20180510Rpc
  */
 class DescribeDomainRealTimeByteHitRateData extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -996,6 +994,7 @@ class DescribeDomainHitRateData extends V20180510Rpc
  */
 class ModifyDomainCustomLogConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1185,6 +1184,7 @@ class DescribeCdnDomainLogs extends V20180510Rpc
  */
 class DescribeFCTrigger extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1232,6 +1232,7 @@ class DescribeDomainReqHitRateData extends V20180510Rpc
  */
 class ModifyUserCustomLogConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1383,6 +1384,7 @@ class PushObjectCache extends V20180510Rpc
  */
 class DescribeDomainRealTimeQpsData extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1424,6 +1426,7 @@ class SetDomainGreenManagerConfig extends V20180510Rpc
  */
 class SetHttpErrorPageConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1485,6 +1488,7 @@ class DescribeCdnDomainConfigs extends V20180510Rpc
  */
 class DescribeDomainRealTimeBpsData extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1536,6 +1540,7 @@ class DescribeRefreshTasks extends V20180510Rpc
  */
 class DescribeDomainPathData extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1620,6 +1625,7 @@ class SetIpAllowListConfig extends V20180510Rpc
  */
 class DescribeDomainCname extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1677,6 +1683,7 @@ class DeleteFCTrigger extends V20180510Rpc
  */
 class DescribeDomainCustomLogConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1800,6 +1807,7 @@ class DescribeUserConfigs extends V20180510Rpc
  */
 class ListDomainsByLogConfigId extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1929,6 +1937,7 @@ class BatchDeleteCdnDomainConfig extends V20180510Rpc
  */
 class SetL2OssKeyConfig extends V20180510Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

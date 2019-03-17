@@ -119,7 +119,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static SetLocationAccessRestriction setLocationAccessRestriction(array $options = [])
  * @method static SetOptimizeConfig setOptimizeConfig(array $options = [])
  * @method static SetPageCompressConfig setPageCompressConfig(array $options = [])
- * @method static SetPathCacheExpiredConfig setPathCacheExpiredConfig(array $options = [])
  * @method static SetRangeConfig setRangeConfig(array $options = [])
  * @method static SetRefererConfig setRefererConfig(array $options = [])
  * @method static SetRefererRegexConfig setRefererRegexConfig(array $options = [])

@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20171204Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Actiontrail';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-12-04';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'actiontrail';
 }
 
@@ -91,6 +83,7 @@ class UpdateTrail extends V20171204Rpc
  */
 class StopLogging extends V20171204Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -118,6 +111,7 @@ class DescribeTrails extends V20171204Rpc
  */
 class StartLogging extends V20171204Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

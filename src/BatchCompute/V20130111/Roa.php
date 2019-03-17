@@ -6,19 +6,13 @@ use AlibabaCloud\Roa;
 
 class V20130111Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'BatchCompute';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2013-01-11';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -29,6 +23,7 @@ class V20130111Roa extends Roa
  */
 class ModifyJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
 
@@ -53,8 +48,10 @@ class ModifyJob extends V20130111Roa
  */
 class DeleteJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
+    /** @var string */
     public $method = 'DELETE';
 
     /**
@@ -78,8 +75,10 @@ class DeleteJob extends V20130111Roa
  */
 class DeleteImage extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/images/[ResourceName]';
 
+    /** @var string */
     public $method = 'DELETE';
 
     /**
@@ -103,8 +102,10 @@ class DeleteImage extends V20130111Roa
  */
 class GetJobDescription extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/description';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -128,8 +129,10 @@ class GetJobDescription extends V20130111Roa
  */
 class GetJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -153,8 +156,10 @@ class GetJob extends V20130111Roa
  */
 class GetImage extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/images/[ResourceName]';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -178,8 +183,10 @@ class GetImage extends V20130111Roa
  */
 class DeleteSnapshot extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/snapshots/[ResourceName]';
 
+    /** @var string */
     public $method = 'DELETE';
 
     /**
@@ -201,8 +208,10 @@ class DeleteSnapshot extends V20130111Roa
  */
 class ListSnapshots extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/snapshots';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -224,8 +233,10 @@ class ListSnapshots extends V20130111Roa
  */
 class ListJobs extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -247,8 +258,10 @@ class ListJobs extends V20130111Roa
  */
 class ListImages extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/images';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -272,8 +285,10 @@ class ListImages extends V20130111Roa
  */
 class GetTasks extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/tasks';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -297,8 +312,10 @@ class GetTasks extends V20130111Roa
  */
 class GetSnapshot extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/snapshots/[ResourceName]';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -322,8 +339,10 @@ class GetSnapshot extends V20130111Roa
  */
 class ReleaseJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
+    /** @var string */
     public $method = 'DELETE';
 
     /**
@@ -347,6 +366,7 @@ class ReleaseJob extends V20130111Roa
  */
 class PutJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/Priority';
 
 
@@ -369,8 +389,10 @@ class PutJob extends V20130111Roa
  */
 class PostJob extends V20130111Roa
 {
+    /** @var string */
     public $pathPattern = '/jobs';
 
+    /** @var string */
     public $method = 'POST';
 
     /**

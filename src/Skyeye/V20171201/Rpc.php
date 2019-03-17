@@ -6,19 +6,13 @@ use AlibabaCloud\Rpc;
 
 class V20171201Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Skyeye';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-12-01';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 

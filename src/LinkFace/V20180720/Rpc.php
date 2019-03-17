@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20180720Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'LinkFace';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-07-20';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $scheme = 'https';
 }
 

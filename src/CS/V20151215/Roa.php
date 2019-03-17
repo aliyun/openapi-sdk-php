@@ -6,24 +6,16 @@ use AlibabaCloud\Roa;
 
 class V20151215Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'CS';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2015-12-15';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'cs';
 }
 
@@ -33,8 +25,8 @@ class V20151215Roa extends Roa
  */
 class UpdateClusterKubenetesVersion extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/components/Kubernetes/upgrade';
-
 }
 
 /**
@@ -43,8 +35,10 @@ class UpdateClusterKubenetesVersion extends V20151215Roa
  */
 class DescribeClusterEndpoint extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/endpoint';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -54,8 +48,10 @@ class DescribeClusterEndpoint extends V20151215Roa
  */
 class DescribeClusterUserKubeconfig extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/k8s/[ClusterId]/user_config';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -65,8 +61,10 @@ class DescribeClusterUserKubeconfig extends V20151215Roa
  */
 class DescribeClusterEndpoints extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/endpoints';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -76,8 +74,10 @@ class DescribeClusterEndpoints extends V20151215Roa
  */
 class DescribeClusterLogs extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/logs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -89,8 +89,10 @@ class DescribeClusterLogs extends V20151215Roa
  */
 class DescribeClusterNodes extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/nodes';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -122,8 +124,10 @@ class DescribeClusterNodes extends V20151215Roa
 
 class CheckAliyunCSServiceRole extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/aliyuncsrole/status';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -135,8 +139,10 @@ class CheckAliyunCSServiceRole extends V20151215Roa
  */
 class RevokeTrigger extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ActionType]/';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -146,8 +152,8 @@ class RevokeTrigger extends V20151215Roa
  */
 class CreateTrigger extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/';
-
 }
 
 /**
@@ -158,8 +164,10 @@ class CreateTrigger extends V20151215Roa
  */
 class DeleteTrigger extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ApplicationId]';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -171,8 +179,10 @@ class DeleteTrigger extends V20151215Roa
  */
 class DescribeTrigger extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ActionType]/';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -182,8 +192,8 @@ class DescribeTrigger extends V20151215Roa
  */
 class UpgradeClusterAgent extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/upgrade';
-
 }
 
 /**
@@ -194,8 +204,8 @@ class UpgradeClusterAgent extends V20151215Roa
  */
 class UpdateSharedServices extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[ProjectName]/upgrade';
-
 }
 
 /**
@@ -204,8 +214,8 @@ class UpdateSharedServices extends V20151215Roa
  */
 class UpdateClusterDockerVersion extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/update_docker';
-
 }
 
 /**
@@ -214,20 +224,20 @@ class UpdateClusterDockerVersion extends V20151215Roa
  */
 class UpdateController extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/controller/update/[ClusterId]';
-
 }
 
 class UpdateControllers extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/controller/update';
-
 }
 
 class UpdateRamPolicy extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/user/raminfo';
-
 }
 
 /**
@@ -238,14 +248,16 @@ class UpdateRamPolicy extends V20151215Roa
  */
 class UpdateSharedService extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/update';
-
 }
 
 class RevokeTriggerHook extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/hook/trigger';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -255,8 +267,8 @@ class RevokeTriggerHook extends V20151215Roa
  */
 class UnBindSLB extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/unbind_slb';
-
 }
 
 /**
@@ -265,8 +277,10 @@ class UnBindSLB extends V20151215Roa
  */
 class UpdateAutoScale extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/update';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -278,8 +292,8 @@ class UpdateAutoScale extends V20151215Roa
  */
 class UpdateClusterAgentVersion extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/admin/clusters/[ClusterId]/agent/[Version]/modify';
-
 }
 
 /**
@@ -288,14 +302,14 @@ class UpdateClusterAgentVersion extends V20151215Roa
  */
 class RecoverController extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/controller/recover/[ClusterId]';
-
 }
 
 class RecoverControllers extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/controller/recover';
-
 }
 
 /**
@@ -306,8 +320,8 @@ class RecoverControllers extends V20151215Roa
  */
 class ReDeploySharedService extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/redeploy';
-
 }
 
 /**
@@ -318,8 +332,8 @@ class ReDeploySharedService extends V20151215Roa
  */
 class ResetClusterNode extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/instances/[InstanceId]/reset';
-
 }
 
 /**
@@ -328,8 +342,10 @@ class ResetClusterNode extends V20151215Roa
  */
 class RevokeClusterCerts extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/certs';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -341,14 +357,16 @@ class RevokeClusterCerts extends V20151215Roa
  */
 class LoginAliyunHub extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/admin/clusters/[ClusterId]/hub_login';
-
 }
 
 class ProbeTriggerHook extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/hook/trigger';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -358,14 +376,16 @@ class ProbeTriggerHook extends V20151215Roa
  */
 class PushMonitoringData extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/admin/monnitoring/[ClusterId]/push';
-
 }
 
 class DescribeUserResourceDomain extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/resource_domain';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -375,15 +395,19 @@ class DescribeUserResourceDomain extends V20151215Roa
  */
 class DescribeUserResources extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/ram/resources/[Aliuid]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeVxlanPortsRules extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/config/vxlan_ports';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -393,8 +417,8 @@ class DescribeVxlanPortsRules extends V20151215Roa
  */
 class FixSecurityGroup extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/fix_sg';
-
 }
 
 /**
@@ -405,29 +429,37 @@ class FixSecurityGroup extends V20151215Roa
  */
 class DescribeTriggerHookStatus extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/hook/trigger/status/[TriggerURL]/[Secret]/';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeUserInstances extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/instances';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeUserIoOptimizedInstances extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/instances/io_optimized';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeUserQuota extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/quota';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -437,22 +469,28 @@ class DescribeUserQuota extends V20151215Roa
  */
 class DescribeClusterVxlanPortRule extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/vxlan_ports';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeRamUsers extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/ram/users';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeRegionImages extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/region/images';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -462,8 +500,10 @@ class DescribeRegionImages extends V20151215Roa
  */
 class DescribeRegionSharedServices extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/region/[Region]/shared_services';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -473,8 +513,10 @@ class DescribeRegionSharedServices extends V20151215Roa
  */
 class DescribeClusterSharedServices extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -484,8 +526,10 @@ class DescribeClusterSharedServices extends V20151215Roa
  */
 class DescribeClusterSnapshots extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/snapshots';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -495,8 +539,10 @@ class DescribeClusterSnapshots extends V20151215Roa
  */
 class DescribeClusterStatus extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/status';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -506,8 +552,10 @@ class DescribeClusterStatus extends V20151215Roa
  */
 class DescribeClusterAutoScale extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -517,8 +565,10 @@ class DescribeClusterAutoScale extends V20151215Roa
  */
 class DescribeClusterCRL extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/crl';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -528,8 +578,10 @@ class DescribeClusterCRL extends V20151215Roa
  */
 class DescribeClusterExtInfo extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/extinfo';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -539,8 +591,10 @@ class DescribeClusterExtInfo extends V20151215Roa
  */
 class DeleteAutoScale extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -550,8 +604,8 @@ class DeleteAutoScale extends V20151215Roa
  */
 class DeployEMLSolution extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/solutions/deploy';
-
 }
 
 /**
@@ -562,14 +616,16 @@ class DeployEMLSolution extends V20151215Roa
  */
 class DeploySharedService extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/deploy';
-
 }
 
 class DescribeAgentVersions extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/agent_version';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -579,8 +635,8 @@ class DescribeAgentVersions extends V20151215Roa
  */
 class CreateAutoScale extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/cluster/[ClusterId]/autoscale/';
-
 }
 
 /**
@@ -589,14 +645,16 @@ class CreateAutoScale extends V20151215Roa
  */
 class CreateMonitoringUser extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/admin/monnitoring/[ClusterId]/create_or_update';
-
 }
 
 class CreateTriggerHook extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/hook/trigger';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -606,8 +664,8 @@ class CreateTriggerHook extends V20151215Roa
  */
 class CleanUpETCD extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/clean-etcd';
-
 }
 
 /**
@@ -618,8 +676,8 @@ class CleanUpETCD extends V20151215Roa
  */
 class BindSLB extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/slb/[SlbID]/bind';
-
 }
 
 /**
@@ -628,8 +686,8 @@ class BindSLB extends V20151215Roa
  */
 class CheckSecurityGroup extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/check_sg';
-
 }
 
 /**
@@ -638,8 +696,8 @@ class CheckSecurityGroup extends V20151215Roa
  */
 class CleanUpControllerEvent extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/controller/event_clean/[ClusterId]';
-
 }
 
 /**
@@ -648,8 +706,8 @@ class CleanUpControllerEvent extends V20151215Roa
  */
 class BatchUpdateSharedService extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/batch_update';
-
 }
 
 /**
@@ -662,8 +720,10 @@ class BatchUpdateSharedService extends V20151215Roa
  */
 class DeleteClusterNode extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/ip/[Ip]';
 
+    /** @var string */
     public $method = 'DELETE';
 
     /**
@@ -701,8 +761,10 @@ class DeleteClusterNode extends V20151215Roa
  */
 class DownloadClusterNodeCerts extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/token/[Token]/nodes/[NodeId]/certs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -712,8 +774,10 @@ class DownloadClusterNodeCerts extends V20151215Roa
  */
 class RevokeClusterToken extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/token/[Token]/revoke';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -723,21 +787,25 @@ class RevokeClusterToken extends V20151215Roa
  */
 class AttachInstances extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/attach';
-
 }
 
 class DescribeUserServices extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/region/[RegionId]/services';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeApiVersion extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/version';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -747,8 +815,10 @@ class DescribeApiVersion extends V20151215Roa
  */
 class DeleteCluster extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
 
+    /** @var string */
     public $method = 'DELETE';
 }
 
@@ -758,8 +828,10 @@ class DeleteCluster extends V20151215Roa
  */
 class DescribeClusterCerts extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/certs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -769,8 +841,10 @@ class DescribeClusterCerts extends V20151215Roa
  */
 class DescribeClusterDetail extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -780,8 +854,10 @@ class DescribeClusterDetail extends V20151215Roa
  */
 class DescribeClusters extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -817,13 +893,15 @@ class DescribeClusters extends V20151215Roa
  */
 class ScaleCluster extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
 class CreateCluster extends V20151215Roa
 {
+    /** @var string */
     public $pathPattern = '/clusters';
-
 }

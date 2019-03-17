@@ -6,24 +6,16 @@ use AlibabaCloud\Roa;
 
 class V20180509Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Green';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-05-09';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'green';
 }
 
@@ -32,6 +24,7 @@ class V20180509Roa extends Roa
  */
 class UploadCredentials extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/credentials/uploadcredentials';
 
 
@@ -54,6 +47,7 @@ class UploadCredentials extends V20180509Roa
  */
 class VoiceCancelScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/cancelscan';
 
 
@@ -76,6 +70,7 @@ class VoiceCancelScan extends V20180509Roa
  */
 class GetAddVideoDnaResults extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/dna/add/results';
 
 
@@ -98,6 +93,7 @@ class GetAddVideoDnaResults extends V20180509Roa
  */
 class DeleteVideoDnaGroup extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/dna/group/delete';
 
 
@@ -120,6 +116,7 @@ class DeleteVideoDnaGroup extends V20180509Roa
  */
 class DeleteVideoDna extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/dna/delete';
 
 
@@ -142,6 +139,7 @@ class DeleteVideoDna extends V20180509Roa
  */
 class AddVideoDnaGroup extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/dna/group/add';
 
 
@@ -164,6 +162,7 @@ class AddVideoDnaGroup extends V20180509Roa
  */
 class AddVideoDna extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/dna/add';
 
 
@@ -186,6 +185,7 @@ class AddVideoDna extends V20180509Roa
  */
 class VoiceIdentityStartRegister extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/auth/start/register';
 
 
@@ -208,6 +208,7 @@ class VoiceIdentityStartRegister extends V20180509Roa
  */
 class VoiceIdentityUnregister extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/auth/unregister';
 
 
@@ -230,6 +231,7 @@ class VoiceIdentityUnregister extends V20180509Roa
  */
 class VoiceIdentityStartCheck extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/auth/start/check';
 
 
@@ -252,6 +254,7 @@ class VoiceIdentityStartCheck extends V20180509Roa
  */
 class VoiceIdentityRegister extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/auth/register';
 
 
@@ -274,6 +277,7 @@ class VoiceIdentityRegister extends V20180509Roa
  */
 class VoiceIdentityCheck extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/auth/check';
 
 
@@ -296,6 +300,7 @@ class VoiceIdentityCheck extends V20180509Roa
  */
 class VideoSyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/syncscan';
 
 
@@ -318,6 +323,7 @@ class VideoSyncScan extends V20180509Roa
  */
 class VoiceAsyncScanResults extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/results';
 
 
@@ -340,6 +346,7 @@ class VoiceAsyncScanResults extends V20180509Roa
  */
 class VideoAsyncScanResults extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/results';
 
 
@@ -362,6 +369,7 @@ class VideoAsyncScanResults extends V20180509Roa
  */
 class AddGroups extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person/groups/add';
 
 
@@ -384,6 +392,7 @@ class AddGroups extends V20180509Roa
  */
 class GetFaces extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/faces';
 
 
@@ -406,6 +415,7 @@ class GetFaces extends V20180509Roa
  */
 class GetPersons extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/group/persons';
 
 
@@ -428,6 +438,7 @@ class GetPersons extends V20180509Roa
  */
 class GetGroups extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/groups';
 
 
@@ -450,6 +461,7 @@ class GetGroups extends V20180509Roa
  */
 class TextFeedback extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/text/feedback';
 
 
@@ -472,6 +484,7 @@ class TextFeedback extends V20180509Roa
  */
 class DeleteSimilarityImage extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/similarity/image/delete';
 
 
@@ -494,6 +507,7 @@ class DeleteSimilarityImage extends V20180509Roa
  */
 class SetPerson extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person/update';
 
 
@@ -516,6 +530,7 @@ class SetPerson extends V20180509Roa
  */
 class AddFaces extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/face/add';
 
 
@@ -538,6 +553,7 @@ class AddFaces extends V20180509Roa
  */
 class DeleteFaces extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/face/delete';
 
 
@@ -560,6 +576,7 @@ class DeleteFaces extends V20180509Roa
  */
 class DeletePerson extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person/delete';
 
 
@@ -582,6 +599,7 @@ class DeletePerson extends V20180509Roa
  */
 class ImageAsyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/image/asyncscan';
 
 
@@ -604,6 +622,7 @@ class ImageAsyncScan extends V20180509Roa
  */
 class VoiceAsyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/voice/asyncscan';
 
 
@@ -626,6 +645,7 @@ class VoiceAsyncScan extends V20180509Roa
  */
 class GetPerson extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person';
 
 
@@ -648,6 +668,7 @@ class GetPerson extends V20180509Roa
  */
 class ImageSyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/image/scan';
 
 
@@ -670,6 +691,7 @@ class ImageSyncScan extends V20180509Roa
  */
 class VideoFeedback extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/feedback';
 
 
@@ -692,6 +714,7 @@ class VideoFeedback extends V20180509Roa
  */
 class AddPerson extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person/add';
 
 
@@ -714,6 +737,7 @@ class AddPerson extends V20180509Roa
  */
 class AddSimilarityImage extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/similarity/image/add';
 
 
@@ -736,6 +760,7 @@ class AddSimilarityImage extends V20180509Roa
  */
 class FileAsyncScanResults extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/file/results';
 
 
@@ -758,6 +783,7 @@ class FileAsyncScanResults extends V20180509Roa
  */
 class SearchPerson extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/search';
 
 
@@ -780,6 +806,7 @@ class SearchPerson extends V20180509Roa
  */
 class ImageScanFeedback extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/image/feedback';
 
 
@@ -802,6 +829,7 @@ class ImageScanFeedback extends V20180509Roa
  */
 class VideoAsyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/video/asyncscan';
 
 
@@ -824,6 +852,7 @@ class VideoAsyncScan extends V20180509Roa
  */
 class ImageAsyncScanResults extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/image/results';
 
 
@@ -846,6 +875,7 @@ class ImageAsyncScanResults extends V20180509Roa
  */
 class FileAsyncScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/file/asyncscan';
 
 
@@ -868,6 +898,7 @@ class FileAsyncScan extends V20180509Roa
  */
 class TextScan extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/text/scan';
 
 
@@ -890,6 +921,7 @@ class TextScan extends V20180509Roa
  */
 class DeleteGroups extends V20180509Roa
 {
+    /** @var string */
     public $pathPattern = '/green/sface/person/groups/delete';
 
 

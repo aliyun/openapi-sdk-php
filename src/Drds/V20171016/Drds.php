@@ -30,8 +30,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeShardDBs describeShardDBs(array $options = [])
  * @method static DescribeShardDbConnectionInfo describeShardDbConnectionInfo(array $options = [])
  * @method static DrdsApiResolver drdsApiResolver(array $options = [])
- * @method static DrdsInstanceDbMonitor drdsInstanceDbMonitor(array $options = [])
- * @method static DrdsInstanceMonitor drdsInstanceMonitor(array $options = [])
  * @method static ModifyDrdsDBPasswd modifyDrdsDBPasswd(array $options = [])
  * @method static ModifyDrdsInstanceDescription modifyDrdsInstanceDescription(array $options = [])
  * @method static ModifyDrdsIpWhiteList modifyDrdsIpWhiteList(array $options = [])

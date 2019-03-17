@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20180723Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'finmall';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-07-23';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'finmall';
 }
 
@@ -141,6 +133,7 @@ class SaveAuthenticationInfo extends V20180723Rpc
  */
 class UpdateEnterpriseCustomInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -150,6 +143,7 @@ class UpdateEnterpriseCustomInfo extends V20180723Rpc
  */
 class QueryFundPartyList extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -167,6 +161,7 @@ class QueryFundPartyList extends V20180723Rpc
  */
 class QuerySignResult extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -184,6 +179,7 @@ class QuerySignResult extends V20180723Rpc
  */
 class GetSignContractUrl extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -195,6 +191,7 @@ class GetSignContractUrl extends V20180723Rpc
  */
 class CancelCredit extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -204,6 +201,7 @@ class CancelCredit extends V20180723Rpc
  */
 class QueryTrialRecords extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -237,6 +235,7 @@ class AddTrialRecord extends V20180723Rpc
  */
 class AddCustomInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -284,6 +283,7 @@ class UploadCustomIDImage extends V20180723Rpc
  */
 class SignLoanAgreement extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -297,6 +297,7 @@ class SignLoanAgreement extends V20180723Rpc
  */
 class PayForOrder extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -312,6 +313,7 @@ class PayForOrder extends V20180723Rpc
  */
 class GetAuthorizeCreditQuery extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -325,6 +327,7 @@ class GetAuthorizeCreditQuery extends V20180723Rpc
  */
 class GetUserInfoAuthorizationAgreement extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -340,6 +343,7 @@ class GetUserInfoAuthorizationAgreement extends V20180723Rpc
  */
 class GetCreditRepayList extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -355,6 +359,7 @@ class GetCreditRepayList extends V20180723Rpc
  */
 class GetCreditList extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -366,6 +371,7 @@ class GetCreditList extends V20180723Rpc
  */
 class GetTradeData extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -381,6 +387,7 @@ class GetTradeData extends V20180723Rpc
  */
 class GetLoanAgreement extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -394,6 +401,7 @@ class GetLoanAgreement extends V20180723Rpc
  */
 class GetRepayPlanTrial extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -413,6 +421,7 @@ class GetRepayPlanTrial extends V20180723Rpc
  */
 class ApplyForLoan extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -422,6 +431,7 @@ class ApplyForLoan extends V20180723Rpc
  */
 class GetZhimaScore extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -455,6 +465,7 @@ class GetZhimaScore extends V20180723Rpc
  */
 class VerifyCustomer extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -464,6 +475,7 @@ class VerifyCustomer extends V20180723Rpc
  */
 class GetCustomerVerifyInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -475,6 +487,7 @@ class GetCustomerVerifyInfo extends V20180723Rpc
  */
 class GetCreditWithdrawRecord extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -486,6 +499,7 @@ class GetCreditWithdrawRecord extends V20180723Rpc
  */
 class GetCreditSignatureInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -497,6 +511,7 @@ class GetCreditSignatureInfo extends V20180723Rpc
  */
 class GetCurrentTermRepayInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -518,6 +533,7 @@ class GetLoanApplyRecordList extends V20180723Rpc
  */
 class GetLatestOverdueRecord extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -543,6 +559,7 @@ class GetOverdueRecordList extends V20180723Rpc
  */
 class GetCreditDetail extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -554,6 +571,7 @@ class GetCreditDetail extends V20180723Rpc
  */
 class GetCreditStatus extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -567,6 +585,7 @@ class GetCreditStatus extends V20180723Rpc
  */
 class GetProductDetail extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -580,6 +599,7 @@ class GetProductDetail extends V20180723Rpc
  */
 class GetProductList extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -591,6 +611,7 @@ class GetProductList extends V20180723Rpc
  */
 class VerifySMSToken extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -606,6 +627,7 @@ class VerifySMSToken extends V20180723Rpc
  */
 class GetDocumentDownloadUrl extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -635,5 +657,6 @@ class SignResultNotify extends V20180723Rpc
  */
 class GetCustomStatusInfo extends V20180723Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }

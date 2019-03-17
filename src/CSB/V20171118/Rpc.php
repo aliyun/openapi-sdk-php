@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20171118Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'CSB';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-11-18';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $scheme = 'https';
 }
 
@@ -53,6 +45,7 @@ class CreateOrUpdateAlarmRule extends V20171118Rpc
  */
 class FindAllAlarmRuleForService extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -64,6 +57,7 @@ class FindAllAlarmRuleForService extends V20171118Rpc
  */
 class FindAlarmHistory extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -107,6 +101,7 @@ class DeleteMemberFromAlarmGroup extends V20171118Rpc
 
 class FindAllAlarmGroupsForUser extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -116,6 +111,7 @@ class FindAllAlarmGroupsForUser extends V20171118Rpc
  */
 class FindAllMembersForAlarmGroup extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -127,6 +123,7 @@ class FindAllMembersForAlarmGroup extends V20171118Rpc
  */
 class FindAlarmRule extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -142,6 +139,7 @@ class FindAlarmRule extends V20171118Rpc
  */
 class FindServiceStatisticalData extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -151,8 +149,10 @@ class FindServiceStatisticalData extends V20171118Rpc
  */
 class GetInstance extends V20171118Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -202,8 +202,10 @@ class DeleteCasService extends V20171118Rpc
  */
 class FindInstanceList extends V20171118Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -251,6 +253,7 @@ class DeleteUnionCasService extends V20171118Rpc
  */
 class FindOrderedList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -268,6 +271,7 @@ class FindOrderedList extends V20171118Rpc
  */
 class FindOrderableList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -279,6 +283,7 @@ class FindOrderableList extends V20171118Rpc
  */
 class GetProject extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -300,6 +305,7 @@ class DeleteProject extends V20171118Rpc
  */
 class GetService extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -341,6 +347,7 @@ class CheckServiceExist extends V20171118Rpc
  */
 class GetOrder extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -372,6 +379,7 @@ class DeleteProjectList extends V20171118Rpc
  */
 class FindProjectList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -383,6 +391,7 @@ class FindProjectList extends V20171118Rpc
  */
 class FindProjectsNameList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -414,6 +423,7 @@ class DeleteServiceList extends V20171118Rpc
  */
 class FindApprovalOrderList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -441,6 +451,7 @@ class UpdateOrderList extends V20171118Rpc
  */
 class FindApproveServiceList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -484,6 +495,7 @@ class CreateCredentials extends V20171118Rpc
  */
 class FindCredentialsList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -601,5 +613,6 @@ class ReplaceCredential extends V20171118Rpc
  */
 class FindServiceList extends V20171118Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }

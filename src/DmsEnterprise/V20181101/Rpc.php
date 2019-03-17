@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20181101Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'dms-enterprise';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-11-01';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'dmsenterprise';
 }
 
@@ -87,6 +79,7 @@ class RegisterUser extends V20181101Rpc
  */
 class GetOpLog extends V20181101Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

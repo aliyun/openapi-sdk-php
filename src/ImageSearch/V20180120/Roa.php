@@ -9,19 +9,13 @@ use AlibabaCloud\Roa;
 
 class V20180120Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'ImageSearch';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-01-20';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -32,8 +26,8 @@ class SearchItem extends V20180120Roa
 {
     use SearchItemTrait;
 
+    /** @var string */
     public $pathPattern = '/item/search';
-
 
     /**
      * @param string $value
@@ -42,7 +36,7 @@ class SearchItem extends V20180120Roa
      */
     public function withInstanceName($value)
     {
-        $this->data['InstanceName'] = $value;
+        $this->data['InstanceName']             = $value;
         $this->options['query']['instanceName'] = $value;
 
         return $this;
@@ -56,8 +50,8 @@ class DeleteItem extends V20180120Roa
 {
     use DeleteItemTrait;
 
+    /** @var string */
     public $pathPattern = '/item/delete';
-
 
     /**
      * @param string $value
@@ -66,7 +60,7 @@ class DeleteItem extends V20180120Roa
      */
     public function withInstanceName($value)
     {
-        $this->data['InstanceName'] = $value;
+        $this->data['InstanceName']             = $value;
         $this->options['query']['instanceName'] = $value;
 
         return $this;
@@ -80,8 +74,8 @@ class AddItem extends V20180120Roa
 {
     use AddItemTrait;
 
+    /** @var string */
     public $pathPattern = '/item/add';
-
 
     /**
      * @param string $value
@@ -90,7 +84,7 @@ class AddItem extends V20180120Roa
      */
     public function withInstanceName($value)
     {
-        $this->data['InstanceName'] = $value;
+        $this->data['InstanceName']             = $value;
         $this->options['query']['instanceName'] = $value;
 
         return $this;

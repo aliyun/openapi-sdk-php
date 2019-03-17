@@ -76,8 +76,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeParameters describeParameters(array $options = [])
  * @method static DescribePrice describePrice(array $options = [])
  * @method static DescribeProxyFunctionSupport describeProxyFunctionSupport(array $options = [])
- * @method static DescribeRdsVSwitchs describeRdsVSwitchs(array $options = [])
- * @method static DescribeRdsVpcs describeRdsVpcs(array $options = [])
  * @method static DescribeRegions describeRegions(array $options = [])
  * @method static DescribeRenewalPrice describeRenewalPrice(array $options = [])
  * @method static DescribeResourceUsage describeResourceUsage(array $options = [])

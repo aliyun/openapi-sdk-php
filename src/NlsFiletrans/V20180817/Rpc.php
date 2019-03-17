@@ -6,19 +6,13 @@ use AlibabaCloud\Rpc;
 
 class V20180817Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'nls-filetrans';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-08-17';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -40,5 +34,6 @@ class SubmitTask extends V20180817Rpc
  */
 class GetTaskResult extends V20180817Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }

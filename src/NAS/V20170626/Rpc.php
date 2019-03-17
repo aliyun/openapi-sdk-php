@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20170626Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'NAS';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-06-26';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'nas';
 }
 
@@ -81,6 +73,7 @@ class CreateTieringPolicy extends V20170626Rpc
  */
 class ModifyTieringPolicy extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -90,11 +83,13 @@ class ModifyTieringPolicy extends V20170626Rpc
  */
 class DeleteTieringPolicy extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
 class DescribeTieringPolicies extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -130,6 +125,7 @@ class CreateTieringJob extends V20170626Rpc
  */
 class DeleteTieringJob extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -155,6 +151,7 @@ class DeleteTieringJob extends V20170626Rpc
  */
 class ModifyTieringJob extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -164,6 +161,7 @@ class ModifyTieringJob extends V20170626Rpc
  */
 class DescribeTieringJobs extends V20170626Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

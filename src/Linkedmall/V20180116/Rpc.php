@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20180116Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'linkedmall';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-01-16';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'linkedmall';
 }
 
@@ -332,6 +324,7 @@ class CreateOrder extends V20180116Rpc
  */
 class CreateMovieTicketOrder extends V20180116Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -491,6 +484,7 @@ class QueryMovieComments extends V20180116Rpc
  */
 class QueryMovieTickets extends V20180116Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

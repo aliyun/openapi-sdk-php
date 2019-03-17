@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20160620Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Ots';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2016-06-20';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'ots';
 }
 
@@ -129,6 +121,7 @@ class InsertTags extends V20160620Rpc
  */
 class ListClusterType extends V20160620Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -157,6 +150,7 @@ class ListClusterType extends V20160620Rpc
  */
 class ListInstance extends V20160620Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -247,6 +241,7 @@ class ListTags extends V20160620Rpc
  */
 class ListVpcInfoByInstance extends V20160620Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -277,6 +272,7 @@ class ListVpcInfoByInstance extends V20160620Rpc
  */
 class ListVpcInfoByVpc extends V20160620Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -383,6 +379,7 @@ class DeleteTags extends V20160620Rpc
  */
 class GetInstance extends V20160620Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**

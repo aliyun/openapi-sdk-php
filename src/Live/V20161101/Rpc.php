@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20161101Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'live';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2016-11-01';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'live';
 }
 
@@ -75,6 +67,7 @@ class UpdateBoardCallback extends V20161101Rpc
  */
 class DescribeLiveDomainMapping extends V20161101Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -228,6 +221,7 @@ class DescribeLiveTopDomainsByFlow extends V20161101Rpc
  */
 class DescribeLiveDomainRealTimeBpsData extends V20161101Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -513,6 +507,7 @@ class DescribeCasterSceneAudio extends V20161101Rpc
  */
 class DescribeLiveStreamCount extends V20161101Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -526,6 +521,7 @@ class DescribeLiveStreamCount extends V20161101Rpc
  */
 class DescribeHlsLiveStreamRealTimeBpsData extends V20161101Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

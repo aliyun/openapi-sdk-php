@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20170525Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Dysmsapi';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-05-25';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'dysmsapi';
 }
 

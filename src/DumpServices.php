@@ -4,7 +4,6 @@ namespace AlibabaCloud;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use ReflectionException;
-use Stringy\Stringy;
 
 /**
  * CLass DumpServices
@@ -101,8 +100,6 @@ EOT;
 
         return $versions;
     }
-
-
 
     /**
      * @param string $versionDirectory

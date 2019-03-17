@@ -6,19 +6,13 @@ use AlibabaCloud\Roa;
 
 class V20170720Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'xspace';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-07-20';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -27,6 +21,7 @@ class V20170720Roa extends Roa
  */
 class QueryCustomerByPhone extends V20170720Roa
 {
+    /** @var string */
     public $pathPattern = '/customerbyphone';
 
 
@@ -49,8 +44,10 @@ class QueryCustomerByPhone extends V20170720Roa
  */
 class QueryCustomerById extends V20170720Roa
 {
+    /** @var string */
     public $pathPattern = '/customer';
 
+    /** @var string */
     public $method = 'PUT';
 
     /**

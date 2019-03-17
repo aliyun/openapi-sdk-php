@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20160408Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Emr';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2016-04-08';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'emr';
 }
 
@@ -3552,6 +3544,7 @@ class DescribeAvailableInstanceType extends V20160408Rpc
  */
 class GetOpsCommandDetail extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -3565,6 +3558,7 @@ class GetOpsCommandDetail extends V20160408Rpc
  */
 class ListOpsOperationTask1 extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -3578,6 +3572,7 @@ class ListOpsOperationTask1 extends V20160408Rpc
  */
 class ListOpsOperationTask extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -3607,6 +3602,7 @@ class GetOpsCommandResultOnce extends V20160408Rpc
  */
 class GetOpsCommandResult extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -3627,6 +3623,7 @@ class GetOpsCommandResult extends V20160408Rpc
  */
 class RunOpsCommand extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -3663,6 +3660,7 @@ class GetSupportedOpsCommand extends V20160408Rpc
  */
 class ListOpsOperation extends V20160408Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

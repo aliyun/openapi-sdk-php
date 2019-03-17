@@ -6,19 +6,13 @@ use AlibabaCloud\Roa;
 
 class V20170922Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'IDST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-09-22';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -33,6 +27,7 @@ class V20170922Roa extends Roa
  */
 class RoaSearch extends V20170922Roa
 {
+    /** @var string */
     public $pathPattern = '/bin/sp';
 
 

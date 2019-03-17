@@ -6,29 +6,19 @@ use AlibabaCloud\Rpc;
 
 class V20171001Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Ccs';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-10-01';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $scheme = 'https';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'ccs';
 }
 
@@ -110,8 +100,8 @@ class QueryServiceRecord extends V20171001Rpc
  */
 class GetServiceRecord extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -128,8 +118,8 @@ class GetServiceRecord extends V20171001Rpc
  */
 class ProceedTicket extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -154,8 +144,8 @@ class ProceedTicket extends V20171001Rpc
  */
 class QueryRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -168,8 +158,8 @@ class QueryRobotSession extends V20171001Rpc
  */
 class LastRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -182,8 +172,8 @@ class LastRobotSession extends V20171001Rpc
  */
 class EvaluateRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -200,8 +190,8 @@ class EvaluateRobotSession extends V20171001Rpc
  */
 class CreateRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -212,8 +202,8 @@ class CreateRobotSession extends V20171001Rpc
  */
 class CloseRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -232,8 +222,8 @@ class CloseRobotSession extends V20171001Rpc
  */
 class ChatRobotSession extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -244,8 +234,8 @@ class ChatRobotSession extends V20171001Rpc
  */
 class AssumeOss extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -258,8 +248,8 @@ class AssumeOss extends V20171001Rpc
  */
 class CheckInspectAudio extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -269,6 +259,7 @@ class CheckInspectAudio extends V20171001Rpc
  */
 class CheckInspectText extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
 
@@ -299,8 +290,8 @@ class CheckInspectText extends V20171001Rpc
  */
 class GetInspectResult extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -317,8 +308,8 @@ class GetInspectResult extends V20171001Rpc
  */
 class CreateTicket extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -341,6 +332,6 @@ class CreateTicket extends V20171001Rpc
  */
 class QueryTicket extends V20171001Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }

@@ -6,19 +6,13 @@ use AlibabaCloud\Rpc;
 
 class V20171214Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'BssOpenApi';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2017-12-14';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -50,6 +44,7 @@ class CancelOrder extends V20171214Rpc
  */
 class QueryUserOmsData extends V20171214Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -339,6 +334,7 @@ class QueryBillOverview extends V20171214Rpc
  */
 class EnableBillGeneration extends V20171214Rpc
 {
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -356,6 +352,7 @@ class EnableBillGeneration extends V20171214Rpc
  */
 class QueryRedeem extends V20171214Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 

@@ -133,7 +133,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method static DescribeInstancePhysicalAttribute describeInstancePhysicalAttribute(array $options = [])
  * @method static DescribeInstanceRamRole describeInstanceRamRole(array $options = [])
  * @method static DescribeInstanceStatus describeInstanceStatus(array $options = [])
- * @method static DescribeInstanceTopology describeInstanceTopology(array $options = [])
  * @method static DescribeInstanceTypeFamilies describeInstanceTypeFamilies(array $options = [])
  * @method static DescribeInstanceTypes describeInstanceTypes(array $options = [])
  * @method static DescribeInstanceVncPasswd describeInstanceVncPasswd(array $options = [])

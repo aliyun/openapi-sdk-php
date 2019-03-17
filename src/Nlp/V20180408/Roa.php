@@ -6,24 +6,16 @@ use AlibabaCloud\Roa;
 
 class V20180408Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'Nlp';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-04-08';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'nlp';
 }
 
@@ -33,8 +25,8 @@ class V20180408Roa extends Roa
  */
 class IE extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/ie/[Domain]';
-
 }
 
 /**
@@ -43,8 +35,8 @@ class IE extends V20180408Roa
  */
 class TextStructure extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/textstructure/[Domain]';
-
 }
 
 /**
@@ -53,8 +45,8 @@ class TextStructure extends V20180408Roa
  */
 class KWE extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/kwe/[Domain]';
-
 }
 
 /**
@@ -63,8 +55,8 @@ class KWE extends V20180408Roa
  */
 class Translate extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/translate/[Domain]';
-
 }
 
 /**
@@ -73,8 +65,8 @@ class Translate extends V20180408Roa
  */
 class Sentiment extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/sentiment/[Domain]';
-
 }
 
 /**
@@ -83,8 +75,8 @@ class Sentiment extends V20180408Roa
  */
 class WordPos extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/wordpos/[Domain]';
-
 }
 
 /**
@@ -93,8 +85,8 @@ class WordPos extends V20180408Roa
  */
 class Entity extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/entity/[Domain]';
-
 }
 
 /**
@@ -103,8 +95,8 @@ class Entity extends V20180408Roa
  */
 class WordSegment extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/wordsegment/[Domain]';
-
 }
 
 /**
@@ -113,6 +105,6 @@ class WordSegment extends V20180408Roa
  */
 class ReviewAnalysis extends V20180408Roa
 {
+    /** @var string */
     public $pathPattern = '/nlp/api/reviewanalysis/[Domain]';
-
 }

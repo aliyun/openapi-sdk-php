@@ -16,7 +16,7 @@ class Release
     /**
      * Version of the Client
      */
-    const VERSION = '1.2.0';
+    const VERSION = '1.2.1';
 
     /**
      * @param Event $event

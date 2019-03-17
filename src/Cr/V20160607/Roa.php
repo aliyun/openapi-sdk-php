@@ -6,24 +6,16 @@ use AlibabaCloud\Roa;
 
 class V20160607Roa extends Roa
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'cr';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2016-06-07';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'DELETE';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $serviceCode = 'cr';
 }
 
@@ -33,8 +25,8 @@ class V20160607Roa extends Roa
  */
 class DeleteUserSourceAccount extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/sourceAccount/[SourceAccountId]';
-
 }
 
 /**
@@ -47,8 +39,10 @@ class DeleteUserSourceAccount extends V20160607Roa
  */
 class GetRepoSyncTaskList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/syncTasks';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -88,14 +82,16 @@ class GetRepoSyncTaskList extends V20160607Roa
  */
 class DeleteImage extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]';
-
 }
 
 class GetAuthorizationToken extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/tokens';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -107,8 +103,10 @@ class GetAuthorizationToken extends V20160607Roa
  */
 class UpdateRepoSourceRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/sourceRepo';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -122,8 +120,10 @@ class UpdateRepoSourceRepo extends V20160607Roa
  */
 class GetRepoBuildList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -163,8 +163,10 @@ class GetRepoBuildList extends V20160607Roa
  */
 class GetRepoWebhookLogList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]/logs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -178,8 +180,10 @@ class GetRepoWebhookLogList extends V20160607Roa
  */
 class GetUserSourceRepoRefList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/sourceAccount/[SourceAccountId]/repos/[SourceRepoNamespace]/[SourceRepoName]/refs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -191,15 +195,19 @@ class GetUserSourceRepoRefList extends V20160607Roa
  */
 class GetRepoSourceRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/sourceRepo';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class CreateUserInfo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -211,8 +219,10 @@ class CreateUserInfo extends V20160607Roa
  */
 class SearchRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/search';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -274,15 +284,19 @@ class SearchRepo extends V20160607Roa
  */
 class GetUserSourceRepoList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/sourceAccount/[SourceAccountId]/repos';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class UpdateUserInfo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -294,8 +308,10 @@ class UpdateUserInfo extends V20160607Roa
  */
 class GetRepoBuildRuleList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/rules';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -304,8 +320,10 @@ class GetRepoBuildRuleList extends V20160607Roa
  */
 class GetUserSourceAccount extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/sourceAccount';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -324,8 +342,10 @@ class GetUserSourceAccount extends V20160607Roa
 
 class GetSubUserList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/subAccount';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -335,22 +355,28 @@ class GetSubUserList extends V20160607Roa
  */
 class GetNamespace extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class GetMirrorList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/mirrors';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class CreateUserSourceAccount extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users/sourceAccount';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -364,8 +390,10 @@ class CreateUserSourceAccount extends V20160607Roa
  */
 class UpdateRepoWebhook extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -377,8 +405,10 @@ class UpdateRepoWebhook extends V20160607Roa
  */
 class UpdateRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -392,8 +422,10 @@ class UpdateRepo extends V20160607Roa
  */
 class UpdateRepoAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/authorizations/[AuthorizeId]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -407,8 +439,10 @@ class UpdateRepoAuthorization extends V20160607Roa
  */
 class UpdateRepoBuildRule extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/rules/[BuildRuleId]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -418,8 +452,10 @@ class UpdateRepoBuildRule extends V20160607Roa
  */
 class UpdateNamespace extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -431,8 +467,10 @@ class UpdateNamespace extends V20160607Roa
  */
 class UpdateNamespaceAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]/authorizations/[AuthorizeId]';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -446,8 +484,10 @@ class UpdateNamespaceAuthorization extends V20160607Roa
  */
 class StartRepoBuildByRule extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/rules/[BuildRuleId]/build';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -461,8 +501,10 @@ class StartRepoBuildByRule extends V20160607Roa
  */
 class StartImageScan extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]/scan';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -476,8 +518,10 @@ class StartImageScan extends V20160607Roa
  */
 class GetImageScan extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]/scan';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -491,8 +535,10 @@ class GetImageScan extends V20160607Roa
  */
 class GetImageLayer extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]/layers';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -506,8 +552,8 @@ class GetImageLayer extends V20160607Roa
  */
 class DeleteRepoBuildRule extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/rules/[BuildRuleId]';
-
 }
 
 /**
@@ -516,8 +562,8 @@ class DeleteRepoBuildRule extends V20160607Roa
  */
 class DeleteNamespace extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]';
-
 }
 
 /**
@@ -528,8 +574,10 @@ class DeleteNamespace extends V20160607Roa
  */
 class CreateRepoBuildRule extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/rules';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -543,8 +591,10 @@ class CreateRepoBuildRule extends V20160607Roa
  */
 class CancelRepoBuild extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build/[BuildId]/cancel';
 
+    /** @var string */
     public $method = 'POST';
 }
 
@@ -553,8 +603,10 @@ class CancelRepoBuild extends V20160607Roa
  */
 class GetRepoBatch extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/batchsearch';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -582,8 +634,10 @@ class GetRepoBatch extends V20160607Roa
  */
 class GetImageManifest extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]/manifest';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -606,8 +660,10 @@ class GetImageManifest extends V20160607Roa
  */
 class GetCollection extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/collections';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -643,14 +699,16 @@ class GetCollection extends V20160607Roa
  */
 class DeleteCollection extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/collections/[CollectionId]';
-
 }
 
 class CreateCollection extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/collections';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -662,8 +720,10 @@ class CreateCollection extends V20160607Roa
  */
 class GetSearch extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/search-delete';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -721,8 +781,10 @@ class GetSearch extends V20160607Roa
 
 class CreateNamespace extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -734,8 +796,10 @@ class CreateNamespace extends V20160607Roa
  */
 class GetRepoWebhook extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/webhooks';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -749,8 +813,8 @@ class GetRepoWebhook extends V20160607Roa
  */
 class DeleteRepoWebhook extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/webhooks/[WebhookId]';
-
 }
 
 /**
@@ -761,8 +825,10 @@ class DeleteRepoWebhook extends V20160607Roa
  */
 class GetRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -772,8 +838,10 @@ class GetRepo extends V20160607Roa
  */
 class GetNamespaceList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -812,8 +880,10 @@ class GetNamespaceList extends V20160607Roa
  */
 class GetRepoListByNamespace extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -864,8 +934,10 @@ class GetRepoListByNamespace extends V20160607Roa
  */
 class CreateRepoSyncTask extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/syncTasks';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -876,8 +948,10 @@ class CreateRepoSyncTask extends V20160607Roa
  */
 class CreateRepoTagSyncTask extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[repoNamespace]/[repoName]/tags/[tag]/syncTasks';
 
+    /** @var string */
     public $method = 'PUT';
 
     /**
@@ -930,8 +1004,10 @@ class CreateRepoTagSyncTask extends V20160607Roa
  */
 class GetRepoSyncTask extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/syncTasks/[SyncTaskId]';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -942,8 +1018,10 @@ class GetRepoSyncTask extends V20160607Roa
  */
 class CreateRepoTagSync extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[repoNamespace]/[repoName]/tags/[tag]/syncTasks';
 
+    /** @var string */
     public $method = 'PUT';
 
     /**
@@ -988,8 +1066,10 @@ class CreateRepoTagSync extends V20160607Roa
 
 class GetRegionList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/regions';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1002,8 +1082,10 @@ class GetRegionList extends V20160607Roa
  */
 class GetRepoAuthorizationList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/authorizations';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -1030,8 +1112,8 @@ class GetRepoAuthorizationList extends V20160607Roa
  */
 class DeleteRepoAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/authorizations/[AuthorizeId]';
-
 }
 
 /**
@@ -1041,8 +1123,10 @@ class DeleteRepoAuthorization extends V20160607Roa
  */
 class GetNamespaceAuthorizationList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]/authorizations';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -1067,8 +1151,10 @@ class GetNamespaceAuthorizationList extends V20160607Roa
  */
 class CreateRepoWebhook extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/webhooks';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -1080,8 +1166,8 @@ class CreateRepoWebhook extends V20160607Roa
  */
 class DeleteNamespaceAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]/authorizations/[AuthorizeId]';
-
 }
 
 /**
@@ -1092,8 +1178,8 @@ class DeleteNamespaceAuthorization extends V20160607Roa
  */
 class DeleteRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]';
-
 }
 
 /**
@@ -1104,8 +1190,10 @@ class DeleteRepo extends V20160607Roa
  */
 class CreateRepoAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/authorizations';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -1115,22 +1203,28 @@ class CreateRepoAuthorization extends V20160607Roa
  */
 class CreateNamespaceAuthorization extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/namespace/[Namespace]/authorizations';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
 class GetUserInfo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/users';
 
+    /** @var string */
     public $method = 'GET';
 }
 
 class CreateRepo extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos';
 
+    /** @var string */
     public $method = 'PUT';
 }
 
@@ -1144,8 +1238,10 @@ class CreateRepo extends V20160607Roa
  */
 class GetRepoBuildLogs extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build/[BuildId]/logs';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1159,8 +1255,10 @@ class GetRepoBuildLogs extends V20160607Roa
  */
 class GetRepoBuildStatus extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build/[BuildId]/status';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -1171,8 +1269,10 @@ class GetRepoBuildStatus extends V20160607Roa
  */
 class GetRepoList extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -1225,8 +1325,10 @@ class GetRepoList extends V20160607Roa
  */
 class GetRepoTags extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags';
 
+    /** @var string */
     public $method = 'GET';
 
     /**
@@ -1264,7 +1366,9 @@ class GetRepoTags extends V20160607Roa
  */
 class StartRepoBuild extends V20160607Roa
 {
+    /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build';
 
+    /** @var string */
     public $method = 'PUT';
 }

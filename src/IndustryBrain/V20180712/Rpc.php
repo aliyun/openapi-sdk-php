@@ -6,24 +6,16 @@ use AlibabaCloud\Rpc;
 
 class V20180712Rpc extends Rpc
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $product = 'industry-brain';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $version = '2018-07-12';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $method = 'POST';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $scheme = 'https';
 }
 
@@ -59,6 +51,7 @@ class TestHsfPostData extends V20180712Rpc
  */
 class GetDataProperties extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -92,6 +85,7 @@ class TestPostData extends V20180712Rpc
  */
 class GetIndustryInfoLineageList extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -101,6 +95,7 @@ class GetIndustryInfoLineageList extends V20180712Rpc
  */
 class GetIndustryInfoChildrenList extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -110,11 +105,13 @@ class GetIndustryInfoChildrenList extends V20180712Rpc
  */
 class GetIndustryInfo extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
 class GetIndustryInfoList extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -124,6 +121,7 @@ class GetIndustryInfoList extends V20180712Rpc
  */
 class GetAlgorithmList extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -139,8 +137,10 @@ class GetAlgorithmList extends V20180712Rpc
  */
 class GetServiceInputMapping extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -156,8 +156,8 @@ class GetServiceInputMapping extends V20180712Rpc
  */
 class InvokeService extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -190,6 +190,7 @@ class OperateEquipment extends V20180712Rpc
  */
 class GetOSSImageAccess extends V20180712Rpc
 {
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -199,8 +200,10 @@ class GetOSSImageAccess extends V20180712Rpc
  */
 class GetAsyncServiceResult extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -210,8 +213,10 @@ class GetAsyncServiceResult extends V20180712Rpc
  */
 class GetServiceResultAsync extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
@@ -227,8 +232,8 @@ class GetServiceResultAsync extends V20180712Rpc
  */
 class InvokeServiceAsync extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
-
 }
 
 /**
@@ -237,8 +242,10 @@ class InvokeServiceAsync extends V20180712Rpc
  */
 class GetAlgoDataMapping extends V20180712Rpc
 {
+    /** @var string */
     public $scheme = 'http';
 
+    /** @var string */
     public $method = 'GET';
 }
 
