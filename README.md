@@ -68,37 +68,10 @@ require __DIR__ . '/vendor/autoload.php';
 ```
 
 
-## Compatible with old grammar
-The new kernel still supports the old syntax, but the `@deprecated` has been flagged to highlight the IDE. Developers are strongly encouraged to use the new syntax, and we will completely remove the old syntax in a future release.
-
-
-```php
-<?php
-
-use AlibabaCloud\Client\DefaultAcsClient;
-use AlibabaCloud\Client\Profile\DefaultProfile;
-use AlibabaCloud\Ecs\V20140526\DescribeRegions;
-use AlibabaCloud\Client\Exception\ClientException;
-
-$profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
-$client  = new DefaultAcsClient($profile);
-$request = new DescribeRegions();
-
-try {
-    $result = $client->getAcsResponse($request);
-    print_r($result->Regions);
-    print_r($result['Regions']);
-    print_r($result->toArray());
-} catch (ClientException $exception) {
-    echo $exception->getMessage(). PHP_EOL;
-}
-```
-
-
-## Recommend new grammar
+## Quick Examples
 Before request, please [Understanding the Clients][clients], after request, please [Understanding the Result][result].
 
-> Currently only some Alibaba Cloud products are supported. For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [API Explorer](https://api.aliyun.com) to generate Alibaba Cloud Client for PHP code online.
+> Currently only some Alibaba Cloud products are supported, [Supported Products](SUPPORTED.md), For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [API Explorer](https://api.aliyun.com) to generate Alibaba Cloud Client for PHP code online.
 
 ```php
 <?php

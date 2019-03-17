@@ -3,6 +3,7 @@
 namespace AlibabaCloud;
 
 use AlibabaCloud\Client\AlibabaCloud;
+use Composer\Script\Event;
 use ReflectionException;
 
 /**
@@ -21,23 +22,73 @@ class DumpServices
     private static $products = [];
 
     /**
+     * @var array
+     */
+    private static $supported = [];
+
+    /**
+     * @param Event $event
+     *
      * @return void
      */
-    public static function dump()
+    public static function dump(Event $event)
     {
+        require_once $event->getComposer()->getConfig()->get('vendor-dir') . '/autoload.php';
         foreach (glob(__DIR__ . DIRECTORY_SEPARATOR . '*') as $productDirectory) {
             if (is_dir($productDirectory)) {
-                self::$products[] = \basename($productDirectory);
-                self::generateVersionResolverFile($productDirectory);
+                $product                   = \basename($productDirectory);
+                self::$products[]          = $product;
+                $versions                  = self::generateVersionResolverFile($productDirectory);
+                self::$supported[$product] = $versions;
             }
         }
         self::generateServiceResolverTraitFile();
+        self::generateSupportedFile();
+    }
+
+    private static function generateSupportedFile()
+    {
+        $productNum  = count(self::$supported);
+        $versionsNum = 0;
+        $list        = '';
+        foreach (self::$supported as $product => $versions) {
+            $list .= "\n- **$product**";
+            foreach ($versions as $version) {
+                $version = str_replace('V', '', $version);
+                $versionsNum++;
+                $list .= " `$version`";
+            }
+        }
+
+        $en = <<<EOT
+English | [简体中文](./SUPPORTED-CN.md)
+
+# Supported
+Alibaba Cloud SDK for PHP has supported quick access to $versionsNum versions of $productNum products, as listed below:
+$list
+
+EOT;
+
+        $cn = <<<EOT
+[English](./SUPPORTED.md) | 简体中文
+
+# 支持
+Alibaba Cloud SDK for PHP 已经支持 $productNum 个产品的 $versionsNum 个版本的快捷访问，列表如下：
+$list
+
+EOT;
+
+        $file = __DIR__ . DIRECTORY_SEPARATOR . '../SUPPORTED.md';
+        \file_put_contents($file, $en);
+
+        $file = __DIR__ . DIRECTORY_SEPARATOR . '../SUPPORTED-CN.md';
+        \file_put_contents($file, $cn);
     }
 
     /**
      * @param string $productDirectory
      *
-     * @return bool
+     * @return array
      */
     private static function generateVersionResolverFile($productDirectory)
     {
@@ -45,7 +96,7 @@ class DumpServices
 
         $versions = self::getVersions($productDirectory);
         if ($versions === []) {
-            return false;
+            return [];
         }
 
         $method = '';
@@ -75,7 +126,7 @@ EOT;
         $fileName = $productDirectory . DIRECTORY_SEPARATOR . $productName . '.php';
         \file_put_contents($fileName, $php);
 
-        return true;
+        return $versions;
     }
 
     /**

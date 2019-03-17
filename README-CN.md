@@ -66,37 +66,10 @@ require __DIR__ . '/vendor/autoload.php';
 ```
 
 
-## 兼容旧语法
-新内核仍支持旧语法，但已标记 `@deprecated` 让 IDE 高亮提示，强烈建议开发者使用新语法，我们将在未来某个版本中完全移除旧语法。
-
-
-```php
-<?php
-    
-use AlibabaCloud\Client\DefaultAcsClient;
-use AlibabaCloud\Client\Profile\DefaultProfile;
-use AlibabaCloud\Ecs\V20140526\DescribeRegions;
-use AlibabaCloud\Client\Exception\ClientException;
-
-$profile = DefaultProfile::getProfile('<region>', '<accessKeyId>', '<accessKeySecret>');
-$client  = new DefaultAcsClient($profile);
-$request = new DescribeRegions();
-
-try {
-    $result = $client->getAcsResponse($request);
-    print_r($result->Regions);
-    print_r($result['Regions']);
-    print_r($result->toArray());
-} catch (ClientException $exception) {
-   echo $exception->getMessage(). PHP_EOL;
-}
-```
-
-
-## 推荐新语法
+## 快速使用
 请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
 
-> 目前仅支持部分阿里云产品，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
+> 目前仅支持部分阿里云产品，[已支持产品列表](SUPPORTED-CN.md)，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
 
 <br/>
 
