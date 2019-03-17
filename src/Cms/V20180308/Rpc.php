@@ -13,7 +13,7 @@ class V20180308Rpc extends Rpc
     public $version = '2018-03-08';
 
     /** @var string */
-    public $method = 'PUT';
+    public $method = 'POST';
 
     /** @var string */
     public $serviceCode = 'cms';
@@ -28,6 +28,8 @@ class V20180308Rpc extends Rpc
  */
 class RemoveMetricRuleTargets extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -81,6 +83,8 @@ class RemoveMetricRuleTargets extends V20180308Rpc
  */
 class DescribeMetricRuleTargets extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -92,6 +96,8 @@ class DescribeMetricRuleTargets extends V20180308Rpc
  */
 class PutMetricRuleTargets extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -117,6 +123,8 @@ class PutMetricRuleTargets extends V20180308Rpc
  */
 class DescrebeEventRuleTarget extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -127,8 +135,6 @@ class DescrebeEventRuleTarget extends V20180308Rpc
  */
 class DescribeSiteMonitorISPAreaCity extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -145,8 +151,6 @@ class DescribeSiteMonitorISPAreaCity extends V20180308Rpc
  */
 class QueryMetricMeta extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -159,8 +163,6 @@ class QueryMetricMeta extends V20180308Rpc
  */
 class QueryProjectMeta extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -169,8 +171,6 @@ class QueryProjectMeta extends V20180308Rpc
  */
 class DeleteMonitoringTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -193,8 +193,6 @@ class DeleteMonitoringTemplate extends V20180308Rpc
  */
 class ApplyMonitoringTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -205,8 +203,6 @@ class ApplyMonitoringTemplate extends V20180308Rpc
  */
 class GetMonitoringTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -225,8 +221,6 @@ class GetMonitoringTemplate extends V20180308Rpc
  */
 class UpdateMonitoringTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -243,8 +237,6 @@ class UpdateMonitoringTemplate extends V20180308Rpc
  */
 class CreateMonitoringTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -255,8 +247,6 @@ class CreateMonitoringTemplate extends V20180308Rpc
  */
 class QueryStaticsResponseTime extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -267,8 +257,6 @@ class QueryStaticsResponseTime extends V20180308Rpc
  */
 class QueryStaticsErrorRate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -279,8 +267,6 @@ class QueryStaticsErrorRate extends V20180308Rpc
  */
 class QueryStaticsAvailability extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -291,8 +277,6 @@ class QueryStaticsAvailability extends V20180308Rpc
  */
 class QueryErrorDistribution extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -313,8 +297,6 @@ class QueryErrorDistribution extends V20180308Rpc
  */
 class ListMonitoringTemplates extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -325,8 +307,6 @@ class ListMonitoringTemplates extends V20180308Rpc
  */
 class CreateMyGroupAlertBatch extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -335,8 +315,6 @@ class CreateMyGroupAlertBatch extends V20180308Rpc
  */
 class UpdateMyGroupAlert extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -347,8 +325,6 @@ class UpdateMyGroupAlert extends V20180308Rpc
  */
 class GetMyGroupAlert extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -370,8 +346,6 @@ class GetMyGroupAlert extends V20180308Rpc
  */
 class QueryTaskMonitorData extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -389,8 +363,6 @@ class QueryTaskMonitorData extends V20180308Rpc
 
 class QueryTaskConfig extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -401,8 +373,6 @@ class QueryTaskConfig extends V20180308Rpc
  */
 class QuerySystemEventDemo extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -417,8 +387,6 @@ class QuerySystemEventDemo extends V20180308Rpc
  */
 class SendDryRunSystemEvent extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -441,8 +409,6 @@ class SendDryRunSystemEvent extends V20180308Rpc
  */
 class DescribeAlarmsForResources extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -497,6 +463,8 @@ class DescribeAlarmsForResources extends V20180308Rpc
  */
 class PutMetricAlarm extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -519,8 +487,6 @@ class PutMetricAlarm extends V20180308Rpc
  */
 class DescribeAlarmsForDimensions extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -549,8 +515,6 @@ class DescribeAlarmsForDimensions extends V20180308Rpc
  */
 class DescribeAlarms extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -559,8 +523,6 @@ class DescribeAlarms extends V20180308Rpc
  */
 class ListEventTargetsByRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -575,8 +537,6 @@ class ListEventTargetsByRule extends V20180308Rpc
  */
 class ListEventRules extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -586,6 +546,8 @@ class ListEventRules extends V20180308Rpc
  */
 class EnableEventRule extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -610,6 +572,8 @@ class EnableEventRule extends V20180308Rpc
  */
 class DisableEventRule extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -633,8 +597,6 @@ class DisableEventRule extends V20180308Rpc
  */
 class DescribeEventRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -644,6 +606,8 @@ class DescribeEventRule extends V20180308Rpc
  */
 class DeleteEventTargets extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -668,8 +632,6 @@ class DeleteEventTargets extends V20180308Rpc
  */
 class DeleteEventRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -698,6 +660,8 @@ class DeleteEventRule extends V20180308Rpc
  */
 class PutEventTargets extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -803,6 +767,8 @@ class PutEventTargets extends V20180308Rpc
  */
 class PutEventRule extends V20180308Rpc
 {
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $value
@@ -838,8 +804,6 @@ class PutEventRule extends V20180308Rpc
  */
 class DescribeContact extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -848,8 +812,6 @@ class DescribeContact extends V20180308Rpc
  */
 class GetContacts extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -870,8 +832,6 @@ class GetContacts extends V20180308Rpc
  */
 class ApplyTemplate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -895,8 +855,6 @@ class ApplyTemplate extends V20180308Rpc
  */
 class CreateTask extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -933,8 +891,6 @@ class CreateTask extends V20180308Rpc
  */
 class ModifyTask extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -958,8 +914,6 @@ class ModifyTask extends V20180308Rpc
  */
 class DeleteTasks extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -968,8 +922,6 @@ class DeleteTasks extends V20180308Rpc
  */
 class StopTasks extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -978,8 +930,6 @@ class StopTasks extends V20180308Rpc
  */
 class StartTasks extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -990,8 +940,6 @@ class StartTasks extends V20180308Rpc
  */
 class DescribeISPAreaCity extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1000,8 +948,6 @@ class DescribeISPAreaCity extends V20180308Rpc
  */
 class DescribeTaskDetail extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1018,8 +964,6 @@ class DescribeTaskDetail extends V20180308Rpc
  */
 class DescribeTasks extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1028,8 +972,6 @@ class DescribeTasks extends V20180308Rpc
  */
 class ListGroupDynamicRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1040,8 +982,6 @@ class ListGroupDynamicRule extends V20180308Rpc
  */
 class DeleteGroupDynamicRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1052,8 +992,6 @@ class DeleteGroupDynamicRule extends V20180308Rpc
  */
 class PutGroupDynamicRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1066,8 +1004,6 @@ class PutGroupDynamicRule extends V20180308Rpc
  */
 class UpdateMyGroupMembers extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1075,8 +1011,6 @@ class UpdateMyGroupMembers extends V20180308Rpc
  */
 class TaskConfigUnhealthy extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -1099,8 +1033,6 @@ class TaskConfigUnhealthy extends V20180308Rpc
  */
 class TaskConfigDelete extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -1125,8 +1057,6 @@ class TaskConfigDelete extends V20180308Rpc
  */
 class TaskConfigEnable extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -1158,8 +1088,6 @@ class TaskConfigEnable extends V20180308Rpc
  */
 class TaskConfigList extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1183,8 +1111,6 @@ class TaskConfigList extends V20180308Rpc
  */
 class TaskConfigModify extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -1221,8 +1147,6 @@ class TaskConfigModify extends V20180308Rpc
  */
 class TaskConfigCreate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $value
@@ -1266,8 +1190,6 @@ class TaskConfigCreate extends V20180308Rpc
  */
 class QueryMetricTop extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1294,8 +1216,6 @@ class QueryMetricTop extends V20180308Rpc
  */
 class QueryMetricList extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1324,8 +1244,6 @@ class QueryMetricList extends V20180308Rpc
  */
 class QueryMetricLast extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1350,8 +1268,6 @@ class QueryMetricLast extends V20180308Rpc
  */
 class QueryMetricData extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1360,8 +1276,6 @@ class QueryMetricData extends V20180308Rpc
  */
 class EnableAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1378,8 +1292,6 @@ class EnableAlarm extends V20180308Rpc
  */
 class NodeProcessCreate extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1414,8 +1326,6 @@ class NodeProcessCreate extends V20180308Rpc
  */
 class UpdateAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1432,8 +1342,6 @@ class UpdateAlarm extends V20180308Rpc
  */
 class ListAlarmHistory extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1442,8 +1350,6 @@ class ListAlarmHistory extends V20180308Rpc
  */
 class QueryCustomEventHistogram extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1466,8 +1372,6 @@ class QueryCustomEventHistogram extends V20180308Rpc
  */
 class ListMyGroups extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1476,8 +1380,6 @@ class ListMyGroups extends V20180308Rpc
  */
 class NodeProcesses extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1488,8 +1390,6 @@ class NodeProcesses extends V20180308Rpc
  */
 class EnableActiveAlert extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1504,8 +1404,6 @@ class EnableActiveAlert extends V20180308Rpc
  */
 class ProfileSet extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1514,8 +1412,6 @@ class ProfileSet extends V20180308Rpc
  */
 class NodeStatus extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1524,8 +1420,6 @@ class NodeStatus extends V20180308Rpc
  */
 class DeleteAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1536,8 +1430,6 @@ class DeleteAlarm extends V20180308Rpc
  */
 class ListContactGroup extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1546,8 +1438,6 @@ class ListContactGroup extends V20180308Rpc
  */
 class QuerySystemEventHistogram extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1558,8 +1448,6 @@ class QuerySystemEventHistogram extends V20180308Rpc
  */
 class ListActiveAlertRule extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1578,8 +1466,6 @@ class ListActiveAlertRule extends V20180308Rpc
  */
 class GetMyGroups extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1594,8 +1480,6 @@ class GetMyGroups extends V20180308Rpc
  */
 class DeleteCustomMetric extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1634,8 +1518,6 @@ class DeleteCustomMetric extends V20180308Rpc
  */
 class CreateAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1644,8 +1526,6 @@ class CreateAlarm extends V20180308Rpc
  */
 class PutEvent extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1654,8 +1534,6 @@ class PutEvent extends V20180308Rpc
  */
 class ListMyGroupCategories extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1664,8 +1542,6 @@ class ListMyGroupCategories extends V20180308Rpc
  */
 class NodeUninstall extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1674,8 +1550,6 @@ class NodeUninstall extends V20180308Rpc
  */
 class PutCustomMetric extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1686,8 +1560,6 @@ class PutCustomMetric extends V20180308Rpc
  */
 class AddMyGroupInstances extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1710,8 +1582,6 @@ class AddMyGroupInstances extends V20180308Rpc
  */
 class ListAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1724,8 +1594,6 @@ class ListAlarm extends V20180308Rpc
  */
 class DeleteMyGroupInstances extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1746,8 +1614,6 @@ class DeleteMyGroupInstances extends V20180308Rpc
  */
 class ListMyGroupInstancesDetails extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1766,8 +1632,6 @@ class ListMyGroupInstancesDetails extends V20180308Rpc
  */
 class CreateMyGroups extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1776,8 +1640,6 @@ class CreateMyGroups extends V20180308Rpc
  */
 class ListProductOfActiveAlert extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1788,8 +1650,6 @@ class ListProductOfActiveAlert extends V20180308Rpc
  */
 class DisableActiveAlert extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1798,8 +1658,6 @@ class DisableActiveAlert extends V20180308Rpc
  */
 class DeleteMyGroups extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1820,8 +1678,6 @@ class DeleteMyGroups extends V20180308Rpc
  */
 class ListMyGroupInstances extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1846,8 +1702,6 @@ class ListMyGroupInstances extends V20180308Rpc
  */
 class NodeList extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1860,8 +1714,6 @@ class NodeList extends V20180308Rpc
  */
 class NodeInstall extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1880,8 +1732,6 @@ class NodeInstall extends V20180308Rpc
  */
 class UpdateMyGroups extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1894,8 +1744,6 @@ class UpdateMyGroups extends V20180308Rpc
  */
 class NodeProcessDelete extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1914,8 +1762,6 @@ class NodeProcessDelete extends V20180308Rpc
  */
 class QueryCustomMetricList extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1932,8 +1778,6 @@ class QueryCustomMetricList extends V20180308Rpc
  */
 class GetNotifyPolicy extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1942,8 +1786,6 @@ class GetNotifyPolicy extends V20180308Rpc
  */
 class QuerySystemEventCount extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1952,8 +1794,6 @@ class QuerySystemEventCount extends V20180308Rpc
  */
 class QueryCustomEventCount extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1964,8 +1804,6 @@ class QueryCustomEventCount extends V20180308Rpc
  */
 class UpdateMyGroupInstances extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1984,8 +1822,6 @@ class UpdateMyGroupInstances extends V20180308Rpc
  */
 class ListNotifyPolicy extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1994,8 +1830,6 @@ class ListNotifyPolicy extends V20180308Rpc
  */
 class AccessKeyGet extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2004,8 +1838,6 @@ class AccessKeyGet extends V20180308Rpc
  */
 class ProfileGet extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2024,8 +1856,6 @@ class ProfileGet extends V20180308Rpc
  */
 class CreateNotifyPolicy extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2042,8 +1872,6 @@ class CreateNotifyPolicy extends V20180308Rpc
  */
 class DeleteNotifyPolicy extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2052,8 +1880,6 @@ class DeleteNotifyPolicy extends V20180308Rpc
  */
 class DisableAlarm extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2086,8 +1912,6 @@ class DisableAlarm extends V20180308Rpc
  */
 class DescribeAlarmHistory extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2096,8 +1920,6 @@ class DescribeAlarmHistory extends V20180308Rpc
  */
 class QuerySystemEventDetail extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2106,8 +1928,6 @@ class QuerySystemEventDetail extends V20180308Rpc
  */
 class NodeStatusList extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2116,6 +1936,4 @@ class NodeStatusList extends V20180308Rpc
  */
 class QueryCustomEventDetail extends V20180308Rpc
 {
-    /** @var string */
-    public $method = 'POST';
 }

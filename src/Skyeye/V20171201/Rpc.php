@@ -32,6 +32,8 @@ class V20171201Rpc extends Rpc
  */
 class GetCdnSkyeyeStatusData extends V20171201Rpc
 {
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

@@ -11,9 +11,6 @@ class V20130111Roa extends Roa
 
     /** @var string */
     public $version = '2013-01-11';
-
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**
@@ -26,6 +23,8 @@ class ModifyJob extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param string $value
@@ -105,8 +104,6 @@ class GetJobDescription extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/description';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -132,8 +129,6 @@ class GetJob extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -159,8 +154,6 @@ class GetImage extends V20130111Roa
     /** @var string */
     public $pathPattern = '/images/[ResourceName]';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -211,8 +204,6 @@ class ListSnapshots extends V20130111Roa
     /** @var string */
     public $pathPattern = '/snapshots';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -236,8 +227,6 @@ class ListJobs extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -261,8 +250,6 @@ class ListImages extends V20130111Roa
     /** @var string */
     public $pathPattern = '/images';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -288,8 +275,6 @@ class GetTasks extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/tasks';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -315,8 +300,6 @@ class GetSnapshot extends V20130111Roa
     /** @var string */
     public $pathPattern = '/snapshots/[ResourceName]';
 
-    /** @var string */
-    public $method = 'GET';
 
     /**
      * @param string $value
@@ -369,6 +352,8 @@ class PutJob extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/Priority';
 
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param string $value

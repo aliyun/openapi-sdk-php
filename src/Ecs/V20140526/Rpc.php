@@ -8175,6 +8175,8 @@ class DetachDisk extends V20140526Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInstanceChargeType()
