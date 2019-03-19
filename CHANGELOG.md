@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.2 - 2019-03-19
+- Update docs.
+
+
 ## 1.2.1 - 2019-03-17
 - Add `Supported.md`.
 - Support `ProductCatalog`.
