@@ -31,7 +31,7 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 
 ## Getting Started
 
-1. **Alibaba Cloud Account** – Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [credentials](https://usercenter.console.aliyun.com/#/manage/ak).
+1. **Alibaba Cloud Account** – Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [Credentials](https://usercenter.console.aliyun.com/#/manage/ak).
 1. **Requirements** – Your system will need to meet the [Requirements](docs/0-Requirements-EN.md), including having **PHP >= 5.5**. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
 1. **Install Dependency** – If Composer is installed globally on your system, you can run the following in the base directory of your project to add the Alibaba Cloud SDK for PHP as a dependency:
    ```
@@ -39,6 +39,10 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
    ```
    Please see the
    [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other means.
+1. **Optimize automatic loading** - This command must be executed, otherwise it may not be available.
+   ```
+   composer dump-autoload --optimize
+   ```
 
 
 ## Online Demo

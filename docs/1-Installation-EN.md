@@ -16,6 +16,7 @@ Composer is the recommended way to install. Composer is a tool for PHP that mana
 If Composer is already [installed globally on your system](https://getcomposer.org/doc/00-intro.md#globally), run the following in the base directory of your project to install Alibaba Cloud SDK for PHP as a dependency:
 ```bash
 composer require alibabacloud/sdk
+composer dump-autoload --optimize
 ```
 
 Otherwise, download and install Composer (Windows users please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
@@ -26,6 +27,7 @@ curl -sS https://getcomposer.org/installer | php
 Then type this Composer command to install the latest version of the Alibaba Cloud SDK for PHP as a dependency
 ```bash
 php -d memory_limit=-1 composer.phar require alibabacloud/sdk
+php -d memory_limit=-1 composer.phar dump-autoload --optimize
 ```
 
 ### Add autoloader to your PHP scripts
