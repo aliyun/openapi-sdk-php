@@ -31,13 +31,17 @@
 
 ## 快速开始
 
-1. **阿里云帐户**  - 在您开始之前，您需要注册阿里云帐户并获取您的[凭据](https://usercenter.console.aliyun.com/#/manage/ak)。
+1. **阿里云帐户**  - 在您开始之前，您需要注册阿里云帐户并获取您的[凭证](https://usercenter.console.aliyun.com/#/manage/ak)。
 1. **环境要求**  - 您的系统需要满足[环境要求](docs/0-Requirements-CN.md)），包括 **PHP> = 5.5**。 我们强烈建议使用cURL扩展，并使用TLS后端编译cURL 7.16.2+。
 1. **安装依赖**  - 如果在您的系统上全局安装Composer，您可以在项目目录中运行以下内容，将 Alibaba Cloud SDK for PHP 添加为依赖项：
    ```
    composer require alibabacloud/sdk
    ```
    请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
+1. **优化自动加载**  - 必须执行这个命令，否则可能无法使用。
+   ```
+   composer dump-autoload --optimize
+   ```
 
 
 ## 在线示例
