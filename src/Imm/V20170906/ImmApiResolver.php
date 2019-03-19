@@ -7,6 +7,7 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
  * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindImages findImages(array $options = [])

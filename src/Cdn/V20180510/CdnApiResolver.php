@@ -7,6 +7,7 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeDomainWafReqData describeDomainWafReqData(array $options = [])
  * @method DescribeCdnHttpsDomainSSLInfo describeCdnHttpsDomainSSLInfo(array $options = [])
  * @method ListUserTags listUserTags(array $options = [])
  * @method DescribeCdnDomainByCertificate describeCdnDomainByCertificate(array $options = [])

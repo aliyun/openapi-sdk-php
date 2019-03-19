@@ -1012,6 +1012,8 @@ class RebuildInstance extends V20151201Rpc
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */

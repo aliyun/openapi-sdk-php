@@ -4991,6 +4991,7 @@ class DescribeScheduledTasks extends V20140828Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getAdjustmentValue()
  * @method $this withAdjustmentValue($value)
+ * @method array getStepAdjustment()
  * @method string getEstimatedInstanceWarmup()
  * @method $this withEstimatedInstanceWarmup($value)
  * @method string getOwnerAccount()
@@ -5026,6 +5027,23 @@ class DescribeScheduledTasks extends V20140828Rpc
  */
 class ModifyScalingRule extends V20140828Rpc
 {
+
+    /**
+     * @param array $value
+     *
+     * @return $this
+     */
+    public function withStepAdjustment(array $value)
+    {
+        $this->data['StepAdjustment'] = $value;
+        foreach ($value as $i => $iValue) {
+            $this->options['query']['StepAdjustment.' . ($i + 1) . '.MetricIntervalLowerBound'] = $value[$i]['MetricIntervalLowerBound'];
+            $this->options['query']['StepAdjustment.' . ($i + 1) . '.MetricIntervalUpperBound'] = $value[$i]['MetricIntervalUpperBound'];
+            $this->options['query']['StepAdjustment.' . ($i + 1) . '.ScalingAdjustment'] = $value[$i]['ScalingAdjustment'];
+        }
+
+        return $this;
+    }
 }
 
 /**

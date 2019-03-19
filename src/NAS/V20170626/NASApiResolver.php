@@ -7,6 +7,7 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ExtremeDescribeAccessGroups extremeDescribeAccessGroups(array $options = [])
  * @method CPFSDescribeRegions cPFSDescribeRegions(array $options = [])
  * @method CreateTieringPolicy createTieringPolicy(array $options = [])
  * @method ModifyTieringPolicy modifyTieringPolicy(array $options = [])

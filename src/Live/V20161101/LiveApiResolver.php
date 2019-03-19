@@ -7,6 +7,10 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method UnSubscribeStream unSubscribeStream(array $options = [])
+ * @method SubscribeStream subscribeStream(array $options = [])
+ * @method DescirbeSubscribeList descirbeSubscribeList(array $options = [])
+ * @method CreateSubscriber createSubscriber(array $options = [])
  * @method SetBoardCallback setBoardCallback(array $options = [])
  * @method UpdateBoardCallback updateBoardCallback(array $options = [])
  * @method DescribeLiveDomainMapping describeLiveDomainMapping(array $options = [])

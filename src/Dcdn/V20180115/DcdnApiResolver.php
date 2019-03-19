@@ -7,6 +7,8 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeDcdnDomainIpaTrafficData describeDcdnDomainIpaTrafficData(array $options = [])
+ * @method DescribeDcdnDomainIpaBpsData describeDcdnDomainIpaBpsData(array $options = [])
  * @method DescribeDcdnIpaService describeDcdnIpaService(array $options = [])
  * @method DescribeUserDcdnIpaStatus describeUserDcdnIpaStatus(array $options = [])
  * @method StopDcdnIpaDomain stopDcdnIpaDomain(array $options = [])

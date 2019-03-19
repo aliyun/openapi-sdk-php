@@ -1286,8 +1286,6 @@ class DescribeChannelMembers extends V20180731Rpc
  */
 class DescribeOrganization extends V20180731Rpc
 {
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**

@@ -5013,9 +5013,9 @@ class DescribeVirtualBorderRoutersForPhysicalConnection extends V20160428Rpc
  * @method $this withVpcId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getIsDefault()
  * @method $this withIsDefault($value)
- * @method array getTag()
  */
 class DescribeVpcs extends V20160428Rpc
 {

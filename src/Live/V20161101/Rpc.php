@@ -20,6 +20,52 @@ class V20161101Rpc extends Rpc
 }
 
 /**
+ * @method string getSubscriberName()
+ * @method $this withSubscriberName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UnSubscribeStream extends V20161101Rpc
+{
+}
+
+/**
+ * @method string getSubscriberName()
+ * @method $this withSubscriberName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ */
+class SubscribeStream extends V20161101Rpc
+{
+}
+
+/**
+ * @method string getSubscriberName()
+ * @method $this withSubscriberName($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescirbeSubscribeList extends V20161101Rpc
+{
+}
+
+/**
+ * @method string getSubscriberName()
+ * @method $this withSubscriberName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateSubscriber extends V20161101Rpc
+{
+}
+
+/**
  * @method string getAuthKey()
  * @method $this withAuthKey($value)
  * @method string getCallbackEnable()
