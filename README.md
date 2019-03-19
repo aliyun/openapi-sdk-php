@@ -29,43 +29,20 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 - [More flexible configuration per request][request]
 
 
-## Requirements
-- You must use PHP 5.5.0 or later.
-- if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL]. 
+## Getting Started
 
-
-## Recommendations
-- Use [Composer][composer] and optimize automatic loading `composer dump-autoload --optimize`
-- Install [cURL][cURL] 7.16.2 or later version
-- Use [OPCache][OPCache]
-- In a production environment, do not use [Xdebug][xdebug]
+1. **Alibaba Cloud Account** – Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [credentials](https://usercenter.console.aliyun.com/#/manage/ak).
+1. **Requirements** – Your system will need to meet the [Requirements](docs/0-Requirements-EN.md), including having **PHP >= 5.5**. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
+1. **Install Dependency** – If Composer is installed globally on your system, you can run the following in the base directory of your project to add the Alibaba Cloud SDK for PHP as a dependency:
+   ```
+   composer require alibabacloud/sdk
+   ```
+   Please see the
+   [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other means.
 
 
 ## Online Demo
-[API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API. **It is highly recommended**.
-
-
-## Installation
-> To install Alibaba SDK Client for PHP, you must know how to use [Composer][composer].
-
-<br/>
-
-1. Download and install Composer（Windows user please download and run [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe))
-```bash
-curl -sS https://getcomposer.org/installer | php
-```
-
-2. Execute the Composer command, install the newest and stable version of Alibaba Cloud SDK for PHP
-```bash
-php -d memory_limit=-1 composer.phar require alibabacloud/sdk
-```
-
-3. Require the Composer auto-loading tool
-```php
-<?php
-
-require __DIR__ . '/vendor/autoload.php'; 
-```
+[API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API.
 
 
 ## Quick Examples
