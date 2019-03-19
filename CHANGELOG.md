@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.3 - 2019-03-19
+- Support `cloudwf`.
+
+
 ## 1.2.2 - 2019-03-19
 - Update docs.
 

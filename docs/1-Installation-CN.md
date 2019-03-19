@@ -16,6 +16,7 @@
 如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项：
 ```bash
 composer require alibabacloud/sdk
+composer dump-autoload --optimize
 ```
 
 否则，请下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)）
@@ -26,6 +27,7 @@ curl -sS https://getcomposer.org/installer | php
 然后，执行 Composer 命令安装 Alibaba Cloud SDK for PHP 作为依赖项
 ```bash
 php -d memory_limit=-1 composer.phar require alibabacloud/sdk
+php -d memory_limit=-1 composer.phar dump-autoload --optimize
 ```
 
 ### 将自动加载工具添加到 PHP 脚本
