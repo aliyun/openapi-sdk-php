@@ -20,12 +20,12 @@ class V20180808Rpc extends Rpc
 }
 
 /**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getUserTemplate()
- * @method $this withUserTemplate($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -54,12 +54,12 @@ class ExportContainerGroupTemplate extends V20180808Rpc
 }
 
 /**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getUserTemplate()
- * @method $this withUserTemplate($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -497,8 +497,6 @@ class DescribeContainerLog extends V20180808Rpc
 
 /**
  * @method array getContainer()
- * @method string getGpuSpec()
- * @method $this withGpuSpec($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getMemory()
@@ -511,12 +509,12 @@ class DescribeContainerLog extends V20180808Rpc
  * @method $this withDnsPolicy($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method array getHostAliase()
  * @method array getInitContainer()
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getEipInstanceId()
  * @method $this withEipInstanceId($value)
- * @method array getArn()
  * @method array getDnsConfigNameServer()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -537,8 +535,6 @@ class DescribeContainerLog extends V20180808Rpc
  * @method $this withContainerGroupName($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getGpuAmount()
- * @method $this withGpuAmount($value)
  */
 class CreateContainerGroup extends V20180808Rpc
 {
@@ -605,7 +601,24 @@ class CreateContainerGroup extends V20180808Rpc
             $this->options['query']['Container.' . ($i + 1) . '.Stdin'] = $value[$i]['Stdin'];
             $this->options['query']['Container.' . ($i + 1) . '.StdinOnce'] = $value[$i]['StdinOnce'];
             $this->options['query']['Container.' . ($i + 1) . '.Tty'] = $value[$i]['Tty'];
-            $this->options['query']['Container.' . ($i + 1) . '.GpuAmount'] = $value[$i]['GpuAmount'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $value
+     *
+     * @return $this
+     */
+    public function withHostAliase(array $value)
+    {
+        $this->data['HostAliase'] = $value;
+        foreach ($value as $i => $iValue) {
+            $this->options['query']['HostAliase.' . ($i + 1) . '.Ip'] = $value[$i]['Ip'];
+            foreach ($value[$i]['Hostnames'] as $j => $jValue) {
+                $this->options['query']['HostAliase.' . ($i + 1) . '.Hostname.' . ($j + 1)] = $jValue;
+            }
         }
 
         return $this;
@@ -679,23 +692,6 @@ class CreateContainerGroup extends V20180808Rpc
         foreach ($value as $i => $iValue) {
             $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $value[$i]['Key'];
             $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $value[$i]['Value'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $value
-     *
-     * @return $this
-     */
-    public function withArn(array $value)
-    {
-        $this->data['Arn'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['Arn.' . ($i + 1) . '.RoleArn'] = $value[$i]['RoleArn'];
-            $this->options['query']['Arn.' . ($i + 1) . '.RoleType'] = $value[$i]['RoleType'];
-            $this->options['query']['Arn.' . ($i + 1) . '.AssumeRoleFor'] = $value[$i]['AssumeRoleFor'];
         }
 
         return $this;

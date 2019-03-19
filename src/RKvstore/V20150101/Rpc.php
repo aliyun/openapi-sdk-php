@@ -2944,8 +2944,6 @@ class DescribeMonitorItems extends V20150101Rpc
  * @method $this withSecurityToken($value)
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
- * @method string getArchitectureType()
- * @method $this withArchitectureType($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getPageSize()
@@ -2956,26 +2954,9 @@ class DescribeMonitorItems extends V20150101Rpc
  * @method $this withZoneId($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
- * @method array getTag()
  */
 class DescribeInstances extends V20150101Rpc
 {
-
-    /**
-     * @param array $value
-     *
-     * @return $this
-     */
-    public function withTag(array $value)
-    {
-        $this->data['Tag'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['Tag.' . ($i + 1) . '.Value'] = $value[$i]['Value'];
-            $this->options['query']['Tag.' . ($i + 1) . '.Key'] = $value[$i]['Key'];
-        }
-
-        return $this;
-    }
 }
 
 /**

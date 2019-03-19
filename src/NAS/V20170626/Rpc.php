@@ -20,6 +20,14 @@ class V20170626Rpc extends Rpc
 }
 
 /**
+ * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
+ */
+class ExtremeDescribeAccessGroups extends V20170626Rpc
+{
+}
+
+/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()

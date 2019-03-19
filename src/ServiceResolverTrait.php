@@ -35,6 +35,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Cloudauth\Cloudauth cloudauth()
  * @method static Cloudesl\Cloudesl cloudesl()
  * @method static Cloudmarketing\Cloudmarketing cloudmarketing()
+ * @method static Cloudwf\Cloudwf cloudwf()
  * @method static Cms\Cms cms()
  * @method static Cr\Cr cr()
  * @method static Crm\Crm crm()

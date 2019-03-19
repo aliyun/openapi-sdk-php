@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.2.3 - 2019-03-19
+- Support `cloudwf`.
+- Update APIs for `Aegis`.
+- Update APIs for `cdn`.
+- Update APIs for `dcdn`.
+- Update APIs for `imm`.
+- Update APIs for `live`.
+- Update APIs for `NAS`.
+
+
 ## 1.2.2 - 2019-03-19
 - Update docs.
 

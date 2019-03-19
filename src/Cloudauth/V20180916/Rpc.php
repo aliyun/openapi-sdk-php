@@ -53,6 +53,8 @@ class ModifyDeviceInfo extends V20180916Rpc
  * @method $this withSourceIp($value)
  * @method string getTest()
  * @method $this withTest($value)
+ * @method string getAuthYears()
+ * @method $this withAuthYears($value)
  * @method string getLang()
  * @method $this withLang($value)
  */

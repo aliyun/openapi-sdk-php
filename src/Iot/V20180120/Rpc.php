@@ -1039,6 +1039,8 @@ class Pub extends V20180120Rpc
 }
 
 /**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()

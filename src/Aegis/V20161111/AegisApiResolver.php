@@ -7,6 +7,8 @@ use AlibabaCloud\ApiResolverTrait;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CanTrySas canTrySas(array $options = [])
+ * @method OpenSasTrial openSasTrial(array $options = [])
  * @method DescribeSecureSuggestion describeSecureSuggestion(array $options = [])
  * @method DescribeDefenceThread describeDefenceThread(array $options = [])
  * @method DescribeWhiteListStrategyUuidCount describeWhiteListStrategyUuidCount(array $options = [])

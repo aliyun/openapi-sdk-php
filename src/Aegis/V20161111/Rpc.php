@@ -22,6 +22,24 @@ class V20161111Rpc extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ */
+class CanTrySas extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBuyVersion()
+ * @method $this withBuyVersion($value)
+ */
+class OpenSasTrial extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
  */

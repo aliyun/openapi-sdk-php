@@ -22,6 +22,16 @@ class V20170906Rpc extends Rpc
 /**
  * @method string getImageUri()
  * @method $this withImageUri($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ */
+class DetectImageLogos extends V20170906Rpc
+{
+}
+
+/**
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
  * @method string getMinSimilarity()
  * @method $this withMinSimilarity($value)
  * @method string getLimit()
