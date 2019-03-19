@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 1.2.4 - 2019-03-19
+- Support `alikafka`.
+- Support `bss`.
+- Support `cds`.
+- Support `cf`.
+- Support `Commondriver`.
+- Support `dataworks-public`.
+- Support `drcloud`.
+- Support `Edas`.
+- Support `Foas`.
+- Support `HPC`.
+- Support `ITaaS`.
+- Support `jarvis-public`.
+- Support `LinkWAN`.
+- Support `Lubanruler`.
+- Support `Oms`.
+- Support `PTS`.
+- Support `Qualitycheck`.
+- Support `waf-openapi`.
+
+
 ## 1.2.3 - 2019-03-19
 - Support `cloudwf`.
 - Update APIs for `Aegis`.

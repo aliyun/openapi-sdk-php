@@ -22,4 +22,4 @@ define('ALIBABA_CLOUD_PARSE_ERROR', 'SDK.ParseError');
  *
  * @deprecated
  */
-defined('ALIBABA_CLOUD_SDK_VERSION') || define('ALIBABA_CLOUD_SDK_VERSION', '1.2.3');
+defined('ALIBABA_CLOUD_SDK_VERSION') || define('ALIBABA_CLOUD_SDK_VERSION', '1.2.4');

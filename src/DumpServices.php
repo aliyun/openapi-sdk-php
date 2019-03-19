@@ -52,12 +52,14 @@ class DumpServices
         $versionsNum = 0;
         $list        = '';
         foreach (self::$supported as $product => $versions) {
-            $list .= "\n- **$product**";
+            $list .= "| $product |";
             foreach ($versions as $version) {
                 $version = str_replace('V', '', $version);
                 $versionsNum++;
-                $list .= " `$version`";
+                $list .= "V$version, ";
             }
+            $list .= "|\n";
+            $list = str_replace(', |', '|', $list);
         }
 
         $en = <<<EOT
@@ -65,17 +67,21 @@ English | [简体中文](./SUPPORTED-CN.md)
 
 # Supported
 Alibaba Cloud SDK for PHP has supported quick access to $versionsNum versions of $productNum products, as listed below:
-$list
 
+| Products |   Versions    |
+|----------|:-------------:|
+$list
 EOT;
 
         $cn = <<<EOT
 [English](./SUPPORTED.md) | 简体中文
 
 # 支持
-Alibaba Cloud SDK for PHP 已经支持 $productNum 个产品的 $versionsNum 个版本的快捷访问，列表如下：
-$list
+Alibaba Cloud SDK for PHP 已经支持 $productNum 个产品共 $versionsNum 个版本的快捷访问，列表如下：
 
+| 产品     |      版本      |
+|----------|:-------------:|
+$list
 EOT;
 
         $file = __DIR__ . DIRECTORY_SEPARATOR . '../SUPPORTED.md';
