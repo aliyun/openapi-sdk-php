@@ -30,6 +30,9 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 php -d memory_limit=-1 composer.phar dump-autoload --optimize
 ```
 
+### 生成类映射
+在 `composer.json` 中 `config` 部分设置 `"optimize-autoloader": true` 可免执行 `dump-autoload --optimize`。
+
 ### 将自动加载工具添加到 PHP 脚本
 要在脚本中使用 Alibaba Cloud SDK for PHP，请在脚本中包含自动加载工具，如下所示。
 ```php

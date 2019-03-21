@@ -39,10 +39,11 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
    ```
    Please see the
    [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other means.
-1. **Optimize automatic loading** - This command must be executed, otherwise it may not be available.
+1. **Class Map Generation** - This command must be executed, otherwise it may not be available.
    ```
    composer dump-autoload --optimize
    ```
+   Set `"optimize-autoloader": true` inside the `config` key of `composer.json` can avoid executing command `dump-autoload --optimize`.
 
 
 ## Online Demo
