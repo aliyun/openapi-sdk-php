@@ -38,10 +38,11 @@
    composer require alibabacloud/sdk
    ```
    请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
-1. **优化自动加载**  - 必须执行这个命令，否则可能无法使用。
+1. **生成类映射**  - 必须执行这个命令，否则可能无法使用。
    ```
    composer dump-autoload --optimize
    ```
+   在 `composer.json` 中 `config` 部分设置 `"optimize-autoloader": true` 可免执行 `dump-autoload --optimize`。
 
 
 ## 在线示例

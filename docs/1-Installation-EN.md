@@ -30,6 +30,9 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 php -d memory_limit=-1 composer.phar dump-autoload --optimize
 ```
 
+### Class Map Generation
+Set `"optimize-autoloader": true` inside the `config` key of `composer.json` can avoid executing command `dump-autoload --optimize`.
+
 ### Add autoloader to your PHP scripts
 To utilize the Alibaba Cloud SDK for PHP in your scripts, include the autoloader in your scripts, as follows.
 ```php
