@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.5 - 2019-03-23
+- Remove SVG.
+
+
 ## 1.2.4 - 2019-03-19
 - Support `alikafka`.
 - Support `bss`.
