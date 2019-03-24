@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.6 - 2019-03-24
+- Update APIs.
+
+
 ## 1.2.5 - 2019-03-23
 - Remove SVG.
 
