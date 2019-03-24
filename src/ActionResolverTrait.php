@@ -2,7 +2,10 @@
 
 namespace AlibabaCloud;
 
+use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Request\Request;
+use ReflectionClass;
+use ReflectionException;
 
 /**
  * Trait ActionResolverTrait
@@ -20,10 +23,16 @@ trait ActionResolverTrait
      * @param array $options
      *
      * @throws Client\Exception\ClientException
+     * @throws ReflectionException
      */
     public function __construct(array $options = [])
     {
         parent::__construct($options);
+
+        if ((new ReflectionClass(AlibabaCloud::class))->hasMethod('appendUserAgent')) {
+            AlibabaCloud::appendUserAgent('SDK', Release::VERSION);
+        }
+
         if (!$this->action) {
             $this->action = $this->getActionFromClassName();
         }

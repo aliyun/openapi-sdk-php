@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.7 - 2019-03-24
+- Append `SDK` for User-Agent.
+
+
 ## 1.2.6 - 2019-03-24
 - Update APIs.
 
