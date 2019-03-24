@@ -46,7 +46,6 @@
             "AlibabaCloud\\": "src"
         },
         "files": [
-            "src/Constants.php"
         ]
     },
     "autoload-dev": {
