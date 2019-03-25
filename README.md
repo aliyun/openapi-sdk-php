@@ -1,8 +1,11 @@
 English | [简体中文](./README-CN.md)
 
 
-<p align="center"><img src="https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg"></p>
 <p align="center">
+<a href=" https://www.alibabacloud.com">
+<img src="https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg">
+</a>
+<h1 align="center">Alibaba Cloud SDK for PHP</h1>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/stable" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/v/unstable" alt="Latest Unstable Version"></a>
 <a href="https://packagist.org/packages/alibabacloud/sdk"><img src="https://poser.pugx.org/alibabacloud/sdk/composerlock" alt="composer.lock"></a>
@@ -17,8 +20,7 @@ English | [简体中文](./README-CN.md)
 </p>
 
 
-## About
-**Alibaba Cloud SDK for PHP** is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
+Alibaba Cloud SDK for PHP is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
 
 ## Release Notes
