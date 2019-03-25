@@ -129,7 +129,6 @@ class GetJobDescription extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/description';
 
-
     /**
      * @param string $value
      *
@@ -154,7 +153,6 @@ class GetJob extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]';
 
-
     /**
      * @param string $value
      *
@@ -178,7 +176,6 @@ class GetImage extends V20130111Roa
 {
     /** @var string */
     public $pathPattern = '/images/[ResourceName]';
-
 
     /**
      * @param string $value
@@ -229,7 +226,6 @@ class ListSnapshots extends V20130111Roa
     /** @var string */
     public $pathPattern = '/snapshots';
 
-
     /**
      * @param string $value
      *
@@ -252,7 +248,6 @@ class ListJobs extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs';
 
-
     /**
      * @param string $value
      *
@@ -274,7 +269,6 @@ class ListImages extends V20130111Roa
 {
     /** @var string */
     public $pathPattern = '/images';
-
 
     /**
      * @param string $value
@@ -300,7 +294,6 @@ class GetTasks extends V20130111Roa
     /** @var string */
     public $pathPattern = '/jobs/[ResourceName]/tasks';
 
-
     /**
      * @param string $value
      *
@@ -324,7 +317,6 @@ class GetSnapshot extends V20130111Roa
 {
     /** @var string */
     public $pathPattern = '/snapshots/[ResourceName]';
-
 
     /**
      * @param string $value

@@ -102,6 +102,7 @@ class UpdateTrail extends V20171204Rpc
  */
 class StopLogging extends V20171204Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -130,6 +131,7 @@ class DescribeTrails extends V20171204Rpc
  */
 class StartLogging extends V20171204Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

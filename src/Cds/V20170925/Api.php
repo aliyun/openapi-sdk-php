@@ -61,7 +61,6 @@ class UpdateJob extends V20170925Roa
     /** @var string */
     public $pathPattern = '/v1/job/update';
 
-
     /**
      * @param string $value
      *
@@ -98,7 +97,6 @@ class UpdateCredential extends V20170925Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credential/update';
-
 
     /**
      * @param string $value
@@ -148,7 +146,6 @@ class DeleteCredential extends V20170925Roa
     /** @var string */
     public $pathPattern = '/v1/credential/delete';
 
-
     /**
      * @param string $value
      *
@@ -171,7 +168,6 @@ class CreateCredential extends V20170925Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credential/create';
-
 
     /**
      * @param string $value
@@ -209,7 +205,6 @@ class CreateJob extends V20170925Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/create';
-
 
     /**
      * @param string $value

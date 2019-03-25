@@ -44,9 +44,9 @@ class V20151127Rpc extends Rpc
  */
 class MonthlyPaymentCheckOrder extends V20151127Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param string $value
@@ -67,9 +67,9 @@ class MonthlyPaymentCheckOrder extends V20151127Rpc
  */
 class CFMonthlyPayment extends V20151127Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param string $value

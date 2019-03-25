@@ -37,7 +37,6 @@ class GetProduct extends V20180918Roa
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/';
 
-
     /**
      * @param string $value
      *
@@ -61,7 +60,6 @@ class ListProducts extends V20180918Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/';
-
 
     /**
      * @param string $value
@@ -117,7 +115,6 @@ class ListApis extends V20180918Roa
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/versions/[VersionId]/apis/';
 
-
     /**
      * @param string $value
      *
@@ -172,7 +169,6 @@ class GetApi extends V20180918Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/versions/[VersionId]/apis/[ApiId]';
-
 
     /**
      * @param string $value

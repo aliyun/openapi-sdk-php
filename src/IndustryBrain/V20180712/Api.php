@@ -57,6 +57,7 @@ class V20180712Rpc extends Rpc
  */
 class AsyncResponsePost extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -69,6 +70,7 @@ class AsyncResponsePost extends V20180712Rpc
  */
 class TestHsfPostData extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -93,6 +95,7 @@ class GetDataProperties extends V20180712Rpc
  */
 class TestInvokeService extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -105,6 +108,7 @@ class TestInvokeService extends V20180712Rpc
  */
 class TestPostData extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -115,6 +119,7 @@ class TestPostData extends V20180712Rpc
  */
 class GetIndustryInfoLineageList extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -125,6 +130,7 @@ class GetIndustryInfoLineageList extends V20180712Rpc
  */
 class GetIndustryInfoChildrenList extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -135,12 +141,14 @@ class GetIndustryInfoChildrenList extends V20180712Rpc
  */
 class GetIndustryInfo extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
 
 class GetIndustryInfoList extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -151,6 +159,7 @@ class GetIndustryInfoList extends V20180712Rpc
  */
 class GetAlgorithmList extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -181,6 +190,7 @@ class GetServiceInputMapping extends V20180712Rpc
  */
 class InvokeService extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -193,6 +203,7 @@ class InvokeService extends V20180712Rpc
  */
 class PostRealTimeDeviceData extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 
@@ -210,6 +221,7 @@ class PostRealTimeDeviceData extends V20180712Rpc
  */
 class OperateEquipment extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 
@@ -225,6 +237,7 @@ class OperateEquipment extends V20180712Rpc
  */
 class GetOSSImageAccess extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -257,6 +270,7 @@ class GetServiceResultAsync extends V20180712Rpc
  */
 class InvokeServiceAsync extends V20180712Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -275,6 +289,7 @@ class GetAlgoDataMapping extends V20180712Rpc
  */
 class GetOnlineServiceResult extends V20180712Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 

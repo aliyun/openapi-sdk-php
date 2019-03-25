@@ -160,6 +160,7 @@ class DescribeSiteMonitorISPCityList extends V20180308Rpc
  */
 class RemoveMetricRuleTargets extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -215,6 +216,7 @@ class RemoveMetricRuleTargets extends V20180308Rpc
  */
 class DescribeMetricRuleTargets extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -228,6 +230,7 @@ class DescribeMetricRuleTargets extends V20180308Rpc
  */
 class PutMetricRuleTargets extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -255,6 +258,7 @@ class PutMetricRuleTargets extends V20180308Rpc
  */
 class DescrebeEventRuleTarget extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -595,6 +599,7 @@ class DescribeAlarmsForResources extends V20180308Rpc
  */
 class PutMetricAlarm extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -678,6 +683,7 @@ class ListEventRules extends V20180308Rpc
  */
 class EnableEventRule extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -704,6 +710,7 @@ class EnableEventRule extends V20180308Rpc
  */
 class DisableEventRule extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -738,6 +745,7 @@ class DescribeEventRule extends V20180308Rpc
  */
 class DeleteEventTargets extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -792,6 +800,7 @@ class DeleteEventRule extends V20180308Rpc
  */
 class PutEventTargets extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -899,6 +908,7 @@ class PutEventTargets extends V20180308Rpc
  */
 class PutEventRule extends V20180308Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 

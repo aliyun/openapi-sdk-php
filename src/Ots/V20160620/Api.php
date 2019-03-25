@@ -144,6 +144,7 @@ class InsertTags extends V20160620Rpc
  */
 class ListClusterType extends V20160620Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -173,6 +174,7 @@ class ListClusterType extends V20160620Rpc
  */
 class ListInstance extends V20160620Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -264,6 +266,7 @@ class ListTags extends V20160620Rpc
  */
 class ListVpcInfoByInstance extends V20160620Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -295,6 +298,7 @@ class ListVpcInfoByInstance extends V20160620Rpc
  */
 class ListVpcInfoByVpc extends V20160620Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -402,6 +406,7 @@ class DeleteTags extends V20160620Rpc
  */
 class GetInstance extends V20160620Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 

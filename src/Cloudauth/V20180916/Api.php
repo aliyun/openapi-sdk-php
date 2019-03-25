@@ -62,6 +62,7 @@ class V20180916Rpc extends Rpc
  */
 class ModifyDeviceInfo extends V20180916Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -82,6 +83,7 @@ class ModifyDeviceInfo extends V20180916Rpc
  */
 class CreateAuthKey extends V20180916Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -98,6 +100,7 @@ class CreateAuthKey extends V20180916Rpc
  */
 class CreateVerifySDK extends V20180916Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -112,6 +115,7 @@ class CreateVerifySDK extends V20180916Rpc
  */
 class DescribeVerifySDK extends V20180916Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -140,6 +144,7 @@ class DescribeVerifySDK extends V20180916Rpc
  */
 class DescribeDeviceInfo extends V20180916Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }

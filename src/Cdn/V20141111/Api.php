@@ -190,6 +190,7 @@ class V20141111Rpc extends Rpc
  */
 class ListFCTrigger extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -272,6 +273,7 @@ class UpdateFCTrigger extends V20141111Rpc
  */
 class DescribeFCTrigger extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -344,6 +346,7 @@ class DescribeCdnDomainConfigs extends V20141111Rpc
  */
 class DescribeL2VipsByDynamicDomain extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -356,6 +359,7 @@ class DescribeL2VipsByDynamicDomain extends V20141111Rpc
  */
 class DescribeDomainCname extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -372,6 +376,7 @@ class DescribeDomainCname extends V20141111Rpc
  */
 class BatchDescribeDomainCname extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -394,6 +399,7 @@ class BatchDescribeDomainCname extends V20141111Rpc
  */
 class SetWaitingRoomConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -410,6 +416,7 @@ class SetWaitingRoomConfig extends V20141111Rpc
  */
 class DescribeDomainRealTimeByteHitRateData extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -426,6 +433,7 @@ class DescribeDomainRealTimeByteHitRateData extends V20141111Rpc
  */
 class DescribeDomainRealTimeReqHitRateData extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -446,6 +454,7 @@ class DescribeDomainRealTimeReqHitRateData extends V20141111Rpc
  */
 class DescribeDomainRealTimeQpsData extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -466,6 +475,7 @@ class DescribeDomainRealTimeQpsData extends V20141111Rpc
  */
 class DescribeDomainRealTimeBpsData extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -486,6 +496,7 @@ class DescribeDomainRealTimeBpsData extends V20141111Rpc
  */
 class DescribeDomainSlowRatio extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -498,6 +509,7 @@ class DescribeDomainSlowRatio extends V20141111Rpc
  */
 class ListDomainsByLogConfigId extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -518,6 +530,7 @@ class ListDomainsByLogConfigId extends V20141111Rpc
  */
 class SetDomainPathForceTtlCodeConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -538,6 +551,7 @@ class SetDomainPathForceTtlCodeConfig extends V20141111Rpc
  */
 class SetDomainFiletypeForceTtlCodeConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -560,6 +574,7 @@ class DescribeScdnService extends V20141111Rpc
  */
 class DescribeCustomLogConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -574,6 +589,7 @@ class DescribeCustomLogConfig extends V20141111Rpc
  */
 class ModifyDomainCustomLogConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -586,6 +602,7 @@ class ModifyDomainCustomLogConfig extends V20141111Rpc
  */
 class DescribeDomainCustomLogConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -600,6 +617,7 @@ class DescribeDomainCustomLogConfig extends V20141111Rpc
  */
 class ModifyUserCustomLogConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -610,6 +628,7 @@ class ModifyUserCustomLogConfig extends V20141111Rpc
  */
 class DescribeUserCustomLogConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -638,6 +657,7 @@ class SetHttpsOptionConfig extends V20141111Rpc
  */
 class SetDomainGreenManagerConfig extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -790,6 +810,7 @@ class DescribeDomainAverageResponseTime extends V20141111Rpc
  */
 class DescribeDomainPathData extends V20141111Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

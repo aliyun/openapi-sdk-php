@@ -123,6 +123,7 @@ class UpdateCreditGrantingInfo extends V20180723Rpc
  */
 class UpdateAuthenticationInfo extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -161,6 +162,7 @@ class UpdateAuthenticationInfo extends V20180723Rpc
  */
 class SaveAuthenticationInfo extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -279,6 +281,7 @@ class QueryTrialRecords extends V20180723Rpc
  */
 class AddTrialRecord extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -309,6 +312,7 @@ class AddCustomInfo extends V20180723Rpc
  */
 class SignedPageResult extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -325,6 +329,7 @@ class SignedPageResult extends V20180723Rpc
  */
 class UploadCustomIDImage extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -547,6 +552,7 @@ class GetCurrentTermRepayInfo extends V20180723Rpc
  */
 class GetLoanApplyRecordList extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -573,6 +579,7 @@ class GetLatestOverdueRecord extends V20180723Rpc
  */
 class GetOverdueRecordList extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }
@@ -663,6 +670,7 @@ class GetDocumentDownloadUrl extends V20180723Rpc
  */
 class SignResultNotify extends V20180723Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }

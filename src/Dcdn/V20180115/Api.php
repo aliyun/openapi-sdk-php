@@ -325,6 +325,7 @@ class BatchSetDcdnIpaDomainConfigs extends V20180115Rpc
  */
 class DescribeDcdnDomainRealTimeByteHitRateData extends V20180115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -345,6 +346,7 @@ class DescribeDcdnDomainRealTimeByteHitRateData extends V20180115Rpc
  */
 class DescribeDcdnDomainRealTimeQpsData extends V20180115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -375,6 +377,7 @@ class DescribeDcdnDomainRealTimeSrcTrafficData extends V20180115Rpc
  */
 class DescribeDcdnDomainRealTimeReqHitRateData extends V20180115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -395,6 +398,7 @@ class DescribeDcdnDomainRealTimeReqHitRateData extends V20180115Rpc
  */
 class DescribeDcdnDomainRealTimeBpsData extends V20180115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -647,6 +651,7 @@ class DescribeDcdnDomainCertificateInfo extends V20180115Rpc
  */
 class DescribeDcdnDomainCname extends V20180115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

@@ -263,6 +263,7 @@ class DescribeScdnDomainRealTimeSrcTrafficData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeQpsData extends V20171115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -279,6 +280,7 @@ class DescribeScdnDomainRealTimeQpsData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeByteHitRateData extends V20171115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -313,6 +315,7 @@ class DescribeScdnDomainRegionData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeBpsData extends V20171115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -357,6 +360,7 @@ class DescribeScdnDomainRealTimeSrcBpsData extends V20171115Rpc
  */
 class DescribeScdnDomainRealTimeReqHitRateData extends V20171115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -387,6 +391,7 @@ class BatchUpdateScdnDomain extends V20171115Rpc
  */
 class DescribeScdnDomainCname extends V20171115Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

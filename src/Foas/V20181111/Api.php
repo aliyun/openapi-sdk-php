@@ -357,7 +357,6 @@ class GetClusterEngineVersions extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/engineversions';
 
-
     /**
      * @param string $value
      *
@@ -379,7 +378,6 @@ class GetClusterDetails extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/details';
-
 
     /**
      * @param string $value
@@ -403,7 +401,6 @@ class GetClusterQueueInfo extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/queueinfo';
 
-
     /**
      * @param string $value
      *
@@ -425,7 +422,6 @@ class GetClusterResource extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/resource';
-
 
     /**
      * @param string $value
@@ -453,7 +449,6 @@ class ListCluster extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters';
-
 
     /**
      * @param string $value
@@ -821,7 +816,6 @@ class GetProject extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]';
 
-
     /**
      * @param string $value
      *
@@ -969,7 +963,6 @@ class ListProject extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects';
 
-
     /**
      * @param string $value
      *
@@ -1059,7 +1052,6 @@ class CheckRawPlanJson extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson/check';
 
-
     /**
      * @param string $value
      *
@@ -1109,7 +1101,6 @@ class ListProjectBindQueueResource extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queueresource';
-
 
     /**
      * @param string $value
@@ -1161,7 +1152,6 @@ class ListProjectBindQueue extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queues';
 
-
     /**
      * @param string $value
      *
@@ -1211,7 +1201,6 @@ class ValidateJob extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/validate';
 
-
     /**
      * @param string $value
      *
@@ -1248,7 +1237,6 @@ class GetInstanceDetail extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/details';
-
 
     /**
      * @param string $value
@@ -1300,7 +1288,6 @@ class GetInstanceConfig extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/config';
 
-
     /**
      * @param string $value
      *
@@ -1350,7 +1337,6 @@ class GetInstanceCheckpoint extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/checkpoints';
-
 
     /**
      * @param string $value
@@ -1402,7 +1388,6 @@ class GetInstanceExceptions extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/exceptions';
 
-
     /**
      * @param string $value
      *
@@ -1453,7 +1438,6 @@ class GetInstanceResource extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/resource';
 
-
     /**
      * @param string $value
      *
@@ -1503,7 +1487,6 @@ class GetInstanceFinalState extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/finalstate';
-
 
     /**
      * @param string $value
@@ -1713,7 +1696,6 @@ class ListInstance extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/instances';
 
-
     /**
      * @param string $value
      *
@@ -1894,7 +1876,6 @@ class GetInstanceRunSummary extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/runsummary';
 
-
     /**
      * @param string $value
      *
@@ -1944,7 +1925,6 @@ class GetInstance extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]';
-
 
     /**
      * @param string $value
@@ -1996,7 +1976,6 @@ class GetRefPackageJob extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]/jobs';
-
 
     /**
      * @param string $value
@@ -2254,7 +2233,6 @@ class ListPackage extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages';
 
-
     /**
      * @param string $value
      *
@@ -2508,7 +2486,6 @@ class GetPackage extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
 
-
     /**
      * @param string $value
      *
@@ -2637,7 +2614,6 @@ class ListChildFolder extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders/children';
 
-
     /**
      * @param string $value
      *
@@ -2734,7 +2710,6 @@ class ListJob extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs';
-
 
     /**
      * @param string $value
@@ -2915,7 +2890,6 @@ class GetJob extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
 
-
     /**
      * @param string $value
      *
@@ -2993,7 +2967,6 @@ class GetRawPlanJson extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson';
-
 
     /**
      * @param string $value
@@ -3428,7 +3401,6 @@ class GetFolder extends V20181111Roa
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders';
 
-
     /**
      * @param string $value
      *
@@ -3543,7 +3515,6 @@ class BatchGetInstanceRunSummary extends V20181111Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/runsummary';
-
 
     /**
      * @param string $value

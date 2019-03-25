@@ -95,6 +95,7 @@ class RegisterUser extends V20181101Rpc
  */
 class GetOpLog extends V20181101Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

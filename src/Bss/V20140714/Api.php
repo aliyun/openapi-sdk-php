@@ -172,6 +172,7 @@ class SubscriptionCreateOrderApi extends V20140714Rpc
 
 class DescribeCashDetail extends V20140714Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -210,6 +211,7 @@ class SetResourceBusinessStatus extends V20140714Rpc
  */
 class DescribeCouponList extends V20140714Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }
@@ -220,6 +222,7 @@ class DescribeCouponList extends V20140714Rpc
  */
 class DescribeCouponDetail extends V20140714Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 

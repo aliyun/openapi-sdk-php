@@ -39,7 +39,6 @@ class SearchItem extends V20180120Roa
     /** @var string */
     public $pathPattern = '/item/search';
 
-
     /**
      * @param string $value
      *
@@ -64,7 +63,6 @@ class DeleteItem extends V20180120Roa
     /** @var string */
     public $pathPattern = '/item/delete';
 
-
     /**
      * @param string $value
      *
@@ -88,7 +86,6 @@ class AddItem extends V20180120Roa
 
     /** @var string */
     public $pathPattern = '/item/add';
-
 
     /**
      * @param string $value

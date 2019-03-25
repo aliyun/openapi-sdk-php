@@ -277,7 +277,6 @@ class DescribeStacks extends V20150901Roa
     /** @var string */
     public $pathPattern = '/stacks';
 
-
     /**
      * @param string $value
      *
@@ -398,7 +397,6 @@ class DescribeResourceTypes extends V20150901Roa
     /** @var string */
     public $pathPattern = '/resource_types';
 
-
     /**
      * @param string $value
      *
@@ -467,7 +465,6 @@ class DescribeEvents extends V20150901Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/events';
-
 
     /**
      * @param string $value

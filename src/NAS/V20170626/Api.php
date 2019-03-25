@@ -99,6 +99,7 @@ class CreateTieringPolicy extends V20170626Rpc
  */
 class ModifyTieringPolicy extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -109,12 +110,14 @@ class ModifyTieringPolicy extends V20170626Rpc
  */
 class DeleteTieringPolicy extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
 
 class DescribeTieringPolicies extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -151,6 +154,7 @@ class CreateTieringJob extends V20170626Rpc
  */
 class DeleteTieringJob extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -177,6 +181,7 @@ class DeleteTieringJob extends V20170626Rpc
  */
 class ModifyTieringJob extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -187,6 +192,7 @@ class ModifyTieringJob extends V20170626Rpc
  */
 class DescribeTieringJobs extends V20170626Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
