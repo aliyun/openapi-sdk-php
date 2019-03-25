@@ -117,6 +117,7 @@ class CancelOrder extends V20171214Rpc
  */
 class QueryUserOmsData extends V20171214Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -407,6 +408,7 @@ class QueryBillOverview extends V20171214Rpc
  */
 class EnableBillGeneration extends V20171214Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -425,6 +427,7 @@ class EnableBillGeneration extends V20171214Rpc
  */
 class QueryRedeem extends V20171214Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

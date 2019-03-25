@@ -41,7 +41,6 @@ class RoaSearch extends V20170922Roa
     /** @var string */
     public $pathPattern = '/bin/sp';
 
-
     /**
      * @param string $value
      *

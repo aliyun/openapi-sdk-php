@@ -162,7 +162,6 @@ class DescribeClusterNodes extends V20151215Roa
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/nodes';
 
-
     /**
      * @param string $value
      *
@@ -928,7 +927,6 @@ class DescribeClusters extends V20151215Roa
 {
     /** @var string */
     public $pathPattern = '/clusters';
-
 
     /**
      * @param string $value

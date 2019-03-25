@@ -46,6 +46,7 @@ class SubmitTask extends V20180817Rpc
  */
 class GetTaskResult extends V20180817Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

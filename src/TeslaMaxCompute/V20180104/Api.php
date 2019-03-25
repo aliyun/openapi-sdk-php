@@ -35,6 +35,7 @@ class V20180104Rpc extends Rpc
 
 class ListUserQuotas extends V20180104Rpc
 {
+
     /** @var string */
     public $method = 'POST';
 }

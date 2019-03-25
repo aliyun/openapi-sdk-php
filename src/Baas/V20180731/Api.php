@@ -168,6 +168,7 @@ class V20180731Rpc extends Rpc
  */
 class DescribeAntRegions extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -178,6 +179,7 @@ class DescribeAntRegions extends V20180731Rpc
  */
 class DescribeBlockchainConfigOption extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -238,6 +240,7 @@ class DescribeMembers extends V20180731Rpc
  */
 class UpdateMemberRole extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -254,6 +257,7 @@ class UpdateMemberRole extends V20180731Rpc
  */
 class CreateAccount extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -266,6 +270,7 @@ class CreateAccount extends V20180731Rpc
  */
 class FreezeAccount extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -278,6 +283,7 @@ class FreezeAccount extends V20180731Rpc
  */
 class UnfreezeAccount extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -290,6 +296,7 @@ class UnfreezeAccount extends V20180731Rpc
  */
 class RenameBlockchain extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -570,6 +577,7 @@ class DestroyEthereum extends V20180731Rpc
  */
 class DescribeChaincodeCollectionConfig extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -766,6 +774,7 @@ class GetBlockchainCreateTask extends V20180731Rpc
  */
 class DescribePeerLogs extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -780,6 +789,7 @@ class DescribePeerLogs extends V20180731Rpc
  */
 class DescribeOrdererLogs extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1018,6 +1028,7 @@ class ApplyBlockchain extends V20180731Rpc
  */
 class DescribeOrganizationDeletable extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1050,6 +1061,7 @@ class QueryConsortiumDeletable extends V20180731Rpc
  */
 class QueryOrganizationDeletable extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1060,6 +1072,7 @@ class QueryOrganizationDeletable extends V20180731Rpc
  */
 class DeleteChaincode extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1104,6 +1117,7 @@ class DestroyConsortium extends V20180731Rpc
  */
 class DownloadOrganizationSDK extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1130,6 +1144,7 @@ class SynchronizeChaincode extends V20180731Rpc
  */
 class ResetOrganizationUserPassword extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1150,6 +1165,7 @@ class DescribeInvitationCode extends V20180731Rpc
  */
 class CheckOrganizationDomain extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1160,6 +1176,7 @@ class CheckOrganizationDomain extends V20180731Rpc
  */
 class CheckConsortiumDomain extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1188,12 +1205,14 @@ class DescribeConsortiumSpecs extends V20180731Rpc
  */
 class DescribeConsortiumOrderers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
 
 class DescribeConsortiumConfig extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1291,6 +1310,7 @@ class CreateEcosphere extends V20180731Rpc
  */
 class CreateConsortium extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -1318,6 +1338,7 @@ class CreateConsortium extends V20180731Rpc
  */
 class DescribeOrganizationUserCerts extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1350,6 +1371,7 @@ class DescribeOrganizations extends V20180731Rpc
  */
 class CreateOrganization extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1362,6 +1384,7 @@ class CreateOrganization extends V20180731Rpc
  */
 class DescribeOrganizationChaincodes extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1395,6 +1418,7 @@ class DescribeConsortiumChannels extends V20180731Rpc
  */
 class CreateChannel extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -1420,6 +1444,7 @@ class CreateChannel extends V20180731Rpc
  */
 class DescribeChannelMembers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1442,6 +1467,7 @@ class DescribeOrganization extends V20180731Rpc
  */
 class DescribeOrganizationPeers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1454,12 +1480,14 @@ class DescribeOrganizationPeers extends V20180731Rpc
  */
 class DescribeOrganizationUsers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
 
 class DescribeRegions extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1471,6 +1499,7 @@ class DescribeRegions extends V20180731Rpc
  */
 class ConfirmConsortiumMember extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -1499,6 +1528,7 @@ class ConfirmConsortiumMember extends V20180731Rpc
  */
 class CreateConsortiumMember extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -1525,6 +1555,7 @@ class CreateConsortiumMember extends V20180731Rpc
  */
 class CreateChannelMember extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 
@@ -1564,6 +1595,7 @@ class DescribeConsortiums extends V20180731Rpc
  */
 class JoinChannel extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1576,6 +1608,7 @@ class JoinChannel extends V20180731Rpc
  */
 class DescribeOrgnaizationChaincodes extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1588,6 +1621,7 @@ class DescribeOrgnaizationChaincodes extends V20180731Rpc
  */
 class DescribeConsortiumChaincodes extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1622,6 +1656,7 @@ class CreateChaincode extends V20180731Rpc
  */
 class InstallChaincode extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1640,6 +1675,7 @@ class InstallChaincode extends V20180731Rpc
  */
 class UpgradeChaincode extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1658,6 +1694,7 @@ class UpgradeChaincode extends V20180731Rpc
  */
 class InstantiateChaincode extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1668,6 +1705,7 @@ class InstantiateChaincode extends V20180731Rpc
  */
 class DescribeConsortiumAdminStatus extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1678,6 +1716,7 @@ class DescribeConsortiumAdminStatus extends V20180731Rpc
  */
 class DescribeChaincodeUploadPolicy extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1688,6 +1727,7 @@ class DescribeChaincodeUploadPolicy extends V20180731Rpc
  */
 class DescribeInvitationList extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1700,6 +1740,7 @@ class DescribeInvitationList extends V20180731Rpc
  */
 class DescribeOrganizationMembers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1712,6 +1753,7 @@ class DescribeOrganizationMembers extends V20180731Rpc
  */
 class DescribeConsortiumMembers extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1722,6 +1764,7 @@ class DescribeConsortiumMembers extends V20180731Rpc
  */
 class DescribeCandidateOrganizations extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }
@@ -1742,6 +1785,7 @@ class DescribeInviter extends V20180731Rpc
  */
 class DescribeConsortiumMemberApproval extends V20180731Rpc
 {
+
     /** @var string */
     public $method = 'PUT';
 }

@@ -36,7 +36,6 @@ class QueryCustomerByPhone extends V20170720Roa
     /** @var string */
     public $pathPattern = '/customerbyphone';
 
-
     /**
      * @param string $value
      *

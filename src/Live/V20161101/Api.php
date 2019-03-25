@@ -238,6 +238,7 @@ class UpdateBoardCallback extends V20161101Rpc
  */
 class DescribeLiveDomainMapping extends V20161101Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -392,6 +393,7 @@ class DescribeLiveTopDomainsByFlow extends V20161101Rpc
  */
 class DescribeLiveDomainRealTimeBpsData extends V20161101Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -678,6 +680,7 @@ class DescribeCasterSceneAudio extends V20161101Rpc
  */
 class DescribeLiveStreamCount extends V20161101Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -692,6 +695,7 @@ class DescribeLiveStreamCount extends V20161101Rpc
  */
 class DescribeHlsLiveStreamRealTimeBpsData extends V20161101Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

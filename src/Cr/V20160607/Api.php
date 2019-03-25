@@ -117,7 +117,6 @@ class GetRepoSyncTaskList extends V20160607Roa
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/syncTasks';
 
-
     /**
      * @param string $value
      *
@@ -195,7 +194,6 @@ class GetRepoBuildList extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/build';
-
 
     /**
      * @param string $value
@@ -283,7 +281,6 @@ class SearchRepo extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/search';
-
 
     /**
      * @param string $value
@@ -376,7 +373,6 @@ class GetUserSourceAccount extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/users/sourceAccount';
-
 
     /**
      * @param string $value
@@ -649,7 +645,6 @@ class GetRepoBatch extends V20160607Roa
     /** @var string */
     public $pathPattern = '/batchsearch';
 
-
     /**
      * @param string $value
      *
@@ -678,7 +673,6 @@ class GetImageManifest extends V20160607Roa
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags/[Tag]/manifest';
 
-
     /**
      * @param string $value
      *
@@ -701,7 +695,6 @@ class GetCollection extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/collections';
-
 
     /**
      * @param string $value
@@ -762,7 +755,6 @@ class GetSearch extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/search-delete';
-
 
     /**
      * @param string $value
@@ -876,7 +868,6 @@ class GetNamespaceList extends V20160607Roa
     /** @var string */
     public $pathPattern = '/namespace';
 
-
     /**
      * @param string $value
      *
@@ -915,7 +906,6 @@ class GetRepoListByNamespace extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]';
-
 
     /**
      * @param string $value
@@ -1110,7 +1100,6 @@ class GetRepoAuthorizationList extends V20160607Roa
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/authorizations';
 
-
     /**
      * @param string $value
      *
@@ -1151,7 +1140,6 @@ class GetNamespaceAuthorizationList extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/namespace/[Namespace]/authorizations';
-
 
     /**
      * @param string $value
@@ -1293,7 +1281,6 @@ class GetRepoList extends V20160607Roa
     /** @var string */
     public $pathPattern = '/repos';
 
-
     /**
      * @param string $value
      *
@@ -1346,7 +1333,6 @@ class GetRepoTags extends V20160607Roa
 {
     /** @var string */
     public $pathPattern = '/repos/[RepoNamespace]/[RepoName]/tags';
-
 
     /**
      * @param string $value

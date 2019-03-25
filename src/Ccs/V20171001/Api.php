@@ -114,6 +114,7 @@ class QueryHotlineRecord extends V20171001Rpc
  */
 class QueryServiceRecord extends V20171001Rpc
 {
+
     /** @var string */
     public $scheme = 'https';
 }

@@ -1860,51 +1860,43 @@ class AttachInstances extends V20140828Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getAdjustmentValue()
  * @method $this withAdjustmentValue($value)
- * @method array getStepAdjustment()
  * @method string getScalingGroupId()
  * @method $this withScalingGroupId($value)
  * @method string getEstimatedInstanceWarmup()
  * @method $this withEstimatedInstanceWarmup($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getPredictiveTaskBufferTime()
+ * @method $this withPredictiveTaskBufferTime($value)
  * @method string getAdjustmentType()
  * @method $this withAdjustmentType($value)
  * @method string getDisableScaleIn()
  * @method $this withDisableScaleIn($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInitialMaxSize()
+ * @method $this withInitialMaxSize($value)
+ * @method string getPredictiveValueBuffer()
+ * @method $this withPredictiveValueBuffer($value)
  * @method string getScalingRuleName()
  * @method $this withScalingRuleName($value)
  * @method string getCooldown()
  * @method $this withCooldown($value)
  * @method string getMinAdjustmentMagnitude()
  * @method $this withMinAdjustmentMagnitude($value)
+ * @method string getPredictiveValueBehavior()
+ * @method $this withPredictiveValueBehavior($value)
  * @method string getTargetValue()
  * @method $this withTargetValue($value)
  * @method string getScalingRuleType()
  * @method $this withScalingRuleType($value)
  * @method string getMetricName()
  * @method $this withMetricName($value)
+ * @method string getPredictiveScalingMode()
+ * @method $this withPredictiveScalingMode($value)
  */
 class CreateScalingRule extends V20140828Rpc
 {
-
-    /**
-     * @param array $stepAdjustment
-     *
-     * @return $this
-     */
-    public function withStepAdjustment(array $stepAdjustment)
-    {
-        $this->data['StepAdjustment'] = $stepAdjustment;
-        foreach ($stepAdjustment as $depth1 => $depth1Value) {
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalLowerBound'] = $depth1Value['MetricIntervalLowerBound'];
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalUpperBound'] = $depth1Value['MetricIntervalUpperBound'];
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.ScalingAdjustment'] = $depth1Value['ScalingAdjustment'];
-        }
-
-        return $this;
-    }
 }
 
 /**

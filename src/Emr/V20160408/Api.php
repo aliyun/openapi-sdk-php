@@ -3993,6 +3993,7 @@ class DescribeAvailableInstanceType extends V20160408Rpc
  */
 class GetOpsCommandDetail extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -4007,6 +4008,7 @@ class GetOpsCommandDetail extends V20160408Rpc
  */
 class ListOpsOperationTask1 extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -4021,6 +4023,7 @@ class ListOpsOperationTask1 extends V20160408Rpc
  */
 class ListOpsOperationTask extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -4051,6 +4054,7 @@ class GetOpsCommandResultOnce extends V20160408Rpc
  */
 class GetOpsCommandResult extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -4072,6 +4076,7 @@ class GetOpsCommandResult extends V20160408Rpc
  */
 class RunOpsCommand extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -4109,6 +4114,7 @@ class GetSupportedOpsCommand extends V20160408Rpc
  */
 class ListOpsOperation extends V20160408Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }

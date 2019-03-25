@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method UpdateClusterVolumes updateClusterVolumes(array $options = [])
  * @method GetAccountingReport getAccountingReport(array $options = [])
  * @method InstallSoftware installSoftware(array $options = [])
  * @method UninstallSoftware uninstallSoftware(array $options = [])
@@ -109,6 +110,38 @@ class V20180412Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ehs';
+}
+
+/**
+ * @method array getAdditionalVolumes()
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class UpdateClusterVolumes extends V20180412Rpc
+{
+
+    /**
+     * @param array $additionalVolumes
+     *
+     * @return $this
+     */
+    public function withAdditionalVolumes(array $additionalVolumes)
+    {
+        $this->data['AdditionalVolumes'] = $additionalVolumes;
+        foreach ($additionalVolumes as $depth1 => $depth1Value) {
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeType'] = $depth1Value['VolumeType'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeProtocol'] = $depth1Value['VolumeProtocol'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.LocalDirectory'] = $depth1Value['LocalDirectory'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.RemoteDirectory'] = $depth1Value['RemoteDirectory'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeId'] = $depth1Value['VolumeId'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeMountpoint'] = $depth1Value['VolumeMountpoint'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Location'] = $depth1Value['Location'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.JobQueue'] = $depth1Value['JobQueue'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1455,6 +1488,7 @@ class CreateJobTemplate extends V20180412Rpc
  * @method $this withSccClusterId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method array getAdditionalVolumes()
  * @method string getEcsOrderManagerInstanceType()
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
@@ -1534,6 +1568,29 @@ class CreateJobTemplate extends V20180412Rpc
  */
 class CreateCluster extends V20180412Rpc
 {
+
+    /**
+     * @param array $additionalVolumes
+     *
+     * @return $this
+     */
+    public function withAdditionalVolumes(array $additionalVolumes)
+    {
+        $this->data['AdditionalVolumes'] = $additionalVolumes;
+        foreach ($additionalVolumes as $depth1 => $depth1Value) {
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeType'] = $depth1Value['VolumeType'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeProtocol'] = $depth1Value['VolumeProtocol'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.LocalDirectory'] = $depth1Value['LocalDirectory'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.RemoteDirectory'] = $depth1Value['RemoteDirectory'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeId'] = $depth1Value['VolumeId'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeMountpoint'] = $depth1Value['VolumeMountpoint'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Location'] = $depth1Value['Location'];
+            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.JobQueue'] = $depth1Value['JobQueue'];
+        }
+
+        return $this;
+    }
 
     /**
      * @param string $value

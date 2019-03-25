@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method MigrateAvailableZone migrateAvailableZone(array $options = [])
  * @method CheckRecoveryCondition checkRecoveryCondition(array $options = [])
  * @method DescribeBackupDBs describeBackupDBs(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
@@ -153,6 +154,28 @@ class V20151201Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'dds';
+}
+
+/**
+ * @method string getVswitch()
+ * @method $this withVswitch($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MigrateAvailableZone extends V20151201Rpc
+{
 }
 
 /**

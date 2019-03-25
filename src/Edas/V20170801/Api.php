@@ -220,7 +220,6 @@ class CreateServerlessApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_create_without_deploy';
 
-
     /**
      * @param string $value
      *
@@ -544,7 +543,6 @@ class BindServerlessSlb extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/serverless_slb_binding';
 
-
     /**
      * @param string $value
      *
@@ -647,7 +645,6 @@ class DeployServerlessApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_deploy';
-
 
     /**
      * @param string $value
@@ -926,7 +923,6 @@ class InsertServerlessApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_create_without_deploy';
-
 
     /**
      * @param string $value
@@ -1343,7 +1339,6 @@ class InstallAgent extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/ecss/install_agent';
 
-
     /**
      * @param string $value
      *
@@ -1549,7 +1544,6 @@ class BindK8sSlb extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
-
 
     /**
      * @param string $value
@@ -1810,7 +1804,6 @@ class ImportK8sCluster extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/import_k8s_cluster';
 
-
     /**
      * @param string $value
      *
@@ -1862,7 +1855,6 @@ class InsertK8sApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/create_k8s_app';
-
 
     /**
      * @param string $value
@@ -2295,7 +2287,6 @@ class DeployK8sApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_apps';
 
-
     /**
      * @param string $value
      *
@@ -2685,7 +2676,6 @@ class InsertScalingRule extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/app/scaling_rules';
 
-
     /**
      * @param string $value
      *
@@ -2955,7 +2945,6 @@ class InsertResourceGroup extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/res_group';
 
-
     /**
      * @param string $value
      *
@@ -3017,7 +3006,6 @@ class TransformClusterMember extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/transform_cluster_member';
-
 
     /**
      * @param string $value
@@ -3094,7 +3082,6 @@ class InsertClusterMember extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_member';
 
-
     /**
      * @param string $value
      *
@@ -3148,7 +3135,6 @@ class ListScaleOutEcu extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/scale_out_ecu_list';
-
 
     /**
      * @param string $value
@@ -3340,7 +3326,6 @@ class MigrateEcu extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/resource/migrate_ecu';
 
-
     /**
      * @param string $value
      *
@@ -3443,7 +3428,6 @@ class ListUserDefineRegion extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/user_region_defs';
 
-
     /**
      * @param string $value
      *
@@ -3475,7 +3459,6 @@ class InsertOrUpdateRegion extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/user_region_def';
-
 
     /**
      * @param string $value
@@ -3695,7 +3678,6 @@ class UpdateHealthCheckUrl extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/app/modify_hc_url';
 
-
     /**
      * @param string $value
      *
@@ -3735,7 +3717,6 @@ class UpdateJvmConfiguration extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_jvm_config';
-
 
     /**
      * @param string $value
@@ -3829,7 +3810,6 @@ class UpdateContainerConfiguration extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/container_config';
-
 
     /**
      * @param string $value
@@ -3932,7 +3912,6 @@ class UpdateApplicationBaseInfo extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/update_app_info';
-
 
     /**
      * @param string $value
@@ -4061,7 +4040,6 @@ class InsertDeployGroup extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/deploy_group';
 
-
     /**
      * @param string $value
      *
@@ -4096,7 +4074,6 @@ class GetApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_info';
-
 
     /**
      * @param string $value
@@ -4209,7 +4186,6 @@ class ListRecentChangeOrder extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/change_order_list';
 
-
     /**
      * @param string $value
      *
@@ -4231,7 +4207,6 @@ class DeleteEcu extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/delete_ecu';
-
 
     /**
      * @param string $value
@@ -4297,7 +4272,6 @@ class UpdateAccountInfo extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/edit_account_info';
 
-
     /**
      * @param string $value
      *
@@ -4347,7 +4321,6 @@ class UpdateRole extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/edit_role';
 
-
     /**
      * @param string $value
      *
@@ -4384,7 +4357,6 @@ class UnbindSlb extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/app/unbind_slb_json';
-
 
     /**
      * @param string $value
@@ -4433,7 +4405,6 @@ class UnbindSubAccount extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/unbindSubAccount';
-
 
     /**
      * @param string $value
@@ -4533,7 +4504,6 @@ class InsertCluster extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster';
-
 
     /**
      * @param string $value
@@ -4635,7 +4605,6 @@ class InsertRole extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/create_role';
-
 
     /**
      * @param string $value
@@ -4750,7 +4719,6 @@ class DeleteRole extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/delete_role';
 
-
     /**
      * @param string $value
      *
@@ -4773,7 +4741,6 @@ class AuthorizeRole extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_role';
-
 
     /**
      * @param string $value
@@ -4814,7 +4781,6 @@ class BindSlb extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/app/bind_slb_json';
-
 
     /**
      * @param string $value
@@ -4903,7 +4869,6 @@ class BindSubAccount extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/bindSubAccount';
 
-
     /**
      * @param string $value
      *
@@ -4952,7 +4917,6 @@ class AuthorizeApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_app';
 
-
     /**
      * @param string $value
      *
@@ -4989,7 +4953,6 @@ class AuthorizeResourceGroup extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_res_group';
 
-
     /**
      * @param string $value
      *
@@ -5025,7 +4988,6 @@ class GetChangeOrderInfo extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/change_order_info';
 
-
     /**
      * @param string $value
      *
@@ -5047,7 +5009,6 @@ class ListCluster extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_list';
-
 
     /**
      * @param string $value
@@ -5099,7 +5060,6 @@ class RollbackApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_rollback';
-
 
     /**
      * @param string $value
@@ -5177,7 +5137,6 @@ class ScaleInApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_scale_in';
 
-
     /**
      * @param string $value
      *
@@ -5228,7 +5187,6 @@ class ScaleOutApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_scale_out';
 
-
     /**
      * @param string $value
      *
@@ -5278,7 +5236,6 @@ class StartApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_start';
 
-
     /**
      * @param string $value
      *
@@ -5315,7 +5272,6 @@ class StopApplication extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_stop';
 
-
     /**
      * @param string $value
      *
@@ -5351,7 +5307,6 @@ class ResetApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_reset';
-
 
     /**
      * @param string $value
@@ -5399,7 +5354,6 @@ class InsertApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_create_app';
-
 
     /**
      * @param string $value
@@ -5582,7 +5536,6 @@ class ChangeApplicationGroup extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_change_group';
 
-
     /**
      * @param string $value
      *
@@ -5654,7 +5607,6 @@ class DeployApplication extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_deploy';
-
 
     /**
      * @param string $value
@@ -5822,7 +5774,6 @@ class UpdateContainer extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_update_container';
 
-
     /**
      * @param string $value
      *
@@ -5869,7 +5820,6 @@ class ListDeployGroup extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/deploy_group_list';
-
 
     /**
      * @param string $value
@@ -6287,7 +6237,6 @@ class InsertFlowControl extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/flowControl';
 
-
     /**
      * @param string $value
      *
@@ -6413,7 +6362,6 @@ class InsertServiceGroup extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/serviceGroups';
-
 
     /**
      * @param string $value
@@ -6675,7 +6623,6 @@ class InsertConfigCenter extends V20170801Roa
     /** @var string */
     public $pathPattern = '/pop/v5/configCenter';
 
-
     /**
      * @param string $value
      *
@@ -6755,7 +6702,6 @@ class InsertDegradeControl extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradeControl';
-
 
     /**
      * @param string $value

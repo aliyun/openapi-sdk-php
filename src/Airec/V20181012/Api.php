@@ -155,7 +155,6 @@ class DescribeDashboard extends V20181012Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
 
-
     /**
      * @param string $value
      *
@@ -469,7 +468,6 @@ class Recommend extends V20181012Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/recommend';
-
 
     /**
      * @param string $value

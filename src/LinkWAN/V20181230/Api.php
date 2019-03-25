@@ -256,6 +256,7 @@ class UpdateEmbeddedNsAutoSyncEnablingState extends V20181230Rpc
  */
 class CreateCustomLocalJoinPermission extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -266,6 +267,7 @@ class CreateCustomLocalJoinPermission extends V20181230Rpc
  */
 class MeteringQuerySubscribePush extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -284,6 +286,7 @@ class MeteringQuerySubscribePush extends V20181230Rpc
  */
 class MeteringSubscribePush extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -308,6 +311,7 @@ class MeteringSubscribePush extends V20181230Rpc
  */
 class QueryMeteringDetail extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -326,6 +330,7 @@ class QueryMeteringDetail extends V20181230Rpc
  */
 class QueryMeteringStatistics extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -336,6 +341,7 @@ class QueryMeteringStatistics extends V20181230Rpc
  */
 class MeteringUnsubscribePush extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -466,6 +472,7 @@ class ListNodesByOwnedJoinPermissionId extends V20181230Rpc
  */
 class SendMulticastCommand extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -486,6 +493,7 @@ class SendMulticastCommand extends V20181230Rpc
  */
 class SendUnicastCommand extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -500,6 +508,7 @@ class SendUnicastCommand extends V20181230Rpc
  */
 class ListBoundNodesByMcAddress extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -510,6 +519,7 @@ class ListBoundNodesByMcAddress extends V20181230Rpc
  */
 class GetNodeMulticastConfig extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -520,6 +530,7 @@ class GetNodeMulticastConfig extends V20181230Rpc
  */
 class GetMulticastGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -531,9 +542,9 @@ class GetMulticastGroup extends V20181230Rpc
  */
 class UnbindNodesFromMulticastGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param array $devEuiList
@@ -558,9 +569,9 @@ class UnbindNodesFromMulticastGroup extends V20181230Rpc
  */
 class BindNodesToMulticastGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param array $devEuiList
@@ -584,6 +595,7 @@ class BindNodesToMulticastGroup extends V20181230Rpc
  */
 class DeleteMulticastGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -602,6 +614,7 @@ class DeleteMulticastGroup extends V20181230Rpc
  */
 class CreateMulticastGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -613,9 +626,9 @@ class CreateMulticastGroup extends V20181230Rpc
  */
 class UpdateNotificationsHandleState extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param array $notificationId
@@ -719,6 +732,7 @@ class UpdateLabGatewayGwmpConfig extends V20181230Rpc
  */
 class UpdateLabGateway extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -809,6 +823,7 @@ class TriggerLabGatewayConfigReport extends V20181230Rpc
  */
 class SubmitNodeTupleOrder extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -819,6 +834,7 @@ class SubmitNodeTupleOrder extends V20181230Rpc
  */
 class SubmitGatewayTupleOrder extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -833,6 +849,7 @@ class SubmitGatewayTupleOrder extends V20181230Rpc
  */
 class SendMacCommandToLabNode extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -863,6 +880,7 @@ class RegisterKpmPublicKey extends V20181230Rpc
  */
 class RebootLabGateway extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -886,6 +904,7 @@ class RebootLabGateway extends V20181230Rpc
  */
 class ListNotifications extends V20181230Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 
@@ -920,9 +939,9 @@ class ListNotifications extends V20181230Rpc
  */
 class ListNodeTupleOrders extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
-
 
     /**
      * @param array $state
@@ -1140,6 +1159,7 @@ class ListActiveGateways extends V20181230Rpc
 
 class GetUserLicense extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -1150,6 +1170,7 @@ class GetUserLicense extends V20181230Rpc
  */
 class GetNotification extends V20181230Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -1478,6 +1499,7 @@ class DeleteLocalJoinPermission extends V20181230Rpc
  */
 class CreateLocalJoinPermission extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -1662,6 +1684,7 @@ class SubmitJoinPermissionAuthOrder extends V20181230Rpc
  */
 class AcceptJoinPermissionAuthOrder extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -1702,6 +1725,7 @@ class GetKpmPublicKey extends V20181230Rpc
  */
 class CreateNodeGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -1730,6 +1754,7 @@ class UpdateNodeGroup extends V20181230Rpc
  */
 class GetNodeGroup extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }
@@ -1918,6 +1943,7 @@ class ListGateways extends V20181230Rpc
 
 class ListFreqBandPlanGroups extends V20181230Rpc
 {
+
     /** @var string */
     public $scheme = 'http';
 }

@@ -384,6 +384,7 @@ class CreateOrder extends V20180116Rpc
  */
 class CreateMovieTicketOrder extends V20180116Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
@@ -544,6 +545,7 @@ class QueryMovieComments extends V20180116Rpc
  */
 class QueryMovieTickets extends V20180116Rpc
 {
+
     /** @var string */
     public $method = 'GET';
 }
