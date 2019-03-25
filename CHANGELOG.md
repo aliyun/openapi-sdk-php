@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.2.8 - 2019-03-25
+- Updated README.md.
+- Updated Apis.
+
+
 ## 1.2.7 - 2019-03-24
 - Append `SDK` for User-Agent.
 

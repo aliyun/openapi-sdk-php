@@ -33,20 +33,22 @@ Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba
 - [每一个请求配置更加灵活][request]
 
 
-## 快速开始
+## 环境要求
+您的系统需要满足[环境要求](docs/0-Requirements-CN.md)，包括 PHP> = 5.5。 我们强烈建议使用cURL扩展，并使用TLS后端编译cURL 7.16.2+。
 
-1. **阿里云帐户**  - 在您开始之前，您需要注册阿里云帐户并获取您的[凭证](https://usercenter.console.aliyun.com/#/manage/ak)。
-1. **环境要求**  - 您的系统需要满足[环境要求](docs/0-Requirements-CN.md)），包括 **PHP> = 5.5**。 我们强烈建议使用cURL扩展，并使用TLS后端编译cURL 7.16.2+。
-1. **安装依赖**  - 如果在您的系统上全局安装Composer，您可以在项目目录中运行以下内容，将 Alibaba Cloud SDK for PHP 添加为依赖项：
-   ```
-   composer require alibabacloud/sdk
-   ```
-   请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
-1. **生成类映射**  - 必须执行这个命令，否则可能无法使用。
-   ```
-   composer dump-autoload --optimize
-   ```
-   在 `composer.json` 中 `config` 部分设置 `"optimize-autoloader": true` 可免执行 `dump-autoload --optimize`。
+
+## 安装依赖
+如果在您的系统上全局安装Composer，您可以在项目目录中运行以下内容，将 Alibaba Cloud SDK for PHP 添加为依赖项：
+```
+composer require alibabacloud/sdk
+```
+请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
+
+**生成类映射**  - 必须执行这个命令，否则可能无法使用。
+```
+composer dump-autoload --optimize
+```
+在 `composer.json` 中 `config` 部分设置 `"optimize-autoloader": true` 可免执行 `dump-autoload --optimize`。
 
 
 ## 在线示例
@@ -54,7 +56,7 @@ Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba
 
 
 ## 快速使用
-请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
+在您开始之前，您需要注册阿里云帐户并获取您的[凭证](https://usercenter.console.aliyun.com/#/manage/ak)。请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
 
 > 目前仅支持部分阿里云产品，[已支持产品列表](SUPPORTED-CN.md)，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
 
@@ -126,6 +128,18 @@ try {
 ```
 
 
+## 问题
+[提交 Issue](https://github.com/aliyun/openapi-sdk-php/issues/new/choose)，不符合指南的问题可能会立即关闭。
+
+
+## 发行说明
+每个版本的详细更改记录在[发行说明](CHANGELOG.md)中。
+
+
+## 贡献
+提交 Pull Request 之前请阅读[贡献指南](CONTRIBUTING.md)。
+
+
 ## 相关
 * [阿里云服务 Regions & Endpoints][endpoints]
 * [OpenAPI Explorer][open-api]
@@ -133,6 +147,12 @@ try {
 * [Composer][composer]
 * [Guzzle中文文档][guzzle-docs]
 * [Latest Release][latest-release]
+
+
+## 许可证
+[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+版权所有 1999-2019 阿里巴巴集团
 
 
 [open-api]: https://api.aliyun.com
