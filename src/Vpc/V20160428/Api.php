@@ -6008,6 +6008,8 @@ class AllocateEipAddress extends V20160428Rpc
 /**
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getMode()
+ * @method $this withMode($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getInstanceId()

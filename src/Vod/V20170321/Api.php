@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteMessageCallback deleteMessageCallback(array $options = [])
  * @method GetTranscodeSummary getTranscodeSummary(array $options = [])
  * @method ListTranscodeTask listTranscodeTask(array $options = [])
  * @method GetTranscodeTask getTranscodeTask(array $options = [])
@@ -96,6 +97,8 @@ use AlibabaCloud\Rpc;
  * @method DeleteCategory deleteCategory(array $options = [])
  * @method GetPlayInfo getPlayInfo(array $options = [])
  * @method CreateUploadImage createUploadImage(array $options = [])
+ * @method SetMessageCallback setMessageCallback(array $options = [])
+ * @method GetMessageCallback getMessageCallback(array $options = [])
  * @method UpdateVideoInfo updateVideoInfo(array $options = [])
  * @method GetVideoList getVideoList(array $options = [])
  * @method GetVideoPlayAuth getVideoPlayAuth(array $options = [])
@@ -122,6 +125,24 @@ class V20170321Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'vod';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteMessageCallback extends V20170321Rpc
+{
 }
 
 /**
@@ -1701,6 +1722,58 @@ class GetPlayInfo extends V20170321Rpc
  * @method $this withAppId($value)
  */
 class CreateUploadImage extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getAuthKey()
+ * @method $this withAuthKey($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEventTypeList()
+ * @method $this withEventTypeList($value)
+ * @method string getMnsQueueName()
+ * @method $this withMnsQueueName($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCallbackType()
+ * @method $this withCallbackType($value)
+ * @method string getCallbackSwitch()
+ * @method $this withCallbackSwitch($value)
+ * @method string getMnsEndpoint()
+ * @method $this withMnsEndpoint($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getAuthSwitch()
+ * @method $this withAuthSwitch($value)
+ * @method string getCallbackURL()
+ * @method $this withCallbackURL($value)
+ */
+class SetMessageCallback extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetMessageCallback extends V20170321Rpc
 {
 }
 

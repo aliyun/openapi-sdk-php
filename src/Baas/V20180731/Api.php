@@ -512,10 +512,10 @@ class DescribeEthereumNodes extends V20180731Rpc
 /**
  * @method string getName()
  * @method $this withName($value)
+ * @method string getEthereumId()
+ * @method $this withEthereumId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getId()
- * @method $this withId($value)
  */
 class UpdateEthereum extends V20180731Rpc
 {

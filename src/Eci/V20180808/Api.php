@@ -228,7 +228,7 @@ class UpdateContainerGroup extends V20180808Rpc
             foreach ($depth1Value['SecurityContextCapabilityAdd'] as $i => $iValue) {
                 $this->options['query']['Container.' . ($depth1 + 1) . '.SecurityContext.Capability.Add.' . ($i + 1)] = $iValue;
             }
-            $this->options['query']['Container.' . ($depth1 + 1) . '.GpuAmount'] = $depth1Value['GpuAmount'];
+            $this->options['query']['Container.' . ($depth1 + 1) . '.Gpu'] = $depth1Value['Gpu'];
         }
 
         return $this;
@@ -277,7 +277,7 @@ class UpdateContainerGroup extends V20180808Rpc
             foreach ($depth1Value['SecurityContextCapabilityAdd'] as $i => $iValue) {
                 $this->options['query']['InitContainer.' . ($depth1 + 1) . '.SecurityContext.Capability.Add.' . ($i + 1)] = $iValue;
             }
-            $this->options['query']['InitContainer.' . ($depth1 + 1) . '.GpuAmount'] = $depth1Value['GpuAmount'];
+            $this->options['query']['InitContainer.' . ($depth1 + 1) . '.Gpu'] = $depth1Value['Gpu'];
         }
 
         return $this;
