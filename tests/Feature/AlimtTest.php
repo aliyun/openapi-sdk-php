@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Alimt\V20181012\TranslateECommerce;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -25,6 +26,17 @@ class AlimtTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-hangzhou')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::alimt()
+                               ->v20181012()
+                               ->translateECommerce()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(TranslateECommerce::class, $request);
     }
 
     /**

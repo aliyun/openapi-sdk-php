@@ -59,7 +59,7 @@ trait ApiResolverTrait
     {
         $array = \explode('\\', $class);
         if (isset($array[3])) {
-            return $array[3];
+            return str_replace('ApiResolver', '', $array[3]);
         }
         throw new ClientException(
             'Service name not found.',

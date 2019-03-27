@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\CCC\V20170705\ListPhoneNumbers;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -29,6 +30,17 @@ class CCCTest extends TestCase
         AlibabaCloud::bearerTokenClient(
             $this->bearerToken
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::cCC()
+                               ->v20170705()
+                               ->listPhoneNumbers()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(ListPhoneNumbers::class, $request);
     }
 
     /**

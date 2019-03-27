@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Aegis\V20161111\DescribeAlarmEventDetail;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -25,6 +26,17 @@ class AegisTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-hangzhou')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::aegis()
+                               ->v20161111()
+                               ->describeAlarmEventDetail()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(DescribeAlarmEventDetail::class, $request);
     }
 
     /**

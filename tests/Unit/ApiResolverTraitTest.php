@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Unit;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use PHPUnit\Framework\TestCase;
+use ReflectionException;
 use stdClass;
 
 /**
@@ -33,7 +34,7 @@ class ApiResolverTraitTest extends TestCase
     }
 
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function testGetServiceName()
     {
@@ -42,11 +43,11 @@ class ApiResolverTraitTest extends TestCase
         $method = $ref->getMethod('getServiceName');
         $method->setAccessible(true);
         self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class($this)]));
+        self::assertEquals('TraitTest', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      * @expectedException \AlibabaCloud\Client\Exception\ClientException
      * @expectedExceptionMessage Service name not found.
      */
@@ -60,7 +61,7 @@ class ApiResolverTraitTest extends TestCase
     }
 
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function testGetNamespace()
     {
@@ -73,7 +74,7 @@ class ApiResolverTraitTest extends TestCase
     }
 
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      * @expectedException \AlibabaCloud\Client\Exception\ClientException
      * @expectedExceptionMessage Get namespace error.
      */
