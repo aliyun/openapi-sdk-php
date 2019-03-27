@@ -129,6 +129,7 @@ use AlibabaCloud\Rpc;
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method CreateTempInstance createTempInstance(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
+ * @method DescribePrice describePrice(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method DescribeInstanceConfig describeInstanceConfig(array $options = [])
@@ -2905,6 +2906,50 @@ class CreateTempInstance extends V20150101Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteSnapshot extends V20150101Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getInstances()
+ * @method $this withInstances($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOrderParamOut()
+ * @method $this withOrderParamOut($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getCapacity()
+ * @method $this withCapacity($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getForceUpgrade()
+ * @method $this withForceUpgrade($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribePrice extends V20150101Rpc
 {
 }
 

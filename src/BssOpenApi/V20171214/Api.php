@@ -30,8 +30,6 @@ use AlibabaCloud\Rpc;
  * @method DescribePricingModule describePricingModule(array $options = [])
  * @method QueryOrders queryOrders(array $options = [])
  * @method GetOrderDetail getOrderDetail(array $options = [])
- * @method UnsubscribeExportToOSS unsubscribeExportToOSS(array $options = [])
- * @method SubscribeExportToOSS subscribeExportToOSS(array $options = [])
  * @method QueryCashCoupons queryCashCoupons(array $options = [])
  * @method QueryPrepaidCards queryPrepaidCards(array $options = [])
  * @method QueryAccountBalance queryAccountBalance(array $options = [])
@@ -618,36 +616,6 @@ class QueryOrders extends V20171214Rpc
  */
 class GetOrderDetail extends V20171214Rpc
 {
-}
-
-class UnsubscribeExportToOSS extends V20171214Rpc
-{
-}
-
-/**
- * @method string getBucketOwnerId()
- * @method $this withBucketOwnerId($value)
- * @method array getSubscribeType()
- * @method string getSubscribeBucket()
- * @method $this withSubscribeBucket($value)
- */
-class SubscribeExportToOSS extends V20171214Rpc
-{
-
-    /**
-     * @param array $subscribeType
-     *
-     * @return $this
-     */
-    public function withSubscribeType(array $subscribeType)
-    {
-        $this->data['SubscribeType'] = $subscribeType;
-        foreach ($subscribeType as $i => $iValue) {
-            $this->options['query']['SubscribeType.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 }
 
 /**

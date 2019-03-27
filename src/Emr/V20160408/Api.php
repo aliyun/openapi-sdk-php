@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method UpdateKafkaReassignParam updateKafkaReassignParam(array $options = [])
  * @method CreateClusterWithHostPool createClusterWithHostPool(array $options = [])
  * @method CreateHostPool createHostPool(array $options = [])
  * @method AddHpHost addHpHost(array $options = [])
@@ -355,6 +356,20 @@ class V20160408Rpc extends Rpc
 }
 
 /**
+ * @method string getThrottle()
+ * @method $this withThrottle($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTopicId()
+ * @method $this withTopicId($value)
+ * @method string getReassignId()
+ * @method $this withReassignId($value)
+ */
+class UpdateKafkaReassignParam extends V20160408Rpc
+{
+}
+
+/**
  * @method string getClusterType()
  * @method $this withClusterType($value)
  * @method string getResourceOwnerId()
@@ -555,9 +570,25 @@ class StartKafkaBrokerDiskBalancer extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getTopicId()
  * @method $this withTopicId($value)
+ * @method array getBrokerIdList()
  */
 class ReassignKafka extends V20160408Rpc
 {
+
+    /**
+     * @param array $brokerIdList
+     *
+     * @return $this
+     */
+    public function withBrokerIdList(array $brokerIdList)
+    {
+        $this->data['BrokerIdList'] = $brokerIdList;
+        foreach ($brokerIdList as $i => $iValue) {
+            $this->options['query']['BrokerIdList.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -629,8 +660,6 @@ class ListKafkaBroker extends V20160408Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTopicId()
- * @method $this withTopicId($value)
  * @method string getReassignId()
  * @method $this withReassignId($value)
  */
