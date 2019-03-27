@@ -6,6 +6,7 @@ use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Ecs\EcsVersion;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
 use AlibabaCloud\Ecs\V20140526\Ecs;
 use PHPUnit\Framework\TestCase;
 
@@ -27,6 +28,17 @@ class EcsTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId(\getenv('REGION_ID'))->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::ecs()
+                               ->v20140526()
+                               ->describeRegions()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request);
     }
 
     /**

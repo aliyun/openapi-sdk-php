@@ -53,10 +53,9 @@ trait VersionResolverTrait
 
         if ($this->static === true) {
             $serviceName = \str_replace('Version', '', $serviceName);
-            $class       = "AlibabaCloud\\{$serviceName}\\$version\\{$serviceName}ApiResolver";
-        } else {
-            $class = "AlibabaCloud\\{$serviceName}\\$version\\{$serviceName}";
         }
+
+        $class = "AlibabaCloud\\{$serviceName}\\$version\\{$serviceName}ApiResolver";
 
         if (\class_exists($class)) {
             return new $class();

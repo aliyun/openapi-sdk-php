@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\CS\V20151215\DescribeApiVersion;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class CsTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::cS()
+                               ->v20151215()
+                               ->describeApiVersion()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(DescribeApiVersion::class, $request);
     }
 
     /**

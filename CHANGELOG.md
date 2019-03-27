@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.10 - 2019-03-27
+- Improve `Resolver`.
+
+
 ## 1.2.9 - 2019-03-27
 - Support `Dbs`.
 - Support `AliProbe`.

@@ -4,15 +4,15 @@ namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
+use AlibabaCloud\Dbs\V20190306\StartBackupPlan;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class JaqTest
+ * Class DbsTest
  *
  * @package   AlibabaCloud\Tests\Feature
  */
-class JaqTest extends TestCase
+class DbsTest extends TestCase
 {
     /**
      * @throws ClientException
@@ -24,25 +24,21 @@ class JaqTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hanghou')->asGlobalClient();
+        )->regionId('cn-shanghai')->asGlobalClient();
     }
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::jaq()
-                               ->v20161123()
-                               ->afsAppCheck()
+        $request = AlibabaCloud::dbs()
+                               ->v20190306()
+                               ->startBackupPlan()
+                               ->host('dbs-api.cn-hangzhou.aliyuncs.com')
+                               ->withBackupPlanId('id')
+                               ->withOwnerId('id')
                                ->connectTimeout(20)
                                ->timeout(25);
 
-        self::assertInstanceOf(AfsAppCheck::class, $request);
+        self::assertInstanceOf(StartBackupPlan::class, $request);
     }
 
-    public function testJaq()
-    {
-        $request = AlibabaCloud::jaq()
-                               ->v20161123()
-                               ->afsAppCheck();
-        self::assertInstanceOf(AfsAppCheck::class, $request);
-    }
 }
