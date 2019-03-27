@@ -378,6 +378,8 @@ class DescribeGtmInstanceAddressPools extends V20150109Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getPageSize()
@@ -911,12 +913,16 @@ class DescribeDomainRecordInfo extends V20150109Rpc
 /**
  * @method string getValueKeyWord()
  * @method $this withValueKeyWord($value)
+ * @method string getLine()
+ * @method $this withLine($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOrderBy()
  * @method $this withOrderBy($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getUserClientIp()
@@ -935,12 +941,16 @@ class DescribeDomainRecordInfo extends V20150109Rpc
  * @method $this withRRKeyWord($value)
  * @method string getDirection()
  * @method $this withDirection($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeDomainRecords extends V20150109Rpc
 {
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getUserClientIp()

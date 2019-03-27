@@ -78,6 +78,9 @@ class V20171118Rpc extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $serviceCode = 'csb';
 }
 
 /**

@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method GetClusterVolumes getClusterVolumes(array $options = [])
  * @method UpdateClusterVolumes updateClusterVolumes(array $options = [])
  * @method GetAccountingReport getAccountingReport(array $options = [])
  * @method InstallSoftware installSoftware(array $options = [])
@@ -110,6 +111,14 @@ class V20180412Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ehs';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class GetClusterVolumes extends V20180412Rpc
+{
 }
 
 /**

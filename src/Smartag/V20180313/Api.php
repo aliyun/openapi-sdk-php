@@ -405,12 +405,12 @@ class ModifySerialNumber extends V20180313Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getClientIp()
- * @method $this withClientIp($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
  */
 class KickOutClients extends V20180313Rpc
 {

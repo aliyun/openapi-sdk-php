@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method QueryKafkaMsg queryKafkaMsg(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateTopic createTopic(array $options = [])
  * @method GetTopicStatus getTopicStatus(array $options = [])
@@ -34,6 +35,24 @@ class V20181015Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'alikafka';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPartition()
+ * @method $this withPartition($value)
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ */
+class QueryKafkaMsg extends V20181015Rpc
+{
 }
 
 /**

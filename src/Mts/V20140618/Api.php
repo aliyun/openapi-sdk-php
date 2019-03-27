@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method QueryFpCompareJobList queryFpCompareJobList(array $options = [])
  * @method SubmitBeautifyJobs submitBeautifyJobs(array $options = [])
  * @method SubmitFpCompareJob submitFpCompareJob(array $options = [])
  * @method UpdateMCTemplate updateMCTemplate(array $options = [])
@@ -213,6 +214,22 @@ class V20140618Rpc extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryFpCompareJobList extends V20140618Rpc
+{
+}
+
+/**
  * @method string getBeautifyConfig()
  * @method $this withBeautifyConfig($value)
  * @method string getUserData()
@@ -235,12 +252,12 @@ class SubmitBeautifyJobs extends V20140618Rpc
 }
 
 /**
+ * @method string getMatchedFrameStorage()
+ * @method $this withMatchedFrameStorage($value)
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getFpShotConfig()
- * @method $this withFpShotConfig($value)
  * @method string getQueryMedia()
  * @method $this withQueryMedia($value)
  * @method string getFpDBId()

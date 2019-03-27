@@ -8,6 +8,7 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ModifyMasterSpec modifyMasterSpec(array $options = [])
  * @method UnbindQueue unbindQueue(array $options = [])
  * @method BindQueue bindQueue(array $options = [])
  * @method DeleteQueue deleteQueue(array $options = [])
@@ -18,7 +19,6 @@ use AlibabaCloud\Roa;
  * @method GetClusterQueueInfo getClusterQueueInfo(array $options = [])
  * @method GetClusterResource getClusterResource(array $options = [])
  * @method ListCluster listCluster(array $options = [])
- * @method ModifyClusterSpec modifyClusterSpec(array $options = [])
  * @method ShrinkCluster shrinkCluster(array $options = [])
  * @method ExpandCluster expandCluster(array $options = [])
  * @method DestroyCluster destroyCluster(array $options = [])
@@ -82,6 +82,45 @@ class V20181111Roa extends Roa
 
     /** @var string */
     public $serviceCode = 'foas';
+}
+
+/**
+ * @method string getClusterId()
+ * @method string getMasterTargetModel()
+ */
+class ModifyMasterSpec extends V20181111Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/specification';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMasterTargetModel($value)
+    {
+        $this->data['MasterTargetModel'] = $value;
+        $this->options['query']['masterTargetModel'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -530,47 +569,9 @@ class ListCluster extends V20181111Roa
 }
 
 /**
- * @method string getClusterId()
- * @method string getMasterTargetModel()
- */
-class ModifyClusterSpec extends V20181111Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/specification';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMasterTargetModel($value)
-    {
-        $this->data['MasterTargetModel'] = $value;
-        $this->options['query']['masterTargetModel'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getInstanceIds()
  * @method string getClusterId()
+ * @method string getModelTargetCount()
  */
 class ShrinkCluster extends V20181111Roa
 {
@@ -602,6 +603,19 @@ class ShrinkCluster extends V20181111Roa
     {
         $this->data['ClusterId'] = $value;
         $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelTargetCount($value)
+    {
+        $this->data['ModelTargetCount'] = $value;
+        $this->options['query']['modelTargetCount'] = $value;
 
         return $this;
     }

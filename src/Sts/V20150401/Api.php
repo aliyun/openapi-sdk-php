@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method AssumeRoleWithSAML assumeRoleWithSAML(array $options = [])
  * @method GenerateSessionAccessKey generateSessionAccessKey(array $options = [])
  * @method GetCallerIdentity getCallerIdentity(array $options = [])
  * @method AssumeRole assumeRole(array $options = [])
@@ -30,6 +31,22 @@ class V20150401Rpc extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+}
+
+/**
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
+ * @method string getSAMLProviderArn()
+ * @method $this withSAMLProviderArn($value)
+ * @method string getSAMLAssertion()
+ * @method $this withSAMLAssertion($value)
+ * @method string getDurationSeconds()
+ * @method $this withDurationSeconds($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ */
+class AssumeRoleWithSAML extends V20150401Rpc
+{
 }
 
 /**

@@ -1860,6 +1860,7 @@ class AttachInstances extends V20140828Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getAdjustmentValue()
  * @method $this withAdjustmentValue($value)
+ * @method array getStepAdjustment()
  * @method string getScalingGroupId()
  * @method $this withScalingGroupId($value)
  * @method string getEstimatedInstanceWarmup()
@@ -1897,6 +1898,23 @@ class AttachInstances extends V20140828Rpc
  */
 class CreateScalingRule extends V20140828Rpc
 {
+
+    /**
+     * @param array $stepAdjustment
+     *
+     * @return $this
+     */
+    public function withStepAdjustment(array $stepAdjustment)
+    {
+        $this->data['StepAdjustment'] = $stepAdjustment;
+        foreach ($stepAdjustment as $depth1 => $depth1Value) {
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalLowerBound'] = $depth1Value['MetricIntervalLowerBound'];
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalUpperBound'] = $depth1Value['MetricIntervalUpperBound'];
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.ScalingAdjustment'] = $depth1Value['ScalingAdjustment'];
+        }
+
+        return $this;
+    }
 }
 
 /**
