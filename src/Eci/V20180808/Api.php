@@ -549,8 +549,6 @@ class DescribeContainerLog extends V20180808Rpc
 
 /**
  * @method array getContainer()
- * @method string getGpuSpec()
- * @method $this withGpuSpec($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getMemory()
@@ -565,6 +563,8 @@ class DescribeContainerLog extends V20180808Rpc
  * @method $this withResourceGroupId($value)
  * @method array getHostAliase()
  * @method array getInitContainer()
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method array getImageRegistryCredential()
  * @method array getTag()
  * @method string getEipInstanceId()
@@ -590,8 +590,6 @@ class DescribeContainerLog extends V20180808Rpc
  * @method $this withContainerGroupName($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getGpuAmount()
- * @method $this withGpuAmount($value)
  */
 class CreateContainerGroup extends V20180808Rpc
 {
@@ -663,7 +661,7 @@ class CreateContainerGroup extends V20180808Rpc
             $this->options['query']['Container.' . ($depth1 + 1) . '.Stdin'] = $depth1Value['Stdin'];
             $this->options['query']['Container.' . ($depth1 + 1) . '.StdinOnce'] = $depth1Value['StdinOnce'];
             $this->options['query']['Container.' . ($depth1 + 1) . '.Tty'] = $depth1Value['Tty'];
-            $this->options['query']['Container.' . ($depth1 + 1) . '.GpuAmount'] = $depth1Value['GpuAmount'];
+            $this->options['query']['Container.' . ($depth1 + 1) . '.Gpu'] = $depth1Value['Gpu'];
         }
 
         return $this;
@@ -727,7 +725,7 @@ class CreateContainerGroup extends V20180808Rpc
             }
             $this->options['query']['InitContainer.' . ($depth1 + 1) . '.SecurityContext.ReadOnlyRootFilesystem'] = $depth1Value['SecurityContextReadOnlyRootFilesystem'];
             $this->options['query']['InitContainer.' . ($depth1 + 1) . '.SecurityContext.RunAsUser'] = $depth1Value['SecurityContextRunAsUser'];
-            $this->options['query']['InitContainer.' . ($depth1 + 1) . '.GpuAmount'] = $depth1Value['GpuAmount'];
+            $this->options['query']['InitContainer.' . ($depth1 + 1) . '.Gpu'] = $depth1Value['Gpu'];
         }
 
         return $this;

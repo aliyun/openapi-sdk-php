@@ -8,8 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
- * @method UnsubscriptionOfExportFileToOSS unsubscriptionOfExportFileToOSS(array $options = [])
- * @method SubscriptionOfExportFileToOSS subscriptionOfExportFileToOSS(array $options = [])
+ * @method UnsubscribeBillToOSS unsubscribeBillToOSS(array $options = [])
+ * @method SubscribeBillToOSS subscribeBillToOSS(array $options = [])
  * @method CancelOrder cancelOrder(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method ApplyInvoice applyInvoice(array $options = [])
@@ -75,7 +75,7 @@ class V20171214Rpc extends Rpc
  * @method string getSubscribeType()
  * @method $this withSubscribeType($value)
  */
-class UnsubscriptionOfExportFileToOSS extends V20171214Rpc
+class UnsubscribeBillToOSS extends V20171214Rpc
 {
 }
 
@@ -85,7 +85,7 @@ class UnsubscriptionOfExportFileToOSS extends V20171214Rpc
  * @method string getSubscribeBucket()
  * @method $this withSubscribeBucket($value)
  */
-class SubscriptionOfExportFileToOSS extends V20171214Rpc
+class SubscribeBillToOSS extends V20171214Rpc
 {
 }
 

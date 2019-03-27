@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteDBNodes deleteDBNodes(array $options = [])
  * @method CreateDBNodes createDBNodes(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -36,6 +37,7 @@ use AlibabaCloud\Rpc;
  * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteBackup deleteBackup(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
+ * @method CreateDBCluster createDBCluster(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
@@ -71,6 +73,40 @@ class V20170801Rpc extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method array getDBNodeId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDBNodes extends V20170801Rpc
+{
+
+    /**
+     * @param array $dBNodeId
+     *
+     * @return $this
+     */
+    public function withDBNodeId(array $dBNodeId)
+    {
+        $this->data['DBNodeId'] = $dBNodeId;
+        foreach ($dBNodeId as $i => $iValue) {
+            $this->options['query']['DBNodeId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
@@ -95,7 +131,7 @@ class CreateDBNodes extends V20170801Rpc
     {
         $this->data['DBNode'] = $dBNode;
         foreach ($dBNode as $depth1 => $depth1Value) {
-            $this->options['query']['DBNode.' . ($depth1 + 1) . '.ClassCode'] = $depth1Value['ClassCode'];
+            $this->options['query']['DBNode.' . ($depth1 + 1) . '.TargetClass'] = $depth1Value['TargetClass'];
             $this->options['query']['DBNode.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
         }
 
@@ -718,6 +754,46 @@ class DeleteBackup extends V20170801Rpc
  * @method $this withOwnerId($value)
  */
 class CreateBackup extends V20170801Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBClusterDescription()
+ * @method $this withDBClusterDescription($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getClusterNetworkType()
+ * @method $this withClusterNetworkType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getDBNodeClass()
+ * @method $this withDBNodeClass($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getDBType()
+ * @method $this withDBType($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getDBVersion()
+ * @method $this withDBVersion($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateDBCluster extends V20170801Rpc
 {
 }
 

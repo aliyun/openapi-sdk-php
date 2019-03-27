@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
  * @method DescribeDomainWafReqData describeDomainWafReqData(array $options = [])
  * @method DescribeCdnHttpsDomainSSLInfo describeCdnHttpsDomainSSLInfo(array $options = [])
  * @method ListUserTags listUserTags(array $options = [])
@@ -156,6 +157,18 @@ class V20180510Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getProperty()
+ * @method $this withProperty($value)
+ */
+class ModifyCdnDomainSchdmByProperty extends V20180510Rpc
+{
 }
 
 /**
@@ -1798,18 +1811,16 @@ class DescribeDomainCname extends V20180510Rpc
 }
 
 /**
- * @method string getIspNames()
- * @method $this withIspNames($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
  * @method string getLocationNames()
  * @method $this withLocationNames($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getIspNames()
+ * @method $this withIspNames($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -2042,6 +2053,8 @@ class DescribeDomainsBySource extends V20180510Rpc
  * @method $this withPercent($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSortBy()

@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeMigrateCountInfo describeMigrateCountInfo(array $options = [])
+ * @method AssociateServiceUseSecurityIpWithCustins associateServiceUseSecurityIpWithCustins(array $options = [])
  * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
  * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
  * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
@@ -180,6 +182,32 @@ class V20140815Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'rds';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeMigrateCountInfo extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class AssociateServiceUseSecurityIpWithCustins extends V20140815Rpc
+{
 }
 
 class DescribeCrossRegionBackupDBInstance extends V20140815Rpc
@@ -6245,16 +6273,10 @@ class CreateReadOnlyDBInstance extends V20140815Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
  * @method $this withDBInstanceStorage($value)
- * @method string getNodeType()
- * @method $this withNodeType($value)
  * @method string getSystemDBCharset()
  * @method $this withSystemDBCharset($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getZoneIdSlave1()
- * @method $this withZoneIdSlave1($value)
- * @method string getZoneIdSlave2()
- * @method $this withZoneIdSlave2($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
  * @method string getResourceGroupId()
@@ -6275,6 +6297,8 @@ class CreateReadOnlyDBInstance extends V20140815Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEncryptionKey()
+ * @method $this withEncryptionKey($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getUsedTime()
@@ -6287,14 +6311,14 @@ class CreateReadOnlyDBInstance extends V20140815Rpc
  * @method $this withVSwitchId($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getRoleARN()
+ * @method $this withRoleARN($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
  * @method string getTunnelId()
  * @method $this withTunnelId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  * @method string getInstanceNetworkType()
@@ -6805,6 +6829,8 @@ class CreateTempDBInstance extends V20140815Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getCompressType()
+ * @method $this withCompressType($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
@@ -7423,6 +7449,8 @@ class ModifyDBDescription extends V20140815Rpc
  * @method $this withOwnerAccount($value)
  * @method string getLogBackupFrequency()
  * @method $this withLogBackupFrequency($value)
+ * @method string getCompressType()
+ * @method $this withCompressType($value)
  * @method string getBackupLog()
  * @method $this withBackupLog($value)
  * @method string getLocalLogRetentionSpace()

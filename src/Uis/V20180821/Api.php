@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeUiseNodeStatus describeUiseNodeStatus(array $options = [])
  * @method DescribeUisNetworkInterfaces describeUisNetworkInterfaces(array $options = [])
  * @method DeleteUisNetworkInterface deleteUisNetworkInterface(array $options = [])
  * @method CreateUisNetworkInterface createUisNetworkInterface(array $options = [])
@@ -54,6 +55,24 @@ class V20180821Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'uis';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeUiseNodeStatus extends V20180821Rpc
+{
 }
 
 /**

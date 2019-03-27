@@ -320,6 +320,8 @@ class DescribeZoneRecords extends V20180101Rpc
 /**
  * @method string getQueryVpcId()
  * @method $this withQueryVpcId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getUserClientIp()

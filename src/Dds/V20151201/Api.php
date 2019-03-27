@@ -2805,8 +2805,6 @@ class ModifyAccountDescription extends V20151201Rpc
  * @method $this withPreferredBackupTime($value)
  * @method string getPreferredBackupPeriod()
  * @method $this withPreferredBackupPeriod($value)
- * @method string getBackupMethod()
- * @method $this withBackupMethod($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()

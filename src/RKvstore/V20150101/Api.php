@@ -89,6 +89,7 @@ use AlibabaCloud\Rpc;
  * @method DescribeReplicaPerformance describeReplicaPerformance(array $options = [])
  * @method ModifyReplicaDescription modifyReplicaDescription(array $options = [])
  * @method DescribeReplicaUsage describeReplicaUsage(array $options = [])
+ * @method DescribeEngineVersion describeEngineVersion(array $options = [])
  * @method ModifyCertification modifyCertification(array $options = [])
  * @method ModifyInstanceMinorVersion modifyInstanceMinorVersion(array $options = [])
  * @method DescribeCertification describeCertification(array $options = [])
@@ -2132,6 +2133,26 @@ class ModifyReplicaDescription extends V20150101Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeReplicaUsage extends V20150101Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class DescribeEngineVersion extends V20150101Rpc
 {
 }
 

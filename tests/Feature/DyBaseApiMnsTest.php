@@ -32,6 +32,8 @@ class DyBaseApiMnsTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
+     * @expectedException \AlibabaCloud\Client\Exception\ServerException
+     * @expectedExceptionMessage Message not exist.
      */
     public function testMns()
     {
@@ -65,12 +67,8 @@ class DyBaseApiMnsTest extends TestCase
             $token['SecurityToken']
         );
 
-        try {
-            $request = new BatchReceiveMessage(10, 5);
-            $request->setQueueName(getenv('MNS_QUEUE_NAME'));
-            $client->sendRequest($request);
-        } catch (ServerException $e) {
-            self::assertEquals('Message not exist.', $e->getErrorMessage());
-        }
+        $request = new BatchReceiveMessage(10, 5);
+        $request->setQueueName(getenv('MNS_QUEUE_NAME'));
+        $client->sendRequest($request);
     }
 }

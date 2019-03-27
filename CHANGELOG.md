@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.2.9 - 2019-03-27
+- Support `Dbs`.
+- Support `AliProbe`.
+- Fixed `BatchReceiveMessage`.
+
+
 ## 1.2.8 - 2019-03-25
 - Updated README.md.
 - Updated Apis.

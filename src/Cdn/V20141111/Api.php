@@ -1062,35 +1062,21 @@ class BatchSetCdnDomainConfig extends V20141111Rpc
 }
 
 /**
- * @method string getIspNames()
- * @method $this withIspNames($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
  * @method string getLocationNames()
  * @method $this withLocationNames($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNames()
+ * @method $this withIspNames($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
 class DescribeRangeDataByLocateAndIspService extends V20141111Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['query']['startTime'] = $value;
-
-        return $this;
-    }
 }
 
 /**

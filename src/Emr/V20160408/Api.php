@@ -8,6 +8,9 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateClusterWithHostPool createClusterWithHostPool(array $options = [])
+ * @method CreateHostPool createHostPool(array $options = [])
+ * @method AddHpHost addHpHost(array $options = [])
  * @method StartKafkaPreferredReplicaElection startKafkaPreferredReplicaElection(array $options = [])
  * @method StartKafkaBrokerDiskBalancer startKafkaBrokerDiskBalancer(array $options = [])
  * @method ReassignKafka reassignKafka(array $options = [])
@@ -352,6 +355,180 @@ class V20160408Rpc extends Rpc
 }
 
 /**
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method array getHostGroup()
+ * @method array getHostInfo()
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ * @method string getStackVersion()
+ * @method $this withStackVersion($value)
+ * @method array getServiceInfo()
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method array getConfig()
+ */
+class CreateClusterWithHostPool extends V20160408Rpc
+{
+
+    /**
+     * @param array $hostGroup
+     *
+     * @return $this
+     */
+    public function withHostGroup(array $hostGroup)
+    {
+        $this->data['HostGroup'] = $hostGroup;
+        foreach ($hostGroup as $depth1 => $depth1Value) {
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupType'] = $depth1Value['GroupType'];
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupId'] = $depth1Value['GroupId'];
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupName'] = $depth1Value['GroupName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $hostInfo
+     *
+     * @return $this
+     */
+    public function withHostInfo(array $hostInfo)
+    {
+        $this->data['HostInfo'] = $hostInfo;
+        foreach ($hostInfo as $depth1 => $depth1Value) {
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HpHostBizId'] = $depth1Value['HpHostBizId'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HostName'] = $depth1Value['HostName'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.GroupId'] = $depth1Value['GroupId'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.PrivateIp'] = $depth1Value['PrivateIp'];
+            foreach ($depth1Value['ServiceComponentInfo'] as $depth2 => $depth2Value) {
+                $this->options['query']['HostInfo.' . ($depth1 + 1) . '.ServiceComponentInfo.' . ($depth2 + 1) . '.ComponentName'] = $depth2Value['ComponentName'];
+                $this->options['query']['HostInfo.' . ($depth1 + 1) . '.ServiceComponentInfo.' . ($depth2 + 1) . '.ServiceName'] = $depth2Value['ServiceName'];
+            }
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HostGroupName'] = $depth1Value['HostGroupName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $serviceInfo
+     *
+     * @return $this
+     */
+    public function withServiceInfo(array $serviceInfo)
+    {
+        $this->data['ServiceInfo'] = $serviceInfo;
+        foreach ($serviceInfo as $depth1 => $depth1Value) {
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceEcmVersion'] = $depth1Value['ServiceEcmVersion'];
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceVersion'] = $depth1Value['ServiceVersion'];
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return $this
+     */
+    public function withConfig(array $config)
+    {
+        $this->data['Config'] = $config;
+        foreach ($config as $depth1 => $depth1Value) {
+            $this->options['query']['Config.' . ($depth1 + 1) . '.ConfigKey'] = $depth1Value['ConfigKey'];
+            $this->options['query']['Config.' . ($depth1 + 1) . '.FileName'] = $depth1Value['FileName'];
+            $this->options['query']['Config.' . ($depth1 + 1) . '.ConfigValue'] = $depth1Value['ConfigValue'];
+            $this->options['query']['Config.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method array getKubeClusterInfo()
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class CreateHostPool extends V20160408Rpc
+{
+
+    /**
+     * @param array $kubeClusterInfo
+     *
+     * @return $this
+     */
+    public function withKubeClusterInfo(array $kubeClusterInfo)
+    {
+        $this->data['KubeClusterInfo'] = $kubeClusterInfo;
+        foreach ($kubeClusterInfo as $depth1 => $depth1Value) {
+            $this->options['query']['KubeClusterInfo.' . ($depth1 + 1) . '.ExternalKey'] = $depth1Value['ExternalKey'];
+            $this->options['query']['KubeClusterInfo.' . ($depth1 + 1) . '.InternalConfig'] = $depth1Value['InternalConfig'];
+            $this->options['query']['KubeClusterInfo.' . ($depth1 + 1) . '.PublicConfig'] = $depth1Value['PublicConfig'];
+            $this->options['query']['KubeClusterInfo.' . ($depth1 + 1) . '.SshConfig'] = $depth1Value['SshConfig'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getHpHost()
+ * @method string getHpBizId()
+ * @method $this withHpBizId($value)
+ */
+class AddHpHost extends V20160408Rpc
+{
+
+    /**
+     * @param array $hpHost
+     *
+     * @return $this
+     */
+    public function withHpHost(array $hpHost)
+    {
+        $this->data['HpHost'] = $hpHost;
+        foreach ($hpHost as $depth1 => $depth1Value) {
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.CpuCore'] = $depth1Value['CpuCore'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.MemSize'] = $depth1Value['MemSize'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.RackInfo'] = $depth1Value['RackInfo'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.SerialNumber'] = $depth1Value['SerialNumber'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.HostType'] = $depth1Value['HostType'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
+            foreach ($depth1Value['HpHostDisk'] as $depth2 => $depth2Value) {
+                $this->options['query']['HpHost.' . ($depth1 + 1) . '.HpHostDisk.' . ($depth2 + 1) . '.DiskSize'] = $depth2Value['DiskSize'];
+                $this->options['query']['HpHost.' . ($depth1 + 1) . '.HpHostDisk.' . ($depth2 + 1) . '.MountPath'] = $depth2Value['MountPath'];
+                $this->options['query']['HpHost.' . ($depth1 + 1) . '.HpHostDisk.' . ($depth2 + 1) . '.DiskDevice'] = $depth2Value['DiskDevice'];
+            }
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.VswitchId'] = $depth1Value['VswitchId'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.ExternalKey'] = $depth1Value['ExternalKey'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.HostName'] = $depth1Value['HostName'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.VpcId'] = $depth1Value['VpcId'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.InnerIp'] = $depth1Value['InnerIp'];
+            $this->options['query']['HpHost.' . ($depth1 + 1) . '.ExternalIp'] = $depth1Value['ExternalIp'];
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getTopicId()
@@ -402,12 +579,16 @@ class OfflineKafkaBroker extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getActiveOnly()
  * @method $this withActiveOnly($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDataSourceId()
  * @method $this withDataSourceId($value)
  * @method string getTopicName()
  * @method $this withTopicName($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getFuzzyTopicName()
  * @method $this withFuzzyTopicName($value)
  */
@@ -420,6 +601,12 @@ class ListKafkaTopicStatistics extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getTopicId()
  * @method $this withTopicId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListKafkaReassign extends V20160408Rpc
 {
@@ -428,8 +615,12 @@ class ListKafkaReassign extends V20160408Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListKafkaBroker extends V20160408Rpc
 {
@@ -1373,6 +1564,8 @@ class MetastoreUpdateKafkaTopic extends V20160408Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getActiveOnly()
+ * @method $this withActiveOnly($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDataSourceId()
@@ -3584,17 +3777,39 @@ class ListFlowInstance extends V20160408Rpc
 }
 
 /**
+ * @method string getTimeRange()
+ * @method $this withTimeRange($value)
+ * @method array getStatusList()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
+ * @method string getJobType()
+ * @method $this withJobType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
 class ListFlowJobHistory extends V20160408Rpc
 {
+
+    /**
+     * @param array $statusList
+     *
+     * @return $this
+     */
+    public function withStatusList(array $statusList)
+    {
+        $this->data['StatusList'] = $statusList;
+        foreach ($statusList as $i => $iValue) {
+            $this->options['query']['StatusList.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
