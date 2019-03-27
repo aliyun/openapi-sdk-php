@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ram\V20150501\ListAccessKeys;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class RamTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::ram()
+                               ->v20150501()
+                               ->listAccessKeys()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(ListAccessKeys::class, $request);
     }
 
     /**

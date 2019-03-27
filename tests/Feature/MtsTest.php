@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Mts\V20140618\QueryFpImportResult;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class MtsTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::mts()
+                               ->v20140618()
+                               ->queryFpImportResult()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(QueryFpImportResult::class, $request);
     }
 
     /**

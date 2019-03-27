@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\NlsFiletrans\V20180817\SubmitTask;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class NlsFiletransTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::nlsFiletrans()
+                               ->v20180817()
+                               ->submitTask()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(SubmitTask::class, $request);
     }
 
     /**

@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\NlsCloudMeta\V20180518\CreateToken;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class NlsCloudMetaTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::nlsCloudMeta()
+                               ->v20180518()
+                               ->createToken()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(CreateToken::class, $request);
     }
 
     /**

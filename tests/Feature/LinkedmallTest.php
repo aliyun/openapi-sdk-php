@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Feature;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Linkedmall\V20180116\ModifyBizItems;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,6 +26,17 @@ class LinkedmallTest extends TestCase
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-hanghou')->asGlobalClient();
+    }
+
+    public function testVersionResolve()
+    {
+        $request = AlibabaCloud::linkedmall()
+                               ->v20180116()
+                               ->modifyBizItems()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
+        self::assertInstanceOf(ModifyBizItems::class, $request);
     }
 
     /**
