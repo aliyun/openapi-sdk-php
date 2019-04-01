@@ -45,7 +45,7 @@ composer require alibabacloud/sdk
 Please see the
 [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other means.
 
-**Class Map Generation** - This command must be executed, otherwise it may not be available.
+**Class Map Generation** - The following command must be executed or it will not run.
 ```
 composer dump-autoload --optimize
 ```
