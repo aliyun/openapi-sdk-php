@@ -3,43 +3,46 @@
     "homepage": "https://www.alibabacloud.com/",
     "description": "Alibaba Cloud SDK for PHP - Easier to Use Alibaba Cloud in your PHP project",
     "keywords": [
-        "aliyun",
-        "alibaba",
-        "alibabacloud",
         "sdk",
         "ecs",
-        "cloud"
+        "cloud",
+        "aliyun",
+        "alibaba",
+        "library",
+        "alibabacloud"
     ],
     "type": "library",
     "license": "Apache-2.0",
     "support": {
-        "issues": "https://github.com/aliyun/openapi-sdk-php/issues",
-        "source": "https://github.com/aliyun/openapi-sdk-php"
+        "source": "https://github.com/aliyun/openapi-sdk-php",
+        "issues": "https://github.com/aliyun/openapi-sdk-php/issues"
     },
     "authors": [
         {
             "name": "Alibaba Cloud SDK",
-            "homepage": "http://www.alibabacloud.com",
-            "email": "sdk-team@alibabacloud.com"
+            "email": "sdk-team@alibabacloud.com",
+            "homepage": "http://www.alibabacloud.com"
         }
     ],
     "require": {
         "php": ">=5.5",
+        "ext-curl": "*",
         "ext-json": "*",
-        "ext-mbstring": "*",
-        "alibabacloud/client": "^1.0",
-        "ext-xmlwriter": "*",
         "ext-libxml": "*",
+        "ext-openssl": "*",
+        "ext-mbstring": "*",
+        "ext-xmlwriter": "*",
         "ext-simplexml": "*",
-        "ext-curl": "*"
+        "alibabacloud/client": "^1.1"
     },
     "require-dev": {
-        "composer/composer": "^1.8",
-        "phpunit/phpunit": "^4.8",
         "symfony/dotenv": "^3.4",
+        "phpunit/phpunit": "^4.8",
+        "composer/composer": "^1.8",
         "symfony/var-dumper": "^3.4"
     },
     "suggest": {
+        "ext-sockets": "To use client-side monitoring"
     },
     "autoload": {
         "psr-4": {
@@ -57,16 +60,16 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.2-dev"
         }
     },
     "config": {
-        "preferred-install": "dist",
         "sort-packages": true,
+        "preferred-install": "dist",
         "optimize-autoloader": true
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
+    "minimum-stability": "dev",
     "scripts-descriptions": {
         "cs": "Tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard.",
         "cbf": "Automatically correct coding standard violations.",
