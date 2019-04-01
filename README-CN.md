@@ -44,7 +44,7 @@ composer require alibabacloud/sdk
 ```
 请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
 
-**生成类映射**  - 必须执行这个命令，否则可能无法使用。
+**生成类映射**  - 必须执行以下命令，否则无法使用。
 ```
 composer dump-autoload --optimize
 ```
