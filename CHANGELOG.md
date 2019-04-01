@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0 - 2019-04-01
+- Updated `composer.json`.
+
+
 ## 1.2.10 - 2019-03-27
 - Improve `Resolver`.
 
