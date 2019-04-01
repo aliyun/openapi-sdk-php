@@ -149,7 +149,7 @@ Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making
 
 
 ## License
-[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[Apache-2.0](LICENSE.md)
 
 Copyright 1999-2019 Alibaba Group Holding Ltd.
 
