@@ -8,6 +8,13 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeMemberRole describeMemberRole(array $options = [])
+ * @method DescribeQRCodeAccessLog describeQRCodeAccessLog(array $options = [])
+ * @method UpdateQRCodeAuthority updateQRCodeAuthority(array $options = [])
+ * @method DescribeQRCodeAuthority describeQRCodeAuthority(array $options = [])
+ * @method DescribeTransactionReceiptFor2CBrowser describeTransactionReceiptFor2CBrowser(array $options = [])
+ * @method DescribeTransactionQRCode describeTransactionQRCode(array $options = [])
+ * @method DescribeTransactionFor2CBrowser describeTransactionFor2CBrowser(array $options = [])
  * @method DescribeAntRegions describeAntRegions(array $options = [])
  * @method DescribeBlockchainConfigOption describeBlockchainConfigOption(array $options = [])
  * @method DescribeDownloadPathsOfContractChain describeDownloadPathsOfContractChain(array $options = [])
@@ -160,6 +167,74 @@ class V20180731Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ */
+class DescribeMemberRole extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ */
+class DescribeQRCodeAccessLog extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getAuthorized()
+ * @method $this withAuthorized($value)
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ */
+class UpdateQRCodeAuthority extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ */
+class DescribeQRCodeAuthority extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getAlipayAuthCode()
+ * @method $this withAlipayAuthCode($value)
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ * @method string getHash()
+ * @method $this withHash($value)
+ */
+class DescribeTransactionReceiptFor2CBrowser extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ * @method string getHash()
+ * @method $this withHash($value)
+ */
+class DescribeTransactionQRCode extends V20180731Rpc
+{
+}
+
+/**
+ * @method string getAlipayAuthCode()
+ * @method $this withAlipayAuthCode($value)
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ * @method string getHash()
+ * @method $this withHash($value)
+ */
+class DescribeTransactionFor2CBrowser extends V20180731Rpc
+{
 }
 
 /**

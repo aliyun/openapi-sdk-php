@@ -33,23 +33,25 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 - [More flexible configuration per request][request]
 
 
-## Requirements
-Your system will need to meet the [Requirements](docs/0-Requirements-EN.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
+## Prerequisites
+Your system will need to meet the [Prerequisites](docs/0-Prerequisites-EN.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
 
 
 ## Installation
-If Composer is installed globally on your system, you can run the following in the base directory of your project to add the Alibaba Cloud SDK for PHP as a dependency:
+If Composer is already [installed globally on your system](https://getcomposer.org/doc/00-intro.md#globally), run the following in the base directory of your project to install Alibaba Cloud SDK for PHP as a dependency and generation class map:
 ```
-composer require alibabacloud/sdk
+composer require alibabacloud/sdk --optimize-autoloader
 ```
-Please see the
-[Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other means.
 
-**Class Map Generation** - The following command must be executed or it will not run.
-```
-composer dump-autoload --optimize
-```
-Set `"optimize-autoloader": true` inside the `config` key of `composer.json` can avoid executing command `dump-autoload --optimize`.
+Please see the [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other ways.
+
+
+## Class Map Generation
+You must enable the [Class Map Generation][class-map-generation] feature to use the Alibaba Cloud SDK for PHP. There are 3 ways to enable this feature:
+
+- Set `"optimize-autoloader": true` inside the `config` key of `composer.json`.
+- Call `composer install` or `composer update` with `-o` / `--optimize-autoloader`.
+- Call `composer dump-autoload` with `-o` / `--optimize`.
 
 
 ## Online Demo
@@ -172,3 +174,4 @@ Copyright 1999-2019 Alibaba Group Holding Ltd.
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
 [endpoints]: https://developer.aliyun.com/endpoints
+[class-map-generation]:https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation

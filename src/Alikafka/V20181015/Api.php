@@ -8,6 +8,11 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method UpdateInstanceName updateInstanceName(array $options = [])
+ * @method ListAllTopic listAllTopic(array $options = [])
+ * @method GetVpcInfo getVpcInfo(array $options = [])
+ * @method GetTopicSubscribeStatus getTopicSubscribeStatus(array $options = [])
+ * @method CorrectInstanceData correctInstanceData(array $options = [])
  * @method QueryKafkaMsg queryKafkaMsg(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateTopic createTopic(array $options = [])
@@ -35,6 +40,46 @@ class V20181015Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'alikafka';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ */
+class UpdateInstanceName extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListAllTopic extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetVpcInfo extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class GetTopicSubscribeStatus extends V20181015Rpc
+{
+}
+
+class CorrectInstanceData extends V20181015Rpc
+{
 }
 
 /**
