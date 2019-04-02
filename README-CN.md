@@ -33,22 +33,25 @@ Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba
 - [每一个请求配置更加灵活][request]
 
 
-## 环境要求
-您的系统需要满足[环境要求](docs/0-Requirements-CN.md)，包括 PHP> = 5.5。 我们强烈建议使用cURL扩展，并使用TLS后端编译cURL 7.16.2+。
+## 先决条件
+您的系统需要满足[先决条件](docs/0-Prerequisites-CN.md)，包括 PHP> = 5.5。 我们强烈建议使用cURL扩展，并使用 TLS 后端编译 cURL 7.16.2+。
 
 
 ## 安装依赖
-如果在您的系统上全局安装Composer，您可以在项目目录中运行以下内容，将 Alibaba Cloud SDK for PHP 添加为依赖项：
+如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项并生成类映射：
 ```
-composer require alibabacloud/sdk
+composer require alibabacloud/sdk --optimize-autoloader
 ```
+
 请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
 
-**生成类映射**  - 必须执行以下命令，否则无法使用。
-```
-composer dump-autoload --optimize
-```
-在 `composer.json` 中 `config` 部分设置 `"optimize-autoloader": true` 可免执行 `dump-autoload --optimize`。
+
+## 类映射生成
+必须开启[类映射生成][class-map-generation]功能才能使用 Alibaba Cloud SDK for PHP，有3种方法开启此功能：
+
+- 在 `composer.json` 文件中 `config` 部分增加 `"optimize-autoloader": true` ，可一劳永逸。
+- 执行 `composer install` 或 `composer update` 时增加 `-o` 或 `--optimize-autoloader` 选项。
+- 执行 `composer dump-autoload` 时增加 `-o` 或 `--optimize` 选项。
 
 
 ## 在线示例
@@ -173,3 +176,4 @@ try {
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
 [endpoints]: https://developer.aliyun.com/endpoints
+[class-map-generation]:https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation

@@ -8,6 +8,11 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method AutoUpgradeToSasAdvancedVersion autoUpgradeToSasAdvancedVersion(array $options = [])
+ * @method DescribeCanUpgradeSas describeCanUpgradeSas(array $options = [])
+ * @method DescribeCanTrySas describeCanTrySas(array $options = [])
+ * @method ModifyRefreshProcessInfo modifyRefreshProcessInfo(array $options = [])
+ * @method DescribeVulRelatedProcess describeVulRelatedProcess(array $options = [])
  * @method DescribeAgentInstallStatus describeAgentInstallStatus(array $options = [])
  * @method DescribeEcsStsStatus describeEcsStsStatus(array $options = [])
  * @method OperateAgentClientInstall operateAgentClientInstall(array $options = [])
@@ -280,6 +285,52 @@ class V20161111Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'vipaegis';
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class AutoUpgradeToSasAdvancedVersion extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeCanUpgradeSas extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeCanTrySas extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ */
+class ModifyRefreshProcessInfo extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPpid()
+ * @method $this withPpid($value)
+ */
+class DescribeVulRelatedProcess extends V20161111Rpc
+{
 }
 
 /**
@@ -563,6 +614,8 @@ class DescribeWhiteListEffectiveAssets extends V20161111Rpc
  * @method $this withProcessIds($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getStatus()
