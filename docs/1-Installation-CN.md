@@ -28,6 +28,8 @@ curl -sS https://getcomposer.org/installer | php
 php -d memory_limit=-1 composer.phar require alibabacloud/sdk --optimize-autoloader
 ```
 
+> 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。
+
 
 ### 类映射生成
 必须开启[类映射生成][class-map-generation]功能才能使用 Alibaba Cloud SDK for PHP，有3种方法开启此功能：

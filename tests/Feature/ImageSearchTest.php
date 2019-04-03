@@ -43,7 +43,7 @@ class ImageSearchTest extends TestCase
      * @throws ClientException
      * @throws ServerException
      * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /Your instance is unavailable./
+     * @expectedExceptionMessageRegExp /The specified instance name is invalid./
      */
     public function testAddItem()
     {
@@ -67,7 +67,7 @@ class ImageSearchTest extends TestCase
      * @throws ClientException
      * @throws ServerException
      * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /Your instance is unavailable./
+     * @expectedExceptionMessageRegExp /The specified instance name is invalid../
      */
     public function testSearchItem()
     {
@@ -92,7 +92,7 @@ class ImageSearchTest extends TestCase
      * @throws ClientException
      * @throws ServerException
      * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /Your instance is unavailable./
+     * @expectedExceptionMessageRegExp /The specified instance name is invalid../
      */
     public function testDeleteItem()
     {
