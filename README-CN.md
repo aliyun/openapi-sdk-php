@@ -42,6 +42,7 @@ Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba
 ```
 composer require alibabacloud/sdk --optimize-autoloader
 ```
+> 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。
 
 请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
 

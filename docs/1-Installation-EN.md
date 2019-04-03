@@ -28,6 +28,8 @@ Then type this Composer command to install the latest version of the Alibaba Clo
 php -d memory_limit=-1 composer.phar require alibabacloud/sdk --optimize-autoloader
 ```
 
+> Some users may not be able to install due to network problems, you can try to switch the Composer mirror.
+
 
 ### Class Map Generation
 You must enable the [Class Map Generation][class-map-generation] feature to use the Alibaba Cloud SDK for PHP. There are 3 ways to enable this feature:
