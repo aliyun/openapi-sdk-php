@@ -8,6 +8,9 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeViewContent describeViewContent(array $options = [])
+ * @method ExportKeywords exportKeywords(array $options = [])
+ * @method ImportKeywords importKeywords(array $options = [])
  * @method DescribeOssCallbackSetting describeOssCallbackSetting(array $options = [])
  * @method UpdateOssCallbackSetting updateOssCallbackSetting(array $options = [])
  * @method VerifyCustomOcrTemplate verifyCustomOcrTemplate(array $options = [])
@@ -102,6 +105,62 @@ class V20170823Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'green';
+}
+
+/**
+ * @method string getTotalCount()
+ * @method $this withTotalCount($value)
+ * @method string getSuggestion()
+ * @method $this withSuggestion($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getLabel()
+ * @method $this withLabel($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDataId()
+ * @method $this withDataId($value)
+ * @method string getAuditResult()
+ * @method $this withAuditResult($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeViewContent extends V20170823Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getKeywordLibId()
+ * @method $this withKeywordLibId($value)
+ */
+class ExportKeywords extends V20170823Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getKeywordLibId()
+ * @method $this withKeywordLibId($value)
+ * @method string getKeywordsObject()
+ * @method $this withKeywordsObject($value)
+ */
+class ImportKeywords extends V20170823Rpc
+{
 }
 
 /**
@@ -1095,6 +1154,8 @@ class UpdateImageLib extends V20170823Rpc
 /**
  * @method string getImages()
  * @method $this withImages($value)
+ * @method string getUrls()
+ * @method $this withUrls($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getImageLibId()
@@ -1187,8 +1248,14 @@ class DescribeImageLib extends V20170823Rpc
  * @method $this withTotalCount($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getModelId()
+ * @method $this withModelId($value)
  * @method string getImageLibId()
  * @method $this withImageLibId($value)
+ * @method string getStartDay()
+ * @method $this withStartDay($value)
+ * @method string getEndDay()
+ * @method $this withEndDay($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -1267,6 +1334,8 @@ class MarkAuditContent extends V20170823Rpc
  * @method $this withSourceIp($value)
  * @method string getSeed()
  * @method $this withSeed($value)
+ * @method string getAuditRange()
+ * @method $this withAuditRange($value)
  * @method string getCallback()
  * @method $this withCallback($value)
  */

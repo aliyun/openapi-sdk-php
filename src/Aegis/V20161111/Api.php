@@ -8,6 +8,23 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeHostStatistics describeHostStatistics(array $options = [])
+ * @method DescribeScreenOssUploadInfo describeScreenOssUploadInfo(array $options = [])
+ * @method DescribeScreenCityMonitorData describeScreenCityMonitorData(array $options = [])
+ * @method DescribeScreenBizStatSimpleQueryResult describeScreenBizStatSimpleQueryResult(array $options = [])
+ * @method DescribeScreenEmerRisk describeScreenEmerRisk(array $options = [])
+ * @method DescribeScreenTopRequestAndFlow describeScreenTopRequestAndFlow(array $options = [])
+ * @method DescribeScreenCloudHcRisk describeScreenCloudHcRisk(array $options = [])
+ * @method DescribeScreenTitles describeScreenTitles(array $options = [])
+ * @method DescribeScreenTitels describeScreenTitels(array $options = [])
+ * @method DescribeOssUploadInfo describeOssUploadInfo(array $options = [])
+ * @method DescribeScreenFlowRequestCount describeScreenFlowRequestCount(array $options = [])
+ * @method DescribeScreenRequestTopType describeScreenRequestTopType(array $options = [])
+ * @method DescribeScreenDataMap describeScreenDataMap(array $options = [])
+ * @method DescribeBizStatSimpleQueryResult describeBizStatSimpleQueryResult(array $options = [])
+ * @method DescribeCityMonitorData describeCityMonitorData(array $options = [])
+ * @method CreateScreenSetting createScreenSetting(array $options = [])
+ * @method DescribeGrayFunc describeGrayFunc(array $options = [])
  * @method AutoUpgradeToSasAdvancedVersion autoUpgradeToSasAdvancedVersion(array $options = [])
  * @method DescribeCanUpgradeSas describeCanUpgradeSas(array $options = [])
  * @method DescribeCanTrySas describeCanTrySas(array $options = [])
@@ -285,6 +302,186 @@ class V20161111Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'vipaegis';
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeHostStatistics extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenOssUploadInfo extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getScreenId()
+ * @method $this withScreenId($value)
+ * @method string getDateType()
+ * @method $this withDateType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenCityMonitorData extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getRangeUnit()
+ * @method $this withRangeUnit($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCustomQuery()
+ * @method $this withCustomQuery($value)
+ * @method string getRangeValue()
+ * @method $this withRangeValue($value)
+ */
+class DescribeScreenBizStatSimpleQueryResult extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenEmerRisk extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenTopRequestAndFlow extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenCloudHcRisk extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenTitles extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenTitels extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeOssUploadInfo extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenFlowRequestCount extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeScreenRequestTopType extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeScreenDataMap extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCustomTimeRange()
+ * @method $this withCustomTimeRange($value)
+ * @method string getCustomQuery()
+ * @method $this withCustomQuery($value)
+ */
+class DescribeBizStatSimpleQueryResult extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getScreenId()
+ * @method $this withScreenId($value)
+ * @method string getDateType()
+ * @method $this withDateType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeCityMonitorData extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getScreenDataMap()
+ * @method $this withScreenDataMap($value)
+ * @method string getScreenDefault()
+ * @method $this withScreenDefault($value)
+ * @method string getLogoPower()
+ * @method $this withLogoPower($value)
+ * @method string getMonitorUrl()
+ * @method $this withMonitorUrl($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getLogoUrl()
+ * @method $this withLogoUrl($value)
+ */
+class CreateScreenSetting extends V20161111Rpc
+{
+}
+
+/**
+ * @method string getCondition()
+ * @method $this withCondition($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeGrayFunc extends V20161111Rpc
+{
 }
 
 /**
@@ -1660,12 +1857,22 @@ class DescribeScoreThread extends V20161111Rpc
 }
 
 /**
+ * @method string getScreenDataMap()
+ * @method $this withScreenDataMap($value)
+ * @method string getScreenDefault()
+ * @method $this withScreenDefault($value)
+ * @method string getLogoPower()
+ * @method $this withLogoPower($value)
+ * @method string getMonitorUrl()
+ * @method $this withMonitorUrl($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getScreenTitle()
- * @method $this withScreenTitle($value)
- * @method string getScreenIdSetting()
- * @method $this withScreenIdSetting($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getLogoUrl()
+ * @method $this withLogoUrl($value)
  */
 class CreatScreenSetting extends V20161111Rpc
 {
@@ -1720,8 +1927,8 @@ class ModifyScreenSetting extends V20161111Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getScreenTitle()
- * @method $this withScreenTitle($value)
+ * @method string getId()
+ * @method $this withId($value)
  */
 class DeleteScreenSetting extends V20161111Rpc
 {
@@ -1730,8 +1937,8 @@ class DeleteScreenSetting extends V20161111Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getScreenTitle()
- * @method $this withScreenTitle($value)
+ * @method string getId()
+ * @method $this withId($value)
  */
 class DescribeScreenSetting extends V20161111Rpc
 {

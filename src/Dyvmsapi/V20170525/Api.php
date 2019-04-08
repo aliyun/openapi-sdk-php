@@ -209,6 +209,8 @@ class GetVoipToken extends V20170525Rpc
  * @method $this withEarlyMediaAsr($value)
  * @method string getSpeed()
  * @method $this withSpeed($value)
+ * @method string getAsrBaseId()
+ * @method $this withAsrBaseId($value)
  * @method string getSessionTimeout()
  * @method $this withSessionTimeout($value)
  * @method string getDynamicId()

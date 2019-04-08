@@ -8,6 +8,19 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteHostPool deleteHostPool(array $options = [])
+ * @method ListStack listStack(array $options = [])
+ * @method PlanComponentTopo planComponentTopo(array $options = [])
+ * @method PlanHostName planHostName(array $options = [])
+ * @method RemoveHpHost removeHpHost(array $options = [])
+ * @method ModifyHostPool modifyHostPool(array $options = [])
+ * @method DescribeHostPool describeHostPool(array $options = [])
+ * @method ListStackService listStackService(array $options = [])
+ * @method ListClusterSupportService listClusterSupportService(array $options = [])
+ * @method ListClusterInstalledService listClusterInstalledService(array $options = [])
+ * @method ListHostPool listHostPool(array $options = [])
+ * @method ListHPHost listHPHost(array $options = [])
+ * @method ListKafkaReassignTopic listKafkaReassignTopic(array $options = [])
  * @method UpdateKafkaReassignParam updateKafkaReassignParam(array $options = [])
  * @method CreateClusterWithHostPool createClusterWithHostPool(array $options = [])
  * @method CreateHostPool createHostPool(array $options = [])
@@ -356,12 +369,237 @@ class V20160408Rpc extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class DeleteHostPool extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ * @method string getStackVersion()
+ * @method $this withStackVersion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListStack extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getHostGroup()
+ * @method array getHostInfo()
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ * @method string getStackVersion()
+ * @method $this withStackVersion($value)
+ */
+class PlanComponentTopo extends V20160408Rpc
+{
+
+    /**
+     * @param array $hostGroup
+     *
+     * @return $this
+     */
+    public function withHostGroup(array $hostGroup)
+    {
+        $this->data['HostGroup'] = $hostGroup;
+        foreach ($hostGroup as $depth1 => $depth1Value) {
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupType'] = $depth1Value['GroupType'];
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.NodeCount'] = $depth1Value['NodeCount'];
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupName'] = $depth1Value['GroupName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $hostInfo
+     *
+     * @return $this
+     */
+    public function withHostInfo(array $hostInfo)
+    {
+        $this->data['HostInfo'] = $hostInfo;
+        foreach ($hostInfo as $depth1 => $depth1Value) {
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HpHostBizId'] = $depth1Value['HpHostBizId'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HostGroupName'] = $depth1Value['HostGroupName'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getHostGroup()
+ * @method array getHostInfo()
+ */
+class PlanHostName extends V20160408Rpc
+{
+
+    /**
+     * @param array $hostGroup
+     *
+     * @return $this
+     */
+    public function withHostGroup(array $hostGroup)
+    {
+        $this->data['HostGroup'] = $hostGroup;
+        foreach ($hostGroup as $depth1 => $depth1Value) {
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupType'] = $depth1Value['GroupType'];
+            $this->options['query']['HostGroup.' . ($depth1 + 1) . '.GroupName'] = $depth1Value['GroupName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $hostInfo
+     *
+     * @return $this
+     */
+    public function withHostInfo(array $hostInfo)
+    {
+        $this->data['HostInfo'] = $hostInfo;
+        foreach ($hostInfo as $depth1 => $depth1Value) {
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HpHostBizId'] = $depth1Value['HpHostBizId'];
+            $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HostGroupName'] = $depth1Value['HostGroupName'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getHpHostBizId()
+ * @method $this withHpHostBizId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class RemoveHpHost extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ */
+class ModifyHostPool extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class DescribeHostPool extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ * @method string getStackVersion()
+ * @method $this withStackVersion($value)
+ */
+class ListStackService extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ListClusterSupportService extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListClusterInstalledService extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListHostPool extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRole()
+ * @method $this withRole($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getHpBizId()
+ * @method $this withHpBizId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListHPHost extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getReassignId()
+ * @method $this withReassignId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListKafkaReassignTopic extends V20160408Rpc
+{
+}
+
+/**
  * @method string getThrottle()
  * @method $this withThrottle($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTopicId()
- * @method $this withTopicId($value)
  * @method string getReassignId()
  * @method $this withReassignId($value)
  */
@@ -383,8 +621,6 @@ class UpdateKafkaReassignParam extends V20160408Rpc
  * @method string getStackVersion()
  * @method $this withStackVersion($value)
  * @method array getServiceInfo()
- * @method string getUserId()
- * @method $this withUserId($value)
  * @method array getConfig()
  */
 class CreateClusterWithHostPool extends V20160408Rpc
@@ -554,10 +790,16 @@ class StartKafkaPreferredReplicaElection extends V20160408Rpc
 }
 
 /**
+ * @method string getThrottle()
+ * @method $this withThrottle($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getBrokerId()
+ * @method $this withBrokerId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getBalanceThreshold()
+ * @method $this withBalanceThreshold($value)
  */
 class StartKafkaBrokerDiskBalancer extends V20160408Rpc
 {
@@ -570,21 +812,21 @@ class StartKafkaBrokerDiskBalancer extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getTopicId()
  * @method $this withTopicId($value)
- * @method array getBrokerIdList()
+ * @method array getBrokerId()
  */
 class ReassignKafka extends V20160408Rpc
 {
 
     /**
-     * @param array $brokerIdList
+     * @param array $brokerId
      *
      * @return $this
      */
-    public function withBrokerIdList(array $brokerIdList)
+    public function withBrokerId(array $brokerId)
     {
-        $this->data['BrokerIdList'] = $brokerIdList;
-        foreach ($brokerIdList as $i => $iValue) {
-            $this->options['query']['BrokerIdList.' . ($i + 1)] = $iValue;
+        $this->data['BrokerId'] = $brokerId;
+        foreach ($brokerId as $i => $iValue) {
+            $this->options['query']['BrokerId.' . ($i + 1)] = $iValue;
         }
 
         return $this;

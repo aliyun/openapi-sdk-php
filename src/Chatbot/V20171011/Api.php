@@ -586,6 +586,8 @@ class Feedback extends V20171011Rpc
  * @method string getSenderNick()
  * @method $this withSenderNick($value)
  * @method array getPerspective()
+ * @method string getRecommend()
+ * @method $this withRecommend($value)
  * @method string getSessionId()
  * @method $this withSessionId($value)
  * @method string getTag()

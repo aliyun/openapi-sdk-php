@@ -8,7 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
- * @method DescribeMigrateCountInfo describeMigrateCountInfo(array $options = [])
+ * @method GetServiceUseSecirityIP getServiceUseSecirityIP(array $options = [])
+ * @method CreateServiceUseSecurityIP createServiceUseSecurityIP(array $options = [])
  * @method AssociateServiceUseSecurityIpWithCustins associateServiceUseSecurityIpWithCustins(array $options = [])
  * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
  * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
@@ -187,16 +188,42 @@ class V20140815Rpc extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
+ * @method string getId()
+ * @method $this withId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMigrateCountInfo extends V20140815Rpc
+class GetServiceUseSecirityIP extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getOwnerEmail()
+ * @method $this withOwnerEmail($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getContact()
+ * @method $this withContact($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getExportInfoToUser()
+ * @method $this withExportInfoToUser($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateServiceUseSecurityIP extends V20140815Rpc
 {
 }
 

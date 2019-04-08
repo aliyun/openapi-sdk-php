@@ -905,9 +905,6 @@ class RebootLabGateway extends V20181230Rpc
 class ListNotifications extends V20181230Rpc
 {
 
-    /** @var string */
-    public $method = 'GET';
-
     /**
      * @param array $category
      *
@@ -1170,9 +1167,6 @@ class GetUserLicense extends V20181230Rpc
  */
 class GetNotification extends V20181230Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**

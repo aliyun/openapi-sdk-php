@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method RestartAsrTask restartAsrTask(array $options = [])
+ * @method GetUserInfo getUserInfo(array $options = [])
  * @method OpenService openService(array $options = [])
  * @method GetResultToReview getResultToReview(array $options = [])
  * @method CreateRule createRule(array $options = [])
@@ -108,6 +110,24 @@ class V20190115Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class RestartAsrTask extends V20190115Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class GetUserInfo extends V20190115Rpc
+{
 }
 
 /**

@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method NotifyContractEvent notifyContractEvent(array $options = [])
  * @method DescribeProducts describeProducts(array $options = [])
  * @method DescribeProductRates describeProductRates(array $options = [])
  * @method SubscribeImage subscribeImage(array $options = [])
@@ -38,6 +39,16 @@ class V20151101Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getEventMessage()
+ * @method $this withEventMessage($value)
+ * @method string getEventType()
+ * @method $this withEventType($value)
+ */
+class NotifyContractEvent extends V20151101Rpc
+{
 }
 
 /**
@@ -142,6 +153,8 @@ class CreateOrder extends V20151101Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeInstance extends V20151101Rpc
 {

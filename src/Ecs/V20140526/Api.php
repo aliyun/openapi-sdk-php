@@ -699,6 +699,8 @@ class ReleaseDedicatedHost extends V20140526Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTenancy()
+ * @method $this withTenancy($value)
  * @method string getDedicatedHostId()
  * @method $this withDedicatedHostId($value)
  * @method string getOwnerId()
@@ -707,6 +709,8 @@ class ReleaseDedicatedHost extends V20140526Rpc
  * @method $this withInstanceId($value)
  * @method string getForce()
  * @method $this withForce($value)
+ * @method string getAffinity()
+ * @method $this withAffinity($value)
  */
 class ModifyInstanceDeployment extends V20140526Rpc
 {
@@ -772,6 +776,8 @@ class ModifyDedicatedHostAutoRenewAttribute extends V20140526Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getNetworkAttributesSlbUdpTimeout()
+ * @method string getAutoPlacement()
+ * @method $this withAutoPlacement($value)
  * @method string getNetworkAttributesUdpTimeout()
  */
 class ModifyDedicatedHostAttribute extends V20140526Rpc
@@ -910,6 +916,8 @@ class DescribeDedicatedHostTypes extends V20140526Rpc
  * @method string getNetworkAttributesSlbUdpTimeout()
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getAutoPlacement()
+ * @method $this withAutoPlacement($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  * @method string getNetworkAttributesUdpTimeout()
@@ -2657,6 +2665,8 @@ class ReActivateInstances extends V20140526Rpc
  * @method array getIpv6Address()
  * @method string getInternetMaxBandwidthIn()
  * @method $this withInternetMaxBandwidthIn($value)
+ * @method string getAffinity()
+ * @method $this withAffinity($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getSpotInterruptionBehavior()
@@ -2693,6 +2703,8 @@ class ReActivateInstances extends V20140526Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTenancy()
+ * @method $this withTenancy($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
  * @method $this withRamRoleName($value)
@@ -3785,8 +3797,6 @@ class DeleteNetworkInterface extends V20140526Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getServiceManaged()
- * @method $this withServiceManaged($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
  * @method string getType()
@@ -6085,7 +6095,6 @@ class DescribeTasks extends V20140526Rpc
  * @method $this withOSSPrefix($value)
  * @method string getRoleName()
  * @method $this withRoleName($value)
- * @method string getEnableCompress()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getImageFormat()
@@ -6093,19 +6102,6 @@ class DescribeTasks extends V20140526Rpc
  */
 class ExportImage extends V20140526Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEnableCompress($value)
-    {
-        $this->data['EnableCompress'] = $value;
-        $this->options['query']['enableCompress'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -7055,6 +7051,8 @@ class CreateRouteEntry extends V20140526Rpc
  * @method $this withInternetMaxBandwidthIn($value)
  * @method string getUseAdditionalService()
  * @method $this withUseAdditionalService($value)
+ * @method string getAffinity()
+ * @method $this withAffinity($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getClientToken()
@@ -7093,6 +7091,8 @@ class CreateRouteEntry extends V20140526Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTenancy()
+ * @method $this withTenancy($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
  * @method $this withRamRoleName($value)

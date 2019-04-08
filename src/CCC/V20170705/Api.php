@@ -2391,6 +2391,8 @@ class ModifyUser extends V20170705Rpc
  * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getRoutingStrategy()
+ * @method $this withRoutingStrategy($value)
  * @method array getUserId()
  */
 class ModifySkillGroup extends V20170705Rpc
@@ -2688,11 +2690,15 @@ class CreateUser extends V20170705Rpc
  * @method array getSkillLevel()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAllowPrivateOutboundNumber()
+ * @method $this withAllowPrivateOutboundNumber($value)
  * @method array getOutboundPhoneNumberId()
  * @method string getName()
  * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getRoutingStrategy()
+ * @method $this withRoutingStrategy($value)
  * @method array getUserId()
  */
 class CreateSkillGroup extends V20170705Rpc

@@ -8,10 +8,13 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method QueryDeviceFile queryDeviceFile(array $options = [])
+ * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
+ * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
+ * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
  * @method RamAuth ramAuth(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
- * @method IdleService idleService(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
  * @method UpdateProductTags updateProductTags(array $options = [])
  * @method ListProductTags listProductTags(array $options = [])
@@ -26,6 +29,7 @@ use AlibabaCloud\Rpc;
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
  * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
+ * @method ValidateLaUser validateLaUser(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
  * @method QueryDeviceGroupTagList queryDeviceGroupTagList(array $options = [])
  * @method QueryDeviceGroupList queryDeviceGroupList(array $options = [])
@@ -113,6 +117,83 @@ class V20180120Rpc extends Rpc
 }
 
 /**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getFileId()
+ * @method $this withFileId($value)
+ */
+class QueryDeviceFile extends V20180120Rpc
+{
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class QueryDeviceFileList extends V20180120Rpc
+{
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getFileId()
+ * @method $this withFileId($value)
+ */
+class DeleteDeviceFile extends V20180120Rpc
+{
+}
+
+/**
+ * @method array getDeviceNicknameInfo()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchUpdateDeviceNickname extends V20180120Rpc
+{
+
+    /**
+     * @param array $deviceNicknameInfo
+     *
+     * @return $this
+     */
+    public function withDeviceNicknameInfo(array $deviceNicknameInfo)
+    {
+        $this->data['DeviceNicknameInfo'] = $deviceNicknameInfo;
+        foreach ($deviceNicknameInfo as $depth1 => $depth1Value) {
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.IotId'] = $depth1Value['IotId'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.Nickname'] = $depth1Value['Nickname'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
@@ -166,14 +247,6 @@ class QueryDeviceDesiredProperty extends V20180120Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class IdleService extends V20180120Rpc
-{
 }
 
 /**
@@ -546,6 +619,14 @@ class QueryAppDeviceList extends V20180120Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class ValidateLaUser extends V20180120Rpc
+{
 }
 
 /**
@@ -1467,6 +1548,8 @@ class UpdateProduct extends V20180120Rpc
  * @method $this withPinCode($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getNickname()
+ * @method $this withNickname($value)
  * @method string getDeviceName()
  * @method $this withDeviceName($value)
  * @method string getProductKey()

@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method QueryDomainByDomainName queryDomainByDomainName(array $options = [])
  * @method SaveSingleTaskForSynchronizingDSRecord saveSingleTaskForSynchronizingDSRecord(array $options = [])
  * @method SaveSingleTaskForDeletingDSRecord saveSingleTaskForDeletingDSRecord(array $options = [])
  * @method SaveSingleTaskForModifyingDSRecord saveSingleTaskForModifyingDSRecord(array $options = [])
@@ -124,6 +125,18 @@ class V20180129Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class QueryDomainByDomainName extends V20180129Rpc
+{
 }
 
 /**
