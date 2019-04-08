@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.3 - 2019-04-08
+- Added Apis for `Dbs`.
+
+
 ## 1.3.2 - 2019-04-08
 - Support `Dypnsapi`.
 
