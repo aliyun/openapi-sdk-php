@@ -26,7 +26,7 @@ class DyBaseApiMnsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     /**
@@ -40,9 +40,9 @@ class DyBaseApiMnsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             getenv('ACCESS_KEY_ID'),
             getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hangzhou')->asGlobalClient();
+        )->regionId('cn-hangzhou')->asDefaultClient();
 
-        $response = AlibabaCloud::rpcRequest()
+        $response = AlibabaCloud::rpc()
                                 ->product('Dybaseapi')
                                 ->version('2017-05-25')
                                 ->action('QueryTokenForMnsQueue')

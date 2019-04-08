@@ -25,7 +25,7 @@ class LinkedmallTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hanghou')->asGlobalClient();
+        )->regionId('cn-hanghou')->asDefaultClient();
     }
 
     public function testVersionResolve()

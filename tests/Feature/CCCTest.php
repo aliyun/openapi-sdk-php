@@ -29,7 +29,7 @@ class CCCTest extends TestCase
 
         AlibabaCloud::bearerTokenClient(
             $this->bearerToken
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     public function testVersionResolve()

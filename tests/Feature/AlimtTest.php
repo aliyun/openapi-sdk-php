@@ -25,7 +25,7 @@ class AlimtTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-hangzhou')->asGlobalClient();
+        )->regionId('cn-hangzhou')->asDefaultClient();
     }
 
     public function testVersionResolve()

@@ -25,7 +25,7 @@ class RdsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId(\getenv('REGION_ID'))->asGlobalClient();
+        )->regionId(\getenv('REGION_ID'))->asDefaultClient();
     }
 
     public function testVersionResolve()
@@ -74,8 +74,8 @@ class RdsTest extends TestCase
         $set = AlibabaCloud::rds()
                            ->v20140815()
                            ->deleteDatabase()
-                           ->setDBInstanceId(\time())
-                           ->setDBName('name')
+                           ->withDBInstanceId(\time())
+                           ->withDBName('name')
                            ->connectTimeout(20)
                            ->timeout(25);
         self::assertTrue(json_encode($set) === json_encode($with));
