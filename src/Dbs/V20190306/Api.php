@@ -8,6 +8,11 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeFullBackupList describeFullBackupList(array $options = [])
+ * @method DescribeBackupPlanList describeBackupPlanList(array $options = [])
+ * @method StopBackupPlan stopBackupPlan(array $options = [])
+ * @method DescribeIncrementBackupList describeIncrementBackupList(array $options = [])
+ * @method DescribeBackupGatewayList describeBackupGatewayList(array $options = [])
  * @method StartBackupPlan startBackupPlan(array $options = [])
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
@@ -30,6 +35,86 @@ class V20190306Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeFullBackupList extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeBackupPlanList extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getStopMethod()
+ * @method $this withStopMethod($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopBackupPlan extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeIncrementBackupList extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeBackupGatewayList extends V20190306Rpc
+{
 }
 
 /**
