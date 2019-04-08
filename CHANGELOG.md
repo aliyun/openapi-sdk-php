@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.2 - 2019-04-08
+- Support `Dypnsapi`.
+
+
 ## 1.3.1 - 2019-04-02
 - Remove `finmall`.
 
