@@ -25,7 +25,7 @@ class DdsTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId(\getenv('REGION_ID'))->asGlobalClient();
+        )->regionId(\getenv('REGION_ID'))->asDefaultClient();
     }
 
     public function testVersionResolve()

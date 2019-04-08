@@ -25,7 +25,7 @@ class NlsFiletransTest extends TestCase
         AlibabaCloud::accessKeyClient(
             \getenv('ACCESS_KEY_ID'),
             \getenv('ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asGlobalClient();
+        )->regionId('cn-shanghai')->asDefaultClient();
     }
 
     public function testVersionResolve()
@@ -86,7 +86,7 @@ class NlsFiletransTest extends TestCase
      */
     public function testSubmitTaskWithClientMethod()
     {
-        $result = AlibabaCloud::rpcRequest()
+        $result = AlibabaCloud::rpc()
                               ->product('nls-cloud-meta')
                               ->version('2018-08-17')
                               ->method('POST')

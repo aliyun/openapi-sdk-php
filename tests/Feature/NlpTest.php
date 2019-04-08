@@ -125,7 +125,7 @@ class NlpTest extends TestCase
                                                                            'text' => 'Iphone专用数据线',
                                                                        ]),
                                             ])
-                              ->setDomain('general')
+                              ->withDomain('general')
                               ->client('content')
                               ->connectTimeout(20)
                               ->timeout(25)
