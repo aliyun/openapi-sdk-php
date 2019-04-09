@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.5 - 2019-04-09
+- Support `Kms`.
+
+
 ## 1.3.4 - 2019-04-09
 - Fixed `MNS`.
 
