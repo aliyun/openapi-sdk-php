@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.4 - 2019-04-09
+- Fixed `MNS`.
+
+
 ## 1.3.3 - 2019-04-08
 - Added Apis for `Dbs`.
 
