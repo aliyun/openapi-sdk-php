@@ -83,6 +83,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Jaq\Jaq jaq()
  * @method static Jarvis\Jarvis jarvis()
  * @method static JarvisPublic\JarvisPublic jarvisPublic()
+ * @method static Kms\Kms kms()
  * @method static LinkFace\LinkFace linkFace()
  * @method static LinkWAN\LinkWAN linkWAN()
  * @method static Linkedmall\Linkedmall linkedmall()

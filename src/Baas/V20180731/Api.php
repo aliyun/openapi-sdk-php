@@ -1375,6 +1375,8 @@ class DescribeTasks extends V20180731Rpc
  * @method $this withPassword($value)
  * @method string getUsername()
  * @method $this withUsername($value)
+ * @method string getAttrs()
+ * @method $this withAttrs($value)
  */
 class CreateOrganizationUser extends V20180731Rpc
 {

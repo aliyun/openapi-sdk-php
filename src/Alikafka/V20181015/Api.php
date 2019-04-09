@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method AddPartition addPartition(array $options = [])
  * @method UpdateInstanceName updateInstanceName(array $options = [])
  * @method ListAllTopic listAllTopic(array $options = [])
  * @method GetVpcInfo getVpcInfo(array $options = [])
@@ -40,6 +41,18 @@ class V20181015Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'alikafka';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getPartitionNum()
+ * @method $this withPartitionNum($value)
+ */
+class AddPartition extends V20181015Rpc
+{
 }
 
 /**
