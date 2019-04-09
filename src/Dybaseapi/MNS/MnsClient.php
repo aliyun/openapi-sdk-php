@@ -65,7 +65,7 @@ class MnsClient
         $body        = $request->getBody();
 
         $result = HttpHelper::curl(
-            $this->endpoint . '/' . $request->getResourcePath() . "?$queryString",
+            preg_replace('/\/+$/', '', $this->endpoint) . '//' . $request->getResourcePath() . "?$queryString",
             strtoupper($request->getMethod()),
             $body,
             $request->getHeaders()

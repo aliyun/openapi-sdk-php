@@ -85,7 +85,7 @@ class BatchReceiveMessage extends BaseRequest
     {
         $params = ['numOfMessages' => $this->numOfMessages];
         if ($this->waitSeconds !== null) {
-            $params['waitSeconds'] = $this->waitSeconds;
+            $params['waitseconds'] = $this->waitSeconds;
         }
 
         return http_build_query($params);
