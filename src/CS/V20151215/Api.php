@@ -8,6 +8,7 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteClusterNodes deleteClusterNodes(array $options = [])
  * @method UpdateClusterKubenetesVersion updateClusterKubenetesVersion(array $options = [])
  * @method DescribeClusterEndpoint describeClusterEndpoint(array $options = [])
  * @method DescribeClusterUserKubeconfig describeClusterUserKubeconfig(array $options = [])
@@ -96,6 +97,19 @@ class V20151215Roa extends Roa
 
     /** @var string */
     public $serviceCode = 'cs';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteClusterNodes extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/nodes';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -920,7 +934,6 @@ class DescribeClusterDetail extends V20151215Roa
 
 /**
  * @method string getClusterType()
- * @method string getResourceGroupId()
  * @method string getName()
  */
 class DescribeClusters extends V20151215Roa
@@ -937,19 +950,6 @@ class DescribeClusters extends V20151215Roa
     {
         $this->data['ClusterType'] = $value;
         $this->options['query']['clusterType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceGroupId($value)
-    {
-        $this->data['ResourceGroupId'] = $value;
-        $this->options['query']['ResourceGroupId'] = $value;
 
         return $this;
     }

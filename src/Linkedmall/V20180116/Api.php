@@ -18,7 +18,6 @@ use AlibabaCloud\Rpc;
  * @method ModifyBizItems modifyBizItems(array $options = [])
  * @method QueryOrderList queryOrderList(array $options = [])
  * @method QueryOrderLogistics queryOrderLogistics(array $options = [])
- * @method Repay repay(array $options = [])
  * @method DeleteBizItems deleteBizItems(array $options = [])
  * @method QueryItemInventory queryItemInventory(array $options = [])
  * @method NotifyWithholdFund notifyWithholdFund(array $options = [])
@@ -238,18 +237,6 @@ class QueryOrderList extends V20180116Rpc
  * @method $this withBizId($value)
  */
 class QueryOrderLogistics extends V20180116Rpc
-{
-}
-
-/**
- * @method string getLmOrderId()
- * @method $this withLmOrderId($value)
- * @method string getBizUid()
- * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
- */
-class Repay extends V20180116Rpc
 {
 }
 

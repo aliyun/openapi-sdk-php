@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method QueryDomainByDomainName queryDomainByDomainName(array $options = [])
  * @method SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(array $options = [])
  * @method SaveTaskForUpdatingRegistrantInfoByIdentityCredential saveTaskForUpdatingRegistrantInfoByIdentityCredential(array $options = [])
  * @method SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID saveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID(array $options = [])
@@ -108,6 +109,18 @@ class V20171218Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'domain';
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class QueryDomainByDomainName extends V20171218Rpc
+{
 }
 
 /**

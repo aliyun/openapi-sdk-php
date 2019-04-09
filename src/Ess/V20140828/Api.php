@@ -1895,6 +1895,8 @@ class AttachInstances extends V20140828Rpc
  * @method $this withMetricName($value)
  * @method string getPredictiveScalingMode()
  * @method $this withPredictiveScalingMode($value)
+ * @method string getTargetTrackingMode()
+ * @method $this withTargetTrackingMode($value)
  */
 class CreateScalingRule extends V20140828Rpc
 {
@@ -5170,6 +5172,8 @@ class DescribeScheduledTasks extends V20140828Rpc
  * @method $this withMetricName($value)
  * @method string getPredictiveScalingMode()
  * @method $this withPredictiveScalingMode($value)
+ * @method string getTargetTrackingMode()
+ * @method $this withTargetTrackingMode($value)
  */
 class ModifyScalingRule extends V20140828Rpc
 {

@@ -394,10 +394,14 @@ class DeleteDBEndpointAddress extends V20170801Rpc
 }
 
 /**
+ * @method string getAutoAddNewNodes()
+ * @method $this withAutoAddNewNodes($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getNodes()
  * @method $this withNodes($value)
+ * @method string getReadWriteMode()
+ * @method $this withReadWriteMode($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -434,22 +438,28 @@ class DeleteDBClusterEndpoint extends V20170801Rpc
 }
 
 /**
+ * @method string getAutoAddNewNodes()
+ * @method $this withAutoAddNewNodes($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getNodes()
- * @method $this withNodes($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getEndpointType()
- * @method $this withEndpointType($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEndpointConfig()
+ * @method $this withEndpointConfig($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getNodes()
+ * @method $this withNodes($value)
+ * @method string getReadWriteMode()
+ * @method $this withReadWriteMode($value)
+ * @method string getEndpointType()
+ * @method $this withEndpointType($value)
  */
 class CreateDBClusterEndpoint extends V20170801Rpc
 {

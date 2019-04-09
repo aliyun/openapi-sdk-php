@@ -1108,6 +1108,8 @@ class DeleteOfficeConversionTask extends V20170906Rpc
  * @method $this withNotifyTopicName($value)
  * @method string getModelId()
  * @method $this withModelId($value)
+ * @method string getDisplayDpi()
+ * @method $this withDisplayDpi($value)
  * @method string getMaxSheetRow()
  * @method $this withMaxSheetRow($value)
  * @method string getMaxSheetCount()

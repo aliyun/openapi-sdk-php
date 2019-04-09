@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateOwnAccount createOwnAccount(array $options = [])
  * @method DescribeMemberRole describeMemberRole(array $options = [])
  * @method DescribeQRCodeAccessLog describeQRCodeAccessLog(array $options = [])
  * @method UpdateQRCodeAuthority updateQRCodeAuthority(array $options = [])
@@ -167,6 +168,23 @@ class V20180731Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getIdentity()
+ * @method $this withIdentity($value)
+ * @method string getBizid()
+ * @method $this withBizid($value)
+ * @method string getPublicKey()
+ * @method $this withPublicKey($value)
+ * @method string getRecoveryKey()
+ * @method $this withRecoveryKey($value)
+ */
+class CreateOwnAccount extends V20180731Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**

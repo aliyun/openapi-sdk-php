@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeJob describeJob(array $options = [])
  * @method GetClusterVolumes getClusterVolumes(array $options = [])
  * @method UpdateClusterVolumes updateClusterVolumes(array $options = [])
  * @method GetAccountingReport getAccountingReport(array $options = [])
@@ -114,6 +115,16 @@ class V20180412Rpc extends Rpc
 }
 
 /**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeJob extends V20180412Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -140,9 +151,11 @@ class UpdateClusterVolumes extends V20180412Rpc
         foreach ($additionalVolumes as $depth1 => $depth1Value) {
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeType'] = $depth1Value['VolumeType'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeProtocol'] = $depth1Value['VolumeProtocol'];
-            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.LocalDirectory'] = $depth1Value['LocalDirectory'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.RemoteDirectory'] = $depth1Value['RemoteDirectory'];
+            foreach ($depth1Value['Roles'] as $depth2 => $depth2Value) {
+                $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Roles.' . ($depth2 + 1) . '.Name'] = $depth2Value['Name'];
+            }
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeId'] = $depth1Value['VolumeId'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeMountpoint'] = $depth1Value['VolumeMountpoint'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Location'] = $depth1Value['Location'];
@@ -260,6 +273,8 @@ class AddQueue extends V20180412Rpc
  * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
  */
 class ListCpfsFileSystems extends V20180412Rpc
 {
@@ -1191,6 +1206,8 @@ class EditJobTemplate extends V20180412Rpc
  * @method $this withJobQueue($value)
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getAutoRenew()
@@ -1203,6 +1220,8 @@ class EditJobTemplate extends V20180412Rpc
  * @method $this withSystemDiskSize($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
  * @method string getComputeSpotPriceLimit()
  * @method $this withComputeSpotPriceLimit($value)
  */
@@ -1589,9 +1608,11 @@ class CreateCluster extends V20180412Rpc
         foreach ($additionalVolumes as $depth1 => $depth1Value) {
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeType'] = $depth1Value['VolumeType'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeProtocol'] = $depth1Value['VolumeProtocol'];
-            $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Role'] = $depth1Value['Role'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.LocalDirectory'] = $depth1Value['LocalDirectory'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.RemoteDirectory'] = $depth1Value['RemoteDirectory'];
+            foreach ($depth1Value['Roles'] as $depth2 => $depth2Value) {
+                $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Roles.' . ($depth2 + 1) . '.Name'] = $depth2Value['Name'];
+            }
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeId'] = $depth1Value['VolumeId'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeMountpoint'] = $depth1Value['VolumeMountpoint'];
             $this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.Location'] = $depth1Value['Location'];
