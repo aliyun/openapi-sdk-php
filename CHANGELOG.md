@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.4.0 - 2019-04-11
+- Added `2019-03-25` for `ImageSearch`.
+
+
 ## 1.3.5 - 2019-04-09
 - Support `Kms`.
 
