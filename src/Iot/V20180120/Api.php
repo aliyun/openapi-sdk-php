@@ -12,7 +12,6 @@ use AlibabaCloud\Rpc;
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
  * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
- * @method RamAuth ramAuth(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
@@ -29,7 +28,6 @@ use AlibabaCloud\Rpc;
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
  * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
- * @method ValidateLaUser validateLaUser(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
  * @method QueryDeviceGroupTagList queryDeviceGroupTagList(array $options = [])
  * @method QueryDeviceGroupList queryDeviceGroupList(array $options = [])
@@ -191,14 +189,6 @@ class BatchUpdateDeviceNickname extends V20180120Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class RamAuth extends V20180120Rpc
-{
 }
 
 /**
@@ -619,14 +609,6 @@ class QueryAppDeviceList extends V20180120Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class ValidateLaUser extends V20180120Rpc
-{
 }
 
 /**

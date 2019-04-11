@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.4.1 - 2019-04-11
+- Updated Apis.
+- Added tests for `Kms`.
+
+
 ## 1.4.0 - 2019-04-11
 - Added `2019-03-25` for `ImageSearch`.
 

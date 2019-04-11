@@ -193,7 +193,6 @@ class CsbListRegions extends V20170801Roa
  * @method string getWebContainer()
  * @method string getJarStartArgs()
  * @method string getMemory()
- * @method string getBuildPackId()
  * @method string getCommandArgs()
  * @method string getReplicas()
  * @method string getReadiness()
@@ -208,6 +207,7 @@ class CsbListRegions extends V20170801Roa
  * @method string getJdk()
  * @method string getAppDescription()
  * @method string getJarStartOptions()
+ * @method string getEdasContainerVersion()
  * @method string getAppName()
  * @method string getNamespaceId()
  * @method string getPackageUrl()
@@ -255,19 +255,6 @@ class CreateServerlessApplication extends V20170801Roa
     {
         $this->data['Memory'] = $value;
         $this->options['query']['Memory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBuildPackId($value)
-    {
-        $this->data['BuildPackId'] = $value;
-        $this->options['query']['BuildPackId'] = $value;
 
         return $this;
     }
@@ -459,6 +446,19 @@ class CreateServerlessApplication extends V20170801Roa
      *
      * @return $this
      */
+    public function withEdasContainerVersion($value)
+    {
+        $this->data['EdasContainerVersion'] = $value;
+        $this->options['query']['EdasContainerVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withAppName($value)
     {
         $this->data['AppName'] = $value;
@@ -625,7 +625,6 @@ class DeleteServerlessApplication extends V20170801Roa
 /**
  * @method string getWebContainer()
  * @method string getJarStartArgs()
- * @method string getBuildPackId()
  * @method string getCommandArgs()
  * @method string getReadiness()
  * @method string getBatchWaitTime()
@@ -637,6 +636,7 @@ class DeleteServerlessApplication extends V20170801Roa
  * @method string getJdk()
  * @method string getJarStartOptions()
  * @method string getMinReadyInstances()
+ * @method string getEdasContainerVersion()
  * @method string getPackageUrl()
  * @method string getAppId()
  * @method string getImageUrl()
@@ -668,19 +668,6 @@ class DeployServerlessApplication extends V20170801Roa
     {
         $this->data['JarStartArgs'] = $value;
         $this->options['query']['JarStartArgs'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBuildPackId($value)
-    {
-        $this->data['BuildPackId'] = $value;
-        $this->options['query']['BuildPackId'] = $value;
 
         return $this;
     }
@@ -824,6 +811,19 @@ class DeployServerlessApplication extends V20170801Roa
     {
         $this->data['MinReadyInstances'] = $value;
         $this->options['query']['MinReadyInstances'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEdasContainerVersion($value)
+    {
+        $this->data['EdasContainerVersion'] = $value;
+        $this->options['query']['EdasContainerVersion'] = $value;
 
         return $this;
     }
@@ -1797,12 +1797,26 @@ class UpdateK8sApplicationConfig extends V20170801Roa
 }
 
 /**
+ * @method string getNamespaceId()
  * @method string getClusterId()
  */
 class ImportK8sCluster extends V20170801Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/import_k8s_cluster';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceId($value)
+    {
+        $this->data['NamespaceId'] = $value;
+        $this->options['query']['NamespaceId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

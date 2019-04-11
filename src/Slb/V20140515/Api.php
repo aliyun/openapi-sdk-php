@@ -20,7 +20,6 @@ use AlibabaCloud\Rpc;
  * @method CreateLoadBalancerHTTPSListenerAsyn createLoadBalancerHTTPSListenerAsyn(array $options = [])
  * @method CreateLoadBalancerHTTPListenerAsyn createLoadBalancerHTTPListenerAsyn(array $options = [])
  * @method DescribeIdleInstancesForGlobal describeIdleInstancesForGlobal(array $options = [])
- * @method DescribeIdleInstances describeIdleInstances(array $options = [])
  * @method SetVServerGroupAttributeAsyn setVServerGroupAttributeAsyn(array $options = [])
  * @method RemoveVServerGroupBackendServersAsyn removeVServerGroupBackendServersAsyn(array $options = [])
  * @method AddVServerGroupBackendServersAsyn addVServerGroupBackendServersAsyn(array $options = [])
@@ -892,40 +891,6 @@ class CreateLoadBalancerHTTPListenerAsyn extends V20140515Rpc
  * @method $this withTags($value)
  */
 class DescribeIdleInstancesForGlobal extends V20140515Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessKeyId($value)
-    {
-        $this->data['AccessKeyId'] = $value;
-        $this->options['query']['access_key_id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAccessKeyId()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTempId()
- * @method $this withTempId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOnlyAmount()
- * @method $this withOnlyAmount($value)
- * @method string getTags()
- * @method $this withTags($value)
- */
-class DescribeIdleInstances extends V20140515Rpc
 {
 
     /**
@@ -3680,12 +3645,16 @@ class CreateLoadBalancerHTTPSListener extends V20140515Rpc
  * @method $this withListenerPort($value)
  * @method string getCookie()
  * @method $this withCookie($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getStickySession()
  * @method $this withStickySession($value)
+ * @method string getHealthCheckMethod()
+ * @method $this withHealthCheckMethod($value)
  * @method string getHealthCheckDomain()
  * @method $this withHealthCheckDomain($value)
  * @method string getRequestTimeout()

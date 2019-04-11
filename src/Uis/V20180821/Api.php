@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteAccessLog deleteAccessLog(array $options = [])
+ * @method SetAccessLog setAccessLog(array $options = [])
  * @method DescribeUiseNodeStatus describeUiseNodeStatus(array $options = [])
  * @method DescribeUisNetworkInterfaces describeUisNetworkInterfaces(array $options = [])
  * @method DeleteUisNetworkInterface deleteUisNetworkInterface(array $options = [])
@@ -55,6 +57,46 @@ class V20180821Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'uis';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAreaId()
+ * @method $this withAreaId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteAccessLog extends V20180821Rpc
+{
+}
+
+/**
+ * @method string getLogProjectName()
+ * @method $this withLogProjectName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAreaId()
+ * @method $this withAreaId($value)
+ * @method string getLogStoreName()
+ * @method $this withLogStoreName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetAccessLog extends V20180821Rpc
+{
 }
 
 /**

@@ -13,11 +13,6 @@ use AlibabaCloud\Rpc;
  * @method DeleteExternalNodeTuples deleteExternalNodeTuples(array $options = [])
  * @method UpdateEmbeddedNsAutoSyncEnablingState updateEmbeddedNsAutoSyncEnablingState(array $options = [])
  * @method CreateCustomLocalJoinPermission createCustomLocalJoinPermission(array $options = [])
- * @method MeteringQuerySubscribePush meteringQuerySubscribePush(array $options = [])
- * @method MeteringSubscribePush meteringSubscribePush(array $options = [])
- * @method QueryMeteringDetail queryMeteringDetail(array $options = [])
- * @method QueryMeteringStatistics queryMeteringStatistics(array $options = [])
- * @method MeteringUnsubscribePush meteringUnsubscribePush(array $options = [])
  * @method UpdateRoamingJoinPermission updateRoamingJoinPermission(array $options = [])
  * @method UpdateOwnedLocalJoinPermission updateOwnedLocalJoinPermission(array $options = [])
  * @method UpdateRoamingJoinPermissionEnablingState updateRoamingJoinPermissionEnablingState(array $options = [])
@@ -255,91 +250,6 @@ class UpdateEmbeddedNsAutoSyncEnablingState extends V20181230Rpc
  * @method $this withJoinPermissionName($value)
  */
 class CreateCustomLocalJoinPermission extends V20181230Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getSubscribeId()
- * @method $this withSubscribeId($value)
- */
-class MeteringQuerySubscribePush extends V20181230Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getOutletAuthInfo()
- * @method $this withOutletAuthInfo($value)
- * @method string getGwEui()
- * @method $this withGwEui($value)
- * @method string getJoinPermissionId()
- * @method $this withJoinPermissionId($value)
- * @method string getDevEui()
- * @method $this withDevEui($value)
- * @method string getOutletUrl()
- * @method $this withOutletUrl($value)
- */
-class MeteringSubscribePush extends V20181230Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getStart()
- * @method $this withStart($value)
- * @method string getGwEui()
- * @method $this withGwEui($value)
- * @method string getJoinPermissionId()
- * @method $this withJoinPermissionId($value)
- * @method string getDevEui()
- * @method $this withDevEui($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getEnd()
- * @method $this withEnd($value)
- * @method string getDirection()
- * @method $this withDirection($value)
- */
-class QueryMeteringDetail extends V20181230Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getStart()
- * @method $this withStart($value)
- * @method string getGwEui()
- * @method $this withGwEui($value)
- * @method string getJoinPermissionId()
- * @method $this withJoinPermissionId($value)
- * @method string getDevEui()
- * @method $this withDevEui($value)
- * @method string getEnd()
- * @method $this withEnd($value)
- */
-class QueryMeteringStatistics extends V20181230Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getSubscribeId()
- * @method $this withSubscribeId($value)
- */
-class MeteringUnsubscribePush extends V20181230Rpc
 {
 
     /** @var string */

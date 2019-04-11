@@ -543,6 +543,8 @@ class DescribeUserOnlineClients extends V20180313Rpc
  * @method $this withOwnerAccount($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
+ * @method string getStatisticsDate()
+ * @method $this withStatisticsDate($value)
  * @method array getUserNames()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -1430,6 +1432,8 @@ class DescribeRegions extends V20180313Rpc
  * @method $this withPageSize($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */

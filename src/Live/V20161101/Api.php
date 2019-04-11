@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
+ * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method SetBoardCallback setBoardCallback(array $options = [])
  * @method UpdateBoardCallback updateBoardCallback(array $options = [])
  * @method DescribeLiveDomainMapping describeLiveDomainMapping(array $options = [])
@@ -188,6 +190,38 @@ class V20161101Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'live';
+}
+
+/**
+ * @method string getFlvLevel()
+ * @method $this withFlvLevel($value)
+ * @method string getHlsLevel()
+ * @method $this withHlsLevel($value)
+ * @method string getRtmpDelay()
+ * @method $this withRtmpDelay($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFlvDelay()
+ * @method $this withFlvDelay($value)
+ * @method string getRtmpLevel()
+ * @method $this withRtmpLevel($value)
+ * @method string getHlsDelay()
+ * @method $this withHlsDelay($value)
+ */
+class SetLiveStreamDelayConfig extends V20161101Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamDelayConfig extends V20161101Rpc
+{
 }
 
 /**

@@ -453,6 +453,8 @@ class CreateUserUsageDataExportTask extends V20180510Rpc
  * @method $this withDomainNames($value)
  * @method string getTaskName()
  * @method $this withTaskName($value)
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getType()

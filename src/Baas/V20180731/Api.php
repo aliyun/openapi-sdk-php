@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeSmartContractJobsByName describeSmartContractJobsByName(array $options = [])
  * @method CreateOwnAccount createOwnAccount(array $options = [])
  * @method DescribeMemberRole describeMemberRole(array $options = [])
  * @method DescribeQRCodeAccessLog describeQRCodeAccessLog(array $options = [])
@@ -168,6 +169,21 @@ class V20180731Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getSize()
+ * @method $this withSize($value)
+ * @method string getStart()
+ * @method $this withStart($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeSmartContractJobsByName extends V20180731Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**

@@ -380,6 +380,7 @@ class UpdateContainerGroup extends V20180808Rpc
                 $this->options['query']['Volume.' . ($depth1 + 1) . '.ConfigFileVolume.ConfigFileToPath.' . ($depth2 + 1) . '.Content'] = $depth2Value['Content'];
                 $this->options['query']['Volume.' . ($depth1 + 1) . '.ConfigFileVolume.ConfigFileToPath.' . ($depth2 + 1) . '.Path'] = $depth2Value['Path'];
             }
+            $this->options['query']['Volume.' . ($depth1 + 1) . '.EmptyDirVolume.Medium'] = $depth1Value['EmptyDirVolumeMedium'];
         }
 
         return $this;
@@ -846,7 +847,6 @@ class CreateContainerGroup extends V20180808Rpc
             }
             $this->options['query']['Volume.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
             $this->options['query']['Volume.' . ($depth1 + 1) . '.EmptyDirVolume.Medium'] = $depth1Value['EmptyDirVolumeMedium'];
-            $this->options['query']['Volume.' . ($depth1 + 1) . '.EmptyDirVolume.SizeLimit'] = $depth1Value['EmptyDirVolumeSizeLimit'];
         }
 
         return $this;

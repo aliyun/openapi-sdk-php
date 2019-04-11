@@ -8,6 +8,9 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DialEx dialEx(array $options = [])
+ * @method ListPredictiveJobGroups listPredictiveJobGroups(array $options = [])
+ * @method GetJobsProgress getJobsProgress(array $options = [])
  * @method GetContactInfoByOutboundTaskId getContactInfoByOutboundTaskId(array $options = [])
  * @method ListVoiceAppraise listVoiceAppraise(array $options = [])
  * @method CreateVoiceAppraise createVoiceAppraise(array $options = [])
@@ -162,6 +165,56 @@ class V20170705Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProvider()
+ * @method $this withProvider($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ */
+class DialEx extends V20170705Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCriteria()
+ * @method $this withCriteria($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListPredictiveJobGroups extends V20170705Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class GetJobsProgress extends V20170705Rpc
+{
 }
 
 /**
@@ -971,6 +1024,8 @@ class CommitContactFlowVersionModification extends V20170705Rpc
  * @method $this withInstanceId($value)
  * @method string getContactFlowVersionId()
  * @method $this withContactFlowVersionId($value)
+ * @method string getUseTianGong()
+ * @method $this withUseTianGong($value)
  */
 class PublishContactFlowVersion extends V20170705Rpc
 {

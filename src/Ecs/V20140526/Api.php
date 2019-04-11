@@ -8,6 +8,12 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateFleet createFleet(array $options = [])
+ * @method ModifyFleet modifyFleet(array $options = [])
+ * @method DescribeFleets describeFleets(array $options = [])
+ * @method DescribeFleetInstances describeFleetInstances(array $options = [])
+ * @method DescribeFleetHistory describeFleetHistory(array $options = [])
+ * @method DeleteFleet deleteFleet(array $options = [])
  * @method DescribeDemands describeDemands(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
@@ -303,6 +309,316 @@ class V20140526Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ecs';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFleetType()
+ * @method $this withFleetType($value)
+ * @method array getLaunchTemplateConfigs()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTerminateInstancesWithExpiration()
+ * @method $this withTerminateInstancesWithExpiration($value)
+ * @method string getOnDemandTargetCapacity()
+ * @method $this withOnDemandTargetCapacity($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getFleetName()
+ * @method $this withFleetName($value)
+ * @method string getSpotAllocationStrategy()
+ * @method $this withSpotAllocationStrategy($value)
+ * @method string getTerminateInstances()
+ * @method $this withTerminateInstances($value)
+ * @method string getDefaultTargetCapacityType()
+ * @method $this withDefaultTargetCapacityType($value)
+ * @method string getExcessCapacityTerminationPolicy()
+ * @method $this withExcessCapacityTerminationPolicy($value)
+ * @method array getTag()
+ * @method string getValidUntil()
+ * @method $this withValidUntil($value)
+ * @method string getFillGapWithOnDemand()
+ * @method $this withFillGapWithOnDemand($value)
+ * @method string getSpotInstanceInterruptionBehavior()
+ * @method $this withSpotInstanceInterruptionBehavior($value)
+ * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getSpotInstancePoolsToUseCount()
+ * @method $this withSpotInstancePoolsToUseCount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getLaunchTemplateVersion()
+ * @method $this withLaunchTemplateVersion($value)
+ * @method string getTotalTargetCapacity()
+ * @method $this withTotalTargetCapacity($value)
+ * @method string getOnDemandAllocationStrategy()
+ * @method $this withOnDemandAllocationStrategy($value)
+ * @method string getSpotTargetCapacity()
+ * @method $this withSpotTargetCapacity($value)
+ * @method string getValidFrom()
+ * @method $this withValidFrom($value)
+ * @method string getMaxSpotPrice()
+ * @method $this withMaxSpotPrice($value)
+ */
+class CreateFleet extends V20140526Rpc
+{
+
+    /**
+     * @param array $launchTemplateConfigs
+     *
+     * @return $this
+     */
+    public function withLaunchTemplateConfigs(array $launchTemplateConfigs)
+    {
+        $this->data['LaunchTemplateConfigs'] = $launchTemplateConfigs;
+        foreach ($launchTemplateConfigs as $depth1 => $depth1Value) {
+            $this->options['query']['LaunchTemplateConfigs.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+            $this->options['query']['LaunchTemplateConfigs.' . ($depth1 + 1) . '.MaxPrice'] = $depth1Value['MaxPrice'];
+            $this->options['query']['LaunchTemplateConfigs.' . ($depth1 + 1) . '.VSWitchId'] = $depth1Value['VSWitchId'];
+            $this->options['query']['LaunchTemplateConfigs.' . ($depth1 + 1) . '.WeightedCapacity'] = $depth1Value['WeightedCapacity'];
+            $this->options['query']['LaunchTemplateConfigs.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTerminateInstancesWithExpiration()
+ * @method $this withTerminateInstancesWithExpiration($value)
+ * @method string getOnDemandTargetCapacity()
+ * @method $this withOnDemandTargetCapacity($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFleetId()
+ * @method $this withFleetId($value)
+ * @method string getExcessCapacityTerminationPolicyStr()
+ * @method $this withExcessCapacityTerminationPolicyStr($value)
+ * @method string getTotalTargetCapacity()
+ * @method $this withTotalTargetCapacity($value)
+ * @method string getSpotTargetCapacity()
+ * @method $this withSpotTargetCapacity($value)
+ * @method string getMaxSpotPrice()
+ * @method $this withMaxSpotPrice($value)
+ */
+class ModifyFleet extends V20140526Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method array getFleetStatus()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method array getFleetIds()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeFleets extends V20140526Rpc
+{
+
+    /**
+     * @param array $fleetStatus
+     *
+     * @return $this
+     */
+    public function withFleetStatus(array $fleetStatus)
+    {
+        $this->data['FleetStatus'] = $fleetStatus;
+        foreach ($fleetStatus as $i => $iValue) {
+            $this->options['query']['FleetStatus.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $fleetIds
+     *
+     * @return $this
+     */
+    public function withFleetIds(array $fleetIds)
+    {
+        $this->data['FleetIds'] = $fleetIds;
+        foreach ($fleetIds as $i => $iValue) {
+            $this->options['query']['FleetIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFleetId()
+ * @method $this withFleetId($value)
+ */
+class DescribeFleetInstances extends V20140526Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFleetId()
+ * @method $this withFleetId($value)
+ */
+class DescribeFleetHistory extends V20140526Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTerminateInstances()
+ * @method $this withTerminateInstances($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFleetId()
+ * @method $this withFleetId($value)
+ */
+class DeleteFleet extends V20140526Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -916,8 +1232,6 @@ class DescribeDedicatedHostTypes extends V20140526Rpc
  * @method string getNetworkAttributesSlbUdpTimeout()
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getAutoPlacement()
- * @method $this withAutoPlacement($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  * @method string getNetworkAttributesUdpTimeout()
@@ -2621,6 +2935,8 @@ class ReActivateInstances extends V20140526Rpc
  * @method $this withSecurityEnhancementStrategy($value)
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
+ * @method string getMinAmount()
+ * @method $this withMinAmount($value)
  * @method string getSpotPriceLimit()
  * @method $this withSpotPriceLimit($value)
  * @method string getDeletionProtection()
@@ -2665,8 +2981,6 @@ class ReActivateInstances extends V20140526Rpc
  * @method array getIpv6Address()
  * @method string getInternetMaxBandwidthIn()
  * @method $this withInternetMaxBandwidthIn($value)
- * @method string getAffinity()
- * @method $this withAffinity($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getSpotInterruptionBehavior()
@@ -2703,8 +3017,6 @@ class ReActivateInstances extends V20140526Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getTenancy()
- * @method $this withTenancy($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
  * @method $this withRamRoleName($value)
@@ -3797,6 +4109,8 @@ class DeleteNetworkInterface extends V20140526Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getServiceManaged()
+ * @method $this withServiceManaged($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
  * @method string getType()
@@ -7279,19 +7593,13 @@ class CreateVpc extends V20140526Rpc
  * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getSnapshotName()
- * @method $this withSnapshotName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSourceSnapshotId()
- * @method $this withSourceSnapshotId($value)
- * @method string getRemoveSourceSnapshot()
- * @method $this withRemoveSourceSnapshot($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method string getSnapshotName()
+ * @method $this withSnapshotName($value)
  * @method array getTag()
- * @method string getCategory()
- * @method $this withCategory($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateSnapshot extends V20140526Rpc
 {

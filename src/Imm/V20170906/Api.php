@@ -9,6 +9,7 @@ use AlibabaCloud\Rpc;
  * Resolve Api based on the method name.
  *
  * @method DetectImageLogos detectImageLogos(array $options = [])
+ * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
  * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindImages findImages(array $options = [])
@@ -80,6 +81,7 @@ use AlibabaCloud\Rpc;
  * @method ListPhotoProcessTasks listPhotoProcessTasks(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method GetTagSet getTagSet(array $options = [])
+ * @method ListFaceGroups listFaceGroups(array $options = [])
  * @method CreateFaceSet createFaceSet(array $options = [])
  * @method IndexTag indexTag(array $options = [])
  * @method DeleteTagSet deleteTagSet(array $options = [])
@@ -126,6 +128,22 @@ class V20170906Rpc extends Rpc
  * @method $this withProject($value)
  */
 class DetectImageLogos extends V20170906Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getSetId()
+ * @method $this withSetId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getGroupCoverFaceId()
+ * @method $this withGroupCoverFaceId($value)
+ */
+class UpdateFaceGroup extends V20170906Rpc
 {
 }
 
@@ -342,6 +360,8 @@ class ListVideoFrames extends V20170906Rpc
  * @method $this withSetId($value)
  * @method string getSourceType()
  * @method $this withSourceType($value)
+ * @method string getRealUid()
+ * @method $this withRealUid($value)
  */
 class IndexImage extends V20170906Rpc
 {
@@ -372,6 +392,8 @@ class CompareImageFaces extends V20170906Rpc
  * @method $this withLibrary($value)
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getRealUid()
+ * @method $this withRealUid($value)
  */
 class DetectImageCelebrity extends V20170906Rpc
 {
@@ -448,6 +470,8 @@ class DeleteImage extends V20170906Rpc
  * @method $this withImageUri($value)
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getRealUid()
+ * @method $this withRealUid($value)
  */
 class DetectImageFaces extends V20170906Rpc
 {
@@ -458,6 +482,8 @@ class DetectImageFaces extends V20170906Rpc
  * @method $this withImageUri($value)
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getRealUid()
+ * @method $this withRealUid($value)
  */
 class DetectImageTags extends V20170906Rpc
 {
@@ -1256,6 +1282,24 @@ class DeleteProject extends V20170906Rpc
  * @method $this withSetId($value)
  */
 class GetTagSet extends V20170906Rpc
+{
+}
+
+/**
+ * @method string getMarker()
+ * @method $this withMarker($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getSetId()
+ * @method $this withSetId($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ */
+class ListFaceGroups extends V20170906Rpc
 {
 }
 

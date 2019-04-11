@@ -102,6 +102,8 @@ class DescribeIncrementBackupList extends V20190306Rpc
 }
 
 /**
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getPageSize()
