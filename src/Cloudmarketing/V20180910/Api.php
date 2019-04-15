@@ -86,10 +86,22 @@ class DeleteFile extends V20180910Rpc
 
 /**
  * @method string getRequestJsonData()
- * @method $this withRequestJsonData($value)
  */
 class UpdateCrowd extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestJsonData($value)
+    {
+        $this->data['RequestJsonData'] = $value;
+        $this->options['form_params']['RequestJsonData'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -165,10 +177,22 @@ class FetchTag extends V20180910Rpc
 
 /**
  * @method string getRequestJsonData()
- * @method $this withRequestJsonData($value)
  */
 class UpdateCategory extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestJsonData($value)
+    {
+        $this->data['RequestJsonData'] = $value;
+        $this->options['form_params']['RequestJsonData'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -332,18 +356,42 @@ class DescribeCrowd extends V20180910Rpc
 
 /**
  * @method string getRequestJsonData()
- * @method $this withRequestJsonData($value)
  */
 class CalCrowdScale extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestJsonData($value)
+    {
+        $this->data['RequestJsonData'] = $value;
+        $this->options['form_params']['RequestJsonData'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getRequestJsonData()
- * @method $this withRequestJsonData($value)
  */
 class DefineCrowd extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestJsonData($value)
+    {
+        $this->data['RequestJsonData'] = $value;
+        $this->options['form_params']['RequestJsonData'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -403,11 +451,11 @@ class DefineFileSchema extends V20180910Rpc
     {
         $this->data['FileColumns'] = $fileColumns;
         foreach ($fileColumns as $depth1 => $depth1Value) {
-            $this->options['query']['FileColumns.' . ($depth1 + 1) . '.Head'] = $depth1Value['Head'];
-            $this->options['query']['FileColumns.' . ($depth1 + 1) . '.DataType'] = $depth1Value['DataType'];
-            $this->options['query']['FileColumns.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-            $this->options['query']['FileColumns.' . ($depth1 + 1) . '.Index'] = $depth1Value['Index'];
-            $this->options['query']['FileColumns.' . ($depth1 + 1) . '.ColumnType'] = $depth1Value['ColumnType'];
+            $this->options['form_params']['FileColumns.' . ($depth1 + 1) . '.Head'] = $depth1Value['Head'];
+            $this->options['form_params']['FileColumns.' . ($depth1 + 1) . '.DataType'] = $depth1Value['DataType'];
+            $this->options['form_params']['FileColumns.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['form_params']['FileColumns.' . ($depth1 + 1) . '.Index'] = $depth1Value['Index'];
+            $this->options['form_params']['FileColumns.' . ($depth1 + 1) . '.ColumnType'] = $depth1Value['ColumnType'];
         }
 
         return $this;
@@ -456,26 +504,98 @@ class CreateCategory extends V20180910Rpc
 
 /**
  * @method string getPageNo()
- * @method $this withPageNo($value)
  * @method string getName()
- * @method $this withName($value)
  * @method string getPageSize()
- * @method $this withPageSize($value)
  */
 class DescribeBrand extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['form_params']['PageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getName()
- * @method $this withName($value)
  * @method string getId()
- * @method $this withId($value)
  * @method string getDesc()
- * @method $this withDesc($value)
  */
 class UpdateBrand extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDesc($value)
+    {
+        $this->data['Desc'] = $value;
+        $this->options['form_params']['Desc'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -490,25 +610,83 @@ class CreateBrand extends V20180910Rpc
 
 /**
  * @method string getOptionType()
- * @method $this withOptionType($value)
  * @method string getTagName()
- * @method $this withTagName($value)
  * @method string getColumnIndex()
- * @method $this withColumnIndex($value)
  * @method string getTagId()
  * @method $this withTagId($value)
  * @method string getTagDesc()
- * @method $this withTagDesc($value)
  * @method string getValidTime()
- * @method $this withValidTime($value)
  * @method array getOptionDefines()
  * @method string getCategoryId()
- * @method $this withCategoryId($value)
  * @method string getFileId()
- * @method $this withFileId($value)
  */
 class RedefineTag extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOptionType($value)
+    {
+        $this->data['OptionType'] = $value;
+        $this->options['form_params']['OptionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagName($value)
+    {
+        $this->data['TagName'] = $value;
+        $this->options['form_params']['TagName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withColumnIndex($value)
+    {
+        $this->data['ColumnIndex'] = $value;
+        $this->options['form_params']['ColumnIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagDesc($value)
+    {
+        $this->data['TagDesc'] = $value;
+        $this->options['form_params']['TagDesc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValidTime($value)
+    {
+        $this->data['ValidTime'] = $value;
+        $this->options['form_params']['ValidTime'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $optionDefines
@@ -519,10 +697,36 @@ class RedefineTag extends V20180910Rpc
     {
         $this->data['OptionDefines'] = $optionDefines;
         foreach ($optionDefines as $depth1 => $depth1Value) {
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Define'] = $depth1Value['Define'];
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Define'] = $depth1Value['Define'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategoryId($value)
+    {
+        $this->data['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileId($value)
+    {
+        $this->data['FileId'] = $value;
+        $this->options['form_params']['FileId'] = $value;
 
         return $this;
     }
@@ -530,23 +734,81 @@ class RedefineTag extends V20180910Rpc
 
 /**
  * @method string getOptionType()
- * @method $this withOptionType($value)
  * @method string getTagName()
- * @method $this withTagName($value)
  * @method string getColumnIndex()
- * @method $this withColumnIndex($value)
  * @method string getTagDesc()
- * @method $this withTagDesc($value)
  * @method string getValidTime()
- * @method $this withValidTime($value)
  * @method array getOptionDefines()
  * @method string getCategoryId()
- * @method $this withCategoryId($value)
  * @method string getFileId()
- * @method $this withFileId($value)
  */
 class DefineTag extends V20180910Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOptionType($value)
+    {
+        $this->data['OptionType'] = $value;
+        $this->options['form_params']['OptionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagName($value)
+    {
+        $this->data['TagName'] = $value;
+        $this->options['form_params']['TagName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withColumnIndex($value)
+    {
+        $this->data['ColumnIndex'] = $value;
+        $this->options['form_params']['ColumnIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagDesc($value)
+    {
+        $this->data['TagDesc'] = $value;
+        $this->options['form_params']['TagDesc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValidTime($value)
+    {
+        $this->data['ValidTime'] = $value;
+        $this->options['form_params']['ValidTime'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $optionDefines
@@ -557,10 +819,36 @@ class DefineTag extends V20180910Rpc
     {
         $this->data['OptionDefines'] = $optionDefines;
         foreach ($optionDefines as $depth1 => $depth1Value) {
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Define'] = $depth1Value['Define'];
-            $this->options['query']['OptionDefines.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Define'] = $depth1Value['Define'];
+            $this->options['form_params']['OptionDefines.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategoryId($value)
+    {
+        $this->data['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileId($value)
+    {
+        $this->data['FileId'] = $value;
+        $this->options['form_params']['FileId'] = $value;
 
         return $this;
     }

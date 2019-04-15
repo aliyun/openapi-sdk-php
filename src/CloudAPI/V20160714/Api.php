@@ -154,7 +154,6 @@ class CreateIntranetDomain extends V20160714Rpc
  * @method string getDataFormat()
  * @method $this withDataFormat($value)
  * @method string getData()
- * @method $this withData($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getOverwrite()
@@ -162,6 +161,19 @@ class CreateIntranetDomain extends V20160714Rpc
  */
 class ImportSwagger extends V20160714Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**

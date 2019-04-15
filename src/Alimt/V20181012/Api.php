@@ -33,32 +33,152 @@ class V20181012Rpc extends Rpc
 
 /**
  * @method string getSourceLanguage()
- * @method $this withSourceLanguage($value)
  * @method string getSourceText()
- * @method $this withSourceText($value)
  * @method string getFormatType()
- * @method $this withFormatType($value)
  * @method string getTargetLanguage()
- * @method $this withTargetLanguage($value)
  * @method string getScene()
- * @method $this withScene($value)
  */
 class TranslateECommerce extends V20181012Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceText($value)
+    {
+        $this->data['SourceText'] = $value;
+        $this->options['form_params']['SourceText'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFormatType($value)
+    {
+        $this->data['FormatType'] = $value;
+        $this->options['form_params']['FormatType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['Scene'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getSourceLanguage()
- * @method $this withSourceLanguage($value)
  * @method string getSourceText()
- * @method $this withSourceText($value)
  * @method string getFormatType()
- * @method $this withFormatType($value)
  * @method string getTargetLanguage()
- * @method $this withTargetLanguage($value)
  * @method string getScene()
- * @method $this withScene($value)
  */
 class TranslateGeneral extends V20181012Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceText($value)
+    {
+        $this->data['SourceText'] = $value;
+        $this->options['form_params']['SourceText'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFormatType($value)
+    {
+        $this->data['FormatType'] = $value;
+        $this->options['form_params']['FormatType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['Scene'] = $value;
+
+        return $this;
+    }
 }

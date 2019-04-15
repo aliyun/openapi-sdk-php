@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method CreateShardingInstance createShardingInstance(array $options = [])
  * @method ModifyActiveOperationPendingTask modifyActiveOperationPendingTask(array $options = [])
  * @method DescribeTargetAVZ describeTargetAVZ(array $options = [])
@@ -161,6 +162,28 @@ class V20150101Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'redisa';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeAvailableResource extends V20150101Rpc
+{
 }
 
 /**

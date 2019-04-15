@@ -55,7 +55,7 @@ class SearchImage extends V20190325Roa
     public function withFilter($value)
     {
         $this->data['Filter'] = $value;
-        $this->options['query']['Filter'] = $value;
+        $this->options['form_params']['Filter'] = $value;
 
         return $this;
     }
@@ -68,7 +68,7 @@ class SearchImage extends V20190325Roa
     public function withPicContent($value)
     {
         $this->data['PicContent'] = $value;
-        $this->options['query']['PicContent'] = $value;
+        $this->options['form_params']['PicContent'] = $value;
 
         return $this;
     }
@@ -81,7 +81,7 @@ class SearchImage extends V20190325Roa
     public function withInstanceName($value)
     {
         $this->data['InstanceName'] = $value;
-        $this->options['query']['InstanceName'] = $value;
+        $this->options['form_params']['InstanceName'] = $value;
 
         return $this;
     }
@@ -94,7 +94,7 @@ class SearchImage extends V20190325Roa
     public function withProductId($value)
     {
         $this->data['ProductId'] = $value;
-        $this->options['query']['ProductId'] = $value;
+        $this->options['form_params']['ProductId'] = $value;
 
         return $this;
     }
@@ -107,7 +107,7 @@ class SearchImage extends V20190325Roa
     public function withNum($value)
     {
         $this->data['Num'] = $value;
-        $this->options['query']['Num'] = $value;
+        $this->options['form_params']['Num'] = $value;
 
         return $this;
     }
@@ -120,7 +120,7 @@ class SearchImage extends V20190325Roa
     public function withPicName($value)
     {
         $this->data['PicName'] = $value;
-        $this->options['query']['PicName'] = $value;
+        $this->options['form_params']['PicName'] = $value;
 
         return $this;
     }
@@ -133,7 +133,7 @@ class SearchImage extends V20190325Roa
     public function withStart($value)
     {
         $this->data['Start'] = $value;
-        $this->options['query']['Start'] = $value;
+        $this->options['form_params']['Start'] = $value;
 
         return $this;
     }
@@ -146,7 +146,7 @@ class SearchImage extends V20190325Roa
     public function withRegion($value)
     {
         $this->data['Region'] = $value;
-        $this->options['query']['Region'] = $value;
+        $this->options['form_params']['Region'] = $value;
 
         return $this;
     }
@@ -159,7 +159,7 @@ class SearchImage extends V20190325Roa
     public function withType($value)
     {
         $this->data['Type'] = $value;
-        $this->options['query']['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
 
         return $this;
     }
@@ -172,7 +172,7 @@ class SearchImage extends V20190325Roa
     public function withCategoryId($value)
     {
         $this->data['CategoryId'] = $value;
-        $this->options['query']['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
 
         return $this;
     }
@@ -185,7 +185,7 @@ class SearchImage extends V20190325Roa
     public function withCrop($value)
     {
         $this->data['Crop'] = $value;
-        $this->options['query']['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
 
         return $this;
     }
@@ -209,7 +209,7 @@ class DeleteImage extends V20190325Roa
     public function withInstanceName($value)
     {
         $this->data['InstanceName'] = $value;
-        $this->options['query']['InstanceName'] = $value;
+        $this->options['form_params']['InstanceName'] = $value;
 
         return $this;
     }
@@ -222,7 +222,7 @@ class DeleteImage extends V20190325Roa
     public function withProductId($value)
     {
         $this->data['ProductId'] = $value;
-        $this->options['query']['ProductId'] = $value;
+        $this->options['form_params']['ProductId'] = $value;
 
         return $this;
     }
@@ -235,7 +235,7 @@ class DeleteImage extends V20190325Roa
     public function withPicName($value)
     {
         $this->data['PicName'] = $value;
-        $this->options['query']['PicName'] = $value;
+        $this->options['form_params']['PicName'] = $value;
 
         return $this;
     }
@@ -266,7 +266,7 @@ class AddImage extends V20190325Roa
     public function withPicContent($value)
     {
         $this->data['PicContent'] = $value;
-        $this->options['query']['PicContent'] = $value;
+        $this->options['form_params']['PicContent'] = $value;
 
         return $this;
     }
@@ -279,7 +279,7 @@ class AddImage extends V20190325Roa
     public function withStrAttr($value)
     {
         $this->data['StrAttr'] = $value;
-        $this->options['query']['StrAttr'] = $value;
+        $this->options['form_params']['StrAttr'] = $value;
 
         return $this;
     }
@@ -292,7 +292,7 @@ class AddImage extends V20190325Roa
     public function withInstanceName($value)
     {
         $this->data['InstanceName'] = $value;
-        $this->options['query']['InstanceName'] = $value;
+        $this->options['form_params']['InstanceName'] = $value;
 
         return $this;
     }
@@ -305,7 +305,7 @@ class AddImage extends V20190325Roa
     public function withIntAttr($value)
     {
         $this->data['IntAttr'] = $value;
-        $this->options['query']['IntAttr'] = $value;
+        $this->options['form_params']['IntAttr'] = $value;
 
         return $this;
     }
@@ -318,7 +318,7 @@ class AddImage extends V20190325Roa
     public function withProductId($value)
     {
         $this->data['ProductId'] = $value;
-        $this->options['query']['ProductId'] = $value;
+        $this->options['form_params']['ProductId'] = $value;
 
         return $this;
     }
@@ -331,7 +331,7 @@ class AddImage extends V20190325Roa
     public function withPicName($value)
     {
         $this->data['PicName'] = $value;
-        $this->options['query']['PicName'] = $value;
+        $this->options['form_params']['PicName'] = $value;
 
         return $this;
     }
@@ -344,7 +344,7 @@ class AddImage extends V20190325Roa
     public function withCustomContent($value)
     {
         $this->data['CustomContent'] = $value;
-        $this->options['query']['CustomContent'] = $value;
+        $this->options['form_params']['CustomContent'] = $value;
 
         return $this;
     }
@@ -357,7 +357,7 @@ class AddImage extends V20190325Roa
     public function withRegion($value)
     {
         $this->data['Region'] = $value;
-        $this->options['query']['Region'] = $value;
+        $this->options['form_params']['Region'] = $value;
 
         return $this;
     }
@@ -370,7 +370,7 @@ class AddImage extends V20190325Roa
     public function withCategoryId($value)
     {
         $this->data['CategoryId'] = $value;
-        $this->options['query']['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
 
         return $this;
     }
@@ -383,7 +383,7 @@ class AddImage extends V20190325Roa
     public function withCrop($value)
     {
         $this->data['Crop'] = $value;
-        $this->options['query']['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
 
         return $this;
     }

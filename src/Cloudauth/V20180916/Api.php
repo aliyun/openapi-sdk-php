@@ -153,15 +153,26 @@ class DescribeDeviceInfo extends V20180916Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getBiz()
- * @method $this withBiz($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method array getMaterial()
  * @method string getTicketId()
- * @method $this withTicketId($value)
  */
 class SubmitVerification extends V20180916Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBiz($value)
+    {
+        $this->data['Biz'] = $value;
+        $this->options['form_params']['Biz'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $material
@@ -172,9 +183,22 @@ class SubmitVerification extends V20180916Rpc
     {
         $this->data['Material'] = $material;
         foreach ($material as $depth1 => $depth1Value) {
-            $this->options['query']['Material.' . ($depth1 + 1) . '.MaterialType'] = $depth1Value['MaterialType'];
-            $this->options['query']['Material.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['form_params']['Material.' . ($depth1 + 1) . '.MaterialType'] = $depth1Value['MaterialType'];
+            $this->options['form_params']['Material.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTicketId($value)
+    {
+        $this->data['TicketId'] = $value;
+        $this->options['form_params']['TicketId'] = $value;
 
         return $this;
     }
@@ -196,20 +220,68 @@ class GetStatus extends V20180916Rpc
 
 /**
  * @method string getSourceImageType()
- * @method $this withSourceImageType($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getTargetImageType()
- * @method $this withTargetImageType($value)
  * @method string getSourceImageValue()
- * @method $this withSourceImageValue($value)
  * @method string getTargetImageValue()
- * @method $this withTargetImageValue($value)
  */
 class CompareFaces extends V20180916Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceImageType($value)
+    {
+        $this->data['SourceImageType'] = $value;
+        $this->options['form_params']['SourceImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageType($value)
+    {
+        $this->data['TargetImageType'] = $value;
+        $this->options['form_params']['TargetImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceImageValue($value)
+    {
+        $this->data['SourceImageValue'] = $value;
+        $this->options['form_params']['SourceImageValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageValue($value)
+    {
+        $this->data['TargetImageValue'] = $value;
+        $this->options['form_params']['TargetImageValue'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -219,7 +291,6 @@ class CompareFaces extends V20180916Rpc
  * @method $this withSourceIp($value)
  * @method array getMaterial()
  * @method string getVerifyToken()
- * @method $this withVerifyToken($value)
  */
 class SubmitMaterials extends V20180916Rpc
 {
@@ -233,9 +304,22 @@ class SubmitMaterials extends V20180916Rpc
     {
         $this->data['Material'] = $material;
         foreach ($material as $depth1 => $depth1Value) {
-            $this->options['query']['Material.' . ($depth1 + 1) . '.MaterialType'] = $depth1Value['MaterialType'];
-            $this->options['query']['Material.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['form_params']['Material.' . ($depth1 + 1) . '.MaterialType'] = $depth1Value['MaterialType'];
+            $this->options['form_params']['Material.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerifyToken($value)
+    {
+        $this->data['VerifyToken'] = $value;
+        $this->options['form_params']['VerifyToken'] = $value;
 
         return $this;
     }
@@ -265,7 +349,6 @@ class GetMaterials extends V20180916Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getBinding()
- * @method $this withBinding($value)
  * @method string getVerifyConfigs()
  * @method $this withVerifyConfigs($value)
  * @method string getTicketId()
@@ -273,26 +356,111 @@ class GetMaterials extends V20180916Rpc
  */
 class GetVerifyToken extends V20180916Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBinding($value)
+    {
+        $this->data['Binding'] = $value;
+        $this->options['form_params']['Binding'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getMaxNumPhotosPerCategory()
- * @method $this withMaxNumPhotosPerCategory($value)
  * @method string getMaxFaceNum()
- * @method $this withMaxFaceNum($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getRetAttributes()
- * @method $this withRetAttributes($value)
  * @method string getMaterialValue()
- * @method $this withMaterialValue($value)
  * @method string getDontSaveDB()
- * @method $this withDontSaveDB($value)
  * @method string getClientTag()
- * @method $this withClientTag($value)
  */
 class DetectFaceAttributes extends V20180916Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxNumPhotosPerCategory($value)
+    {
+        $this->data['MaxNumPhotosPerCategory'] = $value;
+        $this->options['form_params']['MaxNumPhotosPerCategory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxFaceNum($value)
+    {
+        $this->data['MaxFaceNum'] = $value;
+        $this->options['form_params']['MaxFaceNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRetAttributes($value)
+    {
+        $this->data['RetAttributes'] = $value;
+        $this->options['form_params']['RetAttributes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialValue($value)
+    {
+        $this->data['MaterialValue'] = $value;
+        $this->options['form_params']['MaterialValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDontSaveDB($value)
+    {
+        $this->data['DontSaveDB'] = $value;
+        $this->options['form_params']['DontSaveDB'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientTag($value)
+    {
+        $this->data['ClientTag'] = $value;
+        $this->options['form_params']['ClientTag'] = $value;
+
+        return $this;
+    }
 }

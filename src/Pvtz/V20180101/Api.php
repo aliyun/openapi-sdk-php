@@ -344,6 +344,8 @@ class DescribeZones extends V20180101Rpc
 /**
  * @method string getProxyPattern()
  * @method $this withProxyPattern($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()

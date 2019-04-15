@@ -20,7 +20,6 @@ use AlibabaCloud\Rpc;
  * @method CreateLoadBalancerHTTPSListenerAsyn createLoadBalancerHTTPSListenerAsyn(array $options = [])
  * @method CreateLoadBalancerHTTPListenerAsyn createLoadBalancerHTTPListenerAsyn(array $options = [])
  * @method DescribeIdleInstancesForGlobal describeIdleInstancesForGlobal(array $options = [])
- * @method DescribeIdleInstances describeIdleInstances(array $options = [])
  * @method SetVServerGroupAttributeAsyn setVServerGroupAttributeAsyn(array $options = [])
  * @method RemoveVServerGroupBackendServersAsyn removeVServerGroupBackendServersAsyn(array $options = [])
  * @method AddVServerGroupBackendServersAsyn addVServerGroupBackendServersAsyn(array $options = [])
@@ -892,40 +891,6 @@ class CreateLoadBalancerHTTPListenerAsyn extends V20140515Rpc
  * @method $this withTags($value)
  */
 class DescribeIdleInstancesForGlobal extends V20140515Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessKeyId($value)
-    {
-        $this->data['AccessKeyId'] = $value;
-        $this->options['query']['access_key_id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAccessKeyId()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTempId()
- * @method $this withTempId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOnlyAmount()
- * @method $this withOnlyAmount($value)
- * @method string getTags()
- * @method $this withTags($value)
- */
-class DescribeIdleInstances extends V20140515Rpc
 {
 
     /**
@@ -3472,6 +3437,8 @@ class AddListenerWhiteListItem extends V20140515Rpc
  * @method $this withLoadBalancerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -3540,12 +3507,16 @@ class AddBackendServers extends V20140515Rpc
  * @method $this withListenerPort($value)
  * @method string getCookie()
  * @method $this withCookie($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getStickySession()
  * @method $this withStickySession($value)
+ * @method string getHealthCheckMethod()
+ * @method $this withHealthCheckMethod($value)
  * @method string getHealthCheckDomain()
  * @method $this withHealthCheckDomain($value)
  * @method string getRequestTimeout()
@@ -3562,6 +3533,8 @@ class AddBackendServers extends V20140515Rpc
  * @method $this withServerCertificateId($value)
  * @method string getCACertificateId()
  * @method $this withCACertificateId($value)
+ * @method string getBackendProtocol()
+ * @method $this withBackendProtocol($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getIdleTimeout()
@@ -3680,12 +3653,16 @@ class CreateLoadBalancerHTTPSListener extends V20140515Rpc
  * @method $this withListenerPort($value)
  * @method string getCookie()
  * @method $this withCookie($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getStickySession()
  * @method $this withStickySession($value)
+ * @method string getHealthCheckMethod()
+ * @method $this withHealthCheckMethod($value)
  * @method string getHealthCheckDomain()
  * @method $this withHealthCheckDomain($value)
  * @method string getRequestTimeout()
@@ -4787,7 +4764,8 @@ class SetLoadBalancerName extends V20140515Rpc
 }
 
 /**
- * @method string getAccessKeyId()
+ * @method string getEagleEyeProtocol()
+ * @method $this withEagleEyeProtocol($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getHealthCheckTimeout()
@@ -4796,20 +4774,51 @@ class SetLoadBalancerName extends V20140515Rpc
  * @method $this withXForwardedFor($value)
  * @method string getHealthCheckURI()
  * @method $this withHealthCheckURI($value)
+ * @method string getAclStatus()
+ * @method $this withAclStatus($value)
+ * @method string getAclType()
+ * @method $this withAclType($value)
+ * @method string getHealthCheck()
+ * @method $this withHealthCheck($value)
+ * @method string getEagleEyeRate()
+ * @method $this withEagleEyeRate($value)
+ * @method string getVpcIds()
+ * @method $this withVpcIds($value)
+ * @method string getVServerGroupId()
+ * @method $this withVServerGroupId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getCookie()
+ * @method $this withCookie($value)
+ * @method string getHealthCheckMethod()
+ * @method $this withHealthCheckMethod($value)
+ * @method string getHealthCheckDomain()
+ * @method $this withHealthCheckDomain($value)
+ * @method string getRequestTimeout()
+ * @method $this withRequestTimeout($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCACertificateId()
+ * @method $this withCACertificateId($value)
+ * @method string getBackendProtocol()
+ * @method $this withBackendProtocol($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
+ * @method string getXForwardedForSLBIP()
+ * @method string getHealthCheckInterval()
+ * @method $this withHealthCheckInterval($value)
+ * @method string getXForwardedForSLBID()
+ * @method string getAccessKeyId()
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getUnhealthyThreshold()
  * @method $this withUnhealthyThreshold($value)
  * @method string getHealthyThreshold()
  * @method $this withHealthyThreshold($value)
- * @method string getAclStatus()
- * @method $this withAclStatus($value)
  * @method string getScheduler()
  * @method $this withScheduler($value)
- * @method string getAclType()
- * @method $this withAclType($value)
- * @method string getHealthCheck()
- * @method $this withHealthCheck($value)
  * @method string getMaxConnection()
  * @method $this withMaxConnection($value)
  * @method string getEnableHttp2()
@@ -4818,49 +4827,29 @@ class SetLoadBalancerName extends V20140515Rpc
  * @method $this withCookieTimeout($value)
  * @method string getStickySessionType()
  * @method $this withStickySessionType($value)
- * @method string getVpcIds()
- * @method $this withVpcIds($value)
- * @method string getVServerGroupId()
- * @method $this withVServerGroupId($value)
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getListenerPort()
  * @method $this withListenerPort($value)
- * @method string getCookie()
- * @method $this withCookie($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getStickySession()
  * @method $this withStickySession($value)
- * @method string getHealthCheckDomain()
- * @method $this withHealthCheckDomain($value)
- * @method string getRequestTimeout()
- * @method $this withRequestTimeout($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getGzip()
  * @method $this withGzip($value)
  * @method string getTLSCipherPolicy()
  * @method $this withTLSCipherPolicy($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getServerCertificateId()
  * @method $this withServerCertificateId($value)
- * @method string getCACertificateId()
- * @method $this withCACertificateId($value)
- * @method string getTags()
- * @method $this withTags($value)
  * @method string getIdleTimeout()
  * @method $this withIdleTimeout($value)
- * @method string getLoadBalancerId()
- * @method $this withLoadBalancerId($value)
- * @method string getXForwardedForSLBIP()
- * @method string getHealthCheckInterval()
- * @method $this withHealthCheckInterval($value)
  * @method string getXForwardedForProto()
- * @method string getXForwardedForSLBID()
+ * @method string getEagleEyeStatus()
+ * @method $this withEagleEyeStatus($value)
  * @method string getHealthCheckConnectPort()
  * @method $this withHealthCheckConnectPort($value)
  * @method string getHealthCheckHttpCode()
@@ -4870,19 +4859,6 @@ class SetLoadBalancerName extends V20140515Rpc
  */
 class SetLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessKeyId($value)
-    {
-        $this->data['AccessKeyId'] = $value;
-        $this->options['query']['access_key_id'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -4902,10 +4878,10 @@ class SetLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
      *
      * @return $this
      */
-    public function withXForwardedForProto($value)
+    public function withXForwardedForSLBID($value)
     {
-        $this->data['XForwardedForProto'] = $value;
-        $this->options['query']['XForwardedFor_proto'] = $value;
+        $this->data['XForwardedForSLBID'] = $value;
+        $this->options['query']['XForwardedFor_SLBID'] = $value;
 
         return $this;
     }
@@ -4915,10 +4891,23 @@ class SetLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
      *
      * @return $this
      */
-    public function withXForwardedForSLBID($value)
+    public function withAccessKeyId($value)
     {
-        $this->data['XForwardedForSLBID'] = $value;
-        $this->options['query']['XForwardedFor_SLBID'] = $value;
+        $this->data['AccessKeyId'] = $value;
+        $this->options['query']['access_key_id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withXForwardedForProto($value)
+    {
+        $this->data['XForwardedForProto'] = $value;
+        $this->options['query']['XForwardedFor_proto'] = $value;
 
         return $this;
     }

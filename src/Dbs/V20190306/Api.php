@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateRestoreTask createRestoreTask(array $options = [])
  * @method DescribeFullBackupList describeFullBackupList(array $options = [])
  * @method DescribeBackupPlanList describeBackupPlanList(array $options = [])
  * @method StopBackupPlan stopBackupPlan(array $options = [])
@@ -35,6 +36,48 @@ class V20190306Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getBackupGatewayId()
+ * @method $this withBackupGatewayId($value)
+ * @method string getDestinationEndpointOracleSID()
+ * @method $this withDestinationEndpointOracleSID($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getDestinationEndpointInstanceType()
+ * @method $this withDestinationEndpointInstanceType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDestinationEndpointInstanceID()
+ * @method $this withDestinationEndpointInstanceID($value)
+ * @method string getDestinationEndpointPort()
+ * @method $this withDestinationEndpointPort($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getBackupSetId()
+ * @method $this withBackupSetId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDestinationEndpointRegion()
+ * @method $this withDestinationEndpointRegion($value)
+ * @method string getRestoreDir()
+ * @method $this withRestoreDir($value)
+ * @method string getDestinationEndpointIP()
+ * @method $this withDestinationEndpointIP($value)
+ * @method string getDestinationEndpointDatabaseName()
+ * @method $this withDestinationEndpointDatabaseName($value)
+ * @method string getDestinationEndpointUserName()
+ * @method $this withDestinationEndpointUserName($value)
+ * @method string getRestoreObjects()
+ * @method $this withRestoreObjects($value)
+ * @method string getRestoreTaskName()
+ * @method $this withRestoreTaskName($value)
+ * @method string getDestinationEndpointPassword()
+ * @method $this withDestinationEndpointPassword($value)
+ */
+class CreateRestoreTask extends V20190306Rpc
+{
 }
 
 /**
@@ -102,6 +145,8 @@ class DescribeIncrementBackupList extends V20190306Rpc
 }
 
 /**
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getPageSize()

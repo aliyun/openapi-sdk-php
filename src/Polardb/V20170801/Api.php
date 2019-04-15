@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
  * @method DeleteDBNodes deleteDBNodes(array $options = [])
  * @method CreateDBNodes createDBNodes(array $options = [])
  * @method UntagResources untagResources(array $options = [])
@@ -68,6 +69,28 @@ class V20170801Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
+ * @method string getDBNodeTargetClass()
+ * @method $this withDBNodeTargetClass($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBNodeClass extends V20170801Rpc
+{
 }
 
 /**

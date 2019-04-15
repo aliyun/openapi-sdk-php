@@ -8,17 +8,15 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method AssociateServiceUseSecurityIpWithCustins associateServiceUseSecurityIpWithCustins(array $options = [])
+ * @method GetServiceSecurityList getServiceSecurityList(array $options = [])
+ * @method UpdateServiceSecurityList updateServiceSecurityList(array $options = [])
  * @method GetServiceUseSecirityIP getServiceUseSecirityIP(array $options = [])
  * @method CreateServiceUseSecurityIP createServiceUseSecurityIP(array $options = [])
- * @method AssociateServiceUseSecurityIpWithCustins associateServiceUseSecurityIpWithCustins(array $options = [])
  * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
  * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
  * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
  * @method DescribeInstanceVpcMigrateInfo describeInstanceVpcMigrateInfo(array $options = [])
- * @method DescribeDBInstancesWithCloudResource describeDBInstancesWithCloudResource(array $options = [])
- * @method DescribeDBInstanceEncryptionKey describeDBInstanceEncryptionKey(array $options = [])
- * @method CheckCloudResourceAuthorized checkCloudResourceAuthorized(array $options = [])
- * @method DescribeUserEncryptionKeyList describeUserEncryptionKeyList(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
  * @method RestoreTable restoreTable(array $options = [])
  * @method AllocateInstanceVpcNetworkType allocateInstanceVpcNetworkType(array $options = [])
@@ -194,6 +192,68 @@ class V20140815Rpc extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class AssociateServiceUseSecurityIpWithCustins extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetServiceSecurityList extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getSecurityIPList()
+ * @method $this withSecurityIPList($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getNetType()
+ * @method $this withNetType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ */
+class UpdateServiceSecurityList extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getOwnerId()
@@ -224,16 +284,6 @@ class GetServiceUseSecirityIP extends V20140815Rpc
  * @method $this withOwnerId($value)
  */
 class CreateServiceUseSecurityIP extends V20140815Rpc
-{
-}
-
-/**
- * @method string getDBInstanceName()
- * @method $this withDBInstanceName($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- */
-class AssociateServiceUseSecurityIpWithCustins extends V20140815Rpc
 {
 }
 
@@ -270,84 +320,6 @@ class DescribeAvailableRecoveryTime extends V20140815Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeInstanceVpcMigrateInfo extends V20140815Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRoleArn()
- * @method $this withRoleArn($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEncryptionKey()
- * @method $this withEncryptionKey($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeDBInstancesWithCloudResource extends V20140815Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDBInstanceEncryptionKey extends V20140815Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CheckCloudResourceAuthorized extends V20140815Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeUserEncryptionKeyList extends V20140815Rpc
 {
 }
 

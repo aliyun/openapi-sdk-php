@@ -102,7 +102,6 @@ class TestInvokeService extends V20180712Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
@@ -111,6 +110,19 @@ class TestPostData extends V20180712Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -197,9 +209,7 @@ class InvokeService extends V20180712Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getServiceId()
- * @method $this withServiceId($value)
  */
 class PostRealTimeDeviceData extends V20180712Rpc
 {
@@ -209,15 +219,38 @@ class PostRealTimeDeviceData extends V20180712Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceId($value)
+    {
+        $this->data['ServiceId'] = $value;
+        $this->options['form_params']['ServiceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getOperation()
- * @method $this withOperation($value)
  * @method string getProjectId()
- * @method $this withProjectId($value)
  * @method string getRequestData()
- * @method $this withRequestData($value)
  */
 class OperateEquipment extends V20180712Rpc
 {
@@ -227,6 +260,45 @@ class OperateEquipment extends V20180712Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperation($value)
+    {
+        $this->data['Operation'] = $value;
+        $this->options['form_params']['Operation'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestData($value)
+    {
+        $this->data['RequestData'] = $value;
+        $this->options['form_params']['RequestData'] = $value;
+
+        return $this;
+    }
 }
 
 /**

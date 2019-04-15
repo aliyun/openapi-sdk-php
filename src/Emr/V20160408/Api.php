@@ -8,6 +8,16 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method UpdateGroup updateGroup(array $options = [])
+ * @method CreateGroup createGroup(array $options = [])
+ * @method UpdateUserStatus updateUserStatus(array $options = [])
+ * @method PageListUsers pageListUsers(array $options = [])
+ * @method PageListGroups pageListGroups(array $options = [])
+ * @method ListRoles listRoles(array $options = [])
+ * @method ListGroups listGroups(array $options = [])
+ * @method DescribeUser describeUser(array $options = [])
+ * @method DescribeGroup describeGroup(array $options = [])
+ * @method DeleteGroup deleteGroup(array $options = [])
  * @method DeleteHostPool deleteHostPool(array $options = [])
  * @method ListStack listStack(array $options = [])
  * @method PlanComponentTopo planComponentTopo(array $options = [])
@@ -366,6 +376,156 @@ class V20160408Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'emr';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class UpdateGroup extends V20160408Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateGroup extends V20160408Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUpdateStatus()
+ * @method $this withUpdateStatus($value)
+ */
+class UpdateUserStatus extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListUsers extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListGroups extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class ListRoles extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ */
+class ListGroups extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DescribeUser extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DescribeGroup extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DeleteGroup extends V20160408Rpc
+{
 }
 
 /**
