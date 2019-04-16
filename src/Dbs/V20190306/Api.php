@@ -8,6 +8,9 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
+ * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
+ * @method StartRestoreTask startRestoreTask(array $options = [])
  * @method CreateRestoreTask createRestoreTask(array $options = [])
  * @method DescribeFullBackupList describeFullBackupList(array $options = [])
  * @method DescribeBackupPlanList describeBackupPlanList(array $options = [])
@@ -36,6 +39,48 @@ class V20190306Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRestoreTaskId()
+ * @method $this withRestoreTaskId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRestoreTaskList extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeNodeCidrList extends V20190306Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRestoreTaskId()
+ * @method $this withRestoreTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartRestoreTask extends V20190306Rpc
+{
 }
 
 /**

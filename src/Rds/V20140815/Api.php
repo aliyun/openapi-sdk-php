@@ -80,6 +80,7 @@ use AlibabaCloud\Rpc;
  * @method DescribeCharacterSetName describeCharacterSetName(array $options = [])
  * @method DeleteBackup deleteBackup(array $options = [])
  * @method DescribeDiagnosticReportList describeDiagnosticReportList(array $options = [])
+ * @method CreateDiagnosticReport createDiagnosticReport(array $options = [])
  * @method CloneDBInstance cloneDBInstance(array $options = [])
  * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
  * @method DescribeDBInstanceByTags describeDBInstanceByTags(array $options = [])
@@ -5328,6 +5329,18 @@ class DeleteBackup extends V20140815Rpc
  * @method $this withDBInstanceId($value)
  */
 class DescribeDiagnosticReportList extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ */
+class CreateDiagnosticReport extends V20140815Rpc
 {
 }
 

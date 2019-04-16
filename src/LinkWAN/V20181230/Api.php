@@ -152,7 +152,7 @@ class V20181230Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'linkwan';

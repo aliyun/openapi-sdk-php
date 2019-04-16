@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateUser createUser(array $options = [])
+ * @method UpdateUser updateUser(array $options = [])
  * @method UpdateGroup updateGroup(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  * @method UpdateUserStatus updateUserStatus(array $options = [])
@@ -376,6 +378,146 @@ class V20160408Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'emr';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getUserAccountParam()
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIsSuperAdmin()
+ * @method $this withIsSuperAdmin($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateUser extends V20160408Rpc
+{
+
+    /**
+     * @param array $userAccountParam
+     *
+     * @return $this
+     */
+    public function withUserAccountParam(array $userAccountParam)
+    {
+        $this->data['UserAccountParam'] = $userAccountParam;
+        foreach ($userAccountParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getUserAccountParam()
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIsSuperAdmin()
+ * @method $this withIsSuperAdmin($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateUser extends V20160408Rpc
+{
+
+    /**
+     * @param array $userAccountParam
+     *
+     * @return $this
+     */
+    public function withUserAccountParam(array $userAccountParam)
+    {
+        $this->data['UserAccountParam'] = $userAccountParam;
+        foreach ($userAccountParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**

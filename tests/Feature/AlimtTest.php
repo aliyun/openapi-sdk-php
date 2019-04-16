@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Alimt\V20181012\TranslateECommerce;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Alimt\V20181012\TranslateECommerce;
 
 /**
  * Class AlimtTest
@@ -58,33 +58,5 @@ class AlimtTest extends TestCase
                               ->timeout(25)
                               ->request();
         self::assertArrayHasKey('Data', $result);
-    }
-
-    public function testSetMethod()
-    {
-        $with = AlibabaCloud::alimt()
-                            ->v20181012()
-                            ->translateECommerce()
-                            ->method('POST')
-                            ->withSourceLanguage('en')
-                            ->withScene('title')
-                            ->withSourceText('book')
-                            ->withFormatType('text')
-                            ->withTargetLanguage('zh')
-                            ->connectTimeout(20)
-                            ->timeout(25);
-
-        $set = AlibabaCloud::alimt()
-                           ->v20181012()
-                           ->translateECommerce()
-                           ->method('POST')
-                           ->setSourceLanguage('en')
-                           ->setScene('title')
-                           ->setSourceText('book')
-                           ->setFormatType('text')
-                           ->setTargetLanguage('zh')
-                           ->connectTimeout(20)
-                           ->timeout(25);
-        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }

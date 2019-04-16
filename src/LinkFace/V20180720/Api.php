@@ -44,7 +44,7 @@ class V20180720Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 }
 
 /**

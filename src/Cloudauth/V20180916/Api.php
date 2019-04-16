@@ -38,7 +38,7 @@ class V20180916Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'cloudauth';

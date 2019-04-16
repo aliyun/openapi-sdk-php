@@ -78,7 +78,7 @@ class V20181111Roa extends Roa
     public $version = '2018-11-11';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'foas';

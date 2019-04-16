@@ -61,6 +61,7 @@ use AlibabaCloud\Rpc;
  * @method CreateIPv6TranslatorAclList createIPv6TranslatorAclList(array $options = [])
  * @method SetPublicIpTrafficAuditLogStatus setPublicIpTrafficAuditLogStatus(array $options = [])
  * @method DescribePublicIpTrafficAuditLogAttribute describePublicIpTrafficAuditLogAttribute(array $options = [])
+ * @method DeleteExpressConnect deleteExpressConnect(array $options = [])
  * @method DescribeTrafficAuditLogAttribute describeTrafficAuditLogAttribute(array $options = [])
  * @method SetTrafficAuditLogStatus setTrafficAuditLogStatus(array $options = [])
  * @method DeleteIPv6Translator deleteIPv6Translator(array $options = [])
@@ -1514,6 +1515,26 @@ class SetPublicIpTrafficAuditLogStatus extends V20160428Rpc
  * @method $this withOwnerId($value)
  */
 class DescribePublicIpTrafficAuditLogAttribute extends V20160428Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ * @method string getRouterInterfaceId()
+ * @method $this withRouterInterfaceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteExpressConnect extends V20160428Rpc
 {
 }
 
@@ -3351,8 +3372,6 @@ class ModifyCommonBandwidthPackageSpec extends V20160428Rpc
  * @method $this withOwnerAccount($value)
  * @method string getIpInstanceId()
  * @method $this withIpInstanceId($value)
- * @method string getIpVersion()
- * @method $this withIpVersion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -3371,8 +3390,6 @@ class RemoveCommonBandwidthPackageIp extends V20160428Rpc
  * @method $this withOwnerAccount($value)
  * @method string getForce()
  * @method $this withForce($value)
- * @method string getIpVersion()
- * @method $this withIpVersion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */

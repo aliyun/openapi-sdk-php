@@ -36,7 +36,7 @@ class V20180211Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'mopen';

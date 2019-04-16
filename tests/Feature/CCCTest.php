@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\CCC\V20170705\ListPhoneNumbers;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\CCC\V20170705\ListPhoneNumbers;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class CCCTest
@@ -65,25 +65,5 @@ class CCCTest extends TestCase
                 $result['Message']
             );
         }
-    }
-
-    public function testSetMethod()
-    {
-        $with = AlibabaCloud::cCC()
-                            ->v20170705()
-                            ->listPhoneNumbers()
-                            ->host('ccc.cn-shanghai.aliyuncs.com')
-                            ->withInstanceId('id')
-                            ->connectTimeout(20)
-                            ->timeout(25);
-
-        $set = AlibabaCloud::cCC()
-                           ->v20170705()
-                           ->listPhoneNumbers()
-                           ->host('ccc.cn-shanghai.aliyuncs.com')
-                           ->setInstanceId('id')
-                           ->connectTimeout(20)
-                           ->timeout(25);
-        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }

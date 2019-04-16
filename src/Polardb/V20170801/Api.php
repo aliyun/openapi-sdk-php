@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
+ * @method DescribeAutoRenewAttribute describeAutoRenewAttribute(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
  * @method DeleteDBNodes deleteDBNodes(array $options = [])
  * @method CreateDBNodes createDBNodes(array $options = [])
@@ -69,6 +71,48 @@ class V20170801Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getRenewalStatus()
+ * @method $this withRenewalStatus($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBClusterIds()
+ * @method $this withDBClusterIds($value)
+ */
+class ModifyAutoRenewAttribute extends V20170801Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getDBClusterIds()
+ * @method $this withDBClusterIds($value)
+ */
+class DescribeAutoRenewAttribute extends V20170801Rpc
+{
 }
 
 /**

@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Aegis\V20161111\DescribeAlarmEventDetail;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Aegis\V20161111\DescribeAlarmEventDetail;
 
 /**
  * Class AegisTest
@@ -54,29 +54,5 @@ class AegisTest extends TestCase
                               ->timeout(25)
                               ->request();
         self::assertArrayHasKey('RequestId', $result);
-    }
-
-    /**
-     * @throws ClientException
-     */
-    public function testSetMethod()
-    {
-        $with = AlibabaCloud::aegis()
-                            ->v20161111()
-                            ->describeAlarmEventDetail()
-                            ->withAlarmUniqueInfo('info')
-                            ->withFrom('from')
-                            ->connectTimeout(20)
-                            ->timeout(25);
-
-        $set = AlibabaCloud::aegis()
-                           ->v20161111()
-                           ->describeAlarmEventDetail()
-                           ->setAlarmUniqueInfo('info')
-                           ->setFrom('from')
-                           ->connectTimeout(20)
-                           ->timeout(25);
-
-        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }

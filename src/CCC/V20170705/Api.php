@@ -1218,8 +1218,8 @@ class ListSkillGroupSummaryReportsByInterval extends V20170705Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getSkillGroups()
- * @method $this withSkillGroups($value)
+ * @method string getSkillGroupIds()
+ * @method $this withSkillGroupIds($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()

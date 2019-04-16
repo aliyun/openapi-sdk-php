@@ -1467,6 +1467,8 @@ class DescribeDedicatedHostTypes extends V20140526Rpc
  * @method string getNetworkAttributesSlbUdpTimeout()
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getAutoPlacement()
+ * @method $this withAutoPlacement($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  * @method string getNetworkAttributesUdpTimeout()
@@ -9940,8 +9942,6 @@ class StopInstance extends V20140526Rpc
 }
 
 /**
- * @method string getSourceRegionId()
- * @method $this withSourceRegionId($value)
  * @method string getInitLocalDisk()
  * @method $this withInitLocalDisk($value)
  * @method string getResourceOwnerId()
