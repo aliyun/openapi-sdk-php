@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\NlsFiletrans\V20180817\SubmitTask;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\NlsFiletrans\V20180817\SubmitTask;
 
 /**
  * Class NlsFiletransTest
@@ -101,8 +101,8 @@ class NlsFiletransTest extends TestCase
                                                 'Debug' => 'true',
                                             ],
                                         ])
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(35)
+                              ->timeout(40)
                               ->request();
 
         self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
