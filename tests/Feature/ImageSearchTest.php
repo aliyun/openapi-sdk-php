@@ -118,19 +118,21 @@ class ImageSearchTest extends TestCase
             \getenv('IMAGE_SEARCH_ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asDefaultClient();
 
-        $request = AlibabaCloud::imageSearch()
-                               ->v20190325()
-                               ->searchImage()
-                               ->contentType('application/x-www-form-urlencoded; charset=UTF-8');
-
         $content          = file_get_contents(__DIR__ . '/ImageSearch.jpg');
         $encodePicContent = base64_encode($content);
 
-        $result = $request->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                          ->withPicContent($encodePicContent)
-                          ->withStart(0)
-                          ->withNum(10)
-                          ->request();
+        $request = AlibabaCloud::imageSearch()
+                               ->v20190325()
+                               ->searchImage()
+                               ->connectTimeout(25)
+                               ->timeout(30)
+                               ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
+                               ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                               ->withPicContent($encodePicContent)
+                               ->withStart(0)
+                               ->withNum(10);
+
+        $result = $request->request();
 
         self::assertArrayHasKey('Auctions', $result);
     }
