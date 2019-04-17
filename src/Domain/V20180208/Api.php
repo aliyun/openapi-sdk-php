@@ -139,60 +139,191 @@ class GetReserveDomainUrl extends V20180208Rpc
 
 /**
  * @method string getAuctionId()
- * @method $this withAuctionId($value)
  */
 class QueryAuctionDetail extends V20180208Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuctionId($value)
+    {
+        $this->data['AuctionId'] = $value;
+        $this->options['form_params']['AuctionId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getStatus()
- * @method $this withStatus($value)
  */
 class QueryAuctions extends V20180208Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getAuctionId()
- * @method $this withAuctionId($value)
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  */
 class QueryBidRecords extends V20180208Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuctionId($value)
+    {
+        $this->data['AuctionId'] = $value;
+        $this->options['form_params']['AuctionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getDomainName()
- * @method $this withDomainName($value)
  */
 class QueryBookingDomainInfo extends V20180208Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getAuctionId()
- * @method $this withAuctionId($value)
  * @method string getMaxBid()
- * @method $this withMaxBid($value)
  * @method string getCurrency()
- * @method $this withCurrency($value)
  */
 class BidDomain extends V20180208Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuctionId($value)
+    {
+        $this->data['AuctionId'] = $value;
+        $this->options['form_params']['AuctionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxBid($value)
+    {
+        $this->data['MaxBid'] = $value;
+        $this->options['form_params']['MaxBid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrency($value)
+    {
+        $this->data['Currency'] = $value;
+        $this->options['form_params']['Currency'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method array getChannels()
  * @method string getDomainName()
- * @method $this withDomainName($value)
  */
 class ReserveDomain extends V20180208Rpc
 {
@@ -206,8 +337,21 @@ class ReserveDomain extends V20180208Rpc
     {
         $this->data['Channels'] = $channels;
         foreach ($channels as $i => $iValue) {
-            $this->options['query']['Channels.' . ($i + 1)] = $iValue;
+            $this->options['form_params']['Channels.' . ($i + 1)] = $iValue;
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
 
         return $this;
     }

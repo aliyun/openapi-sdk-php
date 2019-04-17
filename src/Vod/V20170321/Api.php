@@ -8,7 +8,17 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteMultipartUpload deleteMultipartUpload(array $options = [])
+ * @method MoveAppResource moveAppResource(array $options = [])
+ * @method ListAppInfo listAppInfo(array $options = [])
+ * @method DeleteAppInfo deleteAppInfo(array $options = [])
+ * @method UpdateAppInfo updateAppInfo(array $options = [])
+ * @method GetAppInfos getAppInfos(array $options = [])
+ * @method CreateAppInfo createAppInfo(array $options = [])
  * @method DeleteMessageCallback deleteMessageCallback(array $options = [])
+ * @method AttachAppPolicyToIdentity attachAppPolicyToIdentity(array $options = [])
+ * @method DetachAppPolicyFromIdentity detachAppPolicyFromIdentity(array $options = [])
+ * @method ListAppPoliciesForIdentity listAppPoliciesForIdentity(array $options = [])
  * @method GetTranscodeSummary getTranscodeSummary(array $options = [])
  * @method ListTranscodeTask listTranscodeTask(array $options = [])
  * @method GetTranscodeTask getTranscodeTask(array $options = [])
@@ -134,6 +144,138 @@ class V20170321Rpc extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getMediaType()
+ * @method $this withMediaType($value)
+ */
+class DeleteMultipartUpload extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getTargetAppId()
+ * @method $this withTargetAppId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getResourceIds()
+ * @method $this withResourceIds($value)
+ */
+class MoveAppResource extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListAppInfo extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteAppInfo extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateAppInfo extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAppIds()
+ * @method $this withAppIds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetAppInfos extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateAppInfo extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getResourceRealOwnerId()
@@ -142,6 +284,66 @@ class V20170321Rpc extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteMessageCallback extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getIdentityName()
+ * @method $this withIdentityName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIdentityType()
+ * @method $this withIdentityType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPolicyNames()
+ * @method $this withPolicyNames($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AttachAppPolicyToIdentity extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getIdentityName()
+ * @method $this withIdentityName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIdentityType()
+ * @method $this withIdentityType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPolicyNames()
+ * @method $this withPolicyNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DetachAppPolicyFromIdentity extends V20170321Rpc
+{
+}
+
+/**
+ * @method string getIdentityName()
+ * @method $this withIdentityName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIdentityType()
+ * @method $this withIdentityType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListAppPoliciesForIdentity extends V20170321Rpc
 {
 }
 
@@ -754,6 +956,8 @@ class AddVodTemplate extends V20170321Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getCateIds()
  * @method $this withCateIds($value)
+ * @method string getIcon()
+ * @method $this withIcon($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getFileSize()
@@ -776,6 +980,8 @@ class AddVodTemplate extends V20170321Rpc
  * @method $this withFileName($value)
  * @method string getCateId()
  * @method $this withCateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  */
 class CreateUploadAttachedMedia extends V20170321Rpc
 {
@@ -1032,8 +1238,8 @@ class UpdateVideoInfos extends V20170321Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getResultTypes()
- * @method $this withResultTypes($value)
+ * @method string getAdditionType()
+ * @method $this withAdditionType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getVideoIds()
@@ -1518,6 +1724,8 @@ class GetEditingProject extends V20170321Rpc
 /**
  * @method string getCoverURL()
  * @method $this withCoverURL($value)
+ * @method string getDivision()
+ * @method $this withDivision($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1604,6 +1812,8 @@ class GetFileInfo extends V20170321Rpc
  * @method $this withSortBy($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
  */
 class GetCategories extends V20170321Rpc
 {
@@ -1632,6 +1842,8 @@ class UpdateCategory extends V20170321Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getParentId()
  * @method $this withParentId($value)
  * @method string getCateName()
@@ -1862,6 +2074,8 @@ class GetVideoPlayAuth extends V20170321Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getVideoId()
  * @method $this withVideoId($value)
+ * @method string getAdditionType()
+ * @method $this withAdditionType($value)
  * @method string getResultTypes()
  * @method $this withResultTypes($value)
  * @method string getOwnerId()

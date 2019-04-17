@@ -34,22 +34,70 @@ class V20171228Rpc extends Rpc
 
 /**
  * @method string getTaskDO()
- * @method $this withTaskDO($value)
  * @method string getToken()
- * @method $this withToken($value)
  */
 class CreateLubanrulerTask extends V20171228Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskDO($value)
+    {
+        $this->data['TaskDO'] = $value;
+        $this->options['form_params']['TaskDO'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['form_params']['Token'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getAoneInfo()
- * @method $this withAoneInfo($value)
  * @method string getToken()
- * @method $this withToken($value)
  */
 class UpdateLubanrulerTask extends V20171228Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAoneInfo($value)
+    {
+        $this->data['AoneInfo'] = $value;
+        $this->options['form_params']['AoneInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['form_params']['Token'] = $value;
+
+        return $this;
+    }
 }
 
 /**

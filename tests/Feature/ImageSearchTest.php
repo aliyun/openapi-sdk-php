@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\ImageSearch\V20180120\AddItem;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\ImageSearch\V20180120\AddItem;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class ImageSearchTest
@@ -111,27 +111,27 @@ class ImageSearchTest extends TestCase
         self::assertEquals('success', $result['Message']);
     }
 
-    public function testSetMethod()
+    public function testSearchImage()
     {
-        $with = AlibabaCloud::imageSearch()
-                            ->v20180120()
-                            ->deleteItem()
-                            ->withInstanceName('sdktest')
-                            ->withItemId('1234')
-                            ->addPicture('picture')
-                            ->host('imagesearch.cn-shanghai.aliyuncs.com')
-                            ->connectTimeout(30)
-                            ->timeout(35);
+        AlibabaCloud::accessKeyClient(
+            \getenv('IMAGE_SEARCH_ACCESS_KEY_ID'),
+            \getenv('IMAGE_SEARCH_ACCESS_KEY_SECRET')
+        )->regionId('cn-shanghai')->asDefaultClient();
 
-        $set = AlibabaCloud::imageSearch()
-                           ->v20180120()
-                           ->deleteItem()
-                           ->setInstanceName('sdktest')
-                           ->setItemId('1234')
-                           ->addPicture('picture')
-                           ->host('imagesearch.cn-shanghai.aliyuncs.com')
-                           ->connectTimeout(30)
-                           ->timeout(35);
-        self::assertTrue(json_encode($set) === json_encode($with));
+        $request = AlibabaCloud::imageSearch()
+                               ->v20190325()
+                               ->searchImage()
+                               ->contentType('application/x-www-form-urlencoded; charset=UTF-8');
+
+        $content          = file_get_contents(__DIR__ . '/ImageSearch.jpg');
+        $encodePicContent = base64_encode($content);
+
+        $result = $request->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                          ->withPicContent($encodePicContent)
+                          ->withStart(0)
+                          ->withNum(10)
+                          ->request();
+
+        self::assertArrayHasKey('Auctions', $result);
     }
 }

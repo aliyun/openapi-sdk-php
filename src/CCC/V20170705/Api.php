@@ -8,6 +8,9 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DialEx dialEx(array $options = [])
+ * @method ListPredictiveJobGroups listPredictiveJobGroups(array $options = [])
+ * @method GetJobsProgress getJobsProgress(array $options = [])
  * @method GetContactInfoByOutboundTaskId getContactInfoByOutboundTaskId(array $options = [])
  * @method ListVoiceAppraise listVoiceAppraise(array $options = [])
  * @method CreateVoiceAppraise createVoiceAppraise(array $options = [])
@@ -165,6 +168,56 @@ class V20170705Rpc extends Rpc
 }
 
 /**
+ * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProvider()
+ * @method $this withProvider($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ */
+class DialEx extends V20170705Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCriteria()
+ * @method $this withCriteria($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListPredictiveJobGroups extends V20170705Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class GetJobsProgress extends V20170705Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getOutboundTaskId()
@@ -192,30 +245,66 @@ class ListVoiceAppraise extends V20170705Rpc
  * @method string getIsAppraise()
  * @method $this withIsAppraise($value)
  * @method string getContent()
- * @method $this withContent($value)
  */
 class CreateVoiceAppraise extends V20170705Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getStopTime()
  * @method $this withStopTime($value)
- * @method string getEvent()
- * @method $this withEvent($value)
- * @method string getRamId()
- * @method $this withRamId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method array getEvent()
+ * @method array getRamId()
  */
 class ListAgentEvents extends V20170705Rpc
 {
+
+    /**
+     * @param array $event
+     *
+     * @return $this
+     */
+    public function withEvent(array $event)
+    {
+        $this->data['Event'] = $event;
+        foreach ($event as $i => $iValue) {
+            $this->options['query']['Event.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $ramId
+     *
+     * @return $this
+     */
+    public function withRamId(array $ramId)
+    {
+        $this->data['RamId'] = $ramId;
+        foreach ($ramId as $i => $iValue) {
+            $this->options['query']['RamId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -315,7 +404,7 @@ class CreatePredictiveJobGroup extends V20170705Rpc
     {
         $this->data['JobsJson'] = $jobsJson;
         foreach ($jobsJson as $i => $iValue) {
-            $this->options['query']['JobsJson.' . ($i + 1)] = $iValue;
+            $this->options['form_params']['JobsJson.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -936,7 +1025,6 @@ class GetInstance extends V20170705Rpc
 
 /**
  * @method string getCanvas()
- * @method $this withCanvas($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getName()
@@ -946,24 +1034,73 @@ class GetInstance extends V20170705Rpc
  * @method string getType()
  * @method $this withType($value)
  * @method string getContent()
- * @method $this withContent($value)
  */
 class CreateContactFlow extends V20170705Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCanvas($value)
+    {
+        $this->data['Canvas'] = $value;
+        $this->options['form_params']['Canvas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getCanvas()
- * @method $this withCanvas($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getContactFlowVersionId()
  * @method $this withContactFlowVersionId($value)
  * @method string getContent()
- * @method $this withContent($value)
  */
 class CommitContactFlowVersionModification extends V20170705Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCanvas($value)
+    {
+        $this->data['Canvas'] = $value;
+        $this->options['form_params']['Canvas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -971,6 +1108,8 @@ class CommitContactFlowVersionModification extends V20170705Rpc
  * @method $this withInstanceId($value)
  * @method string getContactFlowVersionId()
  * @method $this withContactFlowVersionId($value)
+ * @method string getUseTianGong()
+ * @method $this withUseTianGong($value)
  */
 class PublishContactFlowVersion extends V20170705Rpc
 {
@@ -1079,8 +1218,8 @@ class ListSkillGroupSummaryReportsByInterval extends V20170705Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getSkillGroups()
- * @method $this withSkillGroups($value)
+ * @method string getSkillGroupIds()
+ * @method $this withSkillGroupIds($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()

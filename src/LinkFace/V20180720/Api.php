@@ -44,215 +44,827 @@ class V20180720Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 }
 
 /**
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class DeleteDeviceGroup extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class DeleteDeviceAllGroup extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getImage()
- * @method $this withImage($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  */
 class SearchFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImage($value)
+    {
+        $this->data['Image'] = $value;
+        $this->options['form_params']['Image'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getLicenseType()
- * @method $this withLicenseType($value)
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  */
 class QueryLicenses extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLicenseType($value)
+    {
+        $this->data['LicenseType'] = $value;
+        $this->options['form_params']['LicenseType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getLicenseType()
- * @method $this withLicenseType($value)
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class QueryAuthentication extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLicenseType($value)
+    {
+        $this->data['LicenseType'] = $value;
+        $this->options['form_params']['LicenseType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class QueryAddUserInfo extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  */
 class QueryAllGroups extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getImage()
- * @method $this withImage($value)
  * @method string getUserId()
- * @method $this withUserId($value)
  * @method string getUserInfo()
- * @method $this withUserInfo($value)
  */
 class UpdateFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImage($value)
+    {
+        $this->data['Image'] = $value;
+        $this->options['form_params']['Image'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserInfo($value)
+    {
+        $this->data['UserInfo'] = $value;
+        $this->options['form_params']['UserInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getUserId()
- * @method $this withUserId($value)
  */
 class UnlinkFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class SyncFacePictures extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getImage()
- * @method $this withImage($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getUserId()
- * @method $this withUserId($value)
  * @method string getUserInfo()
- * @method $this withUserInfo($value)
  */
 class RegisterFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImage($value)
+    {
+        $this->data['Image'] = $value;
+        $this->options['form_params']['Image'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserInfo($value)
+    {
+        $this->data['UserInfo'] = $value;
+        $this->options['form_params']['UserInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
- * @method $this withProductKey($value)
  */
 class QuerySyncPicSchedule extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  */
 class QueryGroupUsers extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getUserId()
- * @method $this withUserId($value)
  */
 class QueryFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getUserId()
- * @method $this withUserId($value)
  */
 class LinkFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  */
 class DeleteGroup extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getUserId()
- * @method $this withUserId($value)
  */
 class DeleteFace extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  */
 class CreateGroup extends V20180720Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
 }

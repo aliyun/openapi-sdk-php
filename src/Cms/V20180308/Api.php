@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeAlertHistoryList describeAlertHistoryList(array $options = [])
  * @method DescribeSiteMonitorISPCityList describeSiteMonitorISPCityList(array $options = [])
  * @method RemoveMetricRuleTargets removeMetricRuleTargets(array $options = [])
  * @method DescribeMetricRuleTargets describeMetricRuleTargets(array $options = [])
@@ -142,6 +143,38 @@ class V20180308Rpc extends Rpc
 }
 
 /**
+ * @method string getAlertName()
+ * @method $this withAlertName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAscending()
+ * @method $this withAscending($value)
+ * @method string getOnlyCount()
+ * @method $this withOnlyCount($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeAlertHistoryList extends V20180308Rpc
+{
+}
+
+/**
  * @method string getCity()
  * @method $this withCity($value)
  * @method string getIsp()
@@ -225,7 +258,6 @@ class DescribeMetricRuleTargets extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getActions()
- * @method $this withActions($value)
  * @method array getTargets()
  */
 class PutMetricRuleTargets extends V20180308Rpc
@@ -233,6 +265,19 @@ class PutMetricRuleTargets extends V20180308Rpc
 
     /** @var string */
     public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActions($value)
+    {
+        $this->data['Actions'] = $value;
+        $this->options['form_params']['Actions'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $targets
@@ -1733,6 +1778,8 @@ class ListAlarm extends V20180308Rpc
  * @method $this withInstanceIdList($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class DeleteMyGroupInstances extends V20180308Rpc
 {

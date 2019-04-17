@@ -2,6 +2,8 @@
 
 namespace AlibabaCloud;
 
+use RuntimeException;
+
 /**
  * Trait CallTrait
  *
@@ -39,7 +41,7 @@ trait CallTrait
             $parameterName = $this->propertyNameByMethodName($name);
             $withMethod    = "with$parameterName";
 
-            return $this->$withMethod($arguments[0]);
+            throw new RuntimeException("Please use $withMethod instead of $name");
         }
 
         throw new \RuntimeException('Call to undefined method ' . __CLASS__ . '::' . $name . '()');

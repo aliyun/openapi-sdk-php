@@ -249,20 +249,68 @@ class DeleteFCTrigger extends V20141111Rpc
 
 /**
  * @method string getNotes()
- * @method $this withNotes($value)
  * @method string getTriggerARN()
  * @method $this withTriggerARN($value)
  * @method string getSourceARN()
- * @method $this withSourceARN($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
- * @method $this withRoleARN($value)
  * @method string getFunctionARN()
- * @method $this withFunctionARN($value)
  */
 class UpdateFCTrigger extends V20141111Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotes($value)
+    {
+        $this->data['Notes'] = $value;
+        $this->options['form_params']['Notes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceARN($value)
+    {
+        $this->data['SourceARN'] = $value;
+        $this->options['form_params']['SourceARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleARN($value)
+    {
+        $this->data['RoleARN'] = $value;
+        $this->options['form_params']['RoleARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionARN($value)
+    {
+        $this->data['FunctionARN'] = $value;
+        $this->options['form_params']['FunctionARN'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -280,24 +328,96 @@ class DescribeFCTrigger extends V20141111Rpc
 
 /**
  * @method string getNotes()
- * @method $this withNotes($value)
  * @method string getEventMetaVersion()
- * @method $this withEventMetaVersion($value)
  * @method string getTriggerARN()
  * @method $this withTriggerARN($value)
  * @method string getSourceARN()
- * @method $this withSourceARN($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
- * @method $this withRoleARN($value)
  * @method string getEventMetaName()
- * @method $this withEventMetaName($value)
  * @method string getFunctionARN()
- * @method $this withFunctionARN($value)
  */
 class AddFCTrigger extends V20141111Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotes($value)
+    {
+        $this->data['Notes'] = $value;
+        $this->options['form_params']['Notes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventMetaVersion($value)
+    {
+        $this->data['EventMetaVersion'] = $value;
+        $this->options['form_params']['EventMetaVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceARN($value)
+    {
+        $this->data['SourceARN'] = $value;
+        $this->options['form_params']['SourceARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleARN($value)
+    {
+        $this->data['RoleARN'] = $value;
+        $this->options['form_params']['RoleARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventMetaName($value)
+    {
+        $this->data['EventMetaName'] = $value;
+        $this->options['form_params']['EventMetaName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionARN($value)
+    {
+        $this->data['FunctionARN'] = $value;
+        $this->options['form_params']['FunctionARN'] = $value;
+
+        return $this;
+    }
 }
 
 /**

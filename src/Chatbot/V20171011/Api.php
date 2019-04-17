@@ -336,17 +336,28 @@ class DeleteEntity extends V20171011Rpc
  * @method string getRemoveType()
  * @method $this withRemoveType($value)
  * @method string getMember()
- * @method $this withMember($value)
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
 class RemoveEntityMember extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMember($value)
+    {
+        $this->data['Member'] = $value;
+        $this->options['form_params']['Member'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getMember()
- * @method $this withMember($value)
  * @method string getEntityId()
  * @method $this withEntityId($value)
  * @method string getApplyType()
@@ -354,6 +365,19 @@ class RemoveEntityMember extends V20171011Rpc
  */
 class AppendEntityMember extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMember($value)
+    {
+        $this->data['Member'] = $value;
+        $this->options['form_params']['Member'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -362,7 +386,6 @@ class AppendEntityMember extends V20171011Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  * @method string getMembers()
- * @method $this withMembers($value)
  * @method string getEntityName()
  * @method $this withEntityName($value)
  * @method string getEntityId()
@@ -370,6 +393,19 @@ class AppendEntityMember extends V20171011Rpc
  */
 class UpdateEntity extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMembers($value)
+    {
+        $this->data['Members'] = $value;
+        $this->options['form_params']['Members'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -390,12 +426,24 @@ class DeleteIntent extends V20171011Rpc
 
 /**
  * @method string getIntentDefinition()
- * @method $this withIntentDefinition($value)
  * @method string getIntentId()
  * @method $this withIntentId($value)
  */
 class UpdateIntent extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIntentDefinition($value)
+    {
+        $this->data['IntentDefinition'] = $value;
+        $this->options['form_params']['IntentDefinition'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -452,10 +500,22 @@ class QueryCategories extends V20171011Rpc
 
 /**
  * @method string getKnowledge()
- * @method $this withKnowledge($value)
  */
 class UpdateKnowledge extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKnowledge($value)
+    {
+        $this->data['Knowledge'] = $value;
+        $this->options['form_params']['Knowledge'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -476,20 +536,44 @@ class DeleteKnowledge extends V20171011Rpc
 
 /**
  * @method string getKnowledge()
- * @method $this withKnowledge($value)
  */
 class CreateKnowledge extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKnowledge($value)
+    {
+        $this->data['Knowledge'] = $value;
+        $this->options['form_params']['Knowledge'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getModuleDefinition()
- * @method $this withModuleDefinition($value)
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
 class UpdateDialogFlow extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModuleDefinition($value)
+    {
+        $this->data['ModuleDefinition'] = $value;
+        $this->options['form_params']['ModuleDefinition'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -514,7 +598,6 @@ class QuerySystemEntities extends V20171011Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  * @method string getMembers()
- * @method $this withMembers($value)
  * @method string getEntityName()
  * @method $this withEntityName($value)
  * @method string getDialogId()
@@ -522,16 +605,41 @@ class QuerySystemEntities extends V20171011Rpc
  */
 class CreateEntity extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMembers($value)
+    {
+        $this->data['Members'] = $value;
+        $this->options['form_params']['Members'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getIntentDefinition()
- * @method $this withIntentDefinition($value)
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
 class CreateIntent extends V20171011Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIntentDefinition($value)
+    {
+        $this->data['IntentDefinition'] = $value;
+        $this->options['form_params']['IntentDefinition'] = $value;
+
+        return $this;
+    }
 }
 
 /**

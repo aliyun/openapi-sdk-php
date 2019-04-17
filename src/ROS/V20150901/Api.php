@@ -8,6 +8,11 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DeleteChangeSet deleteChangeSet(array $options = [])
+ * @method ExecuteChangeSet executeChangeSet(array $options = [])
+ * @method DescribeChangeSets describeChangeSets(array $options = [])
+ * @method DescribeChangeSetDetail describeChangeSetDetail(array $options = [])
+ * @method CreateChangeSet createChangeSet(array $options = [])
  * @method CancelUpdateStack cancelUpdateStack(array $options = [])
  * @method ContinueCreateStack continueCreateStack(array $options = [])
  * @method SetStackPolicy setStackPolicy(array $options = [])
@@ -44,6 +49,75 @@ class V20150901Roa extends Roa
 
     /** @var string */
     public $version = '2015-09-01';
+}
+
+/**
+ * @method string getChangeSetName()
+ * @method $this withChangeSetName($value)
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DeleteChangeSet extends V20150901Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
+ * @method string getChangeSetName()
+ * @method $this withChangeSetName($value)
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class ExecuteChangeSet extends V20150901Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]/execute';
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DescribeChangeSets extends V20150901Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets';
+}
+
+/**
+ * @method string getChangeSetName()
+ * @method $this withChangeSetName($value)
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DescribeChangeSetDetail extends V20150901Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
+}
+
+class CreateChangeSet extends V20150901Roa
+{
+    /** @var string */
+    public $pathPattern = '/changeSets';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**

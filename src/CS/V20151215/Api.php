@@ -8,7 +8,11 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeKubernetesVersionMetadata describeKubernetesVersionMetadata(array $options = [])
+ * @method DeleteClusterTags deleteClusterTags(array $options = [])
+ * @method ModifyClusterTags modifyClusterTags(array $options = [])
  * @method DeleteClusterNodes deleteClusterNodes(array $options = [])
+ * @method DescribeEdgeClusterAttachScripts describeEdgeClusterAttachScripts(array $options = [])
  * @method UpdateClusterKubenetesVersion updateClusterKubenetesVersion(array $options = [])
  * @method DescribeClusterEndpoint describeClusterEndpoint(array $options = [])
  * @method DescribeClusterUserKubeconfig describeClusterUserKubeconfig(array $options = [])
@@ -100,6 +104,96 @@ class V20151215Roa extends Roa
 }
 
 /**
+ * @method string getClusterType()
+ * @method string getMultiAZ()
+ * @method string getKubernetesVersion()
+ * @method string getRegion()
+ */
+class DescribeKubernetesVersionMetadata extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/metadata/versions';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterType($value)
+    {
+        $this->data['ClusterType'] = $value;
+        $this->options['query']['ClusterType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMultiAZ($value)
+    {
+        $this->data['MultiAZ'] = $value;
+        $this->options['query']['MultiAZ'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKubernetesVersion($value)
+    {
+        $this->data['KubernetesVersion'] = $value;
+        $this->options['query']['KubernetesVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['query']['Region'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteClusterTags extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/tags';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ModifyClusterTags extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/tags';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -110,6 +204,30 @@ class DeleteClusterNodes extends V20151215Roa
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getNamePrefix()
+ */
+class DescribeEdgeClusterAttachScripts extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/attachscript';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamePrefix($value)
+    {
+        $this->data['NamePrefix'] = $value;
+        $this->options['query']['NamePrefix'] = $value;
+
+        return $this;
+    }
 }
 
 /**

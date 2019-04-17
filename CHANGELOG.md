@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.0.0 - 2019-04-17
+- Improved parameters methods.
+- Abolished method starting with `set` by exception message.
+- Abolish DeprecatedTrait by exception message.
+
+
 ## 1.4.0 - 2019-04-11
 - Added `2019-03-25` for `ImageSearch`.
 

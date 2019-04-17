@@ -77,7 +77,7 @@ class V20171118Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'csb';
@@ -96,7 +96,6 @@ class DeleteAlarmRule extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
@@ -105,6 +104,19 @@ class CreateOrUpdateAlarmRule extends V20171118Rpc
 
     /** @var string */
     public $scheme = 'http';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -141,20 +153,43 @@ class FindAlarmHistory extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getButlerGroupId()
- * @method $this withButlerGroupId($value)
  */
 class AddMember2AlarmGroup extends V20171118Rpc
 {
 
     /** @var string */
     public $scheme = 'http';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withButlerGroupId($value)
+    {
+        $this->data['ButlerGroupId'] = $value;
+        $this->options['form_params']['ButlerGroupId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
@@ -163,6 +198,19 @@ class CreateOrUpdateAlarmGroup extends V20171118Rpc
 
     /** @var string */
     public $scheme = 'http';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -178,15 +226,39 @@ class DeleteAlarmGroup extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getButlerGroupId()
- * @method $this withButlerGroupId($value)
  */
 class DeleteMemberFromAlarmGroup extends V20171118Rpc
 {
 
     /** @var string */
     public $scheme = 'http';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withButlerGroupId($value)
+    {
+        $this->data['ButlerGroupId'] = $value;
+        $this->options['form_params']['ButlerGroupId'] = $value;
+
+        return $this;
+    }
 }
 
 class FindAllAlarmGroupsForUser extends V20171118Rpc
@@ -264,20 +336,44 @@ class GetInstance extends V20171118Rpc
  * @method string getCsbName()
  * @method $this withCsbName($value)
  * @method string getServices()
- * @method $this withServices($value)
  */
 class CommitSuccessedServices extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServices($value)
+    {
+        $this->data['Services'] = $value;
+        $this->options['form_params']['Services'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getCasCsbName()
  * @method $this withCasCsbName($value)
  * @method string getData()
- * @method $this withData($value)
  */
 class PublishCasService extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -318,10 +414,22 @@ class FindInstanceList extends V20171118Rpc
  * @method string getCasCsbName()
  * @method $this withCasCsbName($value)
  * @method string getData()
- * @method $this withData($value)
  */
 class PublishUnionCasService extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -463,20 +571,44 @@ class GetOrder extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  */
 class DeleteOrderList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class DeleteProjectList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -509,12 +641,24 @@ class FindProjectsNameList extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class DeleteServiceList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -542,10 +686,22 @@ class FindApprovalOrderList extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  */
 class UpdateOrderList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -571,32 +727,68 @@ class FindApproveServiceList extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class UpdateServiceListStatus extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class UpdateProjectListStatus extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class CreateCredentials extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -616,75 +808,158 @@ class FindCredentialsList extends V20171118Rpc
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class CreateService extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class UpdateService extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class UpdateOrder extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class CreateOrder extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class UpdateProject extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class CreateProject extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  */
 class ApproveOrderList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getData()
- * @method $this withData($value)
  * @method string getIgnoreDauth()
  * @method $this withIgnoreDauth($value)
  * @method string getForce()
@@ -692,6 +967,19 @@ class ApproveOrderList extends V20171118Rpc
  */
 class DeleteCredentialsList extends V20171118Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**

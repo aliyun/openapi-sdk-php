@@ -453,6 +453,8 @@ class CreateUserUsageDataExportTask extends V20180510Rpc
  * @method $this withDomainNames($value)
  * @method string getTaskName()
  * @method $this withTaskName($value)
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getType()
@@ -839,10 +841,12 @@ class DescribeDomainUpstreamOfCenter extends V20180510Rpc
 }
 
 /**
- * @method string getLocationNames()
- * @method $this withLocationNames($value)
  * @method string getIspNames()
  * @method $this withIspNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getLocationNames()
+ * @method $this withLocationNames($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -1302,18 +1306,54 @@ class SetDomainServerCertificate extends V20180510Rpc
 
 /**
  * @method string getNotes()
- * @method $this withNotes($value)
  * @method string getTriggerARN()
  * @method $this withTriggerARN($value)
  * @method string getSourceARN()
- * @method $this withSourceARN($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
- * @method $this withRoleARN($value)
  */
 class UpdateFCTrigger extends V20180510Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotes($value)
+    {
+        $this->data['Notes'] = $value;
+        $this->options['form_params']['Notes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceARN($value)
+    {
+        $this->data['SourceARN'] = $value;
+        $this->options['form_params']['SourceARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleARN($value)
+    {
+        $this->data['RoleARN'] = $value;
+        $this->options['form_params']['RoleARN'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1471,16 +1511,16 @@ class DescribeOneMinuteData extends V20180510Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPercent()
- * @method $this withPercent($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDomainTopReferVisit extends V20180510Rpc
 {
@@ -1672,28 +1712,28 @@ class DescribeDomainRealTimeBpsData extends V20180510Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getObjectPath()
  * @method $this withObjectPath($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getObjectType()
  * @method $this withObjectType($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -1811,16 +1851,18 @@ class DescribeDomainCname extends V20180510Rpc
 }
 
 /**
+ * @method string getIspNames()
+ * @method $this withIspNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
  * @method string getLocationNames()
  * @method $this withLocationNames($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getIspNames()
- * @method $this withIspNames($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -1949,22 +1991,82 @@ class SetReqAuthConfig extends V20180510Rpc
 
 /**
  * @method string getNotes()
- * @method $this withNotes($value)
  * @method string getEventMetaVersion()
- * @method $this withEventMetaVersion($value)
  * @method string getTriggerARN()
  * @method $this withTriggerARN($value)
  * @method string getSourceARN()
- * @method $this withSourceARN($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
- * @method $this withRoleARN($value)
  * @method string getEventMetaName()
- * @method $this withEventMetaName($value)
  */
 class AddFCTrigger extends V20180510Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotes($value)
+    {
+        $this->data['Notes'] = $value;
+        $this->options['form_params']['Notes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventMetaVersion($value)
+    {
+        $this->data['EventMetaVersion'] = $value;
+        $this->options['form_params']['EventMetaVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceARN($value)
+    {
+        $this->data['SourceARN'] = $value;
+        $this->options['form_params']['SourceARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleARN($value)
+    {
+        $this->data['RoleARN'] = $value;
+        $this->options['form_params']['RoleARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventMetaName($value)
+    {
+        $this->data['EventMetaName'] = $value;
+        $this->options['form_params']['EventMetaName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2047,18 +2149,16 @@ class DescribeDomainsBySource extends V20180510Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPercent()
- * @method $this withPercent($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDomainTopUrlVisit extends V20180510Rpc
 {

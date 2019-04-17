@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method SmartCallOperate smartCallOperate(array $options = [])
  * @method QueryRobotInfoList queryRobotInfoList(array $options = [])
  * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
  * @method BatchRobotSmartCall batchRobotSmartCall(array $options = [])
@@ -40,6 +41,24 @@ class V20170525Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCommand()
+ * @method $this withCommand($value)
+ */
+class SmartCallOperate extends V20170525Rpc
+{
 }
 
 /**

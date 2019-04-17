@@ -8,13 +8,10 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
- * @method AddPartition addPartition(array $options = [])
  * @method UpdateInstanceName updateInstanceName(array $options = [])
- * @method ListAllTopic listAllTopic(array $options = [])
  * @method GetVpcInfo getVpcInfo(array $options = [])
  * @method GetTopicSubscribeStatus getTopicSubscribeStatus(array $options = [])
  * @method CorrectInstanceData correctInstanceData(array $options = [])
- * @method QueryKafkaMsg queryKafkaMsg(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateTopic createTopic(array $options = [])
  * @method GetTopicStatus getTopicStatus(array $options = [])
@@ -46,30 +43,10 @@ class V20181015Rpc extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getPartitionNum()
- * @method $this withPartitionNum($value)
- */
-class AddPartition extends V20181015Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  */
 class UpdateInstanceName extends V20181015Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class ListAllTopic extends V20181015Rpc
 {
 }
 
@@ -92,24 +69,6 @@ class GetTopicSubscribeStatus extends V20181015Rpc
 }
 
 class CorrectInstanceData extends V20181015Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getPartition()
- * @method $this withPartition($value)
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getQueryType()
- * @method $this withQueryType($value)
- */
-class QueryKafkaMsg extends V20181015Rpc
 {
 }
 

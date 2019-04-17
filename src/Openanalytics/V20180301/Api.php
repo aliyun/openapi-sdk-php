@@ -40,84 +40,324 @@ class V20180301Rpc extends Rpc
 
 /**
  * @method string getProductCode()
- * @method $this withProductCode($value)
  * @method string getProductAccessKey()
- * @method $this withProductAccessKey($value)
  * @method string getTargetUid()
- * @method $this withTargetUid($value)
  * @method string getTargetArnRole()
- * @method $this withTargetArnRole($value)
  */
 class GetProductStatus extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['form_params']['ProductCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductAccessKey($value)
+    {
+        $this->data['ProductAccessKey'] = $value;
+        $this->options['form_params']['ProductAccessKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUid($value)
+    {
+        $this->data['TargetUid'] = $value;
+        $this->options['form_params']['TargetUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetArnRole($value)
+    {
+        $this->data['TargetArnRole'] = $value;
+        $this->options['form_params']['TargetArnRole'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getProductCode()
- * @method $this withProductCode($value)
  * @method string getProductAccessKey()
- * @method $this withProductAccessKey($value)
  * @method string getTargetUid()
- * @method $this withTargetUid($value)
  * @method string getTargetArnRole()
- * @method $this withTargetArnRole($value)
  */
 class CloseProductAccount extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['form_params']['ProductCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductAccessKey($value)
+    {
+        $this->data['ProductAccessKey'] = $value;
+        $this->options['form_params']['ProductAccessKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUid($value)
+    {
+        $this->data['TargetUid'] = $value;
+        $this->options['form_params']['TargetUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetArnRole($value)
+    {
+        $this->data['TargetArnRole'] = $value;
+        $this->options['form_params']['TargetArnRole'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getTargetUid()
- * @method $this withTargetUid($value)
  */
 class GetRegionStatus extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUid($value)
+    {
+        $this->data['TargetUid'] = $value;
+        $this->options['form_params']['TargetUid'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getProductCode()
- * @method $this withProductCode($value)
  * @method string getProductAccessKey()
- * @method $this withProductAccessKey($value)
  * @method string getTargetUid()
- * @method $this withTargetUid($value)
  * @method string getTargetArnRole()
- * @method $this withTargetArnRole($value)
  */
 class OpenProductAccount extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['form_params']['ProductCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductAccessKey($value)
+    {
+        $this->data['ProductAccessKey'] = $value;
+        $this->options['form_params']['ProductAccessKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUid($value)
+    {
+        $this->data['TargetUid'] = $value;
+        $this->options['form_params']['TargetUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetArnRole($value)
+    {
+        $this->data['TargetArnRole'] = $value;
+        $this->options['form_params']['TargetArnRole'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getUserID()
- * @method $this withUserID($value)
  * @method string getNetworkType()
- * @method $this withNetworkType($value)
  * @method string getAllowIP()
- * @method $this withAllowIP($value)
  * @method string getAppend()
- * @method $this withAppend($value)
  */
 class SetAllowIP extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['form_params']['NetworkType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAllowIP($value)
+    {
+        $this->data['AllowIP'] = $value;
+        $this->options['form_params']['AllowIP'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppend($value)
+    {
+        $this->data['Append'] = $value;
+        $this->options['form_params']['Append'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getUserID()
- * @method $this withUserID($value)
  */
 class QueryEndPointList extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getUserID()
- * @method $this withUserID($value)
  * @method string getDomainURL()
- * @method $this withDomainURL($value)
  */
 class GetEndPointByDomain extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainURL($value)
+    {
+        $this->data['DomainURL'] = $value;
+        $this->options['form_params']['DomainURL'] = $value;
+
+        return $this;
+    }
 }
 
 class DescribeRegionList extends V20180301Rpc
@@ -126,10 +366,34 @@ class DescribeRegionList extends V20180301Rpc
 
 /**
  * @method string getUserID()
- * @method $this withUserID($value)
  * @method string getNetworkType()
- * @method $this withNetworkType($value)
  */
 class GetAllowIP extends V20180301Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['form_params']['NetworkType'] = $value;
+
+        return $this;
+    }
 }

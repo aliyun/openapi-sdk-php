@@ -36,7 +36,7 @@ class V20180211Rpc extends Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'mopen';
@@ -44,108 +44,396 @@ class V20180211Rpc extends Rpc
 
 /**
  * @method string getPayload()
- * @method $this withPayload($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class MoPenSendMqttMessage extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPayload($value)
+    {
+        $this->data['Payload'] = $value;
+        $this->options['form_params']['Payload'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getCanvasId()
- * @method $this withCanvasId($value)
  * @method string getEndY()
- * @method $this withEndY($value)
  * @method string getEndX()
- * @method $this withEndX($value)
  * @method string getJsonConf()
- * @method $this withJsonConf($value)
  * @method string getExportType()
- * @method $this withExportType($value)
  * @method string getStartY()
- * @method $this withStartY($value)
  * @method string getStartX()
- * @method $this withStartX($value)
  */
 class MoPenDoRecognize extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCanvasId($value)
+    {
+        $this->data['CanvasId'] = $value;
+        $this->options['form_params']['CanvasId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndY($value)
+    {
+        $this->data['EndY'] = $value;
+        $this->options['form_params']['EndY'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndX($value)
+    {
+        $this->data['EndX'] = $value;
+        $this->options['form_params']['EndX'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJsonConf($value)
+    {
+        $this->data['JsonConf'] = $value;
+        $this->options['form_params']['JsonConf'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExportType($value)
+    {
+        $this->data['ExportType'] = $value;
+        $this->options['form_params']['ExportType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartY($value)
+    {
+        $this->data['StartY'] = $value;
+        $this->options['form_params']['StartY'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartX($value)
+    {
+        $this->data['StartX'] = $value;
+        $this->options['form_params']['StartX'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getSessionId()
- * @method $this withSessionId($value)
  * @method string getPageId()
- * @method $this withPageId($value)
  * @method string getStatus()
- * @method $this withStatus($value)
  */
 class MoPenQueryCanvas extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getCreator()
- * @method $this withCreator($value)
  */
 class MoPenFindGroup extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreator($value)
+    {
+        $this->data['Creator'] = $value;
+        $this->options['form_params']['Creator'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class MoPenDeleteGroupMember extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getOrderKey()
- * @method $this withOrderKey($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class MoPenBindIsv extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrderKey($value)
+    {
+        $this->data['OrderKey'] = $value;
+        $this->options['form_params']['OrderKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  */
 class MoPenDeleteGroup extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class MoPenAddGroupMember extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getCreator()
- * @method $this withCreator($value)
  */
 class MopenCreateGroup extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreator($value)
+    {
+        $this->data['Creator'] = $value;
+        $this->options['form_params']['Creator'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getDeviceType()
- * @method $this withDeviceType($value)
  */
 class MoPenCreateDevice extends V20180211Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceType($value)
+    {
+        $this->data['DeviceType'] = $value;
+        $this->options['form_params']['DeviceType'] = $value;
+
+        return $this;
+    }
 }

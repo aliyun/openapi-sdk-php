@@ -33,10 +33,11 @@
         "ext-mbstring": "*",
         "ext-xmlwriter": "*",
         "ext-simplexml": "*",
-        "alibabacloud/client": "^1.1"
+        "alibabacloud/client": "^2.0"
     },
     "require-dev": {
         "symfony/dotenv": "^3.4",
+        "league/climate": "^3.2.4",
         "phpunit/phpunit": "^4.8",
         "composer/composer": "^1.8",
         "symfony/var-dumper": "^3.4"

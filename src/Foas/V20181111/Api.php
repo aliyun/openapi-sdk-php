@@ -78,7 +78,7 @@ class V20181111Roa extends Roa
     public $version = '2018-11-11';
 
     /** @var string */
-    public $scheme = 'https';
+    protected $scheme = 'https';
 
     /** @var string */
     public $serviceCode = 'foas';
@@ -117,7 +117,7 @@ class ModifyMasterSpec extends V20181111Roa
     public function withMasterTargetModel($value)
     {
         $this->data['MasterTargetModel'] = $value;
-        $this->options['query']['masterTargetModel'] = $value;
+        $this->options['form_params']['masterTargetModel'] = $value;
 
         return $this;
     }
@@ -197,7 +197,7 @@ class BindQueue extends V20181111Roa
     public function withQueueName($value)
     {
         $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
 
         return $this;
     }
@@ -223,7 +223,7 @@ class BindQueue extends V20181111Roa
     public function withClusterId($value)
     {
         $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
 
         return $this;
     }
@@ -291,7 +291,7 @@ class CreateQueue extends V20181111Roa
     public function withQueueName($value)
     {
         $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
 
         return $this;
     }
@@ -304,7 +304,7 @@ class CreateQueue extends V20181111Roa
     public function withMaxMemMB($value)
     {
         $this->data['MaxMemMB'] = $value;
-        $this->options['query']['maxMemMB'] = $value;
+        $this->options['form_params']['maxMemMB'] = $value;
 
         return $this;
     }
@@ -330,7 +330,7 @@ class CreateQueue extends V20181111Roa
     public function withGpu($value)
     {
         $this->data['Gpu'] = $value;
-        $this->options['query']['gpu'] = $value;
+        $this->options['form_params']['gpu'] = $value;
 
         return $this;
     }
@@ -343,7 +343,7 @@ class CreateQueue extends V20181111Roa
     public function withMaxVcore($value)
     {
         $this->data['MaxVcore'] = $value;
-        $this->options['query']['maxVcore'] = $value;
+        $this->options['form_params']['maxVcore'] = $value;
 
         return $this;
     }
@@ -382,7 +382,7 @@ class GetClusterMetrics extends V20181111Roa
     public function withMetricJson($value)
     {
         $this->data['MetricJson'] = $value;
-        $this->options['query']['metricJson'] = $value;
+        $this->options['form_params']['metricJson'] = $value;
 
         return $this;
     }
@@ -589,7 +589,7 @@ class ShrinkCluster extends V20181111Roa
     public function withInstanceIds($value)
     {
         $this->data['InstanceIds'] = $value;
-        $this->options['query']['instanceIds'] = $value;
+        $this->options['form_params']['instanceIds'] = $value;
 
         return $this;
     }
@@ -615,7 +615,7 @@ class ShrinkCluster extends V20181111Roa
     public function withModelTargetCount($value)
     {
         $this->data['ModelTargetCount'] = $value;
-        $this->options['query']['modelTargetCount'] = $value;
+        $this->options['form_params']['modelTargetCount'] = $value;
 
         return $this;
     }
@@ -643,7 +643,7 @@ class ExpandCluster extends V20181111Roa
     public function withCount($value)
     {
         $this->data['Count'] = $value;
-        $this->options['query']['count'] = $value;
+        $this->options['form_params']['count'] = $value;
 
         return $this;
     }
@@ -656,7 +656,7 @@ class ExpandCluster extends V20181111Roa
     public function withModel($value)
     {
         $this->data['Model'] = $value;
-        $this->options['query']['model'] = $value;
+        $this->options['form_params']['model'] = $value;
 
         return $this;
     }
@@ -669,7 +669,7 @@ class ExpandCluster extends V20181111Roa
     public function withUserVSwitch($value)
     {
         $this->data['UserVSwitch'] = $value;
-        $this->options['query']['userVSwitch'] = $value;
+        $this->options['form_params']['userVSwitch'] = $value;
 
         return $this;
     }
@@ -738,7 +738,7 @@ class CreateCluster extends V20181111Roa
     public function withOrderId($value)
     {
         $this->data['OrderId'] = $value;
-        $this->options['query']['orderId'] = $value;
+        $this->options['form_params']['orderId'] = $value;
 
         return $this;
     }
@@ -751,7 +751,7 @@ class CreateCluster extends V20181111Roa
     public function withUserOssBucket($value)
     {
         $this->data['UserOssBucket'] = $value;
-        $this->options['query']['userOssBucket'] = $value;
+        $this->options['form_params']['userOssBucket'] = $value;
 
         return $this;
     }
@@ -764,7 +764,7 @@ class CreateCluster extends V20181111Roa
     public function withDisplayName($value)
     {
         $this->data['DisplayName'] = $value;
-        $this->options['query']['displayName'] = $value;
+        $this->options['form_params']['displayName'] = $value;
 
         return $this;
     }
@@ -777,7 +777,7 @@ class CreateCluster extends V20181111Roa
     public function withUserVpcId($value)
     {
         $this->data['UserVpcId'] = $value;
-        $this->options['query']['userVpcId'] = $value;
+        $this->options['form_params']['userVpcId'] = $value;
 
         return $this;
     }
@@ -790,7 +790,7 @@ class CreateCluster extends V20181111Roa
     public function withZoneId($value)
     {
         $this->data['ZoneId'] = $value;
-        $this->options['query']['zoneId'] = $value;
+        $this->options['form_params']['zoneId'] = $value;
 
         return $this;
     }
@@ -803,7 +803,7 @@ class CreateCluster extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -816,7 +816,7 @@ class CreateCluster extends V20181111Roa
     public function withUserVSwitch($value)
     {
         $this->data['UserVSwitch'] = $value;
-        $this->options['query']['userVSwitch'] = $value;
+        $this->options['form_params']['userVSwitch'] = $value;
 
         return $this;
     }
@@ -893,7 +893,7 @@ class CreateProject extends V20181111Roa
     public function withManagerIds($value)
     {
         $this->data['ManagerIds'] = $value;
-        $this->options['query']['managerIds'] = $value;
+        $this->options['form_params']['managerIds'] = $value;
 
         return $this;
     }
@@ -906,7 +906,7 @@ class CreateProject extends V20181111Roa
     public function withOrderId($value)
     {
         $this->data['OrderId'] = $value;
-        $this->options['query']['orderId'] = $value;
+        $this->options['form_params']['orderId'] = $value;
 
         return $this;
     }
@@ -919,7 +919,7 @@ class CreateProject extends V20181111Roa
     public function withName($value)
     {
         $this->data['Name'] = $value;
-        $this->options['query']['name'] = $value;
+        $this->options['form_params']['name'] = $value;
 
         return $this;
     }
@@ -932,7 +932,7 @@ class CreateProject extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -945,7 +945,7 @@ class CreateProject extends V20181111Roa
     public function withClusterId($value)
     {
         $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
 
         return $this;
     }
@@ -958,7 +958,7 @@ class CreateProject extends V20181111Roa
     public function withDeployType($value)
     {
         $this->data['DeployType'] = $value;
-        $this->options['query']['deployType'] = $value;
+        $this->options['form_params']['deployType'] = $value;
 
         return $this;
     }
@@ -1590,7 +1590,7 @@ class GetInstanceMetric extends V20181111Roa
     public function withMetricJson($value)
     {
         $this->data['MetricJson'] = $value;
-        $this->options['query']['metricJson'] = $value;
+        $this->options['form_params']['metricJson'] = $value;
 
         return $this;
     }
@@ -1632,7 +1632,7 @@ class ModifyInstanceState extends V20181111Roa
     public function withIsFlush($value)
     {
         $this->data['IsFlush'] = $value;
-        $this->options['query']['isFlush'] = $value;
+        $this->options['form_params']['isFlush'] = $value;
 
         return $this;
     }
@@ -1671,7 +1671,7 @@ class ModifyInstanceState extends V20181111Roa
     public function withExpectState($value)
     {
         $this->data['ExpectState'] = $value;
-        $this->options['query']['expectState'] = $value;
+        $this->options['form_params']['expectState'] = $value;
 
         return $this;
     }
@@ -2124,7 +2124,7 @@ class UpdatePackage extends V20181111Roa
     public function withOssBucket($value)
     {
         $this->data['OssBucket'] = $value;
-        $this->options['query']['ossBucket'] = $value;
+        $this->options['form_params']['ossBucket'] = $value;
 
         return $this;
     }
@@ -2137,7 +2137,7 @@ class UpdatePackage extends V20181111Roa
     public function withOssOwner($value)
     {
         $this->data['OssOwner'] = $value;
-        $this->options['query']['ossOwner'] = $value;
+        $this->options['form_params']['ossOwner'] = $value;
 
         return $this;
     }
@@ -2163,7 +2163,7 @@ class UpdatePackage extends V20181111Roa
     public function withOssEndpoint($value)
     {
         $this->data['OssEndpoint'] = $value;
-        $this->options['query']['ossEndpoint'] = $value;
+        $this->options['form_params']['ossEndpoint'] = $value;
 
         return $this;
     }
@@ -2176,7 +2176,7 @@ class UpdatePackage extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -2189,7 +2189,7 @@ class UpdatePackage extends V20181111Roa
     public function withTag($value)
     {
         $this->data['Tag'] = $value;
-        $this->options['query']['tag'] = $value;
+        $this->options['form_params']['tag'] = $value;
 
         return $this;
     }
@@ -2202,7 +2202,7 @@ class UpdatePackage extends V20181111Roa
     public function withOriginName($value)
     {
         $this->data['OriginName'] = $value;
-        $this->options['query']['originName'] = $value;
+        $this->options['form_params']['originName'] = $value;
 
         return $this;
     }
@@ -2215,7 +2215,7 @@ class UpdatePackage extends V20181111Roa
     public function withOssPath($value)
     {
         $this->data['OssPath'] = $value;
-        $this->options['query']['ossPath'] = $value;
+        $this->options['form_params']['ossPath'] = $value;
 
         return $this;
     }
@@ -2228,7 +2228,7 @@ class UpdatePackage extends V20181111Roa
     public function withMd5($value)
     {
         $this->data['Md5'] = $value;
-        $this->options['query']['md5'] = $value;
+        $this->options['form_params']['md5'] = $value;
 
         return $this;
     }
@@ -2368,7 +2368,7 @@ class CreatePackage extends V20181111Roa
     public function withOssBucket($value)
     {
         $this->data['OssBucket'] = $value;
-        $this->options['query']['ossBucket'] = $value;
+        $this->options['form_params']['ossBucket'] = $value;
 
         return $this;
     }
@@ -2381,7 +2381,7 @@ class CreatePackage extends V20181111Roa
     public function withOssOwner($value)
     {
         $this->data['OssOwner'] = $value;
-        $this->options['query']['ossOwner'] = $value;
+        $this->options['form_params']['ossOwner'] = $value;
 
         return $this;
     }
@@ -2394,7 +2394,7 @@ class CreatePackage extends V20181111Roa
     public function withPackageName($value)
     {
         $this->data['PackageName'] = $value;
-        $this->options['query']['packageName'] = $value;
+        $this->options['form_params']['packageName'] = $value;
 
         return $this;
     }
@@ -2407,7 +2407,7 @@ class CreatePackage extends V20181111Roa
     public function withOssEndpoint($value)
     {
         $this->data['OssEndpoint'] = $value;
-        $this->options['query']['ossEndpoint'] = $value;
+        $this->options['form_params']['ossEndpoint'] = $value;
 
         return $this;
     }
@@ -2420,7 +2420,7 @@ class CreatePackage extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -2433,7 +2433,7 @@ class CreatePackage extends V20181111Roa
     public function withTag($value)
     {
         $this->data['Tag'] = $value;
-        $this->options['query']['tag'] = $value;
+        $this->options['form_params']['tag'] = $value;
 
         return $this;
     }
@@ -2446,7 +2446,7 @@ class CreatePackage extends V20181111Roa
     public function withOriginName($value)
     {
         $this->data['OriginName'] = $value;
-        $this->options['query']['originName'] = $value;
+        $this->options['form_params']['originName'] = $value;
 
         return $this;
     }
@@ -2459,7 +2459,7 @@ class CreatePackage extends V20181111Roa
     public function withType($value)
     {
         $this->data['Type'] = $value;
-        $this->options['query']['type'] = $value;
+        $this->options['form_params']['type'] = $value;
 
         return $this;
     }
@@ -2472,7 +2472,7 @@ class CreatePackage extends V20181111Roa
     public function withOssPath($value)
     {
         $this->data['OssPath'] = $value;
-        $this->options['query']['ossPath'] = $value;
+        $this->options['form_params']['ossPath'] = $value;
 
         return $this;
     }
@@ -2485,7 +2485,7 @@ class CreatePackage extends V20181111Roa
     public function withMd5($value)
     {
         $this->data['Md5'] = $value;
-        $this->options['query']['md5'] = $value;
+        $this->options['form_params']['md5'] = $value;
 
         return $this;
     }
@@ -2600,7 +2600,7 @@ class MVFolder extends V20181111Roa
     public function withSrcPath($value)
     {
         $this->data['SrcPath'] = $value;
-        $this->options['query']['srcPath'] = $value;
+        $this->options['form_params']['srcPath'] = $value;
 
         return $this;
     }
@@ -2613,7 +2613,7 @@ class MVFolder extends V20181111Roa
     public function withDestPath($value)
     {
         $this->data['DestPath'] = $value;
-        $this->options['query']['destPath'] = $value;
+        $this->options['form_params']['destPath'] = $value;
 
         return $this;
     }
@@ -2689,7 +2689,7 @@ class StartJob extends V20181111Roa
     public function withParameterJson($value)
     {
         $this->data['ParameterJson'] = $value;
-        $this->options['query']['parameterJson'] = $value;
+        $this->options['form_params']['parameterJson'] = $value;
 
         return $this;
     }
@@ -3077,7 +3077,7 @@ class UpdateJob extends V20181111Roa
     public function withQueueName($value)
     {
         $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
 
         return $this;
     }
@@ -3103,7 +3103,7 @@ class UpdateJob extends V20181111Roa
     public function withCode($value)
     {
         $this->data['Code'] = $value;
-        $this->options['query']['code'] = $value;
+        $this->options['form_params']['code'] = $value;
 
         return $this;
     }
@@ -3116,7 +3116,7 @@ class UpdateJob extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -3129,7 +3129,7 @@ class UpdateJob extends V20181111Roa
     public function withPlanJson($value)
     {
         $this->data['PlanJson'] = $value;
-        $this->options['query']['planJson'] = $value;
+        $this->options['form_params']['planJson'] = $value;
 
         return $this;
     }
@@ -3142,7 +3142,7 @@ class UpdateJob extends V20181111Roa
     public function withEngineVersion($value)
     {
         $this->data['EngineVersion'] = $value;
-        $this->options['query']['engineVersion'] = $value;
+        $this->options['form_params']['engineVersion'] = $value;
 
         return $this;
     }
@@ -3155,7 +3155,7 @@ class UpdateJob extends V20181111Roa
     public function withClusterId($value)
     {
         $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
 
         return $this;
     }
@@ -3168,7 +3168,7 @@ class UpdateJob extends V20181111Roa
     public function withPackages($value)
     {
         $this->data['Packages'] = $value;
-        $this->options['query']['packages'] = $value;
+        $this->options['form_params']['packages'] = $value;
 
         return $this;
     }
@@ -3181,7 +3181,7 @@ class UpdateJob extends V20181111Roa
     public function withFolderId($value)
     {
         $this->data['FolderId'] = $value;
-        $this->options['query']['folderId'] = $value;
+        $this->options['form_params']['folderId'] = $value;
 
         return $this;
     }
@@ -3194,7 +3194,7 @@ class UpdateJob extends V20181111Roa
     public function withProperties($value)
     {
         $this->data['Properties'] = $value;
-        $this->options['query']['properties'] = $value;
+        $this->options['form_params']['properties'] = $value;
 
         return $this;
     }
@@ -3244,7 +3244,7 @@ class CreateJob extends V20181111Roa
     public function withQueueName($value)
     {
         $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
 
         return $this;
     }
@@ -3270,7 +3270,7 @@ class CreateJob extends V20181111Roa
     public function withCode($value)
     {
         $this->data['Code'] = $value;
-        $this->options['query']['code'] = $value;
+        $this->options['form_params']['code'] = $value;
 
         return $this;
     }
@@ -3283,7 +3283,7 @@ class CreateJob extends V20181111Roa
     public function withDescription($value)
     {
         $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -3296,7 +3296,7 @@ class CreateJob extends V20181111Roa
     public function withEngineVersion($value)
     {
         $this->data['EngineVersion'] = $value;
-        $this->options['query']['engineVersion'] = $value;
+        $this->options['form_params']['engineVersion'] = $value;
 
         return $this;
     }
@@ -3309,7 +3309,7 @@ class CreateJob extends V20181111Roa
     public function withClusterId($value)
     {
         $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
 
         return $this;
     }
@@ -3322,7 +3322,7 @@ class CreateJob extends V20181111Roa
     public function withPackages($value)
     {
         $this->data['Packages'] = $value;
-        $this->options['query']['packages'] = $value;
+        $this->options['form_params']['packages'] = $value;
 
         return $this;
     }
@@ -3335,7 +3335,7 @@ class CreateJob extends V20181111Roa
     public function withJobType($value)
     {
         $this->data['JobType'] = $value;
-        $this->options['query']['jobType'] = $value;
+        $this->options['form_params']['jobType'] = $value;
 
         return $this;
     }
@@ -3348,7 +3348,7 @@ class CreateJob extends V20181111Roa
     public function withApiType($value)
     {
         $this->data['ApiType'] = $value;
-        $this->options['query']['apiType'] = $value;
+        $this->options['form_params']['apiType'] = $value;
 
         return $this;
     }
@@ -3361,7 +3361,7 @@ class CreateJob extends V20181111Roa
     public function withFolderId($value)
     {
         $this->data['FolderId'] = $value;
-        $this->options['query']['folderId'] = $value;
+        $this->options['form_params']['folderId'] = $value;
 
         return $this;
     }
@@ -3374,7 +3374,7 @@ class CreateJob extends V20181111Roa
     public function withPlanJson($value)
     {
         $this->data['PlanJson'] = $value;
-        $this->options['query']['planJson'] = $value;
+        $this->options['form_params']['planJson'] = $value;
 
         return $this;
     }
@@ -3387,7 +3387,7 @@ class CreateJob extends V20181111Roa
     public function withProperties($value)
     {
         $this->data['Properties'] = $value;
-        $this->options['query']['properties'] = $value;
+        $this->options['form_params']['properties'] = $value;
 
         return $this;
     }
@@ -3400,7 +3400,7 @@ class CreateJob extends V20181111Roa
     public function withJobName($value)
     {
         $this->data['JobName'] = $value;
-        $this->options['query']['jobName'] = $value;
+        $this->options['form_params']['jobName'] = $value;
 
         return $this;
     }
@@ -3462,7 +3462,7 @@ class CreateFolder extends V20181111Roa
     public function withPath($value)
     {
         $this->data['Path'] = $value;
-        $this->options['query']['path'] = $value;
+        $this->options['form_params']['path'] = $value;
 
         return $this;
     }

@@ -595,7 +595,6 @@ class DeleteDomainGroup extends V20180129Rpc
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getFileToUpload()
- * @method $this withFileToUpload($value)
  * @method array getDomainName()
  * @method string getReplace()
  * @method $this withReplace($value)
@@ -606,6 +605,19 @@ class DeleteDomainGroup extends V20180129Rpc
  */
 class UpdateDomainToDomainGroup extends V20180129Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileToUpload($value)
+    {
+        $this->data['FileToUpload'] = $value;
+        $this->options['form_params']['FileToUpload'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $domainName
@@ -1285,7 +1297,6 @@ class SaveBatchTaskForCreatingOrderTransfer extends V20180129Rpc
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getIdentityCredential()
- * @method $this withIdentityCredential($value)
  * @method array getDomainName()
  * @method string getLang()
  * @method $this withLang($value)
@@ -1294,6 +1305,19 @@ class SaveBatchTaskForCreatingOrderTransfer extends V20180129Rpc
  */
 class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends V20180129Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdentityCredential($value)
+    {
+        $this->data['IdentityCredential'] = $value;
+        $this->options['form_params']['IdentityCredential'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $domainName
@@ -1319,7 +1343,6 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
  * @method string getRegistrantProfileID()
  * @method $this withRegistrantProfileID($value)
  * @method string getIdentityCredential()
- * @method $this withIdentityCredential($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getIdentityCredentialNo()
@@ -1327,6 +1350,19 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
  */
 class RegistrantProfileRealNameVerification extends V20180129Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdentityCredential($value)
+    {
+        $this->data['IdentityCredential'] = $value;
+        $this->options['form_params']['IdentityCredential'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1644,7 +1680,6 @@ class CheckDomain extends V20180129Rpc
  * @method $this withRegistrantType($value)
  * @method array getDomainName()
  * @method string getIdentityCredential()
- * @method $this withIdentityCredential($value)
  * @method string getTelephone()
  * @method $this withTelephone($value)
  * @method string getTransferOutProhibited()
@@ -1690,6 +1725,19 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends V20180129Rpc
         foreach ($domainName as $i => $iValue) {
             $this->options['query']['DomainName.' . ($i + 1)] = $iValue;
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdentityCredential($value)
+    {
+        $this->data['IdentityCredential'] = $value;
+        $this->options['form_params']['IdentityCredential'] = $value;
 
         return $this;
     }

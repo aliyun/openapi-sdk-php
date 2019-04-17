@@ -263,39 +263,11 @@ class QueryEvaluateList extends V20171214Rpc
 }
 
 /**
- * @method string getCallerBid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCallerUid()
  */
 class QueryInvoicingCustomerList extends V20171214Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerBid($value)
-    {
-        $this->data['CallerBid'] = $value;
-        $this->options['query']['callerBid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerUid($value)
-    {
-        $this->data['CallerUid'] = $value;
-        $this->options['query']['callerUid'] = $value;
-
-        return $this;
-    }
 }
 
 /**

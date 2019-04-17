@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Cdn\V20180510\DescribeIpInfo;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Cdn\V20180510\DescribeIpInfo;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class CdnTest
@@ -55,25 +55,5 @@ class CdnTest extends TestCase
 
         $result = $request->request();
         self::assertEquals('False', $result['CdnIp']);
-    }
-
-    public function testSetMethod()
-    {
-        $with = AlibabaCloud::cdn()
-                            ->v20180510()
-                            ->describeIpInfo()
-                            ->withIP('192.168.0.1')
-                            ->connectTimeout(20)
-                            ->timeout(25)
-                            ->withSecurityToken('token');
-
-        $set = AlibabaCloud::cdn()
-                           ->v20180510()
-                           ->describeIpInfo()
-                           ->withIP('192.168.0.1')
-                           ->connectTimeout(20)
-                           ->timeout(25)
-                           ->setSecurityToken('token');
-        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }
