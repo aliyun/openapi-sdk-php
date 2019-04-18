@@ -1,9 +1,8 @@
 # CHANGELOG
 
-## 2.0.0 - 2019-04-17
+## 1.5.0 - 2019-04-18
 - Improved parameters methods.
-- Abolished method starting with `set` by exception message.
-- Abolish DeprecatedTrait by exception message.
+- Optimized the logic for body encode.
 
 
 ## 1.4.0 - 2019-04-11
