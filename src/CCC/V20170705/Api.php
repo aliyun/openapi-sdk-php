@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ListCallEventDetailByContactId listCallEventDetailByContactId(array $options = [])
  * @method DialEx dialEx(array $options = [])
  * @method ListPredictiveJobGroups listPredictiveJobGroups(array $options = [])
  * @method GetJobsProgress getJobsProgress(array $options = [])
@@ -165,6 +166,16 @@ class V20170705Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ */
+class ListCallEventDetailByContactId extends V20170705Rpc
+{
 }
 
 /**
@@ -1218,8 +1229,8 @@ class ListSkillGroupSummaryReportsByInterval extends V20170705Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getSkillGroupIds()
- * @method $this withSkillGroupIds($value)
+ * @method string getSkillGroups()
+ * @method $this withSkillGroups($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()

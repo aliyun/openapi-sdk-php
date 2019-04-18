@@ -8,6 +8,7 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ScaleOutCluster scaleOutCluster(array $options = [])
  * @method DescribeKubernetesVersionMetadata describeKubernetesVersionMetadata(array $options = [])
  * @method DeleteClusterTags deleteClusterTags(array $options = [])
  * @method ModifyClusterTags modifyClusterTags(array $options = [])
@@ -101,6 +102,19 @@ class V20151215Roa extends Roa
 
     /** @var string */
     public $serviceCode = 'cs';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ScaleOutCluster extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[ClusterId]';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -254,6 +268,7 @@ class DescribeClusterEndpoint extends V20151215Roa
 }
 
 /**
+ * @method string getPrivateIpAddress()
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -261,6 +276,19 @@ class DescribeClusterUserKubeconfig extends V20151215Roa
 {
     /** @var string */
     public $pathPattern = '/k8s/[ClusterId]/user_config';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivateIpAddress($value)
+    {
+        $this->data['PrivateIpAddress'] = $value;
+        $this->options['query']['PrivateIpAddress'] = $value;
+
+        return $this;
+    }
 }
 
 /**

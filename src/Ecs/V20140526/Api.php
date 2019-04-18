@@ -328,13 +328,8 @@ class V20140526Rpc extends Rpc
  * @method $this withScope($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
- * @method array getTag()
- * @method string getBusinessInfo()
- * @method $this withBusinessInfo($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
- * @method string getFromApp()
- * @method $this withFromApp($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -349,36 +344,17 @@ class V20140526Rpc extends Rpc
  * @method $this withZoneId($value)
  * @method string getReservedInstanceName()
  * @method $this withReservedInstanceName($value)
- * @method string getChargeType()
- * @method $this withChargeType($value)
  * @method string getInstanceAmount()
  * @method $this withInstanceAmount($value)
  */
 class PurchaseReservedInstancesOffering extends V20140526Rpc
 {
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getConfiguration()
- * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -404,22 +380,6 @@ class ModifyReservedInstances extends V20140526Rpc
             $this->options['query']['Configuration.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
             $this->options['query']['Configuration.' . ($depth1 + 1) . '.Scope'] = $depth1Value['Scope'];
             $this->options['query']['Configuration.' . ($depth1 + 1) . '.InstanceAmount'] = $depth1Value['InstanceAmount'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
 
         return $this;
@@ -454,7 +414,6 @@ class ModifyReservedInstances extends V20140526Rpc
  * @method $this withPageSize($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
- * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -466,8 +425,6 @@ class ModifyReservedInstances extends V20140526Rpc
  * @method array getReservedInstanceId()
  * @method string getOfferingType()
  * @method $this withOfferingType($value)
- * @method string getExpiredTime()
- * @method $this withExpiredTime($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getReservedInstanceName()
@@ -476,22 +433,6 @@ class ModifyReservedInstances extends V20140526Rpc
  */
 class DescribeReservedInstances extends V20140526Rpc
 {
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
 
     /**
      * @param array $reservedInstanceId
@@ -7462,8 +7403,8 @@ class CreateDisk extends V20140526Rpc
  * @method string getEncrypted()
  * @method $this withEncrypted($value)
  * @method array getTag()
- * @method string getKmsKeyId()
- * @method $this withKmsKeyId($value)
+ * @method string getKMSKeyId()
+ * @method $this withKMSKeyId($value)
  * @method string getDestinationDescription()
  * @method $this withDestinationDescription($value)
  */
@@ -9942,6 +9883,8 @@ class StopInstance extends V20140526Rpc
 }
 
 /**
+ * @method string getSourceRegionId()
+ * @method $this withSourceRegionId($value)
  * @method string getInitLocalDisk()
  * @method $this withInitLocalDisk($value)
  * @method string getResourceOwnerId()

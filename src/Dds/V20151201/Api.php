@@ -134,6 +134,7 @@ use AlibabaCloud\Rpc;
  * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
  * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
+ * @method CreateAccount createAccount(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  */
 class DdsApiResolver
@@ -3286,6 +3287,30 @@ class DescribeDBInstanceAttribute extends V20151201Rpc
  * @method $this withKey($value)
  */
 class DescribeDBInstancePerformance extends V20151201Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountDescription()
+ * @method $this withAccountDescription($value)
+ */
+class CreateAccount extends V20151201Rpc
 {
 }
 

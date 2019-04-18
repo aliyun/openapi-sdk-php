@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
+ * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
  * @method QueryDeviceFile queryDeviceFile(array $options = [])
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
@@ -112,6 +114,43 @@ class V20180120Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetLoraNodesTask extends V20180120Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method array getDeviceInfo()
+ */
+class CreateLoRaNodesTask extends V20180120Rpc
+{
+
+    /**
+     * @param array $deviceInfo
+     *
+     * @return $this
+     */
+    public function withDeviceInfo(array $deviceInfo)
+    {
+        $this->data['DeviceInfo'] = $deviceInfo;
+        foreach ($deviceInfo as $depth1 => $depth1Value) {
+            $this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.PinCode'] = $depth1Value['PinCode'];
+            $this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.DevEui'] = $depth1Value['DevEui'];
+        }
+
+        return $this;
+    }
 }
 
 /**

@@ -831,6 +831,8 @@ class DescribeCacheAnalysisReport extends V20150101Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
