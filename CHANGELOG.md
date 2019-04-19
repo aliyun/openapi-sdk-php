@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.5.1 - 2019-04-19
+- Supported `Sas`, `Ivision`.
+- Added tests for `Sas`, `Ivision`.
+
+
 ## 1.5.0 - 2019-04-18
 - Improved parameters methods.
 - Optimized the logic for body encode.
