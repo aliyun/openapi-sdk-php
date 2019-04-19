@@ -8,6 +8,11 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeApplicationInstance describeApplicationInstance(array $options = [])
+ * @method DescribeApplicationInstances describeApplicationInstances(array $options = [])
+ * @method UpdateApplicationInstance updateApplicationInstance(array $options = [])
+ * @method CreateApplicationInstance createApplicationInstance(array $options = [])
+ * @method DescribeApplicationTemplates describeApplicationTemplates(array $options = [])
  * @method DescribeApplicationTemplate describeApplicationTemplate(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method NotifyContractEvent notifyContractEvent(array $options = [])
@@ -41,6 +46,54 @@ class V20151101Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getParam()
+ * @method $this withParam($value)
+ */
+class DescribeApplicationInstance extends V20151101Rpc
+{
+}
+
+/**
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeApplicationInstances extends V20151101Rpc
+{
+}
+
+/**
+ * @method string getParam()
+ * @method $this withParam($value)
+ */
+class UpdateApplicationInstance extends V20151101Rpc
+{
+}
+
+/**
+ * @method string getParam()
+ * @method $this withParam($value)
+ */
+class CreateApplicationInstance extends V20151101Rpc
+{
+}
+
+/**
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeApplicationTemplates extends V20151101Rpc
+{
 }
 
 /**

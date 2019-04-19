@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeHighPriorityIps describeHighPriorityIps(array $options = [])
  * @method DeleteAccessLog deleteAccessLog(array $options = [])
  * @method SetAccessLog setAccessLog(array $options = [])
  * @method DescribeUiseNodeStatus describeUiseNodeStatus(array $options = [])
@@ -57,6 +58,26 @@ class V20180821Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'uis';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeHighPriorityIps extends V20180821Rpc
+{
 }
 
 /**

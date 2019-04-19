@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
  * @method UnsubscribeBillToOSS unsubscribeBillToOSS(array $options = [])
  * @method SubscribeBillToOSS subscribeBillToOSS(array $options = [])
  * @method CancelOrder cancelOrder(array $options = [])
@@ -67,6 +68,14 @@ class V20171214Rpc extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetCustomerAccountInfo extends V20171214Rpc
+{
 }
 
 /**

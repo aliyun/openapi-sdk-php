@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method ResetAppCode resetAppCode(array $options = [])
  * @method DescribeApp describeApp(array $options = [])
  * @method CreateIntranetDomain createIntranetDomain(array $options = [])
  * @method ImportSwagger importSwagger(array $options = [])
@@ -126,6 +127,16 @@ class V20160714Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'apigateway';
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppCode()
+ * @method $this withAppCode($value)
+ */
+class ResetAppCode extends V20160714Rpc
+{
 }
 
 /**

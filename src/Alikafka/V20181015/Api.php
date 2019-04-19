@@ -8,6 +8,11 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method SendMsg sendMsg(array $options = [])
+ * @method AddPartitions addPartitions(array $options = [])
+ * @method AddTopicWithPartition addTopicWithPartition(array $options = [])
+ * @method GetAllInstanceIdList getAllInstanceIdList(array $options = [])
+ * @method UpdateTopicRemark updateTopicRemark(array $options = [])
  * @method UpdateInstanceName updateInstanceName(array $options = [])
  * @method GetVpcInfo getVpcInfo(array $options = [])
  * @method GetTopicSubscribeStatus getTopicSubscribeStatus(array $options = [])
@@ -38,6 +43,66 @@ class V20181015Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'alikafka';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPartition()
+ * @method $this withPartition($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getValue()
+ * @method $this withValue($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class SendMsg extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getPartitionNum()
+ * @method $this withPartitionNum($value)
+ */
+class AddPartitions extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getPartitionNum()
+ * @method $this withPartitionNum($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class AddTopicWithPartition extends V20181015Rpc
+{
+}
+
+class GetAllInstanceIdList extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ */
+class UpdateTopicRemark extends V20181015Rpc
+{
 }
 
 /**

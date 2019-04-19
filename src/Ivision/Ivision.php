@@ -1,16 +1,15 @@
 <?php
 
-namespace AlibabaCloud\Ons;
+namespace AlibabaCloud\Ivision;
 
 use AlibabaCloud\VersionResolverTrait;
 
 /**
  * Resolve version based on the method name.
  *
- * @method V20170918\OnsApiResolver v20170918()
- * @method V20190214\OnsApiResolver v20190214()
+ * @method V20190308\IvisionApiResolver v20190308()
  */
-class Ons
+class Ivision
 {
     use VersionResolverTrait;
 }

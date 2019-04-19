@@ -857,6 +857,8 @@ class CreateBackup extends V20170801Rpc
  * @method $this withVSwitchId($value)
  * @method string getDBNodeClass()
  * @method $this withDBNodeClass($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getVPCId()
