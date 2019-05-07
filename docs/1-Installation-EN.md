@@ -31,14 +31,6 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk --optimize-autoloa
 > Some users may not be able to install due to network problems, you can try to switch the Composer mirror.
 
 
-### Class Map Generation
-You must enable the [Class Map Generation][class-map-generation] feature to use the Alibaba Cloud SDK for PHP. There are 3 ways to enable this feature:
-
-- Set `"optimize-autoloader": true` inside the `config` key of `composer.json`.
-- Call `composer install` or `composer update` with `-o` / `--optimize-autoloader`.
-- Call `composer dump-autoload` with `-o` / `--optimize`.
-
-
 ### Add autoloader to your PHP scripts
 To utilize the Alibaba Cloud SDK for PHP in your scripts, include the autoloader in your scripts, as follows.
 ```php
@@ -60,5 +52,3 @@ require __DIR__ . '/vendor/autoload.php';
 
 ***
 [← Prerequisites](0-Prerequisites-EN.md) | Installation[(中文)](1-Installation-CN.md) | [Client →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/2-Client-EN.md)
-
-[class-map-generation]:https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation
