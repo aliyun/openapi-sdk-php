@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\NAS;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20170626\NASApiResolver v20170626()
  */
-class NASVersion
+class NASVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

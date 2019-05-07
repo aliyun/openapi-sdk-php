@@ -2,17 +2,13 @@
 
 namespace AlibabaCloud\Tests\Unit;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use PHPUnit\Framework\TestCase;
-use ReflectionException;
 use stdClass;
+use ReflectionObject;
+use ReflectionException;
+use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
 
-/**
- * Class VersionResolverTraitTest
- *
- * @package AlibabaCloud\Tests\Unit
- */
-class VersionResolverTraitTest extends TestCase
+class VersionResolverTest extends TestCase
 {
     public function testApi()
     {
@@ -39,11 +35,11 @@ class VersionResolverTraitTest extends TestCase
     public function testGetServiceName()
     {
         $slb    = AlibabaCloud::slb();
-        $ref    = new \ReflectionObject($slb);
+        $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getServiceName');
         $method->setAccessible(true);
         self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('Unit', $method->invokeArgs($slb, [\get_class($this)]));
+        self::assertEquals('Tests', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
@@ -54,7 +50,7 @@ class VersionResolverTraitTest extends TestCase
     public function testGetServiceNameNotFound()
     {
         $slb    = AlibabaCloud::slb();
-        $ref    = new \ReflectionObject($slb);
+        $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getServiceName');
         $method->setAccessible(true);
         self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));

@@ -32,8 +32,8 @@
         <whitelist>
             <file>./src/ApiResolverTrait.php</file>
             <file>./src/DumpServices.php</file>
-            <file>./src/ServiceResolverTrait.php</file>
-            <file>./src/VersionResolverTrait.php</file>
+            <file>./src/ProductsResolver.php</file>
+            <file>./src/VersionResolver.php</file>
             <exclude>
                 <file>./src/Constants.php</file>
             </exclude>

@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Iot;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180120\IotApiResolver v20180120()
  */
-class IotVersion
+class IotVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

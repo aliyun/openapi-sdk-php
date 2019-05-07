@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\SasApi;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20170705\SasApiApiResolver v20170705()
  */
-class SasApiVersion
+class SasApiVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

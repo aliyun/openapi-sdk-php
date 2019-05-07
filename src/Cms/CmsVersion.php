@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Cms;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180308\CmsApiResolver v20180308()
  */
-class CmsVersion
+class CmsVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

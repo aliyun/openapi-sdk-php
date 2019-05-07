@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\IDST;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20170922\IDSTApiResolver v20170922()
  */
-class IDSTVersion
+class IDSTVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

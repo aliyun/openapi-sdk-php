@@ -8,6 +8,7 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
@@ -119,6 +120,24 @@ class V20170906Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'imm';
+}
+
+/**
+ * @method string getGroupIdFrom()
+ * @method $this withGroupIdFrom($value)
+ * @method string getGroupIdTo()
+ * @method $this withGroupIdTo($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getSetId()
+ * @method $this withSetId($value)
+ */
+class CreateMergeFaceGroupsJob extends V20170906Rpc
+{
 }
 
 /**

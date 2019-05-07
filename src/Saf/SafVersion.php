@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Saf;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180919\SafApiResolver v20180919()
  */
-class SafVersion
+class SafVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

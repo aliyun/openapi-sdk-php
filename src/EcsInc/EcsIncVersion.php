@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\EcsInc;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20160314\EcsIncApiResolver v20160314()
  */
-class EcsIncVersion
+class EcsIncVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

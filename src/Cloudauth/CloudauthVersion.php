@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Cloudauth;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180916\CloudauthApiResolver v20180916()
  */
-class CloudauthVersion
+class CloudauthVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

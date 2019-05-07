@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Alidns;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20150109\AlidnsApiResolver v20150109()
  */
-class AlidnsVersion
+class AlidnsVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

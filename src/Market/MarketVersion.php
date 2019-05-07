@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Market;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20151101\MarketApiResolver v20151101()
  */
-class MarketVersion
+class MarketVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

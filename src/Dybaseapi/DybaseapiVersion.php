@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Dybaseapi;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20170525\DybaseapiApiResolver v20170525()
  */
-class DybaseapiVersion
+class DybaseapiVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Dts;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20160801\DtsApiResolver v20160801()
  */
-class DtsVersion
+class DtsVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

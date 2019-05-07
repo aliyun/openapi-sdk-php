@@ -6,11 +6,6 @@ use AlibabaCloud\ApiResolverTrait;
 
 /**
  * @deprecated
- *
- * @method static DescribeBusinessStatus describeBusinessStatus(array $options = [])
- * @method static NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
- * @method static SetUserBusinessStatus setUserBusinessStatus(array $options = [])
- * @method static UbsmsApiResolver ubsmsApiResolver(array $options = [])
  */
 class Ubsms
 {

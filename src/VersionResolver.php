@@ -4,14 +4,8 @@ namespace AlibabaCloud;
 
 use AlibabaCloud\Client\Exception\ClientException;
 
-/**
- * Trait VersionResolverTrait
- *
- * @package   AlibabaCloud
- */
-trait VersionResolverTrait
+class VersionResolver
 {
-
     /**
      * @var bool
      */
@@ -28,8 +22,8 @@ trait VersionResolverTrait
     }
 
     /**
-     * @param $name
-     * @param $arguments
+     * @param string $name
+     * @param array  $arguments
      *
      * @return mixed
      */
@@ -39,8 +33,8 @@ trait VersionResolverTrait
     }
 
     /**
-     * @param      $version
-     * @param      $arguments
+     * @param string $version
+     * @param array  $arguments
      *
      * @return mixed
      * @throws ClientException
@@ -76,9 +70,11 @@ trait VersionResolverTrait
     protected function getServiceName($class)
     {
         $array = \explode('\\', $class);
-        if (isset($array[2])) {
-            return $array[2];
+
+        if (isset($array[1])) {
+            return $array[1];
         }
+
         throw new ClientException(
             'Service name not found.',
             'SDK.ServiceNotFound'

@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\NlsCloudMeta;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180518\NlsCloudMetaApiResolver v20180518()
  */
-class NlsCloudMetaVersion
+class NlsCloudMetaVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }
