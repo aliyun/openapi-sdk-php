@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.6.0 - 2019-05-07
+- Changed `Resolver` file name.
+
+
 ## 1.5.1 - 2019-04-19
 - Supported `Sas`, `Ivision`.
 - Added tests for `Sas`, `Ivision`.

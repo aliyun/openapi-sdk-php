@@ -47,14 +47,6 @@ composer require alibabacloud/sdk --optimize-autoloader
 请看 [安装](docs/1-Installation-CN.md) 有关通过 Composer 和其他方式安装的详细信息。
 
 
-## 类映射生成
-必须开启[类映射生成][class-map-generation]功能才能使用 Alibaba Cloud SDK for PHP，有3种方法开启此功能：
-
-- 在 `composer.json` 文件中 `config` 部分增加 `"optimize-autoloader": true` ，可一劳永逸。
-- 执行 `composer install` 或 `composer update` 时增加 `-o` 或 `--optimize-autoloader` 选项。
-- 执行 `composer dump-autoload` 时增加 `-o` 或 `--optimize` 选项。
-
-
 ## 在线示例
 [API Explorer](https://api.aliyun.com) 提供在线调用阿里云产品，并动态生成 SDK 代码和快速检索接口等能力，能显著降低使用云 API 的难度。
 
@@ -177,4 +169,3 @@ try {
 [aliyun]: https://www.aliyun.com
 [alibabacloud]: https://www.alibabacloud.com
 [endpoints]: https://developer.aliyun.com/endpoints
-[class-map-generation]:https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation
