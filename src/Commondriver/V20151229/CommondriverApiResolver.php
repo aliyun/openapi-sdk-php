@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Commondriver\V20151229;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetOrderIdByCheckBeforePay getOrderIdByCheckBeforePay(array $options = [])
  * @method GetOrderIdByQueryPurchase getOrderIdByQueryPurchase(array $options = [])
  */
@@ -16,7 +13,7 @@ class CommondriverApiResolver
     use ApiResolverTrait;
 }
 
-class V20151229Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Commondriver';
@@ -31,7 +28,7 @@ class V20151229Rpc extends Rpc
 /**
  * @method string getOrderId()
  */
-class GetOrderIdByCheckBeforePay extends V20151229Rpc
+class GetOrderIdByCheckBeforePay extends Rpc
 {
 
     /**
@@ -51,7 +48,7 @@ class GetOrderIdByCheckBeforePay extends V20151229Rpc
 /**
  * @method string getOrderId()
  */
-class GetOrderIdByQueryPurchase extends V20151229Rpc
+class GetOrderIdByQueryPurchase extends Rpc
 {
 
     /**

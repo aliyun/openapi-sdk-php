@@ -3,11 +3,8 @@
 namespace AlibabaCloud\AliProbe\V20161222;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UpdateTaskWithSecurityCheck updateTaskWithSecurityCheck(array $options = [])
  * @method QueryTasksRate queryTasksRate(array $options = [])
  * @method QueryWeeklySla queryWeeklySla(array $options = [])
@@ -30,7 +27,7 @@ class AliProbeApiResolver
     use ApiResolverTrait;
 }
 
-class V20161222Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'AliProbe';
@@ -46,7 +43,7 @@ class V20161222Rpc extends Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class UpdateTaskWithSecurityCheck extends V20161222Rpc
+class UpdateTaskWithSecurityCheck extends Rpc
 {
 }
 
@@ -54,7 +51,7 @@ class UpdateTaskWithSecurityCheck extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryTasksRate extends V20161222Rpc
+class QueryTasksRate extends Rpc
 {
 }
 
@@ -62,7 +59,7 @@ class QueryTasksRate extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryWeeklySla extends V20161222Rpc
+class QueryWeeklySla extends Rpc
 {
 }
 
@@ -70,7 +67,7 @@ class QueryWeeklySla extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryTasks extends V20161222Rpc
+class QueryTasks extends Rpc
 {
 }
 
@@ -78,7 +75,7 @@ class QueryTasks extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryTasksCurrentProbeStatus extends V20161222Rpc
+class QueryTasksCurrentProbeStatus extends Rpc
 {
 }
 
@@ -86,7 +83,7 @@ class QueryTasksCurrentProbeStatus extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryMonthlySla extends V20161222Rpc
+class QueryMonthlySla extends Rpc
 {
 }
 
@@ -94,7 +91,7 @@ class QueryMonthlySla extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryIspAvailRate extends V20161222Rpc
+class QueryIspAvailRate extends Rpc
 {
 }
 
@@ -102,7 +99,7 @@ class QueryIspAvailRate extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryIspIndexData extends V20161222Rpc
+class QueryIspIndexData extends Rpc
 {
 }
 
@@ -110,7 +107,7 @@ class QueryIspIndexData extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryIspAreaCity extends V20161222Rpc
+class QueryIspAreaCity extends Rpc
 {
 }
 
@@ -118,7 +115,7 @@ class QueryIspAreaCity extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryErrorRate extends V20161222Rpc
+class QueryErrorRate extends Rpc
 {
 }
 
@@ -126,7 +123,7 @@ class QueryErrorRate extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryDailySla extends V20161222Rpc
+class QueryDailySla extends Rpc
 {
 }
 
@@ -134,7 +131,7 @@ class QueryDailySla extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class QueryIndexData extends V20161222Rpc
+class QueryIndexData extends Rpc
 {
 }
 
@@ -142,7 +139,7 @@ class QueryIndexData extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class DeleteTask extends V20161222Rpc
+class DeleteTask extends Rpc
 {
 }
 
@@ -150,7 +147,7 @@ class DeleteTask extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class GetTask extends V20161222Rpc
+class GetTask extends Rpc
 {
 
     /** @var string */
@@ -161,7 +158,7 @@ class GetTask extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class CreateTaskWithSecurityCheck extends V20161222Rpc
+class CreateTaskWithSecurityCheck extends Rpc
 {
 }
 
@@ -169,6 +166,6 @@ class CreateTaskWithSecurityCheck extends V20161222Rpc
  * @method string getBody()
  * @method $this withBody($value)
  */
-class BatchDeleteTasks extends V20161222Rpc
+class BatchDeleteTasks extends Rpc
 {
 }

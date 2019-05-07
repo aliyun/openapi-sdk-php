@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Market\V20151101;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeApplicationInstance describeApplicationInstance(array $options = [])
  * @method DescribeApplicationInstances describeApplicationInstances(array $options = [])
  * @method UpdateApplicationInstance updateApplicationInstance(array $options = [])
@@ -35,7 +32,7 @@ class MarketApiResolver
     use ApiResolverTrait;
 }
 
-class V20151101Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Market';
@@ -51,7 +48,7 @@ class V20151101Rpc extends Rpc
  * @method string getParam()
  * @method $this withParam($value)
  */
-class DescribeApplicationInstance extends V20151101Rpc
+class DescribeApplicationInstance extends Rpc
 {
 }
 
@@ -63,7 +60,7 @@ class DescribeApplicationInstance extends V20151101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApplicationInstances extends V20151101Rpc
+class DescribeApplicationInstances extends Rpc
 {
 }
 
@@ -71,7 +68,7 @@ class DescribeApplicationInstances extends V20151101Rpc
  * @method string getParam()
  * @method $this withParam($value)
  */
-class UpdateApplicationInstance extends V20151101Rpc
+class UpdateApplicationInstance extends Rpc
 {
 }
 
@@ -79,7 +76,7 @@ class UpdateApplicationInstance extends V20151101Rpc
  * @method string getParam()
  * @method $this withParam($value)
  */
-class CreateApplicationInstance extends V20151101Rpc
+class CreateApplicationInstance extends Rpc
 {
 }
 
@@ -91,7 +88,7 @@ class CreateApplicationInstance extends V20151101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApplicationTemplates extends V20151101Rpc
+class DescribeApplicationTemplates extends Rpc
 {
 }
 
@@ -99,7 +96,7 @@ class DescribeApplicationTemplates extends V20151101Rpc
  * @method string getParam()
  * @method $this withParam($value)
  */
-class DescribeApplicationTemplate extends V20151101Rpc
+class DescribeApplicationTemplate extends Rpc
 {
 }
 
@@ -111,7 +108,7 @@ class DescribeApplicationTemplate extends V20151101Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeInstances extends V20151101Rpc
+class DescribeInstances extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class DescribeInstances extends V20151101Rpc
  * @method string getEventType()
  * @method $this withEventType($value)
  */
-class NotifyContractEvent extends V20151101Rpc
+class NotifyContractEvent extends Rpc
 {
 }
 
@@ -134,7 +131,7 @@ class NotifyContractEvent extends V20151101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeProducts extends V20151101Rpc
+class DescribeProducts extends Rpc
 {
 
     /**
@@ -162,7 +159,7 @@ class DescribeProducts extends V20151101Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class DescribeProductRates extends V20151101Rpc
+class DescribeProductRates extends Rpc
 {
 }
 
@@ -172,7 +169,7 @@ class DescribeProductRates extends V20151101Rpc
  * @method string getImagePackageInstanceId()
  * @method $this withImagePackageInstanceId($value)
  */
-class BindImagePackage extends V20151101Rpc
+class BindImagePackage extends Rpc
 {
 }
 
@@ -182,7 +179,7 @@ class BindImagePackage extends V20151101Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribePrice extends V20151101Rpc
+class DescribePrice extends Rpc
 {
 }
 
@@ -194,7 +191,7 @@ class DescribePrice extends V20151101Rpc
  * @method string getAliUid()
  * @method $this withAliUid($value)
  */
-class DescribeProduct extends V20151101Rpc
+class DescribeProduct extends Rpc
 {
 }
 
@@ -212,7 +209,7 @@ class DescribeProduct extends V20151101Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class CreateOrder extends V20151101Rpc
+class CreateOrder extends Rpc
 {
 }
 
@@ -224,7 +221,7 @@ class CreateOrder extends V20151101Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeInstance extends V20151101Rpc
+class DescribeInstance extends Rpc
 {
 }
 
@@ -232,7 +229,7 @@ class DescribeInstance extends V20151101Rpc
  * @method string getOrderId()
  * @method $this withOrderId($value)
  */
-class DescribeOrder extends V20151101Rpc
+class DescribeOrder extends Rpc
 {
 }
 
@@ -240,7 +237,7 @@ class DescribeOrder extends V20151101Rpc
  * @method string getMetering()
  * @method $this withMetering($value)
  */
-class PushMeteringData extends V20151101Rpc
+class PushMeteringData extends Rpc
 {
 }
 
@@ -250,7 +247,7 @@ class PushMeteringData extends V20151101Rpc
  * @method string getLicenseCode()
  * @method $this withLicenseCode($value)
  */
-class ActivateLicense extends V20151101Rpc
+class ActivateLicense extends Rpc
 {
 }
 
@@ -258,11 +255,11 @@ class ActivateLicense extends V20151101Rpc
  * @method string getLicenseCode()
  * @method $this withLicenseCode($value)
  */
-class DescribeLicense extends V20151101Rpc
+class DescribeLicense extends Rpc
 {
 }
 
-class QueryMarketCategories extends V20151101Rpc
+class QueryMarketCategories extends Rpc
 {
 }
 
@@ -270,6 +267,6 @@ class QueryMarketCategories extends V20151101Rpc
  * @method string getParam()
  * @method $this withParam($value)
  */
-class QueryMarketImages extends V20151101Rpc
+class QueryMarketImages extends Rpc
 {
 }

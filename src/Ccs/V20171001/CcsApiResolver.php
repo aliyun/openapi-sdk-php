@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ccs\V20171001;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetHotlineRecord getHotlineRecord(array $options = [])
  * @method QueryHotlineRecord queryHotlineRecord(array $options = [])
  * @method QueryServiceRecord queryServiceRecord(array $options = [])
@@ -31,7 +28,7 @@ class CcsApiResolver
     use ApiResolverTrait;
 }
 
-class V20171001Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ccs';
@@ -52,7 +49,7 @@ class V20171001Rpc extends Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class GetHotlineRecord extends V20171001Rpc
+class GetHotlineRecord extends Rpc
 {
 }
 
@@ -90,7 +87,7 @@ class GetHotlineRecord extends V20171001Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryHotlineRecord extends V20171001Rpc
+class QueryHotlineRecord extends Rpc
 {
 }
 
@@ -112,7 +109,7 @@ class QueryHotlineRecord extends V20171001Rpc
  * @method string getVisitorId()
  * @method $this withVisitorId($value)
  */
-class QueryServiceRecord extends V20171001Rpc
+class QueryServiceRecord extends Rpc
 {
 
     /** @var string */
@@ -125,7 +122,7 @@ class QueryServiceRecord extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class GetServiceRecord extends V20171001Rpc
+class GetServiceRecord extends Rpc
 {
 }
 
@@ -141,7 +138,7 @@ class GetServiceRecord extends V20171001Rpc
  * @method string getOperatorId()
  * @method $this withOperatorId($value)
  */
-class ProceedTicket extends V20171001Rpc
+class ProceedTicket extends Rpc
 {
 }
 
@@ -165,7 +162,7 @@ class ProceedTicket extends V20171001Rpc
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
-class QueryRobotSession extends V20171001Rpc
+class QueryRobotSession extends Rpc
 {
 }
 
@@ -177,7 +174,7 @@ class QueryRobotSession extends V20171001Rpc
  * @method string getVisitorId()
  * @method $this withVisitorId($value)
  */
-class LastRobotSession extends V20171001Rpc
+class LastRobotSession extends Rpc
 {
 }
 
@@ -189,7 +186,7 @@ class LastRobotSession extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class EvaluateRobotSession extends V20171001Rpc
+class EvaluateRobotSession extends Rpc
 {
 }
 
@@ -205,7 +202,7 @@ class EvaluateRobotSession extends V20171001Rpc
  * @method string getVisitorId()
  * @method $this withVisitorId($value)
  */
-class CreateRobotSession extends V20171001Rpc
+class CreateRobotSession extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class CreateRobotSession extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class CloseRobotSession extends V20171001Rpc
+class CloseRobotSession extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class CloseRobotSession extends V20171001Rpc
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
-class ChatRobotSession extends V20171001Rpc
+class ChatRobotSession extends Rpc
 {
 }
 
@@ -243,7 +240,7 @@ class ChatRobotSession extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class AssumeOss extends V20171001Rpc
+class AssumeOss extends Rpc
 {
 }
 
@@ -255,7 +252,7 @@ class AssumeOss extends V20171001Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class CheckInspectAudio extends V20171001Rpc
+class CheckInspectAudio extends Rpc
 {
 }
 
@@ -264,7 +261,7 @@ class CheckInspectAudio extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class CheckInspectText extends V20171001Rpc
+class CheckInspectText extends Rpc
 {
 
     /**
@@ -292,7 +289,7 @@ class CheckInspectText extends V20171001Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetInspectResult extends V20171001Rpc
+class GetInspectResult extends Rpc
 {
 }
 
@@ -308,7 +305,7 @@ class GetInspectResult extends V20171001Rpc
  * @method string getCustomFields()
  * @method $this withCustomFields($value)
  */
-class CreateTicket extends V20171001Rpc
+class CreateTicket extends Rpc
 {
 }
 
@@ -330,6 +327,6 @@ class CreateTicket extends V20171001Rpc
  * @method string getCcsInstanceId()
  * @method $this withCcsInstanceId($value)
  */
-class QueryTicket extends V20171001Rpc
+class QueryTicket extends Rpc
 {
 }

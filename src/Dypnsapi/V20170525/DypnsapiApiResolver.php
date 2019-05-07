@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dypnsapi\V20170525;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetMobile getMobile(array $options = [])
  * @method CreateVerifyScheme createVerifyScheme(array $options = [])
  * @method VerifyMobile verifyMobile(array $options = [])
@@ -18,7 +15,7 @@ class DypnsapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20170525Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dypnsapi';
@@ -42,7 +39,7 @@ class V20170525Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetMobile extends V20170525Rpc
+class GetMobile extends Rpc
 {
 
     /** @var string */
@@ -69,7 +66,7 @@ class GetMobile extends V20170525Rpc
  * @method string getPackSign()
  * @method $this withPackSign($value)
  */
-class CreateVerifyScheme extends V20170525Rpc
+class CreateVerifyScheme extends Rpc
 {
 }
 
@@ -87,7 +84,7 @@ class CreateVerifyScheme extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class VerifyMobile extends V20170525Rpc
+class VerifyMobile extends Rpc
 {
 
     /** @var string */
@@ -106,6 +103,6 @@ class VerifyMobile extends V20170525Rpc
  * @method string getSince()
  * @method $this withSince($value)
  */
-class TwiceTelVerify extends V20170525Rpc
+class TwiceTelVerify extends Rpc
 {
 }

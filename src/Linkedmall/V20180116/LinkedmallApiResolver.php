@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Linkedmall\V20180116;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method RenderOrder renderOrder(array $options = [])
  * @method ConfirmDisburse confirmDisburse(array $options = [])
  * @method ModifyBasicAndBizItems modifyBasicAndBizItems(array $options = [])
@@ -52,7 +49,7 @@ class LinkedmallApiResolver
     use ApiResolverTrait;
 }
 
-class V20180116Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'linkedmall';
@@ -78,7 +75,7 @@ class V20180116Rpc extends Rpc
  * @method string getDeliveryAddress()
  * @method $this withDeliveryAddress($value)
  */
-class RenderOrder extends V20180116Rpc
+class RenderOrder extends Rpc
 {
 
     /**
@@ -107,7 +104,7 @@ class RenderOrder extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class ConfirmDisburse extends V20180116Rpc
+class ConfirmDisburse extends Rpc
 {
 }
 
@@ -118,7 +115,7 @@ class ConfirmDisburse extends V20180116Rpc
  * @method string getSubBizId()
  * @method $this withSubBizId($value)
  */
-class ModifyBasicAndBizItems extends V20180116Rpc
+class ModifyBasicAndBizItems extends Rpc
 {
 
     /**
@@ -155,7 +152,7 @@ class ModifyBasicAndBizItems extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryRefundApplicationDetail extends V20180116Rpc
+class QueryRefundApplicationDetail extends Rpc
 {
 }
 
@@ -173,7 +170,7 @@ class QueryRefundApplicationDetail extends V20180116Rpc
  * @method string getLogisticsNo()
  * @method $this withLogisticsNo($value)
  */
-class SubmitReturnGoodLogistics extends V20180116Rpc
+class SubmitReturnGoodLogistics extends Rpc
 {
 }
 
@@ -197,7 +194,7 @@ class SubmitReturnGoodLogistics extends V20180116Rpc
  * @method $this withApplyRefundCount($value)
  * @method string getLeaveMessage()
  */
-class ApplyRefund extends V20180116Rpc
+class ApplyRefund extends Rpc
 {
 
     /**
@@ -242,7 +239,7 @@ class ApplyRefund extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class InitApplyRefund extends V20180116Rpc
+class InitApplyRefund extends Rpc
 {
 }
 
@@ -254,7 +251,7 @@ class InitApplyRefund extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class RepayOrder extends V20180116Rpc
+class RepayOrder extends Rpc
 {
 }
 
@@ -266,7 +263,7 @@ class RepayOrder extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryLogistics extends V20180116Rpc
+class QueryLogistics extends Rpc
 {
 }
 
@@ -280,7 +277,7 @@ class QueryLogistics extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class RefundPoint extends V20180116Rpc
+class RefundPoint extends Rpc
 {
 }
 
@@ -292,7 +289,7 @@ class RefundPoint extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryAddress extends V20180116Rpc
+class QueryAddress extends Rpc
 {
 }
 
@@ -301,7 +298,7 @@ class QueryAddress extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class CancelOrder extends V20180116Rpc
+class CancelOrder extends Rpc
 {
 
     /**
@@ -325,7 +322,7 @@ class CancelOrder extends V20180116Rpc
  * @method $this withBizId($value)
  * @method array getItemList()
  */
-class AddSupplierNewItems extends V20180116Rpc
+class AddSupplierNewItems extends Rpc
 {
 
     /**
@@ -359,7 +356,7 @@ class AddSupplierNewItems extends V20180116Rpc
  * @method string getSubBizId()
  * @method $this withSubBizId($value)
  */
-class QueryBizItemList extends V20180116Rpc
+class QueryBizItemList extends Rpc
 {
 }
 
@@ -370,7 +367,7 @@ class QueryBizItemList extends V20180116Rpc
  * @method string getSubBizId()
  * @method $this withSubBizId($value)
  */
-class ModifyBizItems extends V20180116Rpc
+class ModifyBizItems extends Rpc
 {
 
     /**
@@ -410,7 +407,7 @@ class ModifyBizItems extends V20180116Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryOrderList extends V20180116Rpc
+class QueryOrderList extends Rpc
 {
 }
 
@@ -422,7 +419,7 @@ class QueryOrderList extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryOrderLogistics extends V20180116Rpc
+class QueryOrderLogistics extends Rpc
 {
 }
 
@@ -433,7 +430,7 @@ class QueryOrderLogistics extends V20180116Rpc
  * @method string getSubBizId()
  * @method $this withSubBizId($value)
  */
-class DeleteBizItems extends V20180116Rpc
+class DeleteBizItems extends Rpc
 {
 
     /**
@@ -461,7 +458,7 @@ class DeleteBizItems extends V20180116Rpc
  * @method $this withBizId($value)
  * @method array getItemList()
  */
-class QueryItemInventory extends V20180116Rpc
+class QueryItemInventory extends Rpc
 {
 
     /**
@@ -497,7 +494,7 @@ class QueryItemInventory extends V20180116Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class NotifyWithholdFund extends V20180116Rpc
+class NotifyWithholdFund extends Rpc
 {
 }
 
@@ -522,7 +519,7 @@ class NotifyWithholdFund extends V20180116Rpc
  * @method string getDeliveryAddress()
  * @method $this withDeliveryAddress($value)
  */
-class CreateOrder extends V20180116Rpc
+class CreateOrder extends Rpc
 {
 
     /**
@@ -555,7 +552,7 @@ class CreateOrder extends V20180116Rpc
  * @method string getExtJson()
  * @method $this withExtJson($value)
  */
-class CreateMovieTicketOrder extends V20180116Rpc
+class CreateMovieTicketOrder extends Rpc
 {
 
     /** @var string */
@@ -572,7 +569,7 @@ class CreateMovieTicketOrder extends V20180116Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryGuideItemGroup extends V20180116Rpc
+class QueryGuideItemGroup extends Rpc
 {
 }
 
@@ -582,7 +579,7 @@ class QueryGuideItemGroup extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryItemDetail extends V20180116Rpc
+class QueryItemDetail extends Rpc
 {
 }
 
@@ -602,7 +599,7 @@ class QueryItemDetail extends V20180116Rpc
  * @method string getScheduleId()
  * @method $this withScheduleId($value)
  */
-class ReserveMovieSeat extends V20180116Rpc
+class ReserveMovieSeat extends Rpc
 {
 }
 
@@ -616,7 +613,7 @@ class ReserveMovieSeat extends V20180116Rpc
  * @method string getLockSeatApplyKey()
  * @method $this withLockSeatApplyKey($value)
  */
-class ReleaseMovieSeat extends V20180116Rpc
+class ReleaseMovieSeat extends Rpc
 {
 }
 
@@ -628,7 +625,7 @@ class ReleaseMovieSeat extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryUpcomingMovies extends V20180116Rpc
+class QueryUpcomingMovies extends Rpc
 {
 }
 
@@ -640,7 +637,7 @@ class QueryUpcomingMovies extends V20180116Rpc
  * @method string getScheduleId()
  * @method $this withScheduleId($value)
  */
-class QueryMovieSeats extends V20180116Rpc
+class QueryMovieSeats extends Rpc
 {
 }
 
@@ -652,7 +649,7 @@ class QueryMovieSeats extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryMovieSchedules extends V20180116Rpc
+class QueryMovieSchedules extends Rpc
 {
 }
 
@@ -664,7 +661,7 @@ class QueryMovieSchedules extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryHotMovies extends V20180116Rpc
+class QueryHotMovies extends Rpc
 {
 }
 
@@ -674,7 +671,7 @@ class QueryHotMovies extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryAllCities extends V20180116Rpc
+class QueryAllCities extends Rpc
 {
 }
 
@@ -688,7 +685,7 @@ class QueryAllCities extends V20180116Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryAllCinemas extends V20180116Rpc
+class QueryAllCinemas extends Rpc
 {
 }
 
@@ -702,7 +699,7 @@ class QueryAllCinemas extends V20180116Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryMovieComments extends V20180116Rpc
+class QueryMovieComments extends Rpc
 {
 }
 
@@ -716,7 +713,7 @@ class QueryMovieComments extends V20180116Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class QueryMovieTickets extends V20180116Rpc
+class QueryMovieTickets extends Rpc
 {
 
     /** @var string */
@@ -731,7 +728,7 @@ class QueryMovieTickets extends V20180116Rpc
  * @method string getMessageIds()
  * @method $this withMessageIds($value)
  */
-class RemoveMessages extends V20180116Rpc
+class RemoveMessages extends Rpc
 {
 }
 
@@ -743,7 +740,7 @@ class RemoveMessages extends V20180116Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class QueryMessages extends V20180116Rpc
+class QueryMessages extends Rpc
 {
 }
 
@@ -759,7 +756,7 @@ class QueryMessages extends V20180116Rpc
  * @method string getSubBizId()
  * @method $this withSubBizId($value)
  */
-class QueryBizItems extends V20180116Rpc
+class QueryBizItems extends Rpc
 {
 }
 
@@ -775,6 +772,6 @@ class QueryBizItems extends V20180116Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class NotifyPayOrderStatus extends V20180116Rpc
+class NotifyPayOrderStatus extends Rpc
 {
 }

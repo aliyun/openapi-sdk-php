@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method FetchPhotos fetchPhotos(array $options = [])
  * @method FetchMomentPhotos fetchMomentPhotos(array $options = [])
  * @method FetchLibraries fetchLibraries(array $options = [])
@@ -85,7 +82,7 @@ class CloudPhotoApiResolver
     use ApiResolverTrait;
 }
 
-class V20170711Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'CloudPhoto';
@@ -119,7 +116,7 @@ class V20170711Rpc extends Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class FetchPhotos extends V20170711Rpc
+class FetchPhotos extends Rpc
 {
 }
 
@@ -139,7 +136,7 @@ class FetchPhotos extends V20170711Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class FetchMomentPhotos extends V20170711Rpc
+class FetchMomentPhotos extends Rpc
 {
 }
 
@@ -153,7 +150,7 @@ class FetchMomentPhotos extends V20170711Rpc
  * @method string getPage()
  * @method $this withPage($value)
  */
-class FetchLibraries extends V20170711Rpc
+class FetchLibraries extends Rpc
 {
 }
 
@@ -171,7 +168,7 @@ class FetchLibraries extends V20170711Rpc
  * @method string getPage()
  * @method $this withPage($value)
  */
-class FetchAlbumTagPhotos extends V20170711Rpc
+class FetchAlbumTagPhotos extends Rpc
 {
 }
 
@@ -182,7 +179,7 @@ class FetchAlbumTagPhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetAlbumsByNames extends V20170711Rpc
+class GetAlbumsByNames extends Rpc
 {
 
     /**
@@ -215,7 +212,7 @@ class GetAlbumsByNames extends V20170711Rpc
  * @method string getPage()
  * @method $this withPage($value)
  */
-class ListAlbumTagPhotos extends V20170711Rpc
+class ListAlbumTagPhotos extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class ListAlbumTagPhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetEvent extends V20170711Rpc
+class GetEvent extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class GetEvent extends V20170711Rpc
  * @method string getStartAt()
  * @method $this withStartAt($value)
  */
-class EditEvent extends V20170711Rpc
+class EditEvent extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class EditEvent extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class DeleteEvent extends V20170711Rpc
+class DeleteEvent extends Rpc
 {
 }
 
@@ -285,7 +282,7 @@ class DeleteEvent extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListEvents extends V20170711Rpc
+class ListEvents extends Rpc
 {
 }
 
@@ -313,7 +310,7 @@ class ListEvents extends V20170711Rpc
  * @method string getStartAt()
  * @method $this withStartAt($value)
  */
-class CreateEvent extends V20170711Rpc
+class CreateEvent extends Rpc
 {
 }
 
@@ -345,7 +342,7 @@ class CreateEvent extends V20170711Rpc
  * @method string getMd5()
  * @method $this withMd5($value)
  */
-class RegisterPhoto extends V20170711Rpc
+class RegisterPhoto extends Rpc
 {
 }
 
@@ -357,7 +354,7 @@ class RegisterPhoto extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetSimilarPhotos extends V20170711Rpc
+class GetSimilarPhotos extends Rpc
 {
 }
 
@@ -371,7 +368,7 @@ class GetSimilarPhotos extends V20170711Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class RegisterTag extends V20170711Rpc
+class RegisterTag extends Rpc
 {
 }
 
@@ -380,7 +377,7 @@ class RegisterTag extends V20170711Rpc
  * @method $this withStoreName($value)
  * @method array getLang()
  */
-class ListRegisteredTags extends V20170711Rpc
+class ListRegisteredTags extends Rpc
 {
 
     /**
@@ -409,7 +406,7 @@ class ListRegisteredTags extends V20170711Rpc
  * @method $this withPhotoId($value)
  * @method array getTagKey()
  */
-class TagPhoto extends V20170711Rpc
+class TagPhoto extends Rpc
 {
 
     /**
@@ -449,7 +446,7 @@ class TagPhoto extends V20170711Rpc
  * @method $this withStoreName($value)
  * @method array getEnabledFeatures()
  */
-class ToggleFeatures extends V20170711Rpc
+class ToggleFeatures extends Rpc
 {
 
     /**
@@ -489,7 +486,7 @@ class ToggleFeatures extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetLibrary extends V20170711Rpc
+class GetLibrary extends Rpc
 {
 }
 
@@ -507,7 +504,7 @@ class GetLibrary extends V20170711Rpc
  * @method string getAutoCleanDays()
  * @method $this withAutoCleanDays($value)
  */
-class EditPhotoStore extends V20170711Rpc
+class EditPhotoStore extends Rpc
 {
 }
 
@@ -531,7 +528,7 @@ class EditPhotoStore extends V20170711Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class ListTimeLines extends V20170711Rpc
+class ListTimeLines extends Rpc
 {
 }
 
@@ -543,7 +540,7 @@ class ListTimeLines extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class ListPhotoFaces extends V20170711Rpc
+class ListPhotoFaces extends Rpc
 {
 }
 
@@ -556,7 +553,7 @@ class ListPhotoFaces extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetFramedPhotoUrls extends V20170711Rpc
+class GetFramedPhotoUrls extends Rpc
 {
 
     /**
@@ -584,7 +581,7 @@ class GetFramedPhotoUrls extends V20170711Rpc
  * @method $this withState($value)
  * @method array getMd5()
  */
-class GetPhotosByMd5s extends V20170711Rpc
+class GetPhotosByMd5s extends Rpc
 {
 
     /**
@@ -618,7 +615,7 @@ class GetPhotosByMd5s extends V20170711Rpc
  * @method string getTitle()
  * @method $this withTitle($value)
  */
-class EditPhotos extends V20170711Rpc
+class EditPhotos extends Rpc
 {
 
     /**
@@ -646,7 +643,7 @@ class EditPhotos extends V20170711Rpc
  * @method string getZoomType()
  * @method $this withZoomType($value)
  */
-class GetPrivateAccessUrls extends V20170711Rpc
+class GetPrivateAccessUrls extends Rpc
 {
 
     /**
@@ -676,7 +673,7 @@ class GetPrivateAccessUrls extends V20170711Rpc
  * @method string getZoomType()
  * @method $this withZoomType($value)
  */
-class GetPublicAccessUrls extends V20170711Rpc
+class GetPublicAccessUrls extends Rpc
 {
 
     /**
@@ -715,7 +712,7 @@ class GetPublicAccessUrls extends V20170711Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class ListTimeLinePhotos extends V20170711Rpc
+class ListTimeLinePhotos extends Rpc
 {
 }
 
@@ -727,7 +724,7 @@ class ListTimeLinePhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class LikePhoto extends V20170711Rpc
+class LikePhoto extends Rpc
 {
 }
 
@@ -738,7 +735,7 @@ class LikePhoto extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class ActivatePhotos extends V20170711Rpc
+class ActivatePhotos extends Rpc
 {
 
     /**
@@ -766,7 +763,7 @@ class ActivatePhotos extends V20170711Rpc
  * @method string getZoomType()
  * @method $this withZoomType($value)
  */
-class GetThumbnails extends V20170711Rpc
+class GetThumbnails extends Rpc
 {
 
     /**
@@ -792,7 +789,7 @@ class GetThumbnails extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetDownloadUrls extends V20170711Rpc
+class GetDownloadUrls extends Rpc
 {
 
     /**
@@ -818,7 +815,7 @@ class GetDownloadUrls extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetPhotos extends V20170711Rpc
+class GetPhotos extends Rpc
 {
 
     /**
@@ -847,7 +844,7 @@ class GetPhotos extends V20170711Rpc
  * @method string getFaceId()
  * @method $this withFaceId($value)
  */
-class SetFaceCover extends V20170711Rpc
+class SetFaceCover extends Rpc
 {
 }
 
@@ -860,7 +857,7 @@ class SetFaceCover extends V20170711Rpc
  * @method $this withStoreName($value)
  * @method array getFaceId()
  */
-class MergeFaces extends V20170711Rpc
+class MergeFaces extends Rpc
 {
 
     /**
@@ -889,7 +886,7 @@ class MergeFaces extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class RenameAlbum extends V20170711Rpc
+class RenameAlbum extends Rpc
 {
 }
 
@@ -903,7 +900,7 @@ class RenameAlbum extends V20170711Rpc
  * @method string getFaceName()
  * @method $this withFaceName($value)
  */
-class RenameFace extends V20170711Rpc
+class RenameFace extends Rpc
 {
 }
 
@@ -919,7 +916,7 @@ class RenameFace extends V20170711Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class SearchPhotos extends V20170711Rpc
+class SearchPhotos extends Rpc
 {
 }
 
@@ -933,7 +930,7 @@ class SearchPhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class SetAlbumCover extends V20170711Rpc
+class SetAlbumCover extends Rpc
 {
 }
 
@@ -945,7 +942,7 @@ class SetAlbumCover extends V20170711Rpc
  * @method string getFaceId()
  * @method $this withFaceId($value)
  */
-class SetMe extends V20170711Rpc
+class SetMe extends Rpc
 {
 }
 
@@ -957,7 +954,7 @@ class SetMe extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class SetQuota extends V20170711Rpc
+class SetQuota extends Rpc
 {
 }
 
@@ -969,7 +966,7 @@ class SetQuota extends V20170711Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ListTags extends V20170711Rpc
+class ListTags extends Rpc
 {
 }
 
@@ -984,7 +981,7 @@ class ListTags extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class MoveAlbumPhotos extends V20170711Rpc
+class MoveAlbumPhotos extends Rpc
 {
 
     /**
@@ -1014,7 +1011,7 @@ class MoveAlbumPhotos extends V20170711Rpc
  * @method string getSourceFaceId()
  * @method $this withSourceFaceId($value)
  */
-class MoveFacePhotos extends V20170711Rpc
+class MoveFacePhotos extends Rpc
 {
 
     /**
@@ -1040,7 +1037,7 @@ class MoveFacePhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class ReactivatePhotos extends V20170711Rpc
+class ReactivatePhotos extends Rpc
 {
 
     /**
@@ -1068,7 +1065,7 @@ class ReactivatePhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class RemoveAlbumPhotos extends V20170711Rpc
+class RemoveAlbumPhotos extends Rpc
 {
 
     /**
@@ -1096,7 +1093,7 @@ class RemoveAlbumPhotos extends V20170711Rpc
  * @method string getFaceId()
  * @method $this withFaceId($value)
  */
-class RemoveFacePhotos extends V20170711Rpc
+class RemoveFacePhotos extends Rpc
 {
 
     /**
@@ -1131,7 +1128,7 @@ class RemoveFacePhotos extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListMomentPhotos extends V20170711Rpc
+class ListMomentPhotos extends Rpc
 {
 }
 
@@ -1149,7 +1146,7 @@ class ListMomentPhotos extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListMoments extends V20170711Rpc
+class ListMoments extends Rpc
 {
 }
 
@@ -1167,11 +1164,11 @@ class ListMoments extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListPhotos extends V20170711Rpc
+class ListPhotos extends Rpc
 {
 }
 
-class ListPhotoStores extends V20170711Rpc
+class ListPhotoStores extends Rpc
 {
 }
 
@@ -1185,7 +1182,7 @@ class ListPhotoStores extends V20170711Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ListPhotoTags extends V20170711Rpc
+class ListPhotoTags extends Rpc
 {
 }
 
@@ -1205,7 +1202,7 @@ class ListPhotoTags extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListTagPhotos extends V20170711Rpc
+class ListTagPhotos extends Rpc
 {
 }
 
@@ -1218,7 +1215,7 @@ class ListTagPhotos extends V20170711Rpc
  * @method string getInactiveTime()
  * @method $this withInactiveTime($value)
  */
-class InactivatePhotos extends V20170711Rpc
+class InactivatePhotos extends Rpc
 {
 
     /**
@@ -1253,7 +1250,7 @@ class InactivatePhotos extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListAlbumPhotos extends V20170711Rpc
+class ListAlbumPhotos extends Rpc
 {
 }
 
@@ -1271,7 +1268,7 @@ class ListAlbumPhotos extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListAlbums extends V20170711Rpc
+class ListAlbums extends Rpc
 {
 }
 
@@ -1291,7 +1288,7 @@ class ListAlbums extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListFacePhotos extends V20170711Rpc
+class ListFacePhotos extends Rpc
 {
 }
 
@@ -1311,7 +1308,7 @@ class ListFacePhotos extends V20170711Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class ListFaces extends V20170711Rpc
+class ListFaces extends Rpc
 {
 }
 
@@ -1323,7 +1320,7 @@ class ListFaces extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetDownloadUrl extends V20170711Rpc
+class GetDownloadUrl extends Rpc
 {
 }
 
@@ -1331,31 +1328,17 @@ class GetDownloadUrl extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class GetPhotoStore extends V20170711Rpc
-{
-}
-
-/**
- * @method string getLibraryId()
- * @method $this withLibraryId($value)
- * @method string getStoreName()
- * @method $this withStoreName($value)
- */
-class GetQuota extends V20170711Rpc
+class GetPhotoStore extends Rpc
 {
 }
 
 /**
  * @method string getLibraryId()
  * @method $this withLibraryId($value)
- * @method string getPhotoId()
- * @method $this withPhotoId($value)
  * @method string getStoreName()
  * @method $this withStoreName($value)
- * @method string getZoomType()
- * @method $this withZoomType($value)
  */
-class GetThumbnail extends V20170711Rpc
+class GetQuota extends Rpc
 {
 }
 
@@ -1369,7 +1352,21 @@ class GetThumbnail extends V20170711Rpc
  * @method string getZoomType()
  * @method $this withZoomType($value)
  */
-class GetVideoCover extends V20170711Rpc
+class GetThumbnail extends Rpc
+{
+}
+
+/**
+ * @method string getLibraryId()
+ * @method $this withLibraryId($value)
+ * @method string getPhotoId()
+ * @method $this withPhotoId($value)
+ * @method string getStoreName()
+ * @method $this withStoreName($value)
+ * @method string getZoomType()
+ * @method $this withZoomType($value)
+ */
+class GetVideoCover extends Rpc
 {
 }
 
@@ -1380,7 +1377,7 @@ class GetVideoCover extends V20170711Rpc
  * @method $this withStoreName($value)
  * @method array getPhotoId()
  */
-class DeletePhotos extends V20170711Rpc
+class DeletePhotos extends Rpc
 {
 
     /**
@@ -1403,7 +1400,7 @@ class DeletePhotos extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class DeletePhotoStore extends V20170711Rpc
+class DeletePhotoStore extends Rpc
 {
 }
 
@@ -1417,7 +1414,7 @@ class DeletePhotoStore extends V20170711Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class CreateAlbum extends V20170711Rpc
+class CreateAlbum extends Rpc
 {
 }
 
@@ -1443,7 +1440,7 @@ class CreateAlbum extends V20170711Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class CreatePhoto extends V20170711Rpc
+class CreatePhoto extends Rpc
 {
 }
 
@@ -1457,7 +1454,7 @@ class CreatePhoto extends V20170711Rpc
  * @method string getDefaultQuota()
  * @method $this withDefaultQuota($value)
  */
-class CreatePhotoStore extends V20170711Rpc
+class CreatePhotoStore extends Rpc
 {
 }
 
@@ -1475,7 +1472,7 @@ class CreatePhotoStore extends V20170711Rpc
  * @method string getMd5()
  * @method $this withMd5($value)
  */
-class CreateTransaction extends V20170711Rpc
+class CreateTransaction extends Rpc
 {
 }
 
@@ -1486,7 +1483,7 @@ class CreateTransaction extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class DeleteAlbums extends V20170711Rpc
+class DeleteAlbums extends Rpc
 {
 
     /**
@@ -1512,7 +1509,7 @@ class DeleteAlbums extends V20170711Rpc
  * @method $this withStoreName($value)
  * @method array getFaceId()
  */
-class DeleteFaces extends V20170711Rpc
+class DeleteFaces extends Rpc
 {
 
     /**
@@ -1540,7 +1537,7 @@ class DeleteFaces extends V20170711Rpc
  * @method string getStoreName()
  * @method $this withStoreName($value)
  */
-class AddAlbumPhotos extends V20170711Rpc
+class AddAlbumPhotos extends Rpc
 {
 
     /**

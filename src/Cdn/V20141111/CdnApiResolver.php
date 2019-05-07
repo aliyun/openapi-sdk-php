@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cdn\V20141111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ListFCTrigger listFCTrigger(array $options = [])
  * @method DescribeCdnUserQuota describeCdnUserQuota(array $options = [])
  * @method DescribeDomainRealTimeSrcTrafficData describeDomainRealTimeSrcTrafficData(array $options = [])
@@ -168,7 +165,7 @@ class CdnApiResolver
     use ApiResolverTrait;
 }
 
-class V20141111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Cdn';
@@ -188,7 +185,7 @@ class V20141111Rpc extends Rpc
  * @method string getEventMetaName()
  * @method $this withEventMetaName($value)
  */
-class ListFCTrigger extends V20141111Rpc
+class ListFCTrigger extends Rpc
 {
 
     /** @var string */
@@ -201,7 +198,7 @@ class ListFCTrigger extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnUserQuota extends V20141111Rpc
+class DescribeCdnUserQuota extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class DescribeCdnUserQuota extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeSrcTrafficData extends V20141111Rpc
+class DescribeDomainRealTimeSrcTrafficData extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class DescribeDomainRealTimeSrcTrafficData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeHttpCodeData extends V20141111Rpc
+class DescribeDomainRealTimeHttpCodeData extends Rpc
 {
 }
 
@@ -243,7 +240,7 @@ class DescribeDomainRealTimeHttpCodeData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteFCTrigger extends V20141111Rpc
+class DeleteFCTrigger extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class DeleteFCTrigger extends V20141111Rpc
  * @method string getRoleARN()
  * @method string getFunctionARN()
  */
-class UpdateFCTrigger extends V20141111Rpc
+class UpdateFCTrigger extends Rpc
 {
 
     /**
@@ -319,7 +316,7 @@ class UpdateFCTrigger extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeFCTrigger extends V20141111Rpc
+class DescribeFCTrigger extends Rpc
 {
 
     /** @var string */
@@ -338,7 +335,7 @@ class DescribeFCTrigger extends V20141111Rpc
  * @method string getEventMetaName()
  * @method string getFunctionARN()
  */
-class AddFCTrigger extends V20141111Rpc
+class AddFCTrigger extends Rpc
 {
 
     /**
@@ -426,7 +423,7 @@ class AddFCTrigger extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCertificateInfo extends V20141111Rpc
+class DescribeDomainCertificateInfo extends Rpc
 {
 }
 
@@ -440,7 +437,7 @@ class DescribeDomainCertificateInfo extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeSrcBpsData extends V20141111Rpc
+class DescribeDomainRealTimeSrcBpsData extends Rpc
 {
 }
 
@@ -454,7 +451,7 @@ class DescribeDomainRealTimeSrcBpsData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainConfigs extends V20141111Rpc
+class DescribeCdnDomainConfigs extends Rpc
 {
 }
 
@@ -464,7 +461,7 @@ class DescribeCdnDomainConfigs extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeL2VipsByDynamicDomain extends V20141111Rpc
+class DescribeL2VipsByDynamicDomain extends Rpc
 {
 
     /** @var string */
@@ -477,7 +474,7 @@ class DescribeL2VipsByDynamicDomain extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCname extends V20141111Rpc
+class DescribeDomainCname extends Rpc
 {
 
     /** @var string */
@@ -494,7 +491,7 @@ class DescribeDomainCname extends V20141111Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class BatchDescribeDomainCname extends V20141111Rpc
+class BatchDescribeDomainCname extends Rpc
 {
 
     /** @var string */
@@ -517,7 +514,7 @@ class BatchDescribeDomainCname extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetWaitingRoomConfig extends V20141111Rpc
+class SetWaitingRoomConfig extends Rpc
 {
 
     /** @var string */
@@ -534,7 +531,7 @@ class SetWaitingRoomConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeByteHitRateData extends V20141111Rpc
+class DescribeDomainRealTimeByteHitRateData extends Rpc
 {
 
     /** @var string */
@@ -551,28 +548,7 @@ class DescribeDomainRealTimeByteHitRateData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeReqHitRateData extends V20141111Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getLocationNameEn()
- * @method $this withLocationNameEn($value)
- * @method string getIspNameEn()
- * @method $this withIspNameEn($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDomainRealTimeQpsData extends V20141111Rpc
+class DescribeDomainRealTimeReqHitRateData extends Rpc
 {
 
     /** @var string */
@@ -593,7 +569,28 @@ class DescribeDomainRealTimeQpsData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeBpsData extends V20141111Rpc
+class DescribeDomainRealTimeQpsData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDomainRealTimeBpsData extends Rpc
 {
 
     /** @var string */
@@ -614,7 +611,7 @@ class DescribeDomainRealTimeBpsData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainSlowRatio extends V20141111Rpc
+class DescribeDomainSlowRatio extends Rpc
 {
 
     /** @var string */
@@ -627,7 +624,7 @@ class DescribeDomainSlowRatio extends V20141111Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class ListDomainsByLogConfigId extends V20141111Rpc
+class ListDomainsByLogConfigId extends Rpc
 {
 
     /** @var string */
@@ -648,7 +645,7 @@ class ListDomainsByLogConfigId extends V20141111Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class SetDomainPathForceTtlCodeConfig extends V20141111Rpc
+class SetDomainPathForceTtlCodeConfig extends Rpc
 {
 
     /** @var string */
@@ -669,7 +666,7 @@ class SetDomainPathForceTtlCodeConfig extends V20141111Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class SetDomainFiletypeForceTtlCodeConfig extends V20141111Rpc
+class SetDomainFiletypeForceTtlCodeConfig extends Rpc
 {
 
     /** @var string */
@@ -682,7 +679,7 @@ class SetDomainFiletypeForceTtlCodeConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeScdnService extends V20141111Rpc
+class DescribeScdnService extends Rpc
 {
 }
 
@@ -692,7 +689,7 @@ class DescribeScdnService extends V20141111Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class DescribeCustomLogConfig extends V20141111Rpc
+class DescribeCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -707,7 +704,7 @@ class DescribeCustomLogConfig extends V20141111Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class ModifyDomainCustomLogConfig extends V20141111Rpc
+class ModifyDomainCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -720,7 +717,7 @@ class ModifyDomainCustomLogConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCustomLogConfig extends V20141111Rpc
+class DescribeDomainCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -735,7 +732,7 @@ class DescribeDomainCustomLogConfig extends V20141111Rpc
  * @method string getTag()
  * @method $this withTag($value)
  */
-class ModifyUserCustomLogConfig extends V20141111Rpc
+class ModifyUserCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -746,7 +743,7 @@ class ModifyUserCustomLogConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserCustomLogConfig extends V20141111Rpc
+class DescribeUserCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -763,7 +760,7 @@ class DescribeUserCustomLogConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetHttpsOptionConfig extends V20141111Rpc
+class SetHttpsOptionConfig extends Rpc
 {
 }
 
@@ -775,7 +772,7 @@ class SetHttpsOptionConfig extends V20141111Rpc
  * @method string getEnable()
  * @method $this withEnable($value)
  */
-class SetDomainGreenManagerConfig extends V20141111Rpc
+class SetDomainGreenManagerConfig extends Rpc
 {
 
     /** @var string */
@@ -792,7 +789,7 @@ class SetDomainGreenManagerConfig extends V20141111Rpc
  * @method string getRatio()
  * @method $this withRatio($value)
  */
-class SetUserGreenManagerConfig extends V20141111Rpc
+class SetUserGreenManagerConfig extends Rpc
 {
 }
 
@@ -806,7 +803,7 @@ class SetUserGreenManagerConfig extends V20141111Rpc
  * @method string getPrivateOssAuth()
  * @method $this withPrivateOssAuth($value)
  */
-class SetL2OssKeyConfig extends V20141111Rpc
+class SetL2OssKeyConfig extends Rpc
 {
 }
 
@@ -826,7 +823,7 @@ class SetL2OssKeyConfig extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamBitRateData extends V20141111Rpc
+class DescribeLiveStreamBitRateData extends Rpc
 {
 }
 
@@ -840,7 +837,7 @@ class DescribeLiveStreamBitRateData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCertificate extends V20141111Rpc
+class DeleteCertificate extends Rpc
 {
 }
 
@@ -854,7 +851,7 @@ class DeleteCertificate extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetIpAllowListConfig extends V20141111Rpc
+class SetIpAllowListConfig extends Rpc
 {
 }
 
@@ -868,7 +865,7 @@ class SetIpAllowListConfig extends V20141111Rpc
  * @method string getBlockIps()
  * @method $this withBlockIps($value)
  */
-class SetIpBlackListConfig extends V20141111Rpc
+class SetIpBlackListConfig extends Rpc
 {
 }
 
@@ -882,7 +879,7 @@ class SetIpBlackListConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetIpWhiteListConfig extends V20141111Rpc
+class SetIpWhiteListConfig extends Rpc
 {
 }
 
@@ -908,7 +905,7 @@ class SetIpWhiteListConfig extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainAverageResponseTime extends V20141111Rpc
+class DescribeDomainAverageResponseTime extends Rpc
 {
 }
 
@@ -928,7 +925,7 @@ class DescribeDomainAverageResponseTime extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainPathData extends V20141111Rpc
+class DescribeDomainPathData extends Rpc
 {
 
     /** @var string */
@@ -965,7 +962,7 @@ class DescribeDomainPathData extends V20141111Rpc
  * @method string getSeqId()
  * @method $this withSeqId($value)
  */
-class SetBusinessFunctionConfig extends V20141111Rpc
+class SetBusinessFunctionConfig extends Rpc
 {
 }
 
@@ -981,7 +978,7 @@ class SetBusinessFunctionConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetRefererRegexConfig extends V20141111Rpc
+class SetRefererRegexConfig extends Rpc
 {
 }
 
@@ -993,7 +990,7 @@ class SetRefererRegexConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserCustomerLabels extends V20141111Rpc
+class DescribeUserCustomerLabels extends Rpc
 {
 }
 
@@ -1009,7 +1006,7 @@ class DescribeUserCustomerLabels extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetRemoveQueryStringConfig extends V20141111Rpc
+class SetRemoveQueryStringConfig extends Rpc
 {
 }
 
@@ -1027,7 +1024,7 @@ class SetRemoveQueryStringConfig extends V20141111Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class SetReqHeaderConfig extends V20141111Rpc
+class SetReqHeaderConfig extends Rpc
 {
 }
 
@@ -1039,7 +1036,7 @@ class SetReqHeaderConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLivePullStreamConfig extends V20141111Rpc
+class DescribeLivePullStreamConfig extends Rpc
 {
 }
 
@@ -1061,7 +1058,7 @@ class DescribeLivePullStreamConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetDynamicConfig extends V20141111Rpc
+class SetDynamicConfig extends Rpc
 {
 }
 
@@ -1073,7 +1070,7 @@ class SetDynamicConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainsBySource extends V20141111Rpc
+class DescribeDomainsBySource extends Rpc
 {
 }
 
@@ -1089,7 +1086,7 @@ class DescribeDomainsBySource extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSpecificConfig extends V20141111Rpc
+class DeleteSpecificConfig extends Rpc
 {
 }
 
@@ -1105,7 +1102,7 @@ class DeleteSpecificConfig extends V20141111Rpc
  * @method string getErrorCode()
  * @method $this withErrorCode($value)
  */
-class SetHttpErrorPageConfig extends V20141111Rpc
+class SetHttpErrorPageConfig extends Rpc
 {
 }
 
@@ -1119,7 +1116,7 @@ class SetHttpErrorPageConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveDomainMapping extends V20141111Rpc
+class DeleteLiveDomainMapping extends Rpc
 {
 }
 
@@ -1133,7 +1130,7 @@ class DeleteLiveDomainMapping extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveDomainMapping extends V20141111Rpc
+class AddLiveDomainMapping extends Rpc
 {
 }
 
@@ -1145,7 +1142,7 @@ class AddLiveDomainMapping extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeL2VipsByDomain extends V20141111Rpc
+class DescribeL2VipsByDomain extends Rpc
 {
 }
 
@@ -1161,7 +1158,7 @@ class DescribeL2VipsByDomain extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchDeleteCdnDomainConfig extends V20141111Rpc
+class BatchDeleteCdnDomainConfig extends Rpc
 {
 }
 
@@ -1177,7 +1174,7 @@ class BatchDeleteCdnDomainConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchSetCdnDomainConfig extends V20141111Rpc
+class BatchSetCdnDomainConfig extends Rpc
 {
 }
 
@@ -1195,7 +1192,7 @@ class BatchSetCdnDomainConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRangeDataByLocateAndIspService extends V20141111Rpc
+class DescribeRangeDataByLocateAndIspService extends Rpc
 {
 }
 
@@ -1221,7 +1218,7 @@ class DescribeRangeDataByLocateAndIspService extends V20141111Rpc
  * @method string getMainStreamName()
  * @method $this withMainStreamName($value)
  */
-class StartMixStreamsService extends V20141111Rpc
+class StartMixStreamsService extends Rpc
 {
 }
 
@@ -1243,7 +1240,7 @@ class StartMixStreamsService extends V20141111Rpc
  * @method string getMainStreamName()
  * @method $this withMainStreamName($value)
  */
-class StopMixStreamsService extends V20141111Rpc
+class StopMixStreamsService extends Rpc
 {
 }
 
@@ -1263,7 +1260,7 @@ class StopMixStreamsService extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamHistoryUserNumber extends V20141111Rpc
+class DescribeLiveStreamHistoryUserNumber extends Rpc
 {
 }
 
@@ -1285,7 +1282,7 @@ class DescribeLiveStreamHistoryUserNumber extends V20141111Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveSnapshotConfig extends V20141111Rpc
+class DescribeLiveSnapshotConfig extends Rpc
 {
 }
 
@@ -1307,7 +1304,7 @@ class DescribeLiveSnapshotConfig extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamSnapshotInfo extends V20141111Rpc
+class DescribeLiveStreamSnapshotInfo extends Rpc
 {
 }
 
@@ -1331,7 +1328,7 @@ class DescribeLiveStreamSnapshotInfo extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateLiveAppSnapshotConfig extends V20141111Rpc
+class UpdateLiveAppSnapshotConfig extends Rpc
 {
 }
 
@@ -1355,7 +1352,7 @@ class UpdateLiveAppSnapshotConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveAppSnapshotConfig extends V20141111Rpc
+class AddLiveAppSnapshotConfig extends Rpc
 {
 }
 
@@ -1369,7 +1366,7 @@ class AddLiveAppSnapshotConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveAppSnapshotConfig extends V20141111Rpc
+class DeleteLiveAppSnapshotConfig extends Rpc
 {
 }
 
@@ -1385,7 +1382,7 @@ class DeleteLiveAppSnapshotConfig extends V20141111Rpc
  * @method string getTimePoint()
  * @method $this withTimePoint($value)
  */
-class DescribeDomainBpsDataByTimeStamp extends V20141111Rpc
+class DescribeDomainBpsDataByTimeStamp extends Rpc
 {
 }
 
@@ -1399,7 +1396,7 @@ class DescribeDomainBpsDataByTimeStamp extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainMax95BpsData extends V20141111Rpc
+class DescribeDomainMax95BpsData extends Rpc
 {
 }
 
@@ -1419,7 +1416,7 @@ class DescribeDomainMax95BpsData extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamsFrameRateAndBitRateData extends V20141111Rpc
+class DescribeLiveStreamsFrameRateAndBitRateData extends Rpc
 {
 }
 
@@ -1445,7 +1442,7 @@ class DescribeLiveStreamsFrameRateAndBitRateData extends V20141111Rpc
  * @method string getOssObject()
  * @method $this withOssObject($value)
  */
-class CreateLiveStreamRecordIndexFiles extends V20141111Rpc
+class CreateLiveStreamRecordIndexFiles extends Rpc
 {
 }
 
@@ -1459,7 +1456,7 @@ class CreateLiveStreamRecordIndexFiles extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveAppRecordConfig extends V20141111Rpc
+class DeleteLiveAppRecordConfig extends Rpc
 {
 }
 
@@ -1471,7 +1468,7 @@ class DeleteLiveAppRecordConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveRecordConfig extends V20141111Rpc
+class DescribeLiveRecordConfig extends Rpc
 {
 }
 
@@ -1491,7 +1488,7 @@ class DescribeLiveRecordConfig extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamRecordContent extends V20141111Rpc
+class DescribeLiveStreamRecordContent extends Rpc
 {
 }
 
@@ -1509,7 +1506,7 @@ class DescribeLiveStreamRecordContent extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamRecordIndexFile extends V20141111Rpc
+class DescribeLiveStreamRecordIndexFile extends Rpc
 {
 }
 
@@ -1529,7 +1526,7 @@ class DescribeLiveStreamRecordIndexFile extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamRecordIndexFiles extends V20141111Rpc
+class DescribeLiveStreamRecordIndexFiles extends Rpc
 {
 }
 
@@ -1549,7 +1546,7 @@ class DescribeLiveStreamRecordIndexFiles extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveAppRecordConfig extends V20141111Rpc
+class AddLiveAppRecordConfig extends Rpc
 {
 }
 
@@ -1567,7 +1564,7 @@ class AddLiveAppRecordConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetForwardSchemeConfig extends V20141111Rpc
+class SetForwardSchemeConfig extends Rpc
 {
 }
 
@@ -1579,7 +1576,7 @@ class SetForwardSchemeConfig extends V20141111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class DescribeUserConfigs extends V20141111Rpc
+class DescribeUserConfigs extends Rpc
 {
 }
 
@@ -1595,7 +1592,7 @@ class DescribeUserConfigs extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainReqHitRateData extends V20141111Rpc
+class DescribeDomainReqHitRateData extends Rpc
 {
 }
 
@@ -1605,7 +1602,7 @@ class DescribeDomainReqHitRateData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnRegionAndIsp extends V20141111Rpc
+class DescribeCdnRegionAndIsp extends Rpc
 {
 }
 
@@ -1623,7 +1620,7 @@ class DescribeCdnRegionAndIsp extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveStreamTranscode extends V20141111Rpc
+class DeleteLiveStreamTranscode extends Rpc
 {
 }
 
@@ -1635,7 +1632,7 @@ class DeleteLiveStreamTranscode extends V20141111Rpc
  * @method string getDomainTranscodeName()
  * @method $this withDomainTranscodeName($value)
  */
-class DescribeLiveStreamTranscodeInfo extends V20141111Rpc
+class DescribeLiveStreamTranscodeInfo extends Rpc
 {
 }
 
@@ -1657,7 +1654,7 @@ class DescribeLiveStreamTranscodeInfo extends V20141111Rpc
  * @method string getSnapshot()
  * @method $this withSnapshot($value)
  */
-class AddLiveStreamTranscode extends V20141111Rpc
+class AddLiveStreamTranscode extends Rpc
 {
 }
 
@@ -1669,7 +1666,7 @@ class AddLiveStreamTranscode extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopCdnSubscribeService extends V20141111Rpc
+class StopCdnSubscribeService extends Rpc
 {
 }
 
@@ -1683,7 +1680,7 @@ class StopCdnSubscribeService extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetForceRedirectConfig extends V20141111Rpc
+class SetForceRedirectConfig extends Rpc
 {
 }
 
@@ -1703,7 +1700,7 @@ class SetForceRedirectConfig extends V20141111Rpc
  * @method string getSubMedia()
  * @method $this withSubMedia($value)
  */
-class ModifyCdnSubscribeService extends V20141111Rpc
+class ModifyCdnSubscribeService extends Rpc
 {
 }
 
@@ -1723,7 +1720,7 @@ class ModifyCdnSubscribeService extends V20141111Rpc
  * @method string getSubMedia()
  * @method $this withSubMedia($value)
  */
-class OpenCdnSubscribeService extends V20141111Rpc
+class OpenCdnSubscribeService extends Rpc
 {
 }
 
@@ -1735,7 +1732,7 @@ class OpenCdnSubscribeService extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnWeekSubscribe extends V20141111Rpc
+class DescribeCdnWeekSubscribe extends Rpc
 {
 }
 
@@ -1751,7 +1748,7 @@ class DescribeCdnWeekSubscribe extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnUserBillInfo extends V20141111Rpc
+class DescribeCdnUserBillInfo extends Rpc
 {
 }
 
@@ -1763,7 +1760,7 @@ class DescribeCdnUserBillInfo extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnUserSubscribe extends V20141111Rpc
+class DescribeCdnUserSubscribe extends Rpc
 {
 }
 
@@ -1775,7 +1772,7 @@ class DescribeCdnUserSubscribe extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnMonthSubscribe extends V20141111Rpc
+class DescribeCdnMonthSubscribe extends Rpc
 {
 }
 
@@ -1789,7 +1786,7 @@ class DescribeCdnMonthSubscribe extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainsUsageByDay extends V20141111Rpc
+class DescribeDomainsUsageByDay extends Rpc
 {
 }
 
@@ -1805,7 +1802,7 @@ class DescribeDomainsUsageByDay extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeTopDomainsByFlow extends V20141111Rpc
+class DescribeTopDomainsByFlow extends Rpc
 {
 }
 
@@ -1817,7 +1814,7 @@ class DescribeTopDomainsByFlow extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnTypes extends V20141111Rpc
+class DescribeCdnTypes extends Rpc
 {
 }
 
@@ -1841,7 +1838,7 @@ class DescribeCdnTypes extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCdnDomain extends V20141111Rpc
+class ModifyCdnDomain extends Rpc
 {
 }
 
@@ -1867,7 +1864,7 @@ class ModifyCdnDomain extends V20141111Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class SetDomainServerCertificate extends V20141111Rpc
+class SetDomainServerCertificate extends Rpc
 {
 }
 
@@ -1889,7 +1886,7 @@ class SetDomainServerCertificate extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamOnlineUserNum extends V20141111Rpc
+class DescribeLiveStreamOnlineUserNum extends Rpc
 {
 }
 
@@ -1903,7 +1900,7 @@ class DescribeLiveStreamOnlineUserNum extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetLiveStreamsNotifyUrlConfig extends V20141111Rpc
+class SetLiveStreamsNotifyUrlConfig extends Rpc
 {
 }
 
@@ -1921,7 +1918,7 @@ class SetLiveStreamsNotifyUrlConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyHttpHeaderConfig extends V20141111Rpc
+class ModifyHttpHeaderConfig extends Rpc
 {
 }
 
@@ -1935,7 +1932,7 @@ class ModifyHttpHeaderConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainISPData extends V20141111Rpc
+class DescribeDomainISPData extends Rpc
 {
 }
 
@@ -1949,23 +1946,7 @@ class DescribeDomainISPData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRegionData extends V20141111Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDomainCCAttackInfo extends V20141111Rpc
+class DescribeDomainRegionData extends Rpc
 {
 }
 
@@ -1981,7 +1962,23 @@ class DescribeDomainCCAttackInfo extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCCData extends V20141111Rpc
+class DescribeDomainCCAttackInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDomainCCData extends Rpc
 {
 }
 
@@ -1999,7 +1996,7 @@ class DescribeDomainCCData extends V20141111Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class SetPathCacheExpiredConfig extends V20141111Rpc
+class SetPathCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2019,7 +2016,7 @@ class SetPathCacheExpiredConfig extends V20141111Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class ModifyFileCacheExpiredConfig extends V20141111Rpc
+class ModifyFileCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2039,7 +2036,7 @@ class ModifyFileCacheExpiredConfig extends V20141111Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class ModifyPathCacheExpiredConfig extends V20141111Rpc
+class ModifyPathCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2057,7 +2054,7 @@ class ModifyPathCacheExpiredConfig extends V20141111Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class SetFileCacheExpiredConfig extends V20141111Rpc
+class SetFileCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2075,7 +2072,7 @@ class SetFileCacheExpiredConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetIgnoreQueryStringConfig extends V20141111Rpc
+class SetIgnoreQueryStringConfig extends Rpc
 {
 }
 
@@ -2089,7 +2086,7 @@ class SetIgnoreQueryStringConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetOptimizeConfig extends V20141111Rpc
+class SetOptimizeConfig extends Rpc
 {
 }
 
@@ -2103,7 +2100,7 @@ class SetOptimizeConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetPageCompressConfig extends V20141111Rpc
+class SetPageCompressConfig extends Rpc
 {
 }
 
@@ -2117,7 +2114,7 @@ class SetPageCompressConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetRangeConfig extends V20141111Rpc
+class SetRangeConfig extends Rpc
 {
 }
 
@@ -2137,7 +2134,7 @@ class SetRangeConfig extends V20141111Rpc
  * @method string getAllowEmpty()
  * @method $this withAllowEmpty($value)
  */
-class SetRefererConfig extends V20141111Rpc
+class SetRefererConfig extends Rpc
 {
 }
 
@@ -2159,7 +2156,7 @@ class SetRefererConfig extends V20141111Rpc
  * @method string getAuthType()
  * @method $this withAuthType($value)
  */
-class SetReqAuthConfig extends V20141111Rpc
+class SetReqAuthConfig extends Rpc
 {
 }
 
@@ -2175,7 +2172,7 @@ class SetReqAuthConfig extends V20141111Rpc
  * @method string getBackSrcDomain()
  * @method $this withBackSrcDomain($value)
  */
-class SetSourceHostConfig extends V20141111Rpc
+class SetSourceHostConfig extends Rpc
 {
 }
 
@@ -2189,7 +2186,7 @@ class SetSourceHostConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetVideoSeekConfig extends V20141111Rpc
+class SetVideoSeekConfig extends Rpc
 {
 }
 
@@ -2209,7 +2206,7 @@ class SetVideoSeekConfig extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class ForbidLiveStream extends V20141111Rpc
+class ForbidLiveStream extends Rpc
 {
 }
 
@@ -2227,7 +2224,7 @@ class ForbidLiveStream extends V20141111Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class ResumeLiveStream extends V20141111Rpc
+class ResumeLiveStream extends Rpc
 {
 }
 
@@ -2247,7 +2244,7 @@ class ResumeLiveStream extends V20141111Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class SetCacheExpiredConfig extends V20141111Rpc
+class SetCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2263,7 +2260,7 @@ class SetCacheExpiredConfig extends V20141111Rpc
  * @method string getBlockIps()
  * @method $this withBlockIps($value)
  */
-class SetCcConfig extends V20141111Rpc
+class SetCcConfig extends Rpc
 {
 }
 
@@ -2279,7 +2276,7 @@ class SetCcConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetErrorPageConfig extends V20141111Rpc
+class SetErrorPageConfig extends Rpc
 {
 }
 
@@ -2297,7 +2294,7 @@ class SetErrorPageConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetHttpHeaderConfig extends V20141111Rpc
+class SetHttpHeaderConfig extends Rpc
 {
 }
 
@@ -2309,7 +2306,7 @@ class SetHttpHeaderConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamsBlockList extends V20141111Rpc
+class DescribeLiveStreamsBlockList extends Rpc
 {
 }
 
@@ -2327,7 +2324,7 @@ class DescribeLiveStreamsBlockList extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamsControlHistory extends V20141111Rpc
+class DescribeLiveStreamsControlHistory extends Rpc
 {
 }
 
@@ -2347,7 +2344,7 @@ class DescribeLiveStreamsControlHistory extends V20141111Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class DescribeLiveStreamsOnlineList extends V20141111Rpc
+class DescribeLiveStreamsOnlineList extends Rpc
 {
 }
 
@@ -2371,7 +2368,7 @@ class DescribeLiveStreamsOnlineList extends V20141111Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeLiveStreamsPublishList extends V20141111Rpc
+class DescribeLiveStreamsPublishList extends Rpc
 {
 }
 
@@ -2381,7 +2378,7 @@ class DescribeLiveStreamsPublishList extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRefreshQuota extends V20141111Rpc
+class DescribeRefreshQuota extends Rpc
 {
 }
 
@@ -2393,7 +2390,7 @@ class DescribeRefreshQuota extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeIpInfo extends V20141111Rpc
+class DescribeIpInfo extends Rpc
 {
 }
 
@@ -2413,7 +2410,7 @@ class DescribeIpInfo extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainSrcBpsData extends V20141111Rpc
+class DescribeDomainSrcBpsData extends Rpc
 {
 }
 
@@ -2433,7 +2430,7 @@ class DescribeDomainSrcBpsData extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainSrcFlowData extends V20141111Rpc
+class DescribeDomainSrcFlowData extends Rpc
 {
 }
 
@@ -2449,7 +2446,7 @@ class DescribeDomainSrcFlowData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainTopReferVisit extends V20141111Rpc
+class DescribeDomainTopReferVisit extends Rpc
 {
 }
 
@@ -2465,7 +2462,7 @@ class DescribeDomainTopReferVisit extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainTopUrlVisit extends V20141111Rpc
+class DescribeDomainTopUrlVisit extends Rpc
 {
 }
 
@@ -2481,7 +2478,7 @@ class DescribeDomainTopUrlVisit extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainUvData extends V20141111Rpc
+class DescribeDomainUvData extends Rpc
 {
 }
 
@@ -2497,7 +2494,7 @@ class DescribeDomainUvData extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainHitRateData extends V20141111Rpc
+class DescribeDomainHitRateData extends Rpc
 {
 }
 
@@ -2519,7 +2516,7 @@ class DescribeDomainHitRateData extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainHttpCodeData extends V20141111Rpc
+class DescribeDomainHttpCodeData extends Rpc
 {
 }
 
@@ -2535,7 +2532,7 @@ class DescribeDomainHttpCodeData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainPvData extends V20141111Rpc
+class DescribeDomainPvData extends Rpc
 {
 }
 
@@ -2563,7 +2560,7 @@ class DescribeDomainPvData extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainQpsData extends V20141111Rpc
+class DescribeDomainQpsData extends Rpc
 {
 }
 
@@ -2577,7 +2574,7 @@ class DescribeDomainQpsData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainConfigs extends V20141111Rpc
+class DescribeDomainConfigs extends Rpc
 {
 }
 
@@ -2593,7 +2590,7 @@ class DescribeDomainConfigs extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainFileSizeProportionData extends V20141111Rpc
+class DescribeDomainFileSizeProportionData extends Rpc
 {
 }
 
@@ -2617,7 +2614,7 @@ class DescribeDomainFileSizeProportionData extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainFlowData extends V20141111Rpc
+class DescribeDomainFlowData extends Rpc
 {
 }
 
@@ -2633,7 +2630,7 @@ class DescribeDomainFlowData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCacheExpiredConfig extends V20141111Rpc
+class DeleteCacheExpiredConfig extends Rpc
 {
 }
 
@@ -2647,7 +2644,7 @@ class DeleteCacheExpiredConfig extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteHttpHeaderConfig extends V20141111Rpc
+class DeleteHttpHeaderConfig extends Rpc
 {
 }
 
@@ -2671,7 +2668,7 @@ class DeleteHttpHeaderConfig extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainBpsData extends V20141111Rpc
+class DescribeDomainBpsData extends Rpc
 {
 }
 
@@ -2685,7 +2682,7 @@ class DescribeDomainBpsData extends V20141111Rpc
  * @method string getObjectType()
  * @method $this withObjectType($value)
  */
-class RefreshObjectCaches extends V20141111Rpc
+class RefreshObjectCaches extends Rpc
 {
 }
 
@@ -2697,7 +2694,7 @@ class RefreshObjectCaches extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartCdnDomain extends V20141111Rpc
+class StartCdnDomain extends Rpc
 {
 }
 
@@ -2709,7 +2706,7 @@ class StartCdnDomain extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopCdnDomain extends V20141111Rpc
+class StopCdnDomain extends Rpc
 {
 }
 
@@ -2725,7 +2722,7 @@ class StopCdnDomain extends V20141111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeCdnMonitorData extends V20141111Rpc
+class DescribeCdnMonitorData extends Rpc
 {
 }
 
@@ -2735,7 +2732,7 @@ class DescribeCdnMonitorData extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnService extends V20141111Rpc
+class DescribeCdnService extends Rpc
 {
 }
 
@@ -2765,7 +2762,7 @@ class DescribeCdnService extends V20141111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeRefreshTasks extends V20141111Rpc
+class DescribeRefreshTasks extends Rpc
 {
 }
 
@@ -2797,7 +2794,7 @@ class DescribeRefreshTasks extends V20141111Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeUserDomains extends V20141111Rpc
+class DescribeUserDomains extends Rpc
 {
 }
 
@@ -2809,7 +2806,7 @@ class DescribeUserDomains extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCdnService extends V20141111Rpc
+class ModifyCdnService extends Rpc
 {
 }
 
@@ -2821,7 +2818,7 @@ class ModifyCdnService extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class OpenCdnService extends V20141111Rpc
+class OpenCdnService extends Rpc
 {
 }
 
@@ -2835,7 +2832,7 @@ class OpenCdnService extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class PushObjectCache extends V20141111Rpc
+class PushObjectCache extends Rpc
 {
 }
 
@@ -2869,7 +2866,7 @@ class PushObjectCache extends V20141111Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class AddCdnDomain extends V20141111Rpc
+class AddCdnDomain extends Rpc
 {
 }
 
@@ -2883,7 +2880,7 @@ class AddCdnDomain extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCdnDomain extends V20141111Rpc
+class DeleteCdnDomain extends Rpc
 {
 }
 
@@ -2895,7 +2892,7 @@ class DeleteCdnDomain extends V20141111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainDetail extends V20141111Rpc
+class DescribeCdnDomainDetail extends Rpc
 {
 }
 
@@ -2917,6 +2914,6 @@ class DescribeCdnDomainDetail extends V20141111Rpc
  * @method string getLogDay()
  * @method $this withLogDay($value)
  */
-class DescribeCdnDomainLogs extends V20141111Rpc
+class DescribeCdnDomainLogs extends Rpc
 {
 }

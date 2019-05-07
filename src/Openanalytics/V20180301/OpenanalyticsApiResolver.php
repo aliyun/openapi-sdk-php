@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Openanalytics\V20180301;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetProductStatus getProductStatus(array $options = [])
  * @method CloseProductAccount closeProductAccount(array $options = [])
  * @method GetRegionStatus getRegionStatus(array $options = [])
@@ -23,7 +20,7 @@ class OpenanalyticsApiResolver
     use ApiResolverTrait;
 }
 
-class V20180301Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'openanalytics';
@@ -44,7 +41,7 @@ class V20180301Rpc extends Rpc
  * @method string getTargetUid()
  * @method string getTargetArnRole()
  */
-class GetProductStatus extends V20180301Rpc
+class GetProductStatus extends Rpc
 {
 
     /**
@@ -106,7 +103,7 @@ class GetProductStatus extends V20180301Rpc
  * @method string getTargetUid()
  * @method string getTargetArnRole()
  */
-class CloseProductAccount extends V20180301Rpc
+class CloseProductAccount extends Rpc
 {
 
     /**
@@ -165,7 +162,7 @@ class CloseProductAccount extends V20180301Rpc
 /**
  * @method string getTargetUid()
  */
-class GetRegionStatus extends V20180301Rpc
+class GetRegionStatus extends Rpc
 {
 
     /**
@@ -188,7 +185,7 @@ class GetRegionStatus extends V20180301Rpc
  * @method string getTargetUid()
  * @method string getTargetArnRole()
  */
-class OpenProductAccount extends V20180301Rpc
+class OpenProductAccount extends Rpc
 {
 
     /**
@@ -250,7 +247,7 @@ class OpenProductAccount extends V20180301Rpc
  * @method string getAllowIP()
  * @method string getAppend()
  */
-class SetAllowIP extends V20180301Rpc
+class SetAllowIP extends Rpc
 {
 
     /**
@@ -309,7 +306,7 @@ class SetAllowIP extends V20180301Rpc
 /**
  * @method string getUserID()
  */
-class QueryEndPointList extends V20180301Rpc
+class QueryEndPointList extends Rpc
 {
 
     /**
@@ -330,7 +327,7 @@ class QueryEndPointList extends V20180301Rpc
  * @method string getUserID()
  * @method string getDomainURL()
  */
-class GetEndPointByDomain extends V20180301Rpc
+class GetEndPointByDomain extends Rpc
 {
 
     /**
@@ -360,7 +357,7 @@ class GetEndPointByDomain extends V20180301Rpc
     }
 }
 
-class DescribeRegionList extends V20180301Rpc
+class DescribeRegionList extends Rpc
 {
 }
 
@@ -368,7 +365,7 @@ class DescribeRegionList extends V20180301Rpc
  * @method string getUserID()
  * @method string getNetworkType()
  */
-class GetAllowIP extends V20180301Rpc
+class GetAllowIP extends Rpc
 {
 
     /**

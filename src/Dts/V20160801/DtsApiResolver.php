@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dts\V20160801;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeMigrationJobs describeMigrationJobs(array $options = [])
  * @method ConfigureSubscriptionInstance configureSubscriptionInstance(array $options = [])
  * @method ConfigureMigrationJob configureMigrationJob(array $options = [])
@@ -45,7 +42,7 @@ class DtsApiResolver
     use ApiResolverTrait;
 }
 
-class V20160801Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dts';
@@ -67,7 +64,7 @@ class V20160801Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMigrationJobs extends V20160801Rpc
+class DescribeMigrationJobs extends Rpc
 {
 }
 
@@ -87,7 +84,7 @@ class DescribeMigrationJobs extends V20160801Rpc
  * @method string getSourceEndpointInstanceType()
  * @method string getSubscriptionDataTypeDDL()
  */
-class ConfigureSubscriptionInstance extends V20160801Rpc
+class ConfigureSubscriptionInstance extends Rpc
 {
 
     /**
@@ -207,7 +204,7 @@ class ConfigureSubscriptionInstance extends V20160801Rpc
  * @method $this withMigrationJobName($value)
  * @method string getDestinationEndpointInstanceType()
  */
-class ConfigureMigrationJob extends V20160801Rpc
+class ConfigureMigrationJob extends Rpc
 {
 
     /**
@@ -531,7 +528,7 @@ class ConfigureMigrationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSubscriptionObjectModifyStatus extends V20160801Rpc
+class DescribeSubscriptionObjectModifyStatus extends Rpc
 {
 }
 
@@ -543,7 +540,7 @@ class DescribeSubscriptionObjectModifyStatus extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySubscriptionObject extends V20160801Rpc
+class ModifySubscriptionObject extends Rpc
 {
 }
 
@@ -553,7 +550,7 @@ class ModifySubscriptionObject extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartSubscriptionInstance extends V20160801Rpc
+class StartSubscriptionInstance extends Rpc
 {
 }
 
@@ -571,7 +568,7 @@ class StartSubscriptionInstance extends V20160801Rpc
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
  */
-class CreateSubscriptionInstance extends V20160801Rpc
+class CreateSubscriptionInstance extends Rpc
 {
 }
 
@@ -581,7 +578,7 @@ class CreateSubscriptionInstance extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSubscriptionInstance extends V20160801Rpc
+class DeleteSubscriptionInstance extends Rpc
 {
 }
 
@@ -597,7 +594,7 @@ class DeleteSubscriptionInstance extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSubscriptionInstances extends V20160801Rpc
+class DescribeSubscriptionInstances extends Rpc
 {
 }
 
@@ -607,19 +604,7 @@ class DescribeSubscriptionInstances extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartMigrationJob extends V20160801Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StopMigrationJob extends V20160801Rpc
+class StartMigrationJob extends Rpc
 {
 }
 
@@ -631,7 +616,19 @@ class StopMigrationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SuspendMigrationJob extends V20160801Rpc
+class StopMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SuspendMigrationJob extends Rpc
 {
 }
 
@@ -645,7 +642,7 @@ class SuspendMigrationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescirbeMigrationJobs extends V20160801Rpc
+class DescirbeMigrationJobs extends Rpc
 {
 }
 
@@ -664,7 +661,7 @@ class DescirbeMigrationJobs extends V20160801Rpc
  * @method $this withOwnerId($value)
  * @method string getMigrationModeStructureInitialization()
  */
-class DescribeMigrationJobDetail extends V20160801Rpc
+class DescribeMigrationJobDetail extends Rpc
 {
 
     /**
@@ -715,7 +712,7 @@ class DescribeMigrationJobDetail extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMigrationJobStatus extends V20160801Rpc
+class DescribeMigrationJobStatus extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class DescribeMigrationJobStatus extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyMigrationObject extends V20160801Rpc
+class ModifyMigrationObject extends Rpc
 {
 }
 
@@ -743,7 +740,7 @@ class ModifyMigrationObject extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateMigrationJob extends V20160801Rpc
+class CreateMigrationJob extends Rpc
 {
 }
 
@@ -753,7 +750,7 @@ class CreateMigrationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMigrationJob extends V20160801Rpc
+class DeleteMigrationJob extends Rpc
 {
 }
 
@@ -765,7 +762,7 @@ class DeleteMigrationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyConsumptionTimestamp extends V20160801Rpc
+class ModifyConsumptionTimestamp extends Rpc
 {
 }
 
@@ -775,7 +772,7 @@ class ModifyConsumptionTimestamp extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSubscriptionInstanceStatus extends V20160801Rpc
+class DescribeSubscriptionInstanceStatus extends Rpc
 {
 }
 
@@ -787,7 +784,7 @@ class DescribeSubscriptionInstanceStatus extends V20160801Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeSynchronizationObjectModifyStatus extends V20160801Rpc
+class DescribeSynchronizationObjectModifyStatus extends Rpc
 {
 }
 
@@ -801,7 +798,7 @@ class DescribeSynchronizationObjectModifyStatus extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInitializationStatus extends V20160801Rpc
+class DescribeInitializationStatus extends Rpc
 {
 }
 
@@ -817,7 +814,7 @@ class DescribeInitializationStatus extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSynchronizationJobs extends V20160801Rpc
+class DescribeSynchronizationJobs extends Rpc
 {
 }
 
@@ -827,7 +824,7 @@ class DescribeSynchronizationJobs extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SuspendSynchronizationJob extends V20160801Rpc
+class SuspendSynchronizationJob extends Rpc
 {
 }
 
@@ -839,7 +836,7 @@ class SuspendSynchronizationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySynchronizationObject extends V20160801Rpc
+class ModifySynchronizationObject extends Rpc
 {
 }
 
@@ -880,7 +877,7 @@ class ModifySynchronizationObject extends V20160801Rpc
  * @method string getDestinationEndpointIP()
  * @method string getDestinationEndpointInstanceType()
  */
-class ConfigureSynchronizationJob extends V20160801Rpc
+class ConfigureSynchronizationJob extends Rpc
 {
 
     /**
@@ -1137,7 +1134,7 @@ class ConfigureSynchronizationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSynchronizationJob extends V20160801Rpc
+class DeleteSynchronizationJob extends Rpc
 {
 }
 
@@ -1147,7 +1144,7 @@ class DeleteSynchronizationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartSynchronizationJob extends V20160801Rpc
+class StartSynchronizationJob extends Rpc
 {
 }
 
@@ -1167,7 +1164,7 @@ class StartSynchronizationJob extends V20160801Rpc
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
-class ConfigurationSynchronizationJob extends V20160801Rpc
+class ConfigurationSynchronizationJob extends Rpc
 {
 
     /**
@@ -1270,7 +1267,7 @@ class ConfigurationSynchronizationJob extends V20160801Rpc
  * @method string getSourceEndpointInstanceType()
  * @method string getDestinationEndpointInstanceType()
  */
-class CreateSynchronizationJob extends V20160801Rpc
+class CreateSynchronizationJob extends Rpc
 {
 
     /**
@@ -1321,6 +1318,6 @@ class CreateSynchronizationJob extends V20160801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSynchronizationJobStatus extends V20160801Rpc
+class DescribeSynchronizationJobStatus extends Rpc
 {
 }

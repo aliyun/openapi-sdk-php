@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dybaseapi\V20170525;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryTokenForMnsQueue queryTokenForMnsQueue(array $options = [])
  */
 class DybaseapiApiResolver
@@ -15,7 +12,7 @@ class DybaseapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20170525Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dybaseapi';
@@ -42,6 +39,6 @@ class V20170525Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTokenForMnsQueue extends V20170525Rpc
+class QueryTokenForMnsQueue extends Rpc
 {
 }

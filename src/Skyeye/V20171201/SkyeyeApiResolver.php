@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Skyeye\V20171201;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetCdnSkyeyeStatusData getCdnSkyeyeStatusData(array $options = [])
  * @method SendAlertContent sendAlertContent(array $options = [])
  */
@@ -16,7 +13,7 @@ class SkyeyeApiResolver
     use ApiResolverTrait;
 }
 
-class V20171201Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Skyeye';
@@ -42,7 +39,7 @@ class V20171201Rpc extends Rpc
  * @method string getFields()
  * @method $this withFields($value)
  */
-class GetCdnSkyeyeStatusData extends V20171201Rpc
+class GetCdnSkyeyeStatusData extends Rpc
 {
 
     /** @var string */
@@ -61,6 +58,6 @@ class GetCdnSkyeyeStatusData extends V20171201Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SendAlertContent extends V20171201Rpc
+class SendAlertContent extends Rpc
 {
 }

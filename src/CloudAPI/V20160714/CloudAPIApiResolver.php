@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CloudAPI\V20160714;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ResetAppCode resetAppCode(array $options = [])
  * @method DescribeApp describeApp(array $options = [])
  * @method CreateIntranetDomain createIntranetDomain(array $options = [])
@@ -114,7 +111,7 @@ class CloudAPIApiResolver
     use ApiResolverTrait;
 }
 
-class V20160714Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'CloudAPI';
@@ -135,7 +132,7 @@ class V20160714Rpc extends Rpc
  * @method string getAppCode()
  * @method $this withAppCode($value)
  */
-class ResetAppCode extends V20160714Rpc
+class ResetAppCode extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class ResetAppCode extends V20160714Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeApp extends V20160714Rpc
+class DescribeApp extends Rpc
 {
 }
 
@@ -157,7 +154,7 @@ class DescribeApp extends V20160714Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class CreateIntranetDomain extends V20160714Rpc
+class CreateIntranetDomain extends Rpc
 {
 }
 
@@ -170,7 +167,7 @@ class CreateIntranetDomain extends V20160714Rpc
  * @method string getOverwrite()
  * @method $this withOverwrite($value)
  */
-class ImportSwagger extends V20160714Rpc
+class ImportSwagger extends Rpc
 {
 
     /**
@@ -199,7 +196,7 @@ class ImportSwagger extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class SetIpControlApis extends V20160714Rpc
+class SetIpControlApis extends Rpc
 {
 }
 
@@ -211,7 +208,7 @@ class SetIpControlApis extends V20160714Rpc
  * @method string getPolicyItemIds()
  * @method $this withPolicyItemIds($value)
  */
-class RemoveIpControlPolicyItem extends V20160714Rpc
+class RemoveIpControlPolicyItem extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class RemoveIpControlPolicyItem extends V20160714Rpc
  * @method string getCidrIp()
  * @method $this withCidrIp($value)
  */
-class ModifyIpControlPolicyItem extends V20160714Rpc
+class ModifyIpControlPolicyItem extends Rpc
 {
 }
 
@@ -243,7 +240,7 @@ class ModifyIpControlPolicyItem extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class RemoveIpControlApis extends V20160714Rpc
+class RemoveIpControlApis extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class RemoveIpControlApis extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeIpControls extends V20160714Rpc
+class DescribeIpControls extends Rpc
 {
 }
 
@@ -275,7 +272,7 @@ class DescribeIpControls extends V20160714Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class ModifyIpControl extends V20160714Rpc
+class ModifyIpControl extends Rpc
 {
 }
 
@@ -291,7 +288,7 @@ class ModifyIpControl extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeIpControlPolicyItems extends V20160714Rpc
+class DescribeIpControlPolicyItems extends Rpc
 {
 }
 
@@ -305,7 +302,7 @@ class DescribeIpControlPolicyItems extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApisByIpControl extends V20160714Rpc
+class DescribeApisByIpControl extends Rpc
 {
 }
 
@@ -315,7 +312,7 @@ class DescribeApisByIpControl extends V20160714Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class DeleteIpControl extends V20160714Rpc
+class DeleteIpControl extends Rpc
 {
 }
 
@@ -333,7 +330,7 @@ class DeleteIpControl extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class DescribeApiIpControls extends V20160714Rpc
+class DescribeApiIpControls extends Rpc
 {
 }
 
@@ -348,7 +345,7 @@ class DescribeApiIpControls extends V20160714Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class CreateIpControl extends V20160714Rpc
+class CreateIpControl extends Rpc
 {
 
     /**
@@ -378,7 +375,7 @@ class CreateIpControl extends V20160714Rpc
  * @method string getCidrIp()
  * @method $this withCidrIp($value)
  */
-class AddIpControlPolicyItem extends V20160714Rpc
+class AddIpControlPolicyItem extends Rpc
 {
 }
 
@@ -388,31 +385,7 @@ class AddIpControlPolicyItem extends V20160714Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class DescribeLogConfig extends V20160714Rpc
-{
-}
-
-/**
- * @method string getSlsLogStore()
- * @method $this withSlsLogStore($value)
- * @method string getLogType()
- * @method $this withLogType($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSlsProject()
- * @method $this withSlsProject($value)
- */
-class ModifyLogConfig extends V20160714Rpc
-{
-}
-
-/**
- * @method string getLogType()
- * @method $this withLogType($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DeleteLogConfig extends V20160714Rpc
+class DescribeLogConfig extends Rpc
 {
 }
 
@@ -426,7 +399,31 @@ class DeleteLogConfig extends V20160714Rpc
  * @method string getSlsProject()
  * @method $this withSlsProject($value)
  */
-class CreateLogConfig extends V20160714Rpc
+class ModifyLogConfig extends Rpc
+{
+}
+
+/**
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DeleteLogConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSlsLogStore()
+ * @method $this withSlsLogStore($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSlsProject()
+ * @method $this withSlsProject($value)
+ */
+class CreateLogConfig extends Rpc
 {
 }
 
@@ -440,7 +437,7 @@ class CreateLogConfig extends V20160714Rpc
  * @method string getActionValue()
  * @method $this withActionValue($value)
  */
-class SetDomainWebSocketStatus extends V20160714Rpc
+class SetDomainWebSocketStatus extends Rpc
 {
 }
 
@@ -452,7 +449,7 @@ class SetDomainWebSocketStatus extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeVpcAccesses extends V20160714Rpc
+class DescribeVpcAccesses extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class DescribeVpcAccesses extends V20160714Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class SetVpcAccess extends V20160714Rpc
+class SetVpcAccess extends Rpc
 {
 }
 
@@ -482,7 +479,7 @@ class SetVpcAccess extends V20160714Rpc
  * @method string getVpcId()
  * @method $this withVpcId($value)
  */
-class RemoveVpcAccess extends V20160714Rpc
+class RemoveVpcAccess extends Rpc
 {
 }
 
@@ -494,7 +491,7 @@ class RemoveVpcAccess extends V20160714Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class ReactivateDomain extends V20160714Rpc
+class ReactivateDomain extends Rpc
 {
 }
 
@@ -514,7 +511,7 @@ class ReactivateDomain extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApiHistories extends V20160714Rpc
+class DescribeApiHistories extends Rpc
 {
 }
 
@@ -526,7 +523,7 @@ class DescribeApiHistories extends V20160714Rpc
  * @method string getLanguage()
  * @method $this withLanguage($value)
  */
-class SdkGenerateByGroup extends V20160714Rpc
+class SdkGenerateByGroup extends Rpc
 {
 }
 
@@ -538,7 +535,7 @@ class SdkGenerateByGroup extends V20160714Rpc
  * @method string getLanguage()
  * @method $this withLanguage($value)
  */
-class SdkGenerateByApp extends V20160714Rpc
+class SdkGenerateByApp extends Rpc
 {
 }
 
@@ -552,7 +549,7 @@ class SdkGenerateByApp extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApisByApp extends V20160714Rpc
+class DescribeApisByApp extends Rpc
 {
 }
 
@@ -566,7 +563,7 @@ class DescribeApisByApp extends V20160714Rpc
  * @method string getLanguage()
  * @method $this withLanguage($value)
  */
-class SdkGenerate extends V20160714Rpc
+class SdkGenerate extends Rpc
 {
 }
 
@@ -578,7 +575,7 @@ class SdkGenerate extends V20160714Rpc
  * @method string getStageId()
  * @method $this withStageId($value)
  */
-class DescribeApiStage extends V20160714Rpc
+class DescribeApiStage extends Rpc
 {
 }
 
@@ -598,7 +595,7 @@ class DescribeApiStage extends V20160714Rpc
  * @method string getStageId()
  * @method $this withStageId($value)
  */
-class CreateApiStageVariable extends V20160714Rpc
+class CreateApiStageVariable extends Rpc
 {
 }
 
@@ -612,7 +609,7 @@ class CreateApiStageVariable extends V20160714Rpc
  * @method string getStageId()
  * @method $this withStageId($value)
  */
-class DeleteApiStageVariable extends V20160714Rpc
+class DeleteApiStageVariable extends Rpc
 {
 }
 
@@ -628,7 +625,7 @@ class DeleteApiStageVariable extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class SetSignatureApis extends V20160714Rpc
+class SetSignatureApis extends Rpc
 {
 }
 
@@ -644,7 +641,7 @@ class SetSignatureApis extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class SetTrafficControlApis extends V20160714Rpc
+class SetTrafficControlApis extends Rpc
 {
 }
 
@@ -662,7 +659,7 @@ class SetTrafficControlApis extends V20160714Rpc
  * @method string getHistoryVersion()
  * @method $this withHistoryVersion($value)
  */
-class SwitchApi extends V20160714Rpc
+class SwitchApi extends Rpc
 {
 }
 
@@ -684,7 +681,7 @@ class SwitchApi extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class SetApisAuthorities extends V20160714Rpc
+class SetApisAuthorities extends Rpc
 {
 }
 
@@ -706,7 +703,7 @@ class SetApisAuthorities extends V20160714Rpc
  * @method string getAuthValidTime()
  * @method $this withAuthValidTime($value)
  */
-class SetAppsAuthorities extends V20160714Rpc
+class SetAppsAuthorities extends Rpc
 {
 }
 
@@ -724,7 +721,7 @@ class SetAppsAuthorities extends V20160714Rpc
  * @method string getCertificateBody()
  * @method $this withCertificateBody($value)
  */
-class SetDomain extends V20160714Rpc
+class SetDomain extends Rpc
 {
 }
 
@@ -742,7 +739,7 @@ class SetDomain extends V20160714Rpc
  * @method string getCertificateBody()
  * @method $this withCertificateBody($value)
  */
-class SetDomainCertificate extends V20160714Rpc
+class SetDomainCertificate extends Rpc
 {
 }
 
@@ -758,7 +755,7 @@ class SetDomainCertificate extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class RemoveAppsAuthorities extends V20160714Rpc
+class RemoveAppsAuthorities extends Rpc
 {
 }
 
@@ -774,7 +771,7 @@ class RemoveAppsAuthorities extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class RemoveSignatureApis extends V20160714Rpc
+class RemoveSignatureApis extends Rpc
 {
 }
 
@@ -790,7 +787,7 @@ class RemoveSignatureApis extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class RemoveTrafficControlApis extends V20160714Rpc
+class RemoveTrafficControlApis extends Rpc
 {
 }
 
@@ -800,7 +797,7 @@ class RemoveTrafficControlApis extends V20160714Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class ResetAppSecret extends V20160714Rpc
+class ResetAppSecret extends Rpc
 {
 }
 
@@ -814,7 +811,7 @@ class ResetAppSecret extends V20160714Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class ModifyApp extends V20160714Rpc
+class ModifyApp extends Rpc
 {
 }
 
@@ -830,7 +827,7 @@ class ModifyApp extends V20160714Rpc
  * @method string getSignatureSecret()
  * @method $this withSignatureSecret($value)
  */
-class ModifySignature extends V20160714Rpc
+class ModifySignature extends Rpc
 {
 }
 
@@ -852,7 +849,7 @@ class ModifySignature extends V20160714Rpc
  * @method string getAppDefault()
  * @method $this withAppDefault($value)
  */
-class ModifyTrafficControl extends V20160714Rpc
+class ModifyTrafficControl extends Rpc
 {
 }
 
@@ -870,7 +867,7 @@ class ModifyTrafficControl extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class RemoveApisAuthorities extends V20160714Rpc
+class RemoveApisAuthorities extends Rpc
 {
 }
 
@@ -892,7 +889,7 @@ class RemoveApisAuthorities extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeTrafficControls extends V20160714Rpc
+class DescribeTrafficControls extends Rpc
 {
 }
 
@@ -906,7 +903,7 @@ class DescribeTrafficControls extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeTrafficControlsByApi extends V20160714Rpc
+class DescribeTrafficControlsByApi extends Rpc
 {
 }
 
@@ -964,7 +961,7 @@ class DescribeTrafficControlsByApi extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class ModifyApi extends V20160714Rpc
+class ModifyApi extends Rpc
 {
 }
 
@@ -978,7 +975,7 @@ class ModifyApi extends V20160714Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class ModifyApiGroup extends V20160714Rpc
+class ModifyApiGroup extends Rpc
 {
 }
 
@@ -988,7 +985,7 @@ class ModifyApiGroup extends V20160714Rpc
  * @method string getLanguage()
  * @method $this withLanguage($value)
  */
-class DescribeRegions extends V20160714Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1004,7 +1001,7 @@ class DescribeRegions extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSignatures extends V20160714Rpc
+class DescribeSignatures extends Rpc
 {
 }
 
@@ -1018,7 +1015,7 @@ class DescribeSignatures extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeSignaturesByApi extends V20160714Rpc
+class DescribeSignaturesByApi extends Rpc
 {
 }
 
@@ -1026,7 +1023,7 @@ class DescribeSignaturesByApi extends V20160714Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class DescribeSystemParameters extends V20160714Rpc
+class DescribeSystemParameters extends Rpc
 {
 }
 
@@ -1046,7 +1043,7 @@ class DescribeSystemParameters extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeHistoryApis extends V20160714Rpc
+class DescribeHistoryApis extends Rpc
 {
 }
 
@@ -1056,7 +1053,7 @@ class DescribeHistoryApis extends V20160714Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DescribePurchasedApiGroup extends V20160714Rpc
+class DescribePurchasedApiGroup extends Rpc
 {
 }
 
@@ -1068,7 +1065,7 @@ class DescribePurchasedApiGroup extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribePurchasedApiGroups extends V20160714Rpc
+class DescribePurchasedApiGroups extends Rpc
 {
 }
 
@@ -1090,7 +1087,7 @@ class DescribePurchasedApiGroups extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribePurchasedApis extends V20160714Rpc
+class DescribePurchasedApis extends Rpc
 {
 }
 
@@ -1104,7 +1101,7 @@ class DescribePurchasedApis extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeDeployedApi extends V20160714Rpc
+class DescribeDeployedApi extends Rpc
 {
 }
 
@@ -1124,7 +1121,7 @@ class DescribeDeployedApi extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDeployedApis extends V20160714Rpc
+class DescribeDeployedApis extends Rpc
 {
 }
 
@@ -1136,7 +1133,7 @@ class DescribeDeployedApis extends V20160714Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class DescribeDomain extends V20160714Rpc
+class DescribeDomain extends Rpc
 {
 }
 
@@ -1148,7 +1145,7 @@ class DescribeDomain extends V20160714Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DescribeDomainsResolution extends V20160714Rpc
+class DescribeDomainsResolution extends Rpc
 {
 }
 
@@ -1164,7 +1161,7 @@ class DescribeDomainsResolution extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApps extends V20160714Rpc
+class DescribeApps extends Rpc
 {
 }
 
@@ -1174,7 +1171,7 @@ class DescribeApps extends V20160714Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeAppSecurity extends V20160714Rpc
+class DescribeAppSecurity extends Rpc
 {
 }
 
@@ -1188,7 +1185,7 @@ class DescribeAppSecurity extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAuthorizedApis extends V20160714Rpc
+class DescribeAuthorizedApis extends Rpc
 {
 }
 
@@ -1212,7 +1209,7 @@ class DescribeAuthorizedApis extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAuthorizedApps extends V20160714Rpc
+class DescribeAuthorizedApps extends Rpc
 {
 }
 
@@ -1230,7 +1227,7 @@ class DescribeAuthorizedApps extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class DescribeApiSignatures extends V20160714Rpc
+class DescribeApiSignatures extends Rpc
 {
 }
 
@@ -1248,7 +1245,7 @@ class DescribeApiSignatures extends V20160714Rpc
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
-class DescribeApiTrafficControls extends V20160714Rpc
+class DescribeApiTrafficControls extends Rpc
 {
 }
 
@@ -1264,7 +1261,7 @@ class DescribeApiTrafficControls extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiTrafficData extends V20160714Rpc
+class DescribeApiTrafficData extends Rpc
 {
 }
 
@@ -1280,7 +1277,7 @@ class DescribeApiTrafficData extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAppAttributes extends V20160714Rpc
+class DescribeAppAttributes extends Rpc
 {
 }
 
@@ -1302,7 +1299,7 @@ class DescribeAppAttributes extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApis extends V20160714Rpc
+class DescribeApis extends Rpc
 {
 }
 
@@ -1316,7 +1313,7 @@ class DescribeApis extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApisBySignature extends V20160714Rpc
+class DescribeApisBySignature extends Rpc
 {
 }
 
@@ -1330,7 +1327,7 @@ class DescribeApisBySignature extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApisByTrafficControl extends V20160714Rpc
+class DescribeApisByTrafficControl extends Rpc
 {
 }
 
@@ -1346,7 +1343,7 @@ class DescribeApisByTrafficControl extends V20160714Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeApiGroups extends V20160714Rpc
+class DescribeApiGroups extends Rpc
 {
 }
 
@@ -1362,7 +1359,7 @@ class DescribeApiGroups extends V20160714Rpc
  * @method string getHistoryVersion()
  * @method $this withHistoryVersion($value)
  */
-class DescribeApiHistory extends V20160714Rpc
+class DescribeApiHistory extends Rpc
 {
 }
 
@@ -1378,7 +1375,7 @@ class DescribeApiHistory extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiLatencyData extends V20160714Rpc
+class DescribeApiLatencyData extends Rpc
 {
 }
 
@@ -1394,7 +1391,7 @@ class DescribeApiLatencyData extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiQpsData extends V20160714Rpc
+class DescribeApiQpsData extends Rpc
 {
 }
 
@@ -1408,7 +1405,7 @@ class DescribeApiQpsData extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiDoc extends V20160714Rpc
+class DescribeApiDoc extends Rpc
 {
 }
 
@@ -1424,7 +1421,7 @@ class DescribeApiDoc extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiErrorData extends V20160714Rpc
+class DescribeApiErrorData extends Rpc
 {
 }
 
@@ -1434,7 +1431,7 @@ class DescribeApiErrorData extends V20160714Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DescribeApiGroup extends V20160714Rpc
+class DescribeApiGroup extends Rpc
 {
 }
 
@@ -1444,7 +1441,7 @@ class DescribeApiGroup extends V20160714Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class DeleteTrafficControl extends V20160714Rpc
+class DeleteTrafficControl extends Rpc
 {
 }
 
@@ -1458,7 +1455,7 @@ class DeleteTrafficControl extends V20160714Rpc
  * @method string getSpecialType()
  * @method $this withSpecialType($value)
  */
-class DeleteTrafficSpecialControl extends V20160714Rpc
+class DeleteTrafficSpecialControl extends Rpc
 {
 }
 
@@ -1474,7 +1471,7 @@ class DeleteTrafficSpecialControl extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DeployApi extends V20160714Rpc
+class DeployApi extends Rpc
 {
 }
 
@@ -1486,7 +1483,7 @@ class DeployApi extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApi extends V20160714Rpc
+class DescribeApi extends Rpc
 {
 }
 
@@ -1496,7 +1493,7 @@ class DescribeApi extends V20160714Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DeleteApp extends V20160714Rpc
+class DeleteApp extends Rpc
 {
 }
 
@@ -1508,7 +1505,7 @@ class DeleteApp extends V20160714Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class DeleteDomain extends V20160714Rpc
+class DeleteDomain extends Rpc
 {
 }
 
@@ -1522,7 +1519,7 @@ class DeleteDomain extends V20160714Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class DeleteDomainCertificate extends V20160714Rpc
+class DeleteDomainCertificate extends Rpc
 {
 }
 
@@ -1532,7 +1529,7 @@ class DeleteDomainCertificate extends V20160714Rpc
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
  */
-class DeleteSignature extends V20160714Rpc
+class DeleteSignature extends Rpc
 {
 }
 
@@ -1552,7 +1549,7 @@ class DeleteSignature extends V20160714Rpc
  * @method string getAppDefault()
  * @method $this withAppDefault($value)
  */
-class CreateTrafficControl extends V20160714Rpc
+class CreateTrafficControl extends Rpc
 {
 }
 
@@ -1562,7 +1559,7 @@ class CreateTrafficControl extends V20160714Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class DeleteAllTrafficSpecialControl extends V20160714Rpc
+class DeleteAllTrafficSpecialControl extends Rpc
 {
 }
 
@@ -1574,7 +1571,7 @@ class DeleteAllTrafficSpecialControl extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DeleteApi extends V20160714Rpc
+class DeleteApi extends Rpc
 {
 }
 
@@ -1584,7 +1581,7 @@ class DeleteApi extends V20160714Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DeleteApiGroup extends V20160714Rpc
+class DeleteApiGroup extends Rpc
 {
 }
 
@@ -1640,7 +1637,7 @@ class DeleteApiGroup extends V20160714Rpc
  * @method string getResultBodyModel()
  * @method $this withResultBodyModel($value)
  */
-class CreateApi extends V20160714Rpc
+class CreateApi extends Rpc
 {
 }
 
@@ -1654,7 +1651,7 @@ class CreateApi extends V20160714Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class CreateApiGroup extends V20160714Rpc
+class CreateApiGroup extends Rpc
 {
 }
 
@@ -1666,7 +1663,7 @@ class CreateApiGroup extends V20160714Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class CreateApp extends V20160714Rpc
+class CreateApp extends Rpc
 {
 }
 
@@ -1680,7 +1677,7 @@ class CreateApp extends V20160714Rpc
  * @method string getSignatureSecret()
  * @method $this withSignatureSecret($value)
  */
-class CreateSignature extends V20160714Rpc
+class CreateSignature extends Rpc
 {
 }
 
@@ -1694,7 +1691,7 @@ class CreateSignature extends V20160714Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class AbolishApi extends V20160714Rpc
+class AbolishApi extends Rpc
 {
 }
 
@@ -1710,6 +1707,6 @@ class AbolishApi extends V20160714Rpc
  * @method string getSpecialType()
  * @method $this withSpecialType($value)
  */
-class AddTrafficSpecialControl extends V20160714Rpc
+class AddTrafficSpecialControl extends Rpc
 {
 }

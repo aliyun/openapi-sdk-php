@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Green\V20180509;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UploadCredentials uploadCredentials(array $options = [])
  * @method VoiceCancelScan voiceCancelScan(array $options = [])
  * @method GetAddVideoDnaResults getAddVideoDnaResults(array $options = [])
@@ -54,7 +51,7 @@ class GreenApiResolver
     use ApiResolverTrait;
 }
 
-class V20180509Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'Green';
@@ -72,7 +69,7 @@ class V20180509Roa extends Roa
 /**
  * @method string getClientInfo()
  */
-class UploadCredentials extends V20180509Roa
+class UploadCredentials extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/credentials/uploadcredentials';
@@ -94,7 +91,7 @@ class UploadCredentials extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceCancelScan extends V20180509Roa
+class VoiceCancelScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/cancelscan';
@@ -116,7 +113,7 @@ class VoiceCancelScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class GetAddVideoDnaResults extends V20180509Roa
+class GetAddVideoDnaResults extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/dna/add/results';
@@ -138,7 +135,7 @@ class GetAddVideoDnaResults extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteVideoDnaGroup extends V20180509Roa
+class DeleteVideoDnaGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/dna/group/delete';
@@ -160,7 +157,7 @@ class DeleteVideoDnaGroup extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteVideoDna extends V20180509Roa
+class DeleteVideoDna extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/dna/delete';
@@ -182,7 +179,7 @@ class DeleteVideoDna extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddVideoDnaGroup extends V20180509Roa
+class AddVideoDnaGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/dna/group/add';
@@ -204,7 +201,7 @@ class AddVideoDnaGroup extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddVideoDna extends V20180509Roa
+class AddVideoDna extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/dna/add';
@@ -226,7 +223,7 @@ class AddVideoDna extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityStartRegister extends V20180509Roa
+class VoiceIdentityStartRegister extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/start/register';
@@ -248,7 +245,7 @@ class VoiceIdentityStartRegister extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityUnregister extends V20180509Roa
+class VoiceIdentityUnregister extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/unregister';
@@ -270,7 +267,7 @@ class VoiceIdentityUnregister extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityStartCheck extends V20180509Roa
+class VoiceIdentityStartCheck extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/start/check';
@@ -292,7 +289,7 @@ class VoiceIdentityStartCheck extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityRegister extends V20180509Roa
+class VoiceIdentityRegister extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/register';
@@ -314,7 +311,7 @@ class VoiceIdentityRegister extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityCheck extends V20180509Roa
+class VoiceIdentityCheck extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/check';
@@ -336,7 +333,7 @@ class VoiceIdentityCheck extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VideoSyncScan extends V20180509Roa
+class VideoSyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/syncscan';
@@ -358,7 +355,7 @@ class VideoSyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceAsyncScanResults extends V20180509Roa
+class VoiceAsyncScanResults extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/results';
@@ -380,7 +377,7 @@ class VoiceAsyncScanResults extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VideoAsyncScanResults extends V20180509Roa
+class VideoAsyncScanResults extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/results';
@@ -402,7 +399,7 @@ class VideoAsyncScanResults extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddGroups extends V20180509Roa
+class AddGroups extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person/groups/add';
@@ -424,7 +421,7 @@ class AddGroups extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class GetFaces extends V20180509Roa
+class GetFaces extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/faces';
@@ -446,7 +443,7 @@ class GetFaces extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class GetPersons extends V20180509Roa
+class GetPersons extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/group/persons';
@@ -468,7 +465,7 @@ class GetPersons extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class GetGroups extends V20180509Roa
+class GetGroups extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/groups';
@@ -490,7 +487,7 @@ class GetGroups extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class TextFeedback extends V20180509Roa
+class TextFeedback extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/text/feedback';
@@ -512,7 +509,7 @@ class TextFeedback extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteSimilarityImage extends V20180509Roa
+class DeleteSimilarityImage extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/similarity/image/delete';
@@ -534,7 +531,7 @@ class DeleteSimilarityImage extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class SetPerson extends V20180509Roa
+class SetPerson extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person/update';
@@ -556,7 +553,7 @@ class SetPerson extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddFaces extends V20180509Roa
+class AddFaces extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/face/add';
@@ -578,7 +575,7 @@ class AddFaces extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteFaces extends V20180509Roa
+class DeleteFaces extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/face/delete';
@@ -600,7 +597,7 @@ class DeleteFaces extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeletePerson extends V20180509Roa
+class DeletePerson extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person/delete';
@@ -622,7 +619,7 @@ class DeletePerson extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class ImageAsyncScan extends V20180509Roa
+class ImageAsyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/image/asyncscan';
@@ -644,7 +641,7 @@ class ImageAsyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceAsyncScan extends V20180509Roa
+class VoiceAsyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/asyncscan';
@@ -666,7 +663,7 @@ class VoiceAsyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class GetPerson extends V20180509Roa
+class GetPerson extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person';
@@ -688,7 +685,7 @@ class GetPerson extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class ImageSyncScan extends V20180509Roa
+class ImageSyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/image/scan';
@@ -710,7 +707,7 @@ class ImageSyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VideoFeedback extends V20180509Roa
+class VideoFeedback extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/feedback';
@@ -732,7 +729,7 @@ class VideoFeedback extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddPerson extends V20180509Roa
+class AddPerson extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person/add';
@@ -754,7 +751,7 @@ class AddPerson extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class AddSimilarityImage extends V20180509Roa
+class AddSimilarityImage extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/similarity/image/add';
@@ -776,7 +773,7 @@ class AddSimilarityImage extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class FileAsyncScanResults extends V20180509Roa
+class FileAsyncScanResults extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/file/results';
@@ -798,7 +795,7 @@ class FileAsyncScanResults extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class SearchPerson extends V20180509Roa
+class SearchPerson extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/search';
@@ -820,7 +817,7 @@ class SearchPerson extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class ImageScanFeedback extends V20180509Roa
+class ImageScanFeedback extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/image/feedback';
@@ -842,7 +839,7 @@ class ImageScanFeedback extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class VideoAsyncScan extends V20180509Roa
+class VideoAsyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/video/asyncscan';
@@ -864,7 +861,7 @@ class VideoAsyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class ImageAsyncScanResults extends V20180509Roa
+class ImageAsyncScanResults extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/image/results';
@@ -886,7 +883,7 @@ class ImageAsyncScanResults extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class FileAsyncScan extends V20180509Roa
+class FileAsyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/file/asyncscan';
@@ -908,7 +905,7 @@ class FileAsyncScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class TextScan extends V20180509Roa
+class TextScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/text/scan';
@@ -930,7 +927,7 @@ class TextScan extends V20180509Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteGroups extends V20180509Roa
+class DeleteGroups extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/sface/person/groups/delete';

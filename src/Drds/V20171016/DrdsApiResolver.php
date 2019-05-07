@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Drds\V20171016;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeInstanceTags describeInstanceTags(array $options = [])
  * @method RemoveTagsFromInstance removeTagsFromInstance(array $options = [])
  * @method AddTagsToInstance addTagsToInstance(array $options = [])
@@ -46,7 +43,7 @@ class DrdsApiResolver
     use ApiResolverTrait;
 }
 
-class V20171016Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Drds';
@@ -64,7 +61,7 @@ class V20171016Rpc extends Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeInstanceTags extends V20171016Rpc
+class DescribeInstanceTags extends Rpc
 {
 }
 
@@ -74,7 +71,7 @@ class DescribeInstanceTags extends V20171016Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveTagsFromInstance extends V20171016Rpc
+class RemoveTagsFromInstance extends Rpc
 {
 }
 
@@ -84,7 +81,7 @@ class RemoveTagsFromInstance extends V20171016Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddTagsToInstance extends V20171016Rpc
+class AddTagsToInstance extends Rpc
 {
 }
 
@@ -100,7 +97,7 @@ class AddTagsToInstance extends V20171016Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class DescribeDrdsInstanceDbMonitor extends V20171016Rpc
+class DescribeDrdsInstanceDbMonitor extends Rpc
 {
 }
 
@@ -116,7 +113,7 @@ class DescribeDrdsInstanceDbMonitor extends V20171016Rpc
  * @method string getPeriodMultiple()
  * @method $this withPeriodMultiple($value)
  */
-class DescribeDrdsInstanceMonitor extends V20171016Rpc
+class DescribeDrdsInstanceMonitor extends Rpc
 {
 }
 
@@ -130,7 +127,7 @@ class DescribeDrdsInstanceMonitor extends V20171016Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class CreateDrdsAccount extends V20171016Rpc
+class CreateDrdsAccount extends Rpc
 {
 }
 
@@ -142,7 +139,7 @@ class CreateDrdsAccount extends V20171016Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class QueryInstanceInfoByConn extends V20171016Rpc
+class QueryInstanceInfoByConn extends Rpc
 {
 }
 
@@ -154,7 +151,7 @@ class QueryInstanceInfoByConn extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class RemoveReadOnlyAccount extends V20171016Rpc
+class RemoveReadOnlyAccount extends Rpc
 {
 }
 
@@ -166,7 +163,7 @@ class RemoveReadOnlyAccount extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class ModifyDrdsDBPasswd extends V20171016Rpc
+class ModifyDrdsDBPasswd extends Rpc
 {
 }
 
@@ -176,7 +173,7 @@ class ModifyDrdsDBPasswd extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class ModifyDrdsInstanceDescription extends V20171016Rpc
+class ModifyDrdsInstanceDescription extends Rpc
 {
 }
 
@@ -194,7 +191,7 @@ class ModifyDrdsInstanceDescription extends V20171016Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class ModifyDrdsIpWhiteList extends V20171016Rpc
+class ModifyDrdsIpWhiteList extends Rpc
 {
 }
 
@@ -208,7 +205,7 @@ class ModifyDrdsIpWhiteList extends V20171016Rpc
  * @method string getFullTableScan()
  * @method $this withFullTableScan($value)
  */
-class ModifyFullTableScan extends V20171016Rpc
+class ModifyFullTableScan extends Rpc
 {
 }
 
@@ -222,7 +219,7 @@ class ModifyFullTableScan extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class ModifyRdsReadWeight extends V20171016Rpc
+class ModifyRdsReadWeight extends Rpc
 {
 }
 
@@ -238,7 +235,7 @@ class ModifyRdsReadWeight extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class ModifyReadOnlyAccountPassword extends V20171016Rpc
+class ModifyReadOnlyAccountPassword extends Rpc
 {
 }
 
@@ -246,7 +243,7 @@ class ModifyReadOnlyAccountPassword extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class RemoveDrdsInstance extends V20171016Rpc
+class RemoveDrdsInstance extends Rpc
 {
 }
 
@@ -256,7 +253,7 @@ class RemoveDrdsInstance extends V20171016Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeDrdsInstances extends V20171016Rpc
+class DescribeDrdsInstances extends Rpc
 {
 }
 
@@ -266,7 +263,7 @@ class DescribeDrdsInstances extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeRdsList extends V20171016Rpc
+class DescribeRdsList extends Rpc
 {
 }
 
@@ -276,11 +273,11 @@ class DescribeRdsList extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeReadOnlyAccount extends V20171016Rpc
+class DescribeReadOnlyAccount extends Rpc
 {
 }
 
-class DescribeRegions extends V20171016Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -292,7 +289,7 @@ class DescribeRegions extends V20171016Rpc
  * @method string getSubDbName()
  * @method $this withSubDbName($value)
  */
-class DescribeShardDbConnectionInfo extends V20171016Rpc
+class DescribeShardDbConnectionInfo extends Rpc
 {
 }
 
@@ -302,7 +299,7 @@ class DescribeShardDbConnectionInfo extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeShardDBs extends V20171016Rpc
+class DescribeShardDBs extends Rpc
 {
 }
 
@@ -310,7 +307,7 @@ class DescribeShardDBs extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeCreateDrdsInstanceStatus extends V20171016Rpc
+class DescribeCreateDrdsInstanceStatus extends Rpc
 {
 }
 
@@ -320,7 +317,7 @@ class DescribeCreateDrdsInstanceStatus extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeDrdsDB extends V20171016Rpc
+class DescribeDrdsDB extends Rpc
 {
 }
 
@@ -332,7 +329,7 @@ class DescribeDrdsDB extends V20171016Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class DescribeDrdsDBIpWhiteList extends V20171016Rpc
+class DescribeDrdsDBIpWhiteList extends Rpc
 {
 }
 
@@ -340,7 +337,7 @@ class DescribeDrdsDBIpWhiteList extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeDrdsDBs extends V20171016Rpc
+class DescribeDrdsDBs extends Rpc
 {
 }
 
@@ -348,7 +345,7 @@ class DescribeDrdsDBs extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeDrdsInstance extends V20171016Rpc
+class DescribeDrdsInstance extends Rpc
 {
 }
 
@@ -356,7 +353,7 @@ class DescribeDrdsInstance extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DescribeDrdsInstanceNetInfoForInner extends V20171016Rpc
+class DescribeDrdsInstanceNetInfoForInner extends Rpc
 {
 }
 
@@ -372,7 +369,7 @@ class DescribeDrdsInstanceNetInfoForInner extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class CreateDrdsDB extends V20171016Rpc
+class CreateDrdsDB extends Rpc
 {
 }
 
@@ -406,7 +403,7 @@ class CreateDrdsDB extends V20171016Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class CreateDrdsInstance extends V20171016Rpc
+class CreateDrdsInstance extends Rpc
 {
 }
 
@@ -417,7 +414,7 @@ class CreateDrdsInstance extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class CreateReadOnlyAccount extends V20171016Rpc
+class CreateReadOnlyAccount extends Rpc
 {
 
     /**
@@ -440,7 +437,7 @@ class CreateReadOnlyAccount extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DeleteDrdsDB extends V20171016Rpc
+class DeleteDrdsDB extends Rpc
 {
 }
 
@@ -450,6 +447,6 @@ class DeleteDrdsDB extends V20171016Rpc
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
-class DeleteFailedDrdsDB extends V20171016Rpc
+class DeleteFailedDrdsDB extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method WhereInDimQuery whereInDimQuery(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
@@ -16,7 +13,7 @@ class ARMS4FINANCEApiResolver
     use ApiResolverTrait;
 }
 
-class V20171130Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'ARMS4FINANCE';
@@ -47,7 +44,7 @@ class V20171130Rpc extends Rpc
  * @method $this withMaxTime($value)
  * @method array getDimensions()
  */
-class WhereInDimQuery extends V20171130Rpc
+class WhereInDimQuery extends Rpc
 {
 
     /**
@@ -113,7 +110,7 @@ class WhereInDimQuery extends V20171130Rpc
  * @method $this withMaxTime($value)
  * @method array getDimensions()
  */
-class ARMSQueryDataSet extends V20171130Rpc
+class ARMSQueryDataSet extends Rpc
 {
 
     /**

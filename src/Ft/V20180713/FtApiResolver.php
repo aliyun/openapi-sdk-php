@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ft\V20180713;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method FtFlowSpecial ftFlowSpecial(array $options = [])
  * @method FtDynamicAddressHsf ftDynamicAddressHsf(array $options = [])
  * @method FtDynamicAddressDubbo ftDynamicAddressDubbo(array $options = [])
@@ -21,7 +18,7 @@ class FtApiResolver
     use ApiResolverTrait;
 }
 
-class V20180713Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ft';
@@ -37,11 +34,11 @@ class V20180713Rpc extends Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class FtFlowSpecial extends V20180713Rpc
+class FtFlowSpecial extends Rpc
 {
 }
 
-class FtDynamicAddressHsf extends V20180713Rpc
+class FtDynamicAddressHsf extends Rpc
 {
 }
 
@@ -51,7 +48,7 @@ class FtDynamicAddressHsf extends V20180713Rpc
  * @method string getStringValue()
  * @method $this withStringValue($value)
  */
-class FtDynamicAddressDubbo extends V20180713Rpc
+class FtDynamicAddressDubbo extends Rpc
 {
 }
 
@@ -60,7 +57,7 @@ class FtDynamicAddressDubbo extends V20180713Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class FtParamList extends V20180713Rpc
+class FtParamList extends Rpc
 {
 
     /**
@@ -88,7 +85,7 @@ class FtParamList extends V20180713Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class FtEagleEye extends V20180713Rpc
+class FtEagleEye extends Rpc
 {
 }
 
@@ -96,7 +93,7 @@ class FtEagleEye extends V20180713Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class FTApiAliasApi extends V20180713Rpc
+class FTApiAliasApi extends Rpc
 {
 }
 
@@ -104,6 +101,6 @@ class FTApiAliasApi extends V20180713Rpc
  * @method string getIsGatedLaunch()
  * @method $this withIsGatedLaunch($value)
  */
-class FtGatedLaunchPolicy4 extends V20180713Rpc
+class FtGatedLaunchPolicy4 extends Rpc
 {
 }

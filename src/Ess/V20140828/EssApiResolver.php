@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ess\V20140828;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CheckScalingGroupAvailability checkScalingGroupAvailability(array $options = [])
  * @method DetachVServerGroups detachVServerGroups(array $options = [])
  * @method AttachVServerGroups attachVServerGroups(array $options = [])
@@ -81,7 +78,7 @@ class EssApiResolver
     use ApiResolverTrait;
 }
 
-class V20140828Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ess';
@@ -104,7 +101,7 @@ class V20140828Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckScalingGroupAvailability extends V20140828Rpc
+class CheckScalingGroupAvailability extends Rpc
 {
 }
 
@@ -119,7 +116,7 @@ class CheckScalingGroupAvailability extends V20140828Rpc
  * @method $this withOwnerId($value)
  * @method array getVServerGroup()
  */
-class DetachVServerGroups extends V20140828Rpc
+class DetachVServerGroups extends Rpc
 {
 
     /**
@@ -153,7 +150,7 @@ class DetachVServerGroups extends V20140828Rpc
  * @method $this withOwnerId($value)
  * @method array getVServerGroup()
  */
-class AttachVServerGroups extends V20140828Rpc
+class AttachVServerGroups extends Rpc
 {
 
     /**
@@ -188,7 +185,7 @@ class AttachVServerGroups extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DetachDBInstances extends V20140828Rpc
+class DetachDBInstances extends Rpc
 {
 
     /**
@@ -218,7 +215,7 @@ class DetachDBInstances extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AttachDBInstances extends V20140828Rpc
+class AttachDBInstances extends Rpc
 {
 
     /**
@@ -297,7 +294,7 @@ class AttachDBInstances extends V20140828Rpc
  * @method $this withInternetChargeType($value)
  * @method string getSystemDiskDescription()
  */
-class ModifyScalingConfiguration extends V20140828Rpc
+class ModifyScalingConfiguration extends Rpc
 {
 
     /**
@@ -430,7 +427,7 @@ class ModifyScalingConfiguration extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLoadBalancers extends V20140828Rpc
+class DescribeLoadBalancers extends Rpc
 {
 }
 
@@ -445,7 +442,7 @@ class DescribeLoadBalancers extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DetachLoadBalancers extends V20140828Rpc
+class DetachLoadBalancers extends Rpc
 {
 
     /**
@@ -475,7 +472,7 @@ class DetachLoadBalancers extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AttachLoadBalancers extends V20140828Rpc
+class AttachLoadBalancers extends Rpc
 {
 
     /**
@@ -524,7 +521,7 @@ class AttachLoadBalancers extends V20140828Rpc
  * @method string getStatistics()
  * @method $this withStatistics($value)
  */
-class CreateAlarm extends V20140828Rpc
+class CreateAlarm extends Rpc
 {
 
     /**
@@ -567,7 +564,7 @@ class CreateAlarm extends V20140828Rpc
  * @method string getAlarmTaskId()
  * @method $this withAlarmTaskId($value)
  */
-class EnableAlarm extends V20140828Rpc
+class EnableAlarm extends Rpc
 {
 }
 
@@ -601,7 +598,7 @@ class EnableAlarm extends V20140828Rpc
  * @method string getStatistics()
  * @method $this withStatistics($value)
  */
-class ModifyAlarm extends V20140828Rpc
+class ModifyAlarm extends Rpc
 {
 
     /**
@@ -644,7 +641,7 @@ class ModifyAlarm extends V20140828Rpc
  * @method string getAlarmTaskId()
  * @method $this withAlarmTaskId($value)
  */
-class DeleteAlarm extends V20140828Rpc
+class DeleteAlarm extends Rpc
 {
 }
 
@@ -668,7 +665,7 @@ class DeleteAlarm extends V20140828Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAlarms extends V20140828Rpc
+class DescribeAlarms extends Rpc
 {
 }
 
@@ -680,7 +677,7 @@ class DescribeAlarms extends V20140828Rpc
  * @method string getAlarmTaskId()
  * @method $this withAlarmTaskId($value)
  */
-class DisableAlarm extends V20140828Rpc
+class DisableAlarm extends Rpc
 {
 }
 
@@ -696,7 +693,7 @@ class DisableAlarm extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RebalanceInstances extends V20140828Rpc
+class RebalanceInstances extends Rpc
 {
 }
 
@@ -711,7 +708,7 @@ class RebalanceInstances extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyNotificationConfiguration extends V20140828Rpc
+class ModifyNotificationConfiguration extends Rpc
 {
 
     /**
@@ -741,7 +738,7 @@ class ModifyNotificationConfiguration extends V20140828Rpc
  * @method string getProtectedFromScaleIn()
  * @method $this withProtectedFromScaleIn($value)
  */
-class SetInstancesProtection extends V20140828Rpc
+class SetInstancesProtection extends Rpc
 {
 
     /**
@@ -770,7 +767,7 @@ class SetInstancesProtection extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteNotificationConfiguration extends V20140828Rpc
+class DeleteNotificationConfiguration extends Rpc
 {
 }
 
@@ -780,7 +777,7 @@ class DeleteNotificationConfiguration extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNotificationTypes extends V20140828Rpc
+class DescribeNotificationTypes extends Rpc
 {
 }
 
@@ -792,7 +789,7 @@ class DescribeNotificationTypes extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNotificationConfigurations extends V20140828Rpc
+class DescribeNotificationConfigurations extends Rpc
 {
 }
 
@@ -807,7 +804,7 @@ class DescribeNotificationConfigurations extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateNotificationConfiguration extends V20140828Rpc
+class CreateNotificationConfiguration extends Rpc
 {
 
     /**
@@ -843,7 +840,7 @@ class CreateNotificationConfiguration extends V20140828Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeLifecycleHooks extends V20140828Rpc
+class DescribeLifecycleHooks extends Rpc
 {
 
     /**
@@ -886,7 +883,7 @@ class DescribeLifecycleHooks extends V20140828Rpc
  * @method string getNotificationArn()
  * @method $this withNotificationArn($value)
  */
-class ModifyLifecycleHook extends V20140828Rpc
+class ModifyLifecycleHook extends Rpc
 {
 }
 
@@ -904,7 +901,7 @@ class ModifyLifecycleHook extends V20140828Rpc
  * @method string getLifecycleActionResult()
  * @method $this withLifecycleActionResult($value)
  */
-class CompleteLifecycleAction extends V20140828Rpc
+class CompleteLifecycleAction extends Rpc
 {
 }
 
@@ -922,7 +919,7 @@ class CompleteLifecycleAction extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLifecycleHook extends V20140828Rpc
+class DeleteLifecycleHook extends Rpc
 {
 }
 
@@ -937,7 +934,7 @@ class DeleteLifecycleHook extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RecordLifecycleActionHeartbeat extends V20140828Rpc
+class RecordLifecycleActionHeartbeat extends Rpc
 {
 
     /**
@@ -1003,7 +1000,7 @@ class RecordLifecycleActionHeartbeat extends V20140828Rpc
  * @method $this withNotificationArn($value)
  * @method array getLifecycleHook()
  */
-class CreateLifecycleHook extends V20140828Rpc
+class CreateLifecycleHook extends Rpc
 {
 
     /**
@@ -1036,7 +1033,7 @@ class CreateLifecycleHook extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EnterStandby extends V20140828Rpc
+class EnterStandby extends Rpc
 {
 
     /**
@@ -1064,7 +1061,7 @@ class EnterStandby extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ExitStandby extends V20140828Rpc
+class ExitStandby extends Rpc
 {
 
     /**
@@ -1093,7 +1090,7 @@ class ExitStandby extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeactivateScalingConfiguration extends V20140828Rpc
+class DeactivateScalingConfiguration extends Rpc
 {
 }
 
@@ -1108,7 +1105,7 @@ class DeactivateScalingConfiguration extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class OrderSucceededCallback extends V20140828Rpc
+class OrderSucceededCallback extends Rpc
 {
 
     /**
@@ -1139,7 +1136,7 @@ class OrderSucceededCallback extends V20140828Rpc
  * @method string getFailConfig()
  * @method $this withFailConfig($value)
  */
-class ModifyAlertConfig extends V20140828Rpc
+class ModifyAlertConfig extends Rpc
 {
 }
 
@@ -1151,7 +1148,7 @@ class ModifyAlertConfig extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAlertConfig extends V20140828Rpc
+class DescribeAlertConfig extends Rpc
 {
 }
 
@@ -1169,7 +1166,7 @@ class DescribeAlertConfig extends V20140828Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class SpiCallExecuteScalingRule extends V20140828Rpc
+class SpiCallExecuteScalingRule extends Rpc
 {
 }
 
@@ -1185,7 +1182,7 @@ class SpiCallExecuteScalingRule extends V20140828Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class UserOperation extends V20140828Rpc
+class UserOperation extends Rpc
 {
 }
 
@@ -1199,7 +1196,7 @@ class UserOperation extends V20140828Rpc
  * @method string getWorkerIp()
  * @method $this withWorkerIp($value)
  */
-class CountScalingActivitiesInWorker extends V20140828Rpc
+class CountScalingActivitiesInWorker extends Rpc
 {
 }
 
@@ -1213,7 +1210,7 @@ class CountScalingActivitiesInWorker extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class VerifyAuthentication extends V20140828Rpc
+class VerifyAuthentication extends Rpc
 {
 }
 
@@ -1225,7 +1222,7 @@ class VerifyAuthentication extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class VerifyUser extends V20140828Rpc
+class VerifyUser extends Rpc
 {
 }
 
@@ -1235,7 +1232,7 @@ class VerifyUser extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAccountAttributes extends V20140828Rpc
+class DescribeAccountAttributes extends Rpc
 {
 }
 
@@ -1249,7 +1246,7 @@ class DescribeAccountAttributes extends V20140828Rpc
  * @method string getScalingActivityId()
  * @method $this withScalingActivityId($value)
  */
-class DescribeScalingActivityDetail extends V20140828Rpc
+class DescribeScalingActivityDetail extends Rpc
 {
 }
 
@@ -1259,7 +1256,7 @@ class DescribeScalingActivityDetail extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLimitation extends V20140828Rpc
+class DescribeLimitation extends Rpc
 {
 }
 
@@ -1279,7 +1276,7 @@ class DescribeLimitation extends V20140828Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCapacityHistory extends V20140828Rpc
+class DescribeCapacityHistory extends Rpc
 {
 }
 
@@ -1291,7 +1288,7 @@ class DescribeCapacityHistory extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20140828Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1347,7 +1344,7 @@ class DescribeRegions extends V20140828Rpc
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class AttachInstances extends V20140828Rpc
+class AttachInstances extends Rpc
 {
 
     /**
@@ -1912,7 +1909,7 @@ class AttachInstances extends V20140828Rpc
  * @method string getPredictiveScalingMode()
  * @method $this withPredictiveScalingMode($value)
  */
-class CreateScalingRule extends V20140828Rpc
+class CreateScalingRule extends Rpc
 {
 
     /**
@@ -1972,7 +1969,7 @@ class CreateScalingRule extends V20140828Rpc
  * @method array getVServerGroup()
  * @method string getRemovalPolicy2()
  */
-class CreateScalingGroup extends V20140828Rpc
+class CreateScalingGroup extends Rpc
 {
 
     /**
@@ -2123,7 +2120,7 @@ class CreateScalingGroup extends V20140828Rpc
  * @method $this withInternetMaxBandwidthIn($value)
  * @method string getSystemDiskDescription()
  */
-class CreateScalingConfiguration extends V20140828Rpc
+class CreateScalingConfiguration extends Rpc
 {
 
     /**
@@ -2258,7 +2255,7 @@ class CreateScalingConfiguration extends V20140828Rpc
  * @method string getScalingRuleId()
  * @method $this withScalingRuleId($value)
  */
-class DeleteScalingRule extends V20140828Rpc
+class DeleteScalingRule extends Rpc
 {
 }
 
@@ -2274,7 +2271,7 @@ class DeleteScalingRule extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteScalingGroup extends V20140828Rpc
+class DeleteScalingGroup extends Rpc
 {
 }
 
@@ -2288,7 +2285,7 @@ class DeleteScalingGroup extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteScalingConfiguration extends V20140828Rpc
+class DeleteScalingConfiguration extends Rpc
 {
 }
 
@@ -2318,7 +2315,7 @@ class DeleteScalingConfiguration extends V20140828Rpc
  * @method string getRecurrenceType()
  * @method $this withRecurrenceType($value)
  */
-class CreateScheduledTask extends V20140828Rpc
+class CreateScheduledTask extends Rpc
 {
 }
 
@@ -2358,7 +2355,7 @@ class CreateScheduledTask extends V20140828Rpc
  * @method string getScalingConfigurationName9()
  * @method string getScalingConfigurationName10()
  */
-class DescribeScalingConfigurations extends V20140828Rpc
+class DescribeScalingConfigurations extends Rpc
 {
 
     /**
@@ -2660,7 +2657,7 @@ class DescribeScalingConfigurations extends V20140828Rpc
  * @method $this withOwnerId($value)
  * @method string getScalingActivityId20()
  */
-class DescribeScalingActivities extends V20140828Rpc
+class DescribeScalingActivities extends Rpc
 {
 
     /**
@@ -2934,7 +2931,7 @@ class DescribeScalingActivities extends V20140828Rpc
  * @method string getScheduledTaskId()
  * @method $this withScheduledTaskId($value)
  */
-class DeleteScheduledTask extends V20140828Rpc
+class DeleteScheduledTask extends Rpc
 {
 }
 
@@ -2988,7 +2985,7 @@ class DeleteScheduledTask extends V20140828Rpc
  * @method string getScalingRuleId2()
  * @method string getScalingRuleId3()
  */
-class DescribeScalingRules extends V20140828Rpc
+class DescribeScalingRules extends Rpc
 {
 
     /**
@@ -3426,7 +3423,7 @@ class DescribeScalingRules extends V20140828Rpc
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class DescribeScalingInstances extends V20140828Rpc
+class DescribeScalingInstances extends Rpc
 {
 
     /**
@@ -3745,7 +3742,7 @@ class DescribeScalingInstances extends V20140828Rpc
  * @method string getScalingGroupName6()
  * @method string getScalingGroupName12()
  */
-class DescribeScalingGroups extends V20140828Rpc
+class DescribeScalingGroups extends Rpc
 {
 
     /**
@@ -4268,7 +4265,7 @@ class DescribeScalingGroups extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DisableScalingGroup extends V20140828Rpc
+class DisableScalingGroup extends Rpc
 {
 }
 
@@ -4285,7 +4282,7 @@ class DisableScalingGroup extends V20140828Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DetachInstances extends V20140828Rpc
+class DetachInstances extends Rpc
 {
 
     /**
@@ -4378,7 +4375,7 @@ class DetachInstances extends V20140828Rpc
  * @method string getScheduledAction10()
  * @method string getScheduledAction11()
  */
-class DescribeScheduledTasks extends V20140828Rpc
+class DescribeScheduledTasks extends Rpc
 {
 
     /**
@@ -5203,7 +5200,7 @@ class DescribeScheduledTasks extends V20140828Rpc
  * @method string getPredictiveScalingMode()
  * @method $this withPredictiveScalingMode($value)
  */
-class ModifyScalingRule extends V20140828Rpc
+class ModifyScalingRule extends Rpc
 {
 
     /**
@@ -5255,7 +5252,7 @@ class ModifyScalingRule extends V20140828Rpc
  * @method string getRemovalPolicy1()
  * @method string getRemovalPolicy2()
  */
-class ModifyScalingGroup extends V20140828Rpc
+class ModifyScalingGroup extends Rpc
 {
 
     /**
@@ -5318,7 +5315,7 @@ class ModifyScalingGroup extends V20140828Rpc
  * @method string getMetricValue()
  * @method $this withMetricValue($value)
  */
-class ExecuteScalingRule extends V20140828Rpc
+class ExecuteScalingRule extends Rpc
 {
 }
 
@@ -5380,7 +5377,7 @@ class ExecuteScalingRule extends V20140828Rpc
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class EnableScalingGroup extends V20140828Rpc
+class EnableScalingGroup extends Rpc
 {
 
     /**
@@ -5938,7 +5935,7 @@ class EnableScalingGroup extends V20140828Rpc
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class RemoveInstances extends V20140828Rpc
+class RemoveInstances extends Rpc
 {
 
     /**
@@ -6236,6 +6233,6 @@ class RemoveInstances extends V20140828Rpc
  * @method string getRecurrenceType()
  * @method $this withRecurrenceType($value)
  */
-class ModifyScheduledTask extends V20140828Rpc
+class ModifyScheduledTask extends Rpc
 {
 }

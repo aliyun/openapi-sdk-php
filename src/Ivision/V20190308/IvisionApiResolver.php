@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ivision\V20190308;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateStreamPredict createStreamPredict(array $options = [])
  * @method DeleteStreamPredict deleteStreamPredict(array $options = [])
  * @method StopStreamPredict stopStreamPredict(array $options = [])
@@ -48,7 +45,7 @@ class IvisionApiResolver
     use ApiResolverTrait;
 }
 
-class V20190308Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'ivision';
@@ -82,7 +79,7 @@ class V20190308Rpc extends Rpc
  * @method string getModelIds()
  * @method $this withModelIds($value)
  */
-class CreateStreamPredict extends V20190308Rpc
+class CreateStreamPredict extends Rpc
 {
 }
 
@@ -94,7 +91,7 @@ class CreateStreamPredict extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteStreamPredict extends V20190308Rpc
+class DeleteStreamPredict extends Rpc
 {
 }
 
@@ -106,7 +103,7 @@ class DeleteStreamPredict extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopStreamPredict extends V20190308Rpc
+class StopStreamPredict extends Rpc
 {
 }
 
@@ -132,7 +129,7 @@ class StopStreamPredict extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeStreamPredictResult extends V20190308Rpc
+class DescribeStreamPredictResult extends Rpc
 {
 }
 
@@ -150,7 +147,7 @@ class DescribeStreamPredictResult extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeStreamPredicts extends V20190308Rpc
+class DescribeStreamPredicts extends Rpc
 {
 }
 
@@ -162,7 +159,7 @@ class DescribeStreamPredicts extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartStreamPredict extends V20190308Rpc
+class StartStreamPredict extends Rpc
 {
 }
 
@@ -178,7 +175,7 @@ class StartStreamPredict extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTrainDatasTag extends V20190308Rpc
+class DeleteTrainDatasTag extends Rpc
 {
 }
 
@@ -194,7 +191,7 @@ class DeleteTrainDatasTag extends V20190308Rpc
  * @method string getDataId()
  * @method $this withDataId($value)
  */
-class ModifyTrainDataRegionTagAttribute extends V20190308Rpc
+class ModifyTrainDataRegionTagAttribute extends Rpc
 {
 }
 
@@ -216,7 +213,7 @@ class ModifyTrainDataRegionTagAttribute extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DescribeTags extends V20190308Rpc
+class DescribeTags extends Rpc
 {
 }
 
@@ -234,7 +231,7 @@ class DescribeTags extends V20190308Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class ModifyTagAttribute extends V20190308Rpc
+class ModifyTagAttribute extends Rpc
 {
 }
 
@@ -248,7 +245,7 @@ class ModifyTagAttribute extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTag extends V20190308Rpc
+class DeleteTag extends Rpc
 {
 }
 
@@ -264,7 +261,7 @@ class DeleteTag extends V20190308Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateTag extends V20190308Rpc
+class CreateTag extends Rpc
 {
 }
 
@@ -278,7 +275,7 @@ class CreateTag extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DeleteIteration extends V20190308Rpc
+class DeleteIteration extends Rpc
 {
 }
 
@@ -296,7 +293,7 @@ class DeleteIteration extends V20190308Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeIterations extends V20190308Rpc
+class DescribeIterations extends Rpc
 {
 }
 
@@ -308,7 +305,7 @@ class DescribeIterations extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class TrainProject extends V20190308Rpc
+class TrainProject extends Rpc
 {
 }
 
@@ -324,7 +321,7 @@ class TrainProject extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DescribeTrainResult extends V20190308Rpc
+class DescribeTrainResult extends Rpc
 {
 }
 
@@ -338,7 +335,7 @@ class DescribeTrainResult extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTrainDatas extends V20190308Rpc
+class DeleteTrainDatas extends Rpc
 {
 }
 
@@ -354,7 +351,7 @@ class DeleteTrainDatas extends V20190308Rpc
  * @method string getDataId()
  * @method $this withDataId($value)
  */
-class CreateTrainDataTag extends V20190308Rpc
+class CreateTrainDataTag extends Rpc
 {
 }
 
@@ -370,7 +367,7 @@ class CreateTrainDataTag extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DescribeTrainDatasByIds extends V20190308Rpc
+class DescribeTrainDatasByIds extends Rpc
 {
 }
 
@@ -386,7 +383,7 @@ class DescribeTrainDatasByIds extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateTrainDatasTag extends V20190308Rpc
+class CreateTrainDatasTag extends Rpc
 {
 }
 
@@ -404,7 +401,7 @@ class CreateTrainDatasTag extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class CreateTrainDatasFromPrediction extends V20190308Rpc
+class CreateTrainDatasFromPrediction extends Rpc
 {
 }
 
@@ -420,7 +417,7 @@ class CreateTrainDatasFromPrediction extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateTrainDatasFromUrls extends V20190308Rpc
+class CreateTrainDatasFromUrls extends Rpc
 {
 }
 
@@ -436,7 +433,7 @@ class CreateTrainDatasFromUrls extends V20190308Rpc
  * @method string getDataId()
  * @method $this withDataId($value)
  */
-class CreateTrainDataRegionTag extends V20190308Rpc
+class CreateTrainDataRegionTag extends Rpc
 {
 }
 
@@ -452,7 +449,7 @@ class CreateTrainDataRegionTag extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTrainDataTag extends V20190308Rpc
+class DeleteTrainDataTag extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class DeleteTrainDataTag extends V20190308Rpc
  * @method string getDataId()
  * @method $this withDataId($value)
  */
-class ModifyTrainDataTagAttribute extends V20190308Rpc
+class ModifyTrainDataTagAttribute extends Rpc
 {
 }
 
@@ -492,7 +489,7 @@ class ModifyTrainDataTagAttribute extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DescribeTrainDatas extends V20190308Rpc
+class DescribeTrainDatas extends Rpc
 {
 }
 
@@ -508,7 +505,7 @@ class DescribeTrainDatas extends V20190308Rpc
  * @method string getDataUrls()
  * @method $this withDataUrls($value)
  */
-class PredictImage extends V20190308Rpc
+class PredictImage extends Rpc
 {
 }
 
@@ -522,7 +519,7 @@ class PredictImage extends V20190308Rpc
  * @method string getFileName()
  * @method $this withFileName($value)
  */
-class CreateUploadToken extends V20190308Rpc
+class CreateUploadToken extends Rpc
 {
 }
 
@@ -540,7 +537,7 @@ class CreateUploadToken extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeProjects extends V20190308Rpc
+class DescribeProjects extends Rpc
 {
 }
 
@@ -552,7 +549,7 @@ class DescribeProjects extends V20190308Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteProject extends V20190308Rpc
+class DeleteProject extends Rpc
 {
 }
 
@@ -570,7 +567,7 @@ class DeleteProject extends V20190308Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateProject extends V20190308Rpc
+class CreateProject extends Rpc
 {
 }
 
@@ -586,7 +583,7 @@ class CreateProject extends V20190308Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class ModifyProjectAttribute extends V20190308Rpc
+class ModifyProjectAttribute extends Rpc
 {
 }
 
@@ -602,7 +599,7 @@ class ModifyProjectAttribute extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DeletePredictDatas extends V20190308Rpc
+class DeletePredictDatas extends Rpc
 {
 }
 
@@ -630,6 +627,6 @@ class DeletePredictDatas extends V20190308Rpc
  * @method string getIterationId()
  * @method $this withIterationId($value)
  */
-class DescribePredictDatas extends V20190308Rpc
+class DescribePredictDatas extends Rpc
 {
 }

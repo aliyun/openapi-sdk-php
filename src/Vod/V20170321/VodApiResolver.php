@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Vod\V20170321;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetUploadDetails getUploadDetails(array $options = [])
  * @method DeleteMultipartUpload deleteMultipartUpload(array $options = [])
  * @method MoveAppResource moveAppResource(array $options = [])
@@ -124,7 +121,7 @@ class VodApiResolver
     use ApiResolverTrait;
 }
 
-class V20170321Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'vod';
@@ -153,7 +150,7 @@ class V20170321Rpc extends Rpc
  * @method string getMediaType()
  * @method $this withMediaType($value)
  */
-class GetUploadDetails extends V20170321Rpc
+class GetUploadDetails extends Rpc
 {
 }
 
@@ -173,7 +170,7 @@ class GetUploadDetails extends V20170321Rpc
  * @method string getMediaType()
  * @method $this withMediaType($value)
  */
-class DeleteMultipartUpload extends V20170321Rpc
+class DeleteMultipartUpload extends Rpc
 {
 }
 
@@ -193,7 +190,7 @@ class DeleteMultipartUpload extends V20170321Rpc
  * @method string getResourceIds()
  * @method $this withResourceIds($value)
  */
-class MoveAppResource extends V20170321Rpc
+class MoveAppResource extends Rpc
 {
 }
 
@@ -211,7 +208,7 @@ class MoveAppResource extends V20170321Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class DescribeVodTranscodeData extends V20170321Rpc
+class DescribeVodTranscodeData extends Rpc
 {
 }
 
@@ -231,7 +228,7 @@ class DescribeVodTranscodeData extends V20170321Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListAppInfo extends V20170321Rpc
+class ListAppInfo extends Rpc
 {
 }
 
@@ -247,7 +244,7 @@ class ListAppInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAppInfo extends V20170321Rpc
+class DeleteAppInfo extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class DeleteAppInfo extends V20170321Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateAppInfo extends V20170321Rpc
+class UpdateAppInfo extends Rpc
 {
 }
 
@@ -285,7 +282,7 @@ class UpdateAppInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetAppInfos extends V20170321Rpc
+class GetAppInfos extends Rpc
 {
 }
 
@@ -303,7 +300,7 @@ class GetAppInfos extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateAppInfo extends V20170321Rpc
+class CreateAppInfo extends Rpc
 {
 }
 
@@ -321,7 +318,7 @@ class CreateAppInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMessageCallback extends V20170321Rpc
+class DeleteMessageCallback extends Rpc
 {
 }
 
@@ -343,7 +340,7 @@ class DeleteMessageCallback extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AttachAppPolicyToIdentity extends V20170321Rpc
+class AttachAppPolicyToIdentity extends Rpc
 {
 }
 
@@ -363,7 +360,7 @@ class AttachAppPolicyToIdentity extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DetachAppPolicyFromIdentity extends V20170321Rpc
+class DetachAppPolicyFromIdentity extends Rpc
 {
 }
 
@@ -381,7 +378,7 @@ class DetachAppPolicyFromIdentity extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAppPoliciesForIdentity extends V20170321Rpc
+class ListAppPoliciesForIdentity extends Rpc
 {
 }
 
@@ -395,7 +392,7 @@ class ListAppPoliciesForIdentity extends V20170321Rpc
  * @method string getVideoIds()
  * @method $this withVideoIds($value)
  */
-class GetTranscodeSummary extends V20170321Rpc
+class GetTranscodeSummary extends Rpc
 {
 }
 
@@ -417,7 +414,7 @@ class GetTranscodeSummary extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListTranscodeTask extends V20170321Rpc
+class ListTranscodeTask extends Rpc
 {
 }
 
@@ -431,7 +428,7 @@ class ListTranscodeTask extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetTranscodeTask extends V20170321Rpc
+class GetTranscodeTask extends Rpc
 {
 }
 
@@ -445,7 +442,7 @@ class GetTranscodeTask extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAttachedMedia extends V20170321Rpc
+class DeleteAttachedMedia extends Rpc
 {
 }
 
@@ -461,7 +458,7 @@ class DeleteAttachedMedia extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateAttachedMediaInfos extends V20170321Rpc
+class UpdateAttachedMediaInfos extends Rpc
 {
 }
 
@@ -481,7 +478,7 @@ class UpdateAttachedMediaInfos extends V20170321Rpc
  * @method string getAuthTimeout()
  * @method $this withAuthTimeout($value)
  */
-class GetAttachedMediaInfo extends V20170321Rpc
+class GetAttachedMediaInfo extends Rpc
 {
 }
 
@@ -497,7 +494,7 @@ class GetAttachedMediaInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetURLUploadInfos extends V20170321Rpc
+class GetURLUploadInfos extends Rpc
 {
 }
 
@@ -511,7 +508,7 @@ class GetURLUploadInfos extends V20170321Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class SetDefaultAITemplate extends V20170321Rpc
+class SetDefaultAITemplate extends Rpc
 {
 }
 
@@ -525,7 +522,7 @@ class SetDefaultAITemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetDefaultAITemplate extends V20170321Rpc
+class GetDefaultAITemplate extends Rpc
 {
 }
 
@@ -539,7 +536,7 @@ class GetDefaultAITemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAITemplate extends V20170321Rpc
+class ListAITemplate extends Rpc
 {
 }
 
@@ -553,7 +550,7 @@ class ListAITemplate extends V20170321Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class GetAITemplate extends V20170321Rpc
+class GetAITemplate extends Rpc
 {
 }
 
@@ -571,7 +568,7 @@ class GetAITemplate extends V20170321Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class UpdateAITemplate extends V20170321Rpc
+class UpdateAITemplate extends Rpc
 {
 }
 
@@ -585,7 +582,7 @@ class UpdateAITemplate extends V20170321Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteAITemplate extends V20170321Rpc
+class DeleteAITemplate extends Rpc
 {
 }
 
@@ -603,7 +600,7 @@ class DeleteAITemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddAITemplate extends V20170321Rpc
+class AddAITemplate extends Rpc
 {
 }
 
@@ -617,7 +614,7 @@ class AddAITemplate extends V20170321Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class GetMediaAuditResultTimeline extends V20170321Rpc
+class GetMediaAuditResultTimeline extends Rpc
 {
 }
 
@@ -635,7 +632,7 @@ class GetMediaAuditResultTimeline extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeVodDomainLog extends V20170321Rpc
+class DescribeVodDomainLog extends Rpc
 {
 }
 
@@ -655,7 +652,7 @@ class DescribeVodDomainLog extends V20170321Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeVodDomainTrafficData extends V20170321Rpc
+class DescribeVodDomainTrafficData extends Rpc
 {
 }
 
@@ -675,7 +672,7 @@ class DescribeVodDomainTrafficData extends V20170321Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeVodDomainBpsData extends V20170321Rpc
+class DescribeVodDomainBpsData extends Rpc
 {
 }
 
@@ -685,7 +682,7 @@ class DescribeVodDomainBpsData extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeVodRefreshQuota extends V20170321Rpc
+class DescribeVodRefreshQuota extends Rpc
 {
 }
 
@@ -715,7 +712,7 @@ class DescribeVodRefreshQuota extends V20170321Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeVodRefreshTasks extends V20170321Rpc
+class DescribeVodRefreshTasks extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class DescribeVodRefreshTasks extends V20170321Rpc
  * @method string getObjectType()
  * @method $this withObjectType($value)
  */
-class RefreshVodObjectCaches extends V20170321Rpc
+class RefreshVodObjectCaches extends Rpc
 {
 }
 
@@ -741,7 +738,7 @@ class RefreshVodObjectCaches extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class PreloadVodObjectCaches extends V20170321Rpc
+class PreloadVodObjectCaches extends Rpc
 {
 }
 
@@ -757,7 +754,7 @@ class PreloadVodObjectCaches extends V20170321Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class GetMediaAuditResultDetail extends V20170321Rpc
+class GetMediaAuditResultDetail extends Rpc
 {
 }
 
@@ -773,7 +770,7 @@ class GetMediaAuditResultDetail extends V20170321Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class GetMediaAuditResult extends V20170321Rpc
+class GetMediaAuditResult extends Rpc
 {
 }
 
@@ -789,7 +786,7 @@ class GetMediaAuditResult extends V20170321Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class SubmitAIMediaAuditJob extends V20170321Rpc
+class SubmitAIMediaAuditJob extends Rpc
 {
 }
 
@@ -803,7 +800,7 @@ class SubmitAIMediaAuditJob extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetAIMediaAuditJob extends V20170321Rpc
+class GetAIMediaAuditJob extends Rpc
 {
 }
 
@@ -823,7 +820,7 @@ class GetAIMediaAuditJob extends V20170321Rpc
  * @method string getTranscodeTemplateGroupId()
  * @method $this withTranscodeTemplateGroupId($value)
  */
-class UpdateTranscodeTemplateGroup extends V20170321Rpc
+class UpdateTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -841,7 +838,7 @@ class UpdateTranscodeTemplateGroup extends V20170321Rpc
  * @method string getTranscodeTemplateGroupId()
  * @method $this withTranscodeTemplateGroupId($value)
  */
-class AddTranscodeTemplateGroup extends V20170321Rpc
+class AddTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -859,7 +856,7 @@ class AddTranscodeTemplateGroup extends V20170321Rpc
  * @method string getForceDelGroup()
  * @method $this withForceDelGroup($value)
  */
-class DeleteTranscodeTemplateGroup extends V20170321Rpc
+class DeleteTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -873,7 +870,7 @@ class DeleteTranscodeTemplateGroup extends V20170321Rpc
  * @method string getTranscodeTemplateGroupId()
  * @method $this withTranscodeTemplateGroupId($value)
  */
-class GetTranscodeTemplateGroup extends V20170321Rpc
+class GetTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -887,7 +884,7 @@ class GetTranscodeTemplateGroup extends V20170321Rpc
  * @method string getTranscodeTemplateGroupId()
  * @method $this withTranscodeTemplateGroupId($value)
  */
-class SetDefaultTranscodeTemplateGroup extends V20170321Rpc
+class SetDefaultTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -903,7 +900,7 @@ class SetDefaultTranscodeTemplateGroup extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListTranscodeTemplateGroup extends V20170321Rpc
+class ListTranscodeTemplateGroup extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class ListTranscodeTemplateGroup extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateVodTemplate extends V20170321Rpc
+class UpdateVodTemplate extends Rpc
 {
 }
 
@@ -935,7 +932,7 @@ class UpdateVodTemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListVodTemplate extends V20170321Rpc
+class ListVodTemplate extends Rpc
 {
 }
 
@@ -949,7 +946,7 @@ class ListVodTemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetVodTemplate extends V20170321Rpc
+class GetVodTemplate extends Rpc
 {
 }
 
@@ -963,7 +960,7 @@ class GetVodTemplate extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteVodTemplate extends V20170321Rpc
+class DeleteVodTemplate extends Rpc
 {
 }
 
@@ -983,7 +980,7 @@ class DeleteVodTemplate extends V20170321Rpc
  * @method string getSubTemplateType()
  * @method $this withSubTemplateType($value)
  */
-class AddVodTemplate extends V20170321Rpc
+class AddVodTemplate extends Rpc
 {
 }
 
@@ -1021,7 +1018,7 @@ class AddVodTemplate extends V20170321Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class CreateUploadAttachedMedia extends V20170321Rpc
+class CreateUploadAttachedMedia extends Rpc
 {
 }
 
@@ -1041,7 +1038,7 @@ class CreateUploadAttachedMedia extends V20170321Rpc
  * @method string getWorkFlowId()
  * @method $this withWorkFlowId($value)
  */
-class RegisterMedia extends V20170321Rpc
+class RegisterMedia extends Rpc
 {
 }
 
@@ -1055,7 +1052,7 @@ class RegisterMedia extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteWatermark extends V20170321Rpc
+class DeleteWatermark extends Rpc
 {
 }
 
@@ -1069,7 +1066,7 @@ class DeleteWatermark extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetWatermark extends V20170321Rpc
+class GetWatermark extends Rpc
 {
 }
 
@@ -1083,7 +1080,7 @@ class GetWatermark extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetDefaultWatermark extends V20170321Rpc
+class SetDefaultWatermark extends Rpc
 {
 }
 
@@ -1099,7 +1096,7 @@ class SetDefaultWatermark extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListWatermark extends V20170321Rpc
+class ListWatermark extends Rpc
 {
 }
 
@@ -1117,7 +1114,7 @@ class ListWatermark extends V20170321Rpc
  * @method string getWatermarkConfig()
  * @method $this withWatermarkConfig($value)
  */
-class UpdateWatermark extends V20170321Rpc
+class UpdateWatermark extends Rpc
 {
 }
 
@@ -1137,7 +1134,7 @@ class UpdateWatermark extends V20170321Rpc
  * @method string getWatermarkConfig()
  * @method $this withWatermarkConfig($value)
  */
-class AddWatermark extends V20170321Rpc
+class AddWatermark extends Rpc
 {
 }
 
@@ -1153,7 +1150,7 @@ class AddWatermark extends V20170321Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class GetMediaDNAResult extends V20170321Rpc
+class GetMediaDNAResult extends Rpc
 {
 }
 
@@ -1169,7 +1166,7 @@ class GetMediaDNAResult extends V20170321Rpc
  * @method string getVideoIds()
  * @method $this withVideoIds($value)
  */
-class DeleteMezzanines extends V20170321Rpc
+class DeleteMezzanines extends Rpc
 {
 }
 
@@ -1185,7 +1182,7 @@ class DeleteMezzanines extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateImageInfos extends V20170321Rpc
+class UpdateImageInfos extends Rpc
 {
 }
 
@@ -1207,7 +1204,7 @@ class UpdateImageInfos extends V20170321Rpc
  * @method string getImageIds()
  * @method $this withImageIds($value)
  */
-class DeleteImage extends V20170321Rpc
+class DeleteImage extends Rpc
 {
 }
 
@@ -1215,7 +1212,7 @@ class DeleteImage extends V20170321Rpc
  * @method string getSecurityGroupName()
  * @method $this withSecurityGroupName($value)
  */
-class ListAuditSecurityIp extends V20170321Rpc
+class ListAuditSecurityIp extends Rpc
 {
 }
 
@@ -1227,7 +1224,7 @@ class ListAuditSecurityIp extends V20170321Rpc
  * @method string getIps()
  * @method $this withIps($value)
  */
-class SetAuditSecurityIp extends V20170321Rpc
+class SetAuditSecurityIp extends Rpc
 {
 }
 
@@ -1253,7 +1250,7 @@ class SetAuditSecurityIp extends V20170321Rpc
  * @method string getStorageLocation()
  * @method $this withStorageLocation($value)
  */
-class UploadMediaByURL extends V20170321Rpc
+class UploadMediaByURL extends Rpc
 {
 }
 
@@ -1267,7 +1264,7 @@ class UploadMediaByURL extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateVideoInfos extends V20170321Rpc
+class UpdateVideoInfos extends Rpc
 {
 }
 
@@ -1283,7 +1280,7 @@ class UpdateVideoInfos extends V20170321Rpc
  * @method string getVideoIds()
  * @method $this withVideoIds($value)
  */
-class GetVideoInfos extends V20170321Rpc
+class GetVideoInfos extends Rpc
 {
 }
 
@@ -1313,7 +1310,7 @@ class GetVideoInfos extends V20170321Rpc
  * @method string getFields()
  * @method $this withFields($value)
  */
-class SearchMedia extends V20170321Rpc
+class SearchMedia extends Rpc
 {
 }
 
@@ -1329,7 +1326,7 @@ class SearchMedia extends V20170321Rpc
  * @method string getPreprocessType()
  * @method $this withPreprocessType($value)
  */
-class SubmitPreprocessJobs extends V20170321Rpc
+class SubmitPreprocessJobs extends Rpc
 {
 }
 
@@ -1343,7 +1340,7 @@ class SubmitPreprocessJobs extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribePlayVideoStatis extends V20170321Rpc
+class DescribePlayVideoStatis extends Rpc
 {
 }
 
@@ -1355,7 +1352,7 @@ class DescribePlayVideoStatis extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribePlayUserTotal extends V20170321Rpc
+class DescribePlayUserTotal extends Rpc
 {
 }
 
@@ -1367,7 +1364,7 @@ class DescribePlayUserTotal extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribePlayUserAvg extends V20170321Rpc
+class DescribePlayUserAvg extends Rpc
 {
 }
 
@@ -1381,7 +1378,7 @@ class DescribePlayUserAvg extends V20170321Rpc
  * @method string getPageNo()
  * @method $this withPageNo($value)
  */
-class DescribePlayTopVideos extends V20170321Rpc
+class DescribePlayTopVideos extends Rpc
 {
 }
 
@@ -1403,7 +1400,7 @@ class DescribePlayTopVideos extends V20170321Rpc
  * @method string getAuthTimeout()
  * @method $this withAuthTimeout($value)
  */
-class ListSnapshots extends V20170321Rpc
+class ListSnapshots extends Rpc
 {
 }
 
@@ -1419,7 +1416,7 @@ class ListSnapshots extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EditLiveRecordVideo extends V20170321Rpc
+class EditLiveRecordVideo extends Rpc
 {
 }
 
@@ -1443,7 +1440,7 @@ class EditLiveRecordVideo extends V20170321Rpc
  * @method string getPersonName()
  * @method $this withPersonName($value)
  */
-class AddFaceRegistration extends V20170321Rpc
+class AddFaceRegistration extends Rpc
 {
 }
 
@@ -1467,7 +1464,7 @@ class AddFaceRegistration extends V20170321Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitTranscodeJobs extends V20170321Rpc
+class SubmitTranscodeJobs extends Rpc
 {
 }
 
@@ -1497,7 +1494,7 @@ class SubmitTranscodeJobs extends V20170321Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class ListLiveRecordVideo extends V20170321Rpc
+class ListLiveRecordVideo extends Rpc
 {
 }
 
@@ -1505,7 +1502,7 @@ class ListLiveRecordVideo extends V20170321Rpc
  * @method string getAuditContent()
  * @method $this withAuditContent($value)
  */
-class CreateAudit extends V20170321Rpc
+class CreateAudit extends Rpc
 {
 }
 
@@ -1519,7 +1516,7 @@ class CreateAudit extends V20170321Rpc
  * @method string getSortBy()
  * @method $this withSortBy($value)
  */
-class GetAuditHistory extends V20170321Rpc
+class GetAuditHistory extends Rpc
 {
 }
 
@@ -1535,7 +1532,7 @@ class GetAuditHistory extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAIJob extends V20170321Rpc
+class ListAIJob extends Rpc
 {
 }
 
@@ -1559,7 +1556,7 @@ class ListAIJob extends V20170321Rpc
  * @method string getMediaType()
  * @method $this withMediaType($value)
  */
-class SubmitAIJob extends V20170321Rpc
+class SubmitAIJob extends Rpc
 {
 }
 
@@ -1577,7 +1574,7 @@ class SubmitAIJob extends V20170321Rpc
  * @method string getAuthTimeout()
  * @method $this withAuthTimeout($value)
  */
-class GetImageInfo extends V20170321Rpc
+class GetImageInfo extends Rpc
 {
 }
 
@@ -1593,7 +1590,7 @@ class GetImageInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteStream extends V20170321Rpc
+class DeleteStream extends Rpc
 {
 }
 
@@ -1621,7 +1618,7 @@ class DeleteStream extends V20170321Rpc
  * @method string getHeight()
  * @method $this withHeight($value)
  */
-class SubmitSnapshotJob extends V20170321Rpc
+class SubmitSnapshotJob extends Rpc
 {
 }
 
@@ -1639,7 +1636,7 @@ class SubmitSnapshotJob extends V20170321Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class SetEditingProjectMaterials extends V20170321Rpc
+class SetEditingProjectMaterials extends Rpc
 {
 }
 
@@ -1663,7 +1660,7 @@ class SetEditingProjectMaterials extends V20170321Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class UpdateEditingProject extends V20170321Rpc
+class UpdateEditingProject extends Rpc
 {
 }
 
@@ -1691,7 +1688,7 @@ class UpdateEditingProject extends V20170321Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SearchEditingProject extends V20170321Rpc
+class SearchEditingProject extends Rpc
 {
 }
 
@@ -1719,7 +1716,7 @@ class SearchEditingProject extends V20170321Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ProduceEditingProjectVideo extends V20170321Rpc
+class ProduceEditingProjectVideo extends Rpc
 {
 }
 
@@ -1739,7 +1736,7 @@ class ProduceEditingProjectVideo extends V20170321Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class GetEditingProjectMaterials extends V20170321Rpc
+class GetEditingProjectMaterials extends Rpc
 {
 }
 
@@ -1755,7 +1752,7 @@ class GetEditingProjectMaterials extends V20170321Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class GetEditingProject extends V20170321Rpc
+class GetEditingProject extends Rpc
 {
 }
 
@@ -1779,7 +1776,7 @@ class GetEditingProject extends V20170321Rpc
  * @method string getTitle()
  * @method $this withTitle($value)
  */
-class AddEditingProject extends V20170321Rpc
+class AddEditingProject extends Rpc
 {
 }
 
@@ -1795,7 +1792,7 @@ class AddEditingProject extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteEditingProject extends V20170321Rpc
+class DeleteEditingProject extends Rpc
 {
 }
 
@@ -1817,7 +1814,7 @@ class DeleteEditingProject extends V20170321Rpc
  * @method string getAuthTimeout()
  * @method $this withAuthTimeout($value)
  */
-class GetMezzanineInfo extends V20170321Rpc
+class GetMezzanineInfo extends Rpc
 {
 }
 
@@ -1831,7 +1828,7 @@ class GetMezzanineInfo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetFileInfo extends V20170321Rpc
+class GetFileInfo extends Rpc
 {
 }
 
@@ -1853,7 +1850,7 @@ class GetFileInfo extends V20170321Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class GetCategories extends V20170321Rpc
+class GetCategories extends Rpc
 {
 }
 
@@ -1869,7 +1866,7 @@ class GetCategories extends V20170321Rpc
  * @method string getCateName()
  * @method $this withCateName($value)
  */
-class UpdateCategory extends V20170321Rpc
+class UpdateCategory extends Rpc
 {
 }
 
@@ -1887,7 +1884,7 @@ class UpdateCategory extends V20170321Rpc
  * @method string getCateName()
  * @method $this withCateName($value)
  */
-class AddCategory extends V20170321Rpc
+class AddCategory extends Rpc
 {
 }
 
@@ -1901,7 +1898,7 @@ class AddCategory extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCategory extends V20170321Rpc
+class DeleteCategory extends Rpc
 {
 }
 
@@ -1939,7 +1936,7 @@ class DeleteCategory extends V20170321Rpc
  * @method string getAuthInfo()
  * @method $this withAuthInfo($value)
  */
-class GetPlayInfo extends V20170321Rpc
+class GetPlayInfo extends Rpc
 {
 }
 
@@ -1971,7 +1968,7 @@ class GetPlayInfo extends V20170321Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class CreateUploadImage extends V20170321Rpc
+class CreateUploadImage extends Rpc
 {
 }
 
@@ -2005,7 +2002,7 @@ class CreateUploadImage extends V20170321Rpc
  * @method string getCallbackURL()
  * @method $this withCallbackURL($value)
  */
-class SetMessageCallback extends V20170321Rpc
+class SetMessageCallback extends Rpc
 {
 }
 
@@ -2023,7 +2020,7 @@ class SetMessageCallback extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetMessageCallback extends V20170321Rpc
+class GetMessageCallback extends Rpc
 {
 }
 
@@ -2053,7 +2050,7 @@ class GetMessageCallback extends V20170321Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateVideoInfo extends V20170321Rpc
+class UpdateVideoInfo extends Rpc
 {
 }
 
@@ -2081,7 +2078,7 @@ class UpdateVideoInfo extends V20170321Rpc
  * @method string getStorageLocation()
  * @method $this withStorageLocation($value)
  */
-class GetVideoList extends V20170321Rpc
+class GetVideoList extends Rpc
 {
 }
 
@@ -2101,7 +2098,7 @@ class GetVideoList extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetVideoPlayAuth extends V20170321Rpc
+class GetVideoPlayAuth extends Rpc
 {
 }
 
@@ -2119,7 +2116,7 @@ class GetVideoPlayAuth extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetVideoInfo extends V20170321Rpc
+class GetVideoInfo extends Rpc
 {
 }
 
@@ -2133,7 +2130,7 @@ class GetVideoInfo extends V20170321Rpc
  * @method string getVideoIds()
  * @method $this withVideoIds($value)
  */
-class DeleteVideo extends V20170321Rpc
+class DeleteVideo extends Rpc
 {
 }
 
@@ -2147,7 +2144,7 @@ class DeleteVideo extends V20170321Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RefreshUploadVideo extends V20170321Rpc
+class RefreshUploadVideo extends Rpc
 {
 }
 
@@ -2189,6 +2186,6 @@ class RefreshUploadVideo extends V20170321Rpc
  * @method string getCustomMediaInfo()
  * @method $this withCustomMediaInfo($value)
  */
-class CreateUploadVideo extends V20170321Rpc
+class CreateUploadVideo extends Rpc
 {
 }

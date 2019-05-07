@@ -3,11 +3,8 @@
 namespace AlibabaCloud\PTS\V20181111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetReport getReport(array $options = [])
  */
 class PTSApiResolver
@@ -15,7 +12,7 @@ class PTSApiResolver
     use ApiResolverTrait;
 }
 
-class V20181111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'PTS';
@@ -28,6 +25,6 @@ class V20181111Rpc extends Rpc
  * @method string getReportId()
  * @method $this withReportId($value)
  */
-class GetReport extends V20181111Rpc
+class GetReport extends Rpc
 {
 }

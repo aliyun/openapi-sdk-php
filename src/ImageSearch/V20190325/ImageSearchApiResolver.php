@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ImageSearch\V20190325;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ListTagResources listTagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -20,7 +17,7 @@ class ImageSearchApiResolver
     use ApiResolverTrait;
 }
 
-class V20190325Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'ImageSearch';
@@ -38,7 +35,7 @@ class V20190325Roa extends Roa
  * @method array getTag()
  * @method string getResourceType()
  */
-class ListTagResources extends V20190325Roa
+class ListTagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/resources/listTag';
@@ -107,7 +104,7 @@ class ListTagResources extends V20190325Roa
  * @method array getTagKey()
  * @method string getResourceType()
  */
-class UntagResources extends V20190325Roa
+class UntagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/resources/untag';
@@ -174,7 +171,7 @@ class UntagResources extends V20190325Roa
  * @method array getTag()
  * @method string getResourceType()
  */
-class TagResources extends V20190325Roa
+class TagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/imagesearch/tag';
@@ -237,7 +234,7 @@ class TagResources extends V20190325Roa
  * @method string getCategoryId()
  * @method string getCrop()
  */
-class SearchImage extends V20190325Roa
+class SearchImage extends Roa
 {
     /** @var string */
     public $pathPattern = '/v2/image/search';
@@ -391,7 +388,7 @@ class SearchImage extends V20190325Roa
  * @method string getProductId()
  * @method string getPicName()
  */
-class DeleteImage extends V20190325Roa
+class DeleteImage extends Roa
 {
     /** @var string */
     public $pathPattern = '/v2/image/delete';
@@ -448,7 +445,7 @@ class DeleteImage extends V20190325Roa
  * @method string getCategoryId()
  * @method string getCrop()
  */
-class AddImage extends V20190325Roa
+class AddImage extends Roa
 {
     /** @var string */
     public $pathPattern = '/v2/image/add';

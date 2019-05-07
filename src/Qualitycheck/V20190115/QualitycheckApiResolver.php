@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Qualitycheck\V20190115;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ListAsrVocab listAsrVocab(array $options = [])
  * @method RestartAsrTask restartAsrTask(array $options = [])
  * @method GetUserInfo getUserInfo(array $options = [])
@@ -101,7 +98,7 @@ class QualitycheckApiResolver
     use ApiResolverTrait;
 }
 
-class V20190115Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Qualitycheck';
@@ -119,7 +116,7 @@ class V20190115Rpc extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ListAsrVocab extends V20190115Rpc
+class ListAsrVocab extends Rpc
 {
 }
 
@@ -129,7 +126,7 @@ class ListAsrVocab extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class RestartAsrTask extends V20190115Rpc
+class RestartAsrTask extends Rpc
 {
 }
 
@@ -137,17 +134,7 @@ class RestartAsrTask extends V20190115Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class GetUserInfo extends V20190115Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class OpenService extends V20190115Rpc
+class GetUserInfo extends Rpc
 {
 }
 
@@ -157,7 +144,7 @@ class OpenService extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetResultToReview extends V20190115Rpc
+class OpenService extends Rpc
 {
 }
 
@@ -167,7 +154,7 @@ class GetResultToReview extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class CreateRule extends V20190115Rpc
+class GetResultToReview extends Rpc
 {
 }
 
@@ -177,7 +164,7 @@ class CreateRule extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetNextResultToReview extends V20190115Rpc
+class CreateRule extends Rpc
 {
 }
 
@@ -187,7 +174,7 @@ class GetNextResultToReview extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class CloseService extends V20190115Rpc
+class GetNextResultToReview extends Rpc
 {
 }
 
@@ -197,7 +184,7 @@ class CloseService extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioData extends V20190115Rpc
+class CloseService extends Rpc
 {
 }
 
@@ -207,7 +194,7 @@ class UploadAudioData extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SaveReviewResult extends V20190115Rpc
+class UploadAudioData extends Rpc
 {
 }
 
@@ -217,7 +204,7 @@ class SaveReviewResult extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioData4Pre extends V20190115Rpc
+class SaveReviewResult extends Rpc
 {
 }
 
@@ -227,15 +214,7 @@ class UploadAudioData4Pre extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddThesaurusForApi extends V20190115Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- */
-class GenerateCustomizationModelId extends V20190115Rpc
+class UploadAudioData4Pre extends Rpc
 {
 }
 
@@ -245,7 +224,15 @@ class GenerateCustomizationModelId extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class RemoveAndGetTaskRules extends V20190115Rpc
+class AddThesaurusForApi extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class GenerateCustomizationModelId extends Rpc
 {
 }
 
@@ -255,7 +242,7 @@ class RemoveAndGetTaskRules extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitReviewInfo extends V20190115Rpc
+class RemoveAndGetTaskRules extends Rpc
 {
 }
 
@@ -265,7 +252,7 @@ class SubmitReviewInfo extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAudioDataStatus extends V20190115Rpc
+class SubmitReviewInfo extends Rpc
 {
 }
 
@@ -275,7 +262,7 @@ class GetAudioDataStatus extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ReviewSingleResultById extends V20190115Rpc
+class GetAudioDataStatus extends Rpc
 {
 }
 
@@ -285,7 +272,7 @@ class ReviewSingleResultById extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadDataSync extends V20190115Rpc
+class ReviewSingleResultById extends Rpc
 {
 }
 
@@ -295,7 +282,7 @@ class UploadDataSync extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SaveConfigDataSet extends V20190115Rpc
+class UploadDataSync extends Rpc
 {
 }
 
@@ -305,7 +292,7 @@ class SaveConfigDataSet extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateSubScoreForApi extends V20190115Rpc
+class SaveConfigDataSet extends Rpc
 {
 }
 
@@ -315,7 +302,7 @@ class UpdateSubScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ConfigDataSet extends V20190115Rpc
+class UpdateSubScoreForApi extends Rpc
 {
 }
 
@@ -325,7 +312,7 @@ class ConfigDataSet extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadRule extends V20190115Rpc
+class ConfigDataSet extends Rpc
 {
 }
 
@@ -335,7 +322,7 @@ class UploadRule extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class InsertScoreForApi extends V20190115Rpc
+class UploadRule extends Rpc
 {
 }
 
@@ -345,7 +332,7 @@ class InsertScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitModelTestTask extends V20190115Rpc
+class InsertScoreForApi extends Rpc
 {
 }
 
@@ -355,7 +342,7 @@ class SubmitModelTestTask extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class InsertSubScoreForApi extends V20190115Rpc
+class SubmitModelTestTask extends Rpc
 {
 }
 
@@ -365,7 +352,7 @@ class InsertSubScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DelRuleCategory extends V20190115Rpc
+class InsertSubScoreForApi extends Rpc
 {
 }
 
@@ -375,7 +362,7 @@ class DelRuleCategory extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAccAsrResult extends V20190115Rpc
+class DelRuleCategory extends Rpc
 {
 }
 
@@ -385,7 +372,7 @@ class GetAccAsrResult extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class TestRule extends V20190115Rpc
+class GetAccAsrResult extends Rpc
 {
 }
 
@@ -395,7 +382,7 @@ class TestRule extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ExchangeAudio extends V20190115Rpc
+class TestRule extends Rpc
 {
 }
 
@@ -405,7 +392,7 @@ class ExchangeAudio extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetPocTestReport extends V20190115Rpc
+class ExchangeAudio extends Rpc
 {
 }
 
@@ -415,7 +402,7 @@ class GetPocTestReport extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRuleDetail extends V20190115Rpc
+class GetPocTestReport extends Rpc
 {
 }
 
@@ -425,7 +412,7 @@ class GetRuleDetail extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateAsrVocab extends V20190115Rpc
+class GetRuleDetail extends Rpc
 {
 }
 
@@ -435,7 +422,7 @@ class UpdateAsrVocab extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateRuleForAnt extends V20190115Rpc
+class UpdateAsrVocab extends Rpc
 {
 }
 
@@ -445,7 +432,7 @@ class UpdateRuleForAnt extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRecognizeResult extends V20190115Rpc
+class UpdateRuleForAnt extends Rpc
 {
 }
 
@@ -455,7 +442,7 @@ class GetRecognizeResult extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetOssHeader extends V20190115Rpc
+class GetRecognizeResult extends Rpc
 {
 }
 
@@ -465,7 +452,7 @@ class GetOssHeader extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetBusinessCategoryList extends V20190115Rpc
+class GetOssHeader extends Rpc
 {
 }
 
@@ -475,7 +462,7 @@ class GetBusinessCategoryList extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class InvalidRule extends V20190115Rpc
+class GetBusinessCategoryList extends Rpc
 {
 }
 
@@ -485,7 +472,7 @@ class InvalidRule extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateOnPurchaseSuccess extends V20190115Rpc
+class InvalidRule extends Rpc
 {
 }
 
@@ -495,7 +482,7 @@ class UpdateOnPurchaseSuccess extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteSubScoreForApi extends V20190115Rpc
+class UpdateOnPurchaseSuccess extends Rpc
 {
 }
 
@@ -505,7 +492,7 @@ class DeleteSubScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetThesaurusBySynonymForApi extends V20190115Rpc
+class DeleteSubScoreForApi extends Rpc
 {
 }
 
@@ -515,7 +502,7 @@ class GetThesaurusBySynonymForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class CreateAsrVocab extends V20190115Rpc
+class GetThesaurusBySynonymForApi extends Rpc
 {
 }
 
@@ -525,7 +512,7 @@ class CreateAsrVocab extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ListDataSetTask extends V20190115Rpc
+class CreateAsrVocab extends Rpc
 {
 }
 
@@ -535,7 +522,7 @@ class ListDataSetTask extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DelThesaurusForApi extends V20190115Rpc
+class ListDataSetTask extends Rpc
 {
 }
 
@@ -545,7 +532,7 @@ class DelThesaurusForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitAudioLabel extends V20190115Rpc
+class DelThesaurusForApi extends Rpc
 {
 }
 
@@ -555,7 +542,7 @@ class SubmitAudioLabel extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteAsrVocab extends V20190115Rpc
+class SubmitAudioLabel extends Rpc
 {
 }
 
@@ -565,7 +552,7 @@ class DeleteAsrVocab extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAudioUrl extends V20190115Rpc
+class DeleteAsrVocab extends Rpc
 {
 }
 
@@ -575,7 +562,7 @@ class GetAudioUrl extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddRuleCategory extends V20190115Rpc
+class GetAudioUrl extends Rpc
 {
 }
 
@@ -585,7 +572,7 @@ class AddRuleCategory extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddUploadDataSet extends V20190115Rpc
+class AddRuleCategory extends Rpc
 {
 }
 
@@ -595,7 +582,7 @@ class AddUploadDataSet extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRuleDimension extends V20190115Rpc
+class AddUploadDataSet extends Rpc
 {
 }
 
@@ -605,7 +592,7 @@ class GetRuleDimension extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetResultCount extends V20190115Rpc
+class GetRuleDimension extends Rpc
 {
 }
 
@@ -615,7 +602,7 @@ class GetResultCount extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class EditThesaurusForApi extends V20190115Rpc
+class GetResultCount extends Rpc
 {
 }
 
@@ -625,7 +612,7 @@ class EditThesaurusForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetCustomizationConfigList extends V20190115Rpc
+class EditThesaurusForApi extends Rpc
 {
 }
 
@@ -635,7 +622,7 @@ class GetCustomizationConfigList extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ExecuteAsrTransform extends V20190115Rpc
+class GetCustomizationConfigList extends Rpc
 {
 }
 
@@ -645,7 +632,7 @@ class ExecuteAsrTransform extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetScoreInfo extends V20190115Rpc
+class ExecuteAsrTransform extends Rpc
 {
 }
 
@@ -655,7 +642,7 @@ class GetScoreInfo extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddBusinessCategory extends V20190115Rpc
+class GetScoreInfo extends Rpc
 {
 }
 
@@ -665,7 +652,7 @@ class AddBusinessCategory extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadData extends V20190115Rpc
+class AddBusinessCategory extends Rpc
 {
 }
 
@@ -675,7 +662,7 @@ class UploadData extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAsrVocab extends V20190115Rpc
+class UploadData extends Rpc
 {
 }
 
@@ -685,7 +672,17 @@ class GetAsrVocab extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioDataWithRules extends V20190115Rpc
+class GetAsrVocab extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class UploadAudioDataWithRules extends Rpc
 {
 }
 
@@ -713,7 +710,7 @@ class UploadAudioDataWithRules extends V20190115Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoLogicalDeleteResource extends V20190115Rpc
+class DoLogicalDeleteResource extends Rpc
 {
 }
 
@@ -723,7 +720,7 @@ class DoLogicalDeleteResource extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetReviewInfo extends V20190115Rpc
+class GetReviewInfo extends Rpc
 {
 }
 
@@ -733,7 +730,7 @@ class GetReviewInfo extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetResult extends V20190115Rpc
+class GetResult extends Rpc
 {
 }
 
@@ -743,7 +740,7 @@ class GetResult extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitQualityCheckTask extends V20190115Rpc
+class SubmitQualityCheckTask extends Rpc
 {
 }
 
@@ -753,7 +750,7 @@ class SubmitQualityCheckTask extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRuleCategory extends V20190115Rpc
+class GetRuleCategory extends Rpc
 {
 }
 
@@ -763,7 +760,7 @@ class GetRuleCategory extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetDataSetList extends V20190115Rpc
+class GetDataSetList extends Rpc
 {
 }
 
@@ -773,7 +770,7 @@ class GetDataSetList extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRule extends V20190115Rpc
+class GetRule extends Rpc
 {
 }
 
@@ -783,7 +780,7 @@ class GetRule extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadRuleForAnt extends V20190115Rpc
+class UploadRuleForAnt extends Rpc
 {
 }
 
@@ -793,7 +790,7 @@ class UploadRuleForAnt extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitCustomizationConfig extends V20190115Rpc
+class SubmitCustomizationConfig extends Rpc
 {
 }
 
@@ -803,7 +800,7 @@ class SubmitCustomizationConfig extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetTaskFileResultList extends V20190115Rpc
+class GetTaskFileResultList extends Rpc
 {
 }
 
@@ -829,7 +826,7 @@ class GetTaskFileResultList extends V20190115Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoPhysicalDeleteResource extends V20190115Rpc
+class DoPhysicalDeleteResource extends Rpc
 {
 }
 
@@ -839,7 +836,7 @@ class DoPhysicalDeleteResource extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateScoreForApi extends V20190115Rpc
+class UpdateScoreForApi extends Rpc
 {
 }
 
@@ -849,7 +846,7 @@ class UpdateScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteDataSet extends V20190115Rpc
+class DeleteDataSet extends Rpc
 {
 }
 
@@ -859,7 +856,7 @@ class DeleteDataSet extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteCustomizationConfig extends V20190115Rpc
+class DeleteCustomizationConfig extends Rpc
 {
 }
 
@@ -869,7 +866,7 @@ class DeleteCustomizationConfig extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadDataWithRules extends V20190115Rpc
+class UploadDataWithRules extends Rpc
 {
 }
 
@@ -879,7 +876,7 @@ class UploadDataWithRules extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class ValidateRoleSet extends V20190115Rpc
+class ValidateRoleSet extends Rpc
 {
 }
 
@@ -911,7 +908,7 @@ class ValidateRoleSet extends V20190115Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoCheckResource extends V20190115Rpc
+class DoCheckResource extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class DoCheckResource extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteBusinessCategory extends V20190115Rpc
+class DeleteBusinessCategory extends Rpc
 {
 }
 
@@ -931,7 +928,7 @@ class DeleteBusinessCategory extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class RegisterNotice extends V20190115Rpc
+class RegisterNotice extends Rpc
 {
 }
 
@@ -941,7 +938,7 @@ class RegisterNotice extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetDataSetOssHeader extends V20190115Rpc
+class GetDataSetOssHeader extends Rpc
 {
 }
 
@@ -951,7 +948,7 @@ class GetDataSetOssHeader extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetTaskRuleList extends V20190115Rpc
+class GetTaskRuleList extends Rpc
 {
 }
 
@@ -961,7 +958,7 @@ class GetTaskRuleList extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAudioContentInfo extends V20190115Rpc
+class GetAudioContentInfo extends Rpc
 {
 }
 
@@ -971,7 +968,7 @@ class GetAudioContentInfo extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioDataWithRules4Pre extends V20190115Rpc
+class UploadAudioDataWithRules4Pre extends Rpc
 {
 }
 
@@ -981,7 +978,7 @@ class UploadAudioDataWithRules4Pre extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetFileDimension extends V20190115Rpc
+class GetFileDimension extends Rpc
 {
 }
 
@@ -991,7 +988,7 @@ class GetFileDimension extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetResultReviewList extends V20190115Rpc
+class GetResultReviewList extends Rpc
 {
 }
 
@@ -1001,7 +998,7 @@ class GetResultReviewList extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteScoreForApi extends V20190115Rpc
+class DeleteScoreForApi extends Rpc
 {
 }
 
@@ -1011,7 +1008,7 @@ class DeleteScoreForApi extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateRule extends V20190115Rpc
+class UpdateRule extends Rpc
 {
 }
 
@@ -1019,7 +1016,7 @@ class UpdateRule extends V20190115Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class GetUserGroup extends V20190115Rpc
+class GetUserGroup extends Rpc
 {
 }
 
@@ -1029,6 +1026,6 @@ class GetUserGroup extends V20190115Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class TestNetwork extends V20190115Rpc
+class TestNetwork extends Rpc
 {
 }

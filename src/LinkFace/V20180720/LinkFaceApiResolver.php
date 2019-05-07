@@ -3,11 +3,8 @@
 namespace AlibabaCloud\LinkFace\V20180720;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteDeviceGroup deleteDeviceGroup(array $options = [])
  * @method DeleteDeviceAllGroup deleteDeviceAllGroup(array $options = [])
  * @method SearchFace searchFace(array $options = [])
@@ -32,7 +29,7 @@ class LinkFaceApiResolver
     use ApiResolverTrait;
 }
 
-class V20180720Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'LinkFace';
@@ -53,7 +50,7 @@ class V20180720Rpc extends Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class DeleteDeviceGroup extends V20180720Rpc
+class DeleteDeviceGroup extends Rpc
 {
 
     /**
@@ -114,7 +111,7 @@ class DeleteDeviceGroup extends V20180720Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class DeleteDeviceAllGroup extends V20180720Rpc
+class DeleteDeviceAllGroup extends Rpc
 {
 
     /**
@@ -161,7 +158,7 @@ class DeleteDeviceAllGroup extends V20180720Rpc
  * @method string getImage()
  * @method string getGroupId()
  */
-class SearchFace extends V20180720Rpc
+class SearchFace extends Rpc
 {
 
     /**
@@ -196,7 +193,7 @@ class SearchFace extends V20180720Rpc
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryLicenses extends V20180720Rpc
+class QueryLicenses extends Rpc
 {
 
     /**
@@ -247,7 +244,7 @@ class QueryLicenses extends V20180720Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class QueryAuthentication extends V20180720Rpc
+class QueryAuthentication extends Rpc
 {
 
     /**
@@ -335,7 +332,7 @@ class QueryAuthentication extends V20180720Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class QueryAddUserInfo extends V20180720Rpc
+class QueryAddUserInfo extends Rpc
 {
 
     /**
@@ -395,7 +392,7 @@ class QueryAddUserInfo extends V20180720Rpc
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryAllGroups extends V20180720Rpc
+class QueryAllGroups extends Rpc
 {
 
     /**
@@ -430,7 +427,7 @@ class QueryAllGroups extends V20180720Rpc
  * @method string getUserId()
  * @method string getUserInfo()
  */
-class UpdateFace extends V20180720Rpc
+class UpdateFace extends Rpc
 {
 
     /**
@@ -477,7 +474,7 @@ class UpdateFace extends V20180720Rpc
  * @method string getGroupId()
  * @method string getUserId()
  */
-class UnlinkFace extends V20180720Rpc
+class UnlinkFace extends Rpc
 {
 
     /**
@@ -513,7 +510,7 @@ class UnlinkFace extends V20180720Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class SyncFacePictures extends V20180720Rpc
+class SyncFacePictures extends Rpc
 {
 
     /**
@@ -575,7 +572,7 @@ class SyncFacePictures extends V20180720Rpc
  * @method string getUserId()
  * @method string getUserInfo()
  */
-class RegisterFace extends V20180720Rpc
+class RegisterFace extends Rpc
 {
 
     /**
@@ -637,7 +634,7 @@ class RegisterFace extends V20180720Rpc
  * @method string getDeviceName()
  * @method string getProductKey()
  */
-class QuerySyncPicSchedule extends V20180720Rpc
+class QuerySyncPicSchedule extends Rpc
 {
 
     /**
@@ -698,7 +695,7 @@ class QuerySyncPicSchedule extends V20180720Rpc
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryGroupUsers extends V20180720Rpc
+class QueryGroupUsers extends Rpc
 {
 
     /**
@@ -744,7 +741,7 @@ class QueryGroupUsers extends V20180720Rpc
 /**
  * @method string getUserId()
  */
-class QueryFace extends V20180720Rpc
+class QueryFace extends Rpc
 {
 
     /**
@@ -765,7 +762,7 @@ class QueryFace extends V20180720Rpc
  * @method string getGroupId()
  * @method string getUserId()
  */
-class LinkFace extends V20180720Rpc
+class LinkFace extends Rpc
 {
 
     /**
@@ -798,7 +795,7 @@ class LinkFace extends V20180720Rpc
 /**
  * @method string getGroupId()
  */
-class DeleteGroup extends V20180720Rpc
+class DeleteGroup extends Rpc
 {
 
     /**
@@ -819,7 +816,7 @@ class DeleteGroup extends V20180720Rpc
  * @method string getGroupId()
  * @method string getUserId()
  */
-class DeleteFace extends V20180720Rpc
+class DeleteFace extends Rpc
 {
 
     /**
@@ -852,7 +849,7 @@ class DeleteFace extends V20180720Rpc
 /**
  * @method string getGroupId()
  */
-class CreateGroup extends V20180720Rpc
+class CreateGroup extends Rpc
 {
 
     /**

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ocs\V20150301;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyNetworkType modifyNetworkType(array $options = [])
  * @method ModifyHotKeySwitchMode modifyHotKeySwitchMode(array $options = [])
  * @method DataOperate dataOperate(array $options = [])
@@ -37,7 +34,7 @@ class OcsApiResolver
     use ApiResolverTrait;
 }
 
-class V20150301Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ocs';
@@ -67,7 +64,7 @@ class V20150301Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyNetworkType extends V20150301Rpc
+class ModifyNetworkType extends Rpc
 {
 }
 
@@ -91,7 +88,7 @@ class ModifyNetworkType extends V20150301Rpc
  * @method string getSwitchMode()
  * @method $this withSwitchMode($value)
  */
-class ModifyHotKeySwitchMode extends V20150301Rpc
+class ModifyHotKeySwitchMode extends Rpc
 {
 }
 
@@ -111,7 +108,7 @@ class ModifyHotKeySwitchMode extends V20150301Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class DataOperate extends V20150301Rpc
+class DataOperate extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class DataOperate extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RemoveAuthenticIP extends V20150301Rpc
+class RemoveAuthenticIP extends Rpc
 {
 }
 
@@ -153,7 +150,7 @@ class RemoveAuthenticIP extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReplaceAuthenticIP extends V20150301Rpc
+class ReplaceAuthenticIP extends Rpc
 {
 }
 
@@ -173,7 +170,7 @@ class ReplaceAuthenticIP extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class VerifyPassword extends V20150301Rpc
+class VerifyPassword extends Rpc
 {
 }
 
@@ -191,7 +188,7 @@ class VerifyPassword extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class FlushInstance extends V20150301Rpc
+class FlushInstance extends Rpc
 {
 }
 
@@ -213,7 +210,7 @@ class FlushInstance extends V20150301Rpc
  * @method string getNewPassword()
  * @method $this withNewPassword($value)
  */
-class ModifyInstanceAttribute extends V20150301Rpc
+class ModifyInstanceAttribute extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class ModifyInstanceAttribute extends V20150301Rpc
  * @method string getCapacity()
  * @method $this withCapacity($value)
  */
-class ModifyInstanceCapacity extends V20150301Rpc
+class ModifyInstanceCapacity extends Rpc
 {
 }
 
@@ -253,7 +250,7 @@ class ModifyInstanceCapacity extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySecurityIps extends V20150301Rpc
+class ModifySecurityIps extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class ModifySecurityIps extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMonitorItems extends V20150301Rpc
+class DescribeMonitorItems extends Rpc
 {
 }
 
@@ -289,7 +286,7 @@ class DescribeMonitorItems extends V20150301Rpc
  * @method string getMonitorKeys()
  * @method $this withMonitorKeys($value)
  */
-class DescribeMonitorValues extends V20150301Rpc
+class DescribeMonitorValues extends Rpc
 {
 }
 
@@ -305,25 +302,7 @@ class DescribeMonitorValues extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20150301Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSecurityIps extends V20150301Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -341,7 +320,25 @@ class DescribeSecurityIps extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAuthenticIP extends V20150301Rpc
+class DescribeSecurityIps extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAuthenticIP extends Rpc
 {
 }
 
@@ -367,7 +364,7 @@ class DescribeAuthenticIP extends V20150301Rpc
  * @method string getMonitorKeys()
  * @method $this withMonitorKeys($value)
  */
-class DescribeHistoryMonitorValues extends V20150301Rpc
+class DescribeHistoryMonitorValues extends Rpc
 {
 }
 
@@ -399,7 +396,7 @@ class DescribeHistoryMonitorValues extends V20150301Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeInstances extends V20150301Rpc
+class DescribeInstances extends Rpc
 {
 }
 
@@ -417,7 +414,7 @@ class DescribeInstances extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteInstance extends V20150301Rpc
+class DeleteInstance extends Rpc
 {
 }
 
@@ -435,7 +432,7 @@ class DeleteInstance extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeactivateInstance extends V20150301Rpc
+class DeactivateInstance extends Rpc
 {
 }
 
@@ -469,7 +466,7 @@ class DeactivateInstance extends V20150301Rpc
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
-class CreateInstance extends V20150301Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -489,7 +486,7 @@ class CreateInstance extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddAuthenticIP extends V20150301Rpc
+class AddAuthenticIP extends Rpc
 {
 }
 
@@ -507,7 +504,7 @@ class AddAuthenticIP extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ActivateInstance extends V20150301Rpc
+class ActivateInstance extends Rpc
 {
 }
 
@@ -525,6 +522,6 @@ class ActivateInstance extends V20150301Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeZones extends V20150301Rpc
+class DescribeZones extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Oms\V20150212;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetDataOpenConfig getDataOpenConfig(array $options = [])
  * @method GetProductDefine getProductDefine(array $options = [])
  * @method GetUserData getUserData(array $options = [])
@@ -17,7 +14,7 @@ class OmsApiResolver
     use ApiResolverTrait;
 }
 
-class V20150212Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Oms';
@@ -39,7 +36,7 @@ class V20150212Rpc extends Rpc
  * @method string getSiteBid()
  * @method $this withSiteBid($value)
  */
-class GetDataOpenConfig extends V20150212Rpc
+class GetDataOpenConfig extends Rpc
 {
 }
 
@@ -50,7 +47,7 @@ class GetDataOpenConfig extends V20150212Rpc
  * @method $this withProductName($value)
  * @method string getSiteBid()
  */
-class GetProductDefine extends V20150212Rpc
+class GetProductDefine extends Rpc
 {
 
     /**
@@ -87,6 +84,6 @@ class GetProductDefine extends V20150212Rpc
  * @method string getMaxResult()
  * @method $this withMaxResult($value)
  */
-class GetUserData extends V20150212Rpc
+class GetUserData extends Rpc
 {
 }

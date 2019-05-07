@@ -3,11 +3,8 @@
 namespace AlibabaCloud\IndustryBrain\V20180712;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method AsyncResponsePost asyncResponsePost(array $options = [])
  * @method TestHsfPostData testHsfPostData(array $options = [])
  * @method GetDataProperties getDataProperties(array $options = [])
@@ -34,7 +31,7 @@ class IndustryBrainApiResolver
     use ApiResolverTrait;
 }
 
-class V20180712Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'industry-brain';
@@ -57,7 +54,7 @@ class V20180712Rpc extends Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class AsyncResponsePost extends V20180712Rpc
+class AsyncResponsePost extends Rpc
 {
 
     /** @var string */
@@ -70,7 +67,7 @@ class AsyncResponsePost extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class TestHsfPostData extends V20180712Rpc
+class TestHsfPostData extends Rpc
 {
 
     /** @var string */
@@ -81,7 +78,7 @@ class TestHsfPostData extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class GetDataProperties extends V20180712Rpc
+class GetDataProperties extends Rpc
 {
 }
 
@@ -95,7 +92,7 @@ class GetDataProperties extends V20180712Rpc
  * @method string getShowParams()
  * @method $this withShowParams($value)
  */
-class TestInvokeService extends V20180712Rpc
+class TestInvokeService extends Rpc
 {
 
     /** @var string */
@@ -107,7 +104,7 @@ class TestInvokeService extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class TestPostData extends V20180712Rpc
+class TestPostData extends Rpc
 {
 
     /** @var string */
@@ -131,7 +128,7 @@ class TestPostData extends V20180712Rpc
  * @method string getIndustryCode()
  * @method $this withIndustryCode($value)
  */
-class GetIndustryInfoLineageList extends V20180712Rpc
+class GetIndustryInfoLineageList extends Rpc
 {
 
     /** @var string */
@@ -142,7 +139,7 @@ class GetIndustryInfoLineageList extends V20180712Rpc
  * @method string getIndustryCode()
  * @method $this withIndustryCode($value)
  */
-class GetIndustryInfoChildrenList extends V20180712Rpc
+class GetIndustryInfoChildrenList extends Rpc
 {
 
     /** @var string */
@@ -153,14 +150,14 @@ class GetIndustryInfoChildrenList extends V20180712Rpc
  * @method string getIndustryCode()
  * @method $this withIndustryCode($value)
  */
-class GetIndustryInfo extends V20180712Rpc
+class GetIndustryInfo extends Rpc
 {
 
     /** @var string */
     public $scheme = 'https';
 }
 
-class GetIndustryInfoList extends V20180712Rpc
+class GetIndustryInfoList extends Rpc
 {
 
     /** @var string */
@@ -171,7 +168,7 @@ class GetIndustryInfoList extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class GetAlgorithmList extends V20180712Rpc
+class GetAlgorithmList extends Rpc
 {
 
     /** @var string */
@@ -188,7 +185,7 @@ class GetAlgorithmList extends V20180712Rpc
  * @method string getAlgorithmId()
  * @method $this withAlgorithmId($value)
  */
-class GetServiceInputMapping extends V20180712Rpc
+class GetServiceInputMapping extends Rpc
 {
 }
 
@@ -202,7 +199,7 @@ class GetServiceInputMapping extends V20180712Rpc
  * @method string getShowParams()
  * @method $this withShowParams($value)
  */
-class InvokeService extends V20180712Rpc
+class InvokeService extends Rpc
 {
 
     /** @var string */
@@ -213,7 +210,7 @@ class InvokeService extends V20180712Rpc
  * @method string getData()
  * @method string getServiceId()
  */
-class PostRealTimeDeviceData extends V20180712Rpc
+class PostRealTimeDeviceData extends Rpc
 {
 
     /** @var string */
@@ -254,7 +251,7 @@ class PostRealTimeDeviceData extends V20180712Rpc
  * @method string getProjectId()
  * @method string getRequestData()
  */
-class OperateEquipment extends V20180712Rpc
+class OperateEquipment extends Rpc
 {
 
     /** @var string */
@@ -309,7 +306,7 @@ class OperateEquipment extends V20180712Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class GetOSSImageAccess extends V20180712Rpc
+class GetOSSImageAccess extends Rpc
 {
 
     /** @var string */
@@ -320,7 +317,7 @@ class GetOSSImageAccess extends V20180712Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetAsyncServiceResult extends V20180712Rpc
+class GetAsyncServiceResult extends Rpc
 {
 }
 
@@ -328,7 +325,7 @@ class GetAsyncServiceResult extends V20180712Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetServiceResultAsync extends V20180712Rpc
+class GetServiceResultAsync extends Rpc
 {
 }
 
@@ -342,7 +339,7 @@ class GetServiceResultAsync extends V20180712Rpc
  * @method string getRequestData()
  * @method $this withRequestData($value)
  */
-class InvokeServiceAsync extends V20180712Rpc
+class InvokeServiceAsync extends Rpc
 {
 
     /** @var string */
@@ -353,7 +350,7 @@ class InvokeServiceAsync extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class GetAlgoDataMapping extends V20180712Rpc
+class GetAlgoDataMapping extends Rpc
 {
 }
 
@@ -361,7 +358,7 @@ class GetAlgoDataMapping extends V20180712Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class GetOnlineServiceResult extends V20180712Rpc
+class GetOnlineServiceResult extends Rpc
 {
 
     /** @var string */

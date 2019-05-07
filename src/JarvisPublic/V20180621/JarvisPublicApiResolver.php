@@ -3,11 +3,8 @@
 namespace AlibabaCloud\JarvisPublic\V20180621;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeCountAttackEvent describeCountAttackEvent(array $options = [])
  * @method DescribeAttackedIp describeAttackedIp(array $options = [])
  * @method DescribeAttackEvent describeAttackEvent(array $options = [])
@@ -18,7 +15,7 @@ class JarvisPublicApiResolver
     use ApiResolverTrait;
 }
 
-class V20180621Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'jarvis-public';
@@ -53,7 +50,7 @@ class V20180621Rpc extends Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeCountAttackEvent extends V20180621Rpc
+class DescribeCountAttackEvent extends Rpc
 {
 }
 
@@ -77,7 +74,7 @@ class DescribeCountAttackEvent extends V20180621Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeAttackedIp extends V20180621Rpc
+class DescribeAttackedIp extends Rpc
 {
 }
 
@@ -101,7 +98,7 @@ class DescribeAttackedIp extends V20180621Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeAttackEvent extends V20180621Rpc
+class DescribeAttackEvent extends Rpc
 {
 }
 
@@ -113,7 +110,7 @@ class DescribeAttackEvent extends V20180621Rpc
  * @method $this withLang($value)
  * @method string getSourceCode()
  */
-class DescribePhoneInfo extends V20180621Rpc
+class DescribePhoneInfo extends Rpc
 {
 
     /**

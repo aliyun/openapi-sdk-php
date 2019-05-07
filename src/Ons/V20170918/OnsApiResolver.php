@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ons\V20170918;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method OnsMqttGroupIdCreate onsMqttGroupIdCreate(array $options = [])
  * @method OnsPublishCreate onsPublishCreate(array $options = [])
  * @method OnsEmpowerDelete onsEmpowerDelete(array $options = [])
@@ -63,7 +60,7 @@ class OnsApiResolver
     use ApiResolverTrait;
 }
 
-class V20170918Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ons';
@@ -87,7 +84,7 @@ class V20170918Rpc extends Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMqttGroupIdCreate extends V20170918Rpc
+class OnsMqttGroupIdCreate extends Rpc
 {
 }
 
@@ -105,7 +102,7 @@ class OnsMqttGroupIdCreate extends V20170918Rpc
  * @method string getProducerId()
  * @method $this withProducerId($value)
  */
-class OnsPublishCreate extends V20170918Rpc
+class OnsPublishCreate extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class OnsPublishCreate extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsEmpowerDelete extends V20170918Rpc
+class OnsEmpowerDelete extends Rpc
 {
 }
 
@@ -139,7 +136,7 @@ class OnsEmpowerDelete extends V20170918Rpc
  * @method string getRelation()
  * @method $this withRelation($value)
  */
-class OnsEmpowerCreate extends V20170918Rpc
+class OnsEmpowerCreate extends Rpc
 {
 }
 
@@ -167,7 +164,7 @@ class OnsEmpowerCreate extends V20170918Rpc
  * @method string getContacts()
  * @method $this withContacts($value)
  */
-class OnsWarnCreate extends V20170918Rpc
+class OnsWarnCreate extends Rpc
 {
 }
 
@@ -183,7 +180,7 @@ class OnsWarnCreate extends V20170918Rpc
  * @method string getProducerId()
  * @method $this withProducerId($value)
  */
-class OnsPublishDelete extends V20170918Rpc
+class OnsPublishDelete extends Rpc
 {
 }
 
@@ -199,7 +196,7 @@ class OnsPublishDelete extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsSubscriptionCreate extends V20170918Rpc
+class OnsSubscriptionCreate extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class OnsSubscriptionCreate extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsWarnDelete extends V20170918Rpc
+class OnsWarnDelete extends Rpc
 {
 }
 
@@ -235,7 +232,7 @@ class OnsWarnDelete extends V20170918Rpc
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
  */
-class OnsTraceQueryByMsgId extends V20170918Rpc
+class OnsTraceQueryByMsgId extends Rpc
 {
 }
 
@@ -253,7 +250,7 @@ class OnsTraceQueryByMsgId extends V20170918Rpc
  * @method string getDetail()
  * @method $this withDetail($value)
  */
-class OnsConsumerStatus extends V20170918Rpc
+class OnsConsumerStatus extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class OnsConsumerStatus extends V20170918Rpc
  * @method string getMsgKey()
  * @method $this withMsgKey($value)
  */
-class OnsTraceQueryByMsgKey extends V20170918Rpc
+class OnsTraceQueryByMsgKey extends Rpc
 {
 }
 
@@ -289,7 +286,7 @@ class OnsTraceQueryByMsgKey extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicDelete extends V20170918Rpc
+class OnsTopicDelete extends Rpc
 {
 }
 
@@ -309,7 +306,7 @@ class OnsTopicDelete extends V20170918Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsConsumerResetOffset extends V20170918Rpc
+class OnsConsumerResetOffset extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class OnsConsumerResetOffset extends V20170918Rpc
  * @method string getDetail()
  * @method $this withDetail($value)
  */
-class OnsConsumerAccumulate extends V20170918Rpc
+class OnsConsumerAccumulate extends Rpc
 {
 }
 
@@ -355,7 +352,7 @@ class OnsConsumerAccumulate extends V20170918Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class OnsTopicCreate extends V20170918Rpc
+class OnsTopicCreate extends Rpc
 {
 }
 
@@ -371,7 +368,7 @@ class OnsTopicCreate extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsSubscriptionDelete extends V20170918Rpc
+class OnsSubscriptionDelete extends Rpc
 {
 }
 
@@ -387,7 +384,7 @@ class OnsSubscriptionDelete extends V20170918Rpc
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  */
-class OnsSubscriptionUpdate extends V20170918Rpc
+class OnsSubscriptionUpdate extends Rpc
 {
 }
 
@@ -401,7 +398,7 @@ class OnsSubscriptionUpdate extends V20170918Rpc
  * @method string getQueryId()
  * @method $this withQueryId($value)
  */
-class OnsTraceGetResult extends V20170918Rpc
+class OnsTraceGetResult extends Rpc
 {
 }
 
@@ -417,7 +414,7 @@ class OnsTraceGetResult extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicUpdate extends V20170918Rpc
+class OnsTopicUpdate extends Rpc
 {
 }
 
@@ -433,7 +430,7 @@ class OnsTopicUpdate extends V20170918Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class OnsMessageGetByKey extends V20170918Rpc
+class OnsMessageGetByKey extends Rpc
 {
 }
 
@@ -445,7 +442,7 @@ class OnsMessageGetByKey extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsMqttGroupIdList extends V20170918Rpc
+class OnsMqttGroupIdList extends Rpc
 {
 }
 
@@ -467,7 +464,7 @@ class OnsMqttGroupIdList extends V20170918Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsTrendTopicInputTps extends V20170918Rpc
+class OnsTrendTopicInputTps extends Rpc
 {
 }
 
@@ -483,7 +480,7 @@ class OnsTrendTopicInputTps extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsSubscriptionGet extends V20170918Rpc
+class OnsSubscriptionGet extends Rpc
 {
 }
 
@@ -497,7 +494,7 @@ class OnsSubscriptionGet extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsTopicSearch extends V20170918Rpc
+class OnsTopicSearch extends Rpc
 {
 }
 
@@ -513,7 +510,7 @@ class OnsTopicSearch extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMessageGetByMsgId extends V20170918Rpc
+class OnsMessageGetByMsgId extends Rpc
 {
 }
 
@@ -529,7 +526,7 @@ class OnsMessageGetByMsgId extends V20170918Rpc
  * @method string getMsgId()
  * @method $this withMsgId($value)
  */
-class OnsMessageTrace extends V20170918Rpc
+class OnsMessageTrace extends Rpc
 {
 }
 
@@ -543,7 +540,7 @@ class OnsMessageTrace extends V20170918Rpc
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  */
-class OnsConsumerGetConnection extends V20170918Rpc
+class OnsConsumerGetConnection extends Rpc
 {
 }
 
@@ -555,7 +552,7 @@ class OnsConsumerGetConnection extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsRegionList extends V20170918Rpc
+class OnsRegionList extends Rpc
 {
 }
 
@@ -571,7 +568,7 @@ class OnsRegionList extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsEmpowerList extends V20170918Rpc
+class OnsEmpowerList extends Rpc
 {
 }
 
@@ -583,7 +580,7 @@ class OnsEmpowerList extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsPublishList extends V20170918Rpc
+class OnsPublishList extends Rpc
 {
 }
 
@@ -603,7 +600,7 @@ class OnsPublishList extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMessagePush extends V20170918Rpc
+class OnsMessagePush extends Rpc
 {
 }
 
@@ -627,7 +624,7 @@ class OnsMessagePush extends V20170918Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsTrendGroupOutputTps extends V20170918Rpc
+class OnsTrendGroupOutputTps extends Rpc
 {
 }
 
@@ -641,7 +638,7 @@ class OnsTrendGroupOutputTps extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicStatus extends V20170918Rpc
+class OnsTopicStatus extends Rpc
 {
 }
 
@@ -655,7 +652,7 @@ class OnsTopicStatus extends V20170918Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsMqttQueryClientByGroupId extends V20170918Rpc
+class OnsMqttQueryClientByGroupId extends Rpc
 {
 }
 
@@ -669,7 +666,7 @@ class OnsMqttQueryClientByGroupId extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsMqttQueryClientByClientId extends V20170918Rpc
+class OnsMqttQueryClientByClientId extends Rpc
 {
 }
 
@@ -683,7 +680,7 @@ class OnsMqttQueryClientByClientId extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsSubscriptionSearch extends V20170918Rpc
+class OnsSubscriptionSearch extends Rpc
 {
 }
 
@@ -701,7 +698,7 @@ class OnsSubscriptionSearch extends V20170918Rpc
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
  */
-class OnsMqttQueryHistoryOnline extends V20170918Rpc
+class OnsMqttQueryHistoryOnline extends Rpc
 {
 }
 
@@ -715,7 +712,7 @@ class OnsMqttQueryHistoryOnline extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicList extends V20170918Rpc
+class OnsTopicList extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class OnsTopicList extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsPublishSearch extends V20170918Rpc
+class OnsPublishSearch extends Rpc
 {
 }
 
@@ -745,7 +742,7 @@ class OnsPublishSearch extends V20170918Rpc
  * @method string getSubTopic()
  * @method $this withSubTopic($value)
  */
-class OnsMqttQueryClientByTopic extends V20170918Rpc
+class OnsMqttQueryClientByTopic extends Rpc
 {
 }
 
@@ -761,7 +758,7 @@ class OnsMqttQueryClientByTopic extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsConsumerTimeSpan extends V20170918Rpc
+class OnsConsumerTimeSpan extends Rpc
 {
 }
 
@@ -777,7 +774,7 @@ class OnsConsumerTimeSpan extends V20170918Rpc
  * @method string getProducerId()
  * @method $this withProducerId($value)
  */
-class OnsPublishGet extends V20170918Rpc
+class OnsPublishGet extends Rpc
 {
 }
 
@@ -797,7 +794,7 @@ class OnsPublishGet extends V20170918Rpc
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
  */
-class OnsMqttQueryMsgByPubInfo extends V20170918Rpc
+class OnsMqttQueryMsgByPubInfo extends Rpc
 {
 }
 
@@ -821,7 +818,7 @@ class OnsMqttQueryMsgByPubInfo extends V20170918Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class OnsMessagePageQueryByTopic extends V20170918Rpc
+class OnsMessagePageQueryByTopic extends Rpc
 {
 }
 
@@ -833,7 +830,7 @@ class OnsMessagePageQueryByTopic extends V20170918Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsSubscriptionList extends V20170918Rpc
+class OnsSubscriptionList extends Rpc
 {
 }
 
@@ -849,7 +846,7 @@ class OnsSubscriptionList extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMqttQueryTraceByTraceId extends V20170918Rpc
+class OnsMqttQueryTraceByTraceId extends Rpc
 {
 }
 
@@ -871,7 +868,7 @@ class OnsMqttQueryTraceByTraceId extends V20170918Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class OnsMessageSend extends V20170918Rpc
+class OnsMessageSend extends Rpc
 {
 }
 
@@ -899,7 +896,7 @@ class OnsMessageSend extends V20170918Rpc
  * @method string getSubTopic()
  * @method $this withSubTopic($value)
  */
-class OnsMqttQueryMsgTransTrend extends V20170918Rpc
+class OnsMqttQueryMsgTransTrend extends Rpc
 {
 }
 
@@ -913,6 +910,6 @@ class OnsMqttQueryMsgTransTrend extends V20170918Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicGet extends V20170918Rpc
+class OnsTopicGet extends Rpc
 {
 }

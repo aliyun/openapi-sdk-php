@@ -3,11 +3,8 @@
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeBusinessStatusAndKeep describeBusinessStatusAndKeep(array $options = [])
  * @method DescribeBidRelationByBid describeBidRelationByBid(array $options = [])
  * @method DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
@@ -26,7 +23,7 @@ class UbsmsInnerApiResolver
     use ApiResolverTrait;
 }
 
-class V20150623Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ubsms-inner';
@@ -46,7 +43,7 @@ class V20150623Rpc extends Rpc
  * @method string getCallerBid()
  * @method $this withCallerBid($value)
  */
-class DescribeBusinessStatusAndKeep extends V20150623Rpc
+class DescribeBusinessStatusAndKeep extends Rpc
 {
 }
 
@@ -56,7 +53,7 @@ class DescribeBusinessStatusAndKeep extends V20150623Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeBidRelationByBid extends V20150623Rpc
+class DescribeBidRelationByBid extends Rpc
 {
 }
 
@@ -84,7 +81,7 @@ class DescribeBidRelationByBid extends V20150623Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoPhysicalDeleteResource extends V20150623Rpc
+class DoPhysicalDeleteResource extends Rpc
 {
 }
 
@@ -98,7 +95,7 @@ class DoPhysicalDeleteResource extends V20150623Rpc
  * @method array getStatusKey()
  * @method string getCallerBid()
  */
-class DescribeBusinessStatusOfUser extends V20150623Rpc
+class DescribeBusinessStatusOfUser extends Rpc
 {
 
     /**
@@ -140,7 +137,7 @@ class DescribeBusinessStatusOfUser extends V20150623Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeBidUserBusinessStatus extends V20150623Rpc
+class DescribeBidUserBusinessStatus extends Rpc
 {
 
     /**
@@ -181,7 +178,7 @@ class DescribeBidUserBusinessStatus extends V20150623Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeUserNetworkTypes extends V20150623Rpc
+class DescribeUserNetworkTypes extends Rpc
 {
 
     /**
@@ -208,7 +205,7 @@ class DescribeUserNetworkTypes extends V20150623Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeUserNetworkType extends V20150623Rpc
+class DescribeUserNetworkType extends Rpc
 {
 }
 
@@ -217,7 +214,7 @@ class DescribeUserNetworkType extends V20150623Rpc
  * @method $this withPassword($value)
  * @method string getCallerBid()
  */
-class DescribeBusinessStatus extends V20150623Rpc
+class DescribeBusinessStatus extends Rpc
 {
 
     /**
@@ -250,7 +247,7 @@ class DescribeBusinessStatus extends V20150623Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class NotifyUserBusinessCommand extends V20150623Rpc
+class NotifyUserBusinessCommand extends Rpc
 {
 }
 
@@ -302,7 +299,7 @@ class NotifyUserBusinessCommand extends V20150623Rpc
  * @method string getStatusKey9()
  * @method $this withStatusKey9($value)
  */
-class SetUserBusinessStatuses extends V20150623Rpc
+class SetUserBusinessStatuses extends Rpc
 {
 }
 
@@ -352,7 +349,7 @@ class SetUserBusinessStatuses extends V20150623Rpc
  * @method string getStatusKey9()
  * @method $this withStatusKey9($value)
  */
-class SetUserSecurityStatus extends V20150623Rpc
+class SetUserSecurityStatus extends Rpc
 {
 }
 
@@ -365,7 +362,7 @@ class SetUserSecurityStatus extends V20150623Rpc
  * @method $this withServiceCode($value)
  * @method string getCallerBid()
  */
-class DescribeUserBusinessStatus extends V20150623Rpc
+class DescribeUserBusinessStatus extends Rpc
 {
 
     /**

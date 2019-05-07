@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Imm\V20170906;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
@@ -107,7 +104,7 @@ class ImmApiResolver
     use ApiResolverTrait;
 }
 
-class V20170906Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'imm';
@@ -136,7 +133,7 @@ class V20170906Rpc extends Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class CreateMergeFaceGroupsJob extends V20170906Rpc
+class CreateMergeFaceGroupsJob extends Rpc
 {
 }
 
@@ -146,7 +143,7 @@ class CreateMergeFaceGroupsJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectImageLogos extends V20170906Rpc
+class DetectImageLogos extends Rpc
 {
 }
 
@@ -162,7 +159,7 @@ class DetectImageLogos extends V20170906Rpc
  * @method string getGroupCoverFaceId()
  * @method $this withGroupCoverFaceId($value)
  */
-class UpdateFaceGroup extends V20170906Rpc
+class UpdateFaceGroup extends Rpc
 {
 }
 
@@ -180,7 +177,7 @@ class UpdateFaceGroup extends V20170906Rpc
  * @method string getFaceId()
  * @method $this withFaceId($value)
  */
-class FindSimilarFaces extends V20170906Rpc
+class FindSimilarFaces extends Rpc
 {
 }
 
@@ -196,7 +193,7 @@ class FindSimilarFaces extends V20170906Rpc
  * @method string getTagNames()
  * @method $this withTagNames($value)
  */
-class FindImagesByTagNames extends V20170906Rpc
+class FindImagesByTagNames extends Rpc
 {
 }
 
@@ -250,7 +247,7 @@ class FindImagesByTagNames extends V20170906Rpc
  * @method string getModifyTimeRange()
  * @method $this withModifyTimeRange($value)
  */
-class FindImages extends V20170906Rpc
+class FindImages extends Rpc
 {
 }
 
@@ -284,7 +281,7 @@ class FindImages extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class IndexVideo extends V20170906Rpc
+class IndexVideo extends Rpc
 {
 }
 
@@ -296,7 +293,7 @@ class IndexVideo extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class GetVideo extends V20170906Rpc
+class GetVideo extends Rpc
 {
 }
 
@@ -310,7 +307,7 @@ class GetVideo extends V20170906Rpc
  * @method string getCreateTimeStart()
  * @method $this withCreateTimeStart($value)
  */
-class ListVideos extends V20170906Rpc
+class ListVideos extends Rpc
 {
 }
 
@@ -324,7 +321,7 @@ class ListVideos extends V20170906Rpc
  * @method string getResources()
  * @method $this withResources($value)
  */
-class DeleteVideo extends V20170906Rpc
+class DeleteVideo extends Rpc
 {
 }
 
@@ -338,7 +335,7 @@ class DeleteVideo extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class ListVideoAudios extends V20170906Rpc
+class ListVideoAudios extends Rpc
 {
 }
 
@@ -352,7 +349,7 @@ class ListVideoAudios extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class ListVideoFrames extends V20170906Rpc
+class ListVideoFrames extends Rpc
 {
 }
 
@@ -382,7 +379,7 @@ class ListVideoFrames extends V20170906Rpc
  * @method string getRealUid()
  * @method $this withRealUid($value)
  */
-class IndexImage extends V20170906Rpc
+class IndexImage extends Rpc
 {
 }
 
@@ -400,7 +397,7 @@ class IndexImage extends V20170906Rpc
  * @method string getFaceIdB()
  * @method $this withFaceIdB($value)
  */
-class CompareImageFaces extends V20170906Rpc
+class CompareImageFaces extends Rpc
 {
 }
 
@@ -414,7 +411,7 @@ class CompareImageFaces extends V20170906Rpc
  * @method string getRealUid()
  * @method $this withRealUid($value)
  */
-class DetectImageCelebrity extends V20170906Rpc
+class DetectImageCelebrity extends Rpc
 {
 }
 
@@ -424,7 +421,7 @@ class DetectImageCelebrity extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectImageTexts extends V20170906Rpc
+class DetectImageTexts extends Rpc
 {
 }
 
@@ -452,7 +449,7 @@ class DetectImageTexts extends V20170906Rpc
  * @method string getSourceType()
  * @method $this withSourceType($value)
  */
-class UpdateImage extends V20170906Rpc
+class UpdateImage extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class UpdateImage extends V20170906Rpc
  * @method string getCreateTimeStart()
  * @method $this withCreateTimeStart($value)
  */
-class ListImages extends V20170906Rpc
+class ListImages extends Rpc
 {
 }
 
@@ -480,19 +477,7 @@ class ListImages extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class DeleteImage extends V20170906Rpc
-{
-}
-
-/**
- * @method string getImageUri()
- * @method $this withImageUri($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getRealUid()
- * @method $this withRealUid($value)
- */
-class DetectImageFaces extends V20170906Rpc
+class DeleteImage extends Rpc
 {
 }
 
@@ -504,7 +489,19 @@ class DetectImageFaces extends V20170906Rpc
  * @method string getRealUid()
  * @method $this withRealUid($value)
  */
-class DetectImageTags extends V20170906Rpc
+class DetectImageFaces extends Rpc
+{
+}
+
+/**
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getRealUid()
+ * @method $this withRealUid($value)
+ */
+class DetectImageTags extends Rpc
 {
 }
 
@@ -514,7 +511,7 @@ class DetectImageTags extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class DeleteSet extends V20170906Rpc
+class DeleteSet extends Rpc
 {
 }
 
@@ -524,7 +521,7 @@ class DeleteSet extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class ListSetTags extends V20170906Rpc
+class ListSetTags extends Rpc
 {
 }
 
@@ -536,7 +533,7 @@ class ListSetTags extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class GetImage extends V20170906Rpc
+class GetImage extends Rpc
 {
 }
 
@@ -546,7 +543,7 @@ class GetImage extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListSets extends V20170906Rpc
+class ListSets extends Rpc
 {
 }
 
@@ -558,7 +555,7 @@ class ListSets extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class UpdateSet extends V20170906Rpc
+class UpdateSet extends Rpc
 {
 }
 
@@ -570,7 +567,7 @@ class UpdateSet extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class CreateSet extends V20170906Rpc
+class CreateSet extends Rpc
 {
 }
 
@@ -596,7 +593,7 @@ class CreateSet extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class CreateVideoAnalyseTask extends V20170906Rpc
+class CreateVideoAnalyseTask extends Rpc
 {
 }
 
@@ -608,7 +605,7 @@ class CreateVideoAnalyseTask extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetVideoTask extends V20170906Rpc
+class GetVideoTask extends Rpc
 {
 }
 
@@ -620,7 +617,7 @@ class GetVideoTask extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeleteVideoTask extends V20170906Rpc
+class DeleteVideoTask extends Rpc
 {
 }
 
@@ -634,7 +631,7 @@ class DeleteVideoTask extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListVideoTasks extends V20170906Rpc
+class ListVideoTasks extends Rpc
 {
 }
 
@@ -644,7 +641,7 @@ class ListVideoTasks extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class GetSet extends V20170906Rpc
+class GetSet extends Rpc
 {
 }
 
@@ -656,7 +653,7 @@ class GetSet extends V20170906Rpc
  * @method string getJobType()
  * @method $this withJobType($value)
  */
-class GetImageJob extends V20170906Rpc
+class GetImageJob extends Rpc
 {
 }
 
@@ -668,7 +665,7 @@ class GetImageJob extends V20170906Rpc
  * @method string getJobType()
  * @method $this withJobType($value)
  */
-class DeleteImageJob extends V20170906Rpc
+class DeleteImageJob extends Rpc
 {
 }
 
@@ -682,7 +679,7 @@ class DeleteImageJob extends V20170906Rpc
  * @method string getJobType()
  * @method $this withJobType($value)
  */
-class ListImageJobs extends V20170906Rpc
+class ListImageJobs extends Rpc
 {
 }
 
@@ -696,7 +693,7 @@ class ListImageJobs extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class CreateGroupFacesJob extends V20170906Rpc
+class CreateGroupFacesJob extends Rpc
 {
 }
 
@@ -726,7 +723,7 @@ class CreateGroupFacesJob extends V20170906Rpc
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  */
-class CreateDocIndexTask extends V20170906Rpc
+class CreateDocIndexTask extends Rpc
 {
 }
 
@@ -736,7 +733,7 @@ class CreateDocIndexTask extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetDocIndexTask extends V20170906Rpc
+class GetDocIndexTask extends Rpc
 {
 }
 
@@ -762,7 +759,7 @@ class GetDocIndexTask extends V20170906Rpc
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  */
-class UpdateDocIndexMeta extends V20170906Rpc
+class UpdateDocIndexMeta extends Rpc
 {
 }
 
@@ -774,7 +771,7 @@ class UpdateDocIndexMeta extends V20170906Rpc
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  */
-class GetDocIndex extends V20170906Rpc
+class GetDocIndex extends Rpc
 {
 }
 
@@ -786,7 +783,7 @@ class GetDocIndex extends V20170906Rpc
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  */
-class DeleteDocIndex extends V20170906Rpc
+class DeleteDocIndex extends Rpc
 {
 }
 
@@ -830,7 +827,7 @@ class DeleteDocIndex extends V20170906Rpc
  * @method string getLimit()
  * @method $this withLimit($value)
  */
-class SearchDocIndex extends V20170906Rpc
+class SearchDocIndex extends Rpc
 {
 }
 
@@ -842,7 +839,7 @@ class SearchDocIndex extends V20170906Rpc
  * @method string getNewCU()
  * @method $this withNewCU($value)
  */
-class UpdateProject extends V20170906Rpc
+class UpdateProject extends Rpc
 {
 }
 
@@ -852,7 +849,7 @@ class UpdateProject extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectLogo extends V20170906Rpc
+class DetectLogo extends Rpc
 {
 }
 
@@ -862,7 +859,7 @@ class DetectLogo extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectClothes extends V20170906Rpc
+class DetectClothes extends Rpc
 {
 }
 
@@ -872,7 +869,7 @@ class DetectClothes extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectQRCodes extends V20170906Rpc
+class DetectQRCodes extends Rpc
 {
 }
 
@@ -884,7 +881,7 @@ class DetectQRCodes extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class CompareFace extends V20170906Rpc
+class CompareFace extends Rpc
 {
 }
 
@@ -904,7 +901,7 @@ class CompareFace extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class RegistFace extends V20170906Rpc
+class RegistFace extends Rpc
 {
 }
 
@@ -922,7 +919,7 @@ class RegistFace extends V20170906Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class SearchFace extends V20170906Rpc
+class SearchFace extends Rpc
 {
 }
 
@@ -938,7 +935,7 @@ class SearchFace extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class GetFaceSearchImage extends V20170906Rpc
+class GetFaceSearchImage extends Rpc
 {
 }
 
@@ -950,7 +947,7 @@ class GetFaceSearchImage extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class GetFaceSearchUser extends V20170906Rpc
+class GetFaceSearchUser extends Rpc
 {
 }
 
@@ -960,7 +957,7 @@ class GetFaceSearchUser extends V20170906Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class GetFaceSearchGroup extends V20170906Rpc
+class GetFaceSearchGroup extends Rpc
 {
 }
 
@@ -970,7 +967,7 @@ class GetFaceSearchGroup extends V20170906Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class DeleteFaceSearchGroup extends V20170906Rpc
+class DeleteFaceSearchGroup extends Rpc
 {
 }
 
@@ -982,7 +979,7 @@ class DeleteFaceSearchGroup extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class DeleteFaceSearchUser extends V20170906Rpc
+class DeleteFaceSearchUser extends Rpc
 {
 }
 
@@ -994,7 +991,7 @@ class DeleteFaceSearchUser extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListFaceSearchGroups extends V20170906Rpc
+class ListFaceSearchGroups extends Rpc
 {
 }
 
@@ -1010,7 +1007,7 @@ class ListFaceSearchGroups extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class ListFaceSearchGroupImages extends V20170906Rpc
+class ListFaceSearchGroupImages extends Rpc
 {
 }
 
@@ -1026,7 +1023,7 @@ class ListFaceSearchGroupImages extends V20170906Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class DeleteFaceSearchImageById extends V20170906Rpc
+class DeleteFaceSearchImageById extends Rpc
 {
 }
 
@@ -1040,7 +1037,7 @@ class DeleteFaceSearchImageById extends V20170906Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class ListFaceSearchGroupUsers extends V20170906Rpc
+class ListFaceSearchGroupUsers extends Rpc
 {
 }
 
@@ -1052,7 +1049,7 @@ class ListFaceSearchGroupUsers extends V20170906Rpc
  * @method string getSrcUri()
  * @method $this withSrcUri($value)
  */
-class DeleteTagByUrl extends V20170906Rpc
+class DeleteTagByUrl extends Rpc
 {
 }
 
@@ -1066,7 +1063,7 @@ class DeleteTagByUrl extends V20170906Rpc
  * @method string getSrcUri()
  * @method $this withSrcUri($value)
  */
-class DeleteTagByName extends V20170906Rpc
+class DeleteTagByName extends Rpc
 {
 }
 
@@ -1078,7 +1075,7 @@ class DeleteTagByName extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class ListTagNames extends V20170906Rpc
+class ListTagNames extends Rpc
 {
 }
 
@@ -1090,7 +1087,7 @@ class ListTagNames extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListOfficeConversionTask extends V20170906Rpc
+class ListOfficeConversionTask extends Rpc
 {
 }
 
@@ -1106,7 +1103,7 @@ class ListOfficeConversionTask extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class ListTagPhotos extends V20170906Rpc
+class ListTagPhotos extends Rpc
 {
 }
 
@@ -1116,7 +1113,7 @@ class ListTagPhotos extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetOfficeConversionTask extends V20170906Rpc
+class GetOfficeConversionTask extends Rpc
 {
 }
 
@@ -1126,7 +1123,7 @@ class GetOfficeConversionTask extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeleteOfficeConversionTask extends V20170906Rpc
+class DeleteOfficeConversionTask extends Rpc
 {
 }
 
@@ -1180,11 +1177,11 @@ class DeleteOfficeConversionTask extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class CreateOfficeConversionTask extends V20170906Rpc
+class CreateOfficeConversionTask extends Rpc
 {
 }
 
-class DescribeRegions extends V20170906Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1230,7 +1227,7 @@ class DescribeRegions extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class ConvertOfficeFormat extends V20170906Rpc
+class ConvertOfficeFormat extends Rpc
 {
 }
 
@@ -1250,7 +1247,7 @@ class ConvertOfficeFormat extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class PhotoProcess extends V20170906Rpc
+class PhotoProcess extends Rpc
 {
 }
 
@@ -1260,7 +1257,7 @@ class PhotoProcess extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetPhotoProcessTask extends V20170906Rpc
+class GetPhotoProcessTask extends Rpc
 {
 }
 
@@ -1270,7 +1267,7 @@ class GetPhotoProcessTask extends V20170906Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeletePhotoProcessTask extends V20170906Rpc
+class DeletePhotoProcessTask extends Rpc
 {
 }
 
@@ -1282,7 +1279,7 @@ class DeletePhotoProcessTask extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListPhotoProcessTasks extends V20170906Rpc
+class ListPhotoProcessTasks extends Rpc
 {
 }
 
@@ -1290,7 +1287,7 @@ class ListPhotoProcessTasks extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DeleteProject extends V20170906Rpc
+class DeleteProject extends Rpc
 {
 }
 
@@ -1300,7 +1297,7 @@ class DeleteProject extends V20170906Rpc
  * @method string getSetId()
  * @method $this withSetId($value)
  */
-class GetTagSet extends V20170906Rpc
+class GetTagSet extends Rpc
 {
 }
 
@@ -1318,7 +1315,7 @@ class GetTagSet extends V20170906Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class ListFaceGroups extends V20170906Rpc
+class ListFaceGroups extends Rpc
 {
 }
 
@@ -1326,7 +1323,7 @@ class ListFaceGroups extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class CreateFaceSet extends V20170906Rpc
+class CreateFaceSet extends Rpc
 {
 }
 
@@ -1342,7 +1339,7 @@ class CreateFaceSet extends V20170906Rpc
  * @method string getForce()
  * @method $this withForce($value)
  */
-class IndexTag extends V20170906Rpc
+class IndexTag extends Rpc
 {
 }
 
@@ -1356,7 +1353,7 @@ class IndexTag extends V20170906Rpc
  * @method string getCheckEmpty()
  * @method $this withCheckEmpty($value)
  */
-class DeleteTagSet extends V20170906Rpc
+class DeleteTagSet extends Rpc
 {
 }
 
@@ -1368,7 +1365,7 @@ class DeleteTagSet extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListTagSets extends V20170906Rpc
+class ListTagSets extends Rpc
 {
 }
 
@@ -1376,7 +1373,7 @@ class ListTagSets extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class CreateTagSet extends V20170906Rpc
+class CreateTagSet extends Rpc
 {
 }
 
@@ -1388,7 +1385,7 @@ class CreateTagSet extends V20170906Rpc
  * @method string getClearIndexData()
  * @method $this withClearIndexData($value)
  */
-class DeleteFaceJob extends V20170906Rpc
+class DeleteFaceJob extends Rpc
 {
 }
 
@@ -1404,7 +1401,7 @@ class DeleteFaceJob extends V20170906Rpc
  * @method string getSrcUri()
  * @method $this withSrcUri($value)
  */
-class CreateTagJob extends V20170906Rpc
+class CreateTagJob extends Rpc
 {
 }
 
@@ -1416,7 +1413,7 @@ class CreateTagJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DetectTag extends V20170906Rpc
+class DetectTag extends Rpc
 {
 }
 
@@ -1428,7 +1425,7 @@ class DetectTag extends V20170906Rpc
  * @method string getClearIndexData()
  * @method $this withClearIndexData($value)
  */
-class DeleteTagJob extends V20170906Rpc
+class DeleteTagJob extends Rpc
 {
 }
 
@@ -1438,7 +1435,7 @@ class DeleteTagJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class GetTagJob extends V20170906Rpc
+class GetTagJob extends Rpc
 {
 }
 
@@ -1452,7 +1449,7 @@ class GetTagJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListTagJobs extends V20170906Rpc
+class ListTagJobs extends Rpc
 {
 }
 
@@ -1468,7 +1465,7 @@ class ListTagJobs extends V20170906Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class PutProject extends V20170906Rpc
+class PutProject extends Rpc
 {
 }
 
@@ -1476,7 +1473,7 @@ class PutProject extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class GetProject extends V20170906Rpc
+class GetProject extends Rpc
 {
 }
 
@@ -1486,7 +1483,7 @@ class GetProject extends V20170906Rpc
  * @method string getMarker()
  * @method $this withMarker($value)
  */
-class ListProjects extends V20170906Rpc
+class ListProjects extends Rpc
 {
 }
 
@@ -1496,7 +1493,7 @@ class ListProjects extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class DeletePornBatchDetectJob extends V20170906Rpc
+class DeletePornBatchDetectJob extends Rpc
 {
 }
 
@@ -1514,7 +1511,7 @@ class DeletePornBatchDetectJob extends V20170906Rpc
  * @method string getTgtUri()
  * @method $this withTgtUri($value)
  */
-class CreatePornBatchDetectJob extends V20170906Rpc
+class CreatePornBatchDetectJob extends Rpc
 {
 }
 
@@ -1524,7 +1521,7 @@ class CreatePornBatchDetectJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class GetPornBatchDetectJob extends V20170906Rpc
+class GetPornBatchDetectJob extends Rpc
 {
 }
 
@@ -1536,6 +1533,6 @@ class GetPornBatchDetectJob extends V20170906Rpc
  * @method string getProject()
  * @method $this withProject($value)
  */
-class ListPornBatchDetectJobs extends V20170906Rpc
+class ListPornBatchDetectJobs extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ImageSearch\V20180120;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SearchItem searchItem(array $options = [])
  * @method DeleteItem deleteItem(array $options = [])
  * @method AddItem addItem(array $options = [])
@@ -17,7 +14,7 @@ class ImageSearchApiResolver
     use ApiResolverTrait;
 }
 
-class V20180120Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'ImageSearch';
@@ -32,7 +29,7 @@ class V20180120Roa extends Roa
 /**
  * @method string getInstanceName()
  */
-class SearchItem extends V20180120Roa
+class SearchItem extends Roa
 {
     use Traits\SearchItemTrait;
 
@@ -56,7 +53,7 @@ class SearchItem extends V20180120Roa
 /**
  * @method string getInstanceName()
  */
-class DeleteItem extends V20180120Roa
+class DeleteItem extends Roa
 {
     use Traits\DeleteItemTrait;
 
@@ -80,7 +77,7 @@ class DeleteItem extends V20180120Roa
 /**
  * @method string getInstanceName()
  */
-class AddItem extends V20180120Roa
+class AddItem extends Roa
 {
     use Traits\AddItemTrait;
 

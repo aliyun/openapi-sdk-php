@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Snsuapi\V20180709;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method MobileStatusQuery mobileStatusQuery(array $options = [])
  * @method MobileStopSpeedUp mobileStopSpeedUp(array $options = [])
  * @method MobileStartSpeedUp mobileStartSpeedUp(array $options = [])
@@ -23,7 +20,7 @@ class SnsuapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20180709Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Snsuapi';
@@ -48,7 +45,7 @@ class V20180709Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class MobileStatusQuery extends V20180709Rpc
+class MobileStatusQuery extends Rpc
 {
 }
 
@@ -62,7 +59,7 @@ class MobileStatusQuery extends V20180709Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class MobileStopSpeedUp extends V20180709Rpc
+class MobileStopSpeedUp extends Rpc
 {
 }
 
@@ -86,7 +83,7 @@ class MobileStopSpeedUp extends V20180709Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class MobileStartSpeedUp extends V20180709Rpc
+class MobileStartSpeedUp extends Rpc
 {
 }
 
@@ -102,7 +99,7 @@ class MobileStartSpeedUp extends V20180709Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BandOfferOrder extends V20180709Rpc
+class BandOfferOrder extends Rpc
 {
 }
 
@@ -126,7 +123,7 @@ class BandOfferOrder extends V20180709Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class BandStartSpeedUp extends V20180709Rpc
+class BandStartSpeedUp extends Rpc
 {
 }
 
@@ -140,7 +137,7 @@ class BandStartSpeedUp extends V20180709Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BandStatusQuery extends V20180709Rpc
+class BandStatusQuery extends Rpc
 {
 }
 
@@ -160,7 +157,7 @@ class BandStatusQuery extends V20180709Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class BandStopSpeedUp extends V20180709Rpc
+class BandStopSpeedUp extends Rpc
 {
 }
 
@@ -176,7 +173,7 @@ class BandStopSpeedUp extends V20180709Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class OrderSnsuKdjs extends V20180709Rpc
+class OrderSnsuKdjs extends Rpc
 {
 }
 
@@ -192,6 +189,6 @@ class OrderSnsuKdjs extends V20180709Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BandPrecheck extends V20180709Rpc
+class BandPrecheck extends Rpc
 {
 }

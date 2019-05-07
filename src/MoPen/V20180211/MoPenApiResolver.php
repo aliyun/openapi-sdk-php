@@ -3,11 +3,8 @@
 namespace AlibabaCloud\MoPen\V20180211;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method MoPenSendMqttMessage moPenSendMqttMessage(array $options = [])
  * @method MoPenDoRecognize moPenDoRecognize(array $options = [])
  * @method MoPenQueryCanvas moPenQueryCanvas(array $options = [])
@@ -24,7 +21,7 @@ class MoPenApiResolver
     use ApiResolverTrait;
 }
 
-class V20180211Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'MoPen';
@@ -46,7 +43,7 @@ class V20180211Rpc extends Rpc
  * @method string getPayload()
  * @method string getDeviceName()
  */
-class MoPenSendMqttMessage extends V20180211Rpc
+class MoPenSendMqttMessage extends Rpc
 {
 
     /**
@@ -85,7 +82,7 @@ class MoPenSendMqttMessage extends V20180211Rpc
  * @method string getStartY()
  * @method string getStartX()
  */
-class MoPenDoRecognize extends V20180211Rpc
+class MoPenDoRecognize extends Rpc
 {
 
     /**
@@ -186,7 +183,7 @@ class MoPenDoRecognize extends V20180211Rpc
  * @method string getPageId()
  * @method string getStatus()
  */
-class MoPenQueryCanvas extends V20180211Rpc
+class MoPenQueryCanvas extends Rpc
 {
 
     /**
@@ -245,7 +242,7 @@ class MoPenQueryCanvas extends V20180211Rpc
 /**
  * @method string getCreator()
  */
-class MoPenFindGroup extends V20180211Rpc
+class MoPenFindGroup extends Rpc
 {
 
     /**
@@ -266,7 +263,7 @@ class MoPenFindGroup extends V20180211Rpc
  * @method string getGroupId()
  * @method string getDeviceName()
  */
-class MoPenDeleteGroupMember extends V20180211Rpc
+class MoPenDeleteGroupMember extends Rpc
 {
 
     /**
@@ -300,7 +297,7 @@ class MoPenDeleteGroupMember extends V20180211Rpc
  * @method string getOrderKey()
  * @method string getDeviceName()
  */
-class MoPenBindIsv extends V20180211Rpc
+class MoPenBindIsv extends Rpc
 {
 
     /**
@@ -333,7 +330,7 @@ class MoPenBindIsv extends V20180211Rpc
 /**
  * @method string getGroupId()
  */
-class MoPenDeleteGroup extends V20180211Rpc
+class MoPenDeleteGroup extends Rpc
 {
 
     /**
@@ -354,7 +351,7 @@ class MoPenDeleteGroup extends V20180211Rpc
  * @method string getGroupId()
  * @method string getDeviceName()
  */
-class MoPenAddGroupMember extends V20180211Rpc
+class MoPenAddGroupMember extends Rpc
 {
 
     /**
@@ -387,7 +384,7 @@ class MoPenAddGroupMember extends V20180211Rpc
 /**
  * @method string getCreator()
  */
-class MopenCreateGroup extends V20180211Rpc
+class MopenCreateGroup extends Rpc
 {
 
     /**
@@ -408,7 +405,7 @@ class MopenCreateGroup extends V20180211Rpc
  * @method string getDeviceName()
  * @method string getDeviceType()
  */
-class MoPenCreateDevice extends V20180211Rpc
+class MoPenCreateDevice extends Rpc
 {
 
     /**

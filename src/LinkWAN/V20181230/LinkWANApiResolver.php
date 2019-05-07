@@ -3,11 +3,8 @@
 namespace AlibabaCloud\LinkWAN\V20181230;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SubmitExternalNodesAddingTask submitExternalNodesAddingTask(array $options = [])
  * @method SubmitExternalNodeTuplesImportingTask submitExternalNodeTuplesImportingTask(array $options = [])
  * @method DeleteExternalNodeTuples deleteExternalNodeTuples(array $options = [])
@@ -140,7 +137,7 @@ class LinkWANApiResolver
     use ApiResolverTrait;
 }
 
-class V20181230Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'LinkWAN';
@@ -162,7 +159,7 @@ class V20181230Rpc extends Rpc
  * @method string getNodeGroupId()
  * @method array getNodes()
  */
-class SubmitExternalNodesAddingTask extends V20181230Rpc
+class SubmitExternalNodesAddingTask extends Rpc
 {
 
     /**
@@ -197,7 +194,7 @@ class SubmitExternalNodesAddingTask extends V20181230Rpc
 /**
  * @method array getNodeTuples()
  */
-class SubmitExternalNodeTuplesImportingTask extends V20181230Rpc
+class SubmitExternalNodeTuplesImportingTask extends Rpc
 {
 
     /**
@@ -222,7 +219,7 @@ class SubmitExternalNodeTuplesImportingTask extends V20181230Rpc
 /**
  * @method array getDevEuiList()
  */
-class DeleteExternalNodeTuples extends V20181230Rpc
+class DeleteExternalNodeTuples extends Rpc
 {
 
     /**
@@ -245,7 +242,7 @@ class DeleteExternalNodeTuples extends V20181230Rpc
  * @method string getInstanceId()
  * @method string getEnabled()
  */
-class UpdateEmbeddedNsAutoSyncEnablingState extends V20181230Rpc
+class UpdateEmbeddedNsAutoSyncEnablingState extends Rpc
 {
 
     /**
@@ -281,7 +278,7 @@ class UpdateEmbeddedNsAutoSyncEnablingState extends V20181230Rpc
  * @method string getJoinEui()
  * @method string getJoinPermissionName()
  */
-class CreateCustomLocalJoinPermission extends V20181230Rpc
+class CreateCustomLocalJoinPermission extends Rpc
 {
 
     /** @var string */
@@ -344,7 +341,7 @@ class CreateCustomLocalJoinPermission extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getJoinPermissionName()
  */
-class UpdateRoamingJoinPermission extends V20181230Rpc
+class UpdateRoamingJoinPermission extends Rpc
 {
 
     /**
@@ -380,7 +377,7 @@ class UpdateRoamingJoinPermission extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getJoinPermissionName()
  */
-class UpdateOwnedLocalJoinPermission extends V20181230Rpc
+class UpdateOwnedLocalJoinPermission extends Rpc
 {
 
     /**
@@ -440,7 +437,7 @@ class UpdateOwnedLocalJoinPermission extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getEnabled()
  */
-class UpdateRoamingJoinPermissionEnablingState extends V20181230Rpc
+class UpdateRoamingJoinPermissionEnablingState extends Rpc
 {
 
     /**
@@ -474,7 +471,7 @@ class UpdateRoamingJoinPermissionEnablingState extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getEnabled()
  */
-class UpdateOwnedLocalJoinPermissionEnablingState extends V20181230Rpc
+class UpdateOwnedLocalJoinPermissionEnablingState extends Rpc
 {
 
     /**
@@ -511,7 +508,7 @@ class UpdateOwnedLocalJoinPermissionEnablingState extends V20181230Rpc
  * @method string getBase64EncodedMacPayload()
  * @method string getLogMillis()
  */
-class ListNodeTransferPacketPaths extends V20181230Rpc
+class ListNodeTransferPacketPaths extends Rpc
 {
 
     /**
@@ -584,7 +581,7 @@ class ListNodeTransferPacketPaths extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getFuzzyDevEui()
  */
-class CountNodesByNodeGroupId extends V20181230Rpc
+class CountNodesByNodeGroupId extends Rpc
 {
 
     /**
@@ -618,7 +615,7 @@ class CountNodesByNodeGroupId extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getFuzzyDevEui()
  */
-class CountNodesByOwnedJoinPermissionId extends V20181230Rpc
+class CountNodesByOwnedJoinPermissionId extends Rpc
 {
 
     /**
@@ -656,7 +653,7 @@ class CountNodesByOwnedJoinPermissionId extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNodesByNodeGroupId extends V20181230Rpc
+class ListNodesByNodeGroupId extends Rpc
 {
 
     /**
@@ -746,7 +743,7 @@ class ListNodesByNodeGroupId extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNodesByOwnedJoinPermissionId extends V20181230Rpc
+class ListNodesByOwnedJoinPermissionId extends Rpc
 {
 
     /**
@@ -833,7 +830,7 @@ class ListNodesByOwnedJoinPermissionId extends V20181230Rpc
  * @method string getFPort()
  * @method string getContent()
  */
-class SendMulticastCommand extends V20181230Rpc
+class SendMulticastCommand extends Rpc
 {
 
     /** @var string */
@@ -887,7 +884,7 @@ class SendMulticastCommand extends V20181230Rpc
  * @method string getComfirmed()
  * @method string getContent()
  */
-class SendUnicastCommand extends V20181230Rpc
+class SendUnicastCommand extends Rpc
 {
 
     /** @var string */
@@ -977,7 +974,7 @@ class SendUnicastCommand extends V20181230Rpc
  * @method string getLimit()
  * @method string getMcAddress()
  */
-class ListBoundNodesByMcAddress extends V20181230Rpc
+class ListBoundNodesByMcAddress extends Rpc
 {
 
     /** @var string */
@@ -1026,7 +1023,7 @@ class ListBoundNodesByMcAddress extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetNodeMulticastConfig extends V20181230Rpc
+class GetNodeMulticastConfig extends Rpc
 {
 
     /** @var string */
@@ -1049,7 +1046,7 @@ class GetNodeMulticastConfig extends V20181230Rpc
 /**
  * @method string getMcAddress()
  */
-class GetMulticastGroup extends V20181230Rpc
+class GetMulticastGroup extends Rpc
 {
 
     /** @var string */
@@ -1073,7 +1070,7 @@ class GetMulticastGroup extends V20181230Rpc
  * @method string getMcAddress()
  * @method array getDevEuiList()
  */
-class UnbindNodesFromMulticastGroup extends V20181230Rpc
+class UnbindNodesFromMulticastGroup extends Rpc
 {
 
     /** @var string */
@@ -1112,7 +1109,7 @@ class UnbindNodesFromMulticastGroup extends V20181230Rpc
  * @method string getMcAddress()
  * @method array getDevEuiList()
  */
-class BindNodesToMulticastGroup extends V20181230Rpc
+class BindNodesToMulticastGroup extends Rpc
 {
 
     /** @var string */
@@ -1150,7 +1147,7 @@ class BindNodesToMulticastGroup extends V20181230Rpc
 /**
  * @method string getMcAddress()
  */
-class DeleteMulticastGroup extends V20181230Rpc
+class DeleteMulticastGroup extends Rpc
 {
 
     /** @var string */
@@ -1177,7 +1174,7 @@ class DeleteMulticastGroup extends V20181230Rpc
  * @method string getPeriodicity()
  * @method string getDataRate()
  */
-class CreateMulticastGroup extends V20181230Rpc
+class CreateMulticastGroup extends Rpc
 {
 
     /** @var string */
@@ -1253,7 +1250,7 @@ class CreateMulticastGroup extends V20181230Rpc
  * @method array getNotificationId()
  * @method string getTargetHandleState()
  */
-class UpdateNotificationsHandleState extends V20181230Rpc
+class UpdateNotificationsHandleState extends Rpc
 {
 
     /** @var string */
@@ -1293,7 +1290,7 @@ class UpdateNotificationsHandleState extends V20181230Rpc
  * @method string getDebugConfig()
  * @method string getJoinAcceptConfig()
  */
-class UpdateLabNodeJoinAcceptConfig extends V20181230Rpc
+class UpdateLabNodeJoinAcceptConfig extends Rpc
 {
 
     /**
@@ -1341,7 +1338,7 @@ class UpdateLabNodeJoinAcceptConfig extends V20181230Rpc
  * @method string getDebugConfig()
  * @method string getDownlinkConfig()
  */
-class UpdateLabNodeDownlinkConfig extends V20181230Rpc
+class UpdateLabNodeDownlinkConfig extends Rpc
 {
 
     /**
@@ -1388,7 +1385,7 @@ class UpdateLabNodeDownlinkConfig extends V20181230Rpc
  * @method string getDevEui()
  * @method string getDebugConfigJson()
  */
-class UpdateLabNodeDebugConfig extends V20181230Rpc
+class UpdateLabNodeDebugConfig extends Rpc
 {
 
     /**
@@ -1424,7 +1421,7 @@ class UpdateLabNodeDebugConfig extends V20181230Rpc
  * @method string getLoraVersion()
  * @method string getName()
  */
-class UpdateLabNode extends V20181230Rpc
+class UpdateLabNode extends Rpc
 {
 
     /**
@@ -1484,7 +1481,7 @@ class UpdateLabNode extends V20181230Rpc
  * @method string getGwEui()
  * @method string getEnabled()
  */
-class UpdateLabGatewayUartCtrl extends V20181230Rpc
+class UpdateLabGatewayUartCtrl extends Rpc
 {
 
     /**
@@ -1518,7 +1515,7 @@ class UpdateLabGatewayUartCtrl extends V20181230Rpc
  * @method string getGwEui()
  * @method string getEnabled()
  */
-class UpdateLabGatewaySshCtrl extends V20181230Rpc
+class UpdateLabGatewaySshCtrl extends Rpc
 {
 
     /**
@@ -1552,7 +1549,7 @@ class UpdateLabGatewaySshCtrl extends V20181230Rpc
  * @method string getGwEui()
  * @method string getGwmpConfig()
  */
-class UpdateLabGatewayGwmpConfig extends V20181230Rpc
+class UpdateLabGatewayGwmpConfig extends Rpc
 {
 
     /**
@@ -1586,7 +1583,7 @@ class UpdateLabGatewayGwmpConfig extends V20181230Rpc
  * @method string getGwEui()
  * @method string getName()
  */
-class UpdateLabGateway extends V20181230Rpc
+class UpdateLabGateway extends Rpc
 {
 
     /** @var string */
@@ -1623,7 +1620,7 @@ class UpdateLabGateway extends V20181230Rpc
  * @method string getGwEui()
  * @method string getEnabled()
  */
-class UpdateGatewayEnablingState extends V20181230Rpc
+class UpdateGatewayEnablingState extends Rpc
 {
 
     /**
@@ -1667,7 +1664,7 @@ class UpdateGatewayEnablingState extends V20181230Rpc
  * @method string getName()
  * @method string getCommunicationMode()
  */
-class UpdateGateway extends V20181230Rpc
+class UpdateGateway extends Rpc
 {
 
     /**
@@ -1827,7 +1824,7 @@ class UpdateGateway extends V20181230Rpc
     }
 }
 
-class UnregisterKpmPublicKey extends V20181230Rpc
+class UnregisterKpmPublicKey extends Rpc
 {
 }
 
@@ -1835,7 +1832,7 @@ class UnregisterKpmPublicKey extends V20181230Rpc
  * @method string getDevEui()
  * @method string getGwEui()
  */
-class UnbindLabNodeFromLabGateway extends V20181230Rpc
+class UnbindLabNodeFromLabGateway extends Rpc
 {
 
     /**
@@ -1868,7 +1865,7 @@ class UnbindLabNodeFromLabGateway extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class TriggerLabGatewayLogReport extends V20181230Rpc
+class TriggerLabGatewayLogReport extends Rpc
 {
 
     /**
@@ -1888,7 +1885,7 @@ class TriggerLabGatewayLogReport extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class TriggerLabGatewayDeviceInfoReport extends V20181230Rpc
+class TriggerLabGatewayDeviceInfoReport extends Rpc
 {
 
     /**
@@ -1908,7 +1905,7 @@ class TriggerLabGatewayDeviceInfoReport extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class TriggerLabGatewayConfigReport extends V20181230Rpc
+class TriggerLabGatewayConfigReport extends Rpc
 {
 
     /**
@@ -1929,7 +1926,7 @@ class TriggerLabGatewayConfigReport extends V20181230Rpc
  * @method string getLoraVersion()
  * @method string getRequiredCount()
  */
-class SubmitNodeTupleOrder extends V20181230Rpc
+class SubmitNodeTupleOrder extends Rpc
 {
 
     /** @var string */
@@ -1965,7 +1962,7 @@ class SubmitNodeTupleOrder extends V20181230Rpc
 /**
  * @method string getRequiredCount()
  */
-class SubmitGatewayTupleOrder extends V20181230Rpc
+class SubmitGatewayTupleOrder extends Rpc
 {
 
     /** @var string */
@@ -1990,7 +1987,7 @@ class SubmitGatewayTupleOrder extends V20181230Rpc
  * @method string getDebugConfig()
  * @method string getMacCommand()
  */
-class SendMacCommandToLabNode extends V20181230Rpc
+class SendMacCommandToLabNode extends Rpc
 {
 
     /** @var string */
@@ -2041,7 +2038,7 @@ class SendMacCommandToLabNode extends V20181230Rpc
  * @method string getDebugConfig()
  * @method string getBusinessCommand()
  */
-class SendBusinessCommandToLabNode extends V20181230Rpc
+class SendBusinessCommandToLabNode extends Rpc
 {
 
     /**
@@ -2087,7 +2084,7 @@ class SendBusinessCommandToLabNode extends V20181230Rpc
 /**
  * @method string getPublicKey()
  */
-class RegisterKpmPublicKey extends V20181230Rpc
+class RegisterKpmPublicKey extends Rpc
 {
 
     /**
@@ -2107,7 +2104,7 @@ class RegisterKpmPublicKey extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class RebootLabGateway extends V20181230Rpc
+class RebootLabGateway extends Rpc
 {
 
     /** @var string */
@@ -2137,7 +2134,7 @@ class RebootLabGateway extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNotifications extends V20181230Rpc
+class ListNotifications extends Rpc
 {
 
     /**
@@ -2255,7 +2252,7 @@ class ListNotifications extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNodeTupleOrders extends V20181230Rpc
+class ListNodeTupleOrders extends Rpc
 {
 
     /** @var string */
@@ -2348,7 +2345,7 @@ class ListNodeTupleOrders extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getTimeIntervalUnit()
  */
-class ListNodeGroupTransferFlowStats extends V20181230Rpc
+class ListNodeGroupTransferFlowStats extends Rpc
 {
 
     /**
@@ -2413,7 +2410,7 @@ class ListNodeGroupTransferFlowStats extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListLabNodes extends V20181230Rpc
+class ListLabNodes extends Rpc
 {
 
     /**
@@ -2515,7 +2512,7 @@ class ListLabNodes extends V20181230Rpc
  * @method string getPageSize()
  * @method string getBeginMillis()
  */
-class ListLabNodeLogs extends V20181230Rpc
+class ListLabNodeLogs extends Rpc
 {
 
     /**
@@ -2594,7 +2591,7 @@ class ListLabNodeLogs extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListLabGateways extends V20181230Rpc
+class ListLabGateways extends Rpc
 {
 
     /**
@@ -2710,7 +2707,7 @@ class ListLabGateways extends V20181230Rpc
  * @method string getPageSize()
  * @method string getBeginMillis()
  */
-class ListLabGatewayLogs extends V20181230Rpc
+class ListLabGatewayLogs extends Rpc
 {
 
     /**
@@ -2799,7 +2796,7 @@ class ListLabGatewayLogs extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListGatewayTupleOrders extends V20181230Rpc
+class ListGatewayTupleOrders extends Rpc
 {
 
     /**
@@ -2881,7 +2878,7 @@ class ListGatewayTupleOrders extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListGatewayTransferPackets extends V20181230Rpc
+class ListGatewayTransferPackets extends Rpc
 {
 
     /**
@@ -3008,7 +3005,7 @@ class ListGatewayTransferPackets extends V20181230Rpc
  * @method string getGwEui()
  * @method string getTimeIntervalUnit()
  */
-class ListGatewayTransferFlowStats extends V20181230Rpc
+class ListGatewayTransferFlowStats extends Rpc
 {
 
     /**
@@ -3064,7 +3061,7 @@ class ListGatewayTransferFlowStats extends V20181230Rpc
     }
 }
 
-class ListGatewaysGisInfo extends V20181230Rpc
+class ListGatewaysGisInfo extends Rpc
 {
 }
 
@@ -3075,7 +3072,7 @@ class ListGatewaysGisInfo extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListGatewayOnlineRecords extends V20181230Rpc
+class ListGatewayOnlineRecords extends Rpc
 {
 
     /**
@@ -3147,7 +3144,7 @@ class ListGatewayOnlineRecords extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class ListBoundLabNodes extends V20181230Rpc
+class ListBoundLabNodes extends Rpc
 {
 
     /**
@@ -3167,7 +3164,7 @@ class ListBoundLabNodes extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class ListBoundLabGateways extends V20181230Rpc
+class ListBoundLabGateways extends Rpc
 {
 
     /**
@@ -3184,11 +3181,11 @@ class ListBoundLabGateways extends V20181230Rpc
     }
 }
 
-class ListActiveGateways extends V20181230Rpc
+class ListActiveGateways extends Rpc
 {
 }
 
-class GetUserLicense extends V20181230Rpc
+class GetUserLicense extends Rpc
 {
 
     /** @var string */
@@ -3198,7 +3195,7 @@ class GetUserLicense extends V20181230Rpc
 /**
  * @method string getNotificationId()
  */
-class GetNotification extends V20181230Rpc
+class GetNotification extends Rpc
 {
 
     /**
@@ -3218,7 +3215,7 @@ class GetNotification extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class GetNodeTuplesDownloadUrl extends V20181230Rpc
+class GetNodeTuplesDownloadUrl extends Rpc
 {
 
     /**
@@ -3238,7 +3235,7 @@ class GetNodeTuplesDownloadUrl extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class GetNodeTupleOrder extends V20181230Rpc
+class GetNodeTupleOrder extends Rpc
 {
 
     /**
@@ -3258,7 +3255,7 @@ class GetNodeTupleOrder extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetLabNodeJoinAcceptConfig extends V20181230Rpc
+class GetLabNodeJoinAcceptConfig extends Rpc
 {
 
     /**
@@ -3278,7 +3275,7 @@ class GetLabNodeJoinAcceptConfig extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetLabNodeDownlinkConfig extends V20181230Rpc
+class GetLabNodeDownlinkConfig extends Rpc
 {
 
     /**
@@ -3298,7 +3295,7 @@ class GetLabNodeDownlinkConfig extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetLabNodeDebugConfig extends V20181230Rpc
+class GetLabNodeDebugConfig extends Rpc
 {
 
     /**
@@ -3318,7 +3315,7 @@ class GetLabNodeDebugConfig extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetLabNode extends V20181230Rpc
+class GetLabNode extends Rpc
 {
 
     /**
@@ -3338,7 +3335,7 @@ class GetLabNode extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class GetLabGatewayGwmpConfig extends V20181230Rpc
+class GetLabGatewayGwmpConfig extends Rpc
 {
 
     /**
@@ -3358,7 +3355,7 @@ class GetLabGatewayGwmpConfig extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class GetLabGateway extends V20181230Rpc
+class GetLabGateway extends Rpc
 {
 
     /**
@@ -3378,7 +3375,7 @@ class GetLabGateway extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class GetGatewayTuplesDownloadUrl extends V20181230Rpc
+class GetGatewayTuplesDownloadUrl extends Rpc
 {
 
     /**
@@ -3398,7 +3395,7 @@ class GetGatewayTuplesDownloadUrl extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class GetGatewayTupleOrder extends V20181230Rpc
+class GetGatewayTupleOrder extends Rpc
 {
 
     /**
@@ -3424,7 +3421,7 @@ class GetGatewayTupleOrder extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class GetGatewayTransferPacketsDownloadUrl extends V20181230Rpc
+class GetGatewayTransferPacketsDownloadUrl extends Rpc
 {
 
     /**
@@ -3522,7 +3519,7 @@ class GetGatewayTransferPacketsDownloadUrl extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class GetGatewayStatusStat extends V20181230Rpc
+class GetGatewayStatusStat extends Rpc
 {
 
     /**
@@ -3544,7 +3541,7 @@ class GetGatewayStatusStat extends V20181230Rpc
  * @method string getBeginMillis()
  * @method string getGwEui()
  */
-class GetGatewayPacketStat extends V20181230Rpc
+class GetGatewayPacketStat extends Rpc
 {
 
     /**
@@ -3590,7 +3587,7 @@ class GetGatewayPacketStat extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class GetGateway extends V20181230Rpc
+class GetGateway extends Rpc
 {
 
     /**
@@ -3610,7 +3607,7 @@ class GetGateway extends V20181230Rpc
 /**
  * @method string getGroupId()
  */
-class GetFreqBandPlanGroup extends V20181230Rpc
+class GetFreqBandPlanGroup extends Rpc
 {
 
     /**
@@ -3627,14 +3624,14 @@ class GetFreqBandPlanGroup extends V20181230Rpc
     }
 }
 
-class DescribeRegions extends V20181230Rpc
+class DescribeRegions extends Rpc
 {
 }
 
 /**
  * @method string getDevEui()
  */
-class DeleteLabNode extends V20181230Rpc
+class DeleteLabNode extends Rpc
 {
 
     /**
@@ -3654,7 +3651,7 @@ class DeleteLabNode extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class DeleteLabGateway extends V20181230Rpc
+class DeleteLabGateway extends Rpc
 {
 
     /**
@@ -3674,7 +3671,7 @@ class DeleteLabGateway extends V20181230Rpc
 /**
  * @method string getGwEui()
  */
-class DeleteGateway extends V20181230Rpc
+class DeleteGateway extends Rpc
 {
 
     /**
@@ -3697,7 +3694,7 @@ class DeleteGateway extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getName()
  */
-class CreateLabNode extends V20181230Rpc
+class CreateLabNode extends Rpc
 {
 
     /**
@@ -3757,7 +3754,7 @@ class CreateLabNode extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getName()
  */
-class CreateLabGateway extends V20181230Rpc
+class CreateLabGateway extends Rpc
 {
 
     /**
@@ -3802,7 +3799,7 @@ class CreateLabGateway extends V20181230Rpc
  * @method string getName()
  * @method string getCommunicationMode()
  */
-class CreateGateway extends V20181230Rpc
+class CreateGateway extends Rpc
 {
 
     /**
@@ -3981,7 +3978,7 @@ class CreateGateway extends V20181230Rpc
  * @method array getCategory()
  * @method string getBeginMillis()
  */
-class CountNotifications extends V20181230Rpc
+class CountNotifications extends Rpc
 {
 
     /**
@@ -4043,7 +4040,7 @@ class CountNotifications extends V20181230Rpc
  * @method string getIsKpm()
  * @method array getStates()
  */
-class CountNodeTupleOrders extends V20181230Rpc
+class CountNodeTupleOrders extends Rpc
 {
 
     /**
@@ -4081,7 +4078,7 @@ class CountNodeTupleOrders extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getFuzzyDevEui()
  */
-class CountLabNodes extends V20181230Rpc
+class CountLabNodes extends Rpc
 {
 
     /**
@@ -4145,7 +4142,7 @@ class CountLabNodes extends V20181230Rpc
  * @method string getOnlineState()
  * @method string getIsEnabled()
  */
-class CountGateways extends V20181230Rpc
+class CountGateways extends Rpc
 {
 
     /**
@@ -4231,7 +4228,7 @@ class CountGateways extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method $this withJoinPermissionId($value)
  */
-class DeleteLocalJoinPermission extends V20181230Rpc
+class DeleteLocalJoinPermission extends Rpc
 {
 }
 
@@ -4241,7 +4238,7 @@ class DeleteLocalJoinPermission extends V20181230Rpc
  * @method string getUseDefaultJoinEui()
  * @method string getJoinPermissionName()
  */
-class CreateLocalJoinPermission extends V20181230Rpc
+class CreateLocalJoinPermission extends Rpc
 {
 
     /** @var string */
@@ -4304,7 +4301,7 @@ class CreateLocalJoinPermission extends V20181230Rpc
  * @method string getDevEui()
  * @method string getGwEui()
  */
-class BindLabNodeToLabGateway extends V20181230Rpc
+class BindLabNodeToLabGateway extends Rpc
 {
 
     /**
@@ -4337,7 +4334,7 @@ class BindLabNodeToLabGateway extends V20181230Rpc
 /**
  * @method string getJoinPermissionId()
  */
-class GetOwnedJoinPermission extends V20181230Rpc
+class GetOwnedJoinPermission extends Rpc
 {
 
     /**
@@ -4357,7 +4354,7 @@ class GetOwnedJoinPermission extends V20181230Rpc
 /**
  * @method string getJoinPermissionId()
  */
-class GetRentedJoinPermission extends V20181230Rpc
+class GetRentedJoinPermission extends Rpc
 {
 
     /**
@@ -4384,7 +4381,7 @@ class GetRentedJoinPermission extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListOwnedJoinPermissions extends V20181230Rpc
+class ListOwnedJoinPermissions extends Rpc
 {
 
     /**
@@ -4504,7 +4501,7 @@ class ListOwnedJoinPermissions extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListRentedJoinPermissions extends V20181230Rpc
+class ListRentedJoinPermissions extends Rpc
 {
 
     /**
@@ -4644,7 +4641,7 @@ class ListRentedJoinPermissions extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getOnlineState()
  */
-class CountLabGateways extends V20181230Rpc
+class CountLabGateways extends Rpc
 {
 
     /**
@@ -4706,7 +4703,7 @@ class CountLabGateways extends V20181230Rpc
  * @method string getEnabled()
  * @method string getFuzzyJoinEui()
  */
-class CountOwnedJoinPermissions extends V20181230Rpc
+class CountOwnedJoinPermissions extends Rpc
 {
 
     /**
@@ -4765,7 +4762,7 @@ class CountOwnedJoinPermissions extends V20181230Rpc
 /**
  * @method array getStates()
  */
-class CountGatewayTupleOrders extends V20181230Rpc
+class CountGatewayTupleOrders extends Rpc
 {
 
     /**
@@ -4792,7 +4789,7 @@ class CountGatewayTupleOrders extends V20181230Rpc
  * @method string getFuzzyJoinEui()
  * @method string getFuzzyOwnerAliyunId()
  */
-class CountRentedJoinPermissions extends V20181230Rpc
+class CountRentedJoinPermissions extends Rpc
 {
 
     /**
@@ -4879,7 +4876,7 @@ class CountRentedJoinPermissions extends V20181230Rpc
  * @method string getFreqBandPlanGroupId()
  * @method string getJoinPermissionName()
  */
-class ApplyRoamingJoinPermission extends V20181230Rpc
+class ApplyRoamingJoinPermission extends Rpc
 {
 
     /**
@@ -4926,7 +4923,7 @@ class ApplyRoamingJoinPermission extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getJoinPermissionType()
  */
-class ReturnJoinPermission extends V20181230Rpc
+class ReturnJoinPermission extends Rpc
 {
 
     /**
@@ -4960,7 +4957,7 @@ class ReturnJoinPermission extends V20181230Rpc
  * @method string getJoinPermissionId()
  * @method string getRenterAliyunId()
  */
-class SubmitJoinPermissionAuthOrder extends V20181230Rpc
+class SubmitJoinPermissionAuthOrder extends Rpc
 {
 
     /**
@@ -4993,7 +4990,7 @@ class SubmitJoinPermissionAuthOrder extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class AcceptJoinPermissionAuthOrder extends V20181230Rpc
+class AcceptJoinPermissionAuthOrder extends Rpc
 {
 
     /** @var string */
@@ -5016,7 +5013,7 @@ class AcceptJoinPermissionAuthOrder extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class CancelJoinPermissionAuthOrder extends V20181230Rpc
+class CancelJoinPermissionAuthOrder extends Rpc
 {
 
     /**
@@ -5036,7 +5033,7 @@ class CancelJoinPermissionAuthOrder extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class RejectJoinPermissionAuthOrder extends V20181230Rpc
+class RejectJoinPermissionAuthOrder extends Rpc
 {
 
     /**
@@ -5056,7 +5053,7 @@ class RejectJoinPermissionAuthOrder extends V20181230Rpc
 /**
  * @method string getOrderId()
  */
-class GetJoinPermissionAuthOrder extends V20181230Rpc
+class GetJoinPermissionAuthOrder extends Rpc
 {
 
     /**
@@ -5073,7 +5070,7 @@ class GetJoinPermissionAuthOrder extends V20181230Rpc
     }
 }
 
-class GetKpmPublicKey extends V20181230Rpc
+class GetKpmPublicKey extends Rpc
 {
 }
 
@@ -5081,7 +5078,7 @@ class GetKpmPublicKey extends V20181230Rpc
  * @method string getNodeGroupName()
  * @method string getJoinPermissionId()
  */
-class CreateNodeGroup extends V20181230Rpc
+class CreateNodeGroup extends Rpc
 {
 
     /** @var string */
@@ -5117,7 +5114,7 @@ class CreateNodeGroup extends V20181230Rpc
 /**
  * @method string getNodeGroupId()
  */
-class DeleteNodeGroup extends V20181230Rpc
+class DeleteNodeGroup extends Rpc
 {
 
     /**
@@ -5138,7 +5135,7 @@ class DeleteNodeGroup extends V20181230Rpc
  * @method string getNodeGroupName()
  * @method string getNodeGroupId()
  */
-class UpdateNodeGroup extends V20181230Rpc
+class UpdateNodeGroup extends Rpc
 {
 
     /**
@@ -5171,7 +5168,7 @@ class UpdateNodeGroup extends V20181230Rpc
 /**
  * @method string getNodeGroupId()
  */
-class GetNodeGroup extends V20181230Rpc
+class GetNodeGroup extends Rpc
 {
 
     /** @var string */
@@ -5200,7 +5197,7 @@ class GetNodeGroup extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNodeGroups extends V20181230Rpc
+class ListNodeGroups extends Rpc
 {
 
     /**
@@ -5300,7 +5297,7 @@ class ListNodeGroups extends V20181230Rpc
  * @method string getFuzzyJoinEui()
  * @method string getFuzzyDevEui()
  */
-class CountNodeGroups extends V20181230Rpc
+class CountNodeGroups extends Rpc
 {
 
     /**
@@ -5347,7 +5344,7 @@ class CountNodeGroups extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getJoinPermissionId()
  */
-class BindJoinPermissionToNodeGroup extends V20181230Rpc
+class BindJoinPermissionToNodeGroup extends Rpc
 {
 
     /**
@@ -5386,7 +5383,7 @@ class BindJoinPermissionToNodeGroup extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getDataDispatchDestination()
  */
-class UpdateDataDispatchConfig extends V20181230Rpc
+class UpdateDataDispatchConfig extends Rpc
 {
 
     /**
@@ -5485,7 +5482,7 @@ class UpdateDataDispatchConfig extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getDataDispatchEnabled()
  */
-class UpdateDataDispatchEnablingState extends V20181230Rpc
+class UpdateDataDispatchEnablingState extends Rpc
 {
 
     /**
@@ -5520,7 +5517,7 @@ class UpdateDataDispatchEnablingState extends V20181230Rpc
  * @method string getPinCode()
  * @method string getNodeGroupId()
  */
-class AddNodeToGroup extends V20181230Rpc
+class AddNodeToGroup extends Rpc
 {
 
     /**
@@ -5567,7 +5564,7 @@ class AddNodeToGroup extends V20181230Rpc
  * @method string getDevEui()
  * @method string getNodeGroupId()
  */
-class RemoveNodeFromGroup extends V20181230Rpc
+class RemoveNodeFromGroup extends Rpc
 {
 
     /**
@@ -5600,7 +5597,7 @@ class RemoveNodeFromGroup extends V20181230Rpc
 /**
  * @method string getDevEui()
  */
-class GetNode extends V20181230Rpc
+class GetNode extends Rpc
 {
 
     /**
@@ -5628,7 +5625,7 @@ class GetNode extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListNodeGroupTransferPackets extends V20181230Rpc
+class ListNodeGroupTransferPackets extends Rpc
 {
 
     /**
@@ -5758,7 +5755,7 @@ class ListNodeGroupTransferPackets extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class GetNodeGroupTransferPacketsDownloadUrl extends V20181230Rpc
+class GetNodeGroupTransferPacketsDownloadUrl extends Rpc
 {
 
     /**
@@ -5857,7 +5854,7 @@ class GetNodeGroupTransferPacketsDownloadUrl extends V20181230Rpc
  * @method string getNodeGroupId()
  * @method string getJoinPermissionId()
  */
-class UnbindJoinPermissionFromNodeGroup extends V20181230Rpc
+class UnbindJoinPermissionFromNodeGroup extends Rpc
 {
 
     /**
@@ -5899,7 +5896,7 @@ class UnbindJoinPermissionFromNodeGroup extends V20181230Rpc
  * @method string getSortingField()
  * @method string getAscending()
  */
-class ListGateways extends V20181230Rpc
+class ListGateways extends Rpc
 {
 
     /**
@@ -6033,21 +6030,21 @@ class ListGateways extends V20181230Rpc
     }
 }
 
-class ListFreqBandPlanGroups extends V20181230Rpc
+class ListFreqBandPlanGroups extends Rpc
 {
 
     /** @var string */
     public $scheme = 'http';
 }
 
-class ListActivatedFeatures extends V20181230Rpc
+class ListActivatedFeatures extends Rpc
 {
 }
 
 /**
  * @method string getServiceCode()
  */
-class CheckCloudProductOpenStatus extends V20181230Rpc
+class CheckCloudProductOpenStatus extends Rpc
 {
 
     /**

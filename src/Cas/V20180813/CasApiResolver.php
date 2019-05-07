@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cas\V20180813;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeRenewOrder describeRenewOrder(array $options = [])
  * @method DescribeSignatureProductState describeSignatureProductState(array $options = [])
  * @method DescribeOrderRefundRecord describeOrderRefundRecord(array $options = [])
@@ -68,7 +65,7 @@ class CasApiResolver
     use ApiResolverTrait;
 }
 
-class V20180813Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'cas';
@@ -89,7 +86,7 @@ class V20180813Rpc extends Rpc
  * @method string getOrderId()
  * @method $this withOrderId($value)
  */
-class DescribeRenewOrder extends V20180813Rpc
+class DescribeRenewOrder extends Rpc
 {
 }
 
@@ -97,7 +94,7 @@ class DescribeRenewOrder extends V20180813Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeSignatureProductState extends V20180813Rpc
+class DescribeSignatureProductState extends Rpc
 {
 }
 
@@ -105,7 +102,7 @@ class DescribeSignatureProductState extends V20180813Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeOrderRefundRecord extends V20180813Rpc
+class DescribeOrderRefundRecord extends Rpc
 {
 }
 
@@ -117,7 +114,7 @@ class DescribeOrderRefundRecord extends V20180813Rpc
  * @method string getOrderId()
  * @method $this withOrderId($value)
  */
-class CreateOrderRefundRecord extends V20180813Rpc
+class CreateOrderRefundRecord extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class CreateOrderRefundRecord extends V20180813Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class UntagResources extends V20180813Rpc
+class UntagResources extends Rpc
 {
 
     /**
@@ -179,7 +176,7 @@ class UntagResources extends V20180813Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResources extends V20180813Rpc
+class TagResources extends Rpc
 {
 
     /**
@@ -224,7 +221,7 @@ class TagResources extends V20180813Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagResources extends V20180813Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -269,7 +266,7 @@ class ListTagResources extends V20180813Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagKeys extends V20180813Rpc
+class ListTagKeys extends Rpc
 {
 }
 
@@ -279,7 +276,7 @@ class ListTagKeys extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeLocationList extends V20180813Rpc
+class DescribeLocationList extends Rpc
 {
 }
 
@@ -291,7 +288,7 @@ class DescribeLocationList extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteOrder extends V20180813Rpc
+class DeleteOrder extends Rpc
 {
 }
 
@@ -307,7 +304,7 @@ class DeleteOrder extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateCooperationOrder extends V20180813Rpc
+class CreateCooperationOrder extends Rpc
 {
 }
 
@@ -319,7 +316,7 @@ class CreateCooperationOrder extends V20180813Rpc
  * @method string getTransactionId()
  * @method $this withTransactionId($value)
  */
-class DescribeSignatureTradeDetail extends V20180813Rpc
+class DescribeSignatureTradeDetail extends Rpc
 {
 }
 
@@ -333,7 +330,7 @@ class DescribeSignatureTradeDetail extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeExpectationResult extends V20180813Rpc
+class DescribeExpectationResult extends Rpc
 {
 }
 
@@ -345,7 +342,7 @@ class DescribeExpectationResult extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOrderAuditFailRecord extends V20180813Rpc
+class DescribeOrderAuditFailRecord extends Rpc
 {
 }
 
@@ -359,7 +356,7 @@ class DescribeOrderAuditFailRecord extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateAliDnsRecordId extends V20180813Rpc
+class CreateAliDnsRecordId extends Rpc
 {
 }
 
@@ -369,7 +366,7 @@ class CreateAliDnsRecordId extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSignatureStatistics extends V20180813Rpc
+class DescribeSignatureStatistics extends Rpc
 {
 }
 
@@ -387,7 +384,7 @@ class DescribeSignatureStatistics extends V20180813Rpc
  * @method string getSearchValue()
  * @method $this withSearchValue($value)
  */
-class DescribeSignatureTradeList extends V20180813Rpc
+class DescribeSignatureTradeList extends Rpc
 {
 }
 
@@ -399,7 +396,7 @@ class DescribeSignatureTradeList extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStsAuthStatus extends V20180813Rpc
+class DescribeStsAuthStatus extends Rpc
 {
 }
 
@@ -411,33 +408,7 @@ class DescribeStsAuthStatus extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDeploymentDetail extends V20180813Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getCloudProduct()
- * @method $this withCloudProduct($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDeploymentDomainList extends V20180813Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDeploymentProduct extends V20180813Rpc
+class DescribeDeploymentDetail extends Rpc
 {
 }
 
@@ -451,7 +422,33 @@ class DescribeDeploymentProduct extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDeploymentRegionList extends V20180813Rpc
+class DescribeDeploymentDomainList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentProduct extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getCloudProduct()
+ * @method $this withCloudProduct($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentRegionList extends Rpc
 {
 }
 
@@ -463,7 +460,7 @@ class DescribeDeploymentRegionList extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDomainVerifyInfo extends V20180813Rpc
+class DescribeDomainVerifyInfo extends Rpc
 {
 }
 
@@ -477,7 +474,7 @@ class DescribeDomainVerifyInfo extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDownloadCertificate extends V20180813Rpc
+class DescribeDownloadCertificate extends Rpc
 {
 }
 
@@ -489,7 +486,7 @@ class DescribeDownloadCertificate extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDomainVerifyConfigurationStatus extends V20180813Rpc
+class DescribeDomainVerifyConfigurationStatus extends Rpc
 {
 }
 
@@ -501,7 +498,7 @@ class DescribeDomainVerifyConfigurationStatus extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDownloadDomainVerifyConfiguration extends V20180813Rpc
+class DescribeDownloadDomainVerifyConfiguration extends Rpc
 {
 }
 
@@ -513,7 +510,7 @@ class DescribeDownloadDomainVerifyConfiguration extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeHelpList extends V20180813Rpc
+class DescribeHelpList extends Rpc
 {
 }
 
@@ -525,7 +522,7 @@ class DescribeHelpList extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOrderDetail extends V20180813Rpc
+class DescribeOrderDetail extends Rpc
 {
 }
 
@@ -537,7 +534,7 @@ class DescribeOrderDetail extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOrderMaterial extends V20180813Rpc
+class DescribeOrderMaterial extends Rpc
 {
 }
 
@@ -551,7 +548,7 @@ class DescribeOrderMaterial extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOrderDocument extends V20180813Rpc
+class DescribeOrderDocument extends Rpc
 {
 }
 
@@ -563,7 +560,7 @@ class DescribeOrderDocument extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOSSDownloadInfo extends V20180813Rpc
+class DescribeOSSDownloadInfo extends Rpc
 {
 }
 
@@ -584,7 +581,7 @@ class DescribeOSSDownloadInfo extends V20180813Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeOrderList extends V20180813Rpc
+class DescribeOrderList extends Rpc
 {
 
     /**
@@ -614,7 +611,7 @@ class DescribeOrderList extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOSSUploadInfo extends V20180813Rpc
+class DescribeOSSUploadInfo extends Rpc
 {
 }
 
@@ -624,7 +621,7 @@ class DescribeOSSUploadInfo extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSignatureCapacity extends V20180813Rpc
+class DescribeSignatureCapacity extends Rpc
 {
 }
 
@@ -666,7 +663,7 @@ class DescribeSignatureCapacity extends V20180813Rpc
  * @method string getKeywordStrategy()
  * @method $this withKeywordStrategy($value)
  */
-class CreateSignature extends V20180813Rpc
+class CreateSignature extends Rpc
 {
 }
 
@@ -679,7 +676,7 @@ class CreateSignature extends V20180813Rpc
  * @method string getDocTitle()
  * @method $this withDocTitle($value)
  */
-class CreateSignatureDocument extends V20180813Rpc
+class CreateSignatureDocument extends Rpc
 {
 
     /**
@@ -710,7 +707,7 @@ class CreateSignatureDocument extends V20180813Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class CreateSignaturePeopleCertificate extends V20180813Rpc
+class CreateSignaturePeopleCertificate extends Rpc
 {
 }
 
@@ -722,7 +719,7 @@ class CreateSignaturePeopleCertificate extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteCertificate extends V20180813Rpc
+class DeleteCertificate extends Rpc
 {
 }
 
@@ -762,7 +759,7 @@ class DeleteCertificate extends V20180813Rpc
  * @method string getKeywordStrategy()
  * @method $this withKeywordStrategy($value)
  */
-class CreateWebSignature extends V20180813Rpc
+class CreateWebSignature extends Rpc
 {
 }
 
@@ -774,7 +771,7 @@ class CreateWebSignature extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateUnDeployment extends V20180813Rpc
+class CreateUnDeployment extends Rpc
 {
 }
 
@@ -786,7 +783,7 @@ class CreateUnDeployment extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCertificateDetail extends V20180813Rpc
+class DescribeCertificateDetail extends Rpc
 {
 }
 
@@ -796,7 +793,7 @@ class DescribeCertificateDetail extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCertificateBrandList extends V20180813Rpc
+class DescribeCertificateBrandList extends Rpc
 {
 }
 
@@ -815,7 +812,7 @@ class DescribeCertificateBrandList extends V20180813Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeCertificateList extends V20180813Rpc
+class DescribeCertificateList extends Rpc
 {
 
     /**
@@ -889,7 +886,7 @@ class DescribeCertificateList extends V20180813Rpc
  * @method string getPersonDepartment()
  * @method $this withPersonDepartment($value)
  */
-class CreateOrderMaterial extends V20180813Rpc
+class CreateOrderMaterial extends Rpc
 {
 }
 
@@ -907,7 +904,7 @@ class CreateOrderMaterial extends V20180813Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class CreateDeployment extends V20180813Rpc
+class CreateDeployment extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class CreateDeployment extends V20180813Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateDomainVerifyConfigurationStatus extends V20180813Rpc
+class CreateDomainVerifyConfigurationStatus extends Rpc
 {
 }
 
@@ -933,7 +930,7 @@ class CreateDomainVerifyConfigurationStatus extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateOrderCancel extends V20180813Rpc
+class CreateOrderCancel extends Rpc
 {
 }
 
@@ -949,7 +946,7 @@ class CreateOrderCancel extends V20180813Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class CreateCertificate extends V20180813Rpc
+class CreateCertificate extends Rpc
 {
 }
 
@@ -963,7 +960,7 @@ class CreateCertificate extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateOrderRevoke extends V20180813Rpc
+class CreateOrderRevoke extends Rpc
 {
 }
 
@@ -977,7 +974,7 @@ class CreateOrderRevoke extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateCertificateName extends V20180813Rpc
+class CreateCertificateName extends Rpc
 {
 }
 
@@ -989,7 +986,7 @@ class CreateCertificateName extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateFilingSignatureDocument extends V20180813Rpc
+class CreateFilingSignatureDocument extends Rpc
 {
 }
 
@@ -1003,7 +1000,7 @@ class CreateFilingSignatureDocument extends V20180813Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateOrderAudit extends V20180813Rpc
+class CreateOrderAudit extends Rpc
 {
 }
 
@@ -1021,7 +1018,7 @@ class CreateOrderAudit extends V20180813Rpc
  * @method string getExtName()
  * @method $this withExtName($value)
  */
-class CreateOrderDocument extends V20180813Rpc
+class CreateOrderDocument extends Rpc
 {
 }
 
@@ -1032,7 +1029,7 @@ class CreateOrderDocument extends V20180813Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCertificateStatusCount extends V20180813Rpc
+class DescribeCertificateStatusCount extends Rpc
 {
 
     /**

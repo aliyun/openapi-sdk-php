@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Foas\V20181111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyMasterSpec modifyMasterSpec(array $options = [])
  * @method UnbindQueue unbindQueue(array $options = [])
  * @method BindQueue bindQueue(array $options = [])
@@ -69,7 +66,7 @@ class FoasApiResolver
     use ApiResolverTrait;
 }
 
-class V20181111Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'foas';
@@ -88,7 +85,7 @@ class V20181111Roa extends Roa
  * @method string getClusterId()
  * @method string getMasterTargetModel()
  */
-class ModifyMasterSpec extends V20181111Roa
+class ModifyMasterSpec extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/specification';
@@ -128,7 +125,7 @@ class ModifyMasterSpec extends V20181111Roa
  * @method string getProjectName()
  * @method string getClusterId()
  */
-class UnbindQueue extends V20181111Roa
+class UnbindQueue extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queue';
@@ -181,7 +178,7 @@ class UnbindQueue extends V20181111Roa
  * @method string getProjectName()
  * @method string getClusterId()
  */
-class BindQueue extends V20181111Roa
+class BindQueue extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queue';
@@ -233,7 +230,7 @@ class BindQueue extends V20181111Roa
  * @method string getQueueName()
  * @method string getClusterId()
  */
-class DeleteQueue extends V20181111Roa
+class DeleteQueue extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
@@ -275,7 +272,7 @@ class DeleteQueue extends V20181111Roa
  * @method string getGpu()
  * @method string getMaxVcore()
  */
-class CreateQueue extends V20181111Roa
+class CreateQueue extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
@@ -353,7 +350,7 @@ class CreateQueue extends V20181111Roa
  * @method string getClusterId()
  * @method string getMetricJson()
  */
-class GetClusterMetrics extends V20181111Roa
+class GetClusterMetrics extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/metrics';
@@ -391,7 +388,7 @@ class GetClusterMetrics extends V20181111Roa
 /**
  * @method string getClusterId()
  */
-class GetClusterEngineVersions extends V20181111Roa
+class GetClusterEngineVersions extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/engineversions';
@@ -413,7 +410,7 @@ class GetClusterEngineVersions extends V20181111Roa
 /**
  * @method string getClusterId()
  */
-class GetClusterDetails extends V20181111Roa
+class GetClusterDetails extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/details';
@@ -435,7 +432,7 @@ class GetClusterDetails extends V20181111Roa
 /**
  * @method string getClusterId()
  */
-class GetClusterQueueInfo extends V20181111Roa
+class GetClusterQueueInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/queueinfo';
@@ -457,7 +454,7 @@ class GetClusterQueueInfo extends V20181111Roa
 /**
  * @method string getClusterId()
  */
-class GetClusterResource extends V20181111Roa
+class GetClusterResource extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/resource';
@@ -484,7 +481,7 @@ class GetClusterResource extends V20181111Roa
  * @method string getState()
  * @method string getRegion()
  */
-class ListCluster extends V20181111Roa
+class ListCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters';
@@ -573,7 +570,7 @@ class ListCluster extends V20181111Roa
  * @method string getClusterId()
  * @method string getModelTargetCount()
  */
-class ShrinkCluster extends V20181111Roa
+class ShrinkCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/shrink';
@@ -627,7 +624,7 @@ class ShrinkCluster extends V20181111Roa
  * @method string getUserVSwitch()
  * @method string getClusterId()
  */
-class ExpandCluster extends V20181111Roa
+class ExpandCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]/expand';
@@ -691,7 +688,7 @@ class ExpandCluster extends V20181111Roa
 /**
  * @method string getClusterId()
  */
-class DestroyCluster extends V20181111Roa
+class DestroyCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[clusterId]';
@@ -722,7 +719,7 @@ class DestroyCluster extends V20181111Roa
  * @method string getDescription()
  * @method string getUserVSwitch()
  */
-class CreateCluster extends V20181111Roa
+class CreateCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters';
@@ -825,7 +822,7 @@ class CreateCluster extends V20181111Roa
 /**
  * @method string getProjectName()
  */
-class GetProject extends V20181111Roa
+class GetProject extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]';
@@ -847,7 +844,7 @@ class GetProject extends V20181111Roa
 /**
  * @method string getProjectName()
  */
-class DeleteProject extends V20181111Roa
+class DeleteProject extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]';
@@ -877,7 +874,7 @@ class DeleteProject extends V20181111Roa
  * @method string getClusterId()
  * @method string getDeployType()
  */
-class CreateProject extends V20181111Roa
+class CreateProject extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects';
@@ -972,7 +969,7 @@ class CreateProject extends V20181111Roa
  * @method string getRegion()
  * @method string getDeployType()
  */
-class ListProject extends V20181111Roa
+class ListProject extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects';
@@ -1061,7 +1058,7 @@ class ListProject extends V20181111Roa
  * @method string getSessionId()
  * @method string getJobName()
  */
-class CheckRawPlanJson extends V20181111Roa
+class CheckRawPlanJson extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson/check';
@@ -1111,7 +1108,7 @@ class CheckRawPlanJson extends V20181111Roa
  * @method string getProjectName()
  * @method string getClusterId()
  */
-class ListProjectBindQueueResource extends V20181111Roa
+class ListProjectBindQueueResource extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queueresource';
@@ -1161,7 +1158,7 @@ class ListProjectBindQueueResource extends V20181111Roa
  * @method string getProjectName()
  * @method string getClusterId()
  */
-class ListProjectBindQueue extends V20181111Roa
+class ListProjectBindQueue extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/queues';
@@ -1210,7 +1207,7 @@ class ListProjectBindQueue extends V20181111Roa
  * @method string getProjectName()
  * @method string getJobName()
  */
-class ValidateJob extends V20181111Roa
+class ValidateJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/validate';
@@ -1247,7 +1244,7 @@ class ValidateJob extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceDetail extends V20181111Roa
+class GetInstanceDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/details';
@@ -1297,7 +1294,7 @@ class GetInstanceDetail extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceConfig extends V20181111Roa
+class GetInstanceConfig extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/config';
@@ -1347,7 +1344,7 @@ class GetInstanceConfig extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceCheckpoint extends V20181111Roa
+class GetInstanceCheckpoint extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/checkpoints';
@@ -1397,7 +1394,7 @@ class GetInstanceCheckpoint extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceExceptions extends V20181111Roa
+class GetInstanceExceptions extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/exceptions';
@@ -1447,7 +1444,7 @@ class GetInstanceExceptions extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceResource extends V20181111Roa
+class GetInstanceResource extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/resource';
@@ -1497,7 +1494,7 @@ class GetInstanceResource extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceFinalState extends V20181111Roa
+class GetInstanceFinalState extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/finalstate';
@@ -1548,7 +1545,7 @@ class GetInstanceFinalState extends V20181111Roa
  * @method string getMetricJson()
  * @method string getJobName()
  */
-class GetInstanceMetric extends V20181111Roa
+class GetInstanceMetric extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/metric';
@@ -1616,7 +1613,7 @@ class GetInstanceMetric extends V20181111Roa
  * @method string getExpectState()
  * @method string getJobName()
  */
-class ModifyInstanceState extends V20181111Roa
+class ModifyInstanceState extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/expectstate';
@@ -1705,7 +1702,7 @@ class ModifyInstanceState extends V20181111Roa
  * @method string getIsArchived()
  * @method string getJobName()
  */
-class ListInstance extends V20181111Roa
+class ListInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/instances';
@@ -1885,7 +1882,7 @@ class ListInstance extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceRunSummary extends V20181111Roa
+class GetInstanceRunSummary extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/runsummary';
@@ -1935,7 +1932,7 @@ class GetInstanceRunSummary extends V20181111Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstance extends V20181111Roa
+class GetInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]';
@@ -1986,7 +1983,7 @@ class GetInstance extends V20181111Roa
  * @method string getPageSize()
  * @method string getPageIndex()
  */
-class GetRefPackageJob extends V20181111Roa
+class GetRefPackageJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]/jobs';
@@ -2048,7 +2045,7 @@ class GetRefPackageJob extends V20181111Roa
  * @method string getProjectName()
  * @method string getPackageName()
  */
-class DeletePackage extends V20181111Roa
+class DeletePackage extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
@@ -2095,7 +2092,7 @@ class DeletePackage extends V20181111Roa
  * @method string getOssPath()
  * @method string getMd5()
  */
-class UpdatePackage extends V20181111Roa
+class UpdatePackage extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
@@ -2242,7 +2239,7 @@ class UpdatePackage extends V20181111Roa
  * @method string getTag()
  * @method string getType()
  */
-class ListPackage extends V20181111Roa
+class ListPackage extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages';
@@ -2339,7 +2336,7 @@ class ListPackage extends V20181111Roa
  * @method string getOssPath()
  * @method string getMd5()
  */
-class CreatePackage extends V20181111Roa
+class CreatePackage extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages';
@@ -2495,7 +2492,7 @@ class CreatePackage extends V20181111Roa
  * @method string getProjectName()
  * @method string getPackageName()
  */
-class GetPackage extends V20181111Roa
+class GetPackage extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
@@ -2531,7 +2528,7 @@ class GetPackage extends V20181111Roa
  * @method string getPath()
  * @method string getProjectName()
  */
-class DeleteFolder extends V20181111Roa
+class DeleteFolder extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders';
@@ -2571,7 +2568,7 @@ class DeleteFolder extends V20181111Roa
  * @method string getSrcPath()
  * @method string getDestPath()
  */
-class MVFolder extends V20181111Roa
+class MVFolder extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders';
@@ -2623,7 +2620,7 @@ class MVFolder extends V20181111Roa
  * @method string getPath()
  * @method string getProjectName()
  */
-class ListChildFolder extends V20181111Roa
+class ListChildFolder extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders/children';
@@ -2660,7 +2657,7 @@ class ListChildFolder extends V20181111Roa
  * @method string getParameterJson()
  * @method string getJobName()
  */
-class StartJob extends V20181111Roa
+class StartJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance';
@@ -2720,7 +2717,7 @@ class StartJob extends V20181111Roa
  * @method string getJobName()
  * @method string getFolderId()
  */
-class ListJob extends V20181111Roa
+class ListJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs';
@@ -2860,7 +2857,7 @@ class ListJob extends V20181111Roa
  * @method string getProjectName()
  * @method string getJobName()
  */
-class DeleteJob extends V20181111Roa
+class DeleteJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
@@ -2899,7 +2896,7 @@ class DeleteJob extends V20181111Roa
  * @method string getProjectName()
  * @method string getJobName()
  */
-class GetJob extends V20181111Roa
+class GetJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
@@ -2935,7 +2932,7 @@ class GetJob extends V20181111Roa
  * @method string getProjectName()
  * @method string getJobName()
  */
-class OfflineJob extends V20181111Roa
+class OfflineJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/offline';
@@ -2977,7 +2974,7 @@ class OfflineJob extends V20181111Roa
  * @method string getJobName()
  * @method string getAutoconfEnable()
  */
-class GetRawPlanJson extends V20181111Roa
+class GetRawPlanJson extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson';
@@ -3061,7 +3058,7 @@ class GetRawPlanJson extends V20181111Roa
  * @method string getProperties()
  * @method string getJobName()
  */
-class UpdateJob extends V20181111Roa
+class UpdateJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
@@ -3228,7 +3225,7 @@ class UpdateJob extends V20181111Roa
  * @method string getProperties()
  * @method string getJobName()
  */
-class CreateJob extends V20181111Roa
+class CreateJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs';
@@ -3410,7 +3407,7 @@ class CreateJob extends V20181111Roa
  * @method string getPath()
  * @method string getProjectName()
  */
-class GetFolder extends V20181111Roa
+class GetFolder extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders';
@@ -3446,7 +3443,7 @@ class GetFolder extends V20181111Roa
  * @method string getPath()
  * @method string getProjectName()
  */
-class CreateFolder extends V20181111Roa
+class CreateFolder extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/folders';
@@ -3485,7 +3482,7 @@ class CreateFolder extends V20181111Roa
  * @method string getProjectName()
  * @method string getJobName()
  */
-class CommitJob extends V20181111Roa
+class CommitJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/commit';
@@ -3525,7 +3522,7 @@ class CommitJob extends V20181111Roa
  * @method string getJobNames()
  * @method string getJobType()
  */
-class BatchGetInstanceRunSummary extends V20181111Roa
+class BatchGetInstanceRunSummary extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/runsummary';

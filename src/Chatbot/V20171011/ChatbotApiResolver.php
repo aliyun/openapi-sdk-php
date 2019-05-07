@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Chatbot\V20171011;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateSimilarityLoop createSimilarityLoop(array $options = [])
  * @method QueryLoopList queryLoopList(array $options = [])
  * @method QueryLoopResult queryLoopResult(array $options = [])
@@ -70,7 +67,7 @@ class ChatbotApiResolver
     use ApiResolverTrait;
 }
 
-class V20171011Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Chatbot';
@@ -93,19 +90,11 @@ class V20171011Rpc extends Rpc
  * @method string getMultiParams()
  * @method $this withMultiParams($value)
  */
-class CreateSimilarityLoop extends V20171011Rpc
+class CreateSimilarityLoop extends Rpc
 {
 }
 
-class QueryLoopList extends V20171011Rpc
-{
-}
-
-/**
- * @method string getLoopId()
- * @method $this withLoopId($value)
- */
-class QueryLoopResult extends V20171011Rpc
+class QueryLoopList extends Rpc
 {
 }
 
@@ -113,7 +102,15 @@ class QueryLoopResult extends V20171011Rpc
  * @method string getLoopId()
  * @method $this withLoopId($value)
  */
-class QueryLoopStatus extends V20171011Rpc
+class QueryLoopResult extends Rpc
+{
+}
+
+/**
+ * @method string getLoopId()
+ * @method $this withLoopId($value)
+ */
+class QueryLoopStatus extends Rpc
 {
 }
 
@@ -123,7 +120,7 @@ class QueryLoopStatus extends V20171011Rpc
  * @method string getParams()
  * @method $this withParams($value)
  */
-class CreateClusterLoop extends V20171011Rpc
+class CreateClusterLoop extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class CreateClusterLoop extends V20171011Rpc
  * @method string getCoreWordCode()
  * @method $this withCoreWordCode($value)
  */
-class UpdateCoreWord extends V20171011Rpc
+class UpdateCoreWord extends Rpc
 {
 }
 
@@ -141,7 +138,7 @@ class UpdateCoreWord extends V20171011Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class DeleteCoreWord extends V20171011Rpc
+class DeleteCoreWord extends Rpc
 {
 }
 
@@ -149,7 +146,7 @@ class DeleteCoreWord extends V20171011Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class CreateCoreWord extends V20171011Rpc
+class CreateCoreWord extends Rpc
 {
 }
 
@@ -157,7 +154,7 @@ class CreateCoreWord extends V20171011Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class DescribeCategory extends V20171011Rpc
+class DescribeCategory extends Rpc
 {
 }
 
@@ -167,11 +164,11 @@ class DescribeCategory extends V20171011Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class UpdatePerspective extends V20171011Rpc
+class UpdatePerspective extends Rpc
 {
 }
 
-class QueryPerspectives extends V20171011Rpc
+class QueryPerspectives extends Rpc
 {
 }
 
@@ -179,7 +176,7 @@ class QueryPerspectives extends V20171011Rpc
  * @method string getPerspectiveId()
  * @method $this withPerspectiveId($value)
  */
-class DescribePerspective extends V20171011Rpc
+class DescribePerspective extends Rpc
 {
 }
 
@@ -187,7 +184,7 @@ class DescribePerspective extends V20171011Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreatePerspective extends V20171011Rpc
+class CreatePerspective extends Rpc
 {
 }
 
@@ -195,7 +192,7 @@ class CreatePerspective extends V20171011Rpc
  * @method string getPerspectiveId()
  * @method $this withPerspectiveId($value)
  */
-class ActivatePerspective extends V20171011Rpc
+class ActivatePerspective extends Rpc
 {
 }
 
@@ -203,7 +200,7 @@ class ActivatePerspective extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class DisableDialogFlow extends V20171011Rpc
+class DisableDialogFlow extends Rpc
 {
 }
 
@@ -211,7 +208,7 @@ class DisableDialogFlow extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class DescribeDialogFlow extends V20171011Rpc
+class DescribeDialogFlow extends Rpc
 {
 }
 
@@ -219,7 +216,7 @@ class DescribeDialogFlow extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class TestDialogFlow extends V20171011Rpc
+class TestDialogFlow extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class TestDialogFlow extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class DescribeDialog extends V20171011Rpc
+class DescribeDialog extends Rpc
 {
 }
 
@@ -239,7 +236,7 @@ class DescribeDialog extends V20171011Rpc
  * @method string getDialogName()
  * @method $this withDialogName($value)
  */
-class UpdateDialog extends V20171011Rpc
+class UpdateDialog extends Rpc
 {
 }
 
@@ -253,7 +250,7 @@ class UpdateDialog extends V20171011Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryDialogs extends V20171011Rpc
+class QueryDialogs extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class QueryDialogs extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class DeleteDialog extends V20171011Rpc
+class DeleteDialog extends Rpc
 {
 }
 
@@ -271,7 +268,7 @@ class DeleteDialog extends V20171011Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class RemoveSynonym extends V20171011Rpc
+class RemoveSynonym extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class RemoveSynonym extends V20171011Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class AddSynonym extends V20171011Rpc
+class AddSynonym extends Rpc
 {
 }
 
@@ -295,7 +292,7 @@ class AddSynonym extends V20171011Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryIntents extends V20171011Rpc
+class QueryIntents extends Rpc
 {
 }
 
@@ -303,7 +300,7 @@ class QueryIntents extends V20171011Rpc
  * @method string getIntentId()
  * @method $this withIntentId($value)
  */
-class DescribeIntent extends V20171011Rpc
+class DescribeIntent extends Rpc
 {
 }
 
@@ -311,7 +308,7 @@ class DescribeIntent extends V20171011Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class DescribeCoreWord extends V20171011Rpc
+class DescribeCoreWord extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class DescribeCoreWord extends V20171011Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryCoreWords extends V20171011Rpc
+class QueryCoreWords extends Rpc
 {
 }
 
@@ -335,7 +332,7 @@ class QueryCoreWords extends V20171011Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class MoveKnowledgeCategory extends V20171011Rpc
+class MoveKnowledgeCategory extends Rpc
 {
 }
 
@@ -343,7 +340,7 @@ class MoveKnowledgeCategory extends V20171011Rpc
  * @method string getKnowledgeId()
  * @method $this withKnowledgeId($value)
  */
-class PublishKnowledge extends V20171011Rpc
+class PublishKnowledge extends Rpc
 {
 }
 
@@ -351,7 +348,7 @@ class PublishKnowledge extends V20171011Rpc
  * @method string getKnowledgeId()
  * @method $this withKnowledgeId($value)
  */
-class DisableKnowledge extends V20171011Rpc
+class DisableKnowledge extends Rpc
 {
 }
 
@@ -367,7 +364,7 @@ class DisableKnowledge extends V20171011Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class QueryKnowledges extends V20171011Rpc
+class QueryKnowledges extends Rpc
 {
 }
 
@@ -375,7 +372,7 @@ class QueryKnowledges extends V20171011Rpc
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
-class DeleteEntity extends V20171011Rpc
+class DeleteEntity extends Rpc
 {
 }
 
@@ -386,7 +383,7 @@ class DeleteEntity extends V20171011Rpc
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
-class RemoveEntityMember extends V20171011Rpc
+class RemoveEntityMember extends Rpc
 {
 
     /**
@@ -410,7 +407,7 @@ class RemoveEntityMember extends V20171011Rpc
  * @method string getApplyType()
  * @method $this withApplyType($value)
  */
-class AppendEntityMember extends V20171011Rpc
+class AppendEntityMember extends Rpc
 {
 
     /**
@@ -438,7 +435,7 @@ class AppendEntityMember extends V20171011Rpc
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
-class UpdateEntity extends V20171011Rpc
+class UpdateEntity extends Rpc
 {
 
     /**
@@ -459,7 +456,7 @@ class UpdateEntity extends V20171011Rpc
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
-class DescribeEntities extends V20171011Rpc
+class DescribeEntities extends Rpc
 {
 }
 
@@ -467,7 +464,7 @@ class DescribeEntities extends V20171011Rpc
  * @method string getIntentId()
  * @method $this withIntentId($value)
  */
-class DeleteIntent extends V20171011Rpc
+class DeleteIntent extends Rpc
 {
 }
 
@@ -476,7 +473,7 @@ class DeleteIntent extends V20171011Rpc
  * @method string getIntentId()
  * @method $this withIntentId($value)
  */
-class UpdateIntent extends V20171011Rpc
+class UpdateIntent extends Rpc
 {
 
     /**
@@ -503,7 +500,7 @@ class UpdateIntent extends V20171011Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class QueryEntities extends V20171011Rpc
+class QueryEntities extends Rpc
 {
 }
 
@@ -519,7 +516,7 @@ class QueryEntities extends V20171011Rpc
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
-class RecommendKnowledges extends V20171011Rpc
+class RecommendKnowledges extends Rpc
 {
 }
 
@@ -531,7 +528,7 @@ class RecommendKnowledges extends V20171011Rpc
  * @method string getDialogName()
  * @method $this withDialogName($value)
  */
-class CreateDialog extends V20171011Rpc
+class CreateDialog extends Rpc
 {
 }
 
@@ -541,14 +538,14 @@ class CreateDialog extends V20171011Rpc
  * @method string getParentCategoryId()
  * @method $this withParentCategoryId($value)
  */
-class QueryCategories extends V20171011Rpc
+class QueryCategories extends Rpc
 {
 }
 
 /**
  * @method string getKnowledge()
  */
-class UpdateKnowledge extends V20171011Rpc
+class UpdateKnowledge extends Rpc
 {
 
     /**
@@ -569,7 +566,7 @@ class UpdateKnowledge extends V20171011Rpc
  * @method string getKnowledgeId()
  * @method $this withKnowledgeId($value)
  */
-class DescribeKnowledge extends V20171011Rpc
+class DescribeKnowledge extends Rpc
 {
 }
 
@@ -577,14 +574,14 @@ class DescribeKnowledge extends V20171011Rpc
  * @method string getKnowledgeId()
  * @method $this withKnowledgeId($value)
  */
-class DeleteKnowledge extends V20171011Rpc
+class DeleteKnowledge extends Rpc
 {
 }
 
 /**
  * @method string getKnowledge()
  */
-class CreateKnowledge extends V20171011Rpc
+class CreateKnowledge extends Rpc
 {
 
     /**
@@ -606,7 +603,7 @@ class CreateKnowledge extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class UpdateDialogFlow extends V20171011Rpc
+class UpdateDialogFlow extends Rpc
 {
 
     /**
@@ -627,7 +624,7 @@ class UpdateDialogFlow extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class PublishDialogFlow extends V20171011Rpc
+class PublishDialogFlow extends Rpc
 {
 }
 
@@ -635,7 +632,7 @@ class PublishDialogFlow extends V20171011Rpc
  * @method string getEntityName()
  * @method $this withEntityName($value)
  */
-class QuerySystemEntities extends V20171011Rpc
+class QuerySystemEntities extends Rpc
 {
 }
 
@@ -650,7 +647,7 @@ class QuerySystemEntities extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class CreateEntity extends V20171011Rpc
+class CreateEntity extends Rpc
 {
 
     /**
@@ -672,7 +669,7 @@ class CreateEntity extends V20171011Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class CreateIntent extends V20171011Rpc
+class CreateIntent extends Rpc
 {
 
     /**
@@ -695,7 +692,7 @@ class CreateIntent extends V20171011Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateCategory extends V20171011Rpc
+class CreateCategory extends Rpc
 {
 }
 
@@ -703,7 +700,7 @@ class CreateCategory extends V20171011Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class DeleteCategory extends V20171011Rpc
+class DeleteCategory extends Rpc
 {
 }
 
@@ -713,7 +710,7 @@ class DeleteCategory extends V20171011Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class UpdateCategory extends V20171011Rpc
+class UpdateCategory extends Rpc
 {
 }
 
@@ -727,7 +724,7 @@ class UpdateCategory extends V20171011Rpc
  * @method string getSessionId()
  * @method $this withSessionId($value)
  */
-class Feedback extends V20171011Rpc
+class Feedback extends Rpc
 {
 }
 
@@ -750,7 +747,7 @@ class Feedback extends V20171011Rpc
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
-class Chat extends V20171011Rpc
+class Chat extends Rpc
 {
 
     /**

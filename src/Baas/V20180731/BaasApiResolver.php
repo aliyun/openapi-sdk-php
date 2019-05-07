@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Baas\V20180731;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UpdateAntChainConsortium updateAntChainConsortium(array $options = [])
  * @method CreateSmartContractJob createSmartContractJob(array $options = [])
  * @method StartSmartContractJob startSmartContractJob(array $options = [])
@@ -164,7 +161,7 @@ class BaasApiResolver
     use ApiResolverTrait;
 }
 
-class V20180731Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Baas';
@@ -180,7 +177,7 @@ class V20180731Rpc extends Rpc
  * @method string getName()
  * @method string getConsortiumId()
  */
-class UpdateAntChainConsortium extends V20180731Rpc
+class UpdateAntChainConsortium extends Rpc
 {
 
     /** @var string */
@@ -213,7 +210,7 @@ class UpdateAntChainConsortium extends V20180731Rpc
     }
 }
 
-class CreateSmartContractJob extends V20180731Rpc
+class CreateSmartContractJob extends Rpc
 {
 
     /** @var string */
@@ -226,7 +223,7 @@ class CreateSmartContractJob extends V20180731Rpc
  * @method string getSourceOpt()
  * @method string getJobName()
  */
-class StartSmartContractJob extends V20180731Rpc
+class StartSmartContractJob extends Rpc
 {
 
     /** @var string */
@@ -288,7 +285,7 @@ class StartSmartContractJob extends V20180731Rpc
 /**
  * @method string getJobId()
  */
-class DescribeSmartContractResult extends V20180731Rpc
+class DescribeSmartContractResult extends Rpc
 {
 
     /** @var string */
@@ -311,7 +308,7 @@ class DescribeSmartContractResult extends V20180731Rpc
 /**
  * @method string getJobId()
  */
-class DescribeSmartContractJobStatus extends V20180731Rpc
+class DescribeSmartContractJobStatus extends Rpc
 {
 
     /** @var string */
@@ -335,7 +332,7 @@ class DescribeSmartContractJobStatus extends V20180731Rpc
  * @method string getSize()
  * @method string getStart()
  */
-class DescribeSmartContractJobs extends V20180731Rpc
+class DescribeSmartContractJobs extends Rpc
 {
 
     /** @var string */
@@ -373,7 +370,7 @@ class DescribeSmartContractJobs extends V20180731Rpc
  * @method string getStart()
  * @method string getName()
  */
-class DescribeSmartContractJobsByName extends V20180731Rpc
+class DescribeSmartContractJobsByName extends Rpc
 {
 
     /** @var string */
@@ -425,7 +422,7 @@ class DescribeSmartContractJobsByName extends V20180731Rpc
  * @method string getPublicKey()
  * @method string getRecoveryKey()
  */
-class CreateOwnAccount extends V20180731Rpc
+class CreateOwnAccount extends Rpc
 {
 
     /** @var string */
@@ -487,7 +484,7 @@ class CreateOwnAccount extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeMemberRole extends V20180731Rpc
+class DescribeMemberRole extends Rpc
 {
 
     /**
@@ -507,7 +504,7 @@ class DescribeMemberRole extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeQRCodeAccessLog extends V20180731Rpc
+class DescribeQRCodeAccessLog extends Rpc
 {
 
     /**
@@ -528,7 +525,7 @@ class DescribeQRCodeAccessLog extends V20180731Rpc
  * @method string getAuthorized()
  * @method string getBizid()
  */
-class UpdateQRCodeAuthority extends V20180731Rpc
+class UpdateQRCodeAuthority extends Rpc
 {
 
     /**
@@ -561,7 +558,7 @@ class UpdateQRCodeAuthority extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeQRCodeAuthority extends V20180731Rpc
+class DescribeQRCodeAuthority extends Rpc
 {
 
     /**
@@ -583,7 +580,7 @@ class DescribeQRCodeAuthority extends V20180731Rpc
  * @method string getBizid()
  * @method string getHash()
  */
-class DescribeTransactionReceiptFor2CBrowser extends V20180731Rpc
+class DescribeTransactionReceiptFor2CBrowser extends Rpc
 {
 
     /**
@@ -630,7 +627,7 @@ class DescribeTransactionReceiptFor2CBrowser extends V20180731Rpc
  * @method string getBizid()
  * @method string getHash()
  */
-class DescribeTransactionQRCode extends V20180731Rpc
+class DescribeTransactionQRCode extends Rpc
 {
 
     /**
@@ -665,7 +662,7 @@ class DescribeTransactionQRCode extends V20180731Rpc
  * @method string getBizid()
  * @method string getHash()
  */
-class DescribeTransactionFor2CBrowser extends V20180731Rpc
+class DescribeTransactionFor2CBrowser extends Rpc
 {
 
     /**
@@ -711,7 +708,7 @@ class DescribeTransactionFor2CBrowser extends V20180731Rpc
 /**
  * @method string getLocale()
  */
-class DescribeAntRegions extends V20180731Rpc
+class DescribeAntRegions extends Rpc
 {
 
     /** @var string */
@@ -735,7 +732,7 @@ class DescribeAntRegions extends V20180731Rpc
  * @method string getPurpose()
  * @method $this withPurpose($value)
  */
-class DescribeBlockchainConfigOption extends V20180731Rpc
+class DescribeBlockchainConfigOption extends Rpc
 {
 
     /** @var string */
@@ -745,7 +742,7 @@ class DescribeBlockchainConfigOption extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeDownloadPathsOfContractChain extends V20180731Rpc
+class DescribeDownloadPathsOfContractChain extends Rpc
 {
 
     /**
@@ -765,7 +762,7 @@ class DescribeDownloadPathsOfContractChain extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeDownloadPathsOfNotaryChain extends V20180731Rpc
+class DescribeDownloadPathsOfNotaryChain extends Rpc
 {
 
     /**
@@ -785,7 +782,7 @@ class DescribeDownloadPathsOfNotaryChain extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeLatest15Blocks extends V20180731Rpc
+class DescribeLatest15Blocks extends Rpc
 {
 
     /**
@@ -805,7 +802,7 @@ class DescribeLatest15Blocks extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeLatest15TransDigests extends V20180731Rpc
+class DescribeLatest15TransDigests extends Rpc
 {
 
     /**
@@ -827,7 +824,7 @@ class DescribeLatest15TransDigests extends V20180731Rpc
  * @method string getBizid()
  * @method string getPageSize()
  */
-class DescribeMembers extends V20180731Rpc
+class DescribeMembers extends Rpc
 {
 
     /**
@@ -876,7 +873,7 @@ class DescribeMembers extends V20180731Rpc
  * @method string getBid()
  * @method string getUserId()
  */
-class UpdateMemberRole extends V20180731Rpc
+class UpdateMemberRole extends Rpc
 {
 
     /** @var string */
@@ -941,7 +938,7 @@ class UpdateMemberRole extends V20180731Rpc
  * @method string getAccount()
  * @method string getAccountRecoverPubKey()
  */
-class CreateAccount extends V20180731Rpc
+class CreateAccount extends Rpc
 {
 
     /** @var string */
@@ -1004,7 +1001,7 @@ class CreateAccount extends V20180731Rpc
  * @method string getBizid()
  * @method string getAccount()
  */
-class FreezeAccount extends V20180731Rpc
+class FreezeAccount extends Rpc
 {
 
     /** @var string */
@@ -1041,7 +1038,7 @@ class FreezeAccount extends V20180731Rpc
  * @method string getBizid()
  * @method string getAccount()
  */
-class UnfreezeAccount extends V20180731Rpc
+class UnfreezeAccount extends Rpc
 {
 
     /** @var string */
@@ -1078,7 +1075,7 @@ class UnfreezeAccount extends V20180731Rpc
  * @method string getBizid()
  * @method string getNewName()
  */
-class RenameBlockchain extends V20180731Rpc
+class RenameBlockchain extends Rpc
 {
 
     /** @var string */
@@ -1114,7 +1111,7 @@ class RenameBlockchain extends V20180731Rpc
 /**
  * @method string getId()
  */
-class DescribeEthereumNode extends V20180731Rpc
+class DescribeEthereumNode extends Rpc
 {
 
     /** @var string */
@@ -1137,7 +1134,7 @@ class DescribeEthereumNode extends V20180731Rpc
 /**
  * @method string getId()
  */
-class DescribeEthereum extends V20180731Rpc
+class DescribeEthereum extends Rpc
 {
 
     /** @var string */
@@ -1160,7 +1157,7 @@ class DescribeEthereum extends V20180731Rpc
 /**
  * @method string getId()
  */
-class DescribeEthereumInvitee extends V20180731Rpc
+class DescribeEthereumInvitee extends Rpc
 {
 
     /** @var string */
@@ -1184,7 +1181,7 @@ class DescribeEthereumInvitee extends V20180731Rpc
  * @method string getId()
  * @method array getInvitee()
  */
-class ApproveEthereumInvitee extends V20180731Rpc
+class ApproveEthereumInvitee extends Rpc
 {
 
     /** @var string */
@@ -1222,7 +1219,7 @@ class ApproveEthereumInvitee extends V20180731Rpc
 /**
  * @method string getNodeId()
  */
-class DescribeExplorerURL extends V20180731Rpc
+class DescribeExplorerURL extends Rpc
 {
 
     /** @var string */
@@ -1245,7 +1242,7 @@ class DescribeExplorerURL extends V20180731Rpc
 /**
  * @method string getId()
  */
-class DescribeNetstatURL extends V20180731Rpc
+class DescribeNetstatURL extends Rpc
 {
 
     /** @var string */
@@ -1269,7 +1266,7 @@ class DescribeNetstatURL extends V20180731Rpc
  * @method string getCode()
  * @method string getToken()
  */
-class AcceptEthereumInvitation extends V20180731Rpc
+class AcceptEthereumInvitation extends Rpc
 {
 
     /** @var string */
@@ -1305,7 +1302,7 @@ class AcceptEthereumInvitation extends V20180731Rpc
 /**
  * @method string getToken()
  */
-class DescribeEthereumInvitaion extends V20180731Rpc
+class DescribeEthereumInvitaion extends Rpc
 {
 
     /** @var string */
@@ -1328,7 +1325,7 @@ class DescribeEthereumInvitaion extends V20180731Rpc
 /**
  * @method string getEthereumId()
  */
-class CreateEthereumInvitation extends V20180731Rpc
+class CreateEthereumInvitation extends Rpc
 {
 
     /** @var string */
@@ -1353,7 +1350,7 @@ class CreateEthereumInvitation extends V20180731Rpc
  * @method string getNodeId()
  * @method string getTarget()
  */
-class DescribeEthereumNodeLogs extends V20180731Rpc
+class DescribeEthereumNodeLogs extends Rpc
 {
 
     /** @var string */
@@ -1404,7 +1401,7 @@ class DescribeEthereumNodeLogs extends V20180731Rpc
  * @method string getNodeId()
  * @method string getUsername()
  */
-class UpdateEthereumClientUserPassword extends V20180731Rpc
+class UpdateEthereumClientUserPassword extends Rpc
 {
 
     /** @var string */
@@ -1453,7 +1450,7 @@ class UpdateEthereumClientUserPassword extends V20180731Rpc
 /**
  * @method string getNodeId()
  */
-class DescribeEthereumClientUsers extends V20180731Rpc
+class DescribeEthereumClientUsers extends Rpc
 {
 
     /** @var string */
@@ -1476,7 +1473,7 @@ class DescribeEthereumClientUsers extends V20180731Rpc
 /**
  * @method string getNodeId()
  */
-class DescribeEthereumNodeInfo extends V20180731Rpc
+class DescribeEthereumNodeInfo extends Rpc
 {
 
     /** @var string */
@@ -1502,7 +1499,7 @@ class DescribeEthereumNodeInfo extends V20180731Rpc
  * @method string getDescription()
  * @method string getExternalNode()
  */
-class AddEthereumNode extends V20180731Rpc
+class AddEthereumNode extends Rpc
 {
 
     /** @var string */
@@ -1566,7 +1563,7 @@ class AddEthereumNode extends V20180731Rpc
  * @method string getDescription()
  * @method string getNodeId()
  */
-class UpdateEthereumNode extends V20180731Rpc
+class UpdateEthereumNode extends Rpc
 {
 
     /** @var string */
@@ -1612,7 +1609,7 @@ class UpdateEthereumNode extends V20180731Rpc
     }
 }
 
-class DescribeEthereumNodes extends V20180731Rpc
+class DescribeEthereumNodes extends Rpc
 {
 
     /** @var string */
@@ -1624,7 +1621,7 @@ class DescribeEthereumNodes extends V20180731Rpc
  * @method string getEthereumId()
  * @method string getDescription()
  */
-class UpdateEthereum extends V20180731Rpc
+class UpdateEthereum extends Rpc
 {
 
     /** @var string */
@@ -1670,7 +1667,7 @@ class UpdateEthereum extends V20180731Rpc
     }
 }
 
-class DescribeEthereums extends V20180731Rpc
+class DescribeEthereums extends Rpc
 {
 
     /** @var string */
@@ -1687,7 +1684,7 @@ class DescribeEthereums extends V20180731Rpc
  * @method string getNetworkId()
  * @method string getRegion()
  */
-class CreateEthereum extends V20180731Rpc
+class CreateEthereum extends Rpc
 {
 
     /** @var string */
@@ -1811,7 +1808,7 @@ class CreateEthereum extends V20180731Rpc
  * @method string getTMPort()
  * @method string getNodeId()
  */
-class UpdateEthereumNodeConfiguration extends V20180731Rpc
+class UpdateEthereumNodeConfiguration extends Rpc
 {
 
     /** @var string */
@@ -1938,7 +1935,7 @@ class UpdateEthereumNodeConfiguration extends V20180731Rpc
 /**
  * @method string getNodeId()
  */
-class DescribeEthereumNodeConfiguration extends V20180731Rpc
+class DescribeEthereumNodeConfiguration extends Rpc
 {
 
     /** @var string */
@@ -1961,7 +1958,7 @@ class DescribeEthereumNodeConfiguration extends V20180731Rpc
 /**
  * @method string getEthereumId()
  */
-class DescribeEthereumDeletable extends V20180731Rpc
+class DescribeEthereumDeletable extends Rpc
 {
 
     /** @var string */
@@ -1984,7 +1981,7 @@ class DescribeEthereumDeletable extends V20180731Rpc
 /**
  * @method string getEthereumId()
  */
-class QueryEthereumDeletable extends V20180731Rpc
+class QueryEthereumDeletable extends Rpc
 {
 
     /** @var string */
@@ -2007,7 +2004,7 @@ class QueryEthereumDeletable extends V20180731Rpc
 /**
  * @method string getEthereumId()
  */
-class DestroyEthereum extends V20180731Rpc
+class DestroyEthereum extends Rpc
 {
 
     /** @var string */
@@ -2031,7 +2028,7 @@ class DestroyEthereum extends V20180731Rpc
  * @method string getChaincodeId()
  * @method string getLocation()
  */
-class DescribeChaincodeCollectionConfig extends V20180731Rpc
+class DescribeChaincodeCollectionConfig extends Rpc
 {
 
     /**
@@ -2061,7 +2058,7 @@ class DescribeChaincodeCollectionConfig extends V20180731Rpc
     }
 }
 
-class DescribeResourceType extends V20180731Rpc
+class DescribeResourceType extends Rpc
 {
 }
 
@@ -2069,7 +2066,7 @@ class DescribeResourceType extends V20180731Rpc
  * @method string getBizid()
  * @method string getHash()
  */
-class DescribeTransaction extends V20180731Rpc
+class DescribeTransaction extends Rpc
 {
 
     /**
@@ -2108,7 +2105,7 @@ class DescribeTransaction extends V20180731Rpc
  * @method string getTimeArea()
  * @method string getInnerIp()
  */
-class DescribeMetric extends V20180731Rpc
+class DescribeMetric extends Rpc
 {
 
     /**
@@ -2181,7 +2178,7 @@ class DescribeMetric extends V20180731Rpc
  * @method string getBizid()
  * @method string getHeight()
  */
-class DescribeBlock extends V20180731Rpc
+class DescribeBlock extends Rpc
 {
 
     /**
@@ -2215,7 +2212,7 @@ class DescribeBlock extends V20180731Rpc
  * @method string getSchemaId()
  * @method string getBizid()
  */
-class DescribeSchemaDetail extends V20180731Rpc
+class DescribeSchemaDetail extends Rpc
 {
 
     /**
@@ -2248,7 +2245,7 @@ class DescribeSchemaDetail extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DownloadSDK2 extends V20180731Rpc
+class DownloadSDK2 extends Rpc
 {
 
     /**
@@ -2265,7 +2262,7 @@ class DownloadSDK2 extends V20180731Rpc
     }
 }
 
-class DescribeMySuccessfulApplication extends V20180731Rpc
+class DescribeMySuccessfulApplication extends Rpc
 {
 }
 
@@ -2280,7 +2277,7 @@ class DescribeMySuccessfulApplication extends V20180731Rpc
  * @method string getTlsAlgo()
  * @method string getMerkleTreeSuit()
  */
-class CreateBlockchainApplication extends V20180731Rpc
+class CreateBlockchainApplication extends Rpc
 {
 
     /**
@@ -2404,7 +2401,7 @@ class CreateBlockchainApplication extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeBlockchainSchema extends V20180731Rpc
+class DescribeBlockchainSchema extends Rpc
 {
 
     /**
@@ -2424,7 +2421,7 @@ class DescribeBlockchainSchema extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class ResetCertificate extends V20180731Rpc
+class ResetCertificate extends Rpc
 {
 
     /**
@@ -2441,14 +2438,14 @@ class ResetCertificate extends V20180731Rpc
     }
 }
 
-class DescribeTemplates extends V20180731Rpc
+class DescribeTemplates extends Rpc
 {
 }
 
 /**
  * @method string getBizid()
  */
-class DescribeOssProperties extends V20180731Rpc
+class DescribeOssProperties extends Rpc
 {
 
     /**
@@ -2465,18 +2462,18 @@ class DescribeOssProperties extends V20180731Rpc
     }
 }
 
-class DescribeMySuccessApplies extends V20180731Rpc
+class DescribeMySuccessApplies extends Rpc
 {
 }
 
-class DescribeMyBlockchains extends V20180731Rpc
+class DescribeMyBlockchains extends Rpc
 {
 }
 
 /**
  * @method string getBizid()
  */
-class DescribeBlockchainInfo extends V20180731Rpc
+class DescribeBlockchainInfo extends Rpc
 {
 
     /**
@@ -2497,7 +2494,7 @@ class DescribeBlockchainInfo extends V20180731Rpc
  * @method string getCurrent()
  * @method string getPageSize()
  */
-class DescribeBlockchainCreateTask extends V20180731Rpc
+class DescribeBlockchainCreateTask extends Rpc
 {
 
     /**
@@ -2530,7 +2527,7 @@ class DescribeBlockchainCreateTask extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DescribeBcSchema extends V20180731Rpc
+class DescribeBcSchema extends Rpc
 {
 
     /**
@@ -2553,7 +2550,7 @@ class DescribeBcSchema extends V20180731Rpc
  * @method string getPageSize()
  * @method string getStatus()
  */
-class DescribeApplies extends V20180731Rpc
+class DescribeApplies extends Rpc
 {
 
     /**
@@ -2612,7 +2609,7 @@ class DescribeApplies extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DownloadAll extends V20180731Rpc
+class DownloadAll extends Rpc
 {
 
     /**
@@ -2633,7 +2630,7 @@ class DownloadAll extends V20180731Rpc
  * @method string getCurrent()
  * @method string getPageSize()
  */
-class GetBlockchainCreateTask extends V20180731Rpc
+class GetBlockchainCreateTask extends Rpc
 {
 
     /**
@@ -2671,7 +2668,7 @@ class GetBlockchainCreateTask extends V20180731Rpc
  * @method string getLines()
  * @method $this withLines($value)
  */
-class DescribePeerLogs extends V20180731Rpc
+class DescribePeerLogs extends Rpc
 {
 }
 
@@ -2683,14 +2680,14 @@ class DescribePeerLogs extends V20180731Rpc
  * @method string getOrdererName()
  * @method $this withOrdererName($value)
  */
-class DescribeOrdererLogs extends V20180731Rpc
+class DescribeOrdererLogs extends Rpc
 {
 }
 
 /**
  * @method string getBizid()
  */
-class GetOssProperties extends V20180731Rpc
+class GetOssProperties extends Rpc
 {
 
     /**
@@ -2714,7 +2711,7 @@ class GetOssProperties extends V20180731Rpc
  * @method string getDescription()
  * @method string getCategoryConfigs()
  */
-class UpdateSchema extends V20180731Rpc
+class UpdateSchema extends Rpc
 {
 
     /**
@@ -2787,7 +2784,7 @@ class UpdateSchema extends V20180731Rpc
  * @method string getSchemaId()
  * @method string getBizid()
  */
-class SchemaDetail extends V20180731Rpc
+class SchemaDetail extends Rpc
 {
 
     /**
@@ -2823,7 +2820,7 @@ class SchemaDetail extends V20180731Rpc
  * @method string getOperation()
  * @method string getUserName()
  */
-class ResetUser extends V20180731Rpc
+class ResetUser extends Rpc
 {
 
     /**
@@ -2885,7 +2882,7 @@ class ResetUser extends V20180731Rpc
  * @method string getBid()
  * @method string getUserName()
  */
-class RejectUser extends V20180731Rpc
+class RejectUser extends Rpc
 {
 
     /**
@@ -2945,7 +2942,7 @@ class RejectUser extends V20180731Rpc
  * @method string getBizid()
  * @method string getHash()
  */
-class QueryTransaction extends V20180731Rpc
+class QueryTransaction extends Rpc
 {
 
     /**
@@ -2984,7 +2981,7 @@ class QueryTransaction extends V20180731Rpc
  * @method string getTimeArea()
  * @method string getInnerIp()
  */
-class QueryMetric extends V20180731Rpc
+class QueryMetric extends Rpc
 {
 
     /**
@@ -3057,7 +3054,7 @@ class QueryMetric extends V20180731Rpc
  * @method string getBizid()
  * @method string getHeight()
  */
-class QueryBlock extends V20180731Rpc
+class QueryBlock extends Rpc
 {
 
     /**
@@ -3093,7 +3090,7 @@ class QueryBlock extends V20180731Rpc
  * @method string getOperation()
  * @method string getUserName()
  */
-class OperateUser extends V20180731Rpc
+class OperateUser extends Rpc
 {
 
     /**
@@ -3155,7 +3152,7 @@ class OperateUser extends V20180731Rpc
  * @method string getUserId()
  * @method string getUserEmail()
  */
-class InviteUser extends V20180731Rpc
+class InviteUser extends Rpc
 {
 
     /**
@@ -3211,22 +3208,22 @@ class InviteUser extends V20180731Rpc
     }
 }
 
-class GetTemplates extends V20180731Rpc
+class GetTemplates extends Rpc
 {
 }
 
-class GetMySuccessApplies extends V20180731Rpc
+class GetMySuccessApplies extends Rpc
 {
 }
 
-class GetMyBlockchains extends V20180731Rpc
+class GetMyBlockchains extends Rpc
 {
 }
 
 /**
  * @method string getBizid()
  */
-class GetBlockchainInfo extends V20180731Rpc
+class GetBlockchainInfo extends Rpc
 {
 
     /**
@@ -3246,7 +3243,7 @@ class GetBlockchainInfo extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class GetBcSchema extends V20180731Rpc
+class GetBcSchema extends Rpc
 {
 
     /**
@@ -3269,7 +3266,7 @@ class GetBcSchema extends V20180731Rpc
  * @method string getPageSize()
  * @method string getStatus()
  */
-class GetApplies extends V20180731Rpc
+class GetApplies extends Rpc
 {
 
     /**
@@ -3329,7 +3326,7 @@ class GetApplies extends V20180731Rpc
  * @method string getPath()
  * @method string getBizid()
  */
-class DownloadSignedData extends V20180731Rpc
+class DownloadSignedData extends Rpc
 {
 
     /**
@@ -3362,7 +3359,7 @@ class DownloadSignedData extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DownloadSdk extends V20180731Rpc
+class DownloadSdk extends Rpc
 {
 
     /**
@@ -3382,7 +3379,7 @@ class DownloadSdk extends V20180731Rpc
 /**
  * @method string getBizid()
  */
-class DownloadBizview extends V20180731Rpc
+class DownloadBizview extends Rpc
 {
 
     /**
@@ -3405,7 +3402,7 @@ class DownloadBizview extends V20180731Rpc
  * @method string getLiveTime()
  * @method string getBizid()
  */
-class CreateBlockchainApply extends V20180731Rpc
+class CreateBlockchainApply extends Rpc
 {
 
     /**
@@ -3468,7 +3465,7 @@ class CreateBlockchainApply extends V20180731Rpc
  * @method string getAccountRecoverPubKey()
  * @method string getAccount()
  */
-class ApplyBlockchain extends V20180731Rpc
+class ApplyBlockchain extends Rpc
 {
 
     /**
@@ -3542,7 +3539,7 @@ class ApplyBlockchain extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class DescribeOrganizationDeletable extends V20180731Rpc
+class DescribeOrganizationDeletable extends Rpc
 {
 
     /**
@@ -3564,7 +3561,7 @@ class DescribeOrganizationDeletable extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class DescribeConsortiumDeletable extends V20180731Rpc
+class DescribeConsortiumDeletable extends Rpc
 {
 
     /** @var string */
@@ -3589,7 +3586,7 @@ class DescribeConsortiumDeletable extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class QueryConsortiumDeletable extends V20180731Rpc
+class QueryConsortiumDeletable extends Rpc
 {
 
     /** @var string */
@@ -3614,7 +3611,7 @@ class QueryConsortiumDeletable extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class QueryOrganizationDeletable extends V20180731Rpc
+class QueryOrganizationDeletable extends Rpc
 {
 
     /**
@@ -3634,7 +3631,7 @@ class QueryOrganizationDeletable extends V20180731Rpc
 /**
  * @method string getChaincodeId()
  */
-class DeleteChaincode extends V20180731Rpc
+class DeleteChaincode extends Rpc
 {
 
     /**
@@ -3660,7 +3657,7 @@ class DeleteChaincode extends V20180731Rpc
  * @method string getExMethod()
  * @method $this withExMethod($value)
  */
-class DescribeExplorer extends V20180731Rpc
+class DescribeExplorer extends Rpc
 {
 
     /** @var string */
@@ -3683,7 +3680,7 @@ class DescribeExplorer extends V20180731Rpc
 /**
  * @method string getOrganizationId()
  */
-class DestroyOrganization extends V20180731Rpc
+class DestroyOrganization extends Rpc
 {
 
     /** @var string */
@@ -3706,7 +3703,7 @@ class DestroyOrganization extends V20180731Rpc
 /**
  * @method string getConsortiumId()
  */
-class DestroyConsortium extends V20180731Rpc
+class DestroyConsortium extends Rpc
 {
 
     /** @var string */
@@ -3733,7 +3730,7 @@ class DestroyConsortium extends V20180731Rpc
  * @method string getUsername()
  * @method $this withUsername($value)
  */
-class DownloadOrganizationSDK extends V20180731Rpc
+class DownloadOrganizationSDK extends Rpc
 {
 
     /**
@@ -3754,7 +3751,7 @@ class DownloadOrganizationSDK extends V20180731Rpc
  * @method string getOrganizationId()
  * @method string getChaincodeId()
  */
-class SynchronizeChaincode extends V20180731Rpc
+class SynchronizeChaincode extends Rpc
 {
 
     /** @var string */
@@ -3793,7 +3790,7 @@ class SynchronizeChaincode extends V20180731Rpc
  * @method string getLocation()
  * @method string getUsername()
  */
-class ResetOrganizationUserPassword extends V20180731Rpc
+class ResetOrganizationUserPassword extends Rpc
 {
 
     /**
@@ -3852,7 +3849,7 @@ class ResetOrganizationUserPassword extends V20180731Rpc
 /**
  * @method string getConsortiumId()
  */
-class DescribeInvitationCode extends V20180731Rpc
+class DescribeInvitationCode extends Rpc
 {
 
     /**
@@ -3873,7 +3870,7 @@ class DescribeInvitationCode extends V20180731Rpc
  * @method string getDomainCode()
  * @method string getDomain()
  */
-class CheckOrganizationDomain extends V20180731Rpc
+class CheckOrganizationDomain extends Rpc
 {
 
     /**
@@ -3906,7 +3903,7 @@ class CheckOrganizationDomain extends V20180731Rpc
 /**
  * @method string getDomainCode()
  */
-class CheckConsortiumDomain extends V20180731Rpc
+class CheckConsortiumDomain extends Rpc
 {
 
     /**
@@ -3923,19 +3920,19 @@ class CheckConsortiumDomain extends V20180731Rpc
     }
 }
 
-class DescribeRootDomain extends V20180731Rpc
+class DescribeRootDomain extends Rpc
 {
 }
 
-class DescribeOrganizationSpecs extends V20180731Rpc
+class DescribeOrganizationSpecs extends Rpc
 {
 }
 
-class DescribeEcosphereSpecs extends V20180731Rpc
+class DescribeEcosphereSpecs extends Rpc
 {
 }
 
-class DescribeConsortiumSpecs extends V20180731Rpc
+class DescribeConsortiumSpecs extends Rpc
 {
 }
 
@@ -3943,7 +3940,7 @@ class DescribeConsortiumSpecs extends V20180731Rpc
  * @method string getLocation()
  * @method string getConsortiumId()
  */
-class DescribeConsortiumOrderers extends V20180731Rpc
+class DescribeConsortiumOrderers extends Rpc
 {
 
     /**
@@ -3973,11 +3970,11 @@ class DescribeConsortiumOrderers extends V20180731Rpc
     }
 }
 
-class DescribeConsortiumConfig extends V20180731Rpc
+class DescribeConsortiumConfig extends Rpc
 {
 }
 
-class DescribeTasks extends V20180731Rpc
+class DescribeTasks extends Rpc
 {
 }
 
@@ -3987,7 +3984,7 @@ class DescribeTasks extends V20180731Rpc
  * @method string getUsername()
  * @method string getAttrs()
  */
-class CreateOrganizationUser extends V20180731Rpc
+class CreateOrganizationUser extends Rpc
 {
 
     /**
@@ -4058,7 +4055,7 @@ class CreateOrganizationUser extends V20180731Rpc
  * @method string getPeersCount()
  * @method string getPricingCycle()
  */
-class CreateEcosphere extends V20180731Rpc
+class CreateEcosphere extends Rpc
 {
 
     /** @var string */
@@ -4253,7 +4250,7 @@ class CreateEcosphere extends V20180731Rpc
  * @method string getPeersCount()
  * @method string getPricingCycle()
  */
-class CreateConsortium extends V20180731Rpc
+class CreateConsortium extends Rpc
 {
 
     /**
@@ -4431,7 +4428,7 @@ class CreateConsortium extends V20180731Rpc
 /**
  * @method string getLocation()
  */
-class DescribeOrganizations extends V20180731Rpc
+class DescribeOrganizations extends Rpc
 {
 
     /** @var string */
@@ -4469,7 +4466,7 @@ class DescribeOrganizations extends V20180731Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class CreateOrganization extends V20180731Rpc
+class CreateOrganization extends Rpc
 {
 }
 
@@ -4477,7 +4474,7 @@ class CreateOrganization extends V20180731Rpc
  * @method string getOrganizationId()
  * @method string getLocation()
  */
-class DescribeOrganizationChaincodes extends V20180731Rpc
+class DescribeOrganizationChaincodes extends Rpc
 {
 
     /**
@@ -4512,7 +4509,7 @@ class DescribeOrganizationChaincodes extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class DescribeOrganizationChannels extends V20180731Rpc
+class DescribeOrganizationChannels extends Rpc
 {
 
     /** @var string */
@@ -4537,7 +4534,7 @@ class DescribeOrganizationChannels extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class DescribeConsortiumChannels extends V20180731Rpc
+class DescribeConsortiumChannels extends Rpc
 {
 
     /** @var string */
@@ -4564,7 +4561,7 @@ class DescribeConsortiumChannels extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class CreateChannel extends V20180731Rpc
+class CreateChannel extends Rpc
 {
 
     /**
@@ -4587,7 +4584,7 @@ class CreateChannel extends V20180731Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class DescribeChannelMembers extends V20180731Rpc
+class DescribeChannelMembers extends Rpc
 {
 }
 
@@ -4596,7 +4593,7 @@ class DescribeChannelMembers extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class DescribeOrganization extends V20180731Rpc
+class DescribeOrganization extends Rpc
 {
 
     /**
@@ -4618,7 +4615,7 @@ class DescribeOrganization extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class DescribeOrganizationPeers extends V20180731Rpc
+class DescribeOrganizationPeers extends Rpc
 {
 
     /**
@@ -4640,7 +4637,7 @@ class DescribeOrganizationPeers extends V20180731Rpc
  * @method $this withOrganizationId($value)
  * @method string getLocation()
  */
-class DescribeOrganizationUsers extends V20180731Rpc
+class DescribeOrganizationUsers extends Rpc
 {
 
     /**
@@ -4657,7 +4654,7 @@ class DescribeOrganizationUsers extends V20180731Rpc
     }
 }
 
-class DescribeRegions extends V20180731Rpc
+class DescribeRegions extends Rpc
 {
 
     /** @var string */
@@ -4669,7 +4666,7 @@ class DescribeRegions extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class ConfirmConsortiumMember extends V20180731Rpc
+class ConfirmConsortiumMember extends Rpc
 {
 
     /** @var string */
@@ -4698,7 +4695,7 @@ class ConfirmConsortiumMember extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class CreateConsortiumMember extends V20180731Rpc
+class CreateConsortiumMember extends Rpc
 {
 
     /**
@@ -4722,7 +4719,7 @@ class CreateConsortiumMember extends V20180731Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class CreateChannelMember extends V20180731Rpc
+class CreateChannelMember extends Rpc
 {
 
     /**
@@ -4746,7 +4743,7 @@ class CreateChannelMember extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class DescribeConsortiums extends V20180731Rpc
+class DescribeConsortiums extends Rpc
 {
 
     /** @var string */
@@ -4773,7 +4770,7 @@ class DescribeConsortiums extends V20180731Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class JoinChannel extends V20180731Rpc
+class JoinChannel extends Rpc
 {
 
     /**
@@ -4794,7 +4791,7 @@ class JoinChannel extends V20180731Rpc
  * @method string getOrganizationId()
  * @method string getLocation()
  */
-class DescribeOrgnaizationChaincodes extends V20180731Rpc
+class DescribeOrgnaizationChaincodes extends Rpc
 {
 
     /**
@@ -4828,7 +4825,7 @@ class DescribeOrgnaizationChaincodes extends V20180731Rpc
  * @method string getLocation()
  * @method string getConsortiumId()
  */
-class DescribeConsortiumChaincodes extends V20180731Rpc
+class DescribeConsortiumChaincodes extends Rpc
 {
 
     /**
@@ -4867,7 +4864,7 @@ class DescribeConsortiumChaincodes extends V20180731Rpc
  * @method string getChannelId()
  * @method string getConsortiumId()
  */
-class CreateChaincode extends V20180731Rpc
+class CreateChaincode extends Rpc
 {
 
     /** @var string */
@@ -4970,7 +4967,7 @@ class CreateChaincode extends V20180731Rpc
  * @method string getChaincodeId()
  * @method string getLocation()
  */
-class InstallChaincode extends V20180731Rpc
+class InstallChaincode extends Rpc
 {
 
     /**
@@ -5020,7 +5017,7 @@ class InstallChaincode extends V20180731Rpc
  * @method string getEndorsePolicy()
  * @method string getLocation()
  */
-class UpgradeChaincode extends V20180731Rpc
+class UpgradeChaincode extends Rpc
 {
 
     /**
@@ -5096,7 +5093,7 @@ class UpgradeChaincode extends V20180731Rpc
  * @method string getEndorsePolicy()
  * @method string getLocation()
  */
-class InstantiateChaincode extends V20180731Rpc
+class InstantiateChaincode extends Rpc
 {
 
     /**
@@ -5168,7 +5165,7 @@ class InstantiateChaincode extends V20180731Rpc
 /**
  * @method string getLocation()
  */
-class DescribeConsortiumAdminStatus extends V20180731Rpc
+class DescribeConsortiumAdminStatus extends Rpc
 {
 
     /**
@@ -5188,7 +5185,7 @@ class DescribeConsortiumAdminStatus extends V20180731Rpc
 /**
  * @method string getOrganizationId()
  */
-class DescribeChaincodeUploadPolicy extends V20180731Rpc
+class DescribeChaincodeUploadPolicy extends Rpc
 {
 
     /**
@@ -5208,7 +5205,7 @@ class DescribeChaincodeUploadPolicy extends V20180731Rpc
 /**
  * @method string getConsortiumId()
  */
-class DescribeInvitationList extends V20180731Rpc
+class DescribeInvitationList extends Rpc
 {
 
     /**
@@ -5229,7 +5226,7 @@ class DescribeInvitationList extends V20180731Rpc
  * @method string getOrganizationId()
  * @method string getLocation()
  */
-class DescribeOrganizationMembers extends V20180731Rpc
+class DescribeOrganizationMembers extends Rpc
 {
 
     /**
@@ -5263,7 +5260,7 @@ class DescribeOrganizationMembers extends V20180731Rpc
  * @method string getLocation()
  * @method string getConsortiumId()
  */
-class DescribeConsortiumMembers extends V20180731Rpc
+class DescribeConsortiumMembers extends Rpc
 {
 
     /**
@@ -5296,7 +5293,7 @@ class DescribeConsortiumMembers extends V20180731Rpc
 /**
  * @method string getLocation()
  */
-class DescribeCandidateOrganizations extends V20180731Rpc
+class DescribeCandidateOrganizations extends Rpc
 {
 
     /**
@@ -5316,7 +5313,7 @@ class DescribeCandidateOrganizations extends V20180731Rpc
 /**
  * @method string getCode()
  */
-class DescribeInviter extends V20180731Rpc
+class DescribeInviter extends Rpc
 {
 
     /**
@@ -5338,7 +5335,7 @@ class DescribeInviter extends V20180731Rpc
  * @method string getConsortiumId()
  * @method $this withConsortiumId($value)
  */
-class DescribeConsortiumMemberApproval extends V20180731Rpc
+class DescribeConsortiumMemberApproval extends Rpc
 {
 
     /**
@@ -5359,7 +5356,7 @@ class DescribeConsortiumMemberApproval extends V20180731Rpc
  * @method string getCode()
  * @method string getIsAccepted()
  */
-class AcceptInvitation extends V20180731Rpc
+class AcceptInvitation extends Rpc
 {
 
     /** @var string */

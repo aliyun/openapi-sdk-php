@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Smartag\V20180313;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeSagRouteableAddress describeSagRouteableAddress(array $options = [])
  * @method ClearSagRouteableAddress clearSagRouteableAddress(array $options = [])
  * @method SetSagRouteableAddress setSagRouteableAddress(array $options = [])
@@ -79,7 +76,7 @@ class SmartagApiResolver
     use ApiResolverTrait;
 }
 
-class V20180313Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Smartag';
@@ -106,7 +103,7 @@ class V20180313Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSagRouteableAddress extends V20180313Rpc
+class DescribeSagRouteableAddress extends Rpc
 {
 }
 
@@ -123,7 +120,7 @@ class DescribeSagRouteableAddress extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ClearSagRouteableAddress extends V20180313Rpc
+class ClearSagRouteableAddress extends Rpc
 {
 
     /**
@@ -155,7 +152,7 @@ class ClearSagRouteableAddress extends V20180313Rpc
  * @method string getRouteableAddress()
  * @method $this withRouteableAddress($value)
  */
-class SetSagRouteableAddress extends V20180313Rpc
+class SetSagRouteableAddress extends Rpc
 {
 
     /**
@@ -184,7 +181,7 @@ class SetSagRouteableAddress extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNetworkOptimizationSettings extends V20180313Rpc
+class DescribeNetworkOptimizationSettings extends Rpc
 {
 }
 
@@ -202,7 +199,7 @@ class DescribeNetworkOptimizationSettings extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyNetworkOptimization extends V20180313Rpc
+class ModifyNetworkOptimization extends Rpc
 {
 }
 
@@ -219,7 +216,7 @@ class ModifyNetworkOptimization extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DetachNetworkOptimizationSags extends V20180313Rpc
+class DetachNetworkOptimizationSags extends Rpc
 {
 
     /**
@@ -250,7 +247,7 @@ class DetachNetworkOptimizationSags extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNetworkOptimizationSags extends V20180313Rpc
+class DescribeNetworkOptimizationSags extends Rpc
 {
 }
 
@@ -270,7 +267,7 @@ class DescribeNetworkOptimizationSags extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNetworkOptimizations extends V20180313Rpc
+class DescribeNetworkOptimizations extends Rpc
 {
 }
 
@@ -290,7 +287,7 @@ class DescribeNetworkOptimizations extends V20180313Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DeleteNetworkOptimizationSetting extends V20180313Rpc
+class DeleteNetworkOptimizationSetting extends Rpc
 {
 }
 
@@ -306,7 +303,7 @@ class DeleteNetworkOptimizationSetting extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteNetworkOptimization extends V20180313Rpc
+class DeleteNetworkOptimization extends Rpc
 {
 }
 
@@ -324,7 +321,7 @@ class DeleteNetworkOptimization extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateNetworkOptimization extends V20180313Rpc
+class CreateNetworkOptimization extends Rpc
 {
 }
 
@@ -344,7 +341,7 @@ class CreateNetworkOptimization extends V20180313Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class AddNetworkOptimizationSetting extends V20180313Rpc
+class AddNetworkOptimizationSetting extends Rpc
 {
 }
 
@@ -361,7 +358,7 @@ class AddNetworkOptimizationSetting extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AttachNetworkOptimizationSags extends V20180313Rpc
+class AttachNetworkOptimizationSags extends Rpc
 {
 
     /**
@@ -394,7 +391,7 @@ class AttachNetworkOptimizationSags extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySerialNumber extends V20180313Rpc
+class ModifySerialNumber extends Rpc
 {
 }
 
@@ -412,7 +409,7 @@ class ModifySerialNumber extends V20180313Rpc
  * @method string getUsername()
  * @method $this withUsername($value)
  */
-class KickOutClients extends V20180313Rpc
+class KickOutClients extends Rpc
 {
 }
 
@@ -427,7 +424,7 @@ class KickOutClients extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSagOnlineClientStatistics extends V20180313Rpc
+class DescribeSagOnlineClientStatistics extends Rpc
 {
 
     /**
@@ -460,7 +457,7 @@ class DescribeSagOnlineClientStatistics extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ResetSmartAccessGatewayClientUserPassword extends V20180313Rpc
+class ResetSmartAccessGatewayClientUserPassword extends Rpc
 {
 }
 
@@ -480,7 +477,7 @@ class ResetSmartAccessGatewayClientUserPassword extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ModifySmartAccessGatewayClientUser extends V20180313Rpc
+class ModifySmartAccessGatewayClientUser extends Rpc
 {
 }
 
@@ -497,7 +494,7 @@ class ModifySmartAccessGatewayClientUser extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserOnlineClientStatistics extends V20180313Rpc
+class DescribeUserOnlineClientStatistics extends Rpc
 {
 
     /**
@@ -530,7 +527,7 @@ class DescribeUserOnlineClientStatistics extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DescribeUserOnlineClients extends V20180313Rpc
+class DescribeUserOnlineClients extends Rpc
 {
 }
 
@@ -549,7 +546,7 @@ class DescribeUserOnlineClients extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserFlowStatistics extends V20180313Rpc
+class DescribeUserFlowStatistics extends Rpc
 {
 
     /**
@@ -582,7 +579,7 @@ class DescribeUserFlowStatistics extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteSmartAccessGatewayClientUser extends V20180313Rpc
+class DeleteSmartAccessGatewayClientUser extends Rpc
 {
 }
 
@@ -600,7 +597,7 @@ class DeleteSmartAccessGatewayClientUser extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DescribeSmartAccessGatewayClientUsers extends V20180313Rpc
+class DescribeSmartAccessGatewayClientUsers extends Rpc
 {
 }
 
@@ -624,7 +621,7 @@ class DescribeSmartAccessGatewayClientUsers extends V20180313Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class CreateSmartAccessGatewayClientUser extends V20180313Rpc
+class CreateSmartAccessGatewayClientUser extends Rpc
 {
 }
 
@@ -646,7 +643,7 @@ class CreateSmartAccessGatewayClientUser extends V20180313Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeACLs extends V20180313Rpc
+class DescribeACLs extends Rpc
 {
 }
 
@@ -670,7 +667,7 @@ class DescribeACLs extends V20180313Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeACLAttribute extends V20180313Rpc
+class DescribeACLAttribute extends Rpc
 {
 }
 
@@ -686,7 +683,7 @@ class DescribeACLAttribute extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteACL extends V20180313Rpc
+class DeleteACL extends Rpc
 {
 }
 
@@ -704,7 +701,7 @@ class DeleteACL extends V20180313Rpc
  * @method string getAcrId()
  * @method $this withAcrId($value)
  */
-class DeleteACLRule extends V20180313Rpc
+class DeleteACLRule extends Rpc
 {
 }
 
@@ -740,7 +737,7 @@ class DeleteACLRule extends V20180313Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class ModifyACLRule extends V20180313Rpc
+class ModifyACLRule extends Rpc
 {
 }
 
@@ -758,7 +755,7 @@ class ModifyACLRule extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DisassociateACL extends V20180313Rpc
+class DisassociateACL extends Rpc
 {
 }
 
@@ -776,7 +773,7 @@ class DisassociateACL extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AssociateACL extends V20180313Rpc
+class AssociateACL extends Rpc
 {
 }
 
@@ -810,7 +807,7 @@ class AssociateACL extends V20180313Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class AddACLRule extends V20180313Rpc
+class AddACLRule extends Rpc
 {
 }
 
@@ -828,7 +825,7 @@ class AddACLRule extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyACL extends V20180313Rpc
+class ModifyACL extends Rpc
 {
 }
 
@@ -844,7 +841,7 @@ class ModifyACL extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateACL extends V20180313Rpc
+class CreateACL extends Rpc
 {
 }
 
@@ -859,7 +856,7 @@ class CreateACL extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnicomSignConfirm extends V20180313Rpc
+class UnicomSignConfirm extends Rpc
 {
 
     /**
@@ -901,7 +898,7 @@ class UnicomSignConfirm extends V20180313Rpc
  * @method string getDataPlan()
  * @method $this withDataPlan($value)
  */
-class UpgradeSmartAccessGateway extends V20180313Rpc
+class UpgradeSmartAccessGateway extends Rpc
 {
 }
 
@@ -925,7 +922,7 @@ class UpgradeSmartAccessGateway extends V20180313Rpc
  * @method string getDataPlan()
  * @method $this withDataPlan($value)
  */
-class DowngradeSmartAccessGateway extends V20180313Rpc
+class DowngradeSmartAccessGateway extends Rpc
 {
 }
 
@@ -943,7 +940,7 @@ class DowngradeSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSAGLinkLevelHa extends V20180313Rpc
+class DeleteSAGLinkLevelHa extends Rpc
 {
 }
 
@@ -961,7 +958,7 @@ class DeleteSAGLinkLevelHa extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SwitchSAGHaState extends V20180313Rpc
+class SwitchSAGHaState extends Rpc
 {
 }
 
@@ -987,7 +984,7 @@ class SwitchSAGHaState extends V20180313Rpc
  * @method string getBackupLinkRegionId()
  * @method $this withBackupLinkRegionId($value)
  */
-class CreateSAGLinkLevelHa extends V20180313Rpc
+class CreateSAGLinkLevelHa extends Rpc
 {
 }
 
@@ -1012,7 +1009,7 @@ class CreateSAGLinkLevelHa extends V20180313Rpc
  * @method string getTradeId()
  * @method $this withTradeId($value)
  */
-class UnicomOrderConfirm extends V20180313Rpc
+class UnicomOrderConfirm extends Rpc
 {
 
     /**
@@ -1056,7 +1053,7 @@ class UnicomOrderConfirm extends V20180313Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeGrantRules extends V20180313Rpc
+class DescribeGrantRules extends Rpc
 {
 }
 
@@ -1076,7 +1073,7 @@ class DescribeGrantRules extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GrantInstanceToCbn extends V20180313Rpc
+class GrantInstanceToCbn extends Rpc
 {
 }
 
@@ -1094,7 +1091,7 @@ class GrantInstanceToCbn extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RevokeInstanceFromCbn extends V20180313Rpc
+class RevokeInstanceFromCbn extends Rpc
 {
 }
 
@@ -1112,7 +1109,7 @@ class RevokeInstanceFromCbn extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RebootSmartAccessGateway extends V20180313Rpc
+class RebootSmartAccessGateway extends Rpc
 {
 }
 
@@ -1128,7 +1125,7 @@ class RebootSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SwitchCloudBoxHaState extends V20180313Rpc
+class SwitchCloudBoxHaState extends Rpc
 {
 }
 
@@ -1188,7 +1185,7 @@ class SwitchCloudBoxHaState extends V20180313Rpc
  * @method string getReceiverZip()
  * @method $this withReceiverZip($value)
  */
-class CreateSmartAccessGateway extends V20180313Rpc
+class CreateSmartAccessGateway extends Rpc
 {
 }
 
@@ -1204,7 +1201,7 @@ class CreateSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSmartAccessGatewayHa extends V20180313Rpc
+class DescribeSmartAccessGatewayHa extends Rpc
 {
 }
 
@@ -1220,7 +1217,7 @@ class DescribeSmartAccessGatewayHa extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDedicatedLineBackup extends V20180313Rpc
+class DeleteDedicatedLineBackup extends Rpc
 {
 }
 
@@ -1242,7 +1239,7 @@ class DeleteDedicatedLineBackup extends V20180313Rpc
  * @method string getVbrRegionId()
  * @method $this withVbrRegionId($value)
  */
-class CreateDedicatedLineBackup extends V20180313Rpc
+class CreateDedicatedLineBackup extends Rpc
 {
 }
 
@@ -1258,7 +1255,7 @@ class CreateDedicatedLineBackup extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ActivateSmartAccessGateway extends V20180313Rpc
+class ActivateSmartAccessGateway extends Rpc
 {
 }
 
@@ -1274,7 +1271,7 @@ class ActivateSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnlockSmartAccessGateway extends V20180313Rpc
+class UnlockSmartAccessGateway extends Rpc
 {
 }
 
@@ -1290,7 +1287,7 @@ class UnlockSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSmartAccessGatewayVersions extends V20180313Rpc
+class DescribeSmartAccessGatewayVersions extends Rpc
 {
 }
 
@@ -1308,7 +1305,7 @@ class DescribeSmartAccessGatewayVersions extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BindSmartAccessGateway extends V20180313Rpc
+class BindSmartAccessGateway extends Rpc
 {
 }
 
@@ -1332,7 +1329,7 @@ class BindSmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateCloudConnectNetwork extends V20180313Rpc
+class CreateCloudConnectNetwork extends Rpc
 {
 }
 
@@ -1348,7 +1345,7 @@ class CreateCloudConnectNetwork extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCloudConnectNetwork extends V20180313Rpc
+class DeleteCloudConnectNetwork extends Rpc
 {
 }
 
@@ -1371,7 +1368,7 @@ class DeleteCloudConnectNetwork extends V20180313Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCloudConnectNetworks extends V20180313Rpc
+class DescribeCloudConnectNetworks extends Rpc
 {
 
     /**
@@ -1403,7 +1400,7 @@ class DescribeCloudConnectNetworks extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20180313Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1437,7 +1434,7 @@ class DescribeRegions extends V20180313Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeSmartAccessGateways extends V20180313Rpc
+class DescribeSmartAccessGateways extends Rpc
 {
 }
 
@@ -1451,7 +1448,7 @@ class DescribeSmartAccessGateways extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetCloudConnectNetworkUseLimit extends V20180313Rpc
+class GetCloudConnectNetworkUseLimit extends Rpc
 {
 }
 
@@ -1465,7 +1462,7 @@ class GetCloudConnectNetworkUseLimit extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetSmartAccessGatewayUseLimit extends V20180313Rpc
+class GetSmartAccessGatewayUseLimit extends Rpc
 {
 }
 
@@ -1489,7 +1486,7 @@ class GetSmartAccessGatewayUseLimit extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCloudConnectNetwork extends V20180313Rpc
+class ModifyCloudConnectNetwork extends Rpc
 {
 }
 
@@ -1516,7 +1513,7 @@ class ModifyCloudConnectNetwork extends V20180313Rpc
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
  */
-class ModifySmartAccessGateway extends V20180313Rpc
+class ModifySmartAccessGateway extends Rpc
 {
 
     /**
@@ -1550,7 +1547,7 @@ class ModifySmartAccessGateway extends V20180313Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindSmartAccessGateway extends V20180313Rpc
+class UnbindSmartAccessGateway extends Rpc
 {
 }
 
@@ -1570,6 +1567,6 @@ class UnbindSmartAccessGateway extends V20180313Rpc
  * @method string getVersionCode()
  * @method $this withVersionCode($value)
  */
-class UpdateSmartAccessGatewayVersion extends V20180313Rpc
+class UpdateSmartAccessGatewayVersion extends Rpc
 {
 }

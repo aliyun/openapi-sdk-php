@@ -3,11 +3,8 @@
 namespace AlibabaCloud\NAS\V20170626;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateTieringPolicy createTieringPolicy(array $options = [])
  * @method ModifyTieringPolicy modifyTieringPolicy(array $options = [])
  * @method DeleteTieringPolicy deleteTieringPolicy(array $options = [])
@@ -40,7 +37,7 @@ class NASApiResolver
     use ApiResolverTrait;
 }
 
-class V20170626Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'NAS';
@@ -75,7 +72,7 @@ class V20170626Rpc extends Rpc
  * @method string getCheckLimit()
  * @method $this withCheckLimit($value)
  */
-class CreateTieringPolicy extends V20170626Rpc
+class CreateTieringPolicy extends Rpc
 {
 }
 
@@ -97,7 +94,7 @@ class CreateTieringPolicy extends V20170626Rpc
  * @method string getMtime()
  * @method $this withMtime($value)
  */
-class ModifyTieringPolicy extends V20170626Rpc
+class ModifyTieringPolicy extends Rpc
 {
 
     /** @var string */
@@ -108,14 +105,14 @@ class ModifyTieringPolicy extends V20170626Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteTieringPolicy extends V20170626Rpc
+class DeleteTieringPolicy extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
 }
 
-class DescribeTieringPolicies extends V20170626Rpc
+class DescribeTieringPolicies extends Rpc
 {
 
     /** @var string */
@@ -142,7 +139,7 @@ class DescribeTieringPolicies extends V20170626Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class CreateTieringJob extends V20170626Rpc
+class CreateTieringJob extends Rpc
 {
 }
 
@@ -152,7 +149,7 @@ class CreateTieringJob extends V20170626Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteTieringJob extends V20170626Rpc
+class DeleteTieringJob extends Rpc
 {
 
     /** @var string */
@@ -179,7 +176,7 @@ class DeleteTieringJob extends V20170626Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class ModifyTieringJob extends V20170626Rpc
+class ModifyTieringJob extends Rpc
 {
 
     /** @var string */
@@ -190,14 +187,14 @@ class ModifyTieringJob extends V20170626Rpc
  * @method string getVolume()
  * @method $this withVolume($value)
  */
-class DescribeTieringJobs extends V20170626Rpc
+class DescribeTieringJobs extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
 }
 
-class DescribeZones extends V20170626Rpc
+class DescribeZones extends Rpc
 {
 }
 
@@ -207,7 +204,7 @@ class DescribeZones extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class ModifyFileSystem extends V20170626Rpc
+class ModifyFileSystem extends Rpc
 {
 }
 
@@ -221,7 +218,7 @@ class ModifyFileSystem extends V20170626Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyMountTarget extends V20170626Rpc
+class ModifyMountTarget extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class ModifyMountTarget extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class DescribeFileSystems extends V20170626Rpc
+class DescribeFileSystems extends Rpc
 {
 }
 
@@ -247,7 +244,7 @@ class DescribeFileSystems extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class DescribeMountTargets extends V20170626Rpc
+class DescribeMountTargets extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class DescribeMountTargets extends V20170626Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeRegions extends V20170626Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -267,7 +264,7 @@ class DescribeRegions extends V20170626Rpc
  * @method string getAccessGroupName()
  * @method $this withAccessGroupName($value)
  */
-class ModifyAccessGroup extends V20170626Rpc
+class ModifyAccessGroup extends Rpc
 {
 }
 
@@ -285,7 +282,7 @@ class ModifyAccessGroup extends V20170626Rpc
  * @method string getAccessRuleId()
  * @method $this withAccessRuleId($value)
  */
-class ModifyAccessRule extends V20170626Rpc
+class ModifyAccessRule extends Rpc
 {
 }
 
@@ -293,7 +290,7 @@ class ModifyAccessRule extends V20170626Rpc
  * @method string getAccessGroupName()
  * @method $this withAccessGroupName($value)
  */
-class DeleteAccessGroup extends V20170626Rpc
+class DeleteAccessGroup extends Rpc
 {
 }
 
@@ -303,7 +300,7 @@ class DeleteAccessGroup extends V20170626Rpc
  * @method string getAccessRuleId()
  * @method $this withAccessRuleId($value)
  */
-class DeleteAccessRule extends V20170626Rpc
+class DeleteAccessRule extends Rpc
 {
 }
 
@@ -311,7 +308,7 @@ class DeleteAccessRule extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class DeleteFileSystem extends V20170626Rpc
+class DeleteFileSystem extends Rpc
 {
 }
 
@@ -321,7 +318,7 @@ class DeleteFileSystem extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class DeleteMountTarget extends V20170626Rpc
+class DeleteMountTarget extends Rpc
 {
 }
 
@@ -333,7 +330,7 @@ class DeleteMountTarget extends V20170626Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAccessGroups extends V20170626Rpc
+class DescribeAccessGroups extends Rpc
 {
 }
 
@@ -347,7 +344,7 @@ class DescribeAccessGroups extends V20170626Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAccessRules extends V20170626Rpc
+class DescribeAccessRules extends Rpc
 {
 }
 
@@ -363,7 +360,7 @@ class DescribeAccessRules extends V20170626Rpc
  * @method string getAccessGroupName()
  * @method $this withAccessGroupName($value)
  */
-class CreateAccessRule extends V20170626Rpc
+class CreateAccessRule extends Rpc
 {
 }
 
@@ -375,7 +372,7 @@ class CreateAccessRule extends V20170626Rpc
  * @method string getStorageType()
  * @method $this withStorageType($value)
  */
-class CreateFileSystem extends V20170626Rpc
+class CreateFileSystem extends Rpc
 {
 }
 
@@ -391,7 +388,7 @@ class CreateFileSystem extends V20170626Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class CreateMountTarget extends V20170626Rpc
+class CreateMountTarget extends Rpc
 {
 }
 
@@ -403,6 +400,6 @@ class CreateMountTarget extends V20170626Rpc
  * @method string getAccessGroupName()
  * @method $this withAccessGroupName($value)
  */
-class CreateAccessGroup extends V20170626Rpc
+class CreateAccessGroup extends Rpc
 {
 }

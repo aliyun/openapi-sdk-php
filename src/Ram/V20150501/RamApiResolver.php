@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ram\V20150501;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetAccessKeyLastUsed getAccessKeyLastUsed(array $options = [])
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method UpdatePublicKey updatePublicKey(array $options = [])
@@ -80,7 +77,7 @@ class RamApiResolver
     use ApiResolverTrait;
 }
 
-class V20150501Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ram';
@@ -101,7 +98,7 @@ class V20150501Rpc extends Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class GetAccessKeyLastUsed extends V20150501Rpc
+class GetAccessKeyLastUsed extends Rpc
 {
 }
 
@@ -111,7 +108,7 @@ class GetAccessKeyLastUsed extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class GetPublicKey extends V20150501Rpc
+class GetPublicKey extends Rpc
 {
 }
 
@@ -123,7 +120,7 @@ class GetPublicKey extends V20150501Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdatePublicKey extends V20150501Rpc
+class UpdatePublicKey extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class UpdatePublicKey extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class UploadPublicKey extends V20150501Rpc
+class UploadPublicKey extends Rpc
 {
 }
 
@@ -141,7 +138,7 @@ class UploadPublicKey extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ListPublicKeys extends V20150501Rpc
+class ListPublicKeys extends Rpc
 {
 }
 
@@ -151,7 +148,7 @@ class ListPublicKeys extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeletePublicKey extends V20150501Rpc
+class DeletePublicKey extends Rpc
 {
 }
 
@@ -161,7 +158,7 @@ class DeletePublicKey extends V20150501Rpc
  * @method string getNewPassword()
  * @method $this withNewPassword($value)
  */
-class ChangePassword extends V20150501Rpc
+class ChangePassword extends Rpc
 {
 }
 
@@ -171,7 +168,7 @@ class ChangePassword extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class CreateGroup extends V20150501Rpc
+class CreateGroup extends Rpc
 {
 }
 
@@ -179,7 +176,7 @@ class CreateGroup extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class GetGroup extends V20150501Rpc
+class GetGroup extends Rpc
 {
 }
 
@@ -187,7 +184,7 @@ class GetGroup extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class DeleteGroup extends V20150501Rpc
+class DeleteGroup extends Rpc
 {
 }
 
@@ -197,7 +194,7 @@ class DeleteGroup extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class AddUserToGroup extends V20150501Rpc
+class AddUserToGroup extends Rpc
 {
 }
 
@@ -209,7 +206,7 @@ class AddUserToGroup extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class UpdateGroup extends V20150501Rpc
+class UpdateGroup extends Rpc
 {
 }
 
@@ -219,7 +216,7 @@ class UpdateGroup extends V20150501Rpc
  * @method string getMaxItems()
  * @method $this withMaxItems($value)
  */
-class ListGroups extends V20150501Rpc
+class ListGroups extends Rpc
 {
 }
 
@@ -231,7 +228,7 @@ class ListGroups extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class ListUsersForGroup extends V20150501Rpc
+class ListUsersForGroup extends Rpc
 {
 }
 
@@ -239,7 +236,7 @@ class ListUsersForGroup extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ListGroupsForUser extends V20150501Rpc
+class ListGroupsForUser extends Rpc
 {
 }
 
@@ -251,7 +248,7 @@ class ListGroupsForUser extends V20150501Rpc
  * @method string getPolicyDocument()
  * @method $this withPolicyDocument($value)
  */
-class CreatePolicy extends V20150501Rpc
+class CreatePolicy extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class CreatePolicy extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class RemoveUserFromGroup extends V20150501Rpc
+class RemoveUserFromGroup extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class RemoveUserFromGroup extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class AttachPolicyToGroup extends V20150501Rpc
+class AttachPolicyToGroup extends Rpc
 {
 }
 
@@ -285,7 +282,7 @@ class AttachPolicyToGroup extends V20150501Rpc
  * @method string getMaxItems()
  * @method $this withMaxItems($value)
  */
-class ListPolicies extends V20150501Rpc
+class ListPolicies extends Rpc
 {
 }
 
@@ -295,7 +292,7 @@ class ListPolicies extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class GetPolicy extends V20150501Rpc
+class GetPolicy extends Rpc
 {
 }
 
@@ -303,7 +300,7 @@ class GetPolicy extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class DeletePolicy extends V20150501Rpc
+class DeletePolicy extends Rpc
 {
 }
 
@@ -313,7 +310,7 @@ class DeletePolicy extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class ListEntitiesForPolicy extends V20150501Rpc
+class ListEntitiesForPolicy extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class ListEntitiesForPolicy extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DetachPolicyFromUser extends V20150501Rpc
+class DetachPolicyFromUser extends Rpc
 {
 }
 
@@ -337,7 +334,7 @@ class DetachPolicyFromUser extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class DetachPolicyFromGroup extends V20150501Rpc
+class DetachPolicyFromGroup extends Rpc
 {
 }
 
@@ -349,7 +346,7 @@ class DetachPolicyFromGroup extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class AttachPolicyToUser extends V20150501Rpc
+class AttachPolicyToUser extends Rpc
 {
 }
 
@@ -361,7 +358,7 @@ class AttachPolicyToUser extends V20150501Rpc
  * @method string getPolicyDocument()
  * @method $this withPolicyDocument($value)
  */
-class CreatePolicyVersion extends V20150501Rpc
+class CreatePolicyVersion extends Rpc
 {
 }
 
@@ -369,7 +366,7 @@ class CreatePolicyVersion extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ListPoliciesForUser extends V20150501Rpc
+class ListPoliciesForUser extends Rpc
 {
 }
 
@@ -377,7 +374,7 @@ class ListPoliciesForUser extends V20150501Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class ListPoliciesForGroup extends V20150501Rpc
+class ListPoliciesForGroup extends Rpc
 {
 }
 
@@ -387,7 +384,7 @@ class ListPoliciesForGroup extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class SetDefaultPolicyVersion extends V20150501Rpc
+class SetDefaultPolicyVersion extends Rpc
 {
 }
 
@@ -397,7 +394,7 @@ class SetDefaultPolicyVersion extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class ListPolicyVersions extends V20150501Rpc
+class ListPolicyVersions extends Rpc
 {
 }
 
@@ -409,7 +406,7 @@ class ListPolicyVersions extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class GetPolicyVersion extends V20150501Rpc
+class GetPolicyVersion extends Rpc
 {
 }
 
@@ -419,7 +416,7 @@ class GetPolicyVersion extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class DeletePolicyVersion extends V20150501Rpc
+class DeletePolicyVersion extends Rpc
 {
 }
 
@@ -427,19 +424,19 @@ class DeletePolicyVersion extends V20150501Rpc
  * @method string getAccountAlias()
  * @method $this withAccountAlias($value)
  */
-class SetAccountAlias extends V20150501Rpc
+class SetAccountAlias extends Rpc
 {
 }
 
-class GetPasswordPolicy extends V20150501Rpc
+class GetPasswordPolicy extends Rpc
 {
 }
 
-class GetAccountAlias extends V20150501Rpc
+class GetAccountAlias extends Rpc
 {
 }
 
-class ClearAccountAlias extends V20150501Rpc
+class ClearAccountAlias extends Rpc
 {
 }
 
@@ -463,7 +460,7 @@ class ClearAccountAlias extends V20150501Rpc
  * @method string getRequireSymbols()
  * @method $this withRequireSymbols($value)
  */
-class SetPasswordPolicy extends V20150501Rpc
+class SetPasswordPolicy extends Rpc
 {
 }
 
@@ -479,7 +476,7 @@ class SetPasswordPolicy extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class CreateUser extends V20150501Rpc
+class CreateUser extends Rpc
 {
 }
 
@@ -491,7 +488,7 @@ class CreateUser extends V20150501Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateAccessKey extends V20150501Rpc
+class UpdateAccessKey extends Rpc
 {
 }
 
@@ -499,7 +496,7 @@ class UpdateAccessKey extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ListAccessKeys extends V20150501Rpc
+class ListAccessKeys extends Rpc
 {
 }
 
@@ -509,7 +506,7 @@ class ListAccessKeys extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteAccessKey extends V20150501Rpc
+class DeleteAccessKey extends Rpc
 {
 }
 
@@ -517,7 +514,7 @@ class DeleteAccessKey extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class CreateAccessKey extends V20150501Rpc
+class CreateAccessKey extends Rpc
 {
 }
 
@@ -527,7 +524,7 @@ class CreateAccessKey extends V20150501Rpc
  * @method string getMaxItems()
  * @method $this withMaxItems($value)
  */
-class ListUsers extends V20150501Rpc
+class ListUsers extends Rpc
 {
 }
 
@@ -535,7 +532,7 @@ class ListUsers extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class GetUser extends V20150501Rpc
+class GetUser extends Rpc
 {
 }
 
@@ -543,7 +540,7 @@ class GetUser extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteUser extends V20150501Rpc
+class DeleteUser extends Rpc
 {
 }
 
@@ -551,7 +548,7 @@ class DeleteUser extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class GetLoginProfile extends V20150501Rpc
+class GetLoginProfile extends Rpc
 {
 }
 
@@ -559,7 +556,7 @@ class GetLoginProfile extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteLoginProfile extends V20150501Rpc
+class DeleteLoginProfile extends Rpc
 {
 }
 
@@ -573,7 +570,7 @@ class DeleteLoginProfile extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class CreateLoginProfile extends V20150501Rpc
+class CreateLoginProfile extends Rpc
 {
 }
 
@@ -591,7 +588,7 @@ class CreateLoginProfile extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class UpdateUser extends V20150501Rpc
+class UpdateUser extends Rpc
 {
 }
 
@@ -599,7 +596,7 @@ class UpdateUser extends V20150501Rpc
  * @method string getSerialNumber()
  * @method $this withSerialNumber($value)
  */
-class DeleteVirtualMFADevice extends V20150501Rpc
+class DeleteVirtualMFADevice extends Rpc
 {
 }
 
@@ -607,7 +604,7 @@ class DeleteVirtualMFADevice extends V20150501Rpc
  * @method string getVirtualMFADeviceName()
  * @method $this withVirtualMFADeviceName($value)
  */
-class CreateVirtualMFADevice extends V20150501Rpc
+class CreateVirtualMFADevice extends Rpc
 {
 }
 
@@ -621,7 +618,7 @@ class CreateVirtualMFADevice extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class BindMFADevice extends V20150501Rpc
+class BindMFADevice extends Rpc
 {
 }
 
@@ -635,7 +632,7 @@ class BindMFADevice extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class UpdateLoginProfile extends V20150501Rpc
+class UpdateLoginProfile extends Rpc
 {
 }
 
@@ -647,7 +644,7 @@ class UpdateLoginProfile extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class AttachPolicyToRole extends V20150501Rpc
+class AttachPolicyToRole extends Rpc
 {
 }
 
@@ -655,11 +652,11 @@ class AttachPolicyToRole extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class UnbindMFADevice extends V20150501Rpc
+class UnbindMFADevice extends Rpc
 {
 }
 
-class ListVirtualMFADevices extends V20150501Rpc
+class ListVirtualMFADevices extends Rpc
 {
 }
 
@@ -667,7 +664,7 @@ class ListVirtualMFADevices extends V20150501Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class GetUserMFAInfo extends V20150501Rpc
+class GetUserMFAInfo extends Rpc
 {
 }
 
@@ -679,7 +676,7 @@ class GetUserMFAInfo extends V20150501Rpc
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
  */
-class DetachPolicyFromRole extends V20150501Rpc
+class DetachPolicyFromRole extends Rpc
 {
 }
 
@@ -687,7 +684,7 @@ class DetachPolicyFromRole extends V20150501Rpc
  * @method string getRoleName()
  * @method $this withRoleName($value)
  */
-class DeleteRole extends V20150501Rpc
+class DeleteRole extends Rpc
 {
 }
 
@@ -699,7 +696,7 @@ class DeleteRole extends V20150501Rpc
  * @method string getAssumeRolePolicyDocument()
  * @method $this withAssumeRolePolicyDocument($value)
  */
-class CreateRole extends V20150501Rpc
+class CreateRole extends Rpc
 {
 }
 
@@ -709,7 +706,7 @@ class CreateRole extends V20150501Rpc
  * @method string getMaxItems()
  * @method $this withMaxItems($value)
  */
-class ListRoles extends V20150501Rpc
+class ListRoles extends Rpc
 {
 }
 
@@ -717,11 +714,11 @@ class ListRoles extends V20150501Rpc
  * @method string getRoleName()
  * @method $this withRoleName($value)
  */
-class ListPoliciesForRole extends V20150501Rpc
+class ListPoliciesForRole extends Rpc
 {
 }
 
-class GetSecurityPreference extends V20150501Rpc
+class GetSecurityPreference extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class GetSecurityPreference extends V20150501Rpc
  * @method string getRoleName()
  * @method $this withRoleName($value)
  */
-class GetRole extends V20150501Rpc
+class GetRole extends Rpc
 {
 }
 
@@ -739,7 +736,7 @@ class GetRole extends V20150501Rpc
  * @method string getRoleName()
  * @method $this withRoleName($value)
  */
-class UpdateRole extends V20150501Rpc
+class UpdateRole extends Rpc
 {
 }
 
@@ -759,6 +756,6 @@ class UpdateRole extends V20150501Rpc
  * @method string getLoginSessionDuration()
  * @method $this withLoginSessionDuration($value)
  */
-class SetSecurityPreference extends V20150501Rpc
+class SetSecurityPreference extends Rpc
 {
 }

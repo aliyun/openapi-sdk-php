@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Sts\V20150401;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method AssumeRoleWithSAML assumeRoleWithSAML(array $options = [])
  * @method GenerateSessionAccessKey generateSessionAccessKey(array $options = [])
  * @method GetCallerIdentity getCallerIdentity(array $options = [])
@@ -18,7 +15,7 @@ class StsApiResolver
     use ApiResolverTrait;
 }
 
-class V20150401Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Sts';
@@ -45,7 +42,7 @@ class V20150401Rpc extends Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class AssumeRoleWithSAML extends V20150401Rpc
+class AssumeRoleWithSAML extends Rpc
 {
 }
 
@@ -53,11 +50,11 @@ class AssumeRoleWithSAML extends V20150401Rpc
  * @method string getDurationSeconds()
  * @method $this withDurationSeconds($value)
  */
-class GenerateSessionAccessKey extends V20150401Rpc
+class GenerateSessionAccessKey extends Rpc
 {
 }
 
-class GetCallerIdentity extends V20150401Rpc
+class GetCallerIdentity extends Rpc
 {
 }
 
@@ -71,6 +68,6 @@ class GetCallerIdentity extends V20150401Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class AssumeRole extends V20150401Rpc
+class AssumeRole extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Bss\V20140714;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method OpenCallback openCallback(array $options = [])
  * @method QueryForCssOrder queryForCssOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
@@ -24,7 +21,7 @@ class BssApiResolver
     use ApiResolverTrait;
 }
 
-class V20140714Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Bss';
@@ -39,7 +36,7 @@ class V20140714Rpc extends Rpc
 /**
  * @method string getParamStr()
  */
-class OpenCallback extends V20140714Rpc
+class OpenCallback extends Rpc
 {
 
     /**
@@ -59,7 +56,7 @@ class OpenCallback extends V20140714Rpc
 /**
  * @method string getParamStr()
  */
-class QueryForCssOrder extends V20140714Rpc
+class QueryForCssOrder extends Rpc
 {
 
     /**
@@ -79,7 +76,7 @@ class QueryForCssOrder extends V20140714Rpc
 /**
  * @method string getParamStr()
  */
-class CreateOrder extends V20140714Rpc
+class CreateOrder extends Rpc
 {
 
     /**
@@ -99,7 +96,7 @@ class CreateOrder extends V20140714Rpc
 /**
  * @method string getParamStr()
  */
-class VnoPayCallBackNotify extends V20140714Rpc
+class VnoPayCallBackNotify extends Rpc
 {
 
     /**
@@ -119,7 +116,7 @@ class VnoPayCallBackNotify extends V20140714Rpc
 /**
  * @method string getParamStr()
  */
-class VnoBatchRefundOrder extends V20140714Rpc
+class VnoBatchRefundOrder extends Rpc
 {
 
     /**
@@ -140,7 +137,7 @@ class VnoBatchRefundOrder extends V20140714Rpc
  * @method string getProductCode()
  * @method string getOwnerId()
  */
-class SubscriptionCreateOrderApi extends V20140714Rpc
+class SubscriptionCreateOrderApi extends Rpc
 {
 
     /**
@@ -170,7 +167,7 @@ class SubscriptionCreateOrderApi extends V20140714Rpc
     }
 }
 
-class DescribeCashDetail extends V20140714Rpc
+class DescribeCashDetail extends Rpc
 {
 
     /** @var string */
@@ -193,7 +190,7 @@ class DescribeCashDetail extends V20140714Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class SetResourceBusinessStatus extends V20140714Rpc
+class SetResourceBusinessStatus extends Rpc
 {
 }
 
@@ -209,7 +206,7 @@ class SetResourceBusinessStatus extends V20140714Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeCouponList extends V20140714Rpc
+class DescribeCouponList extends Rpc
 {
 
     /** @var string */
@@ -220,7 +217,7 @@ class DescribeCouponList extends V20140714Rpc
  * @method string getCouponNumber()
  * @method $this withCouponNumber($value)
  */
-class DescribeCouponDetail extends V20140714Rpc
+class DescribeCouponDetail extends Rpc
 {
 
     /** @var string */

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\DataworksPublic\V20180601;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ListTagResources listTagResources(array $options = [])
  * @method UnTagResources unTagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -19,7 +16,7 @@ class DataworksPublicApiResolver
     use ApiResolverTrait;
 }
 
-class V20180601Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'dataworks-public';
@@ -42,7 +39,7 @@ class V20180601Rpc extends Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagResources extends V20180601Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -84,7 +81,7 @@ class ListTagResources extends V20180601Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class UnTagResources extends V20180601Rpc
+class UnTagResources extends Rpc
 {
 
     /**
@@ -124,7 +121,7 @@ class UnTagResources extends V20180601Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResources extends V20180601Rpc
+class TagResources extends Rpc
 {
 
     /**
@@ -164,7 +161,7 @@ class TagResources extends V20180601Rpc
  * @method string getDagId()
  * @method $this withDagId($value)
  */
-class SearchManualDagNodeInstance extends V20180601Rpc
+class SearchManualDagNodeInstance extends Rpc
 {
 }
 
@@ -180,6 +177,6 @@ class SearchManualDagNodeInstance extends V20180601Rpc
  * @method string getNodePara()
  * @method $this withNodePara($value)
  */
-class CreateManualDag extends V20180601Rpc
+class CreateManualDag extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ProductCatalog\V20180918;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetProduct getProduct(array $options = [])
  * @method ListProducts listProducts(array $options = [])
  * @method ListApis listApis(array $options = [])
@@ -18,7 +15,7 @@ class ProductCatalogApiResolver
     use ApiResolverTrait;
 }
 
-class V20180918Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'ProductCatalog';
@@ -32,7 +29,7 @@ class V20180918Roa extends Roa
  * @method $this withProductId($value)
  * @method string getLanguage()
  */
-class GetProduct extends V20180918Roa
+class GetProduct extends Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/';
@@ -56,7 +53,7 @@ class GetProduct extends V20180918Roa
  * @method string getLanguage()
  * @method string getPage()
  */
-class ListProducts extends V20180918Roa
+class ListProducts extends Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/';
@@ -110,7 +107,7 @@ class ListProducts extends V20180918Roa
  * @method string getLanguage()
  * @method string getPage()
  */
-class ListApis extends V20180918Roa
+class ListApis extends Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/versions/[VersionId]/apis/';
@@ -165,7 +162,7 @@ class ListApis extends V20180918Roa
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class GetApi extends V20180918Roa
+class GetApi extends Roa
 {
     /** @var string */
     public $pathPattern = '/products/v1/public/[ProductId]/versions/[VersionId]/apis/[ApiId]';

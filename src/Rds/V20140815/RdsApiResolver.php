@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Rds\V20140815;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyInstanceDdrPolicy modifyInstanceDdrPolicy(array $options = [])
  * @method DescribeInstanceDdrPolicy describeInstanceDdrPolicy(array $options = [])
  * @method DescribeCrossRegionLogBackupFiles describeCrossRegionLogBackupFiles(array $options = [])
@@ -171,7 +168,7 @@ class RdsApiResolver
     use ApiResolverTrait;
 }
 
-class V20140815Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Rds';
@@ -216,7 +213,7 @@ class V20140815Rpc extends Rpc
  * @method string getRetention()
  * @method $this withRetention($value)
  */
-class ModifyInstanceDdrPolicy extends V20140815Rpc
+class ModifyInstanceDdrPolicy extends Rpc
 {
 }
 
@@ -230,7 +227,7 @@ class ModifyInstanceDdrPolicy extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceDdrPolicy extends V20140815Rpc
+class DescribeInstanceDdrPolicy extends Rpc
 {
 }
 
@@ -254,7 +251,7 @@ class DescribeInstanceDdrPolicy extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCrossRegionLogBackupFiles extends V20140815Rpc
+class DescribeCrossRegionLogBackupFiles extends Rpc
 {
 }
 
@@ -278,7 +275,7 @@ class DescribeCrossRegionLogBackupFiles extends V20140815Rpc
  * @method string getCrossBackupRegion()
  * @method $this withCrossBackupRegion($value)
  */
-class DescribeCrossRegionBackups extends V20140815Rpc
+class DescribeCrossRegionBackups extends Rpc
 {
 }
 
@@ -292,7 +289,7 @@ class DescribeCrossRegionBackups extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAvailableRecoveryTime extends V20140815Rpc
+class DescribeAvailableRecoveryTime extends Rpc
 {
 }
 
@@ -304,7 +301,7 @@ class DescribeAvailableRecoveryTime extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAvailableCrossRegion extends V20140815Rpc
+class DescribeAvailableCrossRegion extends Rpc
 {
 }
 
@@ -330,7 +327,7 @@ class DescribeAvailableCrossRegion extends V20140815Rpc
  * @method string getDbInstanceStorageType()
  * @method $this withDbInstanceStorageType($value)
  */
-class EvaluateSupportByokShow extends V20140815Rpc
+class EvaluateSupportByokShow extends Rpc
 {
 }
 
@@ -356,7 +353,7 @@ class EvaluateSupportByokShow extends V20140815Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class EvaluteSupportByokShow extends V20140815Rpc
+class EvaluteSupportByokShow extends Rpc
 {
 }
 
@@ -374,7 +371,7 @@ class EvaluteSupportByokShow extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetServiceSecurityList extends V20140815Rpc
+class GetServiceSecurityList extends Rpc
 {
 }
 
@@ -392,7 +389,7 @@ class GetServiceSecurityList extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetServiceUseSecirityIP extends V20140815Rpc
+class GetServiceUseSecirityIP extends Rpc
 {
 }
 
@@ -412,7 +409,7 @@ class GetServiceUseSecirityIP extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceVpcMigrateInfo extends V20140815Rpc
+class DescribeInstanceVpcMigrateInfo extends Rpc
 {
 }
 
@@ -432,7 +429,7 @@ class DescribeInstanceVpcMigrateInfo extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeReadDBInstanceDelay extends V20140815Rpc
+class DescribeReadDBInstanceDelay extends Rpc
 {
 }
 
@@ -456,7 +453,7 @@ class DescribeReadDBInstanceDelay extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestoreTable extends V20140815Rpc
+class RestoreTable extends Rpc
 {
 }
 
@@ -480,7 +477,7 @@ class RestoreTable extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AllocateInstanceVpcNetworkType extends V20140815Rpc
+class AllocateInstanceVpcNetworkType extends Rpc
 {
 }
 
@@ -508,7 +505,7 @@ class AllocateInstanceVpcNetworkType extends V20140815Rpc
  * @method string getSwitchTime()
  * @method $this withSwitchTime($value)
  */
-class MigrateToOtherRegion extends V20140815Rpc
+class MigrateToOtherRegion extends Rpc
 {
 }
 
@@ -542,7 +539,7 @@ class MigrateToOtherRegion extends V20140815Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class ModifyActiveOperationPendingTask extends V20140815Rpc
+class ModifyActiveOperationPendingTask extends Rpc
 {
 }
 
@@ -560,7 +557,7 @@ class ModifyActiveOperationPendingTask extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeTargetAVZ extends V20140815Rpc
+class DescribeTargetAVZ extends Rpc
 {
 }
 
@@ -586,7 +583,7 @@ class DescribeTargetAVZ extends V20140815Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeAvailableInstanceClass extends V20140815Rpc
+class DescribeAvailableInstanceClass extends Rpc
 {
 }
 
@@ -695,7 +692,7 @@ class DescribeAvailableInstanceClass extends V20140815Rpc
  * @method string getTag11Key()
  * @method string getTag2Value()
  */
-class ListTagResources extends V20140815Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -1992,7 +1989,7 @@ class ListTagResources extends V20140815Rpc
  * @method string getTagKey15()
  * @method string getTagKey14()
  */
-class UntagResources extends V20140815Rpc
+class UntagResources extends Rpc
 {
 
     /**
@@ -3035,7 +3032,7 @@ class UntagResources extends V20140815Rpc
  * @method string getTag11Key()
  * @method string getTag2Value()
  */
-class TagResources extends V20140815Rpc
+class TagResources extends Rpc
 {
 
     /**
@@ -4262,7 +4259,7 @@ class TagResources extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeProxyFunctionSupport extends V20140815Rpc
+class DescribeProxyFunctionSupport extends Rpc
 {
 }
 
@@ -4292,7 +4289,7 @@ class DescribeProxyFunctionSupport extends V20140815Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class DescribeMetaList extends V20140815Rpc
+class DescribeMetaList extends Rpc
 {
 }
 
@@ -4304,7 +4301,7 @@ class DescribeMetaList extends V20140815Rpc
  * @method string getServiceRequestType()
  * @method $this withServiceRequestType($value)
  */
-class RequestServiceOfCloudDBExpert extends V20140815Rpc
+class RequestServiceOfCloudDBExpert extends Rpc
 {
 }
 
@@ -4326,7 +4323,7 @@ class RequestServiceOfCloudDBExpert extends V20140815Rpc
  * @method string getServiceRequestType()
  * @method $this withServiceRequestType($value)
  */
-class DescribeCloudDbExpertService extends V20140815Rpc
+class DescribeCloudDbExpertService extends Rpc
 {
 }
 
@@ -4346,7 +4343,7 @@ class DescribeCloudDbExpertService extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class AddDBInstanceNetworkType extends V20140815Rpc
+class AddDBInstanceNetworkType extends Rpc
 {
 }
 
@@ -4360,7 +4357,7 @@ class AddDBInstanceNetworkType extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckInstanceExist extends V20140815Rpc
+class CheckInstanceExist extends Rpc
 {
 }
 
@@ -4402,7 +4399,7 @@ class CheckInstanceExist extends V20140815Rpc
  * @method string getMaxAvgScanRows()
  * @method $this withMaxAvgScanRows($value)
  */
-class DescribeTemplatesList extends V20140815Rpc
+class DescribeTemplatesList extends Rpc
 {
 }
 
@@ -4426,7 +4423,7 @@ class DescribeTemplatesList extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeLogBackupFiles extends V20140815Rpc
+class DescribeLogBackupFiles extends Rpc
 {
 }
 
@@ -4452,7 +4449,7 @@ class DescribeLogBackupFiles extends V20140815Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class DescribeActiveOperationTask extends V20140815Rpc
+class DescribeActiveOperationTask extends Rpc
 {
 }
 
@@ -4474,7 +4471,7 @@ class DescribeActiveOperationTask extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SwitchDBInstanceVpc extends V20140815Rpc
+class SwitchDBInstanceVpc extends Rpc
 {
 }
 
@@ -4488,7 +4485,7 @@ class SwitchDBInstanceVpc extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class MigrateSecurityIPMode extends V20140815Rpc
+class MigrateSecurityIPMode extends Rpc
 {
 }
 
@@ -4500,7 +4497,7 @@ class MigrateSecurityIPMode extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCollationTimeZones extends V20140815Rpc
+class DescribeCollationTimeZones extends Rpc
 {
 }
 
@@ -4518,7 +4515,7 @@ class DescribeCollationTimeZones extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCollationTimeZone extends V20140815Rpc
+class ModifyCollationTimeZone extends Rpc
 {
 }
 
@@ -4550,7 +4547,7 @@ class ModifyCollationTimeZone extends V20140815Rpc
  * @method string getPayType()
  * @method $this withPayType($value)
  */
-class CopyDatabaseBetweenInstances extends V20140815Rpc
+class CopyDatabaseBetweenInstances extends Rpc
 {
 }
 
@@ -4566,7 +4563,7 @@ class CopyDatabaseBetweenInstances extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupDatabase extends V20140815Rpc
+class DescribeBackupDatabase extends Rpc
 {
 }
 
@@ -4614,7 +4611,7 @@ class DescribeBackupDatabase extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class RecoveryDBInstance extends V20140815Rpc
+class RecoveryDBInstance extends Rpc
 {
 }
 
@@ -4640,7 +4637,7 @@ class RecoveryDBInstance extends V20140815Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeAvailableResource extends V20140815Rpc
+class DescribeAvailableResource extends Rpc
 {
 }
 
@@ -4656,7 +4653,7 @@ class DescribeAvailableResource extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReadonlyInstanceDelayReplicationTime extends V20140815Rpc
+class ModifyReadonlyInstanceDelayReplicationTime extends Rpc
 {
 }
 
@@ -4672,7 +4669,7 @@ class ModifyReadonlyInstanceDelayReplicationTime extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyMySQLDBInstanceDelay extends V20140815Rpc
+class ModifyMySQLDBInstanceDelay extends Rpc
 {
 }
 
@@ -4696,7 +4693,7 @@ class ModifyMySQLDBInstanceDelay extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateOnlineDatabaseTask extends V20140815Rpc
+class CreateOnlineDatabaseTask extends Rpc
 {
 }
 
@@ -4714,7 +4711,7 @@ class CreateOnlineDatabaseTask extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpgradeDBInstanceKernelVersion extends V20140815Rpc
+class UpgradeDBInstanceKernelVersion extends Rpc
 {
 }
 
@@ -4732,7 +4729,7 @@ class UpgradeDBInstanceKernelVersion extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceProxyConfiguration extends V20140815Rpc
+class ModifyDBInstanceProxyConfiguration extends Rpc
 {
 }
 
@@ -4746,7 +4743,7 @@ class ModifyDBInstanceProxyConfiguration extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceProxyConfiguration extends V20140815Rpc
+class DescribeDBInstanceProxyConfiguration extends Rpc
 {
 }
 
@@ -4760,7 +4757,7 @@ class DescribeDBInstanceProxyConfiguration extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSecurityGroupConfiguration extends V20140815Rpc
+class DescribeSecurityGroupConfiguration extends Rpc
 {
 }
 
@@ -4776,7 +4773,7 @@ class DescribeSecurityGroupConfiguration extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySecurityGroupConfiguration extends V20140815Rpc
+class ModifySecurityGroupConfiguration extends Rpc
 {
 }
 
@@ -4798,7 +4795,7 @@ class ModifySecurityGroupConfiguration extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeMigrateTasks extends V20140815Rpc
+class DescribeMigrateTasks extends Rpc
 {
 }
 
@@ -4814,7 +4811,7 @@ class DescribeMigrateTasks extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeOssDownloads extends V20140815Rpc
+class DescribeOssDownloads extends Rpc
 {
 }
 
@@ -4842,7 +4839,7 @@ class DescribeOssDownloads extends V20140815Rpc
  * @method string getCheckDBMode()
  * @method $this withCheckDBMode($value)
  */
-class CreateMigrateTask extends V20140815Rpc
+class CreateMigrateTask extends Rpc
 {
 }
 
@@ -4864,7 +4861,7 @@ class CreateMigrateTask extends V20140815Rpc
  * @method string getOSSUrls()
  * @method $this withOSSUrls($value)
  */
-class CreateMigrateTaskForSQLServer extends V20140815Rpc
+class CreateMigrateTaskForSQLServer extends Rpc
 {
 }
 
@@ -4886,7 +4883,7 @@ class CreateMigrateTaskForSQLServer extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeMigrateTasksForSQLServer extends V20140815Rpc
+class DescribeMigrateTasksForSQLServer extends Rpc
 {
 }
 
@@ -4902,7 +4899,7 @@ class DescribeMigrateTasksForSQLServer extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeOssDownloadsForSQLServer extends V20140815Rpc
+class DescribeOssDownloadsForSQLServer extends Rpc
 {
 }
 
@@ -4922,7 +4919,7 @@ class DescribeOssDownloadsForSQLServer extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccount extends V20140815Rpc
+class ResetAccount extends Rpc
 {
 }
 
@@ -4934,7 +4931,7 @@ class ResetAccount extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CopyDatabase extends V20140815Rpc
+class CopyDatabase extends Rpc
 {
 }
 
@@ -4948,7 +4945,7 @@ class CopyDatabase extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstancesAsCsv extends V20140815Rpc
+class DescribeDBInstancesAsCsv extends Rpc
 {
 }
 
@@ -4968,7 +4965,7 @@ class DescribeDBInstancesAsCsv extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceNetworkExpireTime extends V20140815Rpc
+class ModifyDBInstanceNetworkExpireTime extends Rpc
 {
 }
 
@@ -5026,7 +5023,7 @@ class ModifyDBInstanceNetworkExpireTime extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class CreateDBInstanceReplica extends V20140815Rpc
+class CreateDBInstanceReplica extends Rpc
 {
 }
 
@@ -5066,7 +5063,7 @@ class CreateDBInstanceReplica extends V20140815Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribePrice extends V20140815Rpc
+class DescribePrice extends Rpc
 {
 }
 
@@ -5102,7 +5099,7 @@ class DescribePrice extends V20140815Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeRenewalPrice extends V20140815Rpc
+class DescribeRenewalPrice extends Rpc
 {
 }
 
@@ -5122,7 +5119,7 @@ class DescribeRenewalPrice extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaDescription extends V20140815Rpc
+class ModifyReplicaDescription extends Rpc
 {
 }
 
@@ -5144,7 +5141,7 @@ class ModifyReplicaDescription extends V20140815Rpc
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  */
-class RenewInstance extends V20140815Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -5166,7 +5163,7 @@ class RenewInstance extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckRecoveryConditions extends V20140815Rpc
+class CheckRecoveryConditions extends Rpc
 {
 }
 
@@ -5186,7 +5183,7 @@ class CheckRecoveryConditions extends V20140815Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeTaskInfo extends V20140815Rpc
+class DescribeTaskInfo extends Rpc
 {
 }
 
@@ -5208,7 +5205,7 @@ class DescribeTaskInfo extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyInstanceAutoRenewalAttribute extends V20140815Rpc
+class ModifyInstanceAutoRenewalAttribute extends Rpc
 {
 }
 
@@ -5231,7 +5228,7 @@ class ModifyInstanceAutoRenewalAttribute extends V20140815Rpc
  * @method $this withPageNumber($value)
  * @method string getProxyId()
  */
-class DescribeInstanceAutoRenewalAttribute extends V20140815Rpc
+class DescribeInstanceAutoRenewalAttribute extends Rpc
 {
 
     /**
@@ -5264,7 +5261,7 @@ class DescribeInstanceAutoRenewalAttribute extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyResourceGroup extends V20140815Rpc
+class ModifyResourceGroup extends Rpc
 {
 }
 
@@ -5292,7 +5289,7 @@ class ModifyResourceGroup extends V20140815Rpc
  * @method string getMaxDelayTime()
  * @method $this withMaxDelayTime($value)
  */
-class AllocateReadWriteSplittingConnection extends V20140815Rpc
+class AllocateReadWriteSplittingConnection extends Rpc
 {
 }
 
@@ -5318,7 +5315,7 @@ class AllocateReadWriteSplittingConnection extends V20140815Rpc
  * @method string getMaxDelayTime()
  * @method $this withMaxDelayTime($value)
  */
-class ModifyReadWriteSplittingConnection extends V20140815Rpc
+class ModifyReadWriteSplittingConnection extends Rpc
 {
 }
 
@@ -5334,7 +5331,7 @@ class ModifyReadWriteSplittingConnection extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReleaseReadWriteSplittingConnection extends V20140815Rpc
+class ReleaseReadWriteSplittingConnection extends Rpc
 {
 }
 
@@ -5350,7 +5347,7 @@ class ReleaseReadWriteSplittingConnection extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CalculateDBInstanceWeight extends V20140815Rpc
+class CalculateDBInstanceWeight extends Rpc
 {
 }
 
@@ -5378,7 +5375,7 @@ class CalculateDBInstanceWeight extends V20140815Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class CheckResource extends V20140815Rpc
+class CheckResource extends Rpc
 {
 }
 
@@ -5394,7 +5391,7 @@ class CheckResource extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCharacterSetName extends V20140815Rpc
+class DescribeCharacterSetName extends Rpc
 {
 }
 
@@ -5412,7 +5409,7 @@ class DescribeCharacterSetName extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteBackup extends V20140815Rpc
+class DeleteBackup extends Rpc
 {
 }
 
@@ -5420,7 +5417,7 @@ class DeleteBackup extends V20140815Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class DescribeDiagnosticReportList extends V20140815Rpc
+class DescribeDiagnosticReportList extends Rpc
 {
 }
 
@@ -5432,7 +5429,7 @@ class DescribeDiagnosticReportList extends V20140815Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class CreateDiagnosticReport extends V20140815Rpc
+class CreateDiagnosticReport extends Rpc
 {
 }
 
@@ -5486,7 +5483,7 @@ class CreateDiagnosticReport extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class CloneDBInstance extends V20140815Rpc
+class CloneDBInstance extends Rpc
 {
 }
 
@@ -5502,7 +5499,7 @@ class CloneDBInstance extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RevokeOperatorPermission extends V20140815Rpc
+class RevokeOperatorPermission extends Rpc
 {
 }
 
@@ -5527,7 +5524,7 @@ class RevokeOperatorPermission extends V20140815Rpc
  * @method $this withDBInstanceId($value)
  * @method string getProxyId()
  */
-class DescribeDBInstanceByTags extends V20140815Rpc
+class DescribeDBInstanceByTags extends Rpc
 {
 
     /**
@@ -5563,7 +5560,7 @@ class DescribeDBInstanceByTags extends V20140815Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeTags extends V20140815Rpc
+class DescribeTags extends Rpc
 {
 
     /**
@@ -5600,7 +5597,7 @@ class DescribeTags extends V20140815Rpc
  * @method string getTDEStatus()
  * @method $this withTDEStatus($value)
  */
-class ModifyDBInstanceTDE extends V20140815Rpc
+class ModifyDBInstanceTDE extends Rpc
 {
 }
 
@@ -5616,7 +5613,7 @@ class ModifyDBInstanceTDE extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceSSL extends V20140815Rpc
+class DescribeDBInstanceSSL extends Rpc
 {
 }
 
@@ -5632,7 +5629,7 @@ class DescribeDBInstanceSSL extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceTDE extends V20140815Rpc
+class DescribeDBInstanceTDE extends Rpc
 {
 }
 
@@ -5652,7 +5649,7 @@ class DescribeDBInstanceTDE extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GrantOperatorPermission extends V20140815Rpc
+class GrantOperatorPermission extends Rpc
 {
 }
 
@@ -5670,7 +5667,7 @@ class GrantOperatorPermission extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceSSL extends V20140815Rpc
+class ModifyDBInstanceSSL extends Rpc
 {
 }
 
@@ -5692,7 +5689,7 @@ class ModifyDBInstanceSSL extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSQLLogFiles extends V20140815Rpc
+class DescribeSQLLogFiles extends Rpc
 {
 }
 
@@ -5712,7 +5709,7 @@ class DescribeSQLLogFiles extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceMonitor extends V20140815Rpc
+class ModifyDBInstanceMonitor extends Rpc
 {
 }
 
@@ -5734,7 +5731,7 @@ class ModifyDBInstanceMonitor extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifySQLCollectorPolicy extends V20140815Rpc
+class ModifySQLCollectorPolicy extends Rpc
 {
 }
 
@@ -5752,7 +5749,7 @@ class ModifySQLCollectorPolicy extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceMonitor extends V20140815Rpc
+class DescribeDBInstanceMonitor extends Rpc
 {
 }
 
@@ -5776,7 +5773,7 @@ class DescribeDBInstanceMonitor extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSQLReports extends V20140815Rpc
+class DescribeSQLReports extends Rpc
 {
 }
 
@@ -5800,7 +5797,7 @@ class DescribeSQLReports extends V20140815Rpc
  * @method string getOperation()
  * @method $this withOperation($value)
  */
-class SwitchDBInstanceHA extends V20140815Rpc
+class SwitchDBInstanceHA extends Rpc
 {
 }
 
@@ -5820,7 +5817,7 @@ class SwitchDBInstanceHA extends V20140815Rpc
  * @method string getHAMode()
  * @method $this withHAMode($value)
  */
-class ModifyDBInstanceHAConfig extends V20140815Rpc
+class ModifyDBInstanceHAConfig extends Rpc
 {
 }
 
@@ -5836,7 +5833,7 @@ class ModifyDBInstanceHAConfig extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceHAConfig extends V20140815Rpc
+class DescribeDBInstanceHAConfig extends Rpc
 {
 }
 
@@ -5854,7 +5851,7 @@ class DescribeDBInstanceHAConfig extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceIPArrayList extends V20140815Rpc
+class DescribeDBInstanceIPArrayList extends Rpc
 {
 }
 
@@ -5878,7 +5875,7 @@ class DescribeDBInstanceIPArrayList extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSQLLogReportList extends V20140815Rpc
+class DescribeSQLLogReportList extends Rpc
 {
 }
 
@@ -5898,7 +5895,7 @@ class DescribeSQLLogReportList extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceAttribute extends V20140815Rpc
+class DescribeDBInstanceAttribute extends Rpc
 {
 }
 
@@ -5937,7 +5934,7 @@ class DescribeDBInstanceAttribute extends V20140815Rpc
  * @method string getTag3value()
  * @method string getProxyId()
  */
-class DescribeDBInstancesByPerformance extends V20140815Rpc
+class DescribeDBInstancesByPerformance extends Rpc
 {
 
     /**
@@ -6105,7 +6102,7 @@ class DescribeDBInstancesByPerformance extends V20140815Rpc
  * @method $this withExpirePeriod($value)
  * @method string getProxyId()
  */
-class DescribeDBInstancesByExpireTime extends V20140815Rpc
+class DescribeDBInstancesByExpireTime extends Rpc
 {
 
     /**
@@ -6181,7 +6178,7 @@ class DescribeDBInstancesByExpireTime extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class DescribeDBInstances extends V20140815Rpc
+class DescribeDBInstances extends Rpc
 {
 
     /**
@@ -6368,7 +6365,7 @@ class DescribeDBInstances extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class CreateReadOnlyDBInstance extends V20140815Rpc
+class CreateReadOnlyDBInstance extends Rpc
 {
 }
 
@@ -6430,7 +6427,7 @@ class CreateReadOnlyDBInstance extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class CreateDBInstance extends V20140815Rpc
+class CreateDBInstance extends Rpc
 {
 }
 
@@ -6450,7 +6447,7 @@ class CreateDBInstance extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AllocateInstancePublicConnection extends V20140815Rpc
+class AllocateInstancePublicConnection extends Rpc
 {
 }
 
@@ -6468,7 +6465,7 @@ class AllocateInstancePublicConnection extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceConnectionMode extends V20140815Rpc
+class ModifyDBInstanceConnectionMode extends Rpc
 {
 }
 
@@ -6490,7 +6487,7 @@ class ModifyDBInstanceConnectionMode extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceNetInfo extends V20140815Rpc
+class DescribeDBInstanceNetInfo extends Rpc
 {
 }
 
@@ -6514,7 +6511,7 @@ class DescribeDBInstanceNetInfo extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SwitchDBInstanceNetType extends V20140815Rpc
+class SwitchDBInstanceNetType extends Rpc
 {
 }
 
@@ -6532,7 +6529,7 @@ class SwitchDBInstanceNetType extends V20140815Rpc
  * @method string getCurrentConnectionString()
  * @method $this withCurrentConnectionString($value)
  */
-class ReleaseInstancePublicConnection extends V20140815Rpc
+class ReleaseInstancePublicConnection extends Rpc
 {
 }
 
@@ -6564,7 +6561,7 @@ class ReleaseInstancePublicConnection extends V20140815Rpc
  * @method string getReadWriteSplittingClassicExpiredDays()
  * @method $this withReadWriteSplittingClassicExpiredDays($value)
  */
-class ModifyDBInstanceNetworkType extends V20140815Rpc
+class ModifyDBInstanceNetworkType extends Rpc
 {
 }
 
@@ -6586,7 +6583,7 @@ class ModifyDBInstanceNetworkType extends V20140815Rpc
  * @method string getCurrentConnectionString()
  * @method $this withCurrentConnectionString($value)
  */
-class ModifyDBInstanceConnectionString extends V20140815Rpc
+class ModifyDBInstanceConnectionString extends Rpc
 {
 }
 
@@ -6617,7 +6614,7 @@ class ModifyDBInstanceConnectionString extends V20140815Rpc
  * @method string getTag3value()
  * @method string getProxyId()
  */
-class AddTagsToResource extends V20140815Rpc
+class AddTagsToResource extends Rpc
 {
 
     /**
@@ -6784,7 +6781,7 @@ class AddTagsToResource extends V20140815Rpc
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  */
-class CreateAccount extends V20140815Rpc
+class CreateAccount extends Rpc
 {
 }
 
@@ -6804,7 +6801,7 @@ class CreateAccount extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckAccountNameAvailable extends V20140815Rpc
+class CheckAccountNameAvailable extends Rpc
 {
 }
 
@@ -6822,7 +6819,7 @@ class CheckAccountNameAvailable extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CancelImport extends V20140815Rpc
+class CancelImport extends Rpc
 {
 }
 
@@ -6844,7 +6841,7 @@ class CancelImport extends V20140815Rpc
  * @method string getCharacterSetName()
  * @method $this withCharacterSetName($value)
  */
-class CreateDatabase extends V20140815Rpc
+class CreateDatabase extends Rpc
 {
 }
 
@@ -6868,7 +6865,7 @@ class CreateDatabase extends V20140815Rpc
  * @method string getBackupType()
  * @method $this withBackupType($value)
  */
-class CreateBackup extends V20140815Rpc
+class CreateBackup extends Rpc
 {
 }
 
@@ -6886,7 +6883,7 @@ class CreateBackup extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDatabase extends V20140815Rpc
+class DeleteDatabase extends Rpc
 {
 }
 
@@ -6904,7 +6901,7 @@ class DeleteDatabase extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAccount extends V20140815Rpc
+class DeleteAccount extends Rpc
 {
 }
 
@@ -6924,7 +6921,7 @@ class DeleteAccount extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateTempDBInstance extends V20140815Rpc
+class CreateTempDBInstance extends Rpc
 {
 }
 
@@ -6942,7 +6939,7 @@ class CreateTempDBInstance extends V20140815Rpc
  * @method string getBackupPolicyMode()
  * @method $this withBackupPolicyMode($value)
  */
-class DescribeBackupPolicy extends V20140815Rpc
+class DescribeBackupPolicy extends Rpc
 {
 }
 
@@ -6964,7 +6961,7 @@ class DescribeBackupPolicy extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAccounts extends V20140815Rpc
+class DescribeAccounts extends Rpc
 {
 }
 
@@ -6994,7 +6991,7 @@ class DescribeAccounts extends V20140815Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class DescibeImportsFromDatabase extends V20140815Rpc
+class DescibeImportsFromDatabase extends Rpc
 {
 }
 
@@ -7012,7 +7009,7 @@ class DescibeImportsFromDatabase extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDBInstance extends V20140815Rpc
+class DeleteDBInstance extends Rpc
 {
 }
 
@@ -7036,7 +7033,7 @@ class DeleteDBInstance extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeBinlogFiles extends V20140815Rpc
+class DescribeBinlogFiles extends Rpc
 {
 }
 
@@ -7062,7 +7059,7 @@ class DescribeBinlogFiles extends V20140815Rpc
  * @method string getBackupJobStatus()
  * @method $this withBackupJobStatus($value)
  */
-class DescribeBackupTasks extends V20140815Rpc
+class DescribeBackupTasks extends Rpc
 {
 }
 
@@ -7094,7 +7091,7 @@ class DescribeBackupTasks extends V20140815Rpc
  * @method string getBackupMode()
  * @method $this withBackupMode($value)
  */
-class DescribeBackups extends V20140815Rpc
+class DescribeBackups extends Rpc
 {
 }
 
@@ -7118,7 +7115,7 @@ class DescribeBackups extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeErrorLogs extends V20140815Rpc
+class DescribeErrorLogs extends Rpc
 {
 }
 
@@ -7140,7 +7137,7 @@ class DescribeErrorLogs extends V20140815Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class DescribeDBInstancePerformance extends V20140815Rpc
+class DescribeDBInstancePerformance extends Rpc
 {
 }
 
@@ -7164,7 +7161,7 @@ class DescribeDBInstancePerformance extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDatabases extends V20140815Rpc
+class DescribeDatabases extends Rpc
 {
 }
 
@@ -7188,7 +7185,7 @@ class DescribeDatabases extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeModifyParameterLog extends V20140815Rpc
+class DescribeModifyParameterLog extends Rpc
 {
 }
 
@@ -7206,7 +7203,7 @@ class DescribeModifyParameterLog extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeParameters extends V20140815Rpc
+class DescribeParameters extends Rpc
 {
 }
 
@@ -7222,7 +7219,7 @@ class DescribeParameters extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20140815Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -7244,7 +7241,7 @@ class DescribeRegions extends V20140815Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class DescribeParameterTemplates extends V20140815Rpc
+class DescribeParameterTemplates extends Rpc
 {
 }
 
@@ -7272,7 +7269,7 @@ class DescribeParameterTemplates extends V20140815Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class DescribeSlowLogs extends V20140815Rpc
+class DescribeSlowLogs extends Rpc
 {
 }
 
@@ -7300,7 +7297,7 @@ class DescribeSlowLogs extends V20140815Rpc
  * @method string getSQLHASH()
  * @method $this withSQLHASH($value)
  */
-class DescribeSlowLogRecords extends V20140815Rpc
+class DescribeSlowLogRecords extends Rpc
 {
 }
 
@@ -7318,7 +7315,7 @@ class DescribeSlowLogRecords extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeResourceUsage extends V20140815Rpc
+class DescribeResourceUsage extends Rpc
 {
 }
 
@@ -7346,7 +7343,7 @@ class DescribeResourceUsage extends V20140815Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeTasks extends V20140815Rpc
+class DescribeTasks extends Rpc
 {
 }
 
@@ -7370,7 +7367,7 @@ class DescribeTasks extends V20140815Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSQLLogReports extends V20140815Rpc
+class DescribeSQLLogReports extends Rpc
 {
 }
 
@@ -7406,7 +7403,7 @@ class DescribeSQLLogReports extends V20140815Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class DescribeSQLLogRecords extends V20140815Rpc
+class DescribeSQLLogRecords extends Rpc
 {
 }
 
@@ -7428,7 +7425,7 @@ class DescribeSQLLogRecords extends V20140815Rpc
  * @method string getAccountPrivilege()
  * @method $this withAccountPrivilege($value)
  */
-class GrantAccountPrivilege extends V20140815Rpc
+class GrantAccountPrivilege extends Rpc
 {
 }
 
@@ -7458,7 +7455,7 @@ class GrantAccountPrivilege extends V20140815Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class MigrateToOtherZone extends V20140815Rpc
+class MigrateToOtherZone extends Rpc
 {
 }
 
@@ -7476,7 +7473,7 @@ class MigrateToOtherZone extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ImportDataForSQLServer extends V20140815Rpc
+class ImportDataForSQLServer extends Rpc
 {
 }
 
@@ -7496,7 +7493,7 @@ class ImportDataForSQLServer extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ImportDatabaseBetweenInstances extends V20140815Rpc
+class ImportDatabaseBetweenInstances extends Rpc
 {
 }
 
@@ -7516,7 +7513,7 @@ class ImportDatabaseBetweenInstances extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceDescription extends V20140815Rpc
+class ModifyDBInstanceDescription extends Rpc
 {
 }
 
@@ -7536,7 +7533,7 @@ class ModifyDBInstanceDescription extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBDescription extends V20140815Rpc
+class ModifyDBDescription extends Rpc
 {
 }
 
@@ -7590,7 +7587,7 @@ class ModifyDBDescription extends V20140815Rpc
  * @method string getLogBackupRetentionPeriod()
  * @method $this withLogBackupRetentionPeriod($value)
  */
-class ModifyBackupPolicy extends V20140815Rpc
+class ModifyBackupPolicy extends Rpc
 {
 }
 
@@ -7610,7 +7607,7 @@ class ModifyBackupPolicy extends V20140815Rpc
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  */
-class ModifyAccountDescription extends V20140815Rpc
+class ModifyAccountDescription extends Rpc
 {
 }
 
@@ -7632,7 +7629,7 @@ class ModifyAccountDescription extends V20140815Rpc
  * @method string getParameters()
  * @method $this withParameters($value)
  */
-class ModifyParameter extends V20140815Rpc
+class ModifyParameter extends Rpc
 {
 }
 
@@ -7660,7 +7657,7 @@ class ModifyParameter extends V20140815Rpc
  * @method string getPayType()
  * @method $this withPayType($value)
  */
-class ModifyDBInstanceSpec extends V20140815Rpc
+class ModifyDBInstanceSpec extends Rpc
 {
 }
 
@@ -7680,7 +7677,7 @@ class ModifyDBInstanceSpec extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceMaintainTime extends V20140815Rpc
+class ModifyDBInstanceMaintainTime extends Rpc
 {
 }
 
@@ -7698,7 +7695,7 @@ class ModifyDBInstanceMaintainTime extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class PurgeDBInstanceLog extends V20140815Rpc
+class PurgeDBInstanceLog extends Rpc
 {
 }
 
@@ -7730,7 +7727,7 @@ class PurgeDBInstanceLog extends V20140815Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class ModifySecurityIps extends V20140815Rpc
+class ModifySecurityIps extends Rpc
 {
 }
 
@@ -7748,7 +7745,7 @@ class ModifySecurityIps extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestartDBInstance extends V20140815Rpc
+class RestartDBInstance extends Rpc
 {
 }
 
@@ -7768,7 +7765,7 @@ class RestartDBInstance extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccountPassword extends V20140815Rpc
+class ResetAccountPassword extends Rpc
 {
 }
 
@@ -7799,7 +7796,7 @@ class ResetAccountPassword extends V20140815Rpc
  * @method string getTag3value()
  * @method string getProxyId()
  */
-class RemoveTagsFromResource extends V20140815Rpc
+class RemoveTagsFromResource extends Rpc
 {
 
     /**
@@ -7976,7 +7973,7 @@ class RemoveTagsFromResource extends V20140815Rpc
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  */
-class UpgradeDBInstanceEngineVersion extends V20140815Rpc
+class UpgradeDBInstanceEngineVersion extends Rpc
 {
 }
 
@@ -7996,7 +7993,7 @@ class UpgradeDBInstanceEngineVersion extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RevokeAccountPrivilege extends V20140815Rpc
+class RevokeAccountPrivilege extends Rpc
 {
 }
 
@@ -8018,7 +8015,7 @@ class RevokeAccountPrivilege extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestoreDBInstance extends V20140815Rpc
+class RestoreDBInstance extends Rpc
 {
 }
 
@@ -8038,7 +8035,7 @@ class RestoreDBInstance extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccountForPG extends V20140815Rpc
+class ResetAccountForPG extends Rpc
 {
 }
 
@@ -8058,6 +8055,6 @@ class ResetAccountForPG extends V20140815Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AllocateInstancePrivateConnection extends V20140815Rpc
+class AllocateInstancePrivateConnection extends Rpc
 {
 }

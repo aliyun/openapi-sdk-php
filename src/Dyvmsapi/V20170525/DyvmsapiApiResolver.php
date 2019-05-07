@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SmartCallOperate smartCallOperate(array $options = [])
  * @method QueryRobotInfoList queryRobotInfoList(array $options = [])
  * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
@@ -31,7 +28,7 @@ class DyvmsapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20170525Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dyvmsapi';
@@ -57,7 +54,7 @@ class V20170525Rpc extends Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class SmartCallOperate extends V20170525Rpc
+class SmartCallOperate extends Rpc
 {
 }
 
@@ -71,7 +68,7 @@ class SmartCallOperate extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryRobotInfoList extends V20170525Rpc
+class QueryRobotInfoList extends Rpc
 {
 }
 
@@ -89,7 +86,7 @@ class QueryRobotInfoList extends V20170525Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryCallDetailByTaskId extends V20170525Rpc
+class QueryCallDetailByTaskId extends Rpc
 {
 }
 
@@ -123,7 +120,7 @@ class QueryCallDetailByTaskId extends V20170525Rpc
  * @method string getIsSelfLine()
  * @method $this withIsSelfLine($value)
  */
-class BatchRobotSmartCall extends V20170525Rpc
+class BatchRobotSmartCall extends Rpc
 {
 }
 
@@ -137,7 +134,7 @@ class BatchRobotSmartCall extends V20170525Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class AddRtcAccount extends V20170525Rpc
+class AddRtcAccount extends Rpc
 {
 }
 
@@ -155,7 +152,7 @@ class AddRtcAccount extends V20170525Rpc
  * @method string getIsCustomAccount()
  * @method $this withIsCustomAccount($value)
  */
-class GetRtcToken extends V20170525Rpc
+class GetRtcToken extends Rpc
 {
 }
 
@@ -169,7 +166,7 @@ class GetRtcToken extends V20170525Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class VoipAddAccount extends V20170525Rpc
+class VoipAddAccount extends Rpc
 {
 }
 
@@ -187,7 +184,7 @@ class VoipAddAccount extends V20170525Rpc
  * @method string getIsCustomAccount()
  * @method $this withIsCustomAccount($value)
  */
-class VoipGetToken extends V20170525Rpc
+class VoipGetToken extends Rpc
 {
 }
 
@@ -201,7 +198,7 @@ class VoipGetToken extends V20170525Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class AddVoipAccount extends V20170525Rpc
+class AddVoipAccount extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class AddVoipAccount extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetVoipToken extends V20170525Rpc
+class GetVoipToken extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class GetVoipToken extends V20170525Rpc
  * @method string getTtsStyle()
  * @method $this withTtsStyle($value)
  */
-class SmartCall extends V20170525Rpc
+class SmartCall extends Rpc
 {
 }
 
@@ -287,7 +284,7 @@ class SmartCall extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryCallDetailByCallId extends V20170525Rpc
+class QueryCallDetailByCallId extends Rpc
 {
 }
 
@@ -301,7 +298,7 @@ class QueryCallDetailByCallId extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CancelCall extends V20170525Rpc
+class CancelCall extends Rpc
 {
 }
 
@@ -331,7 +328,7 @@ class CancelCall extends V20170525Rpc
  * @method string getCallerNumber()
  * @method $this withCallerNumber($value)
  */
-class ClickToDial extends V20170525Rpc
+class ClickToDial extends Rpc
 {
 }
 
@@ -362,7 +359,7 @@ class ClickToDial extends V20170525Rpc
  * @method string getByeTtsParams()
  * @method $this withByeTtsParams($value)
  */
-class IvrCall extends V20170525Rpc
+class IvrCall extends Rpc
 {
 
     /**
@@ -407,7 +404,7 @@ class IvrCall extends V20170525Rpc
  * @method string getOutId()
  * @method $this withOutId($value)
  */
-class SingleCallByTts extends V20170525Rpc
+class SingleCallByTts extends Rpc
 {
 }
 
@@ -433,6 +430,6 @@ class SingleCallByTts extends V20170525Rpc
  * @method string getSpeed()
  * @method $this withSpeed($value)
  */
-class SingleCallByVoice extends V20170525Rpc
+class SingleCallByVoice extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Actiontrail\V20171204;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeRegions describeRegions(array $options = [])
  * @method LookupEvents lookupEvents(array $options = [])
  * @method UpdateTrail updateTrail(array $options = [])
@@ -23,7 +20,7 @@ class ActiontrailApiResolver
     use ApiResolverTrait;
 }
 
-class V20171204Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Actiontrail';
@@ -38,7 +35,7 @@ class V20171204Rpc extends Rpc
     public $serviceCode = 'actiontrail';
 }
 
-class DescribeRegions extends V20171204Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -72,7 +69,7 @@ class DescribeRegions extends V20171204Rpc
  * @method string getUser()
  * @method $this withUser($value)
  */
-class LookupEvents extends V20171204Rpc
+class LookupEvents extends Rpc
 {
 }
 
@@ -92,7 +89,7 @@ class LookupEvents extends V20171204Rpc
  * @method string getEventRW()
  * @method $this withEventRW($value)
  */
-class UpdateTrail extends V20171204Rpc
+class UpdateTrail extends Rpc
 {
 }
 
@@ -100,7 +97,7 @@ class UpdateTrail extends V20171204Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class StopLogging extends V20171204Rpc
+class StopLogging extends Rpc
 {
 
     /** @var string */
@@ -111,7 +108,7 @@ class StopLogging extends V20171204Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class GetTrailStatus extends V20171204Rpc
+class GetTrailStatus extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class GetTrailStatus extends V20171204Rpc
  * @method string getIncludeShadowTrails()
  * @method $this withIncludeShadowTrails($value)
  */
-class DescribeTrails extends V20171204Rpc
+class DescribeTrails extends Rpc
 {
 }
 
@@ -129,7 +126,7 @@ class DescribeTrails extends V20171204Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class StartLogging extends V20171204Rpc
+class StartLogging extends Rpc
 {
 
     /** @var string */
@@ -152,7 +149,7 @@ class StartLogging extends V20171204Rpc
  * @method string getEventRW()
  * @method $this withEventRW($value)
  */
-class CreateTrail extends V20171204Rpc
+class CreateTrail extends Rpc
 {
 }
 
@@ -160,6 +157,6 @@ class CreateTrail extends V20171204Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteTrail extends V20171204Rpc
+class DeleteTrail extends Rpc
 {
 }

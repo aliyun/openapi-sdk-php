@@ -3,11 +3,8 @@
 namespace AlibabaCloud\WelfareInner\V20180524;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetWelfareGeekInfo getWelfareGeekInfo(array $options = [])
  * @method DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
  * @method DoCheckResource doCheckResource(array $options = [])
@@ -18,7 +15,7 @@ class WelfareInnerApiResolver
     use ApiResolverTrait;
 }
 
-class V20180524Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'welfare-inner';
@@ -36,7 +33,7 @@ class V20180524Rpc extends Rpc
  * @method string getPk()
  * @method $this withPk($value)
  */
-class GetWelfareGeekInfo extends V20180524Rpc
+class GetWelfareGeekInfo extends Rpc
 {
 }
 
@@ -64,7 +61,7 @@ class GetWelfareGeekInfo extends V20180524Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoPhysicalDeleteResource extends V20180524Rpc
+class DoPhysicalDeleteResource extends Rpc
 {
 }
 
@@ -98,7 +95,7 @@ class DoPhysicalDeleteResource extends V20180524Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoCheckResource extends V20180524Rpc
+class DoCheckResource extends Rpc
 {
 }
 
@@ -126,6 +123,6 @@ class DoCheckResource extends V20180524Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoLogicalDeleteResource extends V20180524Rpc
+class DoLogicalDeleteResource extends Rpc
 {
 }

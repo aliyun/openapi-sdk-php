@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Jarvis\V20180206;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteWhiteListDbItemConditional deleteWhiteListDbItemConditional(array $options = [])
  * @method DeleteWhiteListConditional deleteWhiteListConditional(array $options = [])
  * @method DescribeCdnIpList describeCdnIpList(array $options = [])
@@ -51,7 +48,7 @@ class JarvisApiResolver
     use ApiResolverTrait;
 }
 
-class V20180206Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'jarvis';
@@ -76,7 +73,7 @@ class V20180206Rpc extends Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteWhiteListDbItemConditional extends V20180206Rpc
+class DeleteWhiteListDbItemConditional extends Rpc
 {
 
     /**
@@ -106,7 +103,7 @@ class DeleteWhiteListDbItemConditional extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteWhiteListConditional extends V20180206Rpc
+class DeleteWhiteListConditional extends Rpc
 {
 
     /**
@@ -139,7 +136,7 @@ class DeleteWhiteListConditional extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCdnIpList extends V20180206Rpc
+class DescribeCdnIpList extends Rpc
 {
 }
 
@@ -164,7 +161,7 @@ class DescribeCdnIpList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeConsoleAccessWhiteList extends V20180206Rpc
+class DescribeConsoleAccessWhiteList extends Rpc
 {
 
     /**
@@ -191,7 +188,7 @@ class DescribeConsoleAccessWhiteList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateAllEcsWhiteList extends V20180206Rpc
+class CreateAllEcsWhiteList extends Rpc
 {
 }
 
@@ -203,7 +200,7 @@ class CreateAllEcsWhiteList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCdnCertify extends V20180206Rpc
+class DescribeCdnCertify extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class DescribeCdnCertify extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateConsoleAccessWhiteList extends V20180206Rpc
+class CreateConsoleAccessWhiteList extends Rpc
 {
 }
 
@@ -251,7 +248,7 @@ class CreateConsoleAccessWhiteList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteCdnIp extends V20180206Rpc
+class DeleteCdnIp extends Rpc
 {
 }
 
@@ -265,7 +262,7 @@ class DeleteCdnIp extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteConsoleAccessWhiteList extends V20180206Rpc
+class DeleteConsoleAccessWhiteList extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class DeleteConsoleAccessWhiteList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateCdnIp extends V20180206Rpc
+class CreateCdnIp extends Rpc
 {
 }
 
@@ -295,7 +292,7 @@ class CreateCdnIp extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeSpecialEcs extends V20180206Rpc
+class DescribeSpecialEcs extends Rpc
 {
 }
 
@@ -311,7 +308,7 @@ class DescribeSpecialEcs extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeEcsListPage extends V20180206Rpc
+class DescribeEcsListPage extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class DescribeEcsListPage extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteCdnSubscription extends V20180206Rpc
+class DeleteCdnSubscription extends Rpc
 {
 }
 
@@ -341,7 +338,7 @@ class DeleteCdnSubscription extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateCdnSubscription extends V20180206Rpc
+class CreateCdnSubscription extends Rpc
 {
 }
 
@@ -361,7 +358,7 @@ class CreateCdnSubscription extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCdnSubscription extends V20180206Rpc
+class DescribeCdnSubscription extends Rpc
 {
 }
 
@@ -377,7 +374,7 @@ class DescribeCdnSubscription extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCdnVendor extends V20180206Rpc
+class DescribeCdnVendor extends Rpc
 {
 }
 
@@ -389,7 +386,7 @@ class DescribeCdnVendor extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeAccessWhiteListSlbList extends V20180206Rpc
+class DescribeAccessWhiteListSlbList extends Rpc
 {
 }
 
@@ -401,7 +398,7 @@ class DescribeAccessWhiteListSlbList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeAccessWhiteListEipList extends V20180206Rpc
+class DescribeAccessWhiteListEipList extends Rpc
 {
 }
 
@@ -419,7 +416,7 @@ class DescribeAccessWhiteListEipList extends V20180206Rpc
  * @method string getSrcUid()
  * @method string getSourceCode()
  */
-class DescribePunishList extends V20180206Rpc
+class DescribePunishList extends Rpc
 {
 
     /**
@@ -483,7 +480,7 @@ class DescribePunishList extends V20180206Rpc
  * @method string getSrcUid()
  * @method string getSourceCode()
  */
-class DescribeDdosDefenseInfo extends V20180206Rpc
+class DescribeDdosDefenseInfo extends Rpc
 {
 
     /**
@@ -528,7 +525,7 @@ class DescribeDdosDefenseInfo extends V20180206Rpc
  * @method string getQueryRegionId()
  * @method string getStatus()
  */
-class DescribeRiskListDetail extends V20180206Rpc
+class DescribeRiskListDetail extends Rpc
 {
 
     /**
@@ -657,7 +654,7 @@ class DescribeRiskListDetail extends V20180206Rpc
  * @method $this withLang($value)
  * @method string getSourceCode()
  */
-class DescribePhoneInfo extends V20180206Rpc
+class DescribePhoneInfo extends Rpc
 {
 
     /**
@@ -711,7 +708,7 @@ class DescribePhoneInfo extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateUidWhiteListGroup extends V20180206Rpc
+class CreateUidWhiteListGroup extends Rpc
 {
 }
 
@@ -731,7 +728,7 @@ class CreateUidWhiteListGroup extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class ModifyUidWhiteListAutoShare extends V20180206Rpc
+class ModifyUidWhiteListAutoShare extends Rpc
 {
 }
 
@@ -755,7 +752,7 @@ class ModifyUidWhiteListAutoShare extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeUidWhiteListGroup extends V20180206Rpc
+class DescribeUidWhiteListGroup extends Rpc
 {
 }
 
@@ -769,7 +766,7 @@ class DescribeUidWhiteListGroup extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteUidWhiteListGroup extends V20180206Rpc
+class DeleteUidWhiteListGroup extends Rpc
 {
 }
 
@@ -787,7 +784,7 @@ class DeleteUidWhiteListGroup extends V20180206Rpc
  * @method string getQueryRegionId()
  * @method $this withQueryRegionId($value)
  */
-class DescribeRiskTrend extends V20180206Rpc
+class DescribeRiskTrend extends Rpc
 {
 }
 
@@ -799,7 +796,7 @@ class DescribeRiskTrend extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeUidGcLevel extends V20180206Rpc
+class DescribeUidGcLevel extends Rpc
 {
 }
 
@@ -829,7 +826,7 @@ class DescribeUidGcLevel extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateAccessWhiteListGroup extends V20180206Rpc
+class CreateAccessWhiteListGroup extends Rpc
 {
 }
 
@@ -843,7 +840,7 @@ class CreateAccessWhiteListGroup extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DeleteAccessWhiteListGroup extends V20180206Rpc
+class DeleteAccessWhiteListGroup extends Rpc
 {
 }
 
@@ -863,7 +860,7 @@ class DeleteAccessWhiteListGroup extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class ModifyAccessWhiteListAutoShare extends V20180206Rpc
+class ModifyAccessWhiteListAutoShare extends Rpc
 {
 }
 
@@ -875,7 +872,7 @@ class ModifyAccessWhiteListAutoShare extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeResetRecordQueryCount extends V20180206Rpc
+class DescribeResetRecordQueryCount extends Rpc
 {
 }
 
@@ -887,7 +884,7 @@ class DescribeResetRecordQueryCount extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeAccessWhitelistEcsList extends V20180206Rpc
+class DescribeAccessWhitelistEcsList extends Rpc
 {
 }
 
@@ -909,7 +906,7 @@ class DescribeAccessWhitelistEcsList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeResetRecordList extends V20180206Rpc
+class DescribeResetRecordList extends Rpc
 {
 
     /**
@@ -955,7 +952,7 @@ class DescribeResetRecordList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCpmcPunishList extends V20180206Rpc
+class DescribeCpmcPunishList extends Rpc
 {
 
     /**
@@ -1006,7 +1003,7 @@ class DescribeCpmcPunishList extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeAccessWhiteListGroup extends V20180206Rpc
+class DescribeAccessWhiteListGroup extends Rpc
 {
 
     /**
@@ -1047,6 +1044,6 @@ class DescribeAccessWhiteListGroup extends V20180206Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class CreateCpmcPunishFeedBack extends V20180206Rpc
+class CreateCpmcPunishFeedBack extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
  * @method QueryResourceInventory queryResourceInventory(array $options = [])
  * @method QueryTopology queryTopology(array $options = [])
@@ -23,7 +20,7 @@ class TeslaMaxComputeApiResolver
     use ApiResolverTrait;
 }
 
-class V20180104Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'TeslaMaxCompute';
@@ -36,15 +33,15 @@ class V20180104Rpc extends Rpc
  * @method string getRegionName()
  * @method $this withRegionName($value)
  */
-class QueryCustomerSaleInfo extends V20180104Rpc
+class QueryCustomerSaleInfo extends Rpc
 {
 }
 
-class QueryResourceInventory extends V20180104Rpc
+class QueryResourceInventory extends Rpc
 {
 }
 
-class QueryTopology extends V20180104Rpc
+class QueryTopology extends Rpc
 {
 }
 
@@ -60,7 +57,7 @@ class QueryTopology extends V20180104Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class GetClusterInstance extends V20180104Rpc
+class GetClusterInstance extends Rpc
 {
 }
 
@@ -74,7 +71,7 @@ class GetClusterInstance extends V20180104Rpc
  * @method string getQuotaName()
  * @method $this withQuotaName($value)
  */
-class GetInstancesStatusCount extends V20180104Rpc
+class GetInstancesStatusCount extends Rpc
 {
 }
 
@@ -90,7 +87,7 @@ class GetInstancesStatusCount extends V20180104Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class GetProjectInstance extends V20180104Rpc
+class GetProjectInstance extends Rpc
 {
 }
 
@@ -106,7 +103,7 @@ class GetProjectInstance extends V20180104Rpc
  * @method string getQuotaName()
  * @method $this withQuotaName($value)
  */
-class GetQuotaHistoryInfo extends V20180104Rpc
+class GetQuotaHistoryInfo extends Rpc
 {
 }
 
@@ -126,7 +123,7 @@ class GetQuotaHistoryInfo extends V20180104Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class GetQuotaInstance extends V20180104Rpc
+class GetQuotaInstance extends Rpc
 {
 }
 
@@ -142,6 +139,6 @@ class GetQuotaInstance extends V20180104Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class GetUserInstance extends V20180104Rpc
+class GetUserInstance extends Rpc
 {
 }

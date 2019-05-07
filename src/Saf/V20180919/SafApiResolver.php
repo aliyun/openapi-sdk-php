@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Saf\V20180919;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ExecuteRequest executeRequest(array $options = [])
  */
 class SafApiResolver
@@ -15,7 +12,7 @@ class SafApiResolver
     use ApiResolverTrait;
 }
 
-class V20180919Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'saf';
@@ -39,6 +36,6 @@ class V20180919Rpc extends Rpc
  * @method string getService()
  * @method $this withService($value)
  */
-class ExecuteRequest extends V20180919Rpc
+class ExecuteRequest extends Rpc
 {
 }

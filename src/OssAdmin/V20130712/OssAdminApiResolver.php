@@ -3,11 +3,8 @@
 namespace AlibabaCloud\OssAdmin\V20130712;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetBucketPolicy getBucketPolicy(array $options = [])
  * @method CreateOssInstance createOssInstance(array $options = [])
  * @method PutBucketStatus putBucketStatus(array $options = [])
@@ -19,7 +16,7 @@ class OssAdminApiResolver
     use ApiResolverTrait;
 }
 
-class V20130712Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'OssAdmin';
@@ -39,7 +36,7 @@ class V20130712Rpc extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getBid()
  */
-class GetBucketPolicy extends V20130712Rpc
+class GetBucketPolicy extends Rpc
 {
 
     /**
@@ -81,7 +78,7 @@ class GetBucketPolicy extends V20130712Rpc
  * @method $this withOwnerId($value)
  * @method string getRegion()
  */
-class CreateOssInstance extends V20130712Rpc
+class CreateOssInstance extends Rpc
 {
 
     /**
@@ -121,7 +118,7 @@ class CreateOssInstance extends V20130712Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class PutBucketStatus extends V20130712Rpc
+class PutBucketStatus extends Rpc
 {
 
     /**
@@ -177,7 +174,7 @@ class PutBucketStatus extends V20130712Rpc
  * @method string getIamPolicy()
  * @method $this withIamPolicy($value)
  */
-class PutBucketPolicy extends V20130712Rpc
+class PutBucketPolicy extends Rpc
 {
 
     /**
@@ -215,7 +212,7 @@ class PutBucketPolicy extends V20130712Rpc
  * @method string getBucketLimit()
  * @method $this withBucketLimit($value)
  */
-class PutBucketLimit extends V20130712Rpc
+class PutBucketLimit extends Rpc
 {
 
     /**
