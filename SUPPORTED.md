@@ -1,7 +1,7 @@
 English | [简体中文](./SUPPORTED-CN.md)
 
 # Supported
-Alibaba Cloud SDK for PHP has supported quick access to 137 versions of 128 products, as listed below:
+Alibaba Cloud SDK for PHP has supported quick access to 138 versions of 129 products, as listed below:
 
 | Products |  Versions   |
 |----------|-------------|
@@ -92,6 +92,7 @@ Alibaba Cloud SDK for PHP has supported quick access to 137 versions of 128 prod
 | Nlp | V20180408 |
 | NlsCloudMeta | V20180518 |
 | NlsFiletrans | V20180817 |
+| Ocs | V20150301 |
 | Oms | V20150212 |
 | Ons | V20170918, V20190214 |
 | Openanalytics | V20180301 |
