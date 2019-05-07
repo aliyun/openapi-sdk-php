@@ -98,6 +98,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Nlp\Nlp nlp()
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static NlsFiletrans\NlsFiletrans nlsFiletrans()
+ * @method static Ocs\Ocs ocs()
  * @method static Oms\Oms oms()
  * @method static Ons\Ons ons()
  * @method static Openanalytics\Openanalytics openanalytics()
