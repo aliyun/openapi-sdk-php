@@ -165,6 +165,8 @@ class GetMPUTaskStatus extends V20180111Rpc
  * @method array getUserPanes()
  * @method string getBackgroundColor()
  * @method $this withBackgroundColor($value)
+ * @method string getCropMode()
+ * @method $this withCropMode($value)
  * @method string getTaskProfile()
  * @method $this withTaskProfile($value)
  * @method array getLayoutIds()

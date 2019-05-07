@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\BatchCompute;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20130111\BatchComputeApiResolver v20130111()
  */
-class BatchComputeVersion
+class BatchComputeVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

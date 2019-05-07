@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Sts;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20150401\StsApiResolver v20150401()
  */
-class StsVersion
+class StsVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

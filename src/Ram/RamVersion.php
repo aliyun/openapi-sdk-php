@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Ram;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20150501\RamApiResolver v20150501()
  */
-class RamVersion
+class RamVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

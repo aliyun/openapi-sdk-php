@@ -2,13 +2,13 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Ecs\EcsVersion;
+use AlibabaCloud\Ecs\V20140526\Ecs;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Ecs\EcsVersion;
-use AlibabaCloud\Ecs\V20140526\DescribeRegions;
-use AlibabaCloud\Ecs\V20140526\Ecs;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class EcsTest

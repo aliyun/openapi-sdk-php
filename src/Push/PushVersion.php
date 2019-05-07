@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Push;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20160801\PushApiResolver v20160801()
  */
-class PushVersion
+class PushVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

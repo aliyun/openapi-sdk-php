@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Slb;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20140515\SlbApiResolver v20140515()
  */
-class SlbVersion
+class SlbVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

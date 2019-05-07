@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
+ * @method SaveStats saveStats(array $options = [])
  * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
  * @method PublishPredictiveJobGroup publishPredictiveJobGroup(array $options = [])
  * @method CreatePredictiveJobGroup createPredictiveJobGroup(array $options = [])
@@ -169,6 +171,54 @@ class V20170705Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getRecordTime()
+ * @method $this withRecordTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getStats()
+ * @method $this withStats($value)
+ * @method string getCallStartTime()
+ * @method $this withCallStartTime($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCalleeNumber()
+ * @method $this withCalleeNumber($value)
+ * @method string getCallerNumber()
+ * @method $this withCallerNumber($value)
+ */
+class SaveWebRTCStats extends V20170705Rpc
+{
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getRecordTime()
+ * @method $this withRecordTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getStats()
+ * @method $this withStats($value)
+ * @method string getCallStartTime()
+ * @method $this withCallStartTime($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCalleeNumber()
+ * @method $this withCalleeNumber($value)
+ * @method string getCallerNumber()
+ * @method $this withCallerNumber($value)
+ */
+class SaveStats extends V20170705Rpc
+{
 }
 
 class ListInstancesOfUser extends V20170705Rpc

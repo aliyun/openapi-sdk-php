@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Live;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20161101\LiveApiResolver v20161101()
  */
-class LiveVersion
+class LiveVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

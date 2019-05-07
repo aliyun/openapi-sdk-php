@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\RKvstore;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20150101\RKvstoreApiResolver v20150101()
  */
-class RKvstoreVersion
+class RKvstoreVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

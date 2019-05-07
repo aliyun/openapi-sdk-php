@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Scdn;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20171115\ScdnApiResolver v20171115()
  */
-class ScdnVersion
+class ScdnVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

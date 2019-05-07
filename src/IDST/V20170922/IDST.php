@@ -6,9 +6,6 @@ use AlibabaCloud\ApiResolverTrait;
 
 /**
  * @deprecated
- *
- * @method static IDSTApiResolver iDSTApiResolver(array $options = [])
- * @method static RoaSearch roaSearch(array $options = [])
  */
 class IDST
 {

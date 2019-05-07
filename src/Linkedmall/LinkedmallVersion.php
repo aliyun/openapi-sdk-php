@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Linkedmall;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180116\LinkedmallApiResolver v20180116()
  */
-class LinkedmallVersion
+class LinkedmallVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

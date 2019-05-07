@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\DomainIntl;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20171218\DomainIntlApiResolver v20171218()
  */
-class DomainIntlVersion
+class DomainIntlVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

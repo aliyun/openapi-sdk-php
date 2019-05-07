@@ -8,6 +8,15 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method SaveBatchUserAccountInfo saveBatchUserAccountInfo(array $options = [])
+ * @method PageListResourceUsers pageListResourceUsers(array $options = [])
+ * @method ListUsersByCondition listUsersByCondition(array $options = [])
+ * @method DeleteUserResourceRole deleteUserResourceRole(array $options = [])
+ * @method DeleteBatchResourceUsers deleteBatchResourceUsers(array $options = [])
+ * @method DeleteResourceUser deleteResourceUser(array $options = [])
+ * @method CreateBatchUsers createBatchUsers(array $options = [])
+ * @method AddUserResourceRole addUserResourceRole(array $options = [])
+ * @method AddResourceToUsers addResourceToUsers(array $options = [])
  * @method UpdateUserGroup updateUserGroup(array $options = [])
  * @method PageListUserGroups pageListUserGroups(array $options = [])
  * @method ListUserGroups listUserGroups(array $options = [])
@@ -387,6 +396,247 @@ class V20160408Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'emr';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAuthType()
+ * @method $this withAuthType($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ */
+class SaveBatchUserAccountInfo extends V20160408Rpc
+{
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListResourceUsers extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ */
+class ListUsersByCondition extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DeleteUserResourceRole extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class DeleteBatchResourceUsers extends V20160408Rpc
+{
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DeleteResourceUser extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method array getUserBaseParam()
+ */
+class CreateBatchUsers extends V20160408Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $userBaseParam
+     *
+     * @return $this
+     */
+    public function withUserBaseParam(array $userBaseParam)
+    {
+        $this->data['UserBaseParam'] = $userBaseParam;
+        foreach ($userBaseParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.AliyunUserId'] = $depth1Value['AliyunUserId'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.IsSuperAdmin'] = $depth1Value['IsSuperAdmin'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class AddUserResourceRole extends V20160408Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method array getRoleId()
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class AddResourceToUsers extends V20160408Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**

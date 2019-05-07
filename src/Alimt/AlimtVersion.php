@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\Alimt;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20181012\AlimtApiResolver v20181012()
  */
-class AlimtVersion
+class AlimtVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeLiveStreamSpecificConfig describeLiveStreamSpecificConfig(array $options = [])
+ * @method SetLiveStreamSpecificConfig setLiveStreamSpecificConfig(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method SetBoardCallback setBoardCallback(array $options = [])
@@ -190,6 +192,34 @@ class V20161101Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'live';
+}
+
+/**
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamSpecificConfig extends V20161101Rpc
+{
+}
+
+/**
+ * @method string getConfigStatus()
+ * @method $this withConfigStatus($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getConfigValue()
+ * @method $this withConfigValue($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetLiveStreamSpecificConfig extends V20161101Rpc
+{
 }
 
 /**
@@ -495,6 +525,8 @@ class DeleteLiveLazyPullStreamInfoConfig extends V20161101Rpc
 }
 
 /**
+ * @method string getPullArgs()
+ * @method $this withPullArgs($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getPullAuthKey()

@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\NlsFiletrans;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180817\NlsFiletransApiResolver v20180817()
  */
-class NlsFiletransVersion
+class NlsFiletransVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

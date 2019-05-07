@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\EHPC;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20180412\EHPCApiResolver v20180412()
  */
-class EHPCVersion
+class EHPCVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\BssOpenApi;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20171214\BssOpenApiApiResolver v20171214()
  */
-class BssOpenApiVersion
+class BssOpenApiVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

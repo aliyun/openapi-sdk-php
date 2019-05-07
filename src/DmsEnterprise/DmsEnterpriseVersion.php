@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\DmsEnterprise;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20181101\DmsEnterpriseApiResolver v20181101()
  */
-class DmsEnterpriseVersion
+class DmsEnterpriseVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

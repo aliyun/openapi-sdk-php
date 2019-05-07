@@ -8,6 +8,7 @@ use AlibabaCloud\Roa;
 /**
  * Resolve Api based on the method name.
  *
+ * @method DescribeClusterAttachScripts describeClusterAttachScripts(array $options = [])
  * @method GetClusterCertInfo getClusterCertInfo(array $options = [])
  * @method PreCheckForCreateCluster preCheckForCreateCluster(array $options = [])
  * @method CreateClusterByResourcesGroup createClusterByResourcesGroup(array $options = [])
@@ -72,7 +73,6 @@ use AlibabaCloud\Roa;
  * @method CreateAutoScale createAutoScale(array $options = [])
  * @method CreateMonitoringUser createMonitoringUser(array $options = [])
  * @method CreateTriggerHook createTriggerHook(array $options = [])
- * @method CleanUpETCD cleanUpETCD(array $options = [])
  * @method BindSLB bindSLB(array $options = [])
  * @method CheckSecurityGroup checkSecurityGroup(array $options = [])
  * @method CleanUpControllerEvent cleanUpControllerEvent(array $options = [])
@@ -105,6 +105,19 @@ class V20151215Roa extends Roa
 
     /** @var string */
     public $serviceCode = 'cs';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeClusterAttachScripts extends V20151215Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/attachscript';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -918,19 +931,6 @@ class CreateTriggerHook extends V20151215Roa
 
     /** @var string */
     public $method = 'PUT';
-}
-
-/**
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class CleanUpETCD extends V20151215Roa
-{
-    /** @var string */
-    public $pathPattern = '/clusters/clean-etcd';
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**

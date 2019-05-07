@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\UbsmsInner;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20150623\UbsmsInnerApiResolver v20150623()
  */
-class UbsmsInnerVersion
+class UbsmsInnerVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }

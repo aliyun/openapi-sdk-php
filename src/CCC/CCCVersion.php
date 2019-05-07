@@ -2,14 +2,11 @@
 
 namespace AlibabaCloud\CCC;
 
-use AlibabaCloud\VersionResolverTrait;
+use AlibabaCloud\VersionResolver;
 
 /**
  * @deprecated
- *
- * @method static V20170705\CCCApiResolver v20170705()
  */
-class CCCVersion
+class CCCVersion extends VersionResolver
 {
-    use VersionResolverTrait;
 }
