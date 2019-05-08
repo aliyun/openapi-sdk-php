@@ -546,12 +546,12 @@ class SetLiveLazyPullStreamInfoConfig extends Rpc
 }
 
 /**
+ * @method string getAppName()
+ * @method $this withAppName($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getAppName()
- * @method $this withAppName($value)
  */
 class DescribeLiveLazyPullStreamConfig extends Rpc
 {

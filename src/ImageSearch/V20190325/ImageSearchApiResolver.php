@@ -38,7 +38,7 @@ class Roa extends \AlibabaCloud\Roa
 class ListTagResources extends Roa
 {
     /** @var string */
-    public $pathPattern = '/resources/listTag';
+    public $pathPattern = '/imagesearch/listTag';
 
     /**
      * @param array $resourceId
@@ -107,7 +107,7 @@ class ListTagResources extends Roa
 class UntagResources extends Roa
 {
     /** @var string */
-    public $pathPattern = '/resources/untag';
+    public $pathPattern = '/imagesearch/untag';
 
     /**
      * @param string $value

@@ -5,6 +5,7 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
+ * @method SubmitRecording submitRecording(array $options = [])
  * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
  * @method SaveStats saveStats(array $options = [])
  * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
@@ -168,6 +169,22 @@ class Rpc extends \AlibabaCloud\Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ * @method string getMergedRecording()
+ * @method $this withMergedRecording($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getResourceRecording()
+ * @method $this withResourceRecording($value)
+ */
+class SubmitRecording extends Rpc
+{
 }
 
 /**
