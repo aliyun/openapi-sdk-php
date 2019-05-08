@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Live\V20161101;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeLiveStreamSpecificConfig describeLiveStreamSpecificConfig(array $options = [])
  * @method SetLiveStreamSpecificConfig setLiveStreamSpecificConfig(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
@@ -179,7 +176,7 @@ class LiveApiResolver
     use ApiResolverTrait;
 }
 
-class V20161101Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'live';
@@ -202,7 +199,7 @@ class V20161101Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamSpecificConfig extends V20161101Rpc
+class DescribeLiveStreamSpecificConfig extends Rpc
 {
 }
 
@@ -218,7 +215,7 @@ class DescribeLiveStreamSpecificConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetLiveStreamSpecificConfig extends V20161101Rpc
+class SetLiveStreamSpecificConfig extends Rpc
 {
 }
 
@@ -240,7 +237,7 @@ class SetLiveStreamSpecificConfig extends V20161101Rpc
  * @method string getHlsDelay()
  * @method $this withHlsDelay($value)
  */
-class SetLiveStreamDelayConfig extends V20161101Rpc
+class SetLiveStreamDelayConfig extends Rpc
 {
 }
 
@@ -250,7 +247,7 @@ class SetLiveStreamDelayConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamDelayConfig extends V20161101Rpc
+class DescribeLiveStreamDelayConfig extends Rpc
 {
 }
 
@@ -270,7 +267,7 @@ class DescribeLiveStreamDelayConfig extends V20161101Rpc
  * @method string getAuthSwitch()
  * @method $this withAuthSwitch($value)
  */
-class SetBoardCallback extends V20161101Rpc
+class SetBoardCallback extends Rpc
 {
 }
 
@@ -290,7 +287,7 @@ class SetBoardCallback extends V20161101Rpc
  * @method string getAuthSwitch()
  * @method $this withAuthSwitch($value)
  */
-class UpdateBoardCallback extends V20161101Rpc
+class UpdateBoardCallback extends Rpc
 {
 }
 
@@ -300,7 +297,7 @@ class UpdateBoardCallback extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainMapping extends V20161101Rpc
+class DescribeLiveDomainMapping extends Rpc
 {
 
     /** @var string */
@@ -317,7 +314,7 @@ class DescribeLiveDomainMapping extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class CompleteBoardRecord extends V20161101Rpc
+class CompleteBoardRecord extends Rpc
 {
 }
 
@@ -333,7 +330,7 @@ class CompleteBoardRecord extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRecords extends V20161101Rpc
+class DescribeRecords extends Rpc
 {
 }
 
@@ -345,7 +342,7 @@ class DescribeRecords extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRecord extends V20161101Rpc
+class DescribeRecord extends Rpc
 {
 }
 
@@ -359,7 +356,7 @@ class DescribeRecord extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class StartBoardRecord extends V20161101Rpc
+class StartBoardRecord extends Rpc
 {
 }
 
@@ -369,7 +366,7 @@ class StartBoardRecord extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class ApplyRecordToken extends V20161101Rpc
+class ApplyRecordToken extends Rpc
 {
 }
 
@@ -389,7 +386,7 @@ class ApplyRecordToken extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class RealTimeSnapshotCommand extends V20161101Rpc
+class RealTimeSnapshotCommand extends Rpc
 {
 }
 
@@ -405,7 +402,7 @@ class RealTimeSnapshotCommand extends V20161101Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class StopLiveIndex extends V20161101Rpc
+class StopLiveIndex extends Rpc
 {
 }
 
@@ -423,7 +420,7 @@ class StopLiveIndex extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainRealTimeTrafficData extends V20161101Rpc
+class DescribeLiveDomainRealTimeTrafficData extends Rpc
 {
 }
 
@@ -437,7 +434,7 @@ class DescribeLiveDomainRealTimeTrafficData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveTopDomainsByFlow extends V20161101Rpc
+class DescribeLiveTopDomainsByFlow extends Rpc
 {
 }
 
@@ -455,7 +452,7 @@ class DescribeLiveTopDomainsByFlow extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainRealTimeBpsData extends V20161101Rpc
+class DescribeLiveDomainRealTimeBpsData extends Rpc
 {
 
     /** @var string */
@@ -474,7 +471,7 @@ class DescribeLiveDomainRealTimeBpsData extends V20161101Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeLiveDomainSrcHttpCodeData extends V20161101Rpc
+class DescribeLiveDomainSrcHttpCodeData extends Rpc
 {
 }
 
@@ -492,7 +489,7 @@ class DescribeLiveDomainSrcHttpCodeData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainRealTimeHttpCodeData extends V20161101Rpc
+class DescribeLiveDomainRealTimeHttpCodeData extends Rpc
 {
 }
 
@@ -508,7 +505,7 @@ class DescribeLiveDomainRealTimeHttpCodeData extends V20161101Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeLiveDomainHttpsData extends V20161101Rpc
+class DescribeLiveDomainHttpsData extends Rpc
 {
 }
 
@@ -520,7 +517,7 @@ class DescribeLiveDomainHttpsData extends V20161101Rpc
  * @method string getAppName()
  * @method $this withAppName($value)
  */
-class DeleteLiveLazyPullStreamInfoConfig extends V20161101Rpc
+class DeleteLiveLazyPullStreamInfoConfig extends Rpc
 {
 }
 
@@ -544,7 +541,7 @@ class DeleteLiveLazyPullStreamInfoConfig extends V20161101Rpc
  * @method string getPullProtocol()
  * @method $this withPullProtocol($value)
  */
-class SetLiveLazyPullStreamInfoConfig extends V20161101Rpc
+class SetLiveLazyPullStreamInfoConfig extends Rpc
 {
 }
 
@@ -556,7 +553,7 @@ class SetLiveLazyPullStreamInfoConfig extends V20161101Rpc
  * @method string getAppName()
  * @method $this withAppName($value)
  */
-class DescribeLiveLazyPullStreamConfig extends V20161101Rpc
+class DescribeLiveLazyPullStreamConfig extends Rpc
 {
 }
 
@@ -568,7 +565,7 @@ class DescribeLiveLazyPullStreamConfig extends V20161101Rpc
  * @method string getBoardData()
  * @method $this withBoardData($value)
  */
-class UpdateBoard extends V20161101Rpc
+class UpdateBoard extends Rpc
 {
 }
 
@@ -582,7 +579,7 @@ class UpdateBoard extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class JoinBoard extends V20161101Rpc
+class JoinBoard extends Rpc
 {
 }
 
@@ -594,7 +591,7 @@ class JoinBoard extends V20161101Rpc
  * @method string getBoardId()
  * @method $this withBoardId($value)
  */
-class DescribeBoardSnapshot extends V20161101Rpc
+class DescribeBoardSnapshot extends Rpc
 {
 }
 
@@ -608,7 +605,7 @@ class DescribeBoardSnapshot extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeBoards extends V20161101Rpc
+class DescribeBoards extends Rpc
 {
 }
 
@@ -624,7 +621,7 @@ class DescribeBoards extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeBoardEvents extends V20161101Rpc
+class DescribeBoardEvents extends Rpc
 {
 }
 
@@ -636,7 +633,7 @@ class DescribeBoardEvents extends V20161101Rpc
  * @method string getBoardId()
  * @method $this withBoardId($value)
  */
-class DeleteBoard extends V20161101Rpc
+class DeleteBoard extends Rpc
 {
 }
 
@@ -648,7 +645,7 @@ class DeleteBoard extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class CreateBoard extends V20161101Rpc
+class CreateBoard extends Rpc
 {
 }
 
@@ -660,7 +657,7 @@ class CreateBoard extends V20161101Rpc
  * @method string getBoardId()
  * @method $this withBoardId($value)
  */
-class CompleteBoard extends V20161101Rpc
+class CompleteBoard extends Rpc
 {
 }
 
@@ -674,7 +671,7 @@ class CompleteBoard extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class ApplyBoardToken extends V20161101Rpc
+class ApplyBoardToken extends Rpc
 {
 }
 
@@ -690,7 +687,7 @@ class ApplyBoardToken extends V20161101Rpc
  * @method string getFollowEnable()
  * @method $this withFollowEnable($value)
  */
-class UpdateCasterSceneAudio extends V20161101Rpc
+class UpdateCasterSceneAudio extends Rpc
 {
 
     /**
@@ -734,7 +731,7 @@ class UpdateCasterSceneAudio extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterSceneAudio extends V20161101Rpc
+class DescribeCasterSceneAudio extends Rpc
 {
 }
 
@@ -744,7 +741,7 @@ class DescribeCasterSceneAudio extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamCount extends V20161101Rpc
+class DescribeLiveStreamCount extends Rpc
 {
 
     /** @var string */
@@ -759,7 +756,7 @@ class DescribeLiveStreamCount extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeHlsLiveStreamRealTimeBpsData extends V20161101Rpc
+class DescribeHlsLiveStreamRealTimeBpsData extends Rpc
 {
 
     /** @var string */
@@ -780,7 +777,7 @@ class DescribeHlsLiveStreamRealTimeBpsData extends V20161101Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class SetCasterChannel extends V20161101Rpc
+class SetCasterChannel extends Rpc
 {
 }
 
@@ -790,7 +787,7 @@ class SetCasterChannel extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterChannels extends V20161101Rpc
+class DescribeCasterChannels extends Rpc
 {
 }
 
@@ -806,7 +803,7 @@ class DescribeCasterChannels extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchDeleteLiveDomainConfigs extends V20161101Rpc
+class BatchDeleteLiveDomainConfigs extends Rpc
 {
 }
 
@@ -818,7 +815,7 @@ class BatchDeleteLiveDomainConfigs extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRoomStatus extends V20161101Rpc
+class DescribeRoomStatus extends Rpc
 {
 }
 
@@ -836,7 +833,7 @@ class DescribeRoomStatus extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRoomKickoutUserList extends V20161101Rpc
+class DescribeRoomKickoutUserList extends Rpc
 {
 }
 
@@ -856,7 +853,7 @@ class DescribeRoomKickoutUserList extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class SendRoomUserNotification extends V20161101Rpc
+class SendRoomUserNotification extends Rpc
 {
 }
 
@@ -872,7 +869,7 @@ class SendRoomUserNotification extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeForbidPushStreamRoomList extends V20161101Rpc
+class DescribeForbidPushStreamRoomList extends Rpc
 {
 }
 
@@ -890,7 +887,7 @@ class DescribeForbidPushStreamRoomList extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class SendRoomNotification extends V20161101Rpc
+class SendRoomNotification extends Rpc
 {
 }
 
@@ -916,7 +913,7 @@ class SendRoomNotification extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRoomList extends V20161101Rpc
+class DescribeRoomList extends Rpc
 {
 }
 
@@ -932,7 +929,7 @@ class DescribeRoomList extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class ForbidPushStream extends V20161101Rpc
+class ForbidPushStream extends Rpc
 {
 }
 
@@ -944,7 +941,7 @@ class ForbidPushStream extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DeleteRoom extends V20161101Rpc
+class DeleteRoom extends Rpc
 {
 }
 
@@ -962,7 +959,7 @@ class DeleteRoom extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class CreateRoom extends V20161101Rpc
+class CreateRoom extends Rpc
 {
 }
 
@@ -974,7 +971,7 @@ class CreateRoom extends V20161101Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class AllowPushStream extends V20161101Rpc
+class AllowPushStream extends Rpc
 {
 }
 
@@ -984,7 +981,7 @@ class AllowPushStream extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterRtcInfo extends V20161101Rpc
+class DescribeCasterRtcInfo extends Rpc
 {
 }
 
@@ -1002,7 +999,7 @@ class DescribeCasterRtcInfo extends V20161101Rpc
  * @method string getDomainSwitch()
  * @method $this withDomainSwitch($value)
  */
-class DescribeUpBpsPeakOfLine extends V20161101Rpc
+class DescribeUpBpsPeakOfLine extends Rpc
 {
 }
 
@@ -1018,7 +1015,7 @@ class DescribeUpBpsPeakOfLine extends V20161101Rpc
  * @method string getDomainSwitch()
  * @method $this withDomainSwitch($value)
  */
-class DescribeUpPeakPublishStreamData extends V20161101Rpc
+class DescribeUpPeakPublishStreamData extends Rpc
 {
 }
 
@@ -1034,7 +1031,7 @@ class DescribeUpPeakPublishStreamData extends V20161101Rpc
  * @method string getDomainSwitch()
  * @method $this withDomainSwitch($value)
  */
-class DescribeUpBpsPeakData extends V20161101Rpc
+class DescribeUpBpsPeakData extends Rpc
 {
 }
 
@@ -1046,7 +1043,7 @@ class DescribeUpBpsPeakData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveCertificateList extends V20161101Rpc
+class DescribeLiveCertificateList extends Rpc
 {
 }
 
@@ -1066,7 +1063,7 @@ class DescribeLiveCertificateList extends V20161101Rpc
  * @method string getSSLPri()
  * @method $this withSSLPri($value)
  */
-class SetLiveDomainCertificate extends V20161101Rpc
+class SetLiveDomainCertificate extends Rpc
 {
 }
 
@@ -1078,7 +1075,7 @@ class SetLiveDomainCertificate extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveCertificateDetail extends V20161101Rpc
+class DescribeLiveCertificateDetail extends Rpc
 {
 }
 
@@ -1092,7 +1089,7 @@ class DescribeLiveCertificateDetail extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveDomainMapping extends V20161101Rpc
+class AddLiveDomainMapping extends Rpc
 {
 }
 
@@ -1106,7 +1103,7 @@ class AddLiveDomainMapping extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveDomainMapping extends V20161101Rpc
+class DeleteLiveDomainMapping extends Rpc
 {
 }
 
@@ -1120,7 +1117,7 @@ class DeleteLiveDomainMapping extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainConfigs extends V20161101Rpc
+class DescribeLiveDomainConfigs extends Rpc
 {
 }
 
@@ -1132,7 +1129,7 @@ class DescribeLiveDomainConfigs extends V20161101Rpc
  * @method string getContent()
  * @method $this withContent($value)
  */
-class AddCasterEpisodeGroupContent extends V20161101Rpc
+class AddCasterEpisodeGroupContent extends Rpc
 {
 }
 
@@ -1142,7 +1139,7 @@ class AddCasterEpisodeGroupContent extends V20161101Rpc
  * @method string getProgramId()
  * @method $this withProgramId($value)
  */
-class DeleteCasterEpisodeGroup extends V20161101Rpc
+class DeleteCasterEpisodeGroup extends Rpc
 {
 }
 
@@ -1163,7 +1160,7 @@ class DeleteCasterEpisodeGroup extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddCasterEpisodeGroup extends V20161101Rpc
+class AddCasterEpisodeGroup extends Rpc
 {
 
     /**
@@ -1197,7 +1194,7 @@ class AddCasterEpisodeGroup extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainUvData extends V20161101Rpc
+class DescribeLiveDomainUvData extends Rpc
 {
 }
 
@@ -1221,7 +1218,7 @@ class DescribeLiveDomainUvData extends V20161101Rpc
  * @method string getDomainSearchType()
  * @method $this withDomainSearchType($value)
  */
-class DescribeLiveUserDomains extends V20161101Rpc
+class DescribeLiveUserDomains extends Rpc
 {
 }
 
@@ -1235,7 +1232,7 @@ class DescribeLiveUserDomains extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainTranscodeData extends V20161101Rpc
+class DescribeLiveDomainTranscodeData extends Rpc
 {
 }
 
@@ -1251,7 +1248,7 @@ class DescribeLiveDomainTranscodeData extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class RealTimeRecordCommand extends V20161101Rpc
+class RealTimeRecordCommand extends Rpc
 {
 }
 
@@ -1263,7 +1260,7 @@ class RealTimeRecordCommand extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopLiveDomain extends V20161101Rpc
+class StopLiveDomain extends Rpc
 {
 }
 
@@ -1275,7 +1272,7 @@ class StopLiveDomain extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartLiveDomain extends V20161101Rpc
+class StartLiveDomain extends Rpc
 {
 }
 
@@ -1287,7 +1284,7 @@ class StartLiveDomain extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainDetail extends V20161101Rpc
+class DescribeLiveDomainDetail extends Rpc
 {
 }
 
@@ -1315,7 +1312,7 @@ class DescribeLiveDomainDetail extends V20161101Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class DescribeUserLiveDomains extends V20161101Rpc
+class DescribeUserLiveDomains extends Rpc
 {
 }
 
@@ -1329,7 +1326,7 @@ class DescribeUserLiveDomains extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveDomain extends V20161101Rpc
+class DeleteLiveDomain extends Rpc
 {
 }
 
@@ -1343,7 +1340,7 @@ class DeleteLiveDomain extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainConfigs extends V20161101Rpc
+class DescribeDomainConfigs extends Rpc
 {
 }
 
@@ -1367,7 +1364,7 @@ class DescribeDomainConfigs extends V20161101Rpc
  * @method string getLiveDomainType()
  * @method $this withLiveDomainType($value)
  */
-class AddLiveDomain extends V20161101Rpc
+class AddLiveDomain extends Rpc
 {
 }
 
@@ -1383,7 +1380,7 @@ class AddLiveDomain extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchSetLiveDomainConfigs extends V20161101Rpc
+class BatchSetLiveDomainConfigs extends Rpc
 {
 }
 
@@ -1397,7 +1394,7 @@ class BatchSetLiveDomainConfigs extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainTrancodeData extends V20161101Rpc
+class DescribeLiveDomainTrancodeData extends Rpc
 {
 }
 
@@ -1413,7 +1410,7 @@ class DescribeLiveDomainTrancodeData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainRecordData extends V20161101Rpc
+class DescribeLiveDomainRecordData extends Rpc
 {
 }
 
@@ -1427,7 +1424,7 @@ class DescribeLiveDomainRecordData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainSnapshotData extends V20161101Rpc
+class DescribeLiveDomainSnapshotData extends Rpc
 {
 }
 
@@ -1451,7 +1448,7 @@ class DescribeLiveDomainSnapshotData extends V20161101Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeCasterProgram extends V20161101Rpc
+class DescribeCasterProgram extends Rpc
 {
 }
 
@@ -1462,7 +1459,7 @@ class DescribeCasterProgram extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCasterProgram extends V20161101Rpc
+class ModifyCasterProgram extends Rpc
 {
 
     /**
@@ -1497,7 +1494,7 @@ class ModifyCasterProgram extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddCasterProgram extends V20161101Rpc
+class AddCasterProgram extends Rpc
 {
 
     /**
@@ -1543,7 +1540,7 @@ class AddCasterProgram extends V20161101Rpc
  * @method string getEpisodeId()
  * @method $this withEpisodeId($value)
  */
-class ModifyCasterEpisode extends V20161101Rpc
+class ModifyCasterEpisode extends Rpc
 {
 
     /**
@@ -1568,7 +1565,7 @@ class ModifyCasterEpisode extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCasterProgram extends V20161101Rpc
+class DeleteCasterProgram extends Rpc
 {
 }
 
@@ -1580,7 +1577,7 @@ class DeleteCasterProgram extends V20161101Rpc
  * @method string getEpisodeId()
  * @method $this withEpisodeId($value)
  */
-class DeleteCasterEpisode extends V20161101Rpc
+class DeleteCasterEpisode extends Rpc
 {
 }
 
@@ -1603,7 +1600,7 @@ class DeleteCasterEpisode extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddCasterEpisode extends V20161101Rpc
+class AddCasterEpisode extends Rpc
 {
 
     /**
@@ -1638,7 +1635,7 @@ class AddCasterEpisode extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainTrafficData extends V20161101Rpc
+class DescribeLiveDomainTrafficData extends Rpc
 {
 }
 
@@ -1658,7 +1655,7 @@ class DescribeLiveDomainTrafficData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDomainBpsData extends V20161101Rpc
+class DescribeLiveDomainBpsData extends Rpc
 {
 }
 
@@ -1680,7 +1677,7 @@ class DescribeLiveDomainBpsData extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class AddTrancodeSEI extends V20161101Rpc
+class AddTrancodeSEI extends Rpc
 {
 }
 
@@ -1694,7 +1691,7 @@ class AddTrancodeSEI extends V20161101Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DeleteCasterSceneConfig extends V20161101Rpc
+class DeleteCasterSceneConfig extends Rpc
 {
 }
 
@@ -1724,7 +1721,7 @@ class DeleteCasterSceneConfig extends V20161101Rpc
  * @method string getHeight()
  * @method $this withHeight($value)
  */
-class AddCustomLiveStreamTranscode extends V20161101Rpc
+class AddCustomLiveStreamTranscode extends Rpc
 {
 }
 
@@ -1740,7 +1737,7 @@ class AddCustomLiveStreamTranscode extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DeleteLiveRecordVodConfig extends V20161101Rpc
+class DeleteLiveRecordVodConfig extends Rpc
 {
 }
 
@@ -1758,7 +1755,7 @@ class DeleteLiveRecordVodConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveRecordVodConfigs extends V20161101Rpc
+class DescribeLiveRecordVodConfigs extends Rpc
 {
 }
 
@@ -1780,7 +1777,7 @@ class DescribeLiveRecordVodConfigs extends V20161101Rpc
  * @method string getVodTranscodeGroupId()
  * @method $this withVodTranscodeGroupId($value)
  */
-class AddLiveRecordVodConfig extends V20161101Rpc
+class AddLiveRecordVodConfig extends Rpc
 {
 }
 
@@ -1792,7 +1789,7 @@ class AddLiveRecordVodConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterComponents extends V20161101Rpc
+class DescribeCasterComponents extends Rpc
 {
 }
 
@@ -1818,7 +1815,7 @@ class DescribeCasterComponents extends V20161101Rpc
  * @method string getTextLayerContent()
  * @method $this withTextLayerContent($value)
  */
-class ModifyCasterComponent extends V20161101Rpc
+class ModifyCasterComponent extends Rpc
 {
 }
 
@@ -1830,7 +1827,7 @@ class ModifyCasterComponent extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCasterComponent extends V20161101Rpc
+class DeleteCasterComponent extends Rpc
 {
 }
 
@@ -1856,7 +1853,7 @@ class DeleteCasterComponent extends V20161101Rpc
  * @method string getTextLayerContent()
  * @method $this withTextLayerContent($value)
  */
-class AddCasterComponent extends V20161101Rpc
+class AddCasterComponent extends Rpc
 {
 }
 
@@ -1866,7 +1863,7 @@ class AddCasterComponent extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopCaster extends V20161101Rpc
+class StopCaster extends Rpc
 {
 }
 
@@ -1876,7 +1873,7 @@ class StopCaster extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartCaster extends V20161101Rpc
+class StartCaster extends Rpc
 {
 }
 
@@ -1896,7 +1893,7 @@ class StartCaster extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamHistoryUserNum extends V20161101Rpc
+class DescribeLiveStreamHistoryUserNum extends Rpc
 {
 }
 
@@ -1910,7 +1907,7 @@ class DescribeLiveStreamHistoryUserNum extends V20161101Rpc
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class DescribeLiveTranscodeInfo extends V20161101Rpc
+class DescribeLiveTranscodeInfo extends Rpc
 {
 }
 
@@ -1925,7 +1922,7 @@ class DescribeLiveTranscodeInfo extends V20161101Rpc
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  */
-class UpdateCasterSceneConfig extends V20161101Rpc
+class UpdateCasterSceneConfig extends Rpc
 {
 
     /**
@@ -1972,7 +1969,7 @@ class UpdateCasterSceneConfig extends V20161101Rpc
  * @method string getCallbackUrl()
  * @method $this withCallbackUrl($value)
  */
-class SetCasterConfig extends V20161101Rpc
+class SetCasterConfig extends Rpc
 {
 }
 
@@ -1987,7 +1984,7 @@ class SetCasterConfig extends V20161101Rpc
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  */
-class SetCasterSceneConfig extends V20161101Rpc
+class SetCasterSceneConfig extends Rpc
 {
 
     /**
@@ -2014,7 +2011,7 @@ class SetCasterSceneConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartCasterScene extends V20161101Rpc
+class StartCasterScene extends Rpc
 {
 }
 
@@ -2026,7 +2023,7 @@ class StartCasterScene extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopCasterScene extends V20161101Rpc
+class StopCasterScene extends Rpc
 {
 }
 
@@ -2038,7 +2035,7 @@ class StopCasterScene extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EffectCasterUrgent extends V20161101Rpc
+class EffectCasterUrgent extends Rpc
 {
 }
 
@@ -2052,7 +2049,7 @@ class EffectCasterUrgent extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EffectCasterVideoResource extends V20161101Rpc
+class EffectCasterVideoResource extends Rpc
 {
 }
 
@@ -2068,7 +2065,7 @@ class EffectCasterVideoResource extends V20161101Rpc
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  */
-class ModifyCasterLayout extends V20161101Rpc
+class ModifyCasterLayout extends Rpc
 {
 
     /**
@@ -2165,7 +2162,7 @@ class ModifyCasterLayout extends V20161101Rpc
  * @method string getRepeatNum()
  * @method $this withRepeatNum($value)
  */
-class ModifyCasterVideoResource extends V20161101Rpc
+class ModifyCasterVideoResource extends Rpc
 {
 }
 
@@ -2187,7 +2184,7 @@ class ModifyCasterVideoResource extends V20161101Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeCasters extends V20161101Rpc
+class DescribeCasters extends Rpc
 {
 }
 
@@ -2199,7 +2196,7 @@ class DescribeCasters extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterScenes extends V20161101Rpc
+class DescribeCasterScenes extends Rpc
 {
 }
 
@@ -2209,7 +2206,7 @@ class DescribeCasterScenes extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterStreamUrl extends V20161101Rpc
+class DescribeCasterStreamUrl extends Rpc
 {
 }
 
@@ -2219,7 +2216,7 @@ class DescribeCasterStreamUrl extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterVideoResources extends V20161101Rpc
+class DescribeCasterVideoResources extends Rpc
 {
 }
 
@@ -2231,7 +2228,7 @@ class DescribeCasterVideoResources extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCasterVideoResource extends V20161101Rpc
+class DeleteCasterVideoResource extends Rpc
 {
 }
 
@@ -2241,7 +2238,7 @@ class DeleteCasterVideoResource extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCasterConfig extends V20161101Rpc
+class DescribeCasterConfig extends Rpc
 {
 }
 
@@ -2253,7 +2250,7 @@ class DescribeCasterConfig extends V20161101Rpc
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  */
-class DescribeCasterLayouts extends V20161101Rpc
+class DescribeCasterLayouts extends Rpc
 {
 }
 
@@ -2265,7 +2262,7 @@ class DescribeCasterLayouts extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCaster extends V20161101Rpc
+class DeleteCaster extends Rpc
 {
 }
 
@@ -2277,7 +2274,7 @@ class DeleteCaster extends V20161101Rpc
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  */
-class DeleteCasterLayout extends V20161101Rpc
+class DeleteCasterLayout extends Rpc
 {
 }
 
@@ -2291,7 +2288,7 @@ class DeleteCasterLayout extends V20161101Rpc
  * @method string getToSceneId()
  * @method $this withToSceneId($value)
  */
-class CopyCasterSceneConfig extends V20161101Rpc
+class CopyCasterSceneConfig extends Rpc
 {
 }
 
@@ -2313,7 +2310,7 @@ class CopyCasterSceneConfig extends V20161101Rpc
  * @method string getPurchaseTime()
  * @method $this withPurchaseTime($value)
  */
-class CreateCaster extends V20161101Rpc
+class CreateCaster extends Rpc
 {
 }
 
@@ -2327,7 +2324,7 @@ class CreateCaster extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddCasterLayout extends V20161101Rpc
+class AddCasterLayout extends Rpc
 {
 
     /**
@@ -2424,7 +2421,7 @@ class AddCasterLayout extends V20161101Rpc
  * @method string getRepeatNum()
  * @method $this withRepeatNum($value)
  */
-class AddCasterVideoResource extends V20161101Rpc
+class AddCasterVideoResource extends Rpc
 {
 }
 
@@ -2438,7 +2435,7 @@ class AddCasterVideoResource extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CopyCaster extends V20161101Rpc
+class CopyCaster extends Rpc
 {
 }
 
@@ -2460,7 +2457,7 @@ class CopyCaster extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class AddLivePullStreamInfoConfig extends V20161101Rpc
+class AddLivePullStreamInfoConfig extends Rpc
 {
 }
 
@@ -2476,7 +2473,7 @@ class AddLivePullStreamInfoConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DeleteLivePullStreamInfoConfig extends V20161101Rpc
+class DeleteLivePullStreamInfoConfig extends Rpc
 {
 }
 
@@ -2488,7 +2485,7 @@ class DeleteLivePullStreamInfoConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLivePullStreamConfig extends V20161101Rpc
+class DescribeLivePullStreamConfig extends Rpc
 {
 }
 
@@ -2508,7 +2505,7 @@ class DescribeLivePullStreamConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamBitRateData extends V20161101Rpc
+class DescribeLiveStreamBitRateData extends Rpc
 {
 }
 
@@ -2531,7 +2528,7 @@ class DescribeLiveStreamBitRateData extends V20161101Rpc
  * @method $this withOssObject($value)
  * @method array getScene()
  */
-class UpdateLiveSnapshotDetectPornConfig extends V20161101Rpc
+class UpdateLiveSnapshotDetectPornConfig extends Rpc
 {
 
     /**
@@ -2560,7 +2557,7 @@ class UpdateLiveSnapshotDetectPornConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateLiveDetectNotifyConfig extends V20161101Rpc
+class UpdateLiveDetectNotifyConfig extends Rpc
 {
 }
 
@@ -2580,7 +2577,7 @@ class UpdateLiveDetectNotifyConfig extends V20161101Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveSnapshotDetectPornConfig extends V20161101Rpc
+class DescribeLiveSnapshotDetectPornConfig extends Rpc
 {
 }
 
@@ -2594,7 +2591,7 @@ class DescribeLiveSnapshotDetectPornConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveSnapshotDetectPornConfig extends V20161101Rpc
+class DeleteLiveSnapshotDetectPornConfig extends Rpc
 {
 }
 
@@ -2606,7 +2603,7 @@ class DeleteLiveSnapshotDetectPornConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveDetectNotifyConfig extends V20161101Rpc
+class DescribeLiveDetectNotifyConfig extends Rpc
 {
 }
 
@@ -2618,7 +2615,7 @@ class DescribeLiveDetectNotifyConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveDetectNotifyConfig extends V20161101Rpc
+class DeleteLiveDetectNotifyConfig extends Rpc
 {
 }
 
@@ -2641,7 +2638,7 @@ class DeleteLiveDetectNotifyConfig extends V20161101Rpc
  * @method $this withOssObject($value)
  * @method array getScene()
  */
-class AddLiveSnapshotDetectPornConfig extends V20161101Rpc
+class AddLiveSnapshotDetectPornConfig extends Rpc
 {
 
     /**
@@ -2670,7 +2667,7 @@ class AddLiveSnapshotDetectPornConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveDetectNotifyConfig extends V20161101Rpc
+class AddLiveDetectNotifyConfig extends Rpc
 {
 }
 
@@ -2688,7 +2685,7 @@ class AddLiveDetectNotifyConfig extends V20161101Rpc
  * @method string getNeedStatusNotify()
  * @method $this withNeedStatusNotify($value)
  */
-class UpdateLiveRecordNotifyConfig extends V20161101Rpc
+class UpdateLiveRecordNotifyConfig extends Rpc
 {
 }
 
@@ -2698,19 +2695,7 @@ class UpdateLiveRecordNotifyConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamsNotifyUrlConfig extends V20161101Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveRecordNotifyConfig extends V20161101Rpc
+class DescribeLiveStreamsNotifyUrlConfig extends Rpc
 {
 }
 
@@ -2722,7 +2707,19 @@ class DescribeLiveRecordNotifyConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveRecordNotifyConfig extends V20161101Rpc
+class DescribeLiveRecordNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteLiveRecordNotifyConfig extends Rpc
 {
 }
 
@@ -2732,7 +2729,7 @@ class DeleteLiveRecordNotifyConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveStreamsNotifyUrlConfig extends V20161101Rpc
+class DeleteLiveStreamsNotifyUrlConfig extends Rpc
 {
 }
 
@@ -2750,7 +2747,7 @@ class DeleteLiveStreamsNotifyUrlConfig extends V20161101Rpc
  * @method string getNeedStatusNotify()
  * @method $this withNeedStatusNotify($value)
  */
-class AddLiveRecordNotifyConfig extends V20161101Rpc
+class AddLiveRecordNotifyConfig extends Rpc
 {
 }
 
@@ -2768,7 +2765,7 @@ class AddLiveRecordNotifyConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class ResumeLiveStream extends V20161101Rpc
+class ResumeLiveStream extends Rpc
 {
 }
 
@@ -2784,7 +2781,7 @@ class ResumeLiveStream extends V20161101Rpc
  * @method string getAuthType()
  * @method $this withAuthType($value)
  */
-class SetLiveStreamsNotifyUrlConfig extends V20161101Rpc
+class SetLiveStreamsNotifyUrlConfig extends Rpc
 {
 }
 
@@ -2796,7 +2793,7 @@ class SetLiveStreamsNotifyUrlConfig extends V20161101Rpc
  * @method string getDomainTranscodeName()
  * @method $this withDomainTranscodeName($value)
  */
-class DescribeLiveStreamTranscodeInfo extends V20161101Rpc
+class DescribeLiveStreamTranscodeInfo extends Rpc
 {
 }
 
@@ -2818,7 +2815,7 @@ class DescribeLiveStreamTranscodeInfo extends V20161101Rpc
  * @method string getControlStreamAction()
  * @method $this withControlStreamAction($value)
  */
-class ForbidLiveStream extends V20161101Rpc
+class ForbidLiveStream extends Rpc
 {
 }
 
@@ -2838,7 +2835,7 @@ class ForbidLiveStream extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamsFrameRateAndBitRateData extends V20161101Rpc
+class DescribeLiveStreamsFrameRateAndBitRateData extends Rpc
 {
 }
 
@@ -2854,7 +2851,7 @@ class DescribeLiveStreamsFrameRateAndBitRateData extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveStreamTranscode extends V20161101Rpc
+class DeleteLiveStreamTranscode extends Rpc
 {
 }
 
@@ -2870,7 +2867,7 @@ class DeleteLiveStreamTranscode extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveStreamTranscode extends V20161101Rpc
+class AddLiveStreamTranscode extends Rpc
 {
 }
 
@@ -2888,7 +2885,7 @@ class AddLiveStreamTranscode extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLiveStreamsControlHistory extends V20161101Rpc
+class DescribeLiveStreamsControlHistory extends Rpc
 {
 }
 
@@ -2916,7 +2913,7 @@ class DescribeLiveStreamsControlHistory extends V20161101Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class DescribeLiveStreamsOnlineList extends V20161101Rpc
+class DescribeLiveStreamsOnlineList extends Rpc
 {
 }
 
@@ -2944,7 +2941,7 @@ class DescribeLiveStreamsOnlineList extends V20161101Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class DescribeLiveStreamsPublishList extends V20161101Rpc
+class DescribeLiveStreamsPublishList extends Rpc
 {
 }
 
@@ -2964,7 +2961,7 @@ class DescribeLiveStreamsPublishList extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamOnlineUserNum extends V20161101Rpc
+class DescribeLiveStreamOnlineUserNum extends Rpc
 {
 }
 
@@ -2980,7 +2977,7 @@ class DescribeLiveStreamOnlineUserNum extends V20161101Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class DescribeLiveStreamsBlockList extends V20161101Rpc
+class DescribeLiveStreamsBlockList extends Rpc
 {
 }
 
@@ -3004,7 +3001,7 @@ class DescribeLiveStreamsBlockList extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateLiveAppSnapshotConfig extends V20161101Rpc
+class UpdateLiveAppSnapshotConfig extends Rpc
 {
 }
 
@@ -3024,7 +3021,7 @@ class UpdateLiveAppSnapshotConfig extends V20161101Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveSnapshotConfig extends V20161101Rpc
+class DescribeLiveSnapshotConfig extends Rpc
 {
 }
 
@@ -3044,7 +3041,7 @@ class DescribeLiveSnapshotConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamRecordContent extends V20161101Rpc
+class DescribeLiveStreamRecordContent extends Rpc
 {
 }
 
@@ -3062,7 +3059,7 @@ class DescribeLiveStreamRecordContent extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DescribeLiveStreamRecordIndexFile extends V20161101Rpc
+class DescribeLiveStreamRecordIndexFile extends Rpc
 {
 }
 
@@ -3088,7 +3085,7 @@ class DescribeLiveStreamRecordIndexFile extends V20161101Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveStreamRecordIndexFiles extends V20161101Rpc
+class DescribeLiveStreamRecordIndexFiles extends Rpc
 {
 }
 
@@ -3112,7 +3109,7 @@ class DescribeLiveStreamRecordIndexFiles extends V20161101Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveStreamSnapshotInfo extends V20161101Rpc
+class DescribeLiveStreamSnapshotInfo extends Rpc
 {
 }
 
@@ -3138,7 +3135,7 @@ class DescribeLiveStreamSnapshotInfo extends V20161101Rpc
  * @method string getOssObject()
  * @method $this withOssObject($value)
  */
-class CreateLiveStreamRecordIndexFiles extends V20161101Rpc
+class CreateLiveStreamRecordIndexFiles extends Rpc
 {
 }
 
@@ -3154,7 +3151,7 @@ class CreateLiveStreamRecordIndexFiles extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class DeleteLiveAppRecordConfig extends V20161101Rpc
+class DeleteLiveAppRecordConfig extends Rpc
 {
 }
 
@@ -3168,7 +3165,7 @@ class DeleteLiveAppRecordConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteLiveAppSnapshotConfig extends V20161101Rpc
+class DeleteLiveAppSnapshotConfig extends Rpc
 {
 }
 
@@ -3190,7 +3187,7 @@ class DeleteLiveAppSnapshotConfig extends V20161101Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class DescribeLiveRecordConfig extends V20161101Rpc
+class DescribeLiveRecordConfig extends Rpc
 {
 }
 
@@ -3217,7 +3214,7 @@ class DescribeLiveRecordConfig extends V20161101Rpc
  * @method string getStreamName()
  * @method $this withStreamName($value)
  */
-class AddLiveAppRecordConfig extends V20161101Rpc
+class AddLiveAppRecordConfig extends Rpc
 {
 
     /**
@@ -3259,6 +3256,6 @@ class AddLiveAppRecordConfig extends V20161101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddLiveAppSnapshotConfig extends V20161101Rpc
+class AddLiveAppSnapshotConfig extends Rpc
 {
 }

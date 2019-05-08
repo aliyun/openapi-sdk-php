@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Iot\V20180120;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
  * @method QueryDeviceJobDocument queryDeviceJobDocument(array $options = [])
  * @method QueryDeviceTask queryDeviceTask(array $options = [])
@@ -117,7 +114,7 @@ class IotApiResolver
     use ApiResolverTrait;
 }
 
-class V20180120Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Iot';
@@ -133,7 +130,7 @@ class V20180120Rpc extends Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
-class QueryLoRaJoinPermissions extends V20180120Rpc
+class QueryLoRaJoinPermissions extends Rpc
 {
 }
 
@@ -143,7 +140,7 @@ class QueryLoRaJoinPermissions extends V20180120Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
-class QueryDeviceJobDocument extends V20180120Rpc
+class QueryDeviceJobDocument extends Rpc
 {
 }
 
@@ -153,7 +150,7 @@ class QueryDeviceJobDocument extends V20180120Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryDeviceTask extends V20180120Rpc
+class QueryDeviceTask extends Rpc
 {
 }
 
@@ -172,7 +169,7 @@ class QueryDeviceTask extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceTaskListByDevice extends V20180120Rpc
+class QueryDeviceTaskListByDevice extends Rpc
 {
 
     /**
@@ -202,7 +199,7 @@ class QueryDeviceTaskListByDevice extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class QueryDeviceTaskListByJob extends V20180120Rpc
+class QueryDeviceTaskListByJob extends Rpc
 {
 
     /**
@@ -229,7 +226,7 @@ class QueryDeviceTaskListByJob extends V20180120Rpc
  * @method string getForce()
  * @method $this withForce($value)
  */
-class DeleteDeviceJob extends V20180120Rpc
+class DeleteDeviceJob extends Rpc
 {
 }
 
@@ -241,7 +238,7 @@ class DeleteDeviceJob extends V20180120Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class CancelDeviceTask extends V20180120Rpc
+class CancelDeviceTask extends Rpc
 {
 }
 
@@ -251,7 +248,7 @@ class CancelDeviceTask extends V20180120Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeleteDeviceTask extends V20180120Rpc
+class DeleteDeviceTask extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class DeleteDeviceTask extends V20180120Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
-class QueryDeviceJob extends V20180120Rpc
+class QueryDeviceJob extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class QueryDeviceJob extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class QueryDeviceJobList extends V20180120Rpc
+class QueryDeviceJobList extends Rpc
 {
 }
 
@@ -289,7 +286,7 @@ class QueryDeviceJobList extends V20180120Rpc
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class UpdateDeviceJob extends V20180120Rpc
+class UpdateDeviceJob extends Rpc
 {
 }
 
@@ -301,7 +298,7 @@ class UpdateDeviceJob extends V20180120Rpc
  * @method string getForce()
  * @method $this withForce($value)
  */
-class CancelDeviceJob extends V20180120Rpc
+class CancelDeviceJob extends Rpc
 {
 }
 
@@ -334,7 +331,7 @@ class CancelDeviceJob extends V20180120Rpc
  * @method $this withTimeoutConfig($value)
  * @method array getTargetDevice()
  */
-class CreateDeviceJob extends V20180120Rpc
+class CreateDeviceJob extends Rpc
 {
 
     /**
@@ -391,7 +388,7 @@ class CreateDeviceJob extends V20180120Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetLoraNodesTask extends V20180120Rpc
+class GetLoraNodesTask extends Rpc
 {
 }
 
@@ -402,7 +399,7 @@ class GetLoraNodesTask extends V20180120Rpc
  * @method $this withProductKey($value)
  * @method array getDeviceInfo()
  */
-class CreateLoRaNodesTask extends V20180120Rpc
+class CreateLoRaNodesTask extends Rpc
 {
 
     /**
@@ -434,7 +431,7 @@ class CreateLoRaNodesTask extends V20180120Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class QueryDeviceFile extends V20180120Rpc
+class QueryDeviceFile extends Rpc
 {
 }
 
@@ -452,7 +449,7 @@ class QueryDeviceFile extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceFileList extends V20180120Rpc
+class QueryDeviceFileList extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class QueryDeviceFileList extends V20180120Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class DeleteDeviceFile extends V20180120Rpc
+class DeleteDeviceFile extends Rpc
 {
 }
 
@@ -477,7 +474,7 @@ class DeleteDeviceFile extends V20180120Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
-class BatchUpdateDeviceNickname extends V20180120Rpc
+class BatchUpdateDeviceNickname extends Rpc
 {
 
     /**
@@ -513,7 +510,7 @@ class BatchUpdateDeviceNickname extends V20180120Rpc
  * @method string getItems()
  * @method $this withItems($value)
  */
-class SetDeviceDesiredProperty extends V20180120Rpc
+class SetDeviceDesiredProperty extends Rpc
 {
 }
 
@@ -528,7 +525,7 @@ class SetDeviceDesiredProperty extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceDesiredProperty extends V20180120Rpc
+class QueryDeviceDesiredProperty extends Rpc
 {
 
     /**
@@ -554,7 +551,7 @@ class QueryDeviceDesiredProperty extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class CreateProductTags extends V20180120Rpc
+class CreateProductTags extends Rpc
 {
 
     /**
@@ -581,7 +578,7 @@ class CreateProductTags extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class UpdateProductTags extends V20180120Rpc
+class UpdateProductTags extends Rpc
 {
 
     /**
@@ -607,7 +604,7 @@ class UpdateProductTags extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class ListProductTags extends V20180120Rpc
+class ListProductTags extends Rpc
 {
 }
 
@@ -620,7 +617,7 @@ class ListProductTags extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class ListProductByTags extends V20180120Rpc
+class ListProductByTags extends Rpc
 {
 
     /**
@@ -647,7 +644,7 @@ class ListProductByTags extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DeleteProductTags extends V20180120Rpc
+class DeleteProductTags extends Rpc
 {
 
     /**
@@ -675,7 +672,7 @@ class DeleteProductTags extends V20180120Rpc
  * @method $this withCurrentPage($value)
  * @method array getTag()
  */
-class QueryDeviceGroupByTags extends V20180120Rpc
+class QueryDeviceGroupByTags extends Rpc
 {
 
     /**
@@ -705,7 +702,7 @@ class QueryDeviceGroupByTags extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class QueryDeviceListByDeviceGroup extends V20180120Rpc
+class QueryDeviceListByDeviceGroup extends Rpc
 {
 }
 
@@ -715,7 +712,7 @@ class QueryDeviceListByDeviceGroup extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class QuerySuperDeviceGroup extends V20180120Rpc
+class QuerySuperDeviceGroup extends Rpc
 {
 }
 
@@ -728,7 +725,7 @@ class QuerySuperDeviceGroup extends V20180120Rpc
  * @method $this withCurrentPage($value)
  * @method array getTag()
  */
-class QueryDeviceByTags extends V20180120Rpc
+class QueryDeviceByTags extends Rpc
 {
 
     /**
@@ -756,7 +753,7 @@ class QueryDeviceByTags extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class SetDeviceGroupTags extends V20180120Rpc
+class SetDeviceGroupTags extends Rpc
 {
 }
 
@@ -771,7 +768,7 @@ class SetDeviceGroupTags extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class InvokeThingsService extends V20180120Rpc
+class InvokeThingsService extends Rpc
 {
 
     /**
@@ -799,7 +796,7 @@ class InvokeThingsService extends V20180120Rpc
  * @method string getItems()
  * @method $this withItems($value)
  */
-class SetDevicesProperty extends V20180120Rpc
+class SetDevicesProperty extends Rpc
 {
 
     /**
@@ -837,7 +834,7 @@ class SetDevicesProperty extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDevicePropertiesData extends V20180120Rpc
+class QueryDevicePropertiesData extends Rpc
 {
 
     /**
@@ -869,7 +866,7 @@ class QueryDevicePropertiesData extends V20180120Rpc
  * @method $this withAppKey($value)
  * @method array getTagList()
  */
-class QueryAppDeviceList extends V20180120Rpc
+class QueryAppDeviceList extends Rpc
 {
 
     /**
@@ -927,7 +924,7 @@ class QueryAppDeviceList extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class UpdateDeviceGroup extends V20180120Rpc
+class UpdateDeviceGroup extends Rpc
 {
 }
 
@@ -937,7 +934,7 @@ class UpdateDeviceGroup extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class QueryDeviceGroupTagList extends V20180120Rpc
+class QueryDeviceGroupTagList extends Rpc
 {
 }
 
@@ -953,7 +950,7 @@ class QueryDeviceGroupTagList extends V20180120Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class QueryDeviceGroupList extends V20180120Rpc
+class QueryDeviceGroupList extends Rpc
 {
 }
 
@@ -963,7 +960,7 @@ class QueryDeviceGroupList extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class QueryDeviceGroupInfo extends V20180120Rpc
+class QueryDeviceGroupInfo extends Rpc
 {
 }
 
@@ -975,7 +972,7 @@ class QueryDeviceGroupInfo extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceGroupByDevice extends V20180120Rpc
+class QueryDeviceGroupByDevice extends Rpc
 {
 }
 
@@ -985,7 +982,7 @@ class QueryDeviceGroupByDevice extends V20180120Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DeleteDeviceGroup extends V20180120Rpc
+class DeleteDeviceGroup extends Rpc
 {
 }
 
@@ -999,7 +996,7 @@ class DeleteDeviceGroup extends V20180120Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class CreateDeviceGroup extends V20180120Rpc
+class CreateDeviceGroup extends Rpc
 {
 }
 
@@ -1010,7 +1007,7 @@ class CreateDeviceGroup extends V20180120Rpc
  * @method $this withGroupId($value)
  * @method array getDevice()
  */
-class BatchDeleteDeviceGroupRelations extends V20180120Rpc
+class BatchDeleteDeviceGroupRelations extends Rpc
 {
 
     /**
@@ -1037,7 +1034,7 @@ class BatchDeleteDeviceGroupRelations extends V20180120Rpc
  * @method $this withGroupId($value)
  * @method array getDevice()
  */
-class BatchAddDeviceGroupRelations extends V20180120Rpc
+class BatchAddDeviceGroupRelations extends Rpc
 {
 
     /**
@@ -1069,7 +1066,7 @@ class BatchAddDeviceGroupRelations extends V20180120Rpc
  * @method string getProps()
  * @method $this withProps($value)
  */
-class SaveDeviceProp extends V20180120Rpc
+class SaveDeviceProp extends Rpc
 {
 }
 
@@ -1085,7 +1082,7 @@ class SaveDeviceProp extends V20180120Rpc
  * @method string getPropKey()
  * @method $this withPropKey($value)
  */
-class DeleteDeviceProp extends V20180120Rpc
+class DeleteDeviceProp extends Rpc
 {
 }
 
@@ -1099,7 +1096,7 @@ class DeleteDeviceProp extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class QueryPageByApplyId extends V20180120Rpc
+class QueryPageByApplyId extends Rpc
 {
 }
 
@@ -1113,7 +1110,7 @@ class QueryPageByApplyId extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDevice extends V20180120Rpc
+class QueryDevice extends Rpc
 {
 }
 
@@ -1125,7 +1122,7 @@ class QueryDevice extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class BatchGetDeviceState extends V20180120Rpc
+class BatchGetDeviceState extends Rpc
 {
 
     /**
@@ -1173,7 +1170,7 @@ class BatchGetDeviceState extends V20180120Rpc
  * @method string getTimeout()
  * @method $this withTimeout($value)
  */
-class RRpc extends V20180120Rpc
+class RRpc extends Rpc
 {
 }
 
@@ -1183,7 +1180,7 @@ class RRpc extends V20180120Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class QueryTopicReverseRouteTable extends V20180120Rpc
+class QueryTopicReverseRouteTable extends Rpc
 {
 }
 
@@ -1193,7 +1190,7 @@ class QueryTopicReverseRouteTable extends V20180120Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class QueryTopicRouteTable extends V20180120Rpc
+class QueryTopicRouteTable extends Rpc
 {
 }
 
@@ -1207,7 +1204,7 @@ class QueryTopicRouteTable extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class PubBroadcast extends V20180120Rpc
+class PubBroadcast extends Rpc
 {
 }
 
@@ -1218,7 +1215,7 @@ class PubBroadcast extends V20180120Rpc
  * @method string getSrcTopic()
  * @method $this withSrcTopic($value)
  */
-class DeleteTopicRouteTable extends V20180120Rpc
+class DeleteTopicRouteTable extends Rpc
 {
 
     /**
@@ -1244,7 +1241,7 @@ class DeleteTopicRouteTable extends V20180120Rpc
  * @method string getSrcTopic()
  * @method $this withSrcTopic($value)
  */
-class CreateTopicRouteTable extends V20180120Rpc
+class CreateTopicRouteTable extends Rpc
 {
 
     /**
@@ -1274,7 +1271,7 @@ class CreateTopicRouteTable extends V20180120Rpc
  * @method $this withAppKey($value)
  * @method array getTagList()
  */
-class QueryAhDeviceList extends V20180120Rpc
+class QueryAhDeviceList extends Rpc
 {
 
     /**
@@ -1335,7 +1332,7 @@ class QueryAhDeviceList extends V20180120Rpc
  * @method $this withAppKey($value)
  * @method array getTagList()
  */
-class AhQueryDeviceList extends V20180120Rpc
+class AhQueryDeviceList extends Rpc
 {
 
     /**
@@ -1395,7 +1392,7 @@ class AhQueryDeviceList extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceProp extends V20180120Rpc
+class QueryDeviceProp extends Rpc
 {
 }
 
@@ -1411,7 +1408,7 @@ class QueryDeviceProp extends V20180120Rpc
  * @method string getErrorActionFlag()
  * @method $this withErrorActionFlag($value)
  */
-class CreateRuleAction extends V20180120Rpc
+class CreateRuleAction extends Rpc
 {
 }
 
@@ -1435,7 +1432,7 @@ class CreateRuleAction extends V20180120Rpc
  * @method string getShortTopic()
  * @method $this withShortTopic($value)
  */
-class CreateRule extends V20180120Rpc
+class CreateRule extends Rpc
 {
 }
 
@@ -1445,7 +1442,7 @@ class CreateRule extends V20180120Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class ListRuleActions extends V20180120Rpc
+class ListRuleActions extends Rpc
 {
 }
 
@@ -1455,7 +1452,7 @@ class ListRuleActions extends V20180120Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class StartRule extends V20180120Rpc
+class StartRule extends Rpc
 {
 }
 
@@ -1465,7 +1462,7 @@ class StartRule extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryProductTopic extends V20180120Rpc
+class QueryProductTopic extends Rpc
 {
 }
 
@@ -1475,7 +1472,7 @@ class QueryProductTopic extends V20180120Rpc
  * @method string getActionId()
  * @method $this withActionId($value)
  */
-class DeleteRuleAction extends V20180120Rpc
+class DeleteRuleAction extends Rpc
 {
 }
 
@@ -1485,7 +1482,7 @@ class DeleteRuleAction extends V20180120Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class StopRule extends V20180120Rpc
+class StopRule extends Rpc
 {
 }
 
@@ -1501,7 +1498,7 @@ class StopRule extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class Pub extends V20180120Rpc
+class Pub extends Rpc
 {
 }
 
@@ -1515,7 +1512,7 @@ class Pub extends V20180120Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class ListRule extends V20180120Rpc
+class ListRule extends Rpc
 {
 }
 
@@ -1525,7 +1522,7 @@ class ListRule extends V20180120Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class GetRule extends V20180120Rpc
+class GetRule extends Rpc
 {
 }
 
@@ -1541,7 +1538,7 @@ class GetRule extends V20180120Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class CreateProductTopic extends V20180120Rpc
+class CreateProductTopic extends Rpc
 {
 }
 
@@ -1555,7 +1552,7 @@ class CreateProductTopic extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class GetDeviceShadow extends V20180120Rpc
+class GetDeviceShadow extends Rpc
 {
 }
 
@@ -1565,7 +1562,7 @@ class GetDeviceShadow extends V20180120Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  */
-class DeleteProductTopic extends V20180120Rpc
+class DeleteProductTopic extends Rpc
 {
 }
 
@@ -1575,7 +1572,7 @@ class DeleteProductTopic extends V20180120Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class DeleteRule extends V20180120Rpc
+class DeleteRule extends Rpc
 {
 }
 
@@ -1591,7 +1588,7 @@ class DeleteRule extends V20180120Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class UpdateProductTopic extends V20180120Rpc
+class UpdateProductTopic extends Rpc
 {
 }
 
@@ -1601,7 +1598,7 @@ class UpdateProductTopic extends V20180120Rpc
  * @method string getActionId()
  * @method $this withActionId($value)
  */
-class GetRuleAction extends V20180120Rpc
+class GetRuleAction extends Rpc
 {
 }
 
@@ -1615,7 +1612,7 @@ class GetRuleAction extends V20180120Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class UpdateRuleAction extends V20180120Rpc
+class UpdateRuleAction extends Rpc
 {
 }
 
@@ -1629,7 +1626,7 @@ class UpdateRuleAction extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class UpdateDeviceShadow extends V20180120Rpc
+class UpdateDeviceShadow extends Rpc
 {
 }
 
@@ -1653,7 +1650,7 @@ class UpdateDeviceShadow extends V20180120Rpc
  * @method string getShortTopic()
  * @method $this withShortTopic($value)
  */
-class UpdateRule extends V20180120Rpc
+class UpdateRule extends Rpc
 {
 }
 
@@ -1667,7 +1664,7 @@ class UpdateRule extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class GetGatewayBySubDevice extends V20180120Rpc
+class GetGatewayBySubDevice extends Rpc
 {
 }
 
@@ -1679,7 +1676,7 @@ class GetGatewayBySubDevice extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryBatchRegisterDeviceStatus extends V20180120Rpc
+class QueryBatchRegisterDeviceStatus extends Rpc
 {
 }
 
@@ -1693,7 +1690,7 @@ class QueryBatchRegisterDeviceStatus extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class RemoveThingTopo extends V20180120Rpc
+class RemoveThingTopo extends Rpc
 {
 }
 
@@ -1711,7 +1708,7 @@ class RemoveThingTopo extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class GetThingTopo extends V20180120Rpc
+class GetThingTopo extends Rpc
 {
 }
 
@@ -1727,7 +1724,7 @@ class GetThingTopo extends V20180120Rpc
  * @method string getDeviceListStr()
  * @method $this withDeviceListStr($value)
  */
-class NotifyAddThingTopo extends V20180120Rpc
+class NotifyAddThingTopo extends Rpc
 {
 }
 
@@ -1751,7 +1748,7 @@ class NotifyAddThingTopo extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDevicePropertyData extends V20180120Rpc
+class QueryDevicePropertyData extends Rpc
 {
 }
 
@@ -1765,7 +1762,7 @@ class QueryDevicePropertyData extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDevicePropertyStatus extends V20180120Rpc
+class QueryDevicePropertyStatus extends Rpc
 {
 }
 
@@ -1777,7 +1774,7 @@ class QueryDevicePropertyStatus extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class BatchRegisterDevice extends V20180120Rpc
+class BatchRegisterDevice extends Rpc
 {
 }
 
@@ -1789,7 +1786,7 @@ class BatchRegisterDevice extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class BatchRegisterDeviceWithApplyId extends V20180120Rpc
+class BatchRegisterDeviceWithApplyId extends Rpc
 {
 }
 
@@ -1800,7 +1797,7 @@ class BatchRegisterDeviceWithApplyId extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class BatchCheckDeviceNames extends V20180120Rpc
+class BatchCheckDeviceNames extends Rpc
 {
 
     /**
@@ -1829,7 +1826,7 @@ class BatchCheckDeviceNames extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class UpdateProduct extends V20180120Rpc
+class UpdateProduct extends Rpc
 {
 }
 
@@ -1847,7 +1844,7 @@ class UpdateProduct extends V20180120Rpc
  * @method string getDevEui()
  * @method $this withDevEui($value)
  */
-class RegisterDevice extends V20180120Rpc
+class RegisterDevice extends Rpc
 {
 }
 
@@ -1863,7 +1860,7 @@ class RegisterDevice extends V20180120Rpc
  * @method string getItems()
  * @method $this withItems($value)
  */
-class SetDeviceProperty extends V20180120Rpc
+class SetDeviceProperty extends Rpc
 {
 }
 
@@ -1877,7 +1874,7 @@ class SetDeviceProperty extends V20180120Rpc
  * @method string getAliyunCommodityCode()
  * @method $this withAliyunCommodityCode($value)
  */
-class QueryProductList extends V20180120Rpc
+class QueryProductList extends Rpc
 {
 }
 
@@ -1887,7 +1884,7 @@ class QueryProductList extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceStatistics extends V20180120Rpc
+class QueryDeviceStatistics extends Rpc
 {
 }
 
@@ -1897,7 +1894,7 @@ class QueryDeviceStatistics extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryProduct extends V20180120Rpc
+class QueryProduct extends Rpc
 {
 }
 
@@ -1923,7 +1920,7 @@ class QueryProduct extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceEventData extends V20180120Rpc
+class QueryDeviceEventData extends Rpc
 {
 }
 
@@ -1947,7 +1944,7 @@ class QueryDeviceEventData extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceServiceData extends V20180120Rpc
+class QueryDeviceServiceData extends Rpc
 {
 }
 
@@ -1961,7 +1958,7 @@ class QueryDeviceServiceData extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceDetail extends V20180120Rpc
+class QueryDeviceDetail extends Rpc
 {
 }
 
@@ -1979,7 +1976,7 @@ class QueryDeviceDetail extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class InvokeThingService extends V20180120Rpc
+class InvokeThingService extends Rpc
 {
 }
 
@@ -1993,7 +1990,7 @@ class InvokeThingService extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class GetDeviceStatus extends V20180120Rpc
+class GetDeviceStatus extends Rpc
 {
 }
 
@@ -2007,7 +2004,7 @@ class GetDeviceStatus extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DisableThing extends V20180120Rpc
+class DisableThing extends Rpc
 {
 }
 
@@ -2021,7 +2018,7 @@ class DisableThing extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class EnableThing extends V20180120Rpc
+class EnableThing extends Rpc
 {
 }
 
@@ -2035,7 +2032,7 @@ class EnableThing extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DeleteDevice extends V20180120Rpc
+class DeleteDevice extends Rpc
 {
 }
 
@@ -2045,7 +2042,7 @@ class DeleteDevice extends V20180120Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DeleteProduct extends V20180120Rpc
+class DeleteProduct extends Rpc
 {
 }
 
@@ -2073,6 +2070,6 @@ class DeleteProduct extends V20180120Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class CreateProduct extends V20180120Rpc
+class CreateProduct extends Rpc
 {
 }

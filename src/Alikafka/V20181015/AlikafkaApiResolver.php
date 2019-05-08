@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Alikafka\V20181015;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetTopicsByConsumerId getTopicsByConsumerId(array $options = [])
  * @method CheckQueueNum checkQueueNum(array $options = [])
  * @method SendMsg sendMsg(array $options = [])
@@ -32,7 +29,7 @@ class AlikafkaApiResolver
     use ApiResolverTrait;
 }
 
-class V20181015Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'alikafka';
@@ -53,7 +50,7 @@ class V20181015Rpc extends Rpc
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  */
-class GetTopicsByConsumerId extends V20181015Rpc
+class GetTopicsByConsumerId extends Rpc
 {
 }
 
@@ -61,7 +58,7 @@ class GetTopicsByConsumerId extends V20181015Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class CheckQueueNum extends V20181015Rpc
+class CheckQueueNum extends Rpc
 {
 }
 
@@ -77,7 +74,7 @@ class CheckQueueNum extends V20181015Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class SendMsg extends V20181015Rpc
+class SendMsg extends Rpc
 {
 }
 
@@ -89,7 +86,7 @@ class SendMsg extends V20181015Rpc
  * @method string getPartitionNum()
  * @method $this withPartitionNum($value)
  */
-class AddPartitions extends V20181015Rpc
+class AddPartitions extends Rpc
 {
 }
 
@@ -105,11 +102,11 @@ class AddPartitions extends V20181015Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class AddTopicWithPartition extends V20181015Rpc
+class AddTopicWithPartition extends Rpc
 {
 }
 
-class GetAllInstanceIdList extends V20181015Rpc
+class GetAllInstanceIdList extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class GetAllInstanceIdList extends V20181015Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class UpdateTopicRemark extends V20181015Rpc
+class UpdateTopicRemark extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class UpdateTopicRemark extends V20181015Rpc
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  */
-class UpdateInstanceName extends V20181015Rpc
+class UpdateInstanceName extends Rpc
 {
 }
 
@@ -139,7 +136,7 @@ class UpdateInstanceName extends V20181015Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetVpcInfo extends V20181015Rpc
+class GetVpcInfo extends Rpc
 {
 }
 
@@ -149,11 +146,11 @@ class GetVpcInfo extends V20181015Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class GetTopicSubscribeStatus extends V20181015Rpc
+class GetTopicSubscribeStatus extends Rpc
 {
 }
 
-class CorrectInstanceData extends V20181015Rpc
+class CorrectInstanceData extends Rpc
 {
 }
 
@@ -163,7 +160,7 @@ class CorrectInstanceData extends V20181015Rpc
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  */
-class CreateConsumerGroup extends V20181015Rpc
+class CreateConsumerGroup extends Rpc
 {
 }
 
@@ -177,7 +174,7 @@ class CreateConsumerGroup extends V20181015Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class CreateTopic extends V20181015Rpc
+class CreateTopic extends Rpc
 {
 }
 
@@ -187,7 +184,7 @@ class CreateTopic extends V20181015Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class GetTopicStatus extends V20181015Rpc
+class GetTopicStatus extends Rpc
 {
 }
 
@@ -197,7 +194,7 @@ class GetTopicStatus extends V20181015Rpc
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  */
-class GetConsumerProgress extends V20181015Rpc
+class GetConsumerProgress extends Rpc
 {
 }
 
@@ -209,11 +206,11 @@ class GetConsumerProgress extends V20181015Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class GetConsumerList extends V20181015Rpc
+class GetConsumerList extends Rpc
 {
 }
 
-class GetInstanceList extends V20181015Rpc
+class GetInstanceList extends Rpc
 {
 }
 
@@ -225,6 +222,6 @@ class GetInstanceList extends V20181015Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class GetTopicList extends V20181015Rpc
+class GetTopicList extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Pvtz\V20180101;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SetProxyPattern setProxyPattern(array $options = [])
  * @method DescribeStatisticSummary describeStatisticSummary(array $options = [])
  * @method DescribeZoneVpcTree describeZoneVpcTree(array $options = [])
@@ -33,7 +30,7 @@ class PvtzApiResolver
     use ApiResolverTrait;
 }
 
-class V20180101Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'pvtz';
@@ -58,7 +55,7 @@ class V20180101Rpc extends Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SetProxyPattern extends V20180101Rpc
+class SetProxyPattern extends Rpc
 {
 }
 
@@ -68,7 +65,7 @@ class SetProxyPattern extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStatisticSummary extends V20180101Rpc
+class DescribeStatisticSummary extends Rpc
 {
 }
 
@@ -78,7 +75,7 @@ class DescribeStatisticSummary extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeZoneVpcTree extends V20180101Rpc
+class DescribeZoneVpcTree extends Rpc
 {
 }
 
@@ -96,7 +93,7 @@ class DescribeZoneVpcTree extends V20180101Rpc
  * @method string getEndTimestamp()
  * @method $this withEndTimestamp($value)
  */
-class DescribeRequestGraph extends V20180101Rpc
+class DescribeRequestGraph extends Rpc
 {
 }
 
@@ -106,7 +103,7 @@ class DescribeRequestGraph extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeUserServiceStatus extends V20180101Rpc
+class DescribeUserServiceStatus extends Rpc
 {
 }
 
@@ -130,7 +127,7 @@ class DescribeUserServiceStatus extends V20180101Rpc
  * @method string getEndTimestamp()
  * @method $this withEndTimestamp($value)
  */
-class DescribeChangeLogs extends V20180101Rpc
+class DescribeChangeLogs extends Rpc
 {
 }
 
@@ -142,7 +139,7 @@ class DescribeChangeLogs extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeZoneInfo extends V20180101Rpc
+class DescribeZoneInfo extends Rpc
 {
 }
 
@@ -154,7 +151,7 @@ class DescribeZoneInfo extends V20180101Rpc
  * @method string getZoneName()
  * @method $this withZoneName($value)
  */
-class CheckZoneName extends V20180101Rpc
+class CheckZoneName extends Rpc
 {
 }
 
@@ -166,7 +163,7 @@ class CheckZoneName extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteZone extends V20180101Rpc
+class DeleteZone extends Rpc
 {
 }
 
@@ -180,7 +177,7 @@ class DeleteZone extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class UpdateZoneRemark extends V20180101Rpc
+class UpdateZoneRemark extends Rpc
 {
 }
 
@@ -192,7 +189,7 @@ class UpdateZoneRemark extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeRegions extends V20180101Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -205,7 +202,7 @@ class DescribeRegions extends V20180101Rpc
  * @method $this withLang($value)
  * @method array getVpcs()
  */
-class BindZoneVpc extends V20180101Rpc
+class BindZoneVpc extends Rpc
 {
 
     /**
@@ -243,7 +240,7 @@ class BindZoneVpc extends V20180101Rpc
  * @method string getValue()
  * @method $this withValue($value)
  */
-class AddZoneRecord extends V20180101Rpc
+class AddZoneRecord extends Rpc
 {
 }
 
@@ -255,7 +252,7 @@ class AddZoneRecord extends V20180101Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteZoneRecord extends V20180101Rpc
+class DeleteZoneRecord extends Rpc
 {
 }
 
@@ -277,7 +274,7 @@ class DeleteZoneRecord extends V20180101Rpc
  * @method string getValue()
  * @method $this withValue($value)
  */
-class UpdateZoneRecord extends V20180101Rpc
+class UpdateZoneRecord extends Rpc
 {
 }
 
@@ -291,7 +288,7 @@ class UpdateZoneRecord extends V20180101Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SetZoneRecordStatus extends V20180101Rpc
+class SetZoneRecordStatus extends Rpc
 {
 }
 
@@ -313,7 +310,7 @@ class SetZoneRecordStatus extends V20180101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeZoneRecords extends V20180101Rpc
+class DescribeZoneRecords extends Rpc
 {
 }
 
@@ -337,7 +334,7 @@ class DescribeZoneRecords extends V20180101Rpc
  * @method string getQueryRegionId()
  * @method $this withQueryRegionId($value)
  */
-class DescribeZones extends V20180101Rpc
+class DescribeZones extends Rpc
 {
 }
 
@@ -353,6 +350,6 @@ class DescribeZones extends V20180101Rpc
  * @method string getZoneName()
  * @method $this withZoneName($value)
  */
-class AddZone extends V20180101Rpc
+class AddZone extends Rpc
 {
 }

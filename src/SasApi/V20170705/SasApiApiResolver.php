@@ -3,11 +3,8 @@
 namespace AlibabaCloud\SasApi\V20170705;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribePerDateData describePerDateData(array $options = [])
  * @method DescribeThreatTypeLines describeThreatTypeLines(array $options = [])
  * @method DescribeTotalAndRateLine describeTotalAndRateLine(array $options = [])
@@ -28,7 +25,7 @@ class SasApiApiResolver
     use ApiResolverTrait;
 }
 
-class V20170705Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Sas-api';
@@ -46,7 +43,7 @@ class V20170705Rpc extends Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribePerDateData extends V20170705Rpc
+class DescribePerDateData extends Rpc
 {
 }
 
@@ -56,7 +53,7 @@ class DescribePerDateData extends V20170705Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribeThreatTypeLines extends V20170705Rpc
+class DescribeThreatTypeLines extends Rpc
 {
 }
 
@@ -66,7 +63,7 @@ class DescribeThreatTypeLines extends V20170705Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribeTotalAndRateLine extends V20170705Rpc
+class DescribeTotalAndRateLine extends Rpc
 {
 }
 
@@ -76,7 +73,7 @@ class DescribeTotalAndRateLine extends V20170705Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class DescribeAccountProfileByKey extends V20170705Rpc
+class DescribeAccountProfileByKey extends Rpc
 {
 }
 
@@ -86,7 +83,7 @@ class DescribeAccountProfileByKey extends V20170705Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class DescribeAccountProfileByKeyWord extends V20170705Rpc
+class DescribeAccountProfileByKeyWord extends Rpc
 {
 }
 
@@ -102,7 +99,7 @@ class DescribeAccountProfileByKeyWord extends V20170705Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribeThreatDistribute extends V20170705Rpc
+class DescribeThreatDistribute extends Rpc
 {
 }
 
@@ -118,7 +115,7 @@ class DescribeThreatDistribute extends V20170705Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribeHitRateColumn extends V20170705Rpc
+class DescribeHitRateColumn extends Rpc
 {
 }
 
@@ -134,7 +131,7 @@ class DescribeHitRateColumn extends V20170705Rpc
  * @method string getApiType()
  * @method $this withApiType($value)
  */
-class DescribeHitRatePie extends V20170705Rpc
+class DescribeHitRatePie extends Rpc
 {
 }
 
@@ -164,7 +161,7 @@ class DescribeHitRatePie extends V20170705Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class GetAccountProfile extends V20170705Rpc
+class GetAccountProfile extends Rpc
 {
 }
 
@@ -172,7 +169,7 @@ class GetAccountProfile extends V20170705Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetInstanceCount extends V20170705Rpc
+class GetInstanceCount extends Rpc
 {
 }
 
@@ -186,7 +183,7 @@ class GetInstanceCount extends V20170705Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class GetPhoneProfile extends V20170705Rpc
+class GetPhoneProfile extends Rpc
 {
 }
 
@@ -212,7 +209,7 @@ class GetPhoneProfile extends V20170705Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class GetIpProfile extends V20170705Rpc
+class GetIpProfile extends Rpc
 {
 }
 
@@ -238,7 +235,7 @@ class GetIpProfile extends V20170705Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class GetIpProfileRequest extends V20170705Rpc
+class GetIpProfileRequest extends Rpc
 {
 }
 
@@ -264,6 +261,6 @@ class GetIpProfileRequest extends V20170705Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class GetIpHumanClientProbability extends V20170705Rpc
+class GetIpHumanClientProbability extends Rpc
 {
 }

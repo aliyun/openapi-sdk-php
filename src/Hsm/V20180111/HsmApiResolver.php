@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Hsm\V20180111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ConfigNetwork configNetwork(array $options = [])
@@ -22,7 +19,7 @@ class HsmApiResolver
     use ApiResolverTrait;
 }
 
-class V20180111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'hsm';
@@ -47,7 +44,7 @@ class V20180111Rpc extends Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class ModifyInstance extends V20180111Rpc
+class ModifyInstance extends Rpc
 {
 }
 
@@ -63,7 +60,7 @@ class ModifyInstance extends V20180111Rpc
  * @method string getClientToken()
  * @method $this withClientToken($value)
  */
-class RenewInstance extends V20180111Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -81,7 +78,7 @@ class RenewInstance extends V20180111Rpc
  * @method string getIp()
  * @method $this withIp($value)
  */
-class ConfigNetwork extends V20180111Rpc
+class ConfigNetwork extends Rpc
 {
 }
 
@@ -103,7 +100,7 @@ class ConfigNetwork extends V20180111Rpc
  * @method string getHsmOem()
  * @method $this withHsmOem($value)
  */
-class CreateInstance extends V20180111Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -113,7 +110,7 @@ class CreateInstance extends V20180111Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ReleaseInstance extends V20180111Rpc
+class ReleaseInstance extends Rpc
 {
 }
 
@@ -127,7 +124,7 @@ class ReleaseInstance extends V20180111Rpc
  * @method string getWhiteList()
  * @method $this withWhiteList($value)
  */
-class ConfigWhiteList extends V20180111Rpc
+class ConfigWhiteList extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class ConfigWhiteList extends V20180111Rpc
  * @method string getHsmStatus()
  * @method $this withHsmStatus($value)
  */
-class DescribeInstances extends V20180111Rpc
+class DescribeInstances extends Rpc
 {
 }
 
@@ -155,6 +152,6 @@ class DescribeInstances extends V20180111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeRegions extends V20180111Rpc
+class DescribeRegions extends Rpc
 {
 }

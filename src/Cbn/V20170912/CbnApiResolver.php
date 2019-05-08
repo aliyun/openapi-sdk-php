@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cbn\V20170912;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UntagResources untagResources(array $options = [])
  * @method ModifyCenRouteMap modifyCenRouteMap(array $options = [])
  * @method DescribeCenRouteMaps describeCenRouteMaps(array $options = [])
@@ -56,7 +53,7 @@ class CbnApiResolver
     use ApiResolverTrait;
 }
 
-class V20170912Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Cbn';
@@ -89,7 +86,7 @@ class V20170912Rpc extends Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class UntagResources extends V20170912Rpc
+class UntagResources extends Rpc
 {
 
     /**
@@ -171,7 +168,7 @@ class UntagResources extends V20170912Rpc
  * @method $this withCenRegionId($value)
  * @method array getOperateCommunitySet()
  */
-class ModifyCenRouteMap extends V20170912Rpc
+class ModifyCenRouteMap extends Rpc
 {
 
     /**
@@ -377,7 +374,7 @@ class ModifyCenRouteMap extends V20170912Rpc
  * @method string getTransmitDirection()
  * @method $this withTransmitDirection($value)
  */
-class DescribeCenRouteMaps extends V20170912Rpc
+class DescribeCenRouteMaps extends Rpc
 {
 }
 
@@ -397,7 +394,7 @@ class DescribeCenRouteMaps extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCenRouteMap extends V20170912Rpc
+class DeleteCenRouteMap extends Rpc
 {
 }
 
@@ -449,7 +446,7 @@ class DeleteCenRouteMap extends V20170912Rpc
  * @method $this withCenRegionId($value)
  * @method array getOperateCommunitySet()
  */
-class CreateCenRouteMap extends V20170912Rpc
+class CreateCenRouteMap extends Rpc
 {
 
     /**
@@ -657,7 +654,7 @@ class CreateCenRouteMap extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DescribeCenChildInstanceRouteEntries extends V20170912Rpc
+class DescribeCenChildInstanceRouteEntries extends Rpc
 {
 }
 
@@ -682,7 +679,7 @@ class DescribeCenChildInstanceRouteEntries extends V20170912Rpc
  * @method string getUpdateInterval()
  * @method $this withUpdateInterval($value)
  */
-class ResolveAndRouteServiceInCen extends V20170912Rpc
+class ResolveAndRouteServiceInCen extends Rpc
 {
 
     /**
@@ -719,7 +716,7 @@ class ResolveAndRouteServiceInCen extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteRouteServiceInCen extends V20170912Rpc
+class DeleteRouteServiceInCen extends Rpc
 {
 }
 
@@ -745,7 +742,7 @@ class DeleteRouteServiceInCen extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeRouteServicesInCen extends V20170912Rpc
+class DescribeRouteServicesInCen extends Rpc
 {
 }
 
@@ -763,7 +760,7 @@ class DescribeRouteServicesInCen extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnroutePrivateZoneInCenToVpc extends V20170912Rpc
+class UnroutePrivateZoneInCenToVpc extends Rpc
 {
 }
 
@@ -785,7 +782,7 @@ class UnroutePrivateZoneInCenToVpc extends V20170912Rpc
  * @method string getHostVpcId()
  * @method $this withHostVpcId($value)
  */
-class RoutePrivateZoneInCenToVpc extends V20170912Rpc
+class RoutePrivateZoneInCenToVpc extends Rpc
 {
 }
 
@@ -805,7 +802,7 @@ class RoutePrivateZoneInCenToVpc extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCenPrivateZoneRoutes extends V20170912Rpc
+class DescribeCenPrivateZoneRoutes extends Rpc
 {
 }
 
@@ -823,7 +820,7 @@ class DescribeCenPrivateZoneRoutes extends V20170912Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeGrantRulesToCen extends V20170912Rpc
+class DescribeGrantRulesToCen extends Rpc
 {
 }
 
@@ -845,7 +842,7 @@ class DescribeGrantRulesToCen extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DescribeCenAttachedChildInstanceAttribute extends V20170912Rpc
+class DescribeCenAttachedChildInstanceAttribute extends Rpc
 {
 }
 
@@ -867,7 +864,7 @@ class DescribeCenAttachedChildInstanceAttribute extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class WithdrawPublishedRouteEntries extends V20170912Rpc
+class WithdrawPublishedRouteEntries extends Rpc
 {
 }
 
@@ -889,7 +886,7 @@ class WithdrawPublishedRouteEntries extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class PublishRouteEntries extends V20170912Rpc
+class PublishRouteEntries extends Rpc
 {
 }
 
@@ -915,7 +912,7 @@ class PublishRouteEntries extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DescribePublishedRouteEntries extends V20170912Rpc
+class DescribePublishedRouteEntries extends Rpc
 {
 }
 
@@ -935,7 +932,7 @@ class DescribePublishedRouteEntries extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCenGeographicSpans extends V20170912Rpc
+class DescribeCenGeographicSpans extends Rpc
 {
 }
 
@@ -951,7 +948,7 @@ class DescribeCenGeographicSpans extends V20170912Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeChildInstanceRegions extends V20170912Rpc
+class DescribeChildInstanceRegions extends Rpc
 {
 }
 
@@ -969,7 +966,7 @@ class DescribeChildInstanceRegions extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnassociateCenBandwidthPackage extends V20170912Rpc
+class UnassociateCenBandwidthPackage extends Rpc
 {
 }
 
@@ -991,7 +988,7 @@ class UnassociateCenBandwidthPackage extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetCenInterRegionBandwidthLimit extends V20170912Rpc
+class SetCenInterRegionBandwidthLimit extends Rpc
 {
 }
 
@@ -1009,7 +1006,7 @@ class SetCenInterRegionBandwidthLimit extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCenBandwidthPackageSpec extends V20170912Rpc
+class ModifyCenBandwidthPackageSpec extends Rpc
 {
 }
 
@@ -1029,7 +1026,7 @@ class ModifyCenBandwidthPackageSpec extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCenBandwidthPackageAttribute extends V20170912Rpc
+class ModifyCenBandwidthPackageAttribute extends Rpc
 {
 }
 
@@ -1051,7 +1048,7 @@ class ModifyCenBandwidthPackageAttribute extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCenAttribute extends V20170912Rpc
+class ModifyCenAttribute extends Rpc
 {
 }
 
@@ -1077,7 +1074,7 @@ class ModifyCenAttribute extends V20170912Rpc
  * @method string getVbrInstanceRegionId()
  * @method $this withVbrInstanceRegionId($value)
  */
-class EnableCenVbrHealthCheck extends V20170912Rpc
+class EnableCenVbrHealthCheck extends Rpc
 {
 }
 
@@ -1099,7 +1096,7 @@ class EnableCenVbrHealthCheck extends V20170912Rpc
  * @method string getVbrInstanceRegionId()
  * @method $this withVbrInstanceRegionId($value)
  */
-class DisableCenVbrHealthCheck extends V20170912Rpc
+class DisableCenVbrHealthCheck extends Rpc
 {
 }
 
@@ -1125,7 +1122,7 @@ class DisableCenVbrHealthCheck extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DetachCenChildInstance extends V20170912Rpc
+class DetachCenChildInstance extends Rpc
 {
 }
 
@@ -1151,7 +1148,7 @@ class DetachCenChildInstance extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCenVbrHealthCheck extends V20170912Rpc
+class DescribeCenVbrHealthCheck extends Rpc
 {
 }
 
@@ -1171,7 +1168,7 @@ class DescribeCenVbrHealthCheck extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCens extends V20170912Rpc
+class DescribeCens extends Rpc
 {
 
     /**
@@ -1229,7 +1226,7 @@ class DescribeCens extends V20170912Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeCenRegionDomainRouteEntries extends V20170912Rpc
+class DescribeCenRegionDomainRouteEntries extends Rpc
 {
 }
 
@@ -1249,7 +1246,7 @@ class DescribeCenRegionDomainRouteEntries extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCenInterRegionBandwidthLimits extends V20170912Rpc
+class DescribeCenInterRegionBandwidthLimits extends Rpc
 {
 }
 
@@ -1273,7 +1270,7 @@ class DescribeCenInterRegionBandwidthLimits extends V20170912Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeCenGeographicSpanRemainingBandwidth extends V20170912Rpc
+class DescribeCenGeographicSpanRemainingBandwidth extends Rpc
 {
 }
 
@@ -1294,7 +1291,7 @@ class DescribeCenGeographicSpanRemainingBandwidth extends V20170912Rpc
  * @method string getIsOrKey()
  * @method $this withIsOrKey($value)
  */
-class DescribeCenBandwidthPackages extends V20170912Rpc
+class DescribeCenBandwidthPackages extends Rpc
 {
 
     /**
@@ -1338,7 +1335,7 @@ class DescribeCenBandwidthPackages extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DescribeCenAttachedChildInstances extends V20170912Rpc
+class DescribeCenAttachedChildInstances extends Rpc
 {
 }
 
@@ -1354,7 +1351,7 @@ class DescribeCenAttachedChildInstances extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCenBandwidthPackage extends V20170912Rpc
+class DeleteCenBandwidthPackage extends Rpc
 {
 }
 
@@ -1370,7 +1367,7 @@ class DeleteCenBandwidthPackage extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCen extends V20170912Rpc
+class DeleteCen extends Rpc
 {
 }
 
@@ -1404,7 +1401,7 @@ class DeleteCen extends V20170912Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class CreateCenBandwidthPackage extends V20170912Rpc
+class CreateCenBandwidthPackage extends Rpc
 {
 }
 
@@ -1426,7 +1423,7 @@ class CreateCenBandwidthPackage extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateCen extends V20170912Rpc
+class CreateCen extends Rpc
 {
 }
 
@@ -1452,7 +1449,7 @@ class CreateCen extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class AttachCenChildInstance extends V20170912Rpc
+class AttachCenChildInstance extends Rpc
 {
 }
 
@@ -1470,7 +1467,7 @@ class AttachCenChildInstance extends V20170912Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AssociateCenBandwidthPackage extends V20170912Rpc
+class AssociateCenBandwidthPackage extends Rpc
 {
 }
 
@@ -1498,7 +1495,7 @@ class AssociateCenBandwidthPackage extends V20170912Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class DescribeRouteConflict extends V20170912Rpc
+class DescribeRouteConflict extends Rpc
 {
 }
 
@@ -1518,6 +1515,6 @@ class DescribeRouteConflict extends V20170912Rpc
  * @method string getGeographicRegionId()
  * @method $this withGeographicRegionId($value)
  */
-class DescribeGeographicRegionMembership extends V20170912Rpc
+class DescribeGeographicRegionMembership extends Rpc
 {
 }

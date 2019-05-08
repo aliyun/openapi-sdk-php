@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Domain\V20180129;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SaveSingleTaskForSaveArtExtension saveSingleTaskForSaveArtExtension(array $options = [])
  * @method QueryArtExtension queryArtExtension(array $options = [])
  * @method QueryDomainByDomainName queryDomainByDomainName(array $options = [])
@@ -117,7 +114,7 @@ class DomainApiResolver
     use ApiResolverTrait;
 }
 
-class V20180129Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Domain';
@@ -155,7 +152,7 @@ class V20180129Rpc extends Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class SaveSingleTaskForSaveArtExtension extends V20180129Rpc
+class SaveSingleTaskForSaveArtExtension extends Rpc
 {
 }
 
@@ -167,7 +164,7 @@ class SaveSingleTaskForSaveArtExtension extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryArtExtension extends V20180129Rpc
+class QueryArtExtension extends Rpc
 {
 }
 
@@ -179,7 +176,7 @@ class QueryArtExtension extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDomainByDomainName extends V20180129Rpc
+class QueryDomainByDomainName extends Rpc
 {
 }
 
@@ -191,21 +188,7 @@ class QueryDomainByDomainName extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForSynchronizingDSRecord extends V20180129Rpc
-{
-}
-
-/**
- * @method string getKeyTag()
- * @method $this withKeyTag($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getUserClientIp()
- * @method $this withUserClientIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class SaveSingleTaskForDeletingDSRecord extends V20180129Rpc
+class SaveSingleTaskForSynchronizingDSRecord extends Rpc
 {
 }
 
@@ -216,16 +199,10 @@ class SaveSingleTaskForDeletingDSRecord extends V20180129Rpc
  * @method $this withDomainName($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
- * @method string getDigestType()
- * @method $this withDigestType($value)
- * @method string getDigest()
- * @method $this withDigest($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getAlgorithm()
- * @method $this withAlgorithm($value)
  */
-class SaveSingleTaskForModifyingDSRecord extends V20180129Rpc
+class SaveSingleTaskForDeletingDSRecord extends Rpc
 {
 }
 
@@ -245,7 +222,27 @@ class SaveSingleTaskForModifyingDSRecord extends V20180129Rpc
  * @method string getAlgorithm()
  * @method $this withAlgorithm($value)
  */
-class SaveSingleTaskForAddingDSRecord extends V20180129Rpc
+class SaveSingleTaskForModifyingDSRecord extends Rpc
+{
+}
+
+/**
+ * @method string getKeyTag()
+ * @method $this withKeyTag($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDigestType()
+ * @method $this withDigestType($value)
+ * @method string getDigest()
+ * @method $this withDigest($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class SaveSingleTaskForAddingDSRecord extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class SaveSingleTaskForAddingDSRecord extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDSRecord extends V20180129Rpc
+class QueryDSRecord extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class QueryDSRecord extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class BatchFuzzyMatchDomainSensitiveWord extends V20180129Rpc
+class BatchFuzzyMatchDomainSensitiveWord extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class BatchFuzzyMatchDomainSensitiveWord extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class FuzzyMatchDomainSensitiveWord extends V20180129Rpc
+class FuzzyMatchDomainSensitiveWord extends Rpc
 {
 }
 
@@ -331,7 +328,7 @@ class FuzzyMatchDomainSensitiveWord extends V20180129Rpc
  * @method string getEndLength()
  * @method $this withEndLength($value)
  */
-class ScrollDomainList extends V20180129Rpc
+class ScrollDomainList extends Rpc
 {
 }
 
@@ -343,7 +340,7 @@ class ScrollDomainList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class LookupTmchNotice extends V20180129Rpc
+class LookupTmchNotice extends Rpc
 {
 }
 
@@ -355,7 +352,7 @@ class LookupTmchNotice extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CheckDomainSunriseClaim extends V20180129Rpc
+class CheckDomainSunriseClaim extends Rpc
 {
 }
 
@@ -365,7 +362,7 @@ class CheckDomainSunriseClaim extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDomainAdminDivision extends V20180129Rpc
+class QueryDomainAdminDivision extends Rpc
 {
 }
 
@@ -379,7 +376,7 @@ class QueryDomainAdminDivision extends V20180129Rpc
  * @method string getQualificationType()
  * @method $this withQualificationType($value)
  */
-class CancelQualificationVerification extends V20180129Rpc
+class CancelQualificationVerification extends Rpc
 {
 }
 
@@ -391,7 +388,7 @@ class CancelQualificationVerification extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryLocalEnsAssociation extends V20180129Rpc
+class QueryLocalEnsAssociation extends Rpc
 {
 }
 
@@ -403,7 +400,7 @@ class QueryLocalEnsAssociation extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryEnsAssociation extends V20180129Rpc
+class QueryEnsAssociation extends Rpc
 {
 }
 
@@ -415,7 +412,7 @@ class QueryEnsAssociation extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForDisassociatingEns extends V20180129Rpc
+class SaveSingleTaskForDisassociatingEns extends Rpc
 {
 }
 
@@ -429,7 +426,7 @@ class SaveSingleTaskForDisassociatingEns extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForAssociatingEns extends V20180129Rpc
+class SaveSingleTaskForAssociatingEns extends Rpc
 {
 }
 
@@ -441,7 +438,7 @@ class SaveSingleTaskForAssociatingEns extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ResetQualificationVerification extends V20180129Rpc
+class ResetQualificationVerification extends Rpc
 {
 }
 
@@ -457,7 +454,7 @@ class ResetQualificationVerification extends V20180129Rpc
  * @method string getQualificationType()
  * @method $this withQualificationType($value)
  */
-class QueryFailingReasonListForQualification extends V20180129Rpc
+class QueryFailingReasonListForQualification extends Rpc
 {
 }
 
@@ -471,7 +468,7 @@ class QueryFailingReasonListForQualification extends V20180129Rpc
  * @method string getQualificationType()
  * @method $this withQualificationType($value)
  */
-class QueryQualificationDetail extends V20180129Rpc
+class QueryQualificationDetail extends Rpc
 {
 }
 
@@ -481,7 +478,7 @@ class QueryQualificationDetail extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class GetQualificationUploadPolicy extends V20180129Rpc
+class GetQualificationUploadPolicy extends Rpc
 {
 }
 
@@ -495,7 +492,7 @@ class GetQualificationUploadPolicy extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CheckProcessingServerLockApply extends V20180129Rpc
+class CheckProcessingServerLockApply extends Rpc
 {
 }
 
@@ -509,7 +506,7 @@ class CheckProcessingServerLockApply extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CheckMaxYearOfServerLock extends V20180129Rpc
+class CheckMaxYearOfServerLock extends Rpc
 {
 }
 
@@ -521,7 +518,7 @@ class CheckMaxYearOfServerLock extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryServerLock extends V20180129Rpc
+class QueryServerLock extends Rpc
 {
 }
 
@@ -549,7 +546,7 @@ class QueryServerLock extends V20180129Rpc
  * @method string getBeginStartDate()
  * @method $this withBeginStartDate($value)
  */
-class ListServerLock extends V20180129Rpc
+class ListServerLock extends Rpc
 {
 }
 
@@ -561,7 +558,7 @@ class ListServerLock extends V20180129Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class QueryEmailVerification extends V20180129Rpc
+class QueryEmailVerification extends Rpc
 {
 }
 
@@ -575,7 +572,7 @@ class QueryEmailVerification extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CancelDomainVerification extends V20180129Rpc
+class CancelDomainVerification extends Rpc
 {
 }
 
@@ -589,7 +586,7 @@ class CancelDomainVerification extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDomainRealNameVerificationInfo extends V20180129Rpc
+class QueryDomainRealNameVerificationInfo extends Rpc
 {
 }
 
@@ -603,7 +600,7 @@ class QueryDomainRealNameVerificationInfo extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForDeletingDnsHost extends V20180129Rpc
+class SaveSingleTaskForDeletingDnsHost extends Rpc
 {
 }
 
@@ -617,7 +614,7 @@ class SaveSingleTaskForDeletingDnsHost extends V20180129Rpc
  * @method string getDomainGroupId()
  * @method $this withDomainGroupId($value)
  */
-class SaveDomainGroup extends V20180129Rpc
+class SaveDomainGroup extends Rpc
 {
 }
 
@@ -629,7 +626,7 @@ class SaveDomainGroup extends V20180129Rpc
  * @method string getDomainGroupId()
  * @method $this withDomainGroupId($value)
  */
-class DeleteDomainGroup extends V20180129Rpc
+class DeleteDomainGroup extends Rpc
 {
 }
 
@@ -647,7 +644,7 @@ class DeleteDomainGroup extends V20180129Rpc
  * @method string getDomainGroupId()
  * @method $this withDomainGroupId($value)
  */
-class UpdateDomainToDomainGroup extends V20180129Rpc
+class UpdateDomainToDomainGroup extends Rpc
 {
 
     /**
@@ -689,7 +686,7 @@ class UpdateDomainToDomainGroup extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveBatchDomainRemark extends V20180129Rpc
+class SaveBatchDomainRemark extends Rpc
 {
 }
 
@@ -699,7 +696,7 @@ class SaveBatchDomainRemark extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDomainSuffix extends V20180129Rpc
+class QueryDomainSuffix extends Rpc
 {
 }
 
@@ -757,7 +754,7 @@ class QueryDomainSuffix extends V20180129Rpc
  * @method string getEndLength()
  * @method $this withEndLength($value)
  */
-class QueryAdvancedDomainList extends V20180129Rpc
+class QueryAdvancedDomainList extends Rpc
 {
 }
 
@@ -769,7 +766,7 @@ class QueryAdvancedDomainList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDnsHost extends V20180129Rpc
+class QueryDnsHost extends Rpc
 {
 }
 
@@ -789,7 +786,7 @@ class QueryDnsHost extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForUpdatingContactInfo extends V20180129Rpc
+class SaveSingleTaskForUpdatingContactInfo extends Rpc
 {
 }
 
@@ -803,7 +800,7 @@ class SaveSingleTaskForUpdatingContactInfo extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveSingleTaskForUpdateProhibitionLock extends V20180129Rpc
+class SaveSingleTaskForUpdateProhibitionLock extends Rpc
 {
 }
 
@@ -817,7 +814,7 @@ class SaveSingleTaskForUpdateProhibitionLock extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveSingleTaskForTransferProhibitionLock extends V20180129Rpc
+class SaveSingleTaskForTransferProhibitionLock extends Rpc
 {
 }
 
@@ -829,7 +826,7 @@ class SaveSingleTaskForTransferProhibitionLock extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForSynchronizingDnsHost extends V20180129Rpc
+class SaveSingleTaskForSynchronizingDnsHost extends Rpc
 {
 }
 
@@ -844,7 +841,7 @@ class SaveSingleTaskForSynchronizingDnsHost extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForModifyingDnsHost extends V20180129Rpc
+class SaveSingleTaskForModifyingDnsHost extends Rpc
 {
 
     /**
@@ -873,7 +870,7 @@ class SaveSingleTaskForModifyingDnsHost extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveSingleTaskForDomainNameProxyService extends V20180129Rpc
+class SaveSingleTaskForDomainNameProxyService extends Rpc
 {
 }
 
@@ -888,7 +885,7 @@ class SaveSingleTaskForDomainNameProxyService extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForCreatingDnsHost extends V20180129Rpc
+class SaveSingleTaskForCreatingDnsHost extends Rpc
 {
 
     /**
@@ -925,7 +922,7 @@ class SaveSingleTaskForCreatingDnsHost extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveSingleTaskForCreatingOrderRedeem extends V20180129Rpc
+class SaveSingleTaskForCreatingOrderRedeem extends Rpc
 {
 }
 
@@ -944,7 +941,7 @@ class SaveSingleTaskForCreatingOrderRedeem extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveBatchTaskForCreatingOrderRedeem extends V20180129Rpc
+class SaveBatchTaskForCreatingOrderRedeem extends Rpc
 {
 
     /**
@@ -1006,7 +1003,7 @@ class SaveBatchTaskForCreatingOrderRedeem extends V20180129Rpc
  * @method string getZhRegistrantOrganization()
  * @method $this withZhRegistrantOrganization($value)
  */
-class VerifyContactField extends V20180129Rpc
+class VerifyContactField extends Rpc
 {
 }
 
@@ -1017,7 +1014,7 @@ class VerifyContactField extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class AcknowledgeTaskResult extends V20180129Rpc
+class AcknowledgeTaskResult extends Rpc
 {
 
     /**
@@ -1054,7 +1051,7 @@ class AcknowledgeTaskResult extends V20180129Rpc
  * @method string getTaskResultStatus()
  * @method $this withTaskResultStatus($value)
  */
-class PollTaskResult extends V20180129Rpc
+class PollTaskResult extends Rpc
 {
 }
 
@@ -1068,7 +1065,7 @@ class PollTaskResult extends V20180129Rpc
  * @method string getShowDeletingGroup()
  * @method $this withShowDeletingGroup($value)
  */
-class QueryDomainGroupList extends V20180129Rpc
+class QueryDomainGroupList extends Rpc
 {
 }
 
@@ -1080,7 +1077,7 @@ class QueryDomainGroupList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForApprovingTransferOut extends V20180129Rpc
+class SaveSingleTaskForApprovingTransferOut extends Rpc
 {
 }
 
@@ -1092,7 +1089,7 @@ class SaveSingleTaskForApprovingTransferOut extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForCancelingTransferOut extends V20180129Rpc
+class SaveSingleTaskForCancelingTransferOut extends Rpc
 {
 }
 
@@ -1104,7 +1101,7 @@ class SaveSingleTaskForCancelingTransferOut extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForQueryingTransferAuthorizationCode extends V20180129Rpc
+class SaveSingleTaskForQueryingTransferAuthorizationCode extends Rpc
 {
 }
 
@@ -1116,7 +1113,7 @@ class SaveSingleTaskForQueryingTransferAuthorizationCode extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryTransferOutInfo extends V20180129Rpc
+class QueryTransferOutInfo extends Rpc
 {
 }
 
@@ -1130,7 +1127,7 @@ class QueryTransferOutInfo extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryRegistrantProfileRealNameVerificationInfo extends V20180129Rpc
+class QueryRegistrantProfileRealNameVerificationInfo extends Rpc
 {
 }
 
@@ -1143,7 +1140,7 @@ class QueryRegistrantProfileRealNameVerificationInfo extends V20180129Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class ConfirmTransferInEmail extends V20180129Rpc
+class ConfirmTransferInEmail extends Rpc
 {
 
     /**
@@ -1170,7 +1167,7 @@ class ConfirmTransferInEmail extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class TransferInRefetchWhoisEmail extends V20180129Rpc
+class TransferInRefetchWhoisEmail extends Rpc
 {
 }
 
@@ -1184,7 +1181,7 @@ class TransferInRefetchWhoisEmail extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CheckTransferInFeasibility extends V20180129Rpc
+class CheckTransferInFeasibility extends Rpc
 {
 }
 
@@ -1206,7 +1203,7 @@ class CheckTransferInFeasibility extends V20180129Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class QueryTransferInList extends V20180129Rpc
+class QueryTransferInList extends Rpc
 {
 }
 
@@ -1218,7 +1215,7 @@ class QueryTransferInList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryTransferInByInstanceId extends V20180129Rpc
+class QueryTransferInByInstanceId extends Rpc
 {
 }
 
@@ -1230,7 +1227,7 @@ class QueryTransferInByInstanceId extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveSingleTaskForCancelingTransferIn extends V20180129Rpc
+class SaveSingleTaskForCancelingTransferIn extends Rpc
 {
 }
 
@@ -1244,7 +1241,7 @@ class SaveSingleTaskForCancelingTransferIn extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class TransferInReenterTransferAuthorizationCode extends V20180129Rpc
+class TransferInReenterTransferAuthorizationCode extends Rpc
 {
 }
 
@@ -1256,7 +1253,7 @@ class TransferInReenterTransferAuthorizationCode extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class TransferInResendMailToken extends V20180129Rpc
+class TransferInResendMailToken extends Rpc
 {
 }
 
@@ -1268,7 +1265,7 @@ class TransferInResendMailToken extends V20180129Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class TransferInCheckMailToken extends V20180129Rpc
+class TransferInCheckMailToken extends Rpc
 {
 }
 
@@ -1294,7 +1291,7 @@ class TransferInCheckMailToken extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveSingleTaskForCreatingOrderTransfer extends V20180129Rpc
+class SaveSingleTaskForCreatingOrderTransfer extends Rpc
 {
 }
 
@@ -1313,7 +1310,7 @@ class SaveSingleTaskForCreatingOrderTransfer extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveBatchTaskForCreatingOrderTransfer extends V20180129Rpc
+class SaveBatchTaskForCreatingOrderTransfer extends Rpc
 {
 
     /**
@@ -1347,7 +1344,7 @@ class SaveBatchTaskForCreatingOrderTransfer extends V20180129Rpc
  * @method string getIdentityCredentialNo()
  * @method $this withIdentityCredentialNo($value)
  */
-class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends V20180129Rpc
+class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extends Rpc
 {
 
     /**
@@ -1392,7 +1389,7 @@ class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential extend
  * @method string getIdentityCredentialNo()
  * @method $this withIdentityCredentialNo($value)
  */
-class RegistrantProfileRealNameVerification extends V20180129Rpc
+class RegistrantProfileRealNameVerification extends Rpc
 {
 
     /**
@@ -1417,7 +1414,7 @@ class RegistrantProfileRealNameVerification extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveTaskForSubmittingDomainDelete extends V20180129Rpc
+class SaveTaskForSubmittingDomainDelete extends Rpc
 {
 }
 
@@ -1466,7 +1463,7 @@ class SaveTaskForSubmittingDomainDelete extends V20180129Rpc
  * @method string getZhRegistrantOrganization()
  * @method $this withZhRegistrantOrganization($value)
  */
-class SaveBatchTaskForUpdatingContactInfoByNewContact extends V20180129Rpc
+class SaveBatchTaskForUpdatingContactInfoByNewContact extends Rpc
 {
 
     /**
@@ -1498,7 +1495,7 @@ class SaveBatchTaskForUpdatingContactInfoByNewContact extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId extends V20180129Rpc
+class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId extends Rpc
 {
 
     /**
@@ -1525,7 +1522,7 @@ class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId extends V20180129
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class EmailVerified extends V20180129Rpc
+class EmailVerified extends Rpc
 {
 }
 
@@ -1537,7 +1534,7 @@ class EmailVerified extends V20180129Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class ResendEmailVerification extends V20180129Rpc
+class ResendEmailVerification extends Rpc
 {
 }
 
@@ -1549,7 +1546,7 @@ class ResendEmailVerification extends V20180129Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class DeleteEmailVerification extends V20180129Rpc
+class DeleteEmailVerification extends Rpc
 {
 }
 
@@ -1563,7 +1560,7 @@ class DeleteEmailVerification extends V20180129Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class SubmitEmailVerification extends V20180129Rpc
+class SubmitEmailVerification extends Rpc
 {
 }
 
@@ -1575,7 +1572,7 @@ class SubmitEmailVerification extends V20180129Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class VerifyEmail extends V20180129Rpc
+class VerifyEmail extends Rpc
 {
 }
 
@@ -1589,7 +1586,7 @@ class VerifyEmail extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryFailReasonForDomainRealNameVerification extends V20180129Rpc
+class QueryFailReasonForDomainRealNameVerification extends Rpc
 {
 }
 
@@ -1611,7 +1608,7 @@ class QueryFailReasonForDomainRealNameVerification extends V20180129Rpc
  * @method string getVerificationStatus()
  * @method $this withVerificationStatus($value)
  */
-class ListEmailVerification extends V20180129Rpc
+class ListEmailVerification extends Rpc
 {
 }
 
@@ -1633,7 +1630,7 @@ class ListEmailVerification extends V20180129Rpc
  * @method string getDomainNameCursor()
  * @method $this withDomainNameCursor($value)
  */
-class QueryTaskDetailHistory extends V20180129Rpc
+class QueryTaskDetailHistory extends Rpc
 {
 }
 
@@ -1653,7 +1650,7 @@ class QueryTaskDetailHistory extends V20180129Rpc
  * @method string getCreateTimeCursor()
  * @method $this withCreateTimeCursor($value)
  */
-class QueryTaskInfoHistory extends V20180129Rpc
+class QueryTaskInfoHistory extends Rpc
 {
 }
 
@@ -1665,7 +1662,7 @@ class QueryTaskInfoHistory extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryFailReasonForRegistrantProfileRealNameVerification extends V20180129Rpc
+class QueryFailReasonForRegistrantProfileRealNameVerification extends Rpc
 {
 }
 
@@ -1687,7 +1684,7 @@ class QueryFailReasonForRegistrantProfileRealNameVerification extends V20180129R
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class QueryTaskDetailList extends V20180129Rpc
+class QueryTaskDetailList extends Rpc
 {
 }
 
@@ -1703,7 +1700,7 @@ class QueryTaskDetailList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CheckDomain extends V20180129Rpc
+class CheckDomain extends Rpc
 {
 }
 
@@ -1755,7 +1752,7 @@ class CheckDomain extends V20180129Rpc
  * @method string getZhRegistrantOrganization()
  * @method $this withZhRegistrantOrganization($value)
  */
-class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends V20180129Rpc
+class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends Rpc
 {
 
     /**
@@ -1801,7 +1798,7 @@ class SaveTaskForUpdatingRegistrantInfoByIdentityCredential extends V20180129Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class QueryTaskList extends V20180129Rpc
+class QueryTaskList extends Rpc
 {
 }
 
@@ -1816,7 +1813,7 @@ class QueryTaskList extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends V20180129Rpc
+class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
 {
 
     /**
@@ -1850,7 +1847,7 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends V20180129Rp
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveBatchTaskForCreatingOrderRenew extends V20180129Rpc
+class SaveBatchTaskForCreatingOrderRenew extends Rpc
 {
 
     /**
@@ -1883,7 +1880,7 @@ class SaveBatchTaskForCreatingOrderRenew extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends V20180129Rpc
+class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID extends Rpc
 {
 }
 
@@ -1895,7 +1892,7 @@ class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileID exten
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryDomainByInstanceId extends V20180129Rpc
+class QueryDomainByInstanceId extends Rpc
 {
 }
 
@@ -1919,7 +1916,7 @@ class QueryDomainByInstanceId extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveSingleTaskForCreatingOrderRenew extends V20180129Rpc
+class SaveSingleTaskForCreatingOrderRenew extends Rpc
 {
 }
 
@@ -1933,7 +1930,7 @@ class SaveSingleTaskForCreatingOrderRenew extends V20180129Rpc
  * @method string getAliyunDns()
  * @method $this withAliyunDns($value)
  */
-class SaveBatchTaskForModifyingDomainDns extends V20180129Rpc
+class SaveBatchTaskForModifyingDomainDns extends Rpc
 {
 
     /**
@@ -1976,7 +1973,7 @@ class SaveBatchTaskForModifyingDomainDns extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveBatchTaskForDomainNameProxyService extends V20180129Rpc
+class SaveBatchTaskForDomainNameProxyService extends Rpc
 {
 
     /**
@@ -2004,7 +2001,7 @@ class SaveBatchTaskForDomainNameProxyService extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveBatchTaskForTransferProhibitionLock extends V20180129Rpc
+class SaveBatchTaskForTransferProhibitionLock extends Rpc
 {
 
     /**
@@ -2053,7 +2050,7 @@ class SaveBatchTaskForTransferProhibitionLock extends V20180129Rpc
  * @method string getStartRegistrationDate()
  * @method $this withStartRegistrationDate($value)
  */
-class QueryDomainList extends V20180129Rpc
+class QueryDomainList extends Rpc
 {
 }
 
@@ -2066,7 +2063,7 @@ class QueryDomainList extends V20180129Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SaveBatchTaskForUpdateProhibitionLock extends V20180129Rpc
+class SaveBatchTaskForUpdateProhibitionLock extends Rpc
 {
 
     /**
@@ -2095,7 +2092,7 @@ class SaveBatchTaskForUpdateProhibitionLock extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class QueryContactInfo extends V20180129Rpc
+class QueryContactInfo extends Rpc
 {
 }
 
@@ -2115,7 +2112,7 @@ class QueryContactInfo extends V20180129Rpc
  * @method string getStartDate()
  * @method $this withStartDate($value)
  */
-class QueryChangeLogList extends V20180129Rpc
+class QueryChangeLogList extends Rpc
 {
 }
 
@@ -2185,7 +2182,7 @@ class QueryChangeLogList extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveSingleTaskForCreatingOrderActivate extends V20180129Rpc
+class SaveSingleTaskForCreatingOrderActivate extends Rpc
 {
 }
 
@@ -2204,7 +2201,7 @@ class SaveSingleTaskForCreatingOrderActivate extends V20180129Rpc
  * @method string getUsePromotion()
  * @method $this withUsePromotion($value)
  */
-class SaveBatchTaskForCreatingOrderActivate extends V20180129Rpc
+class SaveBatchTaskForCreatingOrderActivate extends Rpc
 {
 
     /**
@@ -2256,7 +2253,7 @@ class SaveBatchTaskForCreatingOrderActivate extends V20180129Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteRegistrantProfile extends V20180129Rpc
+class DeleteRegistrantProfile extends Rpc
 {
 }
 
@@ -2286,7 +2283,7 @@ class DeleteRegistrantProfile extends V20180129Rpc
  * @method string getZhRegistrantOrganization()
  * @method $this withZhRegistrantOrganization($value)
  */
-class QueryRegistrantProfiles extends V20180129Rpc
+class QueryRegistrantProfiles extends Rpc
 {
 }
 
@@ -2336,6 +2333,6 @@ class QueryRegistrantProfiles extends V20180129Rpc
  * @method string getZhRegistrantOrganization()
  * @method $this withZhRegistrantOrganization($value)
  */
-class SaveRegistrantProfile extends V20180129Rpc
+class SaveRegistrantProfile extends Rpc
 {
 }

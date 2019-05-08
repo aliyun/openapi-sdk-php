@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Aegis\V20161111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeWebshellList describeWebshellList(array $options = [])
  * @method AddEventProcess addEventProcess(array $options = [])
  * @method DescribeHostStatistics describeHostStatistics(array $options = [])
@@ -291,7 +288,7 @@ class AegisApiResolver
     use ApiResolverTrait;
 }
 
-class V20161111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'aegis';
@@ -310,7 +307,7 @@ class V20161111Rpc extends Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeWebshellList extends V20161111Rpc
+class DescribeWebshellList extends Rpc
 {
 }
 
@@ -326,7 +323,7 @@ class DescribeWebshellList extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class AddEventProcess extends V20161111Rpc
+class AddEventProcess extends Rpc
 {
 }
 
@@ -334,7 +331,7 @@ class AddEventProcess extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeHostStatistics extends V20161111Rpc
+class DescribeHostStatistics extends Rpc
 {
 }
 
@@ -342,7 +339,7 @@ class DescribeHostStatistics extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenOssUploadInfo extends V20161111Rpc
+class DescribeScreenOssUploadInfo extends Rpc
 {
 }
 
@@ -354,7 +351,7 @@ class DescribeScreenOssUploadInfo extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenCityMonitorData extends V20161111Rpc
+class DescribeScreenCityMonitorData extends Rpc
 {
 }
 
@@ -372,7 +369,7 @@ class DescribeScreenCityMonitorData extends V20161111Rpc
  * @method string getRangeValue()
  * @method $this withRangeValue($value)
  */
-class DescribeScreenBizStatSimpleQueryResult extends V20161111Rpc
+class DescribeScreenBizStatSimpleQueryResult extends Rpc
 {
 }
 
@@ -380,7 +377,7 @@ class DescribeScreenBizStatSimpleQueryResult extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenEmerRisk extends V20161111Rpc
+class DescribeScreenEmerRisk extends Rpc
 {
 }
 
@@ -388,7 +385,7 @@ class DescribeScreenEmerRisk extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenTopRequestAndFlow extends V20161111Rpc
+class DescribeScreenTopRequestAndFlow extends Rpc
 {
 }
 
@@ -396,7 +393,7 @@ class DescribeScreenTopRequestAndFlow extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenCloudHcRisk extends V20161111Rpc
+class DescribeScreenCloudHcRisk extends Rpc
 {
 }
 
@@ -404,7 +401,7 @@ class DescribeScreenCloudHcRisk extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenTitles extends V20161111Rpc
+class DescribeScreenTitles extends Rpc
 {
 }
 
@@ -412,7 +409,7 @@ class DescribeScreenTitles extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenTitels extends V20161111Rpc
+class DescribeScreenTitels extends Rpc
 {
 }
 
@@ -420,7 +417,7 @@ class DescribeScreenTitels extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeOssUploadInfo extends V20161111Rpc
+class DescribeOssUploadInfo extends Rpc
 {
 }
 
@@ -428,7 +425,7 @@ class DescribeOssUploadInfo extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenFlowRequestCount extends V20161111Rpc
+class DescribeScreenFlowRequestCount extends Rpc
 {
 }
 
@@ -438,7 +435,7 @@ class DescribeScreenFlowRequestCount extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeScreenRequestTopType extends V20161111Rpc
+class DescribeScreenRequestTopType extends Rpc
 {
 }
 
@@ -446,7 +443,7 @@ class DescribeScreenRequestTopType extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenDataMap extends V20161111Rpc
+class DescribeScreenDataMap extends Rpc
 {
 }
 
@@ -462,7 +459,7 @@ class DescribeScreenDataMap extends V20161111Rpc
  * @method string getCustomQuery()
  * @method $this withCustomQuery($value)
  */
-class DescribeBizStatSimpleQueryResult extends V20161111Rpc
+class DescribeBizStatSimpleQueryResult extends Rpc
 {
 }
 
@@ -474,7 +471,7 @@ class DescribeBizStatSimpleQueryResult extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeCityMonitorData extends V20161111Rpc
+class DescribeCityMonitorData extends Rpc
 {
 }
 
@@ -496,7 +493,7 @@ class DescribeCityMonitorData extends V20161111Rpc
  * @method string getLogoUrl()
  * @method $this withLogoUrl($value)
  */
-class CreateScreenSetting extends V20161111Rpc
+class CreateScreenSetting extends Rpc
 {
 }
 
@@ -506,7 +503,7 @@ class CreateScreenSetting extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeGrayFunc extends V20161111Rpc
+class DescribeGrayFunc extends Rpc
 {
 }
 
@@ -514,7 +511,7 @@ class DescribeGrayFunc extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class AutoUpgradeToSasAdvancedVersion extends V20161111Rpc
+class AutoUpgradeToSasAdvancedVersion extends Rpc
 {
 }
 
@@ -522,7 +519,7 @@ class AutoUpgradeToSasAdvancedVersion extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeCanUpgradeSas extends V20161111Rpc
+class DescribeCanUpgradeSas extends Rpc
 {
 }
 
@@ -530,7 +527,7 @@ class DescribeCanUpgradeSas extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeCanTrySas extends V20161111Rpc
+class DescribeCanTrySas extends Rpc
 {
 }
 
@@ -540,7 +537,7 @@ class DescribeCanTrySas extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class ModifyRefreshProcessInfo extends V20161111Rpc
+class ModifyRefreshProcessInfo extends Rpc
 {
 }
 
@@ -552,7 +549,7 @@ class ModifyRefreshProcessInfo extends V20161111Rpc
  * @method string getPpid()
  * @method $this withPpid($value)
  */
-class DescribeVulRelatedProcess extends V20161111Rpc
+class DescribeVulRelatedProcess extends Rpc
 {
 }
 
@@ -564,7 +561,7 @@ class DescribeVulRelatedProcess extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeAgentInstallStatus extends V20161111Rpc
+class DescribeAgentInstallStatus extends Rpc
 {
 }
 
@@ -574,7 +571,7 @@ class DescribeAgentInstallStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeEcsStsStatus extends V20161111Rpc
+class DescribeEcsStsStatus extends Rpc
 {
 }
 
@@ -588,7 +585,7 @@ class DescribeEcsStsStatus extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class OperateAgentClientInstall extends V20161111Rpc
+class OperateAgentClientInstall extends Rpc
 {
 }
 
@@ -598,7 +595,7 @@ class OperateAgentClientInstall extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class OperateAgentClient extends V20161111Rpc
+class OperateAgentClient extends Rpc
 {
 }
 
@@ -608,7 +605,7 @@ class OperateAgentClient extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStsStatus extends V20161111Rpc
+class DescribeStsStatus extends Rpc
 {
 }
 
@@ -620,7 +617,7 @@ class DescribeStsStatus extends V20161111Rpc
  * @method string getEventIds()
  * @method $this withEventIds($value)
  */
-class ModifyWebLockOperateEvents extends V20161111Rpc
+class ModifyWebLockOperateEvents extends Rpc
 {
 }
 
@@ -628,7 +625,7 @@ class ModifyWebLockOperateEvents extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class CanTrySas extends V20161111Rpc
+class CanTrySas extends Rpc
 {
 }
 
@@ -638,7 +635,7 @@ class CanTrySas extends V20161111Rpc
  * @method string getBuyVersion()
  * @method $this withBuyVersion($value)
  */
-class OpenSasTrial extends V20161111Rpc
+class OpenSasTrial extends Rpc
 {
 }
 
@@ -648,7 +645,7 @@ class OpenSasTrial extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSecureSuggestion extends V20161111Rpc
+class DescribeSecureSuggestion extends Rpc
 {
 }
 
@@ -658,7 +655,7 @@ class DescribeSecureSuggestion extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDefenceThread extends V20161111Rpc
+class DescribeDefenceThread extends Rpc
 {
 }
 
@@ -672,7 +669,7 @@ class DescribeDefenceThread extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeWhiteListStrategyUuidCount extends V20161111Rpc
+class DescribeWhiteListStrategyUuidCount extends Rpc
 {
 }
 
@@ -692,7 +689,7 @@ class DescribeWhiteListStrategyUuidCount extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateWhiteListStrategyRelation extends V20161111Rpc
+class UpdateWhiteListStrategyRelation extends Rpc
 {
 }
 
@@ -704,7 +701,7 @@ class UpdateWhiteListStrategyRelation extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWhiteListStrategyList extends V20161111Rpc
+class DescribeWhiteListStrategyList extends Rpc
 {
 }
 
@@ -716,7 +713,7 @@ class DescribeWhiteListStrategyList extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifyClearLogstoreStorage extends V20161111Rpc
+class ModifyClearLogstoreStorage extends Rpc
 {
 }
 
@@ -728,7 +725,7 @@ class ModifyClearLogstoreStorage extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeLogstoreStorage extends V20161111Rpc
+class DescribeLogstoreStorage extends Rpc
 {
 }
 
@@ -742,7 +739,7 @@ class DescribeLogstoreStorage extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeShareVmWebshell extends V20161111Rpc
+class DescribeShareVmWebshell extends Rpc
 {
 }
 
@@ -756,7 +753,7 @@ class DescribeShareVmWebshell extends V20161111Rpc
  * @method string getInfo()
  * @method $this withInfo($value)
  */
-class OperateTrojan extends V20161111Rpc
+class OperateTrojan extends Rpc
 {
 }
 
@@ -768,7 +765,7 @@ class OperateTrojan extends V20161111Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class DescribeMaliciousProcess extends V20161111Rpc
+class DescribeMaliciousProcess extends Rpc
 {
 }
 
@@ -776,7 +773,7 @@ class DescribeMaliciousProcess extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeCategoryCount extends V20161111Rpc
+class DescribeCategoryCount extends Rpc
 {
 }
 
@@ -786,7 +783,7 @@ class DescribeCategoryCount extends V20161111Rpc
  * @method string getNoteId()
  * @method $this withNoteId($value)
  */
-class DeleteSuspEventNode extends V20161111Rpc
+class DeleteSuspEventNode extends Rpc
 {
 }
 
@@ -798,7 +795,7 @@ class DeleteSuspEventNode extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class CreateSuspEventNote extends V20161111Rpc
+class CreateSuspEventNote extends Rpc
 {
 }
 
@@ -808,7 +805,7 @@ class CreateSuspEventNote extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWhiteListStrategyCount extends V20161111Rpc
+class DescribeWhiteListStrategyCount extends Rpc
 {
 }
 
@@ -828,7 +825,7 @@ class DescribeWhiteListStrategyCount extends V20161111Rpc
  * @method string getNeedStatistics()
  * @method $this withNeedStatistics($value)
  */
-class DescribeWhiteListEffectiveAssets extends V20161111Rpc
+class DescribeWhiteListEffectiveAssets extends Rpc
 {
 }
 
@@ -844,7 +841,7 @@ class DescribeWhiteListEffectiveAssets extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateWhiteListProcessStatus extends V20161111Rpc
+class UpdateWhiteListProcessStatus extends Rpc
 {
 }
 
@@ -856,7 +853,7 @@ class UpdateWhiteListProcessStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWhiteListGroupStruct extends V20161111Rpc
+class DescribeWhiteListGroupStruct extends Rpc
 {
 }
 
@@ -866,7 +863,7 @@ class DescribeWhiteListGroupStruct extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWhiteListAuthorize extends V20161111Rpc
+class DescribeWhiteListAuthorize extends Rpc
 {
 }
 
@@ -882,7 +879,7 @@ class DescribeWhiteListAuthorize extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveWhiteListStrategy extends V20161111Rpc
+class SaveWhiteListStrategy extends Rpc
 {
 }
 
@@ -898,7 +895,7 @@ class SaveWhiteListStrategy extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWhiteListStrategyStatistics extends V20161111Rpc
+class DescribeWhiteListStrategyStatistics extends Rpc
 {
 }
 
@@ -916,7 +913,7 @@ class DescribeWhiteListStrategyStatistics extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeWhiteListAsset extends V20161111Rpc
+class DescribeWhiteListAsset extends Rpc
 {
 }
 
@@ -930,7 +927,7 @@ class DescribeWhiteListAsset extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateWhiteListStrategyStatus extends V20161111Rpc
+class UpdateWhiteListStrategyStatus extends Rpc
 {
 }
 
@@ -946,7 +943,7 @@ class UpdateWhiteListStrategyStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SaveWhiteListStrategyAssets extends V20161111Rpc
+class SaveWhiteListStrategyAssets extends Rpc
 {
 }
 
@@ -970,7 +967,7 @@ class SaveWhiteListStrategyAssets extends V20161111Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class DescribeWhiteListProcess extends V20161111Rpc
+class DescribeWhiteListProcess extends Rpc
 {
 }
 
@@ -978,7 +975,7 @@ class DescribeWhiteListProcess extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeAnalysisSlsIndex extends V20161111Rpc
+class DescribeAnalysisSlsIndex extends Rpc
 {
 }
 
@@ -986,7 +983,7 @@ class DescribeAnalysisSlsIndex extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeAnalysisStatistics extends V20161111Rpc
+class DescribeAnalysisStatistics extends Rpc
 {
 }
 
@@ -994,7 +991,7 @@ class DescribeAnalysisStatistics extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeTopicList extends V20161111Rpc
+class DescribeTopicList extends Rpc
 {
 }
 
@@ -1006,7 +1003,7 @@ class DescribeTopicList extends V20161111Rpc
  * @method string getEndTimeStamp()
  * @method $this withEndTimeStamp($value)
  */
-class DescribeAnalysisCurve extends V20161111Rpc
+class DescribeAnalysisCurve extends Rpc
 {
 }
 
@@ -1018,7 +1015,7 @@ class DescribeAnalysisCurve extends V20161111Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class ExecuteRuleEngineActualTime extends V20161111Rpc
+class ExecuteRuleEngineActualTime extends Rpc
 {
 }
 
@@ -1026,7 +1023,7 @@ class ExecuteRuleEngineActualTime extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeAnalysisShipperStatus extends V20161111Rpc
+class DescribeAnalysisShipperStatus extends Rpc
 {
 }
 
@@ -1036,7 +1033,7 @@ class DescribeAnalysisShipperStatus extends V20161111Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class DescribeSlsProject extends V20161111Rpc
+class DescribeSlsProject extends Rpc
 {
 }
 
@@ -1052,7 +1049,7 @@ class DescribeSlsProject extends V20161111Rpc
  * @method string getIntervalTime()
  * @method $this withIntervalTime($value)
  */
-class CreateOrUpdateDingTalk extends V20161111Rpc
+class CreateOrUpdateDingTalk extends Rpc
 {
 }
 
@@ -1062,7 +1059,7 @@ class CreateOrUpdateDingTalk extends V20161111Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteDingTalk extends V20161111Rpc
+class DeleteDingTalk extends Rpc
 {
 }
 
@@ -1072,7 +1069,7 @@ class DeleteDingTalk extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeDingTalk extends V20161111Rpc
+class DescribeDingTalk extends Rpc
 {
 }
 
@@ -1084,7 +1081,7 @@ class DescribeDingTalk extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class OperateResult extends V20161111Rpc
+class OperateResult extends Rpc
 {
 }
 
@@ -1108,7 +1105,7 @@ class OperateResult extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeResultList extends V20161111Rpc
+class DescribeResultList extends Rpc
 {
 }
 
@@ -1123,7 +1120,7 @@ class DescribeResultList extends V20161111Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class DescribeJoinRuleList extends V20161111Rpc
+class DescribeJoinRuleList extends Rpc
 {
 
     /**
@@ -1156,7 +1153,7 @@ class DescribeJoinRuleList extends V20161111Rpc
  * @method string getReverse()
  * @method $this withReverse($value)
  */
-class DescribeAnalysisLogs extends V20161111Rpc
+class DescribeAnalysisLogs extends Rpc
 {
 }
 
@@ -1170,7 +1167,7 @@ class DescribeAnalysisLogs extends V20161111Rpc
  * @method string getTo()
  * @method $this withTo($value)
  */
-class DescribeAnalysisHistograms extends V20161111Rpc
+class DescribeAnalysisHistograms extends Rpc
 {
 }
 
@@ -1190,7 +1187,7 @@ class DescribeAnalysisHistograms extends V20161111Rpc
  * @method string getEventName()
  * @method $this withEventName($value)
  */
-class DescribeTraceInfoNode extends V20161111Rpc
+class DescribeTraceInfoNode extends Rpc
 {
 }
 
@@ -1214,7 +1211,7 @@ class DescribeTraceInfoNode extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeTraceInfoNodeList extends V20161111Rpc
+class DescribeTraceInfoNodeList extends Rpc
 {
 }
 
@@ -1232,7 +1229,7 @@ class DescribeTraceInfoNodeList extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeTraceInfoDetail extends V20161111Rpc
+class DescribeTraceInfoDetail extends Rpc
 {
 }
 
@@ -1240,7 +1237,7 @@ class DescribeTraceInfoDetail extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeStatistics extends V20161111Rpc
+class DescribeStatistics extends Rpc
 {
 }
 
@@ -1254,7 +1251,7 @@ class DescribeStatistics extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeVulMachineList extends V20161111Rpc
+class DescribeVulMachineList extends Rpc
 {
 }
 
@@ -1264,7 +1261,7 @@ class DescribeVulMachineList extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class ModifyVulLevel extends V20161111Rpc
+class ModifyVulLevel extends Rpc
 {
 }
 
@@ -1272,7 +1269,7 @@ class ModifyVulLevel extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeVulLevel extends V20161111Rpc
+class DescribeVulLevel extends Rpc
 {
 }
 
@@ -1286,7 +1283,7 @@ class DescribeVulLevel extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeVulLevelStatistics extends V20161111Rpc
+class DescribeVulLevelStatistics extends Rpc
 {
 }
 
@@ -1296,7 +1293,7 @@ class DescribeVulLevelStatistics extends V20161111Rpc
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
  */
-class DescribeStrategyProcess extends V20161111Rpc
+class DescribeStrategyProcess extends Rpc
 {
 }
 
@@ -1308,7 +1305,7 @@ class DescribeStrategyProcess extends V20161111Rpc
  * @method string getCheckWarningId()
  * @method $this withCheckWarningId($value)
  */
-class DescribeCheckWarningDetail extends V20161111Rpc
+class DescribeCheckWarningDetail extends Rpc
 {
 }
 
@@ -1324,7 +1321,7 @@ class DescribeCheckWarningDetail extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class IgnoreHcCheckWarnings extends V20161111Rpc
+class IgnoreHcCheckWarnings extends Rpc
 {
 }
 
@@ -1350,7 +1347,7 @@ class IgnoreHcCheckWarnings extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeCheckWarningSummary extends V20161111Rpc
+class DescribeCheckWarningSummary extends Rpc
 {
 }
 
@@ -1362,7 +1359,7 @@ class DescribeCheckWarningSummary extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ValidateHcWarnings extends V20161111Rpc
+class ValidateHcWarnings extends Rpc
 {
 }
 
@@ -1384,7 +1381,7 @@ class ValidateHcWarnings extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeWarningMachines extends V20161111Rpc
+class DescribeWarningMachines extends Rpc
 {
 }
 
@@ -1402,7 +1399,7 @@ class DescribeWarningMachines extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeCheckWarnings extends V20161111Rpc
+class DescribeCheckWarnings extends Rpc
 {
 }
 
@@ -1416,7 +1413,7 @@ class DescribeCheckWarnings extends V20161111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class ModifyTargetConfig extends V20161111Rpc
+class ModifyTargetConfig extends Rpc
 {
 }
 
@@ -1428,7 +1425,7 @@ class ModifyTargetConfig extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeTargetConfig extends V20161111Rpc
+class DescribeTargetConfig extends Rpc
 {
 }
 
@@ -1458,7 +1455,7 @@ class DescribeTargetConfig extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ModifySaveVulBatch extends V20161111Rpc
+class ModifySaveVulBatch extends Rpc
 {
 }
 
@@ -1470,7 +1467,7 @@ class ModifySaveVulBatch extends V20161111Rpc
  * @method string getResource()
  * @method $this withResource($value)
  */
-class DeleteVulBatch extends V20161111Rpc
+class DeleteVulBatch extends Rpc
 {
 }
 
@@ -1480,7 +1477,7 @@ class DeleteVulBatch extends V20161111Rpc
  * @method string getResource()
  * @method $this withResource($value)
  */
-class DescribeVulBatch extends V20161111Rpc
+class DescribeVulBatch extends Rpc
 {
 }
 
@@ -1492,7 +1489,7 @@ class DescribeVulBatch extends V20161111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class ModifyVulConfig extends V20161111Rpc
+class ModifyVulConfig extends Rpc
 {
 }
 
@@ -1510,7 +1507,7 @@ class ModifyVulConfig extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeVulNumStatistics extends V20161111Rpc
+class DescribeVulNumStatistics extends Rpc
 {
 }
 
@@ -1520,7 +1517,7 @@ class DescribeVulNumStatistics extends V20161111Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteJoinRule extends V20161111Rpc
+class DeleteJoinRule extends Rpc
 {
 }
 
@@ -1536,7 +1533,7 @@ class DeleteJoinRule extends V20161111Rpc
  * @method string getInfo()
  * @method $this withInfo($value)
  */
-class OperateVul extends V20161111Rpc
+class OperateVul extends Rpc
 {
 }
 
@@ -1544,7 +1541,7 @@ class OperateVul extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenVersionConfig extends V20161111Rpc
+class DescribeScreenVersionConfig extends Rpc
 {
 }
 
@@ -1554,7 +1551,7 @@ class DescribeScreenVersionConfig extends V20161111Rpc
  * @method string getExportId()
  * @method $this withExportId($value)
  */
-class DescribeVulExportInfo extends V20161111Rpc
+class DescribeVulExportInfo extends Rpc
 {
 }
 
@@ -1586,7 +1583,7 @@ class DescribeVulExportInfo extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ExportVul extends V20161111Rpc
+class ExportVul extends Rpc
 {
 }
 
@@ -1598,7 +1595,7 @@ class ExportVul extends V20161111Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class ModifyVulTarget extends V20161111Rpc
+class ModifyVulTarget extends Rpc
 {
 }
 
@@ -1610,7 +1607,7 @@ class ModifyVulTarget extends V20161111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class DescribeTarget extends V20161111Rpc
+class DescribeTarget extends Rpc
 {
 }
 
@@ -1620,7 +1617,7 @@ class DescribeTarget extends V20161111Rpc
  * @method string getDays()
  * @method $this withDays($value)
  */
-class ModifyAutoDelConfig extends V20161111Rpc
+class ModifyAutoDelConfig extends Rpc
 {
 }
 
@@ -1630,7 +1627,7 @@ class ModifyAutoDelConfig extends V20161111Rpc
  * @method string getWhitelist()
  * @method $this withWhitelist($value)
  */
-class DeleteVulWhitelist extends V20161111Rpc
+class DeleteVulWhitelist extends Rpc
 {
 }
 
@@ -1638,7 +1635,7 @@ class DeleteVulWhitelist extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeListAccessKeyIdAuth extends V20161111Rpc
+class DescribeListAccessKeyIdAuth extends Rpc
 {
 }
 
@@ -1650,7 +1647,7 @@ class DescribeListAccessKeyIdAuth extends V20161111Rpc
  * @method string getWhitelist()
  * @method $this withWhitelist($value)
  */
-class CreateVulWhitelist extends V20161111Rpc
+class CreateVulWhitelist extends Rpc
 {
 }
 
@@ -1662,7 +1659,7 @@ class CreateVulWhitelist extends V20161111Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class DescribeVulWhitelist extends V20161111Rpc
+class DescribeVulWhitelist extends Rpc
 {
 }
 
@@ -1670,17 +1667,7 @@ class DescribeVulWhitelist extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeAutoDelConfig extends V20161111Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class DescribeVulConfig extends V20161111Rpc
+class DescribeAutoDelConfig extends Rpc
 {
 }
 
@@ -1690,7 +1677,17 @@ class DescribeVulConfig extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeVulTargetStatistics extends V20161111Rpc
+class DescribeVulConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeVulTargetStatistics extends Rpc
 {
 }
 
@@ -1700,7 +1697,7 @@ class DescribeVulTargetStatistics extends V20161111Rpc
  * @method string getTagIdList()
  * @method string getRemark()
  */
-class DescribeGroupStruct extends V20161111Rpc
+class DescribeGroupStruct extends Rpc
 {
 
     /**
@@ -1770,7 +1767,7 @@ class DescribeGroupStruct extends V20161111Rpc
  * @method string getDirection()
  * @method $this withDirection($value)
  */
-class DescribeGroupedVul extends V20161111Rpc
+class DescribeGroupedVul extends Rpc
 {
 }
 
@@ -1788,7 +1785,7 @@ class DescribeGroupedVul extends V20161111Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class CreateOrUpdateDataSource extends V20161111Rpc
+class CreateOrUpdateDataSource extends Rpc
 {
 }
 
@@ -1820,7 +1817,7 @@ class CreateOrUpdateDataSource extends V20161111Rpc
  * @method string getActions()
  * @method $this withActions($value)
  */
-class CreateOrUpdateJoinRule extends V20161111Rpc
+class CreateOrUpdateJoinRule extends Rpc
 {
 }
 
@@ -1836,7 +1833,7 @@ class CreateOrUpdateJoinRule extends V20161111Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class SetDatasourceStatus extends V20161111Rpc
+class SetDatasourceStatus extends Rpc
 {
 }
 
@@ -1850,7 +1847,7 @@ class SetDatasourceStatus extends V20161111Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class DescribeMetaData extends V20161111Rpc
+class DescribeMetaData extends Rpc
 {
 }
 
@@ -1862,7 +1859,7 @@ class DescribeMetaData extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeScreenOperateInfo extends V20161111Rpc
+class DescribeScreenOperateInfo extends Rpc
 {
 }
 
@@ -1870,7 +1867,7 @@ class DescribeScreenOperateInfo extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenHostStatistics extends V20161111Rpc
+class DescribeScreenHostStatistics extends Rpc
 {
 }
 
@@ -1882,7 +1879,7 @@ class DescribeScreenHostStatistics extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeScoreThread extends V20161111Rpc
+class DescribeScoreThread extends Rpc
 {
 }
 
@@ -1904,7 +1901,7 @@ class DescribeScoreThread extends V20161111Rpc
  * @method string getLogoUrl()
  * @method $this withLogoUrl($value)
  */
-class CreatScreenSetting extends V20161111Rpc
+class CreatScreenSetting extends Rpc
 {
 }
 
@@ -1928,7 +1925,7 @@ class CreatScreenSetting extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeScreenAttackAnalysisData extends V20161111Rpc
+class DescribeScreenAttackAnalysisData extends Rpc
 {
 }
 
@@ -1938,7 +1935,7 @@ class DescribeScreenAttackAnalysisData extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeScreenSummaryInfo extends V20161111Rpc
+class DescribeScreenSummaryInfo extends Rpc
 {
 }
 
@@ -1950,7 +1947,7 @@ class DescribeScreenSummaryInfo extends V20161111Rpc
  * @method string getScreenIdSetting()
  * @method $this withScreenIdSetting($value)
  */
-class ModifyScreenSetting extends V20161111Rpc
+class ModifyScreenSetting extends Rpc
 {
 }
 
@@ -1960,7 +1957,7 @@ class ModifyScreenSetting extends V20161111Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteScreenSetting extends V20161111Rpc
+class DeleteScreenSetting extends Rpc
 {
 }
 
@@ -1970,7 +1967,7 @@ class DeleteScreenSetting extends V20161111Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeScreenSetting extends V20161111Rpc
+class DescribeScreenSetting extends Rpc
 {
 }
 
@@ -1982,7 +1979,7 @@ class DescribeScreenSetting extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeScreenScoreThread extends V20161111Rpc
+class DescribeScreenScoreThread extends Rpc
 {
 }
 
@@ -1990,7 +1987,7 @@ class DescribeScreenScoreThread extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeScreenSettings extends V20161111Rpc
+class DescribeScreenSettings extends Rpc
 {
 }
 
@@ -2016,7 +2013,7 @@ class DescribeScreenSettings extends V20161111Rpc
  * @method string getLevels()
  * @method $this withLevels($value)
  */
-class DescribeScreenAlarmEventList extends V20161111Rpc
+class DescribeScreenAlarmEventList extends Rpc
 {
 }
 
@@ -2026,7 +2023,7 @@ class DescribeScreenAlarmEventList extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeScreenSecurityStatInfo extends V20161111Rpc
+class DescribeScreenSecurityStatInfo extends Rpc
 {
 }
 
@@ -2040,7 +2037,7 @@ class DescribeScreenSecurityStatInfo extends V20161111Rpc
  * @method string getReportStatus()
  * @method $this withReportStatus($value)
  */
-class UpdateCustomizeReportStatus extends V20161111Rpc
+class UpdateCustomizeReportStatus extends Rpc
 {
 }
 
@@ -2050,7 +2047,7 @@ class UpdateCustomizeReportStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCustomizeReportChartList extends V20161111Rpc
+class DescribeCustomizeReportChartList extends Rpc
 {
 }
 
@@ -2064,7 +2061,7 @@ class DescribeCustomizeReportChartList extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class OperationCustomizeReportChart extends V20161111Rpc
+class OperationCustomizeReportChart extends Rpc
 {
 }
 
@@ -2090,7 +2087,7 @@ class OperationCustomizeReportChart extends V20161111Rpc
  * @method string getReportStatus()
  * @method $this withReportStatus($value)
  */
-class SaveCustomizeReportConfig extends V20161111Rpc
+class SaveCustomizeReportConfig extends Rpc
 {
 }
 
@@ -2100,7 +2097,7 @@ class SaveCustomizeReportConfig extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCustomizeReportList extends V20161111Rpc
+class DescribeCustomizeReportList extends Rpc
 {
 }
 
@@ -2114,7 +2111,7 @@ class DescribeCustomizeReportList extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCustomizeReportChartData extends V20161111Rpc
+class DescribeCustomizeReportChartData extends Rpc
 {
 }
 
@@ -2126,7 +2123,7 @@ class DescribeCustomizeReportChartData extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteCustomizeReport extends V20161111Rpc
+class DeleteCustomizeReport extends Rpc
 {
 }
 
@@ -2138,7 +2135,7 @@ class DeleteCustomizeReport extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCustomizeReportConfigDetail extends V20161111Rpc
+class DescribeCustomizeReportConfigDetail extends Rpc
 {
 }
 
@@ -2146,7 +2143,7 @@ class DescribeCustomizeReportConfigDetail extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeSuspTrendStatistics extends V20161111Rpc
+class DescribeSuspTrendStatistics extends Rpc
 {
 }
 
@@ -2162,7 +2159,7 @@ class DescribeSuspTrendStatistics extends V20161111Rpc
  * @method string getEventName()
  * @method $this withEventName($value)
  */
-class RollbackQuaraFile extends V20161111Rpc
+class RollbackQuaraFile extends Rpc
 {
 }
 
@@ -2174,7 +2171,7 @@ class RollbackQuaraFile extends V20161111Rpc
  * @method string getOperateType()
  * @method $this withOperateType($value)
  */
-class OperateSuspiciousEvent extends V20161111Rpc
+class OperateSuspiciousEvent extends Rpc
 {
 }
 
@@ -2186,7 +2183,7 @@ class OperateSuspiciousEvent extends V20161111Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class DescribeQuaraFile extends V20161111Rpc
+class DescribeQuaraFile extends Rpc
 {
 }
 
@@ -2194,7 +2191,7 @@ class DescribeQuaraFile extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeSuspEventTypes extends V20161111Rpc
+class DescribeSuspEventTypes extends Rpc
 {
 }
 
@@ -2218,7 +2215,7 @@ class DescribeSuspEventTypes extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeAttackAnalysisData extends V20161111Rpc
+class DescribeAttackAnalysisData extends Rpc
 {
 }
 
@@ -2232,7 +2229,7 @@ class DescribeAttackAnalysisData extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeAlarmEventDetail extends V20161111Rpc
+class DescribeAlarmEventDetail extends Rpc
 {
 }
 
@@ -2242,7 +2239,7 @@ class DescribeAlarmEventDetail extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSecurityStatInfo extends V20161111Rpc
+class DescribeSecurityStatInfo extends Rpc
 {
 }
 
@@ -2252,7 +2249,7 @@ class DescribeSecurityStatInfo extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSummaryInfo extends V20161111Rpc
+class DescribeSummaryInfo extends Rpc
 {
 }
 
@@ -2266,7 +2263,7 @@ class DescribeSummaryInfo extends V20161111Rpc
  * @method string getEventTypes()
  * @method $this withEventTypes($value)
  */
-class DescribeHosts extends V20161111Rpc
+class DescribeHosts extends Rpc
 {
 }
 
@@ -2276,7 +2273,7 @@ class DescribeHosts extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOperateInfo extends V20161111Rpc
+class DescribeOperateInfo extends Rpc
 {
 }
 
@@ -2290,7 +2287,7 @@ class DescribeOperateInfo extends V20161111Rpc
  * @method string getEventTypes()
  * @method $this withEventTypes($value)
  */
-class DescribeHostTotalCount extends V20161111Rpc
+class DescribeHostTotalCount extends Rpc
 {
 }
 
@@ -2316,7 +2313,7 @@ class DescribeHostTotalCount extends V20161111Rpc
  * @method string getLevels()
  * @method $this withLevels($value)
  */
-class DescribeAlarmEventList extends V20161111Rpc
+class DescribeAlarmEventList extends Rpc
 {
 }
 
@@ -2344,7 +2341,7 @@ class DescribeAlarmEventList extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribePropertyUserDetail extends V20161111Rpc
+class DescribePropertyUserDetail extends Rpc
 {
 }
 
@@ -2372,7 +2369,7 @@ class DescribePropertyUserDetail extends V20161111Rpc
  * @method string getEventName()
  * @method $this withEventName($value)
  */
-class DescribeWebLockEvents extends V20161111Rpc
+class DescribeWebLockEvents extends Rpc
 {
 }
 
@@ -2384,7 +2381,7 @@ class DescribeWebLockEvents extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class ModifyWebLockRefresh extends V20161111Rpc
+class ModifyWebLockRefresh extends Rpc
 {
 }
 
@@ -2398,7 +2395,7 @@ class ModifyWebLockRefresh extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class ModifyWebLockDeleteConfig extends V20161111Rpc
+class ModifyWebLockDeleteConfig extends Rpc
 {
 }
 
@@ -2412,7 +2409,7 @@ class ModifyWebLockDeleteConfig extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyWebLockStatus extends V20161111Rpc
+class ModifyWebLockStatus extends Rpc
 {
 }
 
@@ -2424,7 +2421,7 @@ class ModifyWebLockStatus extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ModifyWebLockMachineList extends V20161111Rpc
+class ModifyWebLockMachineList extends Rpc
 {
 }
 
@@ -2450,7 +2447,7 @@ class ModifyWebLockMachineList extends V20161111Rpc
  * @method string getExclusiveDir()
  * @method $this withExclusiveDir($value)
  */
-class ModifyWebLockCreateConfig extends V20161111Rpc
+class ModifyWebLockCreateConfig extends Rpc
 {
 }
 
@@ -2462,7 +2459,7 @@ class ModifyWebLockCreateConfig extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebLockStatus extends V20161111Rpc
+class DescribeWebLockStatus extends Rpc
 {
 }
 
@@ -2472,7 +2469,7 @@ class DescribeWebLockStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebLockMachineList extends V20161111Rpc
+class DescribeWebLockMachineList extends Rpc
 {
 }
 
@@ -2484,7 +2481,7 @@ class DescribeWebLockMachineList extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeWebLockConfigList extends V20161111Rpc
+class DescribeWebLockConfigList extends Rpc
 {
 }
 
@@ -2502,7 +2499,7 @@ class DescribeWebLockConfigList extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeWebLockBindList extends V20161111Rpc
+class DescribeWebLockBindList extends Rpc
 {
 }
 
@@ -2530,7 +2527,7 @@ class DescribeWebLockBindList extends V20161111Rpc
  * @method string getExclusiveDir()
  * @method $this withExclusiveDir($value)
  */
-class ModifyWebLockUpdateConfig extends V20161111Rpc
+class ModifyWebLockUpdateConfig extends Rpc
 {
 }
 
@@ -2550,7 +2547,7 @@ class ModifyWebLockUpdateConfig extends V20161111Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class CreateOrUpdateGroup extends V20161111Rpc
+class CreateOrUpdateGroup extends Rpc
 {
 }
 
@@ -2562,7 +2559,7 @@ class CreateOrUpdateGroup extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteRuleGroup extends V20161111Rpc
+class DeleteRuleGroup extends Rpc
 {
 }
 
@@ -2590,7 +2587,7 @@ class DeleteRuleGroup extends V20161111Rpc
  * @method string getRuleGroupIds()
  * @method $this withRuleGroupIds($value)
  */
-class CreateOrUpdateRule extends V20161111Rpc
+class CreateOrUpdateRule extends Rpc
 {
 }
 
@@ -2602,7 +2599,7 @@ class CreateOrUpdateRule extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteRule extends V20161111Rpc
+class DeleteRule extends Rpc
 {
 }
 
@@ -2626,7 +2623,7 @@ class DeleteRule extends V20161111Rpc
  * @method string getExGroupId()
  * @method $this withExGroupId($value)
  */
-class DescribeRuleList extends V20161111Rpc
+class DescribeRuleList extends Rpc
 {
 }
 
@@ -2646,7 +2643,7 @@ class DescribeRuleList extends V20161111Rpc
  * @method string getExGroupId()
  * @method $this withExGroupId($value)
  */
-class DescribeGroupList extends V20161111Rpc
+class DescribeGroupList extends Rpc
 {
 }
 
@@ -2662,7 +2659,7 @@ class DescribeGroupList extends V20161111Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class DescribeDataSource extends V20161111Rpc
+class DescribeDataSource extends Rpc
 {
 }
 
@@ -2670,7 +2667,7 @@ class DescribeDataSource extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeBuySummary extends V20161111Rpc
+class DescribeBuySummary extends Rpc
 {
 }
 
@@ -2682,7 +2679,7 @@ class DescribeBuySummary extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifyOpenLogShipper extends V20161111Rpc
+class ModifyOpenLogShipper extends Rpc
 {
 }
 
@@ -2700,7 +2697,7 @@ class ModifyOpenLogShipper extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyLogMetaStatus extends V20161111Rpc
+class ModifyLogMetaStatus extends Rpc
 {
 }
 
@@ -2712,7 +2709,7 @@ class ModifyLogMetaStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeLogShipperStatus extends V20161111Rpc
+class DescribeLogShipperStatus extends Rpc
 {
 }
 
@@ -2724,7 +2721,7 @@ class DescribeLogShipperStatus extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeLogMeta extends V20161111Rpc
+class DescribeLogMeta extends Rpc
 {
 }
 
@@ -2740,7 +2737,7 @@ class DescribeLogMeta extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OperateSuspiciousTargetConfig extends V20161111Rpc
+class OperateSuspiciousTargetConfig extends Rpc
 {
 }
 
@@ -2752,7 +2749,7 @@ class OperateSuspiciousTargetConfig extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeSuspiciousUUIDConfig extends V20161111Rpc
+class DescribeSuspiciousUUIDConfig extends Rpc
 {
 }
 
@@ -2762,7 +2759,7 @@ class DescribeSuspiciousUUIDConfig extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeSuspiciousOverallConfig extends V20161111Rpc
+class DescribeSuspiciousOverallConfig extends Rpc
 {
 }
 
@@ -2776,7 +2773,7 @@ class DescribeSuspiciousOverallConfig extends V20161111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class OperateSuspiciousOverallConfig extends V20161111Rpc
+class OperateSuspiciousOverallConfig extends Rpc
 {
 }
 
@@ -2784,7 +2781,7 @@ class OperateSuspiciousOverallConfig extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeApiBuySummary extends V20161111Rpc
+class DescribeApiBuySummary extends Rpc
 {
 }
 
@@ -2830,7 +2827,7 @@ class DescribeApiBuySummary extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeTotalStatistics extends V20161111Rpc
+class DescribeTotalStatistics extends Rpc
 {
 }
 
@@ -2838,7 +2835,7 @@ class DescribeTotalStatistics extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeVersionConfig extends V20161111Rpc
+class DescribeVersionConfig extends Rpc
 {
 }
 
@@ -2850,7 +2847,7 @@ class DescribeVersionConfig extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeInstanceStatistics extends V20161111Rpc
+class DescribeInstanceStatistics extends Rpc
 {
 }
 
@@ -2892,7 +2889,7 @@ class DescribeInstanceStatistics extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeUuidStatistics extends V20161111Rpc
+class DescribeUuidStatistics extends Rpc
 {
 }
 
@@ -2936,7 +2933,7 @@ class DescribeUuidStatistics extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeAllRegionsStatistics extends V20161111Rpc
+class DescribeAllRegionsStatistics extends Rpc
 {
 }
 
@@ -2948,7 +2945,7 @@ class DescribeAllRegionsStatistics extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeEventLevelCount extends V20161111Rpc
+class DescribeEventLevelCount extends Rpc
 {
 }
 
@@ -2958,7 +2955,7 @@ class DescribeEventLevelCount extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeAssetSummary extends V20161111Rpc
+class DescribeAssetSummary extends Rpc
 {
 }
 
@@ -2968,7 +2965,7 @@ class DescribeAssetSummary extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeEmgUserAgreement extends V20161111Rpc
+class DescribeEmgUserAgreement extends Rpc
 {
 }
 
@@ -2982,7 +2979,7 @@ class DescribeEmgUserAgreement extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifyEmgVulSubmit extends V20161111Rpc
+class ModifyEmgVulSubmit extends Rpc
 {
 }
 
@@ -2992,7 +2989,7 @@ class ModifyEmgVulSubmit extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeEmgNotice extends V20161111Rpc
+class DescribeEmgNotice extends Rpc
 {
 }
 
@@ -3002,7 +2999,7 @@ class DescribeEmgNotice extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeEmgVulGroup extends V20161111Rpc
+class DescribeEmgVulGroup extends Rpc
 {
 }
 
@@ -3014,7 +3011,7 @@ class DescribeEmgVulGroup extends V20161111Rpc
  * @method string getConcernNecessity()
  * @method $this withConcernNecessity($value)
  */
-class ModifyConcernNecessity extends V20161111Rpc
+class ModifyConcernNecessity extends Rpc
 {
 }
 
@@ -3024,7 +3021,7 @@ class ModifyConcernNecessity extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeConcernNecessity extends V20161111Rpc
+class DescribeConcernNecessity extends Rpc
 {
 }
 
@@ -3032,7 +3029,7 @@ class DescribeConcernNecessity extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeYesterdayStatistics extends V20161111Rpc
+class DescribeYesterdayStatistics extends Rpc
 {
 }
 
@@ -3042,7 +3039,7 @@ class DescribeYesterdayStatistics extends V20161111Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteCondition extends V20161111Rpc
+class DeleteCondition extends Rpc
 {
 }
 
@@ -3054,7 +3051,7 @@ class DeleteCondition extends V20161111Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class CreateCondition extends V20161111Rpc
+class CreateCondition extends Rpc
 {
 }
 
@@ -3066,7 +3063,7 @@ class CreateCondition extends V20161111Rpc
  * @method string getCronJobId()
  * @method $this withCronJobId($value)
  */
-class DescribeVulnerabilitySummary extends V20161111Rpc
+class DescribeVulnerabilitySummary extends Rpc
 {
 }
 
@@ -3078,7 +3075,7 @@ class DescribeVulnerabilitySummary extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ModifyAssetGroup extends V20161111Rpc
+class ModifyAssetGroup extends Rpc
 {
 }
 
@@ -3086,7 +3083,7 @@ class ModifyAssetGroup extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class AutoUpgradeSas extends V20161111Rpc
+class AutoUpgradeSas extends Rpc
 {
 }
 
@@ -3104,7 +3101,7 @@ class AutoUpgradeSas extends V20161111Rpc
  * @method string getSuspiciousEventLevels()
  * @method $this withSuspiciousEventLevels($value)
  */
-class DescribeEventCountCurve extends V20161111Rpc
+class DescribeEventCountCurve extends Rpc
 {
 }
 
@@ -3112,7 +3109,7 @@ class DescribeEventCountCurve extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class TransformLeakage extends V20161111Rpc
+class TransformLeakage extends Rpc
 {
 }
 
@@ -3122,7 +3119,7 @@ class TransformLeakage extends V20161111Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeTopRiskyAssets extends V20161111Rpc
+class DescribeTopRiskyAssets extends Rpc
 {
 }
 
@@ -3132,7 +3129,7 @@ class DescribeTopRiskyAssets extends V20161111Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteSearchCondition extends V20161111Rpc
+class DeleteSearchCondition extends Rpc
 {
 }
 
@@ -3142,7 +3139,7 @@ class DeleteSearchCondition extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSearchCondition extends V20161111Rpc
+class DescribeSearchCondition extends Rpc
 {
 }
 
@@ -3152,7 +3149,7 @@ class DescribeSearchCondition extends V20161111Rpc
  * @method string getQuery()
  * @method $this withQuery($value)
  */
-class DescribeFilterFields extends V20161111Rpc
+class DescribeFilterFields extends Rpc
 {
 }
 
@@ -3166,7 +3163,7 @@ class DescribeFilterFields extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeHistogram extends V20161111Rpc
+class DescribeHistogram extends Rpc
 {
 }
 
@@ -3184,7 +3181,7 @@ class DescribeHistogram extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeLogInfo extends V20161111Rpc
+class DescribeLogInfo extends Rpc
 {
 }
 
@@ -3194,7 +3191,7 @@ class DescribeLogInfo extends V20161111Rpc
  * @method string getQueryName()
  * @method $this withQueryName($value)
  */
-class DeleteLogQuery extends V20161111Rpc
+class DeleteLogQuery extends Rpc
 {
 }
 
@@ -3208,7 +3205,7 @@ class DeleteLogQuery extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DownloadLog extends V20161111Rpc
+class DownloadLog extends Rpc
 {
 }
 
@@ -3222,7 +3219,7 @@ class DownloadLog extends V20161111Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class DescribeSasLeftCondition extends V20161111Rpc
+class DescribeSasLeftCondition extends Rpc
 {
 }
 
@@ -3236,7 +3233,7 @@ class DescribeSasLeftCondition extends V20161111Rpc
  * @method string getQueryDetail()
  * @method $this withQueryDetail($value)
  */
-class CreateLogQuery extends V20161111Rpc
+class CreateLogQuery extends Rpc
 {
 }
 
@@ -3268,7 +3265,7 @@ class CreateLogQuery extends V20161111Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeLogItems extends V20161111Rpc
+class DescribeLogItems extends Rpc
 {
 }
 
@@ -3276,7 +3273,7 @@ class DescribeLogItems extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeLogQuery extends V20161111Rpc
+class DescribeLogQuery extends Rpc
 {
 }
 
@@ -3292,7 +3289,7 @@ class DescribeLogQuery extends V20161111Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class DescribeAssetList extends V20161111Rpc
+class DescribeAssetList extends Rpc
 {
 }
 
@@ -3308,7 +3305,7 @@ class DescribeAssetList extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeSasAssetStatistics extends V20161111Rpc
+class DescribeSasAssetStatistics extends Rpc
 {
 }
 
@@ -3316,7 +3313,7 @@ class DescribeSasAssetStatistics extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeSasAssetStatisticsColumn extends V20161111Rpc
+class DescribeSasAssetStatisticsColumn extends Rpc
 {
 }
 
@@ -3328,7 +3325,7 @@ class DescribeSasAssetStatisticsColumn extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeAssetDetailByUuid extends V20161111Rpc
+class DescribeAssetDetailByUuid extends Rpc
 {
 }
 
@@ -3338,7 +3335,7 @@ class DescribeAssetDetailByUuid extends V20161111Rpc
  * @method string getStatisticsColumn()
  * @method $this withStatisticsColumn($value)
  */
-class ModifySasAssetStatisticsColumn extends V20161111Rpc
+class ModifySasAssetStatisticsColumn extends Rpc
 {
 }
 
@@ -3350,7 +3347,7 @@ class ModifySasAssetStatisticsColumn extends V20161111Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class ModifySearchCondition extends V20161111Rpc
+class ModifySearchCondition extends Rpc
 {
 }
 
@@ -3368,7 +3365,7 @@ class ModifySearchCondition extends V20161111Rpc
  * @method string getOperation()
  * @method $this withOperation($value)
  */
-class OperationSuspEvents extends V20161111Rpc
+class OperationSuspEvents extends Rpc
 {
 }
 
@@ -3380,7 +3377,7 @@ class OperationSuspEvents extends V20161111Rpc
  * @method string getLevelsOn()
  * @method $this withLevelsOn($value)
  */
-class SaveSuspEventUserSetting extends V20161111Rpc
+class SaveSuspEventUserSetting extends Rpc
 {
 }
 
@@ -3392,7 +3389,7 @@ class SaveSuspEventUserSetting extends V20161111Rpc
  * @method string getQuaraFileId()
  * @method $this withQuaraFileId($value)
  */
-class RollbackSuspEventQuaraFile extends V20161111Rpc
+class RollbackSuspEventQuaraFile extends Rpc
 {
 }
 
@@ -3406,7 +3403,7 @@ class RollbackSuspEventQuaraFile extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSuspEventDetail extends V20161111Rpc
+class DescribeSuspEventDetail extends Rpc
 {
 }
 
@@ -3418,7 +3415,7 @@ class DescribeSuspEventDetail extends V20161111Rpc
  * @method string getExportId()
  * @method $this withExportId($value)
  */
-class DescribeSuspEventExportInfo extends V20161111Rpc
+class DescribeSuspEventExportInfo extends Rpc
 {
 }
 
@@ -3434,7 +3431,7 @@ class DescribeSuspEventExportInfo extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeSuspEventQuaraFiles extends V20161111Rpc
+class DescribeSuspEventQuaraFiles extends Rpc
 {
 }
 
@@ -3462,7 +3459,7 @@ class DescribeSuspEventQuaraFiles extends V20161111Rpc
  * @method string getParentEventTypes()
  * @method $this withParentEventTypes($value)
  */
-class DescribeSuspEvents extends V20161111Rpc
+class DescribeSuspEvents extends Rpc
 {
 }
 
@@ -3474,7 +3471,7 @@ class DescribeSuspEvents extends V20161111Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeSuspEventUserSetting extends V20161111Rpc
+class DescribeSuspEventUserSetting extends Rpc
 {
 }
 
@@ -3502,7 +3499,7 @@ class DescribeSuspEventUserSetting extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ExportSuspEvents extends V20161111Rpc
+class ExportSuspEvents extends Rpc
 {
 }
 
@@ -3518,7 +3515,7 @@ class ExportSuspEvents extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeNsasSuspEventType extends V20161111Rpc
+class DescribeNsasSuspEventType extends Rpc
 {
 }
 
@@ -3528,7 +3525,7 @@ class DescribeNsasSuspEventType extends V20161111Rpc
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
  */
-class ExecStrategy extends V20161111Rpc
+class ExecStrategy extends Rpc
 {
 }
 
@@ -3538,7 +3535,7 @@ class ExecStrategy extends V20161111Rpc
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
  */
-class DescribeStrategyExecDetail extends V20161111Rpc
+class DescribeStrategyExecDetail extends Rpc
 {
 }
 
@@ -3548,7 +3545,7 @@ class DescribeStrategyExecDetail extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeUuidConfig extends V20161111Rpc
+class DescribeUuidConfig extends Rpc
 {
 }
 
@@ -3562,7 +3559,7 @@ class DescribeUuidConfig extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class PushAllTask extends V20161111Rpc
+class PushAllTask extends Rpc
 {
 }
 
@@ -3572,7 +3569,7 @@ class PushAllTask extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeStrategy extends V20161111Rpc
+class DescribeStrategy extends Rpc
 {
 }
 
@@ -3582,7 +3579,7 @@ class DescribeStrategy extends V20161111Rpc
  * @method string getExportId()
  * @method $this withExportId($value)
  */
-class DescribeSuspiciousExportInfo extends V20161111Rpc
+class DescribeSuspiciousExportInfo extends Rpc
 {
 }
 
@@ -3606,7 +3603,7 @@ class DescribeSuspiciousExportInfo extends V20161111Rpc
  * @method string getTag()
  * @method $this withTag($value)
  */
-class CreateSuspiciousExport extends V20161111Rpc
+class CreateSuspiciousExport extends Rpc
 {
 }
 
@@ -3618,7 +3615,7 @@ class CreateSuspiciousExport extends V20161111Rpc
  * @method string getInfo()
  * @method $this withInfo($value)
  */
-class ModifyBatchIgnoreVul extends V20161111Rpc
+class ModifyBatchIgnoreVul extends Rpc
 {
 }
 
@@ -3630,7 +3627,7 @@ class ModifyBatchIgnoreVul extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribePropertyScheduleConfig extends V20161111Rpc
+class DescribePropertyScheduleConfig extends Rpc
 {
 }
 
@@ -3642,7 +3639,7 @@ class DescribePropertyScheduleConfig extends V20161111Rpc
  * @method string getOperateType()
  * @method $this withOperateType($value)
  */
-class OperateWebVul extends V20161111Rpc
+class OperateWebVul extends Rpc
 {
 }
 
@@ -3662,7 +3659,7 @@ class OperateWebVul extends V20161111Rpc
  * @method string getTag()
  * @method $this withTag($value)
  */
-class DescribeLoginLogs extends V20161111Rpc
+class DescribeLoginLogs extends Rpc
 {
 }
 
@@ -3678,7 +3675,7 @@ class DescribeLoginLogs extends V20161111Rpc
  * @method string getTag()
  * @method $this withTag($value)
  */
-class DescribeWebshell extends V20161111Rpc
+class DescribeWebshell extends Rpc
 {
 }
 
@@ -3694,7 +3691,7 @@ class DescribeWebshell extends V20161111Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeVulDetails extends V20161111Rpc
+class DescribeVulDetails extends Rpc
 {
 }
 
@@ -3716,7 +3713,7 @@ class DescribeVulDetails extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeSuspiciousEvents extends V20161111Rpc
+class DescribeSuspiciousEvents extends Rpc
 {
 }
 
@@ -3732,7 +3729,7 @@ class DescribeSuspiciousEvents extends V20161111Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class DescribeHostWafs extends V20161111Rpc
+class DescribeHostWafs extends Rpc
 {
 }
 
@@ -3742,7 +3739,7 @@ class DescribeHostWafs extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class BatchDeleteWhiteList extends V20161111Rpc
+class BatchDeleteWhiteList extends Rpc
 {
 }
 
@@ -3752,7 +3749,7 @@ class BatchDeleteWhiteList extends V20161111Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteStrategy extends V20161111Rpc
+class DeleteStrategy extends Rpc
 {
 }
 
@@ -3764,7 +3761,7 @@ class DeleteStrategy extends V20161111Rpc
  * @method string getSubTypeNames()
  * @method $this withSubTypeNames($value)
  */
-class CreateTypeWhiteList extends V20161111Rpc
+class CreateTypeWhiteList extends Rpc
 {
 }
 
@@ -3776,7 +3773,7 @@ class CreateTypeWhiteList extends V20161111Rpc
  * @method string getInvalidWarningKeepDays()
  * @method $this withInvalidWarningKeepDays($value)
  */
-class CreateUserSetting extends V20161111Rpc
+class CreateUserSetting extends Rpc
 {
 }
 
@@ -3788,7 +3785,7 @@ class CreateUserSetting extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class CreateUserWhiteList extends V20161111Rpc
+class CreateUserWhiteList extends Rpc
 {
 }
 
@@ -3798,7 +3795,7 @@ class CreateUserWhiteList extends V20161111Rpc
  * @method string getExportId()
  * @method $this withExportId($value)
  */
-class DescribeExportInfo extends V20161111Rpc
+class DescribeExportInfo extends Rpc
 {
 }
 
@@ -3822,7 +3819,7 @@ class DescribeExportInfo extends V20161111Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class DescribeMachineConfig extends V20161111Rpc
+class DescribeMachineConfig extends Rpc
 {
 }
 
@@ -3842,7 +3839,7 @@ class DescribeMachineConfig extends V20161111Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class DescribeMacConfig extends V20161111Rpc
+class DescribeMacConfig extends Rpc
 {
 }
 
@@ -3858,7 +3855,7 @@ class DescribeMacConfig extends V20161111Rpc
  * @method string getRiskId()
  * @method $this withRiskId($value)
  */
-class DescribeRisks extends V20161111Rpc
+class DescribeRisks extends Rpc
 {
 }
 
@@ -3886,7 +3883,7 @@ class DescribeRisks extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class Describesummary extends V20161111Rpc
+class Describesummary extends Rpc
 {
 }
 
@@ -3900,7 +3897,7 @@ class Describesummary extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeRiskType extends V20161111Rpc
+class DescribeRiskType extends Rpc
 {
 }
 
@@ -3914,7 +3911,7 @@ class DescribeRiskType extends V20161111Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class DescribeRiskWhiteList extends V20161111Rpc
+class DescribeRiskWhiteList extends Rpc
 {
 }
 
@@ -3924,7 +3921,7 @@ class DescribeRiskWhiteList extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeUserTypeWhiteList extends V20161111Rpc
+class DescribeUserTypeWhiteList extends Rpc
 {
 }
 
@@ -3932,7 +3929,7 @@ class DescribeUserTypeWhiteList extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeUserSetting extends V20161111Rpc
+class DescribeUserSetting extends Rpc
 {
 }
 
@@ -3942,7 +3939,7 @@ class DescribeUserSetting extends V20161111Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeUserWhiteList extends V20161111Rpc
+class DescribeUserWhiteList extends Rpc
 {
 }
 
@@ -3954,7 +3951,7 @@ class DescribeUserWhiteList extends V20161111Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class DescribeStrategyTarget extends V20161111Rpc
+class DescribeStrategyTarget extends Rpc
 {
 }
 
@@ -3966,7 +3963,7 @@ class DescribeStrategyTarget extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStratety extends V20161111Rpc
+class DescribeStratety extends Rpc
 {
 }
 
@@ -3978,7 +3975,7 @@ class DescribeStratety extends V20161111Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStratetyDetail extends V20161111Rpc
+class DescribeStratetyDetail extends Rpc
 {
 }
 
@@ -4006,7 +4003,7 @@ class DescribeStratetyDetail extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeWarning extends V20161111Rpc
+class DescribeWarning extends Rpc
 {
 }
 
@@ -4018,7 +4015,7 @@ class DescribeWarning extends V20161111Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class ModifyMachineConfig extends V20161111Rpc
+class ModifyMachineConfig extends Rpc
 {
 }
 
@@ -4052,7 +4049,7 @@ class ModifyMachineConfig extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ExportWarning extends V20161111Rpc
+class ExportWarning extends Rpc
 {
 }
 
@@ -4066,7 +4063,7 @@ class ExportWarning extends V20161111Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class ModifyStrategyTarget extends V20161111Rpc
+class ModifyStrategyTarget extends Rpc
 {
 }
 
@@ -4080,7 +4077,7 @@ class ModifyStrategyTarget extends V20161111Rpc
  * @method string getRiskWarningIds()
  * @method $this withRiskWarningIds($value)
  */
-class OperateWarning extends V20161111Rpc
+class OperateWarning extends Rpc
 {
 }
 
@@ -4098,7 +4095,7 @@ class OperateWarning extends V20161111Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ModifyStrategy extends V20161111Rpc
+class ModifyStrategy extends Rpc
 {
 }
 
@@ -4140,7 +4137,7 @@ class ModifyStrategy extends V20161111Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeVulList extends V20161111Rpc
+class DescribeVulList extends Rpc
 {
 }
 
@@ -4156,7 +4153,7 @@ class DescribeVulList extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryCrackEvent extends V20161111Rpc
+class QueryCrackEvent extends Rpc
 {
 }
 
@@ -4172,7 +4169,7 @@ class QueryCrackEvent extends V20161111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryLoginEvent extends V20161111Rpc
+class QueryLoginEvent extends Rpc
 {
 }
 
@@ -4180,7 +4177,7 @@ class QueryLoginEvent extends V20161111Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class GetStatisticsByUuid extends V20161111Rpc
+class GetStatisticsByUuid extends Rpc
 {
 }
 
@@ -4190,7 +4187,7 @@ class GetStatisticsByUuid extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class GetCrackStatistics extends V20161111Rpc
+class GetCrackStatistics extends Rpc
 {
 }
 
@@ -4208,7 +4205,7 @@ class GetCrackStatistics extends V20161111Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class GetEntityList extends V20161111Rpc
+class GetEntityList extends Rpc
 {
 }
 
@@ -4218,7 +4215,7 @@ class GetEntityList extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class GetStatistics extends V20161111Rpc
+class GetStatistics extends Rpc
 {
 }
 
@@ -4228,7 +4225,7 @@ class GetStatistics extends V20161111Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class GetAccountStatistics extends V20161111Rpc
+class GetAccountStatistics extends Rpc
 {
 }
 
@@ -4246,7 +4243,7 @@ class GetAccountStatistics extends V20161111Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class RenewInstance extends V20161111Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -4262,7 +4259,7 @@ class RenewInstance extends V20161111Rpc
  * @method string getVersionCode()
  * @method $this withVersionCode($value)
  */
-class UpgradeInstance extends V20161111Rpc
+class UpgradeInstance extends Rpc
 {
 }
 
@@ -4284,7 +4281,7 @@ class UpgradeInstance extends V20161111Rpc
  * @method string getAutoRenewDuration()
  * @method $this withAutoRenewDuration($value)
  */
-class CreateInstance extends V20161111Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -4294,6 +4291,6 @@ class CreateInstance extends V20161111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReleaseInstance extends V20161111Rpc
+class ReleaseInstance extends Rpc
 {
 }

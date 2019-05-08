@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cms\V20180308;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeAlertHistoryList describeAlertHistoryList(array $options = [])
  * @method DescribeSiteMonitorISPCityList describeSiteMonitorISPCityList(array $options = [])
  * @method RemoveMetricRuleTargets removeMetricRuleTargets(array $options = [])
@@ -127,7 +124,7 @@ class CmsApiResolver
     use ApiResolverTrait;
 }
 
-class V20180308Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Cms';
@@ -170,7 +167,7 @@ class V20180308Rpc extends Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeAlertHistoryList extends V20180308Rpc
+class DescribeAlertHistoryList extends Rpc
 {
 }
 
@@ -180,7 +177,7 @@ class DescribeAlertHistoryList extends V20180308Rpc
  * @method string getIsp()
  * @method $this withIsp($value)
  */
-class DescribeSiteMonitorISPCityList extends V20180308Rpc
+class DescribeSiteMonitorISPCityList extends Rpc
 {
 }
 
@@ -191,7 +188,7 @@ class DescribeSiteMonitorISPCityList extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class RemoveMetricRuleTargets extends V20180308Rpc
+class RemoveMetricRuleTargets extends Rpc
 {
 
     /** @var string */
@@ -247,7 +244,7 @@ class RemoveMetricRuleTargets extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DescribeMetricRuleTargets extends V20180308Rpc
+class DescribeMetricRuleTargets extends Rpc
 {
 
     /** @var string */
@@ -260,7 +257,7 @@ class DescribeMetricRuleTargets extends V20180308Rpc
  * @method string getActions()
  * @method array getTargets()
  */
-class PutMetricRuleTargets extends V20180308Rpc
+class PutMetricRuleTargets extends Rpc
 {
 
     /** @var string */
@@ -301,7 +298,7 @@ class PutMetricRuleTargets extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DescrebeEventRuleTarget extends V20180308Rpc
+class DescrebeEventRuleTarget extends Rpc
 {
 
     /** @var string */
@@ -314,7 +311,7 @@ class DescrebeEventRuleTarget extends V20180308Rpc
  * @method string getIsp()
  * @method $this withIsp($value)
  */
-class DescribeSiteMonitorISPAreaCity extends V20180308Rpc
+class DescribeSiteMonitorISPAreaCity extends Rpc
 {
 }
 
@@ -330,7 +327,7 @@ class DescribeSiteMonitorISPAreaCity extends V20180308Rpc
  * @method string getLabels()
  * @method $this withLabels($value)
  */
-class QueryMetricMeta extends V20180308Rpc
+class QueryMetricMeta extends Rpc
 {
 }
 
@@ -342,7 +339,7 @@ class QueryMetricMeta extends V20180308Rpc
  * @method string getLabels()
  * @method $this withLabels($value)
  */
-class QueryProjectMeta extends V20180308Rpc
+class QueryProjectMeta extends Rpc
 {
 }
 
@@ -350,7 +347,7 @@ class QueryProjectMeta extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteMonitoringTemplate extends V20180308Rpc
+class DeleteMonitoringTemplate extends Rpc
 {
 }
 
@@ -372,7 +369,7 @@ class DeleteMonitoringTemplate extends V20180308Rpc
  * @method string getSilenceTime()
  * @method $this withSilenceTime($value)
  */
-class ApplyMonitoringTemplate extends V20180308Rpc
+class ApplyMonitoringTemplate extends Rpc
 {
 }
 
@@ -382,7 +379,7 @@ class ApplyMonitoringTemplate extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetMonitoringTemplate extends V20180308Rpc
+class GetMonitoringTemplate extends Rpc
 {
 }
 
@@ -400,7 +397,7 @@ class GetMonitoringTemplate extends V20180308Rpc
  * @method string getAlertTemplatesJson()
  * @method $this withAlertTemplatesJson($value)
  */
-class UpdateMonitoringTemplate extends V20180308Rpc
+class UpdateMonitoringTemplate extends Rpc
 {
 }
 
@@ -416,7 +413,7 @@ class UpdateMonitoringTemplate extends V20180308Rpc
  * @method string getAlertTemplatesJson()
  * @method $this withAlertTemplatesJson($value)
  */
-class CreateMonitoringTemplate extends V20180308Rpc
+class CreateMonitoringTemplate extends Rpc
 {
 }
 
@@ -426,7 +423,7 @@ class CreateMonitoringTemplate extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryStaticsResponseTime extends V20180308Rpc
+class QueryStaticsResponseTime extends Rpc
 {
 }
 
@@ -436,7 +433,7 @@ class QueryStaticsResponseTime extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryStaticsErrorRate extends V20180308Rpc
+class QueryStaticsErrorRate extends Rpc
 {
 }
 
@@ -446,7 +443,7 @@ class QueryStaticsErrorRate extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryStaticsAvailability extends V20180308Rpc
+class QueryStaticsAvailability extends Rpc
 {
 }
 
@@ -456,7 +453,7 @@ class QueryStaticsAvailability extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryErrorDistribution extends V20180308Rpc
+class QueryErrorDistribution extends Rpc
 {
 }
 
@@ -476,7 +473,7 @@ class QueryErrorDistribution extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListMonitoringTemplates extends V20180308Rpc
+class ListMonitoringTemplates extends Rpc
 {
 }
 
@@ -486,7 +483,7 @@ class ListMonitoringTemplates extends V20180308Rpc
  * @method string getGroupAlertJsonArray()
  * @method $this withGroupAlertJsonArray($value)
  */
-class CreateMyGroupAlertBatch extends V20180308Rpc
+class CreateMyGroupAlertBatch extends Rpc
 {
 }
 
@@ -494,7 +491,7 @@ class CreateMyGroupAlertBatch extends V20180308Rpc
  * @method string getGroupAlertJson()
  * @method $this withGroupAlertJson($value)
  */
-class UpdateMyGroupAlert extends V20180308Rpc
+class UpdateMyGroupAlert extends Rpc
 {
 }
 
@@ -504,7 +501,7 @@ class UpdateMyGroupAlert extends V20180308Rpc
  * @method string getAlertName()
  * @method $this withAlertName($value)
  */
-class GetMyGroupAlert extends V20180308Rpc
+class GetMyGroupAlert extends Rpc
 {
 }
 
@@ -525,7 +522,7 @@ class GetMyGroupAlert extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryTaskMonitorData extends V20180308Rpc
+class QueryTaskMonitorData extends Rpc
 {
 
     /**
@@ -542,7 +539,7 @@ class QueryTaskMonitorData extends V20180308Rpc
     }
 }
 
-class QueryTaskConfig extends V20180308Rpc
+class QueryTaskConfig extends Rpc
 {
 }
 
@@ -552,7 +549,7 @@ class QueryTaskConfig extends V20180308Rpc
  * @method string getEventName()
  * @method $this withEventName($value)
  */
-class QuerySystemEventDemo extends V20180308Rpc
+class QuerySystemEventDemo extends Rpc
 {
 }
 
@@ -566,7 +563,7 @@ class QuerySystemEventDemo extends V20180308Rpc
  * @method string getEventContent()
  * @method $this withEventContent($value)
  */
-class SendDryRunSystemEvent extends V20180308Rpc
+class SendDryRunSystemEvent extends Rpc
 {
 }
 
@@ -588,7 +585,7 @@ class SendDryRunSystemEvent extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class DescribeAlarmsForResources extends V20180308Rpc
+class DescribeAlarmsForResources extends Rpc
 {
 }
 
@@ -642,7 +639,7 @@ class DescribeAlarmsForResources extends V20180308Rpc
  * @method string getStatistics()
  * @method $this withStatistics($value)
  */
-class PutMetricAlarm extends V20180308Rpc
+class PutMetricAlarm extends Rpc
 {
 
     /** @var string */
@@ -667,7 +664,7 @@ class PutMetricAlarm extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class DescribeAlarmsForDimensions extends V20180308Rpc
+class DescribeAlarmsForDimensions extends Rpc
 {
 }
 
@@ -695,7 +692,7 @@ class DescribeAlarmsForDimensions extends V20180308Rpc
  * @method string getMetricName()
  * @method $this withMetricName($value)
  */
-class DescribeAlarms extends V20180308Rpc
+class DescribeAlarms extends Rpc
 {
 }
 
@@ -703,7 +700,7 @@ class DescribeAlarms extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class ListEventTargetsByRule extends V20180308Rpc
+class ListEventTargetsByRule extends Rpc
 {
 }
 
@@ -717,7 +714,7 @@ class ListEventTargetsByRule extends V20180308Rpc
  * @method string getPage()
  * @method $this withPage($value)
  */
-class ListEventRules extends V20180308Rpc
+class ListEventRules extends Rpc
 {
 }
 
@@ -726,7 +723,7 @@ class ListEventRules extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class EnableEventRule extends V20180308Rpc
+class EnableEventRule extends Rpc
 {
 
     /** @var string */
@@ -753,7 +750,7 @@ class EnableEventRule extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DisableEventRule extends V20180308Rpc
+class DisableEventRule extends Rpc
 {
 
     /** @var string */
@@ -779,7 +776,7 @@ class DisableEventRule extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DescribeEventRule extends V20180308Rpc
+class DescribeEventRule extends Rpc
 {
 }
 
@@ -788,7 +785,7 @@ class DescribeEventRule extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DeleteEventTargets extends V20180308Rpc
+class DeleteEventTargets extends Rpc
 {
 
     /** @var string */
@@ -815,7 +812,7 @@ class DeleteEventTargets extends V20180308Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DeleteEventRule extends V20180308Rpc
+class DeleteEventRule extends Rpc
 {
 
     /**
@@ -843,7 +840,7 @@ class DeleteEventRule extends V20180308Rpc
  * @method $this withRuleName($value)
  * @method array getMnsParameters()
  */
-class PutEventTargets extends V20180308Rpc
+class PutEventTargets extends Rpc
 {
 
     /** @var string */
@@ -951,7 +948,7 @@ class PutEventTargets extends V20180308Rpc
  * @method string getState()
  * @method $this withState($value)
  */
-class PutEventRule extends V20180308Rpc
+class PutEventRule extends Rpc
 {
 
     /** @var string */
@@ -989,7 +986,7 @@ class PutEventRule extends V20180308Rpc
  * @method string getContactName()
  * @method $this withContactName($value)
  */
-class DescribeContact extends V20180308Rpc
+class DescribeContact extends Rpc
 {
 }
 
@@ -997,7 +994,7 @@ class DescribeContact extends V20180308Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class GetContacts extends V20180308Rpc
+class GetContacts extends Rpc
 {
 }
 
@@ -1017,7 +1014,7 @@ class GetContacts extends V20180308Rpc
  * @method string getSilenceTime()
  * @method $this withSilenceTime($value)
  */
-class ApplyTemplate extends V20180308Rpc
+class ApplyTemplate extends Rpc
 {
 }
 
@@ -1040,7 +1037,7 @@ class ApplyTemplate extends V20180308Rpc
  * @method string getAlertRule()
  * @method $this withAlertRule($value)
  */
-class CreateTask extends V20180308Rpc
+class CreateTask extends Rpc
 {
 
     /**
@@ -1076,7 +1073,7 @@ class CreateTask extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class ModifyTask extends V20180308Rpc
+class ModifyTask extends Rpc
 {
 
     /**
@@ -1099,7 +1096,7 @@ class ModifyTask extends V20180308Rpc
  * @method string getTaskIds()
  * @method $this withTaskIds($value)
  */
-class DeleteTasks extends V20180308Rpc
+class DeleteTasks extends Rpc
 {
 }
 
@@ -1107,7 +1104,7 @@ class DeleteTasks extends V20180308Rpc
  * @method string getTaskIds()
  * @method $this withTaskIds($value)
  */
-class StopTasks extends V20180308Rpc
+class StopTasks extends Rpc
 {
 }
 
@@ -1115,7 +1112,7 @@ class StopTasks extends V20180308Rpc
  * @method string getTaskIds()
  * @method $this withTaskIds($value)
  */
-class StartTasks extends V20180308Rpc
+class StartTasks extends Rpc
 {
 }
 
@@ -1125,7 +1122,7 @@ class StartTasks extends V20180308Rpc
  * @method string getIsp()
  * @method $this withIsp($value)
  */
-class DescribeISPAreaCity extends V20180308Rpc
+class DescribeISPAreaCity extends Rpc
 {
 }
 
@@ -1133,7 +1130,7 @@ class DescribeISPAreaCity extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeTaskDetail extends V20180308Rpc
+class DescribeTaskDetail extends Rpc
 {
 }
 
@@ -1149,7 +1146,7 @@ class DescribeTaskDetail extends V20180308Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeTasks extends V20180308Rpc
+class DescribeTasks extends Rpc
 {
 }
 
@@ -1157,7 +1154,7 @@ class DescribeTasks extends V20180308Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class ListGroupDynamicRule extends V20180308Rpc
+class ListGroupDynamicRule extends Rpc
 {
 }
 
@@ -1167,7 +1164,7 @@ class ListGroupDynamicRule extends V20180308Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class DeleteGroupDynamicRule extends V20180308Rpc
+class DeleteGroupDynamicRule extends Rpc
 {
 }
 
@@ -1177,7 +1174,7 @@ class DeleteGroupDynamicRule extends V20180308Rpc
  * @method string getGroupRuleArrayJson()
  * @method $this withGroupRuleArrayJson($value)
  */
-class PutGroupDynamicRule extends V20180308Rpc
+class PutGroupDynamicRule extends Rpc
 {
 }
 
@@ -1189,14 +1186,14 @@ class PutGroupDynamicRule extends V20180308Rpc
  * @method string getMasters()
  * @method $this withMasters($value)
  */
-class UpdateMyGroupMembers extends V20180308Rpc
+class UpdateMyGroupMembers extends Rpc
 {
 }
 
 /**
  * @method array getTaskIdList()
  */
-class TaskConfigUnhealthy extends V20180308Rpc
+class TaskConfigUnhealthy extends Rpc
 {
 
     /**
@@ -1218,7 +1215,7 @@ class TaskConfigUnhealthy extends V20180308Rpc
 /**
  * @method array getIdList()
  */
-class TaskConfigDelete extends V20180308Rpc
+class TaskConfigDelete extends Rpc
 {
 
     /**
@@ -1242,7 +1239,7 @@ class TaskConfigDelete extends V20180308Rpc
  * @method string getEnabled()
  * @method $this withEnabled($value)
  */
-class TaskConfigEnable extends V20180308Rpc
+class TaskConfigEnable extends Rpc
 {
 
     /**
@@ -1273,7 +1270,7 @@ class TaskConfigEnable extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class TaskConfigList extends V20180308Rpc
+class TaskConfigList extends Rpc
 {
 }
 
@@ -1296,7 +1293,7 @@ class TaskConfigList extends V20180308Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class TaskConfigModify extends V20180308Rpc
+class TaskConfigModify extends Rpc
 {
 
     /**
@@ -1332,7 +1329,7 @@ class TaskConfigModify extends V20180308Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class TaskConfigCreate extends V20180308Rpc
+class TaskConfigCreate extends Rpc
 {
 
     /**
@@ -1375,7 +1372,7 @@ class TaskConfigCreate extends V20180308Rpc
  * @method string getOrderDesc()
  * @method $this withOrderDesc($value)
  */
-class QueryMetricTop extends V20180308Rpc
+class QueryMetricTop extends Rpc
 {
 }
 
@@ -1401,7 +1398,7 @@ class QueryMetricTop extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class QueryMetricList extends V20180308Rpc
+class QueryMetricList extends Rpc
 {
 }
 
@@ -1429,7 +1426,7 @@ class QueryMetricList extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class QueryMetricLast extends V20180308Rpc
+class QueryMetricLast extends Rpc
 {
 }
 
@@ -1453,7 +1450,7 @@ class QueryMetricLast extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class QueryMetricData extends V20180308Rpc
+class QueryMetricData extends Rpc
 {
 }
 
@@ -1461,7 +1458,7 @@ class QueryMetricData extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class EnableAlarm extends V20180308Rpc
+class EnableAlarm extends Rpc
 {
 }
 
@@ -1477,7 +1474,7 @@ class EnableAlarm extends V20180308Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class NodeProcessCreate extends V20180308Rpc
+class NodeProcessCreate extends Rpc
 {
 }
 
@@ -1511,7 +1508,7 @@ class NodeProcessCreate extends V20180308Rpc
  * @method string getStatistics()
  * @method $this withStatistics($value)
  */
-class UpdateAlarm extends V20180308Rpc
+class UpdateAlarm extends Rpc
 {
 }
 
@@ -1527,7 +1524,7 @@ class UpdateAlarm extends V20180308Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class ListAlarmHistory extends V20180308Rpc
+class ListAlarmHistory extends Rpc
 {
 }
 
@@ -1535,7 +1532,7 @@ class ListAlarmHistory extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QueryCustomEventHistogram extends V20180308Rpc
+class QueryCustomEventHistogram extends Rpc
 {
 }
 
@@ -1557,7 +1554,7 @@ class QueryCustomEventHistogram extends V20180308Rpc
  * @method string getBindUrls()
  * @method $this withBindUrls($value)
  */
-class ListMyGroups extends V20180308Rpc
+class ListMyGroups extends Rpc
 {
 }
 
@@ -1565,7 +1562,7 @@ class ListMyGroups extends V20180308Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class NodeProcesses extends V20180308Rpc
+class NodeProcesses extends Rpc
 {
 }
 
@@ -1575,7 +1572,7 @@ class NodeProcesses extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class EnableActiveAlert extends V20180308Rpc
+class EnableActiveAlert extends Rpc
 {
 }
 
@@ -1589,7 +1586,7 @@ class EnableActiveAlert extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ProfileSet extends V20180308Rpc
+class ProfileSet extends Rpc
 {
 }
 
@@ -1597,7 +1594,7 @@ class ProfileSet extends V20180308Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class NodeStatus extends V20180308Rpc
+class NodeStatus extends Rpc
 {
 }
 
@@ -1605,7 +1602,7 @@ class NodeStatus extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteAlarm extends V20180308Rpc
+class DeleteAlarm extends Rpc
 {
 }
 
@@ -1615,7 +1612,7 @@ class DeleteAlarm extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListContactGroup extends V20180308Rpc
+class ListContactGroup extends Rpc
 {
 }
 
@@ -1623,7 +1620,7 @@ class ListContactGroup extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QuerySystemEventHistogram extends V20180308Rpc
+class QuerySystemEventHistogram extends Rpc
 {
 }
 
@@ -1633,7 +1630,7 @@ class QuerySystemEventHistogram extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListActiveAlertRule extends V20180308Rpc
+class ListActiveAlertRule extends Rpc
 {
 }
 
@@ -1651,7 +1648,7 @@ class ListActiveAlertRule extends V20180308Rpc
  * @method string getBindUrl()
  * @method $this withBindUrl($value)
  */
-class GetMyGroups extends V20180308Rpc
+class GetMyGroups extends Rpc
 {
 }
 
@@ -1665,7 +1662,7 @@ class GetMyGroups extends V20180308Rpc
  * @method string getMd5()
  * @method $this withMd5($value)
  */
-class DeleteCustomMetric extends V20180308Rpc
+class DeleteCustomMetric extends Rpc
 {
 }
 
@@ -1703,7 +1700,7 @@ class DeleteCustomMetric extends V20180308Rpc
  * @method string getStatistics()
  * @method $this withStatistics($value)
  */
-class CreateAlarm extends V20180308Rpc
+class CreateAlarm extends Rpc
 {
 }
 
@@ -1711,7 +1708,7 @@ class CreateAlarm extends V20180308Rpc
  * @method string getEventInfo()
  * @method $this withEventInfo($value)
  */
-class PutEvent extends V20180308Rpc
+class PutEvent extends Rpc
 {
 }
 
@@ -1719,7 +1716,7 @@ class PutEvent extends V20180308Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class ListMyGroupCategories extends V20180308Rpc
+class ListMyGroupCategories extends Rpc
 {
 }
 
@@ -1727,7 +1724,7 @@ class ListMyGroupCategories extends V20180308Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class NodeUninstall extends V20180308Rpc
+class NodeUninstall extends Rpc
 {
 }
 
@@ -1735,7 +1732,7 @@ class NodeUninstall extends V20180308Rpc
  * @method string getMetricList()
  * @method $this withMetricList($value)
  */
-class PutCustomMetric extends V20180308Rpc
+class PutCustomMetric extends Rpc
 {
 }
 
@@ -1745,7 +1742,7 @@ class PutCustomMetric extends V20180308Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class AddMyGroupInstances extends V20180308Rpc
+class AddMyGroupInstances extends Rpc
 {
 }
 
@@ -1767,7 +1764,7 @@ class AddMyGroupInstances extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAlarm extends V20180308Rpc
+class ListAlarm extends Rpc
 {
 }
 
@@ -1781,7 +1778,7 @@ class ListAlarm extends V20180308Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class DeleteMyGroupInstances extends V20180308Rpc
+class DeleteMyGroupInstances extends Rpc
 {
 }
 
@@ -1801,7 +1798,7 @@ class DeleteMyGroupInstances extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListMyGroupInstancesDetails extends V20180308Rpc
+class ListMyGroupInstancesDetails extends Rpc
 {
 }
 
@@ -1819,7 +1816,7 @@ class ListMyGroupInstancesDetails extends V20180308Rpc
  * @method string getBindUrl()
  * @method $this withBindUrl($value)
  */
-class CreateMyGroups extends V20180308Rpc
+class CreateMyGroups extends Rpc
 {
 }
 
@@ -1827,7 +1824,7 @@ class CreateMyGroups extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListProductOfActiveAlert extends V20180308Rpc
+class ListProductOfActiveAlert extends Rpc
 {
 }
 
@@ -1837,7 +1834,7 @@ class ListProductOfActiveAlert extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class DisableActiveAlert extends V20180308Rpc
+class DisableActiveAlert extends Rpc
 {
 }
 
@@ -1845,7 +1842,7 @@ class DisableActiveAlert extends V20180308Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DeleteMyGroups extends V20180308Rpc
+class DeleteMyGroups extends Rpc
 {
 }
 
@@ -1865,7 +1862,7 @@ class DeleteMyGroups extends V20180308Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListMyGroupInstances extends V20180308Rpc
+class ListMyGroupInstances extends Rpc
 {
 }
 
@@ -1889,7 +1886,7 @@ class ListMyGroupInstances extends V20180308Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class NodeList extends V20180308Rpc
+class NodeList extends Rpc
 {
 }
 
@@ -1901,7 +1898,7 @@ class NodeList extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class NodeInstall extends V20180308Rpc
+class NodeInstall extends Rpc
 {
 }
 
@@ -1919,7 +1916,7 @@ class NodeInstall extends V20180308Rpc
  * @method string getBindUrls()
  * @method $this withBindUrls($value)
  */
-class UpdateMyGroups extends V20180308Rpc
+class UpdateMyGroups extends Rpc
 {
 }
 
@@ -1931,7 +1928,7 @@ class UpdateMyGroups extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class NodeProcessDelete extends V20180308Rpc
+class NodeProcessDelete extends Rpc
 {
 }
 
@@ -1949,7 +1946,7 @@ class NodeProcessDelete extends V20180308Rpc
  * @method string getMd5()
  * @method $this withMd5($value)
  */
-class QueryCustomMetricList extends V20180308Rpc
+class QueryCustomMetricList extends Rpc
 {
 }
 
@@ -1965,7 +1962,7 @@ class QueryCustomMetricList extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class GetNotifyPolicy extends V20180308Rpc
+class GetNotifyPolicy extends Rpc
 {
 }
 
@@ -1973,7 +1970,7 @@ class GetNotifyPolicy extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QuerySystemEventCount extends V20180308Rpc
+class QuerySystemEventCount extends Rpc
 {
 }
 
@@ -1981,7 +1978,7 @@ class QuerySystemEventCount extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QueryCustomEventCount extends V20180308Rpc
+class QueryCustomEventCount extends Rpc
 {
 }
 
@@ -1991,7 +1988,7 @@ class QueryCustomEventCount extends V20180308Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class UpdateMyGroupInstances extends V20180308Rpc
+class UpdateMyGroupInstances extends Rpc
 {
 }
 
@@ -2009,7 +2006,7 @@ class UpdateMyGroupInstances extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class ListNotifyPolicy extends V20180308Rpc
+class ListNotifyPolicy extends Rpc
 {
 }
 
@@ -2017,7 +2014,7 @@ class ListNotifyPolicy extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class AccessKeyGet extends V20180308Rpc
+class AccessKeyGet extends Rpc
 {
 }
 
@@ -2025,7 +2022,7 @@ class AccessKeyGet extends V20180308Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ProfileGet extends V20180308Rpc
+class ProfileGet extends Rpc
 {
 }
 
@@ -2043,7 +2040,7 @@ class ProfileGet extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class CreateNotifyPolicy extends V20180308Rpc
+class CreateNotifyPolicy extends Rpc
 {
 }
 
@@ -2059,7 +2056,7 @@ class CreateNotifyPolicy extends V20180308Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class DeleteNotifyPolicy extends V20180308Rpc
+class DeleteNotifyPolicy extends Rpc
 {
 }
 
@@ -2067,7 +2064,7 @@ class DeleteNotifyPolicy extends V20180308Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DisableAlarm extends V20180308Rpc
+class DisableAlarm extends Rpc
 {
 }
 
@@ -2099,7 +2096,7 @@ class DisableAlarm extends V20180308Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeAlarmHistory extends V20180308Rpc
+class DescribeAlarmHistory extends Rpc
 {
 }
 
@@ -2107,7 +2104,7 @@ class DescribeAlarmHistory extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QuerySystemEventDetail extends V20180308Rpc
+class QuerySystemEventDetail extends Rpc
 {
 }
 
@@ -2115,7 +2112,7 @@ class QuerySystemEventDetail extends V20180308Rpc
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
  */
-class NodeStatusList extends V20180308Rpc
+class NodeStatusList extends Rpc
 {
 }
 
@@ -2123,6 +2120,6 @@ class NodeStatusList extends V20180308Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QueryCustomEventDetail extends V20180308Rpc
+class QueryCustomEventDetail extends Rpc
 {
 }

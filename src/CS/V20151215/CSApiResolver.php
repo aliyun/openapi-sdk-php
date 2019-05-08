@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CS\V20151215;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeClusterAttachScripts describeClusterAttachScripts(array $options = [])
  * @method GetClusterCertInfo getClusterCertInfo(array $options = [])
  * @method PreCheckForCreateCluster preCheckForCreateCluster(array $options = [])
@@ -95,7 +92,7 @@ class CSApiResolver
     use ApiResolverTrait;
 }
 
-class V20151215Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'CS';
@@ -111,7 +108,7 @@ class V20151215Roa extends Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterAttachScripts extends V20151215Roa
+class DescribeClusterAttachScripts extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/attachscript';
@@ -124,13 +121,13 @@ class DescribeClusterAttachScripts extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetClusterCertInfo extends V20151215Roa
+class GetClusterCertInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/hosts/certs';
 }
 
-class PreCheckForCreateCluster extends V20151215Roa
+class PreCheckForCreateCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v1/ess/precheck';
@@ -143,7 +140,7 @@ class PreCheckForCreateCluster extends V20151215Roa
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  */
-class CreateClusterByResourcesGroup extends V20151215Roa
+class CreateClusterByResourcesGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/resource_groups/[ResourceGroupId]/clusters';
@@ -156,7 +153,7 @@ class CreateClusterByResourcesGroup extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ScaleOutCluster extends V20151215Roa
+class ScaleOutCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/clusters/[ClusterId]';
@@ -171,7 +168,7 @@ class ScaleOutCluster extends V20151215Roa
  * @method string getKubernetesVersion()
  * @method string getRegion()
  */
-class DescribeKubernetesVersionMetadata extends V20151215Roa
+class DescribeKubernetesVersionMetadata extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v1/metadata/versions';
@@ -233,7 +230,7 @@ class DescribeKubernetesVersionMetadata extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteClusterTags extends V20151215Roa
+class DeleteClusterTags extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/tags';
@@ -246,7 +243,7 @@ class DeleteClusterTags extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ModifyClusterTags extends V20151215Roa
+class ModifyClusterTags extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/tags';
@@ -259,7 +256,7 @@ class ModifyClusterTags extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteClusterNodes extends V20151215Roa
+class DeleteClusterNodes extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/nodes';
@@ -273,7 +270,7 @@ class DeleteClusterNodes extends V20151215Roa
  * @method $this withClusterId($value)
  * @method string getNamePrefix()
  */
-class DescribeEdgeClusterAttachScripts extends V20151215Roa
+class DescribeEdgeClusterAttachScripts extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/attachscript';
@@ -296,7 +293,7 @@ class DescribeEdgeClusterAttachScripts extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateClusterKubenetesVersion extends V20151215Roa
+class UpdateClusterKubenetesVersion extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/components/Kubernetes/upgrade';
@@ -309,7 +306,7 @@ class UpdateClusterKubenetesVersion extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterEndpoint extends V20151215Roa
+class DescribeClusterEndpoint extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/endpoint';
@@ -320,7 +317,7 @@ class DescribeClusterEndpoint extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterUserKubeconfig extends V20151215Roa
+class DescribeClusterUserKubeconfig extends Roa
 {
     /** @var string */
     public $pathPattern = '/k8s/[ClusterId]/user_config';
@@ -343,7 +340,7 @@ class DescribeClusterUserKubeconfig extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterEndpoints extends V20151215Roa
+class DescribeClusterEndpoints extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/endpoints';
@@ -353,7 +350,7 @@ class DescribeClusterEndpoints extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterLogs extends V20151215Roa
+class DescribeClusterLogs extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/logs';
@@ -365,7 +362,7 @@ class DescribeClusterLogs extends V20151215Roa
  * @method $this withClusterId($value)
  * @method string getPageNumber()
  */
-class DescribeClusterNodes extends V20151215Roa
+class DescribeClusterNodes extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/nodes';
@@ -397,7 +394,7 @@ class DescribeClusterNodes extends V20151215Roa
     }
 }
 
-class CheckAliyunCSServiceRole extends V20151215Roa
+class CheckAliyunCSServiceRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/aliyuncsrole/status';
@@ -409,7 +406,7 @@ class CheckAliyunCSServiceRole extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RevokeTrigger extends V20151215Roa
+class RevokeTrigger extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ActionType]/';
@@ -422,7 +419,7 @@ class RevokeTrigger extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CreateTrigger extends V20151215Roa
+class CreateTrigger extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/';
@@ -437,7 +434,7 @@ class CreateTrigger extends V20151215Roa
  * @method string getApplicationId()
  * @method $this withApplicationId($value)
  */
-class DeleteTrigger extends V20151215Roa
+class DeleteTrigger extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ApplicationId]';
@@ -452,7 +449,7 @@ class DeleteTrigger extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeTrigger extends V20151215Roa
+class DescribeTrigger extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/trigger/[ActionType]/';
@@ -462,7 +459,7 @@ class DescribeTrigger extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpgradeClusterAgent extends V20151215Roa
+class UpgradeClusterAgent extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/upgrade';
@@ -477,7 +474,7 @@ class UpgradeClusterAgent extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateSharedServices extends V20151215Roa
+class UpdateSharedServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[ProjectName]/upgrade';
@@ -490,7 +487,7 @@ class UpdateSharedServices extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateClusterDockerVersion extends V20151215Roa
+class UpdateClusterDockerVersion extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/update_docker';
@@ -503,7 +500,7 @@ class UpdateClusterDockerVersion extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateController extends V20151215Roa
+class UpdateController extends Roa
 {
     /** @var string */
     public $pathPattern = '/controller/update/[ClusterId]';
@@ -512,7 +509,7 @@ class UpdateController extends V20151215Roa
     public $method = 'POST';
 }
 
-class UpdateControllers extends V20151215Roa
+class UpdateControllers extends Roa
 {
     /** @var string */
     public $pathPattern = '/controller/update';
@@ -521,7 +518,7 @@ class UpdateControllers extends V20151215Roa
     public $method = 'POST';
 }
 
-class UpdateRamPolicy extends V20151215Roa
+class UpdateRamPolicy extends Roa
 {
     /** @var string */
     public $pathPattern = '/user/raminfo';
@@ -536,7 +533,7 @@ class UpdateRamPolicy extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateSharedService extends V20151215Roa
+class UpdateSharedService extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/update';
@@ -545,7 +542,7 @@ class UpdateSharedService extends V20151215Roa
     public $method = 'POST';
 }
 
-class RevokeTriggerHook extends V20151215Roa
+class RevokeTriggerHook extends Roa
 {
     /** @var string */
     public $pathPattern = '/hook/trigger';
@@ -558,7 +555,7 @@ class RevokeTriggerHook extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UnBindSLB extends V20151215Roa
+class UnBindSLB extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/unbind_slb';
@@ -571,7 +568,7 @@ class UnBindSLB extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateAutoScale extends V20151215Roa
+class UpdateAutoScale extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/update';
@@ -586,7 +583,7 @@ class UpdateAutoScale extends V20151215Roa
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class UpdateClusterAgentVersion extends V20151215Roa
+class UpdateClusterAgentVersion extends Roa
 {
     /** @var string */
     public $pathPattern = '/admin/clusters/[ClusterId]/agent/[Version]/modify';
@@ -599,7 +596,7 @@ class UpdateClusterAgentVersion extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RecoverController extends V20151215Roa
+class RecoverController extends Roa
 {
     /** @var string */
     public $pathPattern = '/controller/recover/[ClusterId]';
@@ -608,7 +605,7 @@ class RecoverController extends V20151215Roa
     public $method = 'POST';
 }
 
-class RecoverControllers extends V20151215Roa
+class RecoverControllers extends Roa
 {
     /** @var string */
     public $pathPattern = '/controller/recover';
@@ -623,7 +620,7 @@ class RecoverControllers extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ReDeploySharedService extends V20151215Roa
+class ReDeploySharedService extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/redeploy';
@@ -638,7 +635,7 @@ class ReDeploySharedService extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ResetClusterNode extends V20151215Roa
+class ResetClusterNode extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/instances/[InstanceId]/reset';
@@ -651,7 +648,7 @@ class ResetClusterNode extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RevokeClusterCerts extends V20151215Roa
+class RevokeClusterCerts extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/certs';
@@ -666,7 +663,7 @@ class RevokeClusterCerts extends V20151215Roa
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class LoginAliyunHub extends V20151215Roa
+class LoginAliyunHub extends Roa
 {
     /** @var string */
     public $pathPattern = '/admin/clusters/[ClusterId]/hub_login';
@@ -675,7 +672,7 @@ class LoginAliyunHub extends V20151215Roa
     public $method = 'POST';
 }
 
-class ProbeTriggerHook extends V20151215Roa
+class ProbeTriggerHook extends Roa
 {
     /** @var string */
     public $pathPattern = '/hook/trigger';
@@ -685,7 +682,7 @@ class ProbeTriggerHook extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class PushMonitoringData extends V20151215Roa
+class PushMonitoringData extends Roa
 {
     /** @var string */
     public $pathPattern = '/admin/monnitoring/[ClusterId]/push';
@@ -694,7 +691,7 @@ class PushMonitoringData extends V20151215Roa
     public $method = 'POST';
 }
 
-class DescribeUserResourceDomain extends V20151215Roa
+class DescribeUserResourceDomain extends Roa
 {
     /** @var string */
     public $pathPattern = '/resource_domain';
@@ -704,13 +701,13 @@ class DescribeUserResourceDomain extends V20151215Roa
  * @method string getAliuid()
  * @method $this withAliuid($value)
  */
-class DescribeUserResources extends V20151215Roa
+class DescribeUserResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/ram/resources/[Aliuid]';
 }
 
-class DescribeVxlanPortsRules extends V20151215Roa
+class DescribeVxlanPortsRules extends Roa
 {
     /** @var string */
     public $pathPattern = '/config/vxlan_ports';
@@ -720,7 +717,7 @@ class DescribeVxlanPortsRules extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class FixSecurityGroup extends V20151215Roa
+class FixSecurityGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/fix_sg';
@@ -735,25 +732,25 @@ class FixSecurityGroup extends V20151215Roa
  * @method string getSecret()
  * @method $this withSecret($value)
  */
-class DescribeTriggerHookStatus extends V20151215Roa
+class DescribeTriggerHookStatus extends Roa
 {
     /** @var string */
     public $pathPattern = '/hook/trigger/status/[TriggerURL]/[Secret]/';
 }
 
-class DescribeUserInstances extends V20151215Roa
+class DescribeUserInstances extends Roa
 {
     /** @var string */
     public $pathPattern = '/instances';
 }
 
-class DescribeUserIoOptimizedInstances extends V20151215Roa
+class DescribeUserIoOptimizedInstances extends Roa
 {
     /** @var string */
     public $pathPattern = '/instances/io_optimized';
 }
 
-class DescribeUserQuota extends V20151215Roa
+class DescribeUserQuota extends Roa
 {
     /** @var string */
     public $pathPattern = '/quota';
@@ -763,19 +760,19 @@ class DescribeUserQuota extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterVxlanPortRule extends V20151215Roa
+class DescribeClusterVxlanPortRule extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/vxlan_ports';
 }
 
-class DescribeRamUsers extends V20151215Roa
+class DescribeRamUsers extends Roa
 {
     /** @var string */
     public $pathPattern = '/ram/users';
 }
 
-class DescribeRegionImages extends V20151215Roa
+class DescribeRegionImages extends Roa
 {
     /** @var string */
     public $pathPattern = '/region/images';
@@ -785,7 +782,7 @@ class DescribeRegionImages extends V20151215Roa
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class DescribeRegionSharedServices extends V20151215Roa
+class DescribeRegionSharedServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/region/[Region]/shared_services';
@@ -795,7 +792,7 @@ class DescribeRegionSharedServices extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterSharedServices extends V20151215Roa
+class DescribeClusterSharedServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services';
@@ -805,7 +802,7 @@ class DescribeClusterSharedServices extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterSnapshots extends V20151215Roa
+class DescribeClusterSnapshots extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/snapshots';
@@ -815,7 +812,7 @@ class DescribeClusterSnapshots extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterStatus extends V20151215Roa
+class DescribeClusterStatus extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/status';
@@ -825,7 +822,7 @@ class DescribeClusterStatus extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterAutoScale extends V20151215Roa
+class DescribeClusterAutoScale extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/';
@@ -835,7 +832,7 @@ class DescribeClusterAutoScale extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterCRL extends V20151215Roa
+class DescribeClusterCRL extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/crl';
@@ -845,7 +842,7 @@ class DescribeClusterCRL extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterExtInfo extends V20151215Roa
+class DescribeClusterExtInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/extinfo';
@@ -855,7 +852,7 @@ class DescribeClusterExtInfo extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteAutoScale extends V20151215Roa
+class DeleteAutoScale extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/autoscale/';
@@ -868,7 +865,7 @@ class DeleteAutoScale extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeployEMLSolution extends V20151215Roa
+class DeployEMLSolution extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/solutions/deploy';
@@ -883,7 +880,7 @@ class DeployEMLSolution extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeploySharedService extends V20151215Roa
+class DeploySharedService extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/[SharedServiceId]/deploy';
@@ -892,7 +889,7 @@ class DeploySharedService extends V20151215Roa
     public $method = 'POST';
 }
 
-class DescribeAgentVersions extends V20151215Roa
+class DescribeAgentVersions extends Roa
 {
     /** @var string */
     public $pathPattern = '/agent_version';
@@ -902,7 +899,7 @@ class DescribeAgentVersions extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CreateAutoScale extends V20151215Roa
+class CreateAutoScale extends Roa
 {
     /** @var string */
     public $pathPattern = '/cluster/[ClusterId]/autoscale/';
@@ -915,7 +912,7 @@ class CreateAutoScale extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CreateMonitoringUser extends V20151215Roa
+class CreateMonitoringUser extends Roa
 {
     /** @var string */
     public $pathPattern = '/admin/monnitoring/[ClusterId]/create_or_update';
@@ -924,7 +921,7 @@ class CreateMonitoringUser extends V20151215Roa
     public $method = 'POST';
 }
 
-class CreateTriggerHook extends V20151215Roa
+class CreateTriggerHook extends Roa
 {
     /** @var string */
     public $pathPattern = '/hook/trigger';
@@ -939,7 +936,7 @@ class CreateTriggerHook extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class BindSLB extends V20151215Roa
+class BindSLB extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/slb/[SlbID]/bind';
@@ -952,7 +949,7 @@ class BindSLB extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CheckSecurityGroup extends V20151215Roa
+class CheckSecurityGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/check_sg';
@@ -965,7 +962,7 @@ class CheckSecurityGroup extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CleanUpControllerEvent extends V20151215Roa
+class CleanUpControllerEvent extends Roa
 {
     /** @var string */
     public $pathPattern = '/controller/event_clean/[ClusterId]';
@@ -978,7 +975,7 @@ class CleanUpControllerEvent extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class BatchUpdateSharedService extends V20151215Roa
+class BatchUpdateSharedService extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/shared_services/batch_update';
@@ -995,7 +992,7 @@ class BatchUpdateSharedService extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteClusterNode extends V20151215Roa
+class DeleteClusterNode extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/ip/[Ip]';
@@ -1036,7 +1033,7 @@ class DeleteClusterNode extends V20151215Roa
  * @method string getToken()
  * @method $this withToken($value)
  */
-class DownloadClusterNodeCerts extends V20151215Roa
+class DownloadClusterNodeCerts extends Roa
 {
     /** @var string */
     public $pathPattern = '/token/[Token]/nodes/[NodeId]/certs';
@@ -1046,7 +1043,7 @@ class DownloadClusterNodeCerts extends V20151215Roa
  * @method string getToken()
  * @method $this withToken($value)
  */
-class RevokeClusterToken extends V20151215Roa
+class RevokeClusterToken extends Roa
 {
     /** @var string */
     public $pathPattern = '/token/[Token]/revoke';
@@ -1059,7 +1056,7 @@ class RevokeClusterToken extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AttachInstances extends V20151215Roa
+class AttachInstances extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/attach';
@@ -1068,13 +1065,13 @@ class AttachInstances extends V20151215Roa
     public $method = 'POST';
 }
 
-class DescribeUserServices extends V20151215Roa
+class DescribeUserServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/region/[RegionId]/services';
 }
 
-class DescribeApiVersion extends V20151215Roa
+class DescribeApiVersion extends Roa
 {
     /** @var string */
     public $pathPattern = '/version';
@@ -1084,7 +1081,7 @@ class DescribeApiVersion extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteCluster extends V20151215Roa
+class DeleteCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
@@ -1097,7 +1094,7 @@ class DeleteCluster extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterCerts extends V20151215Roa
+class DescribeClusterCerts extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/certs';
@@ -1107,7 +1104,7 @@ class DescribeClusterCerts extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterDetail extends V20151215Roa
+class DescribeClusterDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
@@ -1118,7 +1115,7 @@ class DescribeClusterDetail extends V20151215Roa
  * @method string getDisableParameters()
  * @method string getName()
  */
-class DescribeClusters extends V20151215Roa
+class DescribeClusters extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters';
@@ -1167,7 +1164,7 @@ class DescribeClusters extends V20151215Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ScaleCluster extends V20151215Roa
+class ScaleCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]';
@@ -1176,7 +1173,7 @@ class ScaleCluster extends V20151215Roa
     public $method = 'PUT';
 }
 
-class CreateCluster extends V20151215Roa
+class CreateCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters';

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Alidns\V20150109;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeGtmInstanceSystemCname describeGtmInstanceSystemCname(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
@@ -73,7 +70,7 @@ class AlidnsApiResolver
     use ApiResolverTrait;
 }
 
-class V20150109Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Alidns';
@@ -96,7 +93,7 @@ class V20150109Rpc extends Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmInstanceSystemCname extends V20150109Rpc
+class DescribeGtmInstanceSystemCname extends Rpc
 {
 }
 
@@ -109,7 +106,7 @@ class DescribeGtmInstanceSystemCname extends V20150109Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OperateBatchDomain extends V20150109Rpc
+class OperateBatchDomain extends Rpc
 {
 
     /**
@@ -151,7 +148,7 @@ class OperateBatchDomain extends V20150109Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeBatchResultDetail extends V20150109Rpc
+class DescribeBatchResultDetail extends Rpc
 {
 }
 
@@ -165,7 +162,7 @@ class DescribeBatchResultDetail extends V20150109Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeBatchResultCount extends V20150109Rpc
+class DescribeBatchResultCount extends Rpc
 {
 }
 
@@ -185,7 +182,7 @@ class DescribeBatchResultCount extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class AddGtmAccessStrategy extends V20150109Rpc
+class AddGtmAccessStrategy extends Rpc
 {
 }
 
@@ -204,7 +201,7 @@ class AddGtmAccessStrategy extends V20150109Rpc
  * @method string getMinAvailableAddrNum()
  * @method $this withMinAvailableAddrNum($value)
  */
-class AddGtmAddressPool extends V20150109Rpc
+class AddGtmAddressPool extends Rpc
 {
 
     /**
@@ -246,7 +243,7 @@ class AddGtmAddressPool extends V20150109Rpc
  * @method $this withTimeout($value)
  * @method array getIspCityNode()
  */
-class AddGtmMonitor extends V20150109Rpc
+class AddGtmMonitor extends Rpc
 {
 
     /**
@@ -274,7 +271,7 @@ class AddGtmMonitor extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteGtmAccessStrategy extends V20150109Rpc
+class DeleteGtmAccessStrategy extends Rpc
 {
 }
 
@@ -286,7 +283,7 @@ class DeleteGtmAccessStrategy extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteGtmAddressPool extends V20150109Rpc
+class DeleteGtmAddressPool extends Rpc
 {
 }
 
@@ -302,7 +299,7 @@ class DeleteGtmAddressPool extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeGtmAccessStrategies extends V20150109Rpc
+class DescribeGtmAccessStrategies extends Rpc
 {
 }
 
@@ -314,7 +311,7 @@ class DescribeGtmAccessStrategies extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmAccessStrategy extends V20150109Rpc
+class DescribeGtmAccessStrategy extends Rpc
 {
 }
 
@@ -326,7 +323,7 @@ class DescribeGtmAccessStrategy extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmAccessStrategyAvailableConfig extends V20150109Rpc
+class DescribeGtmAccessStrategyAvailableConfig extends Rpc
 {
 }
 
@@ -336,7 +333,7 @@ class DescribeGtmAccessStrategyAvailableConfig extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmAvailableAlertGroup extends V20150109Rpc
+class DescribeGtmAvailableAlertGroup extends Rpc
 {
 }
 
@@ -348,7 +345,7 @@ class DescribeGtmAvailableAlertGroup extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmInstance extends V20150109Rpc
+class DescribeGtmInstance extends Rpc
 {
 }
 
@@ -360,7 +357,7 @@ class DescribeGtmInstance extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmInstanceAddressPool extends V20150109Rpc
+class DescribeGtmInstanceAddressPool extends Rpc
 {
 }
 
@@ -376,7 +373,7 @@ class DescribeGtmInstanceAddressPool extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeGtmInstanceAddressPools extends V20150109Rpc
+class DescribeGtmInstanceAddressPools extends Rpc
 {
 }
 
@@ -394,7 +391,7 @@ class DescribeGtmInstanceAddressPools extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeGtmInstances extends V20150109Rpc
+class DescribeGtmInstances extends Rpc
 {
 }
 
@@ -406,7 +403,7 @@ class DescribeGtmInstances extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmInstanceStatus extends V20150109Rpc
+class DescribeGtmInstanceStatus extends Rpc
 {
 }
 
@@ -428,7 +425,7 @@ class DescribeGtmInstanceStatus extends V20150109Rpc
  * @method string getEndTimestamp()
  * @method $this withEndTimestamp($value)
  */
-class DescribeGtmLogs extends V20150109Rpc
+class DescribeGtmLogs extends Rpc
 {
 }
 
@@ -438,7 +435,7 @@ class DescribeGtmLogs extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmMonitorAvailableConfig extends V20150109Rpc
+class DescribeGtmMonitorAvailableConfig extends Rpc
 {
 }
 
@@ -450,7 +447,7 @@ class DescribeGtmMonitorAvailableConfig extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeGtmMonitorConfig extends V20150109Rpc
+class DescribeGtmMonitorConfig extends Rpc
 {
 }
 
@@ -464,7 +461,7 @@ class DescribeGtmMonitorConfig extends V20150109Rpc
  * @method string getAccessMode()
  * @method $this withAccessMode($value)
  */
-class SetGtmAccessMode extends V20150109Rpc
+class SetGtmAccessMode extends Rpc
 {
 }
 
@@ -478,7 +475,7 @@ class SetGtmAccessMode extends V20150109Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SetGtmMonitorStatus extends V20150109Rpc
+class SetGtmMonitorStatus extends Rpc
 {
 }
 
@@ -498,7 +495,7 @@ class SetGtmMonitorStatus extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class UpdateGtmAccessStrategy extends V20150109Rpc
+class UpdateGtmAccessStrategy extends Rpc
 {
 }
 
@@ -517,7 +514,7 @@ class UpdateGtmAccessStrategy extends V20150109Rpc
  * @method string getMinAvailableAddrNum()
  * @method $this withMinAvailableAddrNum($value)
  */
-class UpdateGtmAddressPool extends V20150109Rpc
+class UpdateGtmAddressPool extends Rpc
 {
 
     /**
@@ -560,7 +557,7 @@ class UpdateGtmAddressPool extends V20150109Rpc
  * @method string getCnameCustomDomainName()
  * @method $this withCnameCustomDomainName($value)
  */
-class UpdateGtmInstanceGlobalConfig extends V20150109Rpc
+class UpdateGtmInstanceGlobalConfig extends Rpc
 {
 }
 
@@ -585,7 +582,7 @@ class UpdateGtmInstanceGlobalConfig extends V20150109Rpc
  * @method $this withTimeout($value)
  * @method array getIspCityNode()
  */
-class UpdateGtmMonitor extends V20150109Rpc
+class UpdateGtmMonitor extends Rpc
 {
 
     /**
@@ -617,7 +614,7 @@ class UpdateGtmMonitor extends V20150109Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryCreateInstancePrice extends V20150109Rpc
+class QueryCreateInstancePrice extends Rpc
 {
 }
 
@@ -637,7 +634,7 @@ class QueryCreateInstancePrice extends V20150109Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class CreateInstance extends V20150109Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -649,7 +646,7 @@ class CreateInstance extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSupportLines extends V20150109Rpc
+class DescribeSupportLines extends Rpc
 {
 }
 
@@ -661,7 +658,7 @@ class DescribeSupportLines extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDomainNs extends V20150109Rpc
+class DescribeDomainNs extends Rpc
 {
 }
 
@@ -673,7 +670,7 @@ class DescribeDomainNs extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDnsProductInstance extends V20150109Rpc
+class DescribeDnsProductInstance extends Rpc
 {
 }
 
@@ -687,7 +684,7 @@ class DescribeDnsProductInstance extends V20150109Rpc
  * @method string getOpen()
  * @method $this withOpen($value)
  */
-class SetDNSSLBStatus extends V20150109Rpc
+class SetDNSSLBStatus extends Rpc
 {
 }
 
@@ -701,7 +698,7 @@ class SetDNSSLBStatus extends V20150109Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SetDomainRecordStatus extends V20150109Rpc
+class SetDomainRecordStatus extends Rpc
 {
 }
 
@@ -715,7 +712,7 @@ class SetDomainRecordStatus extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class UpdateDNSSLBWeight extends V20150109Rpc
+class UpdateDNSSLBWeight extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class UpdateDNSSLBWeight extends V20150109Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class UpdateDomainGroup extends V20150109Rpc
+class UpdateDomainGroup extends Rpc
 {
 }
 
@@ -753,7 +750,7 @@ class UpdateDomainGroup extends V20150109Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class UpdateDomainRecord extends V20150109Rpc
+class UpdateDomainRecord extends Rpc
 {
 }
 
@@ -774,7 +771,7 @@ class UpdateDomainRecord extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeRecordLogs extends V20150109Rpc
+class DescribeRecordLogs extends Rpc
 {
 
     /**
@@ -807,7 +804,7 @@ class DescribeRecordLogs extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSubDomainRecords extends V20150109Rpc
+class DescribeSubDomainRecords extends Rpc
 {
 }
 
@@ -819,7 +816,7 @@ class DescribeSubDomainRecords extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class GetMainDomainName extends V20150109Rpc
+class GetMainDomainName extends Rpc
 {
 }
 
@@ -831,7 +828,7 @@ class GetMainDomainName extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifyHichinaDomainDNS extends V20150109Rpc
+class ModifyHichinaDomainDNS extends Rpc
 {
 }
 
@@ -847,7 +844,7 @@ class ModifyHichinaDomainDNS extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDomainGroups extends V20150109Rpc
+class DescribeDomainGroups extends Rpc
 {
 }
 
@@ -861,7 +858,7 @@ class DescribeDomainGroups extends V20150109Rpc
  * @method string getNeedDetailAttributes()
  * @method $this withNeedDetailAttributes($value)
  */
-class DescribeDomainInfo extends V20150109Rpc
+class DescribeDomainInfo extends Rpc
 {
 }
 
@@ -884,7 +881,7 @@ class DescribeDomainInfo extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDomainLogs extends V20150109Rpc
+class DescribeDomainLogs extends Rpc
 {
 
     /**
@@ -909,7 +906,7 @@ class DescribeDomainLogs extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDomainRecordInfo extends V20150109Rpc
+class DescribeDomainRecordInfo extends Rpc
 {
 }
 
@@ -947,7 +944,7 @@ class DescribeDomainRecordInfo extends V20150109Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeDomainRecords extends V20150109Rpc
+class DescribeDomainRecords extends Rpc
 {
 }
 
@@ -969,7 +966,7 @@ class DescribeDomainRecords extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDomains extends V20150109Rpc
+class DescribeDomains extends Rpc
 {
 }
 
@@ -981,7 +978,7 @@ class DescribeDomains extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteDomainRecord extends V20150109Rpc
+class DeleteDomainRecord extends Rpc
 {
 }
 
@@ -997,7 +994,7 @@ class DeleteDomainRecord extends V20150109Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DeleteSubDomainRecords extends V20150109Rpc
+class DeleteSubDomainRecords extends Rpc
 {
 }
 
@@ -1013,7 +1010,7 @@ class DeleteSubDomainRecords extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDnsProductInstances extends V20150109Rpc
+class DescribeDnsProductInstances extends Rpc
 {
 }
 
@@ -1029,7 +1026,7 @@ class DescribeDnsProductInstances extends V20150109Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDNSSLBSubDomains extends V20150109Rpc
+class DescribeDNSSLBSubDomains extends Rpc
 {
 }
 
@@ -1047,7 +1044,7 @@ class DescribeDNSSLBSubDomains extends V20150109Rpc
  * @method string getValue()
  * @method $this withValue($value)
  */
-class CheckDomainRecord extends V20150109Rpc
+class CheckDomainRecord extends Rpc
 {
 }
 
@@ -1059,7 +1056,7 @@ class CheckDomainRecord extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteDomain extends V20150109Rpc
+class DeleteDomain extends Rpc
 {
 }
 
@@ -1071,7 +1068,7 @@ class DeleteDomain extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteDomainGroup extends V20150109Rpc
+class DeleteDomainGroup extends Rpc
 {
 }
 
@@ -1085,7 +1082,7 @@ class DeleteDomainGroup extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class AddDomain extends V20150109Rpc
+class AddDomain extends Rpc
 {
 }
 
@@ -1097,7 +1094,7 @@ class AddDomain extends V20150109Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class AddDomainGroup extends V20150109Rpc
+class AddDomainGroup extends Rpc
 {
 }
 
@@ -1121,7 +1118,7 @@ class AddDomainGroup extends V20150109Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class AddDomainRecord extends V20150109Rpc
+class AddDomainRecord extends Rpc
 {
 }
 
@@ -1135,7 +1132,7 @@ class AddDomainRecord extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ChangeDomainGroup extends V20150109Rpc
+class ChangeDomainGroup extends Rpc
 {
 }
 
@@ -1151,6 +1148,6 @@ class ChangeDomainGroup extends V20150109Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ChangeDomainOfDnsProduct extends V20150109Rpc
+class ChangeDomainOfDnsProduct extends Rpc
 {
 }

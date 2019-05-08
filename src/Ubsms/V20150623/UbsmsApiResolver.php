@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ubsms\V20150623;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeBusinessStatus describeBusinessStatus(array $options = [])
  * @method NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
  * @method SetUserBusinessStatus setUserBusinessStatus(array $options = [])
@@ -17,7 +14,7 @@ class UbsmsApiResolver
     use ApiResolverTrait;
 }
 
-class V20150623Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ubsms';
@@ -34,7 +31,7 @@ class V20150623Rpc extends Rpc
  * @method $this withPassword($value)
  * @method string getCallerBid()
  */
-class DescribeBusinessStatus extends V20150623Rpc
+class DescribeBusinessStatus extends Rpc
 {
 
     /**
@@ -67,7 +64,7 @@ class DescribeBusinessStatus extends V20150623Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class NotifyUserBusinessCommand extends V20150623Rpc
+class NotifyUserBusinessCommand extends Rpc
 {
 }
 
@@ -81,6 +78,6 @@ class NotifyUserBusinessCommand extends V20150623Rpc
  * @method string getStatusKey()
  * @method $this withStatusKey($value)
  */
-class SetUserBusinessStatus extends V20150623Rpc
+class SetUserBusinessStatus extends Rpc
 {
 }

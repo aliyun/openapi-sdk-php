@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Airec\V20181012;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ListInstanceTask listInstanceTask(array $options = [])
  * @method ValidateInstance validateInstance(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
@@ -47,7 +44,7 @@ class AirecApiResolver
     use ApiResolverTrait;
 }
 
-class V20181012Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'Airec';
@@ -63,7 +60,7 @@ class V20181012Roa extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListInstanceTask extends V20181012Roa
+class ListInstanceTask extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/tasks';
@@ -73,7 +70,7 @@ class ListInstanceTask extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ValidateInstance extends V20181012Roa
+class ValidateInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/validate';
@@ -86,7 +83,7 @@ class ValidateInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class UpgradeInstance extends V20181012Roa
+class UpgradeInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/upgrade';
@@ -101,7 +98,7 @@ class UpgradeInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DescribeDataSetMessage extends V20181012Roa
+class DescribeDataSetMessage extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/messages';
@@ -113,7 +110,7 @@ class DescribeDataSetMessage extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DescribeDataSetReport extends V20181012Roa
+class DescribeDataSetReport extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/report';
@@ -125,7 +122,7 @@ class DescribeDataSetReport extends V20181012Roa
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class ModifyDataSource extends V20181012Roa
+class ModifyDataSource extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSources/[TableName]';
@@ -138,7 +135,7 @@ class ModifyDataSource extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListDataSource extends V20181012Roa
+class ListDataSource extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSources';
@@ -150,7 +147,7 @@ class ListDataSource extends V20181012Roa
  * @method string getEndDate()
  * @method string getStartDate()
  */
-class DescribeDashboard extends V20181012Roa
+class DescribeDashboard extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
@@ -186,7 +183,7 @@ class DescribeDashboard extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RunInstance extends V20181012Roa
+class RunInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/import';
@@ -199,7 +196,7 @@ class RunInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DescribeSchema extends V20181012Roa
+class DescribeSchema extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/schema';
@@ -209,7 +206,7 @@ class DescribeSchema extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DescribeQuota extends V20181012Roa
+class DescribeQuota extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/quota';
@@ -219,7 +216,7 @@ class DescribeQuota extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class PushIntervention extends V20181012Roa
+class PushIntervention extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/intervene';
@@ -228,7 +225,7 @@ class PushIntervention extends V20181012Roa
     public $method = 'POST';
 }
 
-class ListInstance extends V20181012Roa
+class ListInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances';
@@ -240,7 +237,7 @@ class ListInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DeleteDataSet extends V20181012Roa
+class DeleteDataSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]';
@@ -255,7 +252,7 @@ class DeleteDataSet extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class StopDataSet extends V20181012Roa
+class StopDataSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/actions/stop';
@@ -270,7 +267,7 @@ class StopDataSet extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class AttachDataset extends V20181012Roa
+class AttachDataset extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets/[VersionId]/actions/current';
@@ -283,7 +280,7 @@ class AttachDataset extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListDataSet extends V20181012Roa
+class ListDataSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/dataSets';
@@ -295,7 +292,7 @@ class ListDataSet extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class ModifyDiversify extends V20181012Roa
+class ModifyDiversify extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies/[Name]';
@@ -310,7 +307,7 @@ class ModifyDiversify extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class DescribeDiversify extends V20181012Roa
+class DescribeDiversify extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies/[Name]';
@@ -320,7 +317,7 @@ class DescribeDiversify extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListDiversify extends V20181012Roa
+class ListDiversify extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies';
@@ -332,7 +329,7 @@ class ListDiversify extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteDiversify extends V20181012Roa
+class DeleteDiversify extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies/[Name]';
@@ -345,7 +342,7 @@ class DeleteDiversify extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class CreateDiversify extends V20181012Roa
+class CreateDiversify extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/diversifies';
@@ -360,7 +357,7 @@ class CreateDiversify extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteMix extends V20181012Roa
+class DeleteMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
@@ -375,7 +372,7 @@ class DeleteMix extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class ModifyMix extends V20181012Roa
+class ModifyMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
@@ -390,7 +387,7 @@ class ModifyMix extends V20181012Roa
  * @method string getName()
  * @method $this withName($value)
  */
-class DescribeMix extends V20181012Roa
+class DescribeMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
@@ -400,7 +397,7 @@ class DescribeMix extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListMix extends V20181012Roa
+class ListMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
@@ -410,7 +407,7 @@ class ListMix extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class CreateMix extends V20181012Roa
+class CreateMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
@@ -423,7 +420,7 @@ class CreateMix extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DeleteInstance extends V20181012Roa
+class DeleteInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]';
@@ -436,7 +433,7 @@ class DeleteInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ModifyInstance extends V20181012Roa
+class ModifyInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]';
@@ -449,7 +446,7 @@ class ModifyInstance extends V20181012Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DescribeInstance extends V20181012Roa
+class DescribeInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]';
@@ -464,7 +461,7 @@ class DescribeInstance extends V20181012Roa
  * @method string getImei()
  * @method string getUserId()
  */
-class Recommend extends V20181012Roa
+class Recommend extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/recommend';
@@ -541,7 +538,7 @@ class Recommend extends V20181012Roa
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class PushDocument extends V20181012Roa
+class PushDocument extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/tables/[TableName]/actions/bulk';
@@ -550,7 +547,7 @@ class PushDocument extends V20181012Roa
     public $method = 'POST';
 }
 
-class CreateInstance extends V20181012Roa
+class CreateInstance extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances';

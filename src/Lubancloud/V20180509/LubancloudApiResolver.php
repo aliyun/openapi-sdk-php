@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Lubancloud\V20180509;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
  * @method SubmitCutoutTask submitCutoutTask(array $options = [])
  * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
@@ -20,7 +17,7 @@ class LubancloudApiResolver
     use ApiResolverTrait;
 }
 
-class V20180509Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'lubancloud';
@@ -39,14 +36,14 @@ class V20180509Rpc extends Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryCutoutTaskResult extends V20180509Rpc
+class QueryCutoutTaskResult extends Rpc
 {
 }
 
 /**
  * @method array getPictureUrl()
  */
-class SubmitCutoutTask extends V20180509Rpc
+class SubmitCutoutTask extends Rpc
 {
 
     /**
@@ -69,7 +66,7 @@ class SubmitCutoutTask extends V20180509Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryGenerateTaskResult extends V20180509Rpc
+class QueryGenerateTaskResult extends Rpc
 {
 }
 
@@ -90,7 +87,7 @@ class QueryGenerateTaskResult extends V20180509Rpc
  * @method string getHeight()
  * @method $this withHeight($value)
  */
-class SubmitGenerateTask extends V20180509Rpc
+class SubmitGenerateTask extends Rpc
 {
 
     /**
@@ -139,14 +136,14 @@ class SubmitGenerateTask extends V20180509Rpc
     }
 }
 
-class GetStyles extends V20180509Rpc
+class GetStyles extends Rpc
 {
 }
 
 /**
  * @method array getPictureId()
  */
-class BuyOriginPictures extends V20180509Rpc
+class BuyOriginPictures extends Rpc
 {
 
     /**

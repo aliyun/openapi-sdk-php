@@ -3,11 +3,8 @@
 namespace AlibabaCloud\IDST\V20170922;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method RoaSearch roaSearch(array $options = [])
  */
 class IDSTApiResolver
@@ -15,7 +12,7 @@ class IDSTApiResolver
     use ApiResolverTrait;
 }
 
-class V20170922Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'IDST';
@@ -36,7 +33,7 @@ class V20170922Roa extends Roa
  * @method string getN()
  * @method string getPicName()
  */
-class RoaSearch extends V20170922Roa
+class RoaSearch extends Roa
 {
     /** @var string */
     public $pathPattern = '/bin/sp';

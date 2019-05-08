@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dbs\V20190306;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
  * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
  * @method StartRestoreTask startRestoreTask(array $options = [])
@@ -26,7 +23,7 @@ class DbsApiResolver
     use ApiResolverTrait;
 }
 
-class V20190306Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dbs';
@@ -55,7 +52,7 @@ class V20190306Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRestoreTaskList extends V20190306Rpc
+class DescribeRestoreTaskList extends Rpc
 {
 }
 
@@ -67,7 +64,7 @@ class DescribeRestoreTaskList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNodeCidrList extends V20190306Rpc
+class DescribeNodeCidrList extends Rpc
 {
 }
 
@@ -79,7 +76,7 @@ class DescribeNodeCidrList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartRestoreTask extends V20190306Rpc
+class StartRestoreTask extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class StartRestoreTask extends V20190306Rpc
  * @method string getDestinationEndpointPassword()
  * @method $this withDestinationEndpointPassword($value)
  */
-class CreateRestoreTask extends V20190306Rpc
+class CreateRestoreTask extends Rpc
 {
 }
 
@@ -137,7 +134,7 @@ class CreateRestoreTask extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeFullBackupList extends V20190306Rpc
+class DescribeFullBackupList extends Rpc
 {
 }
 
@@ -155,7 +152,7 @@ class DescribeFullBackupList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupPlanList extends V20190306Rpc
+class DescribeBackupPlanList extends Rpc
 {
 }
 
@@ -169,7 +166,7 @@ class DescribeBackupPlanList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopBackupPlan extends V20190306Rpc
+class StopBackupPlan extends Rpc
 {
 }
 
@@ -185,7 +182,7 @@ class StopBackupPlan extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeIncrementBackupList extends V20190306Rpc
+class DescribeIncrementBackupList extends Rpc
 {
 }
 
@@ -203,7 +200,7 @@ class DescribeIncrementBackupList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupGatewayList extends V20190306Rpc
+class DescribeBackupGatewayList extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class DescribeBackupGatewayList extends V20190306Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartBackupPlan extends V20190306Rpc
+class StartBackupPlan extends Rpc
 {
 }
 
@@ -265,7 +262,7 @@ class StartBackupPlan extends V20190306Rpc
  * @method string getEnableBackupLog()
  * @method $this withEnableBackupLog($value)
  */
-class ConfigureBackupPlan extends V20190306Rpc
+class ConfigureBackupPlan extends Rpc
 {
 }
 
@@ -287,6 +284,6 @@ class ConfigureBackupPlan extends V20190306Rpc
  * @method string getInstanceClass()
  * @method $this withInstanceClass($value)
  */
-class CreateBackupPlan extends V20190306Rpc
+class CreateBackupPlan extends Rpc
 {
 }

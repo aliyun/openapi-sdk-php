@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dm\V20151123;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyPWByDomain modifyPWByDomain(array $options = [])
  * @method GetTrackListByMailFromAndTagName getTrackListByMailFromAndTagName(array $options = [])
  * @method DescAccountSummary2 descAccountSummary2(array $options = [])
@@ -78,7 +75,7 @@ class DmApiResolver
     use ApiResolverTrait;
 }
 
-class V20151123Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dm';
@@ -98,7 +95,7 @@ class V20151123Rpc extends Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class ModifyPWByDomain extends V20151123Rpc
+class ModifyPWByDomain extends Rpc
 {
 }
 
@@ -130,7 +127,7 @@ class ModifyPWByDomain extends V20151123Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class GetTrackListByMailFromAndTagName extends V20151123Rpc
+class GetTrackListByMailFromAndTagName extends Rpc
 {
 }
 
@@ -144,7 +141,7 @@ class GetTrackListByMailFromAndTagName extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescAccountSummary2 extends V20151123Rpc
+class DescAccountSummary2 extends Rpc
 {
 }
 
@@ -160,7 +157,7 @@ class DescAccountSummary2 extends V20151123Rpc
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class MigrateMarket extends V20151123Rpc
+class MigrateMarket extends Rpc
 {
 }
 
@@ -172,7 +169,7 @@ class MigrateMarket extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EnableAccount extends V20151123Rpc
+class EnableAccount extends Rpc
 {
 }
 
@@ -212,7 +209,7 @@ class EnableAccount extends V20151123Rpc
  * @method string getTextBody()
  * @method $this withTextBody($value)
  */
-class SendMailUseTemplate extends V20151123Rpc
+class SendMailUseTemplate extends Rpc
 {
 }
 
@@ -226,7 +223,7 @@ class SendMailUseTemplate extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetMaxQuotaLevel extends V20151123Rpc
+class SetMaxQuotaLevel extends Rpc
 {
 }
 
@@ -240,7 +237,7 @@ class SetMaxQuotaLevel extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMailAddress extends V20151123Rpc
+class DeleteMailAddress extends Rpc
 {
 }
 
@@ -264,7 +261,7 @@ class DeleteMailAddress extends V20151123Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class GetSenderAddressList extends V20151123Rpc
+class GetSenderAddressList extends Rpc
 {
 }
 
@@ -280,7 +277,7 @@ class GetSenderAddressList extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyAccountNotification extends V20151123Rpc
+class ModifyAccountNotification extends Rpc
 {
 }
 
@@ -300,7 +297,7 @@ class ModifyAccountNotification extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifySenderAddressNotification extends V20151123Rpc
+class ModifySenderAddressNotification extends Rpc
 {
 }
 
@@ -324,7 +321,7 @@ class ModifySenderAddressNotification extends V20151123Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetAccountList extends V20151123Rpc
+class GetAccountList extends Rpc
 {
 }
 
@@ -348,7 +345,7 @@ class GetAccountList extends V20151123Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetRegionList extends V20151123Rpc
+class GetRegionList extends Rpc
 {
 }
 
@@ -364,7 +361,7 @@ class GetRegionList extends V20151123Rpc
  * @method string getDomainId()
  * @method $this withDomainId($value)
  */
-class UpdateDomainTrackName extends V20151123Rpc
+class UpdateDomainTrackName extends Rpc
 {
 }
 
@@ -392,7 +389,7 @@ class UpdateDomainTrackName extends V20151123Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class GetTrackList extends V20151123Rpc
+class GetTrackList extends Rpc
 {
 }
 
@@ -406,7 +403,7 @@ class GetTrackList extends V20151123Rpc
  * @method string getDomainId()
  * @method $this withDomainId($value)
  */
-class DescDomain extends V20151123Rpc
+class DescDomain extends Rpc
 {
 }
 
@@ -418,7 +415,7 @@ class DescDomain extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetIpProtection extends V20151123Rpc
+class GetIpProtection extends Rpc
 {
 }
 
@@ -432,7 +429,7 @@ class GetIpProtection extends V20151123Rpc
  * @method string getIpProtection()
  * @method $this withIpProtection($value)
  */
-class UpdateIpProtection extends V20151123Rpc
+class UpdateIpProtection extends Rpc
 {
 }
 
@@ -448,7 +445,7 @@ class UpdateIpProtection extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteIpfilterByEdmId extends V20151123Rpc
+class DeleteIpfilterByEdmId extends Rpc
 {
 }
 
@@ -460,7 +457,7 @@ class DeleteIpfilterByEdmId extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetIpfilterList extends V20151123Rpc
+class GetIpfilterList extends Rpc
 {
 }
 
@@ -474,7 +471,7 @@ class GetIpfilterList extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddIpfilter extends V20151123Rpc
+class AddIpfilter extends Rpc
 {
 }
 
@@ -490,7 +487,7 @@ class AddIpfilter extends V20151123Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class ApproveSmsTemplate extends V20151123Rpc
+class ApproveSmsTemplate extends Rpc
 {
 }
 
@@ -506,7 +503,7 @@ class ApproveSmsTemplate extends V20151123Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class ApproveMailTemplate extends V20151123Rpc
+class ApproveMailTemplate extends Rpc
 {
 }
 
@@ -520,7 +517,7 @@ class ApproveMailTemplate extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteInvalidAddress extends V20151123Rpc
+class DeleteInvalidAddress extends Rpc
 {
 }
 
@@ -534,7 +531,7 @@ class DeleteInvalidAddress extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckInvalidAddress extends V20151123Rpc
+class CheckInvalidAddress extends Rpc
 {
 }
 
@@ -556,7 +553,7 @@ class CheckInvalidAddress extends V20151123Rpc
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class SingleSendSms extends V20151123Rpc
+class SingleSendSms extends Rpc
 {
 }
 
@@ -576,7 +573,7 @@ class SingleSendSms extends V20151123Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QuerySignByParam extends V20151123Rpc
+class QuerySignByParam extends Rpc
 {
 }
 
@@ -594,7 +591,7 @@ class QuerySignByParam extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QuerySmsStatistics extends V20151123Rpc
+class QuerySmsStatistics extends Rpc
 {
 }
 
@@ -608,7 +605,7 @@ class QuerySmsStatistics extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateDayu extends V20151123Rpc
+class CreateDayu extends Rpc
 {
 }
 
@@ -630,7 +627,7 @@ class CreateDayu extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateSign extends V20151123Rpc
+class CreateSign extends Rpc
 {
 }
 
@@ -646,7 +643,7 @@ class CreateSign extends V20151123Rpc
  * @method string getSignId()
  * @method $this withSignId($value)
  */
-class DeleteSign extends V20151123Rpc
+class DeleteSign extends Rpc
 {
 }
 
@@ -666,7 +663,7 @@ class DeleteSign extends V20151123Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QueryReceiverDetail extends V20151123Rpc
+class QueryReceiverDetail extends Rpc
 {
 }
 
@@ -682,7 +679,7 @@ class QueryReceiverDetail extends V20151123Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class DeleteReceiverDetail extends V20151123Rpc
+class DeleteReceiverDetail extends Rpc
 {
 }
 
@@ -704,7 +701,7 @@ class DeleteReceiverDetail extends V20151123Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QueryInvalidAddress extends V20151123Rpc
+class QueryInvalidAddress extends Rpc
 {
 }
 
@@ -732,7 +729,7 @@ class QueryInvalidAddress extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class SenderStatisticsDetailByParam extends V20151123Rpc
+class SenderStatisticsDetailByParam extends Rpc
 {
 }
 
@@ -744,7 +741,7 @@ class SenderStatisticsDetailByParam extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescAccountSummary extends V20151123Rpc
+class DescAccountSummary extends Rpc
 {
 }
 
@@ -764,7 +761,7 @@ class DescAccountSummary extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SenderStatisticsByTagNameAndBatchID extends V20151123Rpc
+class SenderStatisticsByTagNameAndBatchID extends Rpc
 {
 }
 
@@ -792,7 +789,7 @@ class SenderStatisticsByTagNameAndBatchID extends V20151123Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class SendTestByTemplate extends V20151123Rpc
+class SendTestByTemplate extends Rpc
 {
 }
 
@@ -828,7 +825,7 @@ class SendTestByTemplate extends V20151123Rpc
  * @method string getTextBody()
  * @method $this withTextBody($value)
  */
-class SingleSendMail extends V20151123Rpc
+class SingleSendMail extends Rpc
 {
 }
 
@@ -858,7 +855,7 @@ class SingleSendMail extends V20151123Rpc
  * @method string getSmsContent()
  * @method $this withSmsContent($value)
  */
-class ModifyTemplate extends V20151123Rpc
+class ModifyTemplate extends Rpc
 {
 }
 
@@ -878,7 +875,7 @@ class ModifyTemplate extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryDomainByParam extends V20151123Rpc
+class QueryDomainByParam extends Rpc
 {
 }
 
@@ -898,7 +895,7 @@ class QueryDomainByParam extends V20151123Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QueryMailAddressByParam extends V20151123Rpc
+class QueryMailAddressByParam extends Rpc
 {
 }
 
@@ -918,7 +915,7 @@ class QueryMailAddressByParam extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryReceiverByParam extends V20151123Rpc
+class QueryReceiverByParam extends Rpc
 {
 }
 
@@ -936,7 +933,7 @@ class QueryReceiverByParam extends V20151123Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QueryTagByParam extends V20151123Rpc
+class QueryTagByParam extends Rpc
 {
 }
 
@@ -956,7 +953,7 @@ class QueryTagByParam extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryTaskByParam extends V20151123Rpc
+class QueryTaskByParam extends Rpc
 {
 }
 
@@ -978,7 +975,7 @@ class QueryTaskByParam extends V20151123Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryTemplateByParam extends V20151123Rpc
+class QueryTemplateByParam extends Rpc
 {
 }
 
@@ -994,7 +991,7 @@ class QueryTemplateByParam extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SaveReceiverDetail extends V20151123Rpc
+class SaveReceiverDetail extends Rpc
 {
 }
 
@@ -1024,7 +1021,7 @@ class SaveReceiverDetail extends V20151123Rpc
  * @method string getSmsContent()
  * @method $this withSmsContent($value)
  */
-class CreateTemplate extends V20151123Rpc
+class CreateTemplate extends Rpc
 {
 }
 
@@ -1038,7 +1035,7 @@ class CreateTemplate extends V20151123Rpc
  * @method string getDomainId()
  * @method $this withDomainId($value)
  */
-class DeleteDomain extends V20151123Rpc
+class DeleteDomain extends Rpc
 {
 }
 
@@ -1052,7 +1049,7 @@ class DeleteDomain extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteReceiver extends V20151123Rpc
+class DeleteReceiver extends Rpc
 {
 }
 
@@ -1066,7 +1063,7 @@ class DeleteReceiver extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTag extends V20151123Rpc
+class DeleteTag extends Rpc
 {
 }
 
@@ -1082,7 +1079,7 @@ class DeleteTag extends V20151123Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteTemplate extends V20151123Rpc
+class DeleteTemplate extends Rpc
 {
 }
 
@@ -1098,7 +1095,7 @@ class DeleteTemplate extends V20151123Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DescTemplate extends V20151123Rpc
+class DescTemplate extends Rpc
 {
 }
 
@@ -1116,7 +1113,7 @@ class DescTemplate extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyMailAddress extends V20151123Rpc
+class ModifyMailAddress extends Rpc
 {
 }
 
@@ -1132,7 +1129,7 @@ class ModifyMailAddress extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyTag extends V20151123Rpc
+class ModifyTag extends Rpc
 {
 }
 
@@ -1148,7 +1145,7 @@ class ModifyTag extends V20151123Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class ApproveTemplate extends V20151123Rpc
+class ApproveTemplate extends Rpc
 {
 }
 
@@ -1176,7 +1173,7 @@ class ApproveTemplate extends V20151123Rpc
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  */
-class BatchSendMail extends V20151123Rpc
+class BatchSendMail extends Rpc
 {
 }
 
@@ -1190,7 +1187,7 @@ class BatchSendMail extends V20151123Rpc
  * @method string getDomainId()
  * @method $this withDomainId($value)
  */
-class CheckDomain extends V20151123Rpc
+class CheckDomain extends Rpc
 {
 }
 
@@ -1208,7 +1205,7 @@ class CheckDomain extends V20151123Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class CheckReplyToMailAddress extends V20151123Rpc
+class CheckReplyToMailAddress extends Rpc
 {
 }
 
@@ -1222,7 +1219,7 @@ class CheckReplyToMailAddress extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateDomain extends V20151123Rpc
+class CreateDomain extends Rpc
 {
 }
 
@@ -1240,7 +1237,7 @@ class CreateDomain extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateMailAddress extends V20151123Rpc
+class CreateMailAddress extends Rpc
 {
 }
 
@@ -1258,7 +1255,7 @@ class CreateMailAddress extends V20151123Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class CreateReceiver extends V20151123Rpc
+class CreateReceiver extends Rpc
 {
 }
 
@@ -1272,7 +1269,7 @@ class CreateReceiver extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateTag extends V20151123Rpc
+class CreateTag extends Rpc
 {
 }
 
@@ -1286,6 +1283,6 @@ class CreateTag extends V20151123Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ApproveReplyMailAddress extends V20151123Rpc
+class ApproveReplyMailAddress extends Rpc
 {
 }

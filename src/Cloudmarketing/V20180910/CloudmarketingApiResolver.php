@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cloudmarketing\V20180910;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteCrowd deleteCrowd(array $options = [])
  * @method FetchCrowdDefine fetchCrowdDefine(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
@@ -48,7 +45,7 @@ class CloudmarketingApiResolver
     use ApiResolverTrait;
 }
 
-class V20180910Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'cloudmarketing';
@@ -64,7 +61,7 @@ class V20180910Rpc extends Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class DeleteCrowd extends V20180910Rpc
+class DeleteCrowd extends Rpc
 {
 }
 
@@ -72,7 +69,7 @@ class DeleteCrowd extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class FetchCrowdDefine extends V20180910Rpc
+class FetchCrowdDefine extends Rpc
 {
 }
 
@@ -80,14 +77,14 @@ class FetchCrowdDefine extends V20180910Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class DeleteFile extends V20180910Rpc
+class DeleteFile extends Rpc
 {
 }
 
 /**
  * @method string getRequestJsonData()
  */
-class UpdateCrowd extends V20180910Rpc
+class UpdateCrowd extends Rpc
 {
 
     /**
@@ -110,7 +107,7 @@ class UpdateCrowd extends V20180910Rpc
  * @method string getOssPath()
  * @method $this withOssPath($value)
  */
-class ProcessAfterUploadFile extends V20180910Rpc
+class ProcessAfterUploadFile extends Rpc
 {
 }
 
@@ -123,7 +120,7 @@ class ProcessAfterUploadFile extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class SyncCrowd extends V20180910Rpc
+class SyncCrowd extends Rpc
 {
 
     /**
@@ -147,7 +144,7 @@ class SyncCrowd extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class DownloadUDReport extends V20180910Rpc
+class DownloadUDReport extends Rpc
 {
 }
 
@@ -155,7 +152,7 @@ class DownloadUDReport extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class DownloadCrowd extends V20180910Rpc
+class DownloadCrowd extends Rpc
 {
 }
 
@@ -163,7 +160,7 @@ class DownloadCrowd extends V20180910Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class FetchFileSchemaData extends V20180910Rpc
+class FetchFileSchemaData extends Rpc
 {
 }
 
@@ -171,14 +168,14 @@ class FetchFileSchemaData extends V20180910Rpc
  * @method string getTagId()
  * @method $this withTagId($value)
  */
-class FetchTag extends V20180910Rpc
+class FetchTag extends Rpc
 {
 }
 
 /**
  * @method string getRequestJsonData()
  */
-class UpdateCategory extends V20180910Rpc
+class UpdateCategory extends Rpc
 {
 
     /**
@@ -198,7 +195,7 @@ class UpdateCategory extends V20180910Rpc
 /**
  * @method array getAccountIds()
  */
-class DescribeAuthBrand extends V20180910Rpc
+class DescribeAuthBrand extends Rpc
 {
 
     /**
@@ -224,7 +221,7 @@ class DescribeAuthBrand extends V20180910Rpc
  * @method string getFavorite()
  * @method $this withFavorite($value)
  */
-class FavoriteTag extends V20180910Rpc
+class FavoriteTag extends Rpc
 {
 
     /**
@@ -258,7 +255,7 @@ class FavoriteTag extends V20180910Rpc
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
-class DescribeTag extends V20180910Rpc
+class DescribeTag extends Rpc
 {
 
     /**
@@ -284,7 +281,7 @@ class DescribeTag extends V20180910Rpc
  * @method $this withBrandId($value)
  * @method array getChannelBrandReqs()
  */
-class Auth2Brand extends V20180910Rpc
+class Auth2Brand extends Rpc
 {
 
     /**
@@ -311,7 +308,7 @@ class Auth2Brand extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class AnalysisCrowd extends V20180910Rpc
+class AnalysisCrowd extends Rpc
 {
 
     /**
@@ -334,7 +331,7 @@ class AnalysisCrowd extends V20180910Rpc
  * @method string getCrowdId()
  * @method $this withCrowdId($value)
  */
-class FetchCrowd extends V20180910Rpc
+class FetchCrowd extends Rpc
 {
 }
 
@@ -350,14 +347,14 @@ class FetchCrowd extends V20180910Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class DescribeCrowd extends V20180910Rpc
+class DescribeCrowd extends Rpc
 {
 }
 
 /**
  * @method string getRequestJsonData()
  */
-class CalCrowdScale extends V20180910Rpc
+class CalCrowdScale extends Rpc
 {
 
     /**
@@ -377,7 +374,7 @@ class CalCrowdScale extends V20180910Rpc
 /**
  * @method string getRequestJsonData()
  */
-class DefineCrowd extends V20180910Rpc
+class DefineCrowd extends Rpc
 {
 
     /**
@@ -400,7 +397,7 @@ class DefineCrowd extends V20180910Rpc
  * @method string getRecursive()
  * @method $this withRecursive($value)
  */
-class DescribeCategory extends V20180910Rpc
+class DescribeCategory extends Rpc
 {
 }
 
@@ -415,7 +412,7 @@ class DescribeCategory extends V20180910Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class DescribeFile extends V20180910Rpc
+class DescribeFile extends Rpc
 {
 
     /**
@@ -439,7 +436,7 @@ class DescribeFile extends V20180910Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class DefineFileSchema extends V20180910Rpc
+class DefineFileSchema extends Rpc
 {
 
     /**
@@ -462,7 +459,7 @@ class DefineFileSchema extends V20180910Rpc
     }
 }
 
-class RequestUploadFile extends V20180910Rpc
+class RequestUploadFile extends Rpc
 {
 }
 
@@ -472,7 +469,7 @@ class RequestUploadFile extends V20180910Rpc
  * @method string getOssPath()
  * @method $this withOssPath($value)
  */
-class ProcessAfterUpload extends V20180910Rpc
+class ProcessAfterUpload extends Rpc
 {
 }
 
@@ -480,15 +477,15 @@ class ProcessAfterUpload extends V20180910Rpc
  * @method string getFileId()
  * @method $this withFileId($value)
  */
-class FetchFileSchema extends V20180910Rpc
+class FetchFileSchema extends Rpc
 {
 }
 
-class DescribeAuthChannelBrand extends V20180910Rpc
+class DescribeAuthChannelBrand extends Rpc
 {
 }
 
-class DescribeChannelBrand extends V20180910Rpc
+class DescribeChannelBrand extends Rpc
 {
 }
 
@@ -498,7 +495,7 @@ class DescribeChannelBrand extends V20180910Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateCategory extends V20180910Rpc
+class CreateCategory extends Rpc
 {
 }
 
@@ -507,7 +504,7 @@ class CreateCategory extends V20180910Rpc
  * @method string getName()
  * @method string getPageSize()
  */
-class DescribeBrand extends V20180910Rpc
+class DescribeBrand extends Rpc
 {
 
     /**
@@ -555,7 +552,7 @@ class DescribeBrand extends V20180910Rpc
  * @method string getId()
  * @method string getDesc()
  */
-class UpdateBrand extends V20180910Rpc
+class UpdateBrand extends Rpc
 {
 
     /**
@@ -604,7 +601,7 @@ class UpdateBrand extends V20180910Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class CreateBrand extends V20180910Rpc
+class CreateBrand extends Rpc
 {
 }
 
@@ -620,7 +617,7 @@ class CreateBrand extends V20180910Rpc
  * @method string getCategoryId()
  * @method string getFileId()
  */
-class RedefineTag extends V20180910Rpc
+class RedefineTag extends Rpc
 {
 
     /**
@@ -742,7 +739,7 @@ class RedefineTag extends V20180910Rpc
  * @method string getCategoryId()
  * @method string getFileId()
  */
-class DefineTag extends V20180910Rpc
+class DefineTag extends Rpc
 {
 
     /**

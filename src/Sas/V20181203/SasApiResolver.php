@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Sas\V20181203;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyAssetGroup modifyAssetGroup(array $options = [])
  * @method DescribeAssetDetailByUuid describeAssetDetailByUuid(array $options = [])
  * @method DescribeSasLeftCondition describeSasLeftCondition(array $options = [])
@@ -52,7 +49,7 @@ class SasApiResolver
     use ApiResolverTrait;
 }
 
-class V20181203Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Sas';
@@ -75,7 +72,7 @@ class V20181203Rpc extends Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ModifyAssetGroup extends V20181203Rpc
+class ModifyAssetGroup extends Rpc
 {
 }
 
@@ -87,7 +84,7 @@ class ModifyAssetGroup extends V20181203Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeAssetDetailByUuid extends V20181203Rpc
+class DescribeAssetDetailByUuid extends Rpc
 {
 }
 
@@ -101,7 +98,7 @@ class DescribeAssetDetailByUuid extends V20181203Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class DescribeSasLeftCondition extends V20181203Rpc
+class DescribeSasLeftCondition extends Rpc
 {
 }
 
@@ -109,7 +106,7 @@ class DescribeSasLeftCondition extends V20181203Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeGroupStruct extends V20181203Rpc
+class DescribeGroupStruct extends Rpc
 {
 }
 
@@ -125,7 +122,7 @@ class DescribeGroupStruct extends V20181203Rpc
  * @method string getFilterConditions()
  * @method $this withFilterConditions($value)
  */
-class DescribeAssetList extends V20181203Rpc
+class DescribeAssetList extends Rpc
 {
 }
 
@@ -137,7 +134,7 @@ class DescribeAssetList extends V20181203Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class ModifyPushAllTask extends V20181203Rpc
+class ModifyPushAllTask extends Rpc
 {
 }
 
@@ -149,7 +146,7 @@ class ModifyPushAllTask extends V20181203Rpc
  * @method string getCheckWarningId()
  * @method $this withCheckWarningId($value)
  */
-class DescribeCheckWarningDetail extends V20181203Rpc
+class DescribeCheckWarningDetail extends Rpc
 {
 }
 
@@ -171,7 +168,7 @@ class DescribeCheckWarningDetail extends V20181203Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeWarningMachines extends V20181203Rpc
+class DescribeWarningMachines extends Rpc
 {
 }
 
@@ -197,7 +194,7 @@ class DescribeWarningMachines extends V20181203Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeCheckWarningSummary extends V20181203Rpc
+class DescribeCheckWarningSummary extends Rpc
 {
 }
 
@@ -207,7 +204,7 @@ class DescribeCheckWarningSummary extends V20181203Rpc
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
  */
-class DescribeStrategyExecDetail extends V20181203Rpc
+class DescribeStrategyExecDetail extends Rpc
 {
 }
 
@@ -225,7 +222,7 @@ class DescribeStrategyExecDetail extends V20181203Rpc
  * @method string getUuid()
  * @method $this withUuid($value)
  */
-class DescribeCheckWarnings extends V20181203Rpc
+class DescribeCheckWarnings extends Rpc
 {
 }
 
@@ -237,7 +234,7 @@ class DescribeCheckWarnings extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeStratety extends V20181203Rpc
+class DescribeStratety extends Rpc
 {
 }
 
@@ -249,7 +246,7 @@ class DescribeStratety extends V20181203Rpc
  * @method string getWhitelist()
  * @method $this withWhitelist($value)
  */
-class ModifyCreateVulWhitelist extends V20181203Rpc
+class ModifyCreateVulWhitelist extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class ModifyCreateVulWhitelist extends V20181203Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeAutoDelConfig extends V20181203Rpc
+class DescribeAutoDelConfig extends Rpc
 {
 }
 
@@ -267,7 +264,7 @@ class DescribeAutoDelConfig extends V20181203Rpc
  * @method string getDays()
  * @method $this withDays($value)
  */
-class ModifyAutoDelConfig extends V20181203Rpc
+class ModifyAutoDelConfig extends Rpc
 {
 }
 
@@ -279,7 +276,7 @@ class ModifyAutoDelConfig extends V20181203Rpc
  * @method string getConcernNecessity()
  * @method $this withConcernNecessity($value)
  */
-class ModifyConcernNecessity extends V20181203Rpc
+class ModifyConcernNecessity extends Rpc
 {
 }
 
@@ -289,7 +286,7 @@ class ModifyConcernNecessity extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeConcernNecessity extends V20181203Rpc
+class DescribeConcernNecessity extends Rpc
 {
 }
 
@@ -301,7 +298,7 @@ class DescribeConcernNecessity extends V20181203Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class DescribeVulWhitelist extends V20181203Rpc
+class DescribeVulWhitelist extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class DescribeVulWhitelist extends V20181203Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeGroupedVul extends V20181203Rpc
+class DescribeGroupedVul extends Rpc
 {
 }
 
@@ -341,7 +338,7 @@ class DescribeGroupedVul extends V20181203Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class DescribeVulDetails extends V20181203Rpc
+class DescribeVulDetails extends Rpc
 {
 }
 
@@ -351,7 +348,7 @@ class DescribeVulDetails extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeEmgVulGroup extends V20181203Rpc
+class DescribeEmgVulGroup extends Rpc
 {
 }
 
@@ -377,7 +374,7 @@ class DescribeEmgVulGroup extends V20181203Rpc
  * @method string getUuids()
  * @method $this withUuids($value)
  */
-class DescribeVulList extends V20181203Rpc
+class DescribeVulList extends Rpc
 {
 }
 
@@ -393,7 +390,7 @@ class DescribeVulList extends V20181203Rpc
  * @method string getInfo()
  * @method $this withInfo($value)
  */
-class ModifyOperateVul extends V20181203Rpc
+class ModifyOperateVul extends Rpc
 {
 }
 
@@ -407,7 +404,7 @@ class ModifyOperateVul extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifyEmgVulSubmit extends V20181203Rpc
+class ModifyEmgVulSubmit extends Rpc
 {
 }
 
@@ -417,7 +414,7 @@ class ModifyEmgVulSubmit extends V20181203Rpc
  * @method string getWhitelist()
  * @method $this withWhitelist($value)
  */
-class ModifyDeleteVulWhitelist extends V20181203Rpc
+class ModifyDeleteVulWhitelist extends Rpc
 {
 }
 
@@ -429,7 +426,7 @@ class ModifyDeleteVulWhitelist extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeUserBaselineAuthorization extends V20181203Rpc
+class DescribeUserBaselineAuthorization extends Rpc
 {
 }
 
@@ -441,7 +438,7 @@ class DescribeUserBaselineAuthorization extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeRiskItemType extends V20181203Rpc
+class DescribeRiskItemType extends Rpc
 {
 }
 
@@ -459,7 +456,7 @@ class DescribeRiskItemType extends V20181203Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyRiskCheckStatus extends V20181203Rpc
+class ModifyRiskCheckStatus extends Rpc
 {
 }
 
@@ -476,7 +473,7 @@ class ModifyRiskCheckStatus extends V20181203Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ModifyRiskSingleResultStatus extends V20181203Rpc
+class ModifyRiskSingleResultStatus extends Rpc
 {
 
     /**
@@ -503,7 +500,7 @@ class ModifyRiskSingleResultStatus extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeRiskCheckSummary extends V20181203Rpc
+class DescribeRiskCheckSummary extends Rpc
 {
 }
 
@@ -515,7 +512,7 @@ class DescribeRiskCheckSummary extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSecurityCheckScheduleConfig extends V20181203Rpc
+class DescribeSecurityCheckScheduleConfig extends Rpc
 {
 }
 
@@ -531,7 +528,7 @@ class DescribeSecurityCheckScheduleConfig extends V20181203Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class StartBaselineSecurityCheck extends V20181203Rpc
+class StartBaselineSecurityCheck extends Rpc
 {
 
     /**
@@ -583,7 +580,7 @@ class StartBaselineSecurityCheck extends V20181203Rpc
  * @method string getRiskLevel()
  * @method $this withRiskLevel($value)
  */
-class DescribeRiskCheckResult extends V20181203Rpc
+class DescribeRiskCheckResult extends Rpc
 {
 }
 
@@ -601,7 +598,7 @@ class DescribeRiskCheckResult extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class ModifySecurityCheckScheduleConfig extends V20181203Rpc
+class ModifySecurityCheckScheduleConfig extends Rpc
 {
 }
 
@@ -629,7 +626,7 @@ class ModifySecurityCheckScheduleConfig extends V20181203Rpc
  * @method string getParentEventTypes()
  * @method $this withParentEventTypes($value)
  */
-class DescribeSuspEvents extends V20181203Rpc
+class DescribeSuspEvents extends Rpc
 {
 }
 
@@ -643,7 +640,7 @@ class DescribeSuspEvents extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSuspEventDetail extends V20181203Rpc
+class DescribeSuspEventDetail extends Rpc
 {
 }
 
@@ -657,7 +654,7 @@ class DescribeSuspEventDetail extends V20181203Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeAlarmEventDetail extends V20181203Rpc
+class DescribeAlarmEventDetail extends Rpc
 {
 }
 
@@ -683,6 +680,6 @@ class DescribeAlarmEventDetail extends V20181203Rpc
  * @method string getLevels()
  * @method $this withLevels($value)
  */
-class DescribeAlarmEventList extends V20181203Rpc
+class DescribeAlarmEventList extends Rpc
 {
 }

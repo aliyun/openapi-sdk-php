@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Alimt\V20181012;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])
  */
@@ -16,7 +13,7 @@ class AlimtApiResolver
     use ApiResolverTrait;
 }
 
-class V20181012Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'alimt';
@@ -38,7 +35,7 @@ class V20181012Rpc extends Rpc
  * @method string getTargetLanguage()
  * @method string getScene()
  */
-class TranslateECommerce extends V20181012Rpc
+class TranslateECommerce extends Rpc
 {
 
     /**
@@ -114,7 +111,7 @@ class TranslateECommerce extends V20181012Rpc
  * @method string getTargetLanguage()
  * @method string getScene()
  */
-class TranslateGeneral extends V20181012Rpc
+class TranslateGeneral extends Rpc
 {
 
     /**

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Mts\V20140618;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryFpCompareJobList queryFpCompareJobList(array $options = [])
  * @method SubmitBeautifyJobs submitBeautifyJobs(array $options = [])
  * @method SubmitFpCompareJob submitFpCompareJob(array $options = [])
@@ -198,7 +195,7 @@ class MtsApiResolver
     use ApiResolverTrait;
 }
 
-class V20140618Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Mts';
@@ -225,7 +222,7 @@ class V20140618Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryFpCompareJobList extends V20140618Rpc
+class QueryFpCompareJobList extends Rpc
 {
 }
 
@@ -247,7 +244,7 @@ class QueryFpCompareJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitBeautifyJobs extends V20140618Rpc
+class SubmitBeautifyJobs extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class SubmitBeautifyJobs extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitFpCompareJob extends V20140618Rpc
+class SubmitFpCompareJob extends Rpc
 {
 }
 
@@ -310,7 +307,7 @@ class SubmitFpCompareJob extends V20140618Rpc
  * @method string getLive()
  * @method $this withLive($value)
  */
-class UpdateMCTemplate extends V20140618Rpc
+class UpdateMCTemplate extends Rpc
 {
 
     /**
@@ -339,7 +336,7 @@ class UpdateMCTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMCTemplateList extends V20140618Rpc
+class QueryMCTemplateList extends Rpc
 {
 }
 
@@ -367,7 +364,7 @@ class QueryMCTemplateList extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryMCJobList extends V20140618Rpc
+class QueryMCJobList extends Rpc
 {
 }
 
@@ -402,7 +399,7 @@ class QueryMCJobList extends V20140618Rpc
  * @method string getLive()
  * @method $this withLive($value)
  */
-class AddMCTemplate extends V20140618Rpc
+class AddMCTemplate extends Rpc
 {
 
     /**
@@ -431,7 +428,7 @@ class AddMCTemplate extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteMCTemplate extends V20140618Rpc
+class DeleteMCTemplate extends Rpc
 {
 }
 
@@ -447,7 +444,7 @@ class DeleteMCTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryCensorTemplateList extends V20140618Rpc
+class QueryCensorTemplateList extends Rpc
 {
 }
 
@@ -473,7 +470,7 @@ class QueryCensorTemplateList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitMCJob extends V20140618Rpc
+class SubmitMCJob extends Rpc
 {
 }
 
@@ -489,7 +486,7 @@ class SubmitMCJob extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteCensorTemplate extends V20140618Rpc
+class DeleteCensorTemplate extends Rpc
 {
 }
 
@@ -526,7 +523,7 @@ class DeleteCensorTemplate extends V20140618Rpc
  * @method string getLive()
  * @method $this withLive($value)
  */
-class UpdateCensorTemplate extends V20140618Rpc
+class UpdateCensorTemplate extends Rpc
 {
 
     /**
@@ -574,7 +571,7 @@ class UpdateCensorTemplate extends V20140618Rpc
  * @method string getLive()
  * @method $this withLive($value)
  */
-class AddCensorTemplate extends V20140618Rpc
+class AddCensorTemplate extends Rpc
 {
 
     /**
@@ -603,7 +600,7 @@ class AddCensorTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaFpDeleteJobList extends V20140618Rpc
+class QueryMediaFpDeleteJobList extends Rpc
 {
 }
 
@@ -625,7 +622,7 @@ class QueryMediaFpDeleteJobList extends V20140618Rpc
  * @method string getPrimaryKey()
  * @method $this withPrimaryKey($value)
  */
-class SubmitMediaFpDeleteJob extends V20140618Rpc
+class SubmitMediaFpDeleteJob extends Rpc
 {
 }
 
@@ -641,7 +638,7 @@ class SubmitMediaFpDeleteJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMcuJob extends V20140618Rpc
+class DeleteMcuJob extends Rpc
 {
 }
 
@@ -657,7 +654,7 @@ class DeleteMcuJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateMcuTemplate extends V20140618Rpc
+class CreateMcuTemplate extends Rpc
 {
 }
 
@@ -675,7 +672,7 @@ class CreateMcuTemplate extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class UpdateMcuTemplate extends V20140618Rpc
+class UpdateMcuTemplate extends Rpc
 {
 }
 
@@ -699,7 +696,7 @@ class UpdateMcuTemplate extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitMcuJob extends V20140618Rpc
+class SubmitMcuJob extends Rpc
 {
 }
 
@@ -715,7 +712,7 @@ class SubmitMcuJob extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class QueryMcuTemplate extends V20140618Rpc
+class QueryMcuTemplate extends Rpc
 {
 }
 
@@ -731,7 +728,7 @@ class QueryMcuTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMcuJob extends V20140618Rpc
+class QueryMcuJob extends Rpc
 {
 }
 
@@ -747,7 +744,7 @@ class QueryMcuJob extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteMcuTemplate extends V20140618Rpc
+class DeleteMcuTemplate extends Rpc
 {
 }
 
@@ -757,7 +754,7 @@ class DeleteMcuTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMtsUserResourcePackage extends V20140618Rpc
+class DescribeMtsUserResourcePackage extends Rpc
 {
 }
 
@@ -773,7 +770,7 @@ class DescribeMtsUserResourcePackage extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryImageSearchJobList extends V20140618Rpc
+class QueryImageSearchJobList extends Rpc
 {
 }
 
@@ -799,7 +796,7 @@ class QueryImageSearchJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitImageSearchJob extends V20140618Rpc
+class SubmitImageSearchJob extends Rpc
 {
 }
 
@@ -827,7 +824,7 @@ class SubmitImageSearchJob extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryMediaCensorJobList extends V20140618Rpc
+class QueryMediaCensorJobList extends Rpc
 {
 }
 
@@ -853,7 +850,7 @@ class QueryMediaCensorJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class ListMediaCensorJob extends V20140618Rpc
+class ListMediaCensorJob extends Rpc
 {
 }
 
@@ -879,7 +876,7 @@ class ListMediaCensorJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class ListFpShotJob extends V20140618Rpc
+class ListFpShotJob extends Rpc
 {
 }
 
@@ -901,7 +898,7 @@ class ListFpShotJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryFpImportResult extends V20140618Rpc
+class QueryFpImportResult extends Rpc
 {
 }
 
@@ -923,7 +920,7 @@ class QueryFpImportResult extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitVideoPoseJob extends V20140618Rpc
+class SubmitVideoPoseJob extends Rpc
 {
 }
 
@@ -939,7 +936,7 @@ class SubmitVideoPoseJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoPoseJobList extends V20140618Rpc
+class QueryVideoPoseJobList extends Rpc
 {
 }
 
@@ -959,7 +956,7 @@ class QueryVideoPoseJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaCensorJobDetail extends V20140618Rpc
+class QueryMediaCensorJobDetail extends Rpc
 {
 }
 
@@ -989,7 +986,7 @@ class QueryMediaCensorJobDetail extends V20140618Rpc
  * @method string getBarrages()
  * @method $this withBarrages($value)
  */
-class SubmitMediaCensorJob extends V20140618Rpc
+class SubmitMediaCensorJob extends Rpc
 {
 }
 
@@ -1005,7 +1002,7 @@ class SubmitMediaCensorJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryComplexJobList extends V20140618Rpc
+class QueryComplexJobList extends Rpc
 {
 }
 
@@ -1033,7 +1030,7 @@ class QueryComplexJobList extends V20140618Rpc
  * @method string getComplexConfigs()
  * @method $this withComplexConfigs($value)
  */
-class SubmitComplexJob extends V20140618Rpc
+class SubmitComplexJob extends Rpc
 {
 }
 
@@ -1055,7 +1052,7 @@ class SubmitComplexJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitSubtitleJob extends V20140618Rpc
+class SubmitSubtitleJob extends Rpc
 {
 }
 
@@ -1071,7 +1068,7 @@ class SubmitSubtitleJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QuerySubtitleJobList extends V20140618Rpc
+class QuerySubtitleJobList extends Rpc
 {
 }
 
@@ -1091,7 +1088,7 @@ class QuerySubtitleJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitImageQuality extends V20140618Rpc
+class SubmitImageQuality extends Rpc
 {
 }
 
@@ -1119,7 +1116,7 @@ class SubmitImageQuality extends V20140618Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class LogicalDeleteResource extends V20140618Rpc
+class LogicalDeleteResource extends Rpc
 {
 }
 
@@ -1147,7 +1144,7 @@ class LogicalDeleteResource extends V20140618Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class PhysicalDeleteResource extends V20140618Rpc
+class PhysicalDeleteResource extends Rpc
 {
 }
 
@@ -1181,7 +1178,7 @@ class PhysicalDeleteResource extends V20140618Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class CheckResource extends V20140618Rpc
+class CheckResource extends Rpc
 {
 }
 
@@ -1195,7 +1192,7 @@ class CheckResource extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAllMediaStorage extends V20140618Rpc
+class ListAllMediaStorage extends Rpc
 {
 }
 
@@ -1211,7 +1208,7 @@ class ListAllMediaStorage extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnindInputBucket extends V20140618Rpc
+class UnindInputBucket extends Rpc
 {
 }
 
@@ -1231,7 +1228,7 @@ class UnindInputBucket extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitImageQualityJob extends V20140618Rpc
+class SubmitImageQualityJob extends Rpc
 {
 }
 
@@ -1247,7 +1244,7 @@ class SubmitImageQualityJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoGifJobList extends V20140618Rpc
+class QueryVideoGifJobList extends Rpc
 {
 }
 
@@ -1269,7 +1266,7 @@ class QueryVideoGifJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitVideoGifJob extends V20140618Rpc
+class SubmitVideoGifJob extends Rpc
 {
 }
 
@@ -1287,7 +1284,7 @@ class SubmitVideoGifJob extends V20140618Rpc
  * @method string getTriggerMode()
  * @method $this withTriggerMode($value)
  */
-class UpdateMediaWorkflowTriggerMode extends V20140618Rpc
+class UpdateMediaWorkflowTriggerMode extends Rpc
 {
 }
 
@@ -1303,7 +1300,7 @@ class UpdateMediaWorkflowTriggerMode extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetPackage extends V20140618Rpc
+class GetPackage extends Rpc
 {
 }
 
@@ -1325,7 +1322,7 @@ class GetPackage extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitFpShotJob extends V20140618Rpc
+class SubmitFpShotJob extends Rpc
 {
 }
 
@@ -1345,7 +1342,7 @@ class SubmitFpShotJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportFpShotJobResult extends V20140618Rpc
+class ReportFpShotJobResult extends Rpc
 {
 }
 
@@ -1375,7 +1372,7 @@ class ReportFpShotJobResult extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryFpShotJobList extends V20140618Rpc
+class QueryFpShotJobList extends Rpc
 {
 }
 
@@ -1399,7 +1396,7 @@ class QueryFpShotJobList extends V20140618Rpc
  * @method string getLicenseUrl()
  * @method $this withLicenseUrl($value)
  */
-class GetLicense extends V20140618Rpc
+class GetLicense extends Rpc
 {
 }
 
@@ -1419,7 +1416,7 @@ class GetLicense extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class CreateSession extends V20140618Rpc
+class CreateSession extends Rpc
 {
 }
 
@@ -1441,7 +1438,7 @@ class CreateSession extends V20140618Rpc
  * @method string getPersonName()
  * @method $this withPersonName($value)
  */
-class RegisterMediaDetailPerson extends V20140618Rpc
+class RegisterMediaDetailPerson extends Rpc
 {
 }
 
@@ -1463,7 +1460,7 @@ class RegisterMediaDetailPerson extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitVideoSplitJob extends V20140618Rpc
+class SubmitVideoSplitJob extends Rpc
 {
 }
 
@@ -1483,7 +1480,7 @@ class SubmitVideoSplitJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportVideoSplitJobResult extends V20140618Rpc
+class ReportVideoSplitJobResult extends Rpc
 {
 }
 
@@ -1499,7 +1496,7 @@ class ReportVideoSplitJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoSplitJobList extends V20140618Rpc
+class QueryVideoSplitJobList extends Rpc
 {
 }
 
@@ -1521,7 +1518,7 @@ class QueryVideoSplitJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitMediaDetailJob extends V20140618Rpc
+class SubmitMediaDetailJob extends Rpc
 {
 }
 
@@ -1541,7 +1538,7 @@ class SubmitMediaDetailJob extends V20140618Rpc
  * @method string getResults()
  * @method $this withResults($value)
  */
-class ReportMediaDetailJobResult extends V20140618Rpc
+class ReportMediaDetailJobResult extends Rpc
 {
 }
 
@@ -1559,7 +1556,7 @@ class ReportMediaDetailJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RegisterMediaDetailScenario extends V20140618Rpc
+class RegisterMediaDetailScenario extends Rpc
 {
 }
 
@@ -1575,7 +1572,7 @@ class RegisterMediaDetailScenario extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaDetailJobList extends V20140618Rpc
+class QueryMediaDetailJobList extends Rpc
 {
 }
 
@@ -1597,7 +1594,7 @@ class QueryMediaDetailJobList extends V20140618Rpc
  * @method string getExtendConfig()
  * @method $this withExtendConfig($value)
  */
-class UpdateKwsDictionary extends V20140618Rpc
+class UpdateKwsDictionary extends Rpc
 {
 }
 
@@ -1621,7 +1618,7 @@ class UpdateKwsDictionary extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateKwsPipeline extends V20140618Rpc
+class UpdateKwsPipeline extends Rpc
 {
 }
 
@@ -1643,7 +1640,7 @@ class UpdateKwsPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitKwsJob extends V20140618Rpc
+class SubmitKwsJob extends Rpc
 {
 }
 
@@ -1659,7 +1656,7 @@ class SubmitKwsJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryKwsJobList extends V20140618Rpc
+class QueryKwsJobList extends Rpc
 {
 }
 
@@ -1675,7 +1672,7 @@ class QueryKwsJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryKwsPipelineList extends V20140618Rpc
+class QueryKwsPipelineList extends Rpc
 {
 }
 
@@ -1691,7 +1688,7 @@ class QueryKwsPipelineList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryKwsDictionary extends V20140618Rpc
+class QueryKwsDictionary extends Rpc
 {
 }
 
@@ -1711,7 +1708,7 @@ class QueryKwsDictionary extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListKwsPipeline extends V20140618Rpc
+class ListKwsPipeline extends Rpc
 {
 }
 
@@ -1727,7 +1724,7 @@ class ListKwsPipeline extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteKwsDictionary extends V20140618Rpc
+class DeleteKwsDictionary extends Rpc
 {
 }
 
@@ -1747,7 +1744,7 @@ class DeleteKwsDictionary extends V20140618Rpc
  * @method string getExtendConfig()
  * @method $this withExtendConfig($value)
  */
-class CreateKwsDictionary extends V20140618Rpc
+class CreateKwsDictionary extends Rpc
 {
 }
 
@@ -1767,7 +1764,7 @@ class CreateKwsDictionary extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddKwsPipeline extends V20140618Rpc
+class AddKwsPipeline extends Rpc
 {
 }
 
@@ -1789,7 +1786,7 @@ class AddKwsPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitFacerecogJob extends V20140618Rpc
+class SubmitFacerecogJob extends Rpc
 {
 }
 
@@ -1811,7 +1808,7 @@ class SubmitFacerecogJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitAnnotationJob extends V20140618Rpc
+class SubmitAnnotationJob extends Rpc
 {
 }
 
@@ -1831,7 +1828,7 @@ class SubmitAnnotationJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportFacerecogJobResult extends V20140618Rpc
+class ReportFacerecogJobResult extends Rpc
 {
 }
 
@@ -1851,7 +1848,7 @@ class ReportFacerecogJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportAnnotationJobResult extends V20140618Rpc
+class ReportAnnotationJobResult extends Rpc
 {
 }
 
@@ -1867,7 +1864,7 @@ class ReportAnnotationJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryFacerecogJobList extends V20140618Rpc
+class QueryFacerecogJobList extends Rpc
 {
 }
 
@@ -1883,7 +1880,7 @@ class QueryFacerecogJobList extends V20140618Rpc
  * @method string getAnnotationJobIds()
  * @method $this withAnnotationJobIds($value)
  */
-class QueryAnnotationJobList extends V20140618Rpc
+class QueryAnnotationJobList extends Rpc
 {
 }
 
@@ -1905,7 +1902,7 @@ class QueryAnnotationJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitTagJob extends V20140618Rpc
+class SubmitTagJob extends Rpc
 {
 }
 
@@ -1925,7 +1922,7 @@ class SubmitTagJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportTagJobResult extends V20140618Rpc
+class ReportTagJobResult extends Rpc
 {
 }
 
@@ -1941,7 +1938,7 @@ class ReportTagJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTagJobList extends V20140618Rpc
+class QueryTagJobList extends Rpc
 {
 }
 
@@ -1965,7 +1962,7 @@ class QueryTagJobList extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateTerrorismPipeline extends V20140618Rpc
+class UpdateTerrorismPipeline extends Rpc
 {
 }
 
@@ -1987,7 +1984,7 @@ class UpdateTerrorismPipeline extends V20140618Rpc
  * @method string getTerrorismConfig()
  * @method $this withTerrorismConfig($value)
  */
-class SubmitTerrorismJob extends V20140618Rpc
+class SubmitTerrorismJob extends Rpc
 {
 }
 
@@ -2007,7 +2004,7 @@ class SubmitTerrorismJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportTerrorismJobResult extends V20140618Rpc
+class ReportTerrorismJobResult extends Rpc
 {
 }
 
@@ -2023,7 +2020,7 @@ class ReportTerrorismJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTerrorismJobList extends V20140618Rpc
+class QueryTerrorismJobList extends Rpc
 {
 }
 
@@ -2039,7 +2036,7 @@ class QueryTerrorismJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTerrorismPipelineList extends V20140618Rpc
+class QueryTerrorismPipelineList extends Rpc
 {
 }
 
@@ -2059,7 +2056,7 @@ class QueryTerrorismPipelineList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListTerrorismPipeline extends V20140618Rpc
+class ListTerrorismPipeline extends Rpc
 {
 }
 
@@ -2079,7 +2076,7 @@ class ListTerrorismPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddTerrorismPipeline extends V20140618Rpc
+class AddTerrorismPipeline extends Rpc
 {
 }
 
@@ -2103,7 +2100,7 @@ class AddTerrorismPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateCensorPipeline extends V20140618Rpc
+class UpdateCensorPipeline extends Rpc
 {
 }
 
@@ -2123,7 +2120,7 @@ class UpdateCensorPipeline extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportCensorJobResult extends V20140618Rpc
+class ReportCensorJobResult extends Rpc
 {
 }
 
@@ -2151,7 +2148,7 @@ class ReportCensorJobResult extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryCensorJobList extends V20140618Rpc
+class QueryCensorJobList extends Rpc
 {
 }
 
@@ -2167,7 +2164,7 @@ class QueryCensorJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryCensorPipelineList extends V20140618Rpc
+class QueryCensorPipelineList extends Rpc
 {
 }
 
@@ -2187,7 +2184,7 @@ class QueryCensorPipelineList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListCensorPipeline extends V20140618Rpc
+class ListCensorPipeline extends Rpc
 {
 }
 
@@ -2207,7 +2204,7 @@ class ListCensorPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddCensorPipeline extends V20140618Rpc
+class AddCensorPipeline extends Rpc
 {
 }
 
@@ -2231,7 +2228,7 @@ class AddCensorPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateVideoSummaryPipeline extends V20140618Rpc
+class UpdateVideoSummaryPipeline extends Rpc
 {
 }
 
@@ -2253,7 +2250,7 @@ class UpdateVideoSummaryPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitVideoSummaryJob extends V20140618Rpc
+class SubmitVideoSummaryJob extends Rpc
 {
 }
 
@@ -2269,7 +2266,7 @@ class SubmitVideoSummaryJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoSummaryPipelineList extends V20140618Rpc
+class QueryVideoSummaryPipelineList extends Rpc
 {
 }
 
@@ -2285,7 +2282,7 @@ class QueryVideoSummaryPipelineList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoSummaryJobList extends V20140618Rpc
+class QueryVideoSummaryJobList extends Rpc
 {
 }
 
@@ -2305,7 +2302,7 @@ class QueryVideoSummaryJobList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListVideoSummaryPipeline extends V20140618Rpc
+class ListVideoSummaryPipeline extends Rpc
 {
 }
 
@@ -2325,7 +2322,7 @@ class ListVideoSummaryPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddVideoSummaryPipeline extends V20140618Rpc
+class AddVideoSummaryPipeline extends Rpc
 {
 }
 
@@ -2351,7 +2348,7 @@ class AddVideoSummaryPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateCoverPipeline extends V20140618Rpc
+class UpdateCoverPipeline extends Rpc
 {
 }
 
@@ -2373,7 +2370,7 @@ class UpdateCoverPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitCoverJob extends V20140618Rpc
+class SubmitCoverJob extends Rpc
 {
 }
 
@@ -2391,7 +2388,7 @@ class SubmitCoverJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportCoverJobResult extends V20140618Rpc
+class ReportCoverJobResult extends Rpc
 {
 }
 
@@ -2419,7 +2416,7 @@ class ReportCoverJobResult extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryCoverJobList extends V20140618Rpc
+class QueryCoverJobList extends Rpc
 {
 }
 
@@ -2435,7 +2432,7 @@ class QueryCoverJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryCoverPipelineList extends V20140618Rpc
+class QueryCoverPipelineList extends Rpc
 {
 }
 
@@ -2455,7 +2452,7 @@ class QueryCoverPipelineList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListCoverPipeline extends V20140618Rpc
+class ListCoverPipeline extends Rpc
 {
 }
 
@@ -2477,7 +2474,7 @@ class ListCoverPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddCoverPipeline extends V20140618Rpc
+class AddCoverPipeline extends Rpc
 {
 }
 
@@ -2501,7 +2498,7 @@ class AddCoverPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateAsrPipeline extends V20140618Rpc
+class UpdateAsrPipeline extends Rpc
 {
 }
 
@@ -2525,7 +2522,7 @@ class UpdateAsrPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitEditingJobs extends V20140618Rpc
+class SubmitEditingJobs extends Rpc
 {
 }
 
@@ -2547,7 +2544,7 @@ class SubmitEditingJobs extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitAsrJob extends V20140618Rpc
+class SubmitAsrJob extends Rpc
 {
 }
 
@@ -2567,7 +2564,7 @@ class SubmitAsrJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportAsrJobResult extends V20140618Rpc
+class ReportAsrJobResult extends Rpc
 {
 }
 
@@ -2583,7 +2580,7 @@ class ReportAsrJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryEditingJobList extends V20140618Rpc
+class QueryEditingJobList extends Rpc
 {
 }
 
@@ -2599,7 +2596,7 @@ class QueryEditingJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryAsrJobList extends V20140618Rpc
+class QueryAsrJobList extends Rpc
 {
 }
 
@@ -2615,7 +2612,7 @@ class QueryAsrJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryAsrPipelineList extends V20140618Rpc
+class QueryAsrPipelineList extends Rpc
 {
 }
 
@@ -2635,7 +2632,7 @@ class QueryAsrPipelineList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAsrPipeline extends V20140618Rpc
+class ListAsrPipeline extends Rpc
 {
 }
 
@@ -2655,7 +2652,7 @@ class ListAsrPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddAsrPipeline extends V20140618Rpc
+class AddAsrPipeline extends Rpc
 {
 }
 
@@ -2679,7 +2676,7 @@ class AddAsrPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdatePornPipeline extends V20140618Rpc
+class UpdatePornPipeline extends Rpc
 {
 }
 
@@ -2701,7 +2698,7 @@ class UpdatePornPipeline extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitPornJob extends V20140618Rpc
+class SubmitPornJob extends Rpc
 {
 }
 
@@ -2721,7 +2718,7 @@ class SubmitPornJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportPornJobResult extends V20140618Rpc
+class ReportPornJobResult extends Rpc
 {
 }
 
@@ -2737,7 +2734,7 @@ class ReportPornJobResult extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryPornJobList extends V20140618Rpc
+class QueryPornJobList extends Rpc
 {
 }
 
@@ -2753,7 +2750,7 @@ class QueryPornJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryPornPipelineList extends V20140618Rpc
+class QueryPornPipelineList extends Rpc
 {
 }
 
@@ -2773,7 +2770,7 @@ class QueryPornPipelineList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListPornPipeline extends V20140618Rpc
+class ListPornPipeline extends Rpc
 {
 }
 
@@ -2793,7 +2790,7 @@ class ListPornPipeline extends V20140618Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddPornPipeline extends V20140618Rpc
+class AddPornPipeline extends Rpc
 {
 }
 
@@ -2811,7 +2808,7 @@ class AddPornPipeline extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindInputBucket extends V20140618Rpc
+class UnbindInputBucket extends Rpc
 {
 }
 
@@ -2827,7 +2824,7 @@ class UnbindInputBucket extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindOutputBucket extends V20140618Rpc
+class UnbindOutputBucket extends Rpc
 {
 }
 
@@ -2849,7 +2846,7 @@ class UnbindOutputBucket extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListMedia extends V20140618Rpc
+class ListMedia extends Rpc
 {
 }
 
@@ -2863,7 +2860,7 @@ class ListMedia extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryAuthConfig extends V20140618Rpc
+class QueryAuthConfig extends Rpc
 {
 }
 
@@ -2879,7 +2876,7 @@ class QueryAuthConfig extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RefreshCdnDomainConfigsCache extends V20140618Rpc
+class RefreshCdnDomainConfigsCache extends Rpc
 {
 }
 
@@ -2897,7 +2894,7 @@ class RefreshCdnDomainConfigsCache extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetAuthConfig extends V20140618Rpc
+class SetAuthConfig extends Rpc
 {
 }
 
@@ -2929,7 +2926,7 @@ class SetAuthConfig extends V20140618Rpc
  * @method string getAuthInfo()
  * @method $this withAuthInfo($value)
  */
-class PlayInfo extends V20140618Rpc
+class PlayInfo extends Rpc
 {
 }
 
@@ -2947,7 +2944,7 @@ class PlayInfo extends V20140618Rpc
  * @method string getCiphertextBlob()
  * @method $this withCiphertextBlob($value)
  */
-class DecryptKey extends V20140618Rpc
+class DecryptKey extends Rpc
 {
 }
 
@@ -2973,7 +2970,7 @@ class DecryptKey extends V20140618Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class UpdateMedia extends V20140618Rpc
+class UpdateMedia extends Rpc
 {
 }
 
@@ -2991,7 +2988,7 @@ class UpdateMedia extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class UpdateMediaCategory extends V20140618Rpc
+class UpdateMediaCategory extends Rpc
 {
 }
 
@@ -3009,7 +3006,7 @@ class UpdateMediaCategory extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class UpdateMediaCover extends V20140618Rpc
+class UpdateMediaCover extends Rpc
 {
 }
 
@@ -3027,7 +3024,7 @@ class UpdateMediaCover extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class UpdateMediaPublishState extends V20140618Rpc
+class UpdateMediaPublishState extends Rpc
 {
 }
 
@@ -3045,7 +3042,7 @@ class UpdateMediaPublishState extends V20140618Rpc
  * @method string getCateName()
  * @method $this withCateName($value)
  */
-class UpdateCategoryName extends V20140618Rpc
+class UpdateCategoryName extends Rpc
 {
 }
 
@@ -3069,7 +3066,7 @@ class UpdateCategoryName extends V20140618Rpc
  * @method string getIncludeMediaInfo()
  * @method $this withIncludeMediaInfo($value)
  */
-class QueryMediaListByURL extends V20140618Rpc
+class QueryMediaListByURL extends Rpc
 {
 }
 
@@ -3087,7 +3084,7 @@ class QueryMediaListByURL extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAllMediaBucket extends V20140618Rpc
+class ListAllMediaBucket extends Rpc
 {
 }
 
@@ -3105,7 +3102,7 @@ class ListAllMediaBucket extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class DeleteMediaTag extends V20140618Rpc
+class DeleteMediaTag extends Rpc
 {
 }
 
@@ -3119,7 +3116,7 @@ class DeleteMediaTag extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAllCategory extends V20140618Rpc
+class ListAllCategory extends Rpc
 {
 }
 
@@ -3137,7 +3134,7 @@ class ListAllCategory extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BindOutputBucket extends V20140618Rpc
+class BindOutputBucket extends Rpc
 {
 }
 
@@ -3151,7 +3148,7 @@ class BindOutputBucket extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CategoryTree extends V20140618Rpc
+class CategoryTree extends Rpc
 {
 }
 
@@ -3167,7 +3164,7 @@ class CategoryTree extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCategory extends V20140618Rpc
+class DeleteCategory extends Rpc
 {
 }
 
@@ -3185,7 +3182,7 @@ class DeleteCategory extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BindInputBucket extends V20140618Rpc
+class BindInputBucket extends Rpc
 {
 }
 
@@ -3203,7 +3200,7 @@ class BindInputBucket extends V20140618Rpc
  * @method string getCateName()
  * @method $this withCateName($value)
  */
-class AddCategory extends V20140618Rpc
+class AddCategory extends Rpc
 {
 }
 
@@ -3237,7 +3234,7 @@ class AddCategory extends V20140618Rpc
  * @method string getMediaWorkflowUserData()
  * @method $this withMediaWorkflowUserData($value)
  */
-class AddMedia extends V20140618Rpc
+class AddMedia extends Rpc
 {
 }
 
@@ -3255,7 +3252,7 @@ class AddMedia extends V20140618Rpc
  * @method string getMediaId()
  * @method $this withMediaId($value)
  */
-class AddMediaTag extends V20140618Rpc
+class AddMediaTag extends Rpc
 {
 }
 
@@ -3281,7 +3278,7 @@ class AddMediaTag extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class ListJob extends V20140618Rpc
+class ListJob extends Rpc
 {
 }
 
@@ -3299,7 +3296,7 @@ class ListJob extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateMediaWorkflow extends V20140618Rpc
+class UpdateMediaWorkflow extends Rpc
 {
 }
 
@@ -3333,7 +3330,7 @@ class UpdateMediaWorkflow extends V20140618Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class SearchMedia extends V20140618Rpc
+class SearchMedia extends Rpc
 {
 }
 
@@ -3353,7 +3350,7 @@ class SearchMedia extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class SearchMediaWorkflow extends V20140618Rpc
+class SearchMediaWorkflow extends Rpc
 {
 }
 
@@ -3377,7 +3374,7 @@ class SearchMediaWorkflow extends V20140618Rpc
  * @method string getIncludeMediaInfo()
  * @method $this withIncludeMediaInfo($value)
  */
-class QueryMediaList extends V20140618Rpc
+class QueryMediaList extends Rpc
 {
 }
 
@@ -3393,7 +3390,7 @@ class QueryMediaList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaWorkflowExecutionList extends V20140618Rpc
+class QueryMediaWorkflowExecutionList extends Rpc
 {
 }
 
@@ -3409,7 +3406,7 @@ class QueryMediaWorkflowExecutionList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaWorkflowList extends V20140618Rpc
+class QueryMediaWorkflowList extends Rpc
 {
 }
 
@@ -3433,7 +3430,7 @@ class QueryMediaWorkflowList extends V20140618Rpc
  * @method string getMediaWorkflowName()
  * @method $this withMediaWorkflowName($value)
  */
-class ListMediaWorkflowExecutions extends V20140618Rpc
+class ListMediaWorkflowExecutions extends Rpc
 {
 }
 
@@ -3449,7 +3446,7 @@ class ListMediaWorkflowExecutions extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeactivateMediaWorkflow extends V20140618Rpc
+class DeactivateMediaWorkflow extends Rpc
 {
 }
 
@@ -3465,7 +3462,7 @@ class DeactivateMediaWorkflow extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMedia extends V20140618Rpc
+class DeleteMedia extends Rpc
 {
 }
 
@@ -3481,7 +3478,7 @@ class DeleteMedia extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMediaWorkflow extends V20140618Rpc
+class DeleteMediaWorkflow extends Rpc
 {
 }
 
@@ -3497,7 +3494,7 @@ class DeleteMediaWorkflow extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ActivateMediaWorkflow extends V20140618Rpc
+class ActivateMediaWorkflow extends Rpc
 {
 }
 
@@ -3517,7 +3514,7 @@ class ActivateMediaWorkflow extends V20140618Rpc
  * @method string getTriggerMode()
  * @method $this withTriggerMode($value)
  */
-class AddMediaWorkflow extends V20140618Rpc
+class AddMediaWorkflow extends Rpc
 {
 }
 
@@ -3541,7 +3538,7 @@ class AddMediaWorkflow extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitJobs extends V20140618Rpc
+class SubmitJobs extends Rpc
 {
 }
 
@@ -3563,7 +3560,7 @@ class SubmitJobs extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitMediaInfoJob extends V20140618Rpc
+class SubmitMediaInfoJob extends Rpc
 {
 }
 
@@ -3585,7 +3582,7 @@ class SubmitMediaInfoJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitSnapshotJob extends V20140618Rpc
+class SubmitSnapshotJob extends Rpc
 {
 }
 
@@ -3609,7 +3606,7 @@ class SubmitSnapshotJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdatePipeline extends V20140618Rpc
+class UpdatePipeline extends Rpc
 {
 }
 
@@ -3637,7 +3634,7 @@ class UpdatePipeline extends V20140618Rpc
  * @method string getAudio()
  * @method $this withAudio($value)
  */
-class UpdateTemplate extends V20140618Rpc
+class UpdateTemplate extends Rpc
 {
 }
 
@@ -3657,7 +3654,7 @@ class UpdateTemplate extends V20140618Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class UpdateWaterMarkTemplate extends V20140618Rpc
+class UpdateWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3677,7 +3674,7 @@ class UpdateWaterMarkTemplate extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class SearchTemplate extends V20140618Rpc
+class SearchTemplate extends Rpc
 {
 }
 
@@ -3697,7 +3694,7 @@ class SearchTemplate extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class SearchWaterMarkTemplate extends V20140618Rpc
+class SearchWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3721,7 +3718,7 @@ class SearchWaterMarkTemplate extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitAnalysisJob extends V20140618Rpc
+class SubmitAnalysisJob extends Rpc
 {
 }
 
@@ -3737,7 +3734,7 @@ class SubmitAnalysisJob extends V20140618Rpc
  * @method string getWaterMarkTemplateIds()
  * @method $this withWaterMarkTemplateIds($value)
  */
-class QueryWaterMarkTemplateList extends V20140618Rpc
+class QueryWaterMarkTemplateList extends Rpc
 {
 }
 
@@ -3757,7 +3754,7 @@ class QueryWaterMarkTemplateList extends V20140618Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class SearchPipeline extends V20140618Rpc
+class SearchPipeline extends Rpc
 {
 }
 
@@ -3773,7 +3770,7 @@ class SearchPipeline extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaInfoJobList extends V20140618Rpc
+class QueryMediaInfoJobList extends Rpc
 {
 }
 
@@ -3789,7 +3786,7 @@ class QueryMediaInfoJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryPipelineList extends V20140618Rpc
+class QueryPipelineList extends Rpc
 {
 }
 
@@ -3817,7 +3814,7 @@ class QueryPipelineList extends V20140618Rpc
  * @method string getEndOfJobCreatedTimeRange()
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QuerySnapshotJobList extends V20140618Rpc
+class QuerySnapshotJobList extends Rpc
 {
 }
 
@@ -3833,7 +3830,7 @@ class QuerySnapshotJobList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTemplateList extends V20140618Rpc
+class QueryTemplateList extends Rpc
 {
 }
 
@@ -3849,7 +3846,7 @@ class QueryTemplateList extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryJobList extends V20140618Rpc
+class QueryJobList extends Rpc
 {
 }
 
@@ -3867,7 +3864,7 @@ class QueryJobList extends V20140618Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class AddWaterMarkTemplate extends V20140618Rpc
+class AddWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3883,7 +3880,7 @@ class AddWaterMarkTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CancelJob extends V20140618Rpc
+class CancelJob extends Rpc
 {
 }
 
@@ -3899,7 +3896,7 @@ class CancelJob extends V20140618Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class DeletePipeline extends V20140618Rpc
+class DeletePipeline extends Rpc
 {
 }
 
@@ -3915,7 +3912,7 @@ class DeletePipeline extends V20140618Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteTemplate extends V20140618Rpc
+class DeleteTemplate extends Rpc
 {
 }
 
@@ -3931,7 +3928,7 @@ class DeleteTemplate extends V20140618Rpc
  * @method string getWaterMarkTemplateId()
  * @method $this withWaterMarkTemplateId($value)
  */
-class DeleteWaterMarkTemplate extends V20140618Rpc
+class DeleteWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3945,7 +3942,7 @@ class DeleteWaterMarkTemplate extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class PlayerAuth extends V20140618Rpc
+class PlayerAuth extends Rpc
 {
 }
 
@@ -3961,7 +3958,7 @@ class PlayerAuth extends V20140618Rpc
  * @method string getAnalysisJobIds()
  * @method $this withAnalysisJobIds($value)
  */
-class QueryAnalysisJobList extends V20140618Rpc
+class QueryAnalysisJobList extends Rpc
 {
 }
 
@@ -3985,7 +3982,7 @@ class QueryAnalysisJobList extends V20140618Rpc
  * @method string getSpeed()
  * @method $this withSpeed($value)
  */
-class AddPipeline extends V20140618Rpc
+class AddPipeline extends Rpc
 {
 }
 
@@ -4011,6 +4008,6 @@ class AddPipeline extends V20140618Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddTemplate extends V20140618Rpc
+class AddTemplate extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Jaq\V20161123;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method MessagePrevention messagePrevention(array $options = [])
  * @method SpamRegisterPrevention spamRegisterPrevention(array $options = [])
  * @method ActivityPrevention activityPrevention(array $options = [])
@@ -23,7 +20,7 @@ class JaqApiResolver
     use ApiResolverTrait;
 }
 
-class V20161123Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'jaq';
@@ -91,7 +88,7 @@ class V20161123Rpc extends Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class MessagePrevention extends V20161123Rpc
+class MessagePrevention extends Rpc
 {
 }
 
@@ -141,7 +138,7 @@ class MessagePrevention extends V20161123Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class SpamRegisterPrevention extends V20161123Rpc
+class SpamRegisterPrevention extends Rpc
 {
 }
 
@@ -203,7 +200,7 @@ class SpamRegisterPrevention extends V20161123Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class ActivityPrevention extends V20161123Rpc
+class ActivityPrevention extends Rpc
 {
 }
 
@@ -215,7 +212,7 @@ class ActivityPrevention extends V20161123Rpc
  * @method string getCallerName()
  * @method $this withCallerName($value)
  */
-class CheckAccountAndPasswordRisk extends V20161123Rpc
+class CheckAccountAndPasswordRisk extends Rpc
 {
 }
 
@@ -277,7 +274,7 @@ class CheckAccountAndPasswordRisk extends V20161123Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class LoginPrevention extends V20161123Rpc
+class LoginPrevention extends Rpc
 {
 }
 
@@ -337,7 +334,7 @@ class LoginPrevention extends V20161123Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class OtherPrevention extends V20161123Rpc
+class OtherPrevention extends Rpc
 {
 }
 
@@ -347,7 +344,7 @@ class OtherPrevention extends V20161123Rpc
  * @method string getCallerName()
  * @method $this withCallerName($value)
  */
-class AfsAppCheck extends V20161123Rpc
+class AfsAppCheck extends Rpc
 {
 }
 
@@ -365,7 +362,7 @@ class AfsAppCheck extends V20161123Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class AfsCheck extends V20161123Rpc
+class AfsCheck extends Rpc
 {
 }
 
@@ -411,6 +408,6 @@ class AfsCheck extends V20161123Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class BbsPrevention extends V20161123Rpc
+class BbsPrevention extends Rpc
 {
 }

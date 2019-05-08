@@ -3,11 +3,8 @@
 namespace AlibabaCloud\TagINner\V20181109;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method InnerFixRegion innerFixRegion(array $options = [])
  * @method QueryServiceCode queryServiceCode(array $options = [])
  * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
@@ -22,7 +19,7 @@ class TagINnerApiResolver
     use ApiResolverTrait;
 }
 
-class V20181109Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Tag-Inner';
@@ -59,7 +56,7 @@ class V20181109Rpc extends Rpc
  * @method string getTagKeyId()
  * @method $this withTagKeyId($value)
  */
-class InnerFixRegion extends V20181109Rpc
+class InnerFixRegion extends Rpc
 {
 }
 
@@ -75,7 +72,7 @@ class InnerFixRegion extends V20181109Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryServiceCode extends V20181109Rpc
+class QueryServiceCode extends Rpc
 {
 }
 
@@ -101,7 +98,7 @@ class QueryServiceCode extends V20181109Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResourcesSystemTags extends V20181109Rpc
+class TagResourcesSystemTags extends Rpc
 {
 
     /**
@@ -152,7 +149,7 @@ class TagResourcesSystemTags extends V20181109Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListTagValues extends V20181109Rpc
+class ListTagValues extends Rpc
 {
 }
 
@@ -180,7 +177,7 @@ class ListTagValues extends V20181109Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class InnerListTagResources extends V20181109Rpc
+class InnerListTagResources extends Rpc
 {
 
     /**
@@ -229,7 +226,7 @@ class InnerListTagResources extends V20181109Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListTagKeys extends V20181109Rpc
+class ListTagKeys extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class ListTagKeys extends V20181109Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class InnerUntagResources extends V20181109Rpc
+class InnerUntagResources extends Rpc
 {
 
     /**
@@ -319,7 +316,7 @@ class InnerUntagResources extends V20181109Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class InnerTagResources extends V20181109Rpc
+class InnerTagResources extends Rpc
 {
 
     /**

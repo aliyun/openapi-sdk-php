@@ -3,11 +3,8 @@
 namespace AlibabaCloud\EHPC\V20180412;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryServicePackAndPrice queryServicePackAndPrice(array $options = [])
  * @method DescribeJob describeJob(array $options = [])
  * @method GetClusterVolumes getClusterVolumes(array $options = [])
@@ -103,7 +100,7 @@ class EHPCApiResolver
     use ApiResolverTrait;
 }
 
-class V20180412Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'EHPC';
@@ -115,7 +112,7 @@ class V20180412Rpc extends Rpc
     public $serviceCode = 'ehs';
 }
 
-class QueryServicePackAndPrice extends V20180412Rpc
+class QueryServicePackAndPrice extends Rpc
 {
 }
 
@@ -125,7 +122,7 @@ class QueryServicePackAndPrice extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeJob extends V20180412Rpc
+class DescribeJob extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class DescribeJob extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetClusterVolumes extends V20180412Rpc
+class GetClusterVolumes extends Rpc
 {
 }
 
@@ -142,7 +139,7 @@ class GetClusterVolumes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpdateClusterVolumes extends V20180412Rpc
+class UpdateClusterVolumes extends Rpc
 {
 
     /**
@@ -181,7 +178,7 @@ class UpdateClusterVolumes extends V20180412Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class GetAccountingReport extends V20180412Rpc
+class GetAccountingReport extends Rpc
 {
 }
 
@@ -191,7 +188,7 @@ class GetAccountingReport extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class InstallSoftware extends V20180412Rpc
+class InstallSoftware extends Rpc
 {
 }
 
@@ -201,7 +198,7 @@ class InstallSoftware extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UninstallSoftware extends V20180412Rpc
+class UninstallSoftware extends Rpc
 {
 }
 
@@ -209,7 +206,7 @@ class UninstallSoftware extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListInstalledSoftware extends V20180412Rpc
+class ListInstalledSoftware extends Rpc
 {
 }
 
@@ -223,7 +220,7 @@ class ListInstalledSoftware extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListNodesByQueue extends V20180412Rpc
+class ListNodesByQueue extends Rpc
 {
 }
 
@@ -234,7 +231,7 @@ class ListNodesByQueue extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class SetQueue extends V20180412Rpc
+class SetQueue extends Rpc
 {
 
     /**
@@ -259,7 +256,7 @@ class SetQueue extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteQueue extends V20180412Rpc
+class DeleteQueue extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class DeleteQueue extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AddQueue extends V20180412Rpc
+class AddQueue extends Rpc
 {
 }
 
@@ -281,23 +278,11 @@ class AddQueue extends V20180412Rpc
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
  */
-class ListCpfsFileSystems extends V20180412Rpc
+class ListCpfsFileSystems extends Rpc
 {
 }
 
-class ListAvailableFileSystemTypes extends V20180412Rpc
-{
-}
-
-/**
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getCidrIp()
- * @method $this withCidrIp($value)
- */
-class StopVisualService extends V20180412Rpc
+class ListAvailableFileSystemTypes extends Rpc
 {
 }
 
@@ -309,7 +294,19 @@ class StopVisualService extends V20180412Rpc
  * @method string getCidrIp()
  * @method $this withCidrIp($value)
  */
-class StartVisualService extends V20180412Rpc
+class StopVisualService extends Rpc
+{
+}
+
+/**
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getCidrIp()
+ * @method $this withCidrIp($value)
+ */
+class StartVisualService extends Rpc
 {
 }
 
@@ -317,7 +314,7 @@ class StartVisualService extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetVisualServiceStatus extends V20180412Rpc
+class GetVisualServiceStatus extends Rpc
 {
 }
 
@@ -331,7 +328,7 @@ class GetVisualServiceStatus extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ModifyVisualServicePasswd extends V20180412Rpc
+class ModifyVisualServicePasswd extends Rpc
 {
 }
 
@@ -341,7 +338,7 @@ class ModifyVisualServicePasswd extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClustersMeta extends V20180412Rpc
+class ListClustersMeta extends Rpc
 {
 }
 
@@ -357,7 +354,7 @@ class ListClustersMeta extends V20180412Rpc
  * @method string getContent()
  * @method $this withContent($value)
  */
-class CreateJobFile extends V20180412Rpc
+class CreateJobFile extends Rpc
 {
 }
 
@@ -367,7 +364,7 @@ class CreateJobFile extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFileSystemWithMountTargets extends V20180412Rpc
+class ListFileSystemWithMountTargets extends Rpc
 {
 }
 
@@ -379,7 +376,7 @@ class ListFileSystemWithMountTargets extends V20180412Rpc
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */
-class ListAvailableEcsTypes extends V20180412Rpc
+class ListAvailableEcsTypes extends Rpc
 {
 }
 
@@ -387,7 +384,7 @@ class ListAvailableEcsTypes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListQueues extends V20180412Rpc
+class ListQueues extends Rpc
 {
 }
 
@@ -405,7 +402,7 @@ class ListQueues extends V20180412Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeImagePrice extends V20180412Rpc
+class DescribeImagePrice extends Rpc
 {
 }
 
@@ -418,7 +415,7 @@ class DescribeImagePrice extends V20180412Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribePrice extends V20180412Rpc
+class DescribePrice extends Rpc
 {
 
     /**
@@ -451,7 +448,7 @@ class DescribePrice extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListCloudMetricProfilings extends V20180412Rpc
+class ListCloudMetricProfilings extends Rpc
 {
 }
 
@@ -467,7 +464,7 @@ class ListCloudMetricProfilings extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RunCloudMetricProfiling extends V20180412Rpc
+class RunCloudMetricProfiling extends Rpc
 {
 }
 
@@ -477,7 +474,7 @@ class RunCloudMetricProfiling extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetCloudMetricProfiling extends V20180412Rpc
+class GetCloudMetricProfiling extends Rpc
 {
 }
 
@@ -487,7 +484,7 @@ class GetCloudMetricProfiling extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AddLocalNodes extends V20180412Rpc
+class AddLocalNodes extends Rpc
 {
 }
 
@@ -511,7 +508,7 @@ class AddLocalNodes extends V20180412Rpc
  * @method string getReverse()
  * @method $this withReverse($value)
  */
-class GetCloudMetricLogs extends V20180412Rpc
+class GetCloudMetricLogs extends Rpc
 {
 }
 
@@ -525,7 +522,7 @@ class GetCloudMetricLogs extends V20180412Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class PullImage extends V20180412Rpc
+class PullImage extends Rpc
 {
 }
 
@@ -548,7 +545,7 @@ class PullImage extends V20180412Rpc
  * @method string getImageExpirationTimeout()
  * @method $this withImageExpirationTimeout($value)
  */
-class ModifyImageGatewayConfig extends V20180412Rpc
+class ModifyImageGatewayConfig extends Rpc
 {
 
     /**
@@ -579,7 +576,7 @@ class ModifyImageGatewayConfig extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListContainerImages extends V20180412Rpc
+class ListContainerImages extends Rpc
 {
 }
 
@@ -593,7 +590,7 @@ class ListContainerImages extends V20180412Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class DescribeImage extends V20180412Rpc
+class DescribeImage extends Rpc
 {
 }
 
@@ -601,7 +598,7 @@ class DescribeImage extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeImageGatewayConfig extends V20180412Rpc
+class DescribeImageGatewayConfig extends Rpc
 {
 }
 
@@ -615,7 +612,7 @@ class DescribeImageGatewayConfig extends V20180412Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class DeleteImage extends V20180412Rpc
+class DeleteImage extends Rpc
 {
 }
 
@@ -676,7 +673,7 @@ class DeleteImage extends V20180412Rpc
  * @method string getLocation()
  * @method $this withLocation($value)
  */
-class CreateHybridCluster extends V20180412Rpc
+class CreateHybridCluster extends Rpc
 {
 
     /**
@@ -730,7 +727,7 @@ class CreateHybridCluster extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetHybridClusterConfig extends V20180412Rpc
+class GetHybridClusterConfig extends Rpc
 {
 }
 
@@ -740,7 +737,7 @@ class GetHybridClusterConfig extends V20180412Rpc
  * @method string getContainerId()
  * @method $this withContainerId($value)
  */
-class ModifyContainerAppAttributes extends V20180412Rpc
+class ModifyContainerAppAttributes extends Rpc
 {
 }
 
@@ -750,7 +747,7 @@ class ModifyContainerAppAttributes extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListContainerApps extends V20180412Rpc
+class ListContainerApps extends Rpc
 {
 }
 
@@ -758,14 +755,14 @@ class ListContainerApps extends V20180412Rpc
  * @method string getContainerId()
  * @method $this withContainerId($value)
  */
-class DescribeContainerApp extends V20180412Rpc
+class DescribeContainerApp extends Rpc
 {
 }
 
 /**
  * @method array getContainerApp()
  */
-class DeleteContainerApps extends V20180412Rpc
+class DeleteContainerApps extends Rpc
 {
 
     /**
@@ -796,7 +793,7 @@ class DeleteContainerApps extends V20180412Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class AddContainerApp extends V20180412Rpc
+class AddContainerApp extends Rpc
 {
 }
 
@@ -810,7 +807,7 @@ class AddContainerApp extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListCommands extends V20180412Rpc
+class ListCommands extends Rpc
 {
 }
 
@@ -820,7 +817,7 @@ class ListCommands extends V20180412Rpc
  * @method string getCommandId()
  * @method $this withCommandId($value)
  */
-class ListInvocationStatus extends V20180412Rpc
+class ListInvocationStatus extends Rpc
 {
 }
 
@@ -837,7 +834,7 @@ class ListInvocationStatus extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListInvocationResults extends V20180412Rpc
+class ListInvocationResults extends Rpc
 {
 
     /**
@@ -867,7 +864,7 @@ class ListInvocationResults extends V20180412Rpc
  * @method string getTimeout()
  * @method $this withTimeout($value)
  */
-class InvokeShellCommand extends V20180412Rpc
+class InvokeShellCommand extends Rpc
 {
 
     /**
@@ -890,7 +887,7 @@ class InvokeShellCommand extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeAutoScaleConfig extends V20180412Rpc
+class DescribeAutoScaleConfig extends Rpc
 {
 }
 
@@ -910,7 +907,7 @@ class DescribeAutoScaleConfig extends V20180412Rpc
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
  */
-class RecoverCluster extends V20180412Rpc
+class RecoverCluster extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class RecoverCluster extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StopNodes extends V20180412Rpc
+class StopNodes extends Rpc
 {
 
     /**
@@ -944,7 +941,7 @@ class StopNodes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StartCluster extends V20180412Rpc
+class StartCluster extends Rpc
 {
 }
 
@@ -955,7 +952,7 @@ class StartCluster extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StartNodes extends V20180412Rpc
+class StartNodes extends Rpc
 {
 
     /**
@@ -978,7 +975,7 @@ class StartNodes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StopCluster extends V20180412Rpc
+class StopCluster extends Rpc
 {
 }
 
@@ -988,7 +985,7 @@ class StopCluster extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StopJobs extends V20180412Rpc
+class StopJobs extends Rpc
 {
 }
 
@@ -998,11 +995,11 @@ class StopJobs extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusters extends V20180412Rpc
+class ListClusters extends Rpc
 {
 }
 
-class ListRegions extends V20180412Rpc
+class ListRegions extends Rpc
 {
 }
 
@@ -1016,7 +1013,7 @@ class ListRegions extends V20180412Rpc
  * @method string getOnlyDetached()
  * @method $this withOnlyDetached($value)
  */
-class ListNodesNoPaging extends V20180412Rpc
+class ListNodesNoPaging extends Rpc
 {
 }
 
@@ -1034,7 +1031,7 @@ class ListNodesNoPaging extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobs extends V20180412Rpc
+class ListJobs extends Rpc
 {
 }
 
@@ -1043,7 +1040,7 @@ class ListJobs extends V20180412Rpc
  * @method $this withClusterId($value)
  * @method array getUser()
  */
-class ModifyUserPasswords extends V20180412Rpc
+class ModifyUserPasswords extends Rpc
 {
 
     /**
@@ -1071,7 +1068,7 @@ class ModifyUserPasswords extends V20180412Rpc
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */
-class ListPreferredEcsTypes extends V20180412Rpc
+class ListPreferredEcsTypes extends Rpc
 {
 }
 
@@ -1079,7 +1076,7 @@ class ListPreferredEcsTypes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetAutoScaleConfig extends V20180412Rpc
+class GetAutoScaleConfig extends Rpc
 {
 }
 
@@ -1088,7 +1085,7 @@ class GetAutoScaleConfig extends V20180412Rpc
  * @method $this withClusterId($value)
  * @method array getUser()
  */
-class ModifyUserGroups extends V20180412Rpc
+class ModifyUserGroups extends Rpc
 {
 
     /**
@@ -1137,7 +1134,7 @@ class ModifyUserGroups extends V20180412Rpc
  * @method string getGrowRatio()
  * @method $this withGrowRatio($value)
  */
-class SetAutoScaleConfig extends V20180412Rpc
+class SetAutoScaleConfig extends Rpc
 {
 
     /**
@@ -1192,7 +1189,7 @@ class SetAutoScaleConfig extends V20180412Rpc
  * @method string getStdoutRedirectPath()
  * @method $this withStdoutRedirectPath($value)
  */
-class EditJobTemplate extends V20180412Rpc
+class EditJobTemplate extends Rpc
 {
 }
 
@@ -1234,7 +1231,7 @@ class EditJobTemplate extends V20180412Rpc
  * @method string getComputeSpotPriceLimit()
  * @method $this withComputeSpotPriceLimit($value)
  */
-class AddNodes extends V20180412Rpc
+class AddNodes extends Rpc
 {
 }
 
@@ -1243,7 +1240,7 @@ class AddNodes extends V20180412Rpc
  * @method $this withClusterId($value)
  * @method array getUser()
  */
-class DeleteUsers extends V20180412Rpc
+class DeleteUsers extends Rpc
 {
 
     /**
@@ -1262,7 +1259,7 @@ class DeleteUsers extends V20180412Rpc
     }
 }
 
-class ListImages extends V20180412Rpc
+class ListImages extends Rpc
 {
 }
 
@@ -1272,7 +1269,7 @@ class ListImages extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteJobs extends V20180412Rpc
+class DeleteJobs extends Rpc
 {
 }
 
@@ -1283,7 +1280,7 @@ class DeleteJobs extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteNodes extends V20180412Rpc
+class DeleteNodes extends Rpc
 {
 
     /**
@@ -1308,7 +1305,7 @@ class DeleteNodes extends V20180412Rpc
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
  */
-class ListCustomImages extends V20180412Rpc
+class ListCustomImages extends Rpc
 {
 }
 
@@ -1317,7 +1314,7 @@ class ListCustomImages extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ResetNodes extends V20180412Rpc
+class ResetNodes extends Rpc
 {
 
     /**
@@ -1344,7 +1341,7 @@ class ResetNodes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class SetJobUser extends V20180412Rpc
+class SetJobUser extends Rpc
 {
 }
 
@@ -1356,7 +1353,7 @@ class SetJobUser extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobTemplates extends V20180412Rpc
+class ListJobTemplates extends Rpc
 {
 }
 
@@ -1364,7 +1361,7 @@ class ListJobTemplates extends V20180412Rpc
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
  */
-class ListSoftwares extends V20180412Rpc
+class ListSoftwares extends Rpc
 {
 }
 
@@ -1373,7 +1370,7 @@ class ListSoftwares extends V20180412Rpc
  * @method $this withClusterId($value)
  * @method array getUser()
  */
-class AddUsers extends V20180412Rpc
+class AddUsers extends Rpc
 {
 
     /**
@@ -1398,11 +1395,11 @@ class AddUsers extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeCluster extends V20180412Rpc
+class DescribeCluster extends Rpc
 {
 }
 
-class ListCurrentClientVersion extends V20180412Rpc
+class ListCurrentClientVersion extends Rpc
 {
 }
 
@@ -1442,7 +1439,7 @@ class ListCurrentClientVersion extends V20180412Rpc
  * @method string getContainerId()
  * @method $this withContainerId($value)
  */
-class SubmitJob extends V20180412Rpc
+class SubmitJob extends Rpc
 {
 }
 
@@ -1452,7 +1449,7 @@ class SubmitJob extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListVolumes extends V20180412Rpc
+class ListVolumes extends Rpc
 {
 }
 
@@ -1468,7 +1465,7 @@ class ListVolumes extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListNodes extends V20180412Rpc
+class ListNodes extends Rpc
 {
 }
 
@@ -1478,7 +1475,7 @@ class ListNodes extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class UpgradeClient extends V20180412Rpc
+class UpgradeClient extends Rpc
 {
 }
 
@@ -1490,7 +1487,7 @@ class UpgradeClient extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ModifyClusterAttributes extends V20180412Rpc
+class ModifyClusterAttributes extends Rpc
 {
 }
 
@@ -1516,7 +1513,7 @@ class ModifyClusterAttributes extends V20180412Rpc
  * @method string getCommandLine()
  * @method $this withCommandLine($value)
  */
-class CreateJobTemplate extends V20180412Rpc
+class CreateJobTemplate extends Rpc
 {
 }
 
@@ -1605,7 +1602,7 @@ class CreateJobTemplate extends V20180412Rpc
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
-class CreateCluster extends V20180412Rpc
+class CreateCluster extends Rpc
 {
 
     /**
@@ -1749,7 +1746,7 @@ class CreateCluster extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteCluster extends V20180412Rpc
+class DeleteCluster extends Rpc
 {
 }
 
@@ -1761,7 +1758,7 @@ class DeleteCluster extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListUsers extends V20180412Rpc
+class ListUsers extends Rpc
 {
 }
 
@@ -1773,7 +1770,7 @@ class ListUsers extends V20180412Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusterLogs extends V20180412Rpc
+class ListClusterLogs extends Rpc
 {
 }
 
@@ -1781,7 +1778,7 @@ class ListClusterLogs extends V20180412Rpc
  * @method string getTemplates()
  * @method $this withTemplates($value)
  */
-class DeleteJobTemplates extends V20180412Rpc
+class DeleteJobTemplates extends Rpc
 {
 }
 
@@ -1791,6 +1788,6 @@ class DeleteJobTemplates extends V20180412Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RerunJobs extends V20180412Rpc
+class RerunJobs extends Rpc
 {
 }

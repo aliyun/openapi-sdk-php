@@ -3,11 +3,8 @@
 namespace AlibabaCloud\DmsEnterprise\V20181101;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method EnableUser enableUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
@@ -20,7 +17,7 @@ class DmsEnterpriseApiResolver
     use ApiResolverTrait;
 }
 
-class V20181101Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'dms-enterprise';
@@ -41,7 +38,7 @@ class V20181101Rpc extends Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class EnableUser extends V20181101Rpc
+class EnableUser extends Rpc
 {
 }
 
@@ -51,7 +48,7 @@ class EnableUser extends V20181101Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class DisableUser extends V20181101Rpc
+class DisableUser extends Rpc
 {
 }
 
@@ -61,7 +58,7 @@ class DisableUser extends V20181101Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class DeleteUser extends V20181101Rpc
+class DeleteUser extends Rpc
 {
 }
 
@@ -75,7 +72,7 @@ class DeleteUser extends V20181101Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class RegisterUser extends V20181101Rpc
+class RegisterUser extends Rpc
 {
 }
 
@@ -93,7 +90,7 @@ class RegisterUser extends V20181101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetOpLog extends V20181101Rpc
+class GetOpLog extends Rpc
 {
 
     /** @var string */
@@ -138,6 +135,6 @@ class GetOpLog extends V20181101Rpc
  * @method string getSafeRule()
  * @method $this withSafeRule($value)
  */
-class RegisterInstance extends V20181101Rpc
+class RegisterInstance extends Rpc
 {
 }

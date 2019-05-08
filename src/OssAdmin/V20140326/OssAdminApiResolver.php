@@ -3,11 +3,8 @@
 namespace AlibabaCloud\OssAdmin\V20140326;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method RestartOss restartOss(array $options = [])
  * @method StopOss stopOss(array $options = [])
  */
@@ -16,7 +13,7 @@ class OssAdminApiResolver
     use ApiResolverTrait;
 }
 
-class V20140326Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'OssAdmin';
@@ -39,7 +36,7 @@ class V20140326Rpc extends Rpc
  * @method $this withOwnerId($value)
  * @method string getRegion()
  */
-class RestartOss extends V20140326Rpc
+class RestartOss extends Rpc
 {
 
     /**
@@ -67,7 +64,7 @@ class RestartOss extends V20140326Rpc
  * @method $this withOwnerId($value)
  * @method string getRegion()
  */
-class StopOss extends V20140326Rpc
+class StopOss extends Rpc
 {
 
     /**

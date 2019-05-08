@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ons\V20190214;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method OnsTopicSubDetail onsTopicSubDetail(array $options = [])
  * @method OnsGroupSubDetail onsGroupSubDetail(array $options = [])
  * @method OnsDLQMessageResendById onsDLQMessageResendById(array $options = [])
@@ -60,7 +57,7 @@ class OnsApiResolver
     use ApiResolverTrait;
 }
 
-class V20190214Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ons';
@@ -83,7 +80,7 @@ class V20190214Rpc extends Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicSubDetail extends V20190214Rpc
+class OnsTopicSubDetail extends Rpc
 {
 }
 
@@ -95,7 +92,7 @@ class OnsTopicSubDetail extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsGroupSubDetail extends V20190214Rpc
+class OnsGroupSubDetail extends Rpc
 {
 }
 
@@ -109,7 +106,7 @@ class OnsGroupSubDetail extends V20190214Rpc
  * @method string getMsgId()
  * @method $this withMsgId($value)
  */
-class OnsDLQMessageResendById extends V20190214Rpc
+class OnsDLQMessageResendById extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class OnsDLQMessageResendById extends V20190214Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class OnsDLQMessagePageQueryByGroupId extends V20190214Rpc
+class OnsDLQMessagePageQueryByGroupId extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class OnsDLQMessagePageQueryByGroupId extends V20190214Rpc
  * @method string getMsgId()
  * @method $this withMsgId($value)
  */
-class OnsDLQMessageGetById extends V20190214Rpc
+class OnsDLQMessageGetById extends Rpc
 {
 }
 
@@ -159,7 +156,7 @@ class OnsDLQMessageGetById extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsWarnDelete extends V20190214Rpc
+class OnsWarnDelete extends Rpc
 {
 }
 
@@ -185,7 +182,7 @@ class OnsWarnDelete extends V20190214Rpc
  * @method string getContacts()
  * @method $this withContacts($value)
  */
-class OnsWarnCreate extends V20190214Rpc
+class OnsWarnCreate extends Rpc
 {
 }
 
@@ -205,7 +202,7 @@ class OnsWarnCreate extends V20190214Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsTrendTopicInputTps extends V20190214Rpc
+class OnsTrendTopicInputTps extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class OnsTrendTopicInputTps extends V20190214Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsTrendGroupOutputTps extends V20190214Rpc
+class OnsTrendGroupOutputTps extends Rpc
 {
 }
 
@@ -245,7 +242,7 @@ class OnsTrendGroupOutputTps extends V20190214Rpc
  * @method string getMsgKey()
  * @method $this withMsgKey($value)
  */
-class OnsTraceQueryByMsgKey extends V20190214Rpc
+class OnsTraceQueryByMsgKey extends Rpc
 {
 }
 
@@ -263,7 +260,7 @@ class OnsTraceQueryByMsgKey extends V20190214Rpc
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
  */
-class OnsTraceQueryByMsgId extends V20190214Rpc
+class OnsTraceQueryByMsgId extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class OnsTraceQueryByMsgId extends V20190214Rpc
  * @method string getQueryId()
  * @method $this withQueryId($value)
  */
-class OnsTraceGetResult extends V20190214Rpc
+class OnsTraceGetResult extends Rpc
 {
 }
 
@@ -287,7 +284,7 @@ class OnsTraceGetResult extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicUpdate extends V20190214Rpc
+class OnsTopicUpdate extends Rpc
 {
 }
 
@@ -299,7 +296,7 @@ class OnsTopicUpdate extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicStatus extends V20190214Rpc
+class OnsTopicStatus extends Rpc
 {
 }
 
@@ -311,7 +308,7 @@ class OnsTopicStatus extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicList extends V20190214Rpc
+class OnsTopicList extends Rpc
 {
 }
 
@@ -323,7 +320,7 @@ class OnsTopicList extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsTopicDelete extends V20190214Rpc
+class OnsTopicDelete extends Rpc
 {
 }
 
@@ -339,7 +336,7 @@ class OnsTopicDelete extends V20190214Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class OnsTopicCreate extends V20190214Rpc
+class OnsTopicCreate extends Rpc
 {
 }
 
@@ -347,7 +344,7 @@ class OnsTopicCreate extends V20190214Rpc
  * @method string getPreventCache()
  * @method $this withPreventCache($value)
  */
-class OnsRegionList extends V20190214Rpc
+class OnsRegionList extends Rpc
 {
 }
 
@@ -373,7 +370,7 @@ class OnsRegionList extends V20190214Rpc
  * @method string getSubTopic()
  * @method $this withSubTopic($value)
  */
-class OnsMqttQueryMsgTransTrend extends V20190214Rpc
+class OnsMqttQueryMsgTransTrend extends Rpc
 {
 }
 
@@ -389,7 +386,7 @@ class OnsMqttQueryMsgTransTrend extends V20190214Rpc
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
  */
-class OnsMqttQueryHistoryOnline extends V20190214Rpc
+class OnsMqttQueryHistoryOnline extends Rpc
 {
 }
 
@@ -403,7 +400,7 @@ class OnsMqttQueryHistoryOnline extends V20190214Rpc
  * @method string getSubTopic()
  * @method $this withSubTopic($value)
  */
-class OnsMqttQueryClientByTopic extends V20190214Rpc
+class OnsMqttQueryClientByTopic extends Rpc
 {
 }
 
@@ -415,7 +412,7 @@ class OnsMqttQueryClientByTopic extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsMqttQueryClientByGroupId extends V20190214Rpc
+class OnsMqttQueryClientByGroupId extends Rpc
 {
 }
 
@@ -427,7 +424,7 @@ class OnsMqttQueryClientByGroupId extends V20190214Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class OnsMqttQueryClientByClientId extends V20190214Rpc
+class OnsMqttQueryClientByClientId extends Rpc
 {
 }
 
@@ -437,7 +434,7 @@ class OnsMqttQueryClientByClientId extends V20190214Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class OnsMqttGroupIdList extends V20190214Rpc
+class OnsMqttGroupIdList extends Rpc
 {
 }
 
@@ -449,7 +446,7 @@ class OnsMqttGroupIdList extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsMqttGroupIdDelete extends V20190214Rpc
+class OnsMqttGroupIdDelete extends Rpc
 {
 }
 
@@ -463,7 +460,7 @@ class OnsMqttGroupIdDelete extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMqttGroupIdCreate extends V20190214Rpc
+class OnsMqttGroupIdCreate extends Rpc
 {
 }
 
@@ -477,7 +474,7 @@ class OnsMqttGroupIdCreate extends V20190214Rpc
  * @method string getMsgId()
  * @method $this withMsgId($value)
  */
-class OnsMessageTrace extends V20190214Rpc
+class OnsMessageTrace extends Rpc
 {
 }
 
@@ -495,7 +492,7 @@ class OnsMessageTrace extends V20190214Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class OnsMessageSend extends V20190214Rpc
+class OnsMessageSend extends Rpc
 {
 }
 
@@ -513,7 +510,7 @@ class OnsMessageSend extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMessagePush extends V20190214Rpc
+class OnsMessagePush extends Rpc
 {
 }
 
@@ -535,7 +532,7 @@ class OnsMessagePush extends V20190214Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class OnsMessagePageQueryByTopic extends V20190214Rpc
+class OnsMessagePageQueryByTopic extends Rpc
 {
 }
 
@@ -549,7 +546,7 @@ class OnsMessagePageQueryByTopic extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMessageGetByMsgId extends V20190214Rpc
+class OnsMessageGetByMsgId extends Rpc
 {
 }
 
@@ -563,7 +560,7 @@ class OnsMessageGetByMsgId extends V20190214Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class OnsMessageGetByKey extends V20190214Rpc
+class OnsMessageGetByKey extends Rpc
 {
 }
 
@@ -577,7 +574,7 @@ class OnsMessageGetByKey extends V20190214Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class OnsInstanceUpdate extends V20190214Rpc
+class OnsInstanceUpdate extends Rpc
 {
 }
 
@@ -585,7 +582,7 @@ class OnsInstanceUpdate extends V20190214Rpc
  * @method string getPreventCache()
  * @method $this withPreventCache($value)
  */
-class OnsInstanceInServiceList extends V20190214Rpc
+class OnsInstanceInServiceList extends Rpc
 {
 }
 
@@ -595,7 +592,7 @@ class OnsInstanceInServiceList extends V20190214Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class OnsInstanceDelete extends V20190214Rpc
+class OnsInstanceDelete extends Rpc
 {
 }
 
@@ -607,7 +604,7 @@ class OnsInstanceDelete extends V20190214Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class OnsInstanceCreate extends V20190214Rpc
+class OnsInstanceCreate extends Rpc
 {
 }
 
@@ -617,19 +614,7 @@ class OnsInstanceCreate extends V20190214Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class OnsInstanceBaseInfo extends V20190214Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class OnsGroupList extends V20190214Rpc
+class OnsInstanceBaseInfo extends Rpc
 {
 }
 
@@ -641,7 +626,19 @@ class OnsGroupList extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsGroupDelete extends V20190214Rpc
+class OnsGroupList extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class OnsGroupDelete extends Rpc
 {
 }
 
@@ -655,7 +652,7 @@ class OnsGroupDelete extends V20190214Rpc
  * @method string getRemark()
  * @method $this withRemark($value)
  */
-class OnsGroupCreate extends V20190214Rpc
+class OnsGroupCreate extends Rpc
 {
 }
 
@@ -669,7 +666,7 @@ class OnsGroupCreate extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsGroupConsumerUpdate extends V20190214Rpc
+class OnsGroupConsumerUpdate extends Rpc
 {
 }
 
@@ -683,7 +680,7 @@ class OnsGroupConsumerUpdate extends V20190214Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsConsumerTimeSpan extends V20190214Rpc
+class OnsConsumerTimeSpan extends Rpc
 {
 }
 
@@ -699,7 +696,7 @@ class OnsConsumerTimeSpan extends V20190214Rpc
  * @method string getDetail()
  * @method $this withDetail($value)
  */
-class OnsConsumerStatus extends V20190214Rpc
+class OnsConsumerStatus extends Rpc
 {
 }
 
@@ -717,7 +714,7 @@ class OnsConsumerStatus extends V20190214Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class OnsConsumerResetOffset extends V20190214Rpc
+class OnsConsumerResetOffset extends Rpc
 {
 }
 
@@ -729,7 +726,7 @@ class OnsConsumerResetOffset extends V20190214Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class OnsConsumerGetConnection extends V20190214Rpc
+class OnsConsumerGetConnection extends Rpc
 {
 }
 
@@ -743,6 +740,6 @@ class OnsConsumerGetConnection extends V20190214Rpc
  * @method string getDetail()
  * @method $this withDetail($value)
  */
-class OnsConsumerAccumulate extends V20190214Rpc
+class OnsConsumerAccumulate extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cds\V20170925;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetCredentials getCredentials(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
  * @method UpdateCredential updateCredential(array $options = [])
@@ -28,7 +25,7 @@ class CdsApiResolver
     use ApiResolverTrait;
 }
 
-class V20170925Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'Cds';
@@ -43,7 +40,7 @@ class V20170925Roa extends Roa
     public $serviceCode = 'cds';
 }
 
-class GetCredentials extends V20170925Roa
+class GetCredentials extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credentials';
@@ -56,7 +53,7 @@ class GetCredentials extends V20170925Roa
  * @method string getJsonContent()
  * @method string getJobName()
  */
-class UpdateJob extends V20170925Roa
+class UpdateJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/update';
@@ -93,7 +90,7 @@ class UpdateJob extends V20170925Roa
  * @method string getJsonContent()
  * @method string getCredentialId()
  */
-class UpdateCredential extends V20170925Roa
+class UpdateCredential extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credential/update';
@@ -141,7 +138,7 @@ class UpdateCredential extends V20170925Roa
 /**
  * @method string getCredentialId()
  */
-class DeleteCredential extends V20170925Roa
+class DeleteCredential extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credential/delete';
@@ -164,7 +161,7 @@ class DeleteCredential extends V20170925Roa
  * @method string getCredentialType()
  * @method string getJsonContent()
  */
-class CreateCredential extends V20170925Roa
+class CreateCredential extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/credential/create';
@@ -201,7 +198,7 @@ class CreateCredential extends V20170925Roa
  * @method string getJobName()
  * @method string getDeployType()
  */
-class CreateJob extends V20170925Roa
+class CreateJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/create';
@@ -252,7 +249,7 @@ class CreateJob extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class GetBuild extends V20170925Roa
+class GetBuild extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]';
@@ -265,7 +262,7 @@ class GetBuild extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class DeleteJob extends V20170925Roa
+class DeleteJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]';
@@ -278,7 +275,7 @@ class DeleteJob extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class GetJob extends V20170925Roa
+class GetJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]';
@@ -293,7 +290,7 @@ class GetJob extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class GetBuilds extends V20170925Roa
+class GetBuilds extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/builds';
@@ -334,7 +331,7 @@ class GetBuilds extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class DeleteBuild extends V20170925Roa
+class DeleteBuild extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]';
@@ -347,7 +344,7 @@ class DeleteBuild extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class RunJob extends V20170925Roa
+class RunJob extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/run';
@@ -359,7 +356,7 @@ class RunJob extends V20170925Roa
  * @method string getJobName()
  * @method $this withJobName($value)
  */
-class StopBuild extends V20170925Roa
+class StopBuild extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]/stop';
@@ -369,7 +366,7 @@ class StopBuild extends V20170925Roa
  * @method string getStart()
  * @method string getNumberPerPage()
  */
-class GetJobs extends V20170925Roa
+class GetJobs extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/jobs';

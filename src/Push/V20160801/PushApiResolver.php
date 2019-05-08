@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Push\V20160801;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryDevicesByAccount queryDevicesByAccount(array $options = [])
  * @method QueryDevicesByAlias queryDevicesByAlias(array $options = [])
  * @method BindPhone bindPhone(array $options = [])
@@ -47,7 +44,7 @@ class PushApiResolver
     use ApiResolverTrait;
 }
 
-class V20160801Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Push';
@@ -65,7 +62,7 @@ class V20160801Rpc extends Rpc
  * @method string getAccount()
  * @method $this withAccount($value)
  */
-class QueryDevicesByAccount extends V20160801Rpc
+class QueryDevicesByAccount extends Rpc
 {
 }
 
@@ -75,7 +72,7 @@ class QueryDevicesByAccount extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class QueryDevicesByAlias extends V20160801Rpc
+class QueryDevicesByAlias extends Rpc
 {
 }
 
@@ -87,7 +84,7 @@ class QueryDevicesByAlias extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class BindPhone extends V20160801Rpc
+class BindPhone extends Rpc
 {
 }
 
@@ -97,7 +94,7 @@ class BindPhone extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class UnbindPhone extends V20160801Rpc
+class UnbindPhone extends Rpc
 {
 }
 
@@ -107,7 +104,7 @@ class UnbindPhone extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class RemoveTag extends V20160801Rpc
+class RemoveTag extends Rpc
 {
 }
 
@@ -117,7 +114,7 @@ class RemoveTag extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class CheckDevices extends V20160801Rpc
+class CheckDevices extends Rpc
 {
 }
 
@@ -135,7 +132,7 @@ class CheckDevices extends V20160801Rpc
  * @method string getPushType()
  * @method $this withPushType($value)
  */
-class QueryPushList extends V20160801Rpc
+class QueryPushList extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class QueryPushList extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class CheckDevice extends V20160801Rpc
+class CheckDevice extends Rpc
 {
 }
 
@@ -155,7 +152,7 @@ class CheckDevice extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class CancelPush extends V20160801Rpc
+class CancelPush extends Rpc
 {
 }
 
@@ -169,7 +166,7 @@ class CancelPush extends V20160801Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class QueryPushStatByApp extends V20160801Rpc
+class QueryPushStatByApp extends Rpc
 {
 }
 
@@ -179,7 +176,7 @@ class QueryPushStatByApp extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class QueryPushStatByMsg extends V20160801Rpc
+class QueryPushStatByMsg extends Rpc
 {
 }
 
@@ -189,11 +186,11 @@ class QueryPushStatByMsg extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class QueryAliases extends V20160801Rpc
+class QueryAliases extends Rpc
 {
 }
 
-class ListSummaryApps extends V20160801Rpc
+class ListSummaryApps extends Rpc
 {
 }
 
@@ -207,7 +204,7 @@ class ListSummaryApps extends V20160801Rpc
  * @method string getKeyType()
  * @method $this withKeyType($value)
  */
-class UnbindTag extends V20160801Rpc
+class UnbindTag extends Rpc
 {
 }
 
@@ -221,7 +218,7 @@ class UnbindTag extends V20160801Rpc
  * @method string getUnbindAll()
  * @method $this withUnbindAll($value)
  */
-class UnbindAlias extends V20160801Rpc
+class UnbindAlias extends Rpc
 {
 }
 
@@ -235,7 +232,7 @@ class UnbindAlias extends V20160801Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class QueryUniqueDeviceStat extends V20160801Rpc
+class QueryUniqueDeviceStat extends Rpc
 {
 }
 
@@ -247,7 +244,7 @@ class QueryUniqueDeviceStat extends V20160801Rpc
  * @method string getKeyType()
  * @method $this withKeyType($value)
  */
-class QueryTags extends V20160801Rpc
+class QueryTags extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class QueryTags extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class QueryPushStat extends V20160801Rpc
+class QueryPushStat extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class QueryPushStat extends V20160801Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class QueryDeviceStat extends V20160801Rpc
+class QueryDeviceStat extends Rpc
 {
 }
 
@@ -283,7 +280,7 @@ class QueryDeviceStat extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class QueryDeviceInfo extends V20160801Rpc
+class QueryDeviceInfo extends Rpc
 {
 }
 
@@ -297,7 +294,7 @@ class QueryDeviceInfo extends V20160801Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class QueryAppPushStat extends V20160801Rpc
+class QueryAppPushStat extends Rpc
 {
 }
 
@@ -307,7 +304,7 @@ class QueryAppPushStat extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class QueryAlias extends V20160801Rpc
+class QueryAlias extends Rpc
 {
 }
 
@@ -327,7 +324,7 @@ class QueryAlias extends V20160801Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class PushNoticeToAndroid extends V20160801Rpc
+class PushNoticeToAndroid extends Rpc
 {
 }
 
@@ -349,7 +346,7 @@ class PushNoticeToAndroid extends V20160801Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class PushNoticeToiOS extends V20160801Rpc
+class PushNoticeToiOS extends Rpc
 {
 }
 
@@ -367,7 +364,7 @@ class PushNoticeToiOS extends V20160801Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class PushMessageToiOS extends V20160801Rpc
+class PushMessageToiOS extends Rpc
 {
 }
 
@@ -385,7 +382,7 @@ class PushMessageToiOS extends V20160801Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class PushMessageToAndroid extends V20160801Rpc
+class PushMessageToAndroid extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class PushMessageToAndroid extends V20160801Rpc
  * @method string getPushType()
  * @method $this withPushType($value)
  */
-class Push extends V20160801Rpc
+class Push extends Rpc
 {
 
     /**
@@ -619,7 +616,7 @@ class Push extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class ListTags extends V20160801Rpc
+class ListTags extends Rpc
 {
 }
 
@@ -637,7 +634,7 @@ class ListTags extends V20160801Rpc
  * @method string getPushType()
  * @method $this withPushType($value)
  */
-class ListPushRecords extends V20160801Rpc
+class ListPushRecords extends Rpc
 {
 }
 
@@ -647,7 +644,7 @@ class ListPushRecords extends V20160801Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class DeleteTag extends V20160801Rpc
+class DeleteTag extends Rpc
 {
 }
 
@@ -657,7 +654,7 @@ class DeleteTag extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class ClearAlias extends V20160801Rpc
+class ClearAlias extends Rpc
 {
 }
 
@@ -671,7 +668,7 @@ class ClearAlias extends V20160801Rpc
  * @method string getKeyType()
  * @method $this withKeyType($value)
  */
-class BindTag extends V20160801Rpc
+class BindTag extends Rpc
 {
 }
 
@@ -683,6 +680,6 @@ class BindTag extends V20160801Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class BindAlias extends V20160801Rpc
+class BindAlias extends Rpc
 {
 }

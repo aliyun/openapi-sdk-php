@@ -3,11 +3,8 @@
 namespace AlibabaCloud\RKvstore\V20150101;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeTags describeTags(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method CreateShardingInstance createShardingInstance(array $options = [])
@@ -150,7 +147,7 @@ class RKvstoreApiResolver
     use ApiResolverTrait;
 }
 
-class V20150101Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'R-kvstore';
@@ -179,7 +176,7 @@ class V20150101Rpc extends Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeTags extends V20150101Rpc
+class DescribeTags extends Rpc
 {
 }
 
@@ -201,7 +198,7 @@ class DescribeTags extends V20150101Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeAvailableResource extends V20150101Rpc
+class DescribeAvailableResource extends Rpc
 {
 }
 
@@ -271,7 +268,7 @@ class DescribeAvailableResource extends V20150101Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class CreateShardingInstance extends V20150101Rpc
+class CreateShardingInstance extends Rpc
 {
 }
 
@@ -305,7 +302,7 @@ class CreateShardingInstance extends V20150101Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class ModifyActiveOperationPendingTask extends V20150101Rpc
+class ModifyActiveOperationPendingTask extends Rpc
 {
 }
 
@@ -323,7 +320,7 @@ class ModifyActiveOperationPendingTask extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeTargetAVZ extends V20150101Rpc
+class DescribeTargetAVZ extends Rpc
 {
 }
 
@@ -343,7 +340,7 @@ class DescribeTargetAVZ extends V20150101Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagResources extends V20150101Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -392,7 +389,7 @@ class ListTagResources extends V20150101Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResources extends V20150101Rpc
+class TagResources extends Rpc
 {
 
     /**
@@ -443,7 +440,7 @@ class TagResources extends V20150101Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class UntagResources extends V20150101Rpc
+class UntagResources extends Rpc
 {
 
     /**
@@ -491,7 +488,7 @@ class UntagResources extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeIntranetAttribute extends V20150101Rpc
+class DescribeIntranetAttribute extends Rpc
 {
 }
 
@@ -509,7 +506,7 @@ class DescribeIntranetAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyIntranetAttribute extends V20150101Rpc
+class ModifyIntranetAttribute extends Rpc
 {
 }
 
@@ -529,7 +526,7 @@ class ModifyIntranetAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class FlushExpireKeys extends V20150101Rpc
+class FlushExpireKeys extends Rpc
 {
 }
 
@@ -549,7 +546,7 @@ class FlushExpireKeys extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceMonitor extends V20150101Rpc
+class ModifyDBInstanceMonitor extends Rpc
 {
 }
 
@@ -567,7 +564,7 @@ class ModifyDBInstanceMonitor extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceMonitor extends V20150101Rpc
+class DescribeDBInstanceMonitor extends Rpc
 {
 }
 
@@ -589,7 +586,7 @@ class DescribeDBInstanceMonitor extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AllocateInstancePublicConnection extends V20150101Rpc
+class AllocateInstancePublicConnection extends Rpc
 {
 }
 
@@ -609,7 +606,7 @@ class AllocateInstancePublicConnection extends V20150101Rpc
  * @method string getCurrentConnectionString()
  * @method $this withCurrentConnectionString($value)
  */
-class ReleaseInstancePublicConnection extends V20150101Rpc
+class ReleaseInstancePublicConnection extends Rpc
 {
 }
 
@@ -629,7 +626,7 @@ class ReleaseInstancePublicConnection extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestartInstance extends V20150101Rpc
+class RestartInstance extends Rpc
 {
 }
 
@@ -649,7 +646,7 @@ class RestartInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestartDBInstance extends V20150101Rpc
+class RestartDBInstance extends Rpc
 {
 }
 
@@ -672,7 +669,7 @@ class RestartDBInstance extends V20150101Rpc
  * @method $this withPageNumber($value)
  * @method string getProxyId()
  */
-class DescribeInstanceAutoRenewalAttribute extends V20150101Rpc
+class DescribeInstanceAutoRenewalAttribute extends Rpc
 {
 
     /**
@@ -707,7 +704,7 @@ class DescribeInstanceAutoRenewalAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyInstanceAutoRenewalAttribute extends V20150101Rpc
+class ModifyInstanceAutoRenewalAttribute extends Rpc
 {
 }
 
@@ -731,7 +728,7 @@ class ModifyInstanceAutoRenewalAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class MigrateToOtherZone extends V20150101Rpc
+class MigrateToOtherZone extends Rpc
 {
 }
 
@@ -753,7 +750,7 @@ class MigrateToOtherZone extends V20150101Rpc
  * @method string getRetention()
  * @method $this withRetention($value)
  */
-class ModifyAuditLogConfig extends V20150101Rpc
+class ModifyAuditLogConfig extends Rpc
 {
 }
 
@@ -789,7 +786,7 @@ class ModifyAuditLogConfig extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeAuditRecords extends V20150101Rpc
+class DescribeAuditRecords extends Rpc
 {
 }
 
@@ -815,7 +812,7 @@ class DescribeAuditRecords extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeCacheAnalysisReportList extends V20150101Rpc
+class DescribeCacheAnalysisReportList extends Rpc
 {
 }
 
@@ -843,7 +840,7 @@ class DescribeCacheAnalysisReportList extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeCacheAnalysisReport extends V20150101Rpc
+class DescribeCacheAnalysisReport extends Rpc
 {
 }
 
@@ -861,7 +858,7 @@ class DescribeCacheAnalysisReport extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateCacheAnalysisTask extends V20150101Rpc
+class CreateCacheAnalysisTask extends Rpc
 {
 }
 
@@ -881,7 +878,7 @@ class CreateCacheAnalysisTask extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyActiveOperationTask extends V20150101Rpc
+class ModifyActiveOperationTask extends Rpc
 {
 }
 
@@ -899,7 +896,7 @@ class ModifyActiveOperationTask extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeActiveOperationTaskType extends V20150101Rpc
+class DescribeActiveOperationTaskType extends Rpc
 {
 }
 
@@ -919,7 +916,7 @@ class DescribeActiveOperationTaskType extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeActiveOperationTaskRegion extends V20150101Rpc
+class DescribeActiveOperationTaskRegion extends Rpc
 {
 }
 
@@ -935,7 +932,7 @@ class DescribeActiveOperationTaskRegion extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeActiveOperationTaskCount extends V20150101Rpc
+class DescribeActiveOperationTaskCount extends Rpc
 {
 }
 
@@ -961,7 +958,7 @@ class DescribeActiveOperationTaskCount extends V20150101Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class DescribeActiveOperationTask extends V20150101Rpc
+class DescribeActiveOperationTask extends Rpc
 {
 }
 
@@ -993,41 +990,7 @@ class DescribeActiveOperationTask extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeSlowLogRecords extends V20150101Rpc
-{
-}
-
-/**
- * @method string getSQLId()
- * @method $this withSQLId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRoleType()
- * @method $this withRoleType($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- */
-class DescribeRunningLogRecords extends V20150101Rpc
+class DescribeSlowLogRecords extends Rpc
 {
 }
 
@@ -1061,7 +1024,41 @@ class DescribeRunningLogRecords extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeErrorLogRecords extends V20150101Rpc
+class DescribeRunningLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getSQLId()
+ * @method $this withSQLId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRoleType()
+ * @method $this withRoleType($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class DescribeErrorLogRecords extends Rpc
 {
 }
 
@@ -1081,7 +1078,7 @@ class DescribeErrorLogRecords extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnlinkReplicaInstance extends V20150101Rpc
+class UnlinkReplicaInstance extends Rpc
 {
 }
 
@@ -1111,7 +1108,7 @@ class UnlinkReplicaInstance extends V20150101Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class EvaluateResource extends V20150101Rpc
+class EvaluateResource extends Rpc
 {
 }
 
@@ -1133,7 +1130,7 @@ class EvaluateResource extends V20150101Rpc
  * @method string getEffectTime()
  * @method $this withEffectTime($value)
  */
-class ModifyInstanceMajorVersion extends V20150101Rpc
+class ModifyInstanceMajorVersion extends Rpc
 {
 }
 
@@ -1155,7 +1152,7 @@ class ModifyInstanceMajorVersion extends V20150101Rpc
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  */
-class ModifyAccountDescription extends V20150101Rpc
+class ModifyAccountDescription extends Rpc
 {
 }
 
@@ -1177,7 +1174,7 @@ class ModifyAccountDescription extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccount extends V20150101Rpc
+class ResetAccount extends Rpc
 {
 }
 
@@ -1197,7 +1194,7 @@ class ResetAccount extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAccount extends V20150101Rpc
+class DeleteAccount extends Rpc
 {
 }
 
@@ -1225,7 +1222,7 @@ class DeleteAccount extends V20150101Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
-class CreateAccount extends V20150101Rpc
+class CreateAccount extends Rpc
 {
 }
 
@@ -1247,7 +1244,7 @@ class CreateAccount extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccountPassword extends V20150101Rpc
+class ResetAccountPassword extends Rpc
 {
 }
 
@@ -1267,7 +1264,7 @@ class ResetAccountPassword extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAccounts extends V20150101Rpc
+class DescribeAccounts extends Rpc
 {
 }
 
@@ -1287,7 +1284,7 @@ class DescribeAccounts extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RevokeAccountPrivilege extends V20150101Rpc
+class RevokeAccountPrivilege extends Rpc
 {
 }
 
@@ -1309,7 +1306,7 @@ class RevokeAccountPrivilege extends V20150101Rpc
  * @method string getAccountPrivilege()
  * @method $this withAccountPrivilege($value)
  */
-class GrantAccountPrivilege extends V20150101Rpc
+class GrantAccountPrivilege extends Rpc
 {
 }
 
@@ -1329,7 +1326,7 @@ class GrantAccountPrivilege extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeParameters extends V20150101Rpc
+class DescribeParameters extends Rpc
 {
 }
 
@@ -1351,7 +1348,7 @@ class DescribeParameters extends V20150101Rpc
  * @method string getCharacterType()
  * @method $this withCharacterType($value)
  */
-class DescribeParameterTemplates extends V20150101Rpc
+class DescribeParameterTemplates extends Rpc
 {
 }
 
@@ -1375,7 +1372,7 @@ class DescribeParameterTemplates extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeParameterModificationHistory extends V20150101Rpc
+class DescribeParameterModificationHistory extends Rpc
 {
 }
 
@@ -1393,7 +1390,7 @@ class DescribeParameterModificationHistory extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EvaluateFailOverSwitch extends V20150101Rpc
+class EvaluateFailOverSwitch extends Rpc
 {
 }
 
@@ -1413,7 +1410,7 @@ class EvaluateFailOverSwitch extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyInstanceVpcAuthMode extends V20150101Rpc
+class ModifyInstanceVpcAuthMode extends Rpc
 {
 }
 
@@ -1439,7 +1436,7 @@ class ModifyInstanceVpcAuthMode extends V20150101Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class ModifyDBInstanceConnectionString extends V20150101Rpc
+class ModifyDBInstanceConnectionString extends Rpc
 {
 }
 
@@ -1457,7 +1454,7 @@ class ModifyDBInstanceConnectionString extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRdsVpcs extends V20150101Rpc
+class DescribeRdsVpcs extends Rpc
 {
 }
 
@@ -1477,7 +1474,7 @@ class DescribeRdsVpcs extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRdsVSwitchs extends V20150101Rpc
+class DescribeRdsVSwitchs extends Rpc
 {
 }
 
@@ -1495,7 +1492,7 @@ class DescribeRdsVSwitchs extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DestroyInstance extends V20150101Rpc
+class DestroyInstance extends Rpc
 {
 }
 
@@ -1549,7 +1546,7 @@ class DestroyInstance extends V20150101Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class RebuildInstance extends V20150101Rpc
+class RebuildInstance extends Rpc
 {
 }
 
@@ -1575,7 +1572,7 @@ class RebuildInstance extends V20150101Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeVerificationList extends V20150101Rpc
+class DescribeVerificationList extends Rpc
 {
 }
 
@@ -1595,7 +1592,7 @@ class DescribeVerificationList extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaRecoveryMode extends V20150101Rpc
+class ModifyReplicaRecoveryMode extends Rpc
 {
 }
 
@@ -1615,7 +1612,7 @@ class ModifyReplicaRecoveryMode extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaVerificationMode extends V20150101Rpc
+class ModifyReplicaVerificationMode extends Rpc
 {
 }
 
@@ -1635,7 +1632,7 @@ class ModifyReplicaVerificationMode extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaDynamicMode extends V20150101Rpc
+class ModifyReplicaDynamicMode extends Rpc
 {
 }
 
@@ -1655,7 +1652,7 @@ class ModifyReplicaDynamicMode extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaFilterMode extends V20150101Rpc
+class ModifyReplicaFilterMode extends Rpc
 {
 }
 
@@ -1673,7 +1670,7 @@ class ModifyReplicaFilterMode extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeStrategy extends V20150101Rpc
+class DescribeStrategy extends Rpc
 {
 }
 
@@ -1693,7 +1690,7 @@ class DescribeStrategy extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDynamicMode extends V20150101Rpc
+class ModifyDynamicMode extends Rpc
 {
 }
 
@@ -1719,7 +1716,7 @@ class ModifyDynamicMode extends V20150101Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeReplicaConflictInfo extends V20150101Rpc
+class DescribeReplicaConflictInfo extends Rpc
 {
 }
 
@@ -1741,7 +1738,7 @@ class DescribeReplicaConflictInfo extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeStaticVerificationList extends V20150101Rpc
+class DescribeStaticVerificationList extends Rpc
 {
 }
 
@@ -1763,7 +1760,7 @@ class DescribeStaticVerificationList extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateStaticVerification extends V20150101Rpc
+class CreateStaticVerification extends Rpc
 {
 }
 
@@ -1783,7 +1780,7 @@ class CreateStaticVerification extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaRecoverMode extends V20150101Rpc
+class ModifyReplicaRecoverMode extends Rpc
 {
 }
 
@@ -1809,7 +1806,7 @@ class ModifyReplicaRecoverMode extends V20150101Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeDynamicVerificationList extends V20150101Rpc
+class DescribeDynamicVerificationList extends Rpc
 {
 }
 
@@ -1835,7 +1832,7 @@ class DescribeDynamicVerificationList extends V20150101Rpc
  * @method string getExpirePeriod()
  * @method $this withExpirePeriod($value)
  */
-class DescribeInstancesByExpireTime extends V20150101Rpc
+class DescribeInstancesByExpireTime extends Rpc
 {
 }
 
@@ -1855,7 +1852,7 @@ class DescribeInstancesByExpireTime extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyGuardDomainMode extends V20150101Rpc
+class ModifyGuardDomainMode extends Rpc
 {
 }
 
@@ -1875,7 +1872,7 @@ class ModifyGuardDomainMode extends V20150101Rpc
  * @method string getSSLEnabled()
  * @method $this withSSLEnabled($value)
  */
-class ModifyInstanceSSL extends V20150101Rpc
+class ModifyInstanceSSL extends Rpc
 {
 }
 
@@ -1893,7 +1890,7 @@ class ModifyInstanceSSL extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceSSL extends V20150101Rpc
+class DescribeInstanceSSL extends Rpc
 {
 }
 
@@ -1917,7 +1914,7 @@ class DescribeInstanceSSL extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaMode extends V20150101Rpc
+class ModifyReplicaMode extends Rpc
 {
 }
 
@@ -1935,7 +1932,7 @@ class ModifyReplicaMode extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaRelation extends V20150101Rpc
+class ModifyReplicaRelation extends Rpc
 {
 }
 
@@ -1967,7 +1964,7 @@ class ModifyReplicaRelation extends V20150101Rpc
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  */
-class ModifyInstanceSpec extends V20150101Rpc
+class ModifyInstanceSpec extends Rpc
 {
 }
 
@@ -1985,7 +1982,7 @@ class ModifyInstanceSpec extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeLogicInstanceTopology extends V20150101Rpc
+class DescribeLogicInstanceTopology extends Rpc
 {
 }
 
@@ -2005,7 +2002,7 @@ class DescribeLogicInstanceTopology extends V20150101Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class DescribeInstancePerformanceUsage extends V20150101Rpc
+class DescribeInstancePerformanceUsage extends Rpc
 {
 }
 
@@ -2025,7 +2022,7 @@ class DescribeInstancePerformanceUsage extends V20150101Rpc
  * @method string getTargetInstanceClass()
  * @method $this withTargetInstanceClass($value)
  */
-class ModifyInstanceSpecPreCheck extends V20150101Rpc
+class ModifyInstanceSpecPreCheck extends Rpc
 {
 }
 
@@ -2047,7 +2044,7 @@ class ModifyInstanceSpecPreCheck extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyInstanceNetExpireTime extends V20150101Rpc
+class ModifyInstanceNetExpireTime extends Rpc
 {
 }
 
@@ -2071,7 +2068,7 @@ class ModifyInstanceNetExpireTime extends V20150101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeReplicas extends V20150101Rpc
+class DescribeReplicas extends Rpc
 {
 }
 
@@ -2089,7 +2086,7 @@ class DescribeReplicas extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReleaseReplica extends V20150101Rpc
+class ReleaseReplica extends Rpc
 {
 }
 
@@ -2107,7 +2104,7 @@ class ReleaseReplica extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeReplicaInitializeProgress extends V20150101Rpc
+class DescribeReplicaInitializeProgress extends Rpc
 {
 }
 
@@ -2135,7 +2132,7 @@ class DescribeReplicaInitializeProgress extends V20150101Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class DescribeReplicaPerformance extends V20150101Rpc
+class DescribeReplicaPerformance extends Rpc
 {
 }
 
@@ -2155,7 +2152,7 @@ class DescribeReplicaPerformance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicaDescription extends V20150101Rpc
+class ModifyReplicaDescription extends Rpc
 {
 }
 
@@ -2177,7 +2174,7 @@ class ModifyReplicaDescription extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeReplicaUsage extends V20150101Rpc
+class DescribeReplicaUsage extends Rpc
 {
 }
 
@@ -2197,7 +2194,7 @@ class DescribeReplicaUsage extends V20150101Rpc
  * @method string getParameters()
  * @method $this withParameters($value)
  */
-class DescribeEngineVersion extends V20150101Rpc
+class DescribeEngineVersion extends Rpc
 {
 }
 
@@ -2217,7 +2214,7 @@ class DescribeEngineVersion extends V20150101Rpc
  * @method string getNoCertification()
  * @method $this withNoCertification($value)
  */
-class ModifyCertification extends V20150101Rpc
+class ModifyCertification extends Rpc
 {
 }
 
@@ -2239,7 +2236,7 @@ class ModifyCertification extends V20150101Rpc
  * @method string getEffectTime()
  * @method $this withEffectTime($value)
  */
-class ModifyInstanceMinorVersion extends V20150101Rpc
+class ModifyInstanceMinorVersion extends Rpc
 {
 }
 
@@ -2259,7 +2256,7 @@ class ModifyInstanceMinorVersion extends V20150101Rpc
  * @method string getParameters()
  * @method $this withParameters($value)
  */
-class DescribeCertification extends V20150101Rpc
+class DescribeCertification extends Rpc
 {
 }
 
@@ -2277,7 +2274,7 @@ class DescribeCertification extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceNetInfo extends V20150101Rpc
+class DescribeDBInstanceNetInfo extends Rpc
 {
 }
 
@@ -2305,7 +2302,7 @@ class DescribeDBInstanceNetInfo extends V20150101Rpc
  * @method string getDestinationDataFilter()
  * @method $this withDestinationDataFilter($value)
  */
-class AddBindingTunnel extends V20150101Rpc
+class AddBindingTunnel extends Rpc
 {
 }
 
@@ -2325,7 +2322,7 @@ class AddBindingTunnel extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindTunnel extends V20150101Rpc
+class UnbindTunnel extends Rpc
 {
 }
 
@@ -2343,7 +2340,7 @@ class UnbindTunnel extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteReplicationGroup extends V20150101Rpc
+class DeleteReplicationGroup extends Rpc
 {
 }
 
@@ -2365,7 +2362,7 @@ class DeleteReplicationGroup extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeReplicationGroup extends V20150101Rpc
+class DescribeReplicationGroup extends Rpc
 {
 }
 
@@ -2387,7 +2384,7 @@ class DescribeReplicationGroup extends V20150101Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListReplicationGroup extends V20150101Rpc
+class ListReplicationGroup extends Rpc
 {
 }
 
@@ -2407,7 +2404,7 @@ class ListReplicationGroup extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyReplicationGroup extends V20150101Rpc
+class ModifyReplicationGroup extends Rpc
 {
 }
 
@@ -2429,7 +2426,7 @@ class ModifyReplicationGroup extends V20150101Rpc
  * @method string getDestinationContext()
  * @method $this withDestinationContext($value)
  */
-class BindTunnel extends V20150101Rpc
+class BindTunnel extends Rpc
 {
 }
 
@@ -2447,7 +2444,7 @@ class BindTunnel extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateReplicationGroup extends V20150101Rpc
+class CreateReplicationGroup extends Rpc
 {
 }
 
@@ -2467,7 +2464,7 @@ class CreateReplicationGroup extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMonthlyServiceStatusDetail extends V20150101Rpc
+class DescribeMonthlyServiceStatusDetail extends Rpc
 {
 }
 
@@ -2487,7 +2484,7 @@ class DescribeMonthlyServiceStatusDetail extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMonthlyServiceStatus extends V20150101Rpc
+class DescribeMonthlyServiceStatus extends Rpc
 {
 }
 
@@ -2505,7 +2502,7 @@ class DescribeMonthlyServiceStatus extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSecurityIps extends V20150101Rpc
+class DescribeSecurityIps extends Rpc
 {
 }
 
@@ -2531,7 +2528,7 @@ class DescribeSecurityIps extends V20150101Rpc
  * @method string getSecurityIpGroupAttribute()
  * @method $this withSecurityIpGroupAttribute($value)
  */
-class ModifySecurityIps extends V20150101Rpc
+class ModifySecurityIps extends Rpc
 {
 }
 
@@ -2553,7 +2550,7 @@ class ModifySecurityIps extends V20150101Rpc
  * @method string getMaintainEndTime()
  * @method $this withMaintainEndTime($value)
  */
-class ModifyInstanceMaintainTime extends V20150101Rpc
+class ModifyInstanceMaintainTime extends Rpc
 {
 }
 
@@ -2571,7 +2568,7 @@ class ModifyInstanceMaintainTime extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceAttribute extends V20150101Rpc
+class DescribeInstanceAttribute extends Rpc
 {
 }
 
@@ -2591,7 +2588,7 @@ class DescribeInstanceAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestoreInstance extends V20150101Rpc
+class RestoreInstance extends Rpc
 {
 }
 
@@ -2613,7 +2610,7 @@ class RestoreInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyBackupPolicy extends V20150101Rpc
+class ModifyBackupPolicy extends Rpc
 {
 }
 
@@ -2641,7 +2638,7 @@ class ModifyBackupPolicy extends V20150101Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class DescribeBackups extends V20150101Rpc
+class DescribeBackups extends Rpc
 {
 }
 
@@ -2659,7 +2656,7 @@ class DescribeBackups extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupPolicy extends V20150101Rpc
+class DescribeBackupPolicy extends Rpc
 {
 }
 
@@ -2677,7 +2674,7 @@ class DescribeBackupPolicy extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateBackup extends V20150101Rpc
+class CreateBackup extends Rpc
 {
 }
 
@@ -2695,7 +2692,7 @@ class CreateBackup extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeZones extends V20150101Rpc
+class DescribeZones extends Rpc
 {
 }
 
@@ -2723,7 +2720,7 @@ class DescribeZones extends V20150101Rpc
  * @method string getVpcId()
  * @method $this withVpcId($value)
  */
-class SwitchNetwork extends V20150101Rpc
+class SwitchNetwork extends Rpc
 {
 }
 
@@ -2751,7 +2748,7 @@ class SwitchNetwork extends V20150101Rpc
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  */
-class RenewMultiInstance extends V20150101Rpc
+class RenewMultiInstance extends Rpc
 {
 }
 
@@ -2775,7 +2772,7 @@ class RenewMultiInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class TransformToPrePaid extends V20150101Rpc
+class TransformToPrePaid extends Rpc
 {
 }
 
@@ -2789,7 +2786,7 @@ class TransformToPrePaid extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetSnapshotSettings extends V20150101Rpc
+class SetSnapshotSettings extends Rpc
 {
 }
 
@@ -2803,7 +2800,7 @@ class SetSnapshotSettings extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SwitchTempInstance extends V20150101Rpc
+class SwitchTempInstance extends Rpc
 {
 }
 
@@ -2817,7 +2814,7 @@ class SwitchTempInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTask extends V20150101Rpc
+class QueryTask extends Rpc
 {
 }
 
@@ -2831,7 +2828,7 @@ class QueryTask extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestoreSnapshot extends V20150101Rpc
+class RestoreSnapshot extends Rpc
 {
 }
 
@@ -2849,7 +2846,7 @@ class RestoreSnapshot extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeSnapshots extends V20150101Rpc
+class DescribeSnapshots extends Rpc
 {
 }
 
@@ -2863,7 +2860,7 @@ class DescribeSnapshots extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeTempInstance extends V20150101Rpc
+class DescribeTempInstance extends Rpc
 {
 }
 
@@ -2879,7 +2876,7 @@ class DescribeTempInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetSnapshotSettings extends V20150101Rpc
+class GetSnapshotSettings extends Rpc
 {
 }
 
@@ -2893,7 +2890,7 @@ class GetSnapshotSettings extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSnapshotSettings extends V20150101Rpc
+class DeleteSnapshotSettings extends Rpc
 {
 }
 
@@ -2907,7 +2904,7 @@ class DeleteSnapshotSettings extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTempInstance extends V20150101Rpc
+class DeleteTempInstance extends Rpc
 {
 }
 
@@ -2921,7 +2918,7 @@ class DeleteTempInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateSnapshot extends V20150101Rpc
+class CreateSnapshot extends Rpc
 {
 }
 
@@ -2935,7 +2932,7 @@ class CreateSnapshot extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateTempInstance extends V20150101Rpc
+class CreateTempInstance extends Rpc
 {
 }
 
@@ -2949,7 +2946,7 @@ class CreateTempInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSnapshot extends V20150101Rpc
+class DeleteSnapshot extends Rpc
 {
 }
 
@@ -2993,7 +2990,7 @@ class DeleteSnapshot extends V20150101Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribePrice extends V20150101Rpc
+class DescribePrice extends Rpc
 {
 }
 
@@ -3027,7 +3024,7 @@ class DescribePrice extends V20150101Rpc
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  */
-class RenewInstance extends V20150101Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -3083,7 +3080,7 @@ class RenewInstance extends V20150101Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class CreateInstance extends V20150101Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -3101,7 +3098,7 @@ class CreateInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceConfig extends V20150101Rpc
+class DescribeInstanceConfig extends Rpc
 {
 }
 
@@ -3129,7 +3126,7 @@ class DescribeInstanceConfig extends V20150101Rpc
  * @method string getMonitorKeys()
  * @method $this withMonitorKeys($value)
  */
-class DescribeHistoryMonitorValues extends V20150101Rpc
+class DescribeHistoryMonitorValues extends Rpc
 {
 }
 
@@ -3147,7 +3144,7 @@ class DescribeHistoryMonitorValues extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteInstance extends V20150101Rpc
+class DeleteInstance extends Rpc
 {
 }
 
@@ -3163,7 +3160,7 @@ class DeleteInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMonitorItems extends V20150101Rpc
+class DescribeMonitorItems extends Rpc
 {
 }
 
@@ -3210,7 +3207,7 @@ class DescribeMonitorItems extends V20150101Rpc
  * @method $this withChargeType($value)
  * @method array getTag()
  */
-class DescribeInstances extends V20150101Rpc
+class DescribeInstances extends Rpc
 {
 
     /**
@@ -3244,7 +3241,7 @@ class DescribeInstances extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class FlushInstance extends V20150101Rpc
+class FlushInstance extends Rpc
 {
 }
 
@@ -3262,7 +3259,7 @@ class FlushInstance extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20150101Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -3284,7 +3281,7 @@ class DescribeRegions extends V20150101Rpc
  * @method string getNewPassword()
  * @method $this withNewPassword($value)
  */
-class ModifyInstanceAttribute extends V20150101Rpc
+class ModifyInstanceAttribute extends Rpc
 {
 }
 
@@ -3304,7 +3301,7 @@ class ModifyInstanceAttribute extends V20150101Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class VerifyPassword extends V20150101Rpc
+class VerifyPassword extends Rpc
 {
 }
 
@@ -3324,6 +3321,6 @@ class VerifyPassword extends V20150101Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class ModifyInstanceConfig extends V20150101Rpc
+class ModifyInstanceConfig extends Rpc
 {
 }

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateAgAccount createAgAccount(array $options = [])
  * @method CreateResellerUserQuota createResellerUserQuota(array $options = [])
  * @method SetResellerUserAlarmThreshold setResellerUserAlarmThreshold(array $options = [])
@@ -66,7 +63,7 @@ class BssOpenApiApiResolver
     use ApiResolverTrait;
 }
 
-class V20171214Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'BssOpenApi';
@@ -98,7 +95,7 @@ class V20171214Rpc extends Rpc
  * @method string getLastName()
  * @method $this withLastName($value)
  */
-class CreateAgAccount extends V20171214Rpc
+class CreateAgAccount extends Rpc
 {
 
     /** @var string */
@@ -117,7 +114,7 @@ class CreateAgAccount extends V20171214Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class CreateResellerUserQuota extends V20171214Rpc
+class CreateResellerUserQuota extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class CreateResellerUserQuota extends V20171214Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class SetResellerUserAlarmThreshold extends V20171214Rpc
+class SetResellerUserAlarmThreshold extends Rpc
 {
 }
 
@@ -155,7 +152,7 @@ class SetResellerUserAlarmThreshold extends V20171214Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class ChangeResellerConsumeAmount extends V20171214Rpc
+class ChangeResellerConsumeAmount extends Rpc
 {
 }
 
@@ -167,7 +164,7 @@ class ChangeResellerConsumeAmount extends V20171214Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class QueryResellerAvailableQuota extends V20171214Rpc
+class QueryResellerAvailableQuota extends Rpc
 {
 }
 
@@ -183,11 +180,11 @@ class QueryResellerAvailableQuota extends V20171214Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class SetResellerUserQuota extends V20171214Rpc
+class SetResellerUserQuota extends Rpc
 {
 }
 
-class GetCustomerList extends V20171214Rpc
+class GetCustomerList extends Rpc
 {
 }
 
@@ -201,7 +198,7 @@ class GetCustomerList extends V20171214Rpc
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
  */
-class SetResellerUserStatus extends V20171214Rpc
+class SetResellerUserStatus extends Rpc
 {
 }
 
@@ -209,7 +206,7 @@ class SetResellerUserStatus extends V20171214Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetCustomerAccountInfo extends V20171214Rpc
+class GetCustomerAccountInfo extends Rpc
 {
 }
 
@@ -217,7 +214,7 @@ class GetCustomerAccountInfo extends V20171214Rpc
  * @method string getSubscribeType()
  * @method $this withSubscribeType($value)
  */
-class UnsubscribeBillToOSS extends V20171214Rpc
+class UnsubscribeBillToOSS extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class UnsubscribeBillToOSS extends V20171214Rpc
  * @method string getSubscribeBucket()
  * @method $this withSubscribeBucket($value)
  */
-class SubscribeBillToOSS extends V20171214Rpc
+class SubscribeBillToOSS extends Rpc
 {
 }
 
@@ -237,7 +234,7 @@ class SubscribeBillToOSS extends V20171214Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CancelOrder extends V20171214Rpc
+class CancelOrder extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class CancelOrder extends V20171214Rpc
  * @method string getTable()
  * @method $this withTable($value)
  */
-class QueryUserOmsData extends V20171214Rpc
+class QueryUserOmsData extends Rpc
 {
 
     /** @var string */
@@ -285,7 +282,7 @@ class QueryUserOmsData extends V20171214Rpc
  * @method $this withAddressId($value)
  * @method string getCallerUid()
  */
-class ApplyInvoice extends V20171214Rpc
+class ApplyInvoice extends Rpc
 {
 
     /**
@@ -359,7 +356,7 @@ class ApplyInvoice extends V20171214Rpc
  * @method string getStartBizTime()
  * @method $this withStartBizTime($value)
  */
-class QueryEvaluateList extends V20171214Rpc
+class QueryEvaluateList extends Rpc
 {
 
     /**
@@ -382,7 +379,7 @@ class QueryEvaluateList extends V20171214Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryInvoicingCustomerList extends V20171214Rpc
+class QueryInvoicingCustomerList extends Rpc
 {
 }
 
@@ -392,7 +389,7 @@ class QueryInvoicingCustomerList extends V20171214Rpc
  * @method $this withOwnerId($value)
  * @method string getCallerUid()
  */
-class QueryCustomerAddressList extends V20171214Rpc
+class QueryCustomerAddressList extends Rpc
 {
 
     /**
@@ -442,7 +439,7 @@ class QueryCustomerAddressList extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QueryInstanceBill extends V20171214Rpc
+class QueryInstanceBill extends Rpc
 {
 }
 
@@ -468,7 +465,7 @@ class QueryInstanceBill extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QueryBill extends V20171214Rpc
+class QueryBill extends Rpc
 {
 }
 
@@ -482,7 +479,7 @@ class QueryBill extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QueryBillOverview extends V20171214Rpc
+class QueryBillOverview extends Rpc
 {
 }
 
@@ -492,7 +489,7 @@ class QueryBillOverview extends V20171214Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class EnableBillGeneration extends V20171214Rpc
+class EnableBillGeneration extends Rpc
 {
 
     /** @var string */
@@ -511,7 +508,7 @@ class EnableBillGeneration extends V20171214Rpc
  * @method string getEffectiveOrNot()
  * @method $this withEffectiveOrNot($value)
  */
-class QueryRedeem extends V20171214Rpc
+class QueryRedeem extends Rpc
 {
 
     /** @var string */
@@ -532,7 +529,7 @@ class QueryRedeem extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class ConvertChargeType extends V20171214Rpc
+class ConvertChargeType extends Rpc
 {
 }
 
@@ -553,7 +550,7 @@ class ConvertChargeType extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class ModifyInstance extends V20171214Rpc
+class ModifyInstance extends Rpc
 {
 
     /**
@@ -592,7 +589,7 @@ class ModifyInstance extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class CreateInstance extends V20171214Rpc
+class CreateInstance extends Rpc
 {
 
     /**
@@ -626,7 +623,7 @@ class CreateInstance extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QueryInstanceGaapCost extends V20171214Rpc
+class QueryInstanceGaapCost extends Rpc
 {
 }
 
@@ -644,7 +641,7 @@ class QueryInstanceGaapCost extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class RenewInstance extends V20171214Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -656,7 +653,7 @@ class RenewInstance extends V20171214Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class QueryProductList extends V20171214Rpc
+class QueryProductList extends Rpc
 {
 }
 
@@ -670,7 +667,7 @@ class QueryProductList extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribePricingModule extends V20171214Rpc
+class DescribePricingModule extends Rpc
 {
 }
 
@@ -696,7 +693,7 @@ class DescribePricingModule extends V20171214Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class QueryOrders extends V20171214Rpc
+class QueryOrders extends Rpc
 {
 }
 
@@ -706,7 +703,7 @@ class QueryOrders extends V20171214Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetOrderDetail extends V20171214Rpc
+class GetOrderDetail extends Rpc
 {
 }
 
@@ -718,7 +715,7 @@ class GetOrderDetail extends V20171214Rpc
  * @method string getEffectiveOrNot()
  * @method $this withEffectiveOrNot($value)
  */
-class QueryCashCoupons extends V20171214Rpc
+class QueryCashCoupons extends Rpc
 {
 }
 
@@ -730,11 +727,11 @@ class QueryCashCoupons extends V20171214Rpc
  * @method string getEffectiveOrNot()
  * @method $this withEffectiveOrNot($value)
  */
-class QueryPrepaidCards extends V20171214Rpc
+class QueryPrepaidCards extends Rpc
 {
 }
 
-class QueryAccountBalance extends V20171214Rpc
+class QueryAccountBalance extends Rpc
 {
 }
 
@@ -756,7 +753,7 @@ class QueryAccountBalance extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class SetRenewal extends V20171214Rpc
+class SetRenewal extends Rpc
 {
 }
 
@@ -788,7 +785,7 @@ class SetRenewal extends V20171214Rpc
  * @method string getRenewStatus()
  * @method $this withRenewStatus($value)
  */
-class QueryAvailableInstances extends V20171214Rpc
+class QueryAvailableInstances extends Rpc
 {
 }
 
@@ -796,7 +793,7 @@ class QueryAvailableInstances extends V20171214Rpc
  * @method string getProductCode()
  * @method $this withProductCode($value)
  */
-class DescribeResourcePackageProduct extends V20171214Rpc
+class DescribeResourcePackageProduct extends Rpc
 {
 }
 
@@ -814,7 +811,7 @@ class DescribeResourcePackageProduct extends V20171214Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class QueryResourcePackageInstances extends V20171214Rpc
+class QueryResourcePackageInstances extends Rpc
 {
 }
 
@@ -834,7 +831,7 @@ class QueryResourcePackageInstances extends V20171214Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class GetResourcePackagePrice extends V20171214Rpc
+class GetResourcePackagePrice extends Rpc
 {
 }
 
@@ -854,7 +851,7 @@ class GetResourcePackagePrice extends V20171214Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class CreateResourcePackage extends V20171214Rpc
+class CreateResourcePackage extends Rpc
 {
 }
 
@@ -882,19 +879,19 @@ class CreateResourcePackage extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QuerySettlementBill extends V20171214Rpc
+class QuerySettlementBill extends Rpc
 {
 }
 
-class QueryUserValueCard extends V20171214Rpc
+class QueryUserValueCard extends Rpc
 {
 }
 
-class QueryUserCoupon extends V20171214Rpc
+class QueryUserCoupon extends Rpc
 {
 }
 
-class QueryUserAvailableCreditAmount extends V20171214Rpc
+class QueryUserAvailableCreditAmount extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class QueryUserAvailableCreditAmount extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class GetSubscriptionPrice extends V20171214Rpc
+class GetSubscriptionPrice extends Rpc
 {
 
     /**
@@ -956,7 +953,7 @@ class GetSubscriptionPrice extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class GetPayAsYouGoPrice extends V20171214Rpc
+class GetPayAsYouGoPrice extends Rpc
 {
 
     /**
@@ -995,7 +992,7 @@ class GetPayAsYouGoPrice extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class SetRenewalApi extends V20171214Rpc
+class SetRenewalApi extends Rpc
 {
 }
 
@@ -1015,7 +1012,7 @@ class SetRenewalApi extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class QueryMonthlyInstanceConsumption extends V20171214Rpc
+class QueryMonthlyInstanceConsumption extends Rpc
 {
 }
 
@@ -1023,7 +1020,7 @@ class QueryMonthlyInstanceConsumption extends V20171214Rpc
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  */
-class QueryMonthlyBill extends V20171214Rpc
+class QueryMonthlyBill extends Rpc
 {
 }
 
@@ -1045,7 +1042,7 @@ class QueryMonthlyBill extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class SetAutoRenewalApi extends V20171214Rpc
+class SetAutoRenewalApi extends Rpc
 {
 }
 
@@ -1077,7 +1074,7 @@ class SetAutoRenewalApi extends V20171214Rpc
  * @method string getRenewStatus()
  * @method $this withRenewStatus($value)
  */
-class QueryAvailableInstancesApi extends V20171214Rpc
+class QueryAvailableInstancesApi extends Rpc
 {
 }
 
@@ -1093,6 +1090,6 @@ class QueryAvailableInstancesApi extends V20171214Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class SetNotRenewalApi extends V20171214Rpc
+class SetNotRenewalApi extends Rpc
 {
 }

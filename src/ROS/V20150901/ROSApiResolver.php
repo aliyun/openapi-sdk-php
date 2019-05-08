@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ROS\V20150901;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteChangeSet deleteChangeSet(array $options = [])
  * @method ExecuteChangeSet executeChangeSet(array $options = [])
  * @method DescribeChangeSets describeChangeSets(array $options = [])
@@ -42,7 +39,7 @@ class ROSApiResolver
     use ApiResolverTrait;
 }
 
-class V20150901Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'ROS';
@@ -59,7 +56,7 @@ class V20150901Roa extends Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DeleteChangeSet extends V20150901Roa
+class DeleteChangeSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
@@ -76,7 +73,7 @@ class DeleteChangeSet extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class ExecuteChangeSet extends V20150901Roa
+class ExecuteChangeSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]/execute';
@@ -91,7 +88,7 @@ class ExecuteChangeSet extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeChangeSets extends V20150901Roa
+class DescribeChangeSets extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets';
@@ -105,13 +102,13 @@ class DescribeChangeSets extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeChangeSetDetail extends V20150901Roa
+class DescribeChangeSetDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
 }
 
-class CreateChangeSet extends V20150901Roa
+class CreateChangeSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/changeSets';
@@ -126,7 +123,7 @@ class CreateChangeSet extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class CancelUpdateStack extends V20150901Roa
+class CancelUpdateStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/cancel';
@@ -141,7 +138,7 @@ class CancelUpdateStack extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class ContinueCreateStack extends V20150901Roa
+class ContinueCreateStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/continue';
@@ -156,7 +153,7 @@ class ContinueCreateStack extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class SetStackPolicy extends V20150901Roa
+class SetStackPolicy extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
@@ -171,7 +168,7 @@ class SetStackPolicy extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class GetStackPolicy extends V20150901Roa
+class GetStackPolicy extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
@@ -183,7 +180,7 @@ class GetStackPolicy extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class UpdateStack extends V20150901Roa
+class UpdateStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
@@ -199,7 +196,7 @@ class UpdateStack extends V20150901Roa
  * @method string getExpire()
  * @method string getStackname()
  */
-class WaitConditions extends V20150901Roa
+class WaitConditions extends Roa
 {
     /** @var string */
     public $pathPattern = '/waitcondition';
@@ -273,7 +270,7 @@ class WaitConditions extends V20150901Roa
     }
 }
 
-class InquiryStack extends V20150901Roa
+class InquiryStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/inquiry';
@@ -282,7 +279,7 @@ class InquiryStack extends V20150901Roa
     public $method = 'POST';
 }
 
-class PreviewStack extends V20150901Roa
+class PreviewStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/preview';
@@ -297,7 +294,7 @@ class PreviewStack extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DoActions extends V20150901Roa
+class DoActions extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/actions';
@@ -312,13 +309,13 @@ class DoActions extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeTemplate extends V20150901Roa
+class DescribeTemplate extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/template';
 }
 
-class ValidateTemplate extends V20150901Roa
+class ValidateTemplate extends Roa
 {
     /** @var string */
     public $pathPattern = '/validate';
@@ -333,7 +330,7 @@ class ValidateTemplate extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeStackDetail extends V20150901Roa
+class DescribeStackDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
@@ -346,7 +343,7 @@ class DescribeStackDetail extends V20150901Roa
  * @method string getPageNumber()
  * @method string getStatus()
  */
-class DescribeStacks extends V20150901Roa
+class DescribeStacks extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks';
@@ -421,7 +418,7 @@ class DescribeStacks extends V20150901Roa
  * @method string getTypeName()
  * @method $this withTypeName($value)
  */
-class DescribeResourceTypeTemplate extends V20150901Roa
+class DescribeResourceTypeTemplate extends Roa
 {
     /** @var string */
     public $pathPattern = '/resource_types/[TypeName]/template';
@@ -435,7 +432,7 @@ class DescribeResourceTypeTemplate extends V20150901Roa
  * @method string getResourceName()
  * @method $this withResourceName($value)
  */
-class DescribeResourceDetail extends V20150901Roa
+class DescribeResourceDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources/[ResourceName]';
@@ -447,7 +444,7 @@ class DescribeResourceDetail extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeResources extends V20150901Roa
+class DescribeResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/resources';
@@ -457,7 +454,7 @@ class DescribeResources extends V20150901Roa
  * @method string getTypeName()
  * @method $this withTypeName($value)
  */
-class DescribeResourceTypeDetail extends V20150901Roa
+class DescribeResourceTypeDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/resource_types/[TypeName]';
@@ -466,7 +463,7 @@ class DescribeResourceTypeDetail extends V20150901Roa
 /**
  * @method string getSupportStatus()
  */
-class DescribeResourceTypes extends V20150901Roa
+class DescribeResourceTypes extends Roa
 {
     /** @var string */
     public $pathPattern = '/resource_types';
@@ -491,7 +488,7 @@ class DescribeResourceTypes extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class AbandonStack extends V20150901Roa
+class AbandonStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/abandon';
@@ -500,7 +497,7 @@ class AbandonStack extends V20150901Roa
     public $method = 'DELETE';
 }
 
-class CreateStacks extends V20150901Roa
+class CreateStacks extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks';
@@ -515,7 +512,7 @@ class CreateStacks extends V20150901Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DeleteStack extends V20150901Roa
+class DeleteStack extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]';
@@ -535,7 +532,7 @@ class DeleteStack extends V20150901Roa
  * @method string getResourceType()
  * @method string getPageNumber()
  */
-class DescribeEvents extends V20150901Roa
+class DescribeEvents extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/events';
@@ -606,7 +603,7 @@ class DescribeEvents extends V20150901Roa
     }
 }
 
-class DescribeRegions extends V20150901Roa
+class DescribeRegions extends Roa
 {
     /** @var string */
     public $pathPattern = '/regions';

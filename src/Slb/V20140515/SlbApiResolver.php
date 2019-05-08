@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Slb\V20140515;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeSlbAttachmentInfo describeSlbAttachmentInfo(array $options = [])
  * @method DescribeSlbEcsRelationTimes describeSlbEcsRelationTimes(array $options = [])
  * @method DescribeLoadBalancerSummaryForGlobal describeLoadBalancerSummaryForGlobal(array $options = [])
@@ -131,7 +128,7 @@ class SlbApiResolver
     use ApiResolverTrait;
 }
 
-class V20140515Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Slb';
@@ -163,7 +160,7 @@ class V20140515Rpc extends Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeSlbAttachmentInfo extends V20140515Rpc
+class DescribeSlbAttachmentInfo extends Rpc
 {
 
     /**
@@ -197,7 +194,7 @@ class DescribeSlbAttachmentInfo extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeSlbEcsRelationTimes extends V20140515Rpc
+class DescribeSlbEcsRelationTimes extends Rpc
 {
 
     /**
@@ -227,7 +224,7 @@ class DescribeSlbEcsRelationTimes extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerSummaryForGlobal extends V20140515Rpc
+class DescribeLoadBalancerSummaryForGlobal extends Rpc
 {
 
     /**
@@ -257,7 +254,7 @@ class DescribeLoadBalancerSummaryForGlobal extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DiagnoseCommonStatus extends V20140515Rpc
+class DiagnoseCommonStatus extends Rpc
 {
 
     /**
@@ -294,7 +291,7 @@ class DiagnoseCommonStatus extends V20140515Rpc
  * @method $this withListenerProtocol($value)
  * @method array getServerId()
  */
-class DiagnoseHealthCheckStatus extends V20140515Rpc
+class DiagnoseHealthCheckStatus extends Rpc
 {
 
     /**
@@ -339,7 +336,7 @@ class DiagnoseHealthCheckStatus extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DiagnoseCertificates extends V20140515Rpc
+class DiagnoseCertificates extends Rpc
 {
 
     /**
@@ -370,7 +367,7 @@ class DiagnoseCertificates extends V20140515Rpc
  * @method $this withOwnerId($value)
  * @method array getTaskId()
  */
-class DescribeHealthCheckDiagnoseResult extends V20140515Rpc
+class DescribeHealthCheckDiagnoseResult extends Rpc
 {
 
     /**
@@ -462,7 +459,7 @@ class DescribeHealthCheckDiagnoseResult extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerTCPListenerAsyn extends V20140515Rpc
+class CreateLoadBalancerTCPListenerAsyn extends Rpc
 {
 
     /**
@@ -544,7 +541,7 @@ class CreateLoadBalancerTCPListenerAsyn extends V20140515Rpc
  * @method string getHealthCheckConnectPort()
  * @method $this withHealthCheckConnectPort($value)
  */
-class CreateLoadBalancerUDPListenerAsyn extends V20140515Rpc
+class CreateLoadBalancerUDPListenerAsyn extends Rpc
 {
 
     /**
@@ -682,7 +679,7 @@ class CreateLoadBalancerUDPListenerAsyn extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerHTTPSListenerAsyn extends V20140515Rpc
+class CreateLoadBalancerHTTPSListenerAsyn extends Rpc
 {
 
     /**
@@ -816,7 +813,7 @@ class CreateLoadBalancerHTTPSListenerAsyn extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerHTTPListenerAsyn extends V20140515Rpc
+class CreateLoadBalancerHTTPListenerAsyn extends Rpc
 {
 
     /**
@@ -891,7 +888,7 @@ class CreateLoadBalancerHTTPListenerAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeIdleInstancesForGlobal extends V20140515Rpc
+class DescribeIdleInstancesForGlobal extends Rpc
 {
 
     /**
@@ -923,7 +920,7 @@ class DescribeIdleInstancesForGlobal extends V20140515Rpc
  * @method string getAddressIPVersion()
  * @method $this withAddressIPVersion($value)
  */
-class DescribeAvailableResource extends V20140515Rpc
+class DescribeAvailableResource extends Rpc
 {
 
     /**
@@ -959,7 +956,7 @@ class DescribeAvailableResource extends V20140515Rpc
  * @method string getVServerGroupName()
  * @method $this withVServerGroupName($value)
  */
-class SetVServerGroupAttributeAsyn extends V20140515Rpc
+class SetVServerGroupAttributeAsyn extends Rpc
 {
 
     /**
@@ -995,7 +992,7 @@ class SetVServerGroupAttributeAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveVServerGroupBackendServersAsyn extends V20140515Rpc
+class RemoveVServerGroupBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1031,7 +1028,7 @@ class RemoveVServerGroupBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddVServerGroupBackendServersAsyn extends V20140515Rpc
+class AddVServerGroupBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1067,7 +1064,7 @@ class AddVServerGroupBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class ModifyVServerGroupBackendServersAsyn extends V20140515Rpc
+class ModifyVServerGroupBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1103,7 +1100,7 @@ class ModifyVServerGroupBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetBackendServersAsyn extends V20140515Rpc
+class SetBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1137,7 +1134,7 @@ class SetBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveBackendServersAsyn extends V20140515Rpc
+class RemoveBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1173,7 +1170,7 @@ class RemoveBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerBackendServers extends V20140515Rpc
+class DescribeLoadBalancerBackendServers extends Rpc
 {
 
     /**
@@ -1209,7 +1206,7 @@ class DescribeLoadBalancerBackendServers extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddBackendServersAsyn extends V20140515Rpc
+class AddBackendServersAsyn extends Rpc
 {
 
     /**
@@ -1241,7 +1238,7 @@ class AddBackendServersAsyn extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeAutoRenewStatus extends V20140515Rpc
+class DescribeAutoRenewStatus extends Rpc
 {
 
     /**
@@ -1279,7 +1276,7 @@ class DescribeAutoRenewStatus extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetAutoRenewStatus extends V20140515Rpc
+class SetAutoRenewStatus extends Rpc
 {
 
     /**
@@ -1343,7 +1340,7 @@ class SetAutoRenewStatus extends V20140515Rpc
  * @method string getFilterFuzzyMode()
  * @method $this withFilterFuzzyMode($value)
  */
-class DescribeLoadBalancersPro extends V20140515Rpc
+class DescribeLoadBalancersPro extends Rpc
 {
 
     /**
@@ -1377,7 +1374,7 @@ class DescribeLoadBalancersPro extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class ModifyLoadBalancerVPCAddress extends V20140515Rpc
+class ModifyLoadBalancerVPCAddress extends Rpc
 {
 
     /**
@@ -1413,7 +1410,7 @@ class ModifyLoadBalancerVPCAddress extends V20140515Rpc
  * @method string getDomainExtensionId()
  * @method $this withDomainExtensionId($value)
  */
-class DescribeDomainExtensions extends V20140515Rpc
+class DescribeDomainExtensions extends Rpc
 {
 
     /**
@@ -1451,7 +1448,7 @@ class DescribeDomainExtensions extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class CreateDomainExtension extends V20140515Rpc
+class CreateDomainExtension extends Rpc
 {
 
     /**
@@ -1483,7 +1480,7 @@ class CreateDomainExtension extends V20140515Rpc
  * @method string getDomainExtensionId()
  * @method $this withDomainExtensionId($value)
  */
-class DeleteDomainExtension extends V20140515Rpc
+class DeleteDomainExtension extends Rpc
 {
 
     /**
@@ -1517,7 +1514,7 @@ class DeleteDomainExtension extends V20140515Rpc
  * @method string getDomainExtensionId()
  * @method $this withDomainExtensionId($value)
  */
-class SetDomainExtensionAttribute extends V20140515Rpc
+class SetDomainExtensionAttribute extends Rpc
 {
 
     /**
@@ -1549,7 +1546,7 @@ class SetDomainExtensionAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class InnerQueryQuotaConfig extends V20140515Rpc
+class InnerQueryQuotaConfig extends Rpc
 {
 
     /**
@@ -1583,7 +1580,7 @@ class InnerQueryQuotaConfig extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetAccessControlListAttribute extends V20140515Rpc
+class SetAccessControlListAttribute extends Rpc
 {
 
     /**
@@ -1617,7 +1614,7 @@ class SetAccessControlListAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeAccessControlListAttribute extends V20140515Rpc
+class DescribeAccessControlListAttribute extends Rpc
 {
 
     /**
@@ -1651,7 +1648,7 @@ class DescribeAccessControlListAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddAccessControlListEntry extends V20140515Rpc
+class AddAccessControlListEntry extends Rpc
 {
 
     /**
@@ -1685,7 +1682,7 @@ class AddAccessControlListEntry extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetAccessControlListAttributeImpl extends V20140515Rpc
+class SetAccessControlListAttributeImpl extends Rpc
 {
 
     /**
@@ -1726,7 +1723,7 @@ class SetAccessControlListAttributeImpl extends V20140515Rpc
  * @method $this withPageSize($value)
  * @method array getTag()
  */
-class DescribeAccessControlLists extends V20140515Rpc
+class DescribeAccessControlLists extends Rpc
 {
 
     /**
@@ -1778,7 +1775,7 @@ class DescribeAccessControlLists extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class CreateAccessControlList extends V20140515Rpc
+class CreateAccessControlList extends Rpc
 {
 
     /**
@@ -1810,7 +1807,7 @@ class CreateAccessControlList extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteAccessControlList extends V20140515Rpc
+class DeleteAccessControlList extends Rpc
 {
 
     /**
@@ -1844,7 +1841,7 @@ class DeleteAccessControlList extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveAccessControlListEntry extends V20140515Rpc
+class RemoveAccessControlListEntry extends Rpc
 {
 
     /**
@@ -1874,7 +1871,7 @@ class RemoveAccessControlListEntry extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCertificateRelatedListenersAndRules extends V20140515Rpc
+class DescribeCertificateRelatedListenersAndRules extends Rpc
 {
 
     /**
@@ -1906,7 +1903,7 @@ class DescribeCertificateRelatedListenersAndRules extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancersRelatedEcs extends V20140515Rpc
+class DescribeLoadBalancersRelatedEcs extends Rpc
 {
 
     /**
@@ -1946,7 +1943,7 @@ class DescribeLoadBalancersRelatedEcs extends V20140515Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class ModifyLoadBalancerPayType extends V20140515Rpc
+class ModifyLoadBalancerPayType extends Rpc
 {
 
     /**
@@ -1984,7 +1981,7 @@ class ModifyLoadBalancerPayType extends V20140515Rpc
  * @method string getNewResourceGroupId()
  * @method $this withNewResourceGroupId($value)
  */
-class MoveResourceGroup extends V20140515Rpc
+class MoveResourceGroup extends Rpc
 {
 
     /**
@@ -2020,7 +2017,7 @@ class MoveResourceGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class ModifyLoadBalancerResourceGroup extends V20140515Rpc
+class ModifyLoadBalancerResourceGroup extends Rpc
 {
 
     /**
@@ -2056,7 +2053,7 @@ class ModifyLoadBalancerResourceGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class ModifyLoadBalancerInstanceSpec extends V20140515Rpc
+class ModifyLoadBalancerInstanceSpec extends Rpc
 {
 
     /**
@@ -2088,7 +2085,7 @@ class ModifyLoadBalancerInstanceSpec extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeMasterSlaveServerGroupAttribute extends V20140515Rpc
+class DescribeMasterSlaveServerGroupAttribute extends Rpc
 {
 
     /**
@@ -2122,7 +2119,7 @@ class DescribeMasterSlaveServerGroupAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeMasterSlaveServerGroups extends V20140515Rpc
+class DescribeMasterSlaveServerGroups extends Rpc
 {
 
     /**
@@ -2158,7 +2155,7 @@ class DescribeMasterSlaveServerGroups extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class CreateMasterSlaveServerGroup extends V20140515Rpc
+class CreateMasterSlaveServerGroup extends Rpc
 {
 
     /**
@@ -2190,7 +2187,7 @@ class CreateMasterSlaveServerGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteMasterSlaveServerGroup extends V20140515Rpc
+class DeleteMasterSlaveServerGroup extends Rpc
 {
 
     /**
@@ -2250,7 +2247,7 @@ class DeleteMasterSlaveServerGroup extends V20140515Rpc
  * @method string getTunnelType()
  * @method $this withTunnelType($value)
  */
-class CreateLoadBalancerOld extends V20140515Rpc
+class CreateLoadBalancerOld extends Rpc
 {
 
     /**
@@ -2282,7 +2279,7 @@ class CreateLoadBalancerOld extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeMasterSlaveVServerGroupAttribute extends V20140515Rpc
+class DescribeMasterSlaveVServerGroupAttribute extends Rpc
 {
 
     /**
@@ -2314,7 +2311,7 @@ class DescribeMasterSlaveVServerGroupAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeMasterSlaveVServerGroups extends V20140515Rpc
+class DescribeMasterSlaveVServerGroups extends Rpc
 {
 
     /**
@@ -2346,7 +2343,7 @@ class DescribeMasterSlaveVServerGroups extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteMasterSlaveVServerGroup extends V20140515Rpc
+class DeleteMasterSlaveVServerGroup extends Rpc
 {
 
     /**
@@ -2382,7 +2379,7 @@ class DeleteMasterSlaveVServerGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class CreateMasterSlaveVServerGroup extends V20140515Rpc
+class CreateMasterSlaveVServerGroup extends Rpc
 {
 
     /**
@@ -2416,7 +2413,7 @@ class CreateMasterSlaveVServerGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetLoadBalancerAutoReleaseTime extends V20140515Rpc
+class SetLoadBalancerAutoReleaseTime extends Rpc
 {
 
     /**
@@ -2448,7 +2445,7 @@ class SetLoadBalancerAutoReleaseTime extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerAutoReleaseTime extends V20140515Rpc
+class DescribeLoadBalancerAutoReleaseTime extends Rpc
 {
 
     /**
@@ -2481,7 +2478,7 @@ class DescribeLoadBalancerAutoReleaseTime extends V20140515Rpc
  * @method string getCACertificateId()
  * @method $this withCACertificateId($value)
  */
-class DescribeCACertificates extends V20140515Rpc
+class DescribeCACertificates extends Rpc
 {
 
     /**
@@ -2529,7 +2526,7 @@ class DescribeCACertificates extends V20140515Rpc
  * @method string getCACertificateId()
  * @method $this withCACertificateId($value)
  */
-class SetCACertificateName extends V20140515Rpc
+class SetCACertificateName extends Rpc
 {
 
     /**
@@ -2563,7 +2560,7 @@ class SetCACertificateName extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UploadCACertificate extends V20140515Rpc
+class UploadCACertificate extends Rpc
 {
 
     /**
@@ -2593,7 +2590,7 @@ class UploadCACertificate extends V20140515Rpc
  * @method string getCACertificateId()
  * @method $this withCACertificateId($value)
  */
-class DeleteCACertificate extends V20140515Rpc
+class DeleteCACertificate extends Rpc
 {
 
     /**
@@ -2631,7 +2628,7 @@ class DeleteCACertificate extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeTags extends V20140515Rpc
+class DescribeTags extends Rpc
 {
 
     /**
@@ -2663,7 +2660,7 @@ class DescribeTags extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddTags extends V20140515Rpc
+class AddTags extends Rpc
 {
 
     /**
@@ -2695,7 +2692,7 @@ class AddTags extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveTags extends V20140515Rpc
+class RemoveTags extends Rpc
 {
 
     /**
@@ -2731,7 +2728,7 @@ class RemoveTags extends V20140515Rpc
  * @method string getVServerGroupName()
  * @method $this withVServerGroupName($value)
  */
-class SetVServerGroupAttribute extends V20140515Rpc
+class SetVServerGroupAttribute extends Rpc
 {
 
     /**
@@ -2767,7 +2764,7 @@ class SetVServerGroupAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeRules extends V20140515Rpc
+class DescribeRules extends Rpc
 {
 
     /**
@@ -2799,7 +2796,7 @@ class DescribeRules extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeVServerGroupAttribute extends V20140515Rpc
+class DescribeVServerGroupAttribute extends Rpc
 {
 
     /**
@@ -2835,7 +2832,7 @@ class DescribeVServerGroupAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class ModifyVServerGroupBackendServers extends V20140515Rpc
+class ModifyVServerGroupBackendServers extends Rpc
 {
 
     /**
@@ -2871,7 +2868,7 @@ class ModifyVServerGroupBackendServers extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveVServerGroupBackendServers extends V20140515Rpc
+class RemoveVServerGroupBackendServers extends Rpc
 {
 
     /**
@@ -2903,7 +2900,7 @@ class RemoveVServerGroupBackendServers extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeRuleAttribute extends V20140515Rpc
+class DescribeRuleAttribute extends Rpc
 {
 
     /**
@@ -2941,7 +2938,7 @@ class DescribeRuleAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class CreateRules extends V20140515Rpc
+class CreateRules extends Rpc
 {
 
     /**
@@ -2973,7 +2970,7 @@ class CreateRules extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteRules extends V20140515Rpc
+class DeleteRules extends Rpc
 {
 
     /**
@@ -3009,7 +3006,7 @@ class DeleteRules extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddVServerGroupBackendServers extends V20140515Rpc
+class AddVServerGroupBackendServers extends Rpc
 {
 
     /**
@@ -3043,7 +3040,7 @@ class AddVServerGroupBackendServers extends V20140515Rpc
  * @method string getVServerGroupName()
  * @method $this withVServerGroupName($value)
  */
-class SetVServerGroup extends V20140515Rpc
+class SetVServerGroup extends Rpc
 {
 
     /**
@@ -3075,7 +3072,7 @@ class SetVServerGroup extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteVServerGroup extends V20140515Rpc
+class DeleteVServerGroup extends Rpc
 {
 
     /**
@@ -3111,7 +3108,7 @@ class DeleteVServerGroup extends V20140515Rpc
  * @method string getUrl()
  * @method $this withUrl($value)
  */
-class DescribeRuleAttributes extends V20140515Rpc
+class DescribeRuleAttributes extends Rpc
 {
 
     /**
@@ -3141,7 +3138,7 @@ class DescribeRuleAttributes extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeVServerGroupAttributes extends V20140515Rpc
+class DescribeVServerGroupAttributes extends Rpc
 {
 
     /**
@@ -3177,7 +3174,7 @@ class DescribeVServerGroupAttributes extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeVServerGroups extends V20140515Rpc
+class DescribeVServerGroups extends Rpc
 {
 
     /**
@@ -3211,7 +3208,7 @@ class DescribeVServerGroups extends V20140515Rpc
  * @method string getBackendServers()
  * @method $this withBackendServers($value)
  */
-class RemoveVServerGroupBackendServer extends V20140515Rpc
+class RemoveVServerGroupBackendServer extends Rpc
 {
 
     /**
@@ -3277,7 +3274,7 @@ class RemoveVServerGroupBackendServer extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class SetRule extends V20140515Rpc
+class SetRule extends Rpc
 {
 
     /**
@@ -3311,7 +3308,7 @@ class SetRule extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateRule extends V20140515Rpc
+class CreateRule extends Rpc
 {
 
     /**
@@ -3347,7 +3344,7 @@ class CreateRule extends V20140515Rpc
  * @method string getVServerGroupName()
  * @method $this withVServerGroupName($value)
  */
-class CreateVServerGroup extends V20140515Rpc
+class CreateVServerGroup extends Rpc
 {
 
     /**
@@ -3381,7 +3378,7 @@ class CreateVServerGroup extends V20140515Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteRule extends V20140515Rpc
+class DeleteRule extends Rpc
 {
 
     /**
@@ -3411,7 +3408,7 @@ class DeleteRule extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeZones extends V20140515Rpc
+class DescribeZones extends Rpc
 {
 
     /**
@@ -3449,7 +3446,7 @@ class DescribeZones extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddListenerWhiteListItem extends V20140515Rpc
+class AddListenerWhiteListItem extends Rpc
 {
 
     /**
@@ -3485,7 +3482,7 @@ class AddListenerWhiteListItem extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class AddBackendServers extends V20140515Rpc
+class AddBackendServers extends Rpc
 {
 
     /**
@@ -3590,7 +3587,7 @@ class AddBackendServers extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerHTTPSListener extends V20140515Rpc
+class CreateLoadBalancerHTTPSListener extends Rpc
 {
 
     /**
@@ -3728,7 +3725,7 @@ class CreateLoadBalancerHTTPSListener extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerHTTPListener extends V20140515Rpc
+class CreateLoadBalancerHTTPListener extends Rpc
 {
 
     /**
@@ -3837,7 +3834,7 @@ class CreateLoadBalancerHTTPListener extends V20140515Rpc
  * @method string getRatio()
  * @method $this withRatio($value)
  */
-class CreateLoadBalancer extends V20140515Rpc
+class CreateLoadBalancer extends Rpc
 {
 
     /**
@@ -3873,7 +3870,7 @@ class CreateLoadBalancer extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteLoadBalancerListener extends V20140515Rpc
+class DeleteLoadBalancerListener extends Rpc
 {
 
     /**
@@ -3905,7 +3902,7 @@ class DeleteLoadBalancerListener extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteLoadBalancer extends V20140515Rpc
+class DeleteLoadBalancer extends Rpc
 {
 
     /**
@@ -3982,7 +3979,7 @@ class DeleteLoadBalancer extends V20140515Rpc
  * @method string getHealthCheckHttpCode()
  * @method $this withHealthCheckHttpCode($value)
  */
-class CreateLoadBalancerTCPListener extends V20140515Rpc
+class CreateLoadBalancerTCPListener extends Rpc
 {
 
     /**
@@ -4031,7 +4028,7 @@ class CreateLoadBalancerTCPListener extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeListenerAccessControlAttribute extends V20140515Rpc
+class DescribeListenerAccessControlAttribute extends Rpc
 {
 
     /**
@@ -4067,7 +4064,7 @@ class DescribeListenerAccessControlAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeHealthStatus extends V20140515Rpc
+class DescribeHealthStatus extends Rpc
 {
 
     /**
@@ -4099,7 +4096,7 @@ class DescribeHealthStatus extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DeleteServerCertificate extends V20140515Rpc
+class DeleteServerCertificate extends Rpc
 {
 
     /**
@@ -4133,7 +4130,7 @@ class DeleteServerCertificate extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
+class DescribeLoadBalancerHTTPSListenerAttribute extends Rpc
 {
 
     /**
@@ -4167,7 +4164,7 @@ class DescribeLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerHTTPListenerAttribute extends V20140515Rpc
+class DescribeLoadBalancerHTTPListenerAttribute extends Rpc
 {
 
     /**
@@ -4201,7 +4198,7 @@ class DescribeLoadBalancerHTTPListenerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerAttribute extends V20140515Rpc
+class DescribeLoadBalancerAttribute extends Rpc
 {
 
     /**
@@ -4233,7 +4230,7 @@ class DescribeLoadBalancerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeRegions extends V20140515Rpc
+class DescribeRegions extends Rpc
 {
 
     /**
@@ -4267,7 +4264,7 @@ class DescribeRegions extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerTCPListenerAttribute extends V20140515Rpc
+class DescribeLoadBalancerTCPListenerAttribute extends Rpc
 {
 
     /**
@@ -4336,7 +4333,7 @@ class DescribeLoadBalancerTCPListenerAttribute extends V20140515Rpc
  * @method string getPayType()
  * @method $this withPayType($value)
  */
-class DescribeLoadBalancers extends V20140515Rpc
+class DescribeLoadBalancers extends Rpc
 {
 
     /**
@@ -4386,7 +4383,7 @@ class DescribeLoadBalancers extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveBackendServers extends V20140515Rpc
+class RemoveBackendServers extends Rpc
 {
 
     /**
@@ -4426,7 +4423,7 @@ class RemoveBackendServers extends V20140515Rpc
  * @method string getRatio()
  * @method $this withRatio($value)
  */
-class ModifyLoadBalancerInternetSpec extends V20140515Rpc
+class ModifyLoadBalancerInternetSpec extends Rpc
 {
 
     /**
@@ -4461,7 +4458,7 @@ class ModifyLoadBalancerInternetSpec extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeServerCertificates extends V20140515Rpc
+class DescribeServerCertificates extends Rpc
 {
 
     /**
@@ -4570,7 +4567,7 @@ class DescribeServerCertificates extends V20140515Rpc
  * @method string getVServerGroup()
  * @method $this withVServerGroup($value)
  */
-class SetLoadBalancerHTTPListenerAttribute extends V20140515Rpc
+class SetLoadBalancerHTTPListenerAttribute extends Rpc
 {
 
     /**
@@ -4647,7 +4644,7 @@ class SetLoadBalancerHTTPListenerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetListenerAccessControlStatus extends V20140515Rpc
+class SetListenerAccessControlStatus extends Rpc
 {
 
     /**
@@ -4681,7 +4678,7 @@ class SetListenerAccessControlStatus extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetBackendServers extends V20140515Rpc
+class SetBackendServers extends Rpc
 {
 
     /**
@@ -4719,7 +4716,7 @@ class SetBackendServers extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class RemoveListenerWhiteListItem extends V20140515Rpc
+class RemoveListenerWhiteListItem extends Rpc
 {
 
     /**
@@ -4755,7 +4752,7 @@ class RemoveListenerWhiteListItem extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetLoadBalancerStatus extends V20140515Rpc
+class SetLoadBalancerStatus extends Rpc
 {
 
     /**
@@ -4789,7 +4786,7 @@ class SetLoadBalancerStatus extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetLoadBalancerName extends V20140515Rpc
+class SetLoadBalancerName extends Rpc
 {
 
     /**
@@ -4890,7 +4887,7 @@ class SetLoadBalancerName extends V20140515Rpc
  * @method string getVServerGroup()
  * @method $this withVServerGroup($value)
  */
-class SetLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
+class SetLoadBalancerHTTPSListenerAttribute extends Rpc
 {
 
     /**
@@ -4965,7 +4962,7 @@ class SetLoadBalancerHTTPSListenerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class StartLoadBalancerListener extends V20140515Rpc
+class StartLoadBalancerListener extends Rpc
 {
 
     /**
@@ -4999,7 +4996,7 @@ class StartLoadBalancerListener extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class SetServerCertificateName extends V20140515Rpc
+class SetServerCertificateName extends Rpc
 {
 
     /**
@@ -5081,7 +5078,7 @@ class SetServerCertificateName extends V20140515Rpc
  * @method string getVServerGroup()
  * @method $this withVServerGroup($value)
  */
-class SetLoadBalancerTCPListenerAttribute extends V20140515Rpc
+class SetLoadBalancerTCPListenerAttribute extends Rpc
 {
 
     /**
@@ -5123,7 +5120,7 @@ class SetLoadBalancerTCPListenerAttribute extends V20140515Rpc
  * @method string getServerCertificateName()
  * @method $this withServerCertificateName($value)
  */
-class UploadServerCertificate extends V20140515Rpc
+class UploadServerCertificate extends Rpc
 {
 
     /**
@@ -5159,7 +5156,7 @@ class UploadServerCertificate extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class StopLoadBalancerListener extends V20140515Rpc
+class StopLoadBalancerListener extends Rpc
 {
 
     /**
@@ -5231,7 +5228,7 @@ class StopLoadBalancerListener extends V20140515Rpc
  * @method string getVServerGroup()
  * @method $this withVServerGroup($value)
  */
-class SetLoadBalancerUDPListenerAttribute extends V20140515Rpc
+class SetLoadBalancerUDPListenerAttribute extends Rpc
 {
 
     /**
@@ -5291,7 +5288,7 @@ class SetLoadBalancerUDPListenerAttribute extends V20140515Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class DescribeLoadBalancerUDPListenerAttribute extends V20140515Rpc
+class DescribeLoadBalancerUDPListenerAttribute extends Rpc
 {
 
     /**
@@ -5360,7 +5357,7 @@ class DescribeLoadBalancerUDPListenerAttribute extends V20140515Rpc
  * @method string getHealthCheckConnectPort()
  * @method $this withHealthCheckConnectPort($value)
  */
-class CreateLoadBalancerUDPListener extends V20140515Rpc
+class CreateLoadBalancerUDPListener extends Rpc
 {
 
     /**

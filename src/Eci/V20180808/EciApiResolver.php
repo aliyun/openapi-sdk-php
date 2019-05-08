@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Eci\V20180808;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeMultiContainerGroupMetric describeMultiContainerGroupMetric(array $options = [])
  * @method UpdateContainerGroupByTemplate updateContainerGroupByTemplate(array $options = [])
  * @method ExportContainerGroupTemplate exportContainerGroupTemplate(array $options = [])
@@ -28,7 +25,7 @@ class EciApiResolver
     use ApiResolverTrait;
 }
 
-class V20180808Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Eci';
@@ -57,7 +54,7 @@ class V20180808Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMultiContainerGroupMetric extends V20180808Rpc
+class DescribeMultiContainerGroupMetric extends Rpc
 {
 }
 
@@ -74,7 +71,7 @@ class DescribeMultiContainerGroupMetric extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpdateContainerGroupByTemplate extends V20180808Rpc
+class UpdateContainerGroupByTemplate extends Rpc
 {
 
     /**
@@ -103,7 +100,7 @@ class UpdateContainerGroupByTemplate extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ExportContainerGroupTemplate extends V20180808Rpc
+class ExportContainerGroupTemplate extends Rpc
 {
 }
 
@@ -120,7 +117,7 @@ class ExportContainerGroupTemplate extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateContainerGroupFromTemplate extends V20180808Rpc
+class CreateContainerGroupFromTemplate extends Rpc
 {
 
     /**
@@ -155,7 +152,7 @@ class CreateContainerGroupFromTemplate extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeContainerGroupMetric extends V20180808Rpc
+class DescribeContainerGroupMetric extends Rpc
 {
 }
 
@@ -187,7 +184,7 @@ class DescribeContainerGroupMetric extends V20180808Rpc
  * @method $this withOwnerId($value)
  * @method array getVolume()
  */
-class UpdateContainerGroup extends V20180808Rpc
+class UpdateContainerGroup extends Rpc
 {
 
     /**
@@ -425,7 +422,7 @@ class UpdateContainerGroup extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestartContainerGroup extends V20180808Rpc
+class RestartContainerGroup extends Rpc
 {
 }
 
@@ -443,7 +440,7 @@ class RestartContainerGroup extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeContainerGroupPrice extends V20180808Rpc
+class DescribeContainerGroupPrice extends Rpc
 {
 }
 
@@ -463,7 +460,7 @@ class DescribeContainerGroupPrice extends V20180808Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class ExecContainerCommand extends V20180808Rpc
+class ExecContainerCommand extends Rpc
 {
 }
 
@@ -483,7 +480,7 @@ class ExecContainerCommand extends V20180808Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class DescribeContainerExecUri extends V20180808Rpc
+class DescribeContainerExecUri extends Rpc
 {
 }
 
@@ -501,7 +498,7 @@ class DescribeContainerExecUri extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteContainerGroup extends V20180808Rpc
+class DeleteContainerGroup extends Rpc
 {
 }
 
@@ -530,7 +527,7 @@ class DeleteContainerGroup extends V20180808Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeContainerGroups extends V20180808Rpc
+class DescribeContainerGroups extends Rpc
 {
 
     /**
@@ -568,7 +565,7 @@ class DescribeContainerGroups extends V20180808Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeContainerLog extends V20180808Rpc
+class DescribeContainerLog extends Rpc
 {
 }
 
@@ -616,7 +613,7 @@ class DescribeContainerLog extends V20180808Rpc
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
-class CreateContainerGroup extends V20180808Rpc
+class CreateContainerGroup extends Rpc
 {
 
     /**

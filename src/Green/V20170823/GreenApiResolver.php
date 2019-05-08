@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Green\V20170823;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeViewContent describeViewContent(array $options = [])
  * @method ExportKeywords exportKeywords(array $options = [])
  * @method ImportKeywords importKeywords(array $options = [])
@@ -92,7 +89,7 @@ class GreenApiResolver
     use ApiResolverTrait;
 }
 
-class V20170823Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Green';
@@ -143,7 +140,7 @@ class V20170823Rpc extends Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeViewContent extends V20170823Rpc
+class DescribeViewContent extends Rpc
 {
 }
 
@@ -153,7 +150,7 @@ class DescribeViewContent extends V20170823Rpc
  * @method string getKeywordLibId()
  * @method $this withKeywordLibId($value)
  */
-class ExportKeywords extends V20170823Rpc
+class ExportKeywords extends Rpc
 {
 }
 
@@ -165,7 +162,7 @@ class ExportKeywords extends V20170823Rpc
  * @method string getKeywordsObject()
  * @method $this withKeywordsObject($value)
  */
-class ImportKeywords extends V20170823Rpc
+class ImportKeywords extends Rpc
 {
 }
 
@@ -173,7 +170,7 @@ class ImportKeywords extends V20170823Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeOssCallbackSetting extends V20170823Rpc
+class DescribeOssCallbackSetting extends Rpc
 {
 }
 
@@ -193,7 +190,7 @@ class DescribeOssCallbackSetting extends V20170823Rpc
  * @method string getServiceModules()
  * @method $this withServiceModules($value)
  */
-class UpdateOssCallbackSetting extends V20170823Rpc
+class UpdateOssCallbackSetting extends Rpc
 {
 }
 
@@ -205,7 +202,7 @@ class UpdateOssCallbackSetting extends V20170823Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class VerifyCustomOcrTemplate extends V20170823Rpc
+class VerifyCustomOcrTemplate extends Rpc
 {
 }
 
@@ -221,7 +218,7 @@ class VerifyCustomOcrTemplate extends V20170823Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class UpdateCustomOcrTemplate extends V20170823Rpc
+class UpdateCustomOcrTemplate extends Rpc
 {
 }
 
@@ -231,7 +228,7 @@ class UpdateCustomOcrTemplate extends V20170823Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DescribeCustomOcrTemplate extends V20170823Rpc
+class DescribeCustomOcrTemplate extends Rpc
 {
 }
 
@@ -241,7 +238,7 @@ class DescribeCustomOcrTemplate extends V20170823Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteCustomOcrTemplate extends V20170823Rpc
+class DeleteCustomOcrTemplate extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class DeleteCustomOcrTemplate extends V20170823Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreatCustomOcrTemplate extends V20170823Rpc
+class CreatCustomOcrTemplate extends Rpc
 {
 }
 
@@ -273,7 +270,7 @@ class CreatCustomOcrTemplate extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class MarkAuditContentItem extends V20170823Rpc
+class MarkAuditContentItem extends Rpc
 {
 }
 
@@ -293,7 +290,7 @@ class MarkAuditContentItem extends V20170823Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeAuditContentItem extends V20170823Rpc
+class DescribeAuditContentItem extends Rpc
 {
 }
 
@@ -305,7 +302,7 @@ class DescribeAuditContentItem extends V20170823Rpc
  * @method string getContactTypes()
  * @method $this withContactTypes($value)
  */
-class DeleteNotificationContacts extends V20170823Rpc
+class DeleteNotificationContacts extends Rpc
 {
 }
 
@@ -317,7 +314,7 @@ class DeleteNotificationContacts extends V20170823Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeUpdatePackageResult extends V20170823Rpc
+class DescribeUpdatePackageResult extends Rpc
 {
 }
 
@@ -329,7 +326,7 @@ class DescribeUpdatePackageResult extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeUploadInfo extends V20170823Rpc
+class DescribeUploadInfo extends Rpc
 {
 }
 
@@ -339,7 +336,7 @@ class DescribeUploadInfo extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeAppUploadInfo extends V20170823Rpc
+class DescribeAppUploadInfo extends Rpc
 {
 }
 
@@ -353,7 +350,7 @@ class DescribeAppUploadInfo extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSdkUrl extends V20170823Rpc
+class DescribeSdkUrl extends Rpc
 {
 }
 
@@ -371,7 +368,7 @@ class DescribeSdkUrl extends V20170823Rpc
  * @method string getPlatform()
  * @method $this withPlatform($value)
  */
-class DescribeAppInfo extends V20170823Rpc
+class DescribeAppInfo extends Rpc
 {
 }
 
@@ -389,7 +386,7 @@ class DescribeAppInfo extends V20170823Rpc
  * @method string getPlatform()
  * @method $this withPlatform($value)
  */
-class UpdateAppPackage extends V20170823Rpc
+class UpdateAppPackage extends Rpc
 {
 }
 
@@ -399,7 +396,7 @@ class UpdateAppPackage extends V20170823Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RefundCdiBaseBag extends V20170823Rpc
+class RefundCdiBaseBag extends Rpc
 {
 }
 
@@ -409,7 +406,7 @@ class RefundCdiBaseBag extends V20170823Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RefundCdiBag extends V20170823Rpc
+class RefundCdiBag extends Rpc
 {
 }
 
@@ -419,7 +416,7 @@ class RefundCdiBag extends V20170823Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RefundWebSiteInstance extends V20170823Rpc
+class RefundWebSiteInstance extends Rpc
 {
 }
 
@@ -437,7 +434,7 @@ class RefundWebSiteInstance extends V20170823Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class UpgradeCdiBaseBag extends V20170823Rpc
+class UpgradeCdiBaseBag extends Rpc
 {
 }
 
@@ -455,7 +452,7 @@ class UpgradeCdiBaseBag extends V20170823Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class CreateCdiBaseBag extends V20170823Rpc
+class CreateCdiBaseBag extends Rpc
 {
 }
 
@@ -473,7 +470,7 @@ class CreateCdiBaseBag extends V20170823Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class CreateCdiBag extends V20170823Rpc
+class CreateCdiBag extends Rpc
 {
 }
 
@@ -495,7 +492,7 @@ class CreateCdiBag extends V20170823Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class RenewWebSiteInstance extends V20170823Rpc
+class RenewWebSiteInstance extends Rpc
 {
 }
 
@@ -513,7 +510,7 @@ class RenewWebSiteInstance extends V20170823Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class CreateWebSiteInstance extends V20170823Rpc
+class CreateWebSiteInstance extends Rpc
 {
 }
 
@@ -523,7 +520,7 @@ class CreateWebSiteInstance extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOssIncrementCheckSetting extends V20170823Rpc
+class DescribeOssIncrementCheckSetting extends Rpc
 {
 }
 
@@ -553,7 +550,7 @@ class DescribeOssIncrementCheckSetting extends V20170823Rpc
  * @method string getVideoMaxFrames()
  * @method $this withVideoMaxFrames($value)
  */
-class UpdateOssIncrementCheckSetting extends V20170823Rpc
+class UpdateOssIncrementCheckSetting extends Rpc
 {
 }
 
@@ -573,7 +570,7 @@ class UpdateOssIncrementCheckSetting extends V20170823Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class MarkOssResult extends V20170823Rpc
+class MarkOssResult extends Rpc
 {
 }
 
@@ -583,7 +580,7 @@ class MarkOssResult extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOssIncrementOverview extends V20170823Rpc
+class DescribeOssIncrementOverview extends Rpc
 {
 }
 
@@ -617,7 +614,7 @@ class DescribeOssIncrementOverview extends V20170823Rpc
  * @method string getStock()
  * @method $this withStock($value)
  */
-class ExportOssResult extends V20170823Rpc
+class ExportOssResult extends Rpc
 {
 }
 
@@ -651,7 +648,7 @@ class ExportOssResult extends V20170823Rpc
  * @method string getOperation()
  * @method $this withOperation($value)
  */
-class UpdateOssStockStatus extends V20170823Rpc
+class UpdateOssStockStatus extends Rpc
 {
 }
 
@@ -661,7 +658,7 @@ class UpdateOssStockStatus extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOssStockStatus extends V20170823Rpc
+class DescribeOssStockStatus extends Rpc
 {
 }
 
@@ -679,7 +676,7 @@ class DescribeOssStockStatus extends V20170823Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class DescribeOssIncrementStats extends V20170823Rpc
+class DescribeOssIncrementStats extends Rpc
 {
 }
 
@@ -717,7 +714,7 @@ class DescribeOssIncrementStats extends V20170823Rpc
  * @method string getObject()
  * @method $this withObject($value)
  */
-class DescribeOssResultItems extends V20170823Rpc
+class DescribeOssResultItems extends Rpc
 {
 }
 
@@ -731,7 +728,7 @@ class DescribeOssResultItems extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class UpdateWebsiteInstanceKeyUrl extends V20170823Rpc
+class UpdateWebsiteInstanceKeyUrl extends Rpc
 {
 }
 
@@ -743,7 +740,7 @@ class UpdateWebsiteInstanceKeyUrl extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteIndexPageBaseline extends V20170823Rpc
+class DescribeWebsiteIndexPageBaseline extends Rpc
 {
 }
 
@@ -755,7 +752,7 @@ class DescribeWebsiteIndexPageBaseline extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateWebsiteIndexPageBaseline extends V20170823Rpc
+class CreateWebsiteIndexPageBaseline extends Rpc
 {
 }
 
@@ -765,7 +762,7 @@ class CreateWebsiteIndexPageBaseline extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteInstanceId extends V20170823Rpc
+class DescribeWebsiteInstanceId extends Rpc
 {
 }
 
@@ -779,7 +776,7 @@ class DescribeWebsiteInstanceId extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SendWebsiteFeedback extends V20170823Rpc
+class SendWebsiteFeedback extends Rpc
 {
 }
 
@@ -797,7 +794,7 @@ class SendWebsiteFeedback extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteInstance extends V20170823Rpc
+class DescribeWebsiteInstance extends Rpc
 {
 }
 
@@ -809,7 +806,7 @@ class DescribeWebsiteInstance extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class MarkWebsiteScanResult extends V20170823Rpc
+class MarkWebsiteScanResult extends Rpc
 {
 }
 
@@ -831,7 +828,7 @@ class MarkWebsiteScanResult extends V20170823Rpc
  * @method string getIndexPageScanInterval()
  * @method $this withIndexPageScanInterval($value)
  */
-class UpdateWebsiteInstance extends V20170823Rpc
+class UpdateWebsiteInstance extends Rpc
 {
 }
 
@@ -845,7 +842,7 @@ class UpdateWebsiteInstance extends V20170823Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateWebsiteInstanceStatus extends V20170823Rpc
+class UpdateWebsiteInstanceStatus extends Rpc
 {
 }
 
@@ -857,7 +854,7 @@ class UpdateWebsiteInstanceStatus extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteVerifyInfo extends V20170823Rpc
+class DescribeWebsiteVerifyInfo extends Rpc
 {
 }
 
@@ -867,7 +864,7 @@ class DescribeWebsiteVerifyInfo extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteStat extends V20170823Rpc
+class DescribeWebsiteStat extends Rpc
 {
 }
 
@@ -881,7 +878,7 @@ class DescribeWebsiteStat extends V20170823Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeWebsiteScanResultDetail extends V20170823Rpc
+class DescribeWebsiteScanResultDetail extends Rpc
 {
 }
 
@@ -907,7 +904,7 @@ class DescribeWebsiteScanResultDetail extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteScanResult extends V20170823Rpc
+class DescribeWebsiteScanResult extends Rpc
 {
 }
 
@@ -921,7 +918,7 @@ class DescribeWebsiteScanResult extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class VerifyWebsiteInstance extends V20170823Rpc
+class VerifyWebsiteInstance extends Rpc
 {
 }
 
@@ -933,7 +930,7 @@ class VerifyWebsiteInstance extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeWebsiteInstanceKeyUrl extends V20170823Rpc
+class DescribeWebsiteInstanceKeyUrl extends Rpc
 {
 }
 
@@ -945,7 +942,7 @@ class DescribeWebsiteInstanceKeyUrl extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class SendVerifyCodeToPhone extends V20170823Rpc
+class SendVerifyCodeToPhone extends Rpc
 {
 }
 
@@ -963,7 +960,7 @@ class SendVerifyCodeToPhone extends V20170823Rpc
  * @method string getScheduleMessageTimeZone()
  * @method $this withScheduleMessageTimeZone($value)
  */
-class UpdateNotificationSetting extends V20170823Rpc
+class UpdateNotificationSetting extends Rpc
 {
 }
 
@@ -975,7 +972,7 @@ class UpdateNotificationSetting extends V20170823Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class SendVerifyCodeToEmail extends V20170823Rpc
+class SendVerifyCodeToEmail extends Rpc
 {
 }
 
@@ -987,7 +984,7 @@ class SendVerifyCodeToEmail extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class VerifyEmail extends V20170823Rpc
+class VerifyEmail extends Rpc
 {
 }
 
@@ -1001,7 +998,7 @@ class VerifyEmail extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class VerifyPhone extends V20170823Rpc
+class VerifyPhone extends Rpc
 {
 }
 
@@ -1011,7 +1008,7 @@ class VerifyPhone extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeNotificationSetting extends V20170823Rpc
+class DescribeNotificationSetting extends Rpc
 {
 }
 
@@ -1023,7 +1020,7 @@ class DescribeNotificationSetting extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeKeywordLib extends V20170823Rpc
+class DescribeKeywordLib extends Rpc
 {
 }
 
@@ -1043,7 +1040,7 @@ class DescribeKeywordLib extends V20170823Rpc
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
-class DescribeKeyword extends V20170823Rpc
+class DescribeKeyword extends Rpc
 {
 }
 
@@ -1063,7 +1060,7 @@ class DescribeKeyword extends V20170823Rpc
  * @method string getMatchMode()
  * @method $this withMatchMode($value)
  */
-class UpdateKeywordLib extends V20170823Rpc
+class UpdateKeywordLib extends Rpc
 {
 }
 
@@ -1079,7 +1076,7 @@ class UpdateKeywordLib extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteKeyword extends V20170823Rpc
+class DeleteKeyword extends Rpc
 {
 }
 
@@ -1091,7 +1088,7 @@ class DeleteKeyword extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DeleteKeywordLib extends V20170823Rpc
+class DeleteKeywordLib extends Rpc
 {
 }
 
@@ -1119,7 +1116,7 @@ class DeleteKeywordLib extends V20170823Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class CreateKeywordLib extends V20170823Rpc
+class CreateKeywordLib extends Rpc
 {
 }
 
@@ -1133,7 +1130,7 @@ class CreateKeywordLib extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateKeyword extends V20170823Rpc
+class CreateKeyword extends Rpc
 {
 }
 
@@ -1153,7 +1150,7 @@ class CreateKeyword extends V20170823Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class UpdateImageLib extends V20170823Rpc
+class UpdateImageLib extends Rpc
 {
 }
 
@@ -1167,7 +1164,7 @@ class UpdateImageLib extends V20170823Rpc
  * @method string getImageLibId()
  * @method $this withImageLibId($value)
  */
-class UploadImageToLib extends V20170823Rpc
+class UploadImageToLib extends Rpc
 {
 }
 
@@ -1175,7 +1172,7 @@ class UploadImageToLib extends V20170823Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribeImageUploadInfo extends V20170823Rpc
+class DescribeImageUploadInfo extends Rpc
 {
 }
 
@@ -1185,7 +1182,7 @@ class DescribeImageUploadInfo extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeAuditSetting extends V20170823Rpc
+class DescribeAuditSetting extends Rpc
 {
 }
 
@@ -1195,7 +1192,7 @@ class DescribeAuditSetting extends V20170823Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteImageFromLib extends V20170823Rpc
+class DeleteImageFromLib extends Rpc
 {
 }
 
@@ -1205,7 +1202,7 @@ class DeleteImageFromLib extends V20170823Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteImageLib extends V20170823Rpc
+class DeleteImageLib extends Rpc
 {
 }
 
@@ -1225,7 +1222,7 @@ class DeleteImageLib extends V20170823Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class CreateImageLib extends V20170823Rpc
+class CreateImageLib extends Rpc
 {
 }
 
@@ -1235,7 +1232,7 @@ class CreateImageLib extends V20170823Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeUserStatus extends V20170823Rpc
+class DescribeUserStatus extends Rpc
 {
 }
 
@@ -1245,7 +1242,7 @@ class DescribeUserStatus extends V20170823Rpc
  * @method string getServiceModule()
  * @method $this withServiceModule($value)
  */
-class DescribeImageLib extends V20170823Rpc
+class DescribeImageLib extends Rpc
 {
 }
 
@@ -1267,7 +1264,7 @@ class DescribeImageLib extends V20170823Rpc
  * @method string getStartDate()
  * @method $this withStartDate($value)
  */
-class DescribeImageFromLib extends V20170823Rpc
+class DescribeImageFromLib extends Rpc
 {
 }
 
@@ -1281,7 +1278,7 @@ class DescribeImageFromLib extends V20170823Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeOpenApiUsage extends V20170823Rpc
+class DescribeOpenApiUsage extends Rpc
 {
 }
 
@@ -1323,7 +1320,7 @@ class DescribeOpenApiUsage extends V20170823Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeAuditContent extends V20170823Rpc
+class DescribeAuditContent extends Rpc
 {
 }
 
@@ -1337,7 +1334,7 @@ class DescribeAuditContent extends V20170823Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class MarkAuditContent extends V20170823Rpc
+class MarkAuditContent extends Rpc
 {
 }
 
@@ -1351,6 +1348,6 @@ class MarkAuditContent extends V20170823Rpc
  * @method string getCallback()
  * @method $this withCallback($value)
  */
-class UpdateAuditSetting extends V20170823Rpc
+class UpdateAuditSetting extends Rpc
 {
 }

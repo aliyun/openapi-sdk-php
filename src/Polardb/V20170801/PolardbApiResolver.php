@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Polardb\V20170801;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
  * @method DescribeAutoRenewAttribute describeAutoRenewAttribute(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
@@ -58,7 +55,7 @@ class PolardbApiResolver
     use ApiResolverTrait;
 }
 
-class V20170801Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'polardb';
@@ -91,7 +88,7 @@ class V20170801Rpc extends Rpc
  * @method string getDBClusterIds()
  * @method $this withDBClusterIds($value)
  */
-class ModifyAutoRenewAttribute extends V20170801Rpc
+class ModifyAutoRenewAttribute extends Rpc
 {
 }
 
@@ -111,7 +108,7 @@ class ModifyAutoRenewAttribute extends V20170801Rpc
  * @method string getDBClusterIds()
  * @method $this withDBClusterIds($value)
  */
-class DescribeAutoRenewAttribute extends V20170801Rpc
+class DescribeAutoRenewAttribute extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class DescribeAutoRenewAttribute extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBNodeClass extends V20170801Rpc
+class ModifyDBNodeClass extends Rpc
 {
 }
 
@@ -152,7 +149,7 @@ class ModifyDBNodeClass extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDBNodes extends V20170801Rpc
+class DeleteDBNodes extends Rpc
 {
 
     /**
@@ -186,7 +183,7 @@ class DeleteDBNodes extends V20170801Rpc
  * @method $this withOwnerId($value)
  * @method array getDBNode()
  */
-class CreateDBNodes extends V20170801Rpc
+class CreateDBNodes extends Rpc
 {
 
     /**
@@ -222,7 +219,7 @@ class CreateDBNodes extends V20170801Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class UntagResources extends V20170801Rpc
+class UntagResources extends Rpc
 {
 
     /**
@@ -270,7 +267,7 @@ class UntagResources extends V20170801Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResources extends V20170801Rpc
+class TagResources extends Rpc
 {
 
     /**
@@ -321,7 +318,7 @@ class TagResources extends V20170801Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagResources extends V20170801Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -372,7 +369,7 @@ class ListTagResources extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyAccountPassword extends V20170801Rpc
+class ModifyAccountPassword extends Rpc
 {
 }
 
@@ -392,7 +389,7 @@ class ModifyAccountPassword extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBDescription extends V20170801Rpc
+class ModifyDBDescription extends Rpc
 {
 }
 
@@ -414,7 +411,7 @@ class ModifyDBDescription extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBEndpointAddress extends V20170801Rpc
+class ModifyDBEndpointAddress extends Rpc
 {
 }
 
@@ -436,7 +433,7 @@ class ModifyDBEndpointAddress extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateDBEndpointAddress extends V20170801Rpc
+class CreateDBEndpointAddress extends Rpc
 {
 }
 
@@ -456,7 +453,7 @@ class CreateDBEndpointAddress extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDBEndpointAddress extends V20170801Rpc
+class DeleteDBEndpointAddress extends Rpc
 {
 }
 
@@ -482,7 +479,7 @@ class DeleteDBEndpointAddress extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBClusterEndpoint extends V20170801Rpc
+class ModifyDBClusterEndpoint extends Rpc
 {
 }
 
@@ -500,7 +497,7 @@ class ModifyDBClusterEndpoint extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDBClusterEndpoint extends V20170801Rpc
+class DeleteDBClusterEndpoint extends Rpc
 {
 }
 
@@ -528,7 +525,7 @@ class DeleteDBClusterEndpoint extends V20170801Rpc
  * @method string getEndpointType()
  * @method $this withEndpointType($value)
  */
-class CreateDBClusterEndpoint extends V20170801Rpc
+class CreateDBClusterEndpoint extends Rpc
 {
 }
 
@@ -546,7 +543,7 @@ class CreateDBClusterEndpoint extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBClusterEndpoints extends V20170801Rpc
+class DescribeDBClusterEndpoints extends Rpc
 {
 }
 
@@ -566,7 +563,7 @@ class DescribeDBClusterEndpoints extends V20170801Rpc
  * @method string getParameters()
  * @method $this withParameters($value)
  */
-class ModifyDBClusterParameters extends V20170801Rpc
+class ModifyDBClusterParameters extends Rpc
 {
 }
 
@@ -582,7 +579,7 @@ class ModifyDBClusterParameters extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBClusterParameters extends V20170801Rpc
+class DescribeDBClusterParameters extends Rpc
 {
 }
 
@@ -598,7 +595,7 @@ class DescribeDBClusterParameters extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestartDBNode extends V20170801Rpc
+class RestartDBNode extends Rpc
 {
 }
 
@@ -620,7 +617,7 @@ class RestartDBNode extends V20170801Rpc
  * @method string getDBClusterIPArrayAttribute()
  * @method $this withDBClusterIPArrayAttribute($value)
  */
-class ModifyDBClusterAccessWhitelist extends V20170801Rpc
+class ModifyDBClusterAccessWhitelist extends Rpc
 {
 }
 
@@ -636,7 +633,7 @@ class ModifyDBClusterAccessWhitelist extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBClusterAccessWhitelist extends V20170801Rpc
+class DescribeDBClusterAccessWhitelist extends Rpc
 {
 }
 
@@ -654,7 +651,7 @@ class DescribeDBClusterAccessWhitelist extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBClusterMaintainTime extends V20170801Rpc
+class ModifyDBClusterMaintainTime extends Rpc
 {
 }
 
@@ -680,7 +677,7 @@ class ModifyDBClusterMaintainTime extends V20170801Rpc
  * @method string getAccountPrivilege()
  * @method $this withAccountPrivilege($value)
  */
-class CreateDatabase extends V20170801Rpc
+class CreateDatabase extends Rpc
 {
 }
 
@@ -698,7 +695,7 @@ class CreateDatabase extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDatabases extends V20170801Rpc
+class DescribeDatabases extends Rpc
 {
 }
 
@@ -718,7 +715,7 @@ class DescribeDatabases extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RevokeAccountPrivilege extends V20170801Rpc
+class RevokeAccountPrivilege extends Rpc
 {
 }
 
@@ -738,7 +735,7 @@ class RevokeAccountPrivilege extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ResetAccount extends V20170801Rpc
+class ResetAccount extends Rpc
 {
 }
 
@@ -760,7 +757,7 @@ class ResetAccount extends V20170801Rpc
  * @method string getAccountPrivilege()
  * @method $this withAccountPrivilege($value)
  */
-class GrantAccountPrivilege extends V20170801Rpc
+class GrantAccountPrivilege extends Rpc
 {
 }
 
@@ -778,7 +775,7 @@ class GrantAccountPrivilege extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDatabase extends V20170801Rpc
+class DeleteDatabase extends Rpc
 {
 }
 
@@ -796,7 +793,7 @@ class DeleteDatabase extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAccount extends V20170801Rpc
+class DeleteAccount extends Rpc
 {
 }
 
@@ -814,7 +811,7 @@ class DeleteAccount extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteBackup extends V20170801Rpc
+class DeleteBackup extends Rpc
 {
 }
 
@@ -830,7 +827,7 @@ class DeleteBackup extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateBackup extends V20170801Rpc
+class CreateBackup extends Rpc
 {
 }
 
@@ -872,7 +869,7 @@ class CreateBackup extends V20170801Rpc
  * @method string getPayType()
  * @method $this withPayType($value)
  */
-class CreateDBCluster extends V20170801Rpc
+class CreateDBCluster extends Rpc
 {
 }
 
@@ -886,7 +883,7 @@ class CreateDBCluster extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends V20170801Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -906,7 +903,7 @@ class DescribeRegions extends V20170801Rpc
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  */
-class ModifyAccountDescription extends V20170801Rpc
+class ModifyAccountDescription extends Rpc
 {
 }
 
@@ -928,7 +925,7 @@ class ModifyAccountDescription extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyBackupPolicy extends V20170801Rpc
+class ModifyBackupPolicy extends Rpc
 {
 }
 
@@ -946,7 +943,7 @@ class ModifyBackupPolicy extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBClusterDescription extends V20170801Rpc
+class ModifyDBClusterDescription extends Rpc
 {
 }
 
@@ -962,7 +959,7 @@ class ModifyDBClusterDescription extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBClusterAttribute extends V20170801Rpc
+class DescribeDBClusterAttribute extends Rpc
 {
 }
 
@@ -989,7 +986,7 @@ class DescribeDBClusterAttribute extends V20170801Rpc
  * @method string getDBClusterIds()
  * @method $this withDBClusterIds($value)
  */
-class DescribeDBClusters extends V20170801Rpc
+class DescribeDBClusters extends Rpc
 {
 
     /**
@@ -1033,7 +1030,7 @@ class DescribeDBClusters extends V20170801Rpc
  * @method string getDBName()
  * @method $this withDBName($value)
  */
-class CreateAccount extends V20170801Rpc
+class CreateAccount extends Rpc
 {
 }
 
@@ -1049,7 +1046,7 @@ class CreateAccount extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDBCluster extends V20170801Rpc
+class DeleteDBCluster extends Rpc
 {
 }
 
@@ -1067,7 +1064,7 @@ class DeleteDBCluster extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAccounts extends V20170801Rpc
+class DescribeAccounts extends Rpc
 {
 }
 
@@ -1083,7 +1080,7 @@ class DescribeAccounts extends V20170801Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupPolicy extends V20170801Rpc
+class DescribeBackupPolicy extends Rpc
 {
 }
 
@@ -1113,6 +1110,6 @@ class DescribeBackupPolicy extends V20170801Rpc
  * @method string getBackupMode()
  * @method $this withBackupMode($value)
  */
-class DescribeBackups extends V20170801Rpc
+class DescribeBackups extends Rpc
 {
 }

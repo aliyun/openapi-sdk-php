@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ITaaS\V20170505;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UpdateRoomName updateRoomName(array $options = [])
  * @method RemoveIPSegment removeIPSegment(array $options = [])
  * @method RemoveRegisterBox removeRegisterBox(array $options = [])
@@ -31,7 +28,7 @@ class ITaaSApiResolver
     use ApiResolverTrait;
 }
 
-class V20170505Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'ITaaS';
@@ -55,7 +52,7 @@ class V20170505Rpc extends Rpc
  * @method string getScreencode()
  * @method $this withScreencode($value)
  */
-class UpdateRoomName extends V20170505Rpc
+class UpdateRoomName extends Rpc
 {
 }
 
@@ -69,7 +66,7 @@ class UpdateRoomName extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class RemoveIPSegment extends V20170505Rpc
+class RemoveIPSegment extends Rpc
 {
 }
 
@@ -83,7 +80,7 @@ class RemoveIPSegment extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class RemoveRegisterBox extends V20170505Rpc
+class RemoveRegisterBox extends Rpc
 {
 }
 
@@ -97,7 +94,7 @@ class RemoveRegisterBox extends V20170505Rpc
  * @method string getWelcomeuri()
  * @method $this withWelcomeuri($value)
  */
-class SetWelcomePageURI extends V20170505Rpc
+class SetWelcomePageURI extends Rpc
 {
 }
 
@@ -115,7 +112,7 @@ class SetWelcomePageURI extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class UpdateEnterpriseConfig extends V20170505Rpc
+class UpdateEnterpriseConfig extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class UpdateEnterpriseConfig extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class UpdateIPSegment extends V20170505Rpc
+class UpdateIPSegment extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class UpdateIPSegment extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetRegisterBoxList extends V20170505Rpc
+class GetRegisterBoxList extends Rpc
 {
 }
 
@@ -157,7 +154,7 @@ class GetRegisterBoxList extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetRegisterBoxNumber extends V20170505Rpc
+class GetRegisterBoxNumber extends Rpc
 {
 }
 
@@ -169,7 +166,7 @@ class GetRegisterBoxNumber extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetRegisterHistoryList extends V20170505Rpc
+class GetRegisterHistoryList extends Rpc
 {
 }
 
@@ -181,7 +178,7 @@ class GetRegisterHistoryList extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetWelcomePageURI extends V20170505Rpc
+class GetWelcomePageURI extends Rpc
 {
 }
 
@@ -195,7 +192,7 @@ class GetWelcomePageURI extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class RemoveBoxCode extends V20170505Rpc
+class RemoveBoxCode extends Rpc
 {
 }
 
@@ -207,7 +204,7 @@ class RemoveBoxCode extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetBoxCodeList extends V20170505Rpc
+class GetBoxCodeList extends Rpc
 {
 }
 
@@ -219,7 +216,7 @@ class GetBoxCodeList extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetEnterpriseConfig extends V20170505Rpc
+class GetEnterpriseConfig extends Rpc
 {
 }
 
@@ -231,7 +228,7 @@ class GetEnterpriseConfig extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetIPSegmentsList extends V20170505Rpc
+class GetIPSegmentsList extends Rpc
 {
 }
 
@@ -247,7 +244,7 @@ class GetIPSegmentsList extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class AddIPSegment extends V20170505Rpc
+class AddIPSegment extends Rpc
 {
 }
 
@@ -259,7 +256,7 @@ class AddIPSegment extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class CreateBoxCode extends V20170505Rpc
+class CreateBoxCode extends Rpc
 {
 }
 
@@ -275,6 +272,6 @@ class CreateBoxCode extends V20170505Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class CreateEnterprise extends V20170505Rpc
+class CreateEnterprise extends Rpc
 {
 }

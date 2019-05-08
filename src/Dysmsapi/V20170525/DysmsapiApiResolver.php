@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Dysmsapi\V20170525;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SendBatchSms sendBatchSms(array $options = [])
  * @method QuerySendDetails querySendDetails(array $options = [])
  * @method SendSms sendSms(array $options = [])
@@ -17,7 +14,7 @@ class DysmsapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20170525Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Dysmsapi';
@@ -50,7 +47,7 @@ class V20170525Rpc extends Rpc
  * @method string getPhoneNumberJson()
  * @method $this withPhoneNumberJson($value)
  */
-class SendBatchSms extends V20170525Rpc
+class SendBatchSms extends Rpc
 {
 }
 
@@ -72,7 +69,7 @@ class SendBatchSms extends V20170525Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QuerySendDetails extends V20170525Rpc
+class QuerySendDetails extends Rpc
 {
 }
 
@@ -96,6 +93,6 @@ class QuerySendDetails extends V20170525Rpc
  * @method string getTemplateParam()
  * @method $this withTemplateParam($value)
  */
-class SendSms extends V20170525Rpc
+class SendSms extends Rpc
 {
 }

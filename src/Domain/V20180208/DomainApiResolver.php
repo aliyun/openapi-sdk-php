@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Domain\V20180208;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
  * @method RequestPayDemand requestPayDemand(array $options = [])
  * @method FinishDemand finishDemand(array $options = [])
@@ -29,7 +26,7 @@ class DomainApiResolver
     use ApiResolverTrait;
 }
 
-class V20180208Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Domain';
@@ -49,7 +46,7 @@ class V20180208Rpc extends Rpc
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  */
-class QueryBrokerDemandRecord extends V20180208Rpc
+class QueryBrokerDemandRecord extends Rpc
 {
 }
 
@@ -65,7 +62,7 @@ class QueryBrokerDemandRecord extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class RequestPayDemand extends V20180208Rpc
+class RequestPayDemand extends Rpc
 {
 }
 
@@ -75,7 +72,7 @@ class RequestPayDemand extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class FinishDemand extends V20180208Rpc
+class FinishDemand extends Rpc
 {
 }
 
@@ -85,7 +82,7 @@ class FinishDemand extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class FailDemand extends V20180208Rpc
+class FailDemand extends Rpc
 {
 }
 
@@ -95,7 +92,7 @@ class FailDemand extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class RecordDemand extends V20180208Rpc
+class RecordDemand extends Rpc
 {
 }
 
@@ -105,7 +102,7 @@ class RecordDemand extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class RefuseDemand extends V20180208Rpc
+class RefuseDemand extends Rpc
 {
 }
 
@@ -115,7 +112,7 @@ class RefuseDemand extends V20180208Rpc
  * @method string getMessage()
  * @method $this withMessage($value)
  */
-class AcceptDemand extends V20180208Rpc
+class AcceptDemand extends Rpc
 {
 }
 
@@ -129,18 +126,18 @@ class AcceptDemand extends V20180208Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryBrokerDemand extends V20180208Rpc
+class QueryBrokerDemand extends Rpc
 {
 }
 
-class GetReserveDomainUrl extends V20180208Rpc
+class GetReserveDomainUrl extends Rpc
 {
 }
 
 /**
  * @method string getAuctionId()
  */
-class QueryAuctionDetail extends V20180208Rpc
+class QueryAuctionDetail extends Rpc
 {
 
     /**
@@ -162,7 +159,7 @@ class QueryAuctionDetail extends V20180208Rpc
  * @method string getCurrentPage()
  * @method string getStatus()
  */
-class QueryAuctions extends V20180208Rpc
+class QueryAuctions extends Rpc
 {
 
     /**
@@ -210,7 +207,7 @@ class QueryAuctions extends V20180208Rpc
  * @method string getPageSize()
  * @method string getCurrentPage()
  */
-class QueryBidRecords extends V20180208Rpc
+class QueryBidRecords extends Rpc
 {
 
     /**
@@ -256,7 +253,7 @@ class QueryBidRecords extends V20180208Rpc
 /**
  * @method string getDomainName()
  */
-class QueryBookingDomainInfo extends V20180208Rpc
+class QueryBookingDomainInfo extends Rpc
 {
 
     /**
@@ -278,7 +275,7 @@ class QueryBookingDomainInfo extends V20180208Rpc
  * @method string getMaxBid()
  * @method string getCurrency()
  */
-class BidDomain extends V20180208Rpc
+class BidDomain extends Rpc
 {
 
     /**
@@ -325,7 +322,7 @@ class BidDomain extends V20180208Rpc
  * @method array getChannels()
  * @method string getDomainName()
  */
-class ReserveDomain extends V20180208Rpc
+class ReserveDomain extends Rpc
 {
 
     /**

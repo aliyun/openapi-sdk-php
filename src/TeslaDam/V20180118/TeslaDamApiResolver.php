@@ -3,11 +3,8 @@
 namespace AlibabaCloud\TeslaDam\V20180118;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method Action action(array $options = [])
  * @method ActionDiskRma actionDiskRma(array $options = [])
  * @method ActionDiskCheck actionDiskCheck(array $options = [])
@@ -19,7 +16,7 @@ class TeslaDamApiResolver
     use ApiResolverTrait;
 }
 
-class V20180118Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'TeslaDam';
@@ -34,7 +31,7 @@ class V20180118Rpc extends Rpc
  * @method string getStepCode()
  * @method $this withStepCode($value)
  */
-class Action extends V20180118Rpc
+class Action extends Rpc
 {
 }
 
@@ -54,7 +51,7 @@ class Action extends V20180118Rpc
  * @method string getDiskSn()
  * @method $this withDiskSn($value)
  */
-class ActionDiskRma extends V20180118Rpc
+class ActionDiskRma extends Rpc
 {
 }
 
@@ -64,7 +61,7 @@ class ActionDiskRma extends V20180118Rpc
  * @method string getIp()
  * @method $this withIp($value)
  */
-class ActionDiskCheck extends V20180118Rpc
+class ActionDiskCheck extends Rpc
 {
 }
 
@@ -76,7 +73,7 @@ class ActionDiskCheck extends V20180118Rpc
  * @method string getIp()
  * @method $this withIp($value)
  */
-class ActionDiskMask extends V20180118Rpc
+class ActionDiskMask extends Rpc
 {
 }
 
@@ -90,6 +87,6 @@ class ActionDiskMask extends V20180118Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class HostGets extends V20180118Rpc
+class HostGets extends Rpc
 {
 }

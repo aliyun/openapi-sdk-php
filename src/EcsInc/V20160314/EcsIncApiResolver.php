@@ -3,11 +3,8 @@
 namespace AlibabaCloud\EcsInc\V20160314;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method InnerAuthorizeImagesToBids innerAuthorizeImagesToBids(array $options = [])
  * @method InnerUnlinkNetworkInterfaces innerUnlinkNetworkInterfaces(array $options = [])
  * @method InnerLinkNetworkInterfaces innerLinkNetworkInterfaces(array $options = [])
@@ -258,7 +255,7 @@ class EcsIncApiResolver
     use ApiResolverTrait;
 }
 
-class V20160314Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'EcsInc';
@@ -289,7 +286,7 @@ class V20160314Rpc extends Rpc
  * @method $this withOwnerId($value)
  * @method array getBid()
  */
-class InnerAuthorizeImagesToBids extends V20160314Rpc
+class InnerAuthorizeImagesToBids extends Rpc
 {
 
     /**
@@ -336,7 +333,7 @@ class InnerAuthorizeImagesToBids extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerUnlinkNetworkInterfaces extends V20160314Rpc
+class InnerUnlinkNetworkInterfaces extends Rpc
 {
 
     /**
@@ -368,7 +365,7 @@ class InnerUnlinkNetworkInterfaces extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method array getSrcNetworkInterface()
  */
-class InnerLinkNetworkInterfaces extends V20160314Rpc
+class InnerLinkNetworkInterfaces extends Rpc
 {
 
     /**
@@ -402,7 +399,7 @@ class InnerLinkNetworkInterfaces extends V20160314Rpc
  * @method string getToImageDesc()
  * @method $this withToImageDesc($value)
  */
-class InnerCopyImageAtSameRegion extends V20160314Rpc
+class InnerCopyImageAtSameRegion extends Rpc
 {
 }
 
@@ -424,7 +421,7 @@ class InnerCopyImageAtSameRegion extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class TagResourcesSystemTags extends V20160314Rpc
+class TagResourcesSystemTags extends Rpc
 {
 
     /**
@@ -479,7 +476,7 @@ class TagResourcesSystemTags extends V20160314Rpc
  * @method $this withResourceType($value)
  * @method array getTagKey()
  */
-class UntagResourcesSystemTags extends V20160314Rpc
+class UntagResourcesSystemTags extends Rpc
 {
 
     /**
@@ -535,7 +532,7 @@ class UntagResourcesSystemTags extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class ListTagResources extends V20160314Rpc
+class ListTagResources extends Rpc
 {
 
     /**
@@ -583,7 +580,7 @@ class ListTagResources extends V20160314Rpc
  * @method $this withInstanceId($value)
  * @method array getNetworkInterfaceId()
  */
-class InnerDescribeEniBdf extends V20160314Rpc
+class InnerDescribeEniBdf extends Rpc
 {
 
     /**
@@ -628,7 +625,7 @@ class InnerDescribeEniBdf extends V20160314Rpc
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  */
-class InnerQueryInstanceCreatedByProduct extends V20160314Rpc
+class InnerQueryInstanceCreatedByProduct extends Rpc
 {
 
     /**
@@ -756,7 +753,7 @@ class InnerQueryInstanceCreatedByProduct extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeResourceRecommendFilters extends V20160314Rpc
+class DescribeResourceRecommendFilters extends Rpc
 {
 }
 
@@ -773,7 +770,7 @@ class DescribeResourceRecommendFilters extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeResources extends V20160314Rpc
+class DescribeResources extends Rpc
 {
 
     /**
@@ -800,7 +797,7 @@ class DescribeResources extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeResourceFilterAttributes extends V20160314Rpc
+class DescribeResourceFilterAttributes extends Rpc
 {
 }
 
@@ -818,7 +815,7 @@ class DescribeResourceFilterAttributes extends V20160314Rpc
  * @method string getShardingKey()
  * @method $this withShardingKey($value)
  */
-class InnerSendMessage extends V20160314Rpc
+class InnerSendMessage extends Rpc
 {
 }
 
@@ -834,7 +831,7 @@ class InnerSendMessage extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerReleaseDedicatedHost extends V20160314Rpc
+class InnerReleaseDedicatedHost extends Rpc
 {
 }
 
@@ -852,7 +849,7 @@ class InnerReleaseDedicatedHost extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerQueryEniQosGroupByEni extends V20160314Rpc
+class InnerQueryEniQosGroupByEni extends Rpc
 {
 }
 
@@ -870,7 +867,7 @@ class InnerQueryEniQosGroupByEni extends V20160314Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class InnerQueryEniQosGroupByInstance extends V20160314Rpc
+class InnerQueryEniQosGroupByInstance extends Rpc
 {
 }
 
@@ -895,7 +892,7 @@ class InnerQueryEniQosGroupByInstance extends V20160314Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeAdvisorCheckSummaries extends V20160314Rpc
+class DescribeAdvisorCheckSummaries extends Rpc
 {
 
     /**
@@ -987,7 +984,7 @@ class DescribeAdvisorCheckSummaries extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeAdvisorChecks extends V20160314Rpc
+class DescribeAdvisorChecks extends Rpc
 {
 
     /**
@@ -1080,7 +1077,7 @@ class DescribeAdvisorChecks extends V20160314Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeAdvisorCheckItems extends V20160314Rpc
+class DescribeAdvisorCheckItems extends Rpc
 {
 
     /**
@@ -1154,7 +1151,7 @@ class DescribeAdvisorCheckItems extends V20160314Rpc
  * @method string getRelatedKey()
  * @method $this withRelatedKey($value)
  */
-class DescribeResourcesBySystemTag extends V20160314Rpc
+class DescribeResourcesBySystemTag extends Rpc
 {
 }
 
@@ -1174,7 +1171,7 @@ class DescribeResourcesBySystemTag extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class RemoveSystemTags extends V20160314Rpc
+class RemoveSystemTags extends Rpc
 {
 
     /**
@@ -1235,7 +1232,7 @@ class RemoveSystemTags extends V20160314Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  */
-class InnerDescribeTags extends V20160314Rpc
+class InnerDescribeTags extends Rpc
 {
 
     /**
@@ -1293,7 +1290,7 @@ class InnerDescribeTags extends V20160314Rpc
  * @method string getRelatedProduct()
  * @method $this withRelatedProduct($value)
  */
-class TagResourceVSwitch extends V20160314Rpc
+class TagResourceVSwitch extends Rpc
 {
 
     /**
@@ -1328,7 +1325,7 @@ class TagResourceVSwitch extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class InnerDeleteTags extends V20160314Rpc
+class InnerDeleteTags extends Rpc
 {
 
     /**
@@ -1384,7 +1381,7 @@ class InnerDeleteTags extends V20160314Rpc
  * @method string getRelatedKey()
  * @method $this withRelatedKey($value)
  */
-class AddSystemTag extends V20160314Rpc
+class AddSystemTag extends Rpc
 {
 
     /**
@@ -1424,7 +1421,7 @@ class AddSystemTag extends V20160314Rpc
  * @method string getRelatedProduct()
  * @method $this withRelatedProduct($value)
  */
-class DescribeResourcesByTagVsw extends V20160314Rpc
+class DescribeResourcesByTagVsw extends Rpc
 {
 
     /**
@@ -1458,7 +1455,7 @@ class DescribeResourcesByTagVsw extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OpsDescribeAccountAttributes extends V20160314Rpc
+class OpsDescribeAccountAttributes extends Rpc
 {
 
     /**
@@ -1499,7 +1496,7 @@ class OpsDescribeAccountAttributes extends V20160314Rpc
  * @method string getTxPps()
  * @method $this withTxPps($value)
  */
-class InnerModifyEniQosGroup extends V20160314Rpc
+class InnerModifyEniQosGroup extends Rpc
 {
 }
 
@@ -1517,7 +1514,7 @@ class InnerModifyEniQosGroup extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerDescribeEniQosGroupInfo extends V20160314Rpc
+class InnerDescribeEniQosGroupInfo extends Rpc
 {
 }
 
@@ -1537,7 +1534,7 @@ class InnerDescribeEniQosGroupInfo extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerJoinEniQosGroup extends V20160314Rpc
+class InnerJoinEniQosGroup extends Rpc
 {
 }
 
@@ -1555,7 +1552,7 @@ class InnerJoinEniQosGroup extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerLeaveEniQosGroup extends V20160314Rpc
+class InnerLeaveEniQosGroup extends Rpc
 {
 }
 
@@ -1573,7 +1570,7 @@ class InnerLeaveEniQosGroup extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerDescribeEniQosGroupByEni extends V20160314Rpc
+class InnerDescribeEniQosGroupByEni extends Rpc
 {
 }
 
@@ -1591,7 +1588,7 @@ class InnerDescribeEniQosGroupByEni extends V20160314Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class InnerDescribeEniQosGroupByInstance extends V20160314Rpc
+class InnerDescribeEniQosGroupByInstance extends Rpc
 {
 }
 
@@ -1619,7 +1616,7 @@ class InnerDescribeEniQosGroupByInstance extends V20160314Rpc
  * @method string getTxPps()
  * @method $this withTxPps($value)
  */
-class InnerCreateEniQosGroup extends V20160314Rpc
+class InnerCreateEniQosGroup extends Rpc
 {
 }
 
@@ -1637,7 +1634,7 @@ class InnerCreateEniQosGroup extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerDeleteEniQosGroup extends V20160314Rpc
+class InnerDeleteEniQosGroup extends Rpc
 {
 }
 
@@ -1657,7 +1654,7 @@ class InnerDeleteEniQosGroup extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class AddSystemTags extends V20160314Rpc
+class AddSystemTags extends Rpc
 {
 
     /**
@@ -1730,7 +1727,7 @@ class AddSystemTags extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getStatus()
  */
-class InnerEcsInstanceQueryByParam4QT extends V20160314Rpc
+class InnerEcsInstanceQueryByParam4QT extends Rpc
 {
 
     /**
@@ -2110,7 +2107,7 @@ class InnerEcsInstanceQueryByParam4QT extends V20160314Rpc
  * @method string getSpotStrategy()
  * @method $this withSpotStrategy($value)
  */
-class InnerQueryRetainVcpu extends V20160314Rpc
+class InnerQueryRetainVcpu extends Rpc
 {
 }
 
@@ -2132,7 +2129,7 @@ class InnerQueryRetainVcpu extends V20160314Rpc
  * @method string getOperateType()
  * @method $this withOperateType($value)
  */
-class InnerCheckEniEipOperate extends V20160314Rpc
+class InnerCheckEniEipOperate extends Rpc
 {
 }
 
@@ -2154,7 +2151,7 @@ class InnerCheckEniEipOperate extends V20160314Rpc
  * @method string getOperateType()
  * @method $this withOperateType($value)
  */
-class InnerCheckEniBindEip extends V20160314Rpc
+class InnerCheckEniBindEip extends Rpc
 {
 }
 
@@ -2170,7 +2167,7 @@ class InnerCheckEniBindEip extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerCheckEniUnbindEip extends V20160314Rpc
+class InnerCheckEniUnbindEip extends Rpc
 {
 }
 
@@ -2196,7 +2193,7 @@ class InnerCheckEniUnbindEip extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeGroupHighRiskStat extends V20160314Rpc
+class DescribeGroupHighRiskStat extends Rpc
 {
 
     /**
@@ -2276,7 +2273,7 @@ class DescribeGroupHighRiskStat extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class DescribeGroupHighRiskAcl extends V20160314Rpc
+class DescribeGroupHighRiskAcl extends Rpc
 {
 
     /**
@@ -2346,7 +2343,7 @@ class DescribeGroupHighRiskAcl extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeHighRiskGroupInfo extends V20160314Rpc
+class DescribeHighRiskGroupInfo extends Rpc
 {
 
     /**
@@ -2424,7 +2421,7 @@ class DescribeHighRiskGroupInfo extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class DescribeHighRiskGroupAcl extends V20160314Rpc
+class DescribeHighRiskGroupAcl extends Rpc
 {
 
     /**
@@ -2500,7 +2497,7 @@ class DescribeHighRiskGroupAcl extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeHighRiskGroupAclStat extends V20160314Rpc
+class DescribeHighRiskGroupAclStat extends Rpc
 {
 
     /**
@@ -2570,7 +2567,7 @@ class DescribeHighRiskGroupAclStat extends V20160314Rpc
  * @method $this withInstanceId($value)
  * @method string getCallerUid()
  */
-class QueryEcsElasticUpgradeInfo extends V20160314Rpc
+class QueryEcsElasticUpgradeInfo extends Rpc
 {
 
     /**
@@ -2614,7 +2611,7 @@ class QueryEcsElasticUpgradeInfo extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeDangerGroupInfo extends V20160314Rpc
+class DescribeDangerGroupInfo extends Rpc
 {
 
     /**
@@ -2684,7 +2681,7 @@ class DescribeDangerGroupInfo extends V20160314Rpc
  * @method $this withInstanceId($value)
  * @method string getCallerUid()
  */
-class DescribeElasticUpgradeInfo extends V20160314Rpc
+class DescribeElasticUpgradeInfo extends Rpc
 {
 
     /**
@@ -2734,7 +2731,7 @@ class DescribeElasticUpgradeInfo extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method string getToken()
  */
-class DescribeDangerGroupAclStat extends V20160314Rpc
+class DescribeDangerGroupAclStat extends Rpc
 {
 
     /**
@@ -2812,7 +2809,7 @@ class DescribeDangerGroupAclStat extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class DescribeDangerGroupAcl extends V20160314Rpc
+class DescribeDangerGroupAcl extends Rpc
 {
 
     /**
@@ -2879,7 +2876,7 @@ class DescribeDangerGroupAcl extends V20160314Rpc
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
-class DescribeAccountAttributes extends V20160314Rpc
+class DescribeAccountAttributes extends Rpc
 {
 
     /**
@@ -2920,7 +2917,7 @@ class DescribeAccountAttributes extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class InnerEcsDescribeDangerGroupVmCount extends V20160314Rpc
+class InnerEcsDescribeDangerGroupVmCount extends Rpc
 {
 
     /**
@@ -2998,7 +2995,7 @@ class InnerEcsDescribeDangerGroupVmCount extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class InnerEcsDescribeDangerGroupAcl extends V20160314Rpc
+class InnerEcsDescribeDangerGroupAcl extends Rpc
 {
 
     /**
@@ -3078,7 +3075,7 @@ class InnerEcsDescribeDangerGroupAcl extends V20160314Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class GdprLogicalDeleteResource extends V20160314Rpc
+class GdprLogicalDeleteResource extends Rpc
 {
 }
 
@@ -3106,7 +3103,7 @@ class GdprLogicalDeleteResource extends V20160314Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class GdprPhysicalDeleteResource extends V20160314Rpc
+class GdprPhysicalDeleteResource extends Rpc
 {
 }
 
@@ -3140,7 +3137,7 @@ class GdprPhysicalDeleteResource extends V20160314Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class GdprCheckResource extends V20160314Rpc
+class GdprCheckResource extends Rpc
 {
 }
 
@@ -3172,7 +3169,7 @@ class GdprCheckResource extends V20160314Rpc
  * @method string getAlarmLevel()
  * @method $this withAlarmLevel($value)
  */
-class InnerEcsDescribeDangerAcl extends V20160314Rpc
+class InnerEcsDescribeDangerAcl extends Rpc
 {
 
     /**
@@ -3258,7 +3255,7 @@ class InnerEcsDescribeDangerAcl extends V20160314Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeEvents extends V20160314Rpc
+class DescribeEvents extends Rpc
 {
 }
 
@@ -3276,7 +3273,7 @@ class DescribeEvents extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeEventDetail extends V20160314Rpc
+class DescribeEventDetail extends Rpc
 {
 }
 
@@ -3302,7 +3299,7 @@ class DescribeEventDetail extends V20160314Rpc
  * @method $this withAliUid($value)
  * @method string getProxyId()
  */
-class InnerEcsQueryByHpcClusterId extends V20160314Rpc
+class InnerEcsQueryByHpcClusterId extends Rpc
 {
 
     /**
@@ -3395,7 +3392,7 @@ class InnerEcsQueryByHpcClusterId extends V20160314Rpc
  * @method string getLinkedVSwitchId()
  * @method $this withLinkedVSwitchId($value)
  */
-class LaunchBazaarInstance extends V20160314Rpc
+class LaunchBazaarInstance extends Rpc
 {
 
     /**
@@ -3427,7 +3424,7 @@ class LaunchBazaarInstance extends V20160314Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class TerminateBazaarInstance extends V20160314Rpc
+class TerminateBazaarInstance extends Rpc
 {
 }
 
@@ -3447,7 +3444,7 @@ class TerminateBazaarInstance extends V20160314Rpc
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
  */
-class DescribeBazaarInstances extends V20160314Rpc
+class DescribeBazaarInstances extends Rpc
 {
 }
 
@@ -3461,7 +3458,7 @@ class DescribeBazaarInstances extends V20160314Rpc
  * @method $this withExpression($value)
  * @method array getVSwitchId()
  */
-class InnerCreateNcExpression extends V20160314Rpc
+class InnerCreateNcExpression extends Rpc
 {
 
     /**
@@ -3503,7 +3500,7 @@ class InnerCreateNcExpression extends V20160314Rpc
  * @method array getEcsInstanceId()
  * @method array getVSwitchId()
  */
-class InnerDeleteNcExpression extends V20160314Rpc
+class InnerDeleteNcExpression extends Rpc
 {
 
     /**
@@ -3547,7 +3544,7 @@ class InnerDeleteNcExpression extends V20160314Rpc
  * @method $this withExpression($value)
  * @method array getVSwitchId()
  */
-class InnerDescribeNcExpression extends V20160314Rpc
+class InnerDescribeNcExpression extends Rpc
 {
 
     /**
@@ -3612,7 +3609,7 @@ class InnerDescribeNcExpression extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class InnerDescribeEni extends V20160314Rpc
+class InnerDescribeEni extends Rpc
 {
 
     /**
@@ -3644,7 +3641,7 @@ class InnerDescribeEni extends V20160314Rpc
  * @method $this withOwnerId($value)
  * @method array getInstanceId()
  */
-class InnerInstallCloudAssistant extends V20160314Rpc
+class InnerInstallCloudAssistant extends Rpc
 {
 
     /**
@@ -3681,7 +3678,7 @@ class InnerInstallCloudAssistant extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DescribeRenewalPrice extends V20160314Rpc
+class DescribeRenewalPrice extends Rpc
 {
 }
 
@@ -3733,7 +3730,7 @@ class DescribeRenewalPrice extends V20160314Rpc
  * @method string getInstanceAmount()
  * @method $this withInstanceAmount($value)
  */
-class DescribePrice extends V20160314Rpc
+class DescribePrice extends Rpc
 {
 
     /**
@@ -3883,7 +3880,7 @@ class DescribePrice extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerRefundVcpuQuery extends V20160314Rpc
+class InnerRefundVcpuQuery extends Rpc
 {
 }
 
@@ -3906,7 +3903,7 @@ class InnerRefundVcpuQuery extends V20160314Rpc
  * @method $this withIsSuccess($value)
  * @method array getInstanceIds()
  */
-class InnerRefundVcpuCallBack extends V20160314Rpc
+class InnerRefundVcpuCallBack extends Rpc
 {
 
     /**
@@ -3943,7 +3940,7 @@ class InnerRefundVcpuCallBack extends V20160314Rpc
  * @method string getNewExpireTime()
  * @method $this withNewExpireTime($value)
  */
-class ModifySystemEventAttribute extends V20160314Rpc
+class ModifySystemEventAttribute extends Rpc
 {
 }
 
@@ -3968,7 +3965,7 @@ class ModifySystemEventAttribute extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeResourceModificationCapacity extends V20160314Rpc
+class DescribeResourceModificationCapacity extends Rpc
 {
 
     /**
@@ -4018,7 +4015,7 @@ class DescribeResourceModificationCapacity extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class DescribeResourceCreationCapacity extends V20160314Rpc
+class DescribeResourceCreationCapacity extends Rpc
 {
 
     /**
@@ -4061,7 +4058,7 @@ class DescribeResourceCreationCapacity extends V20160314Rpc
  * @method string getTagKey()
  * @method $this withTagKey($value)
  */
-class InnerQueryEcsCountByCondition extends V20160314Rpc
+class InnerQueryEcsCountByCondition extends Rpc
 {
 
     /**
@@ -4113,7 +4110,7 @@ class InnerQueryEcsCountByCondition extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerModifyEntityConstraints extends V20160314Rpc
+class InnerModifyEntityConstraints extends Rpc
 {
 }
 
@@ -4133,7 +4130,7 @@ class InnerModifyEntityConstraints extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerAddEntityConstraints extends V20160314Rpc
+class InnerAddEntityConstraints extends Rpc
 {
 }
 
@@ -4151,7 +4148,7 @@ class InnerAddEntityConstraints extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerDeleteEntityConstraints extends V20160314Rpc
+class InnerDeleteEntityConstraints extends Rpc
 {
 }
 
@@ -4173,7 +4170,7 @@ class InnerDeleteEntityConstraints extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerUpdateEntityConstraints extends V20160314Rpc
+class InnerUpdateEntityConstraints extends Rpc
 {
 }
 
@@ -4212,7 +4209,7 @@ class InnerUpdateEntityConstraints extends V20160314Rpc
  * @method string getToVSwitchAliUid()
  * @method $this withToVSwitchAliUid($value)
  */
-class ResourceOwnershipTransfer extends V20160314Rpc
+class ResourceOwnershipTransfer extends Rpc
 {
 
     /**
@@ -4344,7 +4341,7 @@ class ResourceOwnershipTransfer extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class InstanceOwnershipTransfer extends V20160314Rpc
+class InstanceOwnershipTransfer extends Rpc
 {
 
     /**
@@ -4454,7 +4451,7 @@ class InstanceOwnershipTransfer extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerQueryLazyLoadProgress extends V20160314Rpc
+class InnerQueryLazyLoadProgress extends Rpc
 {
 
     /**
@@ -4485,7 +4482,7 @@ class InnerQueryLazyLoadProgress extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerListClusterFlowCtrls extends V20160314Rpc
+class InnerListClusterFlowCtrls extends Rpc
 {
 }
 
@@ -4507,7 +4504,7 @@ class InnerListClusterFlowCtrls extends V20160314Rpc
  * @method string getEventType()
  * @method $this withEventType($value)
  */
-class CreateSystemEvent extends V20160314Rpc
+class CreateSystemEvent extends Rpc
 {
 }
 
@@ -4527,7 +4524,7 @@ class CreateSystemEvent extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerQueryConstraints extends V20160314Rpc
+class InnerQueryConstraints extends Rpc
 {
 }
 
@@ -4546,7 +4543,7 @@ class InnerQueryConstraints extends V20160314Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class InnerQueryExplanation extends V20160314Rpc
+class InnerQueryExplanation extends Rpc
 {
 
     /**
@@ -4596,7 +4593,7 @@ class InnerQueryExplanation extends V20160314Rpc
  * @method string getDestinationResource()
  * @method $this withDestinationResource($value)
  */
-class DescribeResourcesModification extends V20160314Rpc
+class DescribeResourcesModification extends Rpc
 {
 }
 
@@ -4628,7 +4625,7 @@ class DescribeResourcesModification extends V20160314Rpc
  * @method string getMigrate()
  * @method $this withMigrate($value)
  */
-class DescribeAvailableResourceForModify extends V20160314Rpc
+class DescribeAvailableResourceForModify extends Rpc
 {
 }
 
@@ -4648,7 +4645,7 @@ class DescribeAvailableResourceForModify extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class InnerQueryEcsPermit extends V20160314Rpc
+class InnerQueryEcsPermit extends Rpc
 {
 }
 
@@ -4690,7 +4687,7 @@ class InnerQueryEcsPermit extends V20160314Rpc
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
-class DescribeAvailableResource extends V20160314Rpc
+class DescribeAvailableResource extends Rpc
 {
 }
 
@@ -4712,7 +4709,7 @@ class DescribeAvailableResource extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBandwidthLimitation extends V20160314Rpc
+class DescribeBandwidthLimitation extends Rpc
 {
 }
 
@@ -4730,7 +4727,7 @@ class DescribeBandwidthLimitation extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CancelSystemEvent extends V20160314Rpc
+class CancelSystemEvent extends Rpc
 {
 }
 
@@ -4752,7 +4749,7 @@ class CancelSystemEvent extends V20160314Rpc
  * @method string getNewExpireTime()
  * @method $this withNewExpireTime($value)
  */
-class ModifySystemEventPlanTime extends V20160314Rpc
+class ModifySystemEventPlanTime extends Rpc
 {
 }
 
@@ -4769,7 +4766,7 @@ class ModifySystemEventPlanTime extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerDetailInstanceFamilyDefine extends V20160314Rpc
+class InnerDetailInstanceFamilyDefine extends Rpc
 {
 
     /**
@@ -4802,7 +4799,7 @@ class InnerDetailInstanceFamilyDefine extends V20160314Rpc
  * @method string getVpcId()
  * @method $this withVpcId($value)
  */
-class InnerBatchAttachClassicLinkVpc extends V20160314Rpc
+class InnerBatchAttachClassicLinkVpc extends Rpc
 {
 }
 
@@ -4830,7 +4827,7 @@ class InnerBatchAttachClassicLinkVpc extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class ModifyInstanceAutoRenewAttributeInner extends V20160314Rpc
+class ModifyInstanceAutoRenewAttributeInner extends Rpc
 {
 }
 
@@ -4850,7 +4847,7 @@ class ModifyInstanceAutoRenewAttributeInner extends V20160314Rpc
  * @method string getGroupNo()
  * @method $this withGroupNo($value)
  */
-class InnerBatchAttchClassicLinkVpc extends V20160314Rpc
+class InnerBatchAttchClassicLinkVpc extends Rpc
 {
 }
 
@@ -4864,7 +4861,7 @@ class InnerBatchAttchClassicLinkVpc extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerRegionSupportInstancetypes extends V20160314Rpc
+class InnerRegionSupportInstancetypes extends Rpc
 {
 }
 
@@ -4883,7 +4880,7 @@ class InnerRegionSupportInstancetypes extends V20160314Rpc
  * @method string getToken()
  * @method string getAppKey()
  */
-class CheckIsDefaultVpcUser extends V20160314Rpc
+class CheckIsDefaultVpcUser extends Rpc
 {
 
     /**
@@ -4967,7 +4964,7 @@ class CheckIsDefaultVpcUser extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerCheckIsDefaultVpcUser extends V20160314Rpc
+class InnerCheckIsDefaultVpcUser extends Rpc
 {
 
     /**
@@ -5055,7 +5052,7 @@ class InnerCheckIsDefaultVpcUser extends V20160314Rpc
  * @method $this withEniName($value)
  * @method string getToken()
  */
-class InnerEcsDescribeVPortInfo extends V20160314Rpc
+class InnerEcsDescribeVPortInfo extends Rpc
 {
 
     /**
@@ -5136,7 +5133,7 @@ class InnerEcsDescribeVPortInfo extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class InnerQueryCopyImageSupportRegions extends V20160314Rpc
+class InnerQueryCopyImageSupportRegions extends Rpc
 {
 }
 
@@ -5156,7 +5153,7 @@ class InnerQueryCopyImageSupportRegions extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class CancelAgreement extends V20160314Rpc
+class CancelAgreement extends Rpc
 {
 }
 
@@ -5176,7 +5173,7 @@ class CancelAgreement extends V20160314Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class SignAgreement extends V20160314Rpc
+class SignAgreement extends Rpc
 {
 }
 
@@ -5194,7 +5191,7 @@ class SignAgreement extends V20160314Rpc
  * @method $this withInstanceId($value)
  * @method string getCallerUid()
  */
-class QueryEcsInstanceOrderInfo extends V20160314Rpc
+class QueryEcsInstanceOrderInfo extends Rpc
 {
 
     /**
@@ -5248,7 +5245,7 @@ class QueryEcsInstanceOrderInfo extends V20160314Rpc
  * @method string getPageNo()
  * @method $this withPageNo($value)
  */
-class InnerEcsDescribeIpsInGroup extends V20160314Rpc
+class InnerEcsDescribeIpsInGroup extends Rpc
 {
 
     /**
@@ -5318,7 +5315,7 @@ class InnerEcsDescribeIpsInGroup extends V20160314Rpc
  * @method string getNeedFactor()
  * @method $this withNeedFactor($value)
  */
-class InnerDescribeInstanceTypes extends V20160314Rpc
+class InnerDescribeInstanceTypes extends Rpc
 {
 }
 
@@ -5334,7 +5331,7 @@ class InnerDescribeInstanceTypes extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceTypesInner extends V20160314Rpc
+class DescribeInstanceTypesInner extends Rpc
 {
 }
 
@@ -5362,7 +5359,7 @@ class DescribeInstanceTypesInner extends V20160314Rpc
  * @method string getResourceIds()
  * @method $this withResourceIds($value)
  */
-class InnerEcsResourceGroupQueryByResources extends V20160314Rpc
+class InnerEcsResourceGroupQueryByResources extends Rpc
 {
 
     /**
@@ -5428,7 +5425,7 @@ class InnerEcsResourceGroupQueryByResources extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerDescribeSnapshotBusinessStatus extends V20160314Rpc
+class InnerDescribeSnapshotBusinessStatus extends Rpc
 {
 }
 
@@ -5444,7 +5441,7 @@ class InnerDescribeSnapshotBusinessStatus extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerModifySnapshotBusinessStatus extends V20160314Rpc
+class InnerModifySnapshotBusinessStatus extends Rpc
 {
 }
 
@@ -5476,7 +5473,7 @@ class InnerModifySnapshotBusinessStatus extends V20160314Rpc
  * @method $this withBid($value)
  * @method string getProxyId()
  */
-class QueryRecommendInstanceType extends V20160314Rpc
+class QueryRecommendInstanceType extends Rpc
 {
 
     /**
@@ -5546,7 +5543,7 @@ class QueryRecommendInstanceType extends V20160314Rpc
  * @method string getMigrate()
  * @method $this withMigrate($value)
  */
-class QueryResourceModify extends V20160314Rpc
+class QueryResourceModify extends Rpc
 {
 }
 
@@ -5570,7 +5567,7 @@ class QueryResourceModify extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReInitDisks extends V20160314Rpc
+class ReInitDisks extends Rpc
 {
 }
 
@@ -5587,7 +5584,7 @@ class ReInitDisks extends V20160314Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class ListImageBinding extends V20160314Rpc
+class ListImageBinding extends Rpc
 {
 
     /**
@@ -5622,7 +5619,7 @@ class ListImageBinding extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsRegionQueryByBid extends V20160314Rpc
+class InnerEcsRegionQueryByBid extends Rpc
 {
 
     /**
@@ -5689,7 +5686,7 @@ class InnerEcsRegionQueryByBid extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListBoundMarketImage extends V20160314Rpc
+class ListBoundMarketImage extends Rpc
 {
 
     /**
@@ -5725,7 +5722,7 @@ class ListBoundMarketImage extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsIsClassicLinkVpcUser extends V20160314Rpc
+class InnerEcsIsClassicLinkVpcUser extends Rpc
 {
 
     /**
@@ -5810,7 +5807,7 @@ class InnerEcsIsClassicLinkVpcUser extends V20160314Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class GetCommodityProxy extends V20160314Rpc
+class GetCommodityProxy extends Rpc
 {
 }
 
@@ -5832,7 +5829,7 @@ class GetCommodityProxy extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQueryIpThreshold extends V20160314Rpc
+class InnerEcsQueryIpThreshold extends Rpc
 {
 
     /**
@@ -5912,7 +5909,7 @@ class InnerEcsQueryIpThreshold extends V20160314Rpc
  * @method string getPricingCycle()
  * @method string getProxyId()
  */
-class InnerAntInstanceConvertToPrepaid extends V20160314Rpc
+class InnerAntInstanceConvertToPrepaid extends Rpc
 {
 
     /**
@@ -6115,7 +6112,7 @@ class InnerAntInstanceConvertToPrepaid extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsExpireRegionQuery extends V20160314Rpc
+class InnerEcsExpireRegionQuery extends Rpc
 {
 
     /**
@@ -6214,7 +6211,7 @@ class InnerEcsExpireRegionQuery extends V20160314Rpc
  * @method $this withIsExpireTransition($value)
  * @method string getProxyId()
  */
-class InnerEcsTransitionModify extends V20160314Rpc
+class InnerEcsTransitionModify extends Rpc
 {
 
     /**
@@ -6335,7 +6332,7 @@ class InnerEcsTransitionModify extends V20160314Rpc
  * @method $this withIsExpireTransition($value)
  * @method string getProxyId()
  */
-class InnerEcsTransitionQuery extends V20160314Rpc
+class InnerEcsTransitionQuery extends Rpc
 {
 
     /**
@@ -6426,7 +6423,7 @@ class InnerEcsTransitionQuery extends V20160314Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class InnerRemedyRenewInstance extends V20160314Rpc
+class InnerRemedyRenewInstance extends Rpc
 {
 }
 
@@ -6446,7 +6443,7 @@ class InnerRemedyRenewInstance extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerConstraintDataPush extends V20160314Rpc
+class InnerConstraintDataPush extends Rpc
 {
 
     /**
@@ -6550,7 +6547,7 @@ class InnerConstraintDataPush extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerReleasePublicIpAddress extends V20160314Rpc
+class InnerReleasePublicIpAddress extends Rpc
 {
 
     /**
@@ -6654,7 +6651,7 @@ class InnerReleasePublicIpAddress extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerModifyPublicIpAddress extends V20160314Rpc
+class InnerModifyPublicIpAddress extends Rpc
 {
 
     /**
@@ -6754,7 +6751,7 @@ class InnerModifyPublicIpAddress extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerMarketplaceImageExpire extends V20160314Rpc
+class InnerMarketplaceImageExpire extends Rpc
 {
 
     /**
@@ -6830,7 +6827,7 @@ class InnerMarketplaceImageExpire extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerModifyInstanceChargeType extends V20160314Rpc
+class InnerModifyInstanceChargeType extends Rpc
 {
 
     /**
@@ -6980,7 +6977,7 @@ class InnerModifyInstanceChargeType extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckImageSupportCloudinit extends V20160314Rpc
+class CheckImageSupportCloudinit extends Rpc
 {
 }
 
@@ -7009,7 +7006,7 @@ class CheckImageSupportCloudinit extends V20160314Rpc
  * @method string getMD5()
  * @method $this withMD5($value)
  */
-class UploadSystemImageAtOrigin extends V20160314Rpc
+class UploadSystemImageAtOrigin extends Rpc
 {
 
     /**
@@ -7050,7 +7047,7 @@ class UploadSystemImageAtOrigin extends V20160314Rpc
  * @method string getResourceTransitInBase64()
  * @method $this withResourceTransitInBase64($value)
  */
-class CopySystemImageAtTarget extends V20160314Rpc
+class CopySystemImageAtTarget extends Rpc
 {
 
     /**
@@ -7087,7 +7084,7 @@ class CopySystemImageAtTarget extends V20160314Rpc
  * @method string getImageRegionNo()
  * @method $this withImageRegionNo($value)
  */
-class QueryImageCopyProgress extends V20160314Rpc
+class QueryImageCopyProgress extends Rpc
 {
 
     /**
@@ -7136,7 +7133,7 @@ class QueryImageCopyProgress extends V20160314Rpc
  * @method $this withResourceName($value)
  * @method array getTag()
  */
-class QueryResourceTransit extends V20160314Rpc
+class QueryResourceTransit extends Rpc
 {
 
     /**
@@ -7204,7 +7201,7 @@ class QueryResourceTransit extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CopySystemImage extends V20160314Rpc
+class CopySystemImage extends Rpc
 {
 
     /**
@@ -7250,7 +7247,7 @@ class CopySystemImage extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerCheckOpenSnapshotService extends V20160314Rpc
+class InnerCheckOpenSnapshotService extends Rpc
 {
 
     /**
@@ -7280,7 +7277,7 @@ class InnerCheckOpenSnapshotService extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class InnerOpenSnapshotService extends V20160314Rpc
+class InnerOpenSnapshotService extends Rpc
 {
 
     /**
@@ -7320,7 +7317,7 @@ class InnerOpenSnapshotService extends V20160314Rpc
  * @method $this withAliUid($value)
  * @method string getProxyId()
  */
-class InnerQueryImageBindByInstance extends V20160314Rpc
+class InnerQueryImageBindByInstance extends Rpc
 {
 
     /**
@@ -7413,7 +7410,7 @@ class InnerQueryImageBindByInstance extends V20160314Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class InnerRenewInstance extends V20160314Rpc
+class InnerRenewInstance extends Rpc
 {
 }
 
@@ -7437,7 +7434,7 @@ class InnerRenewInstance extends V20160314Rpc
  * @method string getAppKey()
  * @method string getProxyId()
  */
-class InnerCheckProduce extends V20160314Rpc
+class InnerCheckProduce extends Rpc
 {
 
     /**
@@ -7539,7 +7536,7 @@ class InnerCheckProduce extends V20160314Rpc
  * @method string getAppKey()
  * @method string getProxyId()
  */
-class InnerProduce extends V20160314Rpc
+class InnerProduce extends Rpc
 {
 
     /**
@@ -7638,7 +7635,7 @@ class InnerProduce extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class QueryInstanceInfo extends V20160314Rpc
+class QueryInstanceInfo extends Rpc
 {
 
     /**
@@ -7754,7 +7751,7 @@ class QueryInstanceInfo extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceSetEndTime extends V20160314Rpc
+class InnerInstanceSetEndTime extends Rpc
 {
 
     /**
@@ -7918,7 +7915,7 @@ class InnerInstanceSetEndTime extends V20160314Rpc
  * @method string getProxyId()
  * @method string getNetworkValidation()
  */
-class InnerNetworkModifyValidation extends V20160314Rpc
+class InnerNetworkModifyValidation extends Rpc
 {
 
     /**
@@ -8030,7 +8027,7 @@ class InnerNetworkModifyValidation extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerDiskResizeByParam extends V20160314Rpc
+class InnerDiskResizeByParam extends Rpc
 {
 
     /**
@@ -8143,7 +8140,7 @@ class InnerDiskResizeByParam extends V20160314Rpc
  * @method string getIncludeOffline()
  * @method string getProxyId()
  */
-class InnerInstanceGetInstanceTypeModelByType extends V20160314Rpc
+class InnerInstanceGetInstanceTypeModelByType extends Rpc
 {
 
     /**
@@ -8269,7 +8266,7 @@ class InnerInstanceGetInstanceTypeModelByType extends V20160314Rpc
  * @method string getValue()
  * @method string getProxyId()
  */
-class InnerImageModifyProductCapacity extends V20160314Rpc
+class InnerImageModifyProductCapacity extends Rpc
 {
 
     /**
@@ -8401,7 +8398,7 @@ class InnerImageModifyProductCapacity extends V20160314Rpc
  * @method string getProxyId()
  * @method string getStatus()
  */
-class InnerImageQueryImgsByParam extends V20160314Rpc
+class InnerImageQueryImgsByParam extends Rpc
 {
 
     /**
@@ -8604,7 +8601,7 @@ class InnerImageQueryImgsByParam extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerImageQueryProductQuota extends V20160314Rpc
+class InnerImageQueryProductQuota extends Rpc
 {
 
     /**
@@ -8716,7 +8713,7 @@ class InnerImageQueryProductQuota extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsInstanceDetailForConsole extends V20160314Rpc
+class InnerEcsInstanceDetailForConsole extends Rpc
 {
 
     /**
@@ -8825,7 +8822,7 @@ class InnerEcsInstanceDetailForConsole extends V20160314Rpc
  * @method string getCreateTimeTo()
  * @method string getStatus()
  */
-class InnerDiskQueryByParamForConsole extends V20160314Rpc
+class InnerDiskQueryByParamForConsole extends Rpc
 {
 
     /**
@@ -9233,7 +9230,7 @@ class InnerDiskQueryByParamForConsole extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerSnapshotIsUserAutoSnapshotPause extends V20160314Rpc
+class InnerSnapshotIsUserAutoSnapshotPause extends Rpc
 {
 
     /**
@@ -9306,7 +9303,7 @@ class InnerSnapshotIsUserAutoSnapshotPause extends V20160314Rpc
  * @method string getInstanceId()
  * @method string getProxyId()
  */
-class InnerVncQueryPasswd extends V20160314Rpc
+class InnerVncQueryPasswd extends Rpc
 {
 
     /**
@@ -9419,7 +9416,7 @@ class InnerVncQueryPasswd extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsReleaseByDriver extends V20160314Rpc
+class InnerEcsReleaseByDriver extends Rpc
 {
 
     /**
@@ -9518,7 +9515,7 @@ class InnerEcsReleaseByDriver extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerImageKeepUsing extends V20160314Rpc
+class InnerImageKeepUsing extends Rpc
 {
 
     /**
@@ -9628,7 +9625,7 @@ class InnerImageKeepUsing extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerImageQueryNeedKeepUsing extends V20160314Rpc
+class InnerImageQueryNeedKeepUsing extends Rpc
 {
 
     /**
@@ -9714,7 +9711,7 @@ class InnerImageQueryNeedKeepUsing extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerDiskFindDiskByDiskId extends V20160314Rpc
+class InnerDiskFindDiskByDiskId extends Rpc
 {
 
     /**
@@ -9798,7 +9795,7 @@ class InnerDiskFindDiskByDiskId extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerDiskQueryUserDiskSummary extends V20160314Rpc
+class InnerDiskQueryUserDiskSummary extends Rpc
 {
 
     /**
@@ -9888,7 +9885,7 @@ class InnerDiskQueryUserDiskSummary extends V20160314Rpc
  * @method string getKeepDiskSize()
  * @method string getProxyId()
  */
-class InnerDiskReset extends V20160314Rpc
+class InnerDiskReset extends Rpc
 {
 
     /**
@@ -10047,7 +10044,7 @@ class InnerDiskReset extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class FiveDaysRefund extends V20160314Rpc
+class FiveDaysRefund extends Rpc
 {
 }
 
@@ -10101,7 +10098,7 @@ class FiveDaysRefund extends V20160314Rpc
  * @method string getStatus()
  * @method string getOrderType()
  */
-class InnerInstanceQueryByParamBackyard extends V20160314Rpc
+class InnerInstanceQueryByParamBackyard extends Rpc
 {
 
     /**
@@ -10642,7 +10639,7 @@ class InnerInstanceQueryByParamBackyard extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerIpLoad extends V20160314Rpc
+class InnerIpLoad extends Rpc
 {
 
     /**
@@ -10752,7 +10749,7 @@ class InnerIpLoad extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsSnapshotQueryAllSnapshotsByEcsId extends V20160314Rpc
+class InnerEcsSnapshotQueryAllSnapshotsByEcsId extends Rpc
 {
 
     /**
@@ -10839,7 +10836,7 @@ class InnerEcsSnapshotQueryAllSnapshotsByEcsId extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerIzQueryForVmSale extends V20160314Rpc
+class InnerIzQueryForVmSale extends Rpc
 {
 
     /**
@@ -10963,7 +10960,7 @@ class InnerIzQueryForVmSale extends V20160314Rpc
  * @method string getProxyId()
  * @method string getRegionNo()
  */
-class InnerStockListUsedVms extends V20160314Rpc
+class InnerStockListUsedVms extends Rpc
 {
 
     /**
@@ -11062,7 +11059,7 @@ class InnerStockListUsedVms extends V20160314Rpc
  * @method string getProxyId()
  * @method string getRegionNo()
  */
-class InnerGetZoneVendibleDataAndStatusById extends V20160314Rpc
+class InnerGetZoneVendibleDataAndStatusById extends Rpc
 {
 
     /**
@@ -11175,7 +11172,7 @@ class InnerGetZoneVendibleDataAndStatusById extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerGroupFindDefaultSystemGroup extends V20160314Rpc
+class InnerGroupFindDefaultSystemGroup extends Rpc
 {
 
     /**
@@ -11302,7 +11299,7 @@ class InnerGroupFindDefaultSystemGroup extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerImageConvert2Product extends V20160314Rpc
+class InnerImageConvert2Product extends Rpc
 {
 
     /**
@@ -11450,7 +11447,7 @@ class InnerImageConvert2Product extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerImageModify extends V20160314Rpc
+class InnerImageModify extends Rpc
 {
 
     /**
@@ -11685,7 +11682,7 @@ class InnerImageModify extends V20160314Rpc
  * @method string getImageIds()
  * @method string getStatus()
  */
-class InnerImageQueryAvailableImgs extends V20160314Rpc
+class InnerImageQueryAvailableImgs extends Rpc
 {
 
     /**
@@ -12047,7 +12044,7 @@ class InnerImageQueryAvailableImgs extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceQueryEcsByImgPc extends V20160314Rpc
+class InnerInstanceQueryEcsByImgPc extends Rpc
 {
 
     /**
@@ -12197,7 +12194,7 @@ class InnerInstanceQueryEcsByImgPc extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsGetBflagByBidAndUid extends V20160314Rpc
+class InnerEcsGetBflagByBidAndUid extends Rpc
 {
 
     /**
@@ -12296,7 +12293,7 @@ class InnerEcsGetBflagByBidAndUid extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsInstanceQueryRegionNoFilter extends V20160314Rpc
+class InnerEcsInstanceQueryRegionNoFilter extends Rpc
 {
 
     /**
@@ -12408,7 +12405,7 @@ class InnerEcsInstanceQueryRegionNoFilter extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsInstanceQueryRegions extends V20160314Rpc
+class InnerEcsInstanceQueryRegions extends Rpc
 {
 
     /**
@@ -12518,7 +12515,7 @@ class InnerEcsInstanceQueryRegions extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerGetInstanceTypeModelByType extends V20160314Rpc
+class InnerGetInstanceTypeModelByType extends Rpc
 {
 
     /**
@@ -12605,7 +12602,7 @@ class InnerGetInstanceTypeModelByType extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQuerySecurity extends V20160314Rpc
+class InnerEcsQuerySecurity extends Rpc
 {
 
     /**
@@ -12711,7 +12708,7 @@ class InnerEcsQuerySecurity extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsRiskControlPunish extends V20160314Rpc
+class InnerEcsRiskControlPunish extends Rpc
 {
 
     /**
@@ -12896,7 +12893,7 @@ class InnerEcsRiskControlPunish extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsRiskControlPunishRemove extends V20160314Rpc
+class InnerEcsRiskControlPunishRemove extends Rpc
 {
 
     /**
@@ -13091,7 +13088,7 @@ class InnerEcsRiskControlPunishRemove extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsRiskControlQuery extends V20160314Rpc
+class InnerEcsRiskControlQuery extends Rpc
 {
 
     /**
@@ -13270,7 +13267,7 @@ class InnerEcsRiskControlQuery extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerMonitor extends V20160314Rpc
+class InnerMonitor extends Rpc
 {
 
     /**
@@ -13388,7 +13385,7 @@ class InnerMonitor extends V20160314Rpc
  * @method string getProxyId()
  * @method string getIntranetIp()
  */
-class InnerEcsFindById extends V20160314Rpc
+class InnerEcsFindById extends Rpc
 {
 
     /**
@@ -13587,7 +13584,7 @@ class InnerEcsFindById extends V20160314Rpc
  * @method string getTag4Key()
  * @method string getTag3Value()
  */
-class CopyToCenterAtOrigin extends V20160314Rpc
+class CopyToCenterAtOrigin extends Rpc
 {
 
     /**
@@ -13747,7 +13744,7 @@ class CopyToCenterAtOrigin extends V20160314Rpc
  * @method string getTag4Key()
  * @method string getTag3Value()
  */
-class DescribeCopyProgressAtOrigin extends V20160314Rpc
+class DescribeCopyProgressAtOrigin extends Rpc
 {
 
     /**
@@ -13907,7 +13904,7 @@ class DescribeCopyProgressAtOrigin extends V20160314Rpc
  * @method string getTag4Key()
  * @method string getTag3Value()
  */
-class DetailCenterResourceAtOrigin extends V20160314Rpc
+class DetailCenterResourceAtOrigin extends Rpc
 {
 
     /**
@@ -14069,7 +14066,7 @@ class DetailCenterResourceAtOrigin extends V20160314Rpc
  * @method string getTag4Key()
  * @method string getTag3Value()
  */
-class CancelCopyImageAtOrigin extends V20160314Rpc
+class CancelCopyImageAtOrigin extends Rpc
 {
 
     /**
@@ -14241,7 +14238,7 @@ class CancelCopyImageAtOrigin extends V20160314Rpc
  * @method string getDestinationDescription()
  * @method $this withDestinationDescription($value)
  */
-class CopyImageAtTarget extends V20160314Rpc
+class CopyImageAtTarget extends Rpc
 {
 }
 
@@ -14263,7 +14260,7 @@ class CopyImageAtTarget extends V20160314Rpc
  * @method string getMetrics()
  * @method string getBid()
  */
-class InnerMonitorDataDescribeInstance extends V20160314Rpc
+class InnerMonitorDataDescribeInstance extends Rpc
 {
 
     /**
@@ -14369,7 +14366,7 @@ class InnerMonitorDataDescribeInstance extends V20160314Rpc
  * @method string getProxyId()
  * @method string getSnapshotIndexId()
  */
-class InnerSnapshotDescribeMountedSnapshots extends V20160314Rpc
+class InnerSnapshotDescribeMountedSnapshots extends Rpc
 {
 
     /**
@@ -14569,7 +14566,7 @@ class InnerSnapshotDescribeMountedSnapshots extends V20160314Rpc
  * @method string getBid()
  * @method string getSnapshotNos()
  */
-class InnerSnapshotQueryUserSnapshots extends V20160314Rpc
+class InnerSnapshotQueryUserSnapshots extends Rpc
 {
 
     /**
@@ -14985,7 +14982,7 @@ class InnerSnapshotQueryUserSnapshots extends V20160314Rpc
  * @method string getProxyId()
  * @method string getSnapshotIndexId()
  */
-class InnerSnapshotSecurityMount extends V20160314Rpc
+class InnerSnapshotSecurityMount extends Rpc
 {
 
     /**
@@ -15141,7 +15138,7 @@ class InnerSnapshotSecurityMount extends V20160314Rpc
  * @method string getProxyId()
  * @method string getSnapshotIndexId()
  */
-class InnerSnapshotSecurityUnmount extends V20160314Rpc
+class InnerSnapshotSecurityUnmount extends Rpc
 {
 
     /**
@@ -15296,7 +15293,7 @@ class InnerSnapshotSecurityUnmount extends V20160314Rpc
  * @method string getProof()
  * @method string getProxyId()
  */
-class InnerMaliceEcsLock extends V20160314Rpc
+class InnerMaliceEcsLock extends Rpc
 {
 
     /**
@@ -15438,7 +15435,7 @@ class InnerMaliceEcsLock extends V20160314Rpc
  * @method string getProof()
  * @method string getProxyId()
  */
-class InnerMaliceEcsUnlock extends V20160314Rpc
+class InnerMaliceEcsUnlock extends Rpc
 {
 
     /**
@@ -15577,7 +15574,7 @@ class InnerMaliceEcsUnlock extends V20160314Rpc
  * @method string getMetrics()
  * @method string getBid()
  */
-class InnerMonitorDataDescribeDisk extends V20160314Rpc
+class InnerMonitorDataDescribeDisk extends Rpc
 {
 
     /**
@@ -15678,7 +15675,7 @@ class InnerMonitorDataDescribeDisk extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceDisableSLBFlow extends V20160314Rpc
+class InnerInstanceDisableSLBFlow extends Rpc
 {
 
     /**
@@ -15792,7 +15789,7 @@ class InnerInstanceDisableSLBFlow extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceEnableSLBFlow extends V20160314Rpc
+class InnerInstanceEnableSLBFlow extends Rpc
 {
 
     /**
@@ -15929,7 +15926,7 @@ class InnerInstanceEnableSLBFlow extends V20160314Rpc
  * @method string getIntranetIp()
  * @method string getOrderType()
  */
-class InnerInstanceQueryByParam extends V20160314Rpc
+class InnerInstanceQueryByParam extends Rpc
 {
 
     /**
@@ -16367,7 +16364,7 @@ class InnerInstanceQueryByParam extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerImageDetail extends V20160314Rpc
+class InnerImageDetail extends Rpc
 {
 
     /**
@@ -16501,7 +16498,7 @@ class InnerImageDetail extends V20160314Rpc
  * @method string getProxyId()
  * @method string getStatus()
  */
-class InnerImageQueryUserImages extends V20160314Rpc
+class InnerImageQueryUserImages extends Rpc
 {
 
     /**
@@ -16705,7 +16702,7 @@ class InnerImageQueryUserImages extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerInstanceDetail extends V20160314Rpc
+class InnerInstanceDetail extends Rpc
 {
 
     /**
@@ -16817,7 +16814,7 @@ class InnerInstanceDetail extends V20160314Rpc
  * @method string getBid()
  * @method string getGroupNo()
  */
-class InnerGroupQuery extends V20160314Rpc
+class InnerGroupQuery extends Rpc
 {
 
     /**
@@ -17101,7 +17098,7 @@ class InnerGroupQuery extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupQueryVm extends V20160314Rpc
+class InnerGroupQueryVm extends Rpc
 {
 
     /**
@@ -17254,7 +17251,7 @@ class InnerGroupQueryVm extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupRemove extends V20160314Rpc
+class InnerGroupRemove extends Rpc
 {
 
     /**
@@ -17403,7 +17400,7 @@ class InnerGroupRemove extends V20160314Rpc
  * @method string getProxyId()
  * @method string getPolicy()
  */
-class InnerGroupRevoke extends V20160314Rpc
+class InnerGroupRevoke extends Rpc
 {
 
     /**
@@ -17662,7 +17659,7 @@ class InnerGroupRevoke extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerGroupCreate extends V20160314Rpc
+class InnerGroupCreate extends Rpc
 {
 
     /**
@@ -17830,7 +17827,7 @@ class InnerGroupCreate extends V20160314Rpc
  * @method string getProxyId()
  * @method string getDirection()
  */
-class InnerGroupDetail extends V20160314Rpc
+class InnerGroupDetail extends Rpc
 {
 
     /**
@@ -17997,7 +17994,7 @@ class InnerGroupDetail extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupJoin extends V20160314Rpc
+class InnerGroupJoin extends Rpc
 {
 
     /**
@@ -18151,7 +18148,7 @@ class InnerGroupJoin extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupLeave extends V20160314Rpc
+class InnerGroupLeave extends Rpc
 {
 
     /**
@@ -18302,7 +18299,7 @@ class InnerGroupLeave extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQueryNcInfoByInstanceId extends V20160314Rpc
+class InnerEcsQueryNcInfoByInstanceId extends Rpc
 {
 
     /**
@@ -18387,7 +18384,7 @@ class InnerEcsQueryNcInfoByInstanceId extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsRegionQueryActive extends V20160314Rpc
+class InnerEcsRegionQueryActive extends Rpc
 {
 
     /**
@@ -18483,7 +18480,7 @@ class InnerEcsRegionQueryActive extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsRegionQueryAll extends V20160314Rpc
+class InnerEcsRegionQueryAll extends Rpc
 {
 
     /**
@@ -18568,7 +18565,7 @@ class InnerEcsRegionQueryAll extends V20160314Rpc
  * @method string getBid()
  * @method string getGroupNo()
  */
-class InnerGroupAuthorize extends V20160314Rpc
+class InnerGroupAuthorize extends Rpc
 {
 
     /**
@@ -18834,7 +18831,7 @@ class InnerGroupAuthorize extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQueryBySerialNumber extends V20160314Rpc
+class InnerEcsQueryBySerialNumber extends Rpc
 {
 
     /**
@@ -18922,7 +18919,7 @@ class InnerEcsQueryBySerialNumber extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsQueryByIp extends V20160314Rpc
+class InnerEcsQueryByIp extends Rpc
 {
 
     /**
@@ -19093,7 +19090,7 @@ class InnerEcsQueryByIp extends V20160314Rpc
  * @method string getIntranetIp()
  * @method string getOrderType()
  */
-class InnerEcsQueryByParam extends V20160314Rpc
+class InnerEcsQueryByParam extends Rpc
 {
 
     /**
@@ -19632,7 +19629,7 @@ class InnerEcsQueryByParam extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQueryByInternetIp extends V20160314Rpc
+class InnerEcsQueryByInternetIp extends Rpc
 {
 
     /**
@@ -19716,7 +19713,7 @@ class InnerEcsQueryByInternetIp extends V20160314Rpc
  * @method string getProxyId()
  * @method string getIntranetIp()
  */
-class InnerEcsQueryByIntranetIp extends V20160314Rpc
+class InnerEcsQueryByIntranetIp extends Rpc
 {
 
     /**
@@ -19800,7 +19797,7 @@ class InnerEcsQueryByIntranetIp extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsIsChannelMerchant extends V20160314Rpc
+class InnerEcsIsChannelMerchant extends Rpc
 {
 
     /**
@@ -19885,7 +19882,7 @@ class InnerEcsIsChannelMerchant extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsQueryByInstanceId extends V20160314Rpc
+class InnerEcsQueryByInstanceId extends Rpc
 {
 
     /**
@@ -19979,7 +19976,7 @@ class InnerEcsQueryByInstanceId extends V20160314Rpc
  * @method string getGroupNo()
  * @method string getStatus()
  */
-class InnerEcsInstanceQueryByParam extends V20160314Rpc
+class InnerEcsInstanceQueryByParam extends Rpc
 {
 
     /**
@@ -20389,7 +20386,7 @@ class InnerEcsInstanceQueryByParam extends V20160314Rpc
  * @method string getBid()
  * @method string getStatus()
  */
-class InnerDiskQueryByParam extends V20160314Rpc
+class InnerDiskQueryByParam extends Rpc
 {
 
     /**
@@ -20825,7 +20822,7 @@ class InnerDiskQueryByParam extends V20160314Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsCountInRegion extends V20160314Rpc
+class InnerEcsCountInRegion extends Rpc
 {
 
     /**
@@ -20926,7 +20923,7 @@ class InnerEcsCountInRegion extends V20160314Rpc
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsInstanceDetail extends V20160314Rpc
+class InnerEcsInstanceDetail extends Rpc
 {
 
     /**
@@ -21031,7 +21028,7 @@ class InnerEcsInstanceDetail extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryNeedKeepUsing extends V20160314Rpc
+class QueryNeedKeepUsing extends Rpc
 {
 }
 
@@ -21057,7 +21054,7 @@ class QueryNeedKeepUsing extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryUsableSnapshots extends V20160314Rpc
+class QueryUsableSnapshots extends Rpc
 {
 }
 
@@ -21071,7 +21068,7 @@ class QueryUsableSnapshots extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryUserInfo extends V20160314Rpc
+class QueryUserInfo extends Rpc
 {
 }
 
@@ -21089,7 +21086,7 @@ class QueryUserInfo extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReopenInstance extends V20160314Rpc
+class ReopenInstance extends Rpc
 {
 }
 
@@ -21114,7 +21111,7 @@ class ReopenInstance extends V20160314Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class NotifyRefund extends V20160314Rpc
+class NotifyRefund extends Rpc
 {
 
     /**
@@ -21147,7 +21144,7 @@ class NotifyRefund extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryAvailableRegion extends V20160314Rpc
+class QueryAvailableRegion extends Rpc
 {
 }
 
@@ -21164,7 +21161,7 @@ class QueryAvailableRegion extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryImageByImageId extends V20160314Rpc
+class QueryImageByImageId extends Rpc
 {
 
     /**
@@ -21197,7 +21194,7 @@ class QueryImageByImageId extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryImageIdByRegion extends V20160314Rpc
+class QueryImageIdByRegion extends Rpc
 {
 }
 
@@ -21211,7 +21208,7 @@ class QueryImageIdByRegion extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMarketImageCategory extends V20160314Rpc
+class QueryMarketImageCategory extends Rpc
 {
 }
 
@@ -21237,7 +21234,7 @@ class QueryMarketImageCategory extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMarketImages extends V20160314Rpc
+class QueryMarketImages extends Rpc
 {
 }
 
@@ -21255,7 +21252,7 @@ class QueryMarketImages extends V20160314Rpc
  * @method string getPlatform()
  * @method $this withPlatform($value)
  */
-class KeepUsing extends V20160314Rpc
+class KeepUsing extends Rpc
 {
 }
 
@@ -21269,7 +21266,7 @@ class KeepUsing extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAllIzMap extends V20160314Rpc
+class ListAllIzMap extends Rpc
 {
 }
 
@@ -21285,7 +21282,7 @@ class ListAllIzMap extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListBandwidthHistory extends V20160314Rpc
+class ListBandwidthHistory extends Rpc
 {
 }
 
@@ -21300,7 +21297,7 @@ class ListBandwidthHistory extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListEcsInstanceOrderInfo extends V20160314Rpc
+class ListEcsInstanceOrderInfo extends Rpc
 {
 
     /**
@@ -21331,7 +21328,7 @@ class ListEcsInstanceOrderInfo extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetActiveRegions extends V20160314Rpc
+class GetActiveRegions extends Rpc
 {
 }
 
@@ -21351,7 +21348,7 @@ class GetActiveRegions extends V20160314Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class GetCommodity extends V20160314Rpc
+class GetCommodity extends Rpc
 {
 }
 
@@ -21375,7 +21372,7 @@ class GetCommodity extends V20160314Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class DescribeEipPrice extends V20160314Rpc
+class DescribeEipPrice extends Rpc
 {
 }
 
@@ -21390,7 +21387,7 @@ class DescribeEipPrice extends V20160314Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CheckOrderNotPaid extends V20160314Rpc
+class CheckOrderNotPaid extends Rpc
 {
 
     /**

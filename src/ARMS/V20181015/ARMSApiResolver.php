@@ -3,11 +3,8 @@
 namespace AlibabaCloud\ARMS\V20181015;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method MetricQuery metricQuery(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
@@ -16,7 +13,7 @@ class ARMSApiResolver
     use ApiResolverTrait;
 }
 
-class V20181015Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'ARMS';
@@ -49,7 +46,7 @@ class V20181015Rpc extends Rpc
  * @method string getOrder()
  * @method $this withOrder($value)
  */
-class MetricQuery extends V20181015Rpc
+class MetricQuery extends Rpc
 {
 
     /**
@@ -127,7 +124,7 @@ class MetricQuery extends V20181015Rpc
  * @method $this withDatasetId($value)
  * @method array getDimensions()
  */
-class ARMSQueryDataSet extends V20181015Rpc
+class ARMSQueryDataSet extends Rpc
 {
 
     /**

@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Aas\V20150701;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GenerateAccountLoginToken generateAccountLoginToken(array $options = [])
  * @method VerifyAccountLoginToken verifyAccountLoginToken(array $options = [])
  * @method CreateIntlAliyunAccount createIntlAliyunAccount(array $options = [])
@@ -31,7 +28,7 @@ class AasApiResolver
     use ApiResolverTrait;
 }
 
-class V20150701Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Aas';
@@ -47,7 +44,7 @@ class V20150701Rpc extends Rpc
  * @method string getTargetPk()
  * @method $this withTargetPk($value)
  */
-class GenerateAccountLoginToken extends V20150701Rpc
+class GenerateAccountLoginToken extends Rpc
 {
 }
 
@@ -55,7 +52,7 @@ class GenerateAccountLoginToken extends V20150701Rpc
  * @method string getLoginToken()
  * @method $this withLoginToken($value)
  */
-class VerifyAccountLoginToken extends V20150701Rpc
+class VerifyAccountLoginToken extends Rpc
 {
 }
 
@@ -63,7 +60,7 @@ class VerifyAccountLoginToken extends V20150701Rpc
  * @method string getNationalityCode()
  * @method $this withNationalityCode($value)
  */
-class CreateIntlAliyunAccount extends V20150701Rpc
+class CreateIntlAliyunAccount extends Rpc
 {
 }
 
@@ -75,7 +72,7 @@ class CreateIntlAliyunAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class CreateShortTermAccessKeyForAccount extends V20150701Rpc
+class CreateShortTermAccessKeyForAccount extends Rpc
 {
 }
 
@@ -83,7 +80,7 @@ class CreateShortTermAccessKeyForAccount extends V20150701Rpc
  * @method string getHavanaId()
  * @method $this withHavanaId($value)
  */
-class GetAliyunAccountWithBindTaobaoHid extends V20150701Rpc
+class GetAliyunAccountWithBindTaobaoHid extends Rpc
 {
 }
 
@@ -91,7 +88,7 @@ class GetAliyunAccountWithBindTaobaoHid extends V20150701Rpc
  * @method string getInnerAccountHid()
  * @method $this withInnerAccountHid($value)
  */
-class CreateAliyunAccountWithBindHid extends V20150701Rpc
+class CreateAliyunAccountWithBindHid extends Rpc
 {
 }
 
@@ -99,7 +96,7 @@ class CreateAliyunAccountWithBindHid extends V20150701Rpc
  * @method string getInnerAccountHid()
  * @method $this withInnerAccountHid($value)
  */
-class GetAliyunAccountWithBindHid extends V20150701Rpc
+class GetAliyunAccountWithBindHid extends Rpc
 {
 }
 
@@ -111,7 +108,7 @@ class GetAliyunAccountWithBindHid extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class GetShortTermAccessKeyForAccount extends V20150701Rpc
+class GetShortTermAccessKeyForAccount extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class GetShortTermAccessKeyForAccount extends V20150701Rpc
  * @method string getMaxItems()
  * @method $this withMaxItems($value)
  */
-class ListAliyunAccount extends V20150701Rpc
+class ListAliyunAccount extends Rpc
 {
 }
 
@@ -131,7 +128,7 @@ class ListAliyunAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class UpdateStatusForAccount extends V20150701Rpc
+class UpdateStatusForAccount extends Rpc
 {
 }
 
@@ -139,7 +136,7 @@ class UpdateStatusForAccount extends V20150701Rpc
  * @method string getAliyunId()
  * @method $this withAliyunId($value)
  */
-class GetBasicInfoForAccount extends V20150701Rpc
+class GetBasicInfoForAccount extends Rpc
 {
 }
 
@@ -151,7 +148,7 @@ class GetBasicInfoForAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class ListAccessKeysForAccount extends V20150701Rpc
+class ListAccessKeysForAccount extends Rpc
 {
 }
 
@@ -163,7 +160,7 @@ class ListAccessKeysForAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class UpdateAccessKeyStatusForAccount extends V20150701Rpc
+class UpdateAccessKeyStatusForAccount extends Rpc
 {
 }
 
@@ -173,7 +170,7 @@ class UpdateAccessKeyStatusForAccount extends V20150701Rpc
  * @method string getNewPassword()
  * @method $this withNewPassword($value)
  */
-class UpdatePasswordForAccount extends V20150701Rpc
+class UpdatePasswordForAccount extends Rpc
 {
 }
 
@@ -183,7 +180,7 @@ class UpdatePasswordForAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class CreateAccessKeyForAccount extends V20150701Rpc
+class CreateAccessKeyForAccount extends Rpc
 {
 }
 
@@ -191,7 +188,7 @@ class CreateAccessKeyForAccount extends V20150701Rpc
  * @method string getAliyunId()
  * @method $this withAliyunId($value)
  */
-class CreateAliyunAccount extends V20150701Rpc
+class CreateAliyunAccount extends Rpc
 {
 }
 
@@ -201,6 +198,6 @@ class CreateAliyunAccount extends V20150701Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class DeleteAccessKeyForAccount extends V20150701Rpc
+class DeleteAccessKeyForAccount extends Rpc
 {
 }

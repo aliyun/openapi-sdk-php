@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Edas\V20170801;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetCluster getCluster(array $options = [])
  * @method QueryRegionConfig queryRegionConfig(array $options = [])
  * @method CsbListRegions csbListRegions(array $options = [])
@@ -131,7 +128,7 @@ class EdasApiResolver
     use ApiResolverTrait;
 }
 
-class V20170801Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'Edas';
@@ -149,7 +146,7 @@ class V20170801Roa extends Roa
 /**
  * @method string getClusterId()
  */
-class GetCluster extends V20170801Roa
+class GetCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster';
@@ -171,7 +168,7 @@ class GetCluster extends V20170801Roa
     }
 }
 
-class QueryRegionConfig extends V20170801Roa
+class QueryRegionConfig extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/region_config';
@@ -180,7 +177,7 @@ class QueryRegionConfig extends V20170801Roa
     public $method = 'GET';
 }
 
-class CsbListRegions extends V20170801Roa
+class CsbListRegions extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/authgw/csb/api/edas/list_regions';
@@ -215,7 +212,7 @@ class CsbListRegions extends V20170801Roa
  * @method string getImageUrl()
  * @method string getPackageType()
  */
-class CreateServerlessApplication extends V20170801Roa
+class CreateServerlessApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_create_without_deploy';
@@ -538,7 +535,7 @@ class CreateServerlessApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getInternet()
  */
-class BindServerlessSlb extends V20170801Roa
+class BindServerlessSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/serverless_slb_binding';
@@ -587,7 +584,7 @@ class BindServerlessSlb extends V20170801Roa
  * @method string getAct()
  * @method string getAppId()
  */
-class DeleteServerlessApplication extends V20170801Roa
+class DeleteServerlessApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_delete';
@@ -641,7 +638,7 @@ class DeleteServerlessApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getImageUrl()
  */
-class DeployServerlessApplication extends V20170801Roa
+class DeployServerlessApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_deploy';
@@ -871,7 +868,7 @@ class DeployServerlessApplication extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class GetServerlessAppConfigDetail extends V20170801Roa
+class GetServerlessAppConfigDetail extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_config_detail';
@@ -919,7 +916,7 @@ class GetServerlessAppConfigDetail extends V20170801Roa
  * @method string getImageUrl()
  * @method string getPackageType()
  */
-class InsertServerlessApplication extends V20170801Roa
+class InsertServerlessApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_create_without_deploy';
@@ -1241,7 +1238,7 @@ class InsertServerlessApplication extends V20170801Roa
  * @method string getReplicas()
  * @method string getAppId()
  */
-class ScaleServerlessApplication extends V20170801Roa
+class ScaleServerlessApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_rescale';
@@ -1281,7 +1278,7 @@ class ScaleServerlessApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getInternet()
  */
-class UnbindServerlessSlb extends V20170801Roa
+class UnbindServerlessSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/serverless_slb_binding';
@@ -1334,7 +1331,7 @@ class UnbindServerlessSlb extends V20170801Roa
  * @method string getDoAsync()
  * @method string getClusterId()
  */
-class InstallAgent extends V20170801Roa
+class InstallAgent extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/ecss/install_agent';
@@ -1379,7 +1376,7 @@ class InstallAgent extends V20170801Roa
     }
 }
 
-class ListComponents extends V20170801Roa
+class ListComponents extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/components';
@@ -1388,7 +1385,7 @@ class ListComponents extends V20170801Roa
     public $method = 'GET';
 }
 
-class GetPackageStorageCredential extends V20170801Roa
+class GetPackageStorageCredential extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/package_storage_credential';
@@ -1401,7 +1398,7 @@ class GetPackageStorageCredential extends V20170801Roa
  * @method string getVpcId()
  * @method string getNetworkMode()
  */
-class ListEcsNotInCluster extends V20170801Roa
+class ListEcsNotInCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/ecs_not_in_cluster';
@@ -1444,7 +1441,7 @@ class ListEcsNotInCluster extends V20170801Roa
  * @method string getType()
  * @method string getTargetPort()
  */
-class UpdateK8sSlb extends V20170801Roa
+class UpdateK8sSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
@@ -1540,7 +1537,7 @@ class UpdateK8sSlb extends V20170801Roa
  * @method string getType()
  * @method string getTargetPort()
  */
-class BindK8sSlb extends V20170801Roa
+class BindK8sSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
@@ -1641,7 +1638,7 @@ class BindK8sSlb extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupId()
  */
-class ListScalingRecords extends V20170801Roa
+class ListScalingRecords extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/scaling_records';
@@ -1681,7 +1678,7 @@ class ListScalingRecords extends V20170801Roa
  * @method string getClusterId()
  * @method string getType()
  */
-class UnbindK8sSlb extends V20170801Roa
+class UnbindK8sSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
@@ -1735,7 +1732,7 @@ class UnbindK8sSlb extends V20170801Roa
  * @method string getClusterId()
  * @method string getCpuLimit()
  */
-class UpdateK8sApplicationConfig extends V20170801Roa
+class UpdateK8sApplicationConfig extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_app_configuration';
@@ -1800,7 +1797,7 @@ class UpdateK8sApplicationConfig extends V20170801Roa
  * @method string getNamespaceId()
  * @method string getClusterId()
  */
-class ImportK8sCluster extends V20170801Roa
+class ImportK8sCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/import_k8s_cluster';
@@ -1871,7 +1868,7 @@ class ImportK8sCluster extends V20170801Roa
  * @method string getRequestsCpu()
  * @method string getPostStart()
  */
-class InsertK8sApplication extends V20170801Roa
+class InsertK8sApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/create_k8s_app';
@@ -2385,7 +2382,7 @@ class InsertK8sApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getPostStart()
  */
-class DeployK8sApplication extends V20170801Roa
+class DeployK8sApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_apps';
@@ -2720,7 +2717,7 @@ class DeployK8sApplication extends V20170801Roa
  * @method string getReplicas()
  * @method string getAppId()
  */
-class ScaleK8sApplication extends V20170801Roa
+class ScaleK8sApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_apps';
@@ -2758,7 +2755,7 @@ class ScaleK8sApplication extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class DeleteK8sApplication extends V20170801Roa
+class DeleteK8sApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_apps';
@@ -2784,7 +2781,7 @@ class DeleteK8sApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupId()
  */
-class ListScalingRules extends V20170801Roa
+class ListScalingRules extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/scaling_records';
@@ -2839,7 +2836,7 @@ class ListScalingRules extends V20170801Roa
  * @method string getAppId()
  * @method string getInCpu()
  */
-class InsertScalingRule extends V20170801Roa
+class InsertScalingRule extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/scaling_rules';
@@ -3082,7 +3079,7 @@ class InsertScalingRule extends V20170801Roa
 /**
  * @method string getId()
  */
-class DeleteResourceGroup extends V20170801Roa
+class DeleteResourceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/res_group';
@@ -3108,7 +3105,7 @@ class DeleteResourceGroup extends V20170801Roa
  * @method string getName()
  * @method string getDescription()
  */
-class InsertResourceGroup extends V20170801Roa
+class InsertResourceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/res_group';
@@ -3143,7 +3140,7 @@ class InsertResourceGroup extends V20170801Roa
 /**
  * @method string getNamespaceId()
  */
-class GetSecureToken extends V20170801Roa
+class GetSecureToken extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/secure_token';
@@ -3170,7 +3167,7 @@ class GetSecureToken extends V20170801Roa
  * @method string getInstanceIds()
  * @method string getTargetClusterId()
  */
-class TransformClusterMember extends V20170801Roa
+class TransformClusterMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/transform_cluster_member';
@@ -3218,7 +3215,7 @@ class TransformClusterMember extends V20170801Roa
 /**
  * @method string getClusterId()
  */
-class ListConvertableEcu extends V20170801Roa
+class ListConvertableEcu extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/convertable_ecu_list';
@@ -3245,7 +3242,7 @@ class ListConvertableEcu extends V20170801Roa
  * @method string getInstanceIds()
  * @method string getClusterId()
  */
-class InsertClusterMember extends V20170801Roa
+class InsertClusterMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_member';
@@ -3299,7 +3296,7 @@ class InsertClusterMember extends V20170801Roa
  * @method string getCpu()
  * @method string getClusterId()
  */
-class ListScaleOutEcu extends V20170801Roa
+class ListScaleOutEcu extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/scale_out_ecu_list';
@@ -3400,7 +3397,7 @@ class ListScaleOutEcu extends V20170801Roa
  * @method string getAct()
  * @method string getLogicalRegionId()
  */
-class ListEcuByRegion extends V20170801Roa
+class ListEcuByRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/ecu_list';
@@ -3438,7 +3435,7 @@ class ListEcuByRegion extends V20170801Roa
 /**
  * @method string getLogicalRegionId()
  */
-class QueryMigrateEcuList extends V20170801Roa
+class QueryMigrateEcuList extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/migrate_ecu_list';
@@ -3463,7 +3460,7 @@ class QueryMigrateEcuList extends V20170801Roa
 /**
  * @method string getLogicalRegionId()
  */
-class QueryMigrateRegionList extends V20170801Roa
+class QueryMigrateRegionList extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/migrate_region_select';
@@ -3489,7 +3486,7 @@ class QueryMigrateRegionList extends V20170801Roa
  * @method string getInstanceIds()
  * @method string getLogicalRegionId()
  */
-class MigrateEcu extends V20170801Roa
+class MigrateEcu extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/migrate_ecu';
@@ -3527,7 +3524,7 @@ class MigrateEcu extends V20170801Roa
  * @method string getAct()
  * @method string getClusterId()
  */
-class MigrateToRegion extends V20170801Roa
+class MigrateToRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/ecus';
@@ -3591,7 +3588,7 @@ class MigrateToRegion extends V20170801Roa
 /**
  * @method string getDebugEnable()
  */
-class ListUserDefineRegion extends V20170801Roa
+class ListUserDefineRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/user_region_defs';
@@ -3610,7 +3607,7 @@ class ListUserDefineRegion extends V20170801Roa
     }
 }
 
-class ListAliyunRegion extends V20170801Roa
+class ListAliyunRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/region_list';
@@ -3623,7 +3620,7 @@ class ListAliyunRegion extends V20170801Roa
  * @method string getDescription()
  * @method string getId()
  */
-class InsertOrUpdateRegion extends V20170801Roa
+class InsertOrUpdateRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/user_region_def';
@@ -3698,7 +3695,7 @@ class InsertOrUpdateRegion extends V20170801Roa
  * @method string getRegionTag()
  * @method string getId()
  */
-class DeleteUserDefineRegion extends V20170801Roa
+class DeleteUserDefineRegion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/user_region_def';
@@ -3741,7 +3738,7 @@ class DeleteUserDefineRegion extends V20170801Roa
  * @method string getInterval()
  * @method string getTags()
  */
-class QueryMonitorInfo extends V20170801Roa
+class QueryMonitorInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/monitor/queryMonitorInfo';
@@ -3828,7 +3825,7 @@ class QueryMonitorInfo extends V20170801Roa
     }
 }
 
-class ListVpc extends V20170801Roa
+class ListVpc extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/vpc_list';
@@ -3841,7 +3838,7 @@ class ListVpc extends V20170801Roa
  * @method string getAppId()
  * @method string getHcURL()
  */
-class UpdateHealthCheckUrl extends V20170801Roa
+class UpdateHealthCheckUrl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/modify_hc_url';
@@ -3881,7 +3878,7 @@ class UpdateHealthCheckUrl extends V20170801Roa
  * @method string getMaxPermSize()
  * @method string getMaxHeapSize()
  */
-class UpdateJvmConfiguration extends V20170801Roa
+class UpdateJvmConfiguration extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_jvm_config';
@@ -3974,7 +3971,7 @@ class UpdateJvmConfiguration extends V20170801Roa
  * @method string getHttpPort()
  * @method string getContextPath()
  */
-class UpdateContainerConfiguration extends V20170801Roa
+class UpdateContainerConfiguration extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/container_config';
@@ -4076,7 +4073,7 @@ class UpdateContainerConfiguration extends V20170801Roa
  * @method string getAppId()
  * @method string getDesc()
  */
-class UpdateApplicationBaseInfo extends V20170801Roa
+class UpdateApplicationBaseInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/update_app_info';
@@ -4125,7 +4122,7 @@ class UpdateApplicationBaseInfo extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupId()
  */
-class GetContainerConfiguration extends V20170801Roa
+class GetContainerConfiguration extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/container_config';
@@ -4164,7 +4161,7 @@ class GetContainerConfiguration extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupId()
  */
-class GetJvmConfiguration extends V20170801Roa
+class GetJvmConfiguration extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_jvm_config';
@@ -4203,7 +4200,7 @@ class GetJvmConfiguration extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupName()
  */
-class InsertDeployGroup extends V20170801Roa
+class InsertDeployGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/deploy_group';
@@ -4238,7 +4235,7 @@ class InsertDeployGroup extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class GetApplication extends V20170801Roa
+class GetApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_info';
@@ -4261,7 +4258,7 @@ class GetApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getGroupName()
  */
-class DeleteDeployGroup extends V20170801Roa
+class DeleteDeployGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/deploy_group';
@@ -4299,7 +4296,7 @@ class DeleteDeployGroup extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class QueryApplicationStatus extends V20170801Roa
+class QueryApplicationStatus extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_status';
@@ -4324,7 +4321,7 @@ class QueryApplicationStatus extends V20170801Roa
 /**
  * @method string getType()
  */
-class SynchronizeResource extends V20170801Roa
+class SynchronizeResource extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/pop_sync_resource';
@@ -4349,7 +4346,7 @@ class SynchronizeResource extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListRecentChangeOrder extends V20170801Roa
+class ListRecentChangeOrder extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/change_order_list';
@@ -4371,7 +4368,7 @@ class ListRecentChangeOrder extends V20170801Roa
 /**
  * @method string getEcuId()
  */
-class DeleteEcu extends V20170801Roa
+class DeleteEcu extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/delete_ecu';
@@ -4390,7 +4387,7 @@ class DeleteEcu extends V20170801Roa
     }
 }
 
-class ListSlb extends V20170801Roa
+class ListSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/slb_list';
@@ -4402,7 +4399,7 @@ class ListSlb extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListHistoryDeployVersion extends V20170801Roa
+class ListHistoryDeployVersion extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/deploy_history_version_list';
@@ -4424,7 +4421,7 @@ class ListHistoryDeployVersion extends V20170801Roa
     }
 }
 
-class ListResourceGroup extends V20170801Roa
+class ListResourceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/reg_group_list';
@@ -4435,7 +4432,7 @@ class ListResourceGroup extends V20170801Roa
  * @method string getTelephone()
  * @method string getEmail()
  */
-class UpdateAccountInfo extends V20170801Roa
+class UpdateAccountInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/edit_account_info';
@@ -4484,7 +4481,7 @@ class UpdateAccountInfo extends V20170801Roa
  * @method string getRoleId()
  * @method string getActionData()
  */
-class UpdateRole extends V20170801Roa
+class UpdateRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/edit_role';
@@ -4521,7 +4518,7 @@ class UpdateRole extends V20170801Roa
  * @method string getAppId()
  * @method string getType()
  */
-class UnbindSlb extends V20170801Roa
+class UnbindSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/app/unbind_slb_json';
@@ -4569,7 +4566,7 @@ class UnbindSlb extends V20170801Roa
 /**
  * @method string getTargetUserIds()
  */
-class UnbindSubAccount extends V20170801Roa
+class UnbindSubAccount extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/unbindSubAccount';
@@ -4588,13 +4585,13 @@ class UnbindSubAccount extends V20170801Roa
     }
 }
 
-class ListRole extends V20170801Roa
+class ListRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/role_list';
 }
 
-class ListSubAccount extends V20170801Roa
+class ListSubAccount extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/sub_account_list';
@@ -4605,7 +4602,7 @@ class ListSubAccount extends V20170801Roa
  * @method string getCurrentPage()
  * @method string getClusterId()
  */
-class ListClusterMembers extends V20170801Roa
+class ListClusterMembers extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_member_list';
@@ -4653,7 +4650,7 @@ class ListClusterMembers extends V20170801Roa
     }
 }
 
-class ListAuthority extends V20170801Roa
+class ListAuthority extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authority_list';
@@ -4668,7 +4665,7 @@ class ListAuthority extends V20170801Roa
  * @method string getNetworkMode()
  * @method string getOversoldFactor()
  */
-class InsertCluster extends V20170801Roa
+class InsertCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster';
@@ -4769,7 +4766,7 @@ class InsertCluster extends V20170801Roa
  * @method string getRoleName()
  * @method string getActionData()
  */
-class InsertRole extends V20170801Roa
+class InsertRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/create_role';
@@ -4805,7 +4802,7 @@ class InsertRole extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class EnableDegradeControl extends V20170801Roa
+class EnableDegradeControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradecontrol/enable';
@@ -4844,7 +4841,7 @@ class EnableDegradeControl extends V20170801Roa
  * @method string getClusterMemberId()
  * @method string getClusterId()
  */
-class DeleteClusterMember extends V20170801Roa
+class DeleteClusterMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_member';
@@ -4882,7 +4879,7 @@ class DeleteClusterMember extends V20170801Roa
 /**
  * @method string getRoleId()
  */
-class DeleteRole extends V20170801Roa
+class DeleteRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/delete_role';
@@ -4905,7 +4902,7 @@ class DeleteRole extends V20170801Roa
  * @method string getRoleIds()
  * @method string getTargetUserId()
  */
-class AuthorizeRole extends V20170801Roa
+class AuthorizeRole extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_role';
@@ -4945,7 +4942,7 @@ class AuthorizeRole extends V20170801Roa
  * @method string getSlbIp()
  * @method string getType()
  */
-class BindSlb extends V20170801Roa
+class BindSlb extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/app/bind_slb_json';
@@ -5032,7 +5029,7 @@ class BindSlb extends V20170801Roa
 /**
  * @method string getTargetUserIds()
  */
-class BindSubAccount extends V20170801Roa
+class BindSubAccount extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/bindSubAccount';
@@ -5054,7 +5051,7 @@ class BindSubAccount extends V20170801Roa
 /**
  * @method string getClusterId()
  */
-class DeleteCluster extends V20170801Roa
+class DeleteCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster';
@@ -5080,7 +5077,7 @@ class DeleteCluster extends V20170801Roa
  * @method string getAppIds()
  * @method string getTargetUserId()
  */
-class AuthorizeApplication extends V20170801Roa
+class AuthorizeApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_app';
@@ -5116,7 +5113,7 @@ class AuthorizeApplication extends V20170801Roa
  * @method string getResourceGroupIds()
  * @method string getTargetUserId()
  */
-class AuthorizeResourceGroup extends V20170801Roa
+class AuthorizeResourceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authorize_res_group';
@@ -5151,7 +5148,7 @@ class AuthorizeResourceGroup extends V20170801Roa
 /**
  * @method string getChangeOrderId()
  */
-class GetChangeOrderInfo extends V20170801Roa
+class GetChangeOrderInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/change_order_info';
@@ -5173,7 +5170,7 @@ class GetChangeOrderInfo extends V20170801Roa
 /**
  * @method string getLogicalRegionId()
  */
-class ListCluster extends V20170801Roa
+class ListCluster extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/cluster_list';
@@ -5195,7 +5192,7 @@ class ListCluster extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class DeleteApplication extends V20170801Roa
+class DeleteApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_delete_app';
@@ -5224,7 +5221,7 @@ class DeleteApplication extends V20170801Roa
  * @method string getBatch()
  * @method string getHistoryVersion()
  */
-class RollbackApplication extends V20170801Roa
+class RollbackApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_rollback';
@@ -5300,7 +5297,7 @@ class RollbackApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getEccInfo()
  */
-class ScaleInApplication extends V20170801Roa
+class ScaleInApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_scale_in';
@@ -5350,7 +5347,7 @@ class ScaleInApplication extends V20170801Roa
  * @method string getDeployGroup()
  * @method string getAppId()
  */
-class ScaleOutApplication extends V20170801Roa
+class ScaleOutApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_scale_out';
@@ -5399,7 +5396,7 @@ class ScaleOutApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getEccInfo()
  */
-class StartApplication extends V20170801Roa
+class StartApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_start';
@@ -5435,7 +5432,7 @@ class StartApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getEccInfo()
  */
-class StopApplication extends V20170801Roa
+class StopApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_stop';
@@ -5471,7 +5468,7 @@ class StopApplication extends V20170801Roa
  * @method string getAppId()
  * @method string getEccInfo()
  */
-class ResetApplication extends V20170801Roa
+class ResetApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_reset';
@@ -5518,7 +5515,7 @@ class ResetApplication extends V20170801Roa
  * @method string getLogicalRegionId()
  * @method string getPackageType()
  */
-class InsertApplication extends V20170801Roa
+class InsertApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_create_app';
@@ -5699,7 +5696,7 @@ class InsertApplication extends V20170801Roa
  * @method string getEccInfo()
  * @method string getGroupName()
  */
-class ChangeApplicationGroup extends V20170801Roa
+class ChangeApplicationGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_change_group';
@@ -5771,7 +5768,7 @@ class ChangeApplicationGroup extends V20170801Roa
  * @method string getDesc()
  * @method string getDeployType()
  */
-class DeployApplication extends V20170801Roa
+class DeployApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_deploy';
@@ -5937,7 +5934,7 @@ class DeployApplication extends V20170801Roa
  * @method string getBuildPackId()
  * @method string getAppId()
  */
-class UpdateContainer extends V20170801Roa
+class UpdateContainer extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/changeorder/co_update_container';
@@ -5969,13 +5966,13 @@ class UpdateContainer extends V20170801Roa
     }
 }
 
-class ListApplicationEcu extends V20170801Roa
+class ListApplicationEcu extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/resource/ecu_list';
 }
 
-class ListBuildPack extends V20170801Roa
+class ListBuildPack extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/build_pack_list';
@@ -5984,7 +5981,7 @@ class ListBuildPack extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListDeployGroup extends V20170801Roa
+class ListDeployGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/deploy_group_list';
@@ -6008,7 +6005,7 @@ class ListDeployGroup extends V20170801Roa
  * @method string getLogicalRegionId()
  * @method string getGroup()
  */
-class QueryConfigCenter extends V20170801Roa
+class QueryConfigCenter extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/configCenter';
@@ -6066,7 +6063,7 @@ class QueryConfigCenter extends V20170801Roa
  * @method string getRuleId()
  * @method string getMethodName()
  */
-class UpdateDegradeControl extends V20170801Roa
+class UpdateDegradeControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradeControl';
@@ -6191,7 +6188,7 @@ class UpdateDegradeControl extends V20170801Roa
  * @method string getStrategy()
  * @method string getMethodName()
  */
-class UpdateFlowControl extends V20170801Roa
+class UpdateFlowControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/flowControl';
@@ -6333,7 +6330,7 @@ class UpdateFlowControl extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListFlowControls extends V20170801Roa
+class ListFlowControls extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/flowControls';
@@ -6358,7 +6355,7 @@ class ListFlowControls extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListPublishedServices extends V20170801Roa
+class ListPublishedServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/listPublishedServices';
@@ -6380,7 +6377,7 @@ class ListPublishedServices extends V20170801Roa
     }
 }
 
-class ListServiceGroups extends V20170801Roa
+class ListServiceGroups extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/serviceGroups';
@@ -6400,7 +6397,7 @@ class ListServiceGroups extends V20170801Roa
  * @method string getStrategy()
  * @method string getMethodName()
  */
-class InsertFlowControl extends V20170801Roa
+class InsertFlowControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/flowControl';
@@ -6526,7 +6523,7 @@ class InsertFlowControl extends V20170801Roa
 /**
  * @method string getGroupName()
  */
-class InsertServiceGroup extends V20170801Roa
+class InsertServiceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/serviceGroups';
@@ -6551,7 +6548,7 @@ class InsertServiceGroup extends V20170801Roa
  * @method string getDataIdPattern()
  * @method string getGroup()
  */
-class ListConfigCenters extends V20170801Roa
+class ListConfigCenters extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/configCenters';
@@ -6615,7 +6612,7 @@ class ListConfigCenters extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListConsumedServices extends V20170801Roa
+class ListConsumedServices extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/listConsumedServices';
@@ -6640,7 +6637,7 @@ class ListConsumedServices extends V20170801Roa
 /**
  * @method string getAppId()
  */
-class ListDegradeControls extends V20170801Roa
+class ListDegradeControls extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/degradeControls';
@@ -6666,7 +6663,7 @@ class ListDegradeControls extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class DisableDegradeControl extends V20170801Roa
+class DisableDegradeControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradecontrol/disable';
@@ -6705,7 +6702,7 @@ class DisableDegradeControl extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class DisableFlowControl extends V20170801Roa
+class DisableFlowControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/flowcontrol/disable';
@@ -6744,7 +6741,7 @@ class DisableFlowControl extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class EnableFlowControl extends V20170801Roa
+class EnableFlowControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/flowcontrol/enable';
@@ -6786,7 +6783,7 @@ class EnableFlowControl extends V20170801Roa
  * @method string getLogicalRegionId()
  * @method string getGroup()
  */
-class InsertConfigCenter extends V20170801Roa
+class InsertConfigCenter extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/configCenter';
@@ -6866,7 +6863,7 @@ class InsertConfigCenter extends V20170801Roa
  * @method string getServiceName()
  * @method string getMethodName()
  */
-class InsertDegradeControl extends V20170801Roa
+class InsertDegradeControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradeControl';
@@ -6968,7 +6965,7 @@ class InsertDegradeControl extends V20170801Roa
  * @method string getLogicalRegionId()
  * @method string getGroup()
  */
-class DeleteConfigCenter extends V20170801Roa
+class DeleteConfigCenter extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/configCenter';
@@ -7020,7 +7017,7 @@ class DeleteConfigCenter extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class DeleteDegradeControl extends V20170801Roa
+class DeleteDegradeControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/degradeControl';
@@ -7059,7 +7056,7 @@ class DeleteDegradeControl extends V20170801Roa
  * @method string getAppId()
  * @method string getRuleId()
  */
-class DeleteFlowControl extends V20170801Roa
+class DeleteFlowControl extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/flowControl';
@@ -7097,7 +7094,7 @@ class DeleteFlowControl extends V20170801Roa
 /**
  * @method string getGroupId()
  */
-class DeleteServiceGroup extends V20170801Roa
+class DeleteServiceGroup extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/service/serviceGroups';
@@ -7119,7 +7116,7 @@ class DeleteServiceGroup extends V20170801Roa
     }
 }
 
-class ListApplication extends V20170801Roa
+class ListApplication extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/app/app_list';

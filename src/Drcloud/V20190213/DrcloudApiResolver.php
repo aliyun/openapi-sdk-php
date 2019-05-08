@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Drcloud\V20190213;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetAnswer getAnswer(array $options = [])
  */
 class DrcloudApiResolver
@@ -15,7 +12,7 @@ class DrcloudApiResolver
     use ApiResolverTrait;
 }
 
-class V20190213Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'drcloud';
@@ -52,6 +49,6 @@ class V20190213Rpc extends Rpc
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
-class GetAnswer extends V20190213Rpc
+class GetAnswer extends Rpc
 {
 }

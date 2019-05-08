@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CSB\V20171118;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteAlarmRule deleteAlarmRule(array $options = [])
  * @method CreateOrUpdateAlarmRule createOrUpdateAlarmRule(array $options = [])
  * @method FindAllAlarmRuleForService findAllAlarmRuleForService(array $options = [])
@@ -65,7 +62,7 @@ class CSBApiResolver
     use ApiResolverTrait;
 }
 
-class V20171118Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'CSB';
@@ -87,7 +84,7 @@ class V20171118Rpc extends Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteAlarmRule extends V20171118Rpc
+class DeleteAlarmRule extends Rpc
 {
 
     /** @var string */
@@ -99,7 +96,7 @@ class DeleteAlarmRule extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateOrUpdateAlarmRule extends V20171118Rpc
+class CreateOrUpdateAlarmRule extends Rpc
 {
 
     /** @var string */
@@ -125,7 +122,7 @@ class CreateOrUpdateAlarmRule extends V20171118Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class FindAllAlarmRuleForService extends V20171118Rpc
+class FindAllAlarmRuleForService extends Rpc
 {
 
     /** @var string */
@@ -141,7 +138,7 @@ class FindAllAlarmRuleForService extends V20171118Rpc
  * @method string getTimeWindow()
  * @method $this withTimeWindow($value)
  */
-class FindAlarmHistory extends V20171118Rpc
+class FindAlarmHistory extends Rpc
 {
 
     /** @var string */
@@ -155,7 +152,7 @@ class FindAlarmHistory extends V20171118Rpc
  * @method string getData()
  * @method string getButlerGroupId()
  */
-class AddMember2AlarmGroup extends V20171118Rpc
+class AddMember2AlarmGroup extends Rpc
 {
 
     /** @var string */
@@ -193,7 +190,7 @@ class AddMember2AlarmGroup extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateOrUpdateAlarmGroup extends V20171118Rpc
+class CreateOrUpdateAlarmGroup extends Rpc
 {
 
     /** @var string */
@@ -217,7 +214,7 @@ class CreateOrUpdateAlarmGroup extends V20171118Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteAlarmGroup extends V20171118Rpc
+class DeleteAlarmGroup extends Rpc
 {
 
     /** @var string */
@@ -228,7 +225,7 @@ class DeleteAlarmGroup extends V20171118Rpc
  * @method string getData()
  * @method string getButlerGroupId()
  */
-class DeleteMemberFromAlarmGroup extends V20171118Rpc
+class DeleteMemberFromAlarmGroup extends Rpc
 {
 
     /** @var string */
@@ -261,7 +258,7 @@ class DeleteMemberFromAlarmGroup extends V20171118Rpc
     }
 }
 
-class FindAllAlarmGroupsForUser extends V20171118Rpc
+class FindAllAlarmGroupsForUser extends Rpc
 {
 
     /** @var string */
@@ -275,7 +272,7 @@ class FindAllAlarmGroupsForUser extends V20171118Rpc
  * @method string getButlerGroupId()
  * @method $this withButlerGroupId($value)
  */
-class FindAllMembersForAlarmGroup extends V20171118Rpc
+class FindAllMembersForAlarmGroup extends Rpc
 {
 
     /** @var string */
@@ -291,7 +288,7 @@ class FindAllMembersForAlarmGroup extends V20171118Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class FindAlarmRule extends V20171118Rpc
+class FindAlarmRule extends Rpc
 {
 
     /** @var string */
@@ -311,7 +308,7 @@ class FindAlarmRule extends V20171118Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class FindServiceStatisticalData extends V20171118Rpc
+class FindServiceStatisticalData extends Rpc
 {
 
     /** @var string */
@@ -322,7 +319,7 @@ class FindServiceStatisticalData extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class GetInstance extends V20171118Rpc
+class GetInstance extends Rpc
 {
 
     /** @var string */
@@ -337,7 +334,7 @@ class GetInstance extends V20171118Rpc
  * @method $this withCsbName($value)
  * @method string getServices()
  */
-class CommitSuccessedServices extends V20171118Rpc
+class CommitSuccessedServices extends Rpc
 {
 
     /**
@@ -359,7 +356,7 @@ class CommitSuccessedServices extends V20171118Rpc
  * @method $this withCasCsbName($value)
  * @method string getData()
  */
-class PublishCasService extends V20171118Rpc
+class PublishCasService extends Rpc
 {
 
     /**
@@ -386,7 +383,7 @@ class PublishCasService extends V20171118Rpc
  * @method string getCasServiceId()
  * @method $this withCasServiceId($value)
  */
-class DeleteCasService extends V20171118Rpc
+class DeleteCasService extends Rpc
 {
 }
 
@@ -400,7 +397,7 @@ class DeleteCasService extends V20171118Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class FindInstanceList extends V20171118Rpc
+class FindInstanceList extends Rpc
 {
 
     /** @var string */
@@ -415,7 +412,7 @@ class FindInstanceList extends V20171118Rpc
  * @method $this withCasCsbName($value)
  * @method string getData()
  */
-class PublishUnionCasService extends V20171118Rpc
+class PublishUnionCasService extends Rpc
 {
 
     /**
@@ -442,7 +439,7 @@ class PublishUnionCasService extends V20171118Rpc
  * @method string getCasServiceId()
  * @method $this withCasServiceId($value)
  */
-class DeleteUnionCasService extends V20171118Rpc
+class DeleteUnionCasService extends Rpc
 {
 }
 
@@ -464,7 +461,7 @@ class DeleteUnionCasService extends V20171118Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class FindOrderedList extends V20171118Rpc
+class FindOrderedList extends Rpc
 {
 
     /** @var string */
@@ -483,7 +480,7 @@ class FindOrderedList extends V20171118Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class FindOrderableList extends V20171118Rpc
+class FindOrderableList extends Rpc
 {
 
     /** @var string */
@@ -496,7 +493,7 @@ class FindOrderableList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class GetProject extends V20171118Rpc
+class GetProject extends Rpc
 {
 
     /** @var string */
@@ -509,7 +506,7 @@ class GetProject extends V20171118Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteProject extends V20171118Rpc
+class DeleteProject extends Rpc
 {
 }
 
@@ -519,7 +516,7 @@ class DeleteProject extends V20171118Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class GetService extends V20171118Rpc
+class GetService extends Rpc
 {
 
     /** @var string */
@@ -532,7 +529,7 @@ class GetService extends V20171118Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class DeleteService extends V20171118Rpc
+class DeleteService extends Rpc
 {
 }
 
@@ -542,7 +539,7 @@ class DeleteService extends V20171118Rpc
  * @method string getServiceId()
  * @method $this withServiceId($value)
  */
-class UpdateServiceQPS extends V20171118Rpc
+class UpdateServiceQPS extends Rpc
 {
 }
 
@@ -552,7 +549,7 @@ class UpdateServiceQPS extends V20171118Rpc
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
-class CheckServiceExist extends V20171118Rpc
+class CheckServiceExist extends Rpc
 {
 }
 
@@ -562,7 +559,7 @@ class CheckServiceExist extends V20171118Rpc
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
-class GetOrder extends V20171118Rpc
+class GetOrder extends Rpc
 {
 
     /** @var string */
@@ -572,7 +569,7 @@ class GetOrder extends V20171118Rpc
 /**
  * @method string getData()
  */
-class DeleteOrderList extends V20171118Rpc
+class DeleteOrderList extends Rpc
 {
 
     /**
@@ -594,7 +591,7 @@ class DeleteOrderList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class DeleteProjectList extends V20171118Rpc
+class DeleteProjectList extends Rpc
 {
 
     /**
@@ -619,7 +616,7 @@ class DeleteProjectList extends V20171118Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class FindProjectList extends V20171118Rpc
+class FindProjectList extends Rpc
 {
 
     /** @var string */
@@ -632,7 +629,7 @@ class FindProjectList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class FindProjectsNameList extends V20171118Rpc
+class FindProjectsNameList extends Rpc
 {
 
     /** @var string */
@@ -644,7 +641,7 @@ class FindProjectsNameList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class DeleteServiceList extends V20171118Rpc
+class DeleteServiceList extends Rpc
 {
 
     /**
@@ -677,7 +674,7 @@ class DeleteServiceList extends V20171118Rpc
  * @method string getOnlyPending()
  * @method $this withOnlyPending($value)
  */
-class FindApprovalOrderList extends V20171118Rpc
+class FindApprovalOrderList extends Rpc
 {
 
     /** @var string */
@@ -687,7 +684,7 @@ class FindApprovalOrderList extends V20171118Rpc
 /**
  * @method string getData()
  */
-class UpdateOrderList extends V20171118Rpc
+class UpdateOrderList extends Rpc
 {
 
     /**
@@ -718,7 +715,7 @@ class UpdateOrderList extends V20171118Rpc
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
-class FindApproveServiceList extends V20171118Rpc
+class FindApproveServiceList extends Rpc
 {
 
     /** @var string */
@@ -730,7 +727,7 @@ class FindApproveServiceList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class UpdateServiceListStatus extends V20171118Rpc
+class UpdateServiceListStatus extends Rpc
 {
 
     /**
@@ -752,7 +749,7 @@ class UpdateServiceListStatus extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class UpdateProjectListStatus extends V20171118Rpc
+class UpdateProjectListStatus extends Rpc
 {
 
     /**
@@ -774,7 +771,7 @@ class UpdateProjectListStatus extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateCredentials extends V20171118Rpc
+class CreateCredentials extends Rpc
 {
 
     /**
@@ -799,7 +796,7 @@ class CreateCredentials extends V20171118Rpc
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
-class FindCredentialsList extends V20171118Rpc
+class FindCredentialsList extends Rpc
 {
 
     /** @var string */
@@ -811,7 +808,7 @@ class FindCredentialsList extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateService extends V20171118Rpc
+class CreateService extends Rpc
 {
 
     /**
@@ -833,7 +830,7 @@ class CreateService extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class UpdateService extends V20171118Rpc
+class UpdateService extends Rpc
 {
 
     /**
@@ -855,7 +852,7 @@ class UpdateService extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class UpdateOrder extends V20171118Rpc
+class UpdateOrder extends Rpc
 {
 
     /**
@@ -877,7 +874,7 @@ class UpdateOrder extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateOrder extends V20171118Rpc
+class CreateOrder extends Rpc
 {
 
     /**
@@ -899,7 +896,7 @@ class CreateOrder extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class UpdateProject extends V20171118Rpc
+class UpdateProject extends Rpc
 {
 
     /**
@@ -921,7 +918,7 @@ class UpdateProject extends V20171118Rpc
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
-class CreateProject extends V20171118Rpc
+class CreateProject extends Rpc
 {
 
     /**
@@ -941,7 +938,7 @@ class CreateProject extends V20171118Rpc
 /**
  * @method string getData()
  */
-class ApproveOrderList extends V20171118Rpc
+class ApproveOrderList extends Rpc
 {
 
     /**
@@ -965,7 +962,7 @@ class ApproveOrderList extends V20171118Rpc
  * @method string getForce()
  * @method $this withForce($value)
  */
-class DeleteCredentialsList extends V20171118Rpc
+class DeleteCredentialsList extends Rpc
 {
 
     /**
@@ -986,7 +983,7 @@ class DeleteCredentialsList extends V20171118Rpc
  * @method string getCredentialId()
  * @method $this withCredentialId($value)
  */
-class RenewCredentials extends V20171118Rpc
+class RenewCredentials extends Rpc
 {
 }
 
@@ -994,7 +991,7 @@ class RenewCredentials extends V20171118Rpc
  * @method string getCredentialId()
  * @method $this withCredentialId($value)
  */
-class ReplaceCredential extends V20171118Rpc
+class ReplaceCredential extends Rpc
 {
 }
 
@@ -1014,7 +1011,7 @@ class ReplaceCredential extends V20171118Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class FindServiceList extends V20171118Rpc
+class FindServiceList extends Rpc
 {
 
     /** @var string */

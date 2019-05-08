@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Sms\V20160927;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyAccountSummary modifyAccountSummary(array $options = [])
  * @method QuerySmsTemplateInfoList querySmsTemplateInfoList(array $options = [])
  * @method QuerySmsCurrentStatistics querySmsCurrentStatistics(array $options = [])
@@ -31,7 +28,7 @@ class SmsApiResolver
     use ApiResolverTrait;
 }
 
-class V20160927Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Sms';
@@ -55,7 +52,7 @@ class V20160927Rpc extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyAccountSummary extends V20160927Rpc
+class ModifyAccountSummary extends Rpc
 {
 }
 
@@ -67,7 +64,7 @@ class ModifyAccountSummary extends V20160927Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QuerySmsTemplateInfoList extends V20160927Rpc
+class QuerySmsTemplateInfoList extends Rpc
 {
 }
 
@@ -93,7 +90,7 @@ class QuerySmsTemplateInfoList extends V20160927Rpc
  * @method string getTemplateCode()
  * @method $this withTemplateCode($value)
  */
-class QuerySmsCurrentStatistics extends V20160927Rpc
+class QuerySmsCurrentStatistics extends Rpc
 {
 }
 
@@ -115,7 +112,7 @@ class QuerySmsCurrentStatistics extends V20160927Rpc
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class BatchSendSms extends V20160927Rpc
+class BatchSendSms extends Rpc
 {
 }
 
@@ -127,7 +124,7 @@ class BatchSendSms extends V20160927Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDayu extends V20160927Rpc
+class ModifyDayu extends Rpc
 {
 }
 
@@ -147,7 +144,7 @@ class ModifyDayu extends V20160927Rpc
  * @method string getTemplateCode()
  * @method $this withTemplateCode($value)
  */
-class SingleSendSms extends V20160927Rpc
+class SingleSendSms extends Rpc
 {
 }
 
@@ -167,7 +164,7 @@ class SingleSendSms extends V20160927Rpc
  * @method string getQueryTime()
  * @method $this withQueryTime($value)
  */
-class QuerySmsFailByPage extends V20160927Rpc
+class QuerySmsFailByPage extends Rpc
 {
 }
 
@@ -189,7 +186,7 @@ class QuerySmsFailByPage extends V20160927Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QuerySmsStatistics extends V20160927Rpc
+class QuerySmsStatistics extends Rpc
 {
 }
 
@@ -211,7 +208,7 @@ class QuerySmsStatistics extends V20160927Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class QueryTemplateByParam extends V20160927Rpc
+class QueryTemplateByParam extends Rpc
 {
 }
 
@@ -227,7 +224,7 @@ class QueryTemplateByParam extends V20160927Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class DeleteTemplate extends V20160927Rpc
+class DeleteTemplate extends Rpc
 {
 }
 
@@ -241,7 +238,7 @@ class DeleteTemplate extends V20160927Rpc
  * @method string getVersion()
  * @method $this withVersion($value)
  */
-class DescAccountSummary extends V20160927Rpc
+class DescAccountSummary extends Rpc
 {
 }
 
@@ -261,7 +258,7 @@ class DescAccountSummary extends V20160927Rpc
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
  */
-class QuerySignByParam extends V20160927Rpc
+class QuerySignByParam extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class QuerySignByParam extends V20160927Rpc
  * @method string getQueryTime()
  * @method $this withQueryTime($value)
  */
-class QuerySmsDetailByPage extends V20160927Rpc
+class QuerySmsDetailByPage extends Rpc
 {
 }
 
@@ -293,7 +290,7 @@ class QuerySmsDetailByPage extends V20160927Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateMarketing extends V20160927Rpc
+class CreateMarketing extends Rpc
 {
 }
 
@@ -317,7 +314,7 @@ class CreateMarketing extends V20160927Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateSign extends V20160927Rpc
+class CreateSign extends Rpc
 {
 }
 
@@ -341,7 +338,7 @@ class CreateSign extends V20160927Rpc
  * @method string getSmsContent()
  * @method $this withSmsContent($value)
  */
-class CreateTemplate extends V20160927Rpc
+class CreateTemplate extends Rpc
 {
 }
 
@@ -357,6 +354,6 @@ class CreateTemplate extends V20160927Rpc
  * @method string getSignId()
  * @method $this withSignId($value)
  */
-class DeleteSign extends V20160927Rpc
+class DeleteSign extends Rpc
 {
 }

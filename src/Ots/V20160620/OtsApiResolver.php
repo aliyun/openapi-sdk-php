@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Ots\V20160620;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
  * @method InsertTags insertTags(array $options = [])
@@ -27,7 +24,7 @@ class OtsApiResolver
     use ApiResolverTrait;
 }
 
-class V20160620Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Ots';
@@ -53,7 +50,7 @@ class V20160620Rpc extends Rpc
  * @method string getRegionNo()
  * @method $this withRegionNo($value)
  */
-class UnbindInstance2Vpc extends V20160620Rpc
+class UnbindInstance2Vpc extends Rpc
 {
 
     /**
@@ -79,7 +76,7 @@ class UnbindInstance2Vpc extends V20160620Rpc
  * @method string getNetwork()
  * @method $this withNetwork($value)
  */
-class UpdateInstance extends V20160620Rpc
+class UpdateInstance extends Rpc
 {
 
     /**
@@ -104,7 +101,7 @@ class UpdateInstance extends V20160620Rpc
  * @method $this withInstanceName($value)
  * @method array getTagInfo()
  */
-class InsertTags extends V20160620Rpc
+class InsertTags extends Rpc
 {
 
     /**
@@ -142,7 +139,7 @@ class InsertTags extends V20160620Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListClusterType extends V20160620Rpc
+class ListClusterType extends Rpc
 {
 
     /** @var string */
@@ -172,7 +169,7 @@ class ListClusterType extends V20160620Rpc
  * @method $this withPageNum($value)
  * @method array getTagInfo()
  */
-class ListInstance extends V20160620Rpc
+class ListInstance extends Rpc
 {
 
     /** @var string */
@@ -220,7 +217,7 @@ class ListInstance extends V20160620Rpc
  * @method $this withPageNum($value)
  * @method array getTagInfo()
  */
-class ListTags extends V20160620Rpc
+class ListTags extends Rpc
 {
 
     /**
@@ -264,7 +261,7 @@ class ListTags extends V20160620Rpc
  * @method string getPageNum()
  * @method $this withPageNum($value)
  */
-class ListVpcInfoByInstance extends V20160620Rpc
+class ListVpcInfoByInstance extends Rpc
 {
 
     /** @var string */
@@ -296,7 +293,7 @@ class ListVpcInfoByInstance extends V20160620Rpc
  * @method $this withPageNum($value)
  * @method array getTagInfo()
  */
-class ListVpcInfoByVpc extends V20160620Rpc
+class ListVpcInfoByVpc extends Rpc
 {
 
     /** @var string */
@@ -339,7 +336,7 @@ class ListVpcInfoByVpc extends V20160620Rpc
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  */
-class DeleteInstance extends V20160620Rpc
+class DeleteInstance extends Rpc
 {
 
     /**
@@ -364,7 +361,7 @@ class DeleteInstance extends V20160620Rpc
  * @method $this withInstanceName($value)
  * @method array getTagInfo()
  */
-class DeleteTags extends V20160620Rpc
+class DeleteTags extends Rpc
 {
 
     /**
@@ -404,7 +401,7 @@ class DeleteTags extends V20160620Rpc
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  */
-class GetInstance extends V20160620Rpc
+class GetInstance extends Rpc
 {
 
     /** @var string */
@@ -438,7 +435,7 @@ class GetInstance extends V20160620Rpc
  * @method string getNetwork()
  * @method $this withNetwork($value)
  */
-class InsertInstance extends V20160620Rpc
+class InsertInstance extends Rpc
 {
 
     /**
@@ -488,7 +485,7 @@ class InsertInstance extends V20160620Rpc
  * @method string getNetwork()
  * @method $this withNetwork($value)
  */
-class BindInstance2Vpc extends V20160620Rpc
+class BindInstance2Vpc extends Rpc
 {
 
     /**

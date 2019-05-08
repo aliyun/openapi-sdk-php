@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Crm\V20150408;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method AddLabelForBid addLabelForBid(array $options = [])
  * @method CheckLabelForBid checkLabelForBid(array $options = [])
  * @method DeleteLabelForBid deleteLabelForBid(array $options = [])
@@ -26,7 +23,7 @@ class CrmApiResolver
     use ApiResolverTrait;
 }
 
-class V20150408Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Crm';
@@ -51,7 +48,7 @@ class V20150408Rpc extends Rpc
  * @method string getLabel()
  * @method $this withLabel($value)
  */
-class AddLabelForBid extends V20150408Rpc
+class AddLabelForBid extends Rpc
 {
 }
 
@@ -63,7 +60,7 @@ class AddLabelForBid extends V20150408Rpc
  * @method string getLabel()
  * @method $this withLabel($value)
  */
-class CheckLabelForBid extends V20150408Rpc
+class CheckLabelForBid extends Rpc
 {
 }
 
@@ -75,14 +72,14 @@ class CheckLabelForBid extends V20150408Rpc
  * @method string getLabel()
  * @method $this withLabel($value)
  */
-class DeleteLabelForBid extends V20150408Rpc
+class DeleteLabelForBid extends Rpc
 {
 }
 
 /**
  * @method array getPkList()
  */
-class BatchGetAliyunIdByAliyunPk extends V20150408Rpc
+class BatchGetAliyunIdByAliyunPk extends Rpc
 {
 
     /**
@@ -105,7 +102,7 @@ class BatchGetAliyunIdByAliyunPk extends V20150408Rpc
  * @method string getAliyunId()
  * @method $this withAliyunId($value)
  */
-class GetAliyunPkByAliyunId extends V20150408Rpc
+class GetAliyunPkByAliyunId extends Rpc
 {
 }
 
@@ -115,7 +112,7 @@ class GetAliyunPkByAliyunId extends V20150408Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class QueryBidUserCertifiedInfo extends V20150408Rpc
+class QueryBidUserCertifiedInfo extends Rpc
 {
 }
 
@@ -125,7 +122,7 @@ class QueryBidUserCertifiedInfo extends V20150408Rpc
  * @method string getPK()
  * @method $this withPK($value)
  */
-class RemoveIdentityCertifiedForBidUser extends V20150408Rpc
+class RemoveIdentityCertifiedForBidUser extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class RemoveIdentityCertifiedForBidUser extends V20150408Rpc
  * @method string getIsEnterprise()
  * @method $this withIsEnterprise($value)
  */
-class AddIdentityCertifiedForBidUser extends V20150408Rpc
+class AddIdentityCertifiedForBidUser extends Rpc
 {
 }
 
@@ -163,7 +160,7 @@ class AddIdentityCertifiedForBidUser extends V20150408Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class AddLabel extends V20150408Rpc
+class AddLabel extends Rpc
 {
 }
 
@@ -175,7 +172,7 @@ class AddLabel extends V20150408Rpc
  * @method string getLabelName()
  * @method $this withLabelName($value)
  */
-class CheckLabel extends V20150408Rpc
+class CheckLabel extends Rpc
 {
 }
 
@@ -191,7 +188,7 @@ class CheckLabel extends V20150408Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteLabel extends V20150408Rpc
+class DeleteLabel extends Rpc
 {
 }
 
@@ -199,6 +196,6 @@ class DeleteLabel extends V20150408Rpc
  * @method string getLabelSeries()
  * @method $this withLabelSeries($value)
  */
-class QueryCustomerLabel extends V20150408Rpc
+class QueryCustomerLabel extends Rpc
 {
 }

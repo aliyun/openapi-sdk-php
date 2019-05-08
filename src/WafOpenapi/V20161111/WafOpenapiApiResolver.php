@@ -3,11 +3,8 @@
 namespace AlibabaCloud\WafOpenapi\V20161111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateInstance createInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
@@ -18,7 +15,7 @@ class WafOpenapiApiResolver
     use ApiResolverTrait;
 }
 
-class V20161111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'waf-openapi';
@@ -50,7 +47,7 @@ class V20161111Rpc extends Rpc
  * @method string getAutoRenewDuration()
  * @method $this withAutoRenewDuration($value)
  */
-class CreateInstance extends V20161111Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -60,7 +57,7 @@ class CreateInstance extends V20161111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReleaseInstance extends V20161111Rpc
+class ReleaseInstance extends Rpc
 {
 }
 
@@ -76,7 +73,7 @@ class ReleaseInstance extends V20161111Rpc
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
-class RenewInstance extends V20161111Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -94,6 +91,6 @@ class RenewInstance extends V20161111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UpgradeInstance extends V20161111Rpc
+class UpgradeInstance extends Rpc
 {
 }

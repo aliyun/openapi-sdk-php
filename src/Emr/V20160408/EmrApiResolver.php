@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Emr\V20160408;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SaveBatchUserAccountInfo saveBatchUserAccountInfo(array $options = [])
  * @method PageListResourceUsers pageListResourceUsers(array $options = [])
  * @method ListUsersByCondition listUsersByCondition(array $options = [])
@@ -383,7 +380,7 @@ class EmrApiResolver
     use ApiResolverTrait;
 }
 
-class V20160408Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Emr';
@@ -413,7 +410,7 @@ class V20160408Rpc extends Rpc
  * @method string getAccountPassword()
  * @method $this withAccountPassword($value)
  */
-class SaveBatchUserAccountInfo extends V20160408Rpc
+class SaveBatchUserAccountInfo extends Rpc
 {
 
     /**
@@ -446,7 +443,7 @@ class SaveBatchUserAccountInfo extends V20160408Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class PageListResourceUsers extends V20160408Rpc
+class PageListResourceUsers extends Rpc
 {
 }
 
@@ -456,7 +453,7 @@ class PageListResourceUsers extends V20160408Rpc
  * @method string getSearchKey()
  * @method $this withSearchKey($value)
  */
-class ListUsersByCondition extends V20160408Rpc
+class ListUsersByCondition extends Rpc
 {
 }
 
@@ -472,7 +469,7 @@ class ListUsersByCondition extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class DeleteUserResourceRole extends V20160408Rpc
+class DeleteUserResourceRole extends Rpc
 {
 }
 
@@ -485,7 +482,7 @@ class DeleteUserResourceRole extends V20160408Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class DeleteBatchResourceUsers extends V20160408Rpc
+class DeleteBatchResourceUsers extends Rpc
 {
 
     /**
@@ -514,7 +511,7 @@ class DeleteBatchResourceUsers extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class DeleteResourceUser extends V20160408Rpc
+class DeleteResourceUser extends Rpc
 {
 }
 
@@ -527,7 +524,7 @@ class DeleteResourceUser extends V20160408Rpc
  * @method $this withDescription($value)
  * @method array getUserBaseParam()
  */
-class CreateBatchUsers extends V20160408Rpc
+class CreateBatchUsers extends Rpc
 {
 
     /**
@@ -591,7 +588,7 @@ class CreateBatchUsers extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class AddUserResourceRole extends V20160408Rpc
+class AddUserResourceRole extends Rpc
 {
 }
 
@@ -605,7 +602,7 @@ class AddUserResourceRole extends V20160408Rpc
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
-class AddResourceToUsers extends V20160408Rpc
+class AddResourceToUsers extends Rpc
 {
 
     /**
@@ -652,7 +649,7 @@ class AddResourceToUsers extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class UpdateUserGroup extends V20160408Rpc
+class UpdateUserGroup extends Rpc
 {
 
     /**
@@ -681,7 +678,7 @@ class UpdateUserGroup extends V20160408Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class PageListUserGroups extends V20160408Rpc
+class PageListUserGroups extends Rpc
 {
 }
 
@@ -691,7 +688,7 @@ class PageListUserGroups extends V20160408Rpc
  * @method string getFuzzyName()
  * @method $this withFuzzyName($value)
  */
-class ListUserGroups extends V20160408Rpc
+class ListUserGroups extends Rpc
 {
 }
 
@@ -701,7 +698,7 @@ class ListUserGroups extends V20160408Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DescribeUserGroup extends V20160408Rpc
+class DescribeUserGroup extends Rpc
 {
 }
 
@@ -711,7 +708,7 @@ class DescribeUserGroup extends V20160408Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DeleteUserGroup extends V20160408Rpc
+class DeleteUserGroup extends Rpc
 {
 }
 
@@ -726,7 +723,7 @@ class DeleteUserGroup extends V20160408Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateUserGroup extends V20160408Rpc
+class CreateUserGroup extends Rpc
 {
 
     /**
@@ -757,7 +754,7 @@ class CreateUserGroup extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class SaveUserAccountInfo extends V20160408Rpc
+class SaveUserAccountInfo extends Rpc
 {
 }
 
@@ -765,7 +762,7 @@ class SaveUserAccountInfo extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class QueryUserPolicies extends V20160408Rpc
+class QueryUserPolicies extends Rpc
 {
 }
 
@@ -776,7 +773,7 @@ class QueryUserPolicies extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class QueryUserActionsPolicy extends V20160408Rpc
+class QueryUserActionsPolicy extends Rpc
 {
 
     /**
@@ -814,7 +811,7 @@ class QueryUserActionsPolicy extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class CreateUser extends V20160408Rpc
+class CreateUser extends Rpc
 {
 
     /**
@@ -884,7 +881,7 @@ class CreateUser extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class UpdateUser extends V20160408Rpc
+class UpdateUser extends Rpc
 {
 
     /**
@@ -948,7 +945,7 @@ class UpdateUser extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class UpdateGroup extends V20160408Rpc
+class UpdateGroup extends Rpc
 {
 
     /**
@@ -978,7 +975,7 @@ class UpdateGroup extends V20160408Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class CreateGroup extends V20160408Rpc
+class CreateGroup extends Rpc
 {
 
     /**
@@ -1005,7 +1002,7 @@ class CreateGroup extends V20160408Rpc
  * @method string getUpdateStatus()
  * @method $this withUpdateStatus($value)
  */
-class UpdateUserStatus extends V20160408Rpc
+class UpdateUserStatus extends Rpc
 {
 }
 
@@ -1019,7 +1016,7 @@ class UpdateUserStatus extends V20160408Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class PageListUsers extends V20160408Rpc
+class PageListUsers extends Rpc
 {
 }
 
@@ -1033,7 +1030,7 @@ class PageListUsers extends V20160408Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class PageListGroups extends V20160408Rpc
+class PageListGroups extends Rpc
 {
 }
 
@@ -1041,7 +1038,7 @@ class PageListGroups extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListRoles extends V20160408Rpc
+class ListRoles extends Rpc
 {
 }
 
@@ -1051,7 +1048,7 @@ class ListRoles extends V20160408Rpc
  * @method string getFuzzyName()
  * @method $this withFuzzyName($value)
  */
-class ListGroups extends V20160408Rpc
+class ListGroups extends Rpc
 {
 }
 
@@ -1061,7 +1058,7 @@ class ListGroups extends V20160408Rpc
  * @method string getAliyunUserId()
  * @method $this withAliyunUserId($value)
  */
-class DescribeUser extends V20160408Rpc
+class DescribeUser extends Rpc
 {
 }
 
@@ -1071,7 +1068,7 @@ class DescribeUser extends V20160408Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DescribeGroup extends V20160408Rpc
+class DescribeGroup extends Rpc
 {
 }
 
@@ -1081,7 +1078,7 @@ class DescribeGroup extends V20160408Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  */
-class DeleteGroup extends V20160408Rpc
+class DeleteGroup extends Rpc
 {
 }
 
@@ -1091,7 +1088,7 @@ class DeleteGroup extends V20160408Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class DeleteHostPool extends V20160408Rpc
+class DeleteHostPool extends Rpc
 {
 }
 
@@ -1107,7 +1104,7 @@ class DeleteHostPool extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListStack extends V20160408Rpc
+class ListStack extends Rpc
 {
 }
 
@@ -1124,7 +1121,7 @@ class ListStack extends V20160408Rpc
  * @method $this withStackVersion($value)
  * @method array getServiceInfo()
  */
-class PlanComponentTopo extends V20160408Rpc
+class PlanComponentTopo extends Rpc
 {
 
     /**
@@ -1184,7 +1181,7 @@ class PlanComponentTopo extends V20160408Rpc
  * @method array getHostGroup()
  * @method array getHostInfo()
  */
-class PlanHostName extends V20160408Rpc
+class PlanHostName extends Rpc
 {
 
     /**
@@ -1226,7 +1223,7 @@ class PlanHostName extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class RemoveHpHost extends V20160408Rpc
+class RemoveHpHost extends Rpc
 {
 }
 
@@ -1240,7 +1237,7 @@ class RemoveHpHost extends V20160408Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class ModifyHostPool extends V20160408Rpc
+class ModifyHostPool extends Rpc
 {
 }
 
@@ -1250,7 +1247,7 @@ class ModifyHostPool extends V20160408Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class DescribeHostPool extends V20160408Rpc
+class DescribeHostPool extends Rpc
 {
 }
 
@@ -1262,7 +1259,7 @@ class DescribeHostPool extends V20160408Rpc
  * @method string getStackVersion()
  * @method $this withStackVersion($value)
  */
-class ListStackService extends V20160408Rpc
+class ListStackService extends Rpc
 {
 }
 
@@ -1272,7 +1269,7 @@ class ListStackService extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterSupportService extends V20160408Rpc
+class ListClusterSupportService extends Rpc
 {
 }
 
@@ -1286,7 +1283,7 @@ class ListClusterSupportService extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusterInstalledService extends V20160408Rpc
+class ListClusterInstalledService extends Rpc
 {
 }
 
@@ -1298,7 +1295,7 @@ class ListClusterInstalledService extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListHostPool extends V20160408Rpc
+class ListHostPool extends Rpc
 {
 }
 
@@ -1316,7 +1313,7 @@ class ListHostPool extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListHpHost extends V20160408Rpc
+class ListHpHost extends Rpc
 {
 }
 
@@ -1330,7 +1327,7 @@ class ListHpHost extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListKafkaReassignTopic extends V20160408Rpc
+class ListKafkaReassignTopic extends Rpc
 {
 }
 
@@ -1342,7 +1339,7 @@ class ListKafkaReassignTopic extends V20160408Rpc
  * @method string getReassignId()
  * @method $this withReassignId($value)
  */
-class UpdateKafkaReassignParam extends V20160408Rpc
+class UpdateKafkaReassignParam extends Rpc
 {
 }
 
@@ -1364,7 +1361,7 @@ class UpdateKafkaReassignParam extends V20160408Rpc
  * @method string getRelatedClusterId()
  * @method $this withRelatedClusterId($value)
  */
-class CreateClusterWithHostPool extends V20160408Rpc
+class CreateClusterWithHostPool extends Rpc
 {
 
     /**
@@ -1455,7 +1452,7 @@ class CreateClusterWithHostPool extends V20160408Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateHostPool extends V20160408Rpc
+class CreateHostPool extends Rpc
 {
 
     /**
@@ -1484,7 +1481,7 @@ class CreateHostPool extends V20160408Rpc
  * @method string getHpBizId()
  * @method $this withHpBizId($value)
  */
-class AddHpHost extends V20160408Rpc
+class AddHpHost extends Rpc
 {
 
     /**
@@ -1526,7 +1523,7 @@ class AddHpHost extends V20160408Rpc
  * @method string getTopicId()
  * @method $this withTopicId($value)
  */
-class StartKafkaPreferredReplicaElection extends V20160408Rpc
+class StartKafkaPreferredReplicaElection extends Rpc
 {
 }
 
@@ -1542,7 +1539,7 @@ class StartKafkaPreferredReplicaElection extends V20160408Rpc
  * @method string getBalanceThreshold()
  * @method $this withBalanceThreshold($value)
  */
-class StartKafkaBrokerDiskBalancer extends V20160408Rpc
+class StartKafkaBrokerDiskBalancer extends Rpc
 {
 }
 
@@ -1555,7 +1552,7 @@ class StartKafkaBrokerDiskBalancer extends V20160408Rpc
  * @method $this withTopicId($value)
  * @method array getBrokerId()
  */
-class ReassignKafka extends V20160408Rpc
+class ReassignKafka extends Rpc
 {
 
     /**
@@ -1584,7 +1581,7 @@ class ReassignKafka extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class OfflineKafkaBroker extends V20160408Rpc
+class OfflineKafkaBroker extends Rpc
 {
 }
 
@@ -1606,7 +1603,7 @@ class OfflineKafkaBroker extends V20160408Rpc
  * @method string getFuzzyTopicName()
  * @method $this withFuzzyTopicName($value)
  */
-class ListKafkaTopicStatistics extends V20160408Rpc
+class ListKafkaTopicStatistics extends Rpc
 {
 }
 
@@ -1622,7 +1619,7 @@ class ListKafkaTopicStatistics extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListKafkaReassign extends V20160408Rpc
+class ListKafkaReassign extends Rpc
 {
 }
 
@@ -1636,7 +1633,7 @@ class ListKafkaReassign extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListKafkaBroker extends V20160408Rpc
+class ListKafkaBroker extends Rpc
 {
 }
 
@@ -1646,7 +1643,7 @@ class ListKafkaBroker extends V20160408Rpc
  * @method string getReassignId()
  * @method $this withReassignId($value)
  */
-class DescribeKafkaReassign extends V20160408Rpc
+class DescribeKafkaReassign extends Rpc
 {
 }
 
@@ -1658,7 +1655,7 @@ class DescribeKafkaReassign extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeKafkaBroker extends V20160408Rpc
+class DescribeKafkaBroker extends Rpc
 {
 }
 
@@ -1678,7 +1675,7 @@ class DescribeKafkaBroker extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListETLJobRelease extends V20160408Rpc
+class ListETLJobRelease extends Rpc
 {
 }
 
@@ -1688,7 +1685,7 @@ class ListETLJobRelease extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetJobMigrateResult extends V20160408Rpc
+class GetJobMigrateResult extends Rpc
 {
 }
 
@@ -1696,7 +1693,7 @@ class GetJobMigrateResult extends V20160408Rpc
  * @method string getEntityId()
  * @method $this withEntityId($value)
  */
-class DescribeFlowVariableCollection extends V20160408Rpc
+class DescribeFlowVariableCollection extends Rpc
 {
 }
 
@@ -1704,7 +1701,7 @@ class DescribeFlowVariableCollection extends V20160408Rpc
  * @method string getData()
  * @method $this withData($value)
  */
-class ModifyFlowVariableCollection extends V20160408Rpc
+class ModifyFlowVariableCollection extends Rpc
 {
 }
 
@@ -1720,7 +1717,7 @@ class ModifyFlowVariableCollection extends V20160408Rpc
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class SyncDataSourceSchemaTable extends V20160408Rpc
+class SyncDataSourceSchemaTable extends Rpc
 {
 }
 
@@ -1734,7 +1731,7 @@ class SyncDataSourceSchemaTable extends V20160408Rpc
  * @method string getDataSourceId()
  * @method $this withDataSourceId($value)
  */
-class SyncDataSourceSchemaDatabase extends V20160408Rpc
+class SyncDataSourceSchemaDatabase extends Rpc
 {
 }
 
@@ -1744,7 +1741,7 @@ class SyncDataSourceSchemaDatabase extends V20160408Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class KillETLJobInstance extends V20160408Rpc
+class KillETLJobInstance extends Rpc
 {
 }
 
@@ -1756,7 +1753,7 @@ class KillETLJobInstance extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ReleaseETLJob extends V20160408Rpc
+class ReleaseETLJob extends Rpc
 {
 }
 
@@ -1768,7 +1765,7 @@ class ReleaseETLJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class CloneDataSource extends V20160408Rpc
+class CloneDataSource extends Rpc
 {
 }
 
@@ -1780,7 +1777,7 @@ class CloneDataSource extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class CloneETLJob extends V20160408Rpc
+class CloneETLJob extends Rpc
 {
 }
 
@@ -1792,7 +1789,7 @@ class CloneETLJob extends V20160408Rpc
  * @method string getReleaseId()
  * @method $this withReleaseId($value)
  */
-class CancelETLJobRelease extends V20160408Rpc
+class CancelETLJobRelease extends Rpc
 {
 }
 
@@ -1801,7 +1798,7 @@ class CancelETLJobRelease extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method array getClusterIdList()
  */
-class ListClusterTag extends V20160408Rpc
+class ListClusterTag extends Rpc
 {
 
     /**
@@ -1828,7 +1825,7 @@ class ListClusterTag extends V20160408Rpc
  * @method string getEtlJobId()
  * @method $this withEtlJobId($value)
  */
-class DescribeETLJobStageOutputSchema extends V20160408Rpc
+class DescribeETLJobStageOutputSchema extends Rpc
 {
 }
 
@@ -1842,7 +1839,7 @@ class DescribeETLJobStageOutputSchema extends V20160408Rpc
  * @method string getOssConfig()
  * @method $this withOssConfig($value)
  */
-class UpdateProjectSetting extends V20160408Rpc
+class UpdateProjectSetting extends Rpc
 {
 }
 
@@ -1860,7 +1857,7 @@ class UpdateProjectSetting extends V20160408Rpc
  * @method string getStagePlugin()
  * @method $this withStagePlugin($value)
  */
-class UpdateETLJobStage extends V20160408Rpc
+class UpdateETLJobStage extends Rpc
 {
 }
 
@@ -1872,7 +1869,7 @@ class UpdateETLJobStage extends V20160408Rpc
  * @method string getDataSourceId()
  * @method $this withDataSourceId($value)
  */
-class ListDataSourceSchemaDatabase extends V20160408Rpc
+class ListDataSourceSchemaDatabase extends Rpc
 {
 }
 
@@ -1886,7 +1883,7 @@ class ListDataSourceSchemaDatabase extends V20160408Rpc
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class ListDataSourceSchemaTable extends V20160408Rpc
+class ListDataSourceSchemaTable extends Rpc
 {
 }
 
@@ -1902,7 +1899,7 @@ class ListDataSourceSchemaTable extends V20160408Rpc
  * @method string getSql()
  * @method $this withSql($value)
  */
-class ResolveETLJobSqlSchema extends V20160408Rpc
+class ResolveETLJobSqlSchema extends Rpc
 {
 }
 
@@ -1912,7 +1909,7 @@ class ResolveETLJobSqlSchema extends V20160408Rpc
  * @method string getResolveId()
  * @method $this withResolveId($value)
  */
-class DescribeETLJobSqlSchema extends V20160408Rpc
+class DescribeETLJobSqlSchema extends Rpc
 {
 }
 
@@ -1926,7 +1923,7 @@ class DescribeETLJobSqlSchema extends V20160408Rpc
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class DescribeDataSourceSchemaTable extends V20160408Rpc
+class DescribeDataSourceSchemaTable extends Rpc
 {
 }
 
@@ -1938,7 +1935,7 @@ class DescribeDataSourceSchemaTable extends V20160408Rpc
  * @method string getDataSourceId()
  * @method $this withDataSourceId($value)
  */
-class DescribeDataSourceSchemaDatabase extends V20160408Rpc
+class DescribeDataSourceSchemaDatabase extends Rpc
 {
 }
 
@@ -1954,7 +1951,7 @@ class DescribeDataSourceSchemaDatabase extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class UpdateNavNode extends V20160408Rpc
+class UpdateNavNode extends Rpc
 {
 }
 
@@ -1970,7 +1967,7 @@ class UpdateNavNode extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class UpdateDataSource extends V20160408Rpc
+class UpdateDataSource extends Rpc
 {
 }
 
@@ -1993,7 +1990,7 @@ class UpdateDataSource extends V20160408Rpc
  * @method string getCheck()
  * @method $this withCheck($value)
  */
-class UpdateETLJob extends V20160408Rpc
+class UpdateETLJob extends Rpc
 {
 
     /**
@@ -2059,7 +2056,7 @@ class UpdateETLJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class RunETLJob extends V20160408Rpc
+class RunETLJob extends Rpc
 {
 
     /**
@@ -2091,7 +2088,7 @@ class RunETLJob extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class ListNavSubTree extends V20160408Rpc
+class ListNavSubTree extends Rpc
 {
 }
 
@@ -2101,7 +2098,7 @@ class ListNavSubTree extends V20160408Rpc
  * @method string getEntityType()
  * @method $this withEntityType($value)
  */
-class ListETLJobTriggerEntity extends V20160408Rpc
+class ListETLJobTriggerEntity extends Rpc
 {
 }
 
@@ -2119,7 +2116,7 @@ class ListETLJobTriggerEntity extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListETLJobInstance extends V20160408Rpc
+class ListETLJobInstance extends Rpc
 {
 }
 
@@ -2141,7 +2138,7 @@ class ListETLJobInstance extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListDataSource extends V20160408Rpc
+class ListDataSource extends Rpc
 {
 }
 
@@ -2151,7 +2148,7 @@ class ListDataSource extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeETLJobInstance extends V20160408Rpc
+class DescribeETLJobInstance extends Rpc
 {
 }
 
@@ -2161,7 +2158,7 @@ class DescribeETLJobInstance extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeETLJob extends V20160408Rpc
+class DescribeETLJob extends Rpc
 {
 }
 
@@ -2171,7 +2168,7 @@ class DescribeETLJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeDataSourceSchema extends V20160408Rpc
+class DescribeDataSourceSchema extends Rpc
 {
 }
 
@@ -2181,7 +2178,7 @@ class DescribeDataSourceSchema extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeDataSourceCommand extends V20160408Rpc
+class DescribeDataSourceCommand extends Rpc
 {
 }
 
@@ -2191,7 +2188,7 @@ class DescribeDataSourceCommand extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeDataSource extends V20160408Rpc
+class DescribeDataSource extends Rpc
 {
 }
 
@@ -2203,7 +2200,7 @@ class DescribeDataSource extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteNavNode extends V20160408Rpc
+class DeleteNavNode extends Rpc
 {
 }
 
@@ -2213,7 +2210,7 @@ class DeleteNavNode extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteETLJob extends V20160408Rpc
+class DeleteETLJob extends Rpc
 {
 }
 
@@ -2223,7 +2220,7 @@ class DeleteETLJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteDataSource extends V20160408Rpc
+class DeleteDataSource extends Rpc
 {
 }
 
@@ -2243,7 +2240,7 @@ class DeleteDataSource extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class CreateNavNode extends V20160408Rpc
+class CreateNavNode extends Rpc
 {
 }
 
@@ -2261,7 +2258,7 @@ class CreateNavNode extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class CreateETLJob extends V20160408Rpc
+class CreateETLJob extends Rpc
 {
 }
 
@@ -2281,7 +2278,7 @@ class CreateETLJob extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CreateDataSource extends V20160408Rpc
+class CreateDataSource extends Rpc
 {
 }
 
@@ -2295,7 +2292,7 @@ class CreateDataSource extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CheckDataSource extends V20160408Rpc
+class CheckDataSource extends Rpc
 {
 }
 
@@ -2303,7 +2300,7 @@ class CheckDataSource extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListSupportedServiceName extends V20160408Rpc
+class ListSupportedServiceName extends Rpc
 {
 }
 
@@ -2317,7 +2314,7 @@ class ListSupportedServiceName extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterServiceCustomActionSupportConfig extends V20160408Rpc
+class ListClusterServiceCustomActionSupportConfig extends Rpc
 {
 }
 
@@ -2325,7 +2322,7 @@ class ListClusterServiceCustomActionSupportConfig extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class CommonApiWhiteList extends V20160408Rpc
+class CommonApiWhiteList extends Rpc
 {
 }
 
@@ -2334,7 +2331,7 @@ class CommonApiWhiteList extends V20160408Rpc
  * @method $this withResourceOwnerId($value)
  * @method array getTopicParam()
  */
-class MetastoreUpdateKafkaTopicBatch extends V20160408Rpc
+class MetastoreUpdateKafkaTopicBatch extends Rpc
 {
 
     /**
@@ -2362,7 +2359,7 @@ class MetastoreUpdateKafkaTopicBatch extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RenderResourcePoolXml extends V20160408Rpc
+class RenderResourcePoolXml extends Rpc
 {
 }
 
@@ -2374,7 +2371,7 @@ class RenderResourcePoolXml extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteClusterHostGroup extends V20160408Rpc
+class DeleteClusterHostGroup extends Rpc
 {
 }
 
@@ -2390,7 +2387,7 @@ class DeleteClusterHostGroup extends V20160408Rpc
  * @method string getHostGroupType()
  * @method $this withHostGroupType($value)
  */
-class CreateClusterHostGroup extends V20160408Rpc
+class CreateClusterHostGroup extends Rpc
 {
 }
 
@@ -2410,7 +2407,7 @@ class CreateClusterHostGroup extends V20160408Rpc
  * @method string getHostGroupName()
  * @method $this withHostGroupName($value)
  */
-class ModifyClusterHostGroup extends V20160408Rpc
+class ModifyClusterHostGroup extends Rpc
 {
 }
 
@@ -2423,7 +2420,7 @@ class ModifyClusterHostGroup extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class MigrateClusterHostGroupHost extends V20160408Rpc
+class MigrateClusterHostGroupHost extends Rpc
 {
 
     /**
@@ -2456,7 +2453,7 @@ class MigrateClusterHostGroupHost extends V20160408Rpc
  * @method string getPoolType()
  * @method $this withPoolType($value)
  */
-class ListResourceQueue extends V20160408Rpc
+class ListResourceQueue extends Rpc
 {
 }
 
@@ -2472,7 +2469,7 @@ class ListResourceQueue extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListTablePartition extends V20160408Rpc
+class MetastoreListTablePartition extends Rpc
 {
 }
 
@@ -2498,7 +2495,7 @@ class MetastoreListTablePartition extends V20160408Rpc
  * @method string getLogStore()
  * @method $this withLogStore($value)
  */
-class ContextQueryLog extends V20160408Rpc
+class ContextQueryLog extends Rpc
 {
 }
 
@@ -2514,7 +2511,7 @@ class ContextQueryLog extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListPartition extends V20160408Rpc
+class MetastoreListPartition extends Rpc
 {
 }
 
@@ -2525,7 +2522,7 @@ class MetastoreListPartition extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AttachPubIp extends V20160408Rpc
+class AttachPubIp extends Rpc
 {
 
     /**
@@ -2553,7 +2550,7 @@ class AttachPubIp extends V20160408Rpc
  * @method string getNumPartitions()
  * @method $this withNumPartitions($value)
  */
-class MetastoreUpdateKafkaTopic extends V20160408Rpc
+class MetastoreUpdateKafkaTopic extends Rpc
 {
 
     /**
@@ -2589,7 +2586,7 @@ class MetastoreUpdateKafkaTopic extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListKafkaTopic extends V20160408Rpc
+class MetastoreListKafkaTopic extends Rpc
 {
 }
 
@@ -2603,7 +2600,7 @@ class MetastoreListKafkaTopic extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListKafkaConsumerGroup extends V20160408Rpc
+class MetastoreListKafkaConsumerGroup extends Rpc
 {
 }
 
@@ -2615,7 +2612,7 @@ class MetastoreListKafkaConsumerGroup extends V20160408Rpc
  * @method string getConsumerGroupId()
  * @method $this withConsumerGroupId($value)
  */
-class MetastoreDescribeKafkaConsumerGroup extends V20160408Rpc
+class MetastoreDescribeKafkaConsumerGroup extends Rpc
 {
 }
 
@@ -2625,7 +2622,7 @@ class MetastoreDescribeKafkaConsumerGroup extends V20160408Rpc
  * @method string getTopicId()
  * @method $this withTopicId($value)
  */
-class MetastoreDescribeKafkaTopic extends V20160408Rpc
+class MetastoreDescribeKafkaTopic extends Rpc
 {
 }
 
@@ -2635,7 +2632,7 @@ class MetastoreDescribeKafkaTopic extends V20160408Rpc
  * @method string getTopicId()
  * @method $this withTopicId($value)
  */
-class MetastoreDeleteKafkaTopic extends V20160408Rpc
+class MetastoreDeleteKafkaTopic extends Rpc
 {
 }
 
@@ -2652,7 +2649,7 @@ class MetastoreDeleteKafkaTopic extends V20160408Rpc
  * @method string getReplicationFactor()
  * @method $this withReplicationFactor($value)
  */
-class MetastoreCreateKafkaTopic extends V20160408Rpc
+class MetastoreCreateKafkaTopic extends Rpc
 {
 
     /**
@@ -2678,7 +2675,7 @@ class MetastoreCreateKafkaTopic extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class StartFlow extends V20160408Rpc
+class StartFlow extends Rpc
 {
 }
 
@@ -2700,7 +2697,7 @@ class StartFlow extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class GetLogHistogram extends V20160408Rpc
+class GetLogHistogram extends Rpc
 {
 }
 
@@ -2719,7 +2716,7 @@ class GetLogHistogram extends V20160408Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class ListFlowNodeInstance extends V20160408Rpc
+class ListFlowNodeInstance extends Rpc
 {
 
     /**
@@ -2744,7 +2741,7 @@ class ListFlowNodeInstance extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowJobStatistic extends V20160408Rpc
+class DescribeFlowJobStatistic extends Rpc
 {
 }
 
@@ -2755,7 +2752,7 @@ class DescribeFlowJobStatistic extends V20160408Rpc
  * @method $this withClusterId($value)
  * @method array getHostIdList()
  */
-class RemoveClusterHosts extends V20160408Rpc
+class RemoveClusterHosts extends Rpc
 {
 
     /**
@@ -2780,7 +2777,7 @@ class RemoveClusterHosts extends V20160408Rpc
  * @method string getStrategy()
  * @method $this withStrategy($value)
  */
-class DescribeClusterStatistics extends V20160408Rpc
+class DescribeClusterStatistics extends Rpc
 {
 }
 
@@ -2790,7 +2787,7 @@ class DescribeClusterStatistics extends V20160408Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class MetastoreDescribeTask extends V20160408Rpc
+class MetastoreDescribeTask extends Rpc
 {
 }
 
@@ -2800,7 +2797,7 @@ class MetastoreDescribeTask extends V20160408Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class MetastoreRetryTask extends V20160408Rpc
+class MetastoreRetryTask extends Rpc
 {
 }
 
@@ -2822,7 +2819,7 @@ class MetastoreRetryTask extends V20160408Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class MetastoreListTask extends V20160408Rpc
+class MetastoreListTask extends Rpc
 {
 }
 
@@ -2840,7 +2837,7 @@ class MetastoreListTask extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListDataSource extends V20160408Rpc
+class MetastoreListDataSource extends Rpc
 {
 }
 
@@ -2850,7 +2847,7 @@ class MetastoreListDataSource extends V20160408Rpc
  * @method string getDataSourceId()
  * @method $this withDataSourceId($value)
  */
-class MetastoreDescribeDataSource extends V20160408Rpc
+class MetastoreDescribeDataSource extends Rpc
 {
 }
 
@@ -2864,7 +2861,7 @@ class MetastoreDescribeDataSource extends V20160408Rpc
  * @method $this withTableId($value)
  * @method array getDeletePartitionName()
  */
-class MetastoreUpdateTable extends V20160408Rpc
+class MetastoreUpdateTable extends Rpc
 {
 
     /**
@@ -2948,7 +2945,7 @@ class MetastoreUpdateTable extends V20160408Rpc
  * @method string getEndTimeStamp()
  * @method $this withEndTimeStamp($value)
  */
-class QueryServiceMetricData extends V20160408Rpc
+class QueryServiceMetricData extends Rpc
 {
 }
 
@@ -2962,7 +2959,7 @@ class QueryServiceMetricData extends V20160408Rpc
  * @method string getCurrentSize()
  * @method $this withCurrentSize($value)
  */
-class ListExecutePlanMigrateInfo extends V20160408Rpc
+class ListExecutePlanMigrateInfo extends Rpc
 {
 }
 
@@ -2976,7 +2973,7 @@ class ListExecutePlanMigrateInfo extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ModifyPreMigrateJobs extends V20160408Rpc
+class ModifyPreMigrateJobs extends Rpc
 {
 }
 
@@ -2986,7 +2983,7 @@ class ModifyPreMigrateJobs extends V20160408Rpc
  * @method string getProjectName()
  * @method $this withProjectName($value)
  */
-class MigrateJobs extends V20160408Rpc
+class MigrateJobs extends Rpc
 {
 }
 
@@ -3000,7 +2997,7 @@ class MigrateJobs extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class PreMigrateJobs extends V20160408Rpc
+class PreMigrateJobs extends Rpc
 {
 }
 
@@ -3012,7 +3009,7 @@ class PreMigrateJobs extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class DescribeJobMigrateInfo extends V20160408Rpc
+class DescribeJobMigrateInfo extends Rpc
 {
 }
 
@@ -3026,7 +3023,7 @@ class DescribeJobMigrateInfo extends V20160408Rpc
  * @method string getCurrentSize()
  * @method $this withCurrentSize($value)
  */
-class ListJobMigrateInfo extends V20160408Rpc
+class ListJobMigrateInfo extends Rpc
 {
 }
 
@@ -3040,7 +3037,7 @@ class ListJobMigrateInfo extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AuthorizeSecurityGroup extends V20160408Rpc
+class AuthorizeSecurityGroup extends Rpc
 {
 }
 
@@ -3050,7 +3047,7 @@ class AuthorizeSecurityGroup extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeSecurityGroupAttribute extends V20160408Rpc
+class DescribeSecurityGroupAttribute extends Rpc
 {
 }
 
@@ -3060,7 +3057,7 @@ class DescribeSecurityGroupAttribute extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class DescribeUserStatistics extends V20160408Rpc
+class DescribeUserStatistics extends Rpc
 {
 }
 
@@ -3082,7 +3079,7 @@ class DescribeUserStatistics extends V20160408Rpc
  * @method string getInteractionJobNum()
  * @method $this withInteractionJobNum($value)
  */
-class ModifyUserStatistics extends V20160408Rpc
+class ModifyUserStatistics extends Rpc
 {
 }
 
@@ -3098,7 +3095,7 @@ class ModifyUserStatistics extends V20160408Rpc
  * @method string getCurrentSize()
  * @method $this withCurrentSize($value)
  */
-class ListUserStatistics extends V20160408Rpc
+class ListUserStatistics extends Rpc
 {
 }
 
@@ -3106,7 +3103,7 @@ class ListUserStatistics extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class CreateUserStatistics extends V20160408Rpc
+class CreateUserStatistics extends Rpc
 {
 }
 
@@ -3117,7 +3114,7 @@ class CreateUserStatistics extends V20160408Rpc
  * @method $this withClusterId($value)
  * @method array getUserInfo()
  */
-class RetryCreateUserPassword extends V20160408Rpc
+class RetryCreateUserPassword extends Rpc
 {
 
     /**
@@ -3147,7 +3144,7 @@ class RetryCreateUserPassword extends V20160408Rpc
  * @method string getTarget()
  * @method $this withTarget($value)
  */
-class CreateVerificationCode extends V20160408Rpc
+class CreateVerificationCode extends Rpc
 {
 }
 
@@ -3165,7 +3162,7 @@ class CreateVerificationCode extends V20160408Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class CreateAlertContact extends V20160408Rpc
+class CreateAlertContact extends Rpc
 {
 }
 
@@ -3175,7 +3172,7 @@ class CreateAlertContact extends V20160408Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteAlertContacts extends V20160408Rpc
+class DeleteAlertContacts extends Rpc
 {
 }
 
@@ -3189,7 +3186,7 @@ class DeleteAlertContacts extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListAlertContacts extends V20160408Rpc
+class ListAlertContacts extends Rpc
 {
 }
 
@@ -3209,7 +3206,7 @@ class ListAlertContacts extends V20160408Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class ModifyAlertContact extends V20160408Rpc
+class ModifyAlertContact extends Rpc
 {
 }
 
@@ -3223,7 +3220,7 @@ class ModifyAlertContact extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListAlertDingDingGroup extends V20160408Rpc
+class ListAlertDingDingGroup extends Rpc
 {
 }
 
@@ -3237,7 +3234,7 @@ class ListAlertDingDingGroup extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListAlertUserGroup extends V20160408Rpc
+class ListAlertUserGroup extends Rpc
 {
 }
 
@@ -3251,7 +3248,7 @@ class ListAlertUserGroup extends V20160408Rpc
  * @method string getWebHookUrl()
  * @method $this withWebHookUrl($value)
  */
-class CreateAlertDingDingGroup extends V20160408Rpc
+class CreateAlertDingDingGroup extends Rpc
 {
 }
 
@@ -3267,7 +3264,7 @@ class CreateAlertDingDingGroup extends V20160408Rpc
  * @method string getWebHookUrl()
  * @method $this withWebHookUrl($value)
  */
-class ModifyAlertDingDingGroup extends V20160408Rpc
+class ModifyAlertDingDingGroup extends Rpc
 {
 }
 
@@ -3277,7 +3274,7 @@ class ModifyAlertDingDingGroup extends V20160408Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteAlertDingDingGroups extends V20160408Rpc
+class DeleteAlertDingDingGroups extends Rpc
 {
 }
 
@@ -3287,7 +3284,7 @@ class DeleteAlertDingDingGroups extends V20160408Rpc
  * @method string getIds()
  * @method $this withIds($value)
  */
-class DeleteAlertUserGroups extends V20160408Rpc
+class DeleteAlertUserGroups extends Rpc
 {
 }
 
@@ -3303,7 +3300,7 @@ class DeleteAlertUserGroups extends V20160408Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class ModifyAlertUserGroup extends V20160408Rpc
+class ModifyAlertUserGroup extends Rpc
 {
 }
 
@@ -3317,7 +3314,7 @@ class ModifyAlertUserGroup extends V20160408Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class CreateAlertUserGroup extends V20160408Rpc
+class CreateAlertUserGroup extends Rpc
 {
 }
 
@@ -3337,7 +3334,7 @@ class CreateAlertUserGroup extends V20160408Rpc
  * @method string getEndTimeStamp()
  * @method $this withEndTimeStamp($value)
  */
-class QuerySlsMetricData extends V20160408Rpc
+class QuerySlsMetricData extends Rpc
 {
 }
 
@@ -3347,7 +3344,7 @@ class QuerySlsMetricData extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class CloneFlowJob extends V20160408Rpc
+class CloneFlowJob extends Rpc
 {
 }
 
@@ -3357,7 +3354,7 @@ class CloneFlowJob extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class CloneFlow extends V20160408Rpc
+class CloneFlow extends Rpc
 {
 }
 
@@ -3381,7 +3378,7 @@ class CloneFlow extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListFlow extends V20160408Rpc
+class ListFlow extends Rpc
 {
 }
 
@@ -3391,7 +3388,7 @@ class ListFlow extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListScalingTaskGroup extends V20160408Rpc
+class ListScalingTaskGroup extends Rpc
 {
 }
 
@@ -3425,7 +3422,7 @@ class ListScalingTaskGroup extends V20160408Rpc
  * @method string getRecurrenceType()
  * @method $this withRecurrenceType($value)
  */
-class ModifyScalingRule extends V20160408Rpc
+class ModifyScalingRule extends Rpc
 {
 
     /**
@@ -3484,7 +3481,7 @@ class ModifyScalingRule extends V20160408Rpc
  * @method string getDefaultCooldown()
  * @method $this withDefaultCooldown($value)
  */
-class ModifyScalingTaskGroup extends V20160408Rpc
+class ModifyScalingTaskGroup extends Rpc
 {
 }
 
@@ -3496,7 +3493,7 @@ class ModifyScalingTaskGroup extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeScalingTaskGroup extends V20160408Rpc
+class DescribeScalingTaskGroup extends Rpc
 {
 }
 
@@ -3510,7 +3507,7 @@ class DescribeScalingTaskGroup extends V20160408Rpc
  * @method string getScalingRuleId()
  * @method $this withScalingRuleId($value)
  */
-class DeleteScalingRule extends V20160408Rpc
+class DeleteScalingRule extends Rpc
 {
 }
 
@@ -3522,7 +3519,7 @@ class DeleteScalingRule extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteScalingTaskGroup extends V20160408Rpc
+class DeleteScalingTaskGroup extends Rpc
 {
 }
 
@@ -3553,7 +3550,7 @@ class DeleteScalingTaskGroup extends V20160408Rpc
  * @method $this withPayType($value)
  * @method array getInstanceTypeList()
  */
-class CreateScalingTaskGroup extends V20160408Rpc
+class CreateScalingTaskGroup extends Rpc
 {
 
     /**
@@ -3657,7 +3654,7 @@ class CreateScalingTaskGroup extends V20160408Rpc
  * @method string getRecurrenceType()
  * @method $this withRecurrenceType($value)
  */
-class CreateScalingRule extends V20160408Rpc
+class CreateScalingRule extends Rpc
 {
 
     /**
@@ -3712,7 +3709,7 @@ class CreateScalingRule extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListScalingRule extends V20160408Rpc
+class ListScalingRule extends Rpc
 {
 }
 
@@ -3728,7 +3725,7 @@ class ListScalingRule extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListScalingActivity extends V20160408Rpc
+class ListScalingActivity extends Rpc
 {
 }
 
@@ -3742,7 +3739,7 @@ class ListScalingActivity extends V20160408Rpc
  * @method string getScalingRuleId()
  * @method $this withScalingRuleId($value)
  */
-class DescribeScalingRule extends V20160408Rpc
+class DescribeScalingRule extends Rpc
 {
 }
 
@@ -3756,7 +3753,7 @@ class DescribeScalingRule extends V20160408Rpc
  * @method string getScalingActivityId()
  * @method $this withScalingActivityId($value)
  */
-class DescribeScalingActivity extends V20160408Rpc
+class DescribeScalingActivity extends Rpc
 {
 }
 
@@ -3768,7 +3765,7 @@ class DescribeScalingActivity extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterServiceComponentHealthInfo extends V20160408Rpc
+class ListClusterServiceComponentHealthInfo extends Rpc
 {
 }
 
@@ -3776,7 +3773,7 @@ class ListClusterServiceComponentHealthInfo extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlowProjectById extends V20160408Rpc
+class DeleteFlowProjectById extends Rpc
 {
 }
 
@@ -3786,7 +3783,7 @@ class DeleteFlowProjectById extends V20160408Rpc
  * @method string getEmrVersion()
  * @method $this withEmrVersion($value)
  */
-class DescribeEmrMainVersion extends V20160408Rpc
+class DescribeEmrMainVersion extends Rpc
 {
 }
 
@@ -3804,7 +3801,7 @@ class DescribeEmrMainVersion extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListEmrMainVersion extends V20160408Rpc
+class ListEmrMainVersion extends Rpc
 {
 }
 
@@ -3855,7 +3852,7 @@ class ListEmrMainVersion extends V20160408Rpc
  * @method string getHighAvailabilityEnable()
  * @method $this withHighAvailabilityEnable($value)
  */
-class OperateExistsNodeCluster extends V20160408Rpc
+class OperateExistsNodeCluster extends Rpc
 {
 
     /**
@@ -3911,7 +3908,7 @@ class OperateExistsNodeCluster extends V20160408Rpc
  * @method $this withClusterId($value)
  * @method array getUserInfo()
  */
-class CreateUsers extends V20160408Rpc
+class CreateUsers extends Rpc
 {
 
     /**
@@ -3941,7 +3938,7 @@ class CreateUsers extends V20160408Rpc
  * @method $this withClusterId($value)
  * @method array getUserInfo()
  */
-class CreateUserPassword extends V20160408Rpc
+class CreateUserPassword extends Rpc
 {
 
     /**
@@ -3971,7 +3968,7 @@ class CreateUserPassword extends V20160408Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class ListUsers extends V20160408Rpc
+class ListUsers extends Rpc
 {
 }
 
@@ -3985,7 +3982,7 @@ class ListUsers extends V20160408Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class DeleteUser extends V20160408Rpc
+class DeleteUser extends Rpc
 {
 }
 
@@ -3995,7 +3992,7 @@ class DeleteUser extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class MetastoreDeleteDataResource extends V20160408Rpc
+class MetastoreDeleteDataResource extends Rpc
 {
 }
 
@@ -4015,7 +4012,7 @@ class MetastoreDeleteDataResource extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class MetastoreCreateDataResource extends V20160408Rpc
+class MetastoreCreateDataResource extends Rpc
 {
 }
 
@@ -4023,7 +4020,7 @@ class MetastoreCreateDataResource extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class MetastoreListDataResources extends V20160408Rpc
+class MetastoreListDataResources extends Rpc
 {
 }
 
@@ -4041,7 +4038,7 @@ class MetastoreListDataResources extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class MetastoreModifyDataResource extends V20160408Rpc
+class MetastoreModifyDataResource extends Rpc
 {
 }
 
@@ -4061,7 +4058,7 @@ class MetastoreModifyDataResource extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowJob extends V20160408Rpc
+class ListFlowJob extends Rpc
 {
 }
 
@@ -4071,7 +4068,7 @@ class ListFlowJob extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ListFlowClusterAllHosts extends V20160408Rpc
+class ListFlowClusterAllHosts extends Rpc
 {
 }
 
@@ -4079,7 +4076,7 @@ class ListFlowClusterAllHosts extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListEmrAvailableConfig extends V20160408Rpc
+class ListEmrAvailableConfig extends Rpc
 {
 }
 
@@ -4109,7 +4106,7 @@ class ListEmrAvailableConfig extends V20160408Rpc
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */
-class ListEmrAvailableResource extends V20160408Rpc
+class ListEmrAvailableResource extends Rpc
 {
 }
 
@@ -4123,7 +4120,7 @@ class ListEmrAvailableResource extends V20160408Rpc
  * @method string getTemplateBizId()
  * @method $this withTemplateBizId($value)
  */
-class CreateClusterWithTemplate extends V20160408Rpc
+class CreateClusterWithTemplate extends Rpc
 {
 }
 
@@ -4139,43 +4136,11 @@ class CreateClusterWithTemplate extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ListFlowNodeSqlResult extends V20160408Rpc
+class ListFlowNodeSqlResult extends Rpc
 {
 }
 
-class ListFlowClusterAll extends V20160408Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetUserOutputStatisticInfo extends V20160408Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getApplicationType()
- * @method $this withApplicationType($value)
- * @method string getFinalStatus()
- * @method $this withFinalStatus($value)
- */
-class GetUserSubmissionStatisticInfo extends V20160408Rpc
+class ListFlowClusterAll extends Rpc
 {
 }
 
@@ -4189,35 +4154,7 @@ class GetUserSubmissionStatisticInfo extends V20160408Rpc
  * @method string getToDatetime()
  * @method $this withToDatetime($value)
  */
-class GetUserInputStatisticInfo extends V20160408Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetQueueInputStatisticInfo extends V20160408Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetQueueOutputStatisticInfo extends V20160408Rpc
+class GetUserOutputStatisticInfo extends Rpc
 {
 }
 
@@ -4235,7 +4172,67 @@ class GetQueueOutputStatisticInfo extends V20160408Rpc
  * @method string getFinalStatus()
  * @method $this withFinalStatus($value)
  */
-class GetQueueSubmissionStatisticInfo extends V20160408Rpc
+class GetUserSubmissionStatisticInfo extends Rpc
+{
+}
+
+/**
+ * @method string getFromDatetime()
+ * @method $this withFromDatetime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getToDatetime()
+ * @method $this withToDatetime($value)
+ */
+class GetUserInputStatisticInfo extends Rpc
+{
+}
+
+/**
+ * @method string getFromDatetime()
+ * @method $this withFromDatetime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getToDatetime()
+ * @method $this withToDatetime($value)
+ */
+class GetQueueInputStatisticInfo extends Rpc
+{
+}
+
+/**
+ * @method string getFromDatetime()
+ * @method $this withFromDatetime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getToDatetime()
+ * @method $this withToDatetime($value)
+ */
+class GetQueueOutputStatisticInfo extends Rpc
+{
+}
+
+/**
+ * @method string getFromDatetime()
+ * @method $this withFromDatetime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getToDatetime()
+ * @method $this withToDatetime($value)
+ * @method string getApplicationType()
+ * @method $this withApplicationType($value)
+ * @method string getFinalStatus()
+ * @method $this withFinalStatus($value)
+ */
+class GetQueueSubmissionStatisticInfo extends Rpc
 {
 }
 
@@ -4253,7 +4250,7 @@ class GetQueueSubmissionStatisticInfo extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetJobRunningTimeStatisticInfo extends V20160408Rpc
+class GetJobRunningTimeStatisticInfo extends Rpc
 {
 }
 
@@ -4267,25 +4264,7 @@ class GetJobRunningTimeStatisticInfo extends V20160408Rpc
  * @method string getToDatetime()
  * @method $this withToDatetime($value)
  */
-class GetHdfsCapacityStatisticInfo extends V20160408Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class GetJobInputStatisticInfo extends V20160408Rpc
+class GetHdfsCapacityStatisticInfo extends Rpc
 {
 }
 
@@ -4303,7 +4282,25 @@ class GetJobInputStatisticInfo extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetJobOutputStatisticInfo extends V20160408Rpc
+class GetJobInputStatisticInfo extends Rpc
+{
+}
+
+/**
+ * @method string getFromDatetime()
+ * @method $this withFromDatetime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getToDatetime()
+ * @method $this withToDatetime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class GetJobOutputStatisticInfo extends Rpc
 {
 }
 
@@ -4313,7 +4310,7 @@ class GetJobOutputStatisticInfo extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class KillFlowJob extends V20160408Rpc
+class KillFlowJob extends Rpc
 {
 }
 
@@ -4355,7 +4352,7 @@ class KillFlowJob extends V20160408Rpc
  * @method string getParentCategory()
  * @method $this withParentCategory($value)
  */
-class ModifyFlowForWeb extends V20160408Rpc
+class ModifyFlowForWeb extends Rpc
 {
 }
 
@@ -4391,7 +4388,7 @@ class ModifyFlowForWeb extends V20160408Rpc
  * @method string getParentCategory()
  * @method $this withParentCategory($value)
  */
-class CreateFlowForWeb extends V20160408Rpc
+class CreateFlowForWeb extends Rpc
 {
 }
 
@@ -4415,7 +4412,7 @@ class CreateFlowForWeb extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowNodeInstanceLauncherLog extends V20160408Rpc
+class DescribeFlowNodeInstanceLauncherLog extends Rpc
 {
 }
 
@@ -4429,7 +4426,7 @@ class DescribeFlowNodeInstanceLauncherLog extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowNodeInstanceContainerStatus extends V20160408Rpc
+class ListFlowNodeInstanceContainerStatus extends Rpc
 {
 }
 
@@ -4449,7 +4446,7 @@ class ListFlowNodeInstanceContainerStatus extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowNodeInstanceContainerLog extends V20160408Rpc
+class DescribeFlowNodeInstanceContainerLog extends Rpc
 {
 }
 
@@ -4459,7 +4456,7 @@ class DescribeFlowNodeInstanceContainerLog extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class SuspendFlow extends V20160408Rpc
+class SuspendFlow extends Rpc
 {
 }
 
@@ -4471,7 +4468,7 @@ class SuspendFlow extends V20160408Rpc
  * @method string getFlowId()
  * @method $this withFlowId($value)
  */
-class SubmitFlow extends V20160408Rpc
+class SubmitFlow extends Rpc
 {
 }
 
@@ -4487,7 +4484,7 @@ class SubmitFlow extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class SubmitFlowJob extends V20160408Rpc
+class SubmitFlowJob extends Rpc
 {
 }
 
@@ -4497,7 +4494,7 @@ class SubmitFlowJob extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ResumeFlow extends V20160408Rpc
+class ResumeFlow extends Rpc
 {
 }
 
@@ -4509,7 +4506,7 @@ class ResumeFlow extends V20160408Rpc
  * @method string getReRunFail()
  * @method $this withReRunFail($value)
  */
-class RerunFlow extends V20160408Rpc
+class RerunFlow extends Rpc
 {
 }
 
@@ -4548,7 +4545,7 @@ class RerunFlow extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ModifyFlowJob extends V20160408Rpc
+class ModifyFlowJob extends Rpc
 {
 
     /**
@@ -4576,7 +4573,7 @@ class ModifyFlowJob extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ModifyFlowProject extends V20160408Rpc
+class ModifyFlowProject extends Rpc
 {
 }
 
@@ -4593,7 +4590,7 @@ class ModifyFlowProject extends V20160408Rpc
  * @method string getDefaultUser()
  * @method $this withDefaultUser($value)
  */
-class ModifyFlowProjectClusterSetting extends V20160408Rpc
+class ModifyFlowProjectClusterSetting extends Rpc
 {
 
     /**
@@ -4680,7 +4677,7 @@ class ModifyFlowProjectClusterSetting extends V20160408Rpc
  * @method string getParentCategory()
  * @method $this withParentCategory($value)
  */
-class ModifyFlow extends V20160408Rpc
+class ModifyFlow extends Rpc
 {
 }
 
@@ -4694,7 +4691,7 @@ class ModifyFlow extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class ModifyFlowCategory extends V20160408Rpc
+class ModifyFlowCategory extends Rpc
 {
 }
 
@@ -4706,7 +4703,7 @@ class ModifyFlowCategory extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowProjectUser extends V20160408Rpc
+class ListFlowProjectUser extends Rpc
 {
 }
 
@@ -4720,7 +4717,7 @@ class ListFlowProjectUser extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowProject extends V20160408Rpc
+class ListFlowProject extends Rpc
 {
 }
 
@@ -4732,7 +4729,7 @@ class ListFlowProject extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowProjectClusterSetting extends V20160408Rpc
+class ListFlowProjectClusterSetting extends Rpc
 {
 }
 
@@ -4742,7 +4739,7 @@ class ListFlowProjectClusterSetting extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ListFlowClusterHost extends V20160408Rpc
+class ListFlowClusterHost extends Rpc
 {
 }
 
@@ -4771,7 +4768,7 @@ class ListFlowClusterHost extends V20160408Rpc
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
-class ListFlowInstance extends V20160408Rpc
+class ListFlowInstance extends Rpc
 {
 
     /**
@@ -4807,7 +4804,7 @@ class ListFlowInstance extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowJobHistory extends V20160408Rpc
+class ListFlowJobHistory extends Rpc
 {
 
     /**
@@ -4838,7 +4835,7 @@ class ListFlowJobHistory extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowCategory extends V20160408Rpc
+class ListFlowCategory extends Rpc
 {
 }
 
@@ -4850,7 +4847,7 @@ class ListFlowCategory extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListFlowCluster extends V20160408Rpc
+class ListFlowCluster extends Rpc
 {
 }
 
@@ -4860,7 +4857,7 @@ class ListFlowCluster extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class KillFlow extends V20160408Rpc
+class KillFlow extends Rpc
 {
 }
 
@@ -4870,7 +4867,7 @@ class KillFlow extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowProjectClusterSetting extends V20160408Rpc
+class DescribeFlowProjectClusterSetting extends Rpc
 {
 }
 
@@ -4880,7 +4877,7 @@ class DescribeFlowProjectClusterSetting extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowNodeInstance extends V20160408Rpc
+class DescribeFlowNodeInstance extends Rpc
 {
 }
 
@@ -4888,7 +4885,7 @@ class DescribeFlowNodeInstance extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowProject extends V20160408Rpc
+class DescribeFlowProject extends Rpc
 {
 }
 
@@ -4898,7 +4895,7 @@ class DescribeFlowProject extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowCategoryTree extends V20160408Rpc
+class DescribeFlowCategoryTree extends Rpc
 {
 }
 
@@ -4908,7 +4905,7 @@ class DescribeFlowCategoryTree extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowInstance extends V20160408Rpc
+class DescribeFlowInstance extends Rpc
 {
 }
 
@@ -4918,7 +4915,7 @@ class DescribeFlowInstance extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowJob extends V20160408Rpc
+class DescribeFlowJob extends Rpc
 {
 }
 
@@ -4928,7 +4925,7 @@ class DescribeFlowJob extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlow extends V20160408Rpc
+class DescribeFlow extends Rpc
 {
 }
 
@@ -4938,7 +4935,7 @@ class DescribeFlow extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DescribeFlowCategory extends V20160408Rpc
+class DescribeFlowCategory extends Rpc
 {
 }
 
@@ -4946,7 +4943,7 @@ class DescribeFlowCategory extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlowProject extends V20160408Rpc
+class DeleteFlowProject extends Rpc
 {
 }
 
@@ -4956,7 +4953,7 @@ class DeleteFlowProject extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlowProjectClusterSetting extends V20160408Rpc
+class DeleteFlowProjectClusterSetting extends Rpc
 {
 }
 
@@ -4966,7 +4963,7 @@ class DeleteFlowProjectClusterSetting extends V20160408Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteFlowProjectUser extends V20160408Rpc
+class DeleteFlowProjectUser extends Rpc
 {
 }
 
@@ -4976,7 +4973,7 @@ class DeleteFlowProjectUser extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlow extends V20160408Rpc
+class DeleteFlow extends Rpc
 {
 }
 
@@ -4986,7 +4983,7 @@ class DeleteFlow extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlowCategory extends V20160408Rpc
+class DeleteFlowCategory extends Rpc
 {
 }
 
@@ -4996,7 +4993,7 @@ class DeleteFlowCategory extends V20160408Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class DeleteFlowJob extends V20160408Rpc
+class DeleteFlowJob extends Rpc
 {
 }
 
@@ -5006,7 +5003,7 @@ class DeleteFlowJob extends V20160408Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class CreateFlowProject extends V20160408Rpc
+class CreateFlowProject extends Rpc
 {
 }
 
@@ -5023,7 +5020,7 @@ class CreateFlowProject extends V20160408Rpc
  * @method string getDefaultUser()
  * @method $this withDefaultUser($value)
  */
-class CreateFlowProjectClusterSetting extends V20160408Rpc
+class CreateFlowProjectClusterSetting extends Rpc
 {
 
     /**
@@ -5077,7 +5074,7 @@ class CreateFlowProjectClusterSetting extends V20160408Rpc
  * @method $this withProjectId($value)
  * @method array getUser()
  */
-class CreateFlowProjectUser extends V20160408Rpc
+class CreateFlowProjectUser extends Rpc
 {
 
     /**
@@ -5129,7 +5126,7 @@ class CreateFlowProjectUser extends V20160408Rpc
  * @method string getParentCategory()
  * @method $this withParentCategory($value)
  */
-class CreateFlow extends V20160408Rpc
+class CreateFlow extends Rpc
 {
 }
 
@@ -5143,7 +5140,7 @@ class CreateFlow extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class CreateFlowCategory extends V20160408Rpc
+class CreateFlowCategory extends Rpc
 {
 }
 
@@ -5184,7 +5181,7 @@ class CreateFlowCategory extends V20160408Rpc
  * @method string getParentCategory()
  * @method $this withParentCategory($value)
  */
-class CreateFlowJob extends V20160408Rpc
+class CreateFlowJob extends Rpc
 {
 
     /**
@@ -5210,7 +5207,7 @@ class CreateFlowJob extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeAvailableInstanceType extends V20160408Rpc
+class DescribeAvailableInstanceType extends Rpc
 {
 }
 
@@ -5220,7 +5217,7 @@ class DescribeAvailableInstanceType extends V20160408Rpc
  * @method string getOpsCommandName()
  * @method $this withOpsCommandName($value)
  */
-class GetOpsCommandDetail extends V20160408Rpc
+class GetOpsCommandDetail extends Rpc
 {
 
     /** @var string */
@@ -5235,7 +5232,7 @@ class GetOpsCommandDetail extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListOpsOperationTask1 extends V20160408Rpc
+class ListOpsOperationTask1 extends Rpc
 {
 
     /** @var string */
@@ -5250,7 +5247,7 @@ class ListOpsOperationTask1 extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListOpsOperationTask extends V20160408Rpc
+class ListOpsOperationTask extends Rpc
 {
 
     /** @var string */
@@ -5265,7 +5262,7 @@ class ListOpsOperationTask extends V20160408Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetOpsCommandResultOnce extends V20160408Rpc
+class GetOpsCommandResultOnce extends Rpc
 {
 }
 
@@ -5281,7 +5278,7 @@ class GetOpsCommandResultOnce extends V20160408Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetOpsCommandResult extends V20160408Rpc
+class GetOpsCommandResult extends Rpc
 {
 
     /** @var string */
@@ -5303,7 +5300,7 @@ class GetOpsCommandResult extends V20160408Rpc
  * @method string getDimension()
  * @method $this withDimension($value)
  */
-class RunOpsCommand extends V20160408Rpc
+class RunOpsCommand extends Rpc
 {
 
     /** @var string */
@@ -5329,7 +5326,7 @@ class RunOpsCommand extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class GetSupportedOpsCommand extends V20160408Rpc
+class GetSupportedOpsCommand extends Rpc
 {
 }
 
@@ -5341,7 +5338,7 @@ class GetSupportedOpsCommand extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListOpsOperation extends V20160408Rpc
+class ListOpsOperation extends Rpc
 {
 
     /** @var string */
@@ -5372,7 +5369,7 @@ class ListOpsOperation extends V20160408Rpc
  * @method string getSlsQueryString()
  * @method $this withSlsQueryString($value)
  */
-class SearchLog extends V20160408Rpc
+class SearchLog extends Rpc
 {
 }
 
@@ -5390,7 +5387,7 @@ class SearchLog extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListServiceLog extends V20160408Rpc
+class ListServiceLog extends Rpc
 {
 }
 
@@ -5404,7 +5401,7 @@ class ListServiceLog extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListSlsLogstoreInfo extends V20160408Rpc
+class ListSlsLogstoreInfo extends Rpc
 {
 }
 
@@ -5420,7 +5417,7 @@ class ListSlsLogstoreInfo extends V20160408Rpc
  * @method string getLogFileName()
  * @method $this withLogFileName($value)
  */
-class GetLogDownloadUrl extends V20160408Rpc
+class GetLogDownloadUrl extends Rpc
 {
 }
 
@@ -5430,7 +5427,7 @@ class GetLogDownloadUrl extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterFullServiceQuickLink extends V20160408Rpc
+class ListClusterFullServiceQuickLink extends Rpc
 {
 }
 
@@ -5442,7 +5439,7 @@ class ListClusterFullServiceQuickLink extends V20160408Rpc
  * @method string getParamBizType()
  * @method $this withParamBizType($value)
  */
-class ListJobExecutionPlanParams extends V20160408Rpc
+class ListJobExecutionPlanParams extends Rpc
 {
 }
 
@@ -5461,7 +5458,7 @@ class ListJobExecutionPlanParams extends V20160408Rpc
  * @method $this withYarnsiteconfig($value)
  * @method array getConfig()
  */
-class ModifyResourcePool extends V20160408Rpc
+class ModifyResourcePool extends Rpc
 {
 
     /**
@@ -5503,7 +5500,7 @@ class ModifyResourcePool extends V20160408Rpc
  * @method $this withLeaf($value)
  * @method array getConfig()
  */
-class ModifyResourceQueue extends V20160408Rpc
+class ModifyResourceQueue extends Rpc
 {
 
     /**
@@ -5536,7 +5533,7 @@ class ModifyResourceQueue extends V20160408Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class ModifyJobExecutionPlanFolder extends V20160408Rpc
+class ModifyJobExecutionPlanFolder extends Rpc
 {
 }
 
@@ -5550,7 +5547,7 @@ class ModifyJobExecutionPlanFolder extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ModifyJobExecutionPlanParam extends V20160408Rpc
+class ModifyJobExecutionPlanParam extends Rpc
 {
 }
 
@@ -5618,7 +5615,7 @@ class ModifyJobExecutionPlanParam extends V20160408Rpc
  * @method string getInitCustomHiveMetaDb()
  * @method $this withInitCustomHiveMetaDb($value)
  */
-class ModifyClusterTemplate extends V20160408Rpc
+class ModifyClusterTemplate extends Rpc
 {
 
     /**
@@ -5716,7 +5713,7 @@ class ModifyClusterTemplate extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobExecutionPlanHierarchy extends V20160408Rpc
+class ListJobExecutionPlanHierarchy extends Rpc
 {
 }
 
@@ -5728,7 +5725,7 @@ class ListJobExecutionPlanHierarchy extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class RefreshClusterResourcePool extends V20160408Rpc
+class RefreshClusterResourcePool extends Rpc
 {
 }
 
@@ -5742,7 +5739,7 @@ class RefreshClusterResourcePool extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusterTemplates extends V20160408Rpc
+class ListClusterTemplates extends Rpc
 {
 }
 
@@ -5752,7 +5749,7 @@ class ListClusterTemplates extends V20160408Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class DescribeClusterTemplate extends V20160408Rpc
+class DescribeClusterTemplate extends Rpc
 {
 }
 
@@ -5762,7 +5759,7 @@ class DescribeClusterTemplate extends V20160408Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class DeleteClusterTemplate extends V20160408Rpc
+class DeleteClusterTemplate extends Rpc
 {
 }
 
@@ -5826,7 +5823,7 @@ class DeleteClusterTemplate extends V20160408Rpc
  * @method string getInitCustomHiveMetaDb()
  * @method $this withInitCustomHiveMetaDb($value)
  */
-class CreateClusterTemplate extends V20160408Rpc
+class CreateClusterTemplate extends Rpc
 {
 
     /**
@@ -5920,7 +5917,7 @@ class CreateClusterTemplate extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class SuspendExecutionPlanInstance extends V20160408Rpc
+class SuspendExecutionPlanInstance extends Rpc
 {
 }
 
@@ -5930,7 +5927,7 @@ class SuspendExecutionPlanInstance extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ResumeExecutionPlanInstance extends V20160408Rpc
+class ResumeExecutionPlanInstance extends Rpc
 {
 }
 
@@ -5944,7 +5941,7 @@ class ResumeExecutionPlanInstance extends V20160408Rpc
  * @method string getRerunFail()
  * @method $this withRerunFail($value)
  */
-class RetryExecutionPlanInstance extends V20160408Rpc
+class RetryExecutionPlanInstance extends Rpc
 {
 }
 
@@ -5965,7 +5962,7 @@ class RetryExecutionPlanInstance extends V20160408Rpc
  * @method $this withLeaf($value)
  * @method array getConfig()
  */
-class CreateResourceQueue extends V20160408Rpc
+class CreateResourceQueue extends Rpc
 {
 
     /**
@@ -5995,7 +5992,7 @@ class CreateResourceQueue extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteResourceQueue extends V20160408Rpc
+class DeleteResourceQueue extends Rpc
 {
 }
 
@@ -6005,7 +6002,7 @@ class DeleteResourceQueue extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterResourcePoolSchedulerType extends V20160408Rpc
+class DescribeClusterResourcePoolSchedulerType extends Rpc
 {
 }
 
@@ -6026,7 +6023,7 @@ class DescribeClusterResourcePoolSchedulerType extends V20160408Rpc
  * @method string getPoolType()
  * @method $this withPoolType($value)
  */
-class CreateResourcePool extends V20160408Rpc
+class CreateResourcePool extends Rpc
 {
 
     /**
@@ -6058,7 +6055,7 @@ class CreateResourcePool extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteResourcePool extends V20160408Rpc
+class DeleteResourcePool extends Rpc
 {
 }
 
@@ -6074,7 +6071,7 @@ class DeleteResourcePool extends V20160408Rpc
  * @method string getPoolType()
  * @method $this withPoolType($value)
  */
-class ListResourcePool extends V20160408Rpc
+class ListResourcePool extends Rpc
 {
 }
 
@@ -6086,7 +6083,7 @@ class ListResourcePool extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ModifyResourcePoolSchedulerType extends V20160408Rpc
+class ModifyResourcePoolSchedulerType extends Rpc
 {
 }
 
@@ -6107,7 +6104,7 @@ class ModifyResourcePoolSchedulerType extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusterHostGroup extends V20160408Rpc
+class ListClusterHostGroup extends Rpc
 {
 
     /**
@@ -6136,7 +6133,7 @@ class ListClusterHostGroup extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterServiceConfigTag extends V20160408Rpc
+class DescribeClusterServiceConfigTag extends Rpc
 {
 }
 
@@ -6154,7 +6151,7 @@ class DescribeClusterServiceConfigTag extends V20160408Rpc
  * @method string getEndTimeStamp()
  * @method $this withEndTimeStamp($value)
  */
-class QueryAlarmHistory extends V20160408Rpc
+class QueryAlarmHistory extends Rpc
 {
 }
 
@@ -6164,7 +6161,7 @@ class QueryAlarmHistory extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class QueryAlarmRules extends V20160408Rpc
+class QueryAlarmRules extends Rpc
 {
 }
 
@@ -6176,7 +6173,7 @@ class QueryAlarmRules extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterServiceQuickLink extends V20160408Rpc
+class ListClusterServiceQuickLink extends Rpc
 {
 }
 
@@ -6194,7 +6191,7 @@ class ListClusterServiceQuickLink extends V20160408Rpc
  * @method string getConfigVersion()
  * @method $this withConfigVersion($value)
  */
-class ListClusterServiceConfigHistory extends V20160408Rpc
+class ListClusterServiceConfigHistory extends Rpc
 {
 }
 
@@ -6208,7 +6205,7 @@ class ListClusterServiceConfigHistory extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ReleaseClusterHostGroup extends V20160408Rpc
+class ReleaseClusterHostGroup extends Rpc
 {
 }
 
@@ -6218,7 +6215,7 @@ class ReleaseClusterHostGroup extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeClusterV2 extends V20160408Rpc
+class DescribeClusterV2 extends Rpc
 {
 }
 
@@ -6234,7 +6231,7 @@ class DescribeClusterV2 extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ResizeClusterV2 extends V20160408Rpc
+class ResizeClusterV2 extends Rpc
 {
 
     /**
@@ -6364,7 +6361,7 @@ class ResizeClusterV2 extends V20160408Rpc
  * @method string getInitCustomHiveMetaDB()
  * @method $this withInitCustomHiveMetaDB($value)
  */
-class CreateClusterV2 extends V20160408Rpc
+class CreateClusterV2 extends Rpc
 {
 
     /**
@@ -6498,7 +6495,7 @@ class CreateClusterV2 extends V20160408Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  */
-class DescribeClusterOpLog extends V20160408Rpc
+class DescribeClusterOpLog extends Rpc
 {
 }
 
@@ -6510,7 +6507,7 @@ class DescribeClusterOpLog extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class TerminateClusterOperation extends V20160408Rpc
+class TerminateClusterOperation extends Rpc
 {
 }
 
@@ -6522,7 +6519,7 @@ class TerminateClusterOperation extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListDependedService extends V20160408Rpc
+class ListDependedService extends Rpc
 {
 }
 
@@ -6532,7 +6529,7 @@ class ListDependedService extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterBasicInfo extends V20160408Rpc
+class DescribeClusterBasicInfo extends Rpc
 {
 }
 
@@ -6558,7 +6555,7 @@ class DescribeClusterBasicInfo extends V20160408Rpc
  * @method string getComponentStatus()
  * @method $this withComponentStatus($value)
  */
-class ListClusterHostComponent extends V20160408Rpc
+class ListClusterHostComponent extends Rpc
 {
 }
 
@@ -6587,7 +6584,7 @@ class ListClusterHostComponent extends V20160408Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class ListClusterHost extends V20160408Rpc
+class ListClusterHost extends Rpc
 {
 
     /**
@@ -6616,7 +6613,7 @@ class ListClusterHost extends V20160408Rpc
  * @method string getConfigVersion()
  * @method $this withConfigVersion($value)
  */
-class DescribeClusterServiceConfigHistory extends V20160408Rpc
+class DescribeClusterServiceConfigHistory extends Rpc
 {
 }
 
@@ -6628,7 +6625,7 @@ class DescribeClusterServiceConfigHistory extends V20160408Rpc
  * @method string getServiceNameList()
  * @method $this withServiceNameList($value)
  */
-class ListRequiredService extends V20160408Rpc
+class ListRequiredService extends Rpc
 {
 }
 
@@ -6640,7 +6637,7 @@ class ListRequiredService extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DescribeClusterService extends V20160408Rpc
+class DescribeClusterService extends Rpc
 {
 }
 
@@ -6679,7 +6676,7 @@ class DescribeClusterService extends V20160408Rpc
  * @method string getTurnOnMaintenanceMode()
  * @method $this withTurnOnMaintenanceMode($value)
  */
-class RunClusterServiceAction extends V20160408Rpc
+class RunClusterServiceAction extends Rpc
 {
 
     /**
@@ -6721,7 +6718,7 @@ class RunClusterServiceAction extends V20160408Rpc
  * @method string getConfigParams()
  * @method $this withConfigParams($value)
  */
-class ModifyClusterServiceConfig extends V20160408Rpc
+class ModifyClusterServiceConfig extends Rpc
 {
 
     /**
@@ -6750,7 +6747,7 @@ class ModifyClusterServiceConfig extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListClusterService extends V20160408Rpc
+class ListClusterService extends Rpc
 {
 }
 
@@ -6768,7 +6765,7 @@ class ListClusterService extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListClusterOperation extends V20160408Rpc
+class ListClusterOperation extends Rpc
 {
 }
 
@@ -6786,7 +6783,7 @@ class ListClusterOperation extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListClusterOperationHost extends V20160408Rpc
+class ListClusterOperationHost extends Rpc
 {
 }
 
@@ -6806,7 +6803,7 @@ class ListClusterOperationHost extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class ListClusterOperationHostTask extends V20160408Rpc
+class ListClusterOperationHostTask extends Rpc
 {
 }
 
@@ -6826,7 +6823,7 @@ class ListClusterOperationHostTask extends V20160408Rpc
  * @method string getConfigVersion()
  * @method $this withConfigVersion($value)
  */
-class DescribeClusterServiceConfig extends V20160408Rpc
+class DescribeClusterServiceConfig extends Rpc
 {
 }
 
@@ -6844,7 +6841,7 @@ class DescribeClusterServiceConfig extends V20160408Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeClusterOperationHostTaskLog extends V20160408Rpc
+class DescribeClusterOperationHostTaskLog extends Rpc
 {
 }
 
@@ -6857,7 +6854,7 @@ class DescribeClusterOperationHostTaskLog extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AddClusterService extends V20160408Rpc
+class AddClusterService extends Rpc
 {
 
     /**
@@ -6882,7 +6879,7 @@ class AddClusterService extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class CancelOrder extends V20160408Rpc
+class CancelOrder extends Rpc
 {
 }
 
@@ -6894,7 +6891,7 @@ class CancelOrder extends V20160408Rpc
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class MetastoreSearchTables extends V20160408Rpc
+class MetastoreSearchTables extends Rpc
 {
 }
 
@@ -6906,7 +6903,7 @@ class MetastoreSearchTables extends V20160408Rpc
  * @method string getTableName()
  * @method $this withTableName($value)
  */
-class MetastoreDataPreview extends V20160408Rpc
+class MetastoreDataPreview extends Rpc
 {
 }
 
@@ -6916,7 +6913,7 @@ class MetastoreDataPreview extends V20160408Rpc
  * @method string getNoteId()
  * @method $this withNoteId($value)
  */
-class RunNoteParagraphs extends V20160408Rpc
+class RunNoteParagraphs extends Rpc
 {
 }
 
@@ -6928,7 +6925,7 @@ class RunNoteParagraphs extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class StopParagraph extends V20160408Rpc
+class StopParagraph extends Rpc
 {
 }
 
@@ -6942,7 +6939,7 @@ class StopParagraph extends V20160408Rpc
  * @method string getText()
  * @method $this withText($value)
  */
-class RunParagraph extends V20160408Rpc
+class RunParagraph extends Rpc
 {
 }
 
@@ -6954,7 +6951,7 @@ class RunParagraph extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeParagraph extends V20160408Rpc
+class DescribeParagraph extends Rpc
 {
 }
 
@@ -6964,7 +6961,7 @@ class DescribeParagraph extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteNote extends V20160408Rpc
+class DeleteNote extends Rpc
 {
 }
 
@@ -6976,7 +6973,7 @@ class DeleteNote extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteParagraph extends V20160408Rpc
+class DeleteParagraph extends Rpc
 {
 }
 
@@ -6992,7 +6989,7 @@ class DeleteParagraph extends V20160408Rpc
  * @method string getDatabaseId()
  * @method $this withDatabaseId($value)
  */
-class MetastoreDropTable extends V20160408Rpc
+class MetastoreDropTable extends Rpc
 {
 }
 
@@ -7008,7 +7005,7 @@ class MetastoreDropTable extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class MetastoreListDatabases extends V20160408Rpc
+class MetastoreListDatabases extends Rpc
 {
 }
 
@@ -7030,7 +7027,7 @@ class MetastoreListDatabases extends V20160408Rpc
  * @method string getFuzzyTableName()
  * @method $this withFuzzyTableName($value)
  */
-class MetastoreListTables extends V20160408Rpc
+class MetastoreListTables extends Rpc
 {
 }
 
@@ -7042,7 +7039,7 @@ class MetastoreListTables extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class MetastoreDescribeDatabase extends V20160408Rpc
+class MetastoreDescribeDatabase extends Rpc
 {
 }
 
@@ -7058,7 +7055,7 @@ class MetastoreDescribeDatabase extends V20160408Rpc
  * @method string getDatabaseId()
  * @method $this withDatabaseId($value)
  */
-class MetastoreDescribeTable extends V20160408Rpc
+class MetastoreDescribeTable extends Rpc
 {
 }
 
@@ -7070,7 +7067,7 @@ class MetastoreDescribeTable extends V20160408Rpc
  * @method string getDatabaseId()
  * @method $this withDatabaseId($value)
  */
-class MetastoreDropDatabase extends V20160408Rpc
+class MetastoreDropDatabase extends Rpc
 {
 }
 
@@ -7092,7 +7089,7 @@ class MetastoreDropDatabase extends V20160408Rpc
  * @method string getClusterBizId()
  * @method $this withClusterBizId($value)
  */
-class MetastoreCreateDatabase extends V20160408Rpc
+class MetastoreCreateDatabase extends Rpc
 {
 }
 
@@ -7118,7 +7115,7 @@ class MetastoreCreateDatabase extends V20160408Rpc
  * @method string getDatabaseId()
  * @method $this withDatabaseId($value)
  */
-class MetastoreCreateTable extends V20160408Rpc
+class MetastoreCreateTable extends Rpc
 {
 
     /**
@@ -7162,7 +7159,7 @@ class MetastoreCreateTable extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DetachClusterForNote extends V20160408Rpc
+class DetachClusterForNote extends Rpc
 {
 }
 
@@ -7174,7 +7171,7 @@ class DetachClusterForNote extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class AttachClusterForNote extends V20160408Rpc
+class AttachClusterForNote extends Rpc
 {
 }
 
@@ -7188,7 +7185,7 @@ class AttachClusterForNote extends V20160408Rpc
  * @method string getText()
  * @method $this withText($value)
  */
-class SaveParagraph extends V20160408Rpc
+class SaveParagraph extends Rpc
 {
 }
 
@@ -7196,7 +7193,7 @@ class SaveParagraph extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListNotes extends V20160408Rpc
+class ListNotes extends Rpc
 {
 }
 
@@ -7206,7 +7203,7 @@ class ListNotes extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeNote extends V20160408Rpc
+class DescribeNote extends Rpc
 {
 }
 
@@ -7220,7 +7217,7 @@ class DescribeNote extends V20160408Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateNote extends V20160408Rpc
+class CreateNote extends Rpc
 {
 }
 
@@ -7232,7 +7229,7 @@ class CreateNote extends V20160408Rpc
  * @method string getText()
  * @method $this withText($value)
  */
-class CreateParagraph extends V20160408Rpc
+class CreateParagraph extends Rpc
 {
 }
 
@@ -7244,7 +7241,7 @@ class CreateParagraph extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class RetryExecutionPlan extends V20160408Rpc
+class RetryExecutionPlan extends Rpc
 {
 }
 
@@ -7252,7 +7249,7 @@ class RetryExecutionPlan extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListJobExecutionInstanceTrend extends V20160408Rpc
+class ListJobExecutionInstanceTrend extends Rpc
 {
 }
 
@@ -7260,7 +7257,7 @@ class ListJobExecutionInstanceTrend extends V20160408Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  */
-class ListExecutionPlanInstanceTrend extends V20160408Rpc
+class ListExecutionPlanInstanceTrend extends Rpc
 {
 }
 
@@ -7270,7 +7267,7 @@ class ListExecutionPlanInstanceTrend extends V20160408Rpc
  * @method string getCount()
  * @method $this withCount($value)
  */
-class ListFailureJobExecutionInstances extends V20160408Rpc
+class ListFailureJobExecutionInstances extends Rpc
 {
 }
 
@@ -7321,7 +7318,7 @@ class ListFailureJobExecutionInstances extends V20160408Rpc
  * @method string getLogEnable()
  * @method $this withLogEnable($value)
  */
-class ModifyExecutionPlanClusterInfo extends V20160408Rpc
+class ModifyExecutionPlanClusterInfo extends Rpc
 {
 
     /**
@@ -7385,7 +7382,7 @@ class ModifyExecutionPlanClusterInfo extends V20160408Rpc
  * @method $this withId($value)
  * @method array getJobIdList()
  */
-class ModifyExecutionPlanJobInfo extends V20160408Rpc
+class ModifyExecutionPlanJobInfo extends Rpc
 {
 
     /**
@@ -7422,7 +7419,7 @@ class ModifyExecutionPlanJobInfo extends V20160408Rpc
  * @method string getDayOfMonth()
  * @method $this withDayOfMonth($value)
  */
-class ModifyExecutionPlanScheduleInfo extends V20160408Rpc
+class ModifyExecutionPlanScheduleInfo extends Rpc
 {
 }
 
@@ -7436,7 +7433,7 @@ class ModifyExecutionPlanScheduleInfo extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ModifyExecutionPlanBasicInfo extends V20160408Rpc
+class ModifyExecutionPlanBasicInfo extends Rpc
 {
 }
 
@@ -7446,7 +7443,7 @@ class ModifyExecutionPlanBasicInfo extends V20160408Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class ListClusterScripts extends V20160408Rpc
+class ListClusterScripts extends Rpc
 {
 }
 
@@ -7456,7 +7453,7 @@ class ListClusterScripts extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeClusterScript extends V20160408Rpc
+class DescribeClusterScript extends Rpc
 {
 }
 
@@ -7466,7 +7463,7 @@ class DescribeClusterScript extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteClusterScript extends V20160408Rpc
+class DeleteClusterScript extends Rpc
 {
 }
 
@@ -7484,7 +7481,7 @@ class DeleteClusterScript extends V20160408Rpc
  * @method string getNodeIdList()
  * @method $this withNodeIdList($value)
  */
-class CreateClusterScript extends V20160408Rpc
+class CreateClusterScript extends Rpc
 {
 }
 
@@ -7494,7 +7491,7 @@ class CreateClusterScript extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class KillExecutionPlanInstance extends V20160408Rpc
+class KillExecutionPlanInstance extends Rpc
 {
 }
 
@@ -7506,7 +7503,7 @@ class KillExecutionPlanInstance extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ReleaseCluster extends V20160408Rpc
+class ReleaseCluster extends Rpc
 {
 }
 
@@ -7516,7 +7513,7 @@ class ReleaseCluster extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ResumeExecutionPlanScheduler extends V20160408Rpc
+class ResumeExecutionPlanScheduler extends Rpc
 {
 }
 
@@ -7528,7 +7525,7 @@ class ResumeExecutionPlanScheduler extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class RunExecutionPlan extends V20160408Rpc
+class RunExecutionPlan extends Rpc
 {
 }
 
@@ -7538,7 +7535,7 @@ class RunExecutionPlan extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class SuspendExecutionPlanScheduler extends V20160408Rpc
+class SuspendExecutionPlanScheduler extends Rpc
 {
 }
 
@@ -7556,7 +7553,7 @@ class SuspendExecutionPlanScheduler extends V20160408Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class ListJobs extends V20160408Rpc
+class ListJobs extends Rpc
 {
 }
 
@@ -7568,7 +7565,7 @@ class ListJobs extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ModifyClusterName extends V20160408Rpc
+class ModifyClusterName extends Rpc
 {
 }
 
@@ -7645,7 +7642,7 @@ class ModifyClusterName extends V20160408Rpc
  * @method string getLogEnable()
  * @method $this withLogEnable($value)
  */
-class ModifyExecutionPlan extends V20160408Rpc
+class ModifyExecutionPlan extends Rpc
 {
 
     /**
@@ -7755,7 +7752,7 @@ class ModifyExecutionPlan extends V20160408Rpc
  * @method string getFailAct()
  * @method $this withFailAct($value)
  */
-class ModifyJob extends V20160408Rpc
+class ModifyJob extends Rpc
 {
 }
 
@@ -7779,7 +7776,7 @@ class ModifyJob extends V20160408Rpc
  * @method string getMachineType()
  * @method $this withMachineType($value)
  */
-class ListClusters extends V20160408Rpc
+class ListClusters extends Rpc
 {
 
     /**
@@ -7827,7 +7824,7 @@ class ListClusters extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListExecutionPlanInstances extends V20160408Rpc
+class ListExecutionPlanInstances extends Rpc
 {
 
     /**
@@ -7882,7 +7879,7 @@ class ListExecutionPlanInstances extends V20160408Rpc
  * @method string getQueryType()
  * @method $this withQueryType($value)
  */
-class ListExecutionPlans extends V20160408Rpc
+class ListExecutionPlans extends Rpc
 {
 
     /**
@@ -7913,7 +7910,7 @@ class ListExecutionPlans extends V20160408Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobExecutionInstances extends V20160408Rpc
+class ListJobExecutionInstances extends Rpc
 {
 }
 
@@ -7923,7 +7920,7 @@ class ListJobExecutionInstances extends V20160408Rpc
  * @method string getJobInstanceId()
  * @method $this withJobInstanceId($value)
  */
-class ListJobInstanceWorkers extends V20160408Rpc
+class ListJobInstanceWorkers extends Rpc
 {
 }
 
@@ -7933,7 +7930,7 @@ class ListJobInstanceWorkers extends V20160408Rpc
  * @method string getJobInstanceId()
  * @method $this withJobInstanceId($value)
  */
-class KillExecutionJobInstance extends V20160408Rpc
+class KillExecutionJobInstance extends Rpc
 {
 }
 
@@ -7943,7 +7940,7 @@ class KillExecutionJobInstance extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteJob extends V20160408Rpc
+class DeleteJob extends Rpc
 {
 }
 
@@ -7953,7 +7950,7 @@ class DeleteJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeExecutionPlan extends V20160408Rpc
+class DescribeExecutionPlan extends Rpc
 {
 }
 
@@ -7963,7 +7960,7 @@ class DescribeExecutionPlan extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DescribeJob extends V20160408Rpc
+class DescribeJob extends Rpc
 {
 }
 
@@ -8036,7 +8033,7 @@ class DescribeJob extends V20160408Rpc
  * @method string getLogEnable()
  * @method $this withLogEnable($value)
  */
-class CreateExecutionPlan extends V20160408Rpc
+class CreateExecutionPlan extends Rpc
 {
 
     /**
@@ -8144,7 +8141,7 @@ class CreateExecutionPlan extends V20160408Rpc
  * @method string getFailAct()
  * @method $this withFailAct($value)
  */
-class CreateJob extends V20160408Rpc
+class CreateJob extends Rpc
 {
 }
 
@@ -8154,6 +8151,6 @@ class CreateJob extends V20160408Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteExecutionPlan extends V20160408Rpc
+class DeleteExecutionPlan extends Rpc
 {
 }

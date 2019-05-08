@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cloudesl\V20180801;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DeleteItemBySkuId deleteItemBySkuId(array $options = [])
  * @method PrepareCompany prepareCompany(array $options = [])
  * @method DescribeCompany describeCompany(array $options = [])
@@ -33,7 +30,7 @@ class CloudeslApiResolver
     use ApiResolverTrait;
 }
 
-class V20180801Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'cloudesl';
@@ -51,7 +48,7 @@ class V20180801Rpc extends Rpc
  * @method string getSkuId()
  * @method $this withSkuId($value)
  */
-class DeleteItemBySkuId extends V20180801Rpc
+class DeleteItemBySkuId extends Rpc
 {
 }
 
@@ -59,11 +56,11 @@ class DeleteItemBySkuId extends V20180801Rpc
  * @method string getPlatform()
  * @method $this withPlatform($value)
  */
-class PrepareCompany extends V20180801Rpc
+class PrepareCompany extends Rpc
 {
 }
 
-class DescribeCompany extends V20180801Rpc
+class DescribeCompany extends Rpc
 {
 }
 
@@ -85,7 +82,7 @@ class DescribeCompany extends V20180801Rpc
  * @method string getParentId()
  * @method $this withParentId($value)
  */
-class CreateStore extends V20180801Rpc
+class CreateStore extends Rpc
 {
 }
 
@@ -109,7 +106,7 @@ class CreateStore extends V20180801Rpc
  * @method string getAlarmStatus()
  * @method $this withAlarmStatus($value)
  */
-class DescribeAlarms extends V20180801Rpc
+class DescribeAlarms extends Rpc
 {
 }
 
@@ -117,7 +114,7 @@ class DescribeAlarms extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class DeleteStore extends V20180801Rpc
+class DeleteStore extends Rpc
 {
 }
 
@@ -137,7 +134,7 @@ class DeleteStore extends V20180801Rpc
  * @method string getBrand()
  * @method $this withBrand($value)
  */
-class UpdateStore extends V20180801Rpc
+class UpdateStore extends Rpc
 {
 }
 
@@ -159,7 +156,7 @@ class UpdateStore extends V20180801Rpc
  * @method string getFromDate()
  * @method $this withFromDate($value)
  */
-class DescribeStores extends V20180801Rpc
+class DescribeStores extends Rpc
 {
 }
 
@@ -168,7 +165,7 @@ class DescribeStores extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class BatchInsertItems extends V20180801Rpc
+class BatchInsertItems extends Rpc
 {
 
     /**
@@ -233,7 +230,7 @@ class BatchInsertItems extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class DeleteItem extends V20180801Rpc
+class DeleteItem extends Rpc
 {
 }
 
@@ -257,7 +254,7 @@ class DeleteItem extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class DescribeItems extends V20180801Rpc
+class DescribeItems extends Rpc
 {
 }
 
@@ -269,7 +266,7 @@ class DescribeItems extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class BindEslDevice extends V20180801Rpc
+class BindEslDevice extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class BindEslDevice extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class UnbindEslDevice extends V20180801Rpc
+class UnbindEslDevice extends Rpc
 {
 }
 
@@ -291,7 +288,7 @@ class UnbindEslDevice extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class DeleteEslDevice extends V20180801Rpc
+class DeleteEslDevice extends Rpc
 {
 }
 
@@ -303,7 +300,7 @@ class DeleteEslDevice extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class BindEslDeviceShelf extends V20180801Rpc
+class BindEslDeviceShelf extends Rpc
 {
 }
 
@@ -335,7 +332,7 @@ class BindEslDeviceShelf extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class DescribeEslDevices extends V20180801Rpc
+class DescribeEslDevices extends Rpc
 {
 }
 
@@ -345,7 +342,7 @@ class DescribeEslDevices extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class UnbindEslDeviceShelf extends V20180801Rpc
+class UnbindEslDeviceShelf extends Rpc
 {
 }
 
@@ -377,7 +374,7 @@ class UnbindEslDeviceShelf extends V20180801Rpc
  * @method string getItemBarCode()
  * @method $this withItemBarCode($value)
  */
-class DescribeUserOperationLog extends V20180801Rpc
+class DescribeUserOperationLog extends Rpc
 {
 }
 
@@ -389,6 +386,6 @@ class DescribeUserOperationLog extends V20180801Rpc
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class DescribeUserRamPolicy extends V20180801Rpc
+class DescribeUserRamPolicy extends Rpc
 {
 }

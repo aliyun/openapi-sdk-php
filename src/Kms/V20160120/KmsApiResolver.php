@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Kms\V20160120;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method UpdateAlias updateAlias(array $options = [])
  * @method UntagResource untagResource(array $options = [])
  * @method TagResource tagResource(array $options = [])
@@ -36,7 +33,7 @@ class KmsApiResolver
     use ApiResolverTrait;
 }
 
-class V20160120Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Kms';
@@ -60,7 +57,7 @@ class V20160120Rpc extends Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class UpdateAlias extends V20160120Rpc
+class UpdateAlias extends Rpc
 {
 }
 
@@ -70,7 +67,7 @@ class UpdateAlias extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class UntagResource extends V20160120Rpc
+class UntagResource extends Rpc
 {
 }
 
@@ -80,7 +77,7 @@ class UntagResource extends V20160120Rpc
  * @method string getTags()
  * @method $this withTags($value)
  */
-class TagResource extends V20160120Rpc
+class TagResource extends Rpc
 {
 }
 
@@ -90,7 +87,7 @@ class TagResource extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class ScheduleKeyDeletion extends V20160120Rpc
+class ScheduleKeyDeletion extends Rpc
 {
 }
 
@@ -98,7 +95,7 @@ class ScheduleKeyDeletion extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class ListResourceTags extends V20160120Rpc
+class ListResourceTags extends Rpc
 {
 }
 
@@ -108,7 +105,7 @@ class ListResourceTags extends V20160120Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListKeys extends V20160120Rpc
+class ListKeys extends Rpc
 {
 }
 
@@ -120,7 +117,7 @@ class ListKeys extends V20160120Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAliasesByKeyId extends V20160120Rpc
+class ListAliasesByKeyId extends Rpc
 {
 }
 
@@ -130,7 +127,7 @@ class ListAliasesByKeyId extends V20160120Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAliases extends V20160120Rpc
+class ListAliases extends Rpc
 {
 }
 
@@ -144,7 +141,7 @@ class ListAliases extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class ImportKeyMaterial extends V20160120Rpc
+class ImportKeyMaterial extends Rpc
 {
 }
 
@@ -158,7 +155,7 @@ class ImportKeyMaterial extends V20160120Rpc
  * @method string getNumberOfBytes()
  * @method $this withNumberOfBytes($value)
  */
-class GenerateDataKey extends V20160120Rpc
+class GenerateDataKey extends Rpc
 {
 }
 
@@ -170,7 +167,7 @@ class GenerateDataKey extends V20160120Rpc
  * @method string getWrappingKeySpec()
  * @method $this withWrappingKeySpec($value)
  */
-class GetParametersForImport extends V20160120Rpc
+class GetParametersForImport extends Rpc
 {
 }
 
@@ -182,7 +179,7 @@ class GetParametersForImport extends V20160120Rpc
  * @method string getPlaintext()
  * @method $this withPlaintext($value)
  */
-class Encrypt extends V20160120Rpc
+class Encrypt extends Rpc
 {
 }
 
@@ -190,7 +187,7 @@ class Encrypt extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class EnableKey extends V20160120Rpc
+class EnableKey extends Rpc
 {
 }
 
@@ -198,19 +195,11 @@ class EnableKey extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class DisableKey extends V20160120Rpc
+class DisableKey extends Rpc
 {
 }
 
-class DescribeRegions extends V20160120Rpc
-{
-}
-
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- */
-class DescribeKey extends V20160120Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -218,7 +207,15 @@ class DescribeKey extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class DeleteKeyMaterial extends V20160120Rpc
+class DescribeKey extends Rpc
+{
+}
+
+/**
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ */
+class DeleteKeyMaterial extends Rpc
 {
 }
 
@@ -226,7 +223,7 @@ class DeleteKeyMaterial extends V20160120Rpc
  * @method string getAliasName()
  * @method $this withAliasName($value)
  */
-class DeleteAlias extends V20160120Rpc
+class DeleteAlias extends Rpc
 {
 }
 
@@ -236,7 +233,7 @@ class DeleteAlias extends V20160120Rpc
  * @method string getCiphertextBlob()
  * @method $this withCiphertextBlob($value)
  */
-class Decrypt extends V20160120Rpc
+class Decrypt extends Rpc
 {
 }
 
@@ -248,7 +245,7 @@ class Decrypt extends V20160120Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class CreateKey extends V20160120Rpc
+class CreateKey extends Rpc
 {
 }
 
@@ -258,7 +255,7 @@ class CreateKey extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class CreateAlias extends V20160120Rpc
+class CreateAlias extends Rpc
 {
 }
 
@@ -266,6 +263,6 @@ class CreateAlias extends V20160120Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class CancelKeyDeletion extends V20160120Rpc
+class CancelKeyDeletion extends Rpc
 {
 }

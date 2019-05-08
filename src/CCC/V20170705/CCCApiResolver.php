@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CCC\V20170705;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
  * @method SaveStats saveStats(array $options = [])
  * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
@@ -158,7 +155,7 @@ class CCCApiResolver
     use ApiResolverTrait;
 }
 
-class V20170705Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'CCC';
@@ -193,7 +190,7 @@ class V20170705Rpc extends Rpc
  * @method string getCallerNumber()
  * @method $this withCallerNumber($value)
  */
-class SaveWebRTCStats extends V20170705Rpc
+class SaveWebRTCStats extends Rpc
 {
 }
 
@@ -217,11 +214,11 @@ class SaveWebRTCStats extends V20170705Rpc
  * @method string getCallerNumber()
  * @method $this withCallerNumber($value)
  */
-class SaveStats extends V20170705Rpc
+class SaveStats extends Rpc
 {
 }
 
-class ListInstancesOfUser extends V20170705Rpc
+class ListInstancesOfUser extends Rpc
 {
 }
 
@@ -233,7 +230,7 @@ class ListInstancesOfUser extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class PublishPredictiveJobGroup extends V20170705Rpc
+class PublishPredictiveJobGroup extends Rpc
 {
 }
 
@@ -256,7 +253,7 @@ class PublishPredictiveJobGroup extends V20170705Rpc
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
  */
-class CreatePredictiveJobGroup extends V20170705Rpc
+class CreatePredictiveJobGroup extends Rpc
 {
 
     /**
@@ -284,7 +281,7 @@ class CreatePredictiveJobGroup extends V20170705Rpc
  * @method string getOperationType()
  * @method $this withOperationType($value)
  */
-class ModifySkillGroupOutboundNumbers extends V20170705Rpc
+class ModifySkillGroupOutboundNumbers extends Rpc
 {
 
     /**
@@ -309,7 +306,7 @@ class ModifySkillGroupOutboundNumbers extends V20170705Rpc
  * @method string getContactId()
  * @method $this withContactId($value)
  */
-class ListCallEventDetailByContactId extends V20170705Rpc
+class ListCallEventDetailByContactId extends Rpc
 {
 }
 
@@ -325,7 +322,7 @@ class ListCallEventDetailByContactId extends V20170705Rpc
  * @method string getCallee()
  * @method $this withCallee($value)
  */
-class DialEx extends V20170705Rpc
+class DialEx extends Rpc
 {
 }
 
@@ -347,7 +344,7 @@ class DialEx extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListPredictiveJobGroups extends V20170705Rpc
+class ListPredictiveJobGroups extends Rpc
 {
 }
 
@@ -359,7 +356,7 @@ class ListPredictiveJobGroups extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class GetJobsProgress extends V20170705Rpc
+class GetJobsProgress extends Rpc
 {
 }
 
@@ -371,7 +368,7 @@ class GetJobsProgress extends V20170705Rpc
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
-class GetContactInfoByOutboundTaskId extends V20170705Rpc
+class GetContactInfoByOutboundTaskId extends Rpc
 {
 }
 
@@ -379,7 +376,7 @@ class GetContactInfoByOutboundTaskId extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListVoiceAppraise extends V20170705Rpc
+class ListVoiceAppraise extends Rpc
 {
 }
 
@@ -392,7 +389,7 @@ class ListVoiceAppraise extends V20170705Rpc
  * @method $this withIsAppraise($value)
  * @method string getContent()
  */
-class CreateVoiceAppraise extends V20170705Rpc
+class CreateVoiceAppraise extends Rpc
 {
 
     /**
@@ -419,7 +416,7 @@ class CreateVoiceAppraise extends V20170705Rpc
  * @method array getEvent()
  * @method array getRamId()
  */
-class ListAgentEvents extends V20170705Rpc
+class ListAgentEvents extends Rpc
 {
 
     /**
@@ -464,7 +461,7 @@ class ListAgentEvents extends V20170705Rpc
  * @method string getCalleeNumber()
  * @method $this withCalleeNumber($value)
  */
-class PickOutboundNumbersByTags extends V20170705Rpc
+class PickOutboundNumbersByTags extends Rpc
 {
 
     /**
@@ -519,7 +516,7 @@ class PickOutboundNumbersByTags extends V20170705Rpc
  * @method string getFileName()
  * @method $this withFileName($value)
  */
-class GetJobFileUploadUrl extends V20170705Rpc
+class GetJobFileUploadUrl extends Rpc
 {
 }
 
@@ -533,7 +530,7 @@ class GetJobFileUploadUrl extends V20170705Rpc
  * @method array getSkillGroupId()
  * @method array getPhoneNumber()
  */
-class AddBulkPhoneNumbers extends V20170705Rpc
+class AddBulkPhoneNumbers extends Rpc
 {
 
     /**
@@ -577,7 +574,7 @@ class AddBulkPhoneNumbers extends V20170705Rpc
  * @method string getInstanceDescription()
  * @method $this withInstanceDescription($value)
  */
-class CreateCabInstance extends V20170705Rpc
+class CreateCabInstance extends Rpc
 {
 }
 
@@ -599,7 +596,7 @@ class CreateCabInstance extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListIvrTrackingDetail extends V20170705Rpc
+class ListIvrTrackingDetail extends Rpc
 {
 }
 
@@ -612,7 +609,7 @@ class ListIvrTrackingDetail extends V20170705Rpc
  * @method string getCalleeNumber()
  * @method $this withCalleeNumber($value)
  */
-class PickOutboundNumbers extends V20170705Rpc
+class PickOutboundNumbers extends Rpc
 {
 
     /**
@@ -639,7 +636,7 @@ class PickOutboundNumbers extends V20170705Rpc
  * @method string getMockResponse()
  * @method $this withMockResponse($value)
  */
-class QueryRedialIndicator extends V20170705Rpc
+class QueryRedialIndicator extends Rpc
 {
 }
 
@@ -651,7 +648,7 @@ class QueryRedialIndicator extends V20170705Rpc
  * @method string getDn()
  * @method $this withDn($value)
  */
-class GetAgentState extends V20170705Rpc
+class GetAgentState extends Rpc
 {
 }
 
@@ -663,7 +660,7 @@ class GetAgentState extends V20170705Rpc
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
-class AddNumberToSkillGroup extends V20170705Rpc
+class AddNumberToSkillGroup extends Rpc
 {
 }
 
@@ -675,7 +672,7 @@ class AddNumberToSkillGroup extends V20170705Rpc
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
-class RemoveNumberFromSkillGroup extends V20170705Rpc
+class RemoveNumberFromSkillGroup extends Rpc
 {
 }
 
@@ -699,7 +696,7 @@ class RemoveNumberFromSkillGroup extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListRecordingOfDualTrack extends V20170705Rpc
+class ListRecordingOfDualTrack extends Rpc
 {
 }
 
@@ -710,7 +707,7 @@ class ListRecordingOfDualTrack extends V20170705Rpc
  * @method $this withSkillGroupId($value)
  * @method array getUserId()
  */
-class RemoveUsersFromSkillGroup extends V20170705Rpc
+class RemoveUsersFromSkillGroup extends Rpc
 {
 
     /**
@@ -733,7 +730,7 @@ class RemoveUsersFromSkillGroup extends V20170705Rpc
  * @method string getIntervalType()
  * @method $this withIntervalType($value)
  */
-class ListCallMeasureSummaryReports extends V20170705Rpc
+class ListCallMeasureSummaryReports extends Rpc
 {
 }
 
@@ -751,7 +748,7 @@ class ListCallMeasureSummaryReports extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetCallMeasureSummaryReport extends V20170705Rpc
+class GetCallMeasureSummaryReport extends Rpc
 {
 }
 
@@ -763,7 +760,7 @@ class GetCallMeasureSummaryReport extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class CallOnlinePrivacyNumber extends V20170705Rpc
+class CallOnlinePrivacyNumber extends Rpc
 {
 }
 
@@ -775,7 +772,7 @@ class CallOnlinePrivacyNumber extends V20170705Rpc
  * @method string getContactId()
  * @method $this withContactId($value)
  */
-class ModifyPrivacyNumberCallDetail extends V20170705Rpc
+class ModifyPrivacyNumberCallDetail extends Rpc
 {
 }
 
@@ -797,7 +794,7 @@ class ModifyPrivacyNumberCallDetail extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListPrivacyNumberCallDetails extends V20170705Rpc
+class ListPrivacyNumberCallDetails extends Rpc
 {
 }
 
@@ -807,7 +804,7 @@ class ListPrivacyNumberCallDetails extends V20170705Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class DeleteMedia extends V20170705Rpc
+class DeleteMedia extends Rpc
 {
 }
 
@@ -831,7 +828,7 @@ class DeleteMedia extends V20170705Rpc
  * @method string getOssFileName()
  * @method $this withOssFileName($value)
  */
-class ModifyMedia extends V20170705Rpc
+class ModifyMedia extends Rpc
 {
 }
 
@@ -849,7 +846,7 @@ class ModifyMedia extends V20170705Rpc
  * @method string getContent()
  * @method $this withContent($value)
  */
-class PreModifyMedia extends V20170705Rpc
+class PreModifyMedia extends Rpc
 {
 }
 
@@ -863,7 +860,7 @@ class PreModifyMedia extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListMedias extends V20170705Rpc
+class ListMedias extends Rpc
 {
 }
 
@@ -887,7 +884,7 @@ class ListMedias extends V20170705Rpc
  * @method string getOssFileName()
  * @method $this withOssFileName($value)
  */
-class CreateMedia extends V20170705Rpc
+class CreateMedia extends Rpc
 {
 }
 
@@ -905,7 +902,7 @@ class CreateMedia extends V20170705Rpc
  * @method string getContent()
  * @method $this withContent($value)
  */
-class PreCreateMedia extends V20170705Rpc
+class PreCreateMedia extends Rpc
 {
 }
 
@@ -913,7 +910,7 @@ class PreCreateMedia extends V20170705Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateCCCPostOrder extends V20170705Rpc
+class CreateCCCPostOrder extends Rpc
 {
 }
 
@@ -927,7 +924,7 @@ class CreateCCCPostOrder extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class FindUsers extends V20170705Rpc
+class FindUsers extends Rpc
 {
 }
 
@@ -942,7 +939,7 @@ class FindUsers extends V20170705Rpc
  * @method string getProducerId()
  * @method $this withProducerId($value)
  */
-class ModifyNotificationConfig extends V20170705Rpc
+class ModifyNotificationConfig extends Rpc
 {
 
     /**
@@ -972,7 +969,7 @@ class ModifyNotificationConfig extends V20170705Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ModifySkillGroupOfUser extends V20170705Rpc
+class ModifySkillGroupOfUser extends Rpc
 {
 
     /**
@@ -1027,7 +1024,7 @@ class ModifySkillGroupOfUser extends V20170705Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListOutboundPhoneNumberOfUser extends V20170705Rpc
+class ListOutboundPhoneNumberOfUser extends Rpc
 {
 }
 
@@ -1035,7 +1032,7 @@ class ListOutboundPhoneNumberOfUser extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetInstanceState extends V20170705Rpc
+class GetInstanceState extends Rpc
 {
 }
 
@@ -1049,7 +1046,7 @@ class GetInstanceState extends V20170705Rpc
  * @method string getCallee()
  * @method $this withCallee($value)
  */
-class SimpleDial extends V20170705Rpc
+class SimpleDial extends Rpc
 {
 }
 
@@ -1070,7 +1067,7 @@ class SimpleDial extends V20170705Rpc
  * @method $this withDirectoryId($value)
  * @method array getAdminRamId()
  */
-class CreateInstance extends V20170705Rpc
+class CreateInstance extends Rpc
 {
 
     /**
@@ -1123,7 +1120,7 @@ class CreateInstance extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class DeleteInstance extends V20170705Rpc
+class DeleteInstance extends Rpc
 {
 }
 
@@ -1131,7 +1128,7 @@ class DeleteInstance extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetInstance extends V20170705Rpc
+class GetInstance extends Rpc
 {
 }
 
@@ -1147,7 +1144,7 @@ class GetInstance extends V20170705Rpc
  * @method $this withType($value)
  * @method string getContent()
  */
-class CreateContactFlow extends V20170705Rpc
+class CreateContactFlow extends Rpc
 {
 
     /**
@@ -1185,7 +1182,7 @@ class CreateContactFlow extends V20170705Rpc
  * @method $this withContactFlowVersionId($value)
  * @method string getContent()
  */
-class CommitContactFlowVersionModification extends V20170705Rpc
+class CommitContactFlowVersionModification extends Rpc
 {
 
     /**
@@ -1223,7 +1220,7 @@ class CommitContactFlowVersionModification extends V20170705Rpc
  * @method string getUseTianGong()
  * @method $this withUseTianGong($value)
  */
-class PublishContactFlowVersion extends V20170705Rpc
+class PublishContactFlowVersion extends Rpc
 {
 }
 
@@ -1233,7 +1230,7 @@ class PublishContactFlowVersion extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetPredictiveJob extends V20170705Rpc
+class GetPredictiveJob extends Rpc
 {
 }
 
@@ -1243,7 +1240,7 @@ class GetPredictiveJob extends V20170705Rpc
  * @method string getOutboundTaskId()
  * @method $this withOutboundTaskId($value)
  */
-class GetContactIdentifyByOutBoundTaskId extends V20170705Rpc
+class GetContactIdentifyByOutBoundTaskId extends Rpc
 {
 }
 
@@ -1257,7 +1254,7 @@ class GetContactIdentifyByOutBoundTaskId extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListSkillGroupStates extends V20170705Rpc
+class ListSkillGroupStates extends Rpc
 {
 }
 
@@ -1269,7 +1266,7 @@ class ListSkillGroupStates extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetInstanceSummaryReportSinceMidnight extends V20170705Rpc
+class GetInstanceSummaryReportSinceMidnight extends Rpc
 {
 }
 
@@ -1287,7 +1284,7 @@ class GetInstanceSummaryReportSinceMidnight extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetInstanceSummaryReportByInterval extends V20170705Rpc
+class GetInstanceSummaryReportByInterval extends Rpc
 {
 }
 
@@ -1303,7 +1300,7 @@ class GetInstanceSummaryReportByInterval extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetInstanceSummaryReport extends V20170705Rpc
+class GetInstanceSummaryReport extends Rpc
 {
 }
 
@@ -1323,7 +1320,7 @@ class GetInstanceSummaryReport extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListSkillGroupSummaryReportsByInterval extends V20170705Rpc
+class ListSkillGroupSummaryReportsByInterval extends Rpc
 {
 }
 
@@ -1337,7 +1334,7 @@ class ListSkillGroupSummaryReportsByInterval extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListSkillGroupSummaryReportsSinceMidnight extends V20170705Rpc
+class ListSkillGroupSummaryReportsSinceMidnight extends Rpc
 {
 }
 
@@ -1353,7 +1350,7 @@ class ListSkillGroupSummaryReportsSinceMidnight extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAgentSummaryReportsSinceMidnight extends V20170705Rpc
+class ListAgentSummaryReportsSinceMidnight extends Rpc
 {
 }
 
@@ -1371,7 +1368,7 @@ class ListAgentSummaryReportsSinceMidnight extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListSkillGroupSummaryReports extends V20170705Rpc
+class ListSkillGroupSummaryReports extends Rpc
 {
 }
 
@@ -1393,7 +1390,7 @@ class ListSkillGroupSummaryReports extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAgentSummaryReportsByInterval extends V20170705Rpc
+class ListAgentSummaryReportsByInterval extends Rpc
 {
 }
 
@@ -1413,7 +1410,7 @@ class ListAgentSummaryReportsByInterval extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAgentSummaryReports extends V20170705Rpc
+class ListAgentSummaryReports extends Rpc
 {
 }
 
@@ -1431,7 +1428,7 @@ class ListAgentSummaryReports extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListAgentStates extends V20170705Rpc
+class ListAgentStates extends Rpc
 {
 }
 
@@ -1440,7 +1437,7 @@ class ListAgentStates extends V20170705Rpc
  * @method $this withInstanceId($value)
  * @method array getScenario()
  */
-class GetSmsConfig extends V20170705Rpc
+class GetSmsConfig extends Rpc
 {
 
     /**
@@ -1473,7 +1470,7 @@ class GetSmsConfig extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListRecentCallRecords extends V20170705Rpc
+class ListRecentCallRecords extends Rpc
 {
 }
 
@@ -1487,7 +1484,7 @@ class ListRecentCallRecords extends V20170705Rpc
  * @method string getTemplateParam()
  * @method $this withTemplateParam($value)
  */
-class SendPredefinedShortMessage extends V20170705Rpc
+class SendPredefinedShortMessage extends Rpc
 {
 }
 
@@ -1503,7 +1500,7 @@ class SendPredefinedShortMessage extends V20170705Rpc
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
-class LaunchShortMessageAppraise extends V20170705Rpc
+class LaunchShortMessageAppraise extends Rpc
 {
 }
 
@@ -1517,7 +1514,7 @@ class LaunchShortMessageAppraise extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetConversationDetailByContactId extends V20170705Rpc
+class GetConversationDetailByContactId extends Rpc
 {
 }
 
@@ -1527,7 +1524,7 @@ class GetConversationDetailByContactId extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class DeleteJobGroup extends V20170705Rpc
+class DeleteJobGroup extends Rpc
 {
 }
 
@@ -1543,7 +1540,7 @@ class DeleteJobGroup extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class ModifyScenario extends V20170705Rpc
+class ModifyScenario extends Rpc
 {
 }
 
@@ -1567,7 +1564,7 @@ class ModifyScenario extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListPredictiveJobStatus extends V20170705Rpc
+class ListPredictiveJobStatus extends Rpc
 {
 }
 
@@ -1580,7 +1577,7 @@ class ListPredictiveJobStatus extends V20170705Rpc
  * @method $this withStrategyJson($value)
  * @method array getJobsJson()
  */
-class CreatePredictiveJobs extends V20170705Rpc
+class CreatePredictiveJobs extends Rpc
 {
 
     /**
@@ -1608,7 +1605,7 @@ class CreatePredictiveJobs extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class CancelPredictiveJobs extends V20170705Rpc
+class CancelPredictiveJobs extends Rpc
 {
 
     /**
@@ -1633,7 +1630,7 @@ class CancelPredictiveJobs extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class GetJobTemplateDownloadParams extends V20170705Rpc
+class GetJobTemplateDownloadParams extends Rpc
 {
 }
 
@@ -1643,7 +1640,7 @@ class GetJobTemplateDownloadParams extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class GetScenario extends V20170705Rpc
+class GetScenario extends Rpc
 {
 }
 
@@ -1655,7 +1652,7 @@ class GetScenario extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class PublishSurvey extends V20170705Rpc
+class PublishSurvey extends Rpc
 {
 }
 
@@ -1685,7 +1682,7 @@ class PublishSurvey extends V20170705Rpc
  * @method string getFlowId()
  * @method $this withFlowId($value)
  */
-class ModifySurvey extends V20170705Rpc
+class ModifySurvey extends Rpc
 {
 }
 
@@ -1695,19 +1692,7 @@ class ModifySurvey extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class ListSurveys extends V20170705Rpc
-{
-}
-
-/**
- * @method string getSurveyId()
- * @method $this withSurveyId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getScenarioId()
- * @method $this withScenarioId($value)
- */
-class GetSurvey extends V20170705Rpc
+class ListSurveys extends Rpc
 {
 }
 
@@ -1719,7 +1704,19 @@ class GetSurvey extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class DeleteSurvey extends V20170705Rpc
+class GetSurvey extends Rpc
+{
+}
+
+/**
+ * @method string getSurveyId()
+ * @method $this withSurveyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class DeleteSurvey extends Rpc
 {
 }
 
@@ -1745,7 +1742,7 @@ class DeleteSurvey extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class CreateSurvey extends V20170705Rpc
+class CreateSurvey extends Rpc
 {
 }
 
@@ -1761,7 +1758,7 @@ class CreateSurvey extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListBasicStatisticsReportSubItems extends V20170705Rpc
+class ListBasicStatisticsReportSubItems extends Rpc
 {
 }
 
@@ -1775,7 +1772,7 @@ class ListBasicStatisticsReportSubItems extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListUnreachableContacts extends V20170705Rpc
+class ListUnreachableContacts extends Rpc
 {
 }
 
@@ -1785,7 +1782,7 @@ class ListUnreachableContacts extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class DownloadUnreachableContacts extends V20170705Rpc
+class DownloadUnreachableContacts extends Rpc
 {
 }
 
@@ -1795,7 +1792,7 @@ class DownloadUnreachableContacts extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class DownloadOriginalStatisticsReport extends V20170705Rpc
+class DownloadOriginalStatisticsReport extends Rpc
 {
 }
 
@@ -1805,7 +1802,7 @@ class DownloadOriginalStatisticsReport extends V20170705Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListPrivilegesOfUser extends V20170705Rpc
+class ListPrivilegesOfUser extends Rpc
 {
 }
 
@@ -1823,7 +1820,7 @@ class ListPrivilegesOfUser extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GenerateAgentStatisticReport extends V20170705Rpc
+class GenerateAgentStatisticReport extends Rpc
 {
 }
 
@@ -1839,7 +1836,7 @@ class GenerateAgentStatisticReport extends V20170705Rpc
  * @method string getWorkflowId()
  * @method $this withWorkflowId($value)
  */
-class StartBack2BackCall extends V20170705Rpc
+class StartBack2BackCall extends Rpc
 {
 }
 
@@ -1853,7 +1850,7 @@ class StartBack2BackCall extends V20170705Rpc
  * @method string getCalleeAgent()
  * @method $this withCalleeAgent($value)
  */
-class TwoPartiesCall extends V20170705Rpc
+class TwoPartiesCall extends Rpc
 {
 }
 
@@ -1871,7 +1868,7 @@ class TwoPartiesCall extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class GetAgentData extends V20170705Rpc
+class GetAgentData extends Rpc
 {
 }
 
@@ -1881,11 +1878,11 @@ class GetAgentData extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class GetJobGroup extends V20170705Rpc
+class GetJobGroup extends Rpc
 {
 }
 
-class ListScenarioTemplates extends V20170705Rpc
+class ListScenarioTemplates extends Rpc
 {
 }
 
@@ -1901,7 +1898,7 @@ class ListScenarioTemplates extends V20170705Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
-class CreateScenarioFromTemplate extends V20170705Rpc
+class CreateScenarioFromTemplate extends Rpc
 {
 }
 
@@ -1917,7 +1914,7 @@ class CreateScenarioFromTemplate extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class SuspendJobs extends V20170705Rpc
+class SuspendJobs extends Rpc
 {
 
     /**
@@ -1957,7 +1954,7 @@ class SuspendJobs extends V20170705Rpc
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
-class SubmitBatchJobs extends V20170705Rpc
+class SubmitBatchJobs extends Rpc
 {
 }
 
@@ -1973,7 +1970,7 @@ class SubmitBatchJobs extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class ResumeJobs extends V20170705Rpc
+class ResumeJobs extends Rpc
 {
 
     /**
@@ -2021,7 +2018,7 @@ class ResumeJobs extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobsByGroup extends V20170705Rpc
+class ListJobsByGroup extends Rpc
 {
 }
 
@@ -2042,7 +2039,7 @@ class ListJobsByGroup extends V20170705Rpc
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
  */
-class CreateBatchJobs extends V20170705Rpc
+class CreateBatchJobs extends Rpc
 {
 
     /**
@@ -2073,7 +2070,7 @@ class CreateBatchJobs extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class CancelJobs extends V20170705Rpc
+class CancelJobs extends Rpc
 {
 
     /**
@@ -2119,7 +2116,7 @@ class CancelJobs extends V20170705Rpc
  * @method $this withScenarioId($value)
  * @method array getJobsJson()
  */
-class AssignJobs extends V20170705Rpc
+class AssignJobs extends Rpc
 {
 
     /**
@@ -2159,7 +2156,7 @@ class AssignJobs extends V20170705Rpc
  * @method string getFileName()
  * @method $this withFileName($value)
  */
-class GetJobDataUploadParams extends V20170705Rpc
+class GetJobDataUploadParams extends Rpc
 {
 }
 
@@ -2169,7 +2166,7 @@ class GetJobDataUploadParams extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class LaunchAppraise extends V20170705Rpc
+class LaunchAppraise extends Rpc
 {
 }
 
@@ -2179,7 +2176,7 @@ class LaunchAppraise extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetTaskList extends V20170705Rpc
+class GetTaskList extends Rpc
 {
 }
 
@@ -2197,7 +2194,7 @@ class GetTaskList extends V20170705Rpc
  * @method string getQueryAll()
  * @method $this withQueryAll($value)
  */
-class GetJobList extends V20170705Rpc
+class GetJobList extends Rpc
 {
 }
 
@@ -2207,7 +2204,7 @@ class GetJobList extends V20170705Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetConversationList extends V20170705Rpc
+class GetConversationList extends Rpc
 {
 }
 
@@ -2217,7 +2214,7 @@ class GetConversationList extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetJob extends V20170705Rpc
+class GetJob extends Rpc
 {
 }
 
@@ -2225,7 +2222,7 @@ class GetJob extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListRealTimeAgent extends V20170705Rpc
+class ListRealTimeAgent extends Rpc
 {
 }
 
@@ -2234,7 +2231,7 @@ class ListRealTimeAgent extends V20170705Rpc
  * @method $this withInstanceId($value)
  * @method array getConfigItem()
  */
-class ListConfig extends V20170705Rpc
+class ListConfig extends Rpc
 {
 
     /**
@@ -2257,7 +2254,7 @@ class ListConfig extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListScenarios extends V20170705Rpc
+class ListScenarios extends Rpc
 {
 }
 
@@ -2274,7 +2271,7 @@ class ListScenarios extends V20170705Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateScenario extends V20170705Rpc
+class CreateScenario extends Rpc
 {
 
     /**
@@ -2300,7 +2297,7 @@ class CreateScenario extends V20170705Rpc
  * @method string getCalleeNumber()
  * @method $this withCalleeNumber($value)
  */
-class PickLocalNumber extends V20170705Rpc
+class PickLocalNumber extends Rpc
 {
 
     /**
@@ -2325,7 +2322,7 @@ class PickLocalNumber extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetNumberRegionInfo extends V20170705Rpc
+class GetNumberRegionInfo extends Rpc
 {
 }
 
@@ -2353,7 +2350,7 @@ class GetNumberRegionInfo extends V20170705Rpc
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
-class Dialogue extends V20170705Rpc
+class Dialogue extends Rpc
 {
 }
 
@@ -2370,7 +2367,7 @@ class Dialogue extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class CreateJobGroup extends V20170705Rpc
+class CreateJobGroup extends Rpc
 {
 
     /**
@@ -2401,7 +2398,7 @@ class CreateJobGroup extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobGroups extends V20170705Rpc
+class ListJobGroups extends Rpc
 {
 }
 
@@ -2411,7 +2408,7 @@ class ListJobGroups extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetJobStatusByCallId extends V20170705Rpc
+class GetJobStatusByCallId extends Rpc
 {
 }
 
@@ -2437,7 +2434,7 @@ class GetJobStatusByCallId extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobStatus extends V20170705Rpc
+class ListJobStatus extends Rpc
 {
 }
 
@@ -2454,7 +2451,7 @@ class ListJobStatus extends V20170705Rpc
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
-class StartJob extends V20170705Rpc
+class StartJob extends Rpc
 {
 
     /**
@@ -2479,7 +2476,7 @@ class StartJob extends V20170705Rpc
  * @method string getContactId()
  * @method $this withContactId($value)
  */
-class ListRecordingsByContactId extends V20170705Rpc
+class ListRecordingsByContactId extends Rpc
 {
 }
 
@@ -2491,7 +2488,7 @@ class ListRecordingsByContactId extends V20170705Rpc
  * @method string getChannel()
  * @method $this withChannel($value)
  */
-class DownloadRecording extends V20170705Rpc
+class DownloadRecording extends Rpc
 {
 }
 
@@ -2521,7 +2518,7 @@ class DownloadRecording extends V20170705Rpc
  * @method string getWithRecording()
  * @method $this withWithRecording($value)
  */
-class ListCallDetailRecords extends V20170705Rpc
+class ListCallDetailRecords extends Rpc
 {
 }
 
@@ -2543,7 +2540,7 @@ class ListCallDetailRecords extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListRecordings extends V20170705Rpc
+class ListRecordings extends Rpc
 {
 }
 
@@ -2551,7 +2548,7 @@ class ListRecordings extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RefreshToken extends V20170705Rpc
+class RefreshToken extends Rpc
 {
 }
 
@@ -2561,7 +2558,7 @@ class RefreshToken extends V20170705Rpc
  * @method string getPhoneNumberId()
  * @method $this withPhoneNumberId($value)
  */
-class RemovePhoneNumber extends V20170705Rpc
+class RemovePhoneNumber extends Rpc
 {
 }
 
@@ -2582,7 +2579,7 @@ class RemovePhoneNumber extends V20170705Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class ModifyUser extends V20170705Rpc
+class ModifyUser extends Rpc
 {
 
     /**
@@ -2648,7 +2645,7 @@ class ModifyUser extends V20170705Rpc
  * @method $this withRoutingStrategy($value)
  * @method array getUserId()
  */
-class ModifySkillGroup extends V20170705Rpc
+class ModifySkillGroup extends Rpc
 {
 
     /**
@@ -2708,7 +2705,7 @@ class ModifySkillGroup extends V20170705Rpc
  * @method $this withUsage($value)
  * @method array getSkillGroupId()
  */
-class ModifyPhoneNumber extends V20170705Rpc
+class ModifyPhoneNumber extends Rpc
 {
 
     /**
@@ -2732,7 +2729,7 @@ class ModifyPhoneNumber extends V20170705Rpc
  * @method $this withInstanceId($value)
  * @method array getUserId()
  */
-class RemoveUsers extends V20170705Rpc
+class RemoveUsers extends Rpc
 {
 
     /**
@@ -2761,7 +2758,7 @@ class RemoveUsers extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListUsersOfSkillGroup extends V20170705Rpc
+class ListUsersOfSkillGroup extends Rpc
 {
 }
 
@@ -2769,7 +2766,7 @@ class ListUsersOfSkillGroup extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class RequestLoginInfo extends V20170705Rpc
+class RequestLoginInfo extends Rpc
 {
 }
 
@@ -2781,7 +2778,7 @@ class RequestLoginInfo extends V20170705Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListUsers extends V20170705Rpc
+class ListUsers extends Rpc
 {
 }
 
@@ -2791,7 +2788,7 @@ class ListUsers extends V20170705Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ListSkillGroupsOfUser extends V20170705Rpc
+class ListSkillGroupsOfUser extends Rpc
 {
 }
 
@@ -2799,7 +2796,7 @@ class ListSkillGroupsOfUser extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListSkillGroups extends V20170705Rpc
+class ListSkillGroups extends Rpc
 {
 }
 
@@ -2807,7 +2804,7 @@ class ListSkillGroups extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListRoles extends V20170705Rpc
+class ListRoles extends Rpc
 {
 }
 
@@ -2817,7 +2814,7 @@ class ListRoles extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListPhoneNumbers extends V20170705Rpc
+class ListPhoneNumbers extends Rpc
 {
 }
 
@@ -2825,7 +2822,7 @@ class ListPhoneNumbers extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ListContactFlows extends V20170705Rpc
+class ListContactFlows extends Rpc
 {
 }
 
@@ -2835,7 +2832,7 @@ class ListContactFlows extends V20170705Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class GetUser extends V20170705Rpc
+class GetUser extends Rpc
 {
 }
 
@@ -2845,7 +2842,7 @@ class GetUser extends V20170705Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class GetServiceExtensions extends V20170705Rpc
+class GetServiceExtensions extends Rpc
 {
 }
 
@@ -2859,7 +2856,7 @@ class GetServiceExtensions extends V20170705Rpc
  * @method string getObjectId()
  * @method $this withObjectId($value)
  */
-class GetConfig extends V20170705Rpc
+class GetConfig extends Rpc
 {
 }
 
@@ -2869,7 +2866,7 @@ class GetConfig extends V20170705Rpc
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
-class DeleteSkillGroup extends V20170705Rpc
+class DeleteSkillGroup extends Rpc
 {
 }
 
@@ -2890,7 +2887,7 @@ class DeleteSkillGroup extends V20170705Rpc
  * @method string getEmail()
  * @method $this withEmail($value)
  */
-class CreateUser extends V20170705Rpc
+class CreateUser extends Rpc
 {
 
     /**
@@ -2954,7 +2951,7 @@ class CreateUser extends V20170705Rpc
  * @method $this withRoutingStrategy($value)
  * @method array getUserId()
  */
-class CreateSkillGroup extends V20170705Rpc
+class CreateSkillGroup extends Rpc
 {
 
     /**
@@ -3011,7 +3008,7 @@ class CreateSkillGroup extends V20170705Rpc
  * @method array getRoleId()
  * @method array getSkillGroupId()
  */
-class AssignUsers extends V20170705Rpc
+class AssignUsers extends Rpc
 {
 
     /**
@@ -3085,6 +3082,6 @@ class AssignUsers extends V20170705Rpc
  * @method string getPhoneNumber()
  * @method $this withPhoneNumber($value)
  */
-class AddPhoneNumber extends V20170705Rpc
+class AddPhoneNumber extends Rpc
 {
 }

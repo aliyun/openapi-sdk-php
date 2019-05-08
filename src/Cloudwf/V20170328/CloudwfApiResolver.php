@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cloudwf\V20170328;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetDailyStatistic getDailyStatistic(array $options = [])
  * @method GetStaTop getStaTop(array $options = [])
  * @method GetApTop getApTop(array $options = [])
@@ -248,7 +245,7 @@ class CloudwfApiResolver
     use ApiResolverTrait;
 }
 
-class V20170328Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'cloudwf';
@@ -267,7 +264,7 @@ class V20170328Rpc extends Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetDailyStatistic extends V20170328Rpc
+class GetDailyStatistic extends Rpc
 {
 }
 
@@ -275,7 +272,7 @@ class GetDailyStatistic extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetStaTop extends V20170328Rpc
+class GetStaTop extends Rpc
 {
 }
 
@@ -283,7 +280,7 @@ class GetStaTop extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetApTop extends V20170328Rpc
+class GetApTop extends Rpc
 {
 }
 
@@ -291,7 +288,7 @@ class GetApTop extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetApStaMiscAgg extends V20170328Rpc
+class GetApStaMiscAgg extends Rpc
 {
 }
 
@@ -309,7 +306,7 @@ class GetApStaMiscAgg extends V20170328Rpc
  * @method string getEnd()
  * @method $this withEnd($value)
  */
-class GetScanProbeTimeSer extends V20170328Rpc
+class GetScanProbeTimeSer extends Rpc
 {
 }
 
@@ -323,7 +320,7 @@ class GetScanProbeTimeSer extends V20170328Rpc
  * @method string getWorkToken()
  * @method $this withWorkToken($value)
  */
-class WorkbyAction extends V20170328Rpc
+class WorkbyAction extends Rpc
 {
 }
 
@@ -332,7 +329,7 @@ class WorkbyAction extends V20170328Rpc
  * @method $this withTimeCycleNum($value)
  * @method array getApList()
  */
-class CreateRenewOrder extends V20170328Rpc
+class CreateRenewOrder extends Rpc
 {
 
     /**
@@ -356,7 +353,7 @@ class CreateRenewOrder extends V20170328Rpc
  * @method $this withTimeCycleNum($value)
  * @method array getApList()
  */
-class QueryRenewPrice extends V20170328Rpc
+class QueryRenewPrice extends Rpc
 {
 
     /**
@@ -384,7 +381,7 @@ class QueryRenewPrice extends V20170328Rpc
  * @method $this withAutoRenew($value)
  * @method array getApList()
  */
-class ConfigAutoRenew extends V20170328Rpc
+class ConfigAutoRenew extends Rpc
 {
 
     /**
@@ -403,19 +400,11 @@ class ConfigAutoRenew extends V20170328Rpc
     }
 }
 
-class GetPageProperties extends V20170328Rpc
+class GetPageProperties extends Rpc
 {
 }
 
-class GetBatchCreateApAssetProgress extends V20170328Rpc
-{
-}
-
-/**
- * @method string getJsonData()
- * @method $this withJsonData($value)
- */
-class BatchCreateApAsset extends V20170328Rpc
+class GetBatchCreateApAssetProgress extends Rpc
 {
 }
 
@@ -423,7 +412,15 @@ class BatchCreateApAsset extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class CreateApAsset extends V20170328Rpc
+class BatchCreateApAsset extends Rpc
+{
+}
+
+/**
+ * @method string getJsonData()
+ * @method $this withJsonData($value)
+ */
+class CreateApAsset extends Rpc
 {
 }
 
@@ -431,7 +428,7 @@ class CreateApAsset extends V20170328Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class CreateProbeDataSubscriber extends V20170328Rpc
+class CreateProbeDataSubscriber extends Rpc
 {
 }
 
@@ -440,7 +437,7 @@ class CreateProbeDataSubscriber extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class GetAllActiveShopByGroup extends V20170328Rpc
+class GetAllActiveShopByGroup extends Rpc
 {
 
     /**
@@ -463,15 +460,15 @@ class GetAllActiveShopByGroup extends V20170328Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class ListOnsTopic extends V20170328Rpc
+class ListOnsTopic extends Rpc
 {
 }
 
-class ListOnsEmpowered extends V20170328Rpc
+class ListOnsEmpowered extends Rpc
 {
 }
 
-class CheckRoleAuthorized extends V20170328Rpc
+class CheckRoleAuthorized extends Rpc
 {
 }
 
@@ -479,7 +476,7 @@ class CheckRoleAuthorized extends V20170328Rpc
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class CreateOnsEmpower extends V20170328Rpc
+class CreateOnsEmpower extends Rpc
 {
 }
 
@@ -495,7 +492,7 @@ class CreateOnsEmpower extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListBusinessDetails extends V20170328Rpc
+class ListBusinessDetails extends Rpc
 {
 }
 
@@ -508,7 +505,7 @@ class ListBusinessDetails extends V20170328Rpc
  * @method $this withId($value)
  * @method array getBusinessIds()
  */
-class ModifySubAccountPermission extends V20170328Rpc
+class ModifySubAccountPermission extends Rpc
 {
 
     /**
@@ -557,7 +554,7 @@ class ModifySubAccountPermission extends V20170328Rpc
     }
 }
 
-class ListBusinesses extends V20170328Rpc
+class ListBusinesses extends Rpc
 {
 }
 
@@ -569,7 +566,7 @@ class ListBusinesses extends V20170328Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class ListSubAccountPermission extends V20170328Rpc
+class ListSubAccountPermission extends Rpc
 {
 }
 
@@ -577,7 +574,7 @@ class ListSubAccountPermission extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetSubAccountPermission extends V20170328Rpc
+class GetSubAccountPermission extends Rpc
 {
 }
 
@@ -587,7 +584,7 @@ class GetSubAccountPermission extends V20170328Rpc
  * @method string getQueryId()
  * @method $this withQueryId($value)
  */
-class GetSidsAndGids4Bid extends V20170328Rpc
+class GetSidsAndGids4Bid extends Rpc
 {
 }
 
@@ -595,7 +592,7 @@ class GetSidsAndGids4Bid extends V20170328Rpc
  * @method string getUid()
  * @method $this withUid($value)
  */
-class GetBids4Uid4Root extends V20170328Rpc
+class GetBids4Uid4Root extends Rpc
 {
 }
 
@@ -603,7 +600,7 @@ class GetBids4Uid4Root extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DelSubAccountPermission extends V20170328Rpc
+class DelSubAccountPermission extends Rpc
 {
 }
 
@@ -618,7 +615,7 @@ class DelSubAccountPermission extends V20170328Rpc
  * @method $this withPermissionType($value)
  * @method array getBusinessIds()
  */
-class CreateSubAccountPermission extends V20170328Rpc
+class CreateSubAccountPermission extends Rpc
 {
 
     /**
@@ -673,7 +670,7 @@ class CreateSubAccountPermission extends V20170328Rpc
  * @method string getBindId()
  * @method $this withBindId($value)
  */
-class GetApPortalBind extends V20170328Rpc
+class GetApPortalBind extends Rpc
 {
 }
 
@@ -681,7 +678,7 @@ class GetApPortalBind extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SaveScanConfig extends V20170328Rpc
+class SaveScanConfig extends Rpc
 {
 }
 
@@ -689,7 +686,7 @@ class SaveScanConfig extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemHeatSetting extends V20170328Rpc
+class OemHeatSetting extends Rpc
 {
 }
 
@@ -697,7 +694,7 @@ class OemHeatSetting extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemHeatLine extends V20170328Rpc
+class OemHeatLine extends Rpc
 {
 }
 
@@ -705,7 +702,7 @@ class OemHeatLine extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemHeatMap extends V20170328Rpc
+class OemHeatMap extends Rpc
 {
 }
 
@@ -727,7 +724,7 @@ class OemHeatMap extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListScanConfig extends V20170328Rpc
+class ListScanConfig extends Rpc
 {
 }
 
@@ -743,7 +740,7 @@ class ListScanConfig extends V20170328Rpc
  * @method string getTempPermission()
  * @method $this withTempPermission($value)
  */
-class SavePageConfigTemplate extends V20170328Rpc
+class SavePageConfigTemplate extends Rpc
 {
 }
 
@@ -759,7 +756,7 @@ class SavePageConfigTemplate extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class SaveUmengPagePermission4Root extends V20170328Rpc
+class SaveUmengPagePermission4Root extends Rpc
 {
 }
 
@@ -767,7 +764,7 @@ class SaveUmengPagePermission4Root extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetUmengPagePermission4Root extends V20170328Rpc
+class GetUmengPagePermission4Root extends Rpc
 {
 }
 
@@ -775,7 +772,7 @@ class GetUmengPagePermission4Root extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class GetUserUmengPagePermission extends V20170328Rpc
+class GetUserUmengPagePermission extends Rpc
 {
 }
 
@@ -787,7 +784,7 @@ class GetUserUmengPagePermission extends V20170328Rpc
  * @method string getSearchTempName()
  * @method $this withSearchTempName($value)
  */
-class ListPageConfigTemplate extends V20170328Rpc
+class ListPageConfigTemplate extends Rpc
 {
 }
 
@@ -803,7 +800,7 @@ class ListPageConfigTemplate extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListUmengPagePermission4Root extends V20170328Rpc
+class ListUmengPagePermission4Root extends Rpc
 {
 }
 
@@ -811,7 +808,7 @@ class ListUmengPagePermission4Root extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DelPageConfigTemplate extends V20170328Rpc
+class DelPageConfigTemplate extends Rpc
 {
 }
 
@@ -819,7 +816,7 @@ class DelPageConfigTemplate extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DelUmengPagePermission4Root extends V20170328Rpc
+class DelUmengPagePermission4Root extends Rpc
 {
 }
 
@@ -827,7 +824,7 @@ class DelUmengPagePermission4Root extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetPageConfigTemplate extends V20170328Rpc
+class GetPageConfigTemplate extends Rpc
 {
 }
 
@@ -836,7 +833,7 @@ class GetPageConfigTemplate extends V20170328Rpc
  * @method string getCommand()
  * @method $this withCommand($value)
  */
-class SendCommandByMac extends V20170328Rpc
+class SendCommandByMac extends Rpc
 {
 
     /**
@@ -865,14 +862,14 @@ class SendCommandByMac extends V20170328Rpc
  * @method string getComment()
  * @method $this withComment($value)
  */
-class SetUpgradeImgByModel extends V20170328Rpc
+class SetUpgradeImgByModel extends Rpc
 {
 }
 
 /**
  * @method array getIds()
  */
-class UpgradeAP extends V20170328Rpc
+class UpgradeAP extends Rpc
 {
 
     /**
@@ -894,7 +891,7 @@ class UpgradeAP extends V20170328Rpc
 /**
  * @method array getIds()
  */
-class UpgradeAPGroup extends V20170328Rpc
+class UpgradeAPGroup extends Rpc
 {
 
     /**
@@ -917,7 +914,7 @@ class UpgradeAPGroup extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemSitingContrast extends V20170328Rpc
+class OemSitingContrast extends Rpc
 {
 }
 
@@ -925,7 +922,7 @@ class OemSitingContrast extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemSitingSelction extends V20170328Rpc
+class OemSitingSelction extends Rpc
 {
 }
 
@@ -933,7 +930,7 @@ class OemSitingSelction extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemMarketingSettingData extends V20170328Rpc
+class OemMarketingSettingData extends Rpc
 {
 }
 
@@ -941,7 +938,7 @@ class OemMarketingSettingData extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemMarketingCustomer extends V20170328Rpc
+class OemMarketingCustomer extends Rpc
 {
 }
 
@@ -949,7 +946,7 @@ class OemMarketingCustomer extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemMarketingPotential extends V20170328Rpc
+class OemMarketingPotential extends Rpc
 {
 }
 
@@ -957,7 +954,7 @@ class OemMarketingPotential extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemFlowrateMonitor extends V20170328Rpc
+class OemFlowrateMonitor extends Rpc
 {
 }
 
@@ -965,7 +962,7 @@ class OemFlowrateMonitor extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemFlowrateOverview extends V20170328Rpc
+class OemFlowrateOverview extends Rpc
 {
 }
 
@@ -973,7 +970,7 @@ class OemFlowrateOverview extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class OemFlowrateRanking extends V20170328Rpc
+class OemFlowrateRanking extends Rpc
 {
 }
 
@@ -983,7 +980,7 @@ class OemFlowrateRanking extends V20170328Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class ListUpgradeImg extends V20170328Rpc
+class ListUpgradeImg extends Rpc
 {
 }
 
@@ -991,7 +988,7 @@ class ListUpgradeImg extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemFlowrateAnalyse extends V20170328Rpc
+class OemFlowrateAnalyse extends Rpc
 {
 }
 
@@ -999,11 +996,11 @@ class OemFlowrateAnalyse extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class OemFlowrateIntelligent extends V20170328Rpc
+class OemFlowrateIntelligent extends Rpc
 {
 }
 
-class GetUpgradeAPProgress extends V20170328Rpc
+class GetUpgradeAPProgress extends Rpc
 {
 }
 
@@ -1011,7 +1008,7 @@ class GetUpgradeAPProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetUpgradeImg extends V20170328Rpc
+class GetUpgradeImg extends Rpc
 {
 }
 
@@ -1031,7 +1028,7 @@ class GetUpgradeImg extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListApUpgrade extends V20170328Rpc
+class ListApUpgrade extends Rpc
 {
 }
 
@@ -1039,23 +1036,23 @@ class ListApUpgrade extends V20170328Rpc
  * @method string getMac()
  * @method $this withMac($value)
  */
-class GetDeviceInfoByMac extends V20170328Rpc
+class GetDeviceInfoByMac extends Rpc
 {
 }
 
-class GetSendCommandByMacProgress extends V20170328Rpc
+class GetSendCommandByMacProgress extends Rpc
 {
 }
 
-class GetUpgradeAPGroupProgress extends V20170328Rpc
+class GetUpgradeAPGroupProgress extends Rpc
 {
 }
 
-class CheckRootPermission extends V20170328Rpc
+class CheckRootPermission extends Rpc
 {
 }
 
-class GetAllApModel extends V20170328Rpc
+class GetAllApModel extends Rpc
 {
 }
 
@@ -1075,7 +1072,7 @@ class GetAllApModel extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListProbeinfo extends V20170328Rpc
+class ListProbeinfo extends Rpc
 {
 }
 
@@ -1083,7 +1080,7 @@ class ListProbeinfo extends V20170328Rpc
  * @method string getShopId()
  * @method $this withShopId($value)
  */
-class GetInstanceByShop extends V20170328Rpc
+class GetInstanceByShop extends Rpc
 {
 }
 
@@ -1093,7 +1090,7 @@ class GetInstanceByShop extends V20170328Rpc
  * @method string getSpMsg()
  * @method $this withSpMsg($value)
  */
-class ResumeInstance extends V20170328Rpc
+class ResumeInstance extends Rpc
 {
 }
 
@@ -1103,7 +1100,7 @@ class ResumeInstance extends V20170328Rpc
  * @method string getSpMsg()
  * @method $this withSpMsg($value)
  */
-class CeaseInstance extends V20170328Rpc
+class CeaseInstance extends Rpc
 {
 }
 
@@ -1113,7 +1110,7 @@ class CeaseInstance extends V20170328Rpc
  * @method string getSpMsg()
  * @method $this withSpMsg($value)
  */
-class ReleaseInstance extends V20170328Rpc
+class ReleaseInstance extends Rpc
 {
 }
 
@@ -1123,7 +1120,7 @@ class ReleaseInstance extends V20170328Rpc
  * @method string getProduceParameter()
  * @method $this withProduceParameter($value)
  */
-class ProduceInstance extends V20170328Rpc
+class ProduceInstance extends Rpc
 {
 }
 
@@ -1131,7 +1128,7 @@ class ProduceInstance extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DelPortalTemp extends V20170328Rpc
+class DelPortalTemp extends Rpc
 {
 }
 
@@ -1141,7 +1138,7 @@ class DelPortalTemp extends V20170328Rpc
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  */
-class GetPortalTempDetail extends V20170328Rpc
+class GetPortalTempDetail extends Rpc
 {
 }
 
@@ -1157,7 +1154,7 @@ class GetPortalTempDetail extends V20170328Rpc
  * @method string getSearchTempName()
  * @method $this withSearchTempName($value)
  */
-class ListPortalTemplate extends V20170328Rpc
+class ListPortalTemplate extends Rpc
 {
 }
 
@@ -1175,7 +1172,7 @@ class ListPortalTemplate extends V20170328Rpc
  * @method string getOssFileId()
  * @method $this withOssFileId($value)
  */
-class SavePortalTemplate extends V20170328Rpc
+class SavePortalTemplate extends Rpc
 {
 }
 
@@ -1187,7 +1184,7 @@ class SavePortalTemplate extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportZoneDay extends V20170328Rpc
+class ReportZoneDay extends Rpc
 {
 }
 
@@ -1199,7 +1196,7 @@ class ReportZoneDay extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportZoneHour extends V20170328Rpc
+class ReportZoneHour extends Rpc
 {
 }
 
@@ -1211,7 +1208,7 @@ class ReportZoneHour extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportZoneMinute extends V20170328Rpc
+class ReportZoneMinute extends Rpc
 {
 }
 
@@ -1219,19 +1216,7 @@ class ReportZoneMinute extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportZoneRealtime extends V20170328Rpc
-{
-}
-
-/**
- * @method string getBeginDate()
- * @method $this withBeginDate($value)
- * @method string getEndDate()
- * @method $this withEndDate($value)
- * @method string getAgsid()
- * @method $this withAgsid($value)
- */
-class ReportDay extends V20170328Rpc
+class ReportZoneRealtime extends Rpc
 {
 }
 
@@ -1243,7 +1228,7 @@ class ReportDay extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportHour extends V20170328Rpc
+class ReportDay extends Rpc
 {
 }
 
@@ -1255,7 +1240,19 @@ class ReportHour extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportMinute extends V20170328Rpc
+class ReportHour extends Rpc
+{
+}
+
+/**
+ * @method string getBeginDate()
+ * @method $this withBeginDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getAgsid()
+ * @method $this withAgsid($value)
+ */
+class ReportMinute extends Rpc
 {
 }
 
@@ -1263,7 +1260,7 @@ class ReportMinute extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ReportRealtime extends V20170328Rpc
+class ReportRealtime extends Rpc
 {
 }
 
@@ -1271,7 +1268,7 @@ class ReportRealtime extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ResetApConfig extends V20170328Rpc
+class ResetApConfig extends Rpc
 {
 }
 
@@ -1280,7 +1277,7 @@ class ResetApConfig extends V20170328Rpc
  * @method $this withOperation($value)
  * @method array getMacList()
  */
-class SetScanMode extends V20170328Rpc
+class SetScanMode extends Rpc
 {
 
     /**
@@ -1303,14 +1300,14 @@ class SetScanMode extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetProbeDataSubscriberConfig extends V20170328Rpc
+class GetProbeDataSubscriberConfig extends Rpc
 {
 }
 
 /**
  * @method array getMacList()
  */
-class GetScanMode extends V20170328Rpc
+class GetScanMode extends Rpc
 {
 
     /**
@@ -1346,7 +1343,7 @@ class GetScanMode extends V20170328Rpc
  * @method $this withType($value)
  * @method array getResourceIds()
  */
-class SaveProbeDataSubscriber extends V20170328Rpc
+class SaveProbeDataSubscriber extends Rpc
 {
 
     /**
@@ -1365,7 +1362,7 @@ class SaveProbeDataSubscriber extends V20170328Rpc
     }
 }
 
-class GetSubAccountStatus extends V20170328Rpc
+class GetSubAccountStatus extends Rpc
 {
 }
 
@@ -1375,7 +1372,7 @@ class GetSubAccountStatus extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class UserDataDelete extends V20170328Rpc
+class UserDataDelete extends Rpc
 {
 }
 
@@ -1391,7 +1388,7 @@ class UserDataDelete extends V20170328Rpc
  * @method string getPer()
  * @method $this withPer($value)
  */
-class UserDataShowList extends V20170328Rpc
+class UserDataShowList extends Rpc
 {
 }
 
@@ -1407,7 +1404,7 @@ class UserDataShowList extends V20170328Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class UserDataUpdate extends V20170328Rpc
+class UserDataUpdate extends Rpc
 {
 }
 
@@ -1415,7 +1412,7 @@ class UserDataUpdate extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ShopOverview extends V20170328Rpc
+class ShopOverview extends Rpc
 {
 }
 
@@ -1425,7 +1422,7 @@ class ShopOverview extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopSetfiltermac extends V20170328Rpc
+class ShopSetfiltermac extends Rpc
 {
 }
 
@@ -1455,7 +1452,7 @@ class ShopSetfiltermac extends V20170328Rpc
  * @method string getMaxstoptime()
  * @method $this withMaxstoptime($value)
  */
-class ShopSetredress extends V20170328Rpc
+class ShopSetredress extends Rpc
 {
 }
 
@@ -1477,7 +1474,7 @@ class ShopSetredress extends V20170328Rpc
  * @method string getShopStatus()
  * @method $this withShopStatus($value)
  */
-class ShopShowList extends V20170328Rpc
+class ShopShowList extends Rpc
 {
 }
 
@@ -1521,7 +1518,7 @@ class ShopShowList extends V20170328Rpc
  * @method string getShopBusinessHours()
  * @method $this withShopBusinessHours($value)
  */
-class ShopUpdate extends V20170328Rpc
+class ShopUpdate extends Rpc
 {
 }
 
@@ -1537,7 +1534,7 @@ class ShopUpdate extends V20170328Rpc
  * @method string getChunkCnt()
  * @method $this withChunkCnt($value)
  */
-class UpLoadMap extends V20170328Rpc
+class UpLoadMap extends Rpc
 {
 }
 
@@ -1545,7 +1542,7 @@ class UpLoadMap extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class UserAnalyse extends V20170328Rpc
+class UserAnalyse extends Rpc
 {
 }
 
@@ -1559,7 +1556,7 @@ class UserAnalyse extends V20170328Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class UserDataCreate extends V20170328Rpc
+class UserDataCreate extends Rpc
 {
 }
 
@@ -1573,7 +1570,7 @@ class UserDataCreate extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class ShopGroupCreate extends V20170328Rpc
+class ShopGroupCreate extends Rpc
 {
 }
 
@@ -1581,7 +1578,7 @@ class ShopGroupCreate extends V20170328Rpc
  * @method string getGid()
  * @method $this withGid($value)
  */
-class ShopGroupDelete extends V20170328Rpc
+class ShopGroupDelete extends Rpc
 {
 }
 
@@ -1589,7 +1586,7 @@ class ShopGroupDelete extends V20170328Rpc
  * @method string getGid()
  * @method $this withGid($value)
  */
-class ShopGroupInfo extends V20170328Rpc
+class ShopGroupInfo extends Rpc
 {
 }
 
@@ -1601,7 +1598,7 @@ class ShopGroupInfo extends V20170328Rpc
  * @method string getPer()
  * @method $this withPer($value)
  */
-class ShopGroupShowList extends V20170328Rpc
+class ShopGroupShowList extends Rpc
 {
 }
 
@@ -1615,7 +1612,7 @@ class ShopGroupShowList extends V20170328Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class ShopGroupUpdate extends V20170328Rpc
+class ShopGroupUpdate extends Rpc
 {
 }
 
@@ -1623,7 +1620,7 @@ class ShopGroupUpdate extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopInfo extends V20170328Rpc
+class ShopInfo extends Rpc
 {
 }
 
@@ -1637,7 +1634,7 @@ class ShopInfo extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopMarketingList extends V20170328Rpc
+class ShopMarketingList extends Rpc
 {
 }
 
@@ -1681,7 +1678,7 @@ class ShopMarketingList extends V20170328Rpc
  * @method string getShopBusinessHours()
  * @method $this withShopBusinessHours($value)
  */
-class ShopCreate extends V20170328Rpc
+class ShopCreate extends Rpc
 {
 }
 
@@ -1695,7 +1692,7 @@ class ShopCreate extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopCreatemarketing extends V20170328Rpc
+class ShopCreatemarketing extends Rpc
 {
 }
 
@@ -1711,7 +1708,7 @@ class ShopCreatemarketing extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopDataAlarm extends V20170328Rpc
+class ShopDataAlarm extends Rpc
 {
 }
 
@@ -1719,7 +1716,7 @@ class ShopDataAlarm extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopDelete extends V20170328Rpc
+class ShopDelete extends Rpc
 {
 }
 
@@ -1729,7 +1726,7 @@ class ShopDelete extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopDeletemarketing extends V20170328Rpc
+class ShopDeletemarketing extends Rpc
 {
 }
 
@@ -1737,7 +1734,7 @@ class ShopDeletemarketing extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopGetfiltermac extends V20170328Rpc
+class ShopGetfiltermac extends Rpc
 {
 }
 
@@ -1745,7 +1742,7 @@ class ShopGetfiltermac extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class ShopGetredress extends V20170328Rpc
+class ShopGetredress extends Rpc
 {
 }
 
@@ -1837,7 +1834,7 @@ class ShopGetredress extends V20170328Rpc
  * @method string getOwnip()
  * @method $this withOwnip($value)
  */
-class SaveApRadioSsidConfig extends V20170328Rpc
+class SaveApRadioSsidConfig extends Rpc
 {
 }
 
@@ -1847,7 +1844,7 @@ class SaveApRadioSsidConfig extends V20170328Rpc
  * @method string getApConfigId()
  * @method $this withApConfigId($value)
  */
-class SaveApScanConfig extends V20170328Rpc
+class SaveApScanConfig extends Rpc
 {
 }
 
@@ -1855,7 +1852,7 @@ class SaveApScanConfig extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SaveGroupApRadioConfig extends V20170328Rpc
+class SaveGroupApRadioConfig extends Rpc
 {
 }
 
@@ -1863,7 +1860,7 @@ class SaveGroupApRadioConfig extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SavePortalConfig extends V20170328Rpc
+class SavePortalConfig extends Rpc
 {
 }
 
@@ -1873,7 +1870,7 @@ class SavePortalConfig extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class SaveStaStatus extends V20170328Rpc
+class SaveStaStatus extends Rpc
 {
 }
 
@@ -1881,7 +1878,7 @@ class SaveStaStatus extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ShopActionReturning extends V20170328Rpc
+class ShopActionReturning extends Rpc
 {
 }
 
@@ -1889,7 +1886,7 @@ class ShopActionReturning extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ShopActionCustome extends V20170328Rpc
+class ShopActionCustome extends Rpc
 {
 }
 
@@ -1897,7 +1894,7 @@ class ShopActionCustome extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ShopCamera extends V20170328Rpc
+class ShopCamera extends Rpc
 {
 }
 
@@ -1925,7 +1922,7 @@ class ShopCamera extends V20170328Rpc
  * @method string getMac()
  * @method $this withMac($value)
  */
-class SaveApConfig extends V20170328Rpc
+class SaveApConfig extends Rpc
 {
 }
 
@@ -1949,7 +1946,7 @@ class SaveApConfig extends V20170328Rpc
  * @method string getLogIp()
  * @method $this withLogIp($value)
  */
-class SaveApgroupConfig extends V20170328Rpc
+class SaveApgroupConfig extends Rpc
 {
 }
 
@@ -1959,7 +1956,7 @@ class SaveApgroupConfig extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class SaveApgroupScanConfig extends V20170328Rpc
+class SaveApgroupScanConfig extends Rpc
 {
 }
 
@@ -1967,7 +1964,7 @@ class SaveApgroupScanConfig extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SaveApgroupSsidConfig extends V20170328Rpc
+class SaveApgroupSsidConfig extends Rpc
 {
 }
 
@@ -1975,7 +1972,7 @@ class SaveApgroupSsidConfig extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SaveApMapInfo extends V20170328Rpc
+class SaveApMapInfo extends Rpc
 {
 }
 
@@ -1999,7 +1996,7 @@ class SaveApMapInfo extends V20170328Rpc
  * @method string getNetwork()
  * @method $this withNetwork($value)
  */
-class SaveApPortalConfig extends V20170328Rpc
+class SaveApPortalConfig extends Rpc
 {
 }
 
@@ -2045,7 +2042,7 @@ class SaveApPortalConfig extends V20170328Rpc
  * @method string getRadioIndex()
  * @method $this withRadioIndex($value)
  */
-class SaveApRadioConfig extends V20170328Rpc
+class SaveApRadioConfig extends Rpc
 {
 }
 
@@ -2065,7 +2062,7 @@ class SaveApRadioConfig extends V20170328Rpc
  * @method string getAreaNumber()
  * @method $this withAreaNumber($value)
  */
-class ProfileTag extends V20170328Rpc
+class ProfileTag extends Rpc
 {
 }
 
@@ -2079,7 +2076,7 @@ class ProfileTag extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ProfileTrade extends V20170328Rpc
+class ProfileTrade extends Rpc
 {
 }
 
@@ -2087,7 +2084,7 @@ class ProfileTrade extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class PutOssFile extends V20170328Rpc
+class PutOssFile extends Rpc
 {
 }
 
@@ -2095,7 +2092,7 @@ class PutOssFile extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class RepairAp extends V20170328Rpc
+class RepairAp extends Rpc
 {
 }
 
@@ -2103,7 +2100,7 @@ class RepairAp extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class RepairGroupAp extends V20170328Rpc
+class RepairGroupAp extends Rpc
 {
 }
 
@@ -2111,7 +2108,7 @@ class RepairGroupAp extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class ResetAp extends V20170328Rpc
+class ResetAp extends Rpc
 {
 }
 
@@ -2119,7 +2116,7 @@ class ResetAp extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class SaveAccountConfig extends V20170328Rpc
+class SaveAccountConfig extends Rpc
 {
 }
 
@@ -2129,7 +2126,7 @@ class SaveAccountConfig extends V20170328Rpc
  * @method string getDisabled()
  * @method $this withDisabled($value)
  */
-class OnoffGroupApRadio extends V20170328Rpc
+class OnoffGroupApRadio extends Rpc
 {
 }
 
@@ -2137,21 +2134,7 @@ class OnoffGroupApRadio extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class PeripheryAnalyse extends V20170328Rpc
-{
-}
-
-/**
- * @method string getBeginDate()
- * @method $this withBeginDate($value)
- * @method string getEndDate()
- * @method $this withEndDate($value)
- * @method string getDataType()
- * @method $this withDataType($value)
- * @method string getGsid()
- * @method $this withGsid($value)
- */
-class ProfileBase extends V20170328Rpc
+class PeripheryAnalyse extends Rpc
 {
 }
 
@@ -2165,7 +2148,7 @@ class ProfileBase extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ProfileConsume extends V20170328Rpc
+class ProfileBase extends Rpc
 {
 }
 
@@ -2179,7 +2162,21 @@ class ProfileConsume extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ProfileDistrict extends V20170328Rpc
+class ProfileConsume extends Rpc
+{
+}
+
+/**
+ * @method string getBeginDate()
+ * @method $this withBeginDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getDataType()
+ * @method $this withDataType($value)
+ * @method string getGsid()
+ * @method $this withGsid($value)
+ */
+class ProfileDistrict extends Rpc
 {
 }
 
@@ -2193,7 +2190,7 @@ class ProfileDistrict extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ProfileHistory extends V20170328Rpc
+class ProfileHistory extends Rpc
 {
 }
 
@@ -2207,7 +2204,7 @@ class ProfileHistory extends V20170328Rpc
  * @method string getAgsid()
  * @method $this withAgsid($value)
  */
-class ProfileHistoryList extends V20170328Rpc
+class ProfileHistoryList extends Rpc
 {
 }
 
@@ -2221,7 +2218,7 @@ class ProfileHistoryList extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class ProfileMedia extends V20170328Rpc
+class ProfileMedia extends Rpc
 {
 }
 
@@ -2253,7 +2250,7 @@ class ProfileMedia extends V20170328Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class ListApStatus extends V20170328Rpc
+class ListApStatus extends Rpc
 {
 }
 
@@ -2275,7 +2272,7 @@ class ListApStatus extends V20170328Rpc
  * @method string getSearchModel()
  * @method $this withSearchModel($value)
  */
-class ListBriefApConfig extends V20170328Rpc
+class ListBriefApConfig extends Rpc
 {
 }
 
@@ -2287,7 +2284,7 @@ class ListBriefApConfig extends V20170328Rpc
  * @method string getFuzzySearch()
  * @method $this withFuzzySearch($value)
  */
-class ListBriefConfigByAction extends V20170328Rpc
+class ListBriefConfigByAction extends Rpc
 {
 }
 
@@ -2299,7 +2296,7 @@ class ListBriefConfigByAction extends V20170328Rpc
  * @method string getActionName()
  * @method $this withActionName($value)
  */
-class ListConfigByAction extends V20170328Rpc
+class ListConfigByAction extends Rpc
 {
 }
 
@@ -2321,7 +2318,7 @@ class ListConfigByAction extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListGroupApBriefConfig extends V20170328Rpc
+class ListGroupApBriefConfig extends Rpc
 {
 }
 
@@ -2343,7 +2340,7 @@ class ListGroupApBriefConfig extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListStaOnoffLog extends V20170328Rpc
+class ListStaOnoffLog extends Rpc
 {
 }
 
@@ -2375,7 +2372,7 @@ class ListStaOnoffLog extends V20170328Rpc
  * @method string getSearchDescription()
  * @method $this withSearchDescription($value)
  */
-class ListStaStatus extends V20170328Rpc
+class ListStaStatus extends Rpc
 {
 }
 
@@ -2383,7 +2380,7 @@ class ListStaStatus extends V20170328Rpc
  * @method string getApAssetId()
  * @method $this withApAssetId($value)
  */
-class ListApDetailInfo extends V20170328Rpc
+class ListApDetailInfo extends Rpc
 {
 }
 
@@ -2401,7 +2398,7 @@ class ListApDetailInfo extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListApgroupConfig extends V20170328Rpc
+class ListApgroupConfig extends Rpc
 {
 }
 
@@ -2409,7 +2406,7 @@ class ListApgroupConfig extends V20170328Rpc
  * @method string getMapId()
  * @method $this withMapId($value)
  */
-class ListApPosition extends V20170328Rpc
+class ListApPosition extends Rpc
 {
 }
 
@@ -2431,7 +2428,7 @@ class ListApPosition extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListApPositionMap extends V20170328Rpc
+class ListApPositionMap extends Rpc
 {
 }
 
@@ -2439,7 +2436,7 @@ class ListApPositionMap extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class ListApPositionStatus extends V20170328Rpc
+class ListApPositionStatus extends Rpc
 {
 }
 
@@ -2465,7 +2462,7 @@ class ListApPositionStatus extends V20170328Rpc
  * @method string getSearchApStatus()
  * @method $this withSearchApStatus($value)
  */
-class ListApRadioStatus extends V20170328Rpc
+class ListApRadioStatus extends Rpc
 {
 }
 
@@ -2491,7 +2488,7 @@ class ListApRadioStatus extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListApStaStatus extends V20170328Rpc
+class ListApStaStatus extends Rpc
 {
 }
 
@@ -2499,7 +2496,7 @@ class ListApStaStatus extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class KickAndClearPMKcache extends V20170328Rpc
+class KickAndClearPMKcache extends Rpc
 {
 }
 
@@ -2507,7 +2504,7 @@ class KickAndClearPMKcache extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class KickSta extends V20170328Rpc
+class KickSta extends Rpc
 {
 }
 
@@ -2523,7 +2520,7 @@ class KickSta extends V20170328Rpc
  * @method string getOrderDir()
  * @method $this withOrderDir($value)
  */
-class ListAccountConfig extends V20170328Rpc
+class ListAccountConfig extends Rpc
 {
 }
 
@@ -2545,7 +2542,7 @@ class ListAccountConfig extends V20170328Rpc
  * @method string getSearchModel()
  * @method $this withSearchModel($value)
  */
-class ListApAsset extends V20170328Rpc
+class ListApAsset extends Rpc
 {
 }
 
@@ -2563,7 +2560,7 @@ class ListApAsset extends V20170328Rpc
  * @method string getSearchModel()
  * @method $this withSearchModel($value)
  */
-class ListApAssetCanBeAdded extends V20170328Rpc
+class ListApAssetCanBeAdded extends Rpc
 {
 }
 
@@ -2571,7 +2568,7 @@ class ListApAssetCanBeAdded extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class GroupOverview extends V20170328Rpc
+class GroupOverview extends Rpc
 {
 }
 
@@ -2579,7 +2576,7 @@ class GroupOverview extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class GroupTrend extends V20170328Rpc
+class GroupTrend extends Rpc
 {
 }
 
@@ -2587,7 +2584,7 @@ class GroupTrend extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersOverview extends V20170328Rpc
+class HeadquartersOverview extends Rpc
 {
 }
 
@@ -2595,7 +2592,7 @@ class HeadquartersOverview extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersRanking extends V20170328Rpc
+class HeadquartersRanking extends Rpc
 {
 }
 
@@ -2603,7 +2600,7 @@ class HeadquartersRanking extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersToolsCoincide extends V20170328Rpc
+class HeadquartersToolsCoincide extends Rpc
 {
 }
 
@@ -2611,7 +2608,7 @@ class HeadquartersToolsCoincide extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersToolsContrast extends V20170328Rpc
+class HeadquartersToolsContrast extends Rpc
 {
 }
 
@@ -2619,7 +2616,7 @@ class HeadquartersToolsContrast extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersToolsO2O extends V20170328Rpc
+class HeadquartersToolsO2O extends Rpc
 {
 }
 
@@ -2627,7 +2624,7 @@ class HeadquartersToolsO2O extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class HeadquartersTrend extends V20170328Rpc
+class HeadquartersTrend extends Rpc
 {
 }
 
@@ -2645,7 +2642,7 @@ class HeadquartersTrend extends V20170328Rpc
  * @method string getEnd()
  * @method $this withEnd($value)
  */
-class GetOnlineStaTimeSer extends V20170328Rpc
+class GetOnlineStaTimeSer extends Rpc
 {
 }
 
@@ -2653,7 +2650,7 @@ class GetOnlineStaTimeSer extends V20170328Rpc
  * @method string getDirType()
  * @method $this withDirType($value)
  */
-class GetOssServerSign extends V20170328Rpc
+class GetOssServerSign extends Rpc
 {
 }
 
@@ -2661,7 +2658,7 @@ class GetOssServerSign extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetRadioRunHistoryTimeSer extends V20170328Rpc
+class GetRadioRunHistoryTimeSer extends Rpc
 {
 }
 
@@ -2669,7 +2666,7 @@ class GetRadioRunHistoryTimeSer extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetStaDetailedStatus extends V20170328Rpc
+class GetStaDetailedStatus extends Rpc
 {
 }
 
@@ -2677,7 +2674,7 @@ class GetStaDetailedStatus extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetStaRunHistoryTimeSer extends V20170328Rpc
+class GetStaRunHistoryTimeSer extends Rpc
 {
 }
 
@@ -2685,7 +2682,7 @@ class GetStaRunHistoryTimeSer extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class GroupDetails extends V20170328Rpc
+class GroupDetails extends Rpc
 {
 }
 
@@ -2693,7 +2690,7 @@ class GroupDetails extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class GroupIntime extends V20170328Rpc
+class GroupIntime extends Rpc
 {
 }
 
@@ -2701,19 +2698,11 @@ class GroupIntime extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetGroupApRadioConfigProgress extends V20170328Rpc
+class GetGroupApRadioConfigProgress extends Rpc
 {
 }
 
-class GetGroupApRadioConfigTemplate extends V20170328Rpc
-{
-}
-
-/**
- * @method string getId()
- * @method $this withId($value)
- */
-class GetGroupApRadioOnoffProgress extends V20170328Rpc
+class GetGroupApRadioConfigTemplate extends Rpc
 {
 }
 
@@ -2721,7 +2710,15 @@ class GetGroupApRadioOnoffProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetGroupApRepairProgress extends V20170328Rpc
+class GetGroupApRadioOnoffProgress extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class GetGroupApRepairProgress extends Rpc
 {
 }
 
@@ -2729,7 +2726,7 @@ class GetGroupApRepairProgress extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetLatestApStatistic extends V20170328Rpc
+class GetLatestApStatistic extends Rpc
 {
 }
 
@@ -2737,7 +2734,7 @@ class GetLatestApStatistic extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class GetLatestStaStatistic extends V20170328Rpc
+class GetLatestStaStatistic extends Rpc
 {
 }
 
@@ -2745,7 +2742,7 @@ class GetLatestStaStatistic extends V20170328Rpc
  * @method string getMapId()
  * @method $this withMapId($value)
  */
-class GetMapUrl extends V20170328Rpc
+class GetMapUrl extends Rpc
 {
 }
 
@@ -2763,7 +2760,7 @@ class GetMapUrl extends V20170328Rpc
  * @method string getEnd()
  * @method $this withEnd($value)
  */
-class GetOnlineApTimeSer extends V20170328Rpc
+class GetOnlineApTimeSer extends Rpc
 {
 }
 
@@ -2771,7 +2768,7 @@ class GetOnlineApTimeSer extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApgroupSsidConfigProgress extends V20170328Rpc
+class GetApgroupSsidConfigProgress extends Rpc
 {
 }
 
@@ -2783,11 +2780,11 @@ class GetApgroupSsidConfigProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApRunHistoryTimeSer extends V20170328Rpc
+class GetApRunHistoryTimeSer extends Rpc
 {
 }
 
-class GetBatchSaveApAssetProgress extends V20170328Rpc
+class GetBatchSaveApAssetProgress extends Rpc
 {
 }
 
@@ -2797,11 +2794,11 @@ class GetBatchSaveApAssetProgress extends V20170328Rpc
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  */
-class GetBid extends V20170328Rpc
+class GetBid extends Rpc
 {
 }
 
-class GetBindAp4Umeng extends V20170328Rpc
+class GetBindAp4Umeng extends Rpc
 {
 }
 
@@ -2823,19 +2820,11 @@ class GetBindAp4Umeng extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class GetCrowdList extends V20170328Rpc
+class GetCrowdList extends Rpc
 {
 }
 
-class GetGroupApChangeNameTemplate extends V20170328Rpc
-{
-}
-
-/**
- * @method string getId()
- * @method $this withId($value)
- */
-class GetAddApsProgress extends V20170328Rpc
+class GetGroupApChangeNameTemplate extends Rpc
 {
 }
 
@@ -2843,7 +2832,7 @@ class GetAddApsProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApDetailedConfig extends V20170328Rpc
+class GetAddApsProgress extends Rpc
 {
 }
 
@@ -2851,7 +2840,7 @@ class GetApDetailedConfig extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApDetailedStatus extends V20170328Rpc
+class GetApDetailedConfig extends Rpc
 {
 }
 
@@ -2859,7 +2848,7 @@ class GetApDetailedStatus extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApgroupConfigProgress extends V20170328Rpc
+class GetApDetailedStatus extends Rpc
 {
 }
 
@@ -2867,7 +2856,7 @@ class GetApgroupConfigProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApgroupDetailedConfig extends V20170328Rpc
+class GetApgroupConfigProgress extends Rpc
 {
 }
 
@@ -2875,7 +2864,7 @@ class GetApgroupDetailedConfig extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApgroupPortalConfigProgress extends V20170328Rpc
+class GetApgroupDetailedConfig extends Rpc
 {
 }
 
@@ -2883,7 +2872,15 @@ class GetApgroupPortalConfigProgress extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetApgroupScanConfigSaveProgress extends V20170328Rpc
+class GetApgroupPortalConfigProgress extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class GetApgroupScanConfigSaveProgress extends Rpc
 {
 }
 
@@ -2899,7 +2896,7 @@ class GetApgroupScanConfigSaveProgress extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class DeviceCreate extends V20170328Rpc
+class DeviceCreate extends Rpc
 {
 }
 
@@ -2909,7 +2906,7 @@ class DeviceCreate extends V20170328Rpc
  * @method string getMac()
  * @method $this withMac($value)
  */
-class DeviceDelete extends V20170328Rpc
+class DeviceDelete extends Rpc
 {
 }
 
@@ -2925,7 +2922,7 @@ class DeviceDelete extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class DeviceShowList extends V20170328Rpc
+class DeviceShowList extends Rpc
 {
 }
 
@@ -2937,7 +2934,7 @@ class DeviceShowList extends V20170328Rpc
  * @method string getDid()
  * @method $this withDid($value)
  */
-class DeviceUpdate extends V20170328Rpc
+class DeviceUpdate extends Rpc
 {
 }
 
@@ -2945,7 +2942,7 @@ class DeviceUpdate extends V20170328Rpc
  * @method string getUploadData()
  * @method $this withUploadData($value)
  */
-class ExcelToJson extends V20170328Rpc
+class ExcelToJson extends Rpc
 {
 }
 
@@ -2953,7 +2950,7 @@ class ExcelToJson extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class FindAp extends V20170328Rpc
+class FindAp extends Rpc
 {
 }
 
@@ -2961,7 +2958,7 @@ class FindAp extends V20170328Rpc
  * @method string getGsid()
  * @method $this withGsid($value)
  */
-class FrequencyAnalyse extends V20170328Rpc
+class FrequencyAnalyse extends Rpc
 {
 }
 
@@ -2969,11 +2966,11 @@ class FrequencyAnalyse extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class GetAccountConfig extends V20170328Rpc
+class GetAccountConfig extends Rpc
 {
 }
 
-class CheckUmengDataAnalysisPermission extends V20170328Rpc
+class CheckUmengDataAnalysisPermission extends Rpc
 {
 }
 
@@ -2983,7 +2980,7 @@ class CheckUmengDataAnalysisPermission extends V20170328Rpc
  * @method string getMapId()
  * @method $this withMapId($value)
  */
-class DelApPosition extends V20170328Rpc
+class DelApPosition extends Rpc
 {
 }
 
@@ -2991,7 +2988,7 @@ class DelApPosition extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteApgroupConfig extends V20170328Rpc
+class DeleteApgroupConfig extends Rpc
 {
 }
 
@@ -3001,7 +2998,7 @@ class DeleteApgroupConfig extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteApgroupSsidConfig extends V20170328Rpc
+class DeleteApgroupSsidConfig extends Rpc
 {
 }
 
@@ -3011,7 +3008,7 @@ class DeleteApgroupSsidConfig extends V20170328Rpc
  * @method string getId()
  * @method $this withId($value)
  */
-class DeleteApRadioSsidConfig extends V20170328Rpc
+class DeleteApRadioSsidConfig extends Rpc
 {
 }
 
@@ -3019,7 +3016,7 @@ class DeleteApRadioSsidConfig extends V20170328Rpc
  * @method string getMapId()
  * @method $this withMapId($value)
  */
-class DeletePositionMap extends V20170328Rpc
+class DeletePositionMap extends Rpc
 {
 }
 
@@ -3029,7 +3026,7 @@ class DeletePositionMap extends V20170328Rpc
  * @method string getDeviceType()
  * @method $this withDeviceType($value)
  */
-class DeviceBatchCreate extends V20170328Rpc
+class DeviceBatchCreate extends Rpc
 {
 }
 
@@ -3043,7 +3040,7 @@ class DeviceBatchCreate extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class AreaUpdate extends V20170328Rpc
+class AreaUpdate extends Rpc
 {
 }
 
@@ -3051,7 +3048,7 @@ class AreaUpdate extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class BatchChangeGroupApName extends V20170328Rpc
+class BatchChangeGroupApName extends Rpc
 {
 }
 
@@ -3059,7 +3056,7 @@ class BatchChangeGroupApName extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class BatchRegisterApAsset extends V20170328Rpc
+class BatchRegisterApAsset extends Rpc
 {
 }
 
@@ -3067,7 +3064,7 @@ class BatchRegisterApAsset extends V20170328Rpc
  * @method string getJsonData()
  * @method $this withJsonData($value)
  */
-class BatchSaveApPosition extends V20170328Rpc
+class BatchSaveApPosition extends Rpc
 {
 }
 
@@ -3097,7 +3094,7 @@ class BatchSaveApPosition extends V20170328Rpc
  * @method string getBusinessSubtype()
  * @method $this withBusinessSubtype($value)
  */
-class BusinessCreate extends V20170328Rpc
+class BusinessCreate extends Rpc
 {
 }
 
@@ -3105,7 +3102,7 @@ class BusinessCreate extends V20170328Rpc
  * @method string getBid()
  * @method $this withBid($value)
  */
-class BusinessInfo extends V20170328Rpc
+class BusinessInfo extends Rpc
 {
 }
 
@@ -3115,7 +3112,7 @@ class BusinessInfo extends V20170328Rpc
  * @method string getPer()
  * @method $this withPer($value)
  */
-class BusinessShowList extends V20170328Rpc
+class BusinessShowList extends Rpc
 {
 }
 
@@ -3135,7 +3132,7 @@ class BusinessShowList extends V20170328Rpc
  * @method string getBusinessProvince()
  * @method $this withBusinessProvince($value)
  */
-class BusinessUpdate extends V20170328Rpc
+class BusinessUpdate extends Rpc
 {
 }
 
@@ -3147,7 +3144,7 @@ class BusinessUpdate extends V20170328Rpc
  * @method string getSerialNo()
  * @method $this withSerialNo($value)
  */
-class AliyunRegisterApAsset extends V20170328Rpc
+class AliyunRegisterApAsset extends Rpc
 {
 }
 
@@ -3157,7 +3154,7 @@ class AliyunRegisterApAsset extends V20170328Rpc
  * @method string getApgroupId()
  * @method $this withApgroupId($value)
  */
-class ApgroupBatchAddAp extends V20170328Rpc
+class ApgroupBatchAddAp extends Rpc
 {
 }
 
@@ -3165,7 +3162,7 @@ class ApgroupBatchAddAp extends V20170328Rpc
  * @method string getApAssetIds()
  * @method $this withApAssetIds($value)
  */
-class ApgroupBatchDeleteAp extends V20170328Rpc
+class ApgroupBatchDeleteAp extends Rpc
 {
 }
 
@@ -3177,7 +3174,7 @@ class ApgroupBatchDeleteAp extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class AreaCreate extends V20170328Rpc
+class AreaCreate extends Rpc
 {
 }
 
@@ -3187,7 +3184,7 @@ class AreaCreate extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class AreaDelete extends V20170328Rpc
+class AreaDelete extends Rpc
 {
 }
 
@@ -3197,7 +3194,7 @@ class AreaDelete extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class AreaInfo extends V20170328Rpc
+class AreaInfo extends Rpc
 {
 }
 
@@ -3209,7 +3206,7 @@ class AreaInfo extends V20170328Rpc
  * @method string getSid()
  * @method $this withSid($value)
  */
-class AreaShowList extends V20170328Rpc
+class AreaShowList extends Rpc
 {
 }
 
@@ -3221,14 +3218,14 @@ class AreaShowList extends V20170328Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  */
-class AddApgroupConfig extends V20170328Rpc
+class AddApgroupConfig extends Rpc
 {
 }
 
 /**
  * @method string getData()
  */
-class InnerProduceCloudWF extends V20170328Rpc
+class InnerProduceCloudWF extends Rpc
 {
 
     /**
@@ -3248,7 +3245,7 @@ class InnerProduceCloudWF extends V20170328Rpc
 /**
  * @method string getData()
  */
-class InnerCheckOrder extends V20170328Rpc
+class InnerCheckOrder extends Rpc
 {
 
     /**

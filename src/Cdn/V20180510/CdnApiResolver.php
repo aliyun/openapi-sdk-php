@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cdn\V20180510;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
  * @method DescribeDomainWafReqData describeDomainWafReqData(array $options = [])
  * @method DescribeCdnHttpsDomainSSLInfo describeCdnHttpsDomainSSLInfo(array $options = [])
@@ -147,7 +144,7 @@ class CdnApiResolver
     use ApiResolverTrait;
 }
 
-class V20180510Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Cdn';
@@ -167,7 +164,7 @@ class V20180510Rpc extends Rpc
  * @method string getProperty()
  * @method $this withProperty($value)
  */
-class ModifyCdnDomainSchdmByProperty extends V20180510Rpc
+class ModifyCdnDomainSchdmByProperty extends Rpc
 {
 }
 
@@ -183,7 +180,7 @@ class ModifyCdnDomainSchdmByProperty extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainWafReqData extends V20180510Rpc
+class DescribeDomainWafReqData extends Rpc
 {
 }
 
@@ -193,7 +190,7 @@ class DescribeDomainWafReqData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnHttpsDomainSSLInfo extends V20180510Rpc
+class DescribeCdnHttpsDomainSSLInfo extends Rpc
 {
 }
 
@@ -201,7 +198,7 @@ class DescribeCdnHttpsDomainSSLInfo extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListUserTags extends V20180510Rpc
+class ListUserTags extends Rpc
 {
 }
 
@@ -211,7 +208,7 @@ class ListUserTags extends V20180510Rpc
  * @method string getSSLPub()
  * @method $this withSSLPub($value)
  */
-class DescribeCdnDomainByCertificate extends V20180510Rpc
+class DescribeCdnDomainByCertificate extends Rpc
 {
 }
 
@@ -221,7 +218,7 @@ class DescribeCdnDomainByCertificate extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserCdnStatus extends V20180510Rpc
+class DescribeUserCdnStatus extends Rpc
 {
 }
 
@@ -229,7 +226,7 @@ class DescribeUserCdnStatus extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnHttpsDomainList extends V20180510Rpc
+class DescribeCdnHttpsDomainList extends Rpc
 {
 }
 
@@ -255,7 +252,7 @@ class DescribeCdnHttpsDomainList extends V20180510Rpc
  * @method string getSSLPri()
  * @method $this withSSLPri($value)
  */
-class BatchSetCdnDomainServerCertificate extends V20180510Rpc
+class BatchSetCdnDomainServerCertificate extends Rpc
 {
 }
 
@@ -265,7 +262,7 @@ class BatchSetCdnDomainServerCertificate extends V20180510Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeleteUserUsageDataExportTask extends V20180510Rpc
+class DeleteUserUsageDataExportTask extends Rpc
 {
 }
 
@@ -275,7 +272,7 @@ class DeleteUserUsageDataExportTask extends V20180510Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DeleteUsageDetailDataExportTask extends V20180510Rpc
+class DeleteUsageDetailDataExportTask extends Rpc
 {
 }
 
@@ -293,7 +290,7 @@ class DeleteUsageDetailDataExportTask extends V20180510Rpc
  * @method string getLogStore()
  * @method $this withLogStore($value)
  */
-class DescribeRealtimeDeliveryAcc extends V20180510Rpc
+class DescribeRealtimeDeliveryAcc extends Rpc
 {
 }
 
@@ -305,7 +302,7 @@ class DescribeRealtimeDeliveryAcc extends V20180510Rpc
  * @method string getEventMetaName()
  * @method $this withEventMetaName($value)
  */
-class ListFCTrigger extends V20180510Rpc
+class ListFCTrigger extends Rpc
 {
 
     /** @var string */
@@ -320,7 +317,7 @@ class ListFCTrigger extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnCertificateDetail extends V20180510Rpc
+class DescribeCdnCertificateDetail extends Rpc
 {
 }
 
@@ -338,7 +335,7 @@ class DescribeCdnCertificateDetail extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeHttpCodeData extends V20180510Rpc
+class DescribeDomainRealTimeHttpCodeData extends Rpc
 {
 }
 
@@ -352,7 +349,7 @@ class DescribeDomainRealTimeHttpCodeData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeSrcTrafficData extends V20180510Rpc
+class DescribeDomainRealTimeSrcTrafficData extends Rpc
 {
 }
 
@@ -366,7 +363,7 @@ class DescribeDomainRealTimeSrcTrafficData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeSrcBpsData extends V20180510Rpc
+class DescribeDomainRealTimeSrcBpsData extends Rpc
 {
 }
 
@@ -382,7 +379,7 @@ class DescribeDomainRealTimeSrcBpsData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainSrcHttpCodeData extends V20180510Rpc
+class DescribeDomainSrcHttpCodeData extends Rpc
 {
 }
 
@@ -404,7 +401,7 @@ class DescribeDomainSrcHttpCodeData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainUsageData extends V20180510Rpc
+class DescribeDomainUsageData extends Rpc
 {
 }
 
@@ -416,7 +413,7 @@ class DescribeDomainUsageData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserUsageDetailDataExportTask extends V20180510Rpc
+class DescribeUserUsageDetailDataExportTask extends Rpc
 {
 }
 
@@ -428,7 +425,7 @@ class DescribeUserUsageDetailDataExportTask extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserUsageDataExportTask extends V20180510Rpc
+class DescribeUserUsageDataExportTask extends Rpc
 {
 }
 
@@ -444,7 +441,7 @@ class DescribeUserUsageDataExportTask extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateUserUsageDataExportTask extends V20180510Rpc
+class CreateUserUsageDataExportTask extends Rpc
 {
 }
 
@@ -466,7 +463,7 @@ class CreateUserUsageDataExportTask extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateUsageDetailDataExportTask extends V20180510Rpc
+class CreateUsageDetailDataExportTask extends Rpc
 {
 }
 
@@ -478,7 +475,7 @@ class CreateUsageDetailDataExportTask extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnCertificateList extends V20180510Rpc
+class DescribeCdnCertificateList extends Rpc
 {
 }
 
@@ -494,7 +491,7 @@ class DescribeCdnCertificateList extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainSrcTrafficData extends V20180510Rpc
+class DescribeDomainSrcTrafficData extends Rpc
 {
 }
 
@@ -514,7 +511,7 @@ class DescribeDomainSrcTrafficData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainTrafficData extends V20180510Rpc
+class DescribeDomainTrafficData extends Rpc
 {
 }
 
@@ -524,7 +521,7 @@ class DescribeDomainTrafficData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnUserResourcePackage extends V20180510Rpc
+class DescribeCdnUserResourcePackage extends Rpc
 {
 }
 
@@ -534,7 +531,7 @@ class DescribeCdnUserResourcePackage extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnUserQuota extends V20180510Rpc
+class DescribeCdnUserQuota extends Rpc
 {
 }
 
@@ -550,7 +547,7 @@ class DescribeCdnUserQuota extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCCData extends V20180510Rpc
+class DescribeDomainCCData extends Rpc
 {
 }
 
@@ -562,7 +559,7 @@ class DescribeDomainCCData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeIpInfo extends V20180510Rpc
+class DescribeIpInfo extends Rpc
 {
 }
 
@@ -576,7 +573,7 @@ class DescribeIpInfo extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetUserDomainBlackList extends V20180510Rpc
+class GetUserDomainBlackList extends Rpc
 {
 }
 
@@ -592,7 +589,7 @@ class GetUserDomainBlackList extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainFileSizeProportionData extends V20180510Rpc
+class DescribeDomainFileSizeProportionData extends Rpc
 {
 }
 
@@ -608,7 +605,7 @@ class DescribeDomainFileSizeProportionData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCCAttackInfo extends V20180510Rpc
+class DescribeDomainCCAttackInfo extends Rpc
 {
 }
 
@@ -624,7 +621,7 @@ class DescribeDomainCCAttackInfo extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainPvData extends V20180510Rpc
+class DescribeDomainPvData extends Rpc
 {
 }
 
@@ -644,7 +641,7 @@ class DescribeDomainPvData extends V20180510Rpc
  * @method string getSubMedia()
  * @method $this withSubMedia($value)
  */
-class ModifyCdnSubscribeService extends V20180510Rpc
+class ModifyCdnSubscribeService extends Rpc
 {
 }
 
@@ -660,7 +657,7 @@ class ModifyCdnSubscribeService extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainDownstreamBpsOfEdge extends V20180510Rpc
+class DescribeDomainDownstreamBpsOfEdge extends Rpc
 {
 }
 
@@ -674,7 +671,7 @@ class DescribeDomainDownstreamBpsOfEdge extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetWafConfig extends V20180510Rpc
+class SetWafConfig extends Rpc
 {
 }
 
@@ -690,7 +687,7 @@ class SetWafConfig extends V20180510Rpc
  * @method string getBackSrcDomain()
  * @method $this withBackSrcDomain($value)
  */
-class SetSourceHostConfig extends V20180510Rpc
+class SetSourceHostConfig extends Rpc
 {
 }
 
@@ -700,7 +697,7 @@ class SetSourceHostConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnRegionAndIsp extends V20180510Rpc
+class DescribeCdnRegionAndIsp extends Rpc
 {
 }
 
@@ -720,7 +717,7 @@ class DescribeCdnRegionAndIsp extends V20180510Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class SetCacheExpiredConfig extends V20180510Rpc
+class SetCacheExpiredConfig extends Rpc
 {
 }
 
@@ -734,7 +731,7 @@ class SetCacheExpiredConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetOptimizeConfig extends V20180510Rpc
+class SetOptimizeConfig extends Rpc
 {
 }
 
@@ -750,7 +747,7 @@ class SetOptimizeConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainUpstreamBpsOfEdge extends V20180510Rpc
+class DescribeDomainUpstreamBpsOfEdge extends Rpc
 {
 }
 
@@ -764,7 +761,7 @@ class DescribeDomainUpstreamBpsOfEdge extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetVideoSeekConfig extends V20180510Rpc
+class SetVideoSeekConfig extends Rpc
 {
 }
 
@@ -780,7 +777,7 @@ class SetVideoSeekConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainUvData extends V20180510Rpc
+class DescribeDomainUvData extends Rpc
 {
 }
 
@@ -794,7 +791,7 @@ class DescribeDomainUvData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRegionData extends V20180510Rpc
+class DescribeDomainRegionData extends Rpc
 {
 }
 
@@ -806,7 +803,7 @@ class DescribeDomainRegionData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnTypes extends V20180510Rpc
+class DescribeCdnTypes extends Rpc
 {
 }
 
@@ -820,7 +817,7 @@ class DescribeCdnTypes extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetPageCompressConfig extends V20180510Rpc
+class SetPageCompressConfig extends Rpc
 {
 }
 
@@ -836,7 +833,7 @@ class SetPageCompressConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainUpstreamOfCenter extends V20180510Rpc
+class DescribeDomainUpstreamOfCenter extends Rpc
 {
 }
 
@@ -854,7 +851,7 @@ class DescribeDomainUpstreamOfCenter extends V20180510Rpc
  * @method string getTimePoint()
  * @method $this withTimePoint($value)
  */
-class DescribeDomainBpsDataByTimeStamp extends V20180510Rpc
+class DescribeDomainBpsDataByTimeStamp extends Rpc
 {
 }
 
@@ -868,7 +865,7 @@ class DescribeDomainBpsDataByTimeStamp extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetForceRedirectConfig extends V20180510Rpc
+class SetForceRedirectConfig extends Rpc
 {
 }
 
@@ -886,7 +883,7 @@ class SetForceRedirectConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeData extends V20180510Rpc
+class DescribeDomainRealTimeData extends Rpc
 {
 }
 
@@ -900,7 +897,7 @@ class DescribeDomainRealTimeData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainISPData extends V20180510Rpc
+class DescribeDomainISPData extends Rpc
 {
 }
 
@@ -918,7 +915,7 @@ class DescribeDomainISPData extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetForwardSchemeConfig extends V20180510Rpc
+class SetForwardSchemeConfig extends Rpc
 {
 }
 
@@ -936,7 +933,7 @@ class SetForwardSchemeConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyHttpHeaderConfig extends V20180510Rpc
+class ModifyHttpHeaderConfig extends Rpc
 {
 }
 
@@ -946,7 +943,7 @@ class ModifyHttpHeaderConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class DescribeCustomLogConfig extends V20180510Rpc
+class DescribeCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -983,7 +980,7 @@ class DescribeCustomLogConfig extends V20180510Rpc
  * @method string getSeqId()
  * @method $this withSeqId($value)
  */
-class SetBusinessFunctionConfig extends V20180510Rpc
+class SetBusinessFunctionConfig extends Rpc
 {
 }
 
@@ -999,7 +996,7 @@ class SetBusinessFunctionConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetRefererRegexConfig extends V20180510Rpc
+class SetRefererRegexConfig extends Rpc
 {
 }
 
@@ -1013,7 +1010,7 @@ class SetRefererRegexConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeReqHitRateData extends V20180510Rpc
+class DescribeDomainRealTimeReqHitRateData extends Rpc
 {
 
     /** @var string */
@@ -1042,7 +1039,7 @@ class DescribeDomainRealTimeReqHitRateData extends V20180510Rpc
  * @method string getCheckUrl()
  * @method $this withCheckUrl($value)
  */
-class BatchAddCdnDomain extends V20180510Rpc
+class BatchAddCdnDomain extends Rpc
 {
 }
 
@@ -1056,7 +1053,7 @@ class BatchAddCdnDomain extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeByteHitRateData extends V20180510Rpc
+class DescribeDomainRealTimeByteHitRateData extends Rpc
 {
 
     /** @var string */
@@ -1079,7 +1076,7 @@ class DescribeDomainRealTimeByteHitRateData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainQpsData extends V20180510Rpc
+class DescribeDomainQpsData extends Rpc
 {
 }
 
@@ -1103,7 +1100,7 @@ class DescribeDomainQpsData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainAverageResponseTime extends V20180510Rpc
+class DescribeDomainAverageResponseTime extends Rpc
 {
 }
 
@@ -1123,7 +1120,7 @@ class DescribeDomainAverageResponseTime extends V20180510Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class ModifyFileCacheExpiredConfig extends V20180510Rpc
+class ModifyFileCacheExpiredConfig extends Rpc
 {
 }
 
@@ -1141,7 +1138,7 @@ class ModifyFileCacheExpiredConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnMonitorData extends V20180510Rpc
+class DescribeCdnMonitorData extends Rpc
 {
 }
 
@@ -1157,7 +1154,7 @@ class DescribeCdnMonitorData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainHitRateData extends V20180510Rpc
+class DescribeDomainHitRateData extends Rpc
 {
 }
 
@@ -1169,7 +1166,7 @@ class DescribeDomainHitRateData extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class ModifyDomainCustomLogConfig extends V20180510Rpc
+class ModifyDomainCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -1188,7 +1185,7 @@ class ModifyDomainCustomLogConfig extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainHttpCodeData extends V20180510Rpc
+class DescribeDomainHttpCodeData extends Rpc
 {
 }
 
@@ -1206,7 +1203,7 @@ class DescribeDomainHttpCodeData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetHttpHeaderConfig extends V20180510Rpc
+class SetHttpHeaderConfig extends Rpc
 {
 }
 
@@ -1224,7 +1221,7 @@ class SetHttpHeaderConfig extends V20180510Rpc
  * @method string getTTL()
  * @method $this withTTL($value)
  */
-class SetFileCacheExpiredConfig extends V20180510Rpc
+class SetFileCacheExpiredConfig extends Rpc
 {
 }
 
@@ -1242,7 +1239,7 @@ class SetFileCacheExpiredConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchUpdateCdnDomain extends V20180510Rpc
+class BatchUpdateCdnDomain extends Rpc
 {
 }
 
@@ -1252,7 +1249,7 @@ class BatchUpdateCdnDomain extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCertificateInfo extends V20180510Rpc
+class DescribeDomainCertificateInfo extends Rpc
 {
 }
 
@@ -1262,7 +1259,7 @@ class DescribeDomainCertificateInfo extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRefreshQuota extends V20180510Rpc
+class DescribeRefreshQuota extends Rpc
 {
 }
 
@@ -1276,7 +1273,7 @@ class DescribeRefreshQuota extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainsUsageByDay extends V20180510Rpc
+class DescribeDomainsUsageByDay extends Rpc
 {
 }
 
@@ -1302,7 +1299,7 @@ class DescribeDomainsUsageByDay extends V20180510Rpc
  * @method string getRegion()
  * @method $this withRegion($value)
  */
-class SetDomainServerCertificate extends V20180510Rpc
+class SetDomainServerCertificate extends Rpc
 {
 }
 
@@ -1315,7 +1312,7 @@ class SetDomainServerCertificate extends V20180510Rpc
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
  */
-class UpdateFCTrigger extends V20180510Rpc
+class UpdateFCTrigger extends Rpc
 {
 
     /**
@@ -1370,7 +1367,7 @@ class UpdateFCTrigger extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeTopDomainsByFlow extends V20180510Rpc
+class DescribeTopDomainsByFlow extends Rpc
 {
 }
 
@@ -1388,7 +1385,7 @@ class DescribeTopDomainsByFlow extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainLogs extends V20180510Rpc
+class DescribeCdnDomainLogs extends Rpc
 {
 }
 
@@ -1398,7 +1395,7 @@ class DescribeCdnDomainLogs extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeFCTrigger extends V20180510Rpc
+class DescribeFCTrigger extends Rpc
 {
 
     /** @var string */
@@ -1419,7 +1416,7 @@ class DescribeFCTrigger extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainMonthBillingBpsData extends V20180510Rpc
+class DescribeDomainMonthBillingBpsData extends Rpc
 {
 }
 
@@ -1435,7 +1432,7 @@ class DescribeDomainMonthBillingBpsData extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainReqHitRateData extends V20180510Rpc
+class DescribeDomainReqHitRateData extends Rpc
 {
 }
 
@@ -1447,7 +1444,7 @@ class DescribeDomainReqHitRateData extends V20180510Rpc
  * @method string getTag()
  * @method $this withTag($value)
  */
-class ModifyUserCustomLogConfig extends V20180510Rpc
+class ModifyUserCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -1466,7 +1463,7 @@ class ModifyUserCustomLogConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetRemoveQueryStringConfig extends V20180510Rpc
+class SetRemoveQueryStringConfig extends Rpc
 {
 }
 
@@ -1480,7 +1477,7 @@ class SetRemoveQueryStringConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetHttpsOptionConfig extends V20180510Rpc
+class SetHttpsOptionConfig extends Rpc
 {
 }
 
@@ -1492,7 +1489,7 @@ class SetHttpsOptionConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class OpenCdnService extends V20180510Rpc
+class OpenCdnService extends Rpc
 {
 }
 
@@ -1508,7 +1505,7 @@ class OpenCdnService extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeOneMinuteData extends V20180510Rpc
+class DescribeOneMinuteData extends Rpc
 {
 }
 
@@ -1524,7 +1521,7 @@ class DescribeOneMinuteData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainTopReferVisit extends V20180510Rpc
+class DescribeDomainTopReferVisit extends Rpc
 {
 }
 
@@ -1540,7 +1537,7 @@ class DescribeDomainTopReferVisit extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainSrcBpsData extends V20180510Rpc
+class DescribeDomainSrcBpsData extends Rpc
 {
 }
 
@@ -1552,7 +1549,7 @@ class DescribeDomainSrcBpsData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeL2VipsByDomain extends V20180510Rpc
+class DescribeL2VipsByDomain extends Rpc
 {
 }
 
@@ -1568,7 +1565,7 @@ class DescribeL2VipsByDomain extends V20180510Rpc
  * @method string getBlockIps()
  * @method $this withBlockIps($value)
  */
-class SetCcConfig extends V20180510Rpc
+class SetCcConfig extends Rpc
 {
 }
 
@@ -1582,7 +1579,7 @@ class SetCcConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class PushObjectCache extends V20180510Rpc
+class PushObjectCache extends Rpc
 {
 }
 
@@ -1600,7 +1597,7 @@ class PushObjectCache extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeQpsData extends V20180510Rpc
+class DescribeDomainRealTimeQpsData extends Rpc
 {
 
     /** @var string */
@@ -1615,7 +1612,7 @@ class DescribeDomainRealTimeQpsData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCdnService extends V20180510Rpc
+class ModifyCdnService extends Rpc
 {
 }
 
@@ -1627,7 +1624,7 @@ class ModifyCdnService extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetDomainGreenManagerConfig extends V20180510Rpc
+class SetDomainGreenManagerConfig extends Rpc
 {
 }
 
@@ -1643,7 +1640,7 @@ class SetDomainGreenManagerConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetHttpErrorPageConfig extends V20180510Rpc
+class SetHttpErrorPageConfig extends Rpc
 {
 
     /** @var string */
@@ -1664,7 +1661,7 @@ class SetHttpErrorPageConfig extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetIgnoreQueryStringConfig extends V20180510Rpc
+class SetIgnoreQueryStringConfig extends Rpc
 {
 }
 
@@ -1674,7 +1671,7 @@ class SetIgnoreQueryStringConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnService extends V20180510Rpc
+class DescribeCdnService extends Rpc
 {
 }
 
@@ -1688,7 +1685,7 @@ class DescribeCdnService extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainConfigs extends V20180510Rpc
+class DescribeCdnDomainConfigs extends Rpc
 {
 }
 
@@ -1706,7 +1703,7 @@ class DescribeCdnDomainConfigs extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeBpsData extends V20180510Rpc
+class DescribeDomainRealTimeBpsData extends Rpc
 {
 
     /** @var string */
@@ -1739,7 +1736,7 @@ class DescribeDomainRealTimeBpsData extends V20180510Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeRefreshTasks extends V20180510Rpc
+class DescribeRefreshTasks extends Rpc
 {
 }
 
@@ -1759,7 +1756,7 @@ class DescribeRefreshTasks extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainPathData extends V20180510Rpc
+class DescribeDomainPathData extends Rpc
 {
 
     /** @var string */
@@ -1774,7 +1771,7 @@ class DescribeDomainPathData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainDetail extends V20180510Rpc
+class DescribeCdnDomainDetail extends Rpc
 {
 }
 
@@ -1805,7 +1802,7 @@ class DescribeCdnDomainDetail extends V20180510Rpc
  * @method $this withPageSize($value)
  * @method array getTag()
  */
-class DescribeUserDomains extends V20180510Rpc
+class DescribeUserDomains extends Rpc
 {
 
     /**
@@ -1835,7 +1832,7 @@ class DescribeUserDomains extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetIpAllowListConfig extends V20180510Rpc
+class SetIpAllowListConfig extends Rpc
 {
 }
 
@@ -1845,7 +1842,7 @@ class SetIpAllowListConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCname extends V20180510Rpc
+class DescribeDomainCname extends Rpc
 {
 
     /** @var string */
@@ -1868,7 +1865,7 @@ class DescribeDomainCname extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRangeDataByLocateAndIspService extends V20180510Rpc
+class DescribeRangeDataByLocateAndIspService extends Rpc
 {
 }
 
@@ -1884,7 +1881,7 @@ class DescribeRangeDataByLocateAndIspService extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetErrorPageConfig extends V20180510Rpc
+class SetErrorPageConfig extends Rpc
 {
 }
 
@@ -1894,7 +1891,7 @@ class SetErrorPageConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteFCTrigger extends V20180510Rpc
+class DeleteFCTrigger extends Rpc
 {
 }
 
@@ -1904,7 +1901,7 @@ class DeleteFCTrigger extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainCustomLogConfig extends V20180510Rpc
+class DescribeDomainCustomLogConfig extends Rpc
 {
 
     /** @var string */
@@ -1925,7 +1922,7 @@ class DescribeDomainCustomLogConfig extends V20180510Rpc
  * @method string getKey()
  * @method $this withKey($value)
  */
-class SetReqHeaderConfig extends V20180510Rpc
+class SetReqHeaderConfig extends Rpc
 {
 }
 
@@ -1945,7 +1942,7 @@ class SetReqHeaderConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetWaitingRoomConfig extends V20180510Rpc
+class SetWaitingRoomConfig extends Rpc
 {
 }
 
@@ -1965,7 +1962,7 @@ class SetWaitingRoomConfig extends V20180510Rpc
  * @method string getAllowEmpty()
  * @method $this withAllowEmpty($value)
  */
-class SetRefererConfig extends V20180510Rpc
+class SetRefererConfig extends Rpc
 {
 }
 
@@ -1987,7 +1984,7 @@ class SetRefererConfig extends V20180510Rpc
  * @method string getAuthType()
  * @method $this withAuthType($value)
  */
-class SetReqAuthConfig extends V20180510Rpc
+class SetReqAuthConfig extends Rpc
 {
 }
 
@@ -2002,7 +1999,7 @@ class SetReqAuthConfig extends V20180510Rpc
  * @method string getRoleARN()
  * @method string getEventMetaName()
  */
-class AddFCTrigger extends V20180510Rpc
+class AddFCTrigger extends Rpc
 {
 
     /**
@@ -2079,7 +2076,7 @@ class AddFCTrigger extends V20180510Rpc
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class DescribeUserConfigs extends V20180510Rpc
+class DescribeUserConfigs extends Rpc
 {
 }
 
@@ -2089,7 +2086,7 @@ class DescribeUserConfigs extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class ListDomainsByLogConfigId extends V20180510Rpc
+class ListDomainsByLogConfigId extends Rpc
 {
 
     /** @var string */
@@ -2108,7 +2105,7 @@ class ListDomainsByLogConfigId extends V20180510Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class SetLocationAccessRestriction extends V20180510Rpc
+class SetLocationAccessRestriction extends Rpc
 {
 }
 
@@ -2120,7 +2117,7 @@ class SetLocationAccessRestriction extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeCdnDomainBaseDetail extends V20180510Rpc
+class DescribeCdnDomainBaseDetail extends Rpc
 {
 }
 
@@ -2134,7 +2131,7 @@ class DescribeCdnDomainBaseDetail extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainConfigs extends V20180510Rpc
+class DescribeDomainConfigs extends Rpc
 {
 }
 
@@ -2146,7 +2143,7 @@ class DescribeDomainConfigs extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainsBySource extends V20180510Rpc
+class DescribeDomainsBySource extends Rpc
 {
 }
 
@@ -2162,7 +2159,7 @@ class DescribeDomainsBySource extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainTopUrlVisit extends V20180510Rpc
+class DescribeDomainTopUrlVisit extends Rpc
 {
 }
 
@@ -2176,7 +2173,7 @@ class DescribeDomainTopUrlVisit extends V20180510Rpc
  * @method string getObjectType()
  * @method $this withObjectType($value)
  */
-class RefreshObjectCaches extends V20180510Rpc
+class RefreshObjectCaches extends Rpc
 {
 }
 
@@ -2190,7 +2187,7 @@ class RefreshObjectCaches extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteSpecificConfig extends V20180510Rpc
+class DeleteSpecificConfig extends Rpc
 {
 }
 
@@ -2206,7 +2203,7 @@ class DeleteSpecificConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchDeleteCdnDomainConfig extends V20180510Rpc
+class BatchDeleteCdnDomainConfig extends Rpc
 {
 }
 
@@ -2220,7 +2217,7 @@ class BatchDeleteCdnDomainConfig extends V20180510Rpc
  * @method string getPrivateOssAuth()
  * @method $this withPrivateOssAuth($value)
  */
-class SetL2OssKeyConfig extends V20180510Rpc
+class SetL2OssKeyConfig extends Rpc
 {
 
     /** @var string */
@@ -2239,7 +2236,7 @@ class SetL2OssKeyConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class BatchSetCdnDomainConfig extends V20180510Rpc
+class BatchSetCdnDomainConfig extends Rpc
 {
 }
 
@@ -2257,7 +2254,7 @@ class BatchSetCdnDomainConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyCdnDomain extends V20180510Rpc
+class ModifyCdnDomain extends Rpc
 {
 }
 
@@ -2273,7 +2270,7 @@ class ModifyCdnDomain extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCdnDomain extends V20180510Rpc
+class DeleteCdnDomain extends Rpc
 {
 }
 
@@ -2287,7 +2284,7 @@ class DeleteCdnDomain extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetRangeConfig extends V20180510Rpc
+class SetRangeConfig extends Rpc
 {
 }
 
@@ -2313,7 +2310,7 @@ class SetRangeConfig extends V20180510Rpc
  * @method string getCheckUrl()
  * @method $this withCheckUrl($value)
  */
-class AddCdnDomain extends V20180510Rpc
+class AddCdnDomain extends Rpc
 {
 }
 
@@ -2327,7 +2324,7 @@ class AddCdnDomain extends V20180510Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
-class SetIpBlackListConfig extends V20180510Rpc
+class SetIpBlackListConfig extends Rpc
 {
 }
 
@@ -2339,7 +2336,7 @@ class SetIpBlackListConfig extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StopCdnDomain extends V20180510Rpc
+class StopCdnDomain extends Rpc
 {
 }
 
@@ -2351,7 +2348,7 @@ class StopCdnDomain extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartCdnDomain extends V20180510Rpc
+class StartCdnDomain extends Rpc
 {
 }
 
@@ -2371,7 +2368,7 @@ class StartCdnDomain extends V20180510Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeDomainBpsData extends V20180510Rpc
+class DescribeDomainBpsData extends Rpc
 {
 }
 
@@ -2385,6 +2382,6 @@ class DescribeDomainBpsData extends V20180510Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainMax95BpsData extends V20180510Rpc
+class DescribeDomainMax95BpsData extends Rpc
 {
 }

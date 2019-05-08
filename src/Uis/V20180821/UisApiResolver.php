@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Uis\V20180821;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method DescribeHighPriorityIps describeHighPriorityIps(array $options = [])
  * @method DeleteAccessLog deleteAccessLog(array $options = [])
  * @method SetAccessLog setAccessLog(array $options = [])
@@ -45,7 +42,7 @@ class UisApiResolver
     use ApiResolverTrait;
 }
 
-class V20180821Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Uis';
@@ -76,7 +73,7 @@ class V20180821Rpc extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeHighPriorityIps extends V20180821Rpc
+class DescribeHighPriorityIps extends Rpc
 {
 }
 
@@ -94,7 +91,7 @@ class DescribeHighPriorityIps extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteAccessLog extends V20180821Rpc
+class DeleteAccessLog extends Rpc
 {
 }
 
@@ -116,7 +113,7 @@ class DeleteAccessLog extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class SetAccessLog extends V20180821Rpc
+class SetAccessLog extends Rpc
 {
 }
 
@@ -134,7 +131,7 @@ class SetAccessLog extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUiseNodeStatus extends V20180821Rpc
+class DescribeUiseNodeStatus extends Rpc
 {
 }
 
@@ -156,7 +153,7 @@ class DescribeUiseNodeStatus extends V20180821Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeUisNetworkInterfaces extends V20180821Rpc
+class DescribeUisNetworkInterfaces extends Rpc
 {
 }
 
@@ -174,7 +171,7 @@ class DescribeUisNetworkInterfaces extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisNetworkInterface extends V20180821Rpc
+class DeleteUisNetworkInterface extends Rpc
 {
 }
 
@@ -200,7 +197,7 @@ class DeleteUisNetworkInterface extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateUisNetworkInterface extends V20180821Rpc
+class CreateUisNetworkInterface extends Rpc
 {
 }
 
@@ -230,7 +227,7 @@ class CreateUisNetworkInterface extends V20180821Rpc
  * @method string getName()
  * @method $this withName($value)
  */
-class ModifyDnatEntry extends V20180821Rpc
+class ModifyDnatEntry extends Rpc
 {
 }
 
@@ -252,7 +249,7 @@ class ModifyDnatEntry extends V20180821Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDnatEntries extends V20180821Rpc
+class DescribeDnatEntries extends Rpc
 {
 }
 
@@ -270,7 +267,7 @@ class DescribeDnatEntries extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDnatEntry extends V20180821Rpc
+class DeleteDnatEntry extends Rpc
 {
 }
 
@@ -298,7 +295,7 @@ class DeleteDnatEntry extends V20180821Rpc
  * @method string getOriginalIp()
  * @method $this withOriginalIp($value)
  */
-class CreateDnatEntry extends V20180821Rpc
+class CreateDnatEntry extends Rpc
 {
 }
 
@@ -312,7 +309,7 @@ class CreateDnatEntry extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeAreas extends V20180821Rpc
+class DescribeAreas extends Rpc
 {
 }
 
@@ -330,7 +327,7 @@ class DescribeAreas extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetDroppedIpList extends V20180821Rpc
+class GetDroppedIpList extends Rpc
 {
 }
 
@@ -350,7 +347,7 @@ class GetDroppedIpList extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisNodeIp extends V20180821Rpc
+class DeleteUisNodeIp extends Rpc
 {
 }
 
@@ -370,7 +367,7 @@ class DeleteUisNodeIp extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddUisNodeIp extends V20180821Rpc
+class AddUisNodeIp extends Rpc
 {
 }
 
@@ -394,7 +391,7 @@ class AddUisNodeIp extends V20180821Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeHighPriorityIp extends V20180821Rpc
+class DescribeHighPriorityIp extends Rpc
 {
 }
 
@@ -414,7 +411,7 @@ class DescribeHighPriorityIp extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyHighPriorityIp extends V20180821Rpc
+class ModifyHighPriorityIp extends Rpc
 {
 }
 
@@ -434,7 +431,7 @@ class ModifyHighPriorityIp extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteHighPriorityIp extends V20180821Rpc
+class DeleteHighPriorityIp extends Rpc
 {
 }
 
@@ -454,7 +451,7 @@ class DeleteHighPriorityIp extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddHighPriorityIp extends V20180821Rpc
+class AddHighPriorityIp extends Rpc
 {
 }
 
@@ -478,7 +475,7 @@ class AddHighPriorityIp extends V20180821Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeUisConnections extends V20180821Rpc
+class DescribeUisConnections extends Rpc
 {
 }
 
@@ -506,7 +503,7 @@ class DescribeUisConnections extends V20180821Rpc
  * @method string getGreConfig()
  * @method $this withGreConfig($value)
  */
-class ModifyUisConnectionAttribute extends V20180821Rpc
+class ModifyUisConnectionAttribute extends Rpc
 {
 }
 
@@ -526,7 +523,7 @@ class ModifyUisConnectionAttribute extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisConnection extends V20180821Rpc
+class DeleteUisConnection extends Rpc
 {
 }
 
@@ -548,7 +545,7 @@ class DeleteUisConnection extends V20180821Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeUises extends V20180821Rpc
+class DescribeUises extends Rpc
 {
 }
 
@@ -574,7 +571,7 @@ class DescribeUises extends V20180821Rpc
  * @method string getGreConfig()
  * @method $this withGreConfig($value)
  */
-class CreateUisConnection extends V20180821Rpc
+class CreateUisConnection extends Rpc
 {
 }
 
@@ -602,7 +599,7 @@ class CreateUisConnection extends V20180821Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeUisNodes extends V20180821Rpc
+class DescribeUisNodes extends Rpc
 {
 }
 
@@ -626,7 +623,7 @@ class DescribeUisNodes extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyUisNodeAttribute extends V20180821Rpc
+class ModifyUisNodeAttribute extends Rpc
 {
 }
 
@@ -646,7 +643,7 @@ class ModifyUisNodeAttribute extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisNode extends V20180821Rpc
+class DeleteUisNode extends Rpc
 {
 }
 
@@ -672,7 +669,7 @@ class DeleteUisNode extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateUisNode extends V20180821Rpc
+class CreateUisNode extends Rpc
 {
 }
 
@@ -690,7 +687,7 @@ class CreateUisNode extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUis extends V20180821Rpc
+class DeleteUis extends Rpc
 {
 }
 
@@ -710,7 +707,7 @@ class DeleteUis extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class CreateUis extends V20180821Rpc
+class CreateUis extends Rpc
 {
 }
 
@@ -732,6 +729,6 @@ class CreateUis extends V20180821Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyUisAttribute extends V20180821Rpc
+class ModifyUisAttribute extends Rpc
 {
 }

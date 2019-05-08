@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Xspace\V20170720;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method QueryCustomerByPhone queryCustomerByPhone(array $options = [])
  * @method QueryCustomerById queryCustomerById(array $options = [])
  */
@@ -16,7 +13,7 @@ class XspaceApiResolver
     use ApiResolverTrait;
 }
 
-class V20170720Roa extends Roa
+class Roa extends \AlibabaCloud\Roa
 {
     /** @var string */
     public $product = 'xspace';
@@ -31,7 +28,7 @@ class V20170720Roa extends Roa
 /**
  * @method string getPhone()
  */
-class QueryCustomerByPhone extends V20170720Roa
+class QueryCustomerByPhone extends Roa
 {
     /** @var string */
     public $pathPattern = '/customerbyphone';
@@ -53,7 +50,7 @@ class QueryCustomerByPhone extends V20170720Roa
 /**
  * @method string getId()
  */
-class QueryCustomerById extends V20170720Roa
+class QueryCustomerById extends Roa
 {
     /** @var string */
     public $pathPattern = '/customer';

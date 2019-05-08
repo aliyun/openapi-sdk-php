@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Cloudauth\V20180916;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])
  * @method CreateVerifySDK createVerifySDK(array $options = [])
@@ -26,7 +23,7 @@ class CloudauthApiResolver
     use ApiResolverTrait;
 }
 
-class V20180916Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Cloudauth';
@@ -60,7 +57,7 @@ class V20180916Rpc extends Rpc
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  */
-class ModifyDeviceInfo extends V20180916Rpc
+class ModifyDeviceInfo extends Rpc
 {
 
     /** @var string */
@@ -81,7 +78,7 @@ class ModifyDeviceInfo extends V20180916Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
-class CreateAuthKey extends V20180916Rpc
+class CreateAuthKey extends Rpc
 {
 
     /** @var string */
@@ -98,7 +95,7 @@ class CreateAuthKey extends V20180916Rpc
  * @method string getPlatform()
  * @method $this withPlatform($value)
  */
-class CreateVerifySDK extends V20180916Rpc
+class CreateVerifySDK extends Rpc
 {
 
     /** @var string */
@@ -113,7 +110,7 @@ class CreateVerifySDK extends V20180916Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class DescribeVerifySDK extends V20180916Rpc
+class DescribeVerifySDK extends Rpc
 {
 
     /** @var string */
@@ -142,7 +139,7 @@ class DescribeVerifySDK extends V20180916Rpc
  * @method string getExpiredStartDay()
  * @method $this withExpiredStartDay($value)
  */
-class DescribeDeviceInfo extends V20180916Rpc
+class DescribeDeviceInfo extends Rpc
 {
 
     /** @var string */
@@ -158,7 +155,7 @@ class DescribeDeviceInfo extends V20180916Rpc
  * @method array getMaterial()
  * @method string getTicketId()
  */
-class SubmitVerification extends V20180916Rpc
+class SubmitVerification extends Rpc
 {
 
     /**
@@ -214,7 +211,7 @@ class SubmitVerification extends V20180916Rpc
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
-class GetStatus extends V20180916Rpc
+class GetStatus extends Rpc
 {
 }
 
@@ -228,7 +225,7 @@ class GetStatus extends V20180916Rpc
  * @method string getSourceImageValue()
  * @method string getTargetImageValue()
  */
-class CompareFaces extends V20180916Rpc
+class CompareFaces extends Rpc
 {
 
     /**
@@ -292,7 +289,7 @@ class CompareFaces extends V20180916Rpc
  * @method array getMaterial()
  * @method string getVerifyToken()
  */
-class SubmitMaterials extends V20180916Rpc
+class SubmitMaterials extends Rpc
 {
 
     /**
@@ -335,7 +332,7 @@ class SubmitMaterials extends V20180916Rpc
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
-class GetMaterials extends V20180916Rpc
+class GetMaterials extends Rpc
 {
 }
 
@@ -354,7 +351,7 @@ class GetMaterials extends V20180916Rpc
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
-class GetVerifyToken extends V20180916Rpc
+class GetVerifyToken extends Rpc
 {
 
     /**
@@ -383,7 +380,7 @@ class GetVerifyToken extends V20180916Rpc
  * @method string getDontSaveDB()
  * @method string getClientTag()
  */
-class DetectFaceAttributes extends V20180916Rpc
+class DetectFaceAttributes extends Rpc
 {
 
     /**

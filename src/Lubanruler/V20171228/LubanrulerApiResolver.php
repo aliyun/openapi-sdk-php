@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Lubanruler\V20171228;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateLubanrulerTask createLubanrulerTask(array $options = [])
  * @method UpdateLubanrulerTask updateLubanrulerTask(array $options = [])
  * @method GetResultByLubanruler getResultByLubanruler(array $options = [])
@@ -17,7 +14,7 @@ class LubanrulerApiResolver
     use ApiResolverTrait;
 }
 
-class V20171228Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Lubanruler';
@@ -36,7 +33,7 @@ class V20171228Rpc extends Rpc
  * @method string getTaskDO()
  * @method string getToken()
  */
-class CreateLubanrulerTask extends V20171228Rpc
+class CreateLubanrulerTask extends Rpc
 {
 
     /**
@@ -70,7 +67,7 @@ class CreateLubanrulerTask extends V20171228Rpc
  * @method string getAoneInfo()
  * @method string getToken()
  */
-class UpdateLubanrulerTask extends V20171228Rpc
+class UpdateLubanrulerTask extends Rpc
 {
 
     /**
@@ -106,6 +103,6 @@ class UpdateLubanrulerTask extends V20171228Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class GetResultByLubanruler extends V20171228Rpc
+class GetResultByLubanruler extends Rpc
 {
 }

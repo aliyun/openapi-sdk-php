@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Rtc\V20180111;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method CreateMPULayout createMPULayout(array $options = [])
  * @method DeleteMPULayout deleteMPULayout(array $options = [])
  * @method GetMPUAllLayoutId getMPUAllLayoutId(array $options = [])
@@ -52,7 +49,7 @@ class RtcApiResolver
     use ApiResolverTrait;
 }
 
-class V20180111Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'rtc';
@@ -78,7 +75,7 @@ class V20180111Rpc extends Rpc
  * @method string getAudioMixCount()
  * @method $this withAudioMixCount($value)
  */
-class CreateMPULayout extends V20180111Rpc
+class CreateMPULayout extends Rpc
 {
 
     /**
@@ -111,7 +108,7 @@ class CreateMPULayout extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DeleteMPULayout extends V20180111Rpc
+class DeleteMPULayout extends Rpc
 {
 }
 
@@ -121,7 +118,7 @@ class DeleteMPULayout extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class GetMPUAllLayoutId extends V20180111Rpc
+class GetMPUAllLayoutId extends Rpc
 {
 }
 
@@ -133,7 +130,7 @@ class GetMPUAllLayoutId extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class GetMPULayoutInfo extends V20180111Rpc
+class GetMPULayoutInfo extends Rpc
 {
 }
 
@@ -145,7 +142,7 @@ class GetMPULayoutInfo extends V20180111Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetMPUTaskParam extends V20180111Rpc
+class GetMPUTaskParam extends Rpc
 {
 }
 
@@ -157,7 +154,7 @@ class GetMPUTaskParam extends V20180111Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class GetMPUTaskStatus extends V20180111Rpc
+class GetMPUTaskStatus extends Rpc
 {
 }
 
@@ -183,7 +180,7 @@ class GetMPUTaskStatus extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class StartMPUTask extends V20180111Rpc
+class StartMPUTask extends Rpc
 {
 
     /**
@@ -227,7 +224,7 @@ class StartMPUTask extends V20180111Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class StopMPUTask extends V20180111Rpc
+class StopMPUTask extends Rpc
 {
 }
 
@@ -245,7 +242,7 @@ class StopMPUTask extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeRtcChannelCntData extends V20180111Rpc
+class DescribeRtcChannelCntData extends Rpc
 {
 }
 
@@ -263,7 +260,7 @@ class DescribeRtcChannelCntData extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeRtcDurationData extends V20180111Rpc
+class DescribeRtcDurationData extends Rpc
 {
 }
 
@@ -281,7 +278,7 @@ class DescribeRtcDurationData extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeRtcPeakChannelCntData extends V20180111Rpc
+class DescribeRtcPeakChannelCntData extends Rpc
 {
 }
 
@@ -299,7 +296,7 @@ class DescribeRtcPeakChannelCntData extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeRtcPeakUserCntData extends V20180111Rpc
+class DescribeRtcPeakUserCntData extends Rpc
 {
 }
 
@@ -317,7 +314,7 @@ class DescribeRtcPeakUserCntData extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeRtcUserCntData extends V20180111Rpc
+class DescribeRtcUserCntData extends Rpc
 {
 }
 
@@ -335,7 +332,7 @@ class DescribeRtcUserCntData extends V20180111Rpc
  * @method string getBizId()
  * @method $this withBizId($value)
  */
-class ReceiveNotify extends V20180111Rpc
+class ReceiveNotify extends Rpc
 {
 }
 
@@ -358,7 +355,7 @@ class ReceiveNotify extends V20180111Rpc
  * @method string getMixMode()
  * @method $this withMixMode($value)
  */
-class CreateTemplate extends V20180111Rpc
+class CreateTemplate extends Rpc
 {
 
     /**
@@ -422,7 +419,7 @@ class CreateTemplate extends V20180111Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class StopTask extends V20180111Rpc
+class StopTask extends Rpc
 {
 }
 
@@ -444,7 +441,7 @@ class StopTask extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class StartTask extends V20180111Rpc
+class StartTask extends Rpc
 {
 
     /**
@@ -489,7 +486,7 @@ class StartTask extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class RemoveTerminals extends V20180111Rpc
+class RemoveTerminals extends Rpc
 {
 
     /**
@@ -522,7 +519,7 @@ class RemoveTerminals extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class CreateChannelToken extends V20180111Rpc
+class CreateChannelToken extends Rpc
 {
 }
 
@@ -536,7 +533,7 @@ class CreateChannelToken extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class UpdateChannel extends V20180111Rpc
+class UpdateChannel extends Rpc
 {
 }
 
@@ -548,7 +545,7 @@ class UpdateChannel extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class DeleteChannel extends V20180111Rpc
+class DeleteChannel extends Rpc
 {
 }
 
@@ -560,7 +557,7 @@ class DeleteChannel extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class CreateChannel extends V20180111Rpc
+class CreateChannel extends Rpc
 {
 }
 
@@ -573,7 +570,7 @@ class CreateChannel extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class RemoveParticipants extends V20180111Rpc
+class RemoveParticipants extends Rpc
 {
 
     /**
@@ -610,7 +607,7 @@ class RemoveParticipants extends V20180111Rpc
  * @method string getInterval()
  * @method $this withInterval($value)
  */
-class DescribeStatis extends V20180111Rpc
+class DescribeStatis extends Rpc
 {
 }
 
@@ -628,7 +625,7 @@ class DescribeStatis extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class DescribeRecordDetail extends V20180111Rpc
+class DescribeRecordDetail extends Rpc
 {
 }
 
@@ -654,7 +651,7 @@ class DescribeRecordDetail extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeRecordList extends V20180111Rpc
+class DescribeRecordList extends Rpc
 {
 }
 
@@ -666,7 +663,7 @@ class DescribeRecordList extends V20180111Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRealTimeRecordList extends V20180111Rpc
+class DescribeRealTimeRecordList extends Rpc
 {
 }
 
@@ -680,7 +677,7 @@ class DescribeRealTimeRecordList extends V20180111Rpc
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class DescribeRealTimeRecordDetail extends V20180111Rpc
+class DescribeRealTimeRecordDetail extends Rpc
 {
 }
 
@@ -698,7 +695,7 @@ class DescribeRealTimeRecordDetail extends V20180111Rpc
  * @method string getStatus()
  * @method $this withStatus($value)
  */
-class DescribeApps extends V20180111Rpc
+class DescribeApps extends Rpc
 {
 }
 
@@ -710,7 +707,7 @@ class DescribeApps extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class ModifyApp extends V20180111Rpc
+class ModifyApp extends Rpc
 {
 }
 
@@ -722,7 +719,7 @@ class ModifyApp extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DescribeConferenceAuthInfo extends V20180111Rpc
+class DescribeConferenceAuthInfo extends Rpc
 {
 }
 
@@ -742,7 +739,7 @@ class DescribeConferenceAuthInfo extends V20180111Rpc
  * @method string getRemindNotice()
  * @method $this withRemindNotice($value)
  */
-class ModifyConference extends V20180111Rpc
+class ModifyConference extends Rpc
 {
 }
 
@@ -756,7 +753,7 @@ class ModifyConference extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class UnmuteAudioAll extends V20180111Rpc
+class UnmuteAudioAll extends Rpc
 {
 }
 
@@ -769,7 +766,7 @@ class UnmuteAudioAll extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class UnmuteAudio extends V20180111Rpc
+class UnmuteAudio extends Rpc
 {
 
     /**
@@ -798,7 +795,7 @@ class UnmuteAudio extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class MuteAudioAll extends V20180111Rpc
+class MuteAudioAll extends Rpc
 {
 }
 
@@ -811,7 +808,7 @@ class MuteAudioAll extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class MuteAudio extends V20180111Rpc
+class MuteAudio extends Rpc
 {
 
     /**
@@ -838,7 +835,7 @@ class MuteAudio extends V20180111Rpc
  * @method string getAppId()
  * @method $this withAppId($value)
  */
-class DeleteConference extends V20180111Rpc
+class DeleteConference extends Rpc
 {
 }
 
@@ -858,6 +855,6 @@ class DeleteConference extends V20180111Rpc
  * @method string getRemindNotice()
  * @method $this withRemindNotice($value)
  */
-class CreateConference extends V20180111Rpc
+class CreateConference extends Rpc
 {
 }

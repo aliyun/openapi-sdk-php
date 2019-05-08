@@ -3,11 +3,8 @@
 namespace AlibabaCloud\Httpdns\V20160201;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method GetResolveCountSummary getResolveCountSummary(array $options = [])
  * @method ListDomains listDomains(array $options = [])
  * @method GetAccountInfo getAccountInfo(array $options = [])
@@ -21,7 +18,7 @@ class HttpdnsApiResolver
     use ApiResolverTrait;
 }
 
-class V20160201Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'Httpdns';
@@ -39,7 +36,7 @@ class V20160201Rpc extends Rpc
  * @method string getTimeSpan()
  * @method $this withTimeSpan($value)
  */
-class GetResolveCountSummary extends V20160201Rpc
+class GetResolveCountSummary extends Rpc
 {
 }
 
@@ -49,11 +46,11 @@ class GetResolveCountSummary extends V20160201Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListDomains extends V20160201Rpc
+class ListDomains extends Rpc
 {
 }
 
-class GetAccountInfo extends V20160201Rpc
+class GetAccountInfo extends Rpc
 {
 }
 
@@ -67,7 +64,7 @@ class GetAccountInfo extends V20160201Rpc
  * @method string getTimeSpan()
  * @method $this withTimeSpan($value)
  */
-class GetResolveStatistics extends V20160201Rpc
+class GetResolveStatistics extends Rpc
 {
 }
 
@@ -77,7 +74,7 @@ class GetResolveStatistics extends V20160201Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class AddDomain extends V20160201Rpc
+class AddDomain extends Rpc
 {
 }
 
@@ -87,7 +84,7 @@ class AddDomain extends V20160201Rpc
  * @method string getDomainName()
  * @method $this withDomainName($value)
  */
-class DeleteDomain extends V20160201Rpc
+class DeleteDomain extends Rpc
 {
 }
 
@@ -99,6 +96,6 @@ class DeleteDomain extends V20160201Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDomains extends V20160201Rpc
+class DescribeDomains extends Rpc
 {
 }

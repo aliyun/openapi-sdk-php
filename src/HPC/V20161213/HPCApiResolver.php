@@ -3,11 +3,8 @@
 namespace AlibabaCloud\HPC\V20161213;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method StopJumpserver stopJumpserver(array $options = [])
  * @method ModifyInstancePassword modifyInstancePassword(array $options = [])
  * @method ModifyJumpserverPassword modifyJumpserverPassword(array $options = [])
@@ -27,7 +24,7 @@ class HPCApiResolver
     use ApiResolverTrait;
 }
 
-class V20161213Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'HPC';
@@ -50,7 +47,7 @@ class V20161213Rpc extends Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class StopJumpserver extends V20161213Rpc
+class StopJumpserver extends Rpc
 {
 }
 
@@ -62,7 +59,7 @@ class StopJumpserver extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class ModifyInstancePassword extends V20161213Rpc
+class ModifyInstancePassword extends Rpc
 {
 }
 
@@ -74,7 +71,7 @@ class ModifyInstancePassword extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class ModifyJumpserverPassword extends V20161213Rpc
+class ModifyJumpserverPassword extends Rpc
 {
 }
 
@@ -84,7 +81,7 @@ class ModifyJumpserverPassword extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class RebootInstance extends V20161213Rpc
+class RebootInstance extends Rpc
 {
 }
 
@@ -96,7 +93,7 @@ class RebootInstance extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class RebootJumpserver extends V20161213Rpc
+class RebootJumpserver extends Rpc
 {
 }
 
@@ -112,7 +109,7 @@ class RebootJumpserver extends V20161213Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class RevokeSecurityGroup extends V20161213Rpc
+class RevokeSecurityGroup extends Rpc
 {
 }
 
@@ -124,7 +121,7 @@ class RevokeSecurityGroup extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class StartJumpserver extends V20161213Rpc
+class StartJumpserver extends Rpc
 {
 }
 
@@ -140,7 +137,7 @@ class StartJumpserver extends V20161213Rpc
  * @method string getPolicy()
  * @method $this withPolicy($value)
  */
-class AuthorizeSecurityGroup extends V20161213Rpc
+class AuthorizeSecurityGroup extends Rpc
 {
 }
 
@@ -150,7 +147,7 @@ class AuthorizeSecurityGroup extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class CreateInstance extends V20161213Rpc
+class CreateInstance extends Rpc
 {
 }
 
@@ -160,7 +157,7 @@ class CreateInstance extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class DeleteInstance extends V20161213Rpc
+class DeleteInstance extends Rpc
 {
 }
 
@@ -172,7 +169,7 @@ class DeleteInstance extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class DescribeInstances extends V20161213Rpc
+class DescribeInstances extends Rpc
 {
 }
 
@@ -180,7 +177,7 @@ class DescribeInstances extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class DescribeInstancesInSecurityGroup extends V20161213Rpc
+class DescribeInstancesInSecurityGroup extends Rpc
 {
 }
 
@@ -190,6 +187,6 @@ class DescribeInstancesInSecurityGroup extends V20161213Rpc
  * @method string getTOKEN()
  * @method $this withTOKEN($value)
  */
-class DescribeSecurityGroupAttribute extends V20161213Rpc
+class DescribeSecurityGroupAttribute extends Rpc
 {
 }

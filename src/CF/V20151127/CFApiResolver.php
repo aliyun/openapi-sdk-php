@@ -3,11 +3,8 @@
 namespace AlibabaCloud\CF\V20151127;
 
 use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
 
 /**
- * Resolve Api based on the method name.
- *
  * @method MonthlyPaymentCheckOrder monthlyPaymentCheckOrder(array $options = [])
  * @method CFMonthlyPayment cFMonthlyPayment(array $options = [])
  * @method GetRating getRating(array $options = [])
@@ -21,7 +18,7 @@ class CFApiResolver
     use ApiResolverTrait;
 }
 
-class V20151127Rpc extends Rpc
+class Rpc extends \AlibabaCloud\Rpc
 {
     /** @var string */
     public $product = 'CF';
@@ -42,7 +39,7 @@ class V20151127Rpc extends Rpc
 /**
  * @method string getData()
  */
-class MonthlyPaymentCheckOrder extends V20151127Rpc
+class MonthlyPaymentCheckOrder extends Rpc
 {
 
     /** @var string */
@@ -65,7 +62,7 @@ class MonthlyPaymentCheckOrder extends V20151127Rpc
 /**
  * @method string getData()
  */
-class CFMonthlyPayment extends V20151127Rpc
+class CFMonthlyPayment extends Rpc
 {
 
     /** @var string */
@@ -105,7 +102,7 @@ class CFMonthlyPayment extends V20151127Rpc
  * @method string getScene()
  * @method $this withScene($value)
  */
-class GetRating extends V20151127Rpc
+class GetRating extends Rpc
 {
 }
 
@@ -127,7 +124,7 @@ class GetRating extends V20151127Rpc
  * @method string getCFTimestamp()
  * @method $this withCFTimestamp($value)
  */
-class CfAccountFeedback extends V20151127Rpc
+class CfAccountFeedback extends Rpc
 {
 }
 
@@ -147,7 +144,7 @@ class CfAccountFeedback extends V20151127Rpc
  * @method string getTrans()
  * @method $this withTrans($value)
  */
-class CfAccountQuery extends V20151127Rpc
+class CfAccountQuery extends Rpc
 {
 }
 
@@ -165,7 +162,7 @@ class CfAccountQuery extends V20151127Rpc
  * @method string getTrans()
  * @method $this withTrans($value)
  */
-class QuerySimple extends V20151127Rpc
+class QuerySimple extends Rpc
 {
 }
 
@@ -185,6 +182,6 @@ class QuerySimple extends V20151127Rpc
  * @method string getToken()
  * @method $this withToken($value)
  */
-class Authenticate extends V20151127Rpc
+class Authenticate extends Rpc
 {
 }
