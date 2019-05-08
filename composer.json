@@ -4,7 +4,6 @@
     "description": "Alibaba Cloud SDK for PHP - Easier to Use Alibaba Cloud in your PHP project",
     "keywords": [
         "sdk",
-        "ecs",
         "cloud",
         "aliyun",
         "alibaba",
@@ -48,16 +47,12 @@
     "autoload": {
         "psr-4": {
             "AlibabaCloud\\": "src"
-        },
-        "files": [
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "AlibabaCloud\\Tests\\": "tests/"
-        },
-        "classmap": [
-        ]
+        }
     },
     "config": {
         "sort-packages": true,
