@@ -30,10 +30,10 @@ class Rpc extends \AlibabaCloud\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getAccessCode()
- * @method $this withAccessCode($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getAccessToken()
+ * @method $this withAccessToken($value)
  * @method string getOutId()
  * @method $this withOutId($value)
  * @method string getOwnerId()

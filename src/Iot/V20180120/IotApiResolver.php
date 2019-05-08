@@ -24,6 +24,7 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
  * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
+ * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
@@ -494,6 +495,16 @@ class BatchUpdateDeviceNickname extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetNodesAddingTask extends Rpc
+{
 }
 
 /**

@@ -5,6 +5,7 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
+ * @method QueryAccountTransactions queryAccountTransactions(array $options = [])
  * @method CreateAgAccount createAgAccount(array $options = [])
  * @method CreateResellerUserQuota createResellerUserQuota(array $options = [])
  * @method SetResellerUserAlarmThreshold setResellerUserAlarmThreshold(array $options = [])
@@ -73,6 +74,22 @@ class Rpc extends \AlibabaCloud\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getRecordID()
+ * @method $this withRecordID($value)
+ * @method string getTransactionChannelSN()
+ * @method $this withTransactionChannelSN($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
+ * @method string getTransactionNumber()
+ * @method $this withTransactionNumber($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
+ */
+class QueryAccountTransactions extends Rpc
+{
 }
 
 /**

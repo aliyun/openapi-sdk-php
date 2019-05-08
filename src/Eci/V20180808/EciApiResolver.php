@@ -593,6 +593,7 @@ class DescribeContainerLog extends Rpc
  * @method $this withEipInstanceId($value)
  * @method array getArn()
  * @method array getDnsConfigNameServer()
+ * @method array getSecurityContextSysctl()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getRestartPolicy()
@@ -813,6 +814,22 @@ class CreateContainerGroup extends Rpc
         $this->data['DnsConfigNameServer'] = $dnsConfigNameServer;
         foreach ($dnsConfigNameServer as $i => $iValue) {
             $this->options['query']['DnsConfig.NameServer.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $securityContextSysctl
+     *
+     * @return $this
+     */
+    public function withSecurityContextSysctl(array $securityContextSysctl)
+    {
+        $this->data['SecurityContextSysctl'] = $securityContextSysctl;
+        foreach ($securityContextSysctl as $depth1 => $depth1Value) {
+            $this->options['query']['SecurityContext.Sysctl.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['query']['SecurityContext.Sysctl.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
         }
 
         return $this;

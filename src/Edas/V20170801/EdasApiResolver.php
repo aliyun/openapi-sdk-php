@@ -5,6 +5,7 @@ namespace AlibabaCloud\Edas\V20170801;
 use AlibabaCloud\ApiResolverTrait;
 
 /**
+ * @method ChangeDeployGroup changeDeployGroup(array $options = [])
  * @method GetCluster getCluster(array $options = [])
  * @method QueryRegionConfig queryRegionConfig(array $options = [])
  * @method CsbListRegions csbListRegions(array $options = [])
@@ -95,7 +96,6 @@ use AlibabaCloud\ApiResolverTrait;
  * @method StopApplication stopApplication(array $options = [])
  * @method ResetApplication resetApplication(array $options = [])
  * @method InsertApplication insertApplication(array $options = [])
- * @method ChangeApplicationGroup changeApplicationGroup(array $options = [])
  * @method DeployApplication deployApplication(array $options = [])
  * @method UpdateContainer updateContainer(array $options = [])
  * @method ListApplicationEcu listApplicationEcu(array $options = [])
@@ -141,6 +141,70 @@ class Roa extends \AlibabaCloud\Roa
 
     /** @var string */
     public $serviceCode = 'edas';
+}
+
+/**
+ * @method string getForceStatus()
+ * @method string getAppId()
+ * @method string getEccInfo()
+ * @method string getGroupName()
+ */
+class ChangeDeployGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/changeorder/co_change_group';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForceStatus($value)
+    {
+        $this->data['ForceStatus'] = $value;
+        $this->options['query']['ForceStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEccInfo($value)
+    {
+        $this->data['EccInfo'] = $value;
+        $this->options['query']['EccInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['GroupName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5685,70 +5749,6 @@ class InsertApplication extends Roa
     {
         $this->data['PackageType'] = $value;
         $this->options['query']['PackageType'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getForceStatus()
- * @method string getAppId()
- * @method string getEccInfo()
- * @method string getGroupName()
- */
-class ChangeApplicationGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_change_group';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withForceStatus($value)
-    {
-        $this->data['ForceStatus'] = $value;
-        $this->options['query']['ForceStatus'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEccInfo($value)
-    {
-        $this->data['EccInfo'] = $value;
-        $this->options['query']['EccInfo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupName($value)
-    {
-        $this->data['GroupName'] = $value;
-        $this->options['query']['GroupName'] = $value;
 
         return $this;
     }

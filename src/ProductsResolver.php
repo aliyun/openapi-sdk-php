@@ -125,6 +125,7 @@ use AlibabaCloud\Client\AlibabaCloud;
  * @method static Slb slb()
  * @method static Smartag smartag()
  * @method static Sms sms()
+ * @method static SmsIntl smsIntl()
  * @method static Snsuapi snsuapi()
  * @method static Sts sts()
  * @method static TagINner tagINner()
@@ -950,6 +951,13 @@ class Smartag extends VersionResolver
  * @method static Sms\V20160927\SmsApiResolver v20160927()
  */
 class Sms extends VersionResolver
+{
+}
+
+/**
+ * @method static SmsIntl\V20180501\SmsIntlApiResolver v20180501()
+ */
+class SmsIntl extends VersionResolver
 {
 }
 
