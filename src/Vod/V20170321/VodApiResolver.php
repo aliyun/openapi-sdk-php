@@ -1605,6 +1605,8 @@ class DeleteStream extends Rpc
  * @method $this withVideoId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getSpecifiedOffsetTime()
  * @method $this withSpecifiedOffsetTime($value)
  * @method string getWidth()

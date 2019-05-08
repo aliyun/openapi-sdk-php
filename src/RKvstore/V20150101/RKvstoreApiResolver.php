@@ -3053,6 +3053,8 @@ class RenewInstance extends Rpc
  * @method $this withBusinessInfo($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getSrcDBInstanceId()
