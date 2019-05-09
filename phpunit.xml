@@ -29,14 +29,11 @@
 
 
     <filter>
+        <exclude>
+            <file>./src</file>
+        </exclude>
         <whitelist>
-            <file>./src/ApiResolverTrait.php</file>
-            <file>./src/DumpServices.php</file>
-            <file>./src/ProductsResolver.php</file>
-            <file>./src/VersionResolver.php</file>
-            <exclude>
-                <file>./src/Constants.php</file>
-            </exclude>
+            <file>./src/Release.php</file>
         </whitelist>
     </filter>
 </phpunit>
