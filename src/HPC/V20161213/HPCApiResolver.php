@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\HPC\V20161213;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method StopJumpserver stopJumpserver(array $options = [])
@@ -19,12 +19,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeInstancesInSecurityGroup describeInstancesInSecurityGroup(array $options = [])
  * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
  */
-class HPCApiResolver
+class HPCApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'HPC';

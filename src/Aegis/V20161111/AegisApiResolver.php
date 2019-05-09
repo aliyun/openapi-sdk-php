@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeWebshellList describeWebshellList(array $options = [])
@@ -283,12 +283,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateInstance createInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  */
-class AegisApiResolver
+class AegisApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'aegis';

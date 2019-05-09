@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Slb\V20140515\DescribeRegions;
+use AlibabaCloud\Slb\Slb;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Slb\V20140515\DescribeRegions;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class SlbTest
@@ -30,13 +31,20 @@ class SlbTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::slb()
-                               ->v20140515()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::slb()
+                                ->v20140515()
+                                ->describeRegions()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeRegions::class, $request);
+        $request2 = Slb::v20140515()
+                       ->describeRegions()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request1);
+        self::assertInstanceOf(DescribeRegions::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

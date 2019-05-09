@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Httpdns\V20160201;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Httpdns
+class Httpdns extends ApiResolver
 {
-    use ApiResolverTrait;
 }

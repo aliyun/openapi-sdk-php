@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\NlsFiletrans\V20180817;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class NlsFiletrans
+class NlsFiletrans extends ApiResolver
 {
-    use ApiResolverTrait;
 }

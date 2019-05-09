@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Vod
+class Vod extends ApiResolver
 {
-    use ApiResolverTrait;
 }

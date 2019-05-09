@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ResetAppCode resetAppCode(array $options = [])
@@ -106,12 +106,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AbolishApi abolishApi(array $options = [])
  * @method AddTrafficSpecialControl addTrafficSpecialControl(array $options = [])
  */
-class CloudAPIApiResolver
+class CloudAPIApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'CloudAPI';

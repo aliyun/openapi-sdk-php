@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Vpc
+class Vpc extends ApiResolver
 {
-    use ApiResolverTrait;
 }

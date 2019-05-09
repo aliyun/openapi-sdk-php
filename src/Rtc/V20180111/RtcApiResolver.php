@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateMPULayout createMPULayout(array $options = [])
@@ -44,12 +44,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteConference deleteConference(array $options = [])
  * @method CreateConference createConference(array $options = [])
  */
-class RtcApiResolver
+class RtcApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'rtc';

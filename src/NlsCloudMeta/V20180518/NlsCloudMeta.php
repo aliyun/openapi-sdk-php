@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\NlsCloudMeta\V20180518;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class NlsCloudMeta
+class NlsCloudMeta extends ApiResolver
 {
-    use ApiResolverTrait;
 }

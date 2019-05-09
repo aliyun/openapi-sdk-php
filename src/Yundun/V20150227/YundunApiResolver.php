@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Yundun\V20150227;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method TodayAllkbps todayAllkbps(array $options = [])
@@ -16,12 +16,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method WebAttackNum webAttackNum(array $options = [])
  * @method TodayqpsByRegion todayqpsByRegion(array $options = [])
  */
-class YundunApiResolver
+class YundunApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Yundun';

@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\IDST\V20170922;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class IDST
+class IDST extends ApiResolver
 {
-    use ApiResolverTrait;
 }

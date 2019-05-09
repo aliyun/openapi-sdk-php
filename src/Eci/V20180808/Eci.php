@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Eci
+class Eci extends ApiResolver
 {
-    use ApiResolverTrait;
 }

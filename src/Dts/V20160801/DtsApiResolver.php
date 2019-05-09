@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dts\V20160801;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeMigrationJobs describeMigrationJobs(array $options = [])
@@ -37,12 +37,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateSynchronizationJob createSynchronizationJob(array $options = [])
  * @method DescribeSynchronizationJobStatus describeSynchronizationJobStatus(array $options = [])
  */
-class DtsApiResolver
+class DtsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dts';

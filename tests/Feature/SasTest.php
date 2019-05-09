@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Feature;
 
 use Exception;
 use Stringy\Stringy;
+use AlibabaCloud\Sas\Sas;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
@@ -31,13 +32,20 @@ class SasTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::sas()
-                               ->v20181203()
-                               ->describeAlarmEventList()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::sas()
+                                ->v20181203()
+                                ->describeAlarmEventList()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeAlarmEventList::class, $request);
+        $request2 = Sas::v20181203()
+                       ->describeAlarmEventList()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeAlarmEventList::class, $request1);
+        self::assertInstanceOf(DescribeAlarmEventList::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     public function testSas()

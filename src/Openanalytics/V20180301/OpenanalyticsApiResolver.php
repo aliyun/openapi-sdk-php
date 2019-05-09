@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Openanalytics\V20180301;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetProductStatus getProductStatus(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeRegionList describeRegionList(array $options = [])
  * @method GetAllowIP getAllowIP(array $options = [])
  */
-class OpenanalyticsApiResolver
+class OpenanalyticsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'openanalytics';

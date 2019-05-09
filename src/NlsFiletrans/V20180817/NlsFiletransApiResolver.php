@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\NlsFiletrans\V20180817;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SubmitTask submitTask(array $options = [])
  * @method GetTaskResult getTaskResult(array $options = [])
  */
-class NlsFiletransApiResolver
+class NlsFiletransApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'nls-filetrans';

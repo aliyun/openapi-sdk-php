@@ -2,10 +2,11 @@
 
 namespace AlibabaCloud\Tests\Unit;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use PHPUnit\Framework\TestCase;
-use ReflectionException;
 use stdClass;
+use ReflectionObject;
+use ReflectionException;
+use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
 
 /**
  * Class ApiResolverTraitTest
@@ -39,25 +40,23 @@ class ApiResolverTraitTest extends TestCase
     public function testGetServiceName()
     {
         $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
-        $method = $ref->getMethod('getServiceName');
+        $ref    = new ReflectionObject($slb);
+        $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
         self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('TraitTest', $method->invokeArgs($slb, [\get_class($this)]));
+        self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
      * @throws ReflectionException
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     * @expectedExceptionMessage Service name not found.
      */
     public function testGetServiceNameNotFound()
     {
         $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
-        $method = $ref->getMethod('getServiceName');
+        $ref    = new ReflectionObject($slb);
+        $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));
+        self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class(new stdClass())]));
     }
 
     /**
@@ -66,24 +65,22 @@ class ApiResolverTraitTest extends TestCase
     public function testGetNamespace()
     {
         $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
+        $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getNamespace');
         $method->setAccessible(true);
         self::assertEquals('AlibabaCloud\Slb\V20140515', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('AlibabaCloud\Tests\Unit', $method->invokeArgs($slb, [\get_class($this)]));
+        self::assertEquals('AlibabaCloud\Slb\V20140515', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
      * @throws ReflectionException
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     * @expectedExceptionMessage Get namespace error.
      */
     public function testGetNamespaceNotFound()
     {
         $slb    = AlibabaCloud::slb()->v20140515();
-        $ref    = new \ReflectionObject($slb);
+        $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getNamespace');
         $method->setAccessible(true);
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));
+        self::assertEquals('AlibabaCloud\Slb\V20140515', $method->invokeArgs($slb, [\get_class(new stdClass())]));
     }
 }

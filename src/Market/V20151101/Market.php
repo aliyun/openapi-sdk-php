@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Market
+class Market extends ApiResolver
 {
-    use ApiResolverTrait;
 }

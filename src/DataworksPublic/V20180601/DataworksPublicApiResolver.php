@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\DataworksPublic\V20180601;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListTagResources listTagResources(array $options = [])
@@ -11,12 +11,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method SearchManualDagNodeInstance searchManualDagNodeInstance(array $options = [])
  * @method CreateManualDag createManualDag(array $options = [])
  */
-class DataworksPublicApiResolver
+class DataworksPublicApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'dataworks-public';

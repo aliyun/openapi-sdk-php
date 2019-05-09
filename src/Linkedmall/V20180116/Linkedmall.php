@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Linkedmall
+class Linkedmall extends ApiResolver
 {
-    use ApiResolverTrait;
 }

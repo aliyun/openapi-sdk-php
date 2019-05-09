@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ots\V20160620;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
@@ -19,12 +19,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method InsertInstance insertInstance(array $options = [])
  * @method BindInstance2Vpc bindInstance2Vpc(array $options = [])
  */
-class OtsApiResolver
+class OtsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ots';

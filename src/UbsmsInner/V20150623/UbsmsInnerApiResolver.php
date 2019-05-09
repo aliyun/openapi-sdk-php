@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\UbsmsInner\V20150623;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeBusinessStatusAndKeep describeBusinessStatusAndKeep(array $options = [])
@@ -18,12 +18,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method SetUserSecurityStatus setUserSecurityStatus(array $options = [])
  * @method DescribeUserBusinessStatus describeUserBusinessStatus(array $options = [])
  */
-class UbsmsInnerApiResolver
+class UbsmsInnerApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ubsms-inner';

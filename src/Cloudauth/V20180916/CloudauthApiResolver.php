@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cloudauth\V20180916;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
@@ -18,12 +18,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetVerifyToken getVerifyToken(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
  */
-class CloudauthApiResolver
+class CloudauthApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Cloudauth';

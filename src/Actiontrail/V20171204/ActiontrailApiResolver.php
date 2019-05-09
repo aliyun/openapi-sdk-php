@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Actiontrail\V20171204;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeRegions describeRegions(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateTrail createTrail(array $options = [])
  * @method DeleteTrail deleteTrail(array $options = [])
  */
-class ActiontrailApiResolver
+class ActiontrailApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Actiontrail';

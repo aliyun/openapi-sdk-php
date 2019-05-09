@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\Saf\V20180919;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ExecuteRequest executeRequest(array $options = [])
  */
-class SafApiResolver
+class SafApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'saf';

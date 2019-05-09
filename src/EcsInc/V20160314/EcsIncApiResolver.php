@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method InnerAuthorizeImagesToBids innerAuthorizeImagesToBids(array $options = [])
@@ -250,12 +250,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeEipPrice describeEipPrice(array $options = [])
  * @method CheckOrderNotPaid checkOrderNotPaid(array $options = [])
  */
-class EcsIncApiResolver
+class EcsIncApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'EcsInc';

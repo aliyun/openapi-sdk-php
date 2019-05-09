@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\Dybaseapi\V20170525;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryTokenForMnsQueue queryTokenForMnsQueue(array $options = [])
  */
-class DybaseapiApiResolver
+class DybaseapiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dybaseapi';

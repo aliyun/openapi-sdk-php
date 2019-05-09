@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\IDST\V20170922;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method RoaSearch roaSearch(array $options = [])
  */
-class IDSTApiResolver
+class IDSTApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'IDST';

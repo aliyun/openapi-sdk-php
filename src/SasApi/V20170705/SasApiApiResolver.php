@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\SasApi\V20170705;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribePerDateData describePerDateData(array $options = [])
@@ -20,12 +20,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetIpProfileRequest getIpProfileRequest(array $options = [])
  * @method GetIpHumanClientProbability getIpHumanClientProbability(array $options = [])
  */
-class SasApiApiResolver
+class SasApiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Sas-api';

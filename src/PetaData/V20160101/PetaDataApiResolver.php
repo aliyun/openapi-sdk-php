@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\PetaData\V20160101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UntagResources untagResources(array $options = [])
@@ -46,12 +46,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateDatabase createDatabase(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  */
-class PetaDataApiResolver
+class PetaDataApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'PetaData';

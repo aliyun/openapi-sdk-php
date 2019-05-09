@@ -2,10 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Dbs\V20190306\StartBackupPlan;
+use AlibabaCloud\Dbs\Dbs;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Dbs\V20190306\StartBackupPlan;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class DbsTest
@@ -29,15 +30,25 @@ class DbsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::dbs()
-                               ->v20190306()
-                               ->startBackupPlan()
-                               ->host('dbs-api.cn-hangzhou.aliyuncs.com')
-                               ->withBackupPlanId('id')
-                               ->withOwnerId('id')
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::dbs()
+                                ->v20190306()
+                                ->startBackupPlan()
+                                ->host('dbs-api.cn-hangzhou.aliyuncs.com')
+                                ->withBackupPlanId('id')
+                                ->withOwnerId('id')
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(StartBackupPlan::class, $request);
+        $request2 = Dbs::v20190306()
+                       ->startBackupPlan()
+                       ->host('dbs-api.cn-hangzhou.aliyuncs.com')
+                       ->withBackupPlanId('id')
+                       ->withOwnerId('id')
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(StartBackupPlan::class, $request1);
+        self::assertInstanceOf(StartBackupPlan::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 }

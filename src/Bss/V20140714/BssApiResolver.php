@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Bss\V20140714;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method OpenCallback openCallback(array $options = [])
@@ -16,12 +16,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeCouponList describeCouponList(array $options = [])
  * @method DescribeCouponDetail describeCouponDetail(array $options = [])
  */
-class BssApiResolver
+class BssApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Bss';

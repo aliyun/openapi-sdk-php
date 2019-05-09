@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Nlp\V20180408;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method IE iE(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method WordSegment wordSegment(array $options = [])
  * @method ReviewAnalysis reviewAnalysis(array $options = [])
  */
-class NlpApiResolver
+class NlpApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'Nlp';

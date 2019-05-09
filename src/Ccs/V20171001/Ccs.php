@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Ccs
+class Ccs extends ApiResolver
 {
-    use ApiResolverTrait;
 }

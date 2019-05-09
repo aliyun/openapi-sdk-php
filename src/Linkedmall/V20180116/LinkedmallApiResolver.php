@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Linkedmall\V20180116;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method RenderOrder renderOrder(array $options = [])
@@ -44,12 +44,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryBizItems queryBizItems(array $options = [])
  * @method NotifyPayOrderStatus notifyPayOrderStatus(array $options = [])
  */
-class LinkedmallApiResolver
+class LinkedmallApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'linkedmall';

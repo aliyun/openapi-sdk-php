@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Skyeye;
 
-use AlibabaCloud\VersionResolver;
+use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
  * @deprecated

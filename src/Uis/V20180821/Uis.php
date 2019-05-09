@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Uis
+class Uis extends ApiResolver
 {
-    use ApiResolverTrait;
 }

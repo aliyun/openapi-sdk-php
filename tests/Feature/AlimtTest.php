@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Alimt\Alimt;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -30,13 +31,20 @@ class AlimtTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::alimt()
-                               ->v20181012()
-                               ->translateECommerce()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::alimt()
+                                ->v20181012()
+                                ->translateECommerce()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(TranslateECommerce::class, $request);
+        $request2 = Alimt::v20181012()
+                         ->translateECommerce()
+                         ->connectTimeout(20)
+                         ->timeout(25);
+
+        self::assertInstanceOf(TranslateECommerce::class, $request1);
+        self::assertInstanceOf(TranslateECommerce::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

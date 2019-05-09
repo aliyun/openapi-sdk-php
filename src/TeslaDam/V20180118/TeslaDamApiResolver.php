@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\TeslaDam\V20180118;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method Action action(array $options = [])
@@ -11,12 +11,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ActionDiskMask actionDiskMask(array $options = [])
  * @method HostGets hostGets(array $options = [])
  */
-class TeslaDamApiResolver
+class TeslaDamApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'TeslaDam';

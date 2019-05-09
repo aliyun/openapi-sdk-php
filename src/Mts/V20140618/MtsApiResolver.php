@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryFpCompareJobList queryFpCompareJobList(array $options = [])
@@ -190,12 +190,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddPipeline addPipeline(array $options = [])
  * @method AddTemplate addTemplate(array $options = [])
  */
-class MtsApiResolver
+class MtsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Mts';

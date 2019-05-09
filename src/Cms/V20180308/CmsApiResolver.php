@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeAlertHistoryList describeAlertHistoryList(array $options = [])
@@ -119,12 +119,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method NodeStatusList nodeStatusList(array $options = [])
  * @method QueryCustomEventDetail queryCustomEventDetail(array $options = [])
  */
-class CmsApiResolver
+class CmsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Cms';

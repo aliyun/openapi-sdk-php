@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Lubancloud\V20180509;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
@@ -12,12 +12,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetStyles getStyles(array $options = [])
  * @method BuyOriginPictures buyOriginPictures(array $options = [])
  */
-class LubancloudApiResolver
+class LubancloudApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'lubancloud';

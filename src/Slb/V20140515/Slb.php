@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Slb
+class Slb extends ApiResolver
 {
-    use ApiResolverTrait;
 }

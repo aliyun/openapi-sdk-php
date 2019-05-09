@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Polardb\V20170801;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
@@ -50,12 +50,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
  */
-class PolardbApiResolver
+class PolardbApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'polardb';

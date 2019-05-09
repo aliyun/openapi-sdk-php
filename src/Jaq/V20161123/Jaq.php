@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Jaq\V20161123;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Jaq
+class Jaq extends ApiResolver
 {
-    use ApiResolverTrait;
 }

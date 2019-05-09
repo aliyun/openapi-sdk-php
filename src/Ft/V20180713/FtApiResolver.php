@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ft\V20180713;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method FtFlowSpecial ftFlowSpecial(array $options = [])
@@ -13,12 +13,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method FTApiAliasApi fTApiAliasApi(array $options = [])
  * @method FtGatedLaunchPolicy4 ftGatedLaunchPolicy4(array $options = [])
  */
-class FtApiResolver
+class FtApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ft';

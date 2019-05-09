@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\Commondriver\V20151229;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetOrderIdByCheckBeforePay getOrderIdByCheckBeforePay(array $options = [])
  * @method GetOrderIdByQueryPurchase getOrderIdByQueryPurchase(array $options = [])
  */
-class CommondriverApiResolver
+class CommondriverApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Commondriver';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Edas\V20170801;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ChangeDeployGroup changeDeployGroup(array $options = [])
@@ -123,12 +123,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteServiceGroup deleteServiceGroup(array $options = [])
  * @method ListApplication listApplication(array $options = [])
  */
-class EdasApiResolver
+class EdasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'Edas';

@@ -2,10 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
+use AlibabaCloud\Jaq\Jaq;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class JaqTest
@@ -29,13 +30,20 @@ class JaqTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::jaq()
-                               ->v20161123()
-                               ->afsAppCheck()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::jaq()
+                                ->v20161123()
+                                ->afsAppCheck()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(AfsAppCheck::class, $request);
+        $request2 = Jaq::v20161123()
+                       ->afsAppCheck()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(AfsAppCheck::class, $request1);
+        self::assertInstanceOf(AfsAppCheck::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     public function testJaq()

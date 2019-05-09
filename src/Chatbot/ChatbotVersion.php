@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Chatbot;
 
-use AlibabaCloud\VersionResolver;
+use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
  * @deprecated

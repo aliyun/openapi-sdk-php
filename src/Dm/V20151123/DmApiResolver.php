@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyPWByDomain modifyPWByDomain(array $options = [])
@@ -70,12 +70,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateTag createTag(array $options = [])
  * @method ApproveReplyMailAddress approveReplyMailAddress(array $options = [])
  */
-class DmApiResolver
+class DmApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dm';

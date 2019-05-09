@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Gpdb\V20160503;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UntagResources untagResources(array $options = [])
@@ -41,12 +41,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
  */
-class GpdbApiResolver
+class GpdbApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'gpdb';

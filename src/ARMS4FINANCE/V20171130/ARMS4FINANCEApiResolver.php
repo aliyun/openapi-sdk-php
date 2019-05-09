@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method WhereInDimQuery whereInDimQuery(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
-class ARMS4FINANCEApiResolver
+class ARMS4FINANCEApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'ARMS4FINANCE';

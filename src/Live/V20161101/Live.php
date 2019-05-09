@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Live
+class Live extends ApiResolver
 {
-    use ApiResolverTrait;
 }

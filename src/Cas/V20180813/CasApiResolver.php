@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cas\V20180813;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeRenewOrder describeRenewOrder(array $options = [])
@@ -60,12 +60,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateOrderDocument createOrderDocument(array $options = [])
  * @method DescribeCertificateStatusCount describeCertificateStatusCount(array $options = [])
  */
-class CasApiResolver
+class CasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'cas';

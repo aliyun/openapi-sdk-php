@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\TeslaStream\V20180115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class TeslaStream
+class TeslaStream extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SaveSingleTaskForSaveArtExtension saveSingleTaskForSaveArtExtension(array $options = [])
@@ -90,12 +90,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryChangeLogList queryChangeLogList(array $options = [])
  * @method QueryDomainList queryDomainList(array $options = [])
  */
-class DomainIntlApiResolver
+class DomainIntlApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Domain-intl';

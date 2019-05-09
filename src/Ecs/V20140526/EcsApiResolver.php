@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ReportInstancesStatus reportInstancesStatus(array $options = [])
@@ -294,12 +294,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddTags addTags(array $options = [])
  * @method RemoveTags removeTags(array $options = [])
  */
-class EcsApiResolver
+class EcsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ecs';

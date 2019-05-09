@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\TeslaDam\V20180118;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class TeslaDam
+class TeslaDam extends ApiResolver
 {
-    use ApiResolverTrait;
 }

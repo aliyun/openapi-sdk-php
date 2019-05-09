@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\Drcloud\V20190213;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetAnswer getAnswer(array $options = [])
  */
-class DrcloudApiResolver
+class DrcloudApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'drcloud';

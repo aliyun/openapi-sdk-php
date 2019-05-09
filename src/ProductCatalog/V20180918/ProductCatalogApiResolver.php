@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\ProductCatalog\V20180918;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetProduct getProduct(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListApis listApis(array $options = [])
  * @method GetApi getApi(array $options = [])
  */
-class ProductCatalogApiResolver
+class ProductCatalogApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'ProductCatalog';

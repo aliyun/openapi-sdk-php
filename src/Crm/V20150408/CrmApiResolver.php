@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddLabelForBid addLabelForBid(array $options = [])
@@ -18,12 +18,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteLabel deleteLabel(array $options = [])
  * @method QueryCustomerLabel queryCustomerLabel(array $options = [])
  */
-class CrmApiResolver
+class CrmApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Crm';

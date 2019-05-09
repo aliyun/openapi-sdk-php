@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Pvtz\V20180101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Pvtz
+class Pvtz extends ApiResolver
 {
-    use ApiResolverTrait;
 }

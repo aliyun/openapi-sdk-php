@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\ARMS\V20181015;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method MetricQuery metricQuery(array $options = [])
  * @method ARMSQueryDataSet aRMSQueryDataSet(array $options = [])
  */
-class ARMSApiResolver
+class ARMSApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'ARMS';

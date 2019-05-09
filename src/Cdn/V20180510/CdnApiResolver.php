@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cdn\V20180510;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
@@ -139,12 +139,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeDomainBpsData describeDomainBpsData(array $options = [])
  * @method DescribeDomainMax95BpsData describeDomainMax95BpsData(array $options = [])
  */
-class CdnApiResolver
+class CdnApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Cdn';

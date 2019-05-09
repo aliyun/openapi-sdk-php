@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeTags describeTags(array $options = [])
@@ -142,12 +142,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method VerifyPassword verifyPassword(array $options = [])
  * @method ModifyInstanceConfig modifyInstanceConfig(array $options = [])
  */
-class RKvstoreApiResolver
+class RKvstoreApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'R-kvstore';
@@ -3053,6 +3052,8 @@ class RenewInstance extends Rpc
  * @method $this withBusinessInfo($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getSrcDBInstanceId()

@@ -1,0 +1,43 @@
+{
+    "name": "alibabacloud/oms",
+    "homepage": "https://www.alibabacloud.com/",
+    "description": "Alibaba Cloud Oms SDK for PHP",
+    "keywords": [
+        "oms",
+        "sdk",
+        "cloud",
+        "aliyun",
+        "alibaba",
+        "library",
+        "alibabacloud"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "support": {
+        "source": "https://github.com/alibabacloud-sdk-php/oms",
+        "issues": "https://github.com/alibabacloud-sdk-php/oms/issues"
+    },
+    "authors": [
+        {
+            "name": "Alibaba Cloud SDK",
+            "email": "sdk-team@alibabacloud.com",
+            "homepage": "http://www.alibabacloud.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "alibabacloud/client": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlibabaCloud\\Oms\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}

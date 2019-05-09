@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Alimt\V20181012;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Alimt
+class Alimt extends ApiResolver
 {
-    use ApiResolverTrait;
 }

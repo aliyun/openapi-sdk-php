@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cloudauth;
 
-use AlibabaCloud\VersionResolver;
+use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
  * @deprecated

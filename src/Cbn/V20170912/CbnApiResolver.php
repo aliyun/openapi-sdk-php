@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cbn\V20170912;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UntagResources untagResources(array $options = [])
@@ -48,12 +48,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeRouteConflict describeRouteConflict(array $options = [])
  * @method DescribeGeographicRegionMembership describeGeographicRegionMembership(array $options = [])
  */
-class CbnApiResolver
+class CbnApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Cbn';

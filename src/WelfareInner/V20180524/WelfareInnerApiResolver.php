@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\WelfareInner\V20180524;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetWelfareGeekInfo getWelfareGeekInfo(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DoCheckResource doCheckResource(array $options = [])
  * @method DoLogicalDeleteResource doLogicalDeleteResource(array $options = [])
  */
-class WelfareInnerApiResolver
+class WelfareInnerApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'welfare-inner';

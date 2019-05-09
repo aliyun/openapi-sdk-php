@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryServicePackAndPrice queryServicePackAndPrice(array $options = [])
@@ -95,12 +95,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteJobTemplates deleteJobTemplates(array $options = [])
  * @method RerunJobs rerunJobs(array $options = [])
  */
-class EHPCApiResolver
+class EHPCApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'EHPC';
@@ -373,6 +372,8 @@ class ListFileSystemWithMountTargets extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getShowSoldOut()
+ * @method $this withShowSoldOut($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */

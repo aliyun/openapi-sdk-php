@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\JarvisPublic\V20180621;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeCountAttackEvent describeCountAttackEvent(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeAttackEvent describeAttackEvent(array $options = [])
  * @method DescribePhoneInfo describePhoneInfo(array $options = [])
  */
-class JarvisPublicApiResolver
+class JarvisPublicApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'jarvis-public';

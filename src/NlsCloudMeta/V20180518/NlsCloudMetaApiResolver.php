@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\NlsCloudMeta\V20180518;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateToken createToken(array $options = [])
  */
-class NlsCloudMetaApiResolver
+class NlsCloudMetaApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'nls-cloud-meta';

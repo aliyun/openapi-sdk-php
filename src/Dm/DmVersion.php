@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dm;
 
-use AlibabaCloud\VersionResolver;
+use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
  * @deprecated

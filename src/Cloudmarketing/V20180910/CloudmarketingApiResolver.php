@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cloudmarketing\V20180910;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteCrowd deleteCrowd(array $options = [])
@@ -40,12 +40,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method RedefineTag redefineTag(array $options = [])
  * @method DefineTag defineTag(array $options = [])
  */
-class CloudmarketingApiResolver
+class CloudmarketingApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'cloudmarketing';

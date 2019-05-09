@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeSagRouteableAddress describeSagRouteableAddress(array $options = [])
@@ -71,12 +71,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method UnbindSmartAccessGateway unbindSmartAccessGateway(array $options = [])
  * @method UpdateSmartAccessGatewayVersion updateSmartAccessGatewayVersion(array $options = [])
  */
-class SmartagApiResolver
+class SmartagApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Smartag';

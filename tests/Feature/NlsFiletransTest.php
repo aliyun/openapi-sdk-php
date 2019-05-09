@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Feature;
 
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\NlsFiletrans\NlsFiletrans;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\NlsFiletrans\V20180817\SubmitTask;
@@ -30,13 +31,20 @@ class NlsFiletransTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::nlsFiletrans()
-                               ->v20180817()
-                               ->submitTask()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::nlsFiletrans()
+                                ->v20180817()
+                                ->submitTask()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(SubmitTask::class, $request);
+        $request2 = NlsFiletrans::v20180817()
+                                ->submitTask()
+                                ->connectTimeout(20)
+                                ->timeout(25);
+
+        self::assertInstanceOf(SubmitTask::class, $request1);
+        self::assertInstanceOf(SubmitTask::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

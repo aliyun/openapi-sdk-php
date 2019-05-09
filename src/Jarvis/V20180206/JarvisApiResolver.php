@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteWhiteListDbItemConditional deleteWhiteListDbItemConditional(array $options = [])
@@ -43,12 +43,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeAccessWhiteListGroup describeAccessWhiteListGroup(array $options = [])
  * @method CreateCpmcPunishFeedBack createCpmcPunishFeedBack(array $options = [])
  */
-class JarvisApiResolver
+class JarvisApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'jarvis';

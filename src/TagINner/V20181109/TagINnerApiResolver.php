@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\TagINner\V20181109;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method InnerFixRegion innerFixRegion(array $options = [])
@@ -14,12 +14,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method InnerUntagResources innerUntagResources(array $options = [])
  * @method InnerTagResources innerTagResources(array $options = [])
  */
-class TagINnerApiResolver
+class TagINnerApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Tag-Inner';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cloudesl\V20180801;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteItemBySkuId deleteItemBySkuId(array $options = [])
@@ -25,12 +25,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeUserOperationLog describeUserOperationLog(array $options = [])
  * @method DescribeUserRamPolicy describeUserRamPolicy(array $options = [])
  */
-class CloudeslApiResolver
+class CloudeslApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'cloudesl';

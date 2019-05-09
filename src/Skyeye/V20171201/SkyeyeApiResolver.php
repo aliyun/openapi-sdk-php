@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\Skyeye\V20171201;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetCdnSkyeyeStatusData getCdnSkyeyeStatusData(array $options = [])
  * @method SendAlertContent sendAlertContent(array $options = [])
  */
-class SkyeyeApiResolver
+class SkyeyeApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Skyeye';

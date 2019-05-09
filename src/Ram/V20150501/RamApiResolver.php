@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetAccessKeyLastUsed getAccessKeyLastUsed(array $options = [])
@@ -72,12 +72,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method UpdateRole updateRole(array $options = [])
  * @method SetSecurityPreference setSecurityPreference(array $options = [])
  */
-class RamApiResolver
+class RamApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ram';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Kms\V20160120;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UpdateAlias updateAlias(array $options = [])
@@ -28,12 +28,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateAlias createAlias(array $options = [])
  * @method CancelKeyDeletion cancelKeyDeletion(array $options = [])
  */
-class KmsApiResolver
+class KmsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Kms';

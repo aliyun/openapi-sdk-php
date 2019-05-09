@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Ons\Ons;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Ons\V20170918\OnsRegionList;
@@ -30,13 +31,20 @@ class OnsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::ons()
-                               ->v20170918()
-                               ->onsRegionList()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::ons()
+                                ->v20170918()
+                                ->onsRegionList()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(OnsRegionList::class, $request);
+        $request2 = Ons::v20170918()
+                       ->onsRegionList()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(OnsRegionList::class, $request1);
+        self::assertInstanceOf(OnsRegionList::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

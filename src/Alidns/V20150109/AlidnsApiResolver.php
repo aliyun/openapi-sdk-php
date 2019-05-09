@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeGtmInstanceSystemCname describeGtmInstanceSystemCname(array $options = [])
@@ -65,12 +65,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ChangeDomainGroup changeDomainGroup(array $options = [])
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
  */
-class AlidnsApiResolver
+class AlidnsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Alidns';

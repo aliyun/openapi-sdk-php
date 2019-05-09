@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Hsm\V20180111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyInstance modifyInstance(array $options = [])
@@ -14,12 +14,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  */
-class HsmApiResolver
+class HsmApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'hsm';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryCustomerSaleInfo queryCustomerSaleInfo(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetQuotaInstance getQuotaInstance(array $options = [])
  * @method GetUserInstance getUserInstance(array $options = [])
  */
-class TeslaMaxComputeApiResolver
+class TeslaMaxComputeApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'TeslaMaxCompute';

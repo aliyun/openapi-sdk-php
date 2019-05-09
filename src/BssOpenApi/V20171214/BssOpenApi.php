@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class BssOpenApi
+class BssOpenApi extends ApiResolver
 {
-    use ApiResolverTrait;
 }

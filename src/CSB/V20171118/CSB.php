@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class CSB
+class CSB extends ApiResolver
 {
-    use ApiResolverTrait;
 }

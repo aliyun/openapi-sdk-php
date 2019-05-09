@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Sms\V20160927;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyAccountSummary modifyAccountSummary(array $options = [])
@@ -23,12 +23,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteSign deleteSign(array $options = [])
  */
-class SmsApiResolver
+class SmsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Sms';

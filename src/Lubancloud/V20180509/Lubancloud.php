@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Lubancloud\V20180509;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Lubancloud
+class Lubancloud extends ApiResolver
 {
-    use ApiResolverTrait;
 }

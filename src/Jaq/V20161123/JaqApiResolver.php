@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Jaq\V20161123;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method MessagePrevention messagePrevention(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AfsCheck afsCheck(array $options = [])
  * @method BbsPrevention bbsPrevention(array $options = [])
  */
-class JaqApiResolver
+class JaqApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'jaq';

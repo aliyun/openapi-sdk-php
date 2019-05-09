@@ -2,17 +2,16 @@
 
 namespace AlibabaCloud\PTS\V20181111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetReport getReport(array $options = [])
  */
-class PTSApiResolver
+class PTSApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'PTS';

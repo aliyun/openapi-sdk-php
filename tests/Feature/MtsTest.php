@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Mts\Mts;
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Mts\V20140618\QueryFpImportResult;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class MtsTest
@@ -30,13 +31,20 @@ class MtsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::mts()
-                               ->v20140618()
-                               ->queryFpImportResult()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::mts()
+                                ->v20140618()
+                                ->queryFpImportResult()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(QueryFpImportResult::class, $request);
+        $request2 = Mts::v20140618()
+                       ->queryFpImportResult()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(QueryFpImportResult::class, $request1);
+        self::assertInstanceOf(QueryFpImportResult::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

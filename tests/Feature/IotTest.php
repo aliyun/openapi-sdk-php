@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Iot\Iot;
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Iot\V20180120\BatchGetDeviceState;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class IotTest
@@ -30,13 +31,20 @@ class IotTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::iot()
-                               ->v20180120()
-                               ->batchGetDeviceState()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::iot()
+                                ->v20180120()
+                                ->batchGetDeviceState()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(BatchGetDeviceState::class, $request);
+        $request2 = Iot::v20180120()
+                       ->batchGetDeviceState()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(BatchGetDeviceState::class, $request1);
+        self::assertInstanceOf(BatchGetDeviceState::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

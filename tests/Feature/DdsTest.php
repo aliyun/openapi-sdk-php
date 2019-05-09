@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Dds\V20151201\DescribeRegions;
+use AlibabaCloud\Dds\Dds;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Dds\V20151201\DescribeRegions;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class DdsTest
@@ -30,13 +31,20 @@ class DdsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::dds()
-                               ->v20151201()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::dds()
+                                ->v20151201()
+                                ->describeRegions()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeRegions::class, $request);
+        $request2 = Dds::v20151201()
+                       ->describeRegions()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request1);
+        self::assertInstanceOf(DescribeRegions::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

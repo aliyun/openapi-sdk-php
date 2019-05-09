@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CheckScalingGroupAvailability checkScalingGroupAvailability(array $options = [])
@@ -73,12 +73,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method RemoveInstances removeInstances(array $options = [])
  * @method ModifyScheduledTask modifyScheduledTask(array $options = [])
  */
-class EssApiResolver
+class EssApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ess';
