@@ -5,190 +5,166 @@ namespace AlibabaCloud\Mts\V20140618;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryFpCompareJobList queryFpCompareJobList(array $options = [])
+ * @method DescribeMtsUserResourcePackage describeMtsUserResourcePackage(array $options = [])
  * @method SubmitBeautifyJobs submitBeautifyJobs(array $options = [])
+ * @method QueryMediaCensorJobList queryMediaCensorJobList(array $options = [])
  * @method SubmitFpCompareJob submitFpCompareJob(array $options = [])
+ * @method QueryFpCompareJobList queryFpCompareJobList(array $options = [])
+ * @method SubmitMCJob submitMCJob(array $options = [])
+ * @method QueryMCJobList queryMCJobList(array $options = [])
  * @method UpdateMCTemplate updateMCTemplate(array $options = [])
  * @method QueryMCTemplateList queryMCTemplateList(array $options = [])
- * @method QueryMCJobList queryMCJobList(array $options = [])
- * @method AddMCTemplate addMCTemplate(array $options = [])
  * @method DeleteMCTemplate deleteMCTemplate(array $options = [])
- * @method QueryCensorTemplateList queryCensorTemplateList(array $options = [])
- * @method SubmitMCJob submitMCJob(array $options = [])
- * @method DeleteCensorTemplate deleteCensorTemplate(array $options = [])
- * @method UpdateCensorTemplate updateCensorTemplate(array $options = [])
- * @method AddCensorTemplate addCensorTemplate(array $options = [])
- * @method QueryMediaFpDeleteJobList queryMediaFpDeleteJobList(array $options = [])
- * @method SubmitMediaFpDeleteJob submitMediaFpDeleteJob(array $options = [])
- * @method DeleteMcuJob deleteMcuJob(array $options = [])
+ * @method AddMCTemplate addMCTemplate(array $options = [])
  * @method CreateMcuTemplate createMcuTemplate(array $options = [])
- * @method UpdateMcuTemplate updateMcuTemplate(array $options = [])
+ * @method DeleteMcuJob deleteMcuJob(array $options = [])
  * @method SubmitMcuJob submitMcuJob(array $options = [])
+ * @method UpdateMcuTemplate updateMcuTemplate(array $options = [])
  * @method QueryMcuTemplate queryMcuTemplate(array $options = [])
  * @method QueryMcuJob queryMcuJob(array $options = [])
  * @method DeleteMcuTemplate deleteMcuTemplate(array $options = [])
- * @method DescribeMtsUserResourcePackage describeMtsUserResourcePackage(array $options = [])
+ * @method QueryMediaFpDeleteJobList queryMediaFpDeleteJobList(array $options = [])
+ * @method SubmitMediaFpDeleteJob submitMediaFpDeleteJob(array $options = [])
  * @method QueryImageSearchJobList queryImageSearchJobList(array $options = [])
  * @method SubmitImageSearchJob submitImageSearchJob(array $options = [])
- * @method QueryMediaCensorJobList queryMediaCensorJobList(array $options = [])
- * @method ListMediaCensorJob listMediaCensorJob(array $options = [])
- * @method ListFpShotJob listFpShotJob(array $options = [])
  * @method QueryFpImportResult queryFpImportResult(array $options = [])
- * @method SubmitVideoPoseJob submitVideoPoseJob(array $options = [])
  * @method QueryVideoPoseJobList queryVideoPoseJobList(array $options = [])
+ * @method SubmitVideoPoseJob submitVideoPoseJob(array $options = [])
  * @method QueryMediaCensorJobDetail queryMediaCensorJobDetail(array $options = [])
  * @method SubmitMediaCensorJob submitMediaCensorJob(array $options = [])
  * @method QueryComplexJobList queryComplexJobList(array $options = [])
  * @method SubmitComplexJob submitComplexJob(array $options = [])
- * @method SubmitSubtitleJob submitSubtitleJob(array $options = [])
  * @method QuerySubtitleJobList querySubtitleJobList(array $options = [])
- * @method SubmitImageQuality submitImageQuality(array $options = [])
- * @method LogicalDeleteResource logicalDeleteResource(array $options = [])
+ * @method SubmitSubtitleJob submitSubtitleJob(array $options = [])
  * @method PhysicalDeleteResource physicalDeleteResource(array $options = [])
+ * @method LogicalDeleteResource logicalDeleteResource(array $options = [])
  * @method CheckResource checkResource(array $options = [])
- * @method ListAllMediaStorage listAllMediaStorage(array $options = [])
- * @method UnindInputBucket unindInputBucket(array $options = [])
  * @method SubmitImageQualityJob submitImageQualityJob(array $options = [])
- * @method QueryVideoGifJobList queryVideoGifJobList(array $options = [])
  * @method SubmitVideoGifJob submitVideoGifJob(array $options = [])
+ * @method QueryVideoGifJobList queryVideoGifJobList(array $options = [])
  * @method UpdateMediaWorkflowTriggerMode updateMediaWorkflowTriggerMode(array $options = [])
- * @method GetPackage getPackage(array $options = [])
- * @method SubmitFpShotJob submitFpShotJob(array $options = [])
- * @method ReportFpShotJobResult reportFpShotJobResult(array $options = [])
- * @method QueryFpShotJobList queryFpShotJobList(array $options = [])
- * @method GetLicense getLicense(array $options = [])
  * @method CreateSession createSession(array $options = [])
+ * @method GetLicense getLicense(array $options = [])
+ * @method GetPackage getPackage(array $options = [])
+ * @method QueryFpShotJobList queryFpShotJobList(array $options = [])
+ * @method ReportFpShotJobResult reportFpShotJobResult(array $options = [])
+ * @method SubmitFpShotJob submitFpShotJob(array $options = [])
  * @method RegisterMediaDetailPerson registerMediaDetailPerson(array $options = [])
- * @method SubmitVideoSplitJob submitVideoSplitJob(array $options = [])
  * @method ReportVideoSplitJobResult reportVideoSplitJobResult(array $options = [])
+ * @method SubmitVideoSplitJob submitVideoSplitJob(array $options = [])
  * @method QueryVideoSplitJobList queryVideoSplitJobList(array $options = [])
- * @method SubmitMediaDetailJob submitMediaDetailJob(array $options = [])
- * @method ReportMediaDetailJobResult reportMediaDetailJobResult(array $options = [])
  * @method RegisterMediaDetailScenario registerMediaDetailScenario(array $options = [])
  * @method QueryMediaDetailJobList queryMediaDetailJobList(array $options = [])
- * @method UpdateKwsDictionary updateKwsDictionary(array $options = [])
- * @method UpdateKwsPipeline updateKwsPipeline(array $options = [])
- * @method SubmitKwsJob submitKwsJob(array $options = [])
- * @method QueryKwsJobList queryKwsJobList(array $options = [])
- * @method QueryKwsPipelineList queryKwsPipelineList(array $options = [])
- * @method QueryKwsDictionary queryKwsDictionary(array $options = [])
- * @method ListKwsPipeline listKwsPipeline(array $options = [])
- * @method DeleteKwsDictionary deleteKwsDictionary(array $options = [])
- * @method CreateKwsDictionary createKwsDictionary(array $options = [])
- * @method AddKwsPipeline addKwsPipeline(array $options = [])
+ * @method SubmitMediaDetailJob submitMediaDetailJob(array $options = [])
+ * @method ReportMediaDetailJobResult reportMediaDetailJobResult(array $options = [])
  * @method SubmitFacerecogJob submitFacerecogJob(array $options = [])
  * @method SubmitAnnotationJob submitAnnotationJob(array $options = [])
  * @method ReportFacerecogJobResult reportFacerecogJobResult(array $options = [])
  * @method ReportAnnotationJobResult reportAnnotationJobResult(array $options = [])
  * @method QueryFacerecogJobList queryFacerecogJobList(array $options = [])
  * @method QueryAnnotationJobList queryAnnotationJobList(array $options = [])
- * @method SubmitTagJob submitTagJob(array $options = [])
- * @method ReportTagJobResult reportTagJobResult(array $options = [])
- * @method QueryTagJobList queryTagJobList(array $options = [])
  * @method UpdateTerrorismPipeline updateTerrorismPipeline(array $options = [])
+ * @method UpdateCensorPipeline updateCensorPipeline(array $options = [])
  * @method SubmitTerrorismJob submitTerrorismJob(array $options = [])
  * @method ReportTerrorismJobResult reportTerrorismJobResult(array $options = [])
- * @method QueryTerrorismJobList queryTerrorismJobList(array $options = [])
- * @method QueryTerrorismPipelineList queryTerrorismPipelineList(array $options = [])
- * @method ListTerrorismPipeline listTerrorismPipeline(array $options = [])
- * @method AddTerrorismPipeline addTerrorismPipeline(array $options = [])
- * @method UpdateCensorPipeline updateCensorPipeline(array $options = [])
  * @method ReportCensorJobResult reportCensorJobResult(array $options = [])
- * @method QueryCensorJobList queryCensorJobList(array $options = [])
+ * @method QueryTerrorismPipelineList queryTerrorismPipelineList(array $options = [])
  * @method QueryCensorPipelineList queryCensorPipelineList(array $options = [])
+ * @method QueryTerrorismJobList queryTerrorismJobList(array $options = [])
+ * @method QueryCensorJobList queryCensorJobList(array $options = [])
+ * @method ListTerrorismPipeline listTerrorismPipeline(array $options = [])
  * @method ListCensorPipeline listCensorPipeline(array $options = [])
+ * @method AddTerrorismPipeline addTerrorismPipeline(array $options = [])
  * @method AddCensorPipeline addCensorPipeline(array $options = [])
- * @method UpdateVideoSummaryPipeline updateVideoSummaryPipeline(array $options = [])
+ * @method ReportTagJobResult reportTagJobResult(array $options = [])
+ * @method QueryTagJobList queryTagJobList(array $options = [])
+ * @method SubmitTagJob submitTagJob(array $options = [])
  * @method SubmitVideoSummaryJob submitVideoSummaryJob(array $options = [])
- * @method QueryVideoSummaryPipelineList queryVideoSummaryPipelineList(array $options = [])
  * @method QueryVideoSummaryJobList queryVideoSummaryJobList(array $options = [])
- * @method ListVideoSummaryPipeline listVideoSummaryPipeline(array $options = [])
- * @method AddVideoSummaryPipeline addVideoSummaryPipeline(array $options = [])
+ * @method QueryEditingJobList queryEditingJobList(array $options = [])
+ * @method SubmitEditingJobs submitEditingJobs(array $options = [])
  * @method UpdateCoverPipeline updateCoverPipeline(array $options = [])
  * @method SubmitCoverJob submitCoverJob(array $options = [])
  * @method ReportCoverJobResult reportCoverJobResult(array $options = [])
- * @method QueryCoverJobList queryCoverJobList(array $options = [])
  * @method QueryCoverPipelineList queryCoverPipelineList(array $options = [])
+ * @method QueryCoverJobList queryCoverJobList(array $options = [])
  * @method ListCoverPipeline listCoverPipeline(array $options = [])
  * @method AddCoverPipeline addCoverPipeline(array $options = [])
  * @method UpdateAsrPipeline updateAsrPipeline(array $options = [])
- * @method SubmitEditingJobs submitEditingJobs(array $options = [])
  * @method SubmitAsrJob submitAsrJob(array $options = [])
- * @method ReportAsrJobResult reportAsrJobResult(array $options = [])
- * @method QueryEditingJobList queryEditingJobList(array $options = [])
- * @method QueryAsrJobList queryAsrJobList(array $options = [])
  * @method QueryAsrPipelineList queryAsrPipelineList(array $options = [])
+ * @method QueryAsrJobList queryAsrJobList(array $options = [])
  * @method ListAsrPipeline listAsrPipeline(array $options = [])
  * @method AddAsrPipeline addAsrPipeline(array $options = [])
  * @method UpdatePornPipeline updatePornPipeline(array $options = [])
  * @method SubmitPornJob submitPornJob(array $options = [])
  * @method ReportPornJobResult reportPornJobResult(array $options = [])
- * @method QueryPornJobList queryPornJobList(array $options = [])
  * @method QueryPornPipelineList queryPornPipelineList(array $options = [])
+ * @method QueryPornJobList queryPornJobList(array $options = [])
  * @method ListPornPipeline listPornPipeline(array $options = [])
  * @method AddPornPipeline addPornPipeline(array $options = [])
- * @method UnbindInputBucket unbindInputBucket(array $options = [])
  * @method UnbindOutputBucket unbindOutputBucket(array $options = [])
+ * @method UnbindInputBucket unbindInputBucket(array $options = [])
  * @method ListMedia listMedia(array $options = [])
- * @method QueryAuthConfig queryAuthConfig(array $options = [])
  * @method RefreshCdnDomainConfigsCache refreshCdnDomainConfigsCache(array $options = [])
  * @method SetAuthConfig setAuthConfig(array $options = [])
+ * @method QueryAuthConfig queryAuthConfig(array $options = [])
  * @method PlayInfo playInfo(array $options = [])
  * @method DecryptKey decryptKey(array $options = [])
- * @method UpdateMedia updateMedia(array $options = [])
- * @method UpdateMediaCategory updateMediaCategory(array $options = [])
- * @method UpdateMediaCover updateMediaCover(array $options = [])
  * @method UpdateMediaPublishState updateMediaPublishState(array $options = [])
+ * @method UpdateMediaCover updateMediaCover(array $options = [])
+ * @method UpdateMediaCategory updateMediaCategory(array $options = [])
+ * @method UpdateMedia updateMedia(array $options = [])
  * @method UpdateCategoryName updateCategoryName(array $options = [])
  * @method QueryMediaListByURL queryMediaListByURL(array $options = [])
  * @method ListAllMediaBucket listAllMediaBucket(array $options = [])
- * @method DeleteMediaTag deleteMediaTag(array $options = [])
  * @method ListAllCategory listAllCategory(array $options = [])
- * @method BindOutputBucket bindOutputBucket(array $options = [])
- * @method CategoryTree categoryTree(array $options = [])
+ * @method DeleteMediaTag deleteMediaTag(array $options = [])
  * @method DeleteCategory deleteCategory(array $options = [])
+ * @method CategoryTree categoryTree(array $options = [])
+ * @method BindOutputBucket bindOutputBucket(array $options = [])
  * @method BindInputBucket bindInputBucket(array $options = [])
- * @method AddCategory addCategory(array $options = [])
- * @method AddMedia addMedia(array $options = [])
  * @method AddMediaTag addMediaTag(array $options = [])
+ * @method AddMedia addMedia(array $options = [])
+ * @method AddCategory addCategory(array $options = [])
  * @method ListJob listJob(array $options = [])
  * @method UpdateMediaWorkflow updateMediaWorkflow(array $options = [])
- * @method SearchMedia searchMedia(array $options = [])
  * @method SearchMediaWorkflow searchMediaWorkflow(array $options = [])
- * @method QueryMediaList queryMediaList(array $options = [])
- * @method QueryMediaWorkflowExecutionList queryMediaWorkflowExecutionList(array $options = [])
+ * @method SearchMedia searchMedia(array $options = [])
  * @method QueryMediaWorkflowList queryMediaWorkflowList(array $options = [])
+ * @method QueryMediaWorkflowExecutionList queryMediaWorkflowExecutionList(array $options = [])
+ * @method QueryMediaList queryMediaList(array $options = [])
  * @method ListMediaWorkflowExecutions listMediaWorkflowExecutions(array $options = [])
- * @method DeactivateMediaWorkflow deactivateMediaWorkflow(array $options = [])
- * @method DeleteMedia deleteMedia(array $options = [])
  * @method DeleteMediaWorkflow deleteMediaWorkflow(array $options = [])
- * @method ActivateMediaWorkflow activateMediaWorkflow(array $options = [])
+ * @method DeleteMedia deleteMedia(array $options = [])
+ * @method DeactivateMediaWorkflow deactivateMediaWorkflow(array $options = [])
  * @method AddMediaWorkflow addMediaWorkflow(array $options = [])
- * @method SubmitJobs submitJobs(array $options = [])
- * @method SubmitMediaInfoJob submitMediaInfoJob(array $options = [])
- * @method SubmitSnapshotJob submitSnapshotJob(array $options = [])
- * @method UpdatePipeline updatePipeline(array $options = [])
- * @method UpdateTemplate updateTemplate(array $options = [])
- * @method UpdateWaterMarkTemplate updateWaterMarkTemplate(array $options = [])
- * @method SearchTemplate searchTemplate(array $options = [])
- * @method SearchWaterMarkTemplate searchWaterMarkTemplate(array $options = [])
- * @method SubmitAnalysisJob submitAnalysisJob(array $options = [])
- * @method QueryWaterMarkTemplateList queryWaterMarkTemplateList(array $options = [])
- * @method SearchPipeline searchPipeline(array $options = [])
- * @method QueryMediaInfoJobList queryMediaInfoJobList(array $options = [])
- * @method QueryPipelineList queryPipelineList(array $options = [])
- * @method QuerySnapshotJobList querySnapshotJobList(array $options = [])
- * @method QueryTemplateList queryTemplateList(array $options = [])
- * @method QueryJobList queryJobList(array $options = [])
- * @method AddWaterMarkTemplate addWaterMarkTemplate(array $options = [])
- * @method CancelJob cancelJob(array $options = [])
- * @method DeletePipeline deletePipeline(array $options = [])
- * @method DeleteTemplate deleteTemplate(array $options = [])
- * @method DeleteWaterMarkTemplate deleteWaterMarkTemplate(array $options = [])
- * @method PlayerAuth playerAuth(array $options = [])
- * @method QueryAnalysisJobList queryAnalysisJobList(array $options = [])
- * @method AddPipeline addPipeline(array $options = [])
+ * @method ActivateMediaWorkflow activateMediaWorkflow(array $options = [])
  * @method AddTemplate addTemplate(array $options = [])
+ * @method AddPipeline addPipeline(array $options = [])
+ * @method QueryAnalysisJobList queryAnalysisJobList(array $options = [])
+ * @method PlayerAuth playerAuth(array $options = [])
+ * @method DeleteWaterMarkTemplate deleteWaterMarkTemplate(array $options = [])
+ * @method DeleteTemplate deleteTemplate(array $options = [])
+ * @method DeletePipeline deletePipeline(array $options = [])
+ * @method CancelJob cancelJob(array $options = [])
+ * @method AddWaterMarkTemplate addWaterMarkTemplate(array $options = [])
+ * @method QueryJobList queryJobList(array $options = [])
+ * @method QueryTemplateList queryTemplateList(array $options = [])
+ * @method QuerySnapshotJobList querySnapshotJobList(array $options = [])
+ * @method QueryPipelineList queryPipelineList(array $options = [])
+ * @method QueryMediaInfoJobList queryMediaInfoJobList(array $options = [])
+ * @method SearchPipeline searchPipeline(array $options = [])
+ * @method QueryWaterMarkTemplateList queryWaterMarkTemplateList(array $options = [])
+ * @method SubmitAnalysisJob submitAnalysisJob(array $options = [])
+ * @method SearchWaterMarkTemplate searchWaterMarkTemplate(array $options = [])
+ * @method SearchTemplate searchTemplate(array $options = [])
+ * @method UpdateWaterMarkTemplate updateWaterMarkTemplate(array $options = [])
+ * @method UpdateTemplate updateTemplate(array $options = [])
+ * @method UpdatePipeline updatePipeline(array $options = [])
+ * @method SubmitSnapshotJob submitSnapshotJob(array $options = [])
+ * @method SubmitMediaInfoJob submitMediaInfoJob(array $options = [])
+ * @method SubmitJobs submitJobs(array $options = [])
  */
 class MtsApiResolver extends ApiResolver
 {
@@ -210,18 +186,12 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryFpCompareJobList extends Rpc
+class DescribeMtsUserResourcePackage extends Rpc
 {
 }
 
@@ -248,6 +218,34 @@ class SubmitBeautifyJobs extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getStartOfJobCreatedTimeRange()
+ * @method $this withStartOfJobCreatedTimeRange($value)
+ * @method string getMaximumPageSize()
+ * @method $this withMaximumPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getEndOfJobCreatedTimeRange()
+ * @method $this withEndOfJobCreatedTimeRange($value)
+ */
+class QueryMediaCensorJobList extends Rpc
+{
+}
+
+/**
  * @method string getMatchedFrameStorage()
  * @method $this withMatchedFrameStorage($value)
  * @method string getUserData()
@@ -270,6 +268,76 @@ class SubmitBeautifyJobs extends Rpc
  * @method $this withPipelineId($value)
  */
 class SubmitFpCompareJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryFpCompareJobList extends Rpc
+{
+}
+
+/**
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getImages()
+ * @method $this withImages($value)
+ * @method string getTexts()
+ * @method $this withTexts($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getVideo()
+ * @method $this withVideo($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCensorConfig()
+ * @method $this withCensorConfig($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class SubmitMCJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getStartOfJobCreatedTimeRange()
+ * @method $this withStartOfJobCreatedTimeRange($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getMaximumPageSize()
+ * @method $this withMaximumPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getEndOfJobCreatedTimeRange()
+ * @method $this withEndOfJobCreatedTimeRange($value)
+ */
+class QueryMCJobList extends Rpc
 {
 }
 
@@ -344,26 +412,14 @@ class QueryMCTemplateList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getStartOfJobCreatedTimeRange()
- * @method $this withStartOfJobCreatedTimeRange($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getMaximumPageSize()
- * @method $this withMaximumPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getEndOfJobCreatedTimeRange()
- * @method $this withEndOfJobCreatedTimeRange($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
-class QueryMCJobList extends Rpc
+class DeleteMCTemplate extends Rpc
 {
 }
 
@@ -416,232 +472,6 @@ class AddMCTemplate extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class DeleteMCTemplate extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTemplateIds()
- * @method $this withTemplateIds($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryCensorTemplateList extends Rpc
-{
-}
-
-/**
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getImages()
- * @method $this withImages($value)
- * @method string getTexts()
- * @method $this withTexts($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getVideo()
- * @method $this withVideo($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCensorConfig()
- * @method $this withCensorConfig($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitMCJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class DeleteCensorTemplate extends Rpc
-{
-}
-
-/**
- * @method string getPolitics()
- * @method $this withPolitics($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getContraband()
- * @method $this withContraband($value)
- * @method string getAd()
- * @method $this withAd($value)
- * @method string getAbuse()
- * @method $this withAbuse($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getQrcode()
- * @method $this withQrcode($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getPorn()
- * @method $this withPorn($value)
- * @method string getTerrorism()
- * @method $this withTerrorism($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getLogo()
- * @method $this withLogo($value)
- * @method string getSpam()
- * @method string getLive()
- * @method $this withLive($value)
- */
-class UpdateCensorTemplate extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSpam($value)
-    {
-        $this->data['Spam'] = $value;
-        $this->options['query']['spam'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPolitics()
- * @method $this withPolitics($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getContraband()
- * @method $this withContraband($value)
- * @method string getAd()
- * @method $this withAd($value)
- * @method string getAbuse()
- * @method $this withAbuse($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getQrcode()
- * @method $this withQrcode($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPorn()
- * @method $this withPorn($value)
- * @method string getTerrorism()
- * @method $this withTerrorism($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getLogo()
- * @method $this withLogo($value)
- * @method string getSpam()
- * @method string getLive()
- * @method $this withLive($value)
- */
-class AddCensorTemplate extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSpam($value)
-    {
-        $this->data['Spam'] = $value;
-        $this->options['query']['spam'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMediaFpDeleteJobList extends Rpc
-{
-}
-
-/**
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFpDBId()
- * @method $this withFpDBId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- * @method string getPrimaryKey()
- * @method $this withPrimaryKey($value)
- */
-class SubmitMediaFpDeleteJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteMcuJob extends Rpc
-{
-}
-
-/**
  * @method string getTemplate()
  * @method $this withTemplate($value)
  * @method string getResourceOwnerId()
@@ -658,20 +488,18 @@ class CreateMcuTemplate extends Rpc
 }
 
 /**
- * @method string getTemplate()
- * @method $this withTemplate($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
  */
-class UpdateMcuTemplate extends Rpc
+class DeleteMcuJob extends Rpc
 {
 }
 
@@ -696,6 +524,24 @@ class UpdateMcuTemplate extends Rpc
  * @method $this withPipelineId($value)
  */
 class SubmitMcuJob extends Rpc
+{
+}
+
+/**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class UpdateMcuTemplate extends Rpc
 {
 }
 
@@ -748,12 +594,40 @@ class DeleteMcuTemplate extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeMtsUserResourcePackage extends Rpc
+class QueryMediaFpDeleteJobList extends Rpc
+{
+}
+
+/**
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFpDBId()
+ * @method $this withFpDBId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ * @method string getPrimaryKey()
+ * @method $this withPrimaryKey($value)
+ */
+class SubmitMediaFpDeleteJob extends Rpc
 {
 }
 
@@ -804,86 +678,6 @@ class SubmitImageSearchJob extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getStartOfJobCreatedTimeRange()
- * @method $this withStartOfJobCreatedTimeRange($value)
- * @method string getMaximumPageSize()
- * @method $this withMaximumPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getEndOfJobCreatedTimeRange()
- * @method $this withEndOfJobCreatedTimeRange($value)
- */
-class QueryMediaCensorJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getStartOfJobCreatedTimeRange()
- * @method $this withStartOfJobCreatedTimeRange($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getMaximumPageSize()
- * @method $this withMaximumPageSize($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEndOfJobCreatedTimeRange()
- * @method $this withEndOfJobCreatedTimeRange($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class ListMediaCensorJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getStartOfJobCreatedTimeRange()
- * @method $this withStartOfJobCreatedTimeRange($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getMaximumPageSize()
- * @method $this withMaximumPageSize($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEndOfJobCreatedTimeRange()
- * @method $this withEndOfJobCreatedTimeRange($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class ListFpShotJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getPageSize()
@@ -898,6 +692,22 @@ class ListFpShotJob extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryFpImportResult extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryVideoPoseJobList extends Rpc
 {
 }
 
@@ -920,22 +730,6 @@ class QueryFpImportResult extends Rpc
  * @method $this withPipelineId($value)
  */
 class SubmitVideoPoseJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryVideoPoseJobList extends Rpc
 {
 }
 
@@ -1034,6 +828,22 @@ class SubmitComplexJob extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QuerySubtitleJobList extends Rpc
+{
+}
+
+/**
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getResourceOwnerId()
@@ -1052,70 +862,6 @@ class SubmitComplexJob extends Rpc
  * @method $this withPipelineId($value)
  */
 class SubmitSubtitleJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QuerySubtitleJobList extends Rpc
-{
-}
-
-/**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitImageQuality extends Rpc
-{
-}
-
-/**
- * @method string getCountry()
- * @method $this withCountry($value)
- * @method string getHid()
- * @method $this withHid($value)
- * @method string getSuccess()
- * @method $this withSuccess($value)
- * @method string getInterrupt()
- * @method $this withInterrupt($value)
- * @method string getGmtWakeup()
- * @method $this withGmtWakeup($value)
- * @method string getPk()
- * @method $this withPk($value)
- * @method string getInvoker()
- * @method $this withInvoker($value)
- * @method string getBid()
- * @method $this withBid($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- * @method string getTaskExtraData()
- * @method $this withTaskExtraData($value)
- * @method string getTaskIdentifier()
- * @method $this withTaskIdentifier($value)
- */
-class LogicalDeleteResource extends Rpc
 {
 }
 
@@ -1144,6 +890,34 @@ class LogicalDeleteResource extends Rpc
  * @method $this withTaskIdentifier($value)
  */
 class PhysicalDeleteResource extends Rpc
+{
+}
+
+/**
+ * @method string getCountry()
+ * @method $this withCountry($value)
+ * @method string getHid()
+ * @method $this withHid($value)
+ * @method string getSuccess()
+ * @method $this withSuccess($value)
+ * @method string getInterrupt()
+ * @method $this withInterrupt($value)
+ * @method string getGmtWakeup()
+ * @method $this withGmtWakeup($value)
+ * @method string getPk()
+ * @method $this withPk($value)
+ * @method string getInvoker()
+ * @method $this withInvoker($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getTaskExtraData()
+ * @method $this withTaskExtraData($value)
+ * @method string getTaskIdentifier()
+ * @method $this withTaskIdentifier($value)
+ */
+class LogicalDeleteResource extends Rpc
 {
 }
 
@@ -1182,36 +956,6 @@ class CheckResource extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ListAllMediaStorage extends Rpc
-{
-}
-
-/**
- * @method string getBucket()
- * @method $this withBucket($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class UnindInputBucket extends Rpc
-{
-}
-
-/**
  * @method string getInput()
  * @method $this withInput($value)
  * @method string getUserData()
@@ -1228,22 +972,6 @@ class UnindInputBucket extends Rpc
  * @method $this withPipelineId($value)
  */
 class SubmitImageQualityJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryVideoGifJobList extends Rpc
 {
 }
 
@@ -1274,6 +1002,22 @@ class SubmitVideoGifJob extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryVideoGifJobList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getMediaWorkflowId()
@@ -1290,6 +1034,50 @@ class UpdateMediaWorkflowTriggerMode extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSessionTime()
+ * @method $this withSessionTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndUserId()
+ * @method $this withEndUserId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class CreateSession extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getData()
+ * @method $this withData($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getHeader()
+ * @method $this withHeader($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getLicenseUrl()
+ * @method $this withLicenseUrl($value)
+ */
+class GetLicense extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getData()
  * @method $this withData($value)
  * @method string getResourceOwnerAccount()
@@ -1300,48 +1088,6 @@ class UpdateMediaWorkflowTriggerMode extends Rpc
  * @method $this withOwnerId($value)
  */
 class GetPackage extends Rpc
-{
-}
-
-/**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFpShotConfig()
- * @method $this withFpShotConfig($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitFpShotJob extends Rpc
-{
-}
-
-/**
- * @method string getResult()
- * @method $this withResult($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDetails()
- * @method $this withDetails($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ReportFpShotJobResult extends Rpc
 {
 }
 
@@ -1376,46 +1122,44 @@ class QueryFpShotJobList extends Rpc
 }
 
 /**
+ * @method string getResult()
+ * @method $this withResult($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getData()
- * @method $this withData($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getHeader()
- * @method $this withHeader($value)
+ * @method string getDetails()
+ * @method $this withDetails($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getMediaId()
- * @method $this withMediaId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getLicenseUrl()
- * @method $this withLicenseUrl($value)
  */
-class GetLicense extends Rpc
+class ReportFpShotJobResult extends Rpc
 {
 }
 
 /**
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSessionTime()
- * @method $this withSessionTime($value)
+ * @method string getFpShotConfig()
+ * @method $this withFpShotConfig($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getEndUserId()
- * @method $this withEndUserId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getMediaId()
- * @method $this withMediaId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
-class CreateSession extends Rpc
+class SubmitFpShotJob extends Rpc
 {
 }
 
@@ -1442,6 +1186,26 @@ class RegisterMediaDetailPerson extends Rpc
 }
 
 /**
+ * @method string getResult()
+ * @method $this withResult($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDetails()
+ * @method $this withDetails($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ReportVideoSplitJobResult extends Rpc
+{
+}
+
+/**
  * @method string getInput()
  * @method $this withInput($value)
  * @method string getVideoSplitConfig()
@@ -1464,22 +1228,38 @@ class SubmitVideoSplitJob extends Rpc
 }
 
 /**
- * @method string getResult()
- * @method $this withResult($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryVideoSplitJobList extends Rpc
+{
+}
+
+/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getScenario()
+ * @method $this withScenario($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDetails()
- * @method $this withDetails($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReportVideoSplitJobResult extends Rpc
+class RegisterMediaDetailScenario extends Rpc
 {
 }
 
@@ -1495,7 +1275,7 @@ class ReportVideoSplitJobResult extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryVideoSplitJobList extends Rpc
+class QueryMediaDetailJobList extends Rpc
 {
 }
 
@@ -1538,232 +1318,6 @@ class SubmitMediaDetailJob extends Rpc
  * @method $this withResults($value)
  */
 class ReportMediaDetailJobResult extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScenario()
- * @method $this withScenario($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RegisterMediaDetailScenario extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMediaDetailJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getListDesc()
- * @method $this withListDesc($value)
- * @method string getKeywords()
- * @method $this withKeywords($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDictionaryId()
- * @method $this withDictionaryId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getExtendConfig()
- * @method $this withExtendConfig($value)
- */
-class UpdateKwsDictionary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getNotifyConfig()
- * @method $this withNotifyConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class UpdateKwsPipeline extends Rpc
-{
-}
-
-/**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getKwsConfig()
- * @method $this withKwsConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitKwsJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryKwsJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryKwsPipelineList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDictionaryId()
- * @method $this withDictionaryId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryKwsDictionary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListKwsPipeline extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDictionaryId()
- * @method $this withDictionaryId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteKwsDictionary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getListDesc()
- * @method $this withListDesc($value)
- * @method string getKeywords()
- * @method $this withKeywords($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getExtendConfig()
- * @method $this withExtendConfig($value)
- */
-class CreateKwsDictionary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getNotifyConfig()
- * @method $this withNotifyConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- */
-class AddKwsPipeline extends Rpc
 {
 }
 
@@ -1884,60 +1438,26 @@ class QueryAnnotationJobList extends Rpc
 }
 
 /**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getTagConfig()
- * @method $this withTagConfig($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getNotifyConfig()
+ * @method $this withNotifyConfig($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitTagJob extends Rpc
-{
-}
-
-/**
- * @method string getResult()
- * @method $this withResult($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag()
- * @method $this withTag($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ReportTagJobResult extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getTagJobIds()
- * @method $this withTagJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryTagJobList extends Rpc
+class UpdateTerrorismPipeline extends Rpc
 {
 }
 
@@ -1961,7 +1481,7 @@ class QueryTagJobList extends Rpc
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateTerrorismPipeline extends Rpc
+class UpdateCensorPipeline extends Rpc
 {
 }
 
@@ -2008,102 +1528,6 @@ class ReportTerrorismJobResult extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryTerrorismJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryTerrorismPipelineList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListTerrorismPipeline extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getNotifyConfig()
- * @method $this withNotifyConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- */
-class AddTerrorismPipeline extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getNotifyConfig()
- * @method $this withNotifyConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class UpdateCensorPipeline extends Rpc
-{
-}
-
-/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getResourceOwnerId()
@@ -2128,26 +1552,14 @@ class ReportCensorJobResult extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getStartOfJobCreatedTimeRange()
- * @method $this withStartOfJobCreatedTimeRange($value)
+ * @method string getPipelineIds()
+ * @method $this withPipelineIds($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getMaximumPageSize()
- * @method $this withMaximumPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getEndOfJobCreatedTimeRange()
- * @method $this withEndOfJobCreatedTimeRange($value)
  */
-class QueryCensorJobList extends Rpc
+class QueryTerrorismPipelineList extends Rpc
 {
 }
 
@@ -2164,6 +1576,58 @@ class QueryCensorJobList extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryCensorPipelineList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryTerrorismJobList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryCensorJobList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListTerrorismPipeline extends Rpc
 {
 }
 
@@ -2203,7 +1667,7 @@ class ListCensorPipeline extends Rpc
  * @method string getPriority()
  * @method $this withPriority($value)
  */
-class AddCensorPipeline extends Rpc
+class AddTerrorismPipeline extends Rpc
 {
 }
 
@@ -2216,18 +1680,72 @@ class AddCensorPipeline extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getNotifyConfig()
  * @method $this withNotifyConfig($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ */
+class AddCensorPipeline extends Rpc
+{
+}
+
+/**
+ * @method string getResult()
+ * @method $this withResult($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ReportTagJobResult extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTagJobIds()
+ * @method $this withTagJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryTagJobList extends Rpc
+{
+}
+
+/**
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getTagConfig()
+ * @method $this withTagConfig($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class UpdateVideoSummaryPipeline extends Rpc
+class SubmitTagJob extends Rpc
 {
 }
 
@@ -2258,22 +1776,6 @@ class SubmitVideoSummaryJob extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryVideoSummaryPipelineList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getJobIds()
  * @method $this withJobIds($value)
  * @method string getOwnerAccount()
@@ -2290,38 +1792,38 @@ class QueryVideoSummaryJobList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class ListVideoSummaryPipeline extends Rpc
+class QueryEditingJobList extends Rpc
 {
 }
 
 /**
+ * @method string getOutputBucket()
+ * @method $this withOutputBucket($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEditingJobOutputs()
+ * @method $this withEditingJobOutputs($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getNotifyConfig()
- * @method $this withNotifyConfig($value)
+ * @method string getOutputLocation()
+ * @method $this withOutputLocation($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
+ * @method string getEditingInputs()
+ * @method $this withEditingInputs($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
-class AddVideoSummaryPipeline extends Rpc
+class SubmitEditingJobs extends Rpc
 {
 }
 
@@ -2396,6 +1898,22 @@ class ReportCoverJobResult extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getPipelineIds()
+ * @method $this withPipelineIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryCoverPipelineList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
  * @method string getStartOfJobCreatedTimeRange()
@@ -2416,22 +1934,6 @@ class ReportCoverJobResult extends Rpc
  * @method $this withEndOfJobCreatedTimeRange($value)
  */
 class QueryCoverJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryCoverPipelineList extends Rpc
 {
 }
 
@@ -2502,30 +2004,6 @@ class UpdateAsrPipeline extends Rpc
 }
 
 /**
- * @method string getOutputBucket()
- * @method $this withOutputBucket($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEditingJobOutputs()
- * @method $this withEditingJobOutputs($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOutputLocation()
- * @method $this withOutputLocation($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEditingInputs()
- * @method $this withEditingInputs($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitEditingJobs extends Rpc
-{
-}
-
-/**
  * @method string getInput()
  * @method $this withInput($value)
  * @method string getUserData()
@@ -2548,38 +2026,18 @@ class SubmitAsrJob extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getLabel()
- * @method $this withLabel($value)
- * @method string getDetail()
- * @method $this withDetail($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ReportAsrJobResult extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
+ * @method string getPipelineIds()
+ * @method $this withPipelineIds($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryEditingJobList extends Rpc
+class QueryAsrPipelineList extends Rpc
 {
 }
 
@@ -2596,22 +2054,6 @@ class QueryEditingJobList extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryAsrJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryAsrPipelineList extends Rpc
 {
 }
 
@@ -2726,22 +2168,6 @@ class ReportPornJobResult extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryPornJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getPipelineIds()
  * @method $this withPipelineIds($value)
  * @method string getOwnerAccount()
@@ -2750,6 +2176,22 @@ class QueryPornJobList extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryPornPipelineList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryPornJobList extends Rpc
 {
 }
 
@@ -2800,14 +2242,12 @@ class AddPornPipeline extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getRoleArn()
- * @method $this withRoleArn($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindInputBucket extends Rpc
+class UnbindOutputBucket extends Rpc
 {
 }
 
@@ -2818,12 +2258,14 @@ class UnbindInputBucket extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class UnbindOutputBucket extends Rpc
+class UnbindInputBucket extends Rpc
 {
 }
 
@@ -2846,20 +2288,6 @@ class UnbindOutputBucket extends Rpc
  * @method $this withOwnerId($value)
  */
 class ListMedia extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryAuthConfig extends Rpc
 {
 }
 
@@ -2898,6 +2326,20 @@ class SetAuthConfig extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryAuthConfig extends Rpc
+{
+}
+
+/**
  * @method string getPlayDomain()
  * @method $this withPlayDomain($value)
  * @method string getResourceOwnerId()
@@ -2906,8 +2348,6 @@ class SetAuthConfig extends Rpc
  * @method $this withFormats($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getIncludeSnapshotList()
- * @method $this withIncludeSnapshotList($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getHlsUriToken()
@@ -2948,28 +2388,38 @@ class DecryptKey extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPublish()
+ * @method $this withPublish($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class UpdateMediaPublishState extends Rpc
+{
+}
+
+/**
  * @method string getCoverURL()
  * @method $this withCoverURL($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getCateId()
- * @method $this withCateId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getMediaId()
  * @method $this withMediaId($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getTags()
- * @method $this withTags($value)
  */
-class UpdateMedia extends Rpc
+class UpdateMediaCover extends Rpc
 {
 }
 
@@ -2998,32 +2448,22 @@ class UpdateMediaCategory extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getCateId()
+ * @method $this withCateId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getMediaId()
  * @method $this withMediaId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  */
-class UpdateMediaCover extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPublish()
- * @method $this withPublish($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMediaId()
- * @method $this withMediaId($value)
- */
-class UpdateMediaPublishState extends Rpc
+class UpdateMedia extends Rpc
 {
 }
 
@@ -3094,6 +2534,20 @@ class ListAllMediaBucket extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListAllCategory extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getTag()
  * @method $this withTag($value)
  * @method string getOwnerId()
@@ -3110,30 +2564,14 @@ class DeleteMediaTag extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getCateId()
+ * @method $this withCateId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ListAllCategory extends Rpc
-{
-}
-
-/**
- * @method string getBucket()
- * @method $this withBucket($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRoleArn()
- * @method $this withRoleArn($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class BindOutputBucket extends Rpc
+class DeleteCategory extends Rpc
 {
 }
 
@@ -3152,18 +2590,20 @@ class CategoryTree extends Rpc
 }
 
 /**
+ * @method string getBucket()
+ * @method $this withBucket($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getCateId()
- * @method $this withCateId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteCategory extends Rpc
+class BindOutputBucket extends Rpc
 {
 }
 
@@ -3192,14 +2632,14 @@ class BindInputBucket extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getParentId()
- * @method $this withParentId($value)
- * @method string getCateName()
- * @method $this withCateName($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
  */
-class AddCategory extends Rpc
+class AddMediaTag extends Rpc
 {
 }
 
@@ -3244,14 +2684,14 @@ class AddMedia extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getTag()
- * @method $this withTag($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getMediaId()
- * @method $this withMediaId($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getCateName()
+ * @method $this withCateName($value)
  */
-class AddMediaTag extends Rpc
+class AddCategory extends Rpc
 {
 }
 
@@ -3306,6 +2746,26 @@ class UpdateMediaWorkflow extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStateList()
+ * @method $this withStateList($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class SearchMediaWorkflow extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getOwnerId()
@@ -3334,22 +2794,34 @@ class SearchMedia extends Rpc
 }
 
 /**
+ * @method string getMediaWorkflowIds()
+ * @method $this withMediaWorkflowIds($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getStateList()
- * @method $this withStateList($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class SearchMediaWorkflow extends Rpc
+class QueryMediaWorkflowList extends Rpc
+{
+}
+
+/**
+ * @method string getRunIds()
+ * @method $this withRunIds($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryMediaWorkflowExecutionList extends Rpc
 {
 }
 
@@ -3374,38 +2846,6 @@ class SearchMediaWorkflow extends Rpc
  * @method $this withIncludeMediaInfo($value)
  */
 class QueryMediaList extends Rpc
-{
-}
-
-/**
- * @method string getRunIds()
- * @method $this withRunIds($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMediaWorkflowExecutionList extends Rpc
-{
-}
-
-/**
- * @method string getMediaWorkflowIds()
- * @method $this withMediaWorkflowIds($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMediaWorkflowList extends Rpc
 {
 }
 
@@ -3445,7 +2885,7 @@ class ListMediaWorkflowExecutions extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeactivateMediaWorkflow extends Rpc
+class DeleteMediaWorkflow extends Rpc
 {
 }
 
@@ -3477,23 +2917,7 @@ class DeleteMedia extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteMediaWorkflow extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getMediaWorkflowId()
- * @method $this withMediaWorkflowId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ActivateMediaWorkflow extends Rpc
+class DeactivateMediaWorkflow extends Rpc
 {
 }
 
@@ -3518,70 +2942,44 @@ class AddMediaWorkflow extends Rpc
 }
 
 /**
- * @method string getOutputs()
- * @method $this withOutputs($value)
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getOutputBucket()
- * @method $this withOutputBucket($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getOutputLocation()
- * @method $this withOutputLocation($value)
+ * @method string getMediaWorkflowId()
+ * @method $this withMediaWorkflowId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
  */
-class SubmitJobs extends Rpc
+class ActivateMediaWorkflow extends Rpc
 {
 }
 
 /**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getAsync()
- * @method $this withAsync($value)
+ * @method string getContainer()
+ * @method $this withContainer($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getTransConfig()
+ * @method $this withTransConfig($value)
+ * @method string getMuxConfig()
+ * @method $this withMuxConfig($value)
+ * @method string getVideo()
+ * @method $this withVideo($value)
+ * @method string getAudio()
+ * @method $this withAudio($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
  */
-class SubmitMediaInfoJob extends Rpc
-{
-}
-
-/**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSnapshotConfig()
- * @method $this withSnapshotConfig($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class SubmitSnapshotJob extends Rpc
+class AddTemplate extends Rpc
 {
 }
 
@@ -3596,44 +2994,32 @@ class SubmitSnapshotJob extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getNotifyConfig()
  * @method $this withNotifyConfig($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
+ * @method string getSpeedLevel()
+ * @method $this withSpeedLevel($value)
+ * @method string getSpeed()
+ * @method $this withSpeed($value)
  */
-class UpdatePipeline extends Rpc
+class AddPipeline extends Rpc
 {
 }
 
 /**
- * @method string getContainer()
- * @method $this withContainer($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getMuxConfig()
- * @method $this withMuxConfig($value)
- * @method string getVideo()
- * @method $this withVideo($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getTransConfig()
- * @method $this withTransConfig($value)
- * @method string getAudio()
- * @method $this withAudio($value)
+ * @method string getAnalysisJobIds()
+ * @method $this withAnalysisJobIds($value)
  */
-class UpdateTemplate extends Rpc
+class QueryAnalysisJobList extends Rpc
 {
 }
 
@@ -3644,16 +3030,26 @@ class UpdateTemplate extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class PlayerAuth extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getWaterMarkTemplateId()
  * @method $this withWaterMarkTemplateId($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  */
-class UpdateWaterMarkTemplate extends Rpc
+class DeleteWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3664,16 +3060,12 @@ class UpdateWaterMarkTemplate extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
-class SearchTemplate extends Rpc
+class DeleteTemplate extends Rpc
 {
 }
 
@@ -3684,40 +3076,28 @@ class SearchTemplate extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class SearchWaterMarkTemplate extends Rpc
-{
-}
-
-/**
- * @method string getInput()
- * @method $this withInput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAnalysisConfig()
- * @method $this withAnalysisConfig($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  */
-class SubmitAnalysisJob extends Rpc
+class DeletePipeline extends Rpc
+{
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CancelJob extends Rpc
 {
 }
 
@@ -3728,12 +3108,14 @@ class SubmitAnalysisJob extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getWaterMarkTemplateIds()
- * @method $this withWaterMarkTemplateIds($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
-class QueryWaterMarkTemplateList extends Rpc
+class AddWaterMarkTemplate extends Rpc
 {
 }
 
@@ -3742,26 +3124,22 @@ class QueryWaterMarkTemplateList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class SearchPipeline extends Rpc
+class QueryJobList extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getMediaInfoJobIds()
- * @method $this withMediaInfoJobIds($value)
+ * @method string getTemplateIds()
+ * @method $this withTemplateIds($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3769,23 +3147,7 @@ class SearchPipeline extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryMediaInfoJobList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPipelineIds()
- * @method $this withPipelineIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryPipelineList extends Rpc
+class QueryTemplateList extends Rpc
 {
 }
 
@@ -3820,8 +3182,24 @@ class QuerySnapshotJobList extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTemplateIds()
- * @method $this withTemplateIds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPipelineIds()
+ * @method $this withPipelineIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryPipelineList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMediaInfoJobIds()
+ * @method $this withMediaInfoJobIds($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3829,7 +3207,7 @@ class QuerySnapshotJobList extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryTemplateList extends Rpc
+class QueryMediaInfoJobList extends Rpc
 {
 }
 
@@ -3838,14 +3216,98 @@ class QueryTemplateList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class SearchPipeline extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getWaterMarkTemplateIds()
+ * @method $this withWaterMarkTemplateIds($value)
  */
-class QueryJobList extends Rpc
+class QueryWaterMarkTemplateList extends Rpc
+{
+}
+
+/**
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAnalysisConfig()
+ * @method $this withAnalysisConfig($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class SubmitAnalysisJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class SearchWaterMarkTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class SearchTemplate extends Rpc
 {
 }
 
@@ -3860,104 +3322,40 @@ class QueryJobList extends Rpc
  * @method $this withName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getWaterMarkTemplateId()
+ * @method $this withWaterMarkTemplateId($value)
  * @method string getConfig()
  * @method $this withConfig($value)
  */
-class AddWaterMarkTemplate extends Rpc
+class UpdateWaterMarkTemplate extends Rpc
 {
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
+ * @method string getContainer()
+ * @method $this withContainer($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CancelJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
- */
-class DeletePipeline extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
+ * @method string getMuxConfig()
+ * @method $this withMuxConfig($value)
+ * @method string getVideo()
+ * @method $this withVideo($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getTransConfig()
+ * @method $this withTransConfig($value)
+ * @method string getAudio()
+ * @method $this withAudio($value)
  */
-class DeleteTemplate extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getWaterMarkTemplateId()
- * @method $this withWaterMarkTemplateId($value)
- */
-class DeleteWaterMarkTemplate extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class PlayerAuth extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAnalysisJobIds()
- * @method $this withAnalysisJobIds($value)
- */
-class QueryAnalysisJobList extends Rpc
+class UpdateTemplate extends Rpc
 {
 }
 
@@ -3972,41 +3370,83 @@ class QueryAnalysisJobList extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getState()
+ * @method $this withState($value)
  * @method string getNotifyConfig()
  * @method $this withNotifyConfig($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSpeedLevel()
- * @method $this withSpeedLevel($value)
- * @method string getSpeed()
- * @method $this withSpeed($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
-class AddPipeline extends Rpc
+class UpdatePipeline extends Rpc
 {
 }
 
 /**
- * @method string getContainer()
- * @method $this withContainer($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getTransConfig()
- * @method $this withTransConfig($value)
- * @method string getMuxConfig()
- * @method $this withMuxConfig($value)
- * @method string getVideo()
- * @method $this withVideo($value)
- * @method string getAudio()
- * @method $this withAudio($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSnapshotConfig()
+ * @method $this withSnapshotConfig($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
  */
-class AddTemplate extends Rpc
+class SubmitSnapshotJob extends Rpc
+{
+}
+
+/**
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class SubmitMediaInfoJob extends Rpc
+{
+}
+
+/**
+ * @method string getOutputs()
+ * @method $this withOutputs($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getOutputBucket()
+ * @method $this withOutputBucket($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOutputLocation()
+ * @method $this withOutputLocation($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class SubmitJobs extends Rpc
 {
 }

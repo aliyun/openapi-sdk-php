@@ -6,15 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteItemBySkuId deleteItemBySkuId(array $options = [])
- * @method PrepareCompany prepareCompany(array $options = [])
- * @method DescribeCompany describeCompany(array $options = [])
- * @method CreateStore createStore(array $options = [])
- * @method DescribeAlarms describeAlarms(array $options = [])
- * @method DeleteStore deleteStore(array $options = [])
- * @method UpdateStore updateStore(array $options = [])
- * @method DescribeStores describeStores(array $options = [])
+ * @method DescribeUserRamPolicy describeUserRamPolicy(array $options = [])
  * @method BatchInsertItems batchInsertItems(array $options = [])
- * @method DeleteItem deleteItem(array $options = [])
  * @method DescribeItems describeItems(array $options = [])
  * @method BindEslDevice bindEslDevice(array $options = [])
  * @method UnbindEslDevice unbindEslDevice(array $options = [])
@@ -23,7 +16,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEslDevices describeEslDevices(array $options = [])
  * @method UnbindEslDeviceShelf unbindEslDeviceShelf(array $options = [])
  * @method DescribeUserOperationLog describeUserOperationLog(array $options = [])
- * @method DescribeUserRamPolicy describeUserRamPolicy(array $options = [])
+ * @method DeleteItem deleteItem(array $options = [])
+ * @method DescribeStores describeStores(array $options = [])
+ * @method UpdateStore updateStore(array $options = [])
+ * @method DeleteStore deleteStore(array $options = [])
+ * @method CreateStore createStore(array $options = [])
+ * @method DescribeAlarms describeAlarms(array $options = [])
+ * @method DescribeCompany describeCompany(array $options = [])
  */
 class CloudeslApiResolver extends ApiResolver
 {
@@ -52,110 +51,14 @@ class DeleteItemBySkuId extends Rpc
 }
 
 /**
- * @method string getPlatform()
- * @method $this withPlatform($value)
- */
-class PrepareCompany extends Rpc
-{
-}
-
-class DescribeCompany extends Rpc
-{
-}
-
-/**
  * @method string getCompanyId()
  * @method $this withCompanyId($value)
- * @method string getComments()
- * @method $this withComments($value)
- * @method string getPhone()
- * @method $this withPhone($value)
- * @method string getStoreName()
- * @method $this withStoreName($value)
- * @method string getGroups()
- * @method $this withGroups($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getBrand()
- * @method $this withBrand($value)
- * @method string getParentId()
- * @method $this withParentId($value)
- */
-class CreateStore extends Rpc
-{
-}
-
-/**
- * @method string getErrorType()
- * @method $this withErrorType($value)
- * @method string getToAlarmTime()
- * @method $this withToAlarmTime($value)
- * @method string getAlarmType()
- * @method $this withAlarmType($value)
- * @method string getFromAlarmTime()
- * @method $this withFromAlarmTime($value)
- * @method string getAlarmId()
- * @method $this withAlarmId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getStoreId()
- * @method $this withStoreId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getAlarmStatus()
- * @method $this withAlarmStatus($value)
- */
-class DescribeAlarms extends Rpc
-{
-}
-
-/**
+ * @method string getUserType()
+ * @method $this withUserType($value)
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class DeleteStore extends Rpc
-{
-}
-
-/**
- * @method string getComments()
- * @method $this withComments($value)
- * @method string getPhone()
- * @method $this withPhone($value)
- * @method string getStoreName()
- * @method $this withStoreName($value)
- * @method string getGroups()
- * @method $this withGroups($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getStoreId()
- * @method $this withStoreId($value)
- * @method string getBrand()
- * @method $this withBrand($value)
- */
-class UpdateStore extends Rpc
-{
-}
-
-/**
- * @method string getToDate()
- * @method $this withToDate($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getStoreName()
- * @method $this withStoreName($value)
- * @method string getGroups()
- * @method $this withGroups($value)
- * @method string getStoreId()
- * @method $this withStoreId($value)
- * @method string getBrand()
- * @method $this withBrand($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getFromDate()
- * @method $this withFromDate($value)
- */
-class DescribeStores extends Rpc
+class DescribeUserRamPolicy extends Rpc
 {
 }
 
@@ -221,16 +124,6 @@ class BatchInsertItems extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getStoreId()
- * @method $this withStoreId($value)
- * @method string getItemBarCode()
- * @method $this withItemBarCode($value)
- */
-class DeleteItem extends Rpc
-{
 }
 
 /**
@@ -378,13 +271,111 @@ class DescribeUserOperationLog extends Rpc
 }
 
 /**
- * @method string getCompanyId()
- * @method $this withCompanyId($value)
- * @method string getUserType()
- * @method $this withUserType($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ * @method string getItemBarCode()
+ * @method $this withItemBarCode($value)
+ */
+class DeleteItem extends Rpc
+{
+}
+
+/**
+ * @method string getToDate()
+ * @method $this withToDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStoreName()
+ * @method $this withStoreName($value)
+ * @method string getGroups()
+ * @method $this withGroups($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ * @method string getBrand()
+ * @method $this withBrand($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFromDate()
+ * @method $this withFromDate($value)
+ */
+class DescribeStores extends Rpc
+{
+}
+
+/**
+ * @method string getComments()
+ * @method $this withComments($value)
+ * @method string getPhone()
+ * @method $this withPhone($value)
+ * @method string getStoreName()
+ * @method $this withStoreName($value)
+ * @method string getGroups()
+ * @method $this withGroups($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ * @method string getBrand()
+ * @method $this withBrand($value)
+ */
+class UpdateStore extends Rpc
+{
+}
+
+/**
  * @method string getStoreId()
  * @method $this withStoreId($value)
  */
-class DescribeUserRamPolicy extends Rpc
+class DeleteStore extends Rpc
+{
+}
+
+/**
+ * @method string getCompanyId()
+ * @method $this withCompanyId($value)
+ * @method string getComments()
+ * @method $this withComments($value)
+ * @method string getPhone()
+ * @method $this withPhone($value)
+ * @method string getStoreName()
+ * @method $this withStoreName($value)
+ * @method string getGroups()
+ * @method $this withGroups($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
+ * @method string getBrand()
+ * @method $this withBrand($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ */
+class CreateStore extends Rpc
+{
+}
+
+/**
+ * @method string getErrorType()
+ * @method $this withErrorType($value)
+ * @method string getToAlarmTime()
+ * @method $this withToAlarmTime($value)
+ * @method string getAlarmType()
+ * @method $this withAlarmType($value)
+ * @method string getFromAlarmTime()
+ * @method $this withFromAlarmTime($value)
+ * @method string getAlarmId()
+ * @method $this withAlarmId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAlarmStatus()
+ * @method $this withAlarmStatus($value)
+ */
+class DescribeAlarms extends Rpc
+{
+}
+
+class DescribeCompany extends Rpc
 {
 }

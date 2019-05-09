@@ -9,11 +9,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseProductAccount closeProductAccount(array $options = [])
  * @method GetRegionStatus getRegionStatus(array $options = [])
  * @method OpenProductAccount openProductAccount(array $options = [])
- * @method SetAllowIP setAllowIP(array $options = [])
- * @method QueryEndPointList queryEndPointList(array $options = [])
- * @method GetEndPointByDomain getEndPointByDomain(array $options = [])
- * @method DescribeRegionList describeRegionList(array $options = [])
  * @method GetAllowIP getAllowIP(array $options = [])
+ * @method DescribeRegionList describeRegionList(array $options = [])
+ * @method GetEndPointByDomain getEndPointByDomain(array $options = [])
+ * @method QueryEndPointList queryEndPointList(array $options = [])
+ * @method SetAllowIP setAllowIP(array $options = [])
  */
 class OpenanalyticsApiResolver extends ApiResolver
 {
@@ -243,6 +243,98 @@ class OpenProductAccount extends Rpc
 /**
  * @method string getUserID()
  * @method string getNetworkType()
+ */
+class GetAllowIP extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['form_params']['NetworkType'] = $value;
+
+        return $this;
+    }
+}
+
+class DescribeRegionList extends Rpc
+{
+}
+
+/**
+ * @method string getUserID()
+ * @method string getDomainURL()
+ */
+class GetEndPointByDomain extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainURL($value)
+    {
+        $this->data['DomainURL'] = $value;
+        $this->options['form_params']['DomainURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserID()
+ */
+class QueryEndPointList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserID($value)
+    {
+        $this->data['UserID'] = $value;
+        $this->options['form_params']['UserID'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserID()
+ * @method string getNetworkType()
  * @method string getAllowIP()
  * @method string getAppend()
  */
@@ -297,98 +389,6 @@ class SetAllowIP extends Rpc
     {
         $this->data['Append'] = $value;
         $this->options['form_params']['Append'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getUserID()
- */
-class QueryEndPointList extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserID($value)
-    {
-        $this->data['UserID'] = $value;
-        $this->options['form_params']['UserID'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getUserID()
- * @method string getDomainURL()
- */
-class GetEndPointByDomain extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserID($value)
-    {
-        $this->data['UserID'] = $value;
-        $this->options['form_params']['UserID'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainURL($value)
-    {
-        $this->data['DomainURL'] = $value;
-        $this->options['form_params']['DomainURL'] = $value;
-
-        return $this;
-    }
-}
-
-class DescribeRegionList extends Rpc
-{
-}
-
-/**
- * @method string getUserID()
- * @method string getNetworkType()
- */
-class GetAllowIP extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserID($value)
-    {
-        $this->data['UserID'] = $value;
-        $this->options['form_params']['UserID'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNetworkType($value)
-    {
-        $this->data['NetworkType'] = $value;
-        $this->options['form_params']['NetworkType'] = $value;
 
         return $this;
     }

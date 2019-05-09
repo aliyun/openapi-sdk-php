@@ -5,15 +5,14 @@ namespace AlibabaCloud\Snsuapi\V20180709;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method MobileStatusQuery mobileStatusQuery(array $options = [])
- * @method MobileStopSpeedUp mobileStopSpeedUp(array $options = [])
  * @method MobileStartSpeedUp mobileStartSpeedUp(array $options = [])
+ * @method MobileStopSpeedUp mobileStopSpeedUp(array $options = [])
+ * @method MobileStatusQuery mobileStatusQuery(array $options = [])
  * @method BandOfferOrder bandOfferOrder(array $options = [])
  * @method BandStartSpeedUp bandStartSpeedUp(array $options = [])
- * @method BandStatusQuery bandStatusQuery(array $options = [])
  * @method BandStopSpeedUp bandStopSpeedUp(array $options = [])
- * @method OrderSnsuKdjs orderSnsuKdjs(array $options = [])
  * @method BandPrecheck bandPrecheck(array $options = [])
+ * @method BandStatusQuery bandStatusQuery(array $options = [])
  */
 class SnsuapiApiResolver extends ApiResolver
 {
@@ -32,34 +31,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'snsuapi';
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCorrelationId()
- * @method $this withCorrelationId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class MobileStatusQuery extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCorrelationId()
- * @method $this withCorrelationId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class MobileStopSpeedUp extends Rpc
-{
 }
 
 /**
@@ -83,6 +54,34 @@ class MobileStopSpeedUp extends Rpc
  * @method $this withToken($value)
  */
 class MobileStartSpeedUp extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCorrelationId()
+ * @method $this withCorrelationId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MobileStopSpeedUp extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCorrelationId()
+ * @method $this withCorrelationId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MobileStatusQuery extends Rpc
 {
 }
 
@@ -127,20 +126,6 @@ class BandStartSpeedUp extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBandId()
- * @method $this withBandId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class BandStatusQuery extends Rpc
-{
-}
-
-/**
  * @method string getIpAddress()
  * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
@@ -161,22 +146,6 @@ class BandStopSpeedUp extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBandId()
- * @method $this withBandId($value)
- * @method string getOfferId()
- * @method $this withOfferId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class OrderSnsuKdjs extends Rpc
-{
-}
-
-/**
  * @method string getIpAddress()
  * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
@@ -189,5 +158,19 @@ class OrderSnsuKdjs extends Rpc
  * @method $this withOwnerId($value)
  */
 class BandPrecheck extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandId()
+ * @method $this withBandId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BandStatusQuery extends Rpc
 {
 }

@@ -11,24 +11,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImportSwagger importSwagger(array $options = [])
  * @method SetIpControlApis setIpControlApis(array $options = [])
  * @method RemoveIpControlPolicyItem removeIpControlPolicyItem(array $options = [])
- * @method ModifyIpControlPolicyItem modifyIpControlPolicyItem(array $options = [])
  * @method RemoveIpControlApis removeIpControlApis(array $options = [])
- * @method DescribeIpControls describeIpControls(array $options = [])
+ * @method ModifyIpControlPolicyItem modifyIpControlPolicyItem(array $options = [])
  * @method ModifyIpControl modifyIpControl(array $options = [])
+ * @method DescribeIpControls describeIpControls(array $options = [])
  * @method DescribeIpControlPolicyItems describeIpControlPolicyItems(array $options = [])
  * @method DescribeApisByIpControl describeApisByIpControl(array $options = [])
- * @method DeleteIpControl deleteIpControl(array $options = [])
  * @method DescribeApiIpControls describeApiIpControls(array $options = [])
+ * @method DeleteIpControl deleteIpControl(array $options = [])
  * @method CreateIpControl createIpControl(array $options = [])
  * @method AddIpControlPolicyItem addIpControlPolicyItem(array $options = [])
- * @method DescribeLogConfig describeLogConfig(array $options = [])
  * @method ModifyLogConfig modifyLogConfig(array $options = [])
+ * @method DescribeLogConfig describeLogConfig(array $options = [])
  * @method DeleteLogConfig deleteLogConfig(array $options = [])
  * @method CreateLogConfig createLogConfig(array $options = [])
  * @method SetDomainWebSocketStatus setDomainWebSocketStatus(array $options = [])
- * @method DescribeVpcAccesses describeVpcAccesses(array $options = [])
- * @method SetVpcAccess setVpcAccess(array $options = [])
  * @method RemoveVpcAccess removeVpcAccess(array $options = [])
+ * @method SetVpcAccess setVpcAccess(array $options = [])
+ * @method DescribeVpcAccesses describeVpcAccesses(array $options = [])
  * @method ReactivateDomain reactivateDomain(array $options = [])
  * @method DescribeApiHistories describeApiHistories(array $options = [])
  * @method SdkGenerateByGroup sdkGenerateByGroup(array $options = [])
@@ -36,75 +36,75 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeApisByApp describeApisByApp(array $options = [])
  * @method SdkGenerate sdkGenerate(array $options = [])
  * @method DescribeApiStage describeApiStage(array $options = [])
- * @method CreateApiStageVariable createApiStageVariable(array $options = [])
  * @method DeleteApiStageVariable deleteApiStageVariable(array $options = [])
- * @method SetSignatureApis setSignatureApis(array $options = [])
- * @method SetTrafficControlApis setTrafficControlApis(array $options = [])
+ * @method CreateApiStageVariable createApiStageVariable(array $options = [])
  * @method SwitchApi switchApi(array $options = [])
- * @method SetApisAuthorities setApisAuthorities(array $options = [])
- * @method SetAppsAuthorities setAppsAuthorities(array $options = [])
- * @method SetDomain setDomain(array $options = [])
+ * @method SetTrafficControlApis setTrafficControlApis(array $options = [])
+ * @method SetSignatureApis setSignatureApis(array $options = [])
  * @method SetDomainCertificate setDomainCertificate(array $options = [])
- * @method RemoveAppsAuthorities removeAppsAuthorities(array $options = [])
- * @method RemoveSignatureApis removeSignatureApis(array $options = [])
- * @method RemoveTrafficControlApis removeTrafficControlApis(array $options = [])
+ * @method SetDomain setDomain(array $options = [])
+ * @method SetAppsAuthorities setAppsAuthorities(array $options = [])
+ * @method SetApisAuthorities setApisAuthorities(array $options = [])
  * @method ResetAppSecret resetAppSecret(array $options = [])
- * @method ModifyApp modifyApp(array $options = [])
- * @method ModifySignature modifySignature(array $options = [])
- * @method ModifyTrafficControl modifyTrafficControl(array $options = [])
+ * @method RemoveTrafficControlApis removeTrafficControlApis(array $options = [])
+ * @method RemoveSignatureApis removeSignatureApis(array $options = [])
+ * @method RemoveAppsAuthorities removeAppsAuthorities(array $options = [])
  * @method RemoveApisAuthorities removeApisAuthorities(array $options = [])
- * @method DescribeTrafficControls describeTrafficControls(array $options = [])
- * @method DescribeTrafficControlsByApi describeTrafficControlsByApi(array $options = [])
- * @method ModifyApi modifyApi(array $options = [])
+ * @method ModifyTrafficControl modifyTrafficControl(array $options = [])
+ * @method ModifySignature modifySignature(array $options = [])
+ * @method ModifyApp modifyApp(array $options = [])
  * @method ModifyApiGroup modifyApiGroup(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
- * @method DescribeSignatures describeSignatures(array $options = [])
- * @method DescribeSignaturesByApi describeSignaturesByApi(array $options = [])
+ * @method ModifyApi modifyApi(array $options = [])
+ * @method DescribeTrafficControlsByApi describeTrafficControlsByApi(array $options = [])
+ * @method DescribeTrafficControls describeTrafficControls(array $options = [])
  * @method DescribeSystemParameters describeSystemParameters(array $options = [])
- * @method DescribeHistoryApis describeHistoryApis(array $options = [])
- * @method DescribePurchasedApiGroup describePurchasedApiGroup(array $options = [])
- * @method DescribePurchasedApiGroups describePurchasedApiGroups(array $options = [])
+ * @method DescribeSignaturesByApi describeSignaturesByApi(array $options = [])
+ * @method DescribeSignatures describeSignatures(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribePurchasedApis describePurchasedApis(array $options = [])
- * @method DescribeDeployedApi describeDeployedApi(array $options = [])
- * @method DescribeDeployedApis describeDeployedApis(array $options = [])
- * @method DescribeDomain describeDomain(array $options = [])
+ * @method DescribePurchasedApiGroups describePurchasedApiGroups(array $options = [])
+ * @method DescribePurchasedApiGroup describePurchasedApiGroup(array $options = [])
+ * @method DescribeHistoryApis describeHistoryApis(array $options = [])
  * @method DescribeDomainsResolution describeDomainsResolution(array $options = [])
- * @method DescribeApps describeApps(array $options = [])
- * @method DescribeAppSecurity describeAppSecurity(array $options = [])
- * @method DescribeAuthorizedApis describeAuthorizedApis(array $options = [])
+ * @method DescribeDomain describeDomain(array $options = [])
+ * @method DescribeDeployedApis describeDeployedApis(array $options = [])
+ * @method DescribeDeployedApi describeDeployedApi(array $options = [])
  * @method DescribeAuthorizedApps describeAuthorizedApps(array $options = [])
- * @method DescribeApiSignatures describeApiSignatures(array $options = [])
- * @method DescribeApiTrafficControls describeApiTrafficControls(array $options = [])
- * @method DescribeApiTrafficData describeApiTrafficData(array $options = [])
+ * @method DescribeAuthorizedApis describeAuthorizedApis(array $options = [])
+ * @method DescribeAppSecurity describeAppSecurity(array $options = [])
+ * @method DescribeApps describeApps(array $options = [])
  * @method DescribeAppAttributes describeAppAttributes(array $options = [])
- * @method DescribeApis describeApis(array $options = [])
- * @method DescribeApisBySignature describeApisBySignature(array $options = [])
+ * @method DescribeApiTrafficData describeApiTrafficData(array $options = [])
+ * @method DescribeApiTrafficControls describeApiTrafficControls(array $options = [])
+ * @method DescribeApiSignatures describeApiSignatures(array $options = [])
  * @method DescribeApisByTrafficControl describeApisByTrafficControl(array $options = [])
- * @method DescribeApiGroups describeApiGroups(array $options = [])
- * @method DescribeApiHistory describeApiHistory(array $options = [])
- * @method DescribeApiLatencyData describeApiLatencyData(array $options = [])
+ * @method DescribeApisBySignature describeApisBySignature(array $options = [])
+ * @method DescribeApis describeApis(array $options = [])
  * @method DescribeApiQpsData describeApiQpsData(array $options = [])
- * @method DescribeApiDoc describeApiDoc(array $options = [])
- * @method DescribeApiErrorData describeApiErrorData(array $options = [])
+ * @method DescribeApiLatencyData describeApiLatencyData(array $options = [])
+ * @method DescribeApiHistory describeApiHistory(array $options = [])
+ * @method DescribeApiGroups describeApiGroups(array $options = [])
  * @method DescribeApiGroup describeApiGroup(array $options = [])
- * @method DeleteTrafficControl deleteTrafficControl(array $options = [])
- * @method DeleteTrafficSpecialControl deleteTrafficSpecialControl(array $options = [])
- * @method DeployApi deployApi(array $options = [])
+ * @method DescribeApiErrorData describeApiErrorData(array $options = [])
+ * @method DescribeApiDoc describeApiDoc(array $options = [])
  * @method DescribeApi describeApi(array $options = [])
- * @method DeleteApp deleteApp(array $options = [])
- * @method DeleteDomain deleteDomain(array $options = [])
- * @method DeleteDomainCertificate deleteDomainCertificate(array $options = [])
+ * @method DeployApi deployApi(array $options = [])
+ * @method DeleteTrafficSpecialControl deleteTrafficSpecialControl(array $options = [])
+ * @method DeleteTrafficControl deleteTrafficControl(array $options = [])
  * @method DeleteSignature deleteSignature(array $options = [])
- * @method CreateTrafficControl createTrafficControl(array $options = [])
- * @method DeleteAllTrafficSpecialControl deleteAllTrafficSpecialControl(array $options = [])
- * @method DeleteApi deleteApi(array $options = [])
+ * @method DeleteDomainCertificate deleteDomainCertificate(array $options = [])
+ * @method DeleteDomain deleteDomain(array $options = [])
+ * @method DeleteApp deleteApp(array $options = [])
  * @method DeleteApiGroup deleteApiGroup(array $options = [])
- * @method CreateApi createApi(array $options = [])
- * @method CreateApiGroup createApiGroup(array $options = [])
- * @method CreateApp createApp(array $options = [])
+ * @method DeleteApi deleteApi(array $options = [])
+ * @method DeleteAllTrafficSpecialControl deleteAllTrafficSpecialControl(array $options = [])
+ * @method CreateTrafficControl createTrafficControl(array $options = [])
  * @method CreateSignature createSignature(array $options = [])
- * @method AbolishApi abolishApi(array $options = [])
+ * @method CreateApp createApp(array $options = [])
+ * @method CreateApiGroup createApiGroup(array $options = [])
+ * @method CreateApi createApi(array $options = [])
  * @method AddTrafficSpecialControl addTrafficSpecialControl(array $options = [])
+ * @method AbolishApi abolishApi(array $options = [])
  */
 class CloudAPIApiResolver extends ApiResolver
 {
@@ -212,22 +212,6 @@ class RemoveIpControlPolicyItem extends Rpc
 }
 
 /**
- * @method string getIpControlId()
- * @method $this withIpControlId($value)
- * @method string getPolicyItemId()
- * @method $this withPolicyItemId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getCidrIp()
- * @method $this withCidrIp($value)
- */
-class ModifyIpControlPolicyItem extends Rpc
-{
-}
-
-/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getIpControlId()
@@ -246,18 +230,16 @@ class RemoveIpControlApis extends Rpc
 /**
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
+ * @method string getPolicyItemId()
+ * @method $this withPolicyItemId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getIpControlName()
- * @method $this withIpControlName($value)
- * @method string getIpControlType()
- * @method $this withIpControlType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCidrIp()
+ * @method $this withCidrIp($value)
  */
-class DescribeIpControls extends Rpc
+class ModifyIpControlPolicyItem extends Rpc
 {
 }
 
@@ -272,6 +254,24 @@ class DescribeIpControls extends Rpc
  * @method $this withDescription($value)
  */
 class ModifyIpControl extends Rpc
+{
+}
+
+/**
+ * @method string getIpControlId()
+ * @method $this withIpControlId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getIpControlName()
+ * @method $this withIpControlName($value)
+ * @method string getIpControlType()
+ * @method $this withIpControlType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeIpControls extends Rpc
 {
 }
 
@@ -306,16 +306,6 @@ class DescribeApisByIpControl extends Rpc
 }
 
 /**
- * @method string getIpControlId()
- * @method $this withIpControlId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DeleteIpControl extends Rpc
-{
-}
-
-/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getSecurityToken()
@@ -330,6 +320,16 @@ class DeleteIpControl extends Rpc
  * @method $this withApiIds($value)
  */
 class DescribeApiIpControls extends Rpc
+{
+}
+
+/**
+ * @method string getIpControlId()
+ * @method $this withIpControlId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DeleteIpControl extends Rpc
 {
 }
 
@@ -379,16 +379,6 @@ class AddIpControlPolicyItem extends Rpc
 }
 
 /**
- * @method string getLogType()
- * @method $this withLogType($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DescribeLogConfig extends Rpc
-{
-}
-
-/**
  * @method string getSlsLogStore()
  * @method $this withSlsLogStore($value)
  * @method string getLogType()
@@ -399,6 +389,16 @@ class DescribeLogConfig extends Rpc
  * @method $this withSlsProject($value)
  */
 class ModifyLogConfig extends Rpc
+{
+}
+
+/**
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeLogConfig extends Rpc
 {
 }
 
@@ -441,14 +441,16 @@ class SetDomainWebSocketStatus extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
-class DescribeVpcAccesses extends Rpc
+class RemoveVpcAccess extends Rpc
 {
 }
 
@@ -469,16 +471,14 @@ class SetVpcAccess extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class RemoveVpcAccess extends Rpc
+class DescribeVpcAccesses extends Rpc
 {
 }
 
@@ -579,6 +579,20 @@ class DescribeApiStage extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getVariableName()
+ * @method $this withVariableName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getStageId()
+ * @method $this withStageId($value)
+ */
+class DeleteApiStageVariable extends Rpc
+{
+}
+
+/**
  * @method string getSupportRoute()
  * @method $this withSupportRoute($value)
  * @method string getSecurityToken()
@@ -599,32 +613,20 @@ class CreateApiStageVariable extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getVariableName()
- * @method $this withVariableName($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getStageId()
- * @method $this withStageId($value)
- */
-class DeleteApiStageVariable extends Rpc
-{
-}
-
-/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ * @method string getHistoryVersion()
+ * @method $this withHistoryVersion($value)
  */
-class SetSignatureApis extends Rpc
+class SwitchApi extends Rpc
 {
 }
 
@@ -651,36 +653,48 @@ class SetTrafficControlApis extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getApiId()
- * @method $this withApiId($value)
- * @method string getHistoryVersion()
- * @method $this withHistoryVersion($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
  */
-class SwitchApi extends Rpc
+class SetSignatureApis extends Rpc
 {
 }
 
 /**
- * @method string getAuthVaildTime()
- * @method $this withAuthVaildTime($value)
- * @method string getStageName()
- * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getCertificatePrivateKey()
+ * @method $this withCertificatePrivateKey($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getAuthValidTime()
- * @method $this withAuthValidTime($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getCertificateName()
+ * @method $this withCertificateName($value)
+ * @method string getCertificateBody()
+ * @method $this withCertificateBody($value)
  */
-class SetApisAuthorities extends Rpc
+class SetDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertificatePrivateKey()
+ * @method $this withCertificatePrivateKey($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getCertificateName()
+ * @method $this withCertificateName($value)
+ * @method string getCertificateBody()
+ * @method $this withCertificateBody($value)
+ */
+class SetDomain extends Rpc
 {
 }
 
@@ -707,38 +721,66 @@ class SetAppsAuthorities extends Rpc
 }
 
 /**
+ * @method string getAuthVaildTime()
+ * @method $this withAuthVaildTime($value)
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getCertificatePrivateKey()
- * @method $this withCertificatePrivateKey($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getCertificateName()
- * @method $this withCertificateName($value)
- * @method string getCertificateBody()
- * @method $this withCertificateBody($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAuthValidTime()
+ * @method $this withAuthValidTime($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
  */
-class SetDomain extends Rpc
+class SetApisAuthorities extends Rpc
 {
 }
 
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getCertificatePrivateKey()
- * @method $this withCertificatePrivateKey($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class ResetAppSecret extends Rpc
+{
+}
+
+/**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getCertificateName()
- * @method $this withCertificateName($value)
- * @method string getCertificateBody()
- * @method $this withCertificateBody($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
  */
-class SetDomainCertificate extends Rpc
+class RemoveTrafficControlApis extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
+ */
+class RemoveSignatureApis extends Rpc
 {
 }
 
@@ -765,68 +807,14 @@ class RemoveAppsAuthorities extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
- */
-class RemoveSignatureApis extends Rpc
-{
-}
-
-/**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getStageName()
- * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
- */
-class RemoveTrafficControlApis extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- */
-class ResetAppSecret extends Rpc
-{
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
  */
-class ModifyApp extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSignatureName()
- * @method $this withSignatureName($value)
- * @method string getSignatureKey()
- * @method $this withSignatureKey($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
- * @method string getSignatureSecret()
- * @method $this withSignatureSecret($value)
- */
-class ModifySignature extends Rpc
+class RemoveApisAuthorities extends Rpc
 {
 }
 
@@ -853,56 +841,46 @@ class ModifyTrafficControl extends Rpc
 }
 
 /**
- * @method string getStageName()
- * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getSignatureName()
+ * @method $this withSignatureName($value)
+ * @method string getSignatureKey()
+ * @method $this withSignatureKey($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
+ * @method string getSignatureSecret()
+ * @method $this withSignatureSecret($value)
+ */
+class ModifySignature extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
  */
-class RemoveApisAuthorities extends Rpc
+class ModifyApp extends Rpc
 {
 }
 
 /**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getStageName()
- * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getTrafficControlName()
- * @method $this withTrafficControlName($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getApiId()
- * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeTrafficControls extends Rpc
-{
-}
-
-/**
- * @method string getStageName()
- * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
-class DescribeTrafficControlsByApi extends Rpc
+class ModifyApiGroup extends Rpc
 {
 }
 
@@ -965,42 +943,46 @@ class ModifyApi extends Rpc
 }
 
 /**
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  */
-class ModifyApiGroup extends Rpc
+class DescribeTrafficControlsByApi extends Rpc
 {
 }
 
 /**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getLanguage()
- * @method $this withLanguage($value)
- */
-class DescribeRegions extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSignatureName()
- * @method $this withSignatureName($value)
+ * @method string getTrafficControlName()
+ * @method $this withTrafficControlName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeSignatures extends Rpc
+class DescribeTrafficControls extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeSystemParameters extends Rpc
 {
 }
 
@@ -1021,50 +1003,26 @@ class DescribeSignaturesByApi extends Rpc
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- */
-class DescribeSystemParameters extends Rpc
-{
-}
-
-/**
- * @method string getStageName()
- * @method $this withStageName($value)
- * @method string getApiName()
- * @method $this withApiName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getSignatureName()
+ * @method $this withSignatureName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeHistoryApis extends Rpc
+class DescribeSignatures extends Rpc
 {
 }
 
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
  */
-class DescribePurchasedApiGroup extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribePurchasedApiGroups extends Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1091,16 +1049,68 @@ class DescribePurchasedApis extends Rpc
 }
 
 /**
- * @method string getStageName()
- * @method $this withStageName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribePurchasedApiGroups extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ */
+class DescribePurchasedApiGroup extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getApiName()
+ * @method $this withApiName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class DescribeDeployedApi extends Rpc
+class DescribeHistoryApis extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DescribeDomainsResolution extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ */
+class DescribeDomain extends Rpc
 {
 }
 
@@ -1125,66 +1135,16 @@ class DescribeDeployedApis extends Rpc
 }
 
 /**
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  */
-class DescribeDomain extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDomainNames()
- * @method $this withDomainNames($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class DescribeDomainsResolution extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAppOwner()
- * @method $this withAppOwner($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeApps extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeAppSecurity extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeAuthorizedApis extends Rpc
+class DescribeDeployedApi extends Rpc
 {
 }
 
@@ -1213,20 +1173,74 @@ class DescribeAuthorizedApps extends Rpc
 }
 
 /**
- * @method string getStageName()
- * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getApiIds()
- * @method $this withApiIds($value)
  */
-class DescribeApiSignatures extends Rpc
+class DescribeAuthorizedApis extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeAppSecurity extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAppOwner()
+ * @method $this withAppOwner($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeApps extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeAppAttributes extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ */
+class DescribeApiTrafficData extends Rpc
 {
 }
 
@@ -1249,34 +1263,48 @@ class DescribeApiTrafficControls extends Rpc
 }
 
 /**
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getApiIds()
+ * @method $this withApiIds($value)
  */
-class DescribeApiTrafficData extends Rpc
+class DescribeApiSignatures extends Rpc
 {
 }
 
 /**
- * @method string getAppName()
- * @method $this withAppName($value)
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeAppAttributes extends Rpc
+class DescribeApisByTrafficControl extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeApisBySignature extends Rpc
 {
 }
 
@@ -1305,28 +1333,16 @@ class DescribeApis extends Rpc
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  */
-class DescribeApisBySignature extends Rpc
-{
-}
-
-/**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeApisByTrafficControl extends Rpc
+class DescribeApiQpsData extends Rpc
 {
 }
 
@@ -1335,14 +1351,14 @@ class DescribeApisByTrafficControl extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  */
-class DescribeApiGroups extends Rpc
+class DescribeApiLatencyData extends Rpc
 {
 }
 
@@ -1367,14 +1383,24 @@ class DescribeApiHistory extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class DescribeApiLatencyData extends Rpc
+class DescribeApiGroups extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DescribeApiGroup extends Rpc
 {
 }
 
@@ -1390,7 +1416,7 @@ class DescribeApiLatencyData extends Rpc
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiQpsData extends Rpc
+class DescribeApiErrorData extends Rpc
 {
 }
 
@@ -1413,48 +1439,10 @@ class DescribeApiDoc extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
-class DescribeApiErrorData extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class DescribeApiGroup extends Rpc
-{
-}
-
-/**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DeleteTrafficControl extends Rpc
-{
-}
-
-/**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getSpecialKey()
- * @method $this withSpecialKey($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSpecialType()
- * @method $this withSpecialType($value)
- */
-class DeleteTrafficSpecialControl extends Rpc
+class DescribeApi extends Rpc
 {
 }
 
@@ -1475,36 +1463,36 @@ class DeployApi extends Rpc
 }
 
 /**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getSpecialKey()
+ * @method $this withSpecialKey($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getSpecialType()
+ * @method $this withSpecialType($value)
  */
-class DescribeApi extends Rpc
+class DeleteTrafficSpecialControl extends Rpc
+{
+}
+
+/**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DeleteTrafficControl extends Rpc
 {
 }
 
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getAppId()
- * @method $this withAppId($value)
+ * @method string getSignatureId()
+ * @method $this withSignatureId($value)
  */
-class DeleteApp extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- */
-class DeleteDomain extends Rpc
+class DeleteSignature extends Rpc
 {
 }
 
@@ -1525,10 +1513,54 @@ class DeleteDomainCertificate extends Rpc
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getSignatureId()
- * @method $this withSignatureId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  */
-class DeleteSignature extends Rpc
+class DeleteDomain extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DeleteApp extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DeleteApiGroup extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ */
+class DeleteApi extends Rpc
+{
+}
+
+/**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DeleteAllTrafficSpecialControl extends Rpc
 {
 }
 
@@ -1553,34 +1585,42 @@ class CreateTrafficControl extends Rpc
 }
 
 /**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getSignatureName()
+ * @method $this withSignatureName($value)
+ * @method string getSignatureKey()
+ * @method $this withSignatureKey($value)
+ * @method string getSignatureSecret()
+ * @method $this withSignatureSecret($value)
  */
-class DeleteAllTrafficSpecialControl extends Rpc
+class CreateSignature extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ */
+class CreateApp extends Rpc
 {
 }
 
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getApiId()
- * @method $this withApiId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  */
-class DeleteApi extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class DeleteApiGroup extends Rpc
+class CreateApiGroup extends Rpc
 {
 }
 
@@ -1641,42 +1681,18 @@ class CreateApi extends Rpc
 }
 
 /**
+ * @method string getTrafficControlId()
+ * @method $this withTrafficControlId($value)
+ * @method string getSpecialKey()
+ * @method $this withSpecialKey($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getSource()
- * @method $this withSource($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
+ * @method string getTrafficValue()
+ * @method $this withTrafficValue($value)
+ * @method string getSpecialType()
+ * @method $this withSpecialType($value)
  */
-class CreateApiGroup extends Rpc
-{
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- */
-class CreateApp extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSignatureName()
- * @method $this withSignatureName($value)
- * @method string getSignatureKey()
- * @method $this withSignatureKey($value)
- * @method string getSignatureSecret()
- * @method $this withSignatureSecret($value)
- */
-class CreateSignature extends Rpc
+class AddTrafficSpecialControl extends Rpc
 {
 }
 
@@ -1691,21 +1707,5 @@ class CreateSignature extends Rpc
  * @method $this withApiId($value)
  */
 class AbolishApi extends Rpc
-{
-}
-
-/**
- * @method string getTrafficControlId()
- * @method $this withTrafficControlId($value)
- * @method string getSpecialKey()
- * @method $this withSpecialKey($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getTrafficValue()
- * @method $this withTrafficValue($value)
- * @method string getSpecialType()
- * @method $this withSpecialType($value)
- */
-class AddTrafficSpecialControl extends Rpc
 {
 }

@@ -5,17 +5,17 @@ namespace AlibabaCloud\Crm\V20150408;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method AddLabelForBid addLabelForBid(array $options = [])
- * @method CheckLabelForBid checkLabelForBid(array $options = [])
  * @method DeleteLabelForBid deleteLabelForBid(array $options = [])
- * @method BatchGetAliyunIdByAliyunPk batchGetAliyunIdByAliyunPk(array $options = [])
+ * @method CheckLabelForBid checkLabelForBid(array $options = [])
+ * @method AddLabelForBid addLabelForBid(array $options = [])
  * @method GetAliyunPkByAliyunId getAliyunPkByAliyunId(array $options = [])
- * @method QueryBidUserCertifiedInfo queryBidUserCertifiedInfo(array $options = [])
+ * @method BatchGetAliyunIdByAliyunPk batchGetAliyunIdByAliyunPk(array $options = [])
  * @method RemoveIdentityCertifiedForBidUser removeIdentityCertifiedForBidUser(array $options = [])
+ * @method QueryBidUserCertifiedInfo queryBidUserCertifiedInfo(array $options = [])
  * @method AddIdentityCertifiedForBidUser addIdentityCertifiedForBidUser(array $options = [])
- * @method AddLabel addLabel(array $options = [])
- * @method CheckLabel checkLabel(array $options = [])
  * @method DeleteLabel deleteLabel(array $options = [])
+ * @method CheckLabel checkLabel(array $options = [])
+ * @method AddLabel addLabel(array $options = [])
  * @method QueryCustomerLabel queryCustomerLabel(array $options = [])
  */
 class CrmApiResolver extends ApiResolver
@@ -40,14 +40,12 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getLabelSeries()
  * @method $this withLabelSeries($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getPK()
  * @method $this withPK($value)
  * @method string getLabel()
  * @method $this withLabel($value)
  */
-class AddLabelForBid extends Rpc
+class DeleteLabelForBid extends Rpc
 {
 }
 
@@ -66,12 +64,22 @@ class CheckLabelForBid extends Rpc
 /**
  * @method string getLabelSeries()
  * @method $this withLabelSeries($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getPK()
  * @method $this withPK($value)
  * @method string getLabel()
  * @method $this withLabel($value)
  */
-class DeleteLabelForBid extends Rpc
+class AddLabelForBid extends Rpc
+{
+}
+
+/**
+ * @method string getAliyunId()
+ * @method $this withAliyunId($value)
+ */
+class GetAliyunPkByAliyunId extends Rpc
 {
 }
 
@@ -98,10 +106,12 @@ class BatchGetAliyunIdByAliyunPk extends Rpc
 }
 
 /**
- * @method string getAliyunId()
- * @method $this withAliyunId($value)
+ * @method string getBidType()
+ * @method $this withBidType($value)
+ * @method string getPK()
+ * @method $this withPK($value)
  */
-class GetAliyunPkByAliyunId extends Rpc
+class RemoveIdentityCertifiedForBidUser extends Rpc
 {
 }
 
@@ -112,16 +122,6 @@ class GetAliyunPkByAliyunId extends Rpc
  * @method $this withPK($value)
  */
 class QueryBidUserCertifiedInfo extends Rpc
-{
-}
-
-/**
- * @method string getBidType()
- * @method $this withBidType($value)
- * @method string getPK()
- * @method $this withPK($value)
- */
-class RemoveIdentityCertifiedForBidUser extends Rpc
 {
 }
 
@@ -150,8 +150,6 @@ class AddIdentityCertifiedForBidUser extends Rpc
  * @method $this withLabelSeries($value)
  * @method string getOrganization()
  * @method $this withOrganization($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getPK()
  * @method $this withPK($value)
  * @method string getLabelName()
@@ -159,7 +157,7 @@ class AddIdentityCertifiedForBidUser extends Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class AddLabel extends Rpc
+class DeleteLabel extends Rpc
 {
 }
 
@@ -180,6 +178,8 @@ class CheckLabel extends Rpc
  * @method $this withLabelSeries($value)
  * @method string getOrganization()
  * @method $this withOrganization($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getPK()
  * @method $this withPK($value)
  * @method string getLabelName()
@@ -187,7 +187,7 @@ class CheckLabel extends Rpc
  * @method string getUserName()
  * @method $this withUserName($value)
  */
-class DeleteLabel extends Rpc
+class AddLabel extends Rpc
 {
 }
 

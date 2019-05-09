@@ -8,18 +8,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstances describeInstances(array $options = [])
  * @method NotifyContractEvent notifyContractEvent(array $options = [])
  * @method DescribeProducts describeProducts(array $options = [])
- * @method DescribeProductRates describeProductRates(array $options = [])
  * @method BindImagePackage bindImagePackage(array $options = [])
- * @method DescribePrice describePrice(array $options = [])
  * @method DescribeProduct describeProduct(array $options = [])
- * @method CreateOrder createOrder(array $options = [])
- * @method DescribeInstance describeInstance(array $options = [])
+ * @method DescribePrice describePrice(array $options = [])
  * @method DescribeOrder describeOrder(array $options = [])
+ * @method DescribeInstance describeInstance(array $options = [])
+ * @method CreateOrder createOrder(array $options = [])
  * @method PushMeteringData pushMeteringData(array $options = [])
- * @method ActivateLicense activateLicense(array $options = [])
  * @method DescribeLicense describeLicense(array $options = [])
- * @method QueryMarketCategories queryMarketCategories(array $options = [])
+ * @method ActivateLicense activateLicense(array $options = [])
  * @method QueryMarketImages queryMarketImages(array $options = [])
+ * @method QueryMarketCategories queryMarketCategories(array $options = [])
  */
 class MarketApiResolver extends ApiResolver
 {
@@ -89,24 +88,24 @@ class DescribeProducts extends Rpc
 }
 
 /**
- * @method string getCode()
- * @method $this withCode($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageIndex()
- * @method $this withPageIndex($value)
- */
-class DescribeProductRates extends Rpc
-{
-}
-
-/**
  * @method string getEcsInstanceId()
  * @method $this withEcsInstanceId($value)
  * @method string getImagePackageInstanceId()
  * @method $this withImagePackageInstanceId($value)
  */
 class BindImagePackage extends Rpc
+{
+}
+
+/**
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getQueryDraft()
+ * @method $this withQueryDraft($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ */
+class DescribeProduct extends Rpc
 {
 }
 
@@ -121,14 +120,22 @@ class DescribePrice extends Rpc
 }
 
 /**
- * @method string getCode()
- * @method $this withCode($value)
- * @method string getQueryDraft()
- * @method $this withQueryDraft($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
-class DescribeProduct extends Rpc
+class DescribeOrder extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeInstance extends Rpc
 {
 }
 
@@ -151,30 +158,18 @@ class CreateOrder extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOrderType()
- * @method $this withOrderType($value)
- */
-class DescribeInstance extends Rpc
-{
-}
-
-/**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- */
-class DescribeOrder extends Rpc
-{
-}
-
-/**
  * @method string getMetering()
  * @method $this withMetering($value)
  */
 class PushMeteringData extends Rpc
+{
+}
+
+/**
+ * @method string getLicenseCode()
+ * @method $this withLicenseCode($value)
+ */
+class DescribeLicense extends Rpc
 {
 }
 
@@ -189,21 +184,13 @@ class ActivateLicense extends Rpc
 }
 
 /**
- * @method string getLicenseCode()
- * @method $this withLicenseCode($value)
- */
-class DescribeLicense extends Rpc
-{
-}
-
-class QueryMarketCategories extends Rpc
-{
-}
-
-/**
  * @method string getParam()
  * @method $this withParam($value)
  */
 class QueryMarketImages extends Rpc
+{
+}
+
+class QueryMarketCategories extends Rpc
 {
 }

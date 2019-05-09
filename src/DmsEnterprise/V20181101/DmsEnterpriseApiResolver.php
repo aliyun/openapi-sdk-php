@@ -5,11 +5,11 @@ namespace AlibabaCloud\DmsEnterprise\V20181101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method EnableUser enableUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
+ * @method EnableUser enableUser(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
- * @method RegisterUser registerUser(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
+ * @method RegisterUser registerUser(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  */
 class DmsEnterpriseApiResolver extends ApiResolver
@@ -37,16 +37,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class EnableUser extends Rpc
-{
-}
-
-/**
- * @method string getUid()
- * @method $this withUid($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
 class DisableUser extends Rpc
 {
 }
@@ -57,21 +47,17 @@ class DisableUser extends Rpc
  * @method string getTid()
  * @method $this withTid($value)
  */
-class DeleteUser extends Rpc
+class EnableUser extends Rpc
 {
 }
 
 /**
- * @method string getRoleNames()
- * @method $this withRoleNames($value)
  * @method string getUid()
  * @method $this withUid($value)
- * @method string getUserNick()
- * @method $this withUserNick($value)
  * @method string getTid()
  * @method $this withTid($value)
  */
-class RegisterUser extends Rpc
+class DeleteUser extends Rpc
 {
 }
 
@@ -94,6 +80,20 @@ class GetOpLog extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getRoleNames()
+ * @method $this withRoleNames($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getUserNick()
+ * @method $this withUserNick($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class RegisterUser extends Rpc
+{
 }
 
 /**

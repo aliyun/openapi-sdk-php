@@ -6,53 +6,53 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method OnsMqttGroupIdCreate onsMqttGroupIdCreate(array $options = [])
- * @method OnsPublishCreate onsPublishCreate(array $options = [])
- * @method OnsEmpowerDelete onsEmpowerDelete(array $options = [])
- * @method OnsEmpowerCreate onsEmpowerCreate(array $options = [])
- * @method OnsWarnCreate onsWarnCreate(array $options = [])
- * @method OnsPublishDelete onsPublishDelete(array $options = [])
- * @method OnsSubscriptionCreate onsSubscriptionCreate(array $options = [])
- * @method OnsWarnDelete onsWarnDelete(array $options = [])
- * @method OnsTraceQueryByMsgId onsTraceQueryByMsgId(array $options = [])
- * @method OnsConsumerStatus onsConsumerStatus(array $options = [])
- * @method OnsTraceQueryByMsgKey onsTraceQueryByMsgKey(array $options = [])
- * @method OnsTopicDelete onsTopicDelete(array $options = [])
- * @method OnsConsumerResetOffset onsConsumerResetOffset(array $options = [])
- * @method OnsConsumerAccumulate onsConsumerAccumulate(array $options = [])
- * @method OnsTopicCreate onsTopicCreate(array $options = [])
- * @method OnsSubscriptionDelete onsSubscriptionDelete(array $options = [])
- * @method OnsSubscriptionUpdate onsSubscriptionUpdate(array $options = [])
- * @method OnsTraceGetResult onsTraceGetResult(array $options = [])
- * @method OnsTopicUpdate onsTopicUpdate(array $options = [])
- * @method OnsMessageGetByKey onsMessageGetByKey(array $options = [])
- * @method OnsMqttGroupIdList onsMqttGroupIdList(array $options = [])
  * @method OnsTrendTopicInputTps onsTrendTopicInputTps(array $options = [])
- * @method OnsSubscriptionGet onsSubscriptionGet(array $options = [])
+ * @method OnsMqttGroupIdList onsMqttGroupIdList(array $options = [])
+ * @method OnsMessageGetByKey onsMessageGetByKey(array $options = [])
  * @method OnsTopicSearch onsTopicSearch(array $options = [])
- * @method OnsMessageGetByMsgId onsMessageGetByMsgId(array $options = [])
- * @method OnsMessageTrace onsMessageTrace(array $options = [])
+ * @method OnsEmpowerDelete onsEmpowerDelete(array $options = [])
+ * @method OnsSubscriptionGet onsSubscriptionGet(array $options = [])
+ * @method OnsPublishCreate onsPublishCreate(array $options = [])
  * @method OnsConsumerGetConnection onsConsumerGetConnection(array $options = [])
- * @method OnsRegionList onsRegionList(array $options = [])
+ * @method OnsMessageTrace onsMessageTrace(array $options = [])
+ * @method OnsMessageGetByMsgId onsMessageGetByMsgId(array $options = [])
+ * @method OnsWarnCreate onsWarnCreate(array $options = [])
+ * @method OnsEmpowerCreate onsEmpowerCreate(array $options = [])
+ * @method OnsWarnDelete onsWarnDelete(array $options = [])
+ * @method OnsSubscriptionCreate onsSubscriptionCreate(array $options = [])
  * @method OnsEmpowerList onsEmpowerList(array $options = [])
- * @method OnsPublishList onsPublishList(array $options = [])
- * @method OnsMessagePush onsMessagePush(array $options = [])
- * @method OnsTrendGroupOutputTps onsTrendGroupOutputTps(array $options = [])
+ * @method OnsRegionList onsRegionList(array $options = [])
+ * @method OnsPublishDelete onsPublishDelete(array $options = [])
  * @method OnsTopicStatus onsTopicStatus(array $options = [])
- * @method OnsMqttQueryClientByGroupId onsMqttQueryClientByGroupId(array $options = [])
- * @method OnsMqttQueryClientByClientId onsMqttQueryClientByClientId(array $options = [])
+ * @method OnsTraceQueryByMsgId onsTraceQueryByMsgId(array $options = [])
+ * @method OnsTrendGroupOutputTps onsTrendGroupOutputTps(array $options = [])
+ * @method OnsMessagePush onsMessagePush(array $options = [])
+ * @method OnsPublishList onsPublishList(array $options = [])
  * @method OnsSubscriptionSearch onsSubscriptionSearch(array $options = [])
- * @method OnsMqttQueryHistoryOnline onsMqttQueryHistoryOnline(array $options = [])
- * @method OnsTopicList onsTopicList(array $options = [])
+ * @method OnsTraceQueryByMsgKey onsTraceQueryByMsgKey(array $options = [])
+ * @method OnsMqttQueryClientByClientId onsMqttQueryClientByClientId(array $options = [])
+ * @method OnsMqttQueryClientByGroupId onsMqttQueryClientByGroupId(array $options = [])
  * @method OnsPublishSearch onsPublishSearch(array $options = [])
- * @method OnsMqttQueryClientByTopic onsMqttQueryClientByTopic(array $options = [])
- * @method OnsConsumerTimeSpan onsConsumerTimeSpan(array $options = [])
+ * @method OnsConsumerStatus onsConsumerStatus(array $options = [])
+ * @method OnsTopicList onsTopicList(array $options = [])
+ * @method OnsMqttQueryHistoryOnline onsMqttQueryHistoryOnline(array $options = [])
+ * @method OnsTopicDelete onsTopicDelete(array $options = [])
  * @method OnsPublishGet onsPublishGet(array $options = [])
+ * @method OnsConsumerTimeSpan onsConsumerTimeSpan(array $options = [])
+ * @method OnsMqttQueryClientByTopic onsMqttQueryClientByTopic(array $options = [])
  * @method OnsMqttQueryMsgByPubInfo onsMqttQueryMsgByPubInfo(array $options = [])
  * @method OnsMessagePageQueryByTopic onsMessagePageQueryByTopic(array $options = [])
- * @method OnsSubscriptionList onsSubscriptionList(array $options = [])
+ * @method OnsTopicCreate onsTopicCreate(array $options = [])
+ * @method OnsConsumerAccumulate onsConsumerAccumulate(array $options = [])
+ * @method OnsConsumerResetOffset onsConsumerResetOffset(array $options = [])
  * @method OnsMqttQueryTraceByTraceId onsMqttQueryTraceByTraceId(array $options = [])
- * @method OnsMessageSend onsMessageSend(array $options = [])
+ * @method OnsSubscriptionDelete onsSubscriptionDelete(array $options = [])
+ * @method OnsSubscriptionList onsSubscriptionList(array $options = [])
  * @method OnsMqttQueryMsgTransTrend onsMqttQueryMsgTransTrend(array $options = [])
+ * @method OnsMessageSend onsMessageSend(array $options = [])
+ * @method OnsTraceGetResult onsTraceGetResult(array $options = [])
+ * @method OnsSubscriptionUpdate onsSubscriptionUpdate(array $options = [])
+ * @method OnsTopicUpdate onsTopicUpdate(array $options = [])
  * @method OnsTopicGet onsTopicGet(array $options = [])
  */
 class OnsApiResolver extends ApiResolver
@@ -90,18 +90,64 @@ class OnsMqttGroupIdCreate extends Rpc
 /**
  * @method string getPreventCache()
  * @method $this withPreventCache($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getOnsRegionId()
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getAppName()
- * @method $this withAppName($value)
  * @method string getTopic()
  * @method $this withTopic($value)
- * @method string getProducerId()
- * @method $this withProducerId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getType()
+ * @method $this withType($value)
  */
-class OnsPublishCreate extends Rpc
+class OnsTrendTopicInputTps extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ */
+class OnsMqttGroupIdList extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class OnsMessageGetByKey extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getSearch()
+ * @method $this withSearch($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ */
+class OnsTopicSearch extends Rpc
 {
 }
 
@@ -128,14 +174,76 @@ class OnsEmpowerDelete extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getEmpowerUser()
- * @method $this withEmpowerUser($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
  * @method string getTopic()
  * @method $this withTopic($value)
- * @method string getRelation()
- * @method $this withRelation($value)
  */
-class OnsEmpowerCreate extends Rpc
+class OnsSubscriptionGet extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getProducerId()
+ * @method $this withProducerId($value)
+ */
+class OnsPublishCreate extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ */
+class OnsConsumerGetConnection extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getMsgId()
+ * @method $this withMsgId($value)
+ */
+class OnsMessageTrace extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getMsgId()
+ * @method $this withMsgId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsMessageGetByMsgId extends Rpc
 {
 }
 
@@ -174,28 +282,14 @@ class OnsWarnCreate extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
+ * @method string getEmpowerUser()
+ * @method $this withEmpowerUser($value)
  * @method string getTopic()
  * @method $this withTopic($value)
- * @method string getProducerId()
- * @method $this withProducerId($value)
+ * @method string getRelation()
+ * @method $this withRelation($value)
  */
-class OnsPublishDelete extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsSubscriptionCreate extends Rpc
+class OnsEmpowerCreate extends Rpc
 {
 }
 
@@ -222,336 +316,12 @@ class OnsWarnDelete extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getMsgId()
- * @method $this withMsgId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- */
-class OnsTraceQueryByMsgId extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getNeedJstack()
- * @method $this withNeedJstack($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getDetail()
- * @method $this withDetail($value)
- */
-class OnsConsumerStatus extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getMsgKey()
- * @method $this withMsgKey($value)
- */
-class OnsTraceQueryByMsgKey extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getCluster()
- * @method $this withCluster($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsTopicDelete extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getResetTimestamp()
- * @method $this withResetTimestamp($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class OnsConsumerResetOffset extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getDetail()
- * @method $this withDetail($value)
- */
-class OnsConsumerAccumulate extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getCluster()
- * @method $this withCluster($value)
- * @method string getQueueNum()
- * @method $this withQueueNum($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getQps()
- * @method $this withQps($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getRemark()
- * @method $this withRemark($value)
- * @method string getAppkey()
- * @method $this withAppkey($value)
- * @method string getOrder()
- * @method $this withOrder($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class OnsTopicCreate extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
  * @method string getConsumerId()
  * @method $this withConsumerId($value)
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsSubscriptionDelete extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getReadEnable()
- * @method $this withReadEnable($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- */
-class OnsSubscriptionUpdate extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getQueryId()
- * @method $this withQueryId($value)
- */
-class OnsTraceGetResult extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getPerm()
- * @method $this withPerm($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsTopicUpdate extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class OnsMessageGetByKey extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- */
-class OnsMqttGroupIdList extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class OnsTrendTopicInputTps extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsSubscriptionGet extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getSearch()
- * @method $this withSearch($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- */
-class OnsTopicSearch extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getMsgId()
- * @method $this withMsgId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsMessageGetByMsgId extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getMsgId()
- * @method $this withMsgId($value)
- */
-class OnsMessageTrace extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- */
-class OnsConsumerGetConnection extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- */
-class OnsRegionList extends Rpc
+class OnsSubscriptionCreate extends Rpc
 {
 }
 
@@ -579,7 +349,7 @@ class OnsEmpowerList extends Rpc
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
  */
-class OnsPublishList extends Rpc
+class OnsRegionList extends Rpc
 {
 }
 
@@ -588,18 +358,48 @@ class OnsPublishList extends Rpc
  * @method $this withPreventCache($value)
  * @method string getOnsRegionId()
  * @method $this withOnsRegionId($value)
- * @method string getClientId()
- * @method $this withClientId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getConsumerId()
- * @method $this withConsumerId($value)
- * @method string getMsgId()
- * @method $this withMsgId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getProducerId()
+ * @method $this withProducerId($value)
+ */
+class OnsPublishDelete extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
  * @method string getTopic()
  * @method $this withTopic($value)
  */
-class OnsMessagePush extends Rpc
+class OnsTopicStatus extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getMsgId()
+ * @method $this withMsgId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ */
+class OnsTraceQueryByMsgId extends Rpc
 {
 }
 
@@ -632,40 +432,30 @@ class OnsTrendGroupOutputTps extends Rpc
  * @method $this withPreventCache($value)
  * @method string getOnsRegionId()
  * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsTopicStatus extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
- * @method string getOnsPlatform()
- * @method $this withOnsPlatform($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class OnsMqttQueryClientByGroupId extends Rpc
-{
-}
-
-/**
- * @method string getPreventCache()
- * @method $this withPreventCache($value)
- * @method string getOnsRegionId()
- * @method $this withOnsRegionId($value)
  * @method string getClientId()
  * @method $this withClientId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getMsgId()
+ * @method $this withMsgId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
  */
-class OnsMqttQueryClientByClientId extends Rpc
+class OnsMessagePush extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ */
+class OnsPublishList extends Rpc
 {
 }
 
@@ -690,14 +480,30 @@ class OnsSubscriptionSearch extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getBeginTime()
  * @method $this withBeginTime($value)
+ * @method string getMsgKey()
+ * @method $this withMsgKey($value)
  */
-class OnsMqttQueryHistoryOnline extends Rpc
+class OnsTraceQueryByMsgKey extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getClientId()
+ * @method $this withClientId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ */
+class OnsMqttQueryClientByClientId extends Rpc
 {
 }
 
@@ -708,10 +514,10 @@ class OnsMqttQueryHistoryOnline extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
-class OnsTopicList extends Rpc
+class OnsMqttQueryClientByGroupId extends Rpc
 {
 }
 
@@ -736,12 +542,78 @@ class OnsPublishSearch extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getParentTopic()
- * @method $this withParentTopic($value)
- * @method string getSubTopic()
- * @method $this withSubTopic($value)
+ * @method string getNeedJstack()
+ * @method $this withNeedJstack($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getDetail()
+ * @method $this withDetail($value)
  */
-class OnsMqttQueryClientByTopic extends Rpc
+class OnsConsumerStatus extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsTopicList extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ */
+class OnsMqttQueryHistoryOnline extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getCluster()
+ * @method $this withCluster($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsTopicDelete extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getProducerId()
+ * @method $this withProducerId($value)
+ */
+class OnsPublishGet extends Rpc
 {
 }
 
@@ -768,12 +640,12 @@ class OnsConsumerTimeSpan extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getProducerId()
- * @method $this withProducerId($value)
+ * @method string getParentTopic()
+ * @method $this withParentTopic($value)
+ * @method string getSubTopic()
+ * @method $this withSubTopic($value)
  */
-class OnsPublishGet extends Rpc
+class OnsMqttQueryClientByTopic extends Rpc
 {
 }
 
@@ -824,12 +696,66 @@ class OnsMessagePageQueryByTopic extends Rpc
 /**
  * @method string getPreventCache()
  * @method $this withPreventCache($value)
+ * @method string getCluster()
+ * @method $this withCluster($value)
+ * @method string getQueueNum()
+ * @method $this withQueueNum($value)
  * @method string getOnsRegionId()
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getQps()
+ * @method $this withQps($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getAppkey()
+ * @method $this withAppkey($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class OnsSubscriptionList extends Rpc
+class OnsTopicCreate extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getDetail()
+ * @method $this withDetail($value)
+ */
+class OnsConsumerAccumulate extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getResetTimestamp()
+ * @method $this withResetTimestamp($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class OnsConsumerResetOffset extends Rpc
 {
 }
 
@@ -846,6 +772,62 @@ class OnsSubscriptionList extends Rpc
  * @method $this withTopic($value)
  */
 class OnsMqttQueryTraceByTraceId extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsSubscriptionDelete extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ */
+class OnsSubscriptionList extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getQos()
+ * @method $this withQos($value)
+ * @method string getTransType()
+ * @method $this withTransType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getTpsType()
+ * @method $this withTpsType($value)
+ * @method string getParentTopic()
+ * @method $this withParentTopic($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
+ * @method string getSubTopic()
+ * @method $this withSubTopic($value)
+ */
+class OnsMqttQueryMsgTransTrend extends Rpc
 {
 }
 
@@ -878,24 +860,42 @@ class OnsMessageSend extends Rpc
  * @method $this withOnsRegionId($value)
  * @method string getOnsPlatform()
  * @method $this withOnsPlatform($value)
- * @method string getQos()
- * @method $this withQos($value)
- * @method string getTransType()
- * @method $this withTransType($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getTpsType()
- * @method $this withTpsType($value)
- * @method string getParentTopic()
- * @method $this withParentTopic($value)
- * @method string getMsgType()
- * @method $this withMsgType($value)
- * @method string getSubTopic()
- * @method $this withSubTopic($value)
+ * @method string getQueryId()
+ * @method $this withQueryId($value)
  */
-class OnsMqttQueryMsgTransTrend extends Rpc
+class OnsTraceGetResult extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getReadEnable()
+ * @method $this withReadEnable($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ */
+class OnsSubscriptionUpdate extends Rpc
+{
+}
+
+/**
+ * @method string getPreventCache()
+ * @method $this withPreventCache($value)
+ * @method string getOnsRegionId()
+ * @method $this withOnsRegionId($value)
+ * @method string getOnsPlatform()
+ * @method $this withOnsPlatform($value)
+ * @method string getPerm()
+ * @method $this withPerm($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsTopicUpdate extends Rpc
 {
 }
 

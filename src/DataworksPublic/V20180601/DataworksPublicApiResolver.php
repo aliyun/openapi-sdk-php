@@ -5,11 +5,8 @@ namespace AlibabaCloud\DataworksPublic\V20180601;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method ListTagResources listTagResources(array $options = [])
- * @method UnTagResources unTagResources(array $options = [])
- * @method TagResources tagResources(array $options = [])
- * @method SearchManualDagNodeInstance searchManualDagNodeInstance(array $options = [])
  * @method CreateManualDag createManualDag(array $options = [])
+ * @method SearchManualDagNodeInstance searchManualDagNodeInstance(array $options = [])
  */
 class DataworksPublicApiResolver extends ApiResolver
 {
@@ -31,140 +28,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method array getResourceId()
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method array getTag()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class ListTagResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $i => $iValue) {
-            $this->options['query']['Tag.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAll()
- * @method $this withAll($value)
- * @method array getResourceId()
- * @method array getTagKey()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class UnTagResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tagKey
-     *
-     * @return $this
-     */
-    public function withTagKey(array $tagKey)
-    {
-        $this->data['TagKey'] = $tagKey;
-        foreach ($tagKey as $i => $iValue) {
-            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getResourceId()
- * @method array getTag()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class TagResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $i => $iValue) {
-            $this->options['query']['Tag.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getDagId()
- * @method $this withDagId($value)
- */
-class SearchManualDagNodeInstance extends Rpc
-{
-}
-
-/**
  * @method string getProjectName()
  * @method $this withProjectName($value)
  * @method string getBizdate()
@@ -177,5 +40,15 @@ class SearchManualDagNodeInstance extends Rpc
  * @method $this withNodePara($value)
  */
 class CreateManualDag extends Rpc
+{
+}
+
+/**
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ */
+class SearchManualDagNodeInstance extends Rpc
 {
 }

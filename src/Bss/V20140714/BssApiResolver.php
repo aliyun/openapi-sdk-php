@@ -11,10 +11,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method VnoPayCallBackNotify vnoPayCallBackNotify(array $options = [])
  * @method VnoBatchRefundOrder vnoBatchRefundOrder(array $options = [])
  * @method SubscriptionCreateOrderApi subscriptionCreateOrderApi(array $options = [])
- * @method DescribeCashDetail describeCashDetail(array $options = [])
  * @method SetResourceBusinessStatus setResourceBusinessStatus(array $options = [])
  * @method DescribeCouponList describeCouponList(array $options = [])
  * @method DescribeCouponDetail describeCouponDetail(array $options = [])
+ * @method DescribeCashDetail describeCashDetail(array $options = [])
  */
 class BssApiResolver extends ApiResolver
 {
@@ -166,13 +166,6 @@ class SubscriptionCreateOrderApi extends Rpc
     }
 }
 
-class DescribeCashDetail extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
 /**
  * @method string getBusinessStatus()
  * @method $this withBusinessStatus($value)
@@ -224,4 +217,11 @@ class DescribeCouponDetail extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+class DescribeCashDetail extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }

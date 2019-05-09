@@ -5,22 +5,22 @@ namespace AlibabaCloud\Cbn\V20170912;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method UntagResources untagResources(array $options = [])
- * @method ModifyCenRouteMap modifyCenRouteMap(array $options = [])
- * @method DescribeCenRouteMaps describeCenRouteMaps(array $options = [])
- * @method DeleteCenRouteMap deleteCenRouteMap(array $options = [])
  * @method CreateCenRouteMap createCenRouteMap(array $options = [])
+ * @method DeleteCenRouteMap deleteCenRouteMap(array $options = [])
+ * @method DescribeCenRouteMaps describeCenRouteMaps(array $options = [])
+ * @method ModifyCenRouteMap modifyCenRouteMap(array $options = [])
  * @method DescribeCenChildInstanceRouteEntries describeCenChildInstanceRouteEntries(array $options = [])
- * @method ResolveAndRouteServiceInCen resolveAndRouteServiceInCen(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
+ * @method DescribeCenPrivateZoneRoutes describeCenPrivateZoneRoutes(array $options = [])
+ * @method RoutePrivateZoneInCenToVpc routePrivateZoneInCenToVpc(array $options = [])
+ * @method UnroutePrivateZoneInCenToVpc unroutePrivateZoneInCenToVpc(array $options = [])
  * @method DeleteRouteServiceInCen deleteRouteServiceInCen(array $options = [])
  * @method DescribeRouteServicesInCen describeRouteServicesInCen(array $options = [])
- * @method UnroutePrivateZoneInCenToVpc unroutePrivateZoneInCenToVpc(array $options = [])
- * @method RoutePrivateZoneInCenToVpc routePrivateZoneInCenToVpc(array $options = [])
- * @method DescribeCenPrivateZoneRoutes describeCenPrivateZoneRoutes(array $options = [])
+ * @method ResolveAndRouteServiceInCen resolveAndRouteServiceInCen(array $options = [])
  * @method DescribeGrantRulesToCen describeGrantRulesToCen(array $options = [])
  * @method DescribeCenAttachedChildInstanceAttribute describeCenAttachedChildInstanceAttribute(array $options = [])
- * @method WithdrawPublishedRouteEntries withdrawPublishedRouteEntries(array $options = [])
  * @method PublishRouteEntries publishRouteEntries(array $options = [])
+ * @method WithdrawPublishedRouteEntries withdrawPublishedRouteEntries(array $options = [])
  * @method DescribePublishedRouteEntries describePublishedRouteEntries(array $options = [])
  * @method DescribeCenGeographicSpans describeCenGeographicSpans(array $options = [])
  * @method DescribeChildInstanceRegions describeChildInstanceRegions(array $options = [])
@@ -65,336 +65,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cbn';
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getResourceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTagOwnerUid()
- * @method $this withTagOwnerUid($value)
- * @method string getTagOwnerBid()
- * @method $this withTagOwnerBid($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getTagKey()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class UntagResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tagKey
-     *
-     * @return $this
-     */
-    public function withTagKey(array $tagKey)
-    {
-        $this->data['TagKey'] = $tagKey;
-        foreach ($tagKey as $i => $iValue) {
-            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getRouteTypes()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getCidrMatchMode()
- * @method $this withCidrMatchMode($value)
- * @method string getCommunityMatchMode()
- * @method $this withCommunityMatchMode($value)
- * @method string getCenId()
- * @method $this withCenId($value)
- * @method string getMapResult()
- * @method $this withMapResult($value)
- * @method string getAsPathLength()
- * @method $this withAsPathLength($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getNextPriority()
- * @method $this withNextPriority($value)
- * @method array getDestinationCidrBlocks()
- * @method array getDestinationRouteTableIds()
- * @method array getSourceInstanceIds()
- * @method array getSourceRegionIds()
- * @method array getDestinationInstanceIds()
- * @method array getMatchAsns()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPreference()
- * @method $this withPreference($value)
- * @method string getRouteMapId()
- * @method $this withRouteMapId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method array getDestinationChildInstanceTypes()
- * @method array getSourceRouteTableIds()
- * @method string getAsPathMatchMode()
- * @method $this withAsPathMatchMode($value)
- * @method array getSourceChildInstanceTypes()
- * @method array getMatchCommunitySet()
- * @method string getCommunityOperateMode()
- * @method $this withCommunityOperateMode($value)
- * @method string getCenRegionId()
- * @method $this withCenRegionId($value)
- * @method array getOperateCommunitySet()
- */
-class ModifyCenRouteMap extends Rpc
-{
-
-    /**
-     * @param array $routeTypes
-     *
-     * @return $this
-     */
-    public function withRouteTypes(array $routeTypes)
-    {
-        $this->data['RouteTypes'] = $routeTypes;
-        foreach ($routeTypes as $i => $iValue) {
-            $this->options['query']['RouteTypes.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $destinationCidrBlocks
-     *
-     * @return $this
-     */
-    public function withDestinationCidrBlocks(array $destinationCidrBlocks)
-    {
-        $this->data['DestinationCidrBlocks'] = $destinationCidrBlocks;
-        foreach ($destinationCidrBlocks as $i => $iValue) {
-            $this->options['query']['DestinationCidrBlocks.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $destinationRouteTableIds
-     *
-     * @return $this
-     */
-    public function withDestinationRouteTableIds(array $destinationRouteTableIds)
-    {
-        $this->data['DestinationRouteTableIds'] = $destinationRouteTableIds;
-        foreach ($destinationRouteTableIds as $i => $iValue) {
-            $this->options['query']['DestinationRouteTableIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $sourceInstanceIds
-     *
-     * @return $this
-     */
-    public function withSourceInstanceIds(array $sourceInstanceIds)
-    {
-        $this->data['SourceInstanceIds'] = $sourceInstanceIds;
-        foreach ($sourceInstanceIds as $i => $iValue) {
-            $this->options['query']['SourceInstanceIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $sourceRegionIds
-     *
-     * @return $this
-     */
-    public function withSourceRegionIds(array $sourceRegionIds)
-    {
-        $this->data['SourceRegionIds'] = $sourceRegionIds;
-        foreach ($sourceRegionIds as $i => $iValue) {
-            $this->options['query']['SourceRegionIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $destinationInstanceIds
-     *
-     * @return $this
-     */
-    public function withDestinationInstanceIds(array $destinationInstanceIds)
-    {
-        $this->data['DestinationInstanceIds'] = $destinationInstanceIds;
-        foreach ($destinationInstanceIds as $i => $iValue) {
-            $this->options['query']['DestinationInstanceIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $matchAsns
-     *
-     * @return $this
-     */
-    public function withMatchAsns(array $matchAsns)
-    {
-        $this->data['MatchAsns'] = $matchAsns;
-        foreach ($matchAsns as $i => $iValue) {
-            $this->options['query']['MatchAsns.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $destinationChildInstanceTypes
-     *
-     * @return $this
-     */
-    public function withDestinationChildInstanceTypes(array $destinationChildInstanceTypes)
-    {
-        $this->data['DestinationChildInstanceTypes'] = $destinationChildInstanceTypes;
-        foreach ($destinationChildInstanceTypes as $i => $iValue) {
-            $this->options['query']['DestinationChildInstanceTypes.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $sourceRouteTableIds
-     *
-     * @return $this
-     */
-    public function withSourceRouteTableIds(array $sourceRouteTableIds)
-    {
-        $this->data['SourceRouteTableIds'] = $sourceRouteTableIds;
-        foreach ($sourceRouteTableIds as $i => $iValue) {
-            $this->options['query']['SourceRouteTableIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $sourceChildInstanceTypes
-     *
-     * @return $this
-     */
-    public function withSourceChildInstanceTypes(array $sourceChildInstanceTypes)
-    {
-        $this->data['SourceChildInstanceTypes'] = $sourceChildInstanceTypes;
-        foreach ($sourceChildInstanceTypes as $i => $iValue) {
-            $this->options['query']['SourceChildInstanceTypes.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $matchCommunitySet
-     *
-     * @return $this
-     */
-    public function withMatchCommunitySet(array $matchCommunitySet)
-    {
-        $this->data['MatchCommunitySet'] = $matchCommunitySet;
-        foreach ($matchCommunitySet as $i => $iValue) {
-            $this->options['query']['MatchCommunitySet.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $operateCommunitySet
-     *
-     * @return $this
-     */
-    public function withOperateCommunitySet(array $operateCommunitySet)
-    {
-        $this->data['OperateCommunitySet'] = $operateCommunitySet;
-        foreach ($operateCommunitySet as $i => $iValue) {
-            $this->options['query']['OperateCommunitySet.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenId()
- * @method $this withCenId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCenRegionId()
- * @method $this withCenRegionId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRouteMapId()
- * @method $this withRouteMapId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getTransmitDirection()
- * @method $this withTransmitDirection($value)
- */
-class DescribeCenRouteMaps extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenId()
- * @method $this withCenId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCenRegionId()
- * @method $this withCenRegionId($value)
- * @method string getRouteMapId()
- * @method $this withRouteMapId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteCenRouteMap extends Rpc
-{
 }
 
 /**
@@ -630,6 +300,284 @@ class CreateCenRouteMap extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCenRegionId()
+ * @method $this withCenRegionId($value)
+ * @method string getRouteMapId()
+ * @method $this withRouteMapId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteCenRouteMap extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCenRegionId()
+ * @method $this withCenRegionId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRouteMapId()
+ * @method $this withRouteMapId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTransmitDirection()
+ * @method $this withTransmitDirection($value)
+ */
+class DescribeCenRouteMaps extends Rpc
+{
+}
+
+/**
+ * @method array getRouteTypes()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCidrMatchMode()
+ * @method $this withCidrMatchMode($value)
+ * @method string getCommunityMatchMode()
+ * @method $this withCommunityMatchMode($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getMapResult()
+ * @method $this withMapResult($value)
+ * @method string getAsPathLength()
+ * @method $this withAsPathLength($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNextPriority()
+ * @method $this withNextPriority($value)
+ * @method array getDestinationCidrBlocks()
+ * @method array getDestinationRouteTableIds()
+ * @method array getSourceInstanceIds()
+ * @method array getSourceRegionIds()
+ * @method array getDestinationInstanceIds()
+ * @method array getMatchAsns()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPreference()
+ * @method $this withPreference($value)
+ * @method string getRouteMapId()
+ * @method $this withRouteMapId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method array getDestinationChildInstanceTypes()
+ * @method array getSourceRouteTableIds()
+ * @method string getAsPathMatchMode()
+ * @method $this withAsPathMatchMode($value)
+ * @method array getSourceChildInstanceTypes()
+ * @method array getMatchCommunitySet()
+ * @method string getCommunityOperateMode()
+ * @method $this withCommunityOperateMode($value)
+ * @method string getCenRegionId()
+ * @method $this withCenRegionId($value)
+ * @method array getOperateCommunitySet()
+ */
+class ModifyCenRouteMap extends Rpc
+{
+
+    /**
+     * @param array $routeTypes
+     *
+     * @return $this
+     */
+    public function withRouteTypes(array $routeTypes)
+    {
+        $this->data['RouteTypes'] = $routeTypes;
+        foreach ($routeTypes as $i => $iValue) {
+            $this->options['query']['RouteTypes.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $destinationCidrBlocks
+     *
+     * @return $this
+     */
+    public function withDestinationCidrBlocks(array $destinationCidrBlocks)
+    {
+        $this->data['DestinationCidrBlocks'] = $destinationCidrBlocks;
+        foreach ($destinationCidrBlocks as $i => $iValue) {
+            $this->options['query']['DestinationCidrBlocks.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $destinationRouteTableIds
+     *
+     * @return $this
+     */
+    public function withDestinationRouteTableIds(array $destinationRouteTableIds)
+    {
+        $this->data['DestinationRouteTableIds'] = $destinationRouteTableIds;
+        foreach ($destinationRouteTableIds as $i => $iValue) {
+            $this->options['query']['DestinationRouteTableIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $sourceInstanceIds
+     *
+     * @return $this
+     */
+    public function withSourceInstanceIds(array $sourceInstanceIds)
+    {
+        $this->data['SourceInstanceIds'] = $sourceInstanceIds;
+        foreach ($sourceInstanceIds as $i => $iValue) {
+            $this->options['query']['SourceInstanceIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $sourceRegionIds
+     *
+     * @return $this
+     */
+    public function withSourceRegionIds(array $sourceRegionIds)
+    {
+        $this->data['SourceRegionIds'] = $sourceRegionIds;
+        foreach ($sourceRegionIds as $i => $iValue) {
+            $this->options['query']['SourceRegionIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $destinationInstanceIds
+     *
+     * @return $this
+     */
+    public function withDestinationInstanceIds(array $destinationInstanceIds)
+    {
+        $this->data['DestinationInstanceIds'] = $destinationInstanceIds;
+        foreach ($destinationInstanceIds as $i => $iValue) {
+            $this->options['query']['DestinationInstanceIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $matchAsns
+     *
+     * @return $this
+     */
+    public function withMatchAsns(array $matchAsns)
+    {
+        $this->data['MatchAsns'] = $matchAsns;
+        foreach ($matchAsns as $i => $iValue) {
+            $this->options['query']['MatchAsns.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $destinationChildInstanceTypes
+     *
+     * @return $this
+     */
+    public function withDestinationChildInstanceTypes(array $destinationChildInstanceTypes)
+    {
+        $this->data['DestinationChildInstanceTypes'] = $destinationChildInstanceTypes;
+        foreach ($destinationChildInstanceTypes as $i => $iValue) {
+            $this->options['query']['DestinationChildInstanceTypes.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $sourceRouteTableIds
+     *
+     * @return $this
+     */
+    public function withSourceRouteTableIds(array $sourceRouteTableIds)
+    {
+        $this->data['SourceRouteTableIds'] = $sourceRouteTableIds;
+        foreach ($sourceRouteTableIds as $i => $iValue) {
+            $this->options['query']['SourceRouteTableIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $sourceChildInstanceTypes
+     *
+     * @return $this
+     */
+    public function withSourceChildInstanceTypes(array $sourceChildInstanceTypes)
+    {
+        $this->data['SourceChildInstanceTypes'] = $sourceChildInstanceTypes;
+        foreach ($sourceChildInstanceTypes as $i => $iValue) {
+            $this->options['query']['SourceChildInstanceTypes.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $matchCommunitySet
+     *
+     * @return $this
+     */
+    public function withMatchCommunitySet(array $matchCommunitySet)
+    {
+        $this->data['MatchCommunitySet'] = $matchCommunitySet;
+        foreach ($matchCommunitySet as $i => $iValue) {
+            $this->options['query']['MatchCommunitySet.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $operateCommunitySet
+     *
+     * @return $this
+     */
+    public function withOperateCommunitySet(array $operateCommunitySet)
+    {
+        $this->data['OperateCommunitySet'] = $operateCommunitySet;
+        foreach ($operateCommunitySet as $i => $iValue) {
+            $this->options['query']['OperateCommunitySet.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getChildInstanceId()
  * @method $this withChildInstanceId($value)
  * @method string getResourceOwnerId()
@@ -660,41 +608,113 @@ class DescribeCenChildInstanceRouteEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method array getAccessRegionIds()
+ * @method array getResourceId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getCenId()
- * @method $this withCenId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getHost()
- * @method $this withHost($value)
- * @method string getHostRegionId()
- * @method $this withHostRegionId($value)
+ * @method string getTagOwnerUid()
+ * @method $this withTagOwnerUid($value)
+ * @method string getTagOwnerBid()
+ * @method $this withTagOwnerBid($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getUpdateInterval()
- * @method $this withUpdateInterval($value)
+ * @method array getTagKey()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
-class ResolveAndRouteServiceInCen extends Rpc
+class UntagResources extends Rpc
 {
 
     /**
-     * @param array $accessRegionIds
+     * @param array $resourceId
      *
      * @return $this
      */
-    public function withAccessRegionIds(array $accessRegionIds)
+    public function withResourceId(array $resourceId)
     {
-        $this->data['AccessRegionIds'] = $accessRegionIds;
-        foreach ($accessRegionIds as $i => $iValue) {
-            $this->options['query']['AccessRegionIds.' . ($i + 1)] = $iValue;
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
         }
 
         return $this;
     }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+    public function withTagKey(array $tagKey)
+    {
+        $this->data['TagKey'] = $tagKey;
+        foreach ($tagKey as $i => $iValue) {
+            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getHostRegionId()
+ * @method $this withHostRegionId($value)
+ * @method string getAccessRegionId()
+ * @method $this withAccessRegionId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeCenPrivateZoneRoutes extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getHostRegionId()
+ * @method $this withHostRegionId($value)
+ * @method string getAccessRegionId()
+ * @method $this withAccessRegionId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHostVpcId()
+ * @method $this withHostVpcId($value)
+ */
+class RoutePrivateZoneInCenToVpc extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAccessRegionId()
+ * @method $this withAccessRegionId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UnroutePrivateZoneInCenToVpc extends Rpc
+{
 }
 
 /**
@@ -750,58 +770,24 @@ class DescribeRouteServicesInCen extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getCenId()
  * @method $this withCenId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getAccessRegionId()
- * @method $this withAccessRegionId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class UnroutePrivateZoneInCenToVpc extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenId()
- * @method $this withCenId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
+ * @method string getHost()
+ * @method $this withHost($value)
  * @method string getHostRegionId()
  * @method $this withHostRegionId($value)
  * @method string getAccessRegionId()
  * @method $this withAccessRegionId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getHostVpcId()
- * @method $this withHostVpcId($value)
+ * @method string getUpdateInterval()
+ * @method $this withUpdateInterval($value)
  */
-class RoutePrivateZoneInCenToVpc extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenId()
- * @method $this withCenId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getHostRegionId()
- * @method $this withHostRegionId($value)
- * @method string getAccessRegionId()
- * @method $this withAccessRegionId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeCenPrivateZoneRoutes extends Rpc
+class ResolveAndRouteServiceInCen extends Rpc
 {
 }
 
@@ -863,7 +849,7 @@ class DescribeCenAttachedChildInstanceAttribute extends Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class WithdrawPublishedRouteEntries extends Rpc
+class PublishRouteEntries extends Rpc
 {
 }
 
@@ -885,7 +871,7 @@ class WithdrawPublishedRouteEntries extends Rpc
  * @method string getChildInstanceRegionId()
  * @method $this withChildInstanceRegionId($value)
  */
-class PublishRouteEntries extends Rpc
+class WithdrawPublishedRouteEntries extends Rpc
 {
 }
 
@@ -1313,8 +1299,6 @@ class DescribeCenBandwidthPackages extends Rpc
 }
 
 /**
- * @method string getChildInstanceId()
- * @method $this withChildInstanceId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1441,8 +1425,6 @@ class CreateCen extends Rpc
  * @method $this withOwnerId($value)
  * @method string getChildInstanceType()
  * @method $this withChildInstanceType($value)
- * @method string getIsPublishRoute()
- * @method $this withIsPublishRoute($value)
  * @method string getChildInstanceOwnerId()
  * @method $this withChildInstanceOwnerId($value)
  * @method string getChildInstanceRegionId()

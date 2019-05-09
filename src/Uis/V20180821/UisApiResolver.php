@@ -6,36 +6,36 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeHighPriorityIps describeHighPriorityIps(array $options = [])
- * @method DeleteAccessLog deleteAccessLog(array $options = [])
  * @method SetAccessLog setAccessLog(array $options = [])
+ * @method DeleteAccessLog deleteAccessLog(array $options = [])
  * @method DescribeUiseNodeStatus describeUiseNodeStatus(array $options = [])
- * @method DescribeUisNetworkInterfaces describeUisNetworkInterfaces(array $options = [])
- * @method DeleteUisNetworkInterface deleteUisNetworkInterface(array $options = [])
- * @method CreateUisNetworkInterface createUisNetworkInterface(array $options = [])
- * @method ModifyDnatEntry modifyDnatEntry(array $options = [])
- * @method DescribeDnatEntries describeDnatEntries(array $options = [])
- * @method DeleteDnatEntry deleteDnatEntry(array $options = [])
  * @method CreateDnatEntry createDnatEntry(array $options = [])
+ * @method DeleteDnatEntry deleteDnatEntry(array $options = [])
+ * @method DescribeDnatEntries describeDnatEntries(array $options = [])
+ * @method ModifyDnatEntry modifyDnatEntry(array $options = [])
+ * @method CreateUisNetworkInterface createUisNetworkInterface(array $options = [])
+ * @method DeleteUisNetworkInterface deleteUisNetworkInterface(array $options = [])
+ * @method DescribeUisNetworkInterfaces describeUisNetworkInterfaces(array $options = [])
  * @method DescribeAreas describeAreas(array $options = [])
  * @method GetDroppedIpList getDroppedIpList(array $options = [])
- * @method DeleteUisNodeIp deleteUisNodeIp(array $options = [])
- * @method AddUisNodeIp addUisNodeIp(array $options = [])
- * @method DescribeHighPriorityIp describeHighPriorityIp(array $options = [])
- * @method ModifyHighPriorityIp modifyHighPriorityIp(array $options = [])
- * @method DeleteHighPriorityIp deleteHighPriorityIp(array $options = [])
- * @method AddHighPriorityIp addHighPriorityIp(array $options = [])
- * @method DescribeUisConnections describeUisConnections(array $options = [])
- * @method ModifyUisConnectionAttribute modifyUisConnectionAttribute(array $options = [])
- * @method DeleteUisConnection deleteUisConnection(array $options = [])
- * @method DescribeUises describeUises(array $options = [])
- * @method CreateUisConnection createUisConnection(array $options = [])
- * @method DescribeUisNodes describeUisNodes(array $options = [])
- * @method ModifyUisNodeAttribute modifyUisNodeAttribute(array $options = [])
- * @method DeleteUisNode deleteUisNode(array $options = [])
- * @method CreateUisNode createUisNode(array $options = [])
- * @method DeleteUis deleteUis(array $options = [])
- * @method CreateUis createUis(array $options = [])
  * @method ModifyUisAttribute modifyUisAttribute(array $options = [])
+ * @method CreateUis createUis(array $options = [])
+ * @method DeleteUis deleteUis(array $options = [])
+ * @method CreateUisNode createUisNode(array $options = [])
+ * @method DeleteUisNode deleteUisNode(array $options = [])
+ * @method ModifyUisNodeAttribute modifyUisNodeAttribute(array $options = [])
+ * @method DescribeUisNodes describeUisNodes(array $options = [])
+ * @method CreateUisConnection createUisConnection(array $options = [])
+ * @method DeleteUisConnection deleteUisConnection(array $options = [])
+ * @method ModifyUisConnectionAttribute modifyUisConnectionAttribute(array $options = [])
+ * @method DescribeUisConnections describeUisConnections(array $options = [])
+ * @method AddHighPriorityIp addHighPriorityIp(array $options = [])
+ * @method DeleteHighPriorityIp deleteHighPriorityIp(array $options = [])
+ * @method ModifyHighPriorityIp modifyHighPriorityIp(array $options = [])
+ * @method DescribeHighPriorityIp describeHighPriorityIp(array $options = [])
+ * @method AddUisNodeIp addUisNodeIp(array $options = [])
+ * @method DeleteUisNodeIp deleteUisNodeIp(array $options = [])
+ * @method DescribeUises describeUises(array $options = [])
  */
 class UisApiResolver extends ApiResolver
 {
@@ -77,24 +77,6 @@ class DescribeHighPriorityIps extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAreaId()
- * @method $this withAreaId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteAccessLog extends Rpc
-{
-}
-
-/**
  * @method string getLogProjectName()
  * @method $this withLogProjectName($value)
  * @method string getResourceOwnerId()
@@ -119,6 +101,24 @@ class SetAccessLog extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAreaId()
+ * @method $this withAreaId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteAccessLog extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getUisNodeId()
  * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
@@ -135,6 +135,34 @@ class DescribeUiseNodeStatus extends Rpc
 }
 
 /**
+ * @method string getDestinationIp()
+ * @method $this withDestinationIp($value)
+ * @method string getDestinationPort()
+ * @method $this withDestinationPort($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getOriginalPort()
+ * @method $this withOriginalPort($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOriginalIp()
+ * @method $this withOriginalIp($value)
+ */
+class CreateDnatEntry extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getUisNodeId()
@@ -143,60 +171,34 @@ class DescribeUiseNodeStatus extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getUisDnatId()
+ * @method $this withUisDnatId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDnatEntry extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisDnatId()
+ * @method $this withUisDnatId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getUisEniId()
- * @method $this withUisEniId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeUisNetworkInterfaces extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisEniId()
- * @method $this withUisEniId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteUisNetworkInterface extends Rpc
-{
-}
-
-/**
- * @method string getVswitchId()
- * @method $this withVswitchId($value)
- * @method string getIpAddress()
- * @method $this withIpAddress($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateUisNetworkInterface extends Rpc
+class DescribeDnatEntries extends Rpc
 {
 }
 
@@ -231,6 +233,10 @@ class ModifyDnatEntry extends Rpc
 }
 
 /**
+ * @method string getVswitchId()
+ * @method $this withVswitchId($value)
+ * @method string getIpAddress()
+ * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getUisNodeId()
@@ -239,62 +245,56 @@ class ModifyDnatEntry extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getUisDnatId()
- * @method $this withUisDnatId($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateUisNetworkInterface extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisEniId()
+ * @method $this withUisEniId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteUisNetworkInterface extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getUisEniId()
+ * @method $this withUisEniId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeDnatEntries extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisDnatId()
- * @method $this withUisDnatId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteDnatEntry extends Rpc
-{
-}
-
-/**
- * @method string getDestinationIp()
- * @method $this withDestinationIp($value)
- * @method string getDestinationPort()
- * @method $this withDestinationPort($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getIpProtocol()
- * @method $this withIpProtocol($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getOriginalPort()
- * @method $this withOriginalPort($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOriginalIp()
- * @method $this withOriginalIp($value)
- */
-class CreateDnatEntry extends Rpc
+class DescribeUisNetworkInterfaces extends Rpc
 {
 }
 
@@ -333,40 +333,130 @@ class GetDroppedIpList extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getUisNodeIpAddress()
- * @method $this withUisNodeIpAddress($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisNodeIp extends Rpc
+class ModifyUisAttribute extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateUis extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteUis extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeBandwidth()
+ * @method $this withUisNodeBandwidth($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getUisNodeAreaId()
+ * @method $this withUisNodeAreaId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getIpAddrsNum()
  * @method $this withIpAddrsNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddUisNodeIp extends Rpc
+class CreateUisNode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteUisNode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeBandwidth()
+ * @method $this withUisNodeBandwidth($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyUisNodeAttribute extends Rpc
 {
 }
 
@@ -379,10 +469,112 @@ class AddUisNodeIp extends Rpc
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getHighPriorityIp()
- * @method $this withHighPriorityIp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
  * @method string getUisId()
  * @method $this withUisId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeUisNodes extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getUisProtocol()
+ * @method $this withUisProtocol($value)
+ * @method string getSslConfig()
+ * @method $this withSslConfig($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGreConfig()
+ * @method $this withGreConfig($value)
+ */
+class CreateUisConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisConnectionId()
+ * @method $this withUisConnectionId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteUisConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisConnectionId()
+ * @method $this withUisConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSslConfig()
+ * @method $this withSslConfig($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getUisProtocol()
+ * @method $this withUisProtocol($value)
+ * @method string getGreConfig()
+ * @method $this withGreConfig($value)
+ */
+class ModifyUisConnectionAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getUisConnectionId()
+ * @method $this withUisConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getOwnerId()
@@ -390,7 +582,7 @@ class AddUisNodeIp extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeHighPriorityIp extends Rpc
+class DescribeUisConnections extends Rpc
 {
 }
 
@@ -410,7 +602,7 @@ class DescribeHighPriorityIp extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyHighPriorityIp extends Rpc
+class AddHighPriorityIp extends Rpc
 {
 }
 
@@ -450,23 +642,23 @@ class DeleteHighPriorityIp extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class AddHighPriorityIp extends Rpc
+class ModifyHighPriorityIp extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getUisConnectionId()
- * @method $this withUisConnectionId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getHighPriorityIp()
+ * @method $this withHighPriorityIp($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getOwnerId()
@@ -474,43 +666,13 @@ class AddHighPriorityIp extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeUisConnections extends Rpc
+class DescribeHighPriorityIp extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getUisConnectionId()
- * @method $this withUisConnectionId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getSslConfig()
- * @method $this withSslConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getUisProtocol()
- * @method $this withUisProtocol($value)
- * @method string getGreConfig()
- * @method $this withGreConfig($value)
- */
-class ModifyUisConnectionAttribute extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisConnectionId()
- * @method $this withUisConnectionId($value)
  * @method string getUisNodeId()
  * @method $this withUisNodeId($value)
  * @method string getResourceOwnerAccount()
@@ -519,10 +681,32 @@ class ModifyUisConnectionAttribute extends Rpc
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getIpAddrsNum()
+ * @method $this withIpAddrsNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteUisConnection extends Rpc
+class AddUisNodeIp extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUisNodeIpAddress()
+ * @method $this withUisNodeIpAddress($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteUisNodeIp extends Rpc
 {
 }
 
@@ -545,189 +729,5 @@ class DeleteUisConnection extends Rpc
  * @method $this withPageNumber($value)
  */
 class DescribeUises extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getUisProtocol()
- * @method $this withUisProtocol($value)
- * @method string getSslConfig()
- * @method $this withSslConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getGreConfig()
- * @method $this withGreConfig($value)
- */
-class CreateUisConnection extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeUisNodes extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeBandwidth()
- * @method $this withUisNodeBandwidth($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyUisNodeAttribute extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeId()
- * @method $this withUisNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteUisNode extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUisNodeBandwidth()
- * @method $this withUisNodeBandwidth($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getUisNodeAreaId()
- * @method $this withUisNodeAreaId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getIpAddrsNum()
- * @method $this withIpAddrsNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateUisNode extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteUis extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateUis extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUisId()
- * @method $this withUisId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyUisAttribute extends Rpc
 {
 }

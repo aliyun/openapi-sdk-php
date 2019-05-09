@@ -7,21 +7,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method SmartCallOperate smartCallOperate(array $options = [])
  * @method QueryRobotInfoList queryRobotInfoList(array $options = [])
- * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
  * @method BatchRobotSmartCall batchRobotSmartCall(array $options = [])
- * @method AddRtcAccount addRtcAccount(array $options = [])
+ * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
  * @method GetRtcToken getRtcToken(array $options = [])
+ * @method AddRtcAccount addRtcAccount(array $options = [])
  * @method VoipAddAccount voipAddAccount(array $options = [])
  * @method VoipGetToken voipGetToken(array $options = [])
- * @method AddVoipAccount addVoipAccount(array $options = [])
- * @method GetVoipToken getVoipToken(array $options = [])
  * @method SmartCall smartCall(array $options = [])
  * @method QueryCallDetailByCallId queryCallDetailByCallId(array $options = [])
  * @method CancelCall cancelCall(array $options = [])
  * @method ClickToDial clickToDial(array $options = [])
  * @method IvrCall ivrCall(array $options = [])
- * @method SingleCallByTts singleCallByTts(array $options = [])
  * @method SingleCallByVoice singleCallByVoice(array $options = [])
+ * @method SingleCallByTts singleCallByTts(array $options = [])
  */
 class DyvmsapiApiResolver extends ApiResolver
 {
@@ -74,24 +72,6 @@ class QueryRobotInfoList extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getQueryDate()
- * @method $this withQueryDate($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCallee()
- * @method $this withCallee($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class QueryCallDetailByTaskId extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getEarlyMediaAsr()
  * @method $this withEarlyMediaAsr($value)
  * @method string getResourceOwnerAccount()
@@ -126,14 +106,18 @@ class BatchRobotSmartCall extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getQueryDate()
+ * @method $this withQueryDate($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
-class AddRtcAccount extends Rpc
+class QueryCallDetailByTaskId extends Rpc
 {
 }
 
@@ -152,6 +136,20 @@ class AddRtcAccount extends Rpc
  * @method $this withIsCustomAccount($value)
  */
 class GetRtcToken extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class AddRtcAccount extends Rpc
 {
 }
 
@@ -184,34 +182,6 @@ class VoipAddAccount extends Rpc
  * @method $this withIsCustomAccount($value)
  */
 class VoipGetToken extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- */
-class AddVoipAccount extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getVoipId()
- * @method $this withVoipId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetVoipToken extends Rpc
 {
 }
 
@@ -380,6 +350,32 @@ class IvrCall extends Rpc
 }
 
 /**
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getVoiceCode()
+ * @method $this withVoiceCode($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
+ * @method string getPlayTimes()
+ * @method $this withPlayTimes($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSpeed()
+ * @method $this withSpeed($value)
+ */
+class SingleCallByVoice extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -404,31 +400,5 @@ class IvrCall extends Rpc
  * @method $this withOutId($value)
  */
 class SingleCallByTts extends Rpc
-{
-}
-
-/**
- * @method string getVolume()
- * @method $this withVolume($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCalledNumber()
- * @method $this withCalledNumber($value)
- * @method string getVoiceCode()
- * @method $this withVoiceCode($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getPlayTimes()
- * @method $this withPlayTimes($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSpeed()
- * @method $this withSpeed($value)
- */
-class SingleCallByVoice extends Rpc
 {
 }

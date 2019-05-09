@@ -5,15 +5,15 @@ namespace AlibabaCloud\MoPen\V20180211;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method MoPenSendMqttMessage moPenSendMqttMessage(array $options = [])
- * @method MoPenDoRecognize moPenDoRecognize(array $options = [])
- * @method MoPenQueryCanvas moPenQueryCanvas(array $options = [])
  * @method MoPenFindGroup moPenFindGroup(array $options = [])
- * @method MoPenDeleteGroupMember moPenDeleteGroupMember(array $options = [])
- * @method MoPenBindIsv moPenBindIsv(array $options = [])
- * @method MoPenDeleteGroup moPenDeleteGroup(array $options = [])
- * @method MoPenAddGroupMember moPenAddGroupMember(array $options = [])
+ * @method MoPenQueryCanvas moPenQueryCanvas(array $options = [])
+ * @method MoPenDoRecognize moPenDoRecognize(array $options = [])
+ * @method MoPenSendMqttMessage moPenSendMqttMessage(array $options = [])
  * @method MopenCreateGroup mopenCreateGroup(array $options = [])
+ * @method MoPenAddGroupMember moPenAddGroupMember(array $options = [])
+ * @method MoPenDeleteGroup moPenDeleteGroup(array $options = [])
+ * @method MoPenBindIsv moPenBindIsv(array $options = [])
+ * @method MoPenDeleteGroupMember moPenDeleteGroupMember(array $options = [])
  * @method MoPenCreateDevice moPenCreateDevice(array $options = [])
  */
 class MoPenApiResolver extends ApiResolver
@@ -39,10 +39,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getPayload()
- * @method string getDeviceName()
+ * @method string getCreator()
  */
-class MoPenSendMqttMessage extends Rpc
+class MoPenFindGroup extends Rpc
 {
 
     /**
@@ -50,13 +49,23 @@ class MoPenSendMqttMessage extends Rpc
      *
      * @return $this
      */
-    public function withPayload($value)
+    public function withCreator($value)
     {
-        $this->data['Payload'] = $value;
-        $this->options['form_params']['Payload'] = $value;
+        $this->data['Creator'] = $value;
+        $this->options['form_params']['Creator'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getDeviceName()
+ * @method string getSessionId()
+ * @method string getPageId()
+ * @method string getStatus()
+ */
+class MoPenQueryCanvas extends Rpc
+{
 
     /**
      * @param string $value
@@ -67,6 +76,45 @@ class MoPenSendMqttMessage extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }
@@ -177,13 +225,24 @@ class MoPenDoRecognize extends Rpc
 }
 
 /**
+ * @method string getPayload()
  * @method string getDeviceName()
- * @method string getSessionId()
- * @method string getPageId()
- * @method string getStatus()
  */
-class MoPenQueryCanvas extends Rpc
+class MoPenSendMqttMessage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPayload($value)
+    {
+        $this->data['Payload'] = $value;
+        $this->options['form_params']['Payload'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -197,51 +256,12 @@ class MoPenQueryCanvas extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSessionId($value)
-    {
-        $this->data['SessionId'] = $value;
-        $this->options['form_params']['SessionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageId($value)
-    {
-        $this->data['PageId'] = $value;
-        $this->options['form_params']['PageId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStatus($value)
-    {
-        $this->data['Status'] = $value;
-        $this->options['form_params']['Status'] = $value;
-
-        return $this;
-    }
 }
 
 /**
  * @method string getCreator()
  */
-class MoPenFindGroup extends Rpc
+class MopenCreateGroup extends Rpc
 {
 
     /**
@@ -262,7 +282,7 @@ class MoPenFindGroup extends Rpc
  * @method string getGroupId()
  * @method string getDeviceName()
  */
-class MoPenDeleteGroupMember extends Rpc
+class MoPenAddGroupMember extends Rpc
 {
 
     /**
@@ -287,6 +307,26 @@ class MoPenDeleteGroupMember extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ */
+class MoPenDeleteGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
 
         return $this;
     }
@@ -328,29 +368,9 @@ class MoPenBindIsv extends Rpc
 
 /**
  * @method string getGroupId()
- */
-class MoPenDeleteGroup extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGroupId()
  * @method string getDeviceName()
  */
-class MoPenAddGroupMember extends Rpc
+class MoPenDeleteGroupMember extends Rpc
 {
 
     /**
@@ -375,26 +395,6 @@ class MoPenAddGroupMember extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCreator()
- */
-class MopenCreateGroup extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCreator($value)
-    {
-        $this->data['Creator'] = $value;
-        $this->options['form_params']['Creator'] = $value;
 
         return $this;
     }

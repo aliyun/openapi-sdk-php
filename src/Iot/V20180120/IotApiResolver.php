@@ -5,41 +5,29 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
- * @method QueryDeviceJobDocument queryDeviceJobDocument(array $options = [])
- * @method QueryDeviceTask queryDeviceTask(array $options = [])
- * @method QueryDeviceTaskListByDevice queryDeviceTaskListByDevice(array $options = [])
- * @method QueryDeviceTaskListByJob queryDeviceTaskListByJob(array $options = [])
- * @method DeleteDeviceJob deleteDeviceJob(array $options = [])
- * @method CancelDeviceTask cancelDeviceTask(array $options = [])
- * @method DeleteDeviceTask deleteDeviceTask(array $options = [])
- * @method QueryDeviceJob queryDeviceJob(array $options = [])
- * @method QueryDeviceJobList queryDeviceJobList(array $options = [])
- * @method UpdateDeviceJob updateDeviceJob(array $options = [])
- * @method CancelDeviceJob cancelDeviceJob(array $options = [])
- * @method CreateDeviceJob createDeviceJob(array $options = [])
- * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
+ * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
+ * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
+ * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
  * @method QueryDeviceFile queryDeviceFile(array $options = [])
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
- * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
  * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
  * @method UpdateProductTags updateProductTags(array $options = [])
+ * @method DeleteProductTags deleteProductTags(array $options = [])
  * @method ListProductTags listProductTags(array $options = [])
  * @method ListProductByTags listProductByTags(array $options = [])
- * @method DeleteProductTags deleteProductTags(array $options = [])
  * @method QueryDeviceGroupByTags queryDeviceGroupByTags(array $options = [])
  * @method QueryDeviceListByDeviceGroup queryDeviceListByDeviceGroup(array $options = [])
+ * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
  * @method QuerySuperDeviceGroup querySuperDeviceGroup(array $options = [])
  * @method QueryDeviceByTags queryDeviceByTags(array $options = [])
- * @method SetDeviceGroupTags setDeviceGroupTags(array $options = [])
- * @method InvokeThingsService invokeThingsService(array $options = [])
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
- * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
+ * @method InvokeThingsService invokeThingsService(array $options = [])
+ * @method SetDeviceGroupTags setDeviceGroupTags(array $options = [])
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
  * @method QueryDeviceGroupTagList queryDeviceGroupTagList(array $options = [])
@@ -50,64 +38,62 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDeviceGroup createDeviceGroup(array $options = [])
  * @method BatchDeleteDeviceGroupRelations batchDeleteDeviceGroupRelations(array $options = [])
  * @method BatchAddDeviceGroupRelations batchAddDeviceGroupRelations(array $options = [])
- * @method SaveDeviceProp saveDeviceProp(array $options = [])
- * @method DeleteDeviceProp deleteDeviceProp(array $options = [])
+ * @method RRpc rRpc(array $options = [])
  * @method QueryPageByApplyId queryPageByApplyId(array $options = [])
  * @method QueryDevice queryDevice(array $options = [])
- * @method BatchGetDeviceState batchGetDeviceState(array $options = [])
- * @method RRpc rRpc(array $options = [])
- * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
+ * @method SaveDeviceProp saveDeviceProp(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
+ * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method PubBroadcast pubBroadcast(array $options = [])
  * @method DeleteTopicRouteTable deleteTopicRouteTable(array $options = [])
+ * @method DeleteDeviceProp deleteDeviceProp(array $options = [])
  * @method CreateTopicRouteTable createTopicRouteTable(array $options = [])
- * @method QueryAhDeviceList queryAhDeviceList(array $options = [])
- * @method AhQueryDeviceList ahQueryDeviceList(array $options = [])
- * @method QueryDeviceProp queryDeviceProp(array $options = [])
- * @method CreateRuleAction createRuleAction(array $options = [])
- * @method CreateRule createRule(array $options = [])
- * @method ListRuleActions listRuleActions(array $options = [])
+ * @method BatchGetDeviceState batchGetDeviceState(array $options = [])
+ * @method UpdateRuleAction updateRuleAction(array $options = [])
+ * @method UpdateRule updateRule(array $options = [])
+ * @method UpdateProductTopic updateProductTopic(array $options = [])
+ * @method UpdateDeviceShadow updateDeviceShadow(array $options = [])
+ * @method StopRule stopRule(array $options = [])
  * @method StartRule startRule(array $options = [])
  * @method QueryProductTopic queryProductTopic(array $options = [])
- * @method DeleteRuleAction deleteRuleAction(array $options = [])
- * @method StopRule stopRule(array $options = [])
+ * @method QueryDeviceProp queryDeviceProp(array $options = [])
  * @method Pub pub(array $options = [])
+ * @method ListRuleActions listRuleActions(array $options = [])
  * @method ListRule listRule(array $options = [])
- * @method GetRule getRule(array $options = [])
- * @method CreateProductTopic createProductTopic(array $options = [])
- * @method GetDeviceShadow getDeviceShadow(array $options = [])
- * @method DeleteProductTopic deleteProductTopic(array $options = [])
- * @method DeleteRule deleteRule(array $options = [])
- * @method UpdateProductTopic updateProductTopic(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
- * @method UpdateRuleAction updateRuleAction(array $options = [])
- * @method UpdateDeviceShadow updateDeviceShadow(array $options = [])
- * @method UpdateRule updateRule(array $options = [])
- * @method GetGatewayBySubDevice getGatewayBySubDevice(array $options = [])
+ * @method GetRule getRule(array $options = [])
+ * @method GetDeviceShadow getDeviceShadow(array $options = [])
+ * @method DeleteRuleAction deleteRuleAction(array $options = [])
+ * @method DeleteRule deleteRule(array $options = [])
+ * @method DeleteProductTopic deleteProductTopic(array $options = [])
+ * @method CreateRuleAction createRuleAction(array $options = [])
+ * @method CreateRule createRule(array $options = [])
+ * @method CreateProductTopic createProductTopic(array $options = [])
  * @method QueryBatchRegisterDeviceStatus queryBatchRegisterDeviceStatus(array $options = [])
+ * @method GetGatewayBySubDevice getGatewayBySubDevice(array $options = [])
  * @method RemoveThingTopo removeThingTopo(array $options = [])
- * @method GetThingTopo getThingTopo(array $options = [])
  * @method NotifyAddThingTopo notifyAddThingTopo(array $options = [])
- * @method QueryDevicePropertyData queryDevicePropertyData(array $options = [])
+ * @method GetThingTopo getThingTopo(array $options = [])
  * @method QueryDevicePropertyStatus queryDevicePropertyStatus(array $options = [])
- * @method BatchRegisterDevice batchRegisterDevice(array $options = [])
+ * @method QueryDevicePropertyData queryDevicePropertyData(array $options = [])
  * @method BatchRegisterDeviceWithApplyId batchRegisterDeviceWithApplyId(array $options = [])
+ * @method BatchRegisterDevice batchRegisterDevice(array $options = [])
  * @method BatchCheckDeviceNames batchCheckDeviceNames(array $options = [])
  * @method UpdateProduct updateProduct(array $options = [])
- * @method RegisterDevice registerDevice(array $options = [])
  * @method SetDeviceProperty setDeviceProperty(array $options = [])
+ * @method RegisterDevice registerDevice(array $options = [])
  * @method QueryProductList queryProductList(array $options = [])
- * @method QueryDeviceStatistics queryDeviceStatistics(array $options = [])
  * @method QueryProduct queryProduct(array $options = [])
- * @method QueryDeviceEventData queryDeviceEventData(array $options = [])
+ * @method QueryDeviceStatistics queryDeviceStatistics(array $options = [])
  * @method QueryDeviceServiceData queryDeviceServiceData(array $options = [])
+ * @method QueryDeviceEventData queryDeviceEventData(array $options = [])
  * @method QueryDeviceDetail queryDeviceDetail(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method GetDeviceStatus getDeviceStatus(array $options = [])
- * @method DisableThing disableThing(array $options = [])
  * @method EnableThing enableThing(array $options = [])
- * @method DeleteDevice deleteDevice(array $options = [])
+ * @method DisableThing disableThing(array $options = [])
  * @method DeleteProduct deleteProduct(array $options = [])
+ * @method DeleteDevice deleteDevice(array $options = [])
  * @method CreateProduct createProduct(array $options = [])
  */
 class IotApiResolver extends ApiResolver
@@ -124,272 +110,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class QueryLoRaJoinPermissions extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class QueryDeviceJobDocument extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class QueryDeviceTask extends Rpc
-{
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method array getTaskStatus()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class QueryDeviceTaskListByDevice extends Rpc
-{
-
-    /**
-     * @param array $taskStatus
-     *
-     * @return $this
-     */
-    public function withTaskStatus(array $taskStatus)
-    {
-        $this->data['TaskStatus'] = $taskStatus;
-        foreach ($taskStatus as $i => $iValue) {
-            $this->options['query']['TaskStatus.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method array getTaskStatus()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- */
-class QueryDeviceTaskListByJob extends Rpc
-{
-
-    /**
-     * @param array $taskStatus
-     *
-     * @return $this
-     */
-    public function withTaskStatus(array $taskStatus)
-    {
-        $this->data['TaskStatus'] = $taskStatus;
-        foreach ($taskStatus as $i => $iValue) {
-            $this->options['query']['TaskStatus.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
- */
-class DeleteDeviceJob extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class CancelDeviceTask extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DeleteDeviceTask extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class QueryDeviceJob extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- */
-class QueryDeviceJobList extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getJobConfig()
- * @method $this withJobConfig($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getJobName()
- * @method $this withJobName($value)
- */
-class UpdateDeviceJob extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
- */
-class CancelDeviceJob extends Rpc
-{
-}
-
-/**
- * @method string getJobDocument()
- * @method $this withJobDocument($value)
- * @method array getTargetGroup()
- * @method string getPresignedUrlConfig()
- * @method $this withPresignedUrlConfig($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getRolloutConfig()
- * @method $this withRolloutConfig($value)
- * @method array getTargetProduct()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getTargetSelection()
- * @method $this withTargetSelection($value)
- * @method string getJobDocumentSource()
- * @method $this withJobDocumentSource($value)
- * @method string getAbortConfig()
- * @method $this withAbortConfig($value)
- * @method string getJobName()
- * @method $this withJobName($value)
- * @method string getTargetDevicesSource()
- * @method $this withTargetDevicesSource($value)
- * @method string getTimeoutConfig()
- * @method $this withTimeoutConfig($value)
- * @method array getTargetDevice()
- */
-class CreateDeviceJob extends Rpc
-{
-
-    /**
-     * @param array $targetGroup
-     *
-     * @return $this
-     */
-    public function withTargetGroup(array $targetGroup)
-    {
-        $this->data['TargetGroup'] = $targetGroup;
-        foreach ($targetGroup as $i => $iValue) {
-            $this->options['query']['TargetGroup.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $targetProduct
-     *
-     * @return $this
-     */
-    public function withTargetProduct(array $targetProduct)
-    {
-        $this->data['TargetProduct'] = $targetProduct;
-        foreach ($targetProduct as $i => $iValue) {
-            $this->options['query']['TargetProduct.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $targetDevice
-     *
-     * @return $this
-     */
-    public function withTargetDevice(array $targetDevice)
-    {
-        $this->data['TargetDevice'] = $targetDevice;
-        foreach ($targetDevice as $depth1 => $depth1Value) {
-            $this->options['query']['TargetDevice.' . ($depth1 + 1) . '.IotId'] = $depth1Value['IotId'];
-            $this->options['query']['TargetDevice.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
-            $this->options['query']['TargetDevice.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class GetLoraNodesTask extends Rpc
-{
 }
 
 /**
@@ -413,6 +133,51 @@ class CreateLoRaNodesTask extends Rpc
         foreach ($deviceInfo as $depth1 => $depth1Value) {
             $this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.PinCode'] = $depth1Value['PinCode'];
             $this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.DevEui'] = $depth1Value['DevEui'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetLoraNodesTask extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class QueryLoRaJoinPermissions extends Rpc
+{
+}
+
+/**
+ * @method array getDeviceNicknameInfo()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchUpdateDeviceNickname extends Rpc
+{
+
+    /**
+     * @param array $deviceNicknameInfo
+     *
+     * @return $this
+     */
+    public function withDeviceNicknameInfo(array $deviceNicknameInfo)
+    {
+        $this->data['DeviceNicknameInfo'] = $deviceNicknameInfo;
+        foreach ($deviceNicknameInfo as $depth1 => $depth1Value) {
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.IotId'] = $depth1Value['IotId'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.Nickname'] = $depth1Value['Nickname'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
+            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
         }
 
         return $this;
@@ -467,33 +232,6 @@ class QueryDeviceFileList extends Rpc
  */
 class DeleteDeviceFile extends Rpc
 {
-}
-
-/**
- * @method array getDeviceNicknameInfo()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class BatchUpdateDeviceNickname extends Rpc
-{
-
-    /**
-     * @param array $deviceNicknameInfo
-     *
-     * @return $this
-     */
-    public function withDeviceNicknameInfo(array $deviceNicknameInfo)
-    {
-        $this->data['DeviceNicknameInfo'] = $deviceNicknameInfo;
-        foreach ($deviceNicknameInfo as $depth1 => $depth1Value) {
-            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.IotId'] = $depth1Value['IotId'];
-            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.Nickname'] = $depth1Value['Nickname'];
-            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
-            $this->options['query']['DeviceNicknameInfo.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -611,6 +349,32 @@ class UpdateProductTags extends Rpc
 /**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method array getProductTagKey()
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class DeleteProductTags extends Rpc
+{
+
+    /**
+     * @param array $productTagKey
+     *
+     * @return $this
+     */
+    public function withProductTagKey(array $productTagKey)
+    {
+        $this->data['ProductTagKey'] = $productTagKey;
+        foreach ($productTagKey as $i => $iValue) {
+            $this->options['query']['ProductTagKey.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
@@ -641,32 +405,6 @@ class ListProductByTags extends Rpc
         foreach ($productTag as $depth1 => $depth1Value) {
             $this->options['query']['ProductTag.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
             $this->options['query']['ProductTag.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method array getProductTagKey()
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class DeleteProductTags extends Rpc
-{
-
-    /**
-     * @param array $productTagKey
-     *
-     * @return $this
-     */
-    public function withProductTagKey(array $productTagKey)
-    {
-        $this->data['ProductTagKey'] = $productTagKey;
-        foreach ($productTagKey as $i => $iValue) {
-            $this->options['query']['ProductTagKey.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -717,6 +455,44 @@ class QueryDeviceListByDeviceGroup extends Rpc
 }
 
 /**
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method array getIdentifier()
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class QueryDevicePropertiesData extends Rpc
+{
+
+    /**
+     * @param array $identifier
+     *
+     * @return $this
+     */
+    public function withIdentifier(array $identifier)
+    {
+        $this->data['Identifier'] = $identifier;
+        foreach ($identifier as $i => $iValue) {
+            $this->options['query']['Identifier.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getGroupId()
@@ -756,15 +532,31 @@ class QueryDeviceByTags extends Rpc
 }
 
 /**
- * @method string getTagString()
- * @method $this withTagString($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method array getDeviceName()
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getItems()
+ * @method $this withItems($value)
  */
-class SetDeviceGroupTags extends Rpc
+class SetDevicesProperty extends Rpc
 {
+
+    /**
+     * @param array $deviceName
+     *
+     * @return $this
+     */
+    public function withDeviceName(array $deviceName)
+    {
+        $this->data['DeviceName'] = $deviceName;
+        foreach ($deviceName as $i => $iValue) {
+            $this->options['query']['DeviceName.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -798,69 +590,15 @@ class InvokeThingsService extends Rpc
 }
 
 /**
+ * @method string getTagString()
+ * @method $this withTagString($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method array getDeviceName()
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getItems()
- * @method $this withItems($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
-class SetDevicesProperty extends Rpc
+class SetDeviceGroupTags extends Rpc
 {
-
-    /**
-     * @param array $deviceName
-     *
-     * @return $this
-     */
-    public function withDeviceName(array $deviceName)
-    {
-        $this->data['DeviceName'] = $deviceName;
-        foreach ($deviceName as $i => $iValue) {
-            $this->options['query']['DeviceName.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAsc()
- * @method $this withAsc($value)
- * @method array getIdentifier()
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class QueryDevicePropertiesData extends Rpc
-{
-
-    /**
-     * @param array $identifier
-     *
-     * @return $this
-     */
-    public function withIdentifier(array $identifier)
-    {
-        $this->data['Identifier'] = $identifier;
-        foreach ($identifier as $i => $iValue) {
-            $this->options['query']['Identifier.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -1065,34 +803,20 @@ class BatchAddDeviceGroupRelations extends Rpc
 }
 
 /**
- * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getRequestBase64Byte()
+ * @method $this withRequestBase64Byte($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
  * @method string getDeviceName()
  * @method $this withDeviceName($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
- * @method string getProps()
- * @method $this withProps($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
  */
-class SaveDeviceProp extends Rpc
-{
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getPropKey()
- * @method $this withPropKey($value)
- */
-class DeleteDeviceProp extends Rpc
+class RRpc extends Rpc
 {
 }
 
@@ -1122,6 +846,124 @@ class QueryPageByApplyId extends Rpc
  */
 class QueryDevice extends Rpc
 {
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getProps()
+ * @method $this withProps($value)
+ */
+class SaveDeviceProp extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class QueryTopicRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class QueryTopicReverseRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getTopicFullName()
+ * @method $this withTopicFullName($value)
+ * @method string getMessageContent()
+ * @method $this withMessageContent($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class PubBroadcast extends Rpc
+{
+}
+
+/**
+ * @method array getDstTopic()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getSrcTopic()
+ * @method $this withSrcTopic($value)
+ */
+class DeleteTopicRouteTable extends Rpc
+{
+
+    /**
+     * @param array $dstTopic
+     *
+     * @return $this
+     */
+    public function withDstTopic(array $dstTopic)
+    {
+        $this->data['DstTopic'] = $dstTopic;
+        foreach ($dstTopic as $i => $iValue) {
+            $this->options['query']['DstTopic.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getPropKey()
+ * @method $this withPropKey($value)
+ */
+class DeleteDeviceProp extends Rpc
+{
+}
+
+/**
+ * @method array getDstTopic()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getSrcTopic()
+ * @method $this withSrcTopic($value)
+ */
+class CreateTopicRouteTable extends Rpc
+{
+
+    /**
+     * @param array $dstTopic
+     *
+     * @return $this
+     */
+    public function withDstTopic(array $dstTopic)
+    {
+        $this->data['DstTopic'] = $dstTopic;
+        foreach ($dstTopic as $i => $iValue) {
+            $this->options['query']['DstTopic.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1167,229 +1009,101 @@ class BatchGetDeviceState extends Rpc
 }
 
 /**
+ * @method string getConfiguration()
+ * @method $this withConfiguration($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getRequestBase64Byte()
- * @method $this withRequestBase64Byte($value)
- * @method string getTopic()
- * @method $this withTopic($value)
+ * @method string getActionId()
+ * @method $this withActionId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class UpdateRuleAction extends Rpc
+{
+}
+
+/**
+ * @method string getSelect()
+ * @method $this withSelect($value)
+ * @method string getRuleDesc()
+ * @method $this withRuleDesc($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getWhere()
+ * @method $this withWhere($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTopicType()
+ * @method $this withTopicType($value)
+ * @method string getShortTopic()
+ * @method $this withShortTopic($value)
+ */
+class UpdateRule extends Rpc
+{
+}
+
+/**
+ * @method string getTopicId()
+ * @method $this withTopicId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
+ * @method string getTopicShortName()
+ * @method $this withTopicShortName($value)
+ * @method string getDesc()
+ * @method $this withDesc($value)
+ */
+class UpdateProductTopic extends Rpc
+{
+}
+
+/**
+ * @method string getShadowMessage()
+ * @method $this withShadowMessage($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getDeviceName()
  * @method $this withDeviceName($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
- * @method string getTimeout()
- * @method $this withTimeout($value)
  */
-class RRpc extends Rpc
+class UpdateDeviceShadow extends Rpc
 {
 }
 
 /**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
  */
-class QueryTopicReverseRouteTable extends Rpc
+class StopRule extends Rpc
 {
 }
 
 /**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
  */
-class QueryTopicRouteTable extends Rpc
+class StartRule extends Rpc
 {
 }
 
 /**
- * @method string getTopicFullName()
- * @method $this withTopicFullName($value)
- * @method string getMessageContent()
- * @method $this withMessageContent($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class PubBroadcast extends Rpc
+class QueryProductTopic extends Rpc
 {
-}
-
-/**
- * @method array getDstTopic()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getSrcTopic()
- * @method $this withSrcTopic($value)
- */
-class DeleteTopicRouteTable extends Rpc
-{
-
-    /**
-     * @param array $dstTopic
-     *
-     * @return $this
-     */
-    public function withDstTopic(array $dstTopic)
-    {
-        $this->data['DstTopic'] = $dstTopic;
-        foreach ($dstTopic as $i => $iValue) {
-            $this->options['query']['DstTopic.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getDstTopic()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getSrcTopic()
- * @method $this withSrcTopic($value)
- */
-class CreateTopicRouteTable extends Rpc
-{
-
-    /**
-     * @param array $dstTopic
-     *
-     * @return $this
-     */
-    public function withDstTopic(array $dstTopic)
-    {
-        $this->data['DstTopic'] = $dstTopic;
-        foreach ($dstTopic as $i => $iValue) {
-            $this->options['query']['DstTopic.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getProductKeyList()
- * @method array getCategoryKeyList()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method array getTagList()
- */
-class QueryAhDeviceList extends Rpc
-{
-
-    /**
-     * @param array $productKeyList
-     *
-     * @return $this
-     */
-    public function withProductKeyList(array $productKeyList)
-    {
-        $this->data['ProductKeyList'] = $productKeyList;
-        foreach ($productKeyList as $i => $iValue) {
-            $this->options['query']['ProductKeyList.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $categoryKeyList
-     *
-     * @return $this
-     */
-    public function withCategoryKeyList(array $categoryKeyList)
-    {
-        $this->data['CategoryKeyList'] = $categoryKeyList;
-        foreach ($categoryKeyList as $i => $iValue) {
-            $this->options['query']['CategoryKeyList.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tagList
-     *
-     * @return $this
-     */
-    public function withTagList(array $tagList)
-    {
-        $this->data['TagList'] = $tagList;
-        foreach ($tagList as $depth1 => $depth1Value) {
-            $this->options['query']['TagList.' . ($depth1 + 1) . '.TagName'] = $depth1Value['TagName'];
-            $this->options['query']['TagList.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getProductKeyList()
- * @method array getCategoryKeyList()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method array getTagList()
- */
-class AhQueryDeviceList extends Rpc
-{
-
-    /**
-     * @param array $productKeyList
-     *
-     * @return $this
-     */
-    public function withProductKeyList(array $productKeyList)
-    {
-        $this->data['ProductKeyList'] = $productKeyList;
-        foreach ($productKeyList as $i => $iValue) {
-            $this->options['query']['ProductKeyList.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $categoryKeyList
-     *
-     * @return $this
-     */
-    public function withCategoryKeyList(array $categoryKeyList)
-    {
-        $this->data['CategoryKeyList'] = $categoryKeyList;
-        foreach ($categoryKeyList as $i => $iValue) {
-            $this->options['query']['CategoryKeyList.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $tagList
-     *
-     * @return $this
-     */
-    public function withTagList(array $tagList)
-    {
-        $this->data['TagList'] = $tagList;
-        foreach ($tagList as $depth1 => $depth1Value) {
-            $this->options['query']['TagList.' . ($depth1 + 1) . '.TagName'] = $depth1Value['TagName'];
-            $this->options['query']['TagList.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -1403,6 +1117,110 @@ class AhQueryDeviceList extends Rpc
  * @method $this withProductKey($value)
  */
 class QueryDeviceProp extends Rpc
+{
+}
+
+/**
+ * @method string getTopicFullName()
+ * @method $this withTopicFullName($value)
+ * @method string getQos()
+ * @method $this withQos($value)
+ * @method string getMessageContent()
+ * @method $this withMessageContent($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class Pub extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class ListRuleActions extends Rpc
+{
+}
+
+/**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class ListRule extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getActionId()
+ * @method $this withActionId($value)
+ */
+class GetRuleAction extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class GetRule extends Rpc
+{
+}
+
+/**
+ * @method string getShadowMessage()
+ * @method $this withShadowMessage($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class GetDeviceShadow extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getActionId()
+ * @method $this withActionId($value)
+ */
+class DeleteRuleAction extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DeleteRule extends Rpc
+{
+}
+
+/**
+ * @method string getTopicId()
+ * @method $this withTopicId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class DeleteProductTopic extends Rpc
 {
 }
 
@@ -1449,96 +1267,6 @@ class CreateRule extends Rpc
 /**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class ListRuleActions extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class StartRule extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class QueryProductTopic extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getActionId()
- * @method $this withActionId($value)
- */
-class DeleteRuleAction extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class StopRule extends Rpc
-{
-}
-
-/**
- * @method string getTopicFullName()
- * @method $this withTopicFullName($value)
- * @method string getQos()
- * @method $this withQos($value)
- * @method string getMessageContent()
- * @method $this withMessageContent($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class Pub extends Rpc
-{
-}
-
-/**
- * @method string getSearchName()
- * @method $this withSearchName($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- */
-class ListRule extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class GetRule extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  * @method string getTopicShortName()
@@ -1549,132 +1277,6 @@ class GetRule extends Rpc
  * @method $this withDesc($value)
  */
 class CreateProductTopic extends Rpc
-{
-}
-
-/**
- * @method string getShadowMessage()
- * @method $this withShadowMessage($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class GetDeviceShadow extends Rpc
-{
-}
-
-/**
- * @method string getTopicId()
- * @method $this withTopicId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- */
-class DeleteProductTopic extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class DeleteRule extends Rpc
-{
-}
-
-/**
- * @method string getTopicId()
- * @method $this withTopicId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getOperation()
- * @method $this withOperation($value)
- * @method string getTopicShortName()
- * @method $this withTopicShortName($value)
- * @method string getDesc()
- * @method $this withDesc($value)
- */
-class UpdateProductTopic extends Rpc
-{
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getActionId()
- * @method $this withActionId($value)
- */
-class GetRuleAction extends Rpc
-{
-}
-
-/**
- * @method string getConfiguration()
- * @method $this withConfiguration($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getActionId()
- * @method $this withActionId($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class UpdateRuleAction extends Rpc
-{
-}
-
-/**
- * @method string getShadowMessage()
- * @method $this withShadowMessage($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class UpdateDeviceShadow extends Rpc
-{
-}
-
-/**
- * @method string getSelect()
- * @method $this withSelect($value)
- * @method string getRuleDesc()
- * @method $this withRuleDesc($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getWhere()
- * @method $this withWhere($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getTopicType()
- * @method $this withTopicType($value)
- * @method string getShortTopic()
- * @method $this withShortTopic($value)
- */
-class UpdateRule extends Rpc
-{
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class GetGatewayBySubDevice extends Rpc
 {
 }
 
@@ -1700,7 +1302,37 @@ class QueryBatchRegisterDeviceStatus extends Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
+class GetGatewayBySubDevice extends Rpc
+{
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
 class RemoveThingTopo extends Rpc
+{
+}
+
+/**
+ * @method string getGwProductKey()
+ * @method $this withGwProductKey($value)
+ * @method string getGwDeviceName()
+ * @method $this withGwDeviceName($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getGwIotId()
+ * @method $this withGwIotId($value)
+ * @method string getDeviceListStr()
+ * @method $this withDeviceListStr($value)
+ */
+class NotifyAddThingTopo extends Rpc
 {
 }
 
@@ -1723,18 +1355,16 @@ class GetThingTopo extends Rpc
 }
 
 /**
- * @method string getGwProductKey()
- * @method $this withGwProductKey($value)
- * @method string getGwDeviceName()
- * @method $this withGwDeviceName($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getGwIotId()
- * @method $this withGwIotId($value)
- * @method string getDeviceListStr()
- * @method $this withDeviceListStr($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
  */
-class NotifyAddThingTopo extends Rpc
+class QueryDevicePropertyStatus extends Rpc
 {
 }
 
@@ -1763,16 +1393,14 @@ class QueryDevicePropertyData extends Rpc
 }
 
 /**
- * @method string getIotId()
- * @method $this withIotId($value)
+ * @method string getApplyId()
+ * @method $this withApplyId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDevicePropertyStatus extends Rpc
+class BatchRegisterDeviceWithApplyId extends Rpc
 {
 }
 
@@ -1785,18 +1413,6 @@ class QueryDevicePropertyStatus extends Rpc
  * @method $this withProductKey($value)
  */
 class BatchRegisterDevice extends Rpc
-{
-}
-
-/**
- * @method string getApplyId()
- * @method $this withApplyId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class BatchRegisterDeviceWithApplyId extends Rpc
 {
 }
 
@@ -1841,6 +1457,22 @@ class UpdateProduct extends Rpc
 }
 
 /**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getItems()
+ * @method $this withItems($value)
+ */
+class SetDeviceProperty extends Rpc
+{
+}
+
+/**
  * @method string getPinCode()
  * @method $this withPinCode($value)
  * @method string getIotInstanceId()
@@ -1855,22 +1487,6 @@ class UpdateProduct extends Rpc
  * @method $this withDevEui($value)
  */
 class RegisterDevice extends Rpc
-{
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getItems()
- * @method $this withItems($value)
- */
-class SetDeviceProperty extends Rpc
 {
 }
 
@@ -1894,7 +1510,7 @@ class QueryProductList extends Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryDeviceStatistics extends Rpc
+class QueryProduct extends Rpc
 {
 }
 
@@ -1904,7 +1520,31 @@ class QueryDeviceStatistics extends Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class QueryProduct extends Rpc
+class QueryDeviceStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class QueryDeviceServiceData extends Rpc
 {
 }
 
@@ -1931,30 +1571,6 @@ class QueryProduct extends Rpc
  * @method $this withProductKey($value)
  */
 class QueryDeviceEventData extends Rpc
-{
-}
-
-/**
- * @method string getAsc()
- * @method $this withAsc($value)
- * @method string getIdentifier()
- * @method $this withIdentifier($value)
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
-class QueryDeviceServiceData extends Rpc
 {
 }
 
@@ -2014,20 +1630,6 @@ class GetDeviceStatus extends Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DisableThing extends Rpc
-{
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- */
 class EnableThing extends Rpc
 {
 }
@@ -2042,7 +1644,7 @@ class EnableThing extends Rpc
  * @method string getProductKey()
  * @method $this withProductKey($value)
  */
-class DeleteDevice extends Rpc
+class DisableThing extends Rpc
 {
 }
 
@@ -2053,6 +1655,20 @@ class DeleteDevice extends Rpc
  * @method $this withProductKey($value)
  */
 class DeleteProduct extends Rpc
+{
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class DeleteDevice extends Rpc
 {
 }
 

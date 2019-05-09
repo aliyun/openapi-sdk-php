@@ -5,42 +5,43 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CreateMPULayout createMPULayout(array $options = [])
- * @method DeleteMPULayout deleteMPULayout(array $options = [])
- * @method GetMPUAllLayoutId getMPUAllLayoutId(array $options = [])
- * @method GetMPULayoutInfo getMPULayoutInfo(array $options = [])
- * @method GetMPUTaskParam getMPUTaskParam(array $options = [])
- * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
- * @method StartMPUTask startMPUTask(array $options = [])
- * @method StopMPUTask stopMPUTask(array $options = [])
  * @method DescribeRtcChannelCntData describeRtcChannelCntData(array $options = [])
  * @method DescribeRtcDurationData describeRtcDurationData(array $options = [])
  * @method DescribeRtcPeakChannelCntData describeRtcPeakChannelCntData(array $options = [])
  * @method DescribeRtcPeakUserCntData describeRtcPeakUserCntData(array $options = [])
  * @method DescribeRtcUserCntData describeRtcUserCntData(array $options = [])
+ * @method StopMPUTask stopMPUTask(array $options = [])
+ * @method StartMPUTask startMPUTask(array $options = [])
+ * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
  * @method ReceiveNotify receiveNotify(array $options = [])
- * @method CreateTemplate createTemplate(array $options = [])
+ * @method UpdateTaskParam updateTaskParam(array $options = [])
  * @method StopTask stopTask(array $options = [])
  * @method StartTask startTask(array $options = [])
- * @method RemoveTerminals removeTerminals(array $options = [])
+ * @method GetTemplateInfo getTemplateInfo(array $options = [])
+ * @method GetTaskStatus getTaskStatus(array $options = [])
+ * @method GetTaskParam getTaskParam(array $options = [])
+ * @method GetAllTemplate getAllTemplate(array $options = [])
+ * @method DeleteTemplate deleteTemplate(array $options = [])
+ * @method CreateTemplate createTemplate(array $options = [])
  * @method CreateChannelToken createChannelToken(array $options = [])
+ * @method RemoveTerminals removeTerminals(array $options = [])
+ * @method RemoveParticipants removeParticipants(array $options = [])
+ * @method DescribeStatis describeStatis(array $options = [])
+ * @method DescribeRecordList describeRecordList(array $options = [])
+ * @method DescribeRecordDetail describeRecordDetail(array $options = [])
+ * @method DescribeRealTimeRecordList describeRealTimeRecordList(array $options = [])
+ * @method DescribeRealTimeRecordDetail describeRealTimeRecordDetail(array $options = [])
  * @method UpdateChannel updateChannel(array $options = [])
  * @method DeleteChannel deleteChannel(array $options = [])
  * @method CreateChannel createChannel(array $options = [])
- * @method RemoveParticipants removeParticipants(array $options = [])
- * @method DescribeStatis describeStatis(array $options = [])
- * @method DescribeRecordDetail describeRecordDetail(array $options = [])
- * @method DescribeRecordList describeRecordList(array $options = [])
- * @method DescribeRealTimeRecordList describeRealTimeRecordList(array $options = [])
- * @method DescribeRealTimeRecordDetail describeRealTimeRecordDetail(array $options = [])
- * @method DescribeApps describeApps(array $options = [])
- * @method ModifyApp modifyApp(array $options = [])
- * @method DescribeConferenceAuthInfo describeConferenceAuthInfo(array $options = [])
- * @method ModifyConference modifyConference(array $options = [])
  * @method UnmuteAudioAll unmuteAudioAll(array $options = [])
  * @method UnmuteAudio unmuteAudio(array $options = [])
  * @method MuteAudioAll muteAudioAll(array $options = [])
  * @method MuteAudio muteAudio(array $options = [])
+ * @method ModifyConference modifyConference(array $options = [])
+ * @method ModifyApp modifyApp(array $options = [])
+ * @method DescribeConferenceAuthInfo describeConferenceAuthInfo(array $options = [])
+ * @method DescribeApps describeApps(array $options = [])
  * @method DeleteConference deleteConference(array $options = [])
  * @method CreateConference createConference(array $options = [])
  */
@@ -61,170 +62,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'rtc';
-}
-
-/**
- * @method string getCropMode()
- * @method $this withCropMode($value)
- * @method array getPanes()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getAudioMixCount()
- * @method $this withAudioMixCount($value)
- */
-class CreateMPULayout extends Rpc
-{
-
-    /**
-     * @param array $panes
-     *
-     * @return $this
-     */
-    public function withPanes(array $panes)
-    {
-        $this->data['Panes'] = $panes;
-        foreach ($panes as $depth1 => $depth1Value) {
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.MajorPane'] = $depth1Value['MajorPane'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.Width'] = $depth1Value['Width'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.Height'] = $depth1Value['Height'];
-            $this->options['query']['Panes.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLayoutId()
- * @method $this withLayoutId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DeleteMPULayout extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class GetMPUAllLayoutId extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLayoutId()
- * @method $this withLayoutId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class GetMPULayoutInfo extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class GetMPUTaskParam extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class GetMPUTaskStatus extends Rpc
-{
-}
-
-/**
- * @method array getUserPanes()
- * @method string getBackgroundColor()
- * @method $this withBackgroundColor($value)
- * @method string getCropMode()
- * @method $this withCropMode($value)
- * @method string getTaskProfile()
- * @method $this withTaskProfile($value)
- * @method array getLayoutIds()
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getStreamURL()
- * @method $this withStreamURL($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getMediaEncode()
- * @method $this withMediaEncode($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class StartMPUTask extends Rpc
-{
-
-    /**
-     * @param array $userPanes
-     *
-     * @return $this
-     */
-    public function withUserPanes(array $userPanes)
-    {
-        $this->data['UserPanes'] = $userPanes;
-        foreach ($userPanes as $depth1 => $depth1Value) {
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $layoutIds
-     *
-     * @return $this
-     */
-    public function withLayoutIds(array $layoutIds)
-    {
-        $this->data['LayoutIds'] = $layoutIds;
-        foreach ($layoutIds as $i => $iValue) {
-            $this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopMPUTask extends Rpc
-{
 }
 
 /**
@@ -318,6 +155,88 @@ class DescribeRtcUserCntData extends Rpc
 }
 
 /**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopMPUTask extends Rpc
+{
+}
+
+/**
+ * @method array getUserPanes()
+ * @method string getBackgroundColor()
+ * @method $this withBackgroundColor($value)
+ * @method string getCropMode()
+ * @method $this withCropMode($value)
+ * @method string getTaskProfile()
+ * @method $this withTaskProfile($value)
+ * @method array getLayoutIds()
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getMediaEncode()
+ * @method $this withMediaEncode($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class StartMPUTask extends Rpc
+{
+
+    /**
+     * @param array $userPanes
+     *
+     * @return $this
+     */
+    public function withUserPanes(array $userPanes)
+    {
+        $this->data['UserPanes'] = $userPanes;
+        foreach ($userPanes as $depth1 => $depth1Value) {
+            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
+            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $layoutIds
+     *
+     * @return $this
+     */
+    public function withLayoutIds(array $layoutIds)
+    {
+        $this->data['LayoutIds'] = $layoutIds;
+        foreach ($layoutIds as $i => $iValue) {
+            $this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetMPUTaskStatus extends Rpc
+{
+}
+
+/**
  * @method string getTraceId()
  * @method $this withTraceId($value)
  * @method string getContent()
@@ -332,6 +251,148 @@ class DescribeRtcUserCntData extends Rpc
  * @method $this withBizId($value)
  */
 class ReceiveNotify extends Rpc
+{
+}
+
+/**
+ * @method array getMixPanes()
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class UpdateTaskParam extends Rpc
+{
+
+    /**
+     * @param array $mixPanes
+     *
+     * @return $this
+     */
+    public function withMixPanes(array $mixPanes)
+    {
+        $this->data['MixPanes'] = $mixPanes;
+        foreach ($mixPanes as $depth1 => $depth1Value) {
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopTask extends Rpc
+{
+}
+
+/**
+ * @method array getMixPanes()
+ * @method string getIdempotentId()
+ * @method $this withIdempotentId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class StartTask extends Rpc
+{
+
+    /**
+     * @param array $mixPanes
+     *
+     * @return $this
+     */
+    public function withMixPanes(array $mixPanes)
+    {
+        $this->data['MixPanes'] = $mixPanes;
+        foreach ($mixPanes as $depth1 => $depth1Value) {
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+            $this->options['query']['MixPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class GetTemplateInfo extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetTaskStatus extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetTaskParam extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class GetAllTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DeleteTemplate extends Rpc
 {
 }
 
@@ -411,69 +472,21 @@ class CreateTemplate extends Rpc
 }
 
 /**
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
+ * @method string getUId()
+ * @method $this withUId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getNonce()
+ * @method $this withNonce($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopTask extends Rpc
-{
-}
-
-/**
- * @method array getUserPanes()
- * @method string getBackgroundColor()
- * @method $this withBackgroundColor($value)
- * @method array getLayoutIds()
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getStreamURL()
- * @method $this withStreamURL($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getMediaEncode()
- * @method $this withMediaEncode($value)
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
-class StartTask extends Rpc
+class CreateChannelToken extends Rpc
 {
-
-    /**
-     * @param array $userPanes
-     *
-     * @return $this
-     */
-    public function withUserPanes(array $userPanes)
-    {
-        $this->data['UserPanes'] = $userPanes;
-        foreach ($userPanes as $depth1 => $depth1Value) {
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
-            $this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $layoutIds
-     *
-     * @return $this
-     */
-    public function withLayoutIds(array $layoutIds)
-    {
-        $this->data['LayoutIds'] = $layoutIds;
-        foreach ($layoutIds as $i => $iValue) {
-            $this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -502,62 +515,6 @@ class RemoveTerminals extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getSessionId()
- * @method $this withSessionId($value)
- * @method string getUId()
- * @method $this withUId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getNonce()
- * @method $this withNonce($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class CreateChannelToken extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getNonce()
- * @method $this withNonce($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class UpdateChannel extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class DeleteChannel extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class CreateChannel extends Rpc
-{
 }
 
 /**
@@ -611,24 +568,6 @@ class DescribeStatis extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRecordId()
- * @method $this withRecordId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class DescribeRecordDetail extends Rpc
-{
-}
-
-/**
  * @method string getSortType()
  * @method $this withSortType($value)
  * @method string getStartTime()
@@ -651,6 +590,24 @@ class DescribeRecordDetail extends Rpc
  * @method $this withAppId($value)
  */
 class DescribeRecordList extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRecordId()
+ * @method $this withRecordId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRecordDetail extends Rpc
 {
 }
 
@@ -681,64 +638,40 @@ class DescribeRealTimeRecordDetail extends Rpc
 }
 
 /**
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOrder()
- * @method $this withOrder($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getNonce()
+ * @method $this withNonce($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
-class DescribeApps extends Rpc
+class UpdateChannel extends Rpc
 {
 }
 
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getAppName()
- * @method $this withAppName($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
-class ModifyApp extends Rpc
+class DeleteChannel extends Rpc
 {
 }
 
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getConferenceId()
- * @method $this withConferenceId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
-class DescribeConferenceAuthInfo extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getConferenceId()
- * @method $this withConferenceId($value)
- * @method string getConferenceName()
- * @method $this withConferenceName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getRemindNotice()
- * @method $this withRemindNotice($value)
- */
-class ModifyConference extends Rpc
+class CreateChannel extends Rpc
 {
 }
 
@@ -824,6 +757,68 @@ class MuteAudio extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getConferenceId()
+ * @method $this withConferenceId($value)
+ * @method string getConferenceName()
+ * @method $this withConferenceName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRemindNotice()
+ * @method $this withRemindNotice($value)
+ */
+class ModifyConference extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ModifyApp extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConferenceId()
+ * @method $this withConferenceId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeConferenceAuthInfo extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeApps extends Rpc
+{
 }
 
 /**

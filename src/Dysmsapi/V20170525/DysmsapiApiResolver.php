@@ -6,8 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SendBatchSms sendBatchSms(array $options = [])
- * @method QuerySendDetails querySendDetails(array $options = [])
  * @method SendSms sendSms(array $options = [])
+ * @method QuerySendDetails querySendDetails(array $options = [])
  */
 class DysmsapiApiResolver extends ApiResolver
 {
@@ -51,28 +51,6 @@ class SendBatchSms extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getSendDate()
- * @method $this withSendDate($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QuerySendDetails extends Rpc
-{
-}
-
-/**
  * @method string getSmsUpExtendCode()
  * @method $this withSmsUpExtendCode($value)
  * @method string getResourceOwnerId()
@@ -93,5 +71,27 @@ class QuerySendDetails extends Rpc
  * @method $this withTemplateParam($value)
  */
 class SendSms extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getSendDate()
+ * @method $this withSendDate($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QuerySendDetails extends Rpc
 {
 }

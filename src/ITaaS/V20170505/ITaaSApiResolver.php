@@ -6,22 +6,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UpdateRoomName updateRoomName(array $options = [])
- * @method RemoveIPSegment removeIPSegment(array $options = [])
- * @method RemoveRegisterBox removeRegisterBox(array $options = [])
- * @method SetWelcomePageURI setWelcomePageURI(array $options = [])
- * @method UpdateEnterpriseConfig updateEnterpriseConfig(array $options = [])
  * @method UpdateIPSegment updateIPSegment(array $options = [])
- * @method GetRegisterBoxList getRegisterBoxList(array $options = [])
- * @method GetRegisterBoxNumber getRegisterBoxNumber(array $options = [])
- * @method GetRegisterHistoryList getRegisterHistoryList(array $options = [])
- * @method GetWelcomePageURI getWelcomePageURI(array $options = [])
+ * @method UpdateEnterpriseConfig updateEnterpriseConfig(array $options = [])
+ * @method SetWelcomePageURI setWelcomePageURI(array $options = [])
+ * @method RemoveRegisterBox removeRegisterBox(array $options = [])
+ * @method RemoveIPSegment removeIPSegment(array $options = [])
  * @method RemoveBoxCode removeBoxCode(array $options = [])
- * @method GetBoxCodeList getBoxCodeList(array $options = [])
- * @method GetEnterpriseConfig getEnterpriseConfig(array $options = [])
+ * @method GetWelcomePageURI getWelcomePageURI(array $options = [])
+ * @method GetRegisterHistoryList getRegisterHistoryList(array $options = [])
+ * @method GetRegisterBoxNumber getRegisterBoxNumber(array $options = [])
+ * @method GetRegisterBoxList getRegisterBoxList(array $options = [])
  * @method GetIPSegmentsList getIPSegmentsList(array $options = [])
- * @method AddIPSegment addIPSegment(array $options = [])
- * @method CreateBoxCode createBoxCode(array $options = [])
+ * @method GetEnterpriseConfig getEnterpriseConfig(array $options = [])
+ * @method GetBoxCodeList getBoxCodeList(array $options = [])
  * @method CreateEnterprise createEnterprise(array $options = [])
+ * @method CreateBoxCode createBoxCode(array $options = [])
+ * @method AddIPSegment addIPSegment(array $options = [])
  */
 class ITaaSApiResolver extends ApiResolver
 {
@@ -58,6 +58,10 @@ class UpdateRoomName extends Rpc
 /**
  * @method string getClientappid()
  * @method $this withClientappid($value)
+ * @method string getIpsegment()
+ * @method $this withIpsegment($value)
+ * @method string getMemo()
+ * @method $this withMemo($value)
  * @method string getSysfrom()
  * @method $this withSysfrom($value)
  * @method string getUuid()
@@ -65,35 +69,7 @@ class UpdateRoomName extends Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class RemoveIPSegment extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getDrsessionid()
- * @method $this withDrsessionid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- */
-class RemoveRegisterBox extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- * @method string getWelcomeuri()
- * @method $this withWelcomeuri($value)
- */
-class SetWelcomePageURI extends Rpc
+class UpdateIPSegment extends Rpc
 {
 }
 
@@ -118,10 +94,34 @@ class UpdateEnterpriseConfig extends Rpc
 /**
  * @method string getClientappid()
  * @method $this withClientappid($value)
- * @method string getIpsegment()
- * @method $this withIpsegment($value)
- * @method string getMemo()
- * @method $this withMemo($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ * @method string getWelcomeuri()
+ * @method $this withWelcomeuri($value)
+ */
+class SetWelcomePageURI extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
+ * @method string getDrsessionid()
+ * @method $this withDrsessionid($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ */
+class RemoveRegisterBox extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
  * @method string getSysfrom()
  * @method $this withSysfrom($value)
  * @method string getUuid()
@@ -129,55 +129,7 @@ class UpdateEnterpriseConfig extends Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class UpdateIPSegment extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- */
-class GetRegisterBoxList extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- */
-class GetRegisterBoxNumber extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- */
-class GetRegisterHistoryList extends Rpc
-{
-}
-
-/**
- * @method string getClientappid()
- * @method $this withClientappid($value)
- * @method string getSysfrom()
- * @method $this withSysfrom($value)
- * @method string getOperator()
- * @method $this withOperator($value)
- */
-class GetWelcomePageURI extends Rpc
+class RemoveIPSegment extends Rpc
 {
 }
 
@@ -203,7 +155,55 @@ class RemoveBoxCode extends Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetBoxCodeList extends Rpc
+class GetWelcomePageURI extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ */
+class GetRegisterHistoryList extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ */
+class GetRegisterBoxNumber extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ */
+class GetRegisterBoxList extends Rpc
+{
+}
+
+/**
+ * @method string getClientappid()
+ * @method $this withClientappid($value)
+ * @method string getSysfrom()
+ * @method $this withSysfrom($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ */
+class GetIPSegmentsList extends Rpc
 {
 }
 
@@ -227,23 +227,23 @@ class GetEnterpriseConfig extends Rpc
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class GetIPSegmentsList extends Rpc
+class GetBoxCodeList extends Rpc
 {
 }
 
 /**
  * @method string getClientappid()
  * @method $this withClientappid($value)
- * @method string getIpsegment()
- * @method $this withIpsegment($value)
- * @method string getMemo()
- * @method $this withMemo($value)
+ * @method string getServiceFlag()
+ * @method $this withServiceFlag($value)
  * @method string getSysfrom()
  * @method $this withSysfrom($value)
+ * @method string getBoxNumber()
+ * @method $this withBoxNumber($value)
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class AddIPSegment extends Rpc
+class CreateEnterprise extends Rpc
 {
 }
 
@@ -262,15 +262,15 @@ class CreateBoxCode extends Rpc
 /**
  * @method string getClientappid()
  * @method $this withClientappid($value)
- * @method string getServiceFlag()
- * @method $this withServiceFlag($value)
+ * @method string getIpsegment()
+ * @method $this withIpsegment($value)
+ * @method string getMemo()
+ * @method $this withMemo($value)
  * @method string getSysfrom()
  * @method $this withSysfrom($value)
- * @method string getBoxNumber()
- * @method $this withBoxNumber($value)
  * @method string getOperator()
  * @method $this withOperator($value)
  */
-class CreateEnterprise extends Rpc
+class AddIPSegment extends Rpc
 {
 }

@@ -5,13 +5,12 @@ namespace AlibabaCloud\CF\V20151127;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method MonthlyPaymentCheckOrder monthlyPaymentCheckOrder(array $options = [])
  * @method CFMonthlyPayment cFMonthlyPayment(array $options = [])
- * @method GetRating getRating(array $options = [])
- * @method CfAccountFeedback cfAccountFeedback(array $options = [])
+ * @method MonthlyPaymentCheckOrder monthlyPaymentCheckOrder(array $options = [])
  * @method CfAccountQuery cfAccountQuery(array $options = [])
- * @method QuerySimple querySimple(array $options = [])
+ * @method CfAccountFeedback cfAccountFeedback(array $options = [])
  * @method Authenticate authenticate(array $options = [])
+ * @method QuerySimple querySimple(array $options = [])
  */
 class CFApiResolver extends ApiResolver
 {
@@ -38,7 +37,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getData()
  */
-class MonthlyPaymentCheckOrder extends Rpc
+class CFMonthlyPayment extends Rpc
 {
 
     /** @var string */
@@ -61,7 +60,7 @@ class MonthlyPaymentCheckOrder extends Rpc
 /**
  * @method string getData()
  */
-class CFMonthlyPayment extends Rpc
+class MonthlyPaymentCheckOrder extends Rpc
 {
 
     /** @var string */
@@ -82,26 +81,22 @@ class CFMonthlyPayment extends Rpc
 }
 
 /**
- * @method string getIdType()
- * @method $this withIdType($value)
- * @method string getIdCardNumber()
- * @method $this withIdCardNumber($value)
  * @method string getIp()
  * @method $this withIp($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
  * @method string getPhoneNumber()
  * @method $this withPhoneNumber($value)
- * @method string getSource()
- * @method $this withSource($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getEmail()
- * @method $this withEmail($value)
- * @method string getBankCardNumber()
- * @method $this withBankCardNumber($value)
- * @method string getScene()
- * @method $this withScene($value)
+ * @method string getAppToken()
+ * @method $this withAppToken($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getCFTimestamp()
+ * @method $this withCFTimestamp($value)
+ * @method string getTrans()
+ * @method $this withTrans($value)
  */
-class GetRating extends Rpc
+class CfAccountQuery extends Rpc
 {
 }
 
@@ -128,22 +123,22 @@ class CfAccountFeedback extends Rpc
 }
 
 /**
- * @method string getIp()
- * @method $this withIp($value)
+ * @method string getSig()
+ * @method $this withSig($value)
+ * @method string getRemoteIp()
+ * @method $this withRemoteIp($value)
+ * @method string getSerno()
+ * @method $this withSerno($value)
  * @method string getSceneId()
  * @method $this withSceneId($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getAppToken()
- * @method $this withAppToken($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
- * @method string getCFTimestamp()
- * @method $this withCFTimestamp($value)
- * @method string getTrans()
- * @method $this withTrans($value)
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
+ * @method string getToken()
+ * @method $this withToken($value)
  */
-class CfAccountQuery extends Rpc
+class Authenticate extends Rpc
 {
 }
 
@@ -162,25 +157,5 @@ class CfAccountQuery extends Rpc
  * @method $this withTrans($value)
  */
 class QuerySimple extends Rpc
-{
-}
-
-/**
- * @method string getSig()
- * @method $this withSig($value)
- * @method string getRemoteIp()
- * @method $this withRemoteIp($value)
- * @method string getSerno()
- * @method $this withSerno($value)
- * @method string getSceneId()
- * @method $this withSceneId($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getSessionId()
- * @method $this withSessionId($value)
- * @method string getToken()
- * @method $this withToken($value)
- */
-class Authenticate extends Rpc
 {
 }

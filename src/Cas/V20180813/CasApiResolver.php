@@ -5,60 +5,59 @@ namespace AlibabaCloud\Cas\V20180813;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeRenewOrder describeRenewOrder(array $options = [])
- * @method DescribeSignatureProductState describeSignatureProductState(array $options = [])
- * @method DescribeOrderRefundRecord describeOrderRefundRecord(array $options = [])
- * @method CreateOrderRefundRecord createOrderRefundRecord(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
+ * @method DescribeSignatureProductState describeSignatureProductState(array $options = [])
+ * @method DescribeOrderRefundRecord describeOrderRefundRecord(array $options = [])
+ * @method CreateOrderRefundRecord createOrderRefundRecord(array $options = [])
  * @method DescribeLocationList describeLocationList(array $options = [])
  * @method DeleteOrder deleteOrder(array $options = [])
  * @method CreateCooperationOrder createCooperationOrder(array $options = [])
- * @method DescribeSignatureTradeDetail describeSignatureTradeDetail(array $options = [])
- * @method DescribeExpectationResult describeExpectationResult(array $options = [])
- * @method DescribeOrderAuditFailRecord describeOrderAuditFailRecord(array $options = [])
- * @method CreateAliDnsRecordId createAliDnsRecordId(array $options = [])
- * @method DescribeSignatureStatistics describeSignatureStatistics(array $options = [])
- * @method DescribeSignatureTradeList describeSignatureTradeList(array $options = [])
  * @method DescribeStsAuthStatus describeStsAuthStatus(array $options = [])
- * @method DescribeDeploymentDetail describeDeploymentDetail(array $options = [])
- * @method DescribeDeploymentDomainList describeDeploymentDomainList(array $options = [])
- * @method DescribeDeploymentProduct describeDeploymentProduct(array $options = [])
- * @method DescribeDeploymentRegionList describeDeploymentRegionList(array $options = [])
- * @method DescribeDomainVerifyInfo describeDomainVerifyInfo(array $options = [])
- * @method DescribeDownloadCertificate describeDownloadCertificate(array $options = [])
- * @method DescribeDomainVerifyConfigurationStatus describeDomainVerifyConfigurationStatus(array $options = [])
- * @method DescribeDownloadDomainVerifyConfiguration describeDownloadDomainVerifyConfiguration(array $options = [])
- * @method DescribeHelpList describeHelpList(array $options = [])
- * @method DescribeOrderDetail describeOrderDetail(array $options = [])
- * @method DescribeOrderMaterial describeOrderMaterial(array $options = [])
- * @method DescribeOrderDocument describeOrderDocument(array $options = [])
- * @method DescribeOSSDownloadInfo describeOSSDownloadInfo(array $options = [])
- * @method DescribeOrderList describeOrderList(array $options = [])
- * @method DescribeOSSUploadInfo describeOSSUploadInfo(array $options = [])
+ * @method DescribeSignatureTradeList describeSignatureTradeList(array $options = [])
+ * @method DescribeSignatureTradeDetail describeSignatureTradeDetail(array $options = [])
+ * @method DescribeSignatureStatistics describeSignatureStatistics(array $options = [])
  * @method DescribeSignatureCapacity describeSignatureCapacity(array $options = [])
- * @method CreateSignature createSignature(array $options = [])
- * @method CreateSignatureDocument createSignatureDocument(array $options = [])
- * @method CreateSignaturePeopleCertificate createSignaturePeopleCertificate(array $options = [])
+ * @method DescribeOSSUploadInfo describeOSSUploadInfo(array $options = [])
+ * @method DescribeOSSDownloadInfo describeOSSDownloadInfo(array $options = [])
+ * @method DescribeOrderMaterial describeOrderMaterial(array $options = [])
+ * @method DescribeOrderList describeOrderList(array $options = [])
+ * @method DescribeOrderDocument describeOrderDocument(array $options = [])
+ * @method DescribeOrderDetail describeOrderDetail(array $options = [])
+ * @method DescribeOrderAuditFailRecord describeOrderAuditFailRecord(array $options = [])
+ * @method DescribeHelpList describeHelpList(array $options = [])
+ * @method DescribeExpectationResult describeExpectationResult(array $options = [])
+ * @method DescribeDownloadDomainVerifyConfiguration describeDownloadDomainVerifyConfiguration(array $options = [])
+ * @method DescribeDownloadCertificate describeDownloadCertificate(array $options = [])
+ * @method DescribeDomainVerifyInfo describeDomainVerifyInfo(array $options = [])
+ * @method DescribeDomainVerifyConfigurationStatus describeDomainVerifyConfigurationStatus(array $options = [])
+ * @method DescribeDeploymentRegionList describeDeploymentRegionList(array $options = [])
+ * @method DescribeDeploymentProduct describeDeploymentProduct(array $options = [])
+ * @method DescribeDeploymentDomainList describeDeploymentDomainList(array $options = [])
+ * @method DescribeDeploymentDetail describeDeploymentDetail(array $options = [])
+ * @method DescribeCertificateStatusCount describeCertificateStatusCount(array $options = [])
+ * @method DescribeCertificateList describeCertificateList(array $options = [])
+ * @method DescribeCertificateDetail describeCertificateDetail(array $options = [])
+ * @method DescribeCertificateBrandList describeCertificateBrandList(array $options = [])
  * @method DeleteCertificate deleteCertificate(array $options = [])
  * @method CreateWebSignature createWebSignature(array $options = [])
  * @method CreateUnDeployment createUnDeployment(array $options = [])
- * @method DescribeCertificateDetail describeCertificateDetail(array $options = [])
- * @method DescribeCertificateBrandList describeCertificateBrandList(array $options = [])
- * @method DescribeCertificateList describeCertificateList(array $options = [])
- * @method CreateOrderMaterial createOrderMaterial(array $options = [])
- * @method CreateDeployment createDeployment(array $options = [])
- * @method CreateDomainVerifyConfigurationStatus createDomainVerifyConfigurationStatus(array $options = [])
- * @method CreateOrderCancel createOrderCancel(array $options = [])
- * @method CreateCertificate createCertificate(array $options = [])
+ * @method CreateSignaturePeopleCertificate createSignaturePeopleCertificate(array $options = [])
+ * @method CreateSignatureDocument createSignatureDocument(array $options = [])
+ * @method CreateSignature createSignature(array $options = [])
  * @method CreateOrderRevoke createOrderRevoke(array $options = [])
- * @method CreateCertificateName createCertificateName(array $options = [])
- * @method CreateFilingSignatureDocument createFilingSignatureDocument(array $options = [])
- * @method CreateOrderAudit createOrderAudit(array $options = [])
+ * @method CreateOrderMaterial createOrderMaterial(array $options = [])
  * @method CreateOrderDocument createOrderDocument(array $options = [])
- * @method DescribeCertificateStatusCount describeCertificateStatusCount(array $options = [])
+ * @method CreateOrderCancel createOrderCancel(array $options = [])
+ * @method CreateOrderAudit createOrderAudit(array $options = [])
+ * @method CreateFilingSignatureDocument createFilingSignatureDocument(array $options = [])
+ * @method CreateDomainVerifyConfigurationStatus createDomainVerifyConfigurationStatus(array $options = [])
+ * @method CreateDeployment createDeployment(array $options = [])
+ * @method CreateCertificateName createCertificateName(array $options = [])
+ * @method CreateCertificate createCertificate(array $options = [])
+ * @method CreateAliDnsRecordId createAliDnsRecordId(array $options = [])
  */
 class CasApiResolver extends ApiResolver
 {
@@ -77,44 +76,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cas_esign_fdd';
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- */
-class DescribeRenewOrder extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- */
-class DescribeSignatureProductState extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- */
-class DescribeOrderRefundRecord extends Rpc
-{
-}
-
-/**
- * @method string getReason()
- * @method $this withReason($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- */
-class CreateOrderRefundRecord extends Rpc
-{
 }
 
 /**
@@ -272,6 +233,34 @@ class ListTagKeys extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ */
+class DescribeSignatureProductState extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeOrderRefundRecord extends Rpc
+{
+}
+
+/**
+ * @method string getReason()
+ * @method $this withReason($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class CreateOrderRefundRecord extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
@@ -310,62 +299,12 @@ class CreateCooperationOrder extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getTransactionId()
- * @method $this withTransactionId($value)
- */
-class DescribeSignatureTradeDetail extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getExpectationType()
- * @method $this withExpectationType($value)
+ * @method string getCloudProduct()
+ * @method $this withCloudProduct($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeExpectationResult extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeOrderAuditFailRecord extends Rpc
-{
-}
-
-/**
- * @method string getRecordId()
- * @method $this withRecordId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class CreateAliDnsRecordId extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeSignatureStatistics extends Rpc
+class DescribeStsAuthStatus extends Rpc
 {
 }
 
@@ -390,64 +329,32 @@ class DescribeSignatureTradeList extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getCloudProduct()
- * @method $this withCloudProduct($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getTransactionId()
+ * @method $this withTransactionId($value)
  */
-class DescribeStsAuthStatus extends Rpc
+class DescribeSignatureTradeDetail extends Rpc
 {
 }
 
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDeploymentDetail extends Rpc
+class DescribeSignatureStatistics extends Rpc
 {
 }
 
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getCloudProduct()
- * @method $this withCloudProduct($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDeploymentDomainList extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDeploymentProduct extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getCloudProduct()
- * @method $this withCloudProduct($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDeploymentRegionList extends Rpc
+class DescribeSignatureCapacity extends Rpc
 {
 }
 
@@ -456,98 +363,12 @@ class DescribeDeploymentRegionList extends Rpc
  * @method $this withSourceIp($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
+ * @method string getDocumentType()
+ * @method $this withDocumentType($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeDomainVerifyInfo extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getServerType()
- * @method $this withServerType($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDownloadCertificate extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDomainVerifyConfigurationStatus extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDownloadDomainVerifyConfiguration extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeHelpList extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeOrderDetail extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeOrderMaterial extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeOrderDocument extends Rpc
+class DescribeOSSUploadInfo extends Rpc
 {
 }
 
@@ -560,6 +381,18 @@ class DescribeOrderDocument extends Rpc
  * @method $this withLang($value)
  */
 class DescribeOSSDownloadInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeOrderMaterial extends Rpc
 {
 }
 
@@ -605,108 +438,248 @@ class DescribeOrderList extends Rpc
  * @method $this withSourceIp($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
- * @method string getDocumentType()
- * @method $this withDocumentType($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeOSSUploadInfo extends Rpc
+class DescribeOrderDocument extends Rpc
 {
 }
 
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeSignatureCapacity extends Rpc
-{
-}
-
-/**
- * @method string getIconId()
- * @method $this withIconId($value)
- * @method string getQuantity()
- * @method $this withQuantity($value)
- * @method string getHandSignImg()
- * @method $this withHandSignImg($value)
- * @method string getDocId()
- * @method $this withDocId($value)
- * @method string getCustomApi()
- * @method $this withCustomApi($value)
- * @method string getPositionPage()
- * @method $this withPositionPage($value)
- * @method string getDocTitle()
- * @method $this withDocTitle($value)
- * @method string getPositionX()
- * @method $this withPositionX($value)
- * @method string getPositionY()
- * @method $this withPositionY($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getPeopleId()
- * @method $this withPeopleId($value)
- * @method string getPositionType()
- * @method $this withPositionType($value)
- * @method string getSignKeyword()
- * @method $this withSignKeyword($value)
- * @method string getNotifyUrl()
- * @method $this withNotifyUrl($value)
- * @method string getValidity()
- * @method $this withValidity($value)
- * @method string getReturnUrl()
- * @method $this withReturnUrl($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getKeywordStrategy()
- * @method $this withKeywordStrategy($value)
- */
-class CreateSignature extends Rpc
+class DescribeOrderDetail extends Rpc
 {
 }
 
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getDocContent()
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getDocTitle()
- * @method $this withDocTitle($value)
  */
-class CreateSignatureDocument extends Rpc
+class DescribeOrderAuditFailRecord extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeHelpList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getExpectationType()
+ * @method $this withExpectationType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeExpectationResult extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDownloadDomainVerifyConfiguration extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getServerType()
+ * @method $this withServerType($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDownloadCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDomainVerifyInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDomainVerifyConfigurationStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getCloudProduct()
+ * @method $this withCloudProduct($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentRegionList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentProduct extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getCloudProduct()
+ * @method $this withCloudProduct($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentDomainList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDeploymentDetail extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method array getTag()
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCertificateStatusCount extends Rpc
 {
 
     /**
-     * @param string $value
+     * @param array $tag
      *
      * @return $this
      */
-    public function withDocContent($value)
+    public function withTag(array $tag)
     {
-        $this->data['DocContent'] = $value;
-        $this->options['form_params']['DocContent'] = $value;
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
 
         return $this;
     }
 }
 
 /**
- * @method string getPeopleName()
- * @method $this withPeopleName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getMobile()
- * @method $this withMobile($value)
- * @method string getIdentityNumber()
- * @method $this withIdentityNumber($value)
+ * @method string getShowSize()
+ * @method $this withShowSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method array getTag()
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getEmail()
- * @method $this withEmail($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class CreateSignaturePeopleCertificate extends Rpc
+class DescribeCertificateList extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCertificateDetail extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCertificateBrandList extends Rpc
 {
 }
 
@@ -775,60 +748,103 @@ class CreateUnDeployment extends Rpc
 }
 
 /**
+ * @method string getPeopleName()
+ * @method $this withPeopleName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getIdentityNumber()
+ * @method $this withIdentityNumber($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
  */
-class DescribeCertificateDetail extends Rpc
+class CreateSignaturePeopleCertificate extends Rpc
 {
 }
 
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getDocContent()
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getDocTitle()
+ * @method $this withDocTitle($value)
  */
-class DescribeCertificateBrandList extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getShowSize()
- * @method $this withShowSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method array getTag()
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeCertificateList extends Rpc
+class CreateSignatureDocument extends Rpc
 {
 
     /**
-     * @param array $tag
+     * @param string $value
      *
      * @return $this
      */
-    public function withTag(array $tag)
+    public function withDocContent($value)
     {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+        $this->data['DocContent'] = $value;
+        $this->options['form_params']['DocContent'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getIconId()
+ * @method $this withIconId($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getHandSignImg()
+ * @method $this withHandSignImg($value)
+ * @method string getDocId()
+ * @method $this withDocId($value)
+ * @method string getCustomApi()
+ * @method $this withCustomApi($value)
+ * @method string getPositionPage()
+ * @method $this withPositionPage($value)
+ * @method string getDocTitle()
+ * @method $this withDocTitle($value)
+ * @method string getPositionX()
+ * @method $this withPositionX($value)
+ * @method string getPositionY()
+ * @method $this withPositionY($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPeopleId()
+ * @method $this withPeopleId($value)
+ * @method string getPositionType()
+ * @method $this withPositionType($value)
+ * @method string getSignKeyword()
+ * @method $this withSignKeyword($value)
+ * @method string getNotifyUrl()
+ * @method $this withNotifyUrl($value)
+ * @method string getValidity()
+ * @method $this withValidity($value)
+ * @method string getReturnUrl()
+ * @method $this withReturnUrl($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getKeywordStrategy()
+ * @method $this withKeywordStrategy($value)
+ */
+class CreateSignature extends Rpc
+{
+}
+
+/**
+ * @method string getReason()
+ * @method $this withReason($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CreateOrderRevoke extends Rpc
+{
 }
 
 /**
@@ -890,34 +906,20 @@ class CreateOrderMaterial extends Rpc
 }
 
 /**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getCloudProduct()
- * @method $this withCloudProduct($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class CreateDeployment extends Rpc
-{
-}
-
-/**
+ * @method string getOssKey()
+ * @method $this withOssKey($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
+ * @method string getDocumentType()
+ * @method $this withDocumentType($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getType()
- * @method $this withType($value)
+ * @method string getExtName()
+ * @method $this withExtName($value)
  */
-class CreateDomainVerifyConfigurationStatus extends Rpc
+class CreateOrderDocument extends Rpc
 {
 }
 
@@ -936,44 +938,14 @@ class CreateOrderCancel extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCert()
- * @method $this withCert($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class CreateCertificate extends Rpc
-{
-}
-
-/**
- * @method string getReason()
- * @method $this withReason($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getType()
+ * @method $this withType($value)
  */
-class CreateOrderRevoke extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class CreateCertificateName extends Rpc
+class CreateOrderAudit extends Rpc
 {
 }
 
@@ -999,51 +971,68 @@ class CreateFilingSignatureDocument extends Rpc
  * @method string getType()
  * @method $this withType($value)
  */
-class CreateOrderAudit extends Rpc
+class CreateDomainVerifyConfigurationStatus extends Rpc
 {
 }
 
 /**
- * @method string getOssKey()
- * @method $this withOssKey($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getCloudProduct()
+ * @method $this withCloudProduct($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class CreateDeployment extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CreateCertificateName extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCert()
+ * @method $this withCert($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class CreateCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getRecordId()
+ * @method $this withRecordId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
- * @method string getDocumentType()
- * @method $this withDocumentType($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getExtName()
- * @method $this withExtName($value)
- */
-class CreateOrderDocument extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method array getTag()
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeCertificateStatusCount extends Rpc
+class CreateAliDnsRecordId extends Rpc
 {
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
 }

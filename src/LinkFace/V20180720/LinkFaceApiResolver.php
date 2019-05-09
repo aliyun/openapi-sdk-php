@@ -11,17 +11,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryLicenses queryLicenses(array $options = [])
  * @method QueryAuthentication queryAuthentication(array $options = [])
  * @method QueryAddUserInfo queryAddUserInfo(array $options = [])
- * @method QueryAllGroups queryAllGroups(array $options = [])
- * @method UpdateFace updateFace(array $options = [])
  * @method UnlinkFace unlinkFace(array $options = [])
+ * @method QueryAllGroups queryAllGroups(array $options = [])
  * @method SyncFacePictures syncFacePictures(array $options = [])
- * @method RegisterFace registerFace(array $options = [])
  * @method QuerySyncPicSchedule querySyncPicSchedule(array $options = [])
  * @method QueryGroupUsers queryGroupUsers(array $options = [])
  * @method QueryFace queryFace(array $options = [])
+ * @method UpdateFace updateFace(array $options = [])
+ * @method DeleteFace deleteFace(array $options = [])
+ * @method RegisterFace registerFace(array $options = [])
  * @method LinkFace linkFace(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
- * @method DeleteFace deleteFace(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  */
 class LinkFaceApiResolver extends ApiResolver
@@ -388,88 +388,6 @@ class QueryAddUserInfo extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method string getCurrentPage()
- */
-class QueryAllGroups extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCurrentPage($value)
-    {
-        $this->data['CurrentPage'] = $value;
-        $this->options['form_params']['CurrentPage'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImage()
- * @method string getUserId()
- * @method string getUserInfo()
- */
-class UpdateFace extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImage($value)
-    {
-        $this->data['Image'] = $value;
-        $this->options['form_params']['Image'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserId($value)
-    {
-        $this->data['UserId'] = $value;
-        $this->options['form_params']['UserId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserInfo($value)
-    {
-        $this->data['UserInfo'] = $value;
-        $this->options['form_params']['UserInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getGroupId()
  * @method string getUserId()
  */
@@ -498,6 +416,40 @@ class UnlinkFace extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method string getCurrentPage()
+ */
+class QueryAllGroups extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
 
         return $this;
     }
@@ -560,68 +512,6 @@ class SyncFacePictures extends Rpc
     {
         $this->data['ProductKey'] = $value;
         $this->options['form_params']['ProductKey'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImage()
- * @method string getGroupId()
- * @method string getUserId()
- * @method string getUserInfo()
- */
-class RegisterFace extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImage($value)
-    {
-        $this->data['Image'] = $value;
-        $this->options['form_params']['Image'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserId($value)
-    {
-        $this->data['UserId'] = $value;
-        $this->options['form_params']['UserId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserInfo($value)
-    {
-        $this->data['UserInfo'] = $value;
-        $this->options['form_params']['UserInfo'] = $value;
 
         return $this;
     }
@@ -758,6 +648,150 @@ class QueryFace extends Rpc
 }
 
 /**
+ * @method string getImage()
+ * @method string getUserId()
+ * @method string getUserInfo()
+ */
+class UpdateFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImage($value)
+    {
+        $this->data['Image'] = $value;
+        $this->options['form_params']['Image'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserInfo($value)
+    {
+        $this->data['UserInfo'] = $value;
+        $this->options['form_params']['UserInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ * @method string getUserId()
+ */
+class DeleteFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImage()
+ * @method string getGroupId()
+ * @method string getUserId()
+ * @method string getUserInfo()
+ */
+class RegisterFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImage($value)
+    {
+        $this->data['Image'] = $value;
+        $this->options['form_params']['Image'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserInfo($value)
+    {
+        $this->data['UserInfo'] = $value;
+        $this->options['form_params']['UserInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getGroupId()
  * @method string getUserId()
  */
@@ -806,40 +840,6 @@ class DeleteGroup extends Rpc
     {
         $this->data['GroupId'] = $value;
         $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGroupId()
- * @method string getUserId()
- */
-class DeleteFace extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserId($value)
-    {
-        $this->data['UserId'] = $value;
-        $this->options['form_params']['UserId'] = $value;
 
         return $this;
     }
