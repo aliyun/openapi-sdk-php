@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.6.1 - 2019-05-09
+- Regenerate products.
+- Generate `composer.json` for each product.
+
+
 ## 1.6.0 - 2019-05-07
 - Changed `Resolver` file name.
 
